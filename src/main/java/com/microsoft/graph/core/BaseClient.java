@@ -25,7 +25,6 @@ package com.microsoft.graph.core;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
-import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
@@ -47,11 +46,6 @@ public abstract class BaseClient implements IBaseClient {
      * The http provider instance.
      */
     private IHttpProvider mHttpProvider;
-
-    /**
-     * The logger.
-     */
-    private ILogger mLogger;
 
     /**
      * The serializer instance.
@@ -99,13 +93,6 @@ public abstract class BaseClient implements IBaseClient {
         return mHttpProvider;
     }
 
-    /**
-     * Gets the logger.
-     * @return The logger.
-     */
-    public ILogger getLogger() {
-        return mLogger;
-    }
 
     /**
      * Gets the serializer.
@@ -136,14 +123,6 @@ public abstract class BaseClient implements IBaseClient {
         if (mSerializer == null) {
             throw new NullPointerException("Serializer");
         }
-    }
-
-    /**
-     * Sets the logger.
-     * @param logger The logger.
-     */
-    protected void setLogger(final ILogger logger) {
-        mLogger = logger;
     }
 
     /**

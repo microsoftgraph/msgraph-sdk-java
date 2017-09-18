@@ -20,19 +20,38 @@
 // THE SOFTWARE.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.logger;
+package com.microsoft.graph.core;
+
+import com.microsoft.graph.authentication.IAuthenticationProvider;
+import com.microsoft.graph.concurrency.IExecutors;
+import com.microsoft.graph.http.IHttpProvider;
+import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * Describes the logging levels supported by this client.
+ * The default configuration for a service client.
  */
-public enum LoggerLevel {
+public interface IClientConfig {
     /**
-     * Log only errors, the default.
+     * Gets the authentication provider.
+     * @return The authentication provider.
      */
-    Error,
+    IAuthenticationProvider getAuthenticationProvider();
 
     /**
-     * Log debug information.
+     * Gets the executors.
+     * @return The executors.
      */
-    Debug
+    IExecutors getExecutors();
+
+    /**
+     * Gets the http provider.
+     * @return The http provider.
+     */
+    IHttpProvider getHttpProvider();
+
+    /**
+     * Gets the serializer.
+     * @return The serializer.
+     */
+    ISerializer getSerializer();
 }

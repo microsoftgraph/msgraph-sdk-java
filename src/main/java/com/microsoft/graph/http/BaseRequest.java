@@ -22,14 +22,13 @@
 
 package com.microsoft.graph.http;
 
-import android.net.Uri;
+import java.net.URI;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.BuildConfig;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
@@ -131,7 +130,7 @@ public abstract class BaseRequest implements IHttpRequest {
             }
         }
         final HeaderOption requestStatsHeader = new HeaderOption(REQUEST_STATS_HEADER_NAME,
-                String.format(REQUEST_STATS_HEADER_VALUE_FORMAT_STRING, BuildConfig.VERSION_NAME));
+                String.format(REQUEST_STATS_HEADER_VALUE_FORMAT_STRING, "1.0.0"));
         mHeadersOptions.add(requestStatsHeader);
     }
 
@@ -143,17 +142,18 @@ public abstract class BaseRequest implements IHttpRequest {
     @Override
     public URL getRequestUrl() {
         String requestUrl = addFunctionParameters();
-        Uri baseUrl = Uri.parse(requestUrl);
-        final Uri.Builder uriBuilder = baseUrl.buildUpon();
+        URI baseUrl = URI.create(requestUrl);
+
+        //final URI.Builder uriBuilder = baseUrl.buildUpon();
 
         for (final QueryOption option : mQueryOptions) {
-            uriBuilder.appendQueryParameter(option.getName(), option.getValue().toString());
+            //uriBuilder.appendQueryParameter(option.getName(), option.getValue().toString());
         }
 
         try {
-            return new URL(uriBuilder.toString());
+            return new URL(requestUrl);
         } catch (final MalformedURLException e) {
-            throw new ClientException("Invalid URL: " + uriBuilder.toString(), e, GraphErrorCodes.InvalidRequest);
+            throw new ClientException("Invalid URL: " + requestUrl, e, GraphErrorCodes.InvalidRequest);
         }
     }
 

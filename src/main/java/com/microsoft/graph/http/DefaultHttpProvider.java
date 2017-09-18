@@ -28,8 +28,6 @@ import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.GraphErrorCodes;
-import com.microsoft.graph.logger.ILogger;
-import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
@@ -74,11 +72,6 @@ public class DefaultHttpProvider implements IHttpProvider {
     private final IExecutors mExecutors;
 
     /**
-     * The logger.
-     */
-    private final ILogger mLogger;
-
-    /**
      * The connection factory.
      */
     private IConnectionFactory mConnectionFactory;
@@ -93,12 +86,10 @@ public class DefaultHttpProvider implements IHttpProvider {
      */
     public DefaultHttpProvider(final ISerializer serializer,
                                final IAuthenticationProvider authenticationProvider,
-                               final IExecutors executors,
-                               final ILogger logger) {
+                               final IExecutors executors) {
         mSerializer = serializer;
         mAuthenticationProvider = authenticationProvider;
         mExecutors = executors;
-        mLogger = logger;
         mConnectionFactory = new DefaultConnectionFactory();
     }
 
@@ -223,18 +214,16 @@ public class DefaultHttpProvider implements IHttpProvider {
             InputStream in = null;
             boolean isBinaryStreamInput = false;
             final URL requestUrl = request.getRequestUrl();
-            mLogger.logDebug("Starting to send request, URL " + requestUrl.toString());
             final IConnection connection = mConnectionFactory.createFromRequest(request);
+            connection.addRequestHeader("Accept", "*/*");
 
             try {
-                mLogger.logDebug("Request Method " + request.getHttpMethod().toString());
                 List<HeaderOption> requestHeaders = request.getHeaders();
 
                 final byte[] bytesToWrite;
                 if (serializable == null) {
                     bytesToWrite = null;
                 } else if (serializable instanceof byte[]) {
-                    mLogger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;
 
                     // If the user hasn't specified a Content-Type for the request
@@ -243,7 +232,6 @@ public class DefaultHttpProvider implements IHttpProvider {
                     }
                     connection.setContentLength(bytesToWrite.length);
                 } else {
-                    mLogger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = mSerializer.serializeObject(serializable);
                     bytesToWrite = serializeObject.getBytes();
 
@@ -278,30 +266,24 @@ public class DefaultHttpProvider implements IHttpProvider {
                     handler.configConnection(connection);
                 }
 
-                mLogger.logDebug(String.format("Response code %d, %s",
-                        connection.getResponseCode(),
-                        connection.getResponseMessage()));
 
                 if (handler != null) {
-                    mLogger.logDebug("StatefulResponse is handling the HTTP response.");
+
                     return handler.generateResult(
-                            request, connection, this.getSerializer(), this.mLogger);
+                            request, connection, this.getSerializer());
                 }
 
                 if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-                    mLogger.logDebug("Handling error response");
                     in = connection.getInputStream();
                     handleErrorResponse(request, serializable, connection);
                 }
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_NOBODY
                         || connection.getResponseCode() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-                    mLogger.logDebug("Handling response with no body");
                     return null;
                 }
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
-                    mLogger.logDebug("Handling accepted response");
                     return null;
                 }
 
@@ -311,10 +293,8 @@ public class DefaultHttpProvider implements IHttpProvider {
 
                 final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
                 if (contentType.contains(JSON_CONTENT_TYPE)) {
-                    mLogger.logDebug("Response json");
                     return handleJsonResponse(in, resultClass);
                 } else {
-                    mLogger.logDebug("Response binary");
                     isBinaryStreamInput = true;
                     //noinspection unchecked
                     return (Result) handleBinaryStream(in);
@@ -329,14 +309,12 @@ public class DefaultHttpProvider implements IHttpProvider {
                 }
             }
         } catch (final GraphServiceException ex) {
-            final boolean shouldLogVerbosely = mLogger.getLoggingLevel() == LoggerLevel.Debug;
-            mLogger.logError("OneDrive Service exception " + ex.getMessage(shouldLogVerbosely), ex);
+            final boolean shouldLogVerbosely = false;
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
                     ex,
                     GraphErrorCodes.GeneralException);
-            mLogger.logError("Error during http request", clientException);
             throw clientException;
         }
     }

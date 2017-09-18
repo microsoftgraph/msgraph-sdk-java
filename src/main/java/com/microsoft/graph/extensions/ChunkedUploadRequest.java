@@ -119,7 +119,7 @@ public class ChunkedUploadRequest {
             try {
                 Thread.sleep(RETRY_DELAY * this.mRetryCount * this.mRetryCount);
             } catch (final InterruptedException e) {
-                this.mBaseRequest.getClient().getLogger().logError("Exception while waiting upload file retry", e);
+
             }
 
             ChunkedUploadResult result = null;
@@ -130,7 +130,7 @@ public class ChunkedUploadRequest {
                         .getHttpProvider()
                         .send(mBaseRequest, ChunkedUploadResult.class, this.mData, responseHandler);
             } catch (final ClientException e) {
-                this.mBaseRequest.getClient().getLogger().logDebug("Request failed with, retry if necessary.");
+
             }
 
             if (result != null && result.chunkCompleted()) {

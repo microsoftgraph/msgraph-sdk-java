@@ -27,8 +27,6 @@ import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.DefaultHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
-import com.microsoft.graph.logger.DefaultLogger;
-import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.serializer.ISerializer;
 
@@ -53,11 +51,6 @@ public abstract class DefaultClientConfig implements IClientConfig {
     private DefaultHttpProvider mHttpProvider;
 
     /**
-     * The logger.
-     */
-    private ILogger mLogger;
-
-    /**
      * The serializer instance.
      */
     private DefaultSerializer mSerializer;
@@ -74,14 +67,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
         DefaultClientConfig config = new DefaultClientConfig() {
         };
         config.mAuthenticationProvider = authenticationProvider;
-        config
-                .getLogger()
-                .logDebug(
-                        "Using provided auth provider "
-                                + authenticationProvider
-                                .getClass()
-                                .getSimpleName()
-                );
+        
         return config;
     }
 
@@ -105,9 +91,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
         if (mHttpProvider == null) {
             mHttpProvider = new DefaultHttpProvider(getSerializer(),
                     getAuthenticationProvider(),
-                    getExecutors(),
-                    getLogger());
-            mLogger.logDebug("Created DefaultHttpProvider");
+                    getExecutors());
         }
         return mHttpProvider;
     }
@@ -120,8 +104,8 @@ public abstract class DefaultClientConfig implements IClientConfig {
     @Override
     public ISerializer getSerializer() {
         if (mSerializer == null) {
-            mSerializer = new DefaultSerializer(getLogger());
-            mLogger.logDebug("Created DefaultSerializer");
+            mSerializer = new DefaultSerializer();
+           
         }
         return mSerializer;
     }
@@ -134,22 +118,9 @@ public abstract class DefaultClientConfig implements IClientConfig {
     @Override
     public IExecutors getExecutors() {
         if (mExecutors == null) {
-            mExecutors = new DefaultExecutors(getLogger());
-            mLogger.logDebug("Created DefaultExecutors");
+            mExecutors = new DefaultExecutors();
         }
         return mExecutors;
     }
 
-    /**
-     * Gets the logger.
-     *
-     * @return The logger.
-     */
-    public ILogger getLogger() {
-        if (mLogger == null) {
-            mLogger = new DefaultLogger();
-            mLogger.logDebug("Created DefaultLogger");
-        }
-        return mLogger;
-    }
 }

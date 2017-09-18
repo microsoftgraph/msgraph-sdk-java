@@ -16,8 +16,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.authentication.*;
-import com.microsoft.graph.logger.*;
-import android.app.Activity;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -82,15 +80,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
             return this;
         }
 
-        /**
-         * Sets the logger
-         * @param logger The logger
-         * @return the instance of this builder
-         */
-        public Builder logger(final ILogger logger) {
-            mClient.setLogger(logger);
-            return this;
-        }
 
         /**
          * Set this builder based on the client configuration
@@ -101,7 +90,6 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
             return this.authenticationProvider(clientConfig.getAuthenticationProvider())
                        .executors(clientConfig.getExecutors())
                        .httpProvider(clientConfig.getHttpProvider())
-                       .logger(clientConfig.getLogger())
                        .serializer(clientConfig.getSerializer());
         }
 

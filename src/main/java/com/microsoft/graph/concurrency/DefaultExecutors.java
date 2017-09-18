@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.concurrency;
 
-import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.core.ClientException;
 
 import java.util.concurrent.Executors;
@@ -44,16 +43,10 @@ public class DefaultExecutors implements IExecutors {
     private final SynchronousExecutor mForegroundExecutor;
 
     /**
-     * The logger.
-     */
-    private final ILogger mLogger;
-
-    /**
      * Creates a new instance of the DefaultExecutors.
      * @param logger The logger.
      */
-    public DefaultExecutors(final ILogger logger) {
-        mLogger = logger;
+    public DefaultExecutors() {
         mBackgroundExecutor = (ThreadPoolExecutor)Executors.newCachedThreadPool();
         mForegroundExecutor = new SynchronousExecutor();
     }
@@ -64,8 +57,7 @@ public class DefaultExecutors implements IExecutors {
      */
     @Override
     public void performOnBackground(final Runnable runnable) {
-        mLogger.logDebug("Starting background task, current active count: "
-                         + mBackgroundExecutor.getActiveCount());
+
         mBackgroundExecutor.execute(runnable);
     }
 
@@ -78,10 +70,7 @@ public class DefaultExecutors implements IExecutors {
     @Override
     public <Result> void performOnForeground(final Result result,
                                              final ICallback<Result> callback) {
-        mLogger.logDebug("Starting foreground task, current active count:"
-                         + mForegroundExecutor.getActiveCount()
-                         + ", with result "
-                         + result);
+
         mForegroundExecutor.execute(new Runnable() {
             @Override
             public void run() {
@@ -100,12 +89,7 @@ public class DefaultExecutors implements IExecutors {
     public <Result> void performOnForeground(final int progress,
                                              final int progressMax,
                                              final IProgressCallback<Result> callback) {
-        mLogger.logDebug("Starting foreground task, current active count:"
-                         + mForegroundExecutor.getActiveCount()
-                         + ", with progress  "
-                         + progress
-                         + ", max progress"
-                         + progressMax);
+
         mForegroundExecutor.execute(new Runnable() {
             @Override
             public void run() {
@@ -122,10 +106,7 @@ public class DefaultExecutors implements IExecutors {
     @Override
     public <Result> void performOnForeground(final ClientException exception,
                                              final ICallback<Result> callback) {
-        mLogger.logDebug("Starting foreground task, current active count:"
-                         + mForegroundExecutor.getActiveCount()
-                         + ", with exception "
-                         + exception);
+
         mForegroundExecutor.execute(new Runnable() {
             @Override
             public void run() {

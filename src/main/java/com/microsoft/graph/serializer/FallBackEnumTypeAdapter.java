@@ -7,8 +7,6 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.JsonWriter;
-import com.microsoft.graph.logger.DefaultLogger;
-import com.microsoft.graph.logger.ILogger;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -23,11 +21,6 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
      * The unexpected value constant
      */
     private static final String NO_KNOWN_VALUE = "unexpectedValue";
-
-    /**
-     * The logger instance
-     */
-    private final ILogger mLogger = new DefaultLogger();
 
     /**
      * Creates the type adapter
@@ -64,11 +57,7 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
                     String value = reader.nextString();
                     T incoming = enumValues.get(value);
                     if (incoming == null) {
-                        mLogger.logDebug(
-                                String.format(
-                                        "The following value %s could not be recognized as a member of the enum",
-                                        value)
-                        );
+
                         return enumValues.get(NO_KNOWN_VALUE);
                     }
                     return incoming;
