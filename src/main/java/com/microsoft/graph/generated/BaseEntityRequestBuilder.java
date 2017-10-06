@@ -116,6 +116,10 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroup"), getClient(), null);
     }
 
+    public IPersonRequestBuilder person() {
+        return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment("person"), getClient(), null);
+    }
+
     public IContactFolderRequestBuilder contactFolder() {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolder"), getClient(), null);
     }
@@ -148,6 +152,18 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassificationOverride"), getClient(), null);
     }
 
+    public IColumnDefinitionRequestBuilder columnDefinition() {
+        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columnDefinition"), getClient(), null);
+    }
+
+    public IColumnLinkRequestBuilder columnLink() {
+        return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLink"), getClient(), null);
+    }
+
+    public IContentTypeRequestBuilder contentType() {
+        return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentType"), getClient(), null);
+    }
+
     public IPermissionRequestBuilder permission() {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permission"), getClient(), null);
     }
@@ -160,12 +176,8 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
         return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
     }
 
-    public ISharePointRequestBuilder sharePoint() {
-        return new SharePointRequestBuilder(getRequestUrlWithAdditionalSegment("sharePoint"), getClient(), null);
-    }
-
-    public IListRequestBuilder list() {
-        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
+    public IFieldValueSetRequestBuilder fieldValueSet() {
+        return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fieldValueSet"), getClient(), null);
     }
 
     public IWorkbookApplicationRequestBuilder workbookApplication() {

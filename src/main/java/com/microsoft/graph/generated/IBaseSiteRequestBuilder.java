@@ -31,6 +31,14 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
      */
     ISiteRequest buildRequest(final java.util.List<Option> requestOptions);
 
+    IColumnDefinitionCollectionRequestBuilder getColumns();
+
+    IColumnDefinitionRequestBuilder getColumns(final String id);
+
+    IContentTypeCollectionRequestBuilder getContentTypes();
+
+    IContentTypeRequestBuilder getContentTypes(final String id);
+
     /**
      * Gets the request builder for Drive.
      */
@@ -39,6 +47,14 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     IDriveCollectionRequestBuilder getDrives();
 
     IDriveRequestBuilder getDrives(final String id);
+
+    IBaseItemCollectionRequestBuilder getItems();
+
+    IBaseItemRequestBuilder getItems(final String id);
+
+    IListCollectionRequestBuilder getLists();
+
+    IListRequestBuilder getLists(final String id);
 
     ISiteCollectionRequestBuilder getSites();
 

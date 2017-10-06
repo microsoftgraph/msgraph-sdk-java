@@ -28,13 +28,13 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String message, final java.util.List<DriveRecipient> recipients, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation) {
+    public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("message", message);
-          mBodyParams.put("recipients", recipients);
-          mBodyParams.put("requireSignIn", requireSignIn);
+        mBodyParams.put("requireSignIn", requireSignIn);
           mBodyParams.put("roles", roles);
           mBodyParams.put("sendInvitation", sendInvitation);
+          mBodyParams.put("message", message);
+          mBodyParams.put("recipients", recipients);
       }
 
     public IDriveItemInviteCollectionRequest buildRequest() {
@@ -48,12 +48,6 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
                 requestOptions
         );
 
-        if (hasParameter("message")) {
-            request.mBody.message = getParameter("message");
-        }
-        if (hasParameter("recipients")) {
-            request.mBody.recipients = getParameter("recipients");
-        }
         if (hasParameter("requireSignIn")) {
             request.mBody.requireSignIn = getParameter("requireSignIn");
         }
@@ -62,6 +56,12 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
         }
         if (hasParameter("sendInvitation")) {
             request.mBody.sendInvitation = getParameter("sendInvitation");
+        }
+        if (hasParameter("message")) {
+            request.mBody.message = getParameter("message");
+        }
+        if (hasParameter("recipients")) {
+            request.mBody.recipients = getParameter("recipients");
         }
   
         return request;

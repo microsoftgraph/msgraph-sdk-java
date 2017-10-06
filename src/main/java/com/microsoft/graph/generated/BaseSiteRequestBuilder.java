@@ -47,6 +47,20 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
         return new SiteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    public IColumnDefinitionCollectionRequestBuilder getColumns() {
+        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    }
+
+    public IColumnDefinitionRequestBuilder getColumns(final String id) {
+        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    }
+    public IContentTypeCollectionRequestBuilder getContentTypes() {
+        return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
+    }
+
+    public IContentTypeRequestBuilder getContentTypes(final String id) {
+        return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Drive.
@@ -60,6 +74,20 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     public IDriveRequestBuilder getDrives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
+    }
+    public IBaseItemCollectionRequestBuilder getItems() {
+        return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    }
+
+    public IBaseItemRequestBuilder getItems(final String id) {
+        return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    }
+    public IListCollectionRequestBuilder getLists() {
+        return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
+    }
+
+    public IListRequestBuilder getLists(final String id) {
+        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
     public ISiteCollectionRequestBuilder getSites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);

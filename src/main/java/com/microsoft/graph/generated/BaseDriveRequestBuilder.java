@@ -56,6 +56,13 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
+     * Gets the request builder for List.
+     */
+    public IListRequestBuilder getList() {
+        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for DriveItem.
      */
     public IDriveItemRequestBuilder getRoot() {

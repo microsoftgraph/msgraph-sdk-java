@@ -48,11 +48,7 @@ public class BaseOnenoteResourceRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public IOnenoteResourceStreamRequestBuilder getMsgraph_Content() {
-        return new OnenoteResourceStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
-    }
-
     public IOnenoteResourceStreamRequestBuilder getContent() {
-        return new OnenoteResourceStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+        return new OnenoteResourceStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }

@@ -35,7 +35,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * The full title for the site. Read-only.
+     * The full title for the site. Read-only.
      */
     @SerializedName("displayName")
     @Expose
@@ -43,7 +43,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Root.
-	 * If present, indicates that this is the root site in the site collection. Read-only.
+     * If present, indicates that this is the root site in the site collection. Read-only.
      */
     @SerializedName("root")
     @Expose
@@ -51,7 +51,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-	 * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
     @SerializedName("sharepointIds")
     @Expose
@@ -59,15 +59,27 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Site Collection.
-	 * Provides details about the site's site collection. Available only on the root site. Read-only.
+     * Provides details about the site's site collection. Available only on the root site. Read-only.
      */
     @SerializedName("siteCollection")
     @Expose
     public SiteCollection siteCollection;
 
     /**
+     * The Columns.
+     * 
+     */
+    public transient ColumnDefinitionCollectionPage columns;
+
+    /**
+     * The Content Types.
+     * 
+     */
+    public transient ContentTypeCollectionPage contentTypes;
+
+    /**
      * The Drive.
-	 * The default drive (document library) for this site.
+     * The default drive (document library) for this site.
      */
     @SerializedName("drive")
     @Expose
@@ -75,19 +87,31 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drives.
-	 * The collection of drives (document libraries) under this site.
+     * The collection of drives (document libraries) under this site.
      */
     public transient DriveCollectionPage drives;
 
     /**
+     * The Items.
+     * Used to address any item contained in this site. This collection cannot be enumerated.
+     */
+    public transient BaseItemCollectionPage items;
+
+    /**
+     * The Lists.
+     * 
+     */
+    public transient ListCollectionPage lists;
+
+    /**
      * The Sites.
-	 * The collection of the sub-sites under this site.
+     * The collection of the sub-sites under this site.
      */
     public transient SiteCollectionPage sites;
 
     /**
      * The Onenote.
-	 * Calls the OneNote service for notebook related operations.
+     * Calls the OneNote service for notebook related operations.
      */
     @SerializedName("onenote")
     @Expose
@@ -131,6 +155,38 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
         mRawObject = json;
 
 
+        if (json.has("columns")) {
+            final BaseColumnDefinitionCollectionResponse response = new BaseColumnDefinitionCollectionResponse();
+            if (json.has("columns@odata.nextLink")) {
+                response.nextLink = json.get("columns@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("columns").toString(), JsonObject[].class);
+            final ColumnDefinition[] array = new ColumnDefinition[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ColumnDefinition.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            columns = new ColumnDefinitionCollectionPage(response, null);
+        }
+
+        if (json.has("contentTypes")) {
+            final BaseContentTypeCollectionResponse response = new BaseContentTypeCollectionResponse();
+            if (json.has("contentTypes@odata.nextLink")) {
+                response.nextLink = json.get("contentTypes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contentTypes").toString(), JsonObject[].class);
+            final ContentType[] array = new ContentType[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContentType.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            contentTypes = new ContentTypeCollectionPage(response, null);
+        }
+
         if (json.has("drives")) {
             final BaseDriveCollectionResponse response = new BaseDriveCollectionResponse();
             if (json.has("drives@odata.nextLink")) {
@@ -145,6 +201,38 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             drives = new DriveCollectionPage(response, null);
+        }
+
+        if (json.has("items")) {
+            final BaseBaseItemCollectionResponse response = new BaseBaseItemCollectionResponse();
+            if (json.has("items@odata.nextLink")) {
+                response.nextLink = json.get("items@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
+            final BaseItem[] array = new BaseItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), BaseItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            items = new BaseItemCollectionPage(response, null);
+        }
+
+        if (json.has("lists")) {
+            final BaseListCollectionResponse response = new BaseListCollectionResponse();
+            if (json.has("lists@odata.nextLink")) {
+                response.nextLink = json.get("lists@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("lists").toString(), JsonObject[].class);
+            final List[] array = new List[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), List.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            lists = new ListCollectionPage(response, null);
         }
 
         if (json.has("sites")) {

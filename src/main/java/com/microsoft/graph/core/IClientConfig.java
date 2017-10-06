@@ -25,6 +25,7 @@ package com.microsoft.graph.core;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
+import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
@@ -48,6 +49,12 @@ public interface IClientConfig {
      * @return The http provider.
      */
     IHttpProvider getHttpProvider();
+
+    /**
+     * Gets the logger.
+     * @return The logger.
+     */
+    ILogger getLogger();
 
     /**
      * Gets the serializer.

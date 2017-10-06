@@ -22,6 +22,8 @@
 
 package com.microsoft.graph.http;
 
+
+import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
@@ -52,5 +54,6 @@ public interface IStatefulResponseHandler<ResultType, DeserializedType> {
      */
     ResultType generateResult(final IHttpRequest request,
                               final IConnection connection,
-                              final ISerializer serializer) throws Exception;
+                              final ISerializer serializer,
+                              final ILogger logger) throws Exception;
 }

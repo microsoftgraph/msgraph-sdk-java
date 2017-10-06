@@ -47,4 +47,32 @@ public class BaseListRequestBuilder extends BaseRequestBuilder implements IBaseL
         return new ListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
+    public IColumnDefinitionCollectionRequestBuilder getColumns() {
+        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    }
+
+    public IColumnDefinitionRequestBuilder getColumns(final String id) {
+        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    }
+    public IContentTypeCollectionRequestBuilder getContentTypes() {
+        return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
+    }
+
+    public IContentTypeRequestBuilder getContentTypes(final String id) {
+        return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Drive.
+     */
+    public IDriveRequestBuilder getDrive() {
+        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
+    }
+    public IListItemCollectionRequestBuilder getItems() {
+        return new ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    }
+
+    public IListItemRequestBuilder getItems(final String id) {
+        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    }
 }

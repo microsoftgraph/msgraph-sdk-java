@@ -54,6 +54,13 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     public IDriveItemRequestBuilder getChildren(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for ListItem.
+     */
+    public IListItemRequestBuilder getListItem() {
+        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    }
     public IPermissionCollectionRequestBuilder getPermissions() {
         return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
     }
@@ -93,7 +100,7 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     public IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
-        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, message, recipients, requireSignIn, roles, sendInvitation);
+        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients);
     }
 
     public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {

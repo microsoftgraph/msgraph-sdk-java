@@ -35,7 +35,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Owner.
-	 * Information about the owner of the shared item being referenced.
+     * Information about the owner of the shared item being referenced.
      */
     @SerializedName("owner")
     @Expose
@@ -43,7 +43,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Item.
-	 * A driveItem for the resource that was shared.  This is identical to the root property.
+     * A driveItem for the resource that was shared.  This is identical to the root property.
      */
     @SerializedName("driveItem")
     @Expose
@@ -51,13 +51,29 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-	 * A collection of shared driveItem resources. This collection cannot be enumerated, but items can be accessed by their unique ID.
+     * A collection of shared driveItem resources. This collection cannot be enumerated, but items can be accessed by their unique ID.
      */
     public transient DriveItemCollectionPage items;
 
     /**
+     * The List.
+     * 
+     */
+    @SerializedName("list")
+    @Expose
+    public List list;
+
+    /**
+     * The List Item.
+     * 
+     */
+    @SerializedName("listItem")
+    @Expose
+    public ListItem listItem;
+
+    /**
      * The Root.
-	 * The top level shared driveItem. If a single file is shared, this item is the file. If a folder is shared, this item will be the folder. You can use the item's facets to determine which case applies.
+     * The top level shared driveItem. If a single file is shared, this item is the file. If a folder is shared, this item will be the folder. You can use the item's facets to determine which case applies.
      */
     @SerializedName("root")
     @Expose
@@ -65,7 +81,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Site.
-	 * A site resource that contains the item that was shared.
+     * A site resource that contains the item that was shared.
      */
     @SerializedName("site")
     @Expose

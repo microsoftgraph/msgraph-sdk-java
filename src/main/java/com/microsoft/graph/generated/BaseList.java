@@ -26,12 +26,70 @@ import java.util.Map;
 /**
  * The class for the Base List.
  */
-public class BaseList extends Entity implements IJsonBackedObject {
+public class BaseList extends BaseItem implements IJsonBackedObject {
 
 
     public BaseList() {
         oDataType = "microsoft.graph.list";
     }
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The List.
+     * 
+     */
+    @SerializedName("list")
+    @Expose
+    public ListInfo list;
+
+    /**
+     * The Sharepoint Ids.
+     * 
+     */
+    @SerializedName("sharepointIds")
+    @Expose
+    public SharepointIds sharepointIds;
+
+    /**
+     * The System.
+     * 
+     */
+    @SerializedName("system")
+    @Expose
+    public SystemFacet system;
+
+    /**
+     * The Columns.
+     * 
+     */
+    public transient ColumnDefinitionCollectionPage columns;
+
+    /**
+     * The Content Types.
+     * 
+     */
+    public transient ContentTypeCollectionPage contentTypes;
+
+    /**
+     * The Drive.
+     * 
+     */
+    @SerializedName("drive")
+    @Expose
+    public Drive drive;
+
+    /**
+     * The Items.
+     * 
+     */
+    public transient ListItemCollectionPage items;
 
 
     /**
@@ -70,5 +128,53 @@ public class BaseList extends Entity implements IJsonBackedObject {
         mSerializer = serializer;
         mRawObject = json;
 
+
+        if (json.has("columns")) {
+            final BaseColumnDefinitionCollectionResponse response = new BaseColumnDefinitionCollectionResponse();
+            if (json.has("columns@odata.nextLink")) {
+                response.nextLink = json.get("columns@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("columns").toString(), JsonObject[].class);
+            final ColumnDefinition[] array = new ColumnDefinition[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ColumnDefinition.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            columns = new ColumnDefinitionCollectionPage(response, null);
+        }
+
+        if (json.has("contentTypes")) {
+            final BaseContentTypeCollectionResponse response = new BaseContentTypeCollectionResponse();
+            if (json.has("contentTypes@odata.nextLink")) {
+                response.nextLink = json.get("contentTypes@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("contentTypes").toString(), JsonObject[].class);
+            final ContentType[] array = new ContentType[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContentType.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            contentTypes = new ContentTypeCollectionPage(response, null);
+        }
+
+        if (json.has("items")) {
+            final BaseListItemCollectionResponse response = new BaseListItemCollectionResponse();
+            if (json.has("items@odata.nextLink")) {
+                response.nextLink = json.get("items@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("items").toString(), JsonObject[].class);
+            final ListItem[] array = new ListItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ListItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            items = new ListItemCollectionPage(response, null);
+        }
     }
 }

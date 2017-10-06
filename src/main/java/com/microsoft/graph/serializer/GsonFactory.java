@@ -31,6 +31,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.model.DateOnly;
 
 import java.lang.reflect.Type;
@@ -59,7 +60,7 @@ final class GsonFactory {
      * @param logger The logger.
      * @return The new instance.
      */
-    public static Gson getGsonInstance() {
+    public static Gson getGsonInstance(final ILogger logger) {
 
         final JsonSerializer<Calendar> calendarJsonSerializer = new JsonSerializer<Calendar>() {
             @Override
@@ -72,6 +73,7 @@ final class GsonFactory {
                 try {
                     return new JsonPrimitive(CalendarSerializer.serialize(src));
                 } catch (final Exception e) {
+                    logger.logError("Parsing issue on " + src, e);
                     return null;
                 }
             }
@@ -88,6 +90,7 @@ final class GsonFactory {
                 try {
                     return CalendarSerializer.deserialize(json.getAsString());
                 } catch (final ParseException e) {
+                    logger.logError("Parsing issue on " + json.getAsString(), e);
                     return null;
                 }
             }
@@ -104,6 +107,7 @@ final class GsonFactory {
                 try {
                     return new JsonPrimitive(ByteArraySerializer.serialize(src));
                 } catch (final Exception e) {
+                    logger.logError("Parsing issue on " + src, e);
                     return null;
                 }
             }
@@ -120,6 +124,7 @@ final class GsonFactory {
                 try {
                     return ByteArraySerializer.deserialize(json.getAsString());
                 } catch (final ParseException e) {
+                    logger.logError("Parsing issue on " + json.getAsString(), e);
                     return null;
                 }
             }
@@ -149,6 +154,7 @@ final class GsonFactory {
                 try {
                     return DateOnly.parse(json.getAsString());
                 } catch (final ParseException e) {
+                    logger.logError("Parsing issue on " + json.getAsString(), e);
                     return null;
                 }
             }

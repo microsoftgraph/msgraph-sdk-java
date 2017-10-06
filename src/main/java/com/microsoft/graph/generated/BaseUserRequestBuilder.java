@@ -159,6 +159,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     public IEventRequestBuilder getEvents(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
+    public IPersonCollectionRequestBuilder getPeople() {
+        return new PersonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
+    }
+
+    public IPersonRequestBuilder getPeople(final String id) {
+        return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment("people") + "/" + id, getClient(), null);
+    }
     public IContactCollectionRequestBuilder getContacts() {
         return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
     }

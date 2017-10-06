@@ -97,6 +97,10 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     IEventRequestBuilder getEvents(final String id);
 
+    IPersonCollectionRequestBuilder getPeople();
+
+    IPersonRequestBuilder getPeople(final String id);
+
     IContactCollectionRequestBuilder getContacts();
 
     IContactRequestBuilder getContacts(final String id);

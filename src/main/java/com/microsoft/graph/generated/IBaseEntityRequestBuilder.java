@@ -65,6 +65,8 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     ICalendarGroupRequestBuilder calendarGroup();
 
+    IPersonRequestBuilder person();
+
     IContactFolderRequestBuilder contactFolder();
 
     IInferenceClassificationRequestBuilder inferenceClassification();
@@ -81,15 +83,19 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
 
     IInferenceClassificationOverrideRequestBuilder inferenceClassificationOverride();
 
+    IColumnDefinitionRequestBuilder columnDefinition();
+
+    IColumnLinkRequestBuilder columnLink();
+
+    IContentTypeRequestBuilder contentType();
+
     IPermissionRequestBuilder permission();
 
     IThumbnailSetRequestBuilder thumbnailSet();
 
     IWorkbookRequestBuilder workbook();
 
-    ISharePointRequestBuilder sharePoint();
-
-    IListRequestBuilder list();
+    IFieldValueSetRequestBuilder fieldValueSet();
 
     IWorkbookApplicationRequestBuilder workbookApplication();
 

@@ -45,11 +45,19 @@ public class BaseFolder implements IJsonBackedObject {
 
     /**
      * The Child Count.
-	 * Number of children contained immediately within this container.
+     * Number of children contained immediately within this container.
      */
     @SerializedName("childCount")
     @Expose
     public Integer childCount;
+
+    /**
+     * The View.
+     * 
+     */
+    @SerializedName("view")
+    @Expose
+    public FolderView view;
 
 
     /**

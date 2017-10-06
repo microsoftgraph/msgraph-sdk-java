@@ -37,6 +37,10 @@ public interface IBaseBaseItemRequestBuilder extends IRequestBuilder {
 
     IDriveItemRequestBuilder driveItem();
 
+    IListRequestBuilder list();
+
+    IListItemRequestBuilder listItem();
+
     ISharedDriveItemRequestBuilder sharedDriveItem();
 
     /**

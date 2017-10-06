@@ -45,15 +45,23 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Drive Id.
-	 * Unique identifier of the drive instance that contains the item. Read-only.
+     * Unique identifier of the drive instance that contains the item. Read-only.
      */
     @SerializedName("driveId")
     @Expose
     public String driveId;
 
     /**
+     * The Drive Type.
+     * 
+     */
+    @SerializedName("driveType")
+    @Expose
+    public String driveType;
+
+    /**
      * The Id.
-	 * Unique identifier of the item in the drive. Read-only.
+     * Unique identifier of the item in the drive. Read-only.
      */
     @SerializedName("id")
     @Expose
@@ -61,7 +69,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * The name of the item being referenced. Read-only.
+     * The name of the item being referenced. Read-only.
      */
     @SerializedName("name")
     @Expose
@@ -69,7 +77,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Path.
-	 * Path that can be used to navigate to the item. Read-only.
+     * Path that can be used to navigate to the item. Read-only.
      */
     @SerializedName("path")
     @Expose
@@ -77,7 +85,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Share Id.
-	 * A unique identifier for a shared resource that can be accessed via the Shares API.
+     * A unique identifier for a shared resource that can be accessed via the Shares API.
      */
     @SerializedName("shareId")
     @Expose
@@ -85,7 +93,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-	 * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
     @SerializedName("sharepointIds")
     @Expose

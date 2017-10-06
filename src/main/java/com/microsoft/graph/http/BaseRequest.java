@@ -23,6 +23,7 @@
 package com.microsoft.graph.http;
 
 import java.net.URI;
+import javax.ws.rs.core.UriBuilder;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.IBaseClient;
@@ -35,6 +36,7 @@ import com.microsoft.graph.options.Option;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -143,17 +145,16 @@ public abstract class BaseRequest implements IHttpRequest {
     public URL getRequestUrl() {
         String requestUrl = addFunctionParameters();
         URI baseUrl = URI.create(requestUrl);
-
-        //final URI.Builder uriBuilder = baseUrl.buildUpon();
+        final UriBuilder uriBuilder = UriBuilder.fromUri(baseUrl);
 
         for (final QueryOption option : mQueryOptions) {
-            //uriBuilder.appendQueryParameter(option.getName(), option.getValue().toString());
+        	uriBuilder.queryParam(option.getName(), option.getValue().toString());
         }
 
         try {
-            return new URL(requestUrl);
+            return new URL(uriBuilder.build().toString());
         } catch (final MalformedURLException e) {
-            throw new ClientException("Invalid URL: " + requestUrl, e, GraphErrorCodes.InvalidRequest);
+            throw new ClientException("Invalid URL: " + uriBuilder.toString(), e, GraphErrorCodes.InvalidRequest);
         }
     }
 

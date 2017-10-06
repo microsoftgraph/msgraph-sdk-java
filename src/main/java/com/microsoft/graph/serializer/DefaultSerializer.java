@@ -25,6 +25,7 @@ package com.microsoft.graph.serializer;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.microsoft.graph.logger.ILogger;
 
 import java.util.Map;
 
@@ -38,14 +39,19 @@ public class DefaultSerializer implements ISerializer {
      */
     private final Gson mGson;
 
+    /**
+     * The logger.
+     */
+    private final ILogger mLogger;
 
     /**
      * Creates a DefaultSerializer.
      *
      * @param logger The logger.
      */
-    public DefaultSerializer() {
-        mGson = GsonFactory.getGsonInstance();
+    public DefaultSerializer(final ILogger logger) {
+        mLogger = logger;
+        mGson = GsonFactory.getGsonInstance(logger);
     }
 
     /**
@@ -62,11 +68,13 @@ public class DefaultSerializer implements ISerializer {
 
         // Populate the json backed fields for any annotations that are not in the object model
         if (jsonObject instanceof IJsonBackedObject) {
+            mLogger.logDebug("Deserializing type " + clazz.getSimpleName());
             final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
             final JsonObject rawObject = mGson.fromJson(inputString, JsonObject.class);
             jsonBackedObject.setRawObject(this, rawObject);
             jsonBackedObject.getAdditionalDataManager().setAdditionalData(rawObject);
         } else {
+            mLogger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
         }
 
         return jsonObject;
@@ -81,6 +89,7 @@ public class DefaultSerializer implements ISerializer {
      */
     @Override
     public <T> String serializeObject(final T serializableObject) {
+        mLogger.logDebug("Serializing type " + serializableObject.getClass().getSimpleName());
         JsonElement outJsonTree = mGson.toJsonTree(serializableObject);
 
         if (serializableObject instanceof IJsonBackedObject) {

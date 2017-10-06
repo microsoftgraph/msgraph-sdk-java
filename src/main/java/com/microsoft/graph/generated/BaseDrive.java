@@ -66,10 +66,26 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
     public SharepointIds sharePointIds;
 
     /**
+     * The System.
+     * 
+     */
+    @SerializedName("system")
+    @Expose
+    public SystemFacet system;
+    
+    /**
      * The Items.
 	 * All items contained in the drive. Read-only. Nullable.
      */
     public transient DriveItemCollectionPage items;
+    
+    /**
+     * The List.
+     * 
+     */
+    @SerializedName("list")
+    @Expose
+    public List list;
 
     /**
      * The Root.

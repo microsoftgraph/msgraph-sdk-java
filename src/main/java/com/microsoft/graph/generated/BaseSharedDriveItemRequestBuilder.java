@@ -63,6 +63,20 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
     }
 
     /**
+     * Gets the request builder for List.
+     */
+    public IListRequestBuilder getList() {
+        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ListItem.
+     */
+    public IListItemRequestBuilder getListItem() {
+        return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for DriveItem.
      */
     public IDriveItemRequestBuilder getRoot() {

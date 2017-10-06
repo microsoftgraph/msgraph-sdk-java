@@ -29,7 +29,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseDriveItemInvite
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String message, final java.util.List<DriveRecipient> recipients, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation) {
-        super(requestUrl, client, requestOptions, message, recipients, requireSignIn, roles, sendInvitation);
+    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
+        super(requestUrl, client, requestOptions, requireSignIn, roles, sendInvitation, message, recipients);
     }
 }

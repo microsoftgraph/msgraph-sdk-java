@@ -36,6 +36,11 @@ public interface IBaseDriveRequestBuilder extends IRequestBuilder {
     IDriveItemRequestBuilder getItems(final String id);
 
     /**
+     * Gets the request builder for List.
+     */
+    IListRequestBuilder getList();
+
+    /**
      * Gets the request builder for DriveItem.
      */
     IDriveItemRequestBuilder getRoot();

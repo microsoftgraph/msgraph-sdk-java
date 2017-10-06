@@ -30,6 +30,7 @@ import com.microsoft.graph.http.HttpResponseCode;
 import com.microsoft.graph.http.IConnection;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
+import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 import java.io.BufferedInputStream;
@@ -80,12 +81,13 @@ public class ChunkedUploadResponseHandler<UploadType>
     public ChunkedUploadResult generateResult(
             final IHttpRequest request,
             final IConnection connection,
-            final ISerializer serializer) throws Exception {
+            final ISerializer serializer,
+            final ILogger logger) throws Exception {
         InputStream in = null;
 
         try {
             if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
-
+                logger.logDebug("Chunk bytes has been accepted by the server.");
                 in = new BufferedInputStream(connection.getInputStream());
                 final UploadSession seesion = serializer.deserializeObject(
                         DefaultHttpProvider.streamToString(in), UploadSession.class);
@@ -94,7 +96,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 
             } else if (connection.getResponseCode() == HttpResponseCode.HTTP_CREATED
                     || connection.getResponseCode() == HttpResponseCode.HTTP_OK) {
-
+                logger.logDebug("Upload session is completed, uploaded item returned.");
                 in = new BufferedInputStream(connection.getInputStream());
                 String rawJson = DefaultHttpProvider.streamToString(in);
                 UploadType uploadedItem = serializer.deserializeObject(rawJson,
@@ -102,7 +104,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 
                 return new ChunkedUploadResult(uploadedItem);
             } else if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-
+                logger.logDebug("Receiving error during upload, see detail on result error");
 
                 return new ChunkedUploadResult(
                         GraphServiceException.createFromConnection(request, null, serializer,

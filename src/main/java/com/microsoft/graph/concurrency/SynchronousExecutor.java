@@ -40,7 +40,9 @@ public class SynchronousExecutor implements Executor {
      * @param runnable The task to run on the main thread.
      */
     @Override public void execute(final Runnable runnable) {
-
+    	mActiveCount.incrementAndGet();
+    	runnable.run();
+    	mActiveCount.decrementAndGet();
     }
 
     /**

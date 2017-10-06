@@ -44,8 +44,40 @@ public class BaseVideo implements IJsonBackedObject {
     }
 
     /**
+     * The Audio Bits Per Sample.
+     * 
+     */
+    @SerializedName("audioBitsPerSample")
+    @Expose
+    public Integer audioBitsPerSample;
+
+    /**
+     * The Audio Channels.
+     * 
+     */
+    @SerializedName("audioChannels")
+    @Expose
+    public Integer audioChannels;
+
+    /**
+     * The Audio Format.
+     * 
+     */
+    @SerializedName("audioFormat")
+    @Expose
+    public String audioFormat;
+
+    /**
+     * The Audio Samples Per Second.
+     * 
+     */
+    @SerializedName("audioSamplesPerSecond")
+    @Expose
+    public Integer audioSamplesPerSecond;
+
+    /**
      * The Bitrate.
-	 * Bit rate of the video in bits per second.
+     * Bit rate of the video in bits per second.
      */
     @SerializedName("bitrate")
     @Expose
@@ -53,15 +85,31 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Duration.
-	 * Duration of the file in milliseconds.
+     * Duration of the file in milliseconds.
      */
     @SerializedName("duration")
     @Expose
     public Long duration;
 
     /**
+     * The Four CC.
+     * 
+     */
+    @SerializedName("fourCC")
+    @Expose
+    public String fourCC;
+
+    /**
+     * The Frame Rate.
+     * 
+     */
+    @SerializedName("frameRate")
+    @Expose
+    public Double frameRate;
+
+    /**
      * The Height.
-	 * Height of the video, in pixels.
+     * Height of the video, in pixels.
      */
     @SerializedName("height")
     @Expose
@@ -69,7 +117,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Width.
-	 * Width of the video, in pixels.
+     * Width of the video, in pixels.
      */
     @SerializedName("width")
     @Expose

@@ -35,6 +35,11 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
 
     IDriveItemRequestBuilder getChildren(final String id);
 
+    /**
+     * Gets the request builder for ListItem.
+     */
+    IListItemRequestBuilder getListItem();
+
     IPermissionCollectionRequestBuilder getPermissions();
 
     IPermissionRequestBuilder getPermissions(final String id);

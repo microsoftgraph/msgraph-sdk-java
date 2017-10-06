@@ -190,6 +190,14 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 	 * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      */
     public transient DriveItemCollectionPage children;
+    
+    /**
+     * The List Item.
+     * 
+     */
+    @SerializedName("listItem")
+    @Expose
+    public ListItem listItem;
 
     /**
      * The Permissions.

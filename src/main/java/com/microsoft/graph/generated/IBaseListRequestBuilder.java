@@ -31,4 +31,21 @@ public interface IBaseListRequestBuilder extends IRequestBuilder {
      */
     IListRequest buildRequest(final java.util.List<Option> requestOptions);
 
+    IColumnDefinitionCollectionRequestBuilder getColumns();
+
+    IColumnDefinitionRequestBuilder getColumns(final String id);
+
+    IContentTypeCollectionRequestBuilder getContentTypes();
+
+    IContentTypeRequestBuilder getContentTypes(final String id);
+
+    /**
+     * Gets the request builder for Drive.
+     */
+    IDriveRequestBuilder getDrive();
+
+    IListItemCollectionRequestBuilder getItems();
+
+    IListItemRequestBuilder getItems(final String id);
+
 }
