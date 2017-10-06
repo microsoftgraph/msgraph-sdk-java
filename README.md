@@ -1,12 +1,10 @@
-# Get started with the Microsoft Graph SDK for Android
+# Get started with the Microsoft Graph SDK for Java
 
-[ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/msgraph-sdk-android/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/msgraph-sdk-android/_latestVersion)
-
-Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Android application!
+Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
 
 ## 1. Installation
 ### 1.1 Install AAR via Gradle
-Add the JCenter repository and a compile dependency for `msgraph-sdk-android` to your project's `build.gradle`
+Add the JCenter repository and a compile dependency for `msicrosoft-graph` to your project's `build.gradle`
 
 ```gradle
 repository {
@@ -15,14 +13,14 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:msgraph-sdk-android:1.2.+')
+    compile('com.microsoft.graph:1.2.+')
 
     // Include the gson dependency
     compile('com.google.code.gson:gson:2.3.1')
 }
 ```
 
-### 1.2 Enable ProGuard
+### 1.2 Enable ProGuard (Android)
 The nature of the Graph API is such that the SDK needs quite a large set of classes to describe its functionality. You will need to ensure that [ProGuard](https://developer.android.com/studio/build/shrink-code.html) is enabled on your project. Otherwise, you will incur long build times for functionality that is not necessary relevant to your particular application. If you are still hitting the 64k method limit, you can also enable [multidexing](https://developer.android.com/studio/build/multidex.html).
 
 ## 2. Getting started
@@ -42,7 +40,7 @@ For an example of authentication in a client application see the [MSGraph SDK An
 
 ### 2.3 Get a GraphServiceClient object
 
-Once you have set the correct application Id and url, you must get a **GraphServiceClient** object to make requests against the service. The SDK will store the account information for you, but when a user logs on for the first time, it will invoke UI to get the user's account information.
+Once you have set the correct application ID and url, you must get a **GraphServiceClient** object to make requests against the service. The SDK will store the account information for you, but when a user logs on for the first time, it will invoke UI to get the user's account information.
 
 ```java
 final IClientConfig mCLientConfig = DefaultClientConfig
@@ -96,14 +94,14 @@ For a more detailed documentation see:
 
 ## 5. Issues
 
-For known issues, see [issues](https://github.com/MicrosoftGraph/sdk-android/issues).
+For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-android/issues).
 
 ## 6. Contributions
 
 The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](docs/contributions.md).
 
-## 7. Supported Android Versions
-The Microsoft Graph SDK for Android library is supported at runtime for [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater. To build the sdk you need to install Android API revision 23 or greater.
+## 7. Supported Java Versions
+The Microsoft Graph SDK for Java library is supported at runtime for Java 6+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater. To build the sdk you need to install Android API revision 23 or greater.
 
 ## 8. License
 
