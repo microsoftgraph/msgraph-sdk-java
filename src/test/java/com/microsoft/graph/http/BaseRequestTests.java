@@ -150,16 +150,16 @@ public class BaseRequestTests {
 
     @Test
     public void testProtectedProperties() {
-        assertEquals(0, request.mFunctionOptions.size());
-        assertEquals(0, request.mQueryOptions.size());
+        assertEquals(0, request.functionOptions.size());
+        assertEquals(0, request.queryOptions.size());
         final Option q1 = new QueryOption("q1","option1 ");
         final Option f1 = new FunctionOption("f1","option2");
         final BaseRequest request = new BaseRequest("https://a.b.c", null, Arrays.asList(q1,f1), null){};
-        assertEquals(1, request.mFunctionOptions.size());
-        assertEquals(1, request.mQueryOptions.size());
-        assertEquals("q1", request.mQueryOptions.get(0).getName());
-        assertEquals("option1 ", request.mQueryOptions.get(0).getValue());
-        assertEquals("f1", request.mFunctionOptions.get(0).getName());
-        assertEquals("option2", request.mFunctionOptions.get(0).getValue());
+        assertEquals(1, request.functionOptions.size());
+        assertEquals(1, request.queryOptions.size());
+        assertEquals("q1", request.queryOptions.get(0).getName());
+        assertEquals("option1 ", request.queryOptions.get(0).getValue());
+        assertEquals("f1", request.functionOptions.get(0).getName());
+        assertEquals("option2", request.functionOptions.get(0).getValue());
     }
 }

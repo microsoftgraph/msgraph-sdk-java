@@ -30,8 +30,8 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
      */
     public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String type, final String scope) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("type", type);
-        mBodyParams.put("scope", scope);
+        bodyParams.put("type", type);
+        bodyParams.put("scope", scope);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
         );
 
         if (hasParameter("type")) {
-            request.mBody.type = getParameter("type");
+            request.body.type = getParameter("type");
         }
 
         if (hasParameter("scope")) {
-            request.mBody.scope = getParameter("scope");
+            request.body.scope = getParameter("scope");
         }
 
         return request;

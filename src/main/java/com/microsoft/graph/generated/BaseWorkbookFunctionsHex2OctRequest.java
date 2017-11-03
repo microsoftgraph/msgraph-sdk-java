@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Hex2Oct Request.
  */
 public class BaseWorkbookFunctionsHex2OctRequest extends BaseRequest implements IBaseWorkbookFunctionsHex2OctRequest {
-    protected final WorkbookFunctionsHex2OctBody mBody;
+    protected final WorkbookFunctionsHex2OctBody body;
 
     /**
      * The request for this WorkbookFunctionsHex2Oct
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsHex2OctRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsHex2OctRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsHex2OctBody();
+        body = new WorkbookFunctionsHex2OctBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

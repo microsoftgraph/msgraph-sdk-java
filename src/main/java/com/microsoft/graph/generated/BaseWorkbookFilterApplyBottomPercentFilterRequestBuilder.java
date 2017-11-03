@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder extends Ba
      */
     public BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer percent) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("percent", percent);
+        bodyParams.put("percent", percent);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder extends Ba
         );
 
         if (hasParameter("percent")) {
-            request.mBody.percent = getParameter("percent");
+            request.body.percent = getParameter("percent");
         }
 
         return request;

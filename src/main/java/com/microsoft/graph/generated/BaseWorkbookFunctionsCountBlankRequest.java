@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Count Blank Request.
  */
 public class BaseWorkbookFunctionsCountBlankRequest extends BaseRequest implements IBaseWorkbookFunctionsCountBlankRequest {
-    protected final WorkbookFunctionsCountBlankBody mBody;
+    protected final WorkbookFunctionsCountBlankBody body;
 
     /**
      * The request for this WorkbookFunctionsCountBlank
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCountBlankRequest extends BaseRequest implemen
      */
     public BaseWorkbookFunctionsCountBlankRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCountBlankBody();
+        body = new WorkbookFunctionsCountBlankBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

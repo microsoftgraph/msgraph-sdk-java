@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Pduration Request.
  */
 public class BaseWorkbookFunctionsPdurationRequest extends BaseRequest implements IBaseWorkbookFunctionsPdurationRequest {
-    protected final WorkbookFunctionsPdurationBody mBody;
+    protected final WorkbookFunctionsPdurationBody body;
 
     /**
      * The request for this WorkbookFunctionsPduration
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsPdurationRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsPdurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsPdurationBody();
+        body = new WorkbookFunctionsPdurationBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

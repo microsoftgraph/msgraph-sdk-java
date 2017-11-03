@@ -36,26 +36,26 @@ public class DefaultExecutors implements IExecutors {
     /**
      * The executor for handling background actions.
      */
-    private final ThreadPoolExecutor mBackgroundExecutor;
+    private final ThreadPoolExecutor backgroundExecutor;
 
     /**
      * The executor for handling foreground actions.
      */
-    private final SynchronousExecutor mForegroundExecutor;
+    private final SynchronousExecutor foregroundExecutor;
     
     /**
      * The logger.
      */
-    private final ILogger mLogger;
+    private final ILogger logger;
 
     /**
      * Creates a new instance of the DefaultExecutors.
      * @param logger The logger.
      */
     public DefaultExecutors(final ILogger logger) {
-    	mLogger = logger;
-        mBackgroundExecutor = (ThreadPoolExecutor)Executors.newCachedThreadPool();
-        mForegroundExecutor = new SynchronousExecutor();
+    	this.logger = logger;
+        backgroundExecutor = (ThreadPoolExecutor)Executors.newCachedThreadPool();
+        foregroundExecutor = new SynchronousExecutor();
     }
 
     /**
@@ -64,9 +64,9 @@ public class DefaultExecutors implements IExecutors {
      */
     @Override
     public void performOnBackground(final Runnable runnable) {
-    	mLogger.logDebug("Starting background task, current active count: "
-                + mBackgroundExecutor.getActiveCount());
-        mBackgroundExecutor.execute(runnable);
+    	logger.logDebug("Starting background task, current active count: "
+                + backgroundExecutor.getActiveCount());
+        backgroundExecutor.execute(runnable);
     }
 
     /**
@@ -78,11 +78,11 @@ public class DefaultExecutors implements IExecutors {
     @Override
     public <Result> void performOnForeground(final Result result,
                                              final ICallback<Result> callback) {
-    	mLogger.logDebug("Starting foreground task, current active count:"
-                + mForegroundExecutor.getActiveCount()
+    	logger.logDebug("Starting foreground task, current active count:"
+                + foregroundExecutor.getActiveCount()
                 + ", with result "
                 + result);
-        mForegroundExecutor.execute(new Runnable() {
+        foregroundExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 callback.success(result);
@@ -100,13 +100,13 @@ public class DefaultExecutors implements IExecutors {
     public <Result> void performOnForeground(final int progress,
                                              final int progressMax,
                                              final IProgressCallback<Result> callback) {
-    	mLogger.logDebug("Starting foreground task, current active count:"
-                + mForegroundExecutor.getActiveCount()
+    	logger.logDebug("Starting foreground task, current active count:"
+                + foregroundExecutor.getActiveCount()
                 + ", with progress  "
                 + progress
                 + ", max progress"
                 + progressMax);
-        mForegroundExecutor.execute(new Runnable() {
+        foregroundExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 callback.progress(progress, progressMax);
@@ -122,11 +122,11 @@ public class DefaultExecutors implements IExecutors {
     @Override
     public <Result> void performOnForeground(final ClientException exception,
                                              final ICallback<Result> callback) {
-    	mLogger.logDebug("Starting foreground task, current active count:"
-                + mForegroundExecutor.getActiveCount()
+    	logger.logDebug("Starting foreground task, current active count:"
+                + foregroundExecutor.getActiveCount()
                 + ", with exception "
                 + exception);
-        mForegroundExecutor.execute(new Runnable() {
+        foregroundExecutor.execute(new Runnable() {
             @Override
             public void run() {
                 callback.failure(exception);

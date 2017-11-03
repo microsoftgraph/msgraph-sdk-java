@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Im Sin Request.
  */
 public class BaseWorkbookFunctionsImSinRequest extends BaseRequest implements IBaseWorkbookFunctionsImSinRequest {
-    protected final WorkbookFunctionsImSinBody mBody;
+    protected final WorkbookFunctionsImSinBody body;
 
     /**
      * The request for this WorkbookFunctionsImSin
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsImSinRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsImSinRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsImSinBody();
+        body = new WorkbookFunctionsImSinBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

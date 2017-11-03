@@ -42,7 +42,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     /**
      * The base request for this collection request.
      */
-    private final BaseRequest mBaseRequest;
+    private final BaseRequest baseRequest;
 
     /**
      * Creates the stream request.
@@ -56,7 +56,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
                              final IBaseClient client,
                              final List<Option> options,
                              final Class<T> responseClass) {
-        mBaseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
+        baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
         };
     }
 
@@ -66,8 +66,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @param callback The callback when this request complements. The caller needs to close the stream.
      */
     protected void send(final ICallback<InputStream> callback) {
-        mBaseRequest.setHttpMethod(HttpMethod.GET);
-        mBaseRequest.getClient().getHttpProvider().send(this, callback, InputStream.class, null);
+        baseRequest.setHttpMethod(HttpMethod.GET);
+        baseRequest.getClient().getHttpProvider().send(this, callback, InputStream.class, null);
     }
 
     /**
@@ -77,8 +77,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
     protected InputStream send() throws ClientException {
-        mBaseRequest.setHttpMethod(HttpMethod.GET);
-        return mBaseRequest.getClient().getHttpProvider().send(this, InputStream.class, null);
+        baseRequest.setHttpMethod(HttpMethod.GET);
+        return baseRequest.getClient().getHttpProvider().send(this, InputStream.class, null);
     }
 
     /**
@@ -89,8 +89,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @SuppressWarnings("unchecked")
     protected void send(final byte[] fileContents, final ICallback<T> callback) {
-        mBaseRequest.setHttpMethod(HttpMethod.PUT);
-        mBaseRequest.getClient().getHttpProvider().send(this, callback, mBaseRequest.getResponseType(), fileContents);
+        baseRequest.setHttpMethod(HttpMethod.PUT);
+        baseRequest.getClient().getHttpProvider().send(this, callback, baseRequest.getResponseType(), fileContents);
     }
 
     /**
@@ -101,8 +101,8 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @SuppressWarnings("unchecked")
     protected T send(final byte[] fileContents) {
-        mBaseRequest.setHttpMethod(HttpMethod.PUT);
-        return (T) mBaseRequest.getClient().getHttpProvider().send(this, mBaseRequest.getResponseType(), fileContents);
+        baseRequest.setHttpMethod(HttpMethod.PUT);
+        return (T) baseRequest.getClient().getHttpProvider().send(this, baseRequest.getResponseType(), fileContents);
     }
 
     /**
@@ -112,7 +112,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public URL getRequestUrl() {
-        return mBaseRequest.getRequestUrl();
+        return baseRequest.getRequestUrl();
     }
 
     /**
@@ -122,7 +122,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public HttpMethod getHttpMethod() {
-        return mBaseRequest.getHttpMethod();
+        return baseRequest.getHttpMethod();
     }
 
     /**
@@ -133,7 +133,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public void addHeader(final String header, final String value) {
-        mBaseRequest.addHeader(header, value);
+        baseRequest.addHeader(header, value);
     }
 
     /**
@@ -143,7 +143,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public void setUseCaches(boolean useCaches) {
-        mBaseRequest.setUseCaches(useCaches);
+        baseRequest.setUseCaches(useCaches);
     }
 
     /**
@@ -153,7 +153,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public boolean getUseCaches() {
-        return mBaseRequest.getUseCaches();
+        return baseRequest.getUseCaches();
     }
 
     /**
@@ -163,7 +163,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public List<HeaderOption> getHeaders() {
-        return mBaseRequest.getHeaders();
+        return baseRequest.getHeaders();
     }
 
     /**
@@ -173,6 +173,6 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     @Override
     public List<Option> getOptions() {
-        return mBaseRequest.getOptions();
+        return baseRequest.getOptions();
     }
 }

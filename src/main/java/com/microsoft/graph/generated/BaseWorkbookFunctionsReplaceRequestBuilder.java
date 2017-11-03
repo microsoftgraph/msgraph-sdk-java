@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsReplaceRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsReplaceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numChars, final com.google.gson.JsonElement newText) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("oldText", oldText);
-        mBodyParams.put("startNum", startNum);
-        mBodyParams.put("numChars", numChars);
-        mBodyParams.put("newText", newText);
+        bodyParams.put("oldText", oldText);
+        bodyParams.put("startNum", startNum);
+        bodyParams.put("numChars", numChars);
+        bodyParams.put("newText", newText);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsReplaceRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("oldText")) {
-            request.mBody.oldText = getParameter("oldText");
+            request.body.oldText = getParameter("oldText");
         }
 
         if (hasParameter("startNum")) {
-            request.mBody.startNum = getParameter("startNum");
+            request.body.startNum = getParameter("startNum");
         }
 
         if (hasParameter("numChars")) {
-            request.mBody.numChars = getParameter("numChars");
+            request.body.numChars = getParameter("numChars");
         }
 
         if (hasParameter("newText")) {
-            request.mBody.newText = getParameter("newText");
+            request.body.newText = getParameter("newText");
         }
 
         return request;

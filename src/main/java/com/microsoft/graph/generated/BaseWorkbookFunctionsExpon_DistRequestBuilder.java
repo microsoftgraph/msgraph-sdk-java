@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsExpon_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement lambda, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("lambda", lambda);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("x", x);
+        bodyParams.put("lambda", lambda);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("lambda")) {
-            request.mBody.lambda = getParameter("lambda");
+            request.body.lambda = getParameter("lambda");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

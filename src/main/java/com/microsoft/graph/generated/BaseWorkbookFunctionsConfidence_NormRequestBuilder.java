@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
      */
     public BaseWorkbookFunctionsConfidence_NormRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("alpha", alpha);
-        mBodyParams.put("standardDev", standardDev);
-        mBodyParams.put("size", size);
+        bodyParams.put("alpha", alpha);
+        bodyParams.put("standardDev", standardDev);
+        bodyParams.put("size", size);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
         );
 
         if (hasParameter("alpha")) {
-            request.mBody.alpha = getParameter("alpha");
+            request.body.alpha = getParameter("alpha");
         }
 
         if (hasParameter("standardDev")) {
-            request.mBody.standardDev = getParameter("standardDev");
+            request.body.standardDev = getParameter("standardDev");
         }
 
         if (hasParameter("size")) {
-            request.mBody.size = getParameter("size");
+            request.body.size = getParameter("size");
         }
 
         return request;

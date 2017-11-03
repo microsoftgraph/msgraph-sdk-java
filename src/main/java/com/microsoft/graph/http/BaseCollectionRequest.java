@@ -43,17 +43,17 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     /**
      * The base request for this collection request.
      */
-    private final BaseRequest mBaseRequest;
+    private final BaseRequest baseRequest;
 
     /**
      * The class for the response.
      */
-    private final Class<T1> mResponseClass;
+    private final Class<T1> responseClass;
 
     /**
      * The class for the collection page.
      */
-    private final Class<T2> mCollectionPageClass;
+    private final Class<T2> collectionPageClass;
 
 
     /**
@@ -70,9 +70,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
                                  final List<Option> options,
                                  final Class<T1> responseClass,
                                  final Class<T2> collectionPageClass) {
-        mResponseClass = responseClass;
-        mCollectionPageClass = collectionPageClass;
-        mBaseRequest = new BaseRequest(requestUrl, client, options, mResponseClass) {
+        this.responseClass = responseClass;
+        this.collectionPageClass = collectionPageClass;
+        baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
         };
     }
 
@@ -84,8 +84,8 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @SuppressWarnings("unchecked")
     protected T1 send() throws ClientException {
-        mBaseRequest.setHttpMethod(HttpMethod.GET);
-        return mBaseRequest.getClient().getHttpProvider().send(this, mResponseClass, /* serialization object */ null);
+        baseRequest.setHttpMethod(HttpMethod.GET);
+        return baseRequest.getClient().getHttpProvider().send(this, responseClass, /* serialization object */ null);
     }
 
     /**
@@ -99,8 +99,8 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @SuppressWarnings("unchecked")
     protected <T1, T2> T1 post(final T2 serializedObject) throws ClientException {
-        mBaseRequest.setHttpMethod(HttpMethod.POST);
-        return (T1) mBaseRequest.getClient().getHttpProvider().send(this, mResponseClass, serializedObject);
+        baseRequest.setHttpMethod(HttpMethod.POST);
+        return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
     }
 
     /**
@@ -110,7 +110,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @Override
     public URL getRequestUrl() {
-        return mBaseRequest.getRequestUrl();
+        return baseRequest.getRequestUrl();
     }
 
     /**
@@ -120,7 +120,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @Override
     public HttpMethod getHttpMethod() {
-        return mBaseRequest.getHttpMethod();
+        return baseRequest.getHttpMethod();
     }
 
     /**
@@ -130,7 +130,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @Override
     public List<HeaderOption> getHeaders() {
-        return mBaseRequest.getHeaders();
+        return baseRequest.getHeaders();
     }
 
     /**
@@ -141,7 +141,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @Override
     public void addHeader(final String header, final String value) {
-        mBaseRequest.addHeader(header, value);
+        baseRequest.addHeader(header, value);
     }
 
     /**
@@ -151,7 +151,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @Override
     public void setUseCaches(boolean useCaches) {
-        mBaseRequest.setUseCaches(useCaches);
+        baseRequest.setUseCaches(useCaches);
     }
 
     /**
@@ -161,7 +161,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     @Override
     public boolean getUseCaches() {
-        return mBaseRequest.getUseCaches();
+        return baseRequest.getUseCaches();
     }
 
     /**
@@ -170,7 +170,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return The full list of options for this request.
      */
     public List<Option> getOptions() {
-        return mBaseRequest.getOptions();
+        return baseRequest.getOptions();
     }
 
     /**
@@ -179,7 +179,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param option The query option to add.
      */
     public void addQueryOption(final QueryOption option) {
-        mBaseRequest.getQueryOptions().add(option);
+        baseRequest.getQueryOptions().add(option);
     }
 
     /**
@@ -188,7 +188,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @param option The query option to add.
      */
     public void addFunctionOption(final FunctionOption option) {
-        mBaseRequest.getFunctionOptions().add(option);
+        baseRequest.getFunctionOptions().add(option);
     }
 
     /**
@@ -197,7 +197,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return The base request for this collection request.
      */
     protected BaseRequest getBaseRequest() {
-        return mBaseRequest;
+        return baseRequest;
     }
 
     /**
@@ -206,6 +206,6 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return The class for the collection page.
      */
     public Class<T2> getCollectionPageClass() {
-        return mCollectionPageClass;
+        return collectionPageClass;
     }
 }

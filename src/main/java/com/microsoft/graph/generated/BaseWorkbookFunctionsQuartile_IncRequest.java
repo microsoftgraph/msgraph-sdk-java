@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Quartile_Inc Request.
  */
 public class BaseWorkbookFunctionsQuartile_IncRequest extends BaseRequest implements IBaseWorkbookFunctionsQuartile_IncRequest {
-    protected final WorkbookFunctionsQuartile_IncBody mBody;
+    protected final WorkbookFunctionsQuartile_IncBody body;
 
     /**
      * The request for this WorkbookFunctionsQuartile_Inc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsQuartile_IncRequest extends BaseRequest implem
      */
     public BaseWorkbookFunctionsQuartile_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsQuartile_IncBody();
+        body = new WorkbookFunctionsQuartile_IncBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

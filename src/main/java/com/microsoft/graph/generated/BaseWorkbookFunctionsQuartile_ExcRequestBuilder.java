@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsQuartile_ExcRequestBuilder extends BaseActionR
      */
     public BaseWorkbookFunctionsQuartile_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("array", array);
-        mBodyParams.put("quart", quart);
+        bodyParams.put("array", array);
+        bodyParams.put("quart", quart);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsQuartile_ExcRequestBuilder extends BaseActionR
         );
 
         if (hasParameter("array")) {
-            request.mBody.array = getParameter("array");
+            request.body.array = getParameter("array");
         }
 
         if (hasParameter("quart")) {
-            request.mBody.quart = getParameter("quart");
+            request.body.quart = getParameter("quart");
         }
 
         return request;

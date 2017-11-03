@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Average If Request.
  */
 public class BaseWorkbookFunctionsAverageIfRequest extends BaseRequest implements IBaseWorkbookFunctionsAverageIfRequest {
-    protected final WorkbookFunctionsAverageIfBody mBody;
+    protected final WorkbookFunctionsAverageIfBody body;
 
     /**
      * The request for this WorkbookFunctionsAverageIf
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsAverageIfRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsAverageIfRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsAverageIfBody();
+        body = new WorkbookFunctionsAverageIfBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

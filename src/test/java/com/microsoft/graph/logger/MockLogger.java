@@ -29,7 +29,7 @@ import java.util.ArrayList;
  */
 public class MockLogger implements ILogger {
 
-    private LoggerLevel mLevel = LoggerLevel.Error;
+    private LoggerLevel mLevel = LoggerLevel.ERROR;
     private ArrayList<String> mLogMessage = new ArrayList<String>();
 
     @Override

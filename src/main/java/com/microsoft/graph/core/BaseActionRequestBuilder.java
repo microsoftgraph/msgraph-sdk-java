@@ -19,7 +19,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
     /**
      * The body params to add to this request
      */
-    protected Map<String, Object> mBodyParams = new HashMap<>();
+    protected Map<String, Object> bodyParams = new HashMap<>();
 
     /**
      * Constructs a new {@link BaseActionRequestBuilder}
@@ -43,7 +43,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * @return true, if {@link BaseActionRequestBuilder#mBodyParams} contains the key, otherwise false
      */
     protected boolean hasParameter(final String name) {
-        return mBodyParams.containsKey(name);
+        return bodyParams.containsKey(name);
     }
 
     /**
@@ -54,6 +54,6 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * @return The stored instance of T, otherwise null
      */
     protected <T> T getParameter(final String name) {
-        return (T) mBodyParams.get(name);
+        return (T) bodyParams.get(name);
     }
 }

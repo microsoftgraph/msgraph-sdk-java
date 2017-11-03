@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Yield Disc Request.
  */
 public class BaseWorkbookFunctionsYieldDiscRequest extends BaseRequest implements IBaseWorkbookFunctionsYieldDiscRequest {
-    protected final WorkbookFunctionsYieldDiscBody mBody;
+    protected final WorkbookFunctionsYieldDiscBody body;
 
     /**
      * The request for this WorkbookFunctionsYieldDisc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsYieldDiscRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsYieldDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsYieldDiscBody();
+        body = new WorkbookFunctionsYieldDiscBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

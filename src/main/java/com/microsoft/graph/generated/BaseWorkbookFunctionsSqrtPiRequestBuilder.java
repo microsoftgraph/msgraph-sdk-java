@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsSqrtPiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
+        bodyParams.put("number", number);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         return request;

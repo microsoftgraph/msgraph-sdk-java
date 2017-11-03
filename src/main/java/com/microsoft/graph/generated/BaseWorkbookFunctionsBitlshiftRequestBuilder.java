@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsBitlshiftRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsBitlshiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement shiftAmount) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("shiftAmount", shiftAmount);
+        bodyParams.put("number", number);
+        bodyParams.put("shiftAmount", shiftAmount);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsBitlshiftRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("shiftAmount")) {
-            request.mBody.shiftAmount = getParameter("shiftAmount");
+            request.body.shiftAmount = getParameter("shiftAmount");
         }
 
         return request;

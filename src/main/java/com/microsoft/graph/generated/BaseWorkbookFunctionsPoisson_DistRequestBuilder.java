@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
      */
     public BaseWorkbookFunctionsPoisson_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("mean", mean);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("x", x);
+        bodyParams.put("mean", mean);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("mean")) {
-            request.mBody.mean = getParameter("mean");
+            request.body.mean = getParameter("mean");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Binom_Dist_Range Request.
  */
 public class BaseWorkbookFunctionsBinom_Dist_RangeRequest extends BaseRequest implements IBaseWorkbookFunctionsBinom_Dist_RangeRequest {
-    protected final WorkbookFunctionsBinom_Dist_RangeBody mBody;
+    protected final WorkbookFunctionsBinom_Dist_RangeBody body;
 
     /**
      * The request for this WorkbookFunctionsBinom_Dist_Range
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequest extends BaseRequest im
      */
     public BaseWorkbookFunctionsBinom_Dist_RangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsBinom_Dist_RangeBody();
+        body = new WorkbookFunctionsBinom_Dist_RangeBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

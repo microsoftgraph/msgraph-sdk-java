@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Rank_Avg Request.
  */
 public class BaseWorkbookFunctionsRank_AvgRequest extends BaseRequest implements IBaseWorkbookFunctionsRank_AvgRequest {
-    protected final WorkbookFunctionsRank_AvgBody mBody;
+    protected final WorkbookFunctionsRank_AvgBody body;
 
     /**
      * The request for this WorkbookFunctionsRank_Avg
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRank_AvgRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsRank_AvgRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRank_AvgBody();
+        body = new WorkbookFunctionsRank_AvgBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

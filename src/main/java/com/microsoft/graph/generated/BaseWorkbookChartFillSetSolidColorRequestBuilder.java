@@ -30,7 +30,7 @@ public class BaseWorkbookChartFillSetSolidColorRequestBuilder extends BaseAction
      */
     public BaseWorkbookChartFillSetSolidColorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("color", color);
+        bodyParams.put("color", color);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookChartFillSetSolidColorRequestBuilder extends BaseAction
         );
 
         if (hasParameter("color")) {
-            request.mBody.color = getParameter("color");
+            request.body.color = getParameter("color");
         }
 
         return request;

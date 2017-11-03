@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsCountIfRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsCountIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("range", range);
-        mBodyParams.put("criteria", criteria);
+        bodyParams.put("range", range);
+        bodyParams.put("criteria", criteria);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsCountIfRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("range")) {
-            request.mBody.range = getParameter("range");
+            request.body.range = getParameter("range");
         }
 
         if (hasParameter("criteria")) {
-            request.mBody.criteria = getParameter("criteria");
+            request.body.criteria = getParameter("criteria");
         }
 
         return request;

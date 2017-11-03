@@ -30,12 +30,12 @@ public class BaseWorkbookFunctionsPriceMatRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsPriceMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("issue", issue);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("yld", yld);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("issue", issue);
+        bodyParams.put("rate", rate);
+        bodyParams.put("yld", yld);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -61,27 +61,27 @@ public class BaseWorkbookFunctionsPriceMatRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("issue")) {
-            request.mBody.issue = getParameter("issue");
+            request.body.issue = getParameter("issue");
         }
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("yld")) {
-            request.mBody.yld = getParameter("yld");
+            request.body.yld = getParameter("yld");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

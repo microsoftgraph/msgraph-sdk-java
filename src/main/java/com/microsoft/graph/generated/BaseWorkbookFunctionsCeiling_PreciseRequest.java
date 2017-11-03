@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Ceiling_Precise Request.
  */
 public class BaseWorkbookFunctionsCeiling_PreciseRequest extends BaseRequest implements IBaseWorkbookFunctionsCeiling_PreciseRequest {
-    protected final WorkbookFunctionsCeiling_PreciseBody mBody;
+    protected final WorkbookFunctionsCeiling_PreciseBody body;
 
     /**
      * The request for this WorkbookFunctionsCeiling_Precise
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCeiling_PreciseRequest extends BaseRequest imp
      */
     public BaseWorkbookFunctionsCeiling_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCeiling_PreciseBody();
+        body = new WorkbookFunctionsCeiling_PreciseBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

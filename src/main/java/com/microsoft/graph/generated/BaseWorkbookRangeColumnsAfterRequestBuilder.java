@@ -40,7 +40,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
      */
     public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("count", count));
+        functionOptions.add(new FunctionOption("count", count));
     }
 
     /**
@@ -65,7 +65,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

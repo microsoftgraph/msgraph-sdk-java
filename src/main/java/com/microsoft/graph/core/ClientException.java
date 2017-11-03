@@ -30,7 +30,7 @@ public class ClientException extends RuntimeException {
     /**
      * The error code for this exception.
      */
-    private final GraphErrorCodes mErrorCode;
+    private final GraphErrorCodes errorCode;
 
     /**
      * Creates the client exception.
@@ -40,7 +40,7 @@ public class ClientException extends RuntimeException {
      */
     public ClientException(final String message, final Throwable ex, final GraphErrorCodes errorCode) {
         super(message, ex);
-        mErrorCode = errorCode;
+        this.errorCode = errorCode;
     }
 
     /**
@@ -49,6 +49,6 @@ public class ClientException extends RuntimeException {
      * @return true if the error code matches, and false if there was no match.
      */
     public boolean isError(final GraphErrorCodes expectedCode) {
-        return mErrorCode == expectedCode;
+        return this.errorCode == expectedCode;
     }
 }

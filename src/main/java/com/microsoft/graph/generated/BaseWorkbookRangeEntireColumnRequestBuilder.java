@@ -54,7 +54,7 @@ public class BaseWorkbookRangeEntireColumnRequestBuilder extends BaseFunctionReq
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

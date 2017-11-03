@@ -38,19 +38,19 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     /**
      * The backing client for this request.
      */
-    private final IBaseClient mClient;
+    private final IBaseClient client;
 
     /**
      * The url for this request.
      */
-    private final String mRequestUrl;
+    private final String requestUrl;
 
     /**
      * The options for this request.
      */
-    private final List<Option> mOptions = new ArrayList<>();
+    private final List<Option> options = new ArrayList<>();
 
-    private final IJsonBackedObject mBody;
+    private final IJsonBackedObject body;
 
     /**
      * Creates the request builder.
@@ -64,12 +64,12 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
             final IBaseClient client,
             final List<Option> options
     ) {
-        mRequestUrl = requestUrl;
-        mClient = client;
-        mBody = null;
+        this.requestUrl = requestUrl;
+        this.client = client;
+        body = null;
 
         if (options != null) {
-            mOptions.addAll(options);
+            this.options.addAll(options);
         }
     }
 
@@ -79,12 +79,12 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
             final IBaseClient client,
             final List<Option> options
     ) {
-        mRequestUrl = requestUrl;
-        mClient = client;
-        mBody = body;
+        this.requestUrl = requestUrl;
+        this.client = client;
+        this.body = body;
 
         if (options != null) {
-            mOptions.addAll(options);
+            this.options.addAll(options);
         }
     }
 
@@ -94,7 +94,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @return The client.
      */
     public IBaseClient getClient() {
-        return mClient;
+        return client;
     }
 
     /**
@@ -103,7 +103,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @return The request url.
      */
     public String getRequestUrl() {
-        return mRequestUrl;
+        return requestUrl;
     }
 
     /**
@@ -112,7 +112,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @return The full list of options for this request.
      */
     public List<Option> getOptions() {
-        return Collections.unmodifiableList(mOptions);
+        return Collections.unmodifiableList(options);
     }
 
     /**
@@ -122,11 +122,11 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @return The base url for this request.
      */
     public String getRequestUrlWithAdditionalSegment(final String urlSegment) {
-        return mRequestUrl + "/" + urlSegment;
+        return requestUrl + "/" + urlSegment;
     }
 
     public String getRequestUrlWithAdditionalParameter(final String parameter) {
-        return mRequestUrl + "('" + parameter + "')";
+        return requestUrl + "('" + parameter + "')";
     }
 
 

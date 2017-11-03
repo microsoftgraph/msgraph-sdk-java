@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsAtan2RequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsAtan2RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement xNum, final com.google.gson.JsonElement yNum) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("xNum", xNum);
-        mBodyParams.put("yNum", yNum);
+        bodyParams.put("xNum", xNum);
+        bodyParams.put("yNum", yNum);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsAtan2RequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("xNum")) {
-            request.mBody.xNum = getParameter("xNum");
+            request.body.xNum = getParameter("xNum");
         }
 
         if (hasParameter("yNum")) {
-            request.mBody.yNum = getParameter("yNum");
+            request.body.yNum = getParameter("yNum");
         }
 
         return request;

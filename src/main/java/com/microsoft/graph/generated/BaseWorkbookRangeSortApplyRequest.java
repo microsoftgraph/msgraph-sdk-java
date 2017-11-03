@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Range Sort Apply Request.
  */
 public class BaseWorkbookRangeSortApplyRequest extends BaseRequest implements IBaseWorkbookRangeSortApplyRequest {
-    protected final WorkbookRangeSortApplyBody mBody;
+    protected final WorkbookRangeSortApplyBody body;
 
     /**
      * The request for this WorkbookRangeSortApply
@@ -32,15 +32,15 @@ public class BaseWorkbookRangeSortApplyRequest extends BaseRequest implements IB
      */
     public BaseWorkbookRangeSortApplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookRangeSortApplyBody();
+        body = new WorkbookRangeSortApplyBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

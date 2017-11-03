@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Rand Between Request.
  */
 public class BaseWorkbookFunctionsRandBetweenRequest extends BaseRequest implements IBaseWorkbookFunctionsRandBetweenRequest {
-    protected final WorkbookFunctionsRandBetweenBody mBody;
+    protected final WorkbookFunctionsRandBetweenBody body;
 
     /**
      * The request for this WorkbookFunctionsRandBetween
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRandBetweenRequest extends BaseRequest impleme
      */
     public BaseWorkbookFunctionsRandBetweenRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRandBetweenBody();
+        body = new WorkbookFunctionsRandBetweenBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

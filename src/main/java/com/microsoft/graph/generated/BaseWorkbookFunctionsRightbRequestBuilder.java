@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsRightbRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsRightbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
-        mBodyParams.put("numBytes", numBytes);
+        bodyParams.put("text", text);
+        bodyParams.put("numBytes", numBytes);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsRightbRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         if (hasParameter("numBytes")) {
-            request.mBody.numBytes = getParameter("numBytes");
+            request.body.numBytes = getParameter("numBytes");
         }
 
         return request;

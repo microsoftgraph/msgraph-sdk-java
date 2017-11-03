@@ -30,13 +30,13 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsVdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("cost", cost);
-        mBodyParams.put("salvage", salvage);
-        mBodyParams.put("life", life);
-        mBodyParams.put("startPeriod", startPeriod);
-        mBodyParams.put("endPeriod", endPeriod);
-        mBodyParams.put("factor", factor);
-        mBodyParams.put("noSwitch", noSwitch);
+        bodyParams.put("cost", cost);
+        bodyParams.put("salvage", salvage);
+        bodyParams.put("life", life);
+        bodyParams.put("startPeriod", startPeriod);
+        bodyParams.put("endPeriod", endPeriod);
+        bodyParams.put("factor", factor);
+        bodyParams.put("noSwitch", noSwitch);
     }
 
     /**
@@ -62,31 +62,31 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("cost")) {
-            request.mBody.cost = getParameter("cost");
+            request.body.cost = getParameter("cost");
         }
 
         if (hasParameter("salvage")) {
-            request.mBody.salvage = getParameter("salvage");
+            request.body.salvage = getParameter("salvage");
         }
 
         if (hasParameter("life")) {
-            request.mBody.life = getParameter("life");
+            request.body.life = getParameter("life");
         }
 
         if (hasParameter("startPeriod")) {
-            request.mBody.startPeriod = getParameter("startPeriod");
+            request.body.startPeriod = getParameter("startPeriod");
         }
 
         if (hasParameter("endPeriod")) {
-            request.mBody.endPeriod = getParameter("endPeriod");
+            request.body.endPeriod = getParameter("endPeriod");
         }
 
         if (hasParameter("factor")) {
-            request.mBody.factor = getParameter("factor");
+            request.body.factor = getParameter("factor");
         }
 
         if (hasParameter("noSwitch")) {
-            request.mBody.noSwitch = getParameter("noSwitch");
+            request.body.noSwitch = getParameter("noSwitch");
         }
 
         return request;

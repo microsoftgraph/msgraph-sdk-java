@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Xnpv Request.
  */
 public class BaseWorkbookFunctionsXnpvRequest extends BaseRequest implements IBaseWorkbookFunctionsXnpvRequest {
-    protected final WorkbookFunctionsXnpvBody mBody;
+    protected final WorkbookFunctionsXnpvBody body;
 
     /**
      * The request for this WorkbookFunctionsXnpv
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsXnpvRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsXnpvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsXnpvBody();
+        body = new WorkbookFunctionsXnpvBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

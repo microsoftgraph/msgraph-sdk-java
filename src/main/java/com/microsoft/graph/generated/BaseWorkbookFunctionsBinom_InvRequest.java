@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Binom_Inv Request.
  */
 public class BaseWorkbookFunctionsBinom_InvRequest extends BaseRequest implements IBaseWorkbookFunctionsBinom_InvRequest {
-    protected final WorkbookFunctionsBinom_InvBody mBody;
+    protected final WorkbookFunctionsBinom_InvBody body;
 
     /**
      * The request for this WorkbookFunctionsBinom_Inv
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsBinom_InvRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsBinom_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsBinom_InvBody();
+        body = new WorkbookFunctionsBinom_InvBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Month Request.
  */
 public class BaseWorkbookFunctionsMonthRequest extends BaseRequest implements IBaseWorkbookFunctionsMonthRequest {
-    protected final WorkbookFunctionsMonthBody mBody;
+    protected final WorkbookFunctionsMonthBody body;
 
     /**
      * The request for this WorkbookFunctionsMonth
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsMonthRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsMonthRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsMonthBody();
+        body = new WorkbookFunctionsMonthBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

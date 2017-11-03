@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Expon_Dist Request.
  */
 public class BaseWorkbookFunctionsExpon_DistRequest extends BaseRequest implements IBaseWorkbookFunctionsExpon_DistRequest {
-    protected final WorkbookFunctionsExpon_DistBody mBody;
+    protected final WorkbookFunctionsExpon_DistBody body;
 
     /**
      * The request for this WorkbookFunctionsExpon_Dist
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsExpon_DistRequest extends BaseRequest implemen
      */
     public BaseWorkbookFunctionsExpon_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsExpon_DistBody();
+        body = new WorkbookFunctionsExpon_DistBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

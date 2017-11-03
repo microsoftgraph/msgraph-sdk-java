@@ -30,7 +30,7 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
      */
     public BaseDriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final DriveItemUploadableProperties item) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("item", item);
+        bodyParams.put("item", item);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("item")) {
-            request.mBody.item = getParameter("item");
+            request.body.item = getParameter("item");
         }
 
         return request;

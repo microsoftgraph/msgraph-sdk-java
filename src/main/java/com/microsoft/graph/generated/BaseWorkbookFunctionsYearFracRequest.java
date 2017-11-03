@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Year Frac Request.
  */
 public class BaseWorkbookFunctionsYearFracRequest extends BaseRequest implements IBaseWorkbookFunctionsYearFracRequest {
-    protected final WorkbookFunctionsYearFracBody mBody;
+    protected final WorkbookFunctionsYearFracBody body;
 
     /**
      * The request for this WorkbookFunctionsYearFrac
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsYearFracRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsYearFracRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsYearFracBody();
+        body = new WorkbookFunctionsYearFracBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

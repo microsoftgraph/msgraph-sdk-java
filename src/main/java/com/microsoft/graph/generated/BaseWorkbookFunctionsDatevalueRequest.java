@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Datevalue Request.
  */
 public class BaseWorkbookFunctionsDatevalueRequest extends BaseRequest implements IBaseWorkbookFunctionsDatevalueRequest {
-    protected final WorkbookFunctionsDatevalueBody mBody;
+    protected final WorkbookFunctionsDatevalueBody body;
 
     /**
      * The request for this WorkbookFunctionsDatevalue
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDatevalueRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsDatevalueRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDatevalueBody();
+        body = new WorkbookFunctionsDatevalueBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

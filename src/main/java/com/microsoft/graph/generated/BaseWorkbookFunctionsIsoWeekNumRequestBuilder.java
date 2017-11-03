@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsIsoWeekNumRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsIsoWeekNumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement date) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("date", date);
+        bodyParams.put("date", date);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsIsoWeekNumRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("date")) {
-            request.mBody.date = getParameter("date");
+            request.body.date = getParameter("date");
         }
 
         return request;

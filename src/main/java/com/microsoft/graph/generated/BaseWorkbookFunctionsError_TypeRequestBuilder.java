@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsError_TypeRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsError_TypeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement errorVal) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("errorVal", errorVal);
+        bodyParams.put("errorVal", errorVal);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsError_TypeRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("errorVal")) {
-            request.mBody.errorVal = getParameter("errorVal");
+            request.body.errorVal = getParameter("errorVal");
         }
 
         return request;

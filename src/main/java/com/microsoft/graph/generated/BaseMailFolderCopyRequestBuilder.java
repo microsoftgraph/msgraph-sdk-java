@@ -30,7 +30,7 @@ public class BaseMailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
      */
     public BaseMailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("destinationId", destinationId);
+        bodyParams.put("destinationId", destinationId);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseMailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
         );
 
         if (hasParameter("destinationId")) {
-            request.mBody.destinationId = getParameter("destinationId");
+            request.body.destinationId = getParameter("destinationId");
         }
 
         return request;

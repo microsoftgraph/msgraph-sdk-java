@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Range Insert Request.
  */
 public class BaseWorkbookRangeInsertRequest extends BaseRequest implements IBaseWorkbookRangeInsertRequest {
-    protected final WorkbookRangeInsertBody mBody;
+    protected final WorkbookRangeInsertBody body;
 
     /**
      * The request for this WorkbookRangeInsert
@@ -32,15 +32,15 @@ public class BaseWorkbookRangeInsertRequest extends BaseRequest implements IBase
      */
     public BaseWorkbookRangeInsertRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
-        mBody = new WorkbookRangeInsertBody();
+        body = new WorkbookRangeInsertBody();
     }
 
     public void post(final ICallback<WorkbookRange> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookRange post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

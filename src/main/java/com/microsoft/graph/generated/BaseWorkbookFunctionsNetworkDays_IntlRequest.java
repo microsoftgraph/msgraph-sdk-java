@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Network Days_Intl Request.
  */
 public class BaseWorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest implements IBaseWorkbookFunctionsNetworkDays_IntlRequest {
-    protected final WorkbookFunctionsNetworkDays_IntlBody mBody;
+    protected final WorkbookFunctionsNetworkDays_IntlBody body;
 
     /**
      * The request for this WorkbookFunctionsNetworkDays_Intl
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest im
      */
     public BaseWorkbookFunctionsNetworkDays_IntlRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsNetworkDays_IntlBody();
+        body = new WorkbookFunctionsNetworkDays_IntlBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

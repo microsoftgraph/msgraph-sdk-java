@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Cosh Request.
  */
 public class BaseWorkbookFunctionsCoshRequest extends BaseRequest implements IBaseWorkbookFunctionsCoshRequest {
-    protected final WorkbookFunctionsCoshBody mBody;
+    protected final WorkbookFunctionsCoshBody body;
 
     /**
      * The request for this WorkbookFunctionsCosh
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCoshRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsCoshRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCoshBody();
+        body = new WorkbookFunctionsCoshBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

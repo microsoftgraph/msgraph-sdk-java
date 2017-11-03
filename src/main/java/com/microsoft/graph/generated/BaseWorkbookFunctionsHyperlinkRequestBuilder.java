@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsHyperlinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement linkLocation, final com.google.gson.JsonElement friendlyName) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("linkLocation", linkLocation);
-        mBodyParams.put("friendlyName", friendlyName);
+        bodyParams.put("linkLocation", linkLocation);
+        bodyParams.put("friendlyName", friendlyName);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("linkLocation")) {
-            request.mBody.linkLocation = getParameter("linkLocation");
+            request.body.linkLocation = getParameter("linkLocation");
         }
 
         if (hasParameter("friendlyName")) {
-            request.mBody.friendlyName = getParameter("friendlyName");
+            request.body.friendlyName = getParameter("friendlyName");
         }
 
         return request;

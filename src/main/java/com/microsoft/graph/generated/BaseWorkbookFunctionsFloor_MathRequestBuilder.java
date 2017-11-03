@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("significance", significance);
-        mBodyParams.put("mode", mode);
+        bodyParams.put("number", number);
+        bodyParams.put("significance", significance);
+        bodyParams.put("mode", mode);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("significance")) {
-            request.mBody.significance = getParameter("significance");
+            request.body.significance = getParameter("significance");
         }
 
         if (hasParameter("mode")) {
-            request.mBody.mode = getParameter("mode");
+            request.body.mode = getParameter("mode");
         }
 
         return request;

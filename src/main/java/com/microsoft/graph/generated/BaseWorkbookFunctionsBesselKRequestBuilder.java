@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsBesselKRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsBesselKRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("n", n);
+        bodyParams.put("x", x);
+        bodyParams.put("n", n);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsBesselKRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("n")) {
-            request.mBody.n = getParameter("n");
+            request.body.n = getParameter("n");
         }
 
         return request;

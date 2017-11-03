@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Percent Rank_Inc Request.
  */
 public class BaseWorkbookFunctionsPercentRank_IncRequest extends BaseRequest implements IBaseWorkbookFunctionsPercentRank_IncRequest {
-    protected final WorkbookFunctionsPercentRank_IncBody mBody;
+    protected final WorkbookFunctionsPercentRank_IncBody body;
 
     /**
      * The request for this WorkbookFunctionsPercentRank_Inc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsPercentRank_IncRequest extends BaseRequest imp
      */
     public BaseWorkbookFunctionsPercentRank_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsPercentRank_IncBody();
+        body = new WorkbookFunctionsPercentRank_IncBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

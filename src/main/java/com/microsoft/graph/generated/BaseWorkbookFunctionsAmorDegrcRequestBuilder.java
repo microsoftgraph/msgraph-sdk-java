@@ -30,13 +30,13 @@ public class BaseWorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsAmorDegrcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("cost", cost);
-        mBodyParams.put("datePurchased", datePurchased);
-        mBodyParams.put("firstPeriod", firstPeriod);
-        mBodyParams.put("salvage", salvage);
-        mBodyParams.put("period", period);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("cost", cost);
+        bodyParams.put("datePurchased", datePurchased);
+        bodyParams.put("firstPeriod", firstPeriod);
+        bodyParams.put("salvage", salvage);
+        bodyParams.put("period", period);
+        bodyParams.put("rate", rate);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -62,31 +62,31 @@ public class BaseWorkbookFunctionsAmorDegrcRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("cost")) {
-            request.mBody.cost = getParameter("cost");
+            request.body.cost = getParameter("cost");
         }
 
         if (hasParameter("datePurchased")) {
-            request.mBody.datePurchased = getParameter("datePurchased");
+            request.body.datePurchased = getParameter("datePurchased");
         }
 
         if (hasParameter("firstPeriod")) {
-            request.mBody.firstPeriod = getParameter("firstPeriod");
+            request.body.firstPeriod = getParameter("firstPeriod");
         }
 
         if (hasParameter("salvage")) {
-            request.mBody.salvage = getParameter("salvage");
+            request.body.salvage = getParameter("salvage");
         }
 
         if (hasParameter("period")) {
-            request.mBody.period = getParameter("period");
+            request.body.period = getParameter("period");
         }
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

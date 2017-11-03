@@ -37,12 +37,12 @@ public class DefaultSerializer implements ISerializer {
     /**
      * The instance of the internal serializer.
      */
-    private final Gson mGson;
+    private final Gson gson;
 
     /**
      * The logger.
      */
-    private final ILogger mLogger;
+    private final ILogger logger;
 
     /**
      * Creates a DefaultSerializer.
@@ -50,8 +50,8 @@ public class DefaultSerializer implements ISerializer {
      * @param logger The logger.
      */
     public DefaultSerializer(final ILogger logger) {
-        mLogger = logger;
-        mGson = GsonFactory.getGsonInstance(logger);
+        this.logger = logger;
+        this.gson = GsonFactory.getGsonInstance(logger);
     }
 
     /**
@@ -64,17 +64,17 @@ public class DefaultSerializer implements ISerializer {
      */
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
-        final T jsonObject = mGson.fromJson(inputString, clazz);
+        final T jsonObject = gson.fromJson(inputString, clazz);
 
         // Populate the json backed fields for any annotations that are not in the object model
         if (jsonObject instanceof IJsonBackedObject) {
-            mLogger.logDebug("Deserializing type " + clazz.getSimpleName());
+            logger.logDebug("Deserializing type " + clazz.getSimpleName());
             final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
-            final JsonObject rawObject = mGson.fromJson(inputString, JsonObject.class);
+            final JsonObject rawObject = gson.fromJson(inputString, JsonObject.class);
             jsonBackedObject.setRawObject(this, rawObject);
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
         } else {
-            mLogger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
+            logger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
         }
 
         return jsonObject;
@@ -89,8 +89,8 @@ public class DefaultSerializer implements ISerializer {
      */
     @Override
     public <T> String serializeObject(final T serializableObject) {
-        mLogger.logDebug("Serializing type " + serializableObject.getClass().getSimpleName());
-        JsonElement outJsonTree = mGson.toJsonTree(serializableObject);
+        logger.logDebug("Serializing type " + serializableObject.getClass().getSimpleName());
+        JsonElement outJsonTree = gson.toJsonTree(serializableObject);
 
         if (serializableObject instanceof IJsonBackedObject) {
             AdditionalDataManager additionalData =

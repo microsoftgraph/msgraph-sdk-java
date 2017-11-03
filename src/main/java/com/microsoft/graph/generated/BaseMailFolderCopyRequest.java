@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Mail Folder Copy Request.
  */
 public class BaseMailFolderCopyRequest extends BaseRequest implements IBaseMailFolderCopyRequest {
-    protected final MailFolderCopyBody mBody;
+    protected final MailFolderCopyBody body;
 
     /**
      * The request for this MailFolderCopy
@@ -32,15 +32,15 @@ public class BaseMailFolderCopyRequest extends BaseRequest implements IBaseMailF
      */
     public BaseMailFolderCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolder.class);
-        mBody = new MailFolderCopyBody();
+        body = new MailFolderCopyBody();
     }
 
     public void post(final ICallback<MailFolder> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public MailFolder post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

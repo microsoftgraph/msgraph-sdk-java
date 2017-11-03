@@ -30,14 +30,14 @@ public class BaseWorkbookFunctionsAccrIntRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsAccrIntRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstInterest, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis, final com.google.gson.JsonElement calcMethod) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("issue", issue);
-        mBodyParams.put("firstInterest", firstInterest);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("par", par);
-        mBodyParams.put("frequency", frequency);
-        mBodyParams.put("basis", basis);
-        mBodyParams.put("calcMethod", calcMethod);
+        bodyParams.put("issue", issue);
+        bodyParams.put("firstInterest", firstInterest);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("rate", rate);
+        bodyParams.put("par", par);
+        bodyParams.put("frequency", frequency);
+        bodyParams.put("basis", basis);
+        bodyParams.put("calcMethod", calcMethod);
     }
 
     /**
@@ -63,35 +63,35 @@ public class BaseWorkbookFunctionsAccrIntRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("issue")) {
-            request.mBody.issue = getParameter("issue");
+            request.body.issue = getParameter("issue");
         }
 
         if (hasParameter("firstInterest")) {
-            request.mBody.firstInterest = getParameter("firstInterest");
+            request.body.firstInterest = getParameter("firstInterest");
         }
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("par")) {
-            request.mBody.par = getParameter("par");
+            request.body.par = getParameter("par");
         }
 
         if (hasParameter("frequency")) {
-            request.mBody.frequency = getParameter("frequency");
+            request.body.frequency = getParameter("frequency");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         if (hasParameter("calcMethod")) {
-            request.mBody.calcMethod = getParameter("calcMethod");
+            request.body.calcMethod = getParameter("calcMethod");
         }
 
         return request;

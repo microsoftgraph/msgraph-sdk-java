@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Disc Request.
  */
 public class BaseWorkbookFunctionsDiscRequest extends BaseRequest implements IBaseWorkbookFunctionsDiscRequest {
-    protected final WorkbookFunctionsDiscBody mBody;
+    protected final WorkbookFunctionsDiscBody body;
 
     /**
      * The request for this WorkbookFunctionsDisc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDiscRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDiscBody();
+        body = new WorkbookFunctionsDiscBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

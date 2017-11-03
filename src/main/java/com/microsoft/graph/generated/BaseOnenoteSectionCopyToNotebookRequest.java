@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Onenote Section Copy To Notebook Request.
  */
 public class BaseOnenoteSectionCopyToNotebookRequest extends BaseRequest implements IBaseOnenoteSectionCopyToNotebookRequest {
-    protected final OnenoteSectionCopyToNotebookBody mBody;
+    protected final OnenoteSectionCopyToNotebookBody body;
 
     /**
      * The request for this OnenoteSectionCopyToNotebook
@@ -32,15 +32,15 @@ public class BaseOnenoteSectionCopyToNotebookRequest extends BaseRequest impleme
      */
     public BaseOnenoteSectionCopyToNotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
-        mBody = new OnenoteSectionCopyToNotebookBody();
+        body = new OnenoteSectionCopyToNotebookBody();
     }
 
     public void post(final ICallback<OnenoteOperation> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public OnenoteOperation post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

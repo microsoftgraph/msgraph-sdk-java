@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Trunc Request.
  */
 public class BaseWorkbookFunctionsTruncRequest extends BaseRequest implements IBaseWorkbookFunctionsTruncRequest {
-    protected final WorkbookFunctionsTruncBody mBody;
+    protected final WorkbookFunctionsTruncBody body;
 
     /**
      * The request for this WorkbookFunctionsTrunc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsTruncRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsTruncRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsTruncBody();
+        body = new WorkbookFunctionsTruncBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

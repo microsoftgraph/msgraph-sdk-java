@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsDminRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsDminRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("database", database);
-        mBodyParams.put("field", field);
-        mBodyParams.put("criteria", criteria);
+        bodyParams.put("database", database);
+        bodyParams.put("field", field);
+        bodyParams.put("criteria", criteria);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsDminRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("database")) {
-            request.mBody.database = getParameter("database");
+            request.body.database = getParameter("database");
         }
 
         if (hasParameter("field")) {
-            request.mBody.field = getParameter("field");
+            request.body.field = getParameter("field");
         }
 
         if (hasParameter("criteria")) {
-            request.mBody.criteria = getParameter("criteria");
+            request.body.criteria = getParameter("criteria");
         }
 
         return request;

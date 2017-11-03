@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsOct2DecRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsOct2DecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
+        bodyParams.put("number", number);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsOct2DecRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         return request;

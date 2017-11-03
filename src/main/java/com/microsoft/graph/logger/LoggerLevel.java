@@ -29,10 +29,10 @@ public enum LoggerLevel {
     /**
      * Log only errors, the default.
      */
-    Error,
+    ERROR,
 
     /**
      * Log debug information.
      */
-    Debug
+    DEBUG
 }

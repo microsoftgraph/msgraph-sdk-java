@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsQuotientRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsQuotientRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement numerator, final com.google.gson.JsonElement denominator) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("numerator", numerator);
-        mBodyParams.put("denominator", denominator);
+        bodyParams.put("numerator", numerator);
+        bodyParams.put("denominator", denominator);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsQuotientRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("numerator")) {
-            request.mBody.numerator = getParameter("numerator");
+            request.body.numerator = getParameter("numerator");
         }
 
         if (hasParameter("denominator")) {
-            request.mBody.denominator = getParameter("denominator");
+            request.body.denominator = getParameter("denominator");
         }
 
         return request;

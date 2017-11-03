@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Phi Request.
  */
 public class BaseWorkbookFunctionsPhiRequest extends BaseRequest implements IBaseWorkbookFunctionsPhiRequest {
-    protected final WorkbookFunctionsPhiBody mBody;
+    protected final WorkbookFunctionsPhiBody body;
 
     /**
      * The request for this WorkbookFunctionsPhi
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsPhiRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsPhiRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsPhiBody();
+        body = new WorkbookFunctionsPhiBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

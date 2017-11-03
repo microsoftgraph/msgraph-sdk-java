@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsWeekdayRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsWeekdayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber, final com.google.gson.JsonElement returnType) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("serialNumber", serialNumber);
-        mBodyParams.put("returnType", returnType);
+        bodyParams.put("serialNumber", serialNumber);
+        bodyParams.put("returnType", returnType);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsWeekdayRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("serialNumber")) {
-            request.mBody.serialNumber = getParameter("serialNumber");
+            request.body.serialNumber = getParameter("serialNumber");
         }
 
         if (hasParameter("returnType")) {
-            request.mBody.returnType = getParameter("returnType");
+            request.body.returnType = getParameter("returnType");
         }
 
         return request;

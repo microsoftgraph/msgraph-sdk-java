@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Event Decline Request.
  */
 public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDeclineRequest {
-    protected final EventDeclineBody mBody;
+    protected final EventDeclineBody body;
 
     /**
      * The request for this EventDecline
@@ -32,15 +32,15 @@ public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDe
      */
     public BaseEventDeclineRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new EventDeclineBody();
+        body = new EventDeclineBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

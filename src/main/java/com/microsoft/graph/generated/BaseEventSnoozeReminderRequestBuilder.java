@@ -30,7 +30,7 @@ public class BaseEventSnoozeReminderRequestBuilder extends BaseActionRequestBuil
      */
     public BaseEventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final DateTimeTimeZone newReminderTime) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("newReminderTime", newReminderTime);
+        bodyParams.put("newReminderTime", newReminderTime);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseEventSnoozeReminderRequestBuilder extends BaseActionRequestBuil
         );
 
         if (hasParameter("newReminderTime")) {
-            request.mBody.newReminderTime = getParameter("newReminderTime");
+            request.body.newReminderTime = getParameter("newReminderTime");
         }
 
         return request;

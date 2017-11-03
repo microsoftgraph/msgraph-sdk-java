@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsIspmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("per", per);
-        mBodyParams.put("nper", nper);
-        mBodyParams.put("pv", pv);
+        bodyParams.put("rate", rate);
+        bodyParams.put("per", per);
+        bodyParams.put("nper", nper);
+        bodyParams.put("pv", pv);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("per")) {
-            request.mBody.per = getParameter("per");
+            request.body.per = getParameter("per");
         }
 
         if (hasParameter("nper")) {
-            request.mBody.nper = getParameter("nper");
+            request.body.nper = getParameter("nper");
         }
 
         if (hasParameter("pv")) {
-            request.mBody.pv = getParameter("pv");
+            request.body.pv = getParameter("pv");
         }
 
         return request;

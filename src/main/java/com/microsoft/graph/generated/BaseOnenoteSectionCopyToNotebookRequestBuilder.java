@@ -30,9 +30,9 @@ public class BaseOnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRe
      */
     public BaseOnenoteSectionCopyToNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String id, final String groupId, final String renameAs) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("id", id);
-        mBodyParams.put("groupId", groupId);
-        mBodyParams.put("renameAs", renameAs);
+        bodyParams.put("id", id);
+        bodyParams.put("groupId", groupId);
+        bodyParams.put("renameAs", renameAs);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseOnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("id")) {
-            request.mBody.id = getParameter("id");
+            request.body.id = getParameter("id");
         }
 
         if (hasParameter("groupId")) {
-            request.mBody.groupId = getParameter("groupId");
+            request.body.groupId = getParameter("groupId");
         }
 
         if (hasParameter("renameAs")) {
-            request.mBody.renameAs = getParameter("renameAs");
+            request.body.renameAs = getParameter("renameAs");
         }
 
         return request;

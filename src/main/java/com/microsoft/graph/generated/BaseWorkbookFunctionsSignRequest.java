@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Sign Request.
  */
 public class BaseWorkbookFunctionsSignRequest extends BaseRequest implements IBaseWorkbookFunctionsSignRequest {
-    protected final WorkbookFunctionsSignBody mBody;
+    protected final WorkbookFunctionsSignBody body;
 
     /**
      * The request for this WorkbookFunctionsSign
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsSignRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsSignRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsSignBody();
+        body = new WorkbookFunctionsSignBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

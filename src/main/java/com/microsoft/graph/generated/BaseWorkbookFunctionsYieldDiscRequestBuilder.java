@@ -30,11 +30,11 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsYieldDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("pr", pr);
-        mBodyParams.put("redemption", redemption);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("pr", pr);
+        bodyParams.put("redemption", redemption);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -60,23 +60,23 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("pr")) {
-            request.mBody.pr = getParameter("pr");
+            request.body.pr = getParameter("pr");
         }
 
         if (hasParameter("redemption")) {
-            request.mBody.redemption = getParameter("redemption");
+            request.body.redemption = getParameter("redemption");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

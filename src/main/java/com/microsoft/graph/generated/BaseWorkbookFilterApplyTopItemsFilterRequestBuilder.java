@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseAct
      */
     public BaseWorkbookFilterApplyTopItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("count", count);
+        bodyParams.put("count", count);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseAct
         );
 
         if (hasParameter("count")) {
-            request.mBody.count = getParameter("count");
+            request.body.count = getParameter("count");
         }
 
         return request;

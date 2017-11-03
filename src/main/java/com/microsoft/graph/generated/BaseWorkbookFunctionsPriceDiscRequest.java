@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Price Disc Request.
  */
 public class BaseWorkbookFunctionsPriceDiscRequest extends BaseRequest implements IBaseWorkbookFunctionsPriceDiscRequest {
-    protected final WorkbookFunctionsPriceDiscBody mBody;
+    protected final WorkbookFunctionsPriceDiscBody body;
 
     /**
      * The request for this WorkbookFunctionsPriceDisc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsPriceDiscRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsPriceDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsPriceDiscBody();
+        body = new WorkbookFunctionsPriceDiscBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

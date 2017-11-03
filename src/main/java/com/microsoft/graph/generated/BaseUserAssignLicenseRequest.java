@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base User Assign License Request.
  */
 public class BaseUserAssignLicenseRequest extends BaseRequest implements IBaseUserAssignLicenseRequest {
-    protected final UserAssignLicenseBody mBody;
+    protected final UserAssignLicenseBody body;
 
     /**
      * The request for this UserAssignLicense
@@ -32,15 +32,15 @@ public class BaseUserAssignLicenseRequest extends BaseRequest implements IBaseUs
      */
     public BaseUserAssignLicenseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
-        mBody = new UserAssignLicenseBody();
+        body = new UserAssignLicenseBody();
     }
 
     public void post(final ICallback<User> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public User post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

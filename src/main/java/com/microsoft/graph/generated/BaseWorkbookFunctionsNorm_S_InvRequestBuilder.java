@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsNorm_S_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("probability", probability);
+        bodyParams.put("probability", probability);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("probability")) {
-            request.mBody.probability = getParameter("probability");
+            request.body.probability = getParameter("probability");
         }
 
         return request;

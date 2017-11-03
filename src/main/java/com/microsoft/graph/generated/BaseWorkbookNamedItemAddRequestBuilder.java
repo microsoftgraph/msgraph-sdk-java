@@ -30,9 +30,9 @@ public class BaseWorkbookNamedItemAddRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookNamedItemAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final com.google.gson.JsonElement reference, final String comment) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("name", name);
-        mBodyParams.put("reference", reference);
-        mBodyParams.put("comment", comment);
+        bodyParams.put("name", name);
+        bodyParams.put("reference", reference);
+        bodyParams.put("comment", comment);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookNamedItemAddRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("name")) {
-            request.mBody.name = getParameter("name");
+            request.body.name = getParameter("name");
         }
 
         if (hasParameter("reference")) {
-            request.mBody.reference = getParameter("reference");
+            request.body.reference = getParameter("reference");
         }
 
         if (hasParameter("comment")) {
-            request.mBody.comment = getParameter("comment");
+            request.body.comment = getParameter("comment");
         }
 
         return request;

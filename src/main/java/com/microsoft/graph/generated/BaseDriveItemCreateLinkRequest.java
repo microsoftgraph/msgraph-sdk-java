@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Drive Item Create Link Request.
  */
 public class BaseDriveItemCreateLinkRequest extends BaseRequest implements IBaseDriveItemCreateLinkRequest {
-    protected final DriveItemCreateLinkBody mBody;
+    protected final DriveItemCreateLinkBody body;
 
     /**
      * The request for this DriveItemCreateLink
@@ -32,15 +32,15 @@ public class BaseDriveItemCreateLinkRequest extends BaseRequest implements IBase
      */
     public BaseDriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Permission.class);
-        mBody = new DriveItemCreateLinkBody();
+        body = new DriveItemCreateLinkBody();
     }
 
     public void post(final ICallback<Permission> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Permission post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

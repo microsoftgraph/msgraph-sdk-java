@@ -32,7 +32,7 @@ public class GraphFatalServiceException extends GraphServiceException {
     /**
      * The website to report issues on this sdk.
      */
-    public static final String SDK_BUG_URL = "https://github.com/microsoftgraph/msgraph-sdk-android/issues";
+    public static final String SDK_BUG_URL = "https://github.com/microsoftgraph/msgraph-sdk-java/issues";
 
     /**
      * Create a fatal Graph service exception.

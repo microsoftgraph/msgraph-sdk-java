@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base User Send Mail Request.
  */
 public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSendMailRequest {
-    protected final UserSendMailBody mBody;
+    protected final UserSendMailBody body;
 
     /**
      * The request for this UserSendMail
@@ -32,15 +32,15 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
      */
     public BaseUserSendMailRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new UserSendMailBody();
+        body = new UserSendMailBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

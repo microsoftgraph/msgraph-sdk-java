@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Round Up Request.
  */
 public class BaseWorkbookFunctionsRoundUpRequest extends BaseRequest implements IBaseWorkbookFunctionsRoundUpRequest {
-    protected final WorkbookFunctionsRoundUpBody mBody;
+    protected final WorkbookFunctionsRoundUpBody body;
 
     /**
      * The request for this WorkbookFunctionsRoundUp
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRoundUpRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsRoundUpRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRoundUpBody();
+        body = new WorkbookFunctionsRoundUpBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

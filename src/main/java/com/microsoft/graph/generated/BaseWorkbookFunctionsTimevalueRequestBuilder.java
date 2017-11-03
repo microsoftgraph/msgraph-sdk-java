@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsTimevalueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement timeText) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("timeText", timeText);
+        bodyParams.put("timeText", timeText);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("timeText")) {
-            request.mBody.timeText = getParameter("timeText");
+            request.body.timeText = getParameter("timeText");
         }
 
         return request;

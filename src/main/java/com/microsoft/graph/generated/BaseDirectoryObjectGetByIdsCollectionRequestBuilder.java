@@ -30,8 +30,8 @@ public class BaseDirectoryObjectGetByIdsCollectionRequestBuilder extends BaseAct
      */
     public BaseDirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("ids", ids);
-          mBodyParams.put("types", types);
+        bodyParams.put("ids", ids);
+          bodyParams.put("types", types);
       }
 
     public IDirectoryObjectGetByIdsCollectionRequest buildRequest() {
@@ -46,10 +46,10 @@ public class BaseDirectoryObjectGetByIdsCollectionRequestBuilder extends BaseAct
         );
 
         if (hasParameter("ids")) {
-            request.mBody.ids = getParameter("ids");
+            request.body.ids = getParameter("ids");
         }
         if (hasParameter("types")) {
-            request.mBody.types = getParameter("types");
+            request.body.types = getParameter("types");
         }
   
         return request;

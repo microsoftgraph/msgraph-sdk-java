@@ -30,8 +30,8 @@ public class BaseWorkbookTableRowAddRequestBuilder extends BaseActionRequestBuil
      */
     public BaseWorkbookTableRowAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("index", index);
-        mBodyParams.put("values", values);
+        bodyParams.put("index", index);
+        bodyParams.put("values", values);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookTableRowAddRequestBuilder extends BaseActionRequestBuil
         );
 
         if (hasParameter("index")) {
-            request.mBody.index = getParameter("index");
+            request.body.index = getParameter("index");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         return request;

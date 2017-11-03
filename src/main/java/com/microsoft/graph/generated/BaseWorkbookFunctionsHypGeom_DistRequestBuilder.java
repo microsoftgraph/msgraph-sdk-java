@@ -30,11 +30,11 @@ public class BaseWorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionR
      */
     public BaseWorkbookFunctionsHypGeom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement sampleS, final com.google.gson.JsonElement numberSample, final com.google.gson.JsonElement populationS, final com.google.gson.JsonElement numberPop, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("sampleS", sampleS);
-        mBodyParams.put("numberSample", numberSample);
-        mBodyParams.put("populationS", populationS);
-        mBodyParams.put("numberPop", numberPop);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("sampleS", sampleS);
+        bodyParams.put("numberSample", numberSample);
+        bodyParams.put("populationS", populationS);
+        bodyParams.put("numberPop", numberPop);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -60,23 +60,23 @@ public class BaseWorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionR
         );
 
         if (hasParameter("sampleS")) {
-            request.mBody.sampleS = getParameter("sampleS");
+            request.body.sampleS = getParameter("sampleS");
         }
 
         if (hasParameter("numberSample")) {
-            request.mBody.numberSample = getParameter("numberSample");
+            request.body.numberSample = getParameter("numberSample");
         }
 
         if (hasParameter("populationS")) {
-            request.mBody.populationS = getParameter("populationS");
+            request.body.populationS = getParameter("populationS");
         }
 
         if (hasParameter("numberPop")) {
-            request.mBody.numberPop = getParameter("numberPop");
+            request.body.numberPop = getParameter("numberPop");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

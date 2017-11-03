@@ -30,7 +30,7 @@ public class BaseWorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuild
      */
     public BaseWorkbookRangeRowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer row) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("row", row));
+        functionOptions.add(new FunctionOption("row", row));
     }
 
     /**
@@ -55,7 +55,7 @@ public class BaseWorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuild
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

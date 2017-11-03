@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Cell Color Filter Request.
  */
 public class BaseWorkbookFilterApplyCellColorFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyCellColorFilterRequest {
-    protected final WorkbookFilterApplyCellColorFilterBody mBody;
+    protected final WorkbookFilterApplyCellColorFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyCellColorFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyCellColorFilterRequest extends BaseRequest i
      */
     public BaseWorkbookFilterApplyCellColorFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyCellColorFilterBody();
+        body = new WorkbookFilterApplyCellColorFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

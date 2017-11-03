@@ -30,8 +30,8 @@ public class BaseUserAssignLicenseRequestBuilder extends BaseActionRequestBuilde
      */
     public BaseUserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("addLicenses", addLicenses);
-        mBodyParams.put("removeLicenses", removeLicenses);
+        bodyParams.put("addLicenses", addLicenses);
+        bodyParams.put("removeLicenses", removeLicenses);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseUserAssignLicenseRequestBuilder extends BaseActionRequestBuilde
         );
 
         if (hasParameter("addLicenses")) {
-            request.mBody.addLicenses = getParameter("addLicenses");
+            request.body.addLicenses = getParameter("addLicenses");
         }
 
         if (hasParameter("removeLicenses")) {
-            request.mBody.removeLicenses = getParameter("removeLicenses");
+            request.body.removeLicenses = getParameter("removeLicenses");
         }
 
         return request;

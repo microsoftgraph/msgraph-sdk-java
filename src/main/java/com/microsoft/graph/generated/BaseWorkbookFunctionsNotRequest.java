@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Not Request.
  */
 public class BaseWorkbookFunctionsNotRequest extends BaseRequest implements IBaseWorkbookFunctionsNotRequest {
-    protected final WorkbookFunctionsNotBody mBody;
+    protected final WorkbookFunctionsNotBody body;
 
     /**
      * The request for this WorkbookFunctionsNot
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsNotRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsNotRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsNotBody();
+        body = new WorkbookFunctionsNotBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

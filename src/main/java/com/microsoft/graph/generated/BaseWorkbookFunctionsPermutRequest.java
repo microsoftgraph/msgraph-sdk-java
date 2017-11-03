@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Permut Request.
  */
 public class BaseWorkbookFunctionsPermutRequest extends BaseRequest implements IBaseWorkbookFunctionsPermutRequest {
-    protected final WorkbookFunctionsPermutBody mBody;
+    protected final WorkbookFunctionsPermutBody body;
 
     /**
      * The request for this WorkbookFunctionsPermut
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsPermutRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsPermutRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsPermutBody();
+        body = new WorkbookFunctionsPermutBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

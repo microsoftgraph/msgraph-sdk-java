@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsLogRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsLogRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement base) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("base", base);
+        bodyParams.put("number", number);
+        bodyParams.put("base", base);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsLogRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("base")) {
-            request.mBody.base = getParameter("base");
+            request.body.base = getParameter("base");
         }
 
         return request;

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Range Clear Request.
  */
 public class BaseWorkbookRangeClearRequest extends BaseRequest implements IBaseWorkbookRangeClearRequest {
-    protected final WorkbookRangeClearBody mBody;
+    protected final WorkbookRangeClearBody body;
 
     /**
      * The request for this WorkbookRangeClear
@@ -32,15 +32,15 @@ public class BaseWorkbookRangeClearRequest extends BaseRequest implements IBaseW
      */
     public BaseWorkbookRangeClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookRangeClearBody();
+        body = new WorkbookRangeClearBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

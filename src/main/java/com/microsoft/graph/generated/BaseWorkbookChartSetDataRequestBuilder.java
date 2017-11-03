@@ -30,8 +30,8 @@ public class BaseWorkbookChartSetDataRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookChartSetDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("sourceData", sourceData);
-        mBodyParams.put("seriesBy", seriesBy);
+        bodyParams.put("sourceData", sourceData);
+        bodyParams.put("seriesBy", seriesBy);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookChartSetDataRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("sourceData")) {
-            request.mBody.sourceData = getParameter("sourceData");
+            request.body.sourceData = getParameter("sourceData");
         }
 
         if (hasParameter("seriesBy")) {
-            request.mBody.seriesBy = getParameter("seriesBy");
+            request.body.seriesBy = getParameter("seriesBy");
         }
 
         return request;

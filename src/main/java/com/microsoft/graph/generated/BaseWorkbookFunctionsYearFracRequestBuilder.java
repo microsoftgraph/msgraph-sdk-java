@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsYearFracRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("startDate", startDate);
-        mBodyParams.put("endDate", endDate);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("startDate", startDate);
+        bodyParams.put("endDate", endDate);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("startDate")) {
-            request.mBody.startDate = getParameter("startDate");
+            request.body.startDate = getParameter("startDate");
         }
 
         if (hasParameter("endDate")) {
-            request.mBody.endDate = getParameter("endDate");
+            request.body.endDate = getParameter("endDate");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

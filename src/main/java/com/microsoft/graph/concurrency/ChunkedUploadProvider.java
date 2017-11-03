@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -67,38 +67,38 @@ public class ChunkedUploadProvider<UploadType> {
     /**
      * The client.
      */
-    private final IGraphServiceClient mClient;
+    private final IGraphServiceClient client;
 
     /**
      * The input stream.
      */
-    private final InputStream mInputStream;
+    private final InputStream inputStream;
 
     /**
      * The upload session url.
      */
-    private final String mUploadUrl;
+    private final String uploadUrl;
 
     /**
      * The stream size.
      */
-    private final int mStreamSize;
+    private final int streamSize;
 
     /**
      * The upload response handler.
      */
-    private final ChunkedUploadResponseHandler<UploadType> mResponseHandler;
+    private final ChunkedUploadResponseHandler<UploadType> responseHandler;
 
     /**
      * The counter for how many bytes read from input stream.
      */
-    private int mReadSoFar;
+    private int readSoFar;
 
     /**
      * Create the ChunkedUploadProvider
      *
      * @param uploadSession   The initial upload session.
-     * @param client          The onedrive client.
+     * @param client          The OneDrive client.
      * @param inputStream     The input stream.
      * @param streamSize      The stream size.
      * @param uploadTypeClass The upload type class.
@@ -124,12 +124,12 @@ public class ChunkedUploadProvider<UploadType> {
             throw new InvalidParameterException("Stream size should larger than 0.");
         }
 
-        this.mClient = client;
-        this.mReadSoFar = 0;
-        this.mInputStream = inputStream;
-        this.mStreamSize = streamSize;
-        this.mUploadUrl = uploadSession.uploadUrl;
-        this.mResponseHandler = new ChunkedUploadResponseHandler(uploadTypeClass);
+        this.client = client;
+        this.readSoFar = 0;
+        this.inputStream = inputStream;
+        this.streamSize = streamSize;
+        this.uploadUrl = uploadSession.uploadUrl;
+        this.responseHandler = new ChunkedUploadResponseHandler<UploadType>(uploadTypeClass);
     }
 
     /**
@@ -137,9 +137,9 @@ public class ChunkedUploadProvider<UploadType> {
      *
      * @param options  The upload options.
      * @param callback The progress callback invoked during uploading.
-     * @param configs  The optional ocnfigs for the upload options, [0] should be the customized chunk
+     * @param configs  The optional configurations for the upload options, [0] should be the customized chunk
      *                 size and the [1] should be the maxRetry for upload retry.
-     * @throws IOException The io exception happend during upload.
+     * @throws IOException The IO exception happened during upload.
      */
     public void upload(final List<Option> options,
                        final IProgressCallback<UploadType> callback,
@@ -167,30 +167,30 @@ public class ChunkedUploadProvider<UploadType> {
 
         byte[] buffer = new byte[chunkSize];
 
-        while (this.mReadSoFar < this.mStreamSize) {
-            int read = this.mInputStream.read(buffer);
+        while (this.readSoFar < this.streamSize) {
+            int read = this.inputStream.read(buffer);
 
             if (read == -1) {
                 break;
             }
 
             ChunkedUploadRequest request =
-                    new ChunkedUploadRequest(this.mUploadUrl, this.mClient, options, buffer, read,
-                            maxRetry, this.mReadSoFar, this.mStreamSize);
-            ChunkedUploadResult result = request.upload(this.mResponseHandler);
+                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, read,
+                            maxRetry, this.readSoFar, this.streamSize);
+            ChunkedUploadResult result = request.upload(this.responseHandler);
 
             if (result.uploadCompleted()) {
-                callback.progress(this.mStreamSize, this.mStreamSize);
+                callback.progress(this.streamSize, this.streamSize);
                 callback.success((UploadType) result.getItem());
                 break;
             } else if (result.chunkCompleted()) {
-                callback.progress(this.mReadSoFar, this.mStreamSize);
+                callback.progress(this.readSoFar, this.streamSize);
             } else if (result.hasError()) {
                 callback.failure(result.getError());
                 break;
             }
 
-            this.mReadSoFar += read;
+            this.readSoFar += read;
         }
     }
 }

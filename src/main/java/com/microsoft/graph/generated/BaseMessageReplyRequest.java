@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Message Reply Request.
  */
 public class BaseMessageReplyRequest extends BaseRequest implements IBaseMessageReplyRequest {
-    protected final MessageReplyBody mBody;
+    protected final MessageReplyBody body;
 
     /**
      * The request for this MessageReply
@@ -32,15 +32,15 @@ public class BaseMessageReplyRequest extends BaseRequest implements IBaseMessage
      */
     public BaseMessageReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new MessageReplyBody();
+        body = new MessageReplyBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Application Calculate Request.
  */
 public class BaseWorkbookApplicationCalculateRequest extends BaseRequest implements IBaseWorkbookApplicationCalculateRequest {
-    protected final WorkbookApplicationCalculateBody mBody;
+    protected final WorkbookApplicationCalculateBody body;
 
     /**
      * The request for this WorkbookApplicationCalculate
@@ -32,15 +32,15 @@ public class BaseWorkbookApplicationCalculateRequest extends BaseRequest impleme
      */
     public BaseWorkbookApplicationCalculateRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookApplicationCalculateBody();
+        body = new WorkbookApplicationCalculateBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

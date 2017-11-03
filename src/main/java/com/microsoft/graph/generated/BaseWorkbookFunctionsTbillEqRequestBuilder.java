@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsTbillEqRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsTbillEqRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("discount", discount);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("discount", discount);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsTbillEqRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("discount")) {
-            request.mBody.discount = getParameter("discount");
+            request.body.discount = getParameter("discount");
         }
 
         return request;

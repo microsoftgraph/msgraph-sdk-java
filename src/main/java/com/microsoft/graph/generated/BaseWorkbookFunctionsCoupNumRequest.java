@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Coup Num Request.
  */
 public class BaseWorkbookFunctionsCoupNumRequest extends BaseRequest implements IBaseWorkbookFunctionsCoupNumRequest {
-    protected final WorkbookFunctionsCoupNumBody mBody;
+    protected final WorkbookFunctionsCoupNumBody body;
 
     /**
      * The request for this WorkbookFunctionsCoupNum
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCoupNumRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsCoupNumRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCoupNumBody();
+        body = new WorkbookFunctionsCoupNumBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

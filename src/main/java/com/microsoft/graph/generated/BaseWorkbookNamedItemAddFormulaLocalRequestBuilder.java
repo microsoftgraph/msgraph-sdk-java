@@ -30,9 +30,9 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActi
      */
     public BaseWorkbookNamedItemAddFormulaLocalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final String formula, final String comment) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("name", name);
-        mBodyParams.put("formula", formula);
-        mBodyParams.put("comment", comment);
+        bodyParams.put("name", name);
+        bodyParams.put("formula", formula);
+        bodyParams.put("comment", comment);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActi
         );
 
         if (hasParameter("name")) {
-            request.mBody.name = getParameter("name");
+            request.body.name = getParameter("name");
         }
 
         if (hasParameter("formula")) {
-            request.mBody.formula = getParameter("formula");
+            request.body.formula = getParameter("formula");
         }
 
         if (hasParameter("comment")) {
-            request.mBody.comment = getParameter("comment");
+            request.body.comment = getParameter("comment");
         }
 
         return request;

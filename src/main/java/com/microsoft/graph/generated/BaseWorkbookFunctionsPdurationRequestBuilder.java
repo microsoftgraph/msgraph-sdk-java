@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsPdurationRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsPdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("pv", pv);
-        mBodyParams.put("fv", fv);
+        bodyParams.put("rate", rate);
+        bodyParams.put("pv", pv);
+        bodyParams.put("fv", fv);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsPdurationRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("pv")) {
-            request.mBody.pv = getParameter("pv");
+            request.body.pv = getParameter("pv");
         }
 
         if (hasParameter("fv")) {
-            request.mBody.fv = getParameter("fv");
+            request.body.fv = getParameter("fv");
         }
 
         return request;

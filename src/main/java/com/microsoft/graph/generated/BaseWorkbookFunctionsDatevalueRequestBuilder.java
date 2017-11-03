@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDatevalueRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsDatevalueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement dateText) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("dateText", dateText);
+        bodyParams.put("dateText", dateText);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsDatevalueRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("dateText")) {
-            request.mBody.dateText = getParameter("dateText");
+            request.body.dateText = getParameter("dateText");
         }
 
         return request;

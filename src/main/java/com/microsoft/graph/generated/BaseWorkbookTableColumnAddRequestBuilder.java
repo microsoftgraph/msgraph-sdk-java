@@ -30,9 +30,9 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookTableColumnAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index, final com.google.gson.JsonElement values, final String name) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("index", index);
-        mBodyParams.put("values", values);
-        mBodyParams.put("name", name);
+        bodyParams.put("index", index);
+        bodyParams.put("values", values);
+        bodyParams.put("name", name);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("index")) {
-            request.mBody.index = getParameter("index");
+            request.body.index = getParameter("index");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         if (hasParameter("name")) {
-            request.mBody.name = getParameter("name");
+            request.body.name = getParameter("name");
         }
 
         return request;

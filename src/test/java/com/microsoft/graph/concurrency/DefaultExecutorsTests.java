@@ -95,14 +95,14 @@ public class DefaultExecutorsTests {
         final String expectedLogMessage = "Starting foreground task, current active count:0, with exception com.microsoft.graph.core.ClientException: client exception message";
         final ExecutorTestCallback<String> callback = new ExecutorTestCallback<>();
 
-        defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null, GraphErrorCodes.InvalidAcceptType),
+        defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null, GraphErrorCodes.INVALID_ACCEPT_TYPE),
                 callback);
 
         callback._completionWaiter.waitForSignal();
         assertFalse(callback._successCalled.get());
         assertTrue(callback._failureCalled.get());
         assertEquals(expectedExceptionMessage, callback._exceptionResult.get().getMessage());
-        assertTrue(callback._exceptionResult.get().isError(GraphErrorCodes.InvalidAcceptType));
+        assertTrue(callback._exceptionResult.get().isError(GraphErrorCodes.INVALID_ACCEPT_TYPE));
         assertEquals(1,mLogger.getLogMessages().size());
         assertTrue(mLogger.hasMessage(expectedLogMessage));
     }

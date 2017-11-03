@@ -30,7 +30,7 @@ public class BaseMessageReplyRequestBuilder extends BaseActionRequestBuilder {
      */
     public BaseMessageReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("comment", comment);
+        bodyParams.put("comment", comment);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseMessageReplyRequestBuilder extends BaseActionRequestBuilder {
         );
 
         if (hasParameter("comment")) {
-            request.mBody.comment = getParameter("comment");
+            request.body.comment = getParameter("comment");
         }
 
         return request;

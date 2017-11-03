@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsWorkDayRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsWorkDayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("startDate", startDate);
-        mBodyParams.put("days", days);
-        mBodyParams.put("holidays", holidays);
+        bodyParams.put("startDate", startDate);
+        bodyParams.put("days", days);
+        bodyParams.put("holidays", holidays);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsWorkDayRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("startDate")) {
-            request.mBody.startDate = getParameter("startDate");
+            request.body.startDate = getParameter("startDate");
         }
 
         if (hasParameter("days")) {
-            request.mBody.days = getParameter("days");
+            request.body.days = getParameter("days");
         }
 
         if (hasParameter("holidays")) {
-            request.mBody.holidays = getParameter("holidays");
+            request.body.holidays = getParameter("holidays");
         }
 
         return request;

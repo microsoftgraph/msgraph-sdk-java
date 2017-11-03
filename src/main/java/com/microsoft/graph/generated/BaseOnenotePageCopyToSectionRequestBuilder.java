@@ -30,8 +30,8 @@ public class BaseOnenotePageCopyToSectionRequestBuilder extends BaseActionReques
      */
     public BaseOnenotePageCopyToSectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String id, final String groupId) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("id", id);
-        mBodyParams.put("groupId", groupId);
+        bodyParams.put("id", id);
+        bodyParams.put("groupId", groupId);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseOnenotePageCopyToSectionRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("id")) {
-            request.mBody.id = getParameter("id");
+            request.body.id = getParameter("id");
         }
 
         if (hasParameter("groupId")) {
-            request.mBody.groupId = getParameter("groupId");
+            request.body.groupId = getParameter("groupId");
         }
 
         return request;

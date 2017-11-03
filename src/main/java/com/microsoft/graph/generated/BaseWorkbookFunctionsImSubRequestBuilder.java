@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsImSubRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsImSubRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("inumber1", inumber1);
-        mBodyParams.put("inumber2", inumber2);
+        bodyParams.put("inumber1", inumber1);
+        bodyParams.put("inumber2", inumber2);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsImSubRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("inumber1")) {
-            request.mBody.inumber1 = getParameter("inumber1");
+            request.body.inumber1 = getParameter("inumber1");
         }
 
         if (hasParameter("inumber2")) {
-            request.mBody.inumber2 = getParameter("inumber2");
+            request.body.inumber2 = getParameter("inumber2");
         }
 
         return request;

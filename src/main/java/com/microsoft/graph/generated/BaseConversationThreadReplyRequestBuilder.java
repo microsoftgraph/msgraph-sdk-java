@@ -30,7 +30,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
      */
     public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Post post) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("post", post);
+        bodyParams.put("post", post);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("post")) {
-            request.mBody.post = getParameter("post");
+            request.body.post = getParameter("post");
         }
 
         return request;

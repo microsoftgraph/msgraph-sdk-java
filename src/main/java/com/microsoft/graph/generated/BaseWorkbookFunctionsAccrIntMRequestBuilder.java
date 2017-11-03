@@ -30,11 +30,11 @@ public class BaseWorkbookFunctionsAccrIntMRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsAccrIntMRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("issue", issue);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("par", par);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("issue", issue);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("rate", rate);
+        bodyParams.put("par", par);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -60,23 +60,23 @@ public class BaseWorkbookFunctionsAccrIntMRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("issue")) {
-            request.mBody.issue = getParameter("issue");
+            request.body.issue = getParameter("issue");
         }
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("par")) {
-            request.mBody.par = getParameter("par");
+            request.body.par = getParameter("par");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

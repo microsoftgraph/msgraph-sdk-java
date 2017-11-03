@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Poisson_Dist Request.
  */
 public class BaseWorkbookFunctionsPoisson_DistRequest extends BaseRequest implements IBaseWorkbookFunctionsPoisson_DistRequest {
-    protected final WorkbookFunctionsPoisson_DistBody mBody;
+    protected final WorkbookFunctionsPoisson_DistBody body;
 
     /**
      * The request for this WorkbookFunctionsPoisson_Dist
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsPoisson_DistRequest extends BaseRequest implem
      */
     public BaseWorkbookFunctionsPoisson_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsPoisson_DistBody();
+        body = new WorkbookFunctionsPoisson_DistBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

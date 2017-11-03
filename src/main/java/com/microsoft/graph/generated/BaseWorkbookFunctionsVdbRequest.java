@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Vdb Request.
  */
 public class BaseWorkbookFunctionsVdbRequest extends BaseRequest implements IBaseWorkbookFunctionsVdbRequest {
-    protected final WorkbookFunctionsVdbBody mBody;
+    protected final WorkbookFunctionsVdbBody body;
 
     /**
      * The request for this WorkbookFunctionsVdb
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsVdbRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsVdbRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsVdbBody();
+        body = new WorkbookFunctionsVdbBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

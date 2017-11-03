@@ -36,27 +36,27 @@ public abstract class BaseClient implements IBaseClient {
     /**
      * The auth provider instance.
      */
-    private IAuthenticationProvider mAuthenticationProvider;
+    private IAuthenticationProvider authenticationProvider;
 
     /**
      * The executors instance.
      */
-    private IExecutors mExecutors;
+    private IExecutors executors;
 
     /**
      * The http provider instance.
      */
-    private IHttpProvider mHttpProvider;
+    private IHttpProvider httpProvider;
 
     /**
      * The logger.
      */
-    private ILogger mLogger;
+    private ILogger logger;
 
     /**
      * The serializer instance.
      */
-    private ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the authentication provider.
@@ -64,7 +64,7 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public IAuthenticationProvider getAuthenticationProvider() {
-        return mAuthenticationProvider;
+        return authenticationProvider;
     }
 
     /**
@@ -87,7 +87,7 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public IExecutors getExecutors() {
-        return mExecutors;
+        return executors;
     }
 
     /**
@@ -96,7 +96,7 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public IHttpProvider getHttpProvider() {
-        return mHttpProvider;
+        return httpProvider;
     }
 
     /**
@@ -104,7 +104,7 @@ public abstract class BaseClient implements IBaseClient {
      * @return The logger.
      */
     public ILogger getLogger() {
-        return mLogger;
+        return logger;
     }
 
     /**
@@ -113,7 +113,7 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -121,19 +121,19 @@ public abstract class BaseClient implements IBaseClient {
      */
     @Override
     public void validate() {
-        if (mAuthenticationProvider == null) {
+        if (authenticationProvider == null) {
             throw new NullPointerException("AuthenticationProvider");
         }
 
-        if (mExecutors == null) {
+        if (executors == null) {
             throw new NullPointerException("Executors");
         }
 
-        if (mHttpProvider == null) {
+        if (httpProvider == null) {
             throw new NullPointerException("HttpProvider");
         }
 
-        if (mSerializer == null) {
+        if (serializer == null) {
             throw new NullPointerException("Serializer");
         }
     }
@@ -143,7 +143,7 @@ public abstract class BaseClient implements IBaseClient {
      * @param logger The logger.
      */
     protected void setLogger(final ILogger logger) {
-        mLogger = logger;
+        this.logger = logger;
     }
 
     /**
@@ -151,7 +151,7 @@ public abstract class BaseClient implements IBaseClient {
      * @param executors The executors.
      */
     protected void setExecutors(final IExecutors executors) {
-        mExecutors = executors;
+        this.executors = executors;
     }
 
     /**
@@ -159,7 +159,7 @@ public abstract class BaseClient implements IBaseClient {
      * @param authenticationProvider The authentication provider.
      */
     protected void setAuthenticationProvider(final IAuthenticationProvider authenticationProvider) {
-        mAuthenticationProvider = authenticationProvider;
+        this.authenticationProvider = authenticationProvider;
     }
 
     /**
@@ -167,7 +167,7 @@ public abstract class BaseClient implements IBaseClient {
      * @param httpProvider The http provider.
      */
     protected void setHttpProvider(final IHttpProvider httpProvider) {
-        mHttpProvider = httpProvider;
+        this.httpProvider = httpProvider;
     }
 
     /**
@@ -175,6 +175,6 @@ public abstract class BaseClient implements IBaseClient {
      * @param serializer The serializer.
      */
     public void setSerializer(final ISerializer serializer) {
-        mSerializer = serializer;
+        this.serializer = serializer;
     }
 }

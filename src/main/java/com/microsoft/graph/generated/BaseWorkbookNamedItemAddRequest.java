@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Named Item Add Request.
  */
 public class BaseWorkbookNamedItemAddRequest extends BaseRequest implements IBaseWorkbookNamedItemAddRequest {
-    protected final WorkbookNamedItemAddBody mBody;
+    protected final WorkbookNamedItemAddBody body;
 
     /**
      * The request for this WorkbookNamedItemAdd
@@ -32,15 +32,15 @@ public class BaseWorkbookNamedItemAddRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookNamedItemAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookNamedItem.class);
-        mBody = new WorkbookNamedItemAddBody();
+        body = new WorkbookNamedItemAddBody();
     }
 
     public void post(final ICallback<WorkbookNamedItem> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookNamedItem post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

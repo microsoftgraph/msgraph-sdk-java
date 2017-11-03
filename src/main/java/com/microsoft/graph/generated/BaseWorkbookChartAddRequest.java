@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Chart Add Request.
  */
 public class BaseWorkbookChartAddRequest extends BaseRequest implements IBaseWorkbookChartAddRequest {
-    protected final WorkbookChartAddBody mBody;
+    protected final WorkbookChartAddBody body;
 
     /**
      * The request for this WorkbookChartAdd
@@ -32,15 +32,15 @@ public class BaseWorkbookChartAddRequest extends BaseRequest implements IBaseWor
      */
     public BaseWorkbookChartAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChart.class);
-        mBody = new WorkbookChartAddBody();
+        body = new WorkbookChartAddBody();
     }
 
     public void post(final ICallback<WorkbookChart> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookChart post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

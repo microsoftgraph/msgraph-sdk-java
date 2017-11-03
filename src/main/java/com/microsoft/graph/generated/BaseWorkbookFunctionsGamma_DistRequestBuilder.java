@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsGamma_DistRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsGamma_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("alpha", alpha);
-        mBodyParams.put("beta", beta);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("x", x);
+        bodyParams.put("alpha", alpha);
+        bodyParams.put("beta", beta);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsGamma_DistRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("alpha")) {
-            request.mBody.alpha = getParameter("alpha");
+            request.body.alpha = getParameter("alpha");
         }
 
         if (hasParameter("beta")) {
-            request.mBody.beta = getParameter("beta");
+            request.body.beta = getParameter("beta");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

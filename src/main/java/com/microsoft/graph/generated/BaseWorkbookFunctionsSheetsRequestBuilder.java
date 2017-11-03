@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSheetsRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsSheetsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement reference) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("reference", reference);
+        bodyParams.put("reference", reference);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsSheetsRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("reference")) {
-            request.mBody.reference = getParameter("reference");
+            request.body.reference = getParameter("reference");
         }
 
         return request;

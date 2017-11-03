@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsExactRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsExactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text1, final com.google.gson.JsonElement text2) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text1", text1);
-        mBodyParams.put("text2", text2);
+        bodyParams.put("text1", text1);
+        bodyParams.put("text2", text2);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsExactRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("text1")) {
-            request.mBody.text1 = getParameter("text1");
+            request.body.text1 = getParameter("text1");
         }
 
         if (hasParameter("text2")) {
-            request.mBody.text2 = getParameter("text2");
+            request.body.text2 = getParameter("text2");
         }
 
         return request;

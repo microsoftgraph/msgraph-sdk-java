@@ -30,8 +30,8 @@ public class BaseWorkbookWorksheetCellRequestBuilder extends BaseFunctionRequest
      */
     public BaseWorkbookWorksheetCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("row", row));
-        mFunctionOptions.add(new FunctionOption("column", column));
+        functionOptions.add(new FunctionOption("row", row));
+        functionOptions.add(new FunctionOption("column", column));
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookWorksheetCellRequestBuilder extends BaseFunctionRequest
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

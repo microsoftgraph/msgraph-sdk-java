@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookFunctionsMultiNomialRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("values", values);
+        bodyParams.put("values", values);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         return request;

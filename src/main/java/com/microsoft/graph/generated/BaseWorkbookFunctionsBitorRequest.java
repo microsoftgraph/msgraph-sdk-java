@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Bitor Request.
  */
 public class BaseWorkbookFunctionsBitorRequest extends BaseRequest implements IBaseWorkbookFunctionsBitorRequest {
-    protected final WorkbookFunctionsBitorBody mBody;
+    protected final WorkbookFunctionsBitorBody body;
 
     /**
      * The request for this WorkbookFunctionsBitor
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsBitorRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsBitorRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsBitorBody();
+        body = new WorkbookFunctionsBitorBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

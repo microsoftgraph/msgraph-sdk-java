@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions St Dev_PRequest.
  */
 public class BaseWorkbookFunctionsStDev_PRequest extends BaseRequest implements IBaseWorkbookFunctionsStDev_PRequest {
-    protected final WorkbookFunctionsStDev_PBody mBody;
+    protected final WorkbookFunctionsStDev_PBody body;
 
     /**
      * The request for this WorkbookFunctionsStDev_P
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsStDev_PRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsStDev_PRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsStDev_PBody();
+        body = new WorkbookFunctionsStDev_PBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

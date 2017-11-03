@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsTrimMeanRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsTrimMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement percent) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("array", array);
-        mBodyParams.put("percent", percent);
+        bodyParams.put("array", array);
+        bodyParams.put("percent", percent);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsTrimMeanRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("array")) {
-            request.mBody.array = getParameter("array");
+            request.body.array = getParameter("array");
         }
 
         if (hasParameter("percent")) {
-            request.mBody.percent = getParameter("percent");
+            request.body.percent = getParameter("percent");
         }
 
         return request;

@@ -14,7 +14,7 @@ public class ClientExceptionTests {
 	
 	@Before
 	public void setUp() throws Exception {
-		graphErrorCodes = GraphErrorCodes.AccessDenied;
+		graphErrorCodes = GraphErrorCodes.ACCESS_DENIED;
         clientException = new ClientException(expectMessage, null, graphErrorCodes);
 	}
 

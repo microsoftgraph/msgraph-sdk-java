@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Bottom Items Filter Request.
  */
 public class BaseWorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyBottomItemsFilterRequest {
-    protected final WorkbookFilterApplyBottomItemsFilterBody mBody;
+    protected final WorkbookFilterApplyBottomItemsFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyBottomItemsFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyBottomItemsFilterRequest extends BaseRequest
      */
     public BaseWorkbookFilterApplyBottomItemsFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyBottomItemsFilterBody();
+        body = new WorkbookFilterApplyBottomItemsFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

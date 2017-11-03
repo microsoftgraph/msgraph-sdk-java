@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsReptRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsReptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numberTimes) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
-        mBodyParams.put("numberTimes", numberTimes);
+        bodyParams.put("text", text);
+        bodyParams.put("numberTimes", numberTimes);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsReptRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         if (hasParameter("numberTimes")) {
-            request.mBody.numberTimes = getParameter("numberTimes");
+            request.body.numberTimes = getParameter("numberTimes");
         }
 
         return request;

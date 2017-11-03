@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Event Snooze Reminder Request.
  */
 public class BaseEventSnoozeReminderRequest extends BaseRequest implements IBaseEventSnoozeReminderRequest {
-    protected final EventSnoozeReminderBody mBody;
+    protected final EventSnoozeReminderBody body;
 
     /**
      * The request for this EventSnoozeReminder
@@ -32,15 +32,15 @@ public class BaseEventSnoozeReminderRequest extends BaseRequest implements IBase
      */
     public BaseEventSnoozeReminderRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new EventSnoozeReminderBody();
+        body = new EventSnoozeReminderBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

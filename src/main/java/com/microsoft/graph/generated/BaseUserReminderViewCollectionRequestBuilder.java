@@ -30,8 +30,8 @@ public class BaseUserReminderViewCollectionRequestBuilder extends BaseFunctionRe
      */
     public BaseUserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String startDateTime, final String endDateTime) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("startDateTime", startDateTime));
-          mFunctionOptions.add(new FunctionOption("endDateTime", endDateTime));
+        functionOptions.add(new FunctionOption("startDateTime", startDateTime));
+          functionOptions.add(new FunctionOption("endDateTime", endDateTime));
       }
 
     public IUserReminderViewCollectionRequest buildRequest() {
@@ -45,7 +45,7 @@ public class BaseUserReminderViewCollectionRequestBuilder extends BaseFunctionRe
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

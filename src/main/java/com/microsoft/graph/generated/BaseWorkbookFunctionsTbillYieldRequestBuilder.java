@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsTbillYieldRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsTbillYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("pr", pr);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("pr", pr);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsTbillYieldRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("pr")) {
-            request.mBody.pr = getParameter("pr");
+            request.body.pr = getParameter("pr");
         }
 
         return request;

@@ -19,7 +19,7 @@ public class BaseFunctionRequestBuilder extends BaseRequestBuilder {
     /**
      * The {@link FunctionOption}s to add to this request
      */
-    protected List<FunctionOption> mFunctionOptions = new ArrayList<>();
+    protected List<FunctionOption> functionOptions = new ArrayList<>();
 
     /**
      * Constructs a new {@link BaseFunctionRequestBuilder}

@@ -54,7 +54,7 @@ public class BaseWorkbookTableColumnRangeRequestBuilder extends BaseFunctionRequ
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

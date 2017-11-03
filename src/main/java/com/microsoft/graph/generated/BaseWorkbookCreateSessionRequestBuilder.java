@@ -30,7 +30,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookCreateSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean persistChanges) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("persistChanges", persistChanges);
+        bodyParams.put("persistChanges", persistChanges);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("persistChanges")) {
-            request.mBody.persistChanges = getParameter("persistChanges");
+            request.body.persistChanges = getParameter("persistChanges");
         }
 
         return request;

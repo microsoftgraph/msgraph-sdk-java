@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Daverage Request.
  */
 public class BaseWorkbookFunctionsDaverageRequest extends BaseRequest implements IBaseWorkbookFunctionsDaverageRequest {
-    protected final WorkbookFunctionsDaverageBody mBody;
+    protected final WorkbookFunctionsDaverageBody body;
 
     /**
      * The request for this WorkbookFunctionsDaverage
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDaverageRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsDaverageRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDaverageBody();
+        body = new WorkbookFunctionsDaverageBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

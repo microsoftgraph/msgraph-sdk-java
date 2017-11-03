@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Time Request.
  */
 public class BaseWorkbookFunctionsTimeRequest extends BaseRequest implements IBaseWorkbookFunctionsTimeRequest {
-    protected final WorkbookFunctionsTimeBody mBody;
+    protected final WorkbookFunctionsTimeBody body;
 
     /**
      * The request for this WorkbookFunctionsTime
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsTimeRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsTimeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsTimeBody();
+        body = new WorkbookFunctionsTimeBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

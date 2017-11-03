@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsPermutationaRequestBuilder extends BaseActionR
      */
     public BaseWorkbookFunctionsPermutationaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("numberChosen", numberChosen);
+        bodyParams.put("number", number);
+        bodyParams.put("numberChosen", numberChosen);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsPermutationaRequestBuilder extends BaseActionR
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("numberChosen")) {
-            request.mBody.numberChosen = getParameter("numberChosen");
+            request.body.numberChosen = getParameter("numberChosen");
         }
 
         return request;

@@ -30,12 +30,12 @@ public class BaseWorkbookFunctionsPpmtRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsPpmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("per", per);
-        mBodyParams.put("nper", nper);
-        mBodyParams.put("pv", pv);
-        mBodyParams.put("fv", fv);
-        mBodyParams.put("type", type);
+        bodyParams.put("rate", rate);
+        bodyParams.put("per", per);
+        bodyParams.put("nper", nper);
+        bodyParams.put("pv", pv);
+        bodyParams.put("fv", fv);
+        bodyParams.put("type", type);
     }
 
     /**
@@ -61,27 +61,27 @@ public class BaseWorkbookFunctionsPpmtRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("per")) {
-            request.mBody.per = getParameter("per");
+            request.body.per = getParameter("per");
         }
 
         if (hasParameter("nper")) {
-            request.mBody.nper = getParameter("nper");
+            request.body.nper = getParameter("nper");
         }
 
         if (hasParameter("pv")) {
-            request.mBody.pv = getParameter("pv");
+            request.body.pv = getParameter("pv");
         }
 
         if (hasParameter("fv")) {
-            request.mBody.fv = getParameter("fv");
+            request.body.fv = getParameter("fv");
         }
 
         if (hasParameter("type")) {
-            request.mBody.type = getParameter("type");
+            request.body.type = getParameter("type");
         }
 
         return request;

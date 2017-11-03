@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Drive Item Create Upload Session Request.
  */
 public class BaseDriveItemCreateUploadSessionRequest extends BaseRequest implements IBaseDriveItemCreateUploadSessionRequest {
-    protected final DriveItemCreateUploadSessionBody mBody;
+    protected final DriveItemCreateUploadSessionBody body;
 
     /**
      * The request for this DriveItemCreateUploadSession
@@ -32,15 +32,15 @@ public class BaseDriveItemCreateUploadSessionRequest extends BaseRequest impleme
      */
     public BaseDriveItemCreateUploadSessionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, UploadSession.class);
-        mBody = new DriveItemCreateUploadSessionBody();
+        body = new DriveItemCreateUploadSessionBody();
     }
 
     public void post(final ICallback<UploadSession> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public UploadSession post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

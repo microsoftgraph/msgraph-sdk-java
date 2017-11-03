@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Rightb Request.
  */
 public class BaseWorkbookFunctionsRightbRequest extends BaseRequest implements IBaseWorkbookFunctionsRightbRequest {
-    protected final WorkbookFunctionsRightbBody mBody;
+    protected final WorkbookFunctionsRightbBody body;
 
     /**
      * The request for this WorkbookFunctionsRightb
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRightbRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsRightbRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRightbBody();
+        body = new WorkbookFunctionsRightbBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

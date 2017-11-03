@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Kurt Request.
  */
 public class BaseWorkbookFunctionsKurtRequest extends BaseRequest implements IBaseWorkbookFunctionsKurtRequest {
-    protected final WorkbookFunctionsKurtBody mBody;
+    protected final WorkbookFunctionsKurtBody body;
 
     /**
      * The request for this WorkbookFunctionsKurt
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsKurtRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsKurtRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsKurtBody();
+        body = new WorkbookFunctionsKurtBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

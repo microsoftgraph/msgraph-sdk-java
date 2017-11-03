@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Substitute Request.
  */
 public class BaseWorkbookFunctionsSubstituteRequest extends BaseRequest implements IBaseWorkbookFunctionsSubstituteRequest {
-    protected final WorkbookFunctionsSubstituteBody mBody;
+    protected final WorkbookFunctionsSubstituteBody body;
 
     /**
      * The request for this WorkbookFunctionsSubstitute
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsSubstituteRequest extends BaseRequest implemen
      */
     public BaseWorkbookFunctionsSubstituteRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsSubstituteBody();
+        body = new WorkbookFunctionsSubstituteBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

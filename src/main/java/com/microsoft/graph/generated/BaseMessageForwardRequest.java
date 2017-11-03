@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Message Forward Request.
  */
 public class BaseMessageForwardRequest extends BaseRequest implements IBaseMessageForwardRequest {
-    protected final MessageForwardBody mBody;
+    protected final MessageForwardBody body;
 
     /**
      * The request for this MessageForward
@@ -32,15 +32,15 @@ public class BaseMessageForwardRequest extends BaseRequest implements IBaseMessa
      */
     public BaseMessageForwardRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new MessageForwardBody();
+        body = new MessageForwardBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

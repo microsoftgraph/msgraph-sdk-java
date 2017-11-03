@@ -12,17 +12,17 @@ public class TimeOfDay {
     /**
      * The hour
      */
-    private final int mHour;
+    private final int hour;
 
     /**
      * The minute
      */
-    private final int mMinute;
+    private final int minute;
 
     /**
      * The second
      */
-    private final int mSecond;
+    private final int second;
 
     /**
      * Constructs a timezone-nonspecific DateOnly
@@ -64,9 +64,9 @@ public class TimeOfDay {
      * @param second the second
      */
     public TimeOfDay(final int hour, final int minute, final int second) {
-        mHour = hour;
-        mMinute = minute;
-        mSecond = second;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
     }
 
     /**
@@ -75,7 +75,7 @@ public class TimeOfDay {
      * @return the hour
      */
     public int getHour() {
-        return mHour;
+        return hour;
     }
 
     /**
@@ -84,7 +84,7 @@ public class TimeOfDay {
      * @return the minute
      */
     public int getMinute() {
-        return mMinute;
+        return minute;
     }
 
     /**
@@ -93,14 +93,14 @@ public class TimeOfDay {
      * @return the second
      */
     public int getSecond() {
-        return mSecond;
+        return second;
     }
 
     @Override
     public String toString() {
         return String.format(
                 Locale.ROOT,
-                "%02d:%02d:%02d", mHour, mMinute, mSecond
+                "%02d:%02d:%02d", hour, minute, second
         );
     }
 }

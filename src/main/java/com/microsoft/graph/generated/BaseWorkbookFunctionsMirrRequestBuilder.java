@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsMirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement financeRate, final com.google.gson.JsonElement reinvestRate) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("values", values);
-        mBodyParams.put("financeRate", financeRate);
-        mBodyParams.put("reinvestRate", reinvestRate);
+        bodyParams.put("values", values);
+        bodyParams.put("financeRate", financeRate);
+        bodyParams.put("reinvestRate", reinvestRate);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         if (hasParameter("financeRate")) {
-            request.mBody.financeRate = getParameter("financeRate");
+            request.body.financeRate = getParameter("financeRate");
         }
 
         if (hasParameter("reinvestRate")) {
-            request.mBody.reinvestRate = getParameter("reinvestRate");
+            request.body.reinvestRate = getParameter("reinvestRate");
         }
 
         return request;

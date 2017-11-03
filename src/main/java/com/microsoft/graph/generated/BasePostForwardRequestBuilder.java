@@ -30,8 +30,8 @@ public class BasePostForwardRequestBuilder extends BaseActionRequestBuilder {
      */
     public BasePostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("comment", comment);
-        mBodyParams.put("toRecipients", toRecipients);
+        bodyParams.put("comment", comment);
+        bodyParams.put("toRecipients", toRecipients);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BasePostForwardRequestBuilder extends BaseActionRequestBuilder {
         );
 
         if (hasParameter("comment")) {
-            request.mBody.comment = getParameter("comment");
+            request.body.comment = getParameter("comment");
         }
 
         if (hasParameter("toRecipients")) {
-            request.mBody.toRecipients = getParameter("toRecipients");
+            request.body.toRecipients = getParameter("toRecipients");
         }
 
         return request;

@@ -43,7 +43,7 @@ public class BaseDriveSharedWithMeCollectionRequestBuilder extends BaseFunctionR
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class BaseDirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequest<BaseDirectoryObjectGetByIdsCollectionResponse, IDirectoryObjectGetByIdsCollectionPage> implements IBaseDirectoryObjectGetByIdsCollectionRequest {
 
 
-    protected final DirectoryObjectGetByIdsBody mBody;
+    protected final DirectoryObjectGetByIdsBody body;
 
 
     /**
@@ -35,7 +35,7 @@ public class BaseDirectoryObjectGetByIdsCollectionRequest extends BaseCollection
      */
     public BaseDirectoryObjectGetByIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDirectoryObjectGetByIdsCollectionResponse.class, IDirectoryObjectGetByIdsCollectionPage.class);
-        mBody = new DirectoryObjectGetByIdsBody();
+        body = new DirectoryObjectGetByIdsBody();
     }
 
 
@@ -54,7 +54,7 @@ public class BaseDirectoryObjectGetByIdsCollectionRequest extends BaseCollection
     }
 
     public IDirectoryObjectGetByIdsCollectionPage post() throws ClientException {
-        final BaseDirectoryObjectGetByIdsCollectionResponse response = post(mBody);
+        final BaseDirectoryObjectGetByIdsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 

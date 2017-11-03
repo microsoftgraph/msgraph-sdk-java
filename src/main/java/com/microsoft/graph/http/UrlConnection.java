@@ -40,12 +40,12 @@ public class UrlConnection implements IConnection {
     /**
      * The backing http url connection instance.
      */
-    private final HttpURLConnection mConnection;
+    private final HttpURLConnection connection;
 
     /**
      * The response header cache.
      */
-    private HashMap<String, String> mHeaders;
+    private HashMap<String, String> headers;
 
     /**
      * Creates a new UrlConnection.
@@ -54,86 +54,86 @@ public class UrlConnection implements IConnection {
      * @throws IOException An exception occurs if there was a problem creating the connection.
      */
     public UrlConnection(final IHttpRequest request) throws IOException {
-        mConnection = (HttpURLConnection) request.getRequestUrl().openConnection();
+        connection = (HttpURLConnection) request.getRequestUrl().openConnection();
 
         for (final HeaderOption header : request.getHeaders()) {
-            mConnection.addRequestProperty(header.getName(), header.getValue().toString());
+            connection.addRequestProperty(header.getName(), header.getValue().toString());
         }
 
-        mConnection.setUseCaches(request.getUseCaches());
+        connection.setUseCaches(request.getUseCaches());
 
         try {
-            mConnection.setRequestMethod(request.getHttpMethod().toString());
+            connection.setRequestMethod(request.getHttpMethod().toString());
         } catch (final ProtocolException ignored) {
             // Some HTTP verbs are not supported by older http implementations, use method override as an alternative
-            mConnection.setRequestMethod(HttpMethod.POST.toString());
-            mConnection.addRequestProperty("X-HTTP-Method-Override", request.getHttpMethod().toString());
-            mConnection.addRequestProperty("X-HTTP-Method", request.getHttpMethod().toString());
+            connection.setRequestMethod(HttpMethod.POST.toString());
+            connection.addRequestProperty("X-HTTP-Method-Override", request.getHttpMethod().toString());
+            connection.addRequestProperty("X-HTTP-Method", request.getHttpMethod().toString());
         }
     }
 
     @Override
     public void setFollowRedirects(final boolean followRedirects) {
-        mConnection.setInstanceFollowRedirects(followRedirects);
+        connection.setInstanceFollowRedirects(followRedirects);
     }
 
     @Override
     public void addRequestHeader(final String headerName, final String headerValue) {
-        mConnection.addRequestProperty(headerName, headerValue);
+        connection.addRequestProperty(headerName, headerValue);
     }
 
     @Override
     public OutputStream getOutputStream() throws IOException {
-        mConnection.setDoOutput(true);
-        return mConnection.getOutputStream();
+        connection.setDoOutput(true);
+        return connection.getOutputStream();
     }
 
     @Override
     public InputStream getInputStream() throws IOException {
         final int httpClientErrorResponseCode = 400;
-        if (mConnection.getResponseCode() >= httpClientErrorResponseCode) {
-            return mConnection.getErrorStream();
+        if (connection.getResponseCode() >= httpClientErrorResponseCode) {
+            return connection.getErrorStream();
         } else {
-            return mConnection.getInputStream();
+            return connection.getInputStream();
         }
     }
 
     @Override
     public int getContentLength() {
-        return mConnection.getContentLength();
+        return connection.getContentLength();
     }
 
     @Override
     public int getResponseCode() throws IOException {
-        return mConnection.getResponseCode();
+        return connection.getResponseCode();
     }
 
     @Override
     public String getResponseMessage() throws IOException {
-        return mConnection.getResponseMessage();
+        return connection.getResponseMessage();
     }
 
     @Override
     public void close() {
-        mConnection.disconnect();
+        connection.disconnect();
     }
 
     @Override
     public Map<String, String> getHeaders() {
-        if (mHeaders == null) {
-            mHeaders = getResponseHeaders(mConnection);
+        if (headers == null) {
+            headers = getResponseHeaders(connection);
         }
-        return mHeaders;
+        return headers;
     }
 
     @Override
     public String getRequestMethod() {
-        return mConnection.getRequestMethod();
+        return connection.getRequestMethod();
     }
 
     @Override
     public void setContentLength(final int length) {
-        mConnection.setFixedLengthStreamingMode(length);
+        connection.setFixedLengthStreamingMode(length);
     }
 
     /**

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Convert Request.
  */
 public class BaseWorkbookFunctionsConvertRequest extends BaseRequest implements IBaseWorkbookFunctionsConvertRequest {
-    protected final WorkbookFunctionsConvertBody mBody;
+    protected final WorkbookFunctionsConvertBody body;
 
     /**
      * The request for this WorkbookFunctionsConvert
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsConvertRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsConvertRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsConvertBody();
+        body = new WorkbookFunctionsConvertBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

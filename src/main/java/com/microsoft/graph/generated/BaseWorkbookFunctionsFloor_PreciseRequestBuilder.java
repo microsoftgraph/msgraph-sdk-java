@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsFloor_PreciseRequestBuilder extends BaseAction
      */
     public BaseWorkbookFunctionsFloor_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("significance", significance);
+        bodyParams.put("number", number);
+        bodyParams.put("significance", significance);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsFloor_PreciseRequestBuilder extends BaseAction
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("significance")) {
-            request.mBody.significance = getParameter("significance");
+            request.body.significance = getParameter("significance");
         }
 
         return request;

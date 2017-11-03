@@ -30,11 +30,11 @@ public class BaseWorkbookFunctionsNperRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsNperRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("pmt", pmt);
-        mBodyParams.put("pv", pv);
-        mBodyParams.put("fv", fv);
-        mBodyParams.put("type", type);
+        bodyParams.put("rate", rate);
+        bodyParams.put("pmt", pmt);
+        bodyParams.put("pv", pv);
+        bodyParams.put("fv", fv);
+        bodyParams.put("type", type);
     }
 
     /**
@@ -60,23 +60,23 @@ public class BaseWorkbookFunctionsNperRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("pmt")) {
-            request.mBody.pmt = getParameter("pmt");
+            request.body.pmt = getParameter("pmt");
         }
 
         if (hasParameter("pv")) {
-            request.mBody.pv = getParameter("pv");
+            request.body.pv = getParameter("pv");
         }
 
         if (hasParameter("fv")) {
-            request.mBody.fv = getParameter("fv");
+            request.body.fv = getParameter("fv");
         }
 
         if (hasParameter("type")) {
-            request.mBody.type = getParameter("type");
+            request.body.type = getParameter("type");
         }
 
         return request;

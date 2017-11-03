@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsConvertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement fromUnit, final com.google.gson.JsonElement toUnit) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("fromUnit", fromUnit);
-        mBodyParams.put("toUnit", toUnit);
+        bodyParams.put("number", number);
+        bodyParams.put("fromUnit", fromUnit);
+        bodyParams.put("toUnit", toUnit);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("fromUnit")) {
-            request.mBody.fromUnit = getParameter("fromUnit");
+            request.body.fromUnit = getParameter("fromUnit");
         }
 
         if (hasParameter("toUnit")) {
-            request.mBody.toUnit = getParameter("toUnit");
+            request.body.toUnit = getParameter("toUnit");
         }
 
         return request;

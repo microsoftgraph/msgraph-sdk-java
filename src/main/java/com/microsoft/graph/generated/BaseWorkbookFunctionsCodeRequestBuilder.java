@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCodeRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsCodeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
+        bodyParams.put("text", text);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsCodeRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         return request;

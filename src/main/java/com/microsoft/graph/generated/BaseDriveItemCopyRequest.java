@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Drive Item Copy Request.
  */
 public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveItemCopyRequest {
-    protected final DriveItemCopyBody mBody;
+    protected final DriveItemCopyBody body;
 
     /**
      * The request for this DriveItemCopy
@@ -32,15 +32,15 @@ public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveI
      */
     public BaseDriveItemCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
-        mBody = new DriveItemCopyBody();
+        body = new DriveItemCopyBody();
     }
 
     public void post(final ICallback<DriveItem> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public DriveItem post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

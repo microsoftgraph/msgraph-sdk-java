@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Unicode Request.
  */
 public class BaseWorkbookFunctionsUnicodeRequest extends BaseRequest implements IBaseWorkbookFunctionsUnicodeRequest {
-    protected final WorkbookFunctionsUnicodeBody mBody;
+    protected final WorkbookFunctionsUnicodeBody body;
 
     /**
      * The request for this WorkbookFunctionsUnicode
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsUnicodeRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsUnicodeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsUnicodeBody();
+        body = new WorkbookFunctionsUnicodeBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

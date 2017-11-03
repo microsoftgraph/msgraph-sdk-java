@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuil
      */
     public BaseWorkbookFunctionsIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement logicalTest, final com.google.gson.JsonElement valueIfTrue, final com.google.gson.JsonElement valueIfFalse) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("logicalTest", logicalTest);
-        mBodyParams.put("valueIfTrue", valueIfTrue);
-        mBodyParams.put("valueIfFalse", valueIfFalse);
+        bodyParams.put("logicalTest", logicalTest);
+        bodyParams.put("valueIfTrue", valueIfTrue);
+        bodyParams.put("valueIfFalse", valueIfFalse);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuil
         );
 
         if (hasParameter("logicalTest")) {
-            request.mBody.logicalTest = getParameter("logicalTest");
+            request.body.logicalTest = getParameter("logicalTest");
         }
 
         if (hasParameter("valueIfTrue")) {
-            request.mBody.valueIfTrue = getParameter("valueIfTrue");
+            request.body.valueIfTrue = getParameter("valueIfTrue");
         }
 
         if (hasParameter("valueIfFalse")) {
-            request.mBody.valueIfFalse = getParameter("valueIfFalse");
+            request.body.valueIfFalse = getParameter("valueIfFalse");
         }
 
         return request;

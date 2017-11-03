@@ -30,8 +30,8 @@ public class BaseEventTentativelyAcceptRequestBuilder extends BaseActionRequestB
      */
     public BaseEventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("comment", comment);
-        mBodyParams.put("sendResponse", sendResponse);
+        bodyParams.put("comment", comment);
+        bodyParams.put("sendResponse", sendResponse);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseEventTentativelyAcceptRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("comment")) {
-            request.mBody.comment = getParameter("comment");
+            request.body.comment = getParameter("comment");
         }
 
         if (hasParameter("sendResponse")) {
-            request.mBody.sendResponse = getParameter("sendResponse");
+            request.body.sendResponse = getParameter("sendResponse");
         }
 
         return request;

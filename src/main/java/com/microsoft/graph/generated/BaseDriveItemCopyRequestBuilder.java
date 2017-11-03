@@ -30,8 +30,8 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
      */
     public BaseDriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final ItemReference parentReference) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("name", name);
-        mBodyParams.put("parentReference", parentReference);
+        bodyParams.put("name", name);
+        bodyParams.put("parentReference", parentReference);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
         );
 
         if (hasParameter("name")) {
-            request.mBody.name = getParameter("name");
+            request.body.name = getParameter("name");
         }
 
         if (hasParameter("parentReference")) {
-            request.mBody.parentReference = getParameter("parentReference");
+            request.body.parentReference = getParameter("parentReference");
         }
 
         return request;

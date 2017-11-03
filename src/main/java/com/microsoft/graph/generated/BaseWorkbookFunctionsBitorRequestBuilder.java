@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsBitorRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsBitorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number1", number1);
-        mBodyParams.put("number2", number2);
+        bodyParams.put("number1", number1);
+        bodyParams.put("number2", number2);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsBitorRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("number1")) {
-            request.mBody.number1 = getParameter("number1");
+            request.body.number1 = getParameter("number1");
         }
 
         if (hasParameter("number2")) {
-            request.mBody.number2 = getParameter("number2");
+            request.body.number2 = getParameter("number2");
         }
 
         return request;

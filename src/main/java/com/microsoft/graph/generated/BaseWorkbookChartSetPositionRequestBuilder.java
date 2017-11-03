@@ -30,8 +30,8 @@ public class BaseWorkbookChartSetPositionRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookChartSetPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("startCell", startCell);
-        mBodyParams.put("endCell", endCell);
+        bodyParams.put("startCell", startCell);
+        bodyParams.put("endCell", endCell);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookChartSetPositionRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("startCell")) {
-            request.mBody.startCell = getParameter("startCell");
+            request.body.startCell = getParameter("startCell");
         }
 
         if (hasParameter("endCell")) {
-            request.mBody.endCell = getParameter("endCell");
+            request.body.endCell = getParameter("endCell");
         }
 
         return request;

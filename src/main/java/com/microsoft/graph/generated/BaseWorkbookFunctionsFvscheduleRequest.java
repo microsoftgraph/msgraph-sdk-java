@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Fvschedule Request.
  */
 public class BaseWorkbookFunctionsFvscheduleRequest extends BaseRequest implements IBaseWorkbookFunctionsFvscheduleRequest {
-    protected final WorkbookFunctionsFvscheduleBody mBody;
+    protected final WorkbookFunctionsFvscheduleBody body;
 
     /**
      * The request for this WorkbookFunctionsFvschedule
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsFvscheduleRequest extends BaseRequest implemen
      */
     public BaseWorkbookFunctionsFvscheduleRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsFvscheduleBody();
+        body = new WorkbookFunctionsFvscheduleBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

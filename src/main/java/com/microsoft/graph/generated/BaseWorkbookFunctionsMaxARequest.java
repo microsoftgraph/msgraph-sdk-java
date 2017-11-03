@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Max ARequest.
  */
 public class BaseWorkbookFunctionsMaxARequest extends BaseRequest implements IBaseWorkbookFunctionsMaxARequest {
-    protected final WorkbookFunctionsMaxABody mBody;
+    protected final WorkbookFunctionsMaxABody body;
 
     /**
      * The request for this WorkbookFunctionsMaxA
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsMaxARequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsMaxARequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsMaxABody();
+        body = new WorkbookFunctionsMaxABody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

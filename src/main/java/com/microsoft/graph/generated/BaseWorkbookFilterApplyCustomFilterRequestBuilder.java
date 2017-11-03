@@ -30,9 +30,9 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
      */
     public BaseWorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("criteria1", criteria1);
-        mBodyParams.put("criteria2", criteria2);
-        mBodyParams.put("oper", oper);
+        bodyParams.put("criteria1", criteria1);
+        bodyParams.put("criteria2", criteria2);
+        bodyParams.put("oper", oper);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
         );
 
         if (hasParameter("criteria1")) {
-            request.mBody.criteria1 = getParameter("criteria1");
+            request.body.criteria1 = getParameter("criteria1");
         }
 
         if (hasParameter("criteria2")) {
-            request.mBody.criteria2 = getParameter("criteria2");
+            request.body.criteria2 = getParameter("criteria2");
         }
 
         if (hasParameter("oper")) {
-            request.mBody.oper = getParameter("oper");
+            request.body.oper = getParameter("oper");
         }
 
         return request;

@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class BaseDriveItemInviteCollectionRequest extends BaseCollectionRequest<BaseDriveItemInviteCollectionResponse, IDriveItemInviteCollectionPage> implements IBaseDriveItemInviteCollectionRequest {
 
 
-    protected final DriveItemInviteBody mBody;
+    protected final DriveItemInviteBody body;
 
 
     /**
@@ -35,7 +35,7 @@ public class BaseDriveItemInviteCollectionRequest extends BaseCollectionRequest<
      */
     public BaseDriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDriveItemInviteCollectionResponse.class, IDriveItemInviteCollectionPage.class);
-        mBody = new DriveItemInviteBody();
+        body = new DriveItemInviteBody();
     }
 
 
@@ -54,7 +54,7 @@ public class BaseDriveItemInviteCollectionRequest extends BaseCollectionRequest<
     }
 
     public IDriveItemInviteCollectionPage post() throws ClientException {
-        final BaseDriveItemInviteCollectionResponse response = post(mBody);
+        final BaseDriveItemInviteCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 

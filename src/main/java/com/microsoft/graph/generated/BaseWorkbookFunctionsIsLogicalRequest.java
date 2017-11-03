@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Is Logical Request.
  */
 public class BaseWorkbookFunctionsIsLogicalRequest extends BaseRequest implements IBaseWorkbookFunctionsIsLogicalRequest {
-    protected final WorkbookFunctionsIsLogicalBody mBody;
+    protected final WorkbookFunctionsIsLogicalBody body;
 
     /**
      * The request for this WorkbookFunctionsIsLogical
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsIsLogicalRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsIsLogicalRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsIsLogicalBody();
+        body = new WorkbookFunctionsIsLogicalBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,12 +30,12 @@ public class BaseWorkbookFunctionsMdurationRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsMdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("coupon", coupon);
-        mBodyParams.put("yld", yld);
-        mBodyParams.put("frequency", frequency);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("coupon", coupon);
+        bodyParams.put("yld", yld);
+        bodyParams.put("frequency", frequency);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -61,27 +61,27 @@ public class BaseWorkbookFunctionsMdurationRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("coupon")) {
-            request.mBody.coupon = getParameter("coupon");
+            request.body.coupon = getParameter("coupon");
         }
 
         if (hasParameter("yld")) {
-            request.mBody.yld = getParameter("yld");
+            request.body.yld = getParameter("yld");
         }
 
         if (hasParameter("frequency")) {
-            request.mBody.frequency = getParameter("frequency");
+            request.body.frequency = getParameter("frequency");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

@@ -12,17 +12,17 @@ public class DateOnly {
     /**
      * The year
      */
-    private final int mYear;
+    private final int year;
 
     /**
      * The month
      */
-    private final int mMonth;
+    private final int month;
 
     /**
      * The day
      */
-    private final int mDay;
+    private final int day;
 
     /**
      * Constructs a timezone-nonspecific DateOnly
@@ -64,9 +64,9 @@ public class DateOnly {
      * @param day   day of the month
      */
     public DateOnly(final int year, final int month, final int day) {
-        mYear = year;
-        mMonth = month;
-        mDay = day;
+        this.year = year;
+        this.month = month;
+        this.day = day;
     }
 
     /**
@@ -75,7 +75,7 @@ public class DateOnly {
      * @return the year
      */
     public int getYear() {
-        return mYear;
+        return year;
     }
 
     /**
@@ -84,7 +84,7 @@ public class DateOnly {
      * @return the month
      */
     public int getMonth() {
-        return mMonth;
+        return month;
     }
 
     /**
@@ -93,14 +93,14 @@ public class DateOnly {
      * @return the day
      */
     public int getDay() {
-        return mDay;
+        return day;
     }
 
     @Override
     public String toString() {
         return String.format(
                 Locale.ROOT,
-                "%04d-%02d-%02d", mYear, mMonth, mDay
+                "%04d-%02d-%02d", year, month, day
         );
     }
 }

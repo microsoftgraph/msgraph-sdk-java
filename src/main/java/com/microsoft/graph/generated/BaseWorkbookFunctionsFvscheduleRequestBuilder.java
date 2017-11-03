@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsFvscheduleRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsFvscheduleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement principal, final com.google.gson.JsonElement schedule) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("principal", principal);
-        mBodyParams.put("schedule", schedule);
+        bodyParams.put("principal", principal);
+        bodyParams.put("schedule", schedule);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsFvscheduleRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("principal")) {
-            request.mBody.principal = getParameter("principal");
+            request.body.principal = getParameter("principal");
         }
 
         if (hasParameter("schedule")) {
-            request.mBody.schedule = getParameter("schedule");
+            request.body.schedule = getParameter("schedule");
         }
 
         return request;

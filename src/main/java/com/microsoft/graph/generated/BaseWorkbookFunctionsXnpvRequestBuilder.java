@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsXnpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("values", values);
-        mBodyParams.put("dates", dates);
+        bodyParams.put("rate", rate);
+        bodyParams.put("values", values);
+        bodyParams.put("dates", dates);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsXnpvRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         if (hasParameter("dates")) {
-            request.mBody.dates = getParameter("dates");
+            request.body.dates = getParameter("dates");
         }
 
         return request;

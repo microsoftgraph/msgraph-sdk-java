@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Top Items Filter Request.
  */
 public class BaseWorkbookFilterApplyTopItemsFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyTopItemsFilterRequest {
-    protected final WorkbookFilterApplyTopItemsFilterBody mBody;
+    protected final WorkbookFilterApplyTopItemsFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyTopItemsFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyTopItemsFilterRequest extends BaseRequest im
      */
     public BaseWorkbookFilterApplyTopItemsFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyTopItemsFilterBody();
+        body = new WorkbookFilterApplyTopItemsFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

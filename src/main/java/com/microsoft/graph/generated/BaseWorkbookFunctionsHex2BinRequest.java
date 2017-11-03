@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Hex2Bin Request.
  */
 public class BaseWorkbookFunctionsHex2BinRequest extends BaseRequest implements IBaseWorkbookFunctionsHex2BinRequest {
-    protected final WorkbookFunctionsHex2BinBody mBody;
+    protected final WorkbookFunctionsHex2BinBody body;
 
     /**
      * The request for this WorkbookFunctionsHex2Bin
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsHex2BinRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsHex2BinRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsHex2BinBody();
+        body = new WorkbookFunctionsHex2BinBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

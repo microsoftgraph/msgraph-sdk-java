@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Chart Set Position Request.
  */
 public class BaseWorkbookChartSetPositionRequest extends BaseRequest implements IBaseWorkbookChartSetPositionRequest {
-    protected final WorkbookChartSetPositionBody mBody;
+    protected final WorkbookChartSetPositionBody body;
 
     /**
      * The request for this WorkbookChartSetPosition
@@ -32,15 +32,15 @@ public class BaseWorkbookChartSetPositionRequest extends BaseRequest implements 
      */
     public BaseWorkbookChartSetPositionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookChartSetPositionBody();
+        body = new WorkbookChartSetPositionBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

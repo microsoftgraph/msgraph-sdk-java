@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Choose Request.
  */
 public class BaseWorkbookFunctionsChooseRequest extends BaseRequest implements IBaseWorkbookFunctionsChooseRequest {
-    protected final WorkbookFunctionsChooseBody mBody;
+    protected final WorkbookFunctionsChooseBody body;
 
     /**
      * The request for this WorkbookFunctionsChoose
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsChooseRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsChooseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsChooseBody();
+        body = new WorkbookFunctionsChooseBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

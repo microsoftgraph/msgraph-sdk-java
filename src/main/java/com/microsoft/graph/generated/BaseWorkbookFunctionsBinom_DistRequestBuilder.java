@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("numberS", numberS);
-        mBodyParams.put("trials", trials);
-        mBodyParams.put("probabilityS", probabilityS);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("numberS", numberS);
+        bodyParams.put("trials", trials);
+        bodyParams.put("probabilityS", probabilityS);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("numberS")) {
-            request.mBody.numberS = getParameter("numberS");
+            request.body.numberS = getParameter("numberS");
         }
 
         if (hasParameter("trials")) {
-            request.mBody.trials = getParameter("trials");
+            request.body.trials = getParameter("trials");
         }
 
         if (hasParameter("probabilityS")) {
-            request.mBody.probabilityS = getParameter("probabilityS");
+            request.body.probabilityS = getParameter("probabilityS");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@ package com.microsoft.graph.authentication;
 import com.microsoft.graph.http.IHttpRequest;
 
 /**
- * Provides authentication for a requests before it is sent by a http provider.
+ * Provides authentication for a requests before it is sent by an HTTP provider.
  */
 public interface IAuthenticationProvider {
 

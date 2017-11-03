@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsEffectRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsEffectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement nominalRate, final com.google.gson.JsonElement npery) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("nominalRate", nominalRate);
-        mBodyParams.put("npery", npery);
+        bodyParams.put("nominalRate", nominalRate);
+        bodyParams.put("npery", npery);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsEffectRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("nominalRate")) {
-            request.mBody.nominalRate = getParameter("nominalRate");
+            request.body.nominalRate = getParameter("nominalRate");
         }
 
         if (hasParameter("npery")) {
-            request.mBody.npery = getParameter("npery");
+            request.body.npery = getParameter("npery");
         }
 
         return request;

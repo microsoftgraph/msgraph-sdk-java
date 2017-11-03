@@ -27,7 +27,7 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
     /**
      * The logger instance
      */
-    private final ILogger mLogger = new DefaultLogger();
+    private final ILogger logger = new DefaultLogger();
 
     /**
      * Creates the type adapter
@@ -64,7 +64,7 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
                     String value = reader.nextString();
                     T incoming = enumValues.get(value);
                     if (incoming == null) {
-                        mLogger.logDebug(
+                        logger.logDebug(
                                 String.format(
                                         "The following value %s could not be recognized as a member of the enum",
                                         value)

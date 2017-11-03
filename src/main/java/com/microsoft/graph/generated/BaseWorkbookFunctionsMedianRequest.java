@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Median Request.
  */
 public class BaseWorkbookFunctionsMedianRequest extends BaseRequest implements IBaseWorkbookFunctionsMedianRequest {
-    protected final WorkbookFunctionsMedianBody mBody;
+    protected final WorkbookFunctionsMedianBody body;
 
     /**
      * The request for this WorkbookFunctionsMedian
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsMedianRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsMedianRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsMedianBody();
+        body = new WorkbookFunctionsMedianBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

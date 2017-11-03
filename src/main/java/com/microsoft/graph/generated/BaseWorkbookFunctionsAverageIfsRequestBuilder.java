@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsAverageIfsRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsAverageIfsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement averageRange, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("averageRange", averageRange);
-        mBodyParams.put("values", values);
+        bodyParams.put("averageRange", averageRange);
+        bodyParams.put("values", values);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsAverageIfsRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("averageRange")) {
-            request.mBody.averageRange = getParameter("averageRange");
+            request.body.averageRange = getParameter("averageRange");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         return request;

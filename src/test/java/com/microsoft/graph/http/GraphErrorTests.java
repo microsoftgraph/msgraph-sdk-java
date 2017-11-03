@@ -15,17 +15,17 @@ public class GraphErrorTests {
 	public void testIsError(){
         String expectedMessage = "test error message";
         GraphError error = new GraphError();
-        error.code = GraphErrorCodes.AccessDenied.toString();
+        error.code = GraphErrorCodes.ACCESS_DENIED.toString();
         error.message = expectedMessage;
-        assertTrue(error.isError(GraphErrorCodes.AccessDenied));
+        assertTrue(error.isError(GraphErrorCodes.ACCESS_DENIED));
         assertEquals(expectedMessage, error.message);
     }
 
 	@Test
     public void testIsNotError() {
         GraphError error = new GraphError();
-        error.code = GraphErrorCodes.AccessDenied.toString();
-        assertFalse(error.isError(GraphErrorCodes.Unauthenticated));
+        error.code = GraphErrorCodes.ACCESS_DENIED.toString();
+        assertFalse(error.isError(GraphErrorCodes.UNAUTHENTICATED));
     }
 
 }

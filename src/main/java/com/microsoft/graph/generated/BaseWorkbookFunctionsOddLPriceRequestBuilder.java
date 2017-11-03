@@ -30,14 +30,14 @@ public class BaseWorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsOddLPriceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("lastInterest", lastInterest);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("yld", yld);
-        mBodyParams.put("redemption", redemption);
-        mBodyParams.put("frequency", frequency);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("lastInterest", lastInterest);
+        bodyParams.put("rate", rate);
+        bodyParams.put("yld", yld);
+        bodyParams.put("redemption", redemption);
+        bodyParams.put("frequency", frequency);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -63,35 +63,35 @@ public class BaseWorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("lastInterest")) {
-            request.mBody.lastInterest = getParameter("lastInterest");
+            request.body.lastInterest = getParameter("lastInterest");
         }
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("yld")) {
-            request.mBody.yld = getParameter("yld");
+            request.body.yld = getParameter("yld");
         }
 
         if (hasParameter("redemption")) {
-            request.mBody.redemption = getParameter("redemption");
+            request.body.redemption = getParameter("redemption");
         }
 
         if (hasParameter("frequency")) {
-            request.mBody.frequency = getParameter("frequency");
+            request.body.frequency = getParameter("frequency");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

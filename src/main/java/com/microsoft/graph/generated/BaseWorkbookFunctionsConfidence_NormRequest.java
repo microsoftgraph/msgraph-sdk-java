@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Confidence_Norm Request.
  */
 public class BaseWorkbookFunctionsConfidence_NormRequest extends BaseRequest implements IBaseWorkbookFunctionsConfidence_NormRequest {
-    protected final WorkbookFunctionsConfidence_NormBody mBody;
+    protected final WorkbookFunctionsConfidence_NormBody body;
 
     /**
      * The request for this WorkbookFunctionsConfidence_Norm
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsConfidence_NormRequest extends BaseRequest imp
      */
     public BaseWorkbookFunctionsConfidence_NormRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsConfidence_NormBody();
+        body = new WorkbookFunctionsConfidence_NormBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

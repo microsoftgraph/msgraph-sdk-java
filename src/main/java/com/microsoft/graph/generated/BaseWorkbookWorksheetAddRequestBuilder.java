@@ -30,7 +30,7 @@ public class BaseWorkbookWorksheetAddRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookWorksheetAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("name", name);
+        bodyParams.put("name", name);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookWorksheetAddRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("name")) {
-            request.mBody.name = getParameter("name");
+            request.body.name = getParameter("name");
         }
 
         return request;

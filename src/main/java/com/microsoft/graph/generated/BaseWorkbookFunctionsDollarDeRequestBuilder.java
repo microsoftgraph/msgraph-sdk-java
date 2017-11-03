@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsDollarDeRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsDollarDeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement fractionalDollar, final com.google.gson.JsonElement fraction) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("fractionalDollar", fractionalDollar);
-        mBodyParams.put("fraction", fraction);
+        bodyParams.put("fractionalDollar", fractionalDollar);
+        bodyParams.put("fraction", fraction);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsDollarDeRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("fractionalDollar")) {
-            request.mBody.fractionalDollar = getParameter("fractionalDollar");
+            request.body.fractionalDollar = getParameter("fractionalDollar");
         }
 
         if (hasParameter("fraction")) {
-            request.mBody.fraction = getParameter("fraction");
+            request.body.fraction = getParameter("fraction");
         }
 
         return request;

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Dcount Request.
  */
 public class BaseWorkbookFunctionsDcountRequest extends BaseRequest implements IBaseWorkbookFunctionsDcountRequest {
-    protected final WorkbookFunctionsDcountBody mBody;
+    protected final WorkbookFunctionsDcountBody body;
 
     /**
      * The request for this WorkbookFunctionsDcount
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDcountRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsDcountRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDcountBody();
+        body = new WorkbookFunctionsDcountBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

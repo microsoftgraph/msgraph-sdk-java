@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Roman Request.
  */
 public class BaseWorkbookFunctionsRomanRequest extends BaseRequest implements IBaseWorkbookFunctionsRomanRequest {
-    protected final WorkbookFunctionsRomanBody mBody;
+    protected final WorkbookFunctionsRomanBody body;
 
     /**
      * The request for this WorkbookFunctionsRoman
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRomanRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsRomanRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRomanBody();
+        body = new WorkbookFunctionsRomanBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

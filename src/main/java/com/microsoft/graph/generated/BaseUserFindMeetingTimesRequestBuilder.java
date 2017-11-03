@@ -30,14 +30,14 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
      */
     public BaseUserFindMeetingTimesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("attendees", attendees);
-        mBodyParams.put("locationConstraint", locationConstraint);
-        mBodyParams.put("timeConstraint", timeConstraint);
-        mBodyParams.put("meetingDuration", meetingDuration);
-        mBodyParams.put("maxCandidates", maxCandidates);
-        mBodyParams.put("isOrganizerOptional", isOrganizerOptional);
-        mBodyParams.put("returnSuggestionReasons", returnSuggestionReasons);
-        mBodyParams.put("minimumAttendeePercentage", minimumAttendeePercentage);
+        bodyParams.put("attendees", attendees);
+        bodyParams.put("locationConstraint", locationConstraint);
+        bodyParams.put("timeConstraint", timeConstraint);
+        bodyParams.put("meetingDuration", meetingDuration);
+        bodyParams.put("maxCandidates", maxCandidates);
+        bodyParams.put("isOrganizerOptional", isOrganizerOptional);
+        bodyParams.put("returnSuggestionReasons", returnSuggestionReasons);
+        bodyParams.put("minimumAttendeePercentage", minimumAttendeePercentage);
     }
 
     /**
@@ -63,35 +63,35 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("attendees")) {
-            request.mBody.attendees = getParameter("attendees");
+            request.body.attendees = getParameter("attendees");
         }
 
         if (hasParameter("locationConstraint")) {
-            request.mBody.locationConstraint = getParameter("locationConstraint");
+            request.body.locationConstraint = getParameter("locationConstraint");
         }
 
         if (hasParameter("timeConstraint")) {
-            request.mBody.timeConstraint = getParameter("timeConstraint");
+            request.body.timeConstraint = getParameter("timeConstraint");
         }
 
         if (hasParameter("meetingDuration")) {
-            request.mBody.meetingDuration = getParameter("meetingDuration");
+            request.body.meetingDuration = getParameter("meetingDuration");
         }
 
         if (hasParameter("maxCandidates")) {
-            request.mBody.maxCandidates = getParameter("maxCandidates");
+            request.body.maxCandidates = getParameter("maxCandidates");
         }
 
         if (hasParameter("isOrganizerOptional")) {
-            request.mBody.isOrganizerOptional = getParameter("isOrganizerOptional");
+            request.body.isOrganizerOptional = getParameter("isOrganizerOptional");
         }
 
         if (hasParameter("returnSuggestionReasons")) {
-            request.mBody.returnSuggestionReasons = getParameter("returnSuggestionReasons");
+            request.body.returnSuggestionReasons = getParameter("returnSuggestionReasons");
         }
 
         if (hasParameter("minimumAttendeePercentage")) {
-            request.mBody.minimumAttendeePercentage = getParameter("minimumAttendeePercentage");
+            request.body.minimumAttendeePercentage = getParameter("minimumAttendeePercentage");
         }
 
         return request;

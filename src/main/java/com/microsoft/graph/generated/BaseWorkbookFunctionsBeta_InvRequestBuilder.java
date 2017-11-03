@@ -30,11 +30,11 @@ public class BaseWorkbookFunctionsBeta_InvRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsBeta_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("probability", probability);
-        mBodyParams.put("alpha", alpha);
-        mBodyParams.put("beta", beta);
-        mBodyParams.put("a", a);
-        mBodyParams.put("b", b);
+        bodyParams.put("probability", probability);
+        bodyParams.put("alpha", alpha);
+        bodyParams.put("beta", beta);
+        bodyParams.put("a", a);
+        bodyParams.put("b", b);
     }
 
     /**
@@ -60,23 +60,23 @@ public class BaseWorkbookFunctionsBeta_InvRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("probability")) {
-            request.mBody.probability = getParameter("probability");
+            request.body.probability = getParameter("probability");
         }
 
         if (hasParameter("alpha")) {
-            request.mBody.alpha = getParameter("alpha");
+            request.body.alpha = getParameter("alpha");
         }
 
         if (hasParameter("beta")) {
-            request.mBody.beta = getParameter("beta");
+            request.body.beta = getParameter("beta");
         }
 
         if (hasParameter("a")) {
-            request.mBody.a = getParameter("a");
+            request.body.a = getParameter("a");
         }
 
         if (hasParameter("b")) {
-            request.mBody.b = getParameter("b");
+            request.body.b = getParameter("b");
         }
 
         return request;

@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsImPowerRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsImPowerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement inumber, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("inumber", inumber);
-        mBodyParams.put("number", number);
+        bodyParams.put("inumber", inumber);
+        bodyParams.put("number", number);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsImPowerRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("inumber")) {
-            request.mBody.inumber = getParameter("inumber");
+            request.body.inumber = getParameter("inumber");
         }
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         return request;

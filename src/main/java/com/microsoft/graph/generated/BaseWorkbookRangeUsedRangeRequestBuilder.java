@@ -40,7 +40,7 @@ public class BaseWorkbookRangeUsedRangeRequestBuilder extends BaseFunctionReques
      */
     public BaseWorkbookRangeUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean valuesOnly) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("valuesOnly", valuesOnly));
+        functionOptions.add(new FunctionOption("valuesOnly", valuesOnly));
     }
 
     /**
@@ -65,7 +65,7 @@ public class BaseWorkbookRangeUsedRangeRequestBuilder extends BaseFunctionReques
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

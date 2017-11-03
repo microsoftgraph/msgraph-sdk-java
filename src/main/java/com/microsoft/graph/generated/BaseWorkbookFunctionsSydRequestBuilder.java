@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsSydRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("cost", cost);
-        mBodyParams.put("salvage", salvage);
-        mBodyParams.put("life", life);
-        mBodyParams.put("per", per);
+        bodyParams.put("cost", cost);
+        bodyParams.put("salvage", salvage);
+        bodyParams.put("life", life);
+        bodyParams.put("per", per);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("cost")) {
-            request.mBody.cost = getParameter("cost");
+            request.body.cost = getParameter("cost");
         }
 
         if (hasParameter("salvage")) {
-            request.mBody.salvage = getParameter("salvage");
+            request.body.salvage = getParameter("salvage");
         }
 
         if (hasParameter("life")) {
-            request.mBody.life = getParameter("life");
+            request.body.life = getParameter("life");
         }
 
         if (hasParameter("per")) {
-            request.mBody.per = getParameter("per");
+            request.body.per = getParameter("per");
         }
 
         return request;

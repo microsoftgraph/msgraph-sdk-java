@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsVlookupRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsVlookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement colIndexNum, final com.google.gson.JsonElement rangeLookup) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("lookupValue", lookupValue);
-        mBodyParams.put("tableArray", tableArray);
-        mBodyParams.put("colIndexNum", colIndexNum);
-        mBodyParams.put("rangeLookup", rangeLookup);
+        bodyParams.put("lookupValue", lookupValue);
+        bodyParams.put("tableArray", tableArray);
+        bodyParams.put("colIndexNum", colIndexNum);
+        bodyParams.put("rangeLookup", rangeLookup);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsVlookupRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("lookupValue")) {
-            request.mBody.lookupValue = getParameter("lookupValue");
+            request.body.lookupValue = getParameter("lookupValue");
         }
 
         if (hasParameter("tableArray")) {
-            request.mBody.tableArray = getParameter("tableArray");
+            request.body.tableArray = getParameter("tableArray");
         }
 
         if (hasParameter("colIndexNum")) {
-            request.mBody.colIndexNum = getParameter("colIndexNum");
+            request.body.colIndexNum = getParameter("colIndexNum");
         }
 
         if (hasParameter("rangeLookup")) {
-            request.mBody.rangeLookup = getParameter("rangeLookup");
+            request.body.rangeLookup = getParameter("rangeLookup");
         }
 
         return request;

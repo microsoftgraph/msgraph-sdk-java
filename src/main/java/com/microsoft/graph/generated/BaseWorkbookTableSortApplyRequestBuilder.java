@@ -30,9 +30,9 @@ public class BaseWorkbookTableSortApplyRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookTableSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("fields", fields);
-        mBodyParams.put("matchCase", matchCase);
-        mBodyParams.put("method", method);
+        bodyParams.put("fields", fields);
+        bodyParams.put("matchCase", matchCase);
+        bodyParams.put("method", method);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookTableSortApplyRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("fields")) {
-            request.mBody.fields = getParameter("fields");
+            request.body.fields = getParameter("fields");
         }
 
         if (hasParameter("matchCase")) {
-            request.mBody.matchCase = getParameter("matchCase");
+            request.body.matchCase = getParameter("matchCase");
         }
 
         if (hasParameter("method")) {
-            request.mBody.method = getParameter("method");
+            request.body.method = getParameter("method");
         }
 
         return request;

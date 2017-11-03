@@ -30,7 +30,7 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder extends 
      */
     public BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("securityEnabledOnly", securityEnabledOnly);
+        bodyParams.put("securityEnabledOnly", securityEnabledOnly);
       }
 
     public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest() {
@@ -45,7 +45,7 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder extends 
         );
 
         if (hasParameter("securityEnabledOnly")) {
-            request.mBody.securityEnabledOnly = getParameter("securityEnabledOnly");
+            request.body.securityEnabledOnly = getParameter("securityEnabledOnly");
         }
   
         return request;

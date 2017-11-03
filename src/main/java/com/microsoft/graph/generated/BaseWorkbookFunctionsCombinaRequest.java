@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Combina Request.
  */
 public class BaseWorkbookFunctionsCombinaRequest extends BaseRequest implements IBaseWorkbookFunctionsCombinaRequest {
-    protected final WorkbookFunctionsCombinaBody mBody;
+    protected final WorkbookFunctionsCombinaBody body;
 
     /**
      * The request for this WorkbookFunctionsCombina
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCombinaRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsCombinaRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCombinaBody();
+        body = new WorkbookFunctionsCombinaBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

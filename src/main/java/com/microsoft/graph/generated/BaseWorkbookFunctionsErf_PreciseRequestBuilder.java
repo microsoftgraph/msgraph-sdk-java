@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsErf_PreciseRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookFunctionsErf_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
+        bodyParams.put("x", x);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsErf_PreciseRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         return request;

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Bitand Request.
  */
 public class BaseWorkbookFunctionsBitandRequest extends BaseRequest implements IBaseWorkbookFunctionsBitandRequest {
-    protected final WorkbookFunctionsBitandBody mBody;
+    protected final WorkbookFunctionsBitandBody body;
 
     /**
      * The request for this WorkbookFunctionsBitand
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsBitandRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsBitandRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsBitandBody();
+        body = new WorkbookFunctionsBitandBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsFindRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsFindRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("findText", findText);
-        mBodyParams.put("withinText", withinText);
-        mBodyParams.put("startNum", startNum);
+        bodyParams.put("findText", findText);
+        bodyParams.put("withinText", withinText);
+        bodyParams.put("startNum", startNum);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsFindRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("findText")) {
-            request.mBody.findText = getParameter("findText");
+            request.body.findText = getParameter("findText");
         }
 
         if (hasParameter("withinText")) {
-            request.mBody.withinText = getParameter("withinText");
+            request.body.withinText = getParameter("withinText");
         }
 
         if (hasParameter("startNum")) {
-            request.mBody.startNum = getParameter("startNum");
+            request.body.startNum = getParameter("startNum");
         }
 
         return request;

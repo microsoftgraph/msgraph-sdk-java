@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Dollar Fr Request.
  */
 public class BaseWorkbookFunctionsDollarFrRequest extends BaseRequest implements IBaseWorkbookFunctionsDollarFrRequest {
-    protected final WorkbookFunctionsDollarFrBody mBody;
+    protected final WorkbookFunctionsDollarFrBody body;
 
     /**
      * The request for this WorkbookFunctionsDollarFr
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDollarFrRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsDollarFrRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDollarFrBody();
+        body = new WorkbookFunctionsDollarFrBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

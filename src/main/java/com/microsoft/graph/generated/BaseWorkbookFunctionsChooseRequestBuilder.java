@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsChooseRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsChooseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement indexNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("indexNum", indexNum);
-        mBodyParams.put("values", values);
+        bodyParams.put("indexNum", indexNum);
+        bodyParams.put("values", values);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsChooseRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("indexNum")) {
-            request.mBody.indexNum = getParameter("indexNum");
+            request.body.indexNum = getParameter("indexNum");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         return request;

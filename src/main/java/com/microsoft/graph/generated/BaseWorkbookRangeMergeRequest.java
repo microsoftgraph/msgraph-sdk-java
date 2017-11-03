@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Range Merge Request.
  */
 public class BaseWorkbookRangeMergeRequest extends BaseRequest implements IBaseWorkbookRangeMergeRequest {
-    protected final WorkbookRangeMergeBody mBody;
+    protected final WorkbookRangeMergeBody body;
 
     /**
      * The request for this WorkbookRangeMerge
@@ -32,15 +32,15 @@ public class BaseWorkbookRangeMergeRequest extends BaseRequest implements IBaseW
      */
     public BaseWorkbookRangeMergeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookRangeMergeBody();
+        body = new WorkbookRangeMergeBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

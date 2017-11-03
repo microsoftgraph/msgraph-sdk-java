@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Floor_Precise Request.
  */
 public class BaseWorkbookFunctionsFloor_PreciseRequest extends BaseRequest implements IBaseWorkbookFunctionsFloor_PreciseRequest {
-    protected final WorkbookFunctionsFloor_PreciseBody mBody;
+    protected final WorkbookFunctionsFloor_PreciseBody body;
 
     /**
      * The request for this WorkbookFunctionsFloor_Precise
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsFloor_PreciseRequest extends BaseRequest imple
      */
     public BaseWorkbookFunctionsFloor_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsFloor_PreciseBody();
+        body = new WorkbookFunctionsFloor_PreciseBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

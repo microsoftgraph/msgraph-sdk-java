@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Match Request.
  */
 public class BaseWorkbookFunctionsMatchRequest extends BaseRequest implements IBaseWorkbookFunctionsMatchRequest {
-    protected final WorkbookFunctionsMatchBody mBody;
+    protected final WorkbookFunctionsMatchBody body;
 
     /**
      * The request for this WorkbookFunctionsMatch
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsMatchRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsMatchRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsMatchBody();
+        body = new WorkbookFunctionsMatchBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

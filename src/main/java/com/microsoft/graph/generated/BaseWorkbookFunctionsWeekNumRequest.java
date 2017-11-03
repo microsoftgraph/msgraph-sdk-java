@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Week Num Request.
  */
 public class BaseWorkbookFunctionsWeekNumRequest extends BaseRequest implements IBaseWorkbookFunctionsWeekNumRequest {
-    protected final WorkbookFunctionsWeekNumBody mBody;
+    protected final WorkbookFunctionsWeekNumBody body;
 
     /**
      * The request for this WorkbookFunctionsWeekNum
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsWeekNumRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsWeekNumRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsWeekNumBody();
+        body = new WorkbookFunctionsWeekNumBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

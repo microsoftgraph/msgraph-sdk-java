@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsNpvRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsNpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("rate", rate);
-        mBodyParams.put("values", values);
+        bodyParams.put("rate", rate);
+        bodyParams.put("values", values);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsNpvRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("rate")) {
-            request.mBody.rate = getParameter("rate");
+            request.body.rate = getParameter("rate");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         return request;

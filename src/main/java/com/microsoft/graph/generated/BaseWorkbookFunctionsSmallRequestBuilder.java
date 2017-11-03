@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsSmallRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsSmallRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("array", array);
-        mBodyParams.put("k", k);
+        bodyParams.put("array", array);
+        bodyParams.put("k", k);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsSmallRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("array")) {
-            request.mBody.array = getParameter("array");
+            request.body.array = getParameter("array");
         }
 
         if (hasParameter("k")) {
-            request.mBody.k = getParameter("k");
+            request.body.k = getParameter("k");
         }
 
         return request;

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Is Odd Request.
  */
 public class BaseWorkbookFunctionsIsOddRequest extends BaseRequest implements IBaseWorkbookFunctionsIsOddRequest {
-    protected final WorkbookFunctionsIsOddBody mBody;
+    protected final WorkbookFunctionsIsOddBody body;
 
     /**
      * The request for this WorkbookFunctionsIsOdd
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsIsOddRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsIsOddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsIsOddBody();
+        body = new WorkbookFunctionsIsOddBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

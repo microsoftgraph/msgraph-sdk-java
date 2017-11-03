@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsRank_EqRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsRank_EqRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement ref, final com.google.gson.JsonElement order) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("ref", ref);
-        mBodyParams.put("order", order);
+        bodyParams.put("number", number);
+        bodyParams.put("ref", ref);
+        bodyParams.put("order", order);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsRank_EqRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("ref")) {
-            request.mBody.ref = getParameter("ref");
+            request.body.ref = getParameter("ref");
         }
 
         if (hasParameter("order")) {
-            request.mBody.order = getParameter("order");
+            request.body.order = getParameter("order");
         }
 
         return request;

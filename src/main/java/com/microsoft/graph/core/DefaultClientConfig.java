@@ -40,27 +40,27 @@ public abstract class DefaultClientConfig implements IClientConfig {
     /**
      * The authentication provider instance.
      */
-    private IAuthenticationProvider mAuthenticationProvider;
+    private IAuthenticationProvider authenticationProvider;
 
     /**
      * The executors instance.
      */
-    private IExecutors mExecutors;
+    private IExecutors executors;
 
     /**
      * The http provider instance.
      */
-    private DefaultHttpProvider mHttpProvider;
+    private DefaultHttpProvider httpProvider;
 
     /**
      * The logger.
      */
-    private ILogger mLogger;
+    private ILogger logger;
 
     /**
      * The serializer instance.
      */
-    private DefaultSerializer mSerializer;
+    private DefaultSerializer serializer;
 
     /**
      * Creates an instance of this config with an auth provider.
@@ -73,7 +73,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     ) {
         DefaultClientConfig config = new DefaultClientConfig() {
         };
-        config.mAuthenticationProvider = authenticationProvider;
+        config.authenticationProvider = authenticationProvider;
         config
                 .getLogger()
                 .logDebug(
@@ -92,7 +92,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
      */
     @Override
     public IAuthenticationProvider getAuthenticationProvider() {
-        return mAuthenticationProvider;
+        return authenticationProvider;
     }
 
     /**
@@ -102,14 +102,14 @@ public abstract class DefaultClientConfig implements IClientConfig {
      */
     @Override
     public IHttpProvider getHttpProvider() {
-        if (mHttpProvider == null) {
-            mHttpProvider = new DefaultHttpProvider(getSerializer(),
+        if (httpProvider == null) {
+            httpProvider = new DefaultHttpProvider(getSerializer(),
                     getAuthenticationProvider(),
                     getExecutors(),
                     getLogger());
-            mLogger.logDebug("Created DefaultHttpProvider");
+            logger.logDebug("Created DefaultHttpProvider");
         }
-        return mHttpProvider;
+        return httpProvider;
     }
 
     /**
@@ -119,11 +119,11 @@ public abstract class DefaultClientConfig implements IClientConfig {
      */
     @Override
     public ISerializer getSerializer() {
-        if (mSerializer == null) {
-            mSerializer = new DefaultSerializer(getLogger());
-            mLogger.logDebug("Created DefaultSerializer");
+        if (serializer == null) {
+            serializer = new DefaultSerializer(getLogger());
+            logger.logDebug("Created DefaultSerializer");
         }
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -133,11 +133,11 @@ public abstract class DefaultClientConfig implements IClientConfig {
      */
     @Override
     public IExecutors getExecutors() {
-        if (mExecutors == null) {
-            mExecutors = new DefaultExecutors(getLogger());
-            mLogger.logDebug("Created DefaultExecutors");
+        if (executors == null) {
+            executors = new DefaultExecutors(getLogger());
+            logger.logDebug("Created DefaultExecutors");
         }
-        return mExecutors;
+        return executors;
     }
 
     /**
@@ -146,10 +146,10 @@ public abstract class DefaultClientConfig implements IClientConfig {
      * @return The logger.
      */
     public ILogger getLogger() {
-        if (mLogger == null) {
-            mLogger = new DefaultLogger();
-            mLogger.logDebug("Created DefaultLogger");
+        if (logger == null) {
+            logger = new DefaultLogger();
+            logger.logDebug("Created DefaultLogger");
         }
-        return mLogger;
+        return logger;
     }
 }

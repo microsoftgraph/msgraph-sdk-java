@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Gamma Ln_Precise Request.
  */
 public class BaseWorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest implements IBaseWorkbookFunctionsGammaLn_PreciseRequest {
-    protected final WorkbookFunctionsGammaLn_PreciseBody mBody;
+    protected final WorkbookFunctionsGammaLn_PreciseBody body;
 
     /**
      * The request for this WorkbookFunctionsGammaLn_Precise
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest imp
      */
     public BaseWorkbookFunctionsGammaLn_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsGammaLn_PreciseBody();
+        body = new WorkbookFunctionsGammaLn_PreciseBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

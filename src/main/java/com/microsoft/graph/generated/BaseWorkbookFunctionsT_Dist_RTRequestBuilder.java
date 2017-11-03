@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsT_Dist_RTRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsT_Dist_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("degFreedom", degFreedom);
+        bodyParams.put("x", x);
+        bodyParams.put("degFreedom", degFreedom);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsT_Dist_RTRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("degFreedom")) {
-            request.mBody.degFreedom = getParameter("degFreedom");
+            request.body.degFreedom = getParameter("degFreedom");
         }
 
         return request;

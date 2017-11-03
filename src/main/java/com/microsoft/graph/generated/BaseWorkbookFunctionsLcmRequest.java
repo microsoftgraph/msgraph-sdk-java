@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Lcm Request.
  */
 public class BaseWorkbookFunctionsLcmRequest extends BaseRequest implements IBaseWorkbookFunctionsLcmRequest {
-    protected final WorkbookFunctionsLcmBody mBody;
+    protected final WorkbookFunctionsLcmBody body;
 
     /**
      * The request for this WorkbookFunctionsLcm
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsLcmRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsLcmRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsLcmBody();
+        body = new WorkbookFunctionsLcmBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

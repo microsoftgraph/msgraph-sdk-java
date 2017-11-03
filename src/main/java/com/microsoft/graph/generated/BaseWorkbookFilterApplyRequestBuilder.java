@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyRequestBuilder extends BaseActionRequestBuil
      */
     public BaseWorkbookFilterApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final WorkbookFilterCriteria criteria) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("criteria", criteria);
+        bodyParams.put("criteria", criteria);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFilterApplyRequestBuilder extends BaseActionRequestBuil
         );
 
         if (hasParameter("criteria")) {
-            request.mBody.criteria = getParameter("criteria");
+            request.body.criteria = getParameter("criteria");
         }
 
         return request;

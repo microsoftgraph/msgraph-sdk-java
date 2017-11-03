@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsErfCRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
+        bodyParams.put("x", x);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         return request;

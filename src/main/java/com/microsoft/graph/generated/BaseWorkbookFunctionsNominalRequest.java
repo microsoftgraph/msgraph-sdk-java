@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Nominal Request.
  */
 public class BaseWorkbookFunctionsNominalRequest extends BaseRequest implements IBaseWorkbookFunctionsNominalRequest {
-    protected final WorkbookFunctionsNominalBody mBody;
+    protected final WorkbookFunctionsNominalBody body;
 
     /**
      * The request for this WorkbookFunctionsNominal
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsNominalRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsNominalRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsNominalBody();
+        body = new WorkbookFunctionsNominalBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

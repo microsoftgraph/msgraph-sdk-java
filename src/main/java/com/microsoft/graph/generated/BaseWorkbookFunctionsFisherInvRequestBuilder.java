@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsFisherInvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement y) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("y", y);
+        bodyParams.put("y", y);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("y")) {
-            request.mBody.y = getParameter("y");
+            request.body.y = getParameter("y");
         }
 
         return request;

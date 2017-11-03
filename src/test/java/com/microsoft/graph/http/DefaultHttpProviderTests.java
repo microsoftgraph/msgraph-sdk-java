@@ -228,7 +228,7 @@ public class DefaultHttpProviderTests {
 
     @Test
     public void testErrorResponse() throws Exception {
-        final GraphErrorCodes expectedErrorCode = GraphErrorCodes.InvalidRequest;
+        final GraphErrorCodes expectedErrorCode = GraphErrorCodes.INVALID_REQUEST;
         final String expectedMessage = "Test error!";
         final GraphErrorResponse toSerialize = new GraphErrorResponse();
         toSerialize.error = new GraphError();

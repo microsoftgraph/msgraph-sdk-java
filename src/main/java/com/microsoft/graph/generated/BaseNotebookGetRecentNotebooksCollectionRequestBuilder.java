@@ -30,7 +30,7 @@ public class BaseNotebookGetRecentNotebooksCollectionRequestBuilder extends Base
      */
     public BaseNotebookGetRecentNotebooksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean includePersonalNotebooks) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("includePersonalNotebooks", includePersonalNotebooks));
+        functionOptions.add(new FunctionOption("includePersonalNotebooks", includePersonalNotebooks));
       }
 
     public INotebookGetRecentNotebooksCollectionRequest buildRequest() {
@@ -44,7 +44,7 @@ public class BaseNotebookGetRecentNotebooksCollectionRequestBuilder extends Base
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

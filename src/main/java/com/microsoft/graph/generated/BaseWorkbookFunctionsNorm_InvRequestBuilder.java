@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsNorm_InvRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsNorm_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("probability", probability);
-        mBodyParams.put("mean", mean);
-        mBodyParams.put("standardDev", standardDev);
+        bodyParams.put("probability", probability);
+        bodyParams.put("mean", mean);
+        bodyParams.put("standardDev", standardDev);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsNorm_InvRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("probability")) {
-            request.mBody.probability = getParameter("probability");
+            request.body.probability = getParameter("probability");
         }
 
         if (hasParameter("mean")) {
-            request.mBody.mean = getParameter("mean");
+            request.body.mean = getParameter("mean");
         }
 
         if (hasParameter("standardDev")) {
-            request.mBody.standardDev = getParameter("standardDev");
+            request.body.standardDev = getParameter("standardDev");
         }
 
         return request;

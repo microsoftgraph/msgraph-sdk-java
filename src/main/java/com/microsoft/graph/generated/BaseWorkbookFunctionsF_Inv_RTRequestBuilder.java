@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsF_Inv_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("probability", probability);
-        mBodyParams.put("degFreedom1", degFreedom1);
-        mBodyParams.put("degFreedom2", degFreedom2);
+        bodyParams.put("probability", probability);
+        bodyParams.put("degFreedom1", degFreedom1);
+        bodyParams.put("degFreedom2", degFreedom2);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("probability")) {
-            request.mBody.probability = getParameter("probability");
+            request.body.probability = getParameter("probability");
         }
 
         if (hasParameter("degFreedom1")) {
-            request.mBody.degFreedom1 = getParameter("degFreedom1");
+            request.body.degFreedom1 = getParameter("degFreedom1");
         }
 
         if (hasParameter("degFreedom2")) {
-            request.mBody.degFreedom2 = getParameter("degFreedom2");
+            request.body.degFreedom2 = getParameter("degFreedom2");
         }
 
         return request;

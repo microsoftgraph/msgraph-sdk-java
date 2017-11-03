@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsTextRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsTextRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement value, final com.google.gson.JsonElement formatText) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("value", value);
-        mBodyParams.put("formatText", formatText);
+        bodyParams.put("value", value);
+        bodyParams.put("formatText", formatText);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsTextRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("value")) {
-            request.mBody.value = getParameter("value");
+            request.body.value = getParameter("value");
         }
 
         if (hasParameter("formatText")) {
-            request.mBody.formatText = getParameter("formatText");
+            request.body.formatText = getParameter("formatText");
         }
 
         return request;

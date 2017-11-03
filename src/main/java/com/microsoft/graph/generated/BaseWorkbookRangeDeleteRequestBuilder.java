@@ -30,7 +30,7 @@ public class BaseWorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuil
      */
     public BaseWorkbookRangeDeleteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String shift) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("shift", shift);
+        bodyParams.put("shift", shift);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuil
         );
 
         if (hasParameter("shift")) {
-            request.mBody.shift = getParameter("shift");
+            request.body.shift = getParameter("shift");
         }
 
         return request;

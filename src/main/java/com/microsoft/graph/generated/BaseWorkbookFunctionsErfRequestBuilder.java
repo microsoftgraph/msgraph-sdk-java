@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsErfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement lowerLimit, final com.google.gson.JsonElement upperLimit) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("lowerLimit", lowerLimit);
-        mBodyParams.put("upperLimit", upperLimit);
+        bodyParams.put("lowerLimit", lowerLimit);
+        bodyParams.put("upperLimit", upperLimit);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("lowerLimit")) {
-            request.mBody.lowerLimit = getParameter("lowerLimit");
+            request.body.lowerLimit = getParameter("lowerLimit");
         }
 
         if (hasParameter("upperLimit")) {
-            request.mBody.upperLimit = getParameter("upperLimit");
+            request.body.upperLimit = getParameter("upperLimit");
         }
 
         return request;

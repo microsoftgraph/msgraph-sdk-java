@@ -30,9 +30,9 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
      */
     public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("groupId", groupId);
-        mBodyParams.put("renameAs", renameAs);
-        mBodyParams.put("notebookFolder", notebookFolder);
+        bodyParams.put("groupId", groupId);
+        bodyParams.put("renameAs", renameAs);
+        bodyParams.put("notebookFolder", notebookFolder);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("groupId")) {
-            request.mBody.groupId = getParameter("groupId");
+            request.body.groupId = getParameter("groupId");
         }
 
         if (hasParameter("renameAs")) {
-            request.mBody.renameAs = getParameter("renameAs");
+            request.body.renameAs = getParameter("renameAs");
         }
 
         if (hasParameter("notebookFolder")) {
-            request.mBody.notebookFolder = getParameter("notebookFolder");
+            request.body.notebookFolder = getParameter("notebookFolder");
         }
 
         return request;

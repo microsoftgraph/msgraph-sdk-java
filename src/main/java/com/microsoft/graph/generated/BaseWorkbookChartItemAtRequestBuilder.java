@@ -30,7 +30,7 @@ public class BaseWorkbookChartItemAtRequestBuilder extends BaseFunctionRequestBu
      */
     public BaseWorkbookChartItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("index", index));
+        functionOptions.add(new FunctionOption("index", index));
     }
 
     /**
@@ -55,7 +55,7 @@ public class BaseWorkbookChartItemAtRequestBuilder extends BaseFunctionRequestBu
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

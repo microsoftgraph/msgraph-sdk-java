@@ -30,7 +30,7 @@ public class BaseWorkbookWorksheetProtectionProtectRequestBuilder extends BaseAc
      */
     public BaseWorkbookWorksheetProtectionProtectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final WorkbookWorksheetProtectionOptions options) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("options", options);
+        bodyParams.put("options", options);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookWorksheetProtectionProtectRequestBuilder extends BaseAc
         );
 
         if (hasParameter("options")) {
-            request.mBody.options = getParameter("options");
+            request.body.options = getParameter("options");
         }
 
         return request;

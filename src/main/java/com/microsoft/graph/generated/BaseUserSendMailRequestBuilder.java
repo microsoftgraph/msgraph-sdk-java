@@ -30,8 +30,8 @@ public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
      */
     public BaseUserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Message message, final Boolean saveToSentItems) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("message", message);
-        mBodyParams.put("saveToSentItems", saveToSentItems);
+        bodyParams.put("message", message);
+        bodyParams.put("saveToSentItems", saveToSentItems);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
         );
 
         if (hasParameter("message")) {
-            request.mBody.message = getParameter("message");
+            request.body.message = getParameter("message");
         }
 
         if (hasParameter("saveToSentItems")) {
-            request.mBody.saveToSentItems = getParameter("saveToSentItems");
+            request.body.saveToSentItems = getParameter("saveToSentItems");
         }
 
         return request;

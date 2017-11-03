@@ -30,7 +30,7 @@ public class BaseWorkbookRangeIntersectionRequestBuilder extends BaseFunctionReq
      */
     public BaseWorkbookRangeIntersectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String anotherRange) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("anotherRange", anotherRange));
+        functionOptions.add(new FunctionOption("anotherRange", anotherRange));
     }
 
     /**
@@ -55,7 +55,7 @@ public class BaseWorkbookRangeIntersectionRequestBuilder extends BaseFunctionReq
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

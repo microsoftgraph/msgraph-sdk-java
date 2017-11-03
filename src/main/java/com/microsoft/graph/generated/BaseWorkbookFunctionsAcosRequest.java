@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Acos Request.
  */
 public class BaseWorkbookFunctionsAcosRequest extends BaseRequest implements IBaseWorkbookFunctionsAcosRequest {
-    protected final WorkbookFunctionsAcosBody mBody;
+    protected final WorkbookFunctionsAcosBody body;
 
     /**
      * The request for this WorkbookFunctionsAcos
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsAcosRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsAcosRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsAcosBody();
+        body = new WorkbookFunctionsAcosBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Har Mean Request.
  */
 public class BaseWorkbookFunctionsHarMeanRequest extends BaseRequest implements IBaseWorkbookFunctionsHarMeanRequest {
-    protected final WorkbookFunctionsHarMeanBody mBody;
+    protected final WorkbookFunctionsHarMeanBody body;
 
     /**
      * The request for this WorkbookFunctionsHarMean
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsHarMeanRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsHarMeanRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsHarMeanBody();
+        body = new WorkbookFunctionsHarMeanBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

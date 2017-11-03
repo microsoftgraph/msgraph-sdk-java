@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsLookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("lookupValue", lookupValue);
-        mBodyParams.put("lookupVector", lookupVector);
-        mBodyParams.put("resultVector", resultVector);
+        bodyParams.put("lookupValue", lookupValue);
+        bodyParams.put("lookupVector", lookupVector);
+        bodyParams.put("resultVector", resultVector);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("lookupValue")) {
-            request.mBody.lookupValue = getParameter("lookupValue");
+            request.body.lookupValue = getParameter("lookupValue");
         }
 
         if (hasParameter("lookupVector")) {
-            request.mBody.lookupVector = getParameter("lookupVector");
+            request.body.lookupVector = getParameter("lookupVector");
         }
 
         if (hasParameter("resultVector")) {
-            request.mBody.resultVector = getParameter("resultVector");
+            request.body.resultVector = getParameter("resultVector");
         }
 
         return request;

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDayRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsDayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("serialNumber", serialNumber);
+        bodyParams.put("serialNumber", serialNumber);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsDayRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("serialNumber")) {
-            request.mBody.serialNumber = getParameter("serialNumber");
+            request.body.serialNumber = getParameter("serialNumber");
         }
 
         return request;

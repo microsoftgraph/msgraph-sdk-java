@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsModRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsModRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement divisor) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("divisor", divisor);
+        bodyParams.put("number", number);
+        bodyParams.put("divisor", divisor);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsModRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("divisor")) {
-            request.mBody.divisor = getParameter("divisor");
+            request.body.divisor = getParameter("divisor");
         }
 
         return request;

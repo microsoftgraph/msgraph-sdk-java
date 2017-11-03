@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Gamma_Inv Request.
  */
 public class BaseWorkbookFunctionsGamma_InvRequest extends BaseRequest implements IBaseWorkbookFunctionsGamma_InvRequest {
-    protected final WorkbookFunctionsGamma_InvBody mBody;
+    protected final WorkbookFunctionsGamma_InvBody body;
 
     /**
      * The request for this WorkbookFunctionsGamma_Inv
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsGamma_InvRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsGamma_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsGamma_InvBody();
+        body = new WorkbookFunctionsGamma_InvBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

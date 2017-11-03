@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Trim Mean Request.
  */
 public class BaseWorkbookFunctionsTrimMeanRequest extends BaseRequest implements IBaseWorkbookFunctionsTrimMeanRequest {
-    protected final WorkbookFunctionsTrimMeanBody mBody;
+    protected final WorkbookFunctionsTrimMeanBody body;
 
     /**
      * The request for this WorkbookFunctionsTrimMean
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsTrimMeanRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsTrimMeanRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsTrimMeanBody();
+        body = new WorkbookFunctionsTrimMeanBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

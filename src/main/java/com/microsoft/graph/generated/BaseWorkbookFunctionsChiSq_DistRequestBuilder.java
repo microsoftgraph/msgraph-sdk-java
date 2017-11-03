@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsChiSq_DistRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsChiSq_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("degFreedom", degFreedom);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("x", x);
+        bodyParams.put("degFreedom", degFreedom);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsChiSq_DistRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("degFreedom")) {
-            request.mBody.degFreedom = getParameter("degFreedom");
+            request.body.degFreedom = getParameter("degFreedom");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

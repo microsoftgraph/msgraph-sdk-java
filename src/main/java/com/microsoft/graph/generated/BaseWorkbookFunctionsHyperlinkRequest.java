@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Hyperlink Request.
  */
 public class BaseWorkbookFunctionsHyperlinkRequest extends BaseRequest implements IBaseWorkbookFunctionsHyperlinkRequest {
-    protected final WorkbookFunctionsHyperlinkBody mBody;
+    protected final WorkbookFunctionsHyperlinkBody body;
 
     /**
      * The request for this WorkbookFunctionsHyperlink
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsHyperlinkRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsHyperlinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsHyperlinkBody();
+        body = new WorkbookFunctionsHyperlinkBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

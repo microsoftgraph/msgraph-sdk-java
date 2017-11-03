@@ -30,7 +30,7 @@ public class BaseOnenotePageOnenotePatchContentRequestBuilder extends BaseAction
      */
     public BaseOnenotePageOnenotePatchContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<OnenotePatchContentCommand> commands) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("commands", commands);
+        bodyParams.put("commands", commands);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseOnenotePageOnenotePatchContentRequestBuilder extends BaseAction
         );
 
         if (hasParameter("commands")) {
-            request.mBody.commands = getParameter("commands");
+            request.body.commands = getParameter("commands");
         }
 
         return request;

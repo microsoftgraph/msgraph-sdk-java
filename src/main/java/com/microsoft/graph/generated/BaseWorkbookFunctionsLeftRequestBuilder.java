@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsLeftRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsLeftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numChars) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
-        mBodyParams.put("numChars", numChars);
+        bodyParams.put("text", text);
+        bodyParams.put("numChars", numChars);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsLeftRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         if (hasParameter("numChars")) {
-            request.mBody.numChars = getParameter("numChars");
+            request.body.numChars = getParameter("numChars");
         }
 
         return request;

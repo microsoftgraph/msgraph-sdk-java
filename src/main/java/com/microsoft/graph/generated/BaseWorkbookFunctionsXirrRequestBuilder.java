@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsXirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("values", values);
-        mBodyParams.put("dates", dates);
-        mBodyParams.put("guess", guess);
+        bodyParams.put("values", values);
+        bodyParams.put("dates", dates);
+        bodyParams.put("guess", guess);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         if (hasParameter("dates")) {
-            request.mBody.dates = getParameter("dates");
+            request.body.dates = getParameter("dates");
         }
 
         if (hasParameter("guess")) {
-            request.mBody.guess = getParameter("guess");
+            request.body.guess = getParameter("guess");
         }
 
         return request;

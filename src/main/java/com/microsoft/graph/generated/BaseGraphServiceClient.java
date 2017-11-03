@@ -30,19 +30,19 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * The current endpoint
      */
-    private String mEndpoint;
+    private String endpoint;
 
     @Override
     public String getServiceRoot() {
-        if (mEndpoint == null) {
-            mEndpoint = DEFAULT_GRAPH_ENDPOINT;
+        if (endpoint == null) {
+            endpoint = DEFAULT_GRAPH_ENDPOINT;
         }
-        return mEndpoint;
+        return endpoint;
     }
 
     @Override
     public void setServiceRoot(String value) {
-        mEndpoint = value;
+        endpoint = value;
     }
 
     /**

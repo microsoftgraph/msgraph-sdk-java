@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsHex2OctRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsHex2OctRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("places", places);
+        bodyParams.put("number", number);
+        bodyParams.put("places", places);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsHex2OctRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("places")) {
-            request.mBody.places = getParameter("places");
+            request.body.places = getParameter("places");
         }
 
         return request;

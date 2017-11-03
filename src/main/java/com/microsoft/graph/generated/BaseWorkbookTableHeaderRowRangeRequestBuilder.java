@@ -54,7 +54,7 @@ public class BaseWorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionR
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

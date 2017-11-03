@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsGamma_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("probability", probability);
-        mBodyParams.put("alpha", alpha);
-        mBodyParams.put("beta", beta);
+        bodyParams.put("probability", probability);
+        bodyParams.put("alpha", alpha);
+        bodyParams.put("beta", beta);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("probability")) {
-            request.mBody.probability = getParameter("probability");
+            request.body.probability = getParameter("probability");
         }
 
         if (hasParameter("alpha")) {
-            request.mBody.alpha = getParameter("alpha");
+            request.body.alpha = getParameter("alpha");
         }
 
         if (hasParameter("beta")) {
-            request.mBody.beta = getParameter("beta");
+            request.body.beta = getParameter("beta");
         }
 
         return request;

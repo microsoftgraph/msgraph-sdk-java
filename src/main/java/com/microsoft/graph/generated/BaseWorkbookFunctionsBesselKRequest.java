@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Bessel KRequest.
  */
 public class BaseWorkbookFunctionsBesselKRequest extends BaseRequest implements IBaseWorkbookFunctionsBesselKRequest {
-    protected final WorkbookFunctionsBesselKBody mBody;
+    protected final WorkbookFunctionsBesselKBody body;
 
     /**
      * The request for this WorkbookFunctionsBesselK
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsBesselKRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsBesselKRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsBesselKBody();
+        body = new WorkbookFunctionsBesselKBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

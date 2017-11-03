@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Radians Request.
  */
 public class BaseWorkbookFunctionsRadiansRequest extends BaseRequest implements IBaseWorkbookFunctionsRadiansRequest {
-    protected final WorkbookFunctionsRadiansBody mBody;
+    protected final WorkbookFunctionsRadiansBody body;
 
     /**
      * The request for this WorkbookFunctionsRadians
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRadiansRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsRadiansRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRadiansBody();
+        body = new WorkbookFunctionsRadiansBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

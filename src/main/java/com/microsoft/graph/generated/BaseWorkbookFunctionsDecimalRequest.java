@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Decimal Request.
  */
 public class BaseWorkbookFunctionsDecimalRequest extends BaseRequest implements IBaseWorkbookFunctionsDecimalRequest {
-    protected final WorkbookFunctionsDecimalBody mBody;
+    protected final WorkbookFunctionsDecimalBody body;
 
     /**
      * The request for this WorkbookFunctionsDecimal
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDecimalRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsDecimalRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDecimalBody();
+        body = new WorkbookFunctionsDecimalBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

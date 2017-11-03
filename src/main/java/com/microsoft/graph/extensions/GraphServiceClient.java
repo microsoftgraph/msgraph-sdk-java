@@ -39,7 +39,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
         /**
          * The client under construction
          */
-        private final GraphServiceClient mClient = new GraphServiceClient();
+        private final GraphServiceClient client = new GraphServiceClient();
 
         /**
          * Sets the serializer
@@ -47,7 +47,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @return the instance of this builder
          */
         public Builder serializer(final ISerializer serializer) {
-            mClient.setSerializer(serializer);
+            client.setSerializer(serializer);
             return this;
         }
 
@@ -57,7 +57,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @return the instance of this builder
          */
         public Builder httpProvider(final IHttpProvider httpProvider) {
-            mClient.setHttpProvider(httpProvider);
+            client.setHttpProvider(httpProvider);
             return this;
         }
 
@@ -67,7 +67,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @return the instance of this builder
          */
         public Builder authenticationProvider(final IAuthenticationProvider authenticationProvider) {
-            mClient.setAuthenticationProvider(authenticationProvider);
+            client.setAuthenticationProvider(authenticationProvider);
             return this;
         }
 
@@ -77,7 +77,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @return the instance of this builder
          */
         public Builder executors(final IExecutors executors) {
-            mClient.setExecutors(executors);
+            client.setExecutors(executors);
             return this;
         }
 
@@ -87,7 +87,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @return the instance of this builder
          */
         public Builder logger(final ILogger logger) {
-            mClient.setLogger(logger);
+            client.setLogger(logger);
             return this;
         }
 
@@ -109,8 +109,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          * @throws ClientException if there was an exception creating the client
          */
         public IGraphServiceClient buildClient() throws ClientException  {
-            mClient.validate();
-            return mClient;
+            client.validate();
+            return client;
         }
     }
 }

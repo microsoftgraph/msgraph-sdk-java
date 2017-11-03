@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsCoupNcdRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsCoupNcdRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("settlement", settlement);
-        mBodyParams.put("maturity", maturity);
-        mBodyParams.put("frequency", frequency);
-        mBodyParams.put("basis", basis);
+        bodyParams.put("settlement", settlement);
+        bodyParams.put("maturity", maturity);
+        bodyParams.put("frequency", frequency);
+        bodyParams.put("basis", basis);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsCoupNcdRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("settlement")) {
-            request.mBody.settlement = getParameter("settlement");
+            request.body.settlement = getParameter("settlement");
         }
 
         if (hasParameter("maturity")) {
-            request.mBody.maturity = getParameter("maturity");
+            request.body.maturity = getParameter("maturity");
         }
 
         if (hasParameter("frequency")) {
-            request.mBody.frequency = getParameter("frequency");
+            request.body.frequency = getParameter("frequency");
         }
 
         if (hasParameter("basis")) {
-            request.mBody.basis = getParameter("basis");
+            request.body.basis = getParameter("basis");
         }
 
         return request;

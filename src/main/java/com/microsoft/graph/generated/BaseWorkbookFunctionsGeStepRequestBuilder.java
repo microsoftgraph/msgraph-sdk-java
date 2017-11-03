@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsGeStepRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsGeStepRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement step) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("step", step);
+        bodyParams.put("number", number);
+        bodyParams.put("step", step);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsGeStepRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("step")) {
-            request.mBody.step = getParameter("step");
+            request.body.step = getParameter("step");
         }
 
         return request;

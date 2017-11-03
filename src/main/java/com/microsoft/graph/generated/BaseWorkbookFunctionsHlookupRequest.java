@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Hlookup Request.
  */
 public class BaseWorkbookFunctionsHlookupRequest extends BaseRequest implements IBaseWorkbookFunctionsHlookupRequest {
-    protected final WorkbookFunctionsHlookupBody mBody;
+    protected final WorkbookFunctionsHlookupBody body;
 
     /**
      * The request for this WorkbookFunctionsHlookup
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsHlookupRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsHlookupRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsHlookupBody();
+        body = new WorkbookFunctionsHlookupBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

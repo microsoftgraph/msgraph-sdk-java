@@ -30,11 +30,11 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
      */
     public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("requireSignIn", requireSignIn);
-          mBodyParams.put("roles", roles);
-          mBodyParams.put("sendInvitation", sendInvitation);
-          mBodyParams.put("message", message);
-          mBodyParams.put("recipients", recipients);
+        bodyParams.put("requireSignIn", requireSignIn);
+          bodyParams.put("roles", roles);
+          bodyParams.put("sendInvitation", sendInvitation);
+          bodyParams.put("message", message);
+          bodyParams.put("recipients", recipients);
       }
 
     public IDriveItemInviteCollectionRequest buildRequest() {
@@ -49,19 +49,19 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("requireSignIn")) {
-            request.mBody.requireSignIn = getParameter("requireSignIn");
+            request.body.requireSignIn = getParameter("requireSignIn");
         }
         if (hasParameter("roles")) {
-            request.mBody.roles = getParameter("roles");
+            request.body.roles = getParameter("roles");
         }
         if (hasParameter("sendInvitation")) {
-            request.mBody.sendInvitation = getParameter("sendInvitation");
+            request.body.sendInvitation = getParameter("sendInvitation");
         }
         if (hasParameter("message")) {
-            request.mBody.message = getParameter("message");
+            request.body.message = getParameter("message");
         }
         if (hasParameter("recipients")) {
-            request.mBody.recipients = getParameter("recipients");
+            request.body.recipients = getParameter("recipients");
         }
   
         return request;

@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsDateRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsDateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement year, final com.google.gson.JsonElement month, final com.google.gson.JsonElement day) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("year", year);
-        mBodyParams.put("month", month);
-        mBodyParams.put("day", day);
+        bodyParams.put("year", year);
+        bodyParams.put("month", month);
+        bodyParams.put("day", day);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsDateRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("year")) {
-            request.mBody.year = getParameter("year");
+            request.body.year = getParameter("year");
         }
 
         if (hasParameter("month")) {
-            request.mBody.month = getParameter("month");
+            request.body.month = getParameter("month");
         }
 
         if (hasParameter("day")) {
-            request.mBody.day = getParameter("day");
+            request.body.day = getParameter("day");
         }
 
         return request;

@@ -74,42 +74,42 @@ public class GraphServiceException extends ClientException {
     /**
      * The GraphError response.
      */
-    private final GraphErrorResponse mError;
+    private final GraphErrorResponse error;
 
     /**
      * The http method.
      */
-    private final String mMethod;
+    private final String method;
 
     /**
      * The request url.
      */
-    private final String mUrl;
+    private final String url;
 
     /**
      * The request headers.
      */
-    private final List<String> mRequestHeaders;
+    private final List<String> requestHeaders;
 
     /**
      * The request body represented as a string.
      */
-    private final String mRequestBody;
+    private final String requestBody;
 
     /**
      * The http status code.
      */
-    private final int mResponseCode;
+    private final int responseCode;
 
     /**
      * The http status message.
      */
-    private final String mResponseMessage;
+    private final String responseMessage;
 
     /**
      * The response headers.
      */
-    private final List<String> mResponseHeaders;
+    private final List<String> responseHeaders;
 
     /**
      * Create a Graph service exception.
@@ -132,14 +132,14 @@ public class GraphServiceException extends ClientException {
                                     final List<String> responseHeaders,
                                     final GraphErrorResponse error) {
         super(responseMessage, null, null);
-        mMethod = method;
-        mUrl = url;
-        mRequestHeaders = requestHeaders;
-        mRequestBody = requestBody;
-        mResponseCode = responseCode;
-        mResponseMessage = responseMessage;
-        mResponseHeaders = responseHeaders;
-        mError = error;
+        this.method = method;
+        this.url = url;
+        this.requestHeaders = requestHeaders;
+        this.requestBody = requestBody;
+        this.responseCode = responseCode;
+        this.responseMessage = responseMessage;
+        this.responseHeaders = responseHeaders;
+        this.error = error;
     }
 
     @Override
@@ -155,14 +155,14 @@ public class GraphServiceException extends ClientException {
      */
     public String getMessage(final boolean verbose) {
         final StringBuilder sb = new StringBuilder();
-        if (mError != null && mError.error != null) {
-            sb.append("Error code: ").append(mError.error.code).append(NEW_LINE);
-            sb.append("Error message: ").append(mError.error.message).append(NEW_LINE);
+        if (error != null && error.error != null) {
+            sb.append("Error code: ").append(error.error.code).append(NEW_LINE);
+            sb.append("Error message: ").append(error.error.message).append(NEW_LINE);
             sb.append(NEW_LINE);
         }
         // Request information
-        sb.append(mMethod).append(' ').append(mUrl).append(NEW_LINE);
-        for (final String header : mRequestHeaders) {
+        sb.append(method).append(' ').append(url).append(NEW_LINE);
+        for (final String header : requestHeaders) {
             if (verbose) {
                 sb.append(header);
             } else {
@@ -174,12 +174,12 @@ public class GraphServiceException extends ClientException {
             }
             sb.append(NEW_LINE);
         }
-        if (mRequestBody != null) {
+        if (requestBody != null) {
             if (verbose) {
-                sb.append(mRequestBody);
+                sb.append(requestBody);
             } else {
-                final int bodyLength = Math.min(MAX_BREVITY_LENGTH, mRequestBody.length());
-                final String truncatedBody = mRequestBody.substring(0, bodyLength);
+                final int bodyLength = Math.min(MAX_BREVITY_LENGTH, requestBody.length());
+                final String truncatedBody = requestBody.substring(0, bodyLength);
                 sb.append(truncatedBody);
                 if (truncatedBody.length() == MAX_BREVITY_LENGTH) {
                     sb.append(TRUNCATION_MARKER);
@@ -189,8 +189,8 @@ public class GraphServiceException extends ClientException {
         sb.append(NEW_LINE).append(NEW_LINE);
 
         // Response information
-        sb.append(mResponseCode).append(" : ").append(mResponseMessage).append(NEW_LINE);
-        for (final String header : mResponseHeaders) {
+        sb.append(responseCode).append(" : ").append(responseMessage).append(NEW_LINE);
+        for (final String header : responseHeaders) {
             if (verbose) {
                 sb.append(header).append(NEW_LINE);
             } else {
@@ -199,9 +199,9 @@ public class GraphServiceException extends ClientException {
                 }
             }
         }
-        if (verbose && mError != null && mError.rawObject != null) {
+        if (verbose && error != null && error.rawObject != null) {
             try {
-                final JSONObject jsonObject = new JSONObject(mError.rawObject.toString());
+                final JSONObject jsonObject = new JSONObject(error.rawObject.toString());
                 sb.append(jsonObject.toString(INDENT_SPACES)).append(NEW_LINE);
             } catch (final JSONException ignored) {
                 sb.append("[Warning: Unable to parse error message body]").append(NEW_LINE);
@@ -219,7 +219,7 @@ public class GraphServiceException extends ClientException {
      * @return The error message.
      */
     public GraphError getServiceError() {
-        return mError.error;
+        return error.error;
     }
 
     @Override

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Quotient Request.
  */
 public class BaseWorkbookFunctionsQuotientRequest extends BaseRequest implements IBaseWorkbookFunctionsQuotientRequest {
-    protected final WorkbookFunctionsQuotientBody mBody;
+    protected final WorkbookFunctionsQuotientBody body;
 
     /**
      * The request for this WorkbookFunctionsQuotient
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsQuotientRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsQuotientRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsQuotientBody();
+        body = new WorkbookFunctionsQuotientBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

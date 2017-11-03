@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Conversation Thread Reply Request.
  */
 public class BaseConversationThreadReplyRequest extends BaseRequest implements IBaseConversationThreadReplyRequest {
-    protected final ConversationThreadReplyBody mBody;
+    protected final ConversationThreadReplyBody body;
 
     /**
      * The request for this ConversationThreadReply
@@ -32,15 +32,15 @@ public class BaseConversationThreadReplyRequest extends BaseRequest implements I
      */
     public BaseConversationThreadReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new ConversationThreadReplyBody();
+        body = new ConversationThreadReplyBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

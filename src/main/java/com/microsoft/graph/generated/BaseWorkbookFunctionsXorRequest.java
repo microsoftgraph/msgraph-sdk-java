@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Xor Request.
  */
 public class BaseWorkbookFunctionsXorRequest extends BaseRequest implements IBaseWorkbookFunctionsXorRequest {
-    protected final WorkbookFunctionsXorBody mBody;
+    protected final WorkbookFunctionsXorBody body;
 
     /**
      * The request for this WorkbookFunctionsXor
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsXorRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsXorRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsXorBody();
+        body = new WorkbookFunctionsXorBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base User Find Meeting Times Request.
  */
 public class BaseUserFindMeetingTimesRequest extends BaseRequest implements IBaseUserFindMeetingTimesRequest {
-    protected final UserFindMeetingTimesBody mBody;
+    protected final UserFindMeetingTimesBody body;
 
     /**
      * The request for this UserFindMeetingTimes
@@ -32,15 +32,15 @@ public class BaseUserFindMeetingTimesRequest extends BaseRequest implements IBas
      */
     public BaseUserFindMeetingTimesRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, MeetingTimeSuggestionsResult.class);
-        mBody = new UserFindMeetingTimesBody();
+        body = new UserFindMeetingTimesBody();
     }
 
     public void post(final ICallback<MeetingTimeSuggestionsResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public MeetingTimeSuggestionsResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

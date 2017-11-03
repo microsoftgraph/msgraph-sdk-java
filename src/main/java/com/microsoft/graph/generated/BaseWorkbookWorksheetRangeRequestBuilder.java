@@ -40,7 +40,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
      */
     public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String address) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("address", address));
+        functionOptions.add(new FunctionOption("address", address));
     }
 
     /**
@@ -65,7 +65,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

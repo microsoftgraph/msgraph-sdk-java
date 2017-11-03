@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Range Delete Request.
  */
 public class BaseWorkbookRangeDeleteRequest extends BaseRequest implements IBaseWorkbookRangeDeleteRequest {
-    protected final WorkbookRangeDeleteBody mBody;
+    protected final WorkbookRangeDeleteBody body;
 
     /**
      * The request for this WorkbookRangeDelete
@@ -32,15 +32,15 @@ public class BaseWorkbookRangeDeleteRequest extends BaseRequest implements IBase
      */
     public BaseWorkbookRangeDeleteRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookRangeDeleteBody();
+        body = new WorkbookRangeDeleteBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

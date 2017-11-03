@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Skew_p Request.
  */
 public class BaseWorkbookFunctionsSkew_pRequest extends BaseRequest implements IBaseWorkbookFunctionsSkew_pRequest {
-    protected final WorkbookFunctionsSkew_pBody mBody;
+    protected final WorkbookFunctionsSkew_pBody body;
 
     /**
      * The request for this WorkbookFunctionsSkew_p
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsSkew_pRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsSkew_pRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsSkew_pBody();
+        body = new WorkbookFunctionsSkew_pBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

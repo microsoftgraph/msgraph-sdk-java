@@ -33,16 +33,16 @@ public class SynchronousExecutor implements Executor {
     /**
      * The current number of synchronously executing actions.
      */
-    private AtomicInteger mActiveCount = new AtomicInteger(0);
+    private AtomicInteger activeCount = new AtomicInteger(0);
 
     /**
      * Executes the given Runnable task.
      * @param runnable The task to run on the main thread.
      */
     @Override public void execute(final Runnable runnable) {
-    	mActiveCount.incrementAndGet();
+    	activeCount.incrementAndGet();
     	runnable.run();
-    	mActiveCount.decrementAndGet();
+    	activeCount.decrementAndGet();
     }
 
     /**
@@ -50,6 +50,6 @@ public class SynchronousExecutor implements Executor {
      * @return The count.
      */
     public int getActiveCount() {
-        return mActiveCount.get();
+        return activeCount.get();
     }
 }

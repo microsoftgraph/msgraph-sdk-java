@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsDecimalRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsDecimalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("radix", radix);
+        bodyParams.put("number", number);
+        bodyParams.put("radix", radix);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsDecimalRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("radix")) {
-            request.mBody.radix = getParameter("radix");
+            request.body.radix = getParameter("radix");
         }
 
         return request;

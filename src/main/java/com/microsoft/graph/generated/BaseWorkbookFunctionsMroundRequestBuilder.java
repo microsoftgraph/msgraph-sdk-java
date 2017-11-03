@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsMroundRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsMroundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement multiple) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("multiple", multiple);
+        bodyParams.put("number", number);
+        bodyParams.put("multiple", multiple);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsMroundRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("multiple")) {
-            request.mBody.multiple = getParameter("multiple");
+            request.body.multiple = getParameter("multiple");
         }
 
         return request;

@@ -42,22 +42,22 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     /**
      * The contents of this page.
      */
-    private final List<T1> mPageContents;
+    private final List<T1> pageContents;
 
     /**
      * The request builder for the next page.
      */
-    private final T2 mRequestBuilder;
+    private final T2 requestBuilder;
 
     /**
      * The raw representation of this class.
      */
-    private transient JsonObject mRawObject;
+    private transient JsonObject rawObject;
 
     /**
      * The serializer.
      */
-    private transient ISerializer mSerializer;
+    private transient ISerializer serializer;
 
     /**
      * Creates the collection page.
@@ -68,8 +68,8 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
         // object to the 'children' of the collection.
-        mPageContents = Collections.unmodifiableList(pageContents);
-        mRequestBuilder = nextRequestBuilder;
+        this.pageContents = Collections.unmodifiableList(pageContents);
+        requestBuilder = nextRequestBuilder;
     }
 
     /**
@@ -78,7 +78,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @return The next page request builder.
      */
     public T2 getNextPage() {
-        return mRequestBuilder;
+        return requestBuilder;
     }
 
     /**
@@ -87,7 +87,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @return The current page.
      */
     public List<T1> getCurrentPage() {
-        return mPageContents;
+        return pageContents;
     }
 
     /**
@@ -96,7 +96,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @return The raw representation of this class.
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -105,7 +105,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @return The serializer.
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -115,8 +115,8 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
      * @param json       The json object to set this object to.
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
     }
 
     @Override

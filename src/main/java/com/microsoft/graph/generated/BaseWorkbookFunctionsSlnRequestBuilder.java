@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsSlnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("cost", cost);
-        mBodyParams.put("salvage", salvage);
-        mBodyParams.put("life", life);
+        bodyParams.put("cost", cost);
+        bodyParams.put("salvage", salvage);
+        bodyParams.put("life", life);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("cost")) {
-            request.mBody.cost = getParameter("cost");
+            request.body.cost = getParameter("cost");
         }
 
         if (hasParameter("salvage")) {
-            request.mBody.salvage = getParameter("salvage");
+            request.body.salvage = getParameter("salvage");
         }
 
         if (hasParameter("life")) {
-            request.mBody.life = getParameter("life");
+            request.body.life = getParameter("life");
         }
 
         return request;

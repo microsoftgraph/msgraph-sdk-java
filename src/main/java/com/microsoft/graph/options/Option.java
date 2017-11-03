@@ -30,12 +30,12 @@ public class Option {
     /**
      * The name of the option.
      */
-    private final String mName;
+    private final String name;
 
     /**
      * The value of the option.
      */
-    private final Object mValue;
+    private final Object value;
 
     /**
      * Creates an option object.
@@ -43,8 +43,8 @@ public class Option {
      * @param value The value of the option.
      */
     protected Option(final String name, final Object value) {
-        mName = name;
-        mValue = value;
+        this.name = name;
+        this.value = value;
     }
 
     /**
@@ -52,7 +52,7 @@ public class Option {
      * @return The name of the option.
      */
     public String getName() {
-        return mName;
+        return name;
     }
 
     /**
@@ -60,6 +60,6 @@ public class Option {
      * @return The value of the option.
      */
     public Object getValue() {
-        return mValue;
+        return value;
     }
 }

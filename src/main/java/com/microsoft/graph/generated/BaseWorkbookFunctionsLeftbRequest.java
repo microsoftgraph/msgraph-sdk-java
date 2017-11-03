@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Leftb Request.
  */
 public class BaseWorkbookFunctionsLeftbRequest extends BaseRequest implements IBaseWorkbookFunctionsLeftbRequest {
-    protected final WorkbookFunctionsLeftbBody mBody;
+    protected final WorkbookFunctionsLeftbBody body;
 
     /**
      * The request for this WorkbookFunctionsLeftb
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsLeftbRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsLeftbRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsLeftbBody();
+        body = new WorkbookFunctionsLeftbBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

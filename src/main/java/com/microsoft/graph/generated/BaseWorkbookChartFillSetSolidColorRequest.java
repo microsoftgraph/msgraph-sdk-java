@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Chart Fill Set Solid Color Request.
  */
 public class BaseWorkbookChartFillSetSolidColorRequest extends BaseRequest implements IBaseWorkbookChartFillSetSolidColorRequest {
-    protected final WorkbookChartFillSetSolidColorBody mBody;
+    protected final WorkbookChartFillSetSolidColorBody body;
 
     /**
      * The request for this WorkbookChartFillSetSolidColor
@@ -32,15 +32,15 @@ public class BaseWorkbookChartFillSetSolidColorRequest extends BaseRequest imple
      */
     public BaseWorkbookChartFillSetSolidColorRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookChartFillSetSolidColorBody();
+        body = new WorkbookChartFillSetSolidColorBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

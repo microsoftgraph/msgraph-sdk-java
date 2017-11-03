@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Rate Request.
  */
 public class BaseWorkbookFunctionsRateRequest extends BaseRequest implements IBaseWorkbookFunctionsRateRequest {
-    protected final WorkbookFunctionsRateBody mBody;
+    protected final WorkbookFunctionsRateBody body;
 
     /**
      * The request for this WorkbookFunctionsRate
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsRateRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsRateRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsRateBody();
+        body = new WorkbookFunctionsRateBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

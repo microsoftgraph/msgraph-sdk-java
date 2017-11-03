@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Im Cos Request.
  */
 public class BaseWorkbookFunctionsImCosRequest extends BaseRequest implements IBaseWorkbookFunctionsImCosRequest {
-    protected final WorkbookFunctionsImCosBody mBody;
+    protected final WorkbookFunctionsImCosBody body;
 
     /**
      * The request for this WorkbookFunctionsImCos
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsImCosRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsImCosRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsImCosBody();
+        body = new WorkbookFunctionsImCosBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

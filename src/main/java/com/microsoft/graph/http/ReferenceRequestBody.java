@@ -19,12 +19,12 @@ public class ReferenceRequestBody implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private transient JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private transient ISerializer serializer;
 
     public ReferenceRequestBody(final String payload) {
         odataId = payload;
@@ -36,7 +36,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -45,7 +45,7 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -55,8 +55,8 @@ public class ReferenceRequestBody implements IJsonBackedObject {
      * @param json       The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        this.rawObject = json;
     }
 
     @Override

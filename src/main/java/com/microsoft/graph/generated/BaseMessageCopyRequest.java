@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Message Copy Request.
  */
 public class BaseMessageCopyRequest extends BaseRequest implements IBaseMessageCopyRequest {
-    protected final MessageCopyBody mBody;
+    protected final MessageCopyBody body;
 
     /**
      * The request for this MessageCopy
@@ -32,15 +32,15 @@ public class BaseMessageCopyRequest extends BaseRequest implements IBaseMessageC
      */
     public BaseMessageCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
-        mBody = new MessageCopyBody();
+        body = new MessageCopyBody();
     }
 
     public void post(final ICallback<Message> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Message post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

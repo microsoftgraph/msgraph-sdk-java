@@ -33,7 +33,7 @@ public class DefaultLogger implements ILogger {
     /**
      * The logging level.
      */
-    private LoggerLevel mLevel = LoggerLevel.Error;
+    private LoggerLevel level = LoggerLevel.ERROR;
     
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
@@ -43,7 +43,7 @@ public class DefaultLogger implements ILogger {
      */
     public void setLoggingLevel(final LoggerLevel level) {
     	LOGGER.info("Setting logging level to " + level);
-    	mLevel = level;
+    	this.level = level;
     }
 
     /**
@@ -51,7 +51,7 @@ public class DefaultLogger implements ILogger {
      * @return The level the logger is set to.
      */
     public LoggerLevel getLoggingLevel() {
-        return mLevel;
+        return level;
     }
 
     /**
@@ -96,10 +96,10 @@ public class DefaultLogger implements ILogger {
      */
     @Override
     public void logError(final String message, final Throwable throwable) {
-        switch (mLevel) {
+        switch (level) {
             default:
-            case Debug:
-            case Error:
+            case DEBUG:
+            case ERROR:
                 for (final String line : message.split("\n")) {
                 	LOGGER.severe(getTag() + line);
                 }

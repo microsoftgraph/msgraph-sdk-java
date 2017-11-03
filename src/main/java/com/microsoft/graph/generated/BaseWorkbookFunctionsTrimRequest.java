@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Trim Request.
  */
 public class BaseWorkbookFunctionsTrimRequest extends BaseRequest implements IBaseWorkbookFunctionsTrimRequest {
-    protected final WorkbookFunctionsTrimBody mBody;
+    protected final WorkbookFunctionsTrimBody body;
 
     /**
      * The request for this WorkbookFunctionsTrim
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsTrimRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsTrimRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsTrimBody();
+        body = new WorkbookFunctionsTrimBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

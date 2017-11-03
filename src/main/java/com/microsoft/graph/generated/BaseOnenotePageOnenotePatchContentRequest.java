@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Onenote Page Onenote Patch Content Request.
  */
 public class BaseOnenotePageOnenotePatchContentRequest extends BaseRequest implements IBaseOnenotePageOnenotePatchContentRequest {
-    protected final OnenotePageOnenotePatchContentBody mBody;
+    protected final OnenotePageOnenotePatchContentBody body;
 
     /**
      * The request for this OnenotePageOnenotePatchContent
@@ -32,15 +32,15 @@ public class BaseOnenotePageOnenotePatchContentRequest extends BaseRequest imple
      */
     public BaseOnenotePageOnenotePatchContentRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new OnenotePageOnenotePatchContentBody();
+        body = new OnenotePageOnenotePatchContentBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

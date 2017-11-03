@@ -36,22 +36,22 @@ public class ChunkedUploadRequest {
     /**
      * The chunk data sent to the server.
      */
-    private final byte[] mData;
+    private final byte[] data;
 
     /**
      * The base request.
      */
-    private final BaseRequest mBaseRequest;
+    private final BaseRequest baseRequest;
 
     /**
      * The max retry for single request.
      */
-    private final int mMaxRetry;
+    private final int maxRetry;
 
     /**
      * The retry counter.
      */
-    private int mRetryCount;
+    private int retryCount;
 
     /**
      * Construct the ChunkedUploadRequest
@@ -73,14 +73,14 @@ public class ChunkedUploadRequest {
                                 final int maxRetry,
                                 final int beginIndex,
                                 final int totalLength) {
-        this.mData = new byte[chunkSize];
-        System.arraycopy(chunk, 0, this.mData, 0, chunkSize);
-        this.mRetryCount = 0;
-        this.mMaxRetry = maxRetry;
-        this.mBaseRequest = new BaseRequest(requestUrl, client, options, ChunkedUploadResult.class) {
+        this.data = new byte[chunkSize];
+        System.arraycopy(chunk, 0, this.data, 0, chunkSize);
+        this.retryCount = 0;
+        this.maxRetry = maxRetry;
+        this.baseRequest = new BaseRequest(requestUrl, client, options, ChunkedUploadResult.class) {
         };
-        this.mBaseRequest.setHttpMethod(HttpMethod.PUT);
-        this.mBaseRequest.addHeader(CONTENT_RANGE_HEADER_NAME,
+        this.baseRequest.setHttpMethod(HttpMethod.PUT);
+        this.baseRequest.addHeader(CONTENT_RANGE_HEADER_NAME,
                 String.format(
                         CONTENT_RANGE_FORMAT,
                         beginIndex,
@@ -97,33 +97,33 @@ public class ChunkedUploadRequest {
      */
     public <UploadType> ChunkedUploadResult upload(
             final ChunkedUploadResponseHandler<UploadType> responseHandler) {
-        while (this.mRetryCount < this.mMaxRetry) {
+        while (this.retryCount < this.maxRetry) {
             try {
-                Thread.sleep(RETRY_DELAY * this.mRetryCount * this.mRetryCount);
+                Thread.sleep(RETRY_DELAY * this.retryCount * this.retryCount);
             } catch (final InterruptedException e) {
-                this.mBaseRequest.getClient().getLogger().logError("Exception while waiting upload file retry", e);
+                this.baseRequest.getClient().getLogger().logError("Exception while waiting upload file retry", e);
             }
 
             ChunkedUploadResult result = null;
 
             try {
-                result = this.mBaseRequest
+                result = this.baseRequest
                         .getClient()
                         .getHttpProvider()
-                        .send(mBaseRequest, ChunkedUploadResult.class, this.mData, responseHandler);
+                        .send(baseRequest, ChunkedUploadResult.class, this.data, responseHandler);
             } catch (final ClientException e) {
-                this.mBaseRequest.getClient().getLogger().logDebug("Request failed with, retry if necessary.");
+                this.baseRequest.getClient().getLogger().logDebug("Request failed with, retry if necessary.");
             }
 
             if (result != null && result.chunkCompleted()) {
                 return result;
             }
 
-            this.mRetryCount++;
+            this.retryCount++;
         }
 
         return new ChunkedUploadResult(
                 new ClientException("Upload session failed to many times.", null,
-                        GraphErrorCodes.UploadSessionIncomplete));
+                        GraphErrorCodes.UPLOAD_SESSION_INCOMPLETE));
     }
 }

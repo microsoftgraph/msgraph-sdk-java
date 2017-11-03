@@ -30,12 +30,12 @@ public class BaseWorkbookFunctionsRateRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("nper", nper);
-        mBodyParams.put("pmt", pmt);
-        mBodyParams.put("pv", pv);
-        mBodyParams.put("fv", fv);
-        mBodyParams.put("type", type);
-        mBodyParams.put("guess", guess);
+        bodyParams.put("nper", nper);
+        bodyParams.put("pmt", pmt);
+        bodyParams.put("pv", pv);
+        bodyParams.put("fv", fv);
+        bodyParams.put("type", type);
+        bodyParams.put("guess", guess);
     }
 
     /**
@@ -61,27 +61,27 @@ public class BaseWorkbookFunctionsRateRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("nper")) {
-            request.mBody.nper = getParameter("nper");
+            request.body.nper = getParameter("nper");
         }
 
         if (hasParameter("pmt")) {
-            request.mBody.pmt = getParameter("pmt");
+            request.body.pmt = getParameter("pmt");
         }
 
         if (hasParameter("pv")) {
-            request.mBody.pv = getParameter("pv");
+            request.body.pv = getParameter("pv");
         }
 
         if (hasParameter("fv")) {
-            request.mBody.fv = getParameter("fv");
+            request.body.fv = getParameter("fv");
         }
 
         if (hasParameter("type")) {
-            request.mBody.type = getParameter("type");
+            request.body.type = getParameter("type");
         }
 
         if (hasParameter("guess")) {
-            request.mBody.guess = getParameter("guess");
+            request.body.guess = getParameter("guess");
         }
 
         return request;

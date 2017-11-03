@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Coup Pcd Request.
  */
 public class BaseWorkbookFunctionsCoupPcdRequest extends BaseRequest implements IBaseWorkbookFunctionsCoupPcdRequest {
-    protected final WorkbookFunctionsCoupPcdBody mBody;
+    protected final WorkbookFunctionsCoupPcdBody body;
 
     /**
      * The request for this WorkbookFunctionsCoupPcd
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCoupPcdRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsCoupPcdRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCoupPcdBody();
+        body = new WorkbookFunctionsCoupPcdBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

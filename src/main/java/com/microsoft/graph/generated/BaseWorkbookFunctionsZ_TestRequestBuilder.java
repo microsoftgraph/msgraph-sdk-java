@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequest
      */
     public BaseWorkbookFunctionsZ_TestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement sigma) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("array", array);
-        mBodyParams.put("x", x);
-        mBodyParams.put("sigma", sigma);
+        bodyParams.put("array", array);
+        bodyParams.put("x", x);
+        bodyParams.put("sigma", sigma);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequest
         );
 
         if (hasParameter("array")) {
-            request.mBody.array = getParameter("array");
+            request.body.array = getParameter("array");
         }
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("sigma")) {
-            request.mBody.sigma = getParameter("sigma");
+            request.body.sigma = getParameter("sigma");
         }
 
         return request;

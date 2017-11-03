@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsSumIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement sumRange) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("range", range);
-        mBodyParams.put("criteria", criteria);
-        mBodyParams.put("sumRange", sumRange);
+        bodyParams.put("range", range);
+        bodyParams.put("criteria", criteria);
+        bodyParams.put("sumRange", sumRange);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("range")) {
-            request.mBody.range = getParameter("range");
+            request.body.range = getParameter("range");
         }
 
         if (hasParameter("criteria")) {
-            request.mBody.criteria = getParameter("criteria");
+            request.body.criteria = getParameter("criteria");
         }
 
         if (hasParameter("sumRange")) {
-            request.mBody.sumRange = getParameter("sumRange");
+            request.body.sumRange = getParameter("sumRange");
         }
 
         return request;

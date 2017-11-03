@@ -30,8 +30,8 @@ public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuild
      */
     public BaseUserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String currentPassword, final String newPassword) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("currentPassword", currentPassword);
-        mBodyParams.put("newPassword", newPassword);
+        bodyParams.put("currentPassword", currentPassword);
+        bodyParams.put("newPassword", newPassword);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuild
         );
 
         if (hasParameter("currentPassword")) {
-            request.mBody.currentPassword = getParameter("currentPassword");
+            request.body.currentPassword = getParameter("currentPassword");
         }
 
         if (hasParameter("newPassword")) {
-            request.mBody.newPassword = getParameter("newPassword");
+            request.body.newPassword = getParameter("newPassword");
         }
 
         return request;

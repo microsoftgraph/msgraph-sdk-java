@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsRoundRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsRoundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("numDigits", numDigits);
+        bodyParams.put("number", number);
+        bodyParams.put("numDigits", numDigits);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsRoundRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("numDigits")) {
-            request.mBody.numDigits = getParameter("numDigits");
+            request.body.numDigits = getParameter("numDigits");
         }
 
         return request;

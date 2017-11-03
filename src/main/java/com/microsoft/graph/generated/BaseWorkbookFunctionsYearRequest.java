@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Year Request.
  */
 public class BaseWorkbookFunctionsYearRequest extends BaseRequest implements IBaseWorkbookFunctionsYearRequest {
-    protected final WorkbookFunctionsYearBody mBody;
+    protected final WorkbookFunctionsYearBody body;
 
     /**
      * The request for this WorkbookFunctionsYear
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsYearRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsYearRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsYearBody();
+        body = new WorkbookFunctionsYearBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

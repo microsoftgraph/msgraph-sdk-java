@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Chi Sq_Inv_RTRequest.
  */
 public class BaseWorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest implements IBaseWorkbookFunctionsChiSq_Inv_RTRequest {
-    protected final WorkbookFunctionsChiSq_Inv_RTBody mBody;
+    protected final WorkbookFunctionsChiSq_Inv_RTBody body;
 
     /**
      * The request for this WorkbookFunctionsChiSq_Inv_RT
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsChiSq_Inv_RTRequest extends BaseRequest implem
      */
     public BaseWorkbookFunctionsChiSq_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsChiSq_Inv_RTBody();
+        body = new WorkbookFunctionsChiSq_Inv_RTBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

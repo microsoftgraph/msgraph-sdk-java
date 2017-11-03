@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Gcd Request.
  */
 public class BaseWorkbookFunctionsGcdRequest extends BaseRequest implements IBaseWorkbookFunctionsGcdRequest {
-    protected final WorkbookFunctionsGcdBody mBody;
+    protected final WorkbookFunctionsGcdBody body;
 
     /**
      * The request for this WorkbookFunctionsGcd
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsGcdRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsGcdRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsGcdBody();
+        body = new WorkbookFunctionsGcdBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

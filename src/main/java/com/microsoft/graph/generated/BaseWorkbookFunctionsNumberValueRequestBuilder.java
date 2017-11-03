@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
-        mBodyParams.put("decimalSeparator", decimalSeparator);
-        mBodyParams.put("groupSeparator", groupSeparator);
+        bodyParams.put("text", text);
+        bodyParams.put("decimalSeparator", decimalSeparator);
+        bodyParams.put("groupSeparator", groupSeparator);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         if (hasParameter("decimalSeparator")) {
-            request.mBody.decimalSeparator = getParameter("decimalSeparator");
+            request.body.decimalSeparator = getParameter("decimalSeparator");
         }
 
         if (hasParameter("groupSeparator")) {
-            request.mBody.groupSeparator = getParameter("groupSeparator");
+            request.body.groupSeparator = getParameter("groupSeparator");
         }
 
         return request;

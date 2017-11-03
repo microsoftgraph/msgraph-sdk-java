@@ -30,8 +30,8 @@ public class BaseWorkbookRangeResizedRangeRequestBuilder extends BaseFunctionReq
      */
     public BaseWorkbookRangeResizedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer deltaRows, final Integer deltaColumns) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("deltaRows", deltaRows));
-        mFunctionOptions.add(new FunctionOption("deltaColumns", deltaColumns));
+        functionOptions.add(new FunctionOption("deltaRows", deltaRows));
+        functionOptions.add(new FunctionOption("deltaColumns", deltaColumns));
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookRangeResizedRangeRequestBuilder extends BaseFunctionReq
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Log Norm_Dist Request.
  */
 public class BaseWorkbookFunctionsLogNorm_DistRequest extends BaseRequest implements IBaseWorkbookFunctionsLogNorm_DistRequest {
-    protected final WorkbookFunctionsLogNorm_DistBody mBody;
+    protected final WorkbookFunctionsLogNorm_DistBody body;
 
     /**
      * The request for this WorkbookFunctionsLogNorm_Dist
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsLogNorm_DistRequest extends BaseRequest implem
      */
     public BaseWorkbookFunctionsLogNorm_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsLogNorm_DistBody();
+        body = new WorkbookFunctionsLogNorm_DistBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,7 +30,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extend
      */
     public BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<String> groupIds) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("groupIds", groupIds);
+        bodyParams.put("groupIds", groupIds);
       }
 
     public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest() {
@@ -45,7 +45,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extend
         );
 
         if (hasParameter("groupIds")) {
-            request.mBody.groupIds = getParameter("groupIds");
+            request.body.groupIds = getParameter("groupIds");
         }
   
         return request;

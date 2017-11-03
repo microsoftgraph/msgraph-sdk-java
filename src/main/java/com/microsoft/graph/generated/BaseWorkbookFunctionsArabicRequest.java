@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Arabic Request.
  */
 public class BaseWorkbookFunctionsArabicRequest extends BaseRequest implements IBaseWorkbookFunctionsArabicRequest {
-    protected final WorkbookFunctionsArabicBody mBody;
+    protected final WorkbookFunctionsArabicBody body;
 
     /**
      * The request for this WorkbookFunctionsArabic
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsArabicRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsArabicRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsArabicBody();
+        body = new WorkbookFunctionsArabicBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

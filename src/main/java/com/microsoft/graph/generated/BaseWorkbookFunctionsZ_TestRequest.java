@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Z_Test Request.
  */
 public class BaseWorkbookFunctionsZ_TestRequest extends BaseRequest implements IBaseWorkbookFunctionsZ_TestRequest {
-    protected final WorkbookFunctionsZ_TestBody mBody;
+    protected final WorkbookFunctionsZ_TestBody body;
 
     /**
      * The request for this WorkbookFunctionsZ_Test
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsZ_TestRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsZ_TestRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsZ_TestBody();
+        body = new WorkbookFunctionsZ_TestBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

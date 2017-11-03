@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Mail Folder Move Request.
  */
 public class BaseMailFolderMoveRequest extends BaseRequest implements IBaseMailFolderMoveRequest {
-    protected final MailFolderMoveBody mBody;
+    protected final MailFolderMoveBody body;
 
     /**
      * The request for this MailFolderMove
@@ -32,15 +32,15 @@ public class BaseMailFolderMoveRequest extends BaseRequest implements IBaseMailF
      */
     public BaseMailFolderMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolder.class);
-        mBody = new MailFolderMoveBody();
+        body = new MailFolderMoveBody();
     }
 
     public void post(final ICallback<MailFolder> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public MailFolder post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

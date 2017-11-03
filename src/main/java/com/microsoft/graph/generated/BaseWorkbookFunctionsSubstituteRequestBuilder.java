@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsSubstituteRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsSubstituteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement newText, final com.google.gson.JsonElement instanceNum) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
-        mBodyParams.put("oldText", oldText);
-        mBodyParams.put("newText", newText);
-        mBodyParams.put("instanceNum", instanceNum);
+        bodyParams.put("text", text);
+        bodyParams.put("oldText", oldText);
+        bodyParams.put("newText", newText);
+        bodyParams.put("instanceNum", instanceNum);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsSubstituteRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         if (hasParameter("oldText")) {
-            request.mBody.oldText = getParameter("oldText");
+            request.body.oldText = getParameter("oldText");
         }
 
         if (hasParameter("newText")) {
-            request.mBody.newText = getParameter("newText");
+            request.body.newText = getParameter("newText");
         }
 
         if (hasParameter("instanceNum")) {
-            request.mBody.instanceNum = getParameter("instanceNum");
+            request.body.instanceNum = getParameter("instanceNum");
         }
 
         return request;

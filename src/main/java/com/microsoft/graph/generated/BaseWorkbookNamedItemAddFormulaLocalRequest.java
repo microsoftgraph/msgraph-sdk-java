@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Named Item Add Formula Local Request.
  */
 public class BaseWorkbookNamedItemAddFormulaLocalRequest extends BaseRequest implements IBaseWorkbookNamedItemAddFormulaLocalRequest {
-    protected final WorkbookNamedItemAddFormulaLocalBody mBody;
+    protected final WorkbookNamedItemAddFormulaLocalBody body;
 
     /**
      * The request for this WorkbookNamedItemAddFormulaLocal
@@ -32,15 +32,15 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequest extends BaseRequest imp
      */
     public BaseWorkbookNamedItemAddFormulaLocalRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookNamedItem.class);
-        mBody = new WorkbookNamedItemAddFormulaLocalBody();
+        body = new WorkbookNamedItemAddFormulaLocalBody();
     }
 
     public void post(final ICallback<WorkbookNamedItem> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookNamedItem post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

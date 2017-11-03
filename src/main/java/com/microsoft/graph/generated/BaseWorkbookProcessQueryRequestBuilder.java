@@ -30,7 +30,7 @@ public class BaseWorkbookProcessQueryRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookProcessQueryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final byte[] input) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("input", input);
+        bodyParams.put("input", input);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookProcessQueryRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("input")) {
-            request.mBody.input = getParameter("input");
+            request.body.input = getParameter("input");
         }
 
         return request;

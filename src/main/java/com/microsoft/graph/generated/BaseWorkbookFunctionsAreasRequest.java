@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Areas Request.
  */
 public class BaseWorkbookFunctionsAreasRequest extends BaseRequest implements IBaseWorkbookFunctionsAreasRequest {
-    protected final WorkbookFunctionsAreasBody mBody;
+    protected final WorkbookFunctionsAreasBody body;
 
     /**
      * The request for this WorkbookFunctionsAreas
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsAreasRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsAreasRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsAreasBody();
+        body = new WorkbookFunctionsAreasBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("n", n);
-        mBodyParams.put("m", m);
-        mBodyParams.put("coefficients", coefficients);
+        bodyParams.put("x", x);
+        bodyParams.put("n", n);
+        bodyParams.put("m", m);
+        bodyParams.put("coefficients", coefficients);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("n")) {
-            request.mBody.n = getParameter("n");
+            request.body.n = getParameter("n");
         }
 
         if (hasParameter("m")) {
-            request.mBody.m = getParameter("m");
+            request.body.m = getParameter("m");
         }
 
         if (hasParameter("coefficients")) {
-            request.mBody.coefficients = getParameter("coefficients");
+            request.body.coefficients = getParameter("coefficients");
         }
 
         return request;

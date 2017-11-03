@@ -30,23 +30,23 @@ public class SimpleWaiter {
     /**
      * The internal lock object for this waiter.
      */
-    private final Object mInternalLock = new Object();
+    private final Object internalLock = new Object();
 
     /**
      * Indicates if this waiter has been triggered.
      */
-    private boolean mTriggerState;
+    private boolean triggerState;
 
     /**
      * BLOCKING: Waits for the signal to be triggered, or returns immediately if it has already been triggered.
      */
     public void waitForSignal() {
-        synchronized (mInternalLock) {
-            if (this.mTriggerState) {
+        synchronized (internalLock) {
+            if (this.triggerState) {
                 return;
             }
             try {
-                mInternalLock.wait();
+                internalLock.wait();
             } catch (final InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -57,9 +57,9 @@ public class SimpleWaiter {
      * Triggers the signal for this waiter.
      */
     public void signal() {
-        synchronized (mInternalLock) {
-            mTriggerState = true;
-            mInternalLock.notifyAll();
+        synchronized (internalLock) {
+            triggerState = true;
+            internalLock.notifyAll();
         }
     }
 }

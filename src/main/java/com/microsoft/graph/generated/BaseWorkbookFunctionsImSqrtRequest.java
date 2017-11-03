@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Im Sqrt Request.
  */
 public class BaseWorkbookFunctionsImSqrtRequest extends BaseRequest implements IBaseWorkbookFunctionsImSqrtRequest {
-    protected final WorkbookFunctionsImSqrtBody mBody;
+    protected final WorkbookFunctionsImSqrtBody body;
 
     /**
      * The request for this WorkbookFunctionsImSqrt
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsImSqrtRequest extends BaseRequest implements I
      */
     public BaseWorkbookFunctionsImSqrtRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsImSqrtBody();
+        body = new WorkbookFunctionsImSqrtBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

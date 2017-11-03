@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Erf CRequest.
  */
 public class BaseWorkbookFunctionsErfCRequest extends BaseRequest implements IBaseWorkbookFunctionsErfCRequest {
-    protected final WorkbookFunctionsErfCBody mBody;
+    protected final WorkbookFunctionsErfCBody body;
 
     /**
      * The request for this WorkbookFunctionsErfC
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsErfCRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsErfCRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsErfCBody();
+        body = new WorkbookFunctionsErfCBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

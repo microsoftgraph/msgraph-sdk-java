@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Series Sum Request.
  */
 public class BaseWorkbookFunctionsSeriesSumRequest extends BaseRequest implements IBaseWorkbookFunctionsSeriesSumRequest {
-    protected final WorkbookFunctionsSeriesSumBody mBody;
+    protected final WorkbookFunctionsSeriesSumBody body;
 
     /**
      * The request for this WorkbookFunctionsSeriesSum
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsSeriesSumRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsSeriesSumRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsSeriesSumBody();
+        body = new WorkbookFunctionsSeriesSumBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,8 +30,8 @@ public class BaseWorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequ
      */
     public BaseWorkbookRangeOffsetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer rowOffset, final Integer columnOffset) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("rowOffset", rowOffset));
-        mFunctionOptions.add(new FunctionOption("columnOffset", columnOffset));
+        functionOptions.add(new FunctionOption("rowOffset", rowOffset));
+        functionOptions.add(new FunctionOption("columnOffset", columnOffset));
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequ
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

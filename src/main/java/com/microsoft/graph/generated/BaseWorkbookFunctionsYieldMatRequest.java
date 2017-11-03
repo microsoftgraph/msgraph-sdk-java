@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Yield Mat Request.
  */
 public class BaseWorkbookFunctionsYieldMatRequest extends BaseRequest implements IBaseWorkbookFunctionsYieldMatRequest {
-    protected final WorkbookFunctionsYieldMatBody mBody;
+    protected final WorkbookFunctionsYieldMatBody body;
 
     /**
      * The request for this WorkbookFunctionsYieldMat
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsYieldMatRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsYieldMatRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsYieldMatBody();
+        body = new WorkbookFunctionsYieldMatBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

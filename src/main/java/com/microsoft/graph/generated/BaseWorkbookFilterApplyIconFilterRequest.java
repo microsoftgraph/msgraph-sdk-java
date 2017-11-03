@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Icon Filter Request.
  */
 public class BaseWorkbookFilterApplyIconFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyIconFilterRequest {
-    protected final WorkbookFilterApplyIconFilterBody mBody;
+    protected final WorkbookFilterApplyIconFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyIconFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyIconFilterRequest extends BaseRequest implem
      */
     public BaseWorkbookFilterApplyIconFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyIconFilterBody();
+        body = new WorkbookFilterApplyIconFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

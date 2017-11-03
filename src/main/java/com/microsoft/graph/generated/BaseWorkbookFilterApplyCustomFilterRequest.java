@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Custom Filter Request.
  */
 public class BaseWorkbookFilterApplyCustomFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyCustomFilterRequest {
-    protected final WorkbookFilterApplyCustomFilterBody mBody;
+    protected final WorkbookFilterApplyCustomFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyCustomFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyCustomFilterRequest extends BaseRequest impl
      */
     public BaseWorkbookFilterApplyCustomFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyCustomFilterBody();
+        body = new WorkbookFilterApplyCustomFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

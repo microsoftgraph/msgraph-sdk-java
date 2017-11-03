@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActi
      */
     public BaseWorkbookFilterApplyDynamicFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String criteria) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("criteria", criteria);
+        bodyParams.put("criteria", criteria);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFilterApplyDynamicFilterRequestBuilder extends BaseActi
         );
 
         if (hasParameter("criteria")) {
-            request.mBody.criteria = getParameter("criteria");
+            request.body.criteria = getParameter("criteria");
         }
 
         return request;

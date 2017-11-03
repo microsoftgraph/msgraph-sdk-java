@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyIconFilterRequestBuilder extends BaseActionR
      */
     public BaseWorkbookFilterApplyIconFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final WorkbookIcon icon) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("icon", icon);
+        bodyParams.put("icon", icon);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFilterApplyIconFilterRequestBuilder extends BaseActionR
         );
 
         if (hasParameter("icon")) {
-            request.mBody.icon = getParameter("icon");
+            request.body.icon = getParameter("icon");
         }
 
         return request;

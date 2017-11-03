@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsMidbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("text", text);
-        mBodyParams.put("startNum", startNum);
-        mBodyParams.put("numBytes", numBytes);
+        bodyParams.put("text", text);
+        bodyParams.put("startNum", startNum);
+        bodyParams.put("numBytes", numBytes);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("text")) {
-            request.mBody.text = getParameter("text");
+            request.body.text = getParameter("text");
         }
 
         if (hasParameter("startNum")) {
-            request.mBody.startNum = getParameter("startNum");
+            request.body.startNum = getParameter("startNum");
         }
 
         if (hasParameter("numBytes")) {
-            request.mBody.numBytes = getParameter("numBytes");
+            request.body.numBytes = getParameter("numBytes");
         }
 
         return request;

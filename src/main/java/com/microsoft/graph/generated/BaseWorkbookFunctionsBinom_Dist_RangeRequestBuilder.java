@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseAct
      */
     public BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement numberS2) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("trials", trials);
-        mBodyParams.put("probabilityS", probabilityS);
-        mBodyParams.put("numberS", numberS);
-        mBodyParams.put("numberS2", numberS2);
+        bodyParams.put("trials", trials);
+        bodyParams.put("probabilityS", probabilityS);
+        bodyParams.put("numberS", numberS);
+        bodyParams.put("numberS2", numberS2);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseAct
         );
 
         if (hasParameter("trials")) {
-            request.mBody.trials = getParameter("trials");
+            request.body.trials = getParameter("trials");
         }
 
         if (hasParameter("probabilityS")) {
-            request.mBody.probabilityS = getParameter("probabilityS");
+            request.body.probabilityS = getParameter("probabilityS");
         }
 
         if (hasParameter("numberS")) {
-            request.mBody.numberS = getParameter("numberS");
+            request.body.numberS = getParameter("numberS");
         }
 
         if (hasParameter("numberS2")) {
-            request.mBody.numberS2 = getParameter("numberS2");
+            request.body.numberS2 = getParameter("numberS2");
         }
 
         return request;

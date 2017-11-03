@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base User Change Password Request.
  */
 public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseUserChangePasswordRequest {
-    protected final UserChangePasswordBody mBody;
+    protected final UserChangePasswordBody body;
 
     /**
      * The request for this UserChangePassword
@@ -32,15 +32,15 @@ public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseU
      */
     public BaseUserChangePasswordRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new UserChangePasswordBody();
+        body = new UserChangePasswordBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

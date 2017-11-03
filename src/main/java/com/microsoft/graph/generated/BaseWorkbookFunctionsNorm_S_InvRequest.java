@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Norm_S_Inv Request.
  */
 public class BaseWorkbookFunctionsNorm_S_InvRequest extends BaseRequest implements IBaseWorkbookFunctionsNorm_S_InvRequest {
-    protected final WorkbookFunctionsNorm_S_InvBody mBody;
+    protected final WorkbookFunctionsNorm_S_InvBody body;
 
     /**
      * The request for this WorkbookFunctionsNorm_S_Inv
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsNorm_S_InvRequest extends BaseRequest implemen
      */
     public BaseWorkbookFunctionsNorm_S_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsNorm_S_InvBody();
+        body = new WorkbookFunctionsNorm_S_InvBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

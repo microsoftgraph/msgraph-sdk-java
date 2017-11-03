@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsComplexRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement realNum, final com.google.gson.JsonElement iNum, final com.google.gson.JsonElement suffix) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("realNum", realNum);
-        mBodyParams.put("iNum", iNum);
-        mBodyParams.put("suffix", suffix);
+        bodyParams.put("realNum", realNum);
+        bodyParams.put("iNum", iNum);
+        bodyParams.put("suffix", suffix);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("realNum")) {
-            request.mBody.realNum = getParameter("realNum");
+            request.body.realNum = getParameter("realNum");
         }
 
         if (hasParameter("iNum")) {
-            request.mBody.iNum = getParameter("iNum");
+            request.body.iNum = getParameter("iNum");
         }
 
         if (hasParameter("suffix")) {
-            request.mBody.suffix = getParameter("suffix");
+            request.body.suffix = getParameter("suffix");
         }
 
         return request;

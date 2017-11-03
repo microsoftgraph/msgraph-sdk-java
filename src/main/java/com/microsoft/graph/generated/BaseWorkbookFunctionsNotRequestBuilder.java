@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsNotRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement logical) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("logical", logical);
+        bodyParams.put("logical", logical);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("logical")) {
-            request.mBody.logical = getParameter("logical");
+            request.body.logical = getParameter("logical");
         }
 
         return request;

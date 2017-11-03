@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Table Row Add Request.
  */
 public class BaseWorkbookTableRowAddRequest extends BaseRequest implements IBaseWorkbookTableRowAddRequest {
-    protected final WorkbookTableRowAddBody mBody;
+    protected final WorkbookTableRowAddBody body;
 
     /**
      * The request for this WorkbookTableRowAdd
@@ -32,15 +32,15 @@ public class BaseWorkbookTableRowAddRequest extends BaseRequest implements IBase
      */
     public BaseWorkbookTableRowAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableRow.class);
-        mBody = new WorkbookTableRowAddBody();
+        body = new WorkbookTableRowAddBody();
     }
 
     public void post(final ICallback<WorkbookTableRow> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookTableRow post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

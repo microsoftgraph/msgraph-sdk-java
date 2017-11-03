@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsUsdollarRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsUsdollarRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("decimals", decimals);
+        bodyParams.put("number", number);
+        bodyParams.put("decimals", decimals);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsUsdollarRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("decimals")) {
-            request.mBody.decimals = getParameter("decimals");
+            request.body.decimals = getParameter("decimals");
         }
 
         return request;

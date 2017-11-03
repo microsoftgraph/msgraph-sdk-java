@@ -30,7 +30,7 @@ public class BaseWorkbookApplicationCalculateRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookApplicationCalculateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String calculationType) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("calculationType", calculationType);
+        bodyParams.put("calculationType", calculationType);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookApplicationCalculateRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("calculationType")) {
-            request.mBody.calculationType = getParameter("calculationType");
+            request.body.calculationType = getParameter("calculationType");
         }
 
         return request;

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Amor Degrc Request.
  */
 public class BaseWorkbookFunctionsAmorDegrcRequest extends BaseRequest implements IBaseWorkbookFunctionsAmorDegrcRequest {
-    protected final WorkbookFunctionsAmorDegrcBody mBody;
+    protected final WorkbookFunctionsAmorDegrcBody body;
 
     /**
      * The request for this WorkbookFunctionsAmorDegrc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsAmorDegrcRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsAmorDegrcRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsAmorDegrcBody();
+        body = new WorkbookFunctionsAmorDegrcBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Is Non Text Request.
  */
 public class BaseWorkbookFunctionsIsNonTextRequest extends BaseRequest implements IBaseWorkbookFunctionsIsNonTextRequest {
-    protected final WorkbookFunctionsIsNonTextBody mBody;
+    protected final WorkbookFunctionsIsNonTextBody body;
 
     /**
      * The request for this WorkbookFunctionsIsNonText
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsIsNonTextRequest extends BaseRequest implement
      */
     public BaseWorkbookFunctionsIsNonTextRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsIsNonTextBody();
+        body = new WorkbookFunctionsIsNonTextBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

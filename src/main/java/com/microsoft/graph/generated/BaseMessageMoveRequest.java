@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Message Move Request.
  */
 public class BaseMessageMoveRequest extends BaseRequest implements IBaseMessageMoveRequest {
-    protected final MessageMoveBody mBody;
+    protected final MessageMoveBody body;
 
     /**
      * The request for this MessageMove
@@ -32,15 +32,15 @@ public class BaseMessageMoveRequest extends BaseRequest implements IBaseMessageM
      */
     public BaseMessageMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Message.class);
-        mBody = new MessageMoveBody();
+        body = new MessageMoveBody();
     }
 
     public void post(final ICallback<Message> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Message post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

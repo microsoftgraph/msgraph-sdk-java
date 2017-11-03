@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Ceiling_Math Request.
  */
 public class BaseWorkbookFunctionsCeiling_MathRequest extends BaseRequest implements IBaseWorkbookFunctionsCeiling_MathRequest {
-    protected final WorkbookFunctionsCeiling_MathBody mBody;
+    protected final WorkbookFunctionsCeiling_MathBody body;
 
     /**
      * The request for this WorkbookFunctionsCeiling_Math
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCeiling_MathRequest extends BaseRequest implem
      */
     public BaseWorkbookFunctionsCeiling_MathRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCeiling_MathBody();
+        body = new WorkbookFunctionsCeiling_MathBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

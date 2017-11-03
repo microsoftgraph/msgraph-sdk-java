@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Bin2Oct Request.
  */
 public class BaseWorkbookFunctionsBin2OctRequest extends BaseRequest implements IBaseWorkbookFunctionsBin2OctRequest {
-    protected final WorkbookFunctionsBin2OctBody mBody;
+    protected final WorkbookFunctionsBin2OctBody body;
 
     /**
      * The request for this WorkbookFunctionsBin2Oct
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsBin2OctRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsBin2OctRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsBin2OctBody();
+        body = new WorkbookFunctionsBin2OctBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

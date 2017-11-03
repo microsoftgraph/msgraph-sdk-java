@@ -46,7 +46,7 @@ public class ChunkedUploadResponseHandler<UploadType>
     /**
      * The expected deserialize type for upload type.
      */
-    private final Class<UploadType> mDeserializeTypeClass;
+    private final Class<UploadType> deserializeTypeClass;
 
     /**
      * Create a chunked upload response handler.
@@ -54,7 +54,7 @@ public class ChunkedUploadResponseHandler<UploadType>
      * @param uploadType The expected upload item type.
      */
     public ChunkedUploadResponseHandler(final Class<UploadType> uploadType) {
-        this.mDeserializeTypeClass = uploadType;
+        this.deserializeTypeClass = uploadType;
     }
 
     /**
@@ -100,7 +100,7 @@ public class ChunkedUploadResponseHandler<UploadType>
                 in = new BufferedInputStream(connection.getInputStream());
                 String rawJson = DefaultHttpProvider.streamToString(in);
                 UploadType uploadedItem = serializer.deserializeObject(rawJson,
-                        this.mDeserializeTypeClass);
+                        this.deserializeTypeClass);
 
                 return new ChunkedUploadResult(uploadedItem);
             } else if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {

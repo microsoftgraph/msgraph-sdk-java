@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Cum Princ Request.
  */
 public class BaseWorkbookFunctionsCumPrincRequest extends BaseRequest implements IBaseWorkbookFunctionsCumPrincRequest {
-    protected final WorkbookFunctionsCumPrincBody mBody;
+    protected final WorkbookFunctionsCumPrincBody body;
 
     /**
      * The request for this WorkbookFunctionsCumPrinc
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsCumPrincRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsCumPrincRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsCumPrincBody();
+        body = new WorkbookFunctionsCumPrincBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

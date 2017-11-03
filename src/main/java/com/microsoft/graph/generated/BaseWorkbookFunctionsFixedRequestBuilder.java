@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsFixedRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsFixedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals, final com.google.gson.JsonElement noCommas) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("decimals", decimals);
-        mBodyParams.put("noCommas", noCommas);
+        bodyParams.put("number", number);
+        bodyParams.put("decimals", decimals);
+        bodyParams.put("noCommas", noCommas);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsFixedRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("decimals")) {
-            request.mBody.decimals = getParameter("decimals");
+            request.body.decimals = getParameter("decimals");
         }
 
         if (hasParameter("noCommas")) {
-            request.mBody.noCommas = getParameter("noCommas");
+            request.body.noCommas = getParameter("noCommas");
         }
 
         return request;

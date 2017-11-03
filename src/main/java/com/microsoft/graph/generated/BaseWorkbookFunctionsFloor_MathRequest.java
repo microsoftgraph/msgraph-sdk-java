@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Floor_Math Request.
  */
 public class BaseWorkbookFunctionsFloor_MathRequest extends BaseRequest implements IBaseWorkbookFunctionsFloor_MathRequest {
-    protected final WorkbookFunctionsFloor_MathBody mBody;
+    protected final WorkbookFunctionsFloor_MathBody body;
 
     /**
      * The request for this WorkbookFunctionsFloor_Math
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsFloor_MathRequest extends BaseRequest implemen
      */
     public BaseWorkbookFunctionsFloor_MathRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsFloor_MathBody();
+        body = new WorkbookFunctionsFloor_MathBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

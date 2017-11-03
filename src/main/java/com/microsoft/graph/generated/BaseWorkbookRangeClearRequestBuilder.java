@@ -30,7 +30,7 @@ public class BaseWorkbookRangeClearRequestBuilder extends BaseActionRequestBuild
      */
     public BaseWorkbookRangeClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String applyTo) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("applyTo", applyTo);
+        bodyParams.put("applyTo", applyTo);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookRangeClearRequestBuilder extends BaseActionRequestBuild
         );
 
         if (hasParameter("applyTo")) {
-            request.mBody.applyTo = getParameter("applyTo");
+            request.body.applyTo = getParameter("applyTo");
         }
 
         return request;

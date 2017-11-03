@@ -30,7 +30,7 @@ public class BaseWorkbookRangeMergeRequestBuilder extends BaseActionRequestBuild
      */
     public BaseWorkbookRangeMergeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean across) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("across", across);
+        bodyParams.put("across", across);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookRangeMergeRequestBuilder extends BaseActionRequestBuild
         );
 
         if (hasParameter("across")) {
-            request.mBody.across = getParameter("across");
+            request.body.across = getParameter("across");
         }
 
         return request;

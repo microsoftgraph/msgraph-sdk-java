@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookFunctionsRandBetweenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement bottom, final com.google.gson.JsonElement top) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("bottom", bottom);
-        mBodyParams.put("top", top);
+        bodyParams.put("bottom", bottom);
+        bodyParams.put("top", top);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("bottom")) {
-            request.mBody.bottom = getParameter("bottom");
+            request.body.bottom = getParameter("bottom");
         }
 
         if (hasParameter("top")) {
-            request.mBody.top = getParameter("top");
+            request.body.top = getParameter("top");
         }
 
         return request;

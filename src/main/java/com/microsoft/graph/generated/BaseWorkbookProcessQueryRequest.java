@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Process Query Request.
  */
 public class BaseWorkbookProcessQueryRequest extends BaseRequest implements IBaseWorkbookProcessQueryRequest {
-    protected final WorkbookProcessQueryBody mBody;
+    protected final WorkbookProcessQueryBody body;
 
     /**
      * The request for this WorkbookProcessQuery
@@ -32,15 +32,15 @@ public class BaseWorkbookProcessQueryRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookProcessQueryRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, java.io.InputStream.class);
-        mBody = new WorkbookProcessQueryBody();
+        body = new WorkbookProcessQueryBody();
     }
 
     public void post(final ICallback<java.io.InputStream> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public java.io.InputStream post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

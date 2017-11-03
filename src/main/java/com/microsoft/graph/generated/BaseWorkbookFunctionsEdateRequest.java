@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Edate Request.
  */
 public class BaseWorkbookFunctionsEdateRequest extends BaseRequest implements IBaseWorkbookFunctionsEdateRequest {
-    protected final WorkbookFunctionsEdateBody mBody;
+    protected final WorkbookFunctionsEdateBody body;
 
     /**
      * The request for this WorkbookFunctionsEdate
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsEdateRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsEdateRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsEdateBody();
+        body = new WorkbookFunctionsEdateBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

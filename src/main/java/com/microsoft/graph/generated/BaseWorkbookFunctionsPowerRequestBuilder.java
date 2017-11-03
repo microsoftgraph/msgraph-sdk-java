@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsPowerRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsPowerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement power) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("power", power);
+        bodyParams.put("number", number);
+        bodyParams.put("power", power);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsPowerRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("power")) {
-            request.mBody.power = getParameter("power");
+            request.body.power = getParameter("power");
         }
 
         return request;

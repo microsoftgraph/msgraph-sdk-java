@@ -40,7 +40,7 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer width) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("width", width));
+        functionOptions.add(new FunctionOption("width", width));
     }
     /**
      * The request builder for this WorkbookChartImage
@@ -51,8 +51,8 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer width, final Integer height) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("width", width));
-        mFunctionOptions.add(new FunctionOption("height", height));
+        functionOptions.add(new FunctionOption("width", width));
+        functionOptions.add(new FunctionOption("height", height));
     }
     /**
      * The request builder for this WorkbookChartImage
@@ -63,9 +63,9 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer width, final Integer height, final String fittingMode) {
         super(requestUrl, client, requestOptions);
-        mFunctionOptions.add(new FunctionOption("width", width));
-        mFunctionOptions.add(new FunctionOption("height", height));
-        mFunctionOptions.add(new FunctionOption("fittingMode", fittingMode));
+        functionOptions.add(new FunctionOption("width", width));
+        functionOptions.add(new FunctionOption("height", height));
+        functionOptions.add(new FunctionOption("fittingMode", fittingMode));
     }
 
     /**
@@ -90,7 +90,7 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

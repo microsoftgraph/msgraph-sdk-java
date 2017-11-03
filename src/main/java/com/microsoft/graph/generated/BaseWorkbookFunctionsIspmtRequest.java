@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Ispmt Request.
  */
 public class BaseWorkbookFunctionsIspmtRequest extends BaseRequest implements IBaseWorkbookFunctionsIspmtRequest {
-    protected final WorkbookFunctionsIspmtBody mBody;
+    protected final WorkbookFunctionsIspmtBody body;
 
     /**
      * The request for this WorkbookFunctionsIspmt
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsIspmtRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsIspmtRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsIspmtBody();
+        body = new WorkbookFunctionsIspmtBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

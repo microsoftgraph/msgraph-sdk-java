@@ -30,12 +30,12 @@ public class BaseWorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequ
      */
     public BaseWorkbookFunctionsBeta_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("alpha", alpha);
-        mBodyParams.put("beta", beta);
-        mBodyParams.put("cumulative", cumulative);
-        mBodyParams.put("a", a);
-        mBodyParams.put("b", b);
+        bodyParams.put("x", x);
+        bodyParams.put("alpha", alpha);
+        bodyParams.put("beta", beta);
+        bodyParams.put("cumulative", cumulative);
+        bodyParams.put("a", a);
+        bodyParams.put("b", b);
     }
 
     /**
@@ -61,27 +61,27 @@ public class BaseWorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequ
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("alpha")) {
-            request.mBody.alpha = getParameter("alpha");
+            request.body.alpha = getParameter("alpha");
         }
 
         if (hasParameter("beta")) {
-            request.mBody.beta = getParameter("beta");
+            request.body.beta = getParameter("beta");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         if (hasParameter("a")) {
-            request.mBody.a = getParameter("a");
+            request.body.a = getParameter("a");
         }
 
         if (hasParameter("b")) {
-            request.mBody.b = getParameter("b");
+            request.body.b = getParameter("b");
         }
 
         return request;

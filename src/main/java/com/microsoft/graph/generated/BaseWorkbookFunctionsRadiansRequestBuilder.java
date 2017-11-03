@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsRadiansRequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsRadiansRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement angle) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("angle", angle);
+        bodyParams.put("angle", angle);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsRadiansRequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("angle")) {
-            request.mBody.angle = getParameter("angle");
+            request.body.angle = getParameter("angle");
         }
 
         return request;

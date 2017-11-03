@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsEdateRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsEdateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("startDate", startDate);
-        mBodyParams.put("months", months);
+        bodyParams.put("startDate", startDate);
+        bodyParams.put("months", months);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsEdateRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("startDate")) {
-            request.mBody.startDate = getParameter("startDate");
+            request.body.startDate = getParameter("startDate");
         }
 
         if (hasParameter("months")) {
-            request.mBody.months = getParameter("months");
+            request.body.months = getParameter("months");
         }
 
         return request;

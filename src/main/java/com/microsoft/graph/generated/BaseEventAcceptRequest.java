@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Event Accept Request.
  */
 public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcceptRequest {
-    protected final EventAcceptBody mBody;
+    protected final EventAcceptBody body;
 
     /**
      * The request for this EventAccept
@@ -32,15 +32,15 @@ public class BaseEventAcceptRequest extends BaseRequest implements IBaseEventAcc
      */
     public BaseEventAcceptRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new EventAcceptBody();
+        body = new EventAcceptBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

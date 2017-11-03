@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsIrrRequestBuilder extends BaseActionRequestBui
      */
     public BaseWorkbookFunctionsIrrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("values", values);
-        mBodyParams.put("guess", guess);
+        bodyParams.put("values", values);
+        bodyParams.put("guess", guess);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsIrrRequestBuilder extends BaseActionRequestBui
         );
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         if (hasParameter("guess")) {
-            request.mBody.guess = getParameter("guess");
+            request.body.guess = getParameter("guess");
         }
 
         return request;

@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsNorm_S_DistRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookFunctionsNorm_S_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement z, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("z", z);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("z", z);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsNorm_S_DistRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("z")) {
-            request.mBody.z = getParameter("z");
+            request.body.z = getParameter("z");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

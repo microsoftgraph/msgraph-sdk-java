@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Bottom Percent Filter Request.
  */
 public class BaseWorkbookFilterApplyBottomPercentFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyBottomPercentFilterRequest {
-    protected final WorkbookFilterApplyBottomPercentFilterBody mBody;
+    protected final WorkbookFilterApplyBottomPercentFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyBottomPercentFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequest extends BaseReque
      */
     public BaseWorkbookFilterApplyBottomPercentFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyBottomPercentFilterBody();
+        body = new WorkbookFilterApplyBottomPercentFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

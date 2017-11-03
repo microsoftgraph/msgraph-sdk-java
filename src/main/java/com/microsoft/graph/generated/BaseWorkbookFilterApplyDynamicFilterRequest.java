@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Filter Apply Dynamic Filter Request.
  */
 public class BaseWorkbookFilterApplyDynamicFilterRequest extends BaseRequest implements IBaseWorkbookFilterApplyDynamicFilterRequest {
-    protected final WorkbookFilterApplyDynamicFilterBody mBody;
+    protected final WorkbookFilterApplyDynamicFilterBody body;
 
     /**
      * The request for this WorkbookFilterApplyDynamicFilter
@@ -32,15 +32,15 @@ public class BaseWorkbookFilterApplyDynamicFilterRequest extends BaseRequest imp
      */
     public BaseWorkbookFilterApplyDynamicFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
-        mBody = new WorkbookFilterApplyDynamicFilterBody();
+        body = new WorkbookFilterApplyDynamicFilterBody();
     }
 
     public void post(final ICallback<Void> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public Void post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

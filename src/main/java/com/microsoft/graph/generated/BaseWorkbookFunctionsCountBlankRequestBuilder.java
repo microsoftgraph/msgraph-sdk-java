@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCountBlankRequestBuilder extends BaseActionReq
      */
     public BaseWorkbookFunctionsCountBlankRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement range) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("range", range);
+        bodyParams.put("range", range);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsCountBlankRequestBuilder extends BaseActionReq
         );
 
         if (hasParameter("range")) {
-            request.mBody.range = getParameter("range");
+            request.body.range = getParameter("range");
         }
 
         return request;

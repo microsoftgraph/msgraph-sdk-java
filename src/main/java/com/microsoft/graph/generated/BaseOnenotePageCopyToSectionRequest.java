@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Onenote Page Copy To Section Request.
  */
 public class BaseOnenotePageCopyToSectionRequest extends BaseRequest implements IBaseOnenotePageCopyToSectionRequest {
-    protected final OnenotePageCopyToSectionBody mBody;
+    protected final OnenotePageCopyToSectionBody body;
 
     /**
      * The request for this OnenotePageCopyToSection
@@ -32,15 +32,15 @@ public class BaseOnenotePageCopyToSectionRequest extends BaseRequest implements 
      */
     public BaseOnenotePageCopyToSectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
-        mBody = new OnenotePageCopyToSectionBody();
+        body = new OnenotePageCopyToSectionBody();
     }
 
     public void post(final ICallback<OnenoteOperation> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public OnenoteOperation post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

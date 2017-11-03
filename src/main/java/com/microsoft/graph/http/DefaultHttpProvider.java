@@ -61,27 +61,27 @@ public class DefaultHttpProvider implements IHttpProvider {
     /**
      * The serializer.
      */
-    private final ISerializer mSerializer;
+    private final ISerializer serializer;
 
     /**
      * The authentication provider.
      */
-    private final IAuthenticationProvider mAuthenticationProvider;
+    private final IAuthenticationProvider authenticationProvider;
 
     /**
      * The executors.
      */
-    private final IExecutors mExecutors;
+    private final IExecutors executors;
 
     /**
      * The logger.
      */
-    private final ILogger mLogger;
+    private final ILogger logger;
 
     /**
      * The connection factory.
      */
-    private IConnectionFactory mConnectionFactory;
+    private IConnectionFactory connectionFactory;
 
     /**
      * Creates the DefaultHttpProvider.
@@ -95,11 +95,11 @@ public class DefaultHttpProvider implements IHttpProvider {
                                final IAuthenticationProvider authenticationProvider,
                                final IExecutors executors,
                                final ILogger logger) {
-        mSerializer = serializer;
-        mAuthenticationProvider = authenticationProvider;
-        mExecutors = executors;
-        mLogger = logger;
-        mConnectionFactory = new DefaultConnectionFactory();
+        this.serializer = serializer;
+        this.authenticationProvider = authenticationProvider;
+        this.executors = executors;
+        this.logger = logger;
+        connectionFactory = new DefaultConnectionFactory();
     }
 
     /**
@@ -109,7 +109,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      */
     @Override
     public ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -134,18 +134,18 @@ public class DefaultHttpProvider implements IHttpProvider {
             progressCallback = null;
         }
 
-        mExecutors.performOnBackground(new Runnable() {
+        executors.performOnBackground(new Runnable() {
             @Override
             public void run() {
                 try {
-                    mExecutors.performOnForeground(sendRequestInternal(request,
+                    executors.performOnForeground(sendRequestInternal(request,
                             resultClass,
                             serializable,
                             progressCallback,
                             null),
                             callback);
                 } catch (final ClientException e) {
-                    mExecutors.performOnForeground(e, callback);
+                    executors.performOnForeground(e, callback);
                 }
             }
         });
@@ -215,19 +215,19 @@ public class DefaultHttpProvider implements IHttpProvider {
         final String binaryContentType = "application/octet-stream";
 
         try {
-            if (mAuthenticationProvider != null) {
-                mAuthenticationProvider.authenticateRequest(request);
+            if (authenticationProvider != null) {
+                authenticationProvider.authenticateRequest(request);
             }
 
             OutputStream out = null;
             InputStream in = null;
             boolean isBinaryStreamInput = false;
             final URL requestUrl = request.getRequestUrl();
-            mLogger.logDebug("Starting to send request, URL " + requestUrl.toString());
-            final IConnection connection = mConnectionFactory.createFromRequest(request);
+            logger.logDebug("Starting to send request, URL " + requestUrl.toString());
+            final IConnection connection = connectionFactory.createFromRequest(request);
 
             try {
-                mLogger.logDebug("Request Method " + request.getHttpMethod().toString());
+                logger.logDebug("Request Method " + request.getHttpMethod().toString());
                 List<HeaderOption> requestHeaders = request.getHeaders();
 
                 final byte[] bytesToWrite;
@@ -235,7 +235,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 if (serializable == null) {
                     bytesToWrite = null;
                 } else if (serializable instanceof byte[]) {
-                    mLogger.logDebug("Sending byte[] as request body");
+                    logger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;
 
                     // If the user hasn't specified a Content-Type for the request
@@ -244,8 +244,8 @@ public class DefaultHttpProvider implements IHttpProvider {
                     }
                     connection.setContentLength(bytesToWrite.length);
                 } else {
-                    mLogger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
-                    final String serializeObject = mSerializer.serializeObject(serializable);
+                    logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
+                    final String serializeObject = serializer.serializeObject(serializable);
                     bytesToWrite = serializeObject.getBytes();
 
                     // If the user hasn't specified a Content-Type for the request
@@ -268,7 +268,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                         bos.write(bytesToWrite, writtenSoFar, toWrite);
                         writtenSoFar = writtenSoFar + toWrite;
                         if (progress != null) {
-                            mExecutors.performOnForeground(writtenSoFar, bytesToWrite.length,
+                            executors.performOnForeground(writtenSoFar, bytesToWrite.length,
                                     progress);
                         }
                     } while (toWrite > 0);
@@ -279,30 +279,30 @@ public class DefaultHttpProvider implements IHttpProvider {
                     handler.configConnection(connection);
                 }
 
-                mLogger.logDebug(String.format("Response code %d, %s",
+                logger.logDebug(String.format("Response code %d, %s",
                         connection.getResponseCode(),
                         connection.getResponseMessage()));
 
                 if (handler != null) {
-                    mLogger.logDebug("StatefulResponse is handling the HTTP response.");
+                    logger.logDebug("StatefulResponse is handling the HTTP response.");
                     return handler.generateResult(
-                            request, connection, this.getSerializer(), this.mLogger);
+                            request, connection, this.getSerializer(), this.logger);
                 }
 
                 if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-                    mLogger.logDebug("Handling error response");
+                    logger.logDebug("Handling error response");
                     in = connection.getInputStream();
                     handleErrorResponse(request, serializable, connection);
                 }
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_NOBODY
                         || connection.getResponseCode() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-                    mLogger.logDebug("Handling response with no body");
+                    logger.logDebug("Handling response with no body");
                     return null;
                 }
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
-                    mLogger.logDebug("Handling accepted response");
+                    logger.logDebug("Handling accepted response");
                     return null;
                 }
 
@@ -312,10 +312,10 @@ public class DefaultHttpProvider implements IHttpProvider {
 
                 final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
                 if (contentType.contains(JSON_CONTENT_TYPE)) {
-                    mLogger.logDebug("Response json");
+                    logger.logDebug("Response json");
                     return handleJsonResponse(in, resultClass);
                 } else {
-                    mLogger.logDebug("Response binary");
+                    logger.logDebug("Response binary");
                     isBinaryStreamInput = true;
                     //noinspection unchecked
                     return (Result) handleBinaryStream(in);
@@ -330,14 +330,14 @@ public class DefaultHttpProvider implements IHttpProvider {
                 }
             }
         } catch (final GraphServiceException ex) {
-            final boolean shouldLogVerbosely = mLogger.getLoggingLevel() == LoggerLevel.Debug;
-            mLogger.logError("OneDrive Service exception " + ex.getMessage(shouldLogVerbosely), ex);
+            final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
+            logger.logError("OneDrive Service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
                     ex,
-                    GraphErrorCodes.GeneralException);
-            mLogger.logError("Error during http request", clientException);
+                    GraphErrorCodes.GENERAL_EXCEPTION);
+            logger.logError("Error during http request", clientException);
             throw clientException;
         }
     }
@@ -355,7 +355,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                                             final Body serializable,
                                             final IConnection connection)
             throws IOException {
-        throw GraphServiceException.createFromConnection(request, serializable, mSerializer,
+        throw GraphServiceException.createFromConnection(request, serializable, serializer,
                 connection);
     }
 
@@ -392,7 +392,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @param factory The new factory.
      */
     void setConnectionFactory(final IConnectionFactory factory) {
-        mConnectionFactory = factory;
+        connectionFactory = factory;
     }
 
     /**

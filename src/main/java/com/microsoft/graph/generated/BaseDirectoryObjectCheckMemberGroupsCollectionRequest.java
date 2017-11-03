@@ -23,7 +23,7 @@ import java.util.EnumSet;
 public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseCollectionRequest<BaseDirectoryObjectCheckMemberGroupsCollectionResponse, IDirectoryObjectCheckMemberGroupsCollectionPage> implements IBaseDirectoryObjectCheckMemberGroupsCollectionRequest {
 
 
-    protected final DirectoryObjectCheckMemberGroupsBody mBody;
+    protected final DirectoryObjectCheckMemberGroupsBody body;
 
 
     /**
@@ -35,7 +35,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
      */
     public BaseDirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDirectoryObjectCheckMemberGroupsCollectionResponse.class, IDirectoryObjectCheckMemberGroupsCollectionPage.class);
-        mBody = new DirectoryObjectCheckMemberGroupsBody();
+        body = new DirectoryObjectCheckMemberGroupsBody();
     }
 
 
@@ -54,7 +54,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
     }
 
     public IDirectoryObjectCheckMemberGroupsCollectionPage post() throws ClientException {
-        final BaseDirectoryObjectCheckMemberGroupsCollectionResponse response = post(mBody);
+        final BaseDirectoryObjectCheckMemberGroupsCollectionResponse response = post(body);
         return buildFromResponse(response);
     }
 

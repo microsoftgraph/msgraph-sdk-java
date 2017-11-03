@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsRowsRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsRowsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("array", array);
+        bodyParams.put("array", array);
     }
 
     /**
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsRowsRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("array")) {
-            request.mBody.array = getParameter("array");
+            request.body.array = getParameter("array");
         }
 
         return request;

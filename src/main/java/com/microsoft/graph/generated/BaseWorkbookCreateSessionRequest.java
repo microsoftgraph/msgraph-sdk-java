@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Create Session Request.
  */
 public class BaseWorkbookCreateSessionRequest extends BaseRequest implements IBaseWorkbookCreateSessionRequest {
-    protected final WorkbookCreateSessionBody mBody;
+    protected final WorkbookCreateSessionBody body;
 
     /**
      * The request for this WorkbookCreateSession
@@ -32,15 +32,15 @@ public class BaseWorkbookCreateSessionRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookCreateSessionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookSessionInfo.class);
-        mBody = new WorkbookCreateSessionBody();
+        body = new WorkbookCreateSessionBody();
     }
 
     public void post(final ICallback<WorkbookSessionInfo> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookSessionInfo post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

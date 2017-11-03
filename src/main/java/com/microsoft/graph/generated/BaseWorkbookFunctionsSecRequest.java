@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Sec Request.
  */
 public class BaseWorkbookFunctionsSecRequest extends BaseRequest implements IBaseWorkbookFunctionsSecRequest {
-    protected final WorkbookFunctionsSecBody mBody;
+    protected final WorkbookFunctionsSecBody body;
 
     /**
      * The request for this WorkbookFunctionsSec
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsSecRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsSecRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsSecBody();
+        body = new WorkbookFunctionsSecBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

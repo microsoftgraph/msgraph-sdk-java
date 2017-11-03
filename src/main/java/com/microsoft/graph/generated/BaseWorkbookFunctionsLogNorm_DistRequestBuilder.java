@@ -30,10 +30,10 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
      */
     public BaseWorkbookFunctionsLogNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("mean", mean);
-        mBodyParams.put("standardDev", standardDev);
-        mBodyParams.put("cumulative", cumulative);
+        bodyParams.put("x", x);
+        bodyParams.put("mean", mean);
+        bodyParams.put("standardDev", standardDev);
+        bodyParams.put("cumulative", cumulative);
     }
 
     /**
@@ -59,19 +59,19 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("mean")) {
-            request.mBody.mean = getParameter("mean");
+            request.body.mean = getParameter("mean");
         }
 
         if (hasParameter("standardDev")) {
-            request.mBody.standardDev = getParameter("standardDev");
+            request.body.standardDev = getParameter("standardDev");
         }
 
         if (hasParameter("cumulative")) {
-            request.mBody.cumulative = getParameter("cumulative");
+            request.body.cumulative = getParameter("cumulative");
         }
 
         return request;

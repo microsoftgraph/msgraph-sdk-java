@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBu
      */
     public BaseWorkbookFunctionsTimeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement hour, final com.google.gson.JsonElement minute, final com.google.gson.JsonElement second) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("hour", hour);
-        mBodyParams.put("minute", minute);
-        mBodyParams.put("second", second);
+        bodyParams.put("hour", hour);
+        bodyParams.put("minute", minute);
+        bodyParams.put("second", second);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBu
         );
 
         if (hasParameter("hour")) {
-            request.mBody.hour = getParameter("hour");
+            request.body.hour = getParameter("hour");
         }
 
         if (hasParameter("minute")) {
-            request.mBody.minute = getParameter("minute");
+            request.body.minute = getParameter("minute");
         }
 
         if (hasParameter("second")) {
-            request.mBody.second = getParameter("second");
+            request.body.second = getParameter("second");
         }
 
         return request;

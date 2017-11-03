@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Onenote Section Copy To Section Group Request.
  */
 public class BaseOnenoteSectionCopyToSectionGroupRequest extends BaseRequest implements IBaseOnenoteSectionCopyToSectionGroupRequest {
-    protected final OnenoteSectionCopyToSectionGroupBody mBody;
+    protected final OnenoteSectionCopyToSectionGroupBody body;
 
     /**
      * The request for this OnenoteSectionCopyToSectionGroup
@@ -32,15 +32,15 @@ public class BaseOnenoteSectionCopyToSectionGroupRequest extends BaseRequest imp
      */
     public BaseOnenoteSectionCopyToSectionGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
-        mBody = new OnenoteSectionCopyToSectionGroupBody();
+        body = new OnenoteSectionCopyToSectionGroupBody();
     }
 
     public void post(final ICallback<OnenoteOperation> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public OnenoteOperation post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

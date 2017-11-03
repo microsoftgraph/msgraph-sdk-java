@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Notebook Copy Notebook Request.
  */
 public class BaseNotebookCopyNotebookRequest extends BaseRequest implements IBaseNotebookCopyNotebookRequest {
-    protected final NotebookCopyNotebookBody mBody;
+    protected final NotebookCopyNotebookBody body;
 
     /**
      * The request for this NotebookCopyNotebook
@@ -32,15 +32,15 @@ public class BaseNotebookCopyNotebookRequest extends BaseRequest implements IBas
      */
     public BaseNotebookCopyNotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
-        mBody = new NotebookCopyNotebookBody();
+        body = new NotebookCopyNotebookBody();
     }
 
     public void post(final ICallback<OnenoteOperation> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public OnenoteOperation post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

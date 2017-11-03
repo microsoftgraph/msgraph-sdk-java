@@ -54,7 +54,7 @@ public class BaseWorkbookRangeLastColumnRequestBuilder extends BaseFunctionReque
                 requestOptions
         );
 
-      for (FunctionOption option : mFunctionOptions) {
+      for (FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

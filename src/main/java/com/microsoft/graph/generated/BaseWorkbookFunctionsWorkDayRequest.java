@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Work Day Request.
  */
 public class BaseWorkbookFunctionsWorkDayRequest extends BaseRequest implements IBaseWorkbookFunctionsWorkDayRequest {
-    protected final WorkbookFunctionsWorkDayBody mBody;
+    protected final WorkbookFunctionsWorkDayBody body;
 
     /**
      * The request for this WorkbookFunctionsWorkDay
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsWorkDayRequest extends BaseRequest implements 
      */
     public BaseWorkbookFunctionsWorkDayRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsWorkDayBody();
+        body = new WorkbookFunctionsWorkDayBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
      */
     public BaseWorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("startDate", startDate);
-        mBodyParams.put("endDate", endDate);
-        mBodyParams.put("method", method);
+        bodyParams.put("startDate", startDate);
+        bodyParams.put("endDate", endDate);
+        bodyParams.put("method", method);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
         );
 
         if (hasParameter("startDate")) {
-            request.mBody.startDate = getParameter("startDate");
+            request.body.startDate = getParameter("startDate");
         }
 
         if (hasParameter("endDate")) {
-            request.mBody.endDate = getParameter("endDate");
+            request.body.endDate = getParameter("endDate");
         }
 
         if (hasParameter("method")) {
-            request.mBody.method = getParameter("method");
+            request.body.method = getParameter("method");
         }
 
         return request;

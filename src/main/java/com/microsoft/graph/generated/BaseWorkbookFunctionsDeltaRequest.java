@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Delta Request.
  */
 public class BaseWorkbookFunctionsDeltaRequest extends BaseRequest implements IBaseWorkbookFunctionsDeltaRequest {
-    protected final WorkbookFunctionsDeltaBody mBody;
+    protected final WorkbookFunctionsDeltaBody body;
 
     /**
      * The request for this WorkbookFunctionsDelta
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsDeltaRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionsDeltaRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsDeltaBody();
+        body = new WorkbookFunctionsDeltaBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

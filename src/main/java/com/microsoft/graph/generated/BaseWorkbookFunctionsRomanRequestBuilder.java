@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsRomanRequestBuilder extends BaseActionRequestB
      */
     public BaseWorkbookFunctionsRomanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement form) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("number", number);
-        mBodyParams.put("form", form);
+        bodyParams.put("number", number);
+        bodyParams.put("form", form);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsRomanRequestBuilder extends BaseActionRequestB
         );
 
         if (hasParameter("number")) {
-            request.mBody.number = getParameter("number");
+            request.body.number = getParameter("number");
         }
 
         if (hasParameter("form")) {
-            request.mBody.form = getParameter("form");
+            request.body.form = getParameter("form");
         }
 
         return request;

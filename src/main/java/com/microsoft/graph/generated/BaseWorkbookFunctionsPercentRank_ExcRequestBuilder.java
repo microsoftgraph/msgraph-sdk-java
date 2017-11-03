@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
      */
     public BaseWorkbookFunctionsPercentRank_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("array", array);
-        mBodyParams.put("x", x);
-        mBodyParams.put("significance", significance);
+        bodyParams.put("array", array);
+        bodyParams.put("x", x);
+        bodyParams.put("significance", significance);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
         );
 
         if (hasParameter("array")) {
-            request.mBody.array = getParameter("array");
+            request.body.array = getParameter("array");
         }
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("significance")) {
-            request.mBody.significance = getParameter("significance");
+            request.body.significance = getParameter("significance");
         }
 
         return request;

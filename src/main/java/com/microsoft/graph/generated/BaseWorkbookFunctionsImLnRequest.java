@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Im Ln Request.
  */
 public class BaseWorkbookFunctionsImLnRequest extends BaseRequest implements IBaseWorkbookFunctionsImLnRequest {
-    protected final WorkbookFunctionsImLnBody mBody;
+    protected final WorkbookFunctionsImLnBody body;
 
     /**
      * The request for this WorkbookFunctionsImLn
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsImLnRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsImLnRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsImLnBody();
+        body = new WorkbookFunctionsImLnBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

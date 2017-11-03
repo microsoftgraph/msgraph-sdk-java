@@ -30,8 +30,8 @@ public class BaseWorkbookFunctionsSubtotalRequestBuilder extends BaseActionReque
      */
     public BaseWorkbookFunctionsSubtotalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement functionNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("functionNum", functionNum);
-        mBodyParams.put("values", values);
+        bodyParams.put("functionNum", functionNum);
+        bodyParams.put("values", values);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookFunctionsSubtotalRequestBuilder extends BaseActionReque
         );
 
         if (hasParameter("functionNum")) {
-            request.mBody.functionNum = getParameter("functionNum");
+            request.body.functionNum = getParameter("functionNum");
         }
 
         if (hasParameter("values")) {
-            request.mBody.values = getParameter("values");
+            request.body.values = getParameter("values");
         }
 
         return request;

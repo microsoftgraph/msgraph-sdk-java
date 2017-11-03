@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Accr Int MRequest.
  */
 public class BaseWorkbookFunctionsAccrIntMRequest extends BaseRequest implements IBaseWorkbookFunctionsAccrIntMRequest {
-    protected final WorkbookFunctionsAccrIntMBody mBody;
+    protected final WorkbookFunctionsAccrIntMBody body;
 
     /**
      * The request for this WorkbookFunctionsAccrIntM
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsAccrIntMRequest extends BaseRequest implements
      */
     public BaseWorkbookFunctionsAccrIntMRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsAccrIntMBody();
+        body = new WorkbookFunctionsAccrIntMBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

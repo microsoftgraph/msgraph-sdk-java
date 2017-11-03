@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Len Request.
  */
 public class BaseWorkbookFunctionsLenRequest extends BaseRequest implements IBaseWorkbookFunctionsLenRequest {
-    protected final WorkbookFunctionsLenBody mBody;
+    protected final WorkbookFunctionsLenBody body;
 
     /**
      * The request for this WorkbookFunctionsLen
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsLenRequest extends BaseRequest implements IBas
      */
     public BaseWorkbookFunctionsLenRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsLenBody();
+        body = new WorkbookFunctionsLenBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**

@@ -30,9 +30,9 @@ public class BaseWorkbookFunctionsStandardizeRequestBuilder extends BaseActionRe
      */
     public BaseWorkbookFunctionsStandardizeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("x", x);
-        mBodyParams.put("mean", mean);
-        mBodyParams.put("standardDev", standardDev);
+        bodyParams.put("x", x);
+        bodyParams.put("mean", mean);
+        bodyParams.put("standardDev", standardDev);
     }
 
     /**
@@ -58,15 +58,15 @@ public class BaseWorkbookFunctionsStandardizeRequestBuilder extends BaseActionRe
         );
 
         if (hasParameter("x")) {
-            request.mBody.x = getParameter("x");
+            request.body.x = getParameter("x");
         }
 
         if (hasParameter("mean")) {
-            request.mBody.mean = getParameter("mean");
+            request.body.mean = getParameter("mean");
         }
 
         if (hasParameter("standardDev")) {
-            request.mBody.standardDev = getParameter("standardDev");
+            request.body.standardDev = getParameter("standardDev");
         }
 
         return request;

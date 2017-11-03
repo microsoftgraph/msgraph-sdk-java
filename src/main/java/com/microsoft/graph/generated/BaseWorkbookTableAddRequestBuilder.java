@@ -30,8 +30,8 @@ public class BaseWorkbookTableAddRequestBuilder extends BaseActionRequestBuilder
      */
     public BaseWorkbookTableAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String address, final Boolean hasHeaders) {
         super(requestUrl, client, requestOptions);
-        mBodyParams.put("address", address);
-        mBodyParams.put("hasHeaders", hasHeaders);
+        bodyParams.put("address", address);
+        bodyParams.put("hasHeaders", hasHeaders);
     }
 
     /**
@@ -57,11 +57,11 @@ public class BaseWorkbookTableAddRequestBuilder extends BaseActionRequestBuilder
         );
 
         if (hasParameter("address")) {
-            request.mBody.address = getParameter("address");
+            request.body.address = getParameter("address");
         }
 
         if (hasParameter("hasHeaders")) {
-            request.mBody.hasHeaders = getParameter("hasHeaders");
+            request.body.hasHeaders = getParameter("hasHeaders");
         }
 
         return request;

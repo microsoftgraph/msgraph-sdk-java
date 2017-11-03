@@ -21,7 +21,7 @@ import java.util.EnumSet;
  * The class for the Base Workbook Functions Even Request.
  */
 public class BaseWorkbookFunctionsEvenRequest extends BaseRequest implements IBaseWorkbookFunctionsEvenRequest {
-    protected final WorkbookFunctionsEvenBody mBody;
+    protected final WorkbookFunctionsEvenBody body;
 
     /**
      * The request for this WorkbookFunctionsEven
@@ -32,15 +32,15 @@ public class BaseWorkbookFunctionsEvenRequest extends BaseRequest implements IBa
      */
     public BaseWorkbookFunctionsEvenRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
-        mBody = new WorkbookFunctionsEvenBody();
+        body = new WorkbookFunctionsEvenBody();
     }
 
     public void post(final ICallback<WorkbookFunctionResult> callback) {
-        send(HttpMethod.POST, callback, mBody);
+        send(HttpMethod.POST, callback, body);
     }
 
     public WorkbookFunctionResult post() throws ClientException {
-        return send(HttpMethod.POST, mBody);
+        return send(HttpMethod.POST, body);
     }
 
     /**
