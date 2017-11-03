@@ -23,7 +23,7 @@ public enum OperationStatus
     /**
     * Not Started
     */
-    NOTSTARTED,
+    NOT_STARTED,
     /**
     * Running
     */
@@ -39,5 +39,5 @@ public enum OperationStatus
     /**
     * For OperationStatus values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

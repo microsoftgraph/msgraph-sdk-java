@@ -31,5 +31,5 @@ public enum OnenotePatchInsertPosition
     /**
     * For OnenotePatchInsertPosition values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

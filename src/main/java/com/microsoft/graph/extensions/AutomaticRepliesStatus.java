@@ -27,7 +27,7 @@ public enum AutomaticRepliesStatus
     /**
     * always Enabled
     */
-    ALWAYSENABLED,
+    ALWAYS_ENABLED,
     /**
     * scheduled
     */
@@ -35,5 +35,5 @@ public enum AutomaticRepliesStatus
     /**
     * For AutomaticRepliesStatus values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

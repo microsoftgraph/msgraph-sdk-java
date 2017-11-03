@@ -27,7 +27,7 @@ public enum ExternalAudienceScope
     /**
     * contacts Only
     */
-    CONTACTSONLY,
+    CONTACTS_ONLY,
     /**
     * all
     */
@@ -35,5 +35,5 @@ public enum ExternalAudienceScope
     /**
     * For ExternalAudienceScope values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

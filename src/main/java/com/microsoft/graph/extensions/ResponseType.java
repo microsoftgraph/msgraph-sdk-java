@@ -31,7 +31,7 @@ public enum ResponseType
     /**
     * tentatively Accepted
     */
-    TENTATIVELYACCEPTED,
+    TENTATIVELY_ACCEPTED,
     /**
     * accepted
     */
@@ -43,9 +43,9 @@ public enum ResponseType
     /**
     * not Responded
     */
-    NOTRESPONDED,
+    NOT_RESPONDED,
     /**
     * For ResponseType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

@@ -27,17 +27,17 @@ public enum OnenoteSourceService
     /**
     * One Drive
     */
-    ONEDRIVE,
+    ONE_DRIVE,
     /**
     * One Drive For Business
     */
-    ONEDRIVEFORBUSINESS,
+    ONE_DRIVE_FOR_BUSINESS,
     /**
     * On Prem One Drive For Business
     */
-    ONPREMONEDRIVEFORBUSINESS,
+    ON_PREM_ONE_DRIVE_FOR_BUSINESS,
     /**
     * For OnenoteSourceService values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

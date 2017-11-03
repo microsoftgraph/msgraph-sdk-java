@@ -31,21 +31,21 @@ public enum RecurrencePatternType
     /**
     * absolute Monthly
     */
-    ABSOLUTEMONTHLY,
+    ABSOLUTE_MONTHLY,
     /**
     * relative Monthly
     */
-    RELATIVEMONTHLY,
+    RELATIVE_MONTHLY,
     /**
     * absolute Yearly
     */
-    ABSOLUTEYEARLY,
+    ABSOLUTE_YEARLY,
     /**
     * relative Yearly
     */
-    RELATIVEYEARLY,
+    RELATIVE_YEARLY,
     /**
     * For RecurrencePatternType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

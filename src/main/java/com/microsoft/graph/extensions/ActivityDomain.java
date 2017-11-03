@@ -39,5 +39,5 @@ public enum ActivityDomain
     /**
     * For ActivityDomain values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

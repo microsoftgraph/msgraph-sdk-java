@@ -27,7 +27,7 @@ public enum PlannerPreviewType
     /**
     * no Preview
     */
-    NOPREVIEW,
+    NO_PREVIEW,
     /**
     * checklist
     */
@@ -43,5 +43,5 @@ public enum PlannerPreviewType
     /**
     * For PlannerPreviewType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

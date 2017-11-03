@@ -23,7 +23,7 @@ public enum EventType
     /**
     * single Instance
     */
-    SINGLEINSTANCE,
+    SINGLE_INSTANCE,
     /**
     * occurrence
     */
@@ -35,9 +35,9 @@ public enum EventType
     /**
     * series Master
     */
-    SERIESMASTER,
+    SERIES_MASTER,
     /**
     * For EventType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

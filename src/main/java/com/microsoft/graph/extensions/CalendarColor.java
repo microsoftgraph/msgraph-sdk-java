@@ -23,43 +23,43 @@ public enum CalendarColor
     /**
     * light Blue
     */
-    LIGHTBLUE,
+    LIGHT_BLUE,
     /**
     * light Green
     */
-    LIGHTGREEN,
+    LIGHT_GREEN,
     /**
     * light Orange
     */
-    LIGHTORANGE,
+    LIGHT_ORANGE,
     /**
     * light Gray
     */
-    LIGHTGRAY,
+    LIGHT_GRAY,
     /**
     * light Yellow
     */
-    LIGHTYELLOW,
+    LIGHT_YELLOW,
     /**
     * light Teal
     */
-    LIGHTTEAL,
+    LIGHT_TEAL,
     /**
     * light Pink
     */
-    LIGHTPINK,
+    LIGHT_PINK,
     /**
     * light Brown
     */
-    LIGHTBROWN,
+    LIGHT_BROWN,
     /**
     * light Red
     */
-    LIGHTRED,
+    LIGHT_RED,
     /**
     * max Color
     */
-    MAXCOLOR,
+    MAX_COLOR,
     /**
     * auto
     */
@@ -67,5 +67,5 @@ public enum CalendarColor
     /**
     * For CalendarColor values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

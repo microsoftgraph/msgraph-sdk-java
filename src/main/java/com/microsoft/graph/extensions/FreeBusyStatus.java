@@ -39,7 +39,7 @@ public enum FreeBusyStatus
     /**
     * working Elsewhere
     */
-    WORKINGELSEWHERE,
+    WORKING_ELSEWHERE,
     /**
     * unknown
     */
@@ -47,5 +47,5 @@ public enum FreeBusyStatus
     /**
     * For FreeBusyStatus values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

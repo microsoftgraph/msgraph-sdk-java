@@ -27,25 +27,25 @@ public enum MeetingMessageType
     /**
     * meeting Request
     */
-    MEETINGREQUEST,
+    MEETING_REQUEST,
     /**
     * meeting Cancelled
     */
-    MEETINGCANCELLED,
+    MEETING_CANCELLED,
     /**
     * meeting Accepted
     */
-    MEETINGACCEPTED,
+    MEETING_ACCEPTED,
     /**
     * meeting Tenatively Accepted
     */
-    MEETINGTENATIVELYACCEPTED,
+    MEETING_TENATIVELY_ACCEPTED,
     /**
     * meeting Declined
     */
-    MEETINGDECLINED,
+    MEETING_DECLINED,
     /**
     * For MeetingMessageType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

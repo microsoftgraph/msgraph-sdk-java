@@ -35,5 +35,5 @@ public enum AttendeeType
     /**
     * For AttendeeType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

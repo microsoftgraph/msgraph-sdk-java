@@ -43,15 +43,15 @@ public enum PhoneType
     /**
     * home Fax
     */
-    HOMEFAX,
+    HOME_FAX,
     /**
     * business Fax
     */
-    BUSINESSFAX,
+    BUSINESS_FAX,
     /**
     * other Fax
     */
-    OTHERFAX,
+    OTHER_FAX,
     /**
     * pager
     */
@@ -63,5 +63,5 @@ public enum PhoneType
     /**
     * For PhoneType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

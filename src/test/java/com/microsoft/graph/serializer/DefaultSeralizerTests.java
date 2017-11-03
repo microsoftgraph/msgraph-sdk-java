@@ -43,7 +43,7 @@ public class DefaultSeralizerTests {
                 "}";
         BaseRecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, BaseRecurrenceRange.class);
         assertNotNull(source);
-        assertEquals(baseRecurrenceRange.type, RecurrenceRangeType.noEnd);
+        assertEquals(baseRecurrenceRange.type, RecurrenceRangeType.NO_END);
         assertEquals("2016-04-27", baseRecurrenceRange.startDate.toString());
         assertEquals("0001-01-01", baseRecurrenceRange.endDate.toString());
         assertEquals("China Standard Time", baseRecurrenceRange.recurrenceTimeZone);
@@ -55,7 +55,7 @@ public class DefaultSeralizerTests {
         final String expected = "{\"type\":\"endDate\",\"startDate\":\"2016-04-25\",\"endDate\":\"2016-05-25\",\"recurrenceTimeZone\":\"PST\",\"numberOfOccurrences\":4}";
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         BaseRecurrenceRange brr = new BaseRecurrenceRange();
-        brr.type = RecurrenceRangeType.endDate;
+        brr.type = RecurrenceRangeType.END_DATE;
         brr.startDate = new DateOnly(2016, 4, 25);
         brr.endDate = new DateOnly(2016, 5, 25);
         brr.recurrenceTimeZone = "PST";

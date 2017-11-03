@@ -39,5 +39,5 @@ public enum Sensitivity
     /**
     * For Sensitivity values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

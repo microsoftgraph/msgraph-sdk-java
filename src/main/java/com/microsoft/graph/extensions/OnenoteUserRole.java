@@ -39,5 +39,5 @@ public enum OnenoteUserRole
     /**
     * For OnenoteUserRole values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }

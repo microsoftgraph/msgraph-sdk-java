@@ -43,5 +43,5 @@ public enum WebsiteType
     /**
     * For WebsiteType values that were not expected from the service
     */
-    unexpectedValue
+    UNEXPECTED_VALUE
 }
