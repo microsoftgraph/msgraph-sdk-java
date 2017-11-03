@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
@@ -62,12 +62,12 @@ public class GraphServiceException extends ClientException {
     protected static final int MAX_BYTE_COUNT_BEFORE_TRUNCATION = 8;
 
     /**
-     * The intent spacing on json based responses.
+     * The intent spacing on JSON based responses.
      */
     public static final int INDENT_SPACES = 3;
 
     /**
-     * The internal server error threshold defined by http protocol.
+     * The internal server error threshold defined by the HTTP protocol.
      */
     public static final int INTERNAL_SERVER_ERROR = 500;
 
@@ -77,12 +77,12 @@ public class GraphServiceException extends ClientException {
     private final GraphErrorResponse error;
 
     /**
-     * The http method.
+     * The HTTP method.
      */
     private final String method;
 
     /**
-     * The request url.
+     * The request URL.
      */
     private final String url;
 
@@ -97,12 +97,12 @@ public class GraphServiceException extends ClientException {
     private final String requestBody;
 
     /**
-     * The http status code.
+     * The HTTP status code.
      */
     private final int responseCode;
 
     /**
-     * The http status message.
+     * The HTTP status message.
      */
     private final String responseMessage;
 
@@ -115,7 +115,7 @@ public class GraphServiceException extends ClientException {
      * Create a Graph service exception.
      *
      * @param method          The method that caused the exception.
-     * @param url             The url.
+     * @param url             The URL.
      * @param requestHeaders  The request headers.
      * @param requestBody     The request body.
      * @param responseCode    The response code.
@@ -231,7 +231,7 @@ public class GraphServiceException extends ClientException {
     }
 
     /**
-     * Creates a Graph service exception from a given failed http request.
+     * Creates a Graph service exception from a given failed HTTP request.
      *
      * @param request      The request that resulted in this failure.
      * @param serializable The serialized object that was sent with this request.

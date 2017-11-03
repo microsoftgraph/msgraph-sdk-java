@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
@@ -34,7 +34,7 @@ import com.microsoft.graph.serializer.ISerializer;
 public abstract class BaseClient implements IBaseClient {
 
     /**
-     * The auth provider instance.
+     * The authentication provider instance.
      */
     private IAuthenticationProvider authenticationProvider;
 
@@ -44,7 +44,7 @@ public abstract class BaseClient implements IBaseClient {
     private IExecutors executors;
 
     /**
-     * The http provider instance.
+     * The HTTP provider instance.
      */
     private IHttpProvider httpProvider;
 
@@ -91,8 +91,8 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Gets the http provider.
-     * @return The http provider.
+     * Gets the HTTP provider.
+     * @return The HTTP provider.
      */
     @Override
     public IHttpProvider getHttpProvider() {
@@ -163,8 +163,8 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Sets the http provider.
-     * @param httpProvider The http provider.
+     * Sets the HTTP provider.
+     * @param httpProvider The HTTP provider.
      */
     protected void setHttpProvider(final IHttpProvider httpProvider) {
         this.httpProvider = httpProvider;

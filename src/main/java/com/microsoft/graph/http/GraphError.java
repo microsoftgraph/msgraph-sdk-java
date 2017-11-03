@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
@@ -40,7 +40,7 @@ public class GraphError {
     /**
      * Determine if the given error code is the one that is expected.
      * @param expectedCode The expected error code.
-     * @return <c>true</c> if the error code matches, and <c>false</c> if there was no match.
+     * @return <b>true</b> if the error code matches, and <b>false</b> if there was no match.
      */
     public boolean isError(final GraphErrorCodes expectedCode) {
         if (code.equalsIgnoreCase(expectedCode.toString())) {

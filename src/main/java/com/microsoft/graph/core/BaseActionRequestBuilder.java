@@ -17,7 +17,7 @@ import java.util.Map;
 public class BaseActionRequestBuilder extends BaseRequestBuilder {
 
     /**
-     * The body params to add to this request
+     * The body parameters to add to this request
      */
     protected Map<String, Object> bodyParams = new HashMap<>();
 
@@ -39,7 +39,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
     /**
      * Checks if the parameter map contains a object accessible by the supplied key
      *
-     * @param name The key used to access the stored body param
+     * @param name The key used to access the stored body parameter
      * @return true, if {@link BaseActionRequestBuilder#mBodyParams} contains the key, otherwise false
      */
     protected boolean hasParameter(final String name) {

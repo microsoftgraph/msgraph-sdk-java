@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 //
@@ -44,7 +44,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Http provider based off of URLConnection.
+ * HTTP provider based off of URLConnection.
  */
 public class DefaultHttpProvider implements IHttpProvider {
 
@@ -54,7 +54,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     static final String CONTENT_TYPE_HEADER_NAME = "Content-Type";
 
     /**
-     * The content type for json responses
+     * The content type for JSON responses
      */
     static final String JSON_CONTENT_TYPE = "application/json";
 
@@ -87,7 +87,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      * Creates the DefaultHttpProvider.
      *
      * @param serializer             The serializer.
-     * @param authenticationProvider The auth provider.
+     * @param authenticationProvider The authentication provider.
      * @param executors              The executors.
      * @param logger                 The logger for diagnostic information.
      */
@@ -103,7 +103,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Gets the serializer for this http provider.
+     * Gets the serializer for this HTTP provider.
      *
      * @return The serializer for this provider.
      */
@@ -113,7 +113,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the http request asynchronously.
+     * Sends the HTTP request asynchronously.
      *
      * @param request      The request description.
      * @param callback     The callback to be called after success or failure.
@@ -152,7 +152,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the http request.
+     * Sends the HTTP request.
      *
      * @param request      The request description.
      * @param resultClass  The class of the response from the service.
@@ -171,7 +171,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the http request.
+     * Sends the HTTP request.
      *
      * @param request           The request description.
      * @param resultClass       The class of the response from the service.
@@ -191,7 +191,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the http request.
+     * Sends the HTTP request.
      *
      * @param request           The request description.
      * @param resultClass       The class of the response from the service.
@@ -317,7 +317,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else {
                     logger.logDebug("Response binary");
                     isBinaryStreamInput = true;
-                    //noinspection unchecked
+                    //no inspection unchecked
                     return (Result) handleBinaryStream(in);
                 }
             } finally {
@@ -347,7 +347,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      *
      * @param request      The request that caused the failed response.
      * @param serializable The body of the request.
-     * @param connection   The url connection.
+     * @param connection   The URL connection.
      * @param <Body>       The type of the request body.
      * @throws IOException An exception occurs if there were any problems interacting with the connection object.
      */
@@ -370,12 +370,12 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Handles the cause where the response is a json object.
+     * Handles the cause where the response is a JSON object.
      *
      * @param in       The input stream from the response.
      * @param clazz    The class of the response object.
      * @param <Result> The type of the response object.
-     * @return The json object.
+     * @return The JSON object.
      */
     private <Result> Result handleJsonResponse(final InputStream in, final Class<Result> clazz) {
         if (clazz == null) {

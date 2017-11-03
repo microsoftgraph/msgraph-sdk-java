@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 //
@@ -38,7 +38,7 @@ import java.util.Map;
 public class UrlConnection implements IConnection {
 
     /**
-     * The backing http url connection instance.
+     * The backing HTTP URL connection instance.
      */
     private final HttpURLConnection connection;
 
@@ -65,7 +65,7 @@ public class UrlConnection implements IConnection {
         try {
             connection.setRequestMethod(request.getHttpMethod().toString());
         } catch (final ProtocolException ignored) {
-            // Some HTTP verbs are not supported by older http implementations, use method override as an alternative
+            // Some HTTP verbs are not supported by older HTTP implementations, use method override as an alternative
             connection.setRequestMethod(HttpMethod.POST.toString());
             connection.addRequestProperty("X-HTTP-Method-Override", request.getHttpMethod().toString());
             connection.addRequestProperty("X-HTTP-Method", request.getHttpMethod().toString());
@@ -137,9 +137,9 @@ public class UrlConnection implements IConnection {
     }
 
     /**
-     * Gets the response headers from a http url connection.
+     * Gets the response headers from an HTTP URL connection.
      *
-     * @param connection The http connection.
+     * @param connection The HTTP connection.
      * @return The set of headers names and value.
      */
     private static HashMap<String, String> getResponseHeaders(final HttpURLConnection connection) {

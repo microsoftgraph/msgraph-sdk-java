@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 //
@@ -27,12 +27,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * Sends http requests.
+ * Sends HTTP requests.
  */
 public interface IHttpProvider {
 
     /**
-     * Get the serializer for this http provider.
+     * Get the serializer for this HTTP provider.
      *
      * @return The serializer for this provider.
      */
@@ -55,7 +55,7 @@ public interface IHttpProvider {
 
 
     /**
-     * Sends the http request.
+     * Sends the HTTP request.
      *
      * @param request      The request description.
      * @param resultClass  The class of the response from the service.
@@ -71,7 +71,7 @@ public interface IHttpProvider {
             throws ClientException;
 
     /**
-     * Sends the http request.
+     * Sends the HTTP request.
      *
      * @param request           The request description.
      * @param resultClass       The class of the response from the service.
@@ -79,7 +79,7 @@ public interface IHttpProvider {
      * @param handler           The handler for stateful response.
      * @param <Result>          The expected return type return.
      * @param <BodyType>        The type of the object to send to the service in the body of the request.
-     * @param <DeserializeType> The type of the http response object.
+     * @param <DeserializeType> The type of the HTTP response object.
      * @return The expected result object for the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */

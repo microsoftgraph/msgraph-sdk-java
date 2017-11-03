@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
@@ -41,7 +41,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     private final IBaseClient client;
 
     /**
-     * The url for this request.
+     * The URL for this request.
      */
     private final String requestUrl;
 
@@ -55,7 +55,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     /**
      * Creates the request builder.
      *
-     * @param requestUrl The url to make the request against.
+     * @param requestUrl The URL to make the request against.
      * @param client     The client which can issue the request.
      * @param options    The options for this request.
      */
@@ -98,9 +98,9 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     }
 
     /**
-     * Gets the request url.
+     * Gets the request URL.
      *
-     * @return The request url.
+     * @return The request URL.
      */
     public String getRequestUrl() {
         return requestUrl;
@@ -116,10 +116,10 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     }
 
     /**
-     * Gets the request url with an extra segment added to it.
+     * Gets the request URL with an extra segment added to it.
      *
      * @param urlSegment The section to add.
-     * @return The base url for this request.
+     * @return The base URL for this request.
      */
     public String getRequestUrlWithAdditionalSegment(final String urlSegment) {
         return requestUrl + "/" + urlSegment;

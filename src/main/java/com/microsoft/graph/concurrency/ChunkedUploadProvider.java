@@ -4,7 +4,7 @@
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 //
@@ -49,7 +49,7 @@ public class ChunkedUploadProvider<UploadType> {
     private static final int DEFAULT_CHUNK_SIZE = 5 * 1024 * 1024;
 
     /**
-     * The required chunk size increment by OneDrive Service, which is 320 KiB.
+     * The required chunk size increment by OneDrive service, which is 320 KiB.
      */
     private static final int REQUIRED_CHUNK_SIZE_INCREMENT = 320 * 1024;
 
@@ -75,7 +75,7 @@ public class ChunkedUploadProvider<UploadType> {
     private final InputStream inputStream;
 
     /**
-     * The upload session url.
+     * The upload session URL.
      */
     private final String uploadUrl;
 
@@ -90,7 +90,7 @@ public class ChunkedUploadProvider<UploadType> {
     private final ChunkedUploadResponseHandler<UploadType> responseHandler;
 
     /**
-     * The counter for how many bytes read from input stream.
+     * The counter for how many bytes have been read from input stream.
      */
     private int readSoFar;
 

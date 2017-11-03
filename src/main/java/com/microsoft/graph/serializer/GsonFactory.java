@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 //
@@ -44,7 +44,7 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 
 /**
- * Produce Gson instances that can parse http responses.
+ * Produce GSON instances that can parse HTTP responses.
  */
 final class GsonFactory {
 
@@ -55,7 +55,7 @@ final class GsonFactory {
     }
 
     /**
-     * Creates an instance of Gson.
+     * Creates an instance of GSON.
      *
      * @param logger The logger.
      * @return The new instance.

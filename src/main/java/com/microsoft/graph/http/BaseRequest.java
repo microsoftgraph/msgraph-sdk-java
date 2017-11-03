@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
@@ -42,7 +42,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * An http request.
+ * An HTTP request.
  */
 public abstract class BaseRequest implements IHttpRequest {
 
@@ -57,12 +57,12 @@ public abstract class BaseRequest implements IHttpRequest {
     public static final String REQUEST_STATS_HEADER_VALUE_FORMAT_STRING = "graph-java-v%s";
 
     /**
-     * The http method for this request.
+     * The HTTP method for this request.
      */
     private HttpMethod method;
 
     /**
-     * The url for this request.
+     * The URL for this request.
      */
     private final String requestUrl;
 
@@ -99,7 +99,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * Create the request.
      *
-     * @param requestUrl    The url to make the request against.
+     * @param requestUrl    The URL to make the request against.
      * @param client        The client which can issue the request.
      * @param options       The options for this request.
      * @param responseClass The class for the response.
@@ -136,9 +136,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets the request url.
+     * Gets the request URL.
      *
-     * @return The request url.
+     * @return The request URL.
      */
     @Override
     public URL getRequestUrl() {
@@ -188,9 +188,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets the http method.
+     * Gets the HTTP method.
      *
-     * @return The http method.
+     * @return The HTTP method.
      */
     @Override
     public HttpMethod getHttpMethod() {
@@ -241,7 +241,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * Sends this request.
      *
-     * @param method           The http method.
+     * @param method           The HTTP method.
      * @param callback         The callback when this request complements.
      * @param serializedObject The object to serialize as the body.
      * @param <T1>             The type of the callback result.
@@ -258,7 +258,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * Sends this request.
      *
-     * @param method           The http method.
+     * @param method           The HTTP method.
      * @param serializedObject The object to serialize as the body.
      * @param <T1>             The type of the callback result.
      * @param <T2>             The type of the serialized body.
@@ -322,9 +322,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Sets the http method.
+     * Sets the HTTP method.
      *
-     * @param httpMethod The http method.
+     * @param httpMethod The HTTP method.
      */
     public void setHttpMethod(final HttpMethod httpMethod) {
         method = httpMethod;

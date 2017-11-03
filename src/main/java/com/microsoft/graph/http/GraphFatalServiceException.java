@@ -1,10 +1,10 @@
 // ------------------------------------------------------------------------------
-// Copyright (c) 2015 Microsoft Corporation
+// Copyright (c) 2017 Microsoft Corporation
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// to use, copy, modify, merge, publish, distribute, sub-license, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
 // 
@@ -30,14 +30,14 @@ import java.util.List;
 public class GraphFatalServiceException extends GraphServiceException {
 
     /**
-     * The website to report issues on this sdk.
+     * The web site to report issues on this SDK.
      */
     public static final String SDK_BUG_URL = "https://github.com/microsoftgraph/msgraph-sdk-java/issues";
 
     /**
      * Create a fatal Graph service exception.
      * @param method The method that caused the exception.
-     * @param url The url.
+     * @param url The URL.
      * @param requestHeaders The request headers.
      * @param requestBody The request body.
      * @param responseCode The response code.
@@ -58,7 +58,7 @@ public class GraphFatalServiceException extends GraphServiceException {
 
     @Override
     public String getMessage(final boolean verbose) {
-        //noinspection StringBufferReplaceableByString
+        //no inspection StringBufferReplaceableByString
         final StringBuilder sb = new StringBuilder();
         sb.append("[This is an unexpected error from Graph, please report this at ")
                 .append(SDK_BUG_URL)
