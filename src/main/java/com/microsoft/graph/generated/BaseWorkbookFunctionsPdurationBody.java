@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPdurationBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPdurationBody {
 
     /**
      * The pv.
-	 * 
+     * 
      */
     @SerializedName("pv")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPdurationBody {
 
     /**
      * The fv.
-	 * 
+     * 
      */
     @SerializedName("fv")
     @Expose

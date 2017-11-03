@@ -35,7 +35,7 @@ public class BaseUploadSession implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseUploadSession implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-	 * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
+     * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      */
     @SerializedName("expirationDateTime")
     @Expose
@@ -53,7 +53,7 @@ public class BaseUploadSession implements IJsonBackedObject {
 
     /**
      * The Next Expected Ranges.
-	 * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format "start-end" (e.g. "0-26" to indicate the first 27 bytes of the file).
+     * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format "start-end" (e.g. "0-26" to indicate the first 27 bytes of the file).
      */
     @SerializedName("nextExpectedRanges")
     @Expose
@@ -61,7 +61,7 @@ public class BaseUploadSession implements IJsonBackedObject {
 
     /**
      * The Upload Url.
-	 * The URL endpoint that accepts PUT requests for byte ranges of the file.
+     * The URL endpoint that accepts PUT requests for byte ranges of the file.
      */
     @SerializedName("uploadUrl")
     @Expose

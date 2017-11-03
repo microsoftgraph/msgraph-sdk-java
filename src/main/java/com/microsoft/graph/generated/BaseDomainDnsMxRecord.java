@@ -35,7 +35,7 @@ public class BaseDomainDnsMxRecord extends DomainDnsRecord implements IJsonBacke
 
     /**
      * The Mail Exchange.
-	 * Value used when configuring the answer/destination/value of the MX record at the DNS host.
+     * Value used when configuring the answer/destination/value of the MX record at the DNS host.
      */
     @SerializedName("mailExchange")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDomainDnsMxRecord extends DomainDnsRecord implements IJsonBacke
 
     /**
      * The Preference.
-	 * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
+     * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
      */
     @SerializedName("preference")
     @Expose

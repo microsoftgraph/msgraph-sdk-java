@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSubtotalBody {
 
     /**
      * The function Num.
-	 * 
+     * 
      */
     @SerializedName("functionNum")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSubtotalBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

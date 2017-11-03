@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionResult extends Entity implements IJsonBackedObj
 
     /**
      * The Error.
-	 * 
+     * 
      */
     @SerializedName("error")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionResult extends Entity implements IJsonBackedObj
 
     /**
      * The Value.
-	 * 
+     * 
      */
     @SerializedName("value")
     @Expose

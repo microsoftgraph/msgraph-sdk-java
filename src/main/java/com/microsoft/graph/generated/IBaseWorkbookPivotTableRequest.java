@@ -94,3 +94,4 @@ public interface IBaseWorkbookPivotTableRequest extends IHttpRequest {
     IBaseWorkbookPivotTableRequest expand(final String value);
 
 }
+

@@ -27,7 +27,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The attendees.
-	 * 
+     * 
      */
     @SerializedName("attendees")
     @Expose
@@ -35,7 +35,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The location Constraint.
-	 * 
+     * 
      */
     @SerializedName("locationConstraint")
     @Expose
@@ -43,7 +43,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The time Constraint.
-	 * 
+     * 
      */
     @SerializedName("timeConstraint")
     @Expose
@@ -51,7 +51,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The meeting Duration.
-	 * 
+     * 
      */
     @SerializedName("meetingDuration")
     @Expose
@@ -59,7 +59,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The max Candidates.
-	 * 
+     * 
      */
     @SerializedName("maxCandidates")
     @Expose
@@ -67,7 +67,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The is Organizer Optional.
-	 * 
+     * 
      */
     @SerializedName("isOrganizerOptional")
     @Expose
@@ -75,7 +75,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The return Suggestion Reasons.
-	 * 
+     * 
      */
     @SerializedName("returnSuggestionReasons")
     @Expose
@@ -83,7 +83,7 @@ public class BaseUserFindMeetingTimesBody {
 
     /**
      * The minimum Attendee Percentage.
-	 * 
+     * 
      */
     @SerializedName("minimumAttendeePercentage")
     @Expose

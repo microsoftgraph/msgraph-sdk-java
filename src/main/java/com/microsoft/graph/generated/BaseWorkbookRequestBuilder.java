@@ -51,51 +51,51 @@ public class BaseWorkbookRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Gets the request builder for WorkbookApplication.
      */
-    public IWorkbookApplicationRequestBuilder getApplication() {
+    public IWorkbookApplicationRequestBuilder application() {
         return new WorkbookApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("application"), getClient(), null);
     }
-    public IWorkbookNamedItemCollectionRequestBuilder getNames() {
+    public IWorkbookNamedItemCollectionRequestBuilder names() {
         return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
     }
 
-    public IWorkbookNamedItemRequestBuilder getNames(final String id) {
+    public IWorkbookNamedItemRequestBuilder names(final String id) {
         return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
     }
-    public IWorkbookTableCollectionRequestBuilder getTables() {
+    public IWorkbookTableCollectionRequestBuilder tables() {
         return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
     }
 
-    public IWorkbookTableRequestBuilder getTables(final String id) {
+    public IWorkbookTableRequestBuilder tables(final String id) {
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
     }
-    public IWorkbookWorksheetCollectionRequestBuilder getWorksheets() {
+    public IWorkbookWorksheetCollectionRequestBuilder worksheets() {
         return new WorkbookWorksheetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets"), getClient(), null);
     }
 
-    public IWorkbookWorksheetRequestBuilder getWorksheets(final String id) {
+    public IWorkbookWorksheetRequestBuilder worksheets(final String id) {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookFunctions.
      */
-    public IWorkbookFunctionsRequestBuilder getFunctions() {
+    public IWorkbookFunctionsRequestBuilder functions() {
         return new WorkbookFunctionsRequestBuilder(getRequestUrlWithAdditionalSegment("functions"), getClient(), null);
     }
 
-    public IWorkbookCreateSessionRequestBuilder getCreateSession(final Boolean persistChanges) {
+    public IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges) {
         return new WorkbookCreateSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createSession"), getClient(), null, persistChanges);
     }
 
-    public IWorkbookCloseSessionRequestBuilder getCloseSession() {
+    public IWorkbookCloseSessionRequestBuilder closeSession() {
         return new WorkbookCloseSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.closeSession"), getClient(), null);
     }
 
-    public IWorkbookRefreshSessionRequestBuilder getRefreshSession() {
+    public IWorkbookRefreshSessionRequestBuilder refreshSession() {
         return new WorkbookRefreshSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshSession"), getClient(), null);
     }
 
-    public IWorkbookProcessQueryRequestBuilder getProcessQuery(final byte[] input) {
+    public IWorkbookProcessQueryRequestBuilder processQuery(final byte[] input) {
         return new WorkbookProcessQueryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.processQuery"), getClient(), null, input);
     }
 }

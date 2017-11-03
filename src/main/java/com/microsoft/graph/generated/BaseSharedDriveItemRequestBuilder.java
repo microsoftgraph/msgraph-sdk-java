@@ -51,42 +51,42 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
     /**
      * Gets the request builder for DriveItem.
      */
-    public IDriveItemRequestBuilder getDriveItem() {
+    public IDriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
-    public IDriveItemCollectionRequestBuilder getItems() {
+    public IDriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder getItems(final String id) {
+    public IDriveItemRequestBuilder items(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for List.
      */
-    public IListRequestBuilder getList() {
+    public IListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ListItem.
      */
-    public IListItemRequestBuilder getListItem() {
+    public IListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 
     /**
      * Gets the request builder for DriveItem.
      */
-    public IDriveItemRequestBuilder getRoot() {
+    public IDriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Site.
      */
-    public ISiteRequestBuilder getSite() {
+    public ISiteRequestBuilder site() {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);
     }
 }

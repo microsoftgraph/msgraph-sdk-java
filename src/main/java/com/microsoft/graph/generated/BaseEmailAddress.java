@@ -35,7 +35,7 @@ public class BaseEmailAddress implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseEmailAddress implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * The display name of the person or entity.
+     * The display name of the person or entity.
      */
     @SerializedName("name")
     @Expose
@@ -53,7 +53,7 @@ public class BaseEmailAddress implements IJsonBackedObject {
 
     /**
      * The Address.
-	 * The email address of the person or entity.
+     * The email address of the person or entity.
      */
     @SerializedName("address")
     @Expose

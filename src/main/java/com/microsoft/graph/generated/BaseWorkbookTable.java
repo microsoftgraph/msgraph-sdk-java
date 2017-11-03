@@ -35,7 +35,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Highlight First Column.
-	 * 
+     * 
      */
     @SerializedName("highlightFirstColumn")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Highlight Last Column.
-	 * 
+     * 
      */
     @SerializedName("highlightLastColumn")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Banded Columns.
-	 * 
+     * 
      */
     @SerializedName("showBandedColumns")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Banded Rows.
-	 * 
+     * 
      */
     @SerializedName("showBandedRows")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Filter Button.
-	 * 
+     * 
      */
     @SerializedName("showFilterButton")
     @Expose
@@ -83,7 +83,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Headers.
-	 * 
+     * 
      */
     @SerializedName("showHeaders")
     @Expose
@@ -91,7 +91,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Totals.
-	 * 
+     * 
      */
     @SerializedName("showTotals")
     @Expose
@@ -99,7 +99,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Style.
-	 * 
+     * 
      */
     @SerializedName("style")
     @Expose
@@ -107,19 +107,19 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Columns.
-	 * 
+     * 
      */
     public transient WorkbookTableColumnCollectionPage columns;
 
     /**
      * The Rows.
-	 * 
+     * 
      */
     public transient WorkbookTableRowCollectionPage rows;
 
     /**
      * The Sort.
-	 * 
+     * 
      */
     @SerializedName("sort")
     @Expose
@@ -127,7 +127,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
-	 * 
+     * 
      */
     @SerializedName("worksheet")
     @Expose

@@ -35,7 +35,7 @@ public class BaseFile implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseFile implements IJsonBackedObject {
 
     /**
      * The Hashes.
-	 * Hashes of the file's binary content, if available. Read-only.
+     * Hashes of the file's binary content, if available. Read-only.
      */
     @SerializedName("hashes")
     @Expose
@@ -53,7 +53,7 @@ public class BaseFile implements IJsonBackedObject {
 
     /**
      * The Mime Type.
-	 * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
+     * The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
      */
     @SerializedName("mimeType")
     @Expose
@@ -61,7 +61,7 @@ public class BaseFile implements IJsonBackedObject {
 
     /**
      * The Processing Metadata.
-	 * 
+     * 
      */
     @SerializedName("processingMetadata")
     @Expose

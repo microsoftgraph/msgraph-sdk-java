@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFloor_PreciseBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsFloor_PreciseBody {
 
     /**
      * The significance.
-	 * 
+     * 
      */
     @SerializedName("significance")
     @Expose

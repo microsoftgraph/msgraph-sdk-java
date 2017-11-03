@@ -23,15 +23,15 @@ public enum ExternalAudienceScope
     /**
     * none
     */
-    none,
+    NONE,
     /**
     * contacts Only
     */
-    contactsOnly,
+    CONTACTSONLY,
     /**
     * all
     */
-    all,
+    ALL,
     /**
     * For ExternalAudienceScope values that were not expected from the service
     */

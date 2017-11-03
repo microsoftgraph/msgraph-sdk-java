@@ -30,6 +30,6 @@ public interface IBaseWorkbookTableRowRequestBuilder extends IRequestBuilder {
      * Creates the request with specific options instead of the existing options
      */
     IWorkbookTableRowRequest buildRequest(final java.util.List<Option> requestOptions);
-    IWorkbookTableRowRangeRequestBuilder getRange();
+    IWorkbookTableRowRangeRequestBuilder range();
 
 }

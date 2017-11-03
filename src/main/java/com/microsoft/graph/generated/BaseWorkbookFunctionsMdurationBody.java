@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMdurationBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsMdurationBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsMdurationBody {
 
     /**
      * The coupon.
-	 * 
+     * 
      */
     @SerializedName("coupon")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsMdurationBody {
 
     /**
      * The yld.
-	 * 
+     * 
      */
     @SerializedName("yld")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsMdurationBody {
 
     /**
      * The frequency.
-	 * 
+     * 
      */
     @SerializedName("frequency")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsMdurationBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

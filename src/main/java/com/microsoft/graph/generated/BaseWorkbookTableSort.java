@@ -35,7 +35,7 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Fields.
-	 * 
+     * 
      */
     @SerializedName("fields")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Match Case.
-	 * 
+     * 
      */
     @SerializedName("matchCase")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Method.
-	 * 
+     * 
      */
     @SerializedName("method")
     @Expose

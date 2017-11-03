@@ -35,7 +35,7 @@ public class BaseDiagnostic implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseDiagnostic implements IJsonBackedObject {
 
     /**
      * The Message.
-	 * 
+     * 
      */
     @SerializedName("message")
     @Expose
@@ -53,7 +53,7 @@ public class BaseDiagnostic implements IJsonBackedObject {
 
     /**
      * The Url.
-	 * 
+     * 
      */
     @SerializedName("url")
     @Expose

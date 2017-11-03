@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsCountIfBody {
 
     /**
      * The range.
-	 * 
+     * 
      */
     @SerializedName("range")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsCountIfBody {
 
     /**
      * The criteria.
-	 * 
+     * 
      */
     @SerializedName("criteria")
     @Expose

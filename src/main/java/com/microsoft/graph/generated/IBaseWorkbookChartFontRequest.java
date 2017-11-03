@@ -94,3 +94,4 @@ public interface IBaseWorkbookChartFontRequest extends IHttpRequest {
     IBaseWorkbookChartFontRequest expand(final String value);
 
 }
+

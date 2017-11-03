@@ -34,6 +34,6 @@ public interface IBaseWorkbookChartLegendRequestBuilder extends IRequestBuilder 
     /**
      * Gets the request builder for WorkbookChartLegendFormat.
      */
-    IWorkbookChartLegendFormatRequestBuilder getFormat();
+    IWorkbookChartLegendFormatRequestBuilder format();
 
 }

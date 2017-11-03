@@ -31,30 +31,30 @@ public interface IBaseWorkbookWorksheetRequestBuilder extends IRequestBuilder {
      */
     IWorkbookWorksheetRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IWorkbookChartCollectionRequestBuilder getCharts();
+    IWorkbookChartCollectionRequestBuilder charts();
 
-    IWorkbookChartRequestBuilder getCharts(final String id);
+    IWorkbookChartRequestBuilder charts(final String id);
 
-    IWorkbookNamedItemCollectionRequestBuilder getNames();
+    IWorkbookNamedItemCollectionRequestBuilder names();
 
-    IWorkbookNamedItemRequestBuilder getNames(final String id);
+    IWorkbookNamedItemRequestBuilder names(final String id);
 
-    IWorkbookPivotTableCollectionRequestBuilder getPivotTables();
+    IWorkbookPivotTableCollectionRequestBuilder pivotTables();
 
-    IWorkbookPivotTableRequestBuilder getPivotTables(final String id);
+    IWorkbookPivotTableRequestBuilder pivotTables(final String id);
 
     /**
      * Gets the request builder for WorkbookWorksheetProtection.
      */
-    IWorkbookWorksheetProtectionRequestBuilder getProtection();
+    IWorkbookWorksheetProtectionRequestBuilder protection();
 
-    IWorkbookTableCollectionRequestBuilder getTables();
+    IWorkbookTableCollectionRequestBuilder tables();
 
-    IWorkbookTableRequestBuilder getTables(final String id);
-    IWorkbookWorksheetCellRequestBuilder getCell(final Integer row, final Integer column);
-    IWorkbookWorksheetRangeRequestBuilder getRange();
-    IWorkbookWorksheetRangeRequestBuilder getRange(final String address);
-    IWorkbookWorksheetUsedRangeRequestBuilder getUsedRange();
-    IWorkbookWorksheetUsedRangeRequestBuilder getUsedRange(final Boolean valuesOnly);
+    IWorkbookTableRequestBuilder tables(final String id);
+    IWorkbookWorksheetCellRequestBuilder cell(final Integer row, final Integer column);
+    IWorkbookWorksheetRangeRequestBuilder range();
+    IWorkbookWorksheetRangeRequestBuilder range(final String address);
+    IWorkbookWorksheetUsedRangeRequestBuilder usedRange();
+    IWorkbookWorksheetUsedRangeRequestBuilder usedRange(final Boolean valuesOnly);
 
 }

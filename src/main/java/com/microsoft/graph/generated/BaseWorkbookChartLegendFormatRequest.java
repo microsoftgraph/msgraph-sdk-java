@@ -131,3 +131,4 @@ public class BaseWorkbookChartLegendFormatRequest extends BaseRequest implements
      }
 
 }
+

@@ -47,10 +47,10 @@ public interface IBaseDirectoryObjectRequestBuilder extends IRequestBuilder {
 
     IGroupSettingTemplateRequestBuilder groupSettingTemplate();
 
-    IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder getCheckMemberGroups(final java.util.List<String> groupIds);
+    IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds);
 
-    IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getGetMemberGroups(final Boolean securityEnabledOnly);
+    IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getMemberGroups(final Boolean securityEnabledOnly);
 
-    IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getGetMemberObjects(final Boolean securityEnabledOnly);
+    IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getMemberObjects(final Boolean securityEnabledOnly);
 
 }

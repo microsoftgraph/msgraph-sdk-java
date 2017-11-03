@@ -31,20 +31,20 @@ public interface IBaseCalendarRequestBuilder extends IRequestBuilder {
      */
     ICalendarRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IEventCollectionRequestBuilder getEvents();
+    IEventCollectionRequestBuilder events();
 
-    IEventRequestBuilder getEvents(final String id);
+    IEventRequestBuilder events(final String id);
 
-    IEventCollectionRequestBuilder getCalendarView();
+    IEventCollectionRequestBuilder calendarView();
 
-    IEventRequestBuilder getCalendarView(final String id);
+    IEventRequestBuilder calendarView(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
 
 }

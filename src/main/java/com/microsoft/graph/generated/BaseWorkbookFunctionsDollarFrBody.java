@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDollarFrBody {
 
     /**
      * The decimal Dollar.
-	 * 
+     * 
      */
     @SerializedName("decimalDollar")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDollarFrBody {
 
     /**
      * The fraction.
-	 * 
+     * 
      */
     @SerializedName("fraction")
     @Expose

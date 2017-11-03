@@ -131,3 +131,4 @@ public class BaseGroupSettingTemplateRequest extends BaseRequest implements IBas
      }
 
 }
+

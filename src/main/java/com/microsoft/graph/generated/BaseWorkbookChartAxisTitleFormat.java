@@ -35,7 +35,7 @@ public class BaseWorkbookChartAxisTitleFormat extends Entity implements IJsonBac
 
     /**
      * The Font.
-	 * 
+     * 
      */
     @SerializedName("font")
     @Expose

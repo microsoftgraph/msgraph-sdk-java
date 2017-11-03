@@ -35,7 +35,7 @@ public class BaseAudio implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Album.
-	 * The title of the album for this audio file.
+     * The title of the album for this audio file.
      */
     @SerializedName("album")
     @Expose
@@ -53,7 +53,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Album Artist.
-	 * The artist named on the album for the audio file.
+     * The artist named on the album for the audio file.
      */
     @SerializedName("albumArtist")
     @Expose
@@ -61,7 +61,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Artist.
-	 * The performing artist for the audio file.
+     * The performing artist for the audio file.
      */
     @SerializedName("artist")
     @Expose
@@ -69,7 +69,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Bitrate.
-	 * Bitrate expressed in kbps.
+     * Bitrate expressed in kbps.
      */
     @SerializedName("bitrate")
     @Expose
@@ -77,7 +77,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Composers.
-	 * The name of the composer of the audio file.
+     * The name of the composer of the audio file.
      */
     @SerializedName("composers")
     @Expose
@@ -85,7 +85,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Copyright.
-	 * Copyright information for the audio file.
+     * Copyright information for the audio file.
      */
     @SerializedName("copyright")
     @Expose
@@ -93,7 +93,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Disc.
-	 * The number of the disc this audio file came from.
+     * The number of the disc this audio file came from.
      */
     @SerializedName("disc")
     @Expose
@@ -101,7 +101,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Disc Count.
-	 * The total number of discs in this album.
+     * The total number of discs in this album.
      */
     @SerializedName("discCount")
     @Expose
@@ -109,7 +109,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Duration.
-	 * Duration of the audio file, expressed in milliseconds
+     * Duration of the audio file, expressed in milliseconds
      */
     @SerializedName("duration")
     @Expose
@@ -117,7 +117,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Genre.
-	 * The genre of this audio file.
+     * The genre of this audio file.
      */
     @SerializedName("genre")
     @Expose
@@ -125,7 +125,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Has Drm.
-	 * Indicates if the file is protected with digital rights management.
+     * Indicates if the file is protected with digital rights management.
      */
     @SerializedName("hasDrm")
     @Expose
@@ -133,7 +133,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Is Variable Bitrate.
-	 * Indicates if the file is encoded with a variable bitrate.
+     * Indicates if the file is encoded with a variable bitrate.
      */
     @SerializedName("isVariableBitrate")
     @Expose
@@ -141,7 +141,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Title.
-	 * The title of the audio file.
+     * The title of the audio file.
      */
     @SerializedName("title")
     @Expose
@@ -149,7 +149,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Track.
-	 * The number of the track on the original disc for this audio file.
+     * The number of the track on the original disc for this audio file.
      */
     @SerializedName("track")
     @Expose
@@ -157,7 +157,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Track Count.
-	 * The total number of tracks on the original disc for this audio file.
+     * The total number of tracks on the original disc for this audio file.
      */
     @SerializedName("trackCount")
     @Expose
@@ -165,7 +165,7 @@ public class BaseAudio implements IJsonBackedObject {
 
     /**
      * The Year.
-	 * The year the audio file was recorded.
+     * The year the audio file was recorded.
      */
     @SerializedName("year")
     @Expose

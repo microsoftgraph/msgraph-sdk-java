@@ -47,32 +47,32 @@ public class BaseListRequestBuilder extends BaseRequestBuilder implements IBaseL
         return new ListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IColumnDefinitionCollectionRequestBuilder getColumns() {
+    public IColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
-    public IColumnDefinitionRequestBuilder getColumns(final String id) {
+    public IColumnDefinitionRequestBuilder columns(final String id) {
         return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
-    public IContentTypeCollectionRequestBuilder getContentTypes() {
+    public IContentTypeCollectionRequestBuilder contentTypes() {
         return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
     }
 
-    public IContentTypeRequestBuilder getContentTypes(final String id) {
+    public IContentTypeRequestBuilder contentTypes(final String id) {
         return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive.
      */
-    public IDriveRequestBuilder getDrive() {
+    public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IListItemCollectionRequestBuilder getItems() {
+    public IListItemCollectionRequestBuilder items() {
         return new ListItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IListItemRequestBuilder getItems(final String id) {
+    public IListItemRequestBuilder items(final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 }

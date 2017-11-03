@@ -27,7 +27,7 @@ public class BaseDirectoryObjectGetByIdsBody {
 
     /**
      * The ids.
-	 * 
+     * 
      */
     @SerializedName("ids")
     @Expose
@@ -35,7 +35,7 @@ public class BaseDirectoryObjectGetByIdsBody {
 
     /**
      * The types.
-	 * 
+     * 
      */
     @SerializedName("types")
     @Expose

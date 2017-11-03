@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMedianBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

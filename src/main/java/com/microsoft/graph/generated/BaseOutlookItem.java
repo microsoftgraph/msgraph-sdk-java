@@ -35,7 +35,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-	 * 
+     * 
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -43,7 +43,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-	 * 
+     * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
@@ -51,7 +51,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-	 * 
+     * 
      */
     @SerializedName("changeKey")
     @Expose
@@ -59,7 +59,7 @@ public class BaseOutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-	 * 
+     * 
      */
     @SerializedName("categories")
     @Expose

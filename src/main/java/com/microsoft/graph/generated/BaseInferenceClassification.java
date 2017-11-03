@@ -35,7 +35,7 @@ public class BaseInferenceClassification extends Entity implements IJsonBackedOb
 
     /**
      * The Overrides.
-	 * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
+     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      */
     public transient InferenceClassificationOverrideCollectionPage overrides;
 

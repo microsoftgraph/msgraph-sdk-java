@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAccrIntMBody {
 
     /**
      * The issue.
-	 * 
+     * 
      */
     @SerializedName("issue")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsAccrIntMBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsAccrIntMBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsAccrIntMBody {
 
     /**
      * The par.
-	 * 
+     * 
      */
     @SerializedName("par")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsAccrIntMBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

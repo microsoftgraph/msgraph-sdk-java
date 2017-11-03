@@ -51,7 +51,7 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
     /**
      * Gets the request builder for WorkbookChartLegendFormat.
      */
-    public IWorkbookChartLegendFormatRequestBuilder getFormat() {
+    public IWorkbookChartLegendFormatRequestBuilder format() {
         return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

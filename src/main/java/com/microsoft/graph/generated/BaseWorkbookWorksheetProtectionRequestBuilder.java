@@ -48,11 +48,11 @@ public class BaseWorkbookWorksheetProtectionRequestBuilder extends BaseRequestBu
     }
 
 
-    public IWorkbookWorksheetProtectionProtectRequestBuilder getProtect(final WorkbookWorksheetProtectionOptions options) {
+    public IWorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options) {
         return new WorkbookWorksheetProtectionProtectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.protect"), getClient(), null, options);
     }
 
-    public IWorkbookWorksheetProtectionUnprotectRequestBuilder getUnprotect() {
+    public IWorkbookWorksheetProtectionUnprotectRequestBuilder unprotect() {
         return new WorkbookWorksheetProtectionUnprotectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unprotect"), getClient(), null);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMinABody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

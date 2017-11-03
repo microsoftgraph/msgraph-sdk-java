@@ -131,3 +131,4 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
      }
 
 }
+

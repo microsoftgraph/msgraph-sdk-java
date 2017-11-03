@@ -29,7 +29,7 @@ public interface IBaseEventCollectionRequestBuilder extends IRequestBuilder {
     IEventRequestBuilder byId(final String id);
 
 
-    IEventDeltaCollectionRequestBuilder getDelta();
+    IEventDeltaCollectionRequestBuilder delta();
 
-	IEventDeltaCollectionRequestBuilder getDelta(final String deltaLink);
+	IEventDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

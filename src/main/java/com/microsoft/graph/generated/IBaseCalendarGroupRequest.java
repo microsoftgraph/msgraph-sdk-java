@@ -94,3 +94,4 @@ public interface IBaseCalendarGroupRequest extends IHttpRequest {
     IBaseCalendarGroupRequest expand(final String value);
 
 }
+

@@ -45,11 +45,11 @@ public class BaseWorkbookRangeBorderCollectionRequestBuilder extends BaseRequest
         return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookRangeBorderItemAtRequestBuilder getItemAt(final Integer index) {
+    public IWorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookRangeBorderItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 
-    public IWorkbookRangeBorderCountRequestBuilder getCount() {
+    public IWorkbookRangeBorderCountRequestBuilder count() {
         return new WorkbookRangeBorderCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDateBody {
 
     /**
      * The year.
-	 * 
+     * 
      */
     @SerializedName("year")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDateBody {
 
     /**
      * The month.
-	 * 
+     * 
      */
     @SerializedName("month")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsDateBody {
 
     /**
      * The day.
-	 * 
+     * 
      */
     @SerializedName("day")
     @Expose

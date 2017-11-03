@@ -94,3 +94,4 @@ public interface IBaseSharedDriveItemRequest extends IHttpRequest {
     IBaseSharedDriveItemRequest expand(final String value);
 
 }
+

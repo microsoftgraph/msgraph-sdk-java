@@ -35,7 +35,7 @@ public class BaseWorkbookFormatProtection extends Entity implements IJsonBackedO
 
     /**
      * The Formula Hidden.
-	 * 
+     * 
      */
     @SerializedName("formulaHidden")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFormatProtection extends Entity implements IJsonBackedO
 
     /**
      * The Locked.
-	 * 
+     * 
      */
     @SerializedName("locked")
     @Expose

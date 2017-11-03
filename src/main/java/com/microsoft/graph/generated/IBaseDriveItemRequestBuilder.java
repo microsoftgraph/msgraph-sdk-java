@@ -31,39 +31,39 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
      */
     IDriveItemRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDriveItemCollectionRequestBuilder getChildren();
+    IDriveItemCollectionRequestBuilder children();
 
-    IDriveItemRequestBuilder getChildren(final String id);
+    IDriveItemRequestBuilder children(final String id);
 
     /**
      * Gets the request builder for ListItem.
      */
-    IListItemRequestBuilder getListItem();
+    IListItemRequestBuilder listItem();
 
-    IPermissionCollectionRequestBuilder getPermissions();
+    IPermissionCollectionRequestBuilder permissions();
 
-    IPermissionRequestBuilder getPermissions(final String id);
+    IPermissionRequestBuilder permissions(final String id);
 
-    IThumbnailSetCollectionRequestBuilder getThumbnails();
+    IThumbnailSetCollectionRequestBuilder thumbnails();
 
-    IThumbnailSetRequestBuilder getThumbnails(final String id);
+    IThumbnailSetRequestBuilder thumbnails(final String id);
 
     /**
      * Gets the request builder for Workbook.
      */
-    IWorkbookRequestBuilder getWorkbook();
+    IWorkbookRequestBuilder workbook();
 
-    IDriveItemStreamRequestBuilder getContent();
-    IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference);
-    IDriveItemCreateLinkRequestBuilder getCreateLink(final String type, final String scope);
-    IDriveItemCreateUploadSessionRequestBuilder getCreateUploadSession(final DriveItemUploadableProperties item);
+    IDriveItemStreamRequestBuilder content();
+    IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference);
+    IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope);
+    IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
 
-    IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients);
+    IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients);
 
-    IDriveItemDeltaCollectionRequestBuilder getDelta(final String token);
+    IDriveItemDeltaCollectionRequestBuilder delta(final String token);
 
-    IDriveItemDeltaCollectionRequestBuilder getDelta();
+    IDriveItemDeltaCollectionRequestBuilder delta();
 
-    IDriveItemSearchCollectionRequestBuilder getSearch(final String q);
+    IDriveItemSearchCollectionRequestBuilder search(final String q);
 
 }

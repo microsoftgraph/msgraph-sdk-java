@@ -31,8 +31,8 @@ public interface IBaseCalendarGroupRequestBuilder extends IRequestBuilder {
      */
     ICalendarGroupRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    ICalendarCollectionRequestBuilder getCalendars();
+    ICalendarCollectionRequestBuilder calendars();
 
-    ICalendarRequestBuilder getCalendars(final String id);
+    ICalendarRequestBuilder calendars(final String id);
 
 }

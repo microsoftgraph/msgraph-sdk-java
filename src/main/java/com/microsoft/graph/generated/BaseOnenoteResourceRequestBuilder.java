@@ -48,7 +48,7 @@ public class BaseOnenoteResourceRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public IOnenoteResourceStreamRequestBuilder getContent() {
+    public IOnenoteResourceStreamRequestBuilder content() {
         return new OnenoteResourceStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }

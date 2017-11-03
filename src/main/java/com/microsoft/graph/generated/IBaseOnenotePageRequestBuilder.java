@@ -34,16 +34,16 @@ public interface IBaseOnenotePageRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for OnenoteSection.
      */
-    IOnenoteSectionRequestBuilder getParentSection();
+    IOnenoteSectionRequestBuilder parentSection();
 
     /**
      * Gets the request builder for Notebook.
      */
-    INotebookRequestBuilder getParentNotebook();
+    INotebookRequestBuilder parentNotebook();
 
-    IOnenotePageStreamRequestBuilder getContent();
-    IOnenotePageOnenotePatchContentRequestBuilder getOnenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
-    IOnenotePageCopyToSectionRequestBuilder getCopyToSection(final String id, final String groupId);
-    IOnenotePagePreviewRequestBuilder getPreview();
+    IOnenotePageStreamRequestBuilder content();
+    IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
+    IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId);
+    IOnenotePagePreviewRequestBuilder preview();
 
 }

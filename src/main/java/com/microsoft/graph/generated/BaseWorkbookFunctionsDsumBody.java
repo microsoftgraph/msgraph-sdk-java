@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDsumBody {
 
     /**
      * The database.
-	 * 
+     * 
      */
     @SerializedName("database")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDsumBody {
 
     /**
      * The field.
-	 * 
+     * 
      */
     @SerializedName("field")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsDsumBody {
 
     /**
      * The criteria.
-	 * 
+     * 
      */
     @SerializedName("criteria")
     @Expose

@@ -131,3 +131,4 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
      }
 
 }
+

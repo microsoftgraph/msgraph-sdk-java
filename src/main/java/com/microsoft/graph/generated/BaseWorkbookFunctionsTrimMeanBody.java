@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsTrimMeanBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsTrimMeanBody {
 
     /**
      * The percent.
-	 * 
+     * 
      */
     @SerializedName("percent")
     @Expose

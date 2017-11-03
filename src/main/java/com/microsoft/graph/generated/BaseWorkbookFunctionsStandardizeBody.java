@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsStandardizeBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsStandardizeBody {
 
     /**
      * The mean.
-	 * 
+     * 
      */
     @SerializedName("mean")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsStandardizeBody {
 
     /**
      * The standard Dev.
-	 * 
+     * 
      */
     @SerializedName("standardDev")
     @Expose

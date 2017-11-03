@@ -47,18 +47,18 @@ public class BasePlannerUserRequestBuilder extends BaseRequestBuilder implements
         return new PlannerUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerTaskCollectionRequestBuilder getTasks() {
+    public IPlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder getTasks(final String id) {
+    public IPlannerTaskRequestBuilder tasks(final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
-    public IPlannerPlanCollectionRequestBuilder getPlans() {
+    public IPlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public IPlannerPlanRequestBuilder getPlans(final String id) {
+    public IPlannerPlanRequestBuilder plans(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }

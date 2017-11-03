@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAreasBody {
 
     /**
      * The reference.
-	 * 
+     * 
      */
     @SerializedName("reference")
     @Expose

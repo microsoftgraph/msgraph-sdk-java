@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGammaBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose

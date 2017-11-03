@@ -35,7 +35,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category1.
-	 * The label associated with Category 1
+     * The label associated with Category 1
      */
     @SerializedName("category1")
     @Expose
@@ -53,7 +53,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category2.
-	 * The label associated with Category 2
+     * The label associated with Category 2
      */
     @SerializedName("category2")
     @Expose
@@ -61,7 +61,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category3.
-	 * The label associated with Category 3
+     * The label associated with Category 3
      */
     @SerializedName("category3")
     @Expose
@@ -69,7 +69,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category4.
-	 * The label associated with Category 4
+     * The label associated with Category 4
      */
     @SerializedName("category4")
     @Expose
@@ -77,7 +77,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category5.
-	 * The label associated with Category 5
+     * The label associated with Category 5
      */
     @SerializedName("category5")
     @Expose
@@ -85,7 +85,7 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
 
     /**
      * The Category6.
-	 * The label associated with Category 6
+     * The label associated with Category 6
      */
     @SerializedName("category6")
     @Expose

@@ -35,7 +35,7 @@ public class BasePlannerBucket extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * Name of the bucket.
+     * Name of the bucket.
      */
     @SerializedName("name")
     @Expose
@@ -43,7 +43,7 @@ public class BasePlannerBucket extends Entity implements IJsonBackedObject {
 
     /**
      * The Plan Id.
-	 * Plan ID to which the bucket belongs.
+     * Plan ID to which the bucket belongs.
      */
     @SerializedName("planId")
     @Expose
@@ -51,7 +51,7 @@ public class BasePlannerBucket extends Entity implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-	 * Hint used to order items of this type in a list view. The format is defined as outlined here.
+     * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
     @SerializedName("orderHint")
     @Expose
@@ -59,7 +59,7 @@ public class BasePlannerBucket extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-	 * Read-only. Nullable. The collection of tasks in the bucket.
+     * Read-only. Nullable. The collection of tasks in the bucket.
      */
     public transient PlannerTaskCollectionPage tasks;
 

@@ -31,8 +31,8 @@ public interface IBasePlannerBucketRequestBuilder extends IRequestBuilder {
      */
     IPlannerBucketRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IPlannerTaskCollectionRequestBuilder getTasks();
+    IPlannerTaskCollectionRequestBuilder tasks();
 
-    IPlannerTaskRequestBuilder getTasks(final String id);
+    IPlannerTaskRequestBuilder tasks(final String id);
 
 }

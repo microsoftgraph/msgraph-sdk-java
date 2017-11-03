@@ -27,7 +27,7 @@ public class BaseWorkbookRangeClearBody {
 
     /**
      * The apply To.
-	 * 
+     * 
      */
     @SerializedName("applyTo")
     @Expose

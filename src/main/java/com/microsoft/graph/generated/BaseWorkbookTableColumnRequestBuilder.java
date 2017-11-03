@@ -51,23 +51,23 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
     /**
      * Gets the request builder for WorkbookFilter.
      */
-    public IWorkbookFilterRequestBuilder getFilter() {
+    public IWorkbookFilterRequestBuilder filter() {
         return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
     }
 
-    public IWorkbookTableColumnDataBodyRangeRequestBuilder getDataBodyRange() {
+    public IWorkbookTableColumnDataBodyRangeRequestBuilder dataBodyRange() {
         return new WorkbookTableColumnDataBodyRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dataBodyRange"), getClient(), null);
     }
 
-    public IWorkbookTableColumnHeaderRowRangeRequestBuilder getHeaderRowRange() {
+    public IWorkbookTableColumnHeaderRowRangeRequestBuilder headerRowRange() {
         return new WorkbookTableColumnHeaderRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.headerRowRange"), getClient(), null);
     }
 
-    public IWorkbookTableColumnRangeRequestBuilder getRange() {
+    public IWorkbookTableColumnRangeRequestBuilder range() {
         return new WorkbookTableColumnRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
-    public IWorkbookTableColumnTotalRowRangeRequestBuilder getTotalRowRange() {
+    public IWorkbookTableColumnTotalRowRangeRequestBuilder totalRowRange() {
         return new WorkbookTableColumnTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);
     }
 }

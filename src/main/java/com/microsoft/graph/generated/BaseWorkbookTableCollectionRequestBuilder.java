@@ -45,15 +45,15 @@ public class BaseWorkbookTableCollectionRequestBuilder extends BaseRequestBuilde
         return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookTableAddRequestBuilder getAdd(final String address, final Boolean hasHeaders) {
+    public IWorkbookTableAddRequestBuilder add(final String address, final Boolean hasHeaders) {
         return new WorkbookTableAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, address, hasHeaders);
     }
 
-    public IWorkbookTableItemAtRequestBuilder getItemAt(final Integer index) {
+    public IWorkbookTableItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookTableItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 
-    public IWorkbookTableCountRequestBuilder getCount() {
+    public IWorkbookTableCountRequestBuilder count() {
         return new WorkbookTableCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 }

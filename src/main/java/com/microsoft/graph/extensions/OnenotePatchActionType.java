@@ -23,23 +23,23 @@ public enum OnenotePatchActionType
     /**
     * Replace
     */
-    Replace,
+    REPLACE,
     /**
     * Append
     */
-    Append,
+    APPEND,
     /**
     * Delete
     */
-    Delete,
+    DELETE,
     /**
     * Insert
     */
-    Insert,
+    INSERT,
     /**
     * Prepend
     */
-    Prepend,
+    PREPEND,
     /**
     * For OnenotePatchActionType values that were not expected from the service
     */

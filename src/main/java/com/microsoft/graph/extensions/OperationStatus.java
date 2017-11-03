@@ -23,19 +23,19 @@ public enum OperationStatus
     /**
     * Not Started
     */
-    NotStarted,
+    NOTSTARTED,
     /**
     * Running
     */
-    Running,
+    RUNNING,
     /**
     * Completed
     */
-    Completed,
+    COMPLETED,
     /**
     * Failed
     */
-    Failed,
+    FAILED,
     /**
     * For OperationStatus values that were not expected from the service
     */

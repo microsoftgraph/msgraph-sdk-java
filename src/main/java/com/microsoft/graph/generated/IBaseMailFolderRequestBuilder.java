@@ -31,22 +31,22 @@ public interface IBaseMailFolderRequestBuilder extends IRequestBuilder {
      */
     IMailFolderRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IMessageCollectionRequestBuilder getMessages();
+    IMessageCollectionRequestBuilder messages();
 
-    IMessageRequestBuilder getMessages(final String id);
+    IMessageRequestBuilder messages(final String id);
 
-    IMailFolderCollectionRequestBuilder getChildFolders();
+    IMailFolderCollectionRequestBuilder childFolders();
 
-    IMailFolderRequestBuilder getChildFolders(final String id);
+    IMailFolderRequestBuilder childFolders(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
-    IMailFolderCopyRequestBuilder getCopy(final String destinationId);
-    IMailFolderMoveRequestBuilder getMove(final String destinationId);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+    IMailFolderCopyRequestBuilder copy(final String destinationId);
+    IMailFolderMoveRequestBuilder move(final String destinationId);
 
 }

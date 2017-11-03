@@ -31,9 +31,9 @@ public interface IBaseWorkbookRangeViewRequestBuilder extends IRequestBuilder {
      */
     IWorkbookRangeViewRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IWorkbookRangeViewCollectionRequestBuilder getRows();
+    IWorkbookRangeViewCollectionRequestBuilder rows();
 
-    IWorkbookRangeViewRequestBuilder getRows(final String id);
-    IWorkbookRangeViewRangeRequestBuilder getRange();
+    IWorkbookRangeViewRequestBuilder rows(final String id);
+    IWorkbookRangeViewRangeRequestBuilder range();
 
 }

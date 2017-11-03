@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPercentile_ExcBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPercentile_ExcBody {
 
     /**
      * The k.
-	 * 
+     * 
      */
     @SerializedName("k")
     @Expose

@@ -35,7 +35,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To.
-	 * For user type permissions, the details of the users & applications for this permission. Read-only.
+     * For user type permissions, the details of the users & applications for this permission. Read-only.
      */
     @SerializedName("grantedTo")
     @Expose
@@ -43,7 +43,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Inherited From.
-	 * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
+     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
      */
     @SerializedName("inheritedFrom")
     @Expose
@@ -51,7 +51,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Invitation.
-	 * Details of any associated sharing invitation for this permission. Read-only.
+     * Details of any associated sharing invitation for this permission. Read-only.
      */
     @SerializedName("invitation")
     @Expose
@@ -59,7 +59,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Link.
-	 * Provides the link details of the current permission, if it is a link type permissions. Read-only.
+     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
      */
     @SerializedName("link")
     @Expose
@@ -67,7 +67,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Roles.
-	 * 
+     * 
      */
     @SerializedName("roles")
     @Expose
@@ -75,7 +75,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Share Id.
-	 * A unique token that can be used to access this shared item via the **shares** API. Read-only.
+     * A unique token that can be used to access this shared item via the **shares** API. Read-only.
      */
     @SerializedName("shareId")
     @Expose

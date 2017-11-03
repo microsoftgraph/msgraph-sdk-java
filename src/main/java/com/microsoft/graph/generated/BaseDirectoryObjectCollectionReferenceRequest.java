@@ -49,7 +49,6 @@ public class BaseDirectoryObjectCollectionReferenceRequest extends BaseCollectio
                 .buildRequest(getBaseRequest().getOptions())
                 .post(newDirectoryObject, body);
     }
-
     /**
      * Sets the expand clause for the request
      *

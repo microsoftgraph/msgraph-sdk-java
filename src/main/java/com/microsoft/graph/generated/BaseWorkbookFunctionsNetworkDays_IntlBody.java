@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNetworkDays_IntlBody {
 
     /**
      * The start Date.
-	 * 
+     * 
      */
     @SerializedName("startDate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsNetworkDays_IntlBody {
 
     /**
      * The end Date.
-	 * 
+     * 
      */
     @SerializedName("endDate")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNetworkDays_IntlBody {
 
     /**
      * The weekend.
-	 * 
+     * 
      */
     @SerializedName("weekend")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNetworkDays_IntlBody {
 
     /**
      * The holidays.
-	 * 
+     * 
      */
     @SerializedName("holidays")
     @Expose

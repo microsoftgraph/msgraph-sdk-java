@@ -131,3 +131,4 @@ public class BaseMailFolderRequest extends BaseRequest implements IBaseMailFolde
      }
 
 }
+

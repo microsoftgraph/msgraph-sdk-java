@@ -131,3 +131,4 @@ public class BaseInvitationRequest extends BaseRequest implements IBaseInvitatio
      }
 
 }
+

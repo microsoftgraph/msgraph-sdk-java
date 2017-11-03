@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsHarMeanBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

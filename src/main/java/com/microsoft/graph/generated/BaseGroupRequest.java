@@ -131,3 +131,4 @@ public class BaseGroupRequest extends BaseRequest implements IBaseGroupRequest {
      }
 
 }
+

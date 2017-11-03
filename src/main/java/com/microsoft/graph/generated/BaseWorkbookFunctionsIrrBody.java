@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsIrrBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsIrrBody {
 
     /**
      * The guess.
-	 * 
+     * 
      */
     @SerializedName("guess")
     @Expose

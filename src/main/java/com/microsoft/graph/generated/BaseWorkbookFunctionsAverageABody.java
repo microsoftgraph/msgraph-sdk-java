@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAverageABody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

@@ -23,15 +23,15 @@ public enum RecurrenceRangeType
     /**
     * end Date
     */
-    endDate,
+    ENDDATE,
     /**
     * no End
     */
-    noEnd,
+    NOEND,
     /**
     * numbered
     */
-    numbered,
+    NUMBERED,
     /**
     * For RecurrenceRangeType values that were not expected from the service
     */

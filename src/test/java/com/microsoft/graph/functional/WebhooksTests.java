@@ -20,7 +20,7 @@ public class WebhooksTests {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.HOUR, 1);
         sub.expirationDateTime = cal;
-        Subscription subscription = testBase.graphClient.getSubscriptions().buildRequest().post(sub);
+        Subscription subscription = testBase.graphClient.subscriptions().buildRequest().post(sub);
         assertNotNull(subscription);
         assertEquals(sub.resource, subscription.resource);
     }

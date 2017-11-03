@@ -35,7 +35,7 @@ public class BaseThumbnail implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseThumbnail implements IJsonBackedObject {
 
     /**
      * The Height.
-	 * The height of the thumbnail, in pixels.
+     * The height of the thumbnail, in pixels.
      */
     @SerializedName("height")
     @Expose
@@ -53,7 +53,7 @@ public class BaseThumbnail implements IJsonBackedObject {
 
     /**
      * The Source Item Id.
-	 * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
+     * The unique identifier of the item that provided the thumbnail. This is only available when a folder thumbnail is requested.
      */
     @SerializedName("sourceItemId")
     @Expose
@@ -61,7 +61,7 @@ public class BaseThumbnail implements IJsonBackedObject {
 
     /**
      * The Url.
-	 * The URL used to fetch the thumbnail content.
+     * The URL used to fetch the thumbnail content.
      */
     @SerializedName("url")
     @Expose
@@ -69,7 +69,7 @@ public class BaseThumbnail implements IJsonBackedObject {
 
     /**
      * The Width.
-	 * The width of the thumbnail, in pixels.
+     * The width of the thumbnail, in pixels.
      */
     @SerializedName("width")
     @Expose

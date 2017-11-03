@@ -23,27 +23,27 @@ public enum FreeBusyStatus
     /**
     * free
     */
-    free,
+    FREE,
     /**
     * tentative
     */
-    tentative,
+    TENTATIVE,
     /**
     * busy
     */
-    busy,
+    BUSY,
     /**
     * oof
     */
-    oof,
+    OOF,
     /**
     * working Elsewhere
     */
-    workingElsewhere,
+    WORKINGELSEWHERE,
     /**
     * unknown
     */
-    unknown,
+    UNKNOWN,
     /**
     * For FreeBusyStatus values that were not expected from the service
     */

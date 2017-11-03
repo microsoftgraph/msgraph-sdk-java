@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsRowsBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose

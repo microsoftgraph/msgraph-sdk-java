@@ -35,7 +35,7 @@ public class BaseGroupSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * Display name of this group of settings, which comes from the associated template.
+     * Display name of this group of settings, which comes from the associated template.
      */
     @SerializedName("displayName")
     @Expose
@@ -43,7 +43,7 @@ public class BaseGroupSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Id.
-	 * Unique identifier for the template used to create this group of settings. Read-only.
+     * Unique identifier for the template used to create this group of settings. Read-only.
      */
     @SerializedName("templateId")
     @Expose
@@ -51,7 +51,7 @@ public class BaseGroupSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-	 * Collection of name value pairs. Must contain and set all the settings defined in the template.
+     * Collection of name value pairs. Must contain and set all the settings defined in the template.
      */
     @SerializedName("values")
     @Expose

@@ -51,7 +51,7 @@ public class BaseWorkbookChartTitleRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for WorkbookChartTitleFormat.
      */
-    public IWorkbookChartTitleFormatRequestBuilder getFormat() {
+    public IWorkbookChartTitleFormatRequestBuilder format() {
         return new WorkbookChartTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

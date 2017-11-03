@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsReceivedBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsReceivedBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsReceivedBody {
 
     /**
      * The investment.
-	 * 
+     * 
      */
     @SerializedName("investment")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsReceivedBody {
 
     /**
      * The discount.
-	 * 
+     * 
      */
     @SerializedName("discount")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsReceivedBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

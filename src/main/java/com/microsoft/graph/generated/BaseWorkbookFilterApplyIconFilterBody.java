@@ -27,7 +27,7 @@ public class BaseWorkbookFilterApplyIconFilterBody {
 
     /**
      * The icon.
-	 * 
+     * 
      */
     @SerializedName("icon")
     @Expose

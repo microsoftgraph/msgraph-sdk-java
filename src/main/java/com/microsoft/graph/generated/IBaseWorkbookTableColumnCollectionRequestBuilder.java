@@ -28,7 +28,7 @@ public interface IBaseWorkbookTableColumnCollectionRequestBuilder extends IReque
 
     IWorkbookTableColumnRequestBuilder byId(final String id);
 
-    IWorkbookTableColumnAddRequestBuilder getAdd(final Integer index, final com.google.gson.JsonElement values, final String name);
-    IWorkbookTableColumnItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookTableColumnCountRequestBuilder getCount();
+    IWorkbookTableColumnAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values, final String name);
+    IWorkbookTableColumnItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookTableColumnCountRequestBuilder count();
 }

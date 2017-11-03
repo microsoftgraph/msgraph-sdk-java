@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSkewBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

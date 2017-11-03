@@ -51,7 +51,7 @@ public class BaseEventDeltaCollectionPage extends BaseCollectionPage<Event, IEve
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink() {
+    public String deltaLink() {
         return deltaLink;
     }
 }

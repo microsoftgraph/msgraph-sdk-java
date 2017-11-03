@@ -35,7 +35,7 @@ public class BaseTimeSlot implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseTimeSlot implements IJsonBackedObject {
 
     /**
      * The Start.
-	 * The time the period ends.
+     * The time the period ends.
      */
     @SerializedName("start")
     @Expose
@@ -53,7 +53,7 @@ public class BaseTimeSlot implements IJsonBackedObject {
 
     /**
      * The End.
-	 * The time a period begins.
+     * The time a period begins.
      */
     @SerializedName("end")
     @Expose

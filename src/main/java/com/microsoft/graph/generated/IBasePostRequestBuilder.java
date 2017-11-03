@@ -31,27 +31,27 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
      */
     IPostRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
     /**
      * Gets the request builder for Post.
      */
-    IPostRequestBuilder getInReplyTo();
+    IPostRequestBuilder inReplyTo();
 
-    IAttachmentCollectionRequestBuilder getAttachments();
+    IAttachmentCollectionRequestBuilder attachments();
 
-    IAttachmentRequestBuilder getAttachments(final String id);
+    IAttachmentRequestBuilder attachments(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
-    IPostForwardRequestBuilder getForward(final String comment, final java.util.List<Recipient> toRecipients);
-    IPostReplyRequestBuilder getReply(final Post post);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+    IPostForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients);
+    IPostReplyRequestBuilder reply(final Post post);
 
 }

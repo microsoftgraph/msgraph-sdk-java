@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The cost.
-	 * 
+     * 
      */
     @SerializedName("cost")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The date Purchased.
-	 * 
+     * 
      */
     @SerializedName("datePurchased")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The first Period.
-	 * 
+     * 
      */
     @SerializedName("firstPeriod")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The salvage.
-	 * 
+     * 
      */
     @SerializedName("salvage")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The period.
-	 * 
+     * 
      */
     @SerializedName("period")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookFunctionsAmorDegrcBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

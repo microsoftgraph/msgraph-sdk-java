@@ -27,7 +27,7 @@ public class BaseUserChangePasswordBody {
 
     /**
      * The current Password.
-	 * 
+     * 
      */
     @SerializedName("currentPassword")
     @Expose
@@ -35,7 +35,7 @@ public class BaseUserChangePasswordBody {
 
     /**
      * The new Password.
-	 * 
+     * 
      */
     @SerializedName("newPassword")
     @Expose

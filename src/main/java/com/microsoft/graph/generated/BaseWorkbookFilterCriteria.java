@@ -35,7 +35,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Criterion1.
-	 * 
+     * 
      */
     @SerializedName("criterion1")
     @Expose
@@ -61,7 +61,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Criterion2.
-	 * 
+     * 
      */
     @SerializedName("criterion2")
     @Expose
@@ -69,7 +69,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Dynamic Criteria.
-	 * 
+     * 
      */
     @SerializedName("dynamicCriteria")
     @Expose
@@ -77,7 +77,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Filter On.
-	 * 
+     * 
      */
     @SerializedName("filterOn")
     @Expose
@@ -85,7 +85,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Icon.
-	 * 
+     * 
      */
     @SerializedName("icon")
     @Expose
@@ -93,7 +93,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Operator.
-	 * 
+     * 
      */
     @SerializedName("operator")
     @Expose
@@ -101,7 +101,7 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
 
     /**
      * The Values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

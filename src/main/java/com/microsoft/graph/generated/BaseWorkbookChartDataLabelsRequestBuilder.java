@@ -51,7 +51,7 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
     /**
      * Gets the request builder for WorkbookChartDataLabelFormat.
      */
-    public IWorkbookChartDataLabelFormatRequestBuilder getFormat() {
+    public IWorkbookChartDataLabelFormatRequestBuilder format() {
         return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

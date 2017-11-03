@@ -31,121 +31,121 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
      */
     IUserRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getOwnedDevices();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder ownedDevices();
 
-    IDirectoryObjectWithReferenceRequestBuilder getOwnedDevices(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder ownedDevices(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredDevices();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder registeredDevices();
 
-    IDirectoryObjectWithReferenceRequestBuilder getRegisteredDevices(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id);
 
     /**
      * Gets the request builder for DirectoryObject.
      */
-    IDirectoryObjectWithReferenceRequestBuilder getManager();
+    IDirectoryObjectWithReferenceRequestBuilder manager();
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getDirectReports();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder directReports();
 
-    IDirectoryObjectWithReferenceRequestBuilder getDirectReports(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder directReports(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getMemberOf();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
 
-    IDirectoryObjectWithReferenceRequestBuilder getMemberOf(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getCreatedObjects();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects();
 
-    IDirectoryObjectWithReferenceRequestBuilder getCreatedObjects(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getOwnedObjects();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects();
 
-    IDirectoryObjectWithReferenceRequestBuilder getOwnedObjects(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id);
 
-    ILicenseDetailsCollectionRequestBuilder getLicenseDetails();
+    ILicenseDetailsCollectionRequestBuilder licenseDetails();
 
-    ILicenseDetailsRequestBuilder getLicenseDetails(final String id);
+    ILicenseDetailsRequestBuilder licenseDetails(final String id);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
-    IMessageCollectionRequestBuilder getMessages();
+    IMessageCollectionRequestBuilder messages();
 
-    IMessageRequestBuilder getMessages(final String id);
+    IMessageRequestBuilder messages(final String id);
 
-    IMailFolderCollectionRequestBuilder getMailFolders();
+    IMailFolderCollectionRequestBuilder mailFolders();
 
-    IMailFolderRequestBuilder getMailFolders(final String id);
+    IMailFolderRequestBuilder mailFolders(final String id);
 
     /**
      * Gets the request builder for Calendar.
      */
-    ICalendarRequestBuilder getCalendar();
+    ICalendarRequestBuilder calendar();
 
-    ICalendarCollectionRequestBuilder getCalendars();
+    ICalendarCollectionRequestBuilder calendars();
 
-    ICalendarRequestBuilder getCalendars(final String id);
+    ICalendarRequestBuilder calendars(final String id);
 
-    ICalendarGroupCollectionRequestBuilder getCalendarGroups();
+    ICalendarGroupCollectionRequestBuilder calendarGroups();
 
-    ICalendarGroupRequestBuilder getCalendarGroups(final String id);
+    ICalendarGroupRequestBuilder calendarGroups(final String id);
 
-    IEventCollectionRequestBuilder getCalendarView();
+    IEventCollectionRequestBuilder calendarView();
 
-    IEventRequestBuilder getCalendarView(final String id);
+    IEventRequestBuilder calendarView(final String id);
 
-    IEventCollectionRequestBuilder getEvents();
+    IEventCollectionRequestBuilder events();
 
-    IEventRequestBuilder getEvents(final String id);
+    IEventRequestBuilder events(final String id);
 
-    IPersonCollectionRequestBuilder getPeople();
+    IPersonCollectionRequestBuilder people();
 
-    IPersonRequestBuilder getPeople(final String id);
+    IPersonRequestBuilder people(final String id);
 
-    IContactCollectionRequestBuilder getContacts();
+    IContactCollectionRequestBuilder contacts();
 
-    IContactRequestBuilder getContacts(final String id);
+    IContactRequestBuilder contacts(final String id);
 
-    IContactFolderCollectionRequestBuilder getContactFolders();
+    IContactFolderCollectionRequestBuilder contactFolders();
 
-    IContactFolderRequestBuilder getContactFolders(final String id);
+    IContactFolderRequestBuilder contactFolders(final String id);
 
     /**
      * Gets the request builder for InferenceClassification.
      */
-    IInferenceClassificationRequestBuilder getInferenceClassification();
+    IInferenceClassificationRequestBuilder inferenceClassification();
 
     /**
      * Gets the request builder for ProfilePhoto.
      */
-    IProfilePhotoRequestBuilder getPhoto();
+    IProfilePhotoRequestBuilder photo();
 
-    IProfilePhotoCollectionRequestBuilder getPhotos();
+    IProfilePhotoCollectionRequestBuilder photos();
 
-    IProfilePhotoRequestBuilder getPhotos(final String id);
+    IProfilePhotoRequestBuilder photos(final String id);
 
     /**
      * Gets the request builder for Drive.
      */
-    IDriveRequestBuilder getDrive();
+    IDriveRequestBuilder drive();
 
-    IDriveCollectionRequestBuilder getDrives();
+    IDriveCollectionRequestBuilder drives();
 
-    IDriveRequestBuilder getDrives(final String id);
+    IDriveRequestBuilder drives(final String id);
 
     /**
      * Gets the request builder for PlannerUser.
      */
-    IPlannerUserRequestBuilder getPlanner();
+    IPlannerUserRequestBuilder planner();
 
     /**
      * Gets the request builder for Onenote.
      */
-    IOnenoteRequestBuilder getOnenote();
-    IUserAssignLicenseRequestBuilder getAssignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
-    IUserChangePasswordRequestBuilder getChangePassword(final String currentPassword, final String newPassword);
-    IUserSendMailRequestBuilder getSendMail(final Message message, final Boolean saveToSentItems);
-    IUserFindMeetingTimesRequestBuilder getFindMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage);
+    IOnenoteRequestBuilder onenote();
+    IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
+    IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
+    IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);
+    IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage);
 
-    IUserReminderViewCollectionRequestBuilder getReminderView(final String startDateTime, final String endDateTime);
+    IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime);
 
 }

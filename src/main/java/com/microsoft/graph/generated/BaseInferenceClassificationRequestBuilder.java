@@ -47,11 +47,11 @@ public class BaseInferenceClassificationRequestBuilder extends BaseRequestBuilde
         return new InferenceClassificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IInferenceClassificationOverrideCollectionRequestBuilder getOverrides() {
+    public IInferenceClassificationOverrideCollectionRequestBuilder overrides() {
         return new InferenceClassificationOverrideCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("overrides"), getClient(), null);
     }
 
-    public IInferenceClassificationOverrideRequestBuilder getOverrides(final String id) {
+    public IInferenceClassificationOverrideRequestBuilder overrides(final String id) {
         return new InferenceClassificationOverrideRequestBuilder(getRequestUrlWithAdditionalSegment("overrides") + "/" + id, getClient(), null);
     }
 }

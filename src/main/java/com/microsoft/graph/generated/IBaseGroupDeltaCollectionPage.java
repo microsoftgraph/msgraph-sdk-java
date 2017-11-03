@@ -28,5 +28,5 @@ public interface IBaseGroupDeltaCollectionPage extends IBaseCollectionPage<Group
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink();
+    public String deltaLink();
 }

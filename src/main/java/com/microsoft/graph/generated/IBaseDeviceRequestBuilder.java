@@ -31,16 +31,16 @@ public interface IBaseDeviceRequestBuilder extends IRequestBuilder {
      */
     IDeviceRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredOwners();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder registeredOwners();
 
-    IDirectoryObjectWithReferenceRequestBuilder getRegisteredOwners(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder registeredOwners(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredUsers();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder registeredUsers();
 
-    IDirectoryObjectWithReferenceRequestBuilder getRegisteredUsers(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder registeredUsers(final String id);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
 }

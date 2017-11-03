@@ -51,133 +51,133 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Gets the request builder for WorkbookRangeFormat.
      */
-    public IWorkbookRangeFormatRequestBuilder getFormat() {
+    public IWorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeSort.
      */
-    public IWorkbookRangeSortRequestBuilder getSort() {
+    public IWorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    public IWorkbookWorksheetRequestBuilder getWorksheet() {
+    public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookRangeClearRequestBuilder getClear(final String applyTo) {
+    public IWorkbookRangeClearRequestBuilder clear(final String applyTo) {
         return new WorkbookRangeClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null, applyTo);
     }
 
-    public IWorkbookRangeDeleteRequestBuilder getDelete(final String shift) {
+    public IWorkbookRangeDeleteRequestBuilder delete(final String shift) {
         return new WorkbookRangeDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delete"), getClient(), null, shift);
     }
 
-    public IWorkbookRangeInsertRequestBuilder getInsert(final String shift) {
+    public IWorkbookRangeInsertRequestBuilder insert(final String shift) {
         return new WorkbookRangeInsertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.insert"), getClient(), null, shift);
     }
 
-    public IWorkbookRangeMergeRequestBuilder getMerge(final Boolean across) {
+    public IWorkbookRangeMergeRequestBuilder merge(final Boolean across) {
         return new WorkbookRangeMergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.merge"), getClient(), null, across);
     }
 
-    public IWorkbookRangeUnmergeRequestBuilder getUnmerge() {
+    public IWorkbookRangeUnmergeRequestBuilder unmerge() {
         return new WorkbookRangeUnmergeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unmerge"), getClient(), null);
     }
 
-    public IWorkbookRangeBoundingRectRequestBuilder getBoundingRect(final String anotherRange) {
+    public IWorkbookRangeBoundingRectRequestBuilder boundingRect(final String anotherRange) {
         return new WorkbookRangeBoundingRectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.boundingRect"), getClient(), null, anotherRange);
     }
 
-    public IWorkbookRangeCellRequestBuilder getCell(final Integer row, final Integer column) {
+    public IWorkbookRangeCellRequestBuilder cell(final Integer row, final Integer column) {
         return new WorkbookRangeCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cell"), getClient(), null, row, column);
     }
 
-    public IWorkbookRangeColumnRequestBuilder getColumn(final Integer column) {
+    public IWorkbookRangeColumnRequestBuilder column(final Integer column) {
         return new WorkbookRangeColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.column"), getClient(), null, column);
     }
 
-    public IWorkbookRangeColumnsAfterRequestBuilder getColumnsAfter() {
+    public IWorkbookRangeColumnsAfterRequestBuilder columnsAfter() {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null);
     }
 
-    public IWorkbookRangeColumnsAfterRequestBuilder getColumnsAfter(final Integer count) {
+    public IWorkbookRangeColumnsAfterRequestBuilder columnsAfter(final Integer count) {
         return new WorkbookRangeColumnsAfterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsAfter"), getClient(), null, count);
     }
 
-    public IWorkbookRangeColumnsBeforeRequestBuilder getColumnsBefore() {
+    public IWorkbookRangeColumnsBeforeRequestBuilder columnsBefore() {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null);
     }
 
-    public IWorkbookRangeColumnsBeforeRequestBuilder getColumnsBefore(final Integer count) {
+    public IWorkbookRangeColumnsBeforeRequestBuilder columnsBefore(final Integer count) {
         return new WorkbookRangeColumnsBeforeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columnsBefore"), getClient(), null, count);
     }
 
-    public IWorkbookRangeEntireColumnRequestBuilder getEntireColumn() {
+    public IWorkbookRangeEntireColumnRequestBuilder entireColumn() {
         return new WorkbookRangeEntireColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireColumn"), getClient(), null);
     }
 
-    public IWorkbookRangeEntireRowRequestBuilder getEntireRow() {
+    public IWorkbookRangeEntireRowRequestBuilder entireRow() {
         return new WorkbookRangeEntireRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.entireRow"), getClient(), null);
     }
 
-    public IWorkbookRangeIntersectionRequestBuilder getIntersection(final String anotherRange) {
+    public IWorkbookRangeIntersectionRequestBuilder intersection(final String anotherRange) {
         return new WorkbookRangeIntersectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intersection"), getClient(), null, anotherRange);
     }
 
-    public IWorkbookRangeLastCellRequestBuilder getLastCell() {
+    public IWorkbookRangeLastCellRequestBuilder lastCell() {
         return new WorkbookRangeLastCellRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastCell"), getClient(), null);
     }
 
-    public IWorkbookRangeLastColumnRequestBuilder getLastColumn() {
+    public IWorkbookRangeLastColumnRequestBuilder lastColumn() {
         return new WorkbookRangeLastColumnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastColumn"), getClient(), null);
     }
 
-    public IWorkbookRangeLastRowRequestBuilder getLastRow() {
+    public IWorkbookRangeLastRowRequestBuilder lastRow() {
         return new WorkbookRangeLastRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lastRow"), getClient(), null);
     }
 
-    public IWorkbookRangeOffsetRangeRequestBuilder getOffsetRange(final Integer rowOffset, final Integer columnOffset) {
+    public IWorkbookRangeOffsetRangeRequestBuilder offsetRange(final Integer rowOffset, final Integer columnOffset) {
         return new WorkbookRangeOffsetRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.offsetRange"), getClient(), null, rowOffset, columnOffset);
     }
 
-    public IWorkbookRangeResizedRangeRequestBuilder getResizedRange(final Integer deltaRows, final Integer deltaColumns) {
+    public IWorkbookRangeResizedRangeRequestBuilder resizedRange(final Integer deltaRows, final Integer deltaColumns) {
         return new WorkbookRangeResizedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizedRange"), getClient(), null, deltaRows, deltaColumns);
     }
 
-    public IWorkbookRangeRowRequestBuilder getRow(final Integer row) {
+    public IWorkbookRangeRowRequestBuilder row(final Integer row) {
         return new WorkbookRangeRowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.row"), getClient(), null, row);
     }
 
-    public IWorkbookRangeRowsAboveRequestBuilder getRowsAbove() {
+    public IWorkbookRangeRowsAboveRequestBuilder rowsAbove() {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null);
     }
 
-    public IWorkbookRangeRowsAboveRequestBuilder getRowsAbove(final Integer count) {
+    public IWorkbookRangeRowsAboveRequestBuilder rowsAbove(final Integer count) {
         return new WorkbookRangeRowsAboveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsAbove"), getClient(), null, count);
     }
 
-    public IWorkbookRangeRowsBelowRequestBuilder getRowsBelow() {
+    public IWorkbookRangeRowsBelowRequestBuilder rowsBelow() {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null);
     }
 
-    public IWorkbookRangeRowsBelowRequestBuilder getRowsBelow(final Integer count) {
+    public IWorkbookRangeRowsBelowRequestBuilder rowsBelow(final Integer count) {
         return new WorkbookRangeRowsBelowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rowsBelow"), getClient(), null, count);
     }
 
-    public IWorkbookRangeUsedRangeRequestBuilder getUsedRange() {
+    public IWorkbookRangeUsedRangeRequestBuilder usedRange() {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null);
     }
 
-    public IWorkbookRangeUsedRangeRequestBuilder getUsedRange(final Boolean valuesOnly) {
+    public IWorkbookRangeUsedRangeRequestBuilder usedRange(final Boolean valuesOnly) {
         return new WorkbookRangeUsedRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usedRange"), getClient(), null, valuesOnly);
     }
 
-    public IWorkbookRangeVisibleViewRequestBuilder getVisibleView() {
+    public IWorkbookRangeVisibleViewRequestBuilder visibleView() {
         return new WorkbookRangeVisibleViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.visibleView"), getClient(), null);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSmallBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSmallBody {
 
     /**
      * The k.
-	 * 
+     * 
      */
     @SerializedName("k")
     @Expose

@@ -35,7 +35,7 @@ public class BaseShared implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseShared implements IJsonBackedObject {
 
     /**
      * The Owner.
-	 * The identity of the owner of the shared item. Read-only.
+     * The identity of the owner of the shared item. Read-only.
      */
     @SerializedName("owner")
     @Expose
@@ -53,7 +53,7 @@ public class BaseShared implements IJsonBackedObject {
 
     /**
      * The Scope.
-	 * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
+     * Indicates the scope of how the item is shared: anonymous, organization, or users. Read-only.
      */
     @SerializedName("scope")
     @Expose
@@ -61,7 +61,7 @@ public class BaseShared implements IJsonBackedObject {
 
     /**
      * The Shared By.
-	 * The identity of the user who shared the item. Read-only.
+     * The identity of the user who shared the item. Read-only.
      */
     @SerializedName("sharedBy")
     @Expose
@@ -69,7 +69,7 @@ public class BaseShared implements IJsonBackedObject {
 
     /**
      * The Shared Date Time.
-	 * The UTC date and time when the item was shared. Read-only.
+     * The UTC date and time when the item was shared. Read-only.
      */
     @SerializedName("sharedDateTime")
     @Expose

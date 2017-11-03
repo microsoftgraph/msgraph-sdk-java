@@ -35,7 +35,7 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
 
     /**
      * The Is Checked.
-	 * Value is true if the item is checked and false otherwise.
+     * Value is true if the item is checked and false otherwise.
      */
     @SerializedName("isChecked")
     @Expose
@@ -53,7 +53,7 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
 
     /**
      * The Title.
-	 * Title of the checklist item
+     * Title of the checklist item
      */
     @SerializedName("title")
     @Expose
@@ -61,7 +61,7 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-	 * Used to set the relative order of items in the checklist. The format is defined as outlined here.
+     * Used to set the relative order of items in the checklist. The format is defined as outlined here.
      */
     @SerializedName("orderHint")
     @Expose
@@ -69,7 +69,7 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-	 * Read-only. User ID by which this is last modified.
+     * Read-only. User ID by which this is last modified.
      */
     @SerializedName("lastModifiedBy")
     @Expose
@@ -77,7 +77,7 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-	 * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsReptBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsReptBody {
 
     /**
      * The number Times.
-	 * 
+     * 
      */
     @SerializedName("numberTimes")
     @Expose

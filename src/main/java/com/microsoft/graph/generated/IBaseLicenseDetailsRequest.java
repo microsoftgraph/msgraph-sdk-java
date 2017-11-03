@@ -94,3 +94,4 @@ public interface IBaseLicenseDetailsRequest extends IHttpRequest {
     IBaseLicenseDetailsRequest expand(final String value);
 
 }
+

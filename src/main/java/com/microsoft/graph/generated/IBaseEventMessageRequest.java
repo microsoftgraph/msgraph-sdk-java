@@ -94,3 +94,4 @@ public interface IBaseEventMessageRequest extends IHttpRequest {
     IBaseEventMessageRequest expand(final String value);
 
 }
+

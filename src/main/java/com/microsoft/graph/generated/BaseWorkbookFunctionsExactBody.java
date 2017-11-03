@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsExactBody {
 
     /**
      * The text1.
-	 * 
+     * 
      */
     @SerializedName("text1")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsExactBody {
 
     /**
      * The text2.
-	 * 
+     * 
      */
     @SerializedName("text2")
     @Expose

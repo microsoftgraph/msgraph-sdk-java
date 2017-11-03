@@ -23,15 +23,15 @@ public enum AutomaticRepliesStatus
     /**
     * disabled
     */
-    disabled,
+    DISABLED,
     /**
     * always Enabled
     */
-    alwaysEnabled,
+    ALWAYSENABLED,
     /**
     * scheduled
     */
-    scheduled,
+    SCHEDULED,
     /**
     * For AutomaticRepliesStatus values that were not expected from the service
     */

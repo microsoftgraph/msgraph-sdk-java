@@ -51,68 +51,68 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
     public IEventMessageRequestBuilder eventMessage() {
         return new EventMessageRequestBuilder(getRequestUrlWithAdditionalSegment("eventMessage"), getClient(), null);
     }
-    public IAttachmentCollectionRequestBuilder getAttachments() {
+    public IAttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public IAttachmentRequestBuilder getAttachments(final String id) {
+    public IAttachmentRequestBuilder attachments(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder getExtensions() {
+    public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder getExtensions(final String id) {
+    public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties() {
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id) {
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties() {
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id) {
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public IMessageCopyRequestBuilder getCopy(final String destinationId) {
+    public IMessageCopyRequestBuilder copy(final String destinationId) {
         return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
-    public IMessageMoveRequestBuilder getMove(final String destinationId) {
+    public IMessageMoveRequestBuilder move(final String destinationId) {
         return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 
-    public IMessageCreateReplyRequestBuilder getCreateReply() {
+    public IMessageCreateReplyRequestBuilder createReply() {
         return new MessageCreateReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReply"), getClient(), null);
     }
 
-    public IMessageCreateReplyAllRequestBuilder getCreateReplyAll() {
+    public IMessageCreateReplyAllRequestBuilder createReplyAll() {
         return new MessageCreateReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReplyAll"), getClient(), null);
     }
 
-    public IMessageCreateForwardRequestBuilder getCreateForward() {
+    public IMessageCreateForwardRequestBuilder createForward() {
         return new MessageCreateForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createForward"), getClient(), null);
     }
 
-    public IMessageReplyRequestBuilder getReply(final String comment) {
+    public IMessageReplyRequestBuilder reply(final String comment) {
         return new MessageReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, comment);
     }
 
-    public IMessageReplyAllRequestBuilder getReplyAll(final String comment) {
+    public IMessageReplyAllRequestBuilder replyAll(final String comment) {
         return new MessageReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replyAll"), getClient(), null, comment);
     }
 
-    public IMessageForwardRequestBuilder getForward(final String comment, final java.util.List<Recipient> toRecipients) {
+    public IMessageForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients) {
         return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
     }
 
-    public IMessageSendRequestBuilder getSend() {
+    public IMessageSendRequestBuilder send() {
         return new MessageSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMirrBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsMirrBody {
 
     /**
      * The finance Rate.
-	 * 
+     * 
      */
     @SerializedName("financeRate")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsMirrBody {
 
     /**
      * The reinvest Rate.
-	 * 
+     * 
      */
     @SerializedName("reinvestRate")
     @Expose

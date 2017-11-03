@@ -23,15 +23,15 @@ public enum Importance
     /**
     * low
     */
-    low,
+    LOW,
     /**
     * normal
     */
-    normal,
+    NORMAL,
     /**
     * high
     */
-    high,
+    HIGH,
     /**
     * For Importance values that were not expected from the service
     */

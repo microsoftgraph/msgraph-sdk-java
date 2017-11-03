@@ -51,7 +51,7 @@ public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implement
     /**
      * Gets the request builder for Event.
      */
-    public IEventRequestBuilder getEvent() {
+    public IEventRequestBuilder event() {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
     }
 }

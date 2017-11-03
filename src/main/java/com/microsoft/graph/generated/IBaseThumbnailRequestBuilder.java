@@ -31,6 +31,6 @@ public interface IBaseThumbnailRequestBuilder extends IRequestBuilder {
      */
     IThumbnailRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IThumbnailStreamRequestBuilder getContent();
+    IThumbnailStreamRequestBuilder content();
 
 }

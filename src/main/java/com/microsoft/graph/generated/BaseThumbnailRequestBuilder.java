@@ -48,7 +48,7 @@ public class BaseThumbnailRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public IThumbnailStreamRequestBuilder getContent() {
+    public IThumbnailStreamRequestBuilder content() {
         return new ThumbnailStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }

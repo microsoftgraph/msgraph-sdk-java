@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsIsoWeekNumBody {
 
     /**
      * The date.
-	 * 
+     * 
      */
     @SerializedName("date")
     @Expose

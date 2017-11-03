@@ -31,21 +31,21 @@ public interface IBaseContactRequestBuilder extends IRequestBuilder {
      */
     IContactRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
 
     /**
      * Gets the request builder for ProfilePhoto.
      */
-    IProfilePhotoRequestBuilder getPhoto();
+    IProfilePhotoRequestBuilder photo();
 
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFilterApplyDynamicFilterBody {
 
     /**
      * The criteria.
-	 * 
+     * 
      */
     @SerializedName("criteria")
     @Expose

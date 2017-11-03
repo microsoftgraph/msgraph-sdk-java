@@ -35,7 +35,7 @@ public class BaseContract extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Contract Type.
-	 * 
+     * 
      */
     @SerializedName("contractType")
     @Expose
@@ -43,7 +43,7 @@ public class BaseContract extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Customer Id.
-	 * 
+     * 
      */
     @SerializedName("customerId")
     @Expose
@@ -51,7 +51,7 @@ public class BaseContract extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Default Domain Name.
-	 * 
+     * 
      */
     @SerializedName("defaultDomainName")
     @Expose
@@ -59,7 +59,7 @@ public class BaseContract extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * 
+     * 
      */
     @SerializedName("displayName")
     @Expose

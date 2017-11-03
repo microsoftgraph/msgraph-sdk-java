@@ -31,20 +31,20 @@ public interface IBaseContactFolderRequestBuilder extends IRequestBuilder {
      */
     IContactFolderRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IContactCollectionRequestBuilder getContacts();
+    IContactCollectionRequestBuilder contacts();
 
-    IContactRequestBuilder getContacts(final String id);
+    IContactRequestBuilder contacts(final String id);
 
-    IContactFolderCollectionRequestBuilder getChildFolders();
+    IContactFolderCollectionRequestBuilder childFolders();
 
-    IContactFolderRequestBuilder getChildFolders(final String id);
+    IContactFolderRequestBuilder childFolders(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
 
 }

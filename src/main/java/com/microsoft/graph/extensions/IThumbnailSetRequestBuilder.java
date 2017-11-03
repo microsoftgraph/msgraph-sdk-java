@@ -22,6 +22,7 @@ import java.util.EnumSet;
  */
 public interface IThumbnailSetRequestBuilder extends IBaseThumbnailSetRequestBuilder {
 
+
     /**
      * Gets a request for a thumbnail of a specific size
      * @param size The size to request (typically: small, medium, large)

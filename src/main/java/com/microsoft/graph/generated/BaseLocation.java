@@ -35,7 +35,7 @@ public class BaseLocation implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseLocation implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * The name associated with the location.
+     * The name associated with the location.
      */
     @SerializedName("displayName")
     @Expose
@@ -53,7 +53,7 @@ public class BaseLocation implements IJsonBackedObject {
 
     /**
      * The Location Email Address.
-	 * Optional email address of the location.
+     * Optional email address of the location.
      */
     @SerializedName("locationEmailAddress")
     @Expose
@@ -61,7 +61,7 @@ public class BaseLocation implements IJsonBackedObject {
 
     /**
      * The Address.
-	 * The street address of the location.
+     * The street address of the location.
      */
     @SerializedName("address")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDayBody {
 
     /**
      * The serial Number.
-	 * 
+     * 
      */
     @SerializedName("serialNumber")
     @Expose

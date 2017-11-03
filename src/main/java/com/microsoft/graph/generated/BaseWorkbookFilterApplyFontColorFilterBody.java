@@ -27,7 +27,7 @@ public class BaseWorkbookFilterApplyFontColorFilterBody {
 
     /**
      * The color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose

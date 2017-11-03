@@ -94,3 +94,4 @@ public interface IBaseWorkbookRangeFontRequest extends IHttpRequest {
     IBaseWorkbookRangeFontRequest expand(final String value);
 
 }
+

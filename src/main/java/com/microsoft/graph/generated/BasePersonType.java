@@ -35,7 +35,7 @@ public class BasePersonType implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -49,7 +49,7 @@ public class BasePersonType implements IJsonBackedObject {
      */
     @SerializedName("class")
     @Expose
-    public String msgraph_class;
+    public String msgraphclass;
 
     /**
      * The Subclass.

@@ -131,3 +131,4 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
      }
 
 }
+

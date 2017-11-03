@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPermutationaBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPermutationaBody {
 
     /**
      * The number Chosen.
-	 * 
+     * 
      */
     @SerializedName("numberChosen")
     @Expose

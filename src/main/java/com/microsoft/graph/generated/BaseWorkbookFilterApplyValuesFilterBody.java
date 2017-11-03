@@ -27,7 +27,7 @@ public class BaseWorkbookFilterApplyValuesFilterBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

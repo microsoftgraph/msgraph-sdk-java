@@ -94,3 +94,4 @@ public interface IBasePlannerTaskDetailsRequest extends IHttpRequest {
     IBasePlannerTaskDetailsRequest expand(final String value);
 
 }
+

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsStDevPABody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

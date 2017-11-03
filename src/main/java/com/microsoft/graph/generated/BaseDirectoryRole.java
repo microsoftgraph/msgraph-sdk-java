@@ -35,7 +35,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Description.
-	 * The description for the directory role. Read-only.
+     * The description for the directory role. Read-only.
      */
     @SerializedName("description")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Display Name.
-	 * The display name for the directory role. Read-only.
+     * The display name for the directory role. Read-only.
      */
     @SerializedName("displayName")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Role Template Id.
-	 * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
+     * The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only.
      */
     @SerializedName("roleTemplateId")
     @Expose
@@ -59,7 +59,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Members.
-	 * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
+     * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      */
     public transient DirectoryObjectCollectionPage members;
 

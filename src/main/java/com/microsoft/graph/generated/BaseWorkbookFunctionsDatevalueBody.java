@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDatevalueBody {
 
     /**
      * The date Text.
-	 * 
+     * 
      */
     @SerializedName("dateText")
     @Expose

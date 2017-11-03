@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsRank_EqBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsRank_EqBody {
 
     /**
      * The ref.
-	 * 
+     * 
      */
     @SerializedName("ref")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsRank_EqBody {
 
     /**
      * The order.
-	 * 
+     * 
      */
     @SerializedName("order")
     @Expose

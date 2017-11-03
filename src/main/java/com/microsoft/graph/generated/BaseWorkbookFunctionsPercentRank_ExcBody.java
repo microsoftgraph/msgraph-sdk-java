@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPercentRank_ExcBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPercentRank_ExcBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPercentRank_ExcBody {
 
     /**
      * The significance.
-	 * 
+     * 
      */
     @SerializedName("significance")
     @Expose

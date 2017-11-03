@@ -94,3 +94,4 @@ public interface IBaseFileAttachmentRequest extends IHttpRequest {
     IBaseFileAttachmentRequest expand(final String value);
 
 }
+

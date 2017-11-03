@@ -131,3 +131,4 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
      }
 
 }
+

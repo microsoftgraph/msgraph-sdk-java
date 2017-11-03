@@ -23,23 +23,23 @@ public enum WebsiteType
     /**
     * other
     */
-    other,
+    OTHER,
     /**
     * home
     */
-    home,
+    HOME,
     /**
     * work
     */
-    work,
+    WORK,
     /**
     * blog
     */
-    blog,
+    BLOG,
     /**
     * profile
     */
-    profile,
+    PROFILE,
     /**
     * For WebsiteType values that were not expected from the service
     */

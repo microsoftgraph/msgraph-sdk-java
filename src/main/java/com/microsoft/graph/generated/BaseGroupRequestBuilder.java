@@ -47,164 +47,164 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
         return new GroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getMembers() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder members() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getMembers(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder members(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getMemberOf() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getMemberOf(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DirectoryObject.
      */
-    public IDirectoryObjectWithReferenceRequestBuilder getCreatedOnBehalfOf() {
+    public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getOwners() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder owners() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("owners"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getOwners(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder owners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
     }
-    public IGroupSettingCollectionRequestBuilder getSettings() {
+    public IGroupSettingCollectionRequestBuilder settings() {
         return new GroupSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
-    public IGroupSettingRequestBuilder getSettings(final String id) {
+    public IGroupSettingRequestBuilder settings(final String id) {
         return new GroupSettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder getExtensions() {
+    public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder getExtensions(final String id) {
+    public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IConversationThreadCollectionRequestBuilder getThreads() {
+    public IConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
     }
 
-    public IConversationThreadRequestBuilder getThreads(final String id) {
+    public IConversationThreadRequestBuilder threads(final String id) {
         return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Calendar.
      */
-    public ICalendarRequestBuilder getCalendar() {
+    public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
-    public IEventCollectionRequestBuilder getCalendarView() {
+    public IEventCollectionRequestBuilder calendarView() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
-    public IEventRequestBuilder getCalendarView(final String id) {
+    public IEventRequestBuilder calendarView(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder getEvents() {
+    public IEventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
-    public IEventRequestBuilder getEvents(final String id) {
+    public IEventRequestBuilder events(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
-    public IConversationCollectionRequestBuilder getConversations() {
+    public IConversationCollectionRequestBuilder conversations() {
         return new ConversationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conversations"), getClient(), null);
     }
 
-    public IConversationRequestBuilder getConversations(final String id) {
+    public IConversationRequestBuilder conversations(final String id) {
         return new ConversationRequestBuilder(getRequestUrlWithAdditionalSegment("conversations") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ProfilePhoto.
      */
-    public IProfilePhotoRequestBuilder getPhoto() {
+    public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
     }
-    public IProfilePhotoCollectionRequestBuilder getPhotos() {
+    public IProfilePhotoCollectionRequestBuilder photos() {
         return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
     }
 
-    public IProfilePhotoRequestBuilder getPhotos(final String id) {
+    public IProfilePhotoRequestBuilder photos(final String id) {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder getAcceptedSenders() {
+    public IDirectoryObjectCollectionRequestBuilder acceptedSenders() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder getAcceptedSenders(final String id) {
+    public IDirectoryObjectRequestBuilder acceptedSenders(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder getRejectedSenders() {
+    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder getRejectedSenders(final String id) {
+    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive.
      */
-    public IDriveRequestBuilder getDrive() {
+    public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IDriveCollectionRequestBuilder getDrives() {
+    public IDriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
-    public IDriveRequestBuilder getDrives(final String id) {
+    public IDriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
-    public ISiteCollectionRequestBuilder getSites() {
+    public ISiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }
 
-    public ISiteRequestBuilder getSites(final String id) {
+    public ISiteRequestBuilder sites(final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerGroup.
      */
-    public IPlannerGroupRequestBuilder getPlanner() {
+    public IPlannerGroupRequestBuilder planner() {
         return new PlannerGroupRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Onenote.
      */
-    public IOnenoteRequestBuilder getOnenote() {
+    public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
-    public IGroupSubscribeByMailRequestBuilder getSubscribeByMail() {
+    public IGroupSubscribeByMailRequestBuilder subscribeByMail() {
         return new GroupSubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subscribeByMail"), getClient(), null);
     }
 
-    public IGroupUnsubscribeByMailRequestBuilder getUnsubscribeByMail() {
+    public IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail() {
         return new GroupUnsubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubscribeByMail"), getClient(), null);
     }
 
-    public IGroupAddFavoriteRequestBuilder getAddFavorite() {
+    public IGroupAddFavoriteRequestBuilder addFavorite() {
         return new GroupAddFavoriteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addFavorite"), getClient(), null);
     }
 
-    public IGroupRemoveFavoriteRequestBuilder getRemoveFavorite() {
+    public IGroupRemoveFavoriteRequestBuilder removeFavorite() {
         return new GroupRemoveFavoriteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeFavorite"), getClient(), null);
     }
 
-    public IGroupResetUnseenCountRequestBuilder getResetUnseenCount() {
+    public IGroupResetUnseenCountRequestBuilder resetUnseenCount() {
         return new GroupResetUnseenCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetUnseenCount"), getClient(), null);
     }
 }

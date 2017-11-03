@@ -35,7 +35,7 @@ public class BaseWorkbookApplication extends Entity implements IJsonBackedObject
 
     /**
      * The Calculation Mode.
-	 * 
+     * 
      */
     @SerializedName("calculationMode")
     @Expose

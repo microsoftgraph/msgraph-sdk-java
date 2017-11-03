@@ -27,7 +27,7 @@ public class BaseOnenotePageOnenotePatchContentBody {
 
     /**
      * The commands.
-	 * 
+     * 
      */
     @SerializedName("commands")
     @Expose

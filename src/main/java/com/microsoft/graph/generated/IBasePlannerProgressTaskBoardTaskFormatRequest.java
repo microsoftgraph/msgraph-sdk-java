@@ -94,3 +94,4 @@ public interface IBasePlannerProgressTaskBoardTaskFormatRequest extends IHttpReq
     IBasePlannerProgressTaskBoardTaskFormatRequest expand(final String value);
 
 }
+

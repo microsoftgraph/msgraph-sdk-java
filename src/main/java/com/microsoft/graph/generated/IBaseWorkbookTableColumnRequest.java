@@ -94,3 +94,4 @@ public interface IBaseWorkbookTableColumnRequest extends IHttpRequest {
     IBaseWorkbookTableColumnRequest expand(final String value);
 
 }
+

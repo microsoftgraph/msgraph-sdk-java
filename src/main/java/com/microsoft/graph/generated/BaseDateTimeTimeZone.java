@@ -35,7 +35,7 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
 
     /**
      * The Date Time.
-	 * 
+     * 
      */
     @SerializedName("dateTime")
     @Expose
@@ -53,7 +53,7 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-	 * 
+     * 
      */
     @SerializedName("timeZone")
     @Expose

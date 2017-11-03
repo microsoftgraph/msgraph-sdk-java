@@ -59,7 +59,7 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
     public IDriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
-    
+
     public IListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
@@ -75,14 +75,14 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Gets the request builder for User.
      */
-    public IUserWithReferenceRequestBuilder getCreatedByUser() {
+    public IUserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User.
      */
-    public IUserWithReferenceRequestBuilder getLastModifiedByUser() {
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 }

@@ -28,5 +28,5 @@ public interface IBaseEventDeltaCollectionPage extends IBaseCollectionPage<Event
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink();
+    public String deltaLink();
 }

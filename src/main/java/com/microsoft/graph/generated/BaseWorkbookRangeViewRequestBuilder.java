@@ -47,15 +47,15 @@ public class BaseWorkbookRangeViewRequestBuilder extends BaseRequestBuilder impl
         return new WorkbookRangeViewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookRangeViewCollectionRequestBuilder getRows() {
+    public IWorkbookRangeViewCollectionRequestBuilder rows() {
         return new WorkbookRangeViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
-    public IWorkbookRangeViewRequestBuilder getRows(final String id) {
+    public IWorkbookRangeViewRequestBuilder rows(final String id) {
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
-    public IWorkbookRangeViewRangeRequestBuilder getRange() {
+    public IWorkbookRangeViewRangeRequestBuilder range() {
         return new WorkbookRangeViewRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }

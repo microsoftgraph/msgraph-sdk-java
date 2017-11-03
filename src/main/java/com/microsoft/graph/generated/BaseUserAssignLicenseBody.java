@@ -27,7 +27,7 @@ public class BaseUserAssignLicenseBody {
 
     /**
      * The add Licenses.
-	 * 
+     * 
      */
     @SerializedName("addLicenses")
     @Expose
@@ -35,7 +35,7 @@ public class BaseUserAssignLicenseBody {
 
     /**
      * The remove Licenses.
-	 * 
+     * 
      */
     @SerializedName("removeLicenses")
     @Expose

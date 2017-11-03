@@ -35,7 +35,7 @@ public class BaseWorkbookChartPoint extends Entity implements IJsonBackedObject 
 
     /**
      * The Value.
-	 * 
+     * 
      */
     @SerializedName("value")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartPoint extends Entity implements IJsonBackedObject 
 
     /**
      * The Format.
-	 * 
+     * 
      */
     @SerializedName("format")
     @Expose

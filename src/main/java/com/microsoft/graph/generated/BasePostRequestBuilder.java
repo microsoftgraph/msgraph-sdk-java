@@ -47,47 +47,47 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
         return new PostRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IExtensionCollectionRequestBuilder getExtensions() {
+    public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder getExtensions(final String id) {
+    public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Post.
      */
-    public IPostRequestBuilder getInReplyTo() {
+    public IPostRequestBuilder inReplyTo() {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("inReplyTo"), getClient(), null);
     }
-    public IAttachmentCollectionRequestBuilder getAttachments() {
+    public IAttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public IAttachmentRequestBuilder getAttachments(final String id) {
+    public IAttachmentRequestBuilder attachments(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties() {
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id) {
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties() {
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id) {
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public IPostForwardRequestBuilder getForward(final String comment, final java.util.List<Recipient> toRecipients) {
+    public IPostForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients) {
         return new PostForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
     }
 
-    public IPostReplyRequestBuilder getReply(final Post post) {
+    public IPostReplyRequestBuilder reply(final Post post) {
         return new PostReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }

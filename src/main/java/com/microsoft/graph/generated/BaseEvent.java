@@ -35,7 +35,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original Start Time Zone.
-	 * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
+     * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
      */
     @SerializedName("originalStartTimeZone")
     @Expose
@@ -43,7 +43,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original End Time Zone.
-	 * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
+     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
      */
     @SerializedName("originalEndTimeZone")
     @Expose
@@ -51,7 +51,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Status.
-	 * Indicates the type of response sent in response to an event message.
+     * Indicates the type of response sent in response to an event message.
      */
     @SerializedName("responseStatus")
     @Expose
@@ -59,7 +59,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The ICal UId.
-	 * A unique identifier that is shared by all instances of an event across different calendars.
+     * A unique identifier that is shared by all instances of an event across different calendars.
      */
     @SerializedName("iCalUId")
     @Expose
@@ -67,7 +67,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Reminder Minutes Before Start.
-	 * The number of minutes before the event start time that the reminder alert occurs.
+     * The number of minutes before the event start time that the reminder alert occurs.
      */
     @SerializedName("reminderMinutesBeforeStart")
     @Expose
@@ -75,7 +75,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Reminder On.
-	 * Set to true if an alert is set to remind the user of the event.
+     * Set to true if an alert is set to remind the user of the event.
      */
     @SerializedName("isReminderOn")
     @Expose
@@ -83,7 +83,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-	 * Set to true if the event has attachments.
+     * Set to true if the event has attachments.
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -91,7 +91,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Subject.
-	 * The text of the event's subject line.
+     * The text of the event's subject line.
      */
     @SerializedName("subject")
     @Expose
@@ -99,7 +99,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
-	 * The body of the message associated with the event. It can be in HTML or text format.
+     * The body of the message associated with the event. It can be in HTML or text format.
      */
     @SerializedName("body")
     @Expose
@@ -107,7 +107,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
-	 * The preview of the message associated with the event. It is in text format.
+     * The preview of the message associated with the event. It is in text format.
      */
     @SerializedName("bodyPreview")
     @Expose
@@ -115,7 +115,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-	 * The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: Low, Normal, High.
+     * The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: Low, Normal, High.
      */
     @SerializedName("importance")
     @Expose
@@ -123,7 +123,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-	 * Possible values are: Normal, Personal, Private, Confidential.
+     * Possible values are: Normal, Personal, Private, Confidential.
      */
     @SerializedName("sensitivity")
     @Expose
@@ -131,7 +131,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Start.
-	 * The date, time, and time zone that the event starts.
+     * The date, time, and time zone that the event starts.
      */
     @SerializedName("start")
     @Expose
@@ -139,7 +139,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original Start.
-	 * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("originalStart")
     @Expose
@@ -147,7 +147,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The End.
-	 * The date, time, and time zone that the event ends.
+     * The date, time, and time zone that the event ends.
      */
     @SerializedName("end")
     @Expose
@@ -155,7 +155,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Location.
-	 * The location of the event.
+     * The location of the event.
      */
     @SerializedName("location")
     @Expose
@@ -163,7 +163,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is All Day.
-	 * Set to true if the event lasts all day.
+     * Set to true if the event lasts all day.
      */
     @SerializedName("isAllDay")
     @Expose
@@ -171,7 +171,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Cancelled.
-	 * Set to true if the event has been canceled.
+     * Set to true if the event has been canceled.
      */
     @SerializedName("isCancelled")
     @Expose
@@ -179,7 +179,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Organizer.
-	 * Set to true if the message sender is also the organizer.
+     * Set to true if the message sender is also the organizer.
      */
     @SerializedName("isOrganizer")
     @Expose
@@ -187,7 +187,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-	 * The recurrence pattern for the event.
+     * The recurrence pattern for the event.
      */
     @SerializedName("recurrence")
     @Expose
@@ -195,7 +195,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Requested.
-	 * Set to true if the sender would like a response when the event is accepted or declined.
+     * Set to true if the sender would like a response when the event is accepted or declined.
      */
     @SerializedName("responseRequested")
     @Expose
@@ -203,7 +203,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Series Master Id.
-	 * The categories assigned to the item.
+     * The categories assigned to the item.
      */
     @SerializedName("seriesMasterId")
     @Expose
@@ -211,7 +211,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
-	 * The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+     * The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
      */
     @SerializedName("showAs")
     @Expose
@@ -219,7 +219,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster.
+     * The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster.
      */
     @SerializedName("type")
     @Expose
@@ -227,7 +227,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attendees.
-	 * The collection of attendees for the event.
+     * The collection of attendees for the event.
      */
     @SerializedName("attendees")
     @Expose
@@ -235,7 +235,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Organizer.
-	 * The organizer of the event.
+     * The organizer of the event.
      */
     @SerializedName("organizer")
     @Expose
@@ -243,7 +243,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
-	 * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+     * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
      */
     @SerializedName("webLink")
     @Expose
@@ -251,7 +251,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Online Meeting Url.
-	 * A URL for an online meeting.
+     * A URL for an online meeting.
      */
     @SerializedName("onlineMeetingUrl")
     @Expose
@@ -259,7 +259,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Calendar.
-	 * The calendar that contains the event. Navigation property. Read-only.
+     * The calendar that contains the event. Navigation property. Read-only.
      */
     @SerializedName("calendar")
     @Expose
@@ -267,31 +267,31 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Instances.
-	 * The instances of the event. Navigation property. Read-only. Nullable.
+     * The instances of the event. Navigation property. Read-only. Nullable.
      */
     public transient EventCollectionPage instances;
 
     /**
      * The Extensions.
-	 * The collection of open extensions defined for the event. Read-only. Nullable.
+     * The collection of open extensions defined for the event. Read-only. Nullable.
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The Attachments.
-	 * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+     * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
      */
     public transient AttachmentCollectionPage attachments;
 
     /**
      * The Single Value Extended Properties.
-	 * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
-	 * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

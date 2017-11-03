@@ -35,7 +35,7 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
 
     /**
      * The Code.
-	 * The error code.
+     * The error code.
      */
     @SerializedName("code")
     @Expose
@@ -53,7 +53,7 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
 
     /**
      * The Message.
-	 * The error message.
+     * The error message.
      */
     @SerializedName("message")
     @Expose

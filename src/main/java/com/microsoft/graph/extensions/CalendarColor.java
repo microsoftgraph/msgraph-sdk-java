@@ -23,47 +23,47 @@ public enum CalendarColor
     /**
     * light Blue
     */
-    lightBlue,
+    LIGHTBLUE,
     /**
     * light Green
     */
-    lightGreen,
+    LIGHTGREEN,
     /**
     * light Orange
     */
-    lightOrange,
+    LIGHTORANGE,
     /**
     * light Gray
     */
-    lightGray,
+    LIGHTGRAY,
     /**
     * light Yellow
     */
-    lightYellow,
+    LIGHTYELLOW,
     /**
     * light Teal
     */
-    lightTeal,
+    LIGHTTEAL,
     /**
     * light Pink
     */
-    lightPink,
+    LIGHTPINK,
     /**
     * light Brown
     */
-    lightBrown,
+    LIGHTBROWN,
     /**
     * light Red
     */
-    lightRed,
+    LIGHTRED,
     /**
     * max Color
     */
-    maxColor,
+    MAXCOLOR,
     /**
     * auto
     */
-    auto,
+    AUTO,
     /**
     * For CalendarColor values that were not expected from the service
     */

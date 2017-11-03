@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeBody {
 
     /**
      * The trials.
-	 * 
+     * 
      */
     @SerializedName("trials")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeBody {
 
     /**
      * The probability S.
-	 * 
+     * 
      */
     @SerializedName("probabilityS")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeBody {
 
     /**
      * The number S.
-	 * 
+     * 
      */
     @SerializedName("numberS")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeBody {
 
     /**
      * The number S2.
-	 * 
+     * 
      */
     @SerializedName("numberS2")
     @Expose

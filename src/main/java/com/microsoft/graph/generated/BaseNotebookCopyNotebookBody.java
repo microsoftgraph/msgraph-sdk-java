@@ -27,7 +27,7 @@ public class BaseNotebookCopyNotebookBody {
 
     /**
      * The group Id.
-	 * 
+     * 
      */
     @SerializedName("groupId")
     @Expose
@@ -35,7 +35,7 @@ public class BaseNotebookCopyNotebookBody {
 
     /**
      * The rename As.
-	 * 
+     * 
      */
     @SerializedName("renameAs")
     @Expose
@@ -43,7 +43,7 @@ public class BaseNotebookCopyNotebookBody {
 
     /**
      * The notebook Folder.
-	 * 
+     * 
      */
     @SerializedName("notebookFolder")
     @Expose

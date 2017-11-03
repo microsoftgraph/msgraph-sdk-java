@@ -35,7 +35,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Assigned Plans.
-	 * The collection of service plans associated with the tenant. Not nullable.
+     * The collection of service plans associated with the tenant. Not nullable.
      */
     @SerializedName("assignedPlans")
     @Expose
@@ -43,7 +43,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Business Phones.
-	 * 
+     * 
      */
     @SerializedName("businessPhones")
     @Expose
@@ -51,7 +51,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The City.
-	 * 
+     * 
      */
     @SerializedName("city")
     @Expose
@@ -59,7 +59,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Country.
-	 * 
+     * 
      */
     @SerializedName("country")
     @Expose
@@ -67,7 +67,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Country Letter Code.
-	 * 
+     * 
      */
     @SerializedName("countryLetterCode")
     @Expose
@@ -75,7 +75,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Display Name.
-	 * The display name for the tenant.
+     * The display name for the tenant.
      */
     @SerializedName("displayName")
     @Expose
@@ -83,7 +83,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Marketing Notification Emails.
-	 * Not nullable.
+     * Not nullable.
      */
     @SerializedName("marketingNotificationEmails")
     @Expose
@@ -91,7 +91,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The On Premises Last Sync Date Time.
-	 * 
+     * 
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -99,7 +99,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The On Premises Sync Enabled.
-	 * 
+     * 
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -107,7 +107,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Postal Code.
-	 * 
+     * 
      */
     @SerializedName("postalCode")
     @Expose
@@ -115,7 +115,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Language.
-	 * 
+     * 
      */
     @SerializedName("preferredLanguage")
     @Expose
@@ -123,7 +123,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Provisioned Plans.
-	 * Not nullable.
+     * Not nullable.
      */
     @SerializedName("provisionedPlans")
     @Expose
@@ -131,7 +131,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Security Compliance Notification Mails.
-	 * 
+     * 
      */
     @SerializedName("securityComplianceNotificationMails")
     @Expose
@@ -139,7 +139,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Security Compliance Notification Phones.
-	 * 
+     * 
      */
     @SerializedName("securityComplianceNotificationPhones")
     @Expose
@@ -147,7 +147,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The State.
-	 * 
+     * 
      */
     @SerializedName("state")
     @Expose
@@ -155,7 +155,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Street.
-	 * 
+     * 
      */
     @SerializedName("street")
     @Expose
@@ -163,7 +163,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Technical Notification Mails.
-	 * Not nullable.
+     * Not nullable.
      */
     @SerializedName("technicalNotificationMails")
     @Expose
@@ -171,7 +171,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Verified Domains.
-	 * The collection of domains associated with this tenant. Not nullable.
+     * The collection of domains associated with this tenant. Not nullable.
      */
     @SerializedName("verifiedDomains")
     @Expose
@@ -179,7 +179,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Extensions.
-	 * The collection of open extensions defined for the organization. Read-only. Nullable.
+     * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
     public transient ExtensionCollectionPage extensions;
 

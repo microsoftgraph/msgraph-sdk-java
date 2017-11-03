@@ -131,3 +131,4 @@ public class BaseInferenceClassificationRequest extends BaseRequest implements I
      }
 
 }
+

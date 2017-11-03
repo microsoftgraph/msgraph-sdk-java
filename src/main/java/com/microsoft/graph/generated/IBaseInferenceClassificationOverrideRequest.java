@@ -94,3 +94,4 @@ public interface IBaseInferenceClassificationOverrideRequest extends IHttpReques
     IBaseInferenceClassificationOverrideRequest expand(final String value);
 
 }
+

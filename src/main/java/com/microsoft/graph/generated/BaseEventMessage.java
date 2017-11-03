@@ -35,7 +35,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Meeting Message Type.
-	 * 
+     * 
      */
     @SerializedName("meetingMessageType")
     @Expose
@@ -43,7 +43,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Event.
-	 * 
+     * 
      */
     @SerializedName("event")
     @Expose

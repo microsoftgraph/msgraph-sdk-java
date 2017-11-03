@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsConfidence_NormBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsConfidence_NormBody {
 
     /**
      * The standard Dev.
-	 * 
+     * 
      */
     @SerializedName("standardDev")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsConfidence_NormBody {
 
     /**
      * The size.
-	 * 
+     * 
      */
     @SerializedName("size")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsT_Dist_2TBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsT_Dist_2TBody {
 
     /**
      * The deg Freedom.
-	 * 
+     * 
      */
     @SerializedName("degFreedom")
     @Expose

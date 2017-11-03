@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNegBinom_DistBody {
 
     /**
      * The number F.
-	 * 
+     * 
      */
     @SerializedName("numberF")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsNegBinom_DistBody {
 
     /**
      * The number S.
-	 * 
+     * 
      */
     @SerializedName("numberS")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNegBinom_DistBody {
 
     /**
      * The probability S.
-	 * 
+     * 
      */
     @SerializedName("probabilityS")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNegBinom_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

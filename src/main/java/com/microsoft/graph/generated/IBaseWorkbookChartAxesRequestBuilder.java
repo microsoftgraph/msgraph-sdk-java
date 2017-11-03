@@ -34,16 +34,16 @@ public interface IBaseWorkbookChartAxesRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookChartAxis.
      */
-    IWorkbookChartAxisRequestBuilder getCategoryAxis();
+    IWorkbookChartAxisRequestBuilder categoryAxis();
 
     /**
      * Gets the request builder for WorkbookChartAxis.
      */
-    IWorkbookChartAxisRequestBuilder getSeriesAxis();
+    IWorkbookChartAxisRequestBuilder seriesAxis();
 
     /**
      * Gets the request builder for WorkbookChartAxis.
      */
-    IWorkbookChartAxisRequestBuilder getValueAxis();
+    IWorkbookChartAxisRequestBuilder valueAxis();
 
 }

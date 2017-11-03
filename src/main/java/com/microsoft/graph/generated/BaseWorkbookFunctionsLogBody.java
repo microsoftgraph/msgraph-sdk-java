@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsLogBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsLogBody {
 
     /**
      * The base.
-	 * 
+     * 
      */
     @SerializedName("base")
     @Expose

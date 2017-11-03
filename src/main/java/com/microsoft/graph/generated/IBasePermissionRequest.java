@@ -94,3 +94,4 @@ public interface IBasePermissionRequest extends IHttpRequest {
     IBasePermissionRequest expand(final String value);
 
 }
+

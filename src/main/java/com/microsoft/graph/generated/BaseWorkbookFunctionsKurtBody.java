@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsKurtBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

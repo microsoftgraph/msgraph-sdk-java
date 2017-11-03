@@ -45,7 +45,7 @@ public class BaseWorkbookRangeViewCollectionRequestBuilder extends BaseRequestBu
         return new WorkbookRangeViewRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookRangeViewItemAtRequestBuilder getItemAt(final Integer index) {
+    public IWorkbookRangeViewItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookRangeViewItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

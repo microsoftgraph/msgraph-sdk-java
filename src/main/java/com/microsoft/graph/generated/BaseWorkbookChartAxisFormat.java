@@ -35,7 +35,7 @@ public class BaseWorkbookChartAxisFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Font.
-	 * 
+     * 
      */
     @SerializedName("font")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartAxisFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Line.
-	 * 
+     * 
      */
     @SerializedName("line")
     @Expose

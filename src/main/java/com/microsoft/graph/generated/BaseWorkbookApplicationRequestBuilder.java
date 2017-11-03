@@ -48,7 +48,7 @@ public class BaseWorkbookApplicationRequestBuilder extends BaseRequestBuilder im
     }
 
 
-    public IWorkbookApplicationCalculateRequestBuilder getCalculate(final String calculationType) {
+    public IWorkbookApplicationCalculateRequestBuilder calculate(final String calculationType) {
         return new WorkbookApplicationCalculateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.calculate"), getClient(), null, calculationType);
     }
 }

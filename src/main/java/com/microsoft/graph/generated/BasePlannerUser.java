@@ -35,13 +35,13 @@ public class BasePlannerUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-	 * Read-only. Nullable. Returns the plannerPlans shared with the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
     public transient PlannerTaskCollectionPage tasks;
 
     /**
      * The Plans.
-	 * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
     public transient PlannerPlanCollectionPage plans;
 

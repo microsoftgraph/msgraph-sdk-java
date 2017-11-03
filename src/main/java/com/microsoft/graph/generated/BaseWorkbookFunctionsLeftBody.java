@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsLeftBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsLeftBody {
 
     /**
      * The num Chars.
-	 * 
+     * 
      */
     @SerializedName("numChars")
     @Expose

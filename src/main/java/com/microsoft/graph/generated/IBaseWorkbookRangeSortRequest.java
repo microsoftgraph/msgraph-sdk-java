@@ -94,3 +94,4 @@ public interface IBaseWorkbookRangeSortRequest extends IHttpRequest {
     IBaseWorkbookRangeSortRequest expand(final String value);
 
 }
+

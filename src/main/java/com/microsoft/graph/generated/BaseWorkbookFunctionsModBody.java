@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsModBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsModBody {
 
     /**
      * The divisor.
-	 * 
+     * 
      */
     @SerializedName("divisor")
     @Expose

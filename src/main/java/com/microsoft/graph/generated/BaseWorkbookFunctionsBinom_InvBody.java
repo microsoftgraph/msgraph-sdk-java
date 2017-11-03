@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBinom_InvBody {
 
     /**
      * The trials.
-	 * 
+     * 
      */
     @SerializedName("trials")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBinom_InvBody {
 
     /**
      * The probability S.
-	 * 
+     * 
      */
     @SerializedName("probabilityS")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBinom_InvBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose

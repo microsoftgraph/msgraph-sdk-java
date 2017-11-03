@@ -35,7 +35,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Meeting Time Slot.
-	 * A time period suggested for the meeting.
+     * A time period suggested for the meeting.
      */
     @SerializedName("meetingTimeSlot")
     @Expose
@@ -53,7 +53,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Confidence.
-	 * A percentage that represents the likelhood of all the attendees attending.
+     * A percentage that represents the likelhood of all the attendees attending.
      */
     @SerializedName("confidence")
     @Expose
@@ -61,7 +61,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Organizer Availability.
-	 * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName("organizerAvailability")
     @Expose
@@ -69,7 +69,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Attendee Availability.
-	 * An array that shows the availability status of each attendee for this meeting suggestion.
+     * An array that shows the availability status of each attendee for this meeting suggestion.
      */
     @SerializedName("attendeeAvailability")
     @Expose
@@ -77,7 +77,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Locations.
-	 * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
+     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
      */
     @SerializedName("locations")
     @Expose
@@ -85,7 +85,7 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Suggestion Reason.
-	 * Reason for suggesting the meeting time.
+     * Reason for suggesting the meeting time.
      */
     @SerializedName("suggestionReason")
     @Expose

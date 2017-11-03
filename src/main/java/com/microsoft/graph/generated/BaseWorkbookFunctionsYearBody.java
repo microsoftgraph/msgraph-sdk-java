@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsYearBody {
 
     /**
      * The serial Number.
-	 * 
+     * 
      */
     @SerializedName("serialNumber")
     @Expose

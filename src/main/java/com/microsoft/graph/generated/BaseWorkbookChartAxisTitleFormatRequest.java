@@ -131,3 +131,4 @@ public class BaseWorkbookChartAxisTitleFormatRequest extends BaseRequest impleme
      }
 
 }
+

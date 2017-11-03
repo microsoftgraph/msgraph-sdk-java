@@ -35,7 +35,7 @@ public class BaseWorkbookChartLineFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose

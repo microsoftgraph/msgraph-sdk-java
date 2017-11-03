@@ -94,3 +94,4 @@ public interface IBaseOrganizationRequest extends IHttpRequest {
     IBaseOrganizationRequest expand(final String value);
 
 }
+

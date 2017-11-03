@@ -35,7 +35,7 @@ public class BaseLocationConstraint implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseLocationConstraint implements IJsonBackedObject {
 
     /**
      * The Is Required.
-	 * 
+     * 
      */
     @SerializedName("isRequired")
     @Expose
@@ -53,7 +53,7 @@ public class BaseLocationConstraint implements IJsonBackedObject {
 
     /**
      * The Suggest Location.
-	 * 
+     * 
      */
     @SerializedName("suggestLocation")
     @Expose
@@ -61,7 +61,7 @@ public class BaseLocationConstraint implements IJsonBackedObject {
 
     /**
      * The Locations.
-	 * 
+     * 
      */
     @SerializedName("locations")
     @Expose

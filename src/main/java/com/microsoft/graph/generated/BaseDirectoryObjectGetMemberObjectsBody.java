@@ -27,7 +27,7 @@ public class BaseDirectoryObjectGetMemberObjectsBody {
 
     /**
      * The security Enabled Only.
-	 * 
+     * 
      */
     @SerializedName("securityEnabledOnly")
     @Expose

@@ -23,15 +23,15 @@ public enum AttendeeType
     /**
     * required
     */
-    required,
+    REQUIRED,
     /**
     * optional
     */
-    optional,
+    OPTIONAL,
     /**
     * resource
     */
-    resource,
+    RESOURCE,
     /**
     * For AttendeeType values that were not expected from the service
     */

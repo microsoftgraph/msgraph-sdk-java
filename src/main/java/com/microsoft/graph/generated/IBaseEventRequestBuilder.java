@@ -34,31 +34,31 @@ public interface IBaseEventRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for Calendar.
      */
-    ICalendarRequestBuilder getCalendar();
+    ICalendarRequestBuilder calendar();
 
-    IEventCollectionRequestBuilder getInstances();
+    IEventCollectionRequestBuilder instances();
 
-    IEventRequestBuilder getInstances(final String id);
+    IEventRequestBuilder instances(final String id);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
-    IAttachmentCollectionRequestBuilder getAttachments();
+    IAttachmentCollectionRequestBuilder attachments();
 
-    IAttachmentRequestBuilder getAttachments(final String id);
+    IAttachmentRequestBuilder attachments(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
-    IEventAcceptRequestBuilder getAccept(final String comment, final Boolean sendResponse);
-    IEventDeclineRequestBuilder getDecline(final String comment, final Boolean sendResponse);
-    IEventTentativelyAcceptRequestBuilder getTentativelyAccept(final String comment, final Boolean sendResponse);
-    IEventSnoozeReminderRequestBuilder getSnoozeReminder(final DateTimeTimeZone newReminderTime);
-    IEventDismissReminderRequestBuilder getDismissReminder();
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+    IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse);
+    IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse);
+    IEventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse);
+    IEventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime);
+    IEventDismissReminderRequestBuilder dismissReminder();
 
 }

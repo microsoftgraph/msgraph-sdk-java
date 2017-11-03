@@ -35,7 +35,7 @@ public class BaseWorkbookRangeBorder extends Entity implements IJsonBackedObject
 
     /**
      * The Color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookRangeBorder extends Entity implements IJsonBackedObject
 
     /**
      * The Side Index.
-	 * 
+     * 
      */
     @SerializedName("sideIndex")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookRangeBorder extends Entity implements IJsonBackedObject
 
     /**
      * The Style.
-	 * 
+     * 
      */
     @SerializedName("style")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookRangeBorder extends Entity implements IJsonBackedObject
 
     /**
      * The Weight.
-	 * 
+     * 
      */
     @SerializedName("weight")
     @Expose

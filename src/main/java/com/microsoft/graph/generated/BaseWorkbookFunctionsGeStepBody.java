@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGeStepBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsGeStepBody {
 
     /**
      * The step.
-	 * 
+     * 
      */
     @SerializedName("step")
     @Expose

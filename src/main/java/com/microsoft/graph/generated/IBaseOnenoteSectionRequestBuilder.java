@@ -34,17 +34,17 @@ public interface IBaseOnenoteSectionRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for Notebook.
      */
-    INotebookRequestBuilder getParentNotebook();
+    INotebookRequestBuilder parentNotebook();
 
     /**
      * Gets the request builder for SectionGroup.
      */
-    ISectionGroupRequestBuilder getParentSectionGroup();
+    ISectionGroupRequestBuilder parentSectionGroup();
 
-    IOnenotePageCollectionRequestBuilder getPages();
+    IOnenotePageCollectionRequestBuilder pages();
 
-    IOnenotePageRequestBuilder getPages(final String id);
-    IOnenoteSectionCopyToNotebookRequestBuilder getCopyToNotebook(final String id, final String groupId, final String renameAs);
-    IOnenoteSectionCopyToSectionGroupRequestBuilder getCopyToSectionGroup(final String id, final String groupId, final String renameAs);
+    IOnenotePageRequestBuilder pages(final String id);
+    IOnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs);
+    IOnenoteSectionCopyToSectionGroupRequestBuilder copyToSectionGroup(final String id, final String groupId, final String renameAs);
 
 }

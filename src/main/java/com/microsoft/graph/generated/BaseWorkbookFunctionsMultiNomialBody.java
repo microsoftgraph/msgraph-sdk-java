@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMultiNomialBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

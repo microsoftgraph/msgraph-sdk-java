@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsZ_TestBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsZ_TestBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsZ_TestBody {
 
     /**
      * The sigma.
-	 * 
+     * 
      */
     @SerializedName("sigma")
     @Expose

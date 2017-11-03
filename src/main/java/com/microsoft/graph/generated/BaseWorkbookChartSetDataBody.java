@@ -27,7 +27,7 @@ public class BaseWorkbookChartSetDataBody {
 
     /**
      * The source Data.
-	 * 
+     * 
      */
     @SerializedName("sourceData")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookChartSetDataBody {
 
     /**
      * The series By.
-	 * 
+     * 
      */
     @SerializedName("seriesBy")
     @Expose

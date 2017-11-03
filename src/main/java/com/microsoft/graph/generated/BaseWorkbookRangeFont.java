@@ -35,7 +35,7 @@ public class BaseWorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Bold.
-	 * 
+     * 
      */
     @SerializedName("bold")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Italic.
-	 * 
+     * 
      */
     @SerializedName("italic")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
-	 * 
+     * 
      */
     @SerializedName("size")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Underline.
-	 * 
+     * 
      */
     @SerializedName("underline")
     @Expose

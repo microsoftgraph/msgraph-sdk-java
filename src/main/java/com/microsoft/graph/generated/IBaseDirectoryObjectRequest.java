@@ -94,3 +94,4 @@ public interface IBaseDirectoryObjectRequest extends IHttpRequest {
     IBaseDirectoryObjectRequest expand(final String value);
 
 }
+

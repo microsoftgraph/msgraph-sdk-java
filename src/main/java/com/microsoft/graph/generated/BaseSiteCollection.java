@@ -35,7 +35,7 @@ public class BaseSiteCollection implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseSiteCollection implements IJsonBackedObject {
 
     /**
      * The Hostname.
-	 * The hostname for the site collection. Read-only.
+     * The hostname for the site collection. Read-only.
      */
     @SerializedName("hostname")
     @Expose

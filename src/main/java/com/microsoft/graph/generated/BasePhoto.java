@@ -35,7 +35,7 @@ public class BasePhoto implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Camera Make.
-	 * Camera manufacturer. Read-only.
+     * Camera manufacturer. Read-only.
      */
     @SerializedName("cameraMake")
     @Expose
@@ -53,7 +53,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Camera Model.
-	 * Camera model. Read-only.
+     * Camera model. Read-only.
      */
     @SerializedName("cameraModel")
     @Expose
@@ -61,7 +61,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Exposure Denominator.
-	 * The denominator for the exposure time fraction from the camera. Read-only.
+     * The denominator for the exposure time fraction from the camera. Read-only.
      */
     @SerializedName("exposureDenominator")
     @Expose
@@ -69,7 +69,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Exposure Numerator.
-	 * The numerator for the exposure time fraction from the camera. Read-only.
+     * The numerator for the exposure time fraction from the camera. Read-only.
      */
     @SerializedName("exposureNumerator")
     @Expose
@@ -77,7 +77,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The FNumber.
-	 * The F-stop value from the camera. Read-only.
+     * The F-stop value from the camera. Read-only.
      */
     @SerializedName("fNumber")
     @Expose
@@ -85,7 +85,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Focal Length.
-	 * The focal length from the camera. Read-only.
+     * The focal length from the camera. Read-only.
      */
     @SerializedName("focalLength")
     @Expose
@@ -93,7 +93,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Iso.
-	 * The ISO value from the camera. Read-only.
+     * The ISO value from the camera. Read-only.
      */
     @SerializedName("iso")
     @Expose
@@ -101,7 +101,7 @@ public class BasePhoto implements IJsonBackedObject {
 
     /**
      * The Taken Date Time.
-	 * Represents the date and time the photo was taken. Read-only.
+     * Represents the date and time the photo was taken. Read-only.
      */
     @SerializedName("takenDateTime")
     @Expose

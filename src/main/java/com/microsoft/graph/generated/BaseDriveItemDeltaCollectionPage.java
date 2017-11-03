@@ -51,7 +51,7 @@ public class BaseDriveItemDeltaCollectionPage extends BaseCollectionPage<DriveIt
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink() {
+    public String deltaLink() {
         return deltaLink;
     }
 }

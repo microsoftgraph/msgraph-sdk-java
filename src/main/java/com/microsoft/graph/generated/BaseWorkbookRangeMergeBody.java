@@ -27,7 +27,7 @@ public class BaseWorkbookRangeMergeBody {
 
     /**
      * The across.
-	 * 
+     * 
      */
     @SerializedName("across")
     @Expose

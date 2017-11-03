@@ -51,7 +51,7 @@ public class BaseWorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestB
     /**
      * Gets the request builder for WorkbookChartFont.
      */
-    public IWorkbookChartFontRequestBuilder getFont() {
+    public IWorkbookChartFontRequestBuilder font() {
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }

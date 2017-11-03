@@ -31,8 +31,8 @@ public interface IBaseOrganizationRequestBuilder extends IRequestBuilder {
      */
     IOrganizationRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
 }

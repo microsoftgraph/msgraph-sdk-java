@@ -35,7 +35,7 @@ public class BaseIdentitySet implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseIdentitySet implements IJsonBackedObject {
 
     /**
      * The Application.
-	 * Optional. The application associated with this action.
+     * Optional. The application associated with this action.
      */
     @SerializedName("application")
     @Expose
@@ -53,7 +53,7 @@ public class BaseIdentitySet implements IJsonBackedObject {
 
     /**
      * The Device.
-	 * Optional. The device associated with this action.
+     * Optional. The device associated with this action.
      */
     @SerializedName("device")
     @Expose
@@ -61,7 +61,7 @@ public class BaseIdentitySet implements IJsonBackedObject {
 
     /**
      * The User.
-	 * Optional. The user associated with this action.
+     * Optional. The user associated with this action.
      */
     @SerializedName("user")
     @Expose

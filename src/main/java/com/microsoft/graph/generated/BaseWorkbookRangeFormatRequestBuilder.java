@@ -47,40 +47,40 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
         return new WorkbookRangeFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookRangeBorderCollectionRequestBuilder getBorders() {
+    public IWorkbookRangeBorderCollectionRequestBuilder borders() {
         return new WorkbookRangeBorderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("borders"), getClient(), null);
     }
 
-    public IWorkbookRangeBorderRequestBuilder getBorders(final String id) {
+    public IWorkbookRangeBorderRequestBuilder borders(final String id) {
         return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("borders") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeFill.
      */
-    public IWorkbookRangeFillRequestBuilder getFill() {
+    public IWorkbookRangeFillRequestBuilder fill() {
         return new WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeFont.
      */
-    public IWorkbookRangeFontRequestBuilder getFont() {
+    public IWorkbookRangeFontRequestBuilder font() {
         return new WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookFormatProtection.
      */
-    public IWorkbookFormatProtectionRequestBuilder getProtection() {
+    public IWorkbookFormatProtectionRequestBuilder protection() {
         return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
 
-    public IWorkbookRangeFormatAutofitColumnsRequestBuilder getAutofitColumns() {
+    public IWorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns() {
         return new WorkbookRangeFormatAutofitColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitColumns"), getClient(), null);
     }
 
-    public IWorkbookRangeFormatAutofitRowsRequestBuilder getAutofitRows() {
+    public IWorkbookRangeFormatAutofitRowsRequestBuilder autofitRows() {
         return new WorkbookRangeFormatAutofitRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitRows"), getClient(), null);
     }
 }

@@ -51,14 +51,14 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
     /**
      * Gets the request builder for WorkbookChartFill.
      */
-    public IWorkbookChartFillRequestBuilder getFill() {
+    public IWorkbookChartFillRequestBuilder fill() {
         return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartLineFormat.
      */
-    public IWorkbookChartLineFormatRequestBuilder getLine() {
+    public IWorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
     }
 }

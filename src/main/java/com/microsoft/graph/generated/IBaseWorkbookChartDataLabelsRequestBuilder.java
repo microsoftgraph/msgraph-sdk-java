@@ -34,6 +34,6 @@ public interface IBaseWorkbookChartDataLabelsRequestBuilder extends IRequestBuil
     /**
      * Gets the request builder for WorkbookChartDataLabelFormat.
      */
-    IWorkbookChartDataLabelFormatRequestBuilder getFormat();
+    IWorkbookChartDataLabelFormatRequestBuilder format();
 
 }

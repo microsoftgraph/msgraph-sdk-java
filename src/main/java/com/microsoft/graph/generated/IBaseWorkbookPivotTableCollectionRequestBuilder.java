@@ -28,5 +28,5 @@ public interface IBaseWorkbookPivotTableCollectionRequestBuilder extends IReques
 
     IWorkbookPivotTableRequestBuilder byId(final String id);
 
-    IWorkbookPivotTableRefreshAllRequestBuilder getRefreshAll();
+    IWorkbookPivotTableRefreshAllRequestBuilder refreshAll();
 }

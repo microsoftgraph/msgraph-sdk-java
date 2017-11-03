@@ -23,27 +23,27 @@ public enum ResponseType
     /**
     * none
     */
-    none,
+    NONE,
     /**
     * organizer
     */
-    organizer,
+    ORGANIZER,
     /**
     * tentatively Accepted
     */
-    tentativelyAccepted,
+    TENTATIVELYACCEPTED,
     /**
     * accepted
     */
-    accepted,
+    ACCEPTED,
     /**
     * declined
     */
-    declined,
+    DECLINED,
     /**
     * not Responded
     */
-    notResponded,
+    NOTRESPONDED,
     /**
     * For ResponseType values that were not expected from the service
     */

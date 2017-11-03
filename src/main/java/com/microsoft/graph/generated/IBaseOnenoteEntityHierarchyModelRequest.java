@@ -94,3 +94,4 @@ public interface IBaseOnenoteEntityHierarchyModelRequest extends IHttpRequest {
     IBaseOnenoteEntityHierarchyModelRequest expand(final String value);
 
 }
+

@@ -27,7 +27,7 @@ public class BaseWorkbookFilterApplyCustomFilterBody {
 
     /**
      * The criteria1.
-	 * 
+     * 
      */
     @SerializedName("criteria1")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFilterApplyCustomFilterBody {
 
     /**
      * The criteria2.
-	 * 
+     * 
      */
     @SerializedName("criteria2")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFilterApplyCustomFilterBody {
 
     /**
      * The oper.
-	 * 
+     * 
      */
     @SerializedName("oper")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsOct2BinBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsOct2BinBody {
 
     /**
      * The places.
-	 * 
+     * 
      */
     @SerializedName("places")
     @Expose

@@ -35,7 +35,7 @@ public class BaseDirectoryRoleTemplate extends DirectoryObject implements IJsonB
 
     /**
      * The Description.
-	 * The description to set for the directory role. Read-only.
+     * The description to set for the directory role. Read-only.
      */
     @SerializedName("description")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDirectoryRoleTemplate extends DirectoryObject implements IJsonB
 
     /**
      * The Display Name.
-	 * The display name to set for the directory role. Read-only.
+     * The display name to set for the directory role. Read-only.
      */
     @SerializedName("displayName")
     @Expose

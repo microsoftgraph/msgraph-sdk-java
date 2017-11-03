@@ -94,3 +94,4 @@ public interface IBaseNotebookRequest extends IHttpRequest {
     IBaseNotebookRequest expand(final String value);
 
 }
+

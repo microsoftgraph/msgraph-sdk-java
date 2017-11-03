@@ -23,11 +23,11 @@ public enum BodyType
     /**
     * text
     */
-    text,
+    TEXT,
     /**
     * html
     */
-    html,
+    HTML,
     /**
     * For BodyType values that were not expected from the service
     */

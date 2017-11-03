@@ -27,7 +27,7 @@ public class BaseWorkbookTableRowAddBody {
 
     /**
      * The index.
-	 * 
+     * 
      */
     @SerializedName("index")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookTableRowAddBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

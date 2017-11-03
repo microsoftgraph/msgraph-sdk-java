@@ -35,7 +35,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Position.
-	 * 
+     * 
      */
     @SerializedName("position")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-	 * 
+     * 
      */
     @SerializedName("visibility")
     @Expose
@@ -59,25 +59,25 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Charts.
-	 * 
+     * 
      */
     public transient WorkbookChartCollectionPage charts;
 
     /**
      * The Names.
-	 * 
+     * 
      */
     public transient WorkbookNamedItemCollectionPage names;
 
     /**
      * The Pivot Tables.
-	 * 
+     * 
      */
     public transient WorkbookPivotTableCollectionPage pivotTables;
 
     /**
      * The Protection.
-	 * 
+     * 
      */
     @SerializedName("protection")
     @Expose
@@ -85,7 +85,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Tables.
-	 * 
+     * 
      */
     public transient WorkbookTableCollectionPage tables;
 

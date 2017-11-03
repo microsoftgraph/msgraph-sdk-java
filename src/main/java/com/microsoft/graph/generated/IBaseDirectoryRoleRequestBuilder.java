@@ -31,8 +31,8 @@ public interface IBaseDirectoryRoleRequestBuilder extends IRequestBuilder {
      */
     IDirectoryRoleRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getMembers();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
-    IDirectoryObjectWithReferenceRequestBuilder getMembers(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder members(final String id);
 
 }

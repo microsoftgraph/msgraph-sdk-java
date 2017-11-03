@@ -45,11 +45,11 @@ public class BaseContactCollectionRequestBuilder extends BaseRequestBuilder impl
         return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IContactDeltaCollectionRequestBuilder getDelta() {
+    public IContactDeltaCollectionRequestBuilder delta() {
         return new ContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IContactDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+	public IContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new ContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

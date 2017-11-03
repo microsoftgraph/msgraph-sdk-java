@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPriceMatBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPriceMatBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPriceMatBody {
 
     /**
      * The issue.
-	 * 
+     * 
      */
     @SerializedName("issue")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPriceMatBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsPriceMatBody {
 
     /**
      * The yld.
-	 * 
+     * 
      */
     @SerializedName("yld")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsPriceMatBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

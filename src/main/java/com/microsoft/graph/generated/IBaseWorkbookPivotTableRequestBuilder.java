@@ -34,7 +34,7 @@ public interface IBaseWorkbookPivotTableRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    IWorkbookWorksheetRequestBuilder getWorksheet();
-    IWorkbookPivotTableRefreshRequestBuilder getRefresh();
+    IWorkbookWorksheetRequestBuilder worksheet();
+    IWorkbookPivotTableRefreshRequestBuilder refresh();
 
 }

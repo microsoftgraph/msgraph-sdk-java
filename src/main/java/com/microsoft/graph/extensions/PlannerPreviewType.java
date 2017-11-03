@@ -23,23 +23,23 @@ public enum PlannerPreviewType
     /**
     * automatic
     */
-    automatic,
+    AUTOMATIC,
     /**
     * no Preview
     */
-    noPreview,
+    NOPREVIEW,
     /**
     * checklist
     */
-    checklist,
+    CHECKLIST,
     /**
     * description
     */
-    description,
+    DESCRIPTION,
     /**
     * reference
     */
-    reference,
+    REFERENCE,
     /**
     * For PlannerPreviewType values that were not expected from the service
     */

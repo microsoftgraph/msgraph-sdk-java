@@ -35,7 +35,7 @@ public class BaseInvitedUserMessageInfo implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseInvitedUserMessageInfo implements IJsonBackedObject {
 
     /**
      * The Cc Recipients.
-	 * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
+     * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.
      */
     @SerializedName("ccRecipients")
     @Expose
@@ -53,7 +53,7 @@ public class BaseInvitedUserMessageInfo implements IJsonBackedObject {
 
     /**
      * The Message Language.
-	 * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
+     * The language you want to send the default message in. If the customizedMessageBody is specified, this property is ignored, and the message is sent using the customizedMessageBody. The language format should be in ISO 639. The default is en-US.
      */
     @SerializedName("messageLanguage")
     @Expose
@@ -61,7 +61,7 @@ public class BaseInvitedUserMessageInfo implements IJsonBackedObject {
 
     /**
      * The Customized Message Body.
-	 * Customized message body you want to send if you don't want the default message.
+     * Customized message body you want to send if you don't want the default message.
      */
     @SerializedName("customizedMessageBody")
     @Expose

@@ -35,7 +35,7 @@ public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-	 * Description for the schema extension.
+     * Description for the schema extension.
      */
     @SerializedName("description")
     @Expose
@@ -43,7 +43,7 @@ public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Types.
-	 * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
+     * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
      */
     @SerializedName("targetTypes")
     @Expose
@@ -51,7 +51,7 @@ public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
     /**
      * The Properties.
-	 * The collection of property names and types that make up the schema extension definition.
+     * The collection of property names and types that make up the schema extension definition.
      */
     @SerializedName("properties")
     @Expose
@@ -59,7 +59,7 @@ public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-	 * The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors.
+     * The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. Schema extensions provides more information on the possible state transitions and behaviors.
      */
     @SerializedName("status")
     @Expose
@@ -67,7 +67,7 @@ public class BaseSchemaExtension extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-	 * The appId of the application that created the schema extension. Read-only.
+     * The appId of the application that created the schema extension. Read-only.
      */
     @SerializedName("owner")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsYearFracBody {
 
     /**
      * The start Date.
-	 * 
+     * 
      */
     @SerializedName("startDate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsYearFracBody {
 
     /**
      * The end Date.
-	 * 
+     * 
      */
     @SerializedName("endDate")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsYearFracBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

@@ -35,7 +35,7 @@ public class BaseSectionLinks implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseSectionLinks implements IJsonBackedObject {
 
     /**
      * The One Note Client Url.
-	 * Opens the section in the OneNote native client if it's installed.
+     * Opens the section in the OneNote native client if it's installed.
      */
     @SerializedName("oneNoteClientUrl")
     @Expose
@@ -53,7 +53,7 @@ public class BaseSectionLinks implements IJsonBackedObject {
 
     /**
      * The One Note Web Url.
-	 * Opens the section in OneNote Online.
+     * Opens the section in OneNote Online.
      */
     @SerializedName("oneNoteWebUrl")
     @Expose

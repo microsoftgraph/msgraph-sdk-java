@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBaseBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBaseBody {
 
     /**
      * The radix.
-	 * 
+     * 
      */
     @SerializedName("radix")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBaseBody {
 
     /**
      * The min Length.
-	 * 
+     * 
      */
     @SerializedName("minLength")
     @Expose

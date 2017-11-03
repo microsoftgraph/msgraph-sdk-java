@@ -131,3 +131,4 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
      }
 
 }
+

@@ -35,7 +35,7 @@ public class BaseExtensionSchemaProperty implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseExtensionSchemaProperty implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * The name of the strongly-typed property defined as part of a schema extension.
+     * The name of the strongly-typed property defined as part of a schema extension.
      */
     @SerializedName("name")
     @Expose
@@ -53,7 +53,7 @@ public class BaseExtensionSchemaProperty implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
+     * The type of the property that is defined as part of a schema extension.  Allowed values are Binary, Boolean, DateTime, Integer or String.  See the table below for more details.
      */
     @SerializedName("type")
     @Expose

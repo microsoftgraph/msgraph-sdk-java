@@ -51,28 +51,28 @@ public class BaseSectionGroupRequestBuilder extends BaseRequestBuilder implement
     /**
      * Gets the request builder for Notebook.
      */
-    public INotebookRequestBuilder getParentNotebook() {
+    public INotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
      * Gets the request builder for SectionGroup.
      */
-    public ISectionGroupRequestBuilder getParentSectionGroup() {
+    public ISectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
-    public IOnenoteSectionCollectionRequestBuilder getSections() {
+    public IOnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
-    public IOnenoteSectionRequestBuilder getSections(final String id) {
+    public IOnenoteSectionRequestBuilder sections(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
-    public ISectionGroupCollectionRequestBuilder getSectionGroups() {
+    public ISectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
-    public ISectionGroupRequestBuilder getSectionGroups(final String id) {
+    public ISectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
 }

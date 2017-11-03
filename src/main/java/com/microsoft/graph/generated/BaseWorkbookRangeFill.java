@@ -35,7 +35,7 @@ public class BaseWorkbookRangeFill extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-	 * 
+     * 
      */
     @SerializedName("color")
     @Expose

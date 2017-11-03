@@ -45,11 +45,11 @@ public class BaseGroupCollectionRequestBuilder extends BaseRequestBuilder implem
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IGroupDeltaCollectionRequestBuilder getDelta() {
+    public IGroupDeltaCollectionRequestBuilder delta() {
         return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IGroupDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+	public IGroupDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new GroupDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

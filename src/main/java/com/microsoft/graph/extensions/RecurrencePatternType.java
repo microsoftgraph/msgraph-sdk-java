@@ -23,27 +23,27 @@ public enum RecurrencePatternType
     /**
     * daily
     */
-    daily,
+    DAILY,
     /**
     * weekly
     */
-    weekly,
+    WEEKLY,
     /**
     * absolute Monthly
     */
-    absoluteMonthly,
+    ABSOLUTEMONTHLY,
     /**
     * relative Monthly
     */
-    relativeMonthly,
+    RELATIVEMONTHLY,
     /**
     * absolute Yearly
     */
-    absoluteYearly,
+    ABSOLUTEYEARLY,
     /**
     * relative Yearly
     */
-    relativeYearly,
+    RELATIVEYEARLY,
     /**
     * For RecurrencePatternType values that were not expected from the service
     */

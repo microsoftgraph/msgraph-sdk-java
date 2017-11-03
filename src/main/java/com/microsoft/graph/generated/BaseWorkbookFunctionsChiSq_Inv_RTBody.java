@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsChiSq_Inv_RTBody {
 
     /**
      * The probability.
-	 * 
+     * 
      */
     @SerializedName("probability")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsChiSq_Inv_RTBody {
 
     /**
      * The deg Freedom.
-	 * 
+     * 
      */
     @SerializedName("degFreedom")
     @Expose

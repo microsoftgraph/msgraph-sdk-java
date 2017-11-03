@@ -131,3 +131,4 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
      }
 
 }
+

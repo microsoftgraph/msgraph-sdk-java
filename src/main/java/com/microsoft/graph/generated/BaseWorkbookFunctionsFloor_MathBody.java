@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFloor_MathBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsFloor_MathBody {
 
     /**
      * The significance.
-	 * 
+     * 
      */
     @SerializedName("significance")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsFloor_MathBody {
 
     /**
      * The mode.
-	 * 
+     * 
      */
     @SerializedName("mode")
     @Expose

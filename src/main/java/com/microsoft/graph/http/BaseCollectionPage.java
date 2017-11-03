@@ -120,7 +120,7 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     }
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 }

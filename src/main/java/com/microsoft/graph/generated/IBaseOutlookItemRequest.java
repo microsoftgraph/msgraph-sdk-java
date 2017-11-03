@@ -94,3 +94,4 @@ public interface IBaseOutlookItemRequest extends IHttpRequest {
     IBaseOutlookItemRequest expand(final String value);
 
 }
+

@@ -94,3 +94,4 @@ public interface IBaseInvitationRequest extends IHttpRequest {
     IBaseInvitationRequest expand(final String value);
 
 }
+

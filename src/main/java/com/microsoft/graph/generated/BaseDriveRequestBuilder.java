@@ -47,44 +47,44 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
         return new DriveRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDriveItemCollectionRequestBuilder getItems() {
+    public IDriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder getItems(final String id) {
+    public IDriveItemRequestBuilder items(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for List.
      */
-    public IListRequestBuilder getList() {
+    public IListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
 
     /**
      * Gets the request builder for DriveItem.
      */
-    public IDriveItemRequestBuilder getRoot() {
+    public IDriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
-    public IDriveItemCollectionRequestBuilder getSpecial() {
+    public IDriveItemCollectionRequestBuilder special() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("special"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder getSpecial(final String id) {
+    public IDriveItemRequestBuilder special(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("special") + "/" + id, getClient(), null);
     }
 
-    public IDriveRecentCollectionRequestBuilder getRecent() {
+    public IDriveRecentCollectionRequestBuilder recent() {
         return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
 
-    public IDriveSearchCollectionRequestBuilder getSearch(final String q) {
+    public IDriveSearchCollectionRequestBuilder search(final String q) {
         return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 
-    public IDriveSharedWithMeCollectionRequestBuilder getSharedWithMe() {
+    public IDriveSharedWithMeCollectionRequestBuilder sharedWithMe() {
         return new DriveSharedWithMeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sharedWithMe"), getClient(), null);
     }
 }

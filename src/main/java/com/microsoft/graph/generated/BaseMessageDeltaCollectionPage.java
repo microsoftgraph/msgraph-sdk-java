@@ -51,7 +51,7 @@ public class BaseMessageDeltaCollectionPage extends BaseCollectionPage<Message, 
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink() {
+    public String deltaLink() {
         return deltaLink;
     }
 }

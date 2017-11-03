@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsXnpvBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsXnpvBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsXnpvBody {
 
     /**
      * The dates.
-	 * 
+     * 
      */
     @SerializedName("dates")
     @Expose

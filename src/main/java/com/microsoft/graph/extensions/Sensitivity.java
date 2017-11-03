@@ -23,19 +23,19 @@ public enum Sensitivity
     /**
     * normal
     */
-    normal,
+    NORMAL,
     /**
     * personal
     */
-    personal,
+    PERSONAL,
     /**
     * private
     */
-    msgraph_private,
+    PRIVATE,
     /**
     * confidential
     */
-    confidential,
+    CONFIDENTIAL,
     /**
     * For Sensitivity values that were not expected from the service
     */

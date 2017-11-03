@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNorm_InvBody {
 
     /**
      * The probability.
-	 * 
+     * 
      */
     @SerializedName("probability")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsNorm_InvBody {
 
     /**
      * The mean.
-	 * 
+     * 
      */
     @SerializedName("mean")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNorm_InvBody {
 
     /**
      * The standard Dev.
-	 * 
+     * 
      */
     @SerializedName("standardDev")
     @Expose

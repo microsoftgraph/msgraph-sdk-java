@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFisherBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose

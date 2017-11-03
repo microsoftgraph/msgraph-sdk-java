@@ -35,7 +35,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
 
     /**
      * The Password.
-	 * 
+     * 
      */
     @SerializedName("password")
     @Expose
@@ -53,7 +53,7 @@ public class BasePasswordProfile implements IJsonBackedObject {
 
     /**
      * The Force Change Password Next Sign In.
-	 * 
+     * 
      */
     @SerializedName("forceChangePasswordNextSignIn")
     @Expose

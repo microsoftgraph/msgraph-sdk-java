@@ -35,7 +35,7 @@ public class BaseMultiValueLegacyExtendedProperty extends Entity implements IJso
 
     /**
      * The Value.
-	 * 
+     * 
      */
     @SerializedName("value")
     @Expose

@@ -30,17 +30,17 @@ public interface IBaseWorkbookFilterRequestBuilder extends IRequestBuilder {
      * Creates the request with specific options instead of the existing options
      */
     IWorkbookFilterRequest buildRequest(final java.util.List<Option> requestOptions);
-    IWorkbookFilterApplyRequestBuilder getApply(final WorkbookFilterCriteria criteria);
-    IWorkbookFilterApplyBottomItemsFilterRequestBuilder getApplyBottomItemsFilter(final Integer count);
-    IWorkbookFilterApplyBottomPercentFilterRequestBuilder getApplyBottomPercentFilter(final Integer percent);
-    IWorkbookFilterApplyCellColorFilterRequestBuilder getApplyCellColorFilter(final String color);
-    IWorkbookFilterApplyCustomFilterRequestBuilder getApplyCustomFilter(final String criteria1, final String criteria2, final String oper);
-    IWorkbookFilterApplyDynamicFilterRequestBuilder getApplyDynamicFilter(final String criteria);
-    IWorkbookFilterApplyFontColorFilterRequestBuilder getApplyFontColorFilter(final String color);
-    IWorkbookFilterApplyIconFilterRequestBuilder getApplyIconFilter(final WorkbookIcon icon);
-    IWorkbookFilterApplyTopItemsFilterRequestBuilder getApplyTopItemsFilter(final Integer count);
-    IWorkbookFilterApplyTopPercentFilterRequestBuilder getApplyTopPercentFilter(final Integer percent);
-    IWorkbookFilterApplyValuesFilterRequestBuilder getApplyValuesFilter(final com.google.gson.JsonElement values);
-    IWorkbookFilterClearRequestBuilder getClear();
+    IWorkbookFilterApplyRequestBuilder apply(final WorkbookFilterCriteria criteria);
+    IWorkbookFilterApplyBottomItemsFilterRequestBuilder applyBottomItemsFilter(final Integer count);
+    IWorkbookFilterApplyBottomPercentFilterRequestBuilder applyBottomPercentFilter(final Integer percent);
+    IWorkbookFilterApplyCellColorFilterRequestBuilder applyCellColorFilter(final String color);
+    IWorkbookFilterApplyCustomFilterRequestBuilder applyCustomFilter(final String criteria1, final String criteria2, final String oper);
+    IWorkbookFilterApplyDynamicFilterRequestBuilder applyDynamicFilter(final String criteria);
+    IWorkbookFilterApplyFontColorFilterRequestBuilder applyFontColorFilter(final String color);
+    IWorkbookFilterApplyIconFilterRequestBuilder applyIconFilter(final WorkbookIcon icon);
+    IWorkbookFilterApplyTopItemsFilterRequestBuilder applyTopItemsFilter(final Integer count);
+    IWorkbookFilterApplyTopPercentFilterRequestBuilder applyTopPercentFilter(final Integer percent);
+    IWorkbookFilterApplyValuesFilterRequestBuilder applyValuesFilter(final com.google.gson.JsonElement values);
+    IWorkbookFilterClearRequestBuilder clear();
 
 }

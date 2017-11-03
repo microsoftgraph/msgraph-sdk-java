@@ -23,43 +23,43 @@ public enum PhoneType
     /**
     * home
     */
-    home,
+    HOME,
     /**
     * business
     */
-    business,
+    BUSINESS,
     /**
     * mobile
     */
-    mobile,
+    MOBILE,
     /**
     * other
     */
-    other,
+    OTHER,
     /**
     * assistant
     */
-    assistant,
+    ASSISTANT,
     /**
     * home Fax
     */
-    homeFax,
+    HOMEFAX,
     /**
     * business Fax
     */
-    businessFax,
+    BUSINESSFAX,
     /**
     * other Fax
     */
-    otherFax,
+    OTHERFAX,
     /**
     * pager
     */
-    pager,
+    PAGER,
     /**
     * radio
     */
-    radio,
+    RADIO,
     /**
     * For PhoneType values that were not expected from the service
     */

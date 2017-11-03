@@ -45,11 +45,11 @@ public class BaseWorkbookNamedItemCollectionRequestBuilder extends BaseRequestBu
         return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookNamedItemAddRequestBuilder getAdd(final String name, final com.google.gson.JsonElement reference, final String comment) {
+    public IWorkbookNamedItemAddRequestBuilder add(final String name, final com.google.gson.JsonElement reference, final String comment) {
         return new WorkbookNamedItemAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, name, reference, comment);
     }
 
-    public IWorkbookNamedItemAddFormulaLocalRequestBuilder getAddFormulaLocal(final String name, final String formula, final String comment) {
+    public IWorkbookNamedItemAddFormulaLocalRequestBuilder addFormulaLocal(final String name, final String formula, final String comment) {
         return new WorkbookNamedItemAddFormulaLocalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addFormulaLocal"), getClient(), null, name, formula, comment);
     }
 }

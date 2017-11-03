@@ -35,7 +35,7 @@ public class BaseAttendee extends AttendeeBase implements IJsonBackedObject {
 
     /**
      * The Status.
-	 * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
+     * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
      */
     @SerializedName("status")
     @Expose

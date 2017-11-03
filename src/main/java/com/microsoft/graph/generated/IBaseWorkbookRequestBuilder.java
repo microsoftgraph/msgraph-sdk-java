@@ -34,27 +34,27 @@ public interface IBaseWorkbookRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookApplication.
      */
-    IWorkbookApplicationRequestBuilder getApplication();
+    IWorkbookApplicationRequestBuilder application();
 
-    IWorkbookNamedItemCollectionRequestBuilder getNames();
+    IWorkbookNamedItemCollectionRequestBuilder names();
 
-    IWorkbookNamedItemRequestBuilder getNames(final String id);
+    IWorkbookNamedItemRequestBuilder names(final String id);
 
-    IWorkbookTableCollectionRequestBuilder getTables();
+    IWorkbookTableCollectionRequestBuilder tables();
 
-    IWorkbookTableRequestBuilder getTables(final String id);
+    IWorkbookTableRequestBuilder tables(final String id);
 
-    IWorkbookWorksheetCollectionRequestBuilder getWorksheets();
+    IWorkbookWorksheetCollectionRequestBuilder worksheets();
 
-    IWorkbookWorksheetRequestBuilder getWorksheets(final String id);
+    IWorkbookWorksheetRequestBuilder worksheets(final String id);
 
     /**
      * Gets the request builder for WorkbookFunctions.
      */
-    IWorkbookFunctionsRequestBuilder getFunctions();
-    IWorkbookCreateSessionRequestBuilder getCreateSession(final Boolean persistChanges);
-    IWorkbookCloseSessionRequestBuilder getCloseSession();
-    IWorkbookRefreshSessionRequestBuilder getRefreshSession();
-    IWorkbookProcessQueryRequestBuilder getProcessQuery(final byte[] input);
+    IWorkbookFunctionsRequestBuilder functions();
+    IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);
+    IWorkbookCloseSessionRequestBuilder closeSession();
+    IWorkbookRefreshSessionRequestBuilder refreshSession();
+    IWorkbookProcessQueryRequestBuilder processQuery(final byte[] input);
 
 }

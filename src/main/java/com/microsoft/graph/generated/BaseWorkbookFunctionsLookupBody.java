@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsLookupBody {
 
     /**
      * The lookup Value.
-	 * 
+     * 
      */
     @SerializedName("lookupValue")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsLookupBody {
 
     /**
      * The lookup Vector.
-	 * 
+     * 
      */
     @SerializedName("lookupVector")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsLookupBody {
 
     /**
      * The result Vector.
-	 * 
+     * 
      */
     @SerializedName("resultVector")
     @Expose

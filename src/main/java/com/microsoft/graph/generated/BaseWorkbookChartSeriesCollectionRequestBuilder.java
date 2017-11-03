@@ -45,11 +45,11 @@ public class BaseWorkbookChartSeriesCollectionRequestBuilder extends BaseRequest
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookChartSeriesItemAtRequestBuilder getItemAt(final Integer index) {
+    public IWorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartSeriesItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 
-    public IWorkbookChartSeriesCountRequestBuilder getCount() {
+    public IWorkbookChartSeriesCountRequestBuilder count() {
         return new WorkbookChartSeriesCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 }

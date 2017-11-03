@@ -35,7 +35,7 @@ public class BaseWorkbookChartSeriesFormat extends Entity implements IJsonBacked
 
     /**
      * The Fill.
-	 * 
+     * 
      */
     @SerializedName("fill")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartSeriesFormat extends Entity implements IJsonBacked
 
     /**
      * The Line.
-	 * 
+     * 
      */
     @SerializedName("line")
     @Expose

@@ -34,44 +34,44 @@ public interface IBaseWorkbookRangeRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookRangeFormat.
      */
-    IWorkbookRangeFormatRequestBuilder getFormat();
+    IWorkbookRangeFormatRequestBuilder format();
 
     /**
      * Gets the request builder for WorkbookRangeSort.
      */
-    IWorkbookRangeSortRequestBuilder getSort();
+    IWorkbookRangeSortRequestBuilder sort();
 
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    IWorkbookWorksheetRequestBuilder getWorksheet();
-    IWorkbookRangeClearRequestBuilder getClear(final String applyTo);
-    IWorkbookRangeDeleteRequestBuilder getDelete(final String shift);
-    IWorkbookRangeInsertRequestBuilder getInsert(final String shift);
-    IWorkbookRangeMergeRequestBuilder getMerge(final Boolean across);
-    IWorkbookRangeUnmergeRequestBuilder getUnmerge();
-    IWorkbookRangeBoundingRectRequestBuilder getBoundingRect(final String anotherRange);
-    IWorkbookRangeCellRequestBuilder getCell(final Integer row, final Integer column);
-    IWorkbookRangeColumnRequestBuilder getColumn(final Integer column);
-    IWorkbookRangeColumnsAfterRequestBuilder getColumnsAfter();
-    IWorkbookRangeColumnsAfterRequestBuilder getColumnsAfter(final Integer count);
-    IWorkbookRangeColumnsBeforeRequestBuilder getColumnsBefore();
-    IWorkbookRangeColumnsBeforeRequestBuilder getColumnsBefore(final Integer count);
-    IWorkbookRangeEntireColumnRequestBuilder getEntireColumn();
-    IWorkbookRangeEntireRowRequestBuilder getEntireRow();
-    IWorkbookRangeIntersectionRequestBuilder getIntersection(final String anotherRange);
-    IWorkbookRangeLastCellRequestBuilder getLastCell();
-    IWorkbookRangeLastColumnRequestBuilder getLastColumn();
-    IWorkbookRangeLastRowRequestBuilder getLastRow();
-    IWorkbookRangeOffsetRangeRequestBuilder getOffsetRange(final Integer rowOffset, final Integer columnOffset);
-    IWorkbookRangeResizedRangeRequestBuilder getResizedRange(final Integer deltaRows, final Integer deltaColumns);
-    IWorkbookRangeRowRequestBuilder getRow(final Integer row);
-    IWorkbookRangeRowsAboveRequestBuilder getRowsAbove();
-    IWorkbookRangeRowsAboveRequestBuilder getRowsAbove(final Integer count);
-    IWorkbookRangeRowsBelowRequestBuilder getRowsBelow();
-    IWorkbookRangeRowsBelowRequestBuilder getRowsBelow(final Integer count);
-    IWorkbookRangeUsedRangeRequestBuilder getUsedRange();
-    IWorkbookRangeUsedRangeRequestBuilder getUsedRange(final Boolean valuesOnly);
-    IWorkbookRangeVisibleViewRequestBuilder getVisibleView();
+    IWorkbookWorksheetRequestBuilder worksheet();
+    IWorkbookRangeClearRequestBuilder clear(final String applyTo);
+    IWorkbookRangeDeleteRequestBuilder delete(final String shift);
+    IWorkbookRangeInsertRequestBuilder insert(final String shift);
+    IWorkbookRangeMergeRequestBuilder merge(final Boolean across);
+    IWorkbookRangeUnmergeRequestBuilder unmerge();
+    IWorkbookRangeBoundingRectRequestBuilder boundingRect(final String anotherRange);
+    IWorkbookRangeCellRequestBuilder cell(final Integer row, final Integer column);
+    IWorkbookRangeColumnRequestBuilder column(final Integer column);
+    IWorkbookRangeColumnsAfterRequestBuilder columnsAfter();
+    IWorkbookRangeColumnsAfterRequestBuilder columnsAfter(final Integer count);
+    IWorkbookRangeColumnsBeforeRequestBuilder columnsBefore();
+    IWorkbookRangeColumnsBeforeRequestBuilder columnsBefore(final Integer count);
+    IWorkbookRangeEntireColumnRequestBuilder entireColumn();
+    IWorkbookRangeEntireRowRequestBuilder entireRow();
+    IWorkbookRangeIntersectionRequestBuilder intersection(final String anotherRange);
+    IWorkbookRangeLastCellRequestBuilder lastCell();
+    IWorkbookRangeLastColumnRequestBuilder lastColumn();
+    IWorkbookRangeLastRowRequestBuilder lastRow();
+    IWorkbookRangeOffsetRangeRequestBuilder offsetRange(final Integer rowOffset, final Integer columnOffset);
+    IWorkbookRangeResizedRangeRequestBuilder resizedRange(final Integer deltaRows, final Integer deltaColumns);
+    IWorkbookRangeRowRequestBuilder row(final Integer row);
+    IWorkbookRangeRowsAboveRequestBuilder rowsAbove();
+    IWorkbookRangeRowsAboveRequestBuilder rowsAbove(final Integer count);
+    IWorkbookRangeRowsBelowRequestBuilder rowsBelow();
+    IWorkbookRangeRowsBelowRequestBuilder rowsBelow(final Integer count);
+    IWorkbookRangeUsedRangeRequestBuilder usedRange();
+    IWorkbookRangeUsedRangeRequestBuilder usedRange(final Boolean valuesOnly);
+    IWorkbookRangeVisibleViewRequestBuilder visibleView();
 
 }

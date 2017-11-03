@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsCountABody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

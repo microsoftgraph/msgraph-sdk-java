@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsOct2HexBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsOct2HexBody {
 
     /**
      * The places.
-	 * 
+     * 
      */
     @SerializedName("places")
     @Expose

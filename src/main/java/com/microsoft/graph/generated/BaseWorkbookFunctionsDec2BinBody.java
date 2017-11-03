@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDec2BinBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDec2BinBody {
 
     /**
      * The places.
-	 * 
+     * 
      */
     @SerializedName("places")
     @Expose

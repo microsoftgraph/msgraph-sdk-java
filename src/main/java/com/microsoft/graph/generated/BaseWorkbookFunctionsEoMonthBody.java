@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsEoMonthBody {
 
     /**
      * The start Date.
-	 * 
+     * 
      */
     @SerializedName("startDate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsEoMonthBody {
 
     /**
      * The months.
-	 * 
+     * 
      */
     @SerializedName("months")
     @Expose

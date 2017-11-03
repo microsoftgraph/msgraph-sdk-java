@@ -34,6 +34,6 @@ public interface IBaseWorkbookChartAxisTitleFormatRequestBuilder extends IReques
     /**
      * Gets the request builder for WorkbookChartFont.
      */
-    IWorkbookChartFontRequestBuilder getFont();
+    IWorkbookChartFontRequestBuilder font();
 
 }

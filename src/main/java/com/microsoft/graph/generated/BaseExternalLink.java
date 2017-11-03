@@ -35,7 +35,7 @@ public class BaseExternalLink implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseExternalLink implements IJsonBackedObject {
 
     /**
      * The Href.
-	 * The url of the link.
+     * The url of the link.
      */
     @SerializedName("href")
     @Expose

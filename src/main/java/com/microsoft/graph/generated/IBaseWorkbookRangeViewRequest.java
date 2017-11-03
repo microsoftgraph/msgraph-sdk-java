@@ -94,3 +94,4 @@ public interface IBaseWorkbookRangeViewRequest extends IHttpRequest {
     IBaseWorkbookRangeViewRequest expand(final String value);
 
 }
+

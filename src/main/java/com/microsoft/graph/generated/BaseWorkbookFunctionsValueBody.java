@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsValueBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose

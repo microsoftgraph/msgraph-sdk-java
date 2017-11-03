@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsIsFormulaBody {
 
     /**
      * The reference.
-	 * 
+     * 
      */
     @SerializedName("reference")
     @Expose

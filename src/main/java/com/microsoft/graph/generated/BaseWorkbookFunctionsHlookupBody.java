@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsHlookupBody {
 
     /**
      * The lookup Value.
-	 * 
+     * 
      */
     @SerializedName("lookupValue")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsHlookupBody {
 
     /**
      * The table Array.
-	 * 
+     * 
      */
     @SerializedName("tableArray")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsHlookupBody {
 
     /**
      * The row Index Num.
-	 * 
+     * 
      */
     @SerializedName("rowIndexNum")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsHlookupBody {
 
     /**
      * The range Lookup.
-	 * 
+     * 
      */
     @SerializedName("rangeLookup")
     @Expose

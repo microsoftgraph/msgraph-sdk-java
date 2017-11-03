@@ -51,73 +51,73 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Gets the request builder for WorkbookChartAxes.
      */
-    public IWorkbookChartAxesRequestBuilder getAxes() {
+    public IWorkbookChartAxesRequestBuilder axes() {
         return new WorkbookChartAxesRequestBuilder(getRequestUrlWithAdditionalSegment("axes"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartDataLabels.
      */
-    public IWorkbookChartDataLabelsRequestBuilder getDataLabels() {
+    public IWorkbookChartDataLabelsRequestBuilder dataLabels() {
         return new WorkbookChartDataLabelsRequestBuilder(getRequestUrlWithAdditionalSegment("dataLabels"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAreaFormat.
      */
-    public IWorkbookChartAreaFormatRequestBuilder getFormat() {
+    public IWorkbookChartAreaFormatRequestBuilder format() {
         return new WorkbookChartAreaFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartLegend.
      */
-    public IWorkbookChartLegendRequestBuilder getLegend() {
+    public IWorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
     }
-    public IWorkbookChartSeriesCollectionRequestBuilder getSeries() {
+    public IWorkbookChartSeriesCollectionRequestBuilder series() {
         return new WorkbookChartSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("series"), getClient(), null);
     }
 
-    public IWorkbookChartSeriesRequestBuilder getSeries(final String id) {
+    public IWorkbookChartSeriesRequestBuilder series(final String id) {
         return new WorkbookChartSeriesRequestBuilder(getRequestUrlWithAdditionalSegment("series") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartTitle.
      */
-    public IWorkbookChartTitleRequestBuilder getTitle() {
+    public IWorkbookChartTitleRequestBuilder title() {
         return new WorkbookChartTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    public IWorkbookWorksheetRequestBuilder getWorksheet() {
+    public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookChartSetDataRequestBuilder getSetData(final com.google.gson.JsonElement sourceData, final String seriesBy) {
+    public IWorkbookChartSetDataRequestBuilder setData(final com.google.gson.JsonElement sourceData, final String seriesBy) {
         return new WorkbookChartSetDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setData"), getClient(), null, sourceData, seriesBy);
     }
 
-    public IWorkbookChartSetPositionRequestBuilder getSetPosition(final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
+    public IWorkbookChartSetPositionRequestBuilder setPosition(final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
         return new WorkbookChartSetPositionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPosition"), getClient(), null, startCell, endCell);
     }
 
-    public IWorkbookChartImageRequestBuilder getImage() {
+    public IWorkbookChartImageRequestBuilder image() {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null);
     }
 
-    public IWorkbookChartImageRequestBuilder getImage(final Integer width) {
+    public IWorkbookChartImageRequestBuilder image(final Integer width) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width);
     }
 
-    public IWorkbookChartImageRequestBuilder getImage(final Integer width, final Integer height) {
+    public IWorkbookChartImageRequestBuilder image(final Integer width, final Integer height) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height);
     }
 
-    public IWorkbookChartImageRequestBuilder getImage(final Integer width, final Integer height, final String fittingMode) {
+    public IWorkbookChartImageRequestBuilder image(final Integer width, final Integer height, final String fittingMode) {
         return new WorkbookChartImageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.image"), getClient(), null, width, height, fittingMode);
     }
 }

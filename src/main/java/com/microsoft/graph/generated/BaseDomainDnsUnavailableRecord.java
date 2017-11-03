@@ -35,7 +35,7 @@ public class BaseDomainDnsUnavailableRecord extends DomainDnsRecord implements I
 
     /**
      * The Description.
-	 * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
+     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
      */
     @SerializedName("description")
     @Expose

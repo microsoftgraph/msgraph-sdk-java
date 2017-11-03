@@ -25,7 +25,7 @@ public class SharePointTests {
 
         List<Option> requestOptions = new LinkedList<Option>();
         requestOptions.add(new QueryOption("search", "Contoso"));
-        ISiteCollectionPage sites = testBase.graphClient.getSites().buildRequest(requestOptions).get();
+        ISiteCollectionPage sites = testBase.graphClient.sites().buildRequest(requestOptions).get();
         testSite = sites.getCurrentPage().get(0);
     }
 
@@ -39,21 +39,21 @@ public class SharePointTests {
     public void testSearch() {
         List<Option> requestOptions = new LinkedList<Option>();
         requestOptions.add(new QueryOption("search", "Contoso"));
-        ISiteCollectionPage sites = testBase.graphClient.getSites().buildRequest(requestOptions).get();
+        ISiteCollectionPage sites = testBase.graphClient.sites().buildRequest(requestOptions).get();
 
         assertNotNull(sites);
     }
 
     @Test
     public void testDrives() {
-        IDriveCollectionPage drives = testBase.graphClient.getSites(testSite.id).getDrives().buildRequest().get();
+        IDriveCollectionPage drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
         assertNotNull(drives);
     }
 
     @Test
     public void testNonDefaultLibrary() {
-        IDriveCollectionPage drives = testBase.graphClient.getSites(testSite.id).getDrives().buildRequest().get();
-        IDriveItemCollectionPage driveItems = testBase.graphClient.getSites(testSite.id).getDrives(drives.getCurrentPage().get(0).id).getRoot().getChildren().buildRequest().get();
+        IDriveCollectionPage drives = testBase.graphClient.sites(testSite.id).drives().buildRequest().get();
+        IDriveItemCollectionPage driveItems = testBase.graphClient.sites(testSite.id).drives(drives.getCurrentPage().get(0).id).root().children().buildRequest().get();
 
         assertNotNull(driveItems);
     }

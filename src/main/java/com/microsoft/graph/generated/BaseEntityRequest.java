@@ -60,3 +60,4 @@ public class BaseEntityRequest extends BaseRequest implements IBaseEntityRequest
      }
 
 }
+

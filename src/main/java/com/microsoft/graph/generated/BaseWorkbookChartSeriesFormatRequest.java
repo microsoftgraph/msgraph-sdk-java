@@ -131,3 +131,4 @@ public class BaseWorkbookChartSeriesFormatRequest extends BaseRequest implements
      }
 
 }
+

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBesselJBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBesselJBody {
 
     /**
      * The n.
-	 * 
+     * 
      */
     @SerializedName("n")
     @Expose

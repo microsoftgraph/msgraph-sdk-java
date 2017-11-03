@@ -51,14 +51,14 @@ public class BaseWorkbookChartAreaFormatRequestBuilder extends BaseRequestBuilde
     /**
      * Gets the request builder for WorkbookChartFill.
      */
-    public IWorkbookChartFillRequestBuilder getFill() {
+    public IWorkbookChartFillRequestBuilder fill() {
         return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartFont.
      */
-    public IWorkbookChartFontRequestBuilder getFont() {
+    public IWorkbookChartFontRequestBuilder font() {
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 }

@@ -47,60 +47,60 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
         return new WorkbookTableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IWorkbookTableColumnCollectionRequestBuilder getColumns() {
+    public IWorkbookTableColumnCollectionRequestBuilder columns() {
         return new WorkbookTableColumnCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
 
-    public IWorkbookTableColumnRequestBuilder getColumns(final String id) {
+    public IWorkbookTableColumnRequestBuilder columns(final String id) {
         return new WorkbookTableColumnRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
     }
-    public IWorkbookTableRowCollectionRequestBuilder getRows() {
+    public IWorkbookTableRowCollectionRequestBuilder rows() {
         return new WorkbookTableRowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rows"), getClient(), null);
     }
 
-    public IWorkbookTableRowRequestBuilder getRows(final String id) {
+    public IWorkbookTableRowRequestBuilder rows(final String id) {
         return new WorkbookTableRowRequestBuilder(getRequestUrlWithAdditionalSegment("rows") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookTableSort.
      */
-    public IWorkbookTableSortRequestBuilder getSort() {
+    public IWorkbookTableSortRequestBuilder sort() {
         return new WorkbookTableSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    public IWorkbookWorksheetRequestBuilder getWorksheet() {
+    public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookTableClearFiltersRequestBuilder getClearFilters() {
+    public IWorkbookTableClearFiltersRequestBuilder clearFilters() {
         return new WorkbookTableClearFiltersRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clearFilters"), getClient(), null);
     }
 
-    public IWorkbookTableConvertToRangeRequestBuilder getConvertToRange() {
+    public IWorkbookTableConvertToRangeRequestBuilder convertToRange() {
         return new WorkbookTableConvertToRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.convertToRange"), getClient(), null);
     }
 
-    public IWorkbookTableReapplyFiltersRequestBuilder getReapplyFilters() {
+    public IWorkbookTableReapplyFiltersRequestBuilder reapplyFilters() {
         return new WorkbookTableReapplyFiltersRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reapplyFilters"), getClient(), null);
     }
 
-    public IWorkbookTableDataBodyRangeRequestBuilder getDataBodyRange() {
+    public IWorkbookTableDataBodyRangeRequestBuilder dataBodyRange() {
         return new WorkbookTableDataBodyRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dataBodyRange"), getClient(), null);
     }
 
-    public IWorkbookTableHeaderRowRangeRequestBuilder getHeaderRowRange() {
+    public IWorkbookTableHeaderRowRangeRequestBuilder headerRowRange() {
         return new WorkbookTableHeaderRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.headerRowRange"), getClient(), null);
     }
 
-    public IWorkbookTableRangeRequestBuilder getRange() {
+    public IWorkbookTableRangeRequestBuilder range() {
         return new WorkbookTableRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 
-    public IWorkbookTableTotalRowRangeRequestBuilder getTotalRowRange() {
+    public IWorkbookTableTotalRowRangeRequestBuilder totalRowRange() {
         return new WorkbookTableTotalRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.totalRowRange"), getClient(), null);
     }
 }

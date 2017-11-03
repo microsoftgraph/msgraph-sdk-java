@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBinom_DistBody {
 
     /**
      * The number S.
-	 * 
+     * 
      */
     @SerializedName("numberS")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBinom_DistBody {
 
     /**
      * The trials.
-	 * 
+     * 
      */
     @SerializedName("trials")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBinom_DistBody {
 
     /**
      * The probability S.
-	 * 
+     * 
      */
     @SerializedName("probabilityS")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsBinom_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

@@ -94,3 +94,4 @@ public interface IBaseWorkbookFormatProtectionRequest extends IHttpRequest {
     IBaseWorkbookFormatProtectionRequest expand(final String value);
 
 }
+

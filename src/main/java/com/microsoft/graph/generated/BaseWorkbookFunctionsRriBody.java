@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsRriBody {
 
     /**
      * The nper.
-	 * 
+     * 
      */
     @SerializedName("nper")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsRriBody {
 
     /**
      * The pv.
-	 * 
+     * 
      */
     @SerializedName("pv")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsRriBody {
 
     /**
      * The fv.
-	 * 
+     * 
      */
     @SerializedName("fv")
     @Expose

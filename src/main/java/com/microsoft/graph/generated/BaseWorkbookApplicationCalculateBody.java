@@ -27,7 +27,7 @@ public class BaseWorkbookApplicationCalculateBody {
 
     /**
      * The calculation Type.
-	 * 
+     * 
      */
     @SerializedName("calculationType")
     @Expose

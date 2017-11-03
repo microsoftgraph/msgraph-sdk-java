@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsT_InvBody {
 
     /**
      * The probability.
-	 * 
+     * 
      */
     @SerializedName("probability")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsT_InvBody {
 
     /**
      * The deg Freedom.
-	 * 
+     * 
      */
     @SerializedName("degFreedom")
     @Expose

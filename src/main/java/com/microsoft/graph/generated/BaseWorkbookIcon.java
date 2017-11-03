@@ -35,7 +35,7 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
 
     /**
      * The Index.
-	 * 
+     * 
      */
     @SerializedName("index")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
 
     /**
      * The Set.
-	 * 
+     * 
      */
     @SerializedName("set")
     @Expose

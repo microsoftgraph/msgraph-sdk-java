@@ -28,7 +28,7 @@ public interface IBaseWorkbookTableRowCollectionRequestBuilder extends IRequestB
 
     IWorkbookTableRowRequestBuilder byId(final String id);
 
-    IWorkbookTableRowAddRequestBuilder getAdd(final Integer index, final com.google.gson.JsonElement values);
-    IWorkbookTableRowItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookTableRowCountRequestBuilder getCount();
+    IWorkbookTableRowAddRequestBuilder add(final Integer index, final com.google.gson.JsonElement values);
+    IWorkbookTableRowItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookTableRowCountRequestBuilder count();
 }

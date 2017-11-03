@@ -45,7 +45,7 @@ public class BaseDirectoryObjectCollectionRequestBuilder extends BaseRequestBuil
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IDirectoryObjectGetByIdsCollectionRequestBuilder getGetByIds(final java.util.List<String> ids, final java.util.List<String> types) {
+    public IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types) {
         return new DirectoryObjectGetByIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getByIds"), getClient(), null, ids, types);
     }
 }

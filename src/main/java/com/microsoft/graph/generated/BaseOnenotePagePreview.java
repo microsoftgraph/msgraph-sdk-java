@@ -35,7 +35,7 @@ public class BaseOnenotePagePreview implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseOnenotePagePreview implements IJsonBackedObject {
 
     /**
      * The Preview Text.
-	 * 
+     * 
      */
     @SerializedName("previewText")
     @Expose
@@ -53,7 +53,7 @@ public class BaseOnenotePagePreview implements IJsonBackedObject {
 
     /**
      * The Links.
-	 * 
+     * 
      */
     @SerializedName("links")
     @Expose

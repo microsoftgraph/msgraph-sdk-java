@@ -33,29 +33,29 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
 
     IEventMessageRequestBuilder eventMessage();
 
-    IAttachmentCollectionRequestBuilder getAttachments();
+    IAttachmentCollectionRequestBuilder attachments();
 
-    IAttachmentRequestBuilder getAttachments(final String id);
+    IAttachmentRequestBuilder attachments(final String id);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id);
-    IMessageCopyRequestBuilder getCopy(final String destinationId);
-    IMessageMoveRequestBuilder getMove(final String destinationId);
-    IMessageCreateReplyRequestBuilder getCreateReply();
-    IMessageCreateReplyAllRequestBuilder getCreateReplyAll();
-    IMessageCreateForwardRequestBuilder getCreateForward();
-    IMessageReplyRequestBuilder getReply(final String comment);
-    IMessageReplyAllRequestBuilder getReplyAll(final String comment);
-    IMessageForwardRequestBuilder getForward(final String comment, final java.util.List<Recipient> toRecipients);
-    IMessageSendRequestBuilder getSend();
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+    IMessageCopyRequestBuilder copy(final String destinationId);
+    IMessageMoveRequestBuilder move(final String destinationId);
+    IMessageCreateReplyRequestBuilder createReply();
+    IMessageCreateReplyAllRequestBuilder createReplyAll();
+    IMessageCreateForwardRequestBuilder createForward();
+    IMessageReplyRequestBuilder reply(final String comment);
+    IMessageReplyAllRequestBuilder replyAll(final String comment);
+    IMessageForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients);
+    IMessageSendRequestBuilder send();
 
 }

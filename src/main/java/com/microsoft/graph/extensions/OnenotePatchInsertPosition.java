@@ -23,11 +23,11 @@ public enum OnenotePatchInsertPosition
     /**
     * After
     */
-    After,
+    AFTER,
     /**
     * Before
     */
-    Before,
+    BEFORE,
     /**
     * For OnenotePatchInsertPosition values that were not expected from the service
     */

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAtanhBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose

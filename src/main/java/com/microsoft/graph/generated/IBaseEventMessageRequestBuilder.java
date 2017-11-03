@@ -34,6 +34,6 @@ public interface IBaseEventMessageRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for Event.
      */
-    IEventRequestBuilder getEvent();
+    IEventRequestBuilder event();
 
 }

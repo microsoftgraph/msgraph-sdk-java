@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGcdBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

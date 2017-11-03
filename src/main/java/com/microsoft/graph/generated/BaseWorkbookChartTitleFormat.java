@@ -35,7 +35,7 @@ public class BaseWorkbookChartTitleFormat extends Entity implements IJsonBackedO
 
     /**
      * The Fill.
-	 * 
+     * 
      */
     @SerializedName("fill")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartTitleFormat extends Entity implements IJsonBackedO
 
     /**
      * The Font.
-	 * 
+     * 
      */
     @SerializedName("font")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFixedBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsFixedBody {
 
     /**
      * The decimals.
-	 * 
+     * 
      */
     @SerializedName("decimals")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsFixedBody {
 
     /**
      * The no Commas.
-	 * 
+     * 
      */
     @SerializedName("noCommas")
     @Expose

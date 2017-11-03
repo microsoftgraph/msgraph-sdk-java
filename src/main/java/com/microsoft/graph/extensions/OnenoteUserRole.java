@@ -23,19 +23,19 @@ public enum OnenoteUserRole
     /**
     * Owner
     */
-    Owner,
+    OWNER,
     /**
     * Contributor
     */
-    Contributor,
+    CONTRIBUTOR,
     /**
     * Reader
     */
-    Reader,
+    READER,
     /**
     * None
     */
-    None,
+    NONE,
     /**
     * For OnenoteUserRole values that were not expected from the service
     */

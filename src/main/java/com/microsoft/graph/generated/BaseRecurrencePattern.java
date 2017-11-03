@@ -35,7 +35,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
@@ -53,7 +53,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Interval.
-	 * 
+     * 
      */
     @SerializedName("interval")
     @Expose
@@ -61,7 +61,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Month.
-	 * 
+     * 
      */
     @SerializedName("month")
     @Expose
@@ -69,7 +69,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Day Of Month.
-	 * 
+     * 
      */
     @SerializedName("dayOfMonth")
     @Expose
@@ -77,7 +77,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Days Of Week.
-	 * 
+     * 
      */
     @SerializedName("daysOfWeek")
     @Expose
@@ -85,7 +85,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The First Day Of Week.
-	 * 
+     * 
      */
     @SerializedName("firstDayOfWeek")
     @Expose
@@ -93,7 +93,7 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
 
     /**
      * The Index.
-	 * 
+     * 
      */
     @SerializedName("index")
     @Expose

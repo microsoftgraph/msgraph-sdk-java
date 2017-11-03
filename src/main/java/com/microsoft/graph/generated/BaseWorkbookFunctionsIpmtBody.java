@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsIpmtBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsIpmtBody {
 
     /**
      * The per.
-	 * 
+     * 
      */
     @SerializedName("per")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsIpmtBody {
 
     /**
      * The nper.
-	 * 
+     * 
      */
     @SerializedName("nper")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsIpmtBody {
 
     /**
      * The pv.
-	 * 
+     * 
      */
     @SerializedName("pv")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsIpmtBody {
 
     /**
      * The fv.
-	 * 
+     * 
      */
     @SerializedName("fv")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsIpmtBody {
 
     /**
      * The type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose

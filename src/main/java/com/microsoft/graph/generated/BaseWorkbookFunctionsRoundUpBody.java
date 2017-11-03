@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsRoundUpBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsRoundUpBody {
 
     /**
      * The num Digits.
-	 * 
+     * 
      */
     @SerializedName("numDigits")
     @Expose

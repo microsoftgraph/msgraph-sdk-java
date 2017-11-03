@@ -47,11 +47,11 @@ public class BasePlannerBucketRequestBuilder extends BaseRequestBuilder implemen
         return new PlannerBucketRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerTaskCollectionRequestBuilder getTasks() {
+    public IPlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder getTasks(final String id) {
+    public IPlannerTaskRequestBuilder tasks(final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

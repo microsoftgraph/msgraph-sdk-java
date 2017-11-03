@@ -51,7 +51,7 @@ public class BaseWorkbookChartGridlinesFormatRequestBuilder extends BaseRequestB
     /**
      * Gets the request builder for WorkbookChartLineFormat.
      */
-    public IWorkbookChartLineFormatRequestBuilder getLine() {
+    public IWorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
     }
 }

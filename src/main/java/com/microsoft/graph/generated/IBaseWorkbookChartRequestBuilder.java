@@ -34,41 +34,41 @@ public interface IBaseWorkbookChartRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookChartAxes.
      */
-    IWorkbookChartAxesRequestBuilder getAxes();
+    IWorkbookChartAxesRequestBuilder axes();
 
     /**
      * Gets the request builder for WorkbookChartDataLabels.
      */
-    IWorkbookChartDataLabelsRequestBuilder getDataLabels();
+    IWorkbookChartDataLabelsRequestBuilder dataLabels();
 
     /**
      * Gets the request builder for WorkbookChartAreaFormat.
      */
-    IWorkbookChartAreaFormatRequestBuilder getFormat();
+    IWorkbookChartAreaFormatRequestBuilder format();
 
     /**
      * Gets the request builder for WorkbookChartLegend.
      */
-    IWorkbookChartLegendRequestBuilder getLegend();
+    IWorkbookChartLegendRequestBuilder legend();
 
-    IWorkbookChartSeriesCollectionRequestBuilder getSeries();
+    IWorkbookChartSeriesCollectionRequestBuilder series();
 
-    IWorkbookChartSeriesRequestBuilder getSeries(final String id);
+    IWorkbookChartSeriesRequestBuilder series(final String id);
 
     /**
      * Gets the request builder for WorkbookChartTitle.
      */
-    IWorkbookChartTitleRequestBuilder getTitle();
+    IWorkbookChartTitleRequestBuilder title();
 
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    IWorkbookWorksheetRequestBuilder getWorksheet();
-    IWorkbookChartSetDataRequestBuilder getSetData(final com.google.gson.JsonElement sourceData, final String seriesBy);
-    IWorkbookChartSetPositionRequestBuilder getSetPosition(final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell);
-    IWorkbookChartImageRequestBuilder getImage();
-    IWorkbookChartImageRequestBuilder getImage(final Integer width);
-    IWorkbookChartImageRequestBuilder getImage(final Integer width, final Integer height);
-    IWorkbookChartImageRequestBuilder getImage(final Integer width, final Integer height, final String fittingMode);
+    IWorkbookWorksheetRequestBuilder worksheet();
+    IWorkbookChartSetDataRequestBuilder setData(final com.google.gson.JsonElement sourceData, final String seriesBy);
+    IWorkbookChartSetPositionRequestBuilder setPosition(final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell);
+    IWorkbookChartImageRequestBuilder image();
+    IWorkbookChartImageRequestBuilder image(final Integer width);
+    IWorkbookChartImageRequestBuilder image(final Integer width, final Integer height);
+    IWorkbookChartImageRequestBuilder image(final Integer width, final Integer height, final String fittingMode);
 
 }

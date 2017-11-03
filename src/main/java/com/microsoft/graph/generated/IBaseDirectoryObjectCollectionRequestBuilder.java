@@ -29,5 +29,5 @@ public interface IBaseDirectoryObjectCollectionRequestBuilder extends IRequestBu
     IDirectoryObjectRequestBuilder byId(final String id);
 
 
-    IDirectoryObjectGetByIdsCollectionRequestBuilder getGetByIds(final java.util.List<String> ids, final java.util.List<String> types);
+    IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types);
 }

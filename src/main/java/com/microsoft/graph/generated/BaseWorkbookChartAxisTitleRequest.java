@@ -131,3 +131,4 @@ public class BaseWorkbookChartAxisTitleRequest extends BaseRequest implements IB
      }
 
 }
+

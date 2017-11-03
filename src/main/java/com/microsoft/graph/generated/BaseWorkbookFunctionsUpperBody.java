@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsUpperBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose

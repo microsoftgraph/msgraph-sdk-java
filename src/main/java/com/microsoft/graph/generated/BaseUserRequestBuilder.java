@@ -47,206 +47,206 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
         return new UserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getOwnedDevices() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder ownedDevices() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getOwnedDevices(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder ownedDevices(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredDevices() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder registeredDevices() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getRegisteredDevices(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DirectoryObject.
      */
-    public IDirectoryObjectWithReferenceRequestBuilder getManager() {
+    public IDirectoryObjectWithReferenceRequestBuilder manager() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("manager"), getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getDirectReports() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getDirectReports(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder directReports(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getMemberOf() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getMemberOf(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getCreatedObjects() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getCreatedObjects(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getOwnedObjects() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getOwnedObjects(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id, getClient(), null);
     }
-    public ILicenseDetailsCollectionRequestBuilder getLicenseDetails() {
+    public ILicenseDetailsCollectionRequestBuilder licenseDetails() {
         return new LicenseDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails"), getClient(), null);
     }
 
-    public ILicenseDetailsRequestBuilder getLicenseDetails(final String id) {
+    public ILicenseDetailsRequestBuilder licenseDetails(final String id) {
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder getExtensions() {
+    public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder getExtensions(final String id) {
+    public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IMessageCollectionRequestBuilder getMessages() {
+    public IMessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public IMessageRequestBuilder getMessages(final String id) {
+    public IMessageRequestBuilder messages(final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
-    public IMailFolderCollectionRequestBuilder getMailFolders() {
+    public IMailFolderCollectionRequestBuilder mailFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders"), getClient(), null);
     }
 
-    public IMailFolderRequestBuilder getMailFolders(final String id) {
+    public IMailFolderRequestBuilder mailFolders(final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Calendar.
      */
-    public ICalendarRequestBuilder getCalendar() {
+    public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
-    public ICalendarCollectionRequestBuilder getCalendars() {
+    public ICalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
 
-    public ICalendarRequestBuilder getCalendars(final String id) {
+    public ICalendarRequestBuilder calendars(final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
-    public ICalendarGroupCollectionRequestBuilder getCalendarGroups() {
+    public ICalendarGroupCollectionRequestBuilder calendarGroups() {
         return new CalendarGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups"), getClient(), null);
     }
 
-    public ICalendarGroupRequestBuilder getCalendarGroups(final String id) {
+    public ICalendarGroupRequestBuilder calendarGroups(final String id) {
         return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder getCalendarView() {
+    public IEventCollectionRequestBuilder calendarView() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
-    public IEventRequestBuilder getCalendarView(final String id) {
+    public IEventRequestBuilder calendarView(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder getEvents() {
+    public IEventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
-    public IEventRequestBuilder getEvents(final String id) {
+    public IEventRequestBuilder events(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
-    public IPersonCollectionRequestBuilder getPeople() {
+    public IPersonCollectionRequestBuilder people() {
         return new PersonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
     }
 
-    public IPersonRequestBuilder getPeople(final String id) {
+    public IPersonRequestBuilder people(final String id) {
         return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment("people") + "/" + id, getClient(), null);
     }
-    public IContactCollectionRequestBuilder getContacts() {
+    public IContactCollectionRequestBuilder contacts() {
         return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
     }
 
-    public IContactRequestBuilder getContacts(final String id) {
+    public IContactRequestBuilder contacts(final String id) {
         return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
     }
-    public IContactFolderCollectionRequestBuilder getContactFolders() {
+    public IContactFolderCollectionRequestBuilder contactFolders() {
         return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders"), getClient(), null);
     }
 
-    public IContactFolderRequestBuilder getContactFolders(final String id) {
+    public IContactFolderRequestBuilder contactFolders(final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for InferenceClassification.
      */
-    public IInferenceClassificationRequestBuilder getInferenceClassification() {
+    public IInferenceClassificationRequestBuilder inferenceClassification() {
         return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ProfilePhoto.
      */
-    public IProfilePhotoRequestBuilder getPhoto() {
+    public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
     }
-    public IProfilePhotoCollectionRequestBuilder getPhotos() {
+    public IProfilePhotoCollectionRequestBuilder photos() {
         return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
     }
 
-    public IProfilePhotoRequestBuilder getPhotos(final String id) {
+    public IProfilePhotoRequestBuilder photos(final String id) {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive.
      */
-    public IDriveRequestBuilder getDrive() {
+    public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IDriveCollectionRequestBuilder getDrives() {
+    public IDriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
-    public IDriveRequestBuilder getDrives(final String id) {
+    public IDriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerUser.
      */
-    public IPlannerUserRequestBuilder getPlanner() {
+    public IPlannerUserRequestBuilder planner() {
         return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Onenote.
      */
-    public IOnenoteRequestBuilder getOnenote() {
+    public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
-    public IUserAssignLicenseRequestBuilder getAssignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
+    public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
         return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
 
-    public IUserChangePasswordRequestBuilder getChangePassword(final String currentPassword, final String newPassword) {
+    public IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword) {
         return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, currentPassword, newPassword);
     }
 
-    public IUserSendMailRequestBuilder getSendMail(final Message message, final Boolean saveToSentItems) {
+    public IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {
         return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
     }
 
-    public IUserFindMeetingTimesRequestBuilder getFindMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
+    public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
     }
 
-    public IUserReminderViewCollectionRequestBuilder getReminderView(final String startDateTime, final String endDateTime) {
+    public IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime) {
         return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, startDateTime, endDateTime);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsImConjugateBody {
 
     /**
      * The inumber.
-	 * 
+     * 
      */
     @SerializedName("inumber")
     @Expose

@@ -51,7 +51,7 @@ public class BaseInvitationRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Gets the request builder for User.
      */
-    public IUserWithReferenceRequestBuilder getInvitedUser() {
+    public IUserWithReferenceRequestBuilder invitedUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUser"), getClient(), null);
     }
 }

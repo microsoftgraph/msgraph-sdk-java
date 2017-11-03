@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBeta_DistBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBeta_DistBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBeta_DistBody {
 
     /**
      * The beta.
-	 * 
+     * 
      */
     @SerializedName("beta")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsBeta_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsBeta_DistBody {
 
     /**
      * The a.
-	 * 
+     * 
      */
     @SerializedName("a")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsBeta_DistBody {
 
     /**
      * The b.
-	 * 
+     * 
      */
     @SerializedName("b")
     @Expose

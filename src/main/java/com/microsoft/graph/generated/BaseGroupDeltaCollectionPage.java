@@ -51,7 +51,7 @@ public class BaseGroupDeltaCollectionPage extends BaseCollectionPage<Group, IGro
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink() {
+    public String deltaLink() {
         return deltaLink;
     }
 }

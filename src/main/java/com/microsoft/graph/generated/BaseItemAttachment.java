@@ -35,7 +35,7 @@ public class BaseItemAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Item.
-	 * The attached message or event. Navigation property.
+     * The attached message or event. Navigation property.
      */
     @SerializedName("item")
     @Expose

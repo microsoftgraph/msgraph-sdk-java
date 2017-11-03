@@ -131,3 +131,4 @@ public class BaseWorkbookChartPointRequest extends BaseRequest implements IBaseW
      }
 
 }
+

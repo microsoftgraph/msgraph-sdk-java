@@ -51,7 +51,7 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for OutlookItem.
      */
-    public IOutlookItemRequestBuilder getItem() {
+    public IOutlookItemRequestBuilder item() {
         return new OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);
     }
 }

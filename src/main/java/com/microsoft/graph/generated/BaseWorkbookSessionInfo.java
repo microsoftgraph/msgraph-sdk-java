@@ -35,7 +35,7 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     /**
      * The Id.
-	 * 
+     * 
      */
     @SerializedName("id")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
 
     /**
      * The Persist Changes.
-	 * 
+     * 
      */
     @SerializedName("persistChanges")
     @Expose

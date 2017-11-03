@@ -51,62 +51,62 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * Gets the request builder for Calendar.
      */
-    public ICalendarRequestBuilder getCalendar() {
+    public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
-    public IEventCollectionRequestBuilder getInstances() {
+    public IEventCollectionRequestBuilder instances() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
-    public IEventRequestBuilder getInstances(final String id) {
+    public IEventRequestBuilder instances(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder getExtensions() {
+    public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder getExtensions(final String id) {
+    public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IAttachmentCollectionRequestBuilder getAttachments() {
+    public IAttachmentCollectionRequestBuilder attachments() {
         return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public IAttachmentRequestBuilder getAttachments(final String id) {
+    public IAttachmentRequestBuilder attachments(final String id) {
         return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties() {
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id) {
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties() {
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id) {
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public IEventAcceptRequestBuilder getAccept(final String comment, final Boolean sendResponse) {
+    public IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse) {
         return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
     }
 
-    public IEventDeclineRequestBuilder getDecline(final String comment, final Boolean sendResponse) {
+    public IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse) {
         return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, comment, sendResponse);
     }
 
-    public IEventTentativelyAcceptRequestBuilder getTentativelyAccept(final String comment, final Boolean sendResponse) {
+    public IEventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse) {
         return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, comment, sendResponse);
     }
 
-    public IEventSnoozeReminderRequestBuilder getSnoozeReminder(final DateTimeTimeZone newReminderTime) {
+    public IEventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime) {
         return new EventSnoozeReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.snoozeReminder"), getClient(), null, newReminderTime);
     }
 
-    public IEventDismissReminderRequestBuilder getDismissReminder() {
+    public IEventDismissReminderRequestBuilder dismissReminder() {
         return new EventDismissReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dismissReminder"), getClient(), null);
     }
 }

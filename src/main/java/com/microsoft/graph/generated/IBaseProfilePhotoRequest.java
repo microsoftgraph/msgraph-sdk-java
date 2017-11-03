@@ -94,3 +94,4 @@ public interface IBaseProfilePhotoRequest extends IHttpRequest {
     IBaseProfilePhotoRequest expand(final String value);
 
 }
+

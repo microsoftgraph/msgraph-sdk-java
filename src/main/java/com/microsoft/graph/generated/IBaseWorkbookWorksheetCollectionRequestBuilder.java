@@ -28,5 +28,5 @@ public interface IBaseWorkbookWorksheetCollectionRequestBuilder extends IRequest
 
     IWorkbookWorksheetRequestBuilder byId(final String id);
 
-    IWorkbookWorksheetAddRequestBuilder getAdd(final String name);
+    IWorkbookWorksheetAddRequestBuilder add(final String name);
 }

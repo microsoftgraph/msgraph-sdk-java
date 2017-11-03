@@ -34,6 +34,6 @@ public interface IBaseWorkbookChartTitleRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookChartTitleFormat.
      */
-    IWorkbookChartTitleFormatRequestBuilder getFormat();
+    IWorkbookChartTitleFormatRequestBuilder format();
 
 }

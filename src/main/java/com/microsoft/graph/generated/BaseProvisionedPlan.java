@@ -35,7 +35,7 @@ public class BaseProvisionedPlan implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseProvisionedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-	 * 
+     * 
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -53,7 +53,7 @@ public class BaseProvisionedPlan implements IJsonBackedObject {
 
     /**
      * The Provisioning Status.
-	 * 
+     * 
      */
     @SerializedName("provisioningStatus")
     @Expose
@@ -61,7 +61,7 @@ public class BaseProvisionedPlan implements IJsonBackedObject {
 
     /**
      * The Service.
-	 * 
+     * 
      */
     @SerializedName("service")
     @Expose

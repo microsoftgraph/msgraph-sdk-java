@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsQuotientBody {
 
     /**
      * The numerator.
-	 * 
+     * 
      */
     @SerializedName("numerator")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsQuotientBody {
 
     /**
      * The denominator.
-	 * 
+     * 
      */
     @SerializedName("denominator")
     @Expose

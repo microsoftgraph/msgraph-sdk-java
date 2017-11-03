@@ -28,6 +28,6 @@ public interface IBaseWorkbookChartSeriesCollectionRequestBuilder extends IReque
 
     IWorkbookChartSeriesRequestBuilder byId(final String id);
 
-    IWorkbookChartSeriesItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookChartSeriesCountRequestBuilder getCount();
+    IWorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookChartSeriesCountRequestBuilder count();
 }

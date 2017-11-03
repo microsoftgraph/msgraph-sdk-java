@@ -35,7 +35,7 @@ public class BaseOpenTypeExtension extends Extension implements IJsonBackedObjec
 
     /**
      * The Extension Name.
-	 * 
+     * 
      */
     @SerializedName("extensionName")
     @Expose

@@ -35,7 +35,7 @@ public class BaseProfilePhoto extends Entity implements IJsonBackedObject {
 
     /**
      * The Height.
-	 * The height of the photo. Read-only.
+     * The height of the photo. Read-only.
      */
     @SerializedName("height")
     @Expose
@@ -43,7 +43,7 @@ public class BaseProfilePhoto extends Entity implements IJsonBackedObject {
 
     /**
      * The Width.
-	 * The width of the photo. Read-only.
+     * The width of the photo. Read-only.
      */
     @SerializedName("width")
     @Expose

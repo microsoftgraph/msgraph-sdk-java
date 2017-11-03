@@ -48,7 +48,7 @@ public class BaseWorkbookTableRowRequestBuilder extends BaseRequestBuilder imple
     }
 
 
-    public IWorkbookTableRowRangeRequestBuilder getRange() {
+    public IWorkbookTableRowRangeRequestBuilder range() {
         return new WorkbookTableRowRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }

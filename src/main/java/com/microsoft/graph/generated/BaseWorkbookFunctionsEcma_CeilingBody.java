@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsEcma_CeilingBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsEcma_CeilingBody {
 
     /**
      * The significance.
-	 * 
+     * 
      */
     @SerializedName("significance")
     @Expose

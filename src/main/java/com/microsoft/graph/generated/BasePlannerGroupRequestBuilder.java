@@ -47,11 +47,11 @@ public class BasePlannerGroupRequestBuilder extends BaseRequestBuilder implement
         return new PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerPlanCollectionRequestBuilder getPlans() {
+    public IPlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public IPlannerPlanRequestBuilder getPlans(final String id) {
+    public IPlannerPlanRequestBuilder plans(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }

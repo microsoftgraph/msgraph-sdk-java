@@ -35,7 +35,7 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -49,7 +49,7 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
      */
     @SerializedName("default")
     @Expose
-    public Boolean msgraph_default;
+    public Boolean msgraphdefault;
 
     /**
      * The Position.

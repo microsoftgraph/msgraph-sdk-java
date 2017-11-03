@@ -51,21 +51,21 @@ public class BaseWorkbookChartAxesRequestBuilder extends BaseRequestBuilder impl
     /**
      * Gets the request builder for WorkbookChartAxis.
      */
-    public IWorkbookChartAxisRequestBuilder getCategoryAxis() {
+    public IWorkbookChartAxisRequestBuilder categoryAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("categoryAxis"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAxis.
      */
-    public IWorkbookChartAxisRequestBuilder getSeriesAxis() {
+    public IWorkbookChartAxisRequestBuilder seriesAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("seriesAxis"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAxis.
      */
-    public IWorkbookChartAxisRequestBuilder getValueAxis() {
+    public IWorkbookChartAxisRequestBuilder valueAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);
     }
 }

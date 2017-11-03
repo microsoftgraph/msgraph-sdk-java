@@ -9,6 +9,7 @@
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'java-library'
 apply plugin: 'java'
+apply plugin: 'eclipse'
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -28,5 +29,9 @@ dependencies {
     
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'org.json:json:20141113'
+    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0-m02'
+    
+    // https://mvnrepository.com/artifact/com.sun.jersey/jersey-server
+	compile group: 'com.sun.jersey', name: 'jersey-server', version: '1.19.4'
 }
 

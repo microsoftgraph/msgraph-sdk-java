@@ -27,7 +27,7 @@ public class BaseWorkbookRangeSortApplyBody {
 
     /**
      * The fields.
-	 * 
+     * 
      */
     @SerializedName("fields")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookRangeSortApplyBody {
 
     /**
      * The match Case.
-	 * 
+     * 
      */
     @SerializedName("matchCase")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookRangeSortApplyBody {
 
     /**
      * The has Headers.
-	 * 
+     * 
      */
     @SerializedName("hasHeaders")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookRangeSortApplyBody {
 
     /**
      * The orientation.
-	 * 
+     * 
      */
     @SerializedName("orientation")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookRangeSortApplyBody {
 
     /**
      * The method.
-	 * 
+     * 
      */
     @SerializedName("method")
     @Expose

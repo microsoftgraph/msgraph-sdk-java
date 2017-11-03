@@ -47,25 +47,25 @@ public class BaseDeviceRequestBuilder extends BaseRequestBuilder implements IBas
         return new DeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredOwners() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder registeredOwners() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getRegisteredOwners(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder registeredOwners(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredOwners") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getRegisteredUsers() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder registeredUsers() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getRegisteredUsers(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder registeredUsers(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredUsers") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder getExtensions() {
+    public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder getExtensions(final String id) {
+    public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 }

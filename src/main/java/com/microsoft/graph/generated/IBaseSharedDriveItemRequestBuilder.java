@@ -34,30 +34,30 @@ public interface IBaseSharedDriveItemRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for DriveItem.
      */
-    IDriveItemRequestBuilder getDriveItem();
+    IDriveItemRequestBuilder driveItem();
 
-    IDriveItemCollectionRequestBuilder getItems();
+    IDriveItemCollectionRequestBuilder items();
 
-    IDriveItemRequestBuilder getItems(final String id);
+    IDriveItemRequestBuilder items(final String id);
 
     /**
      * Gets the request builder for List.
      */
-    IListRequestBuilder getList();
+    IListRequestBuilder list();
 
     /**
      * Gets the request builder for ListItem.
      */
-    IListItemRequestBuilder getListItem();
+    IListItemRequestBuilder listItem();
 
     /**
      * Gets the request builder for DriveItem.
      */
-    IDriveItemRequestBuilder getRoot();
+    IDriveItemRequestBuilder root();
 
     /**
      * Gets the request builder for Site.
      */
-    ISiteRequestBuilder getSite();
+    ISiteRequestBuilder site();
 
 }

@@ -34,6 +34,6 @@ public interface IBaseWorkbookChartGridlinesRequestBuilder extends IRequestBuild
     /**
      * Gets the request builder for WorkbookChartGridlinesFormat.
      */
-    IWorkbookChartGridlinesFormatRequestBuilder getFormat();
+    IWorkbookChartGridlinesFormatRequestBuilder format();
 
 }

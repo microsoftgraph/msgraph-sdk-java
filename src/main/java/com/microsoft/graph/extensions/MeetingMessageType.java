@@ -23,27 +23,27 @@ public enum MeetingMessageType
     /**
     * none
     */
-    none,
+    NONE,
     /**
     * meeting Request
     */
-    meetingRequest,
+    MEETINGREQUEST,
     /**
     * meeting Cancelled
     */
-    meetingCancelled,
+    MEETINGCANCELLED,
     /**
     * meeting Accepted
     */
-    meetingAccepted,
+    MEETINGACCEPTED,
     /**
     * meeting Tenatively Accepted
     */
-    meetingTenativelyAccepted,
+    MEETINGTENATIVELYACCEPTED,
     /**
     * meeting Declined
     */
-    meetingDeclined,
+    MEETINGDECLINED,
     /**
     * For MeetingMessageType values that were not expected from the service
     */

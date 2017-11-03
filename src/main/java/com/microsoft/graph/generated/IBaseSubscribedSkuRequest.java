@@ -94,3 +94,4 @@ public interface IBaseSubscribedSkuRequest extends IHttpRequest {
     IBaseSubscribedSkuRequest expand(final String value);
 
 }
+

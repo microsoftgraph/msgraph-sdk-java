@@ -31,25 +31,25 @@ public interface IBaseWorkbookRangeFormatRequestBuilder extends IRequestBuilder 
      */
     IWorkbookRangeFormatRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IWorkbookRangeBorderCollectionRequestBuilder getBorders();
+    IWorkbookRangeBorderCollectionRequestBuilder borders();
 
-    IWorkbookRangeBorderRequestBuilder getBorders(final String id);
+    IWorkbookRangeBorderRequestBuilder borders(final String id);
 
     /**
      * Gets the request builder for WorkbookRangeFill.
      */
-    IWorkbookRangeFillRequestBuilder getFill();
+    IWorkbookRangeFillRequestBuilder fill();
 
     /**
      * Gets the request builder for WorkbookRangeFont.
      */
-    IWorkbookRangeFontRequestBuilder getFont();
+    IWorkbookRangeFontRequestBuilder font();
 
     /**
      * Gets the request builder for WorkbookFormatProtection.
      */
-    IWorkbookFormatProtectionRequestBuilder getProtection();
-    IWorkbookRangeFormatAutofitColumnsRequestBuilder getAutofitColumns();
-    IWorkbookRangeFormatAutofitRowsRequestBuilder getAutofitRows();
+    IWorkbookFormatProtectionRequestBuilder protection();
+    IWorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns();
+    IWorkbookRangeFormatAutofitRowsRequestBuilder autofitRows();
 
 }

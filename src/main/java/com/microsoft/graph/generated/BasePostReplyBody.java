@@ -27,7 +27,7 @@ public class BasePostReplyBody {
 
     /**
      * The post.
-	 * 
+     * 
      */
     @SerializedName("post")
     @Expose

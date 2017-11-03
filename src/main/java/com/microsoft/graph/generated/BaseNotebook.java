@@ -35,7 +35,7 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Is Default.
-	 * Indicates whether this is the user's default notebook. Read-only.
+     * Indicates whether this is the user's default notebook. Read-only.
      */
     @SerializedName("isDefault")
     @Expose
@@ -43,7 +43,7 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The User Role.
-	 * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      */
     @SerializedName("userRole")
     @Expose
@@ -51,7 +51,7 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Is Shared.
-	 * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
+     * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
      */
     @SerializedName("isShared")
     @Expose
@@ -59,7 +59,7 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Sections Url.
-	 * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
+     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
      */
     @SerializedName("sectionsUrl")
     @Expose
@@ -67,7 +67,7 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Section Groups Url.
-	 * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
+     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
      */
     @SerializedName("sectionGroupsUrl")
     @Expose
@@ -75,7 +75,7 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Links.
-	 * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
      */
     @SerializedName("links")
     @Expose
@@ -83,13 +83,13 @@ public class BaseNotebook extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Sections.
-	 * The sections in the notebook. Read-only. Nullable.
+     * The sections in the notebook. Read-only. Nullable.
      */
     public transient OnenoteSectionCollectionPage sections;
 
     /**
      * The Section Groups.
-	 * The section groups in the notebook. Read-only. Nullable.
+     * The section groups in the notebook. Read-only. Nullable.
      */
     public transient SectionGroupCollectionPage sectionGroups;
 

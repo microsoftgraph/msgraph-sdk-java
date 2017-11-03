@@ -27,7 +27,7 @@ public class BaseWorkbookTableSortApplyBody {
 
     /**
      * The fields.
-	 * 
+     * 
      */
     @SerializedName("fields")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookTableSortApplyBody {
 
     /**
      * The match Case.
-	 * 
+     * 
      */
     @SerializedName("matchCase")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookTableSortApplyBody {
 
     /**
      * The method.
-	 * 
+     * 
      */
     @SerializedName("method")
     @Expose

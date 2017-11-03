@@ -51,7 +51,7 @@ public class BaseWorkbookChartPointRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for WorkbookChartPointFormat.
      */
-    public IWorkbookChartPointFormatRequestBuilder getFormat() {
+    public IWorkbookChartPointFormatRequestBuilder format() {
         return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose

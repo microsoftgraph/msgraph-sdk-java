@@ -35,7 +35,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-	 * For example, "Enabled".
+     * For example, "Enabled".
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -43,7 +43,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Consumed Units.
-	 * The number of licenses that have been assigned.
+     * The number of licenses that have been assigned.
      */
     @SerializedName("consumedUnits")
     @Expose
@@ -51,7 +51,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Prepaid Units.
-	 * Information about the number and status of prepaid licenses.
+     * Information about the number and status of prepaid licenses.
      */
     @SerializedName("prepaidUnits")
     @Expose
@@ -59,7 +59,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plans.
-	 * Information about the service plans that are available with the SKU. Not nullable
+     * Information about the service plans that are available with the SKU. Not nullable
      */
     @SerializedName("servicePlans")
     @Expose
@@ -67,7 +67,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Id.
-	 * The unique identifier (GUID) for the service SKU.
+     * The unique identifier (GUID) for the service SKU.
      */
     @SerializedName("skuId")
     @Expose
@@ -75,7 +75,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-	 * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
+     * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
      */
     @SerializedName("skuPartNumber")
     @Expose
@@ -83,7 +83,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
-	 * For example, "User" or "Company".
+     * For example, "User" or "Company".
      */
     @SerializedName("appliesTo")
     @Expose

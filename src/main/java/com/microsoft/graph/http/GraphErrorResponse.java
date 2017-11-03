@@ -51,7 +51,7 @@ public class GraphErrorResponse implements IJsonBackedObject {
     }
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 }

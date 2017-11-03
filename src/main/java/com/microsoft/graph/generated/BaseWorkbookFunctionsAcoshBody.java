@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAcoshBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose

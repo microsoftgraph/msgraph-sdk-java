@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsTimeBody {
 
     /**
      * The hour.
-	 * 
+     * 
      */
     @SerializedName("hour")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsTimeBody {
 
     /**
      * The minute.
-	 * 
+     * 
      */
     @SerializedName("minute")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsTimeBody {
 
     /**
      * The second.
-	 * 
+     * 
      */
     @SerializedName("second")
     @Expose

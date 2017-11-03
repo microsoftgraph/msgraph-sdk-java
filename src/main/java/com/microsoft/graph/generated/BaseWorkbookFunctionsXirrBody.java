@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsXirrBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsXirrBody {
 
     /**
      * The dates.
-	 * 
+     * 
      */
     @SerializedName("dates")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsXirrBody {
 
     /**
      * The guess.
-	 * 
+     * 
      */
     @SerializedName("guess")
     @Expose

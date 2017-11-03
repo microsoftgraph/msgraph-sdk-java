@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsCoupDaysBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsCoupDaysBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsCoupDaysBody {
 
     /**
      * The frequency.
-	 * 
+     * 
      */
     @SerializedName("frequency")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsCoupDaysBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

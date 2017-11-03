@@ -35,7 +35,7 @@ public class BaseWorkbookChartAxes extends Entity implements IJsonBackedObject {
 
     /**
      * The Category Axis.
-	 * 
+     * 
      */
     @SerializedName("categoryAxis")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartAxes extends Entity implements IJsonBackedObject {
 
     /**
      * The Series Axis.
-	 * 
+     * 
      */
     @SerializedName("seriesAxis")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookChartAxes extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Axis.
-	 * 
+     * 
      */
     @SerializedName("valueAxis")
     @Expose

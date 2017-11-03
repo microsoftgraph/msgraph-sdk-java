@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsTbillPriceBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsTbillPriceBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsTbillPriceBody {
 
     /**
      * The discount.
-	 * 
+     * 
      */
     @SerializedName("discount")
     @Expose

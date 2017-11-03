@@ -94,3 +94,4 @@ public interface IBaseDomainDnsCnameRecordRequest extends IHttpRequest {
     IBaseDomainDnsCnameRecordRequest expand(final String value);
 
 }
+

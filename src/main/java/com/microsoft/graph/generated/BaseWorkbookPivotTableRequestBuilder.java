@@ -51,11 +51,11 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    public IWorkbookWorksheetRequestBuilder getWorksheet() {
+    public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookPivotTableRefreshRequestBuilder getRefresh() {
+    public IWorkbookPivotTableRefreshRequestBuilder refresh() {
         return new WorkbookPivotTableRefreshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refresh"), getClient(), null);
     }
 }

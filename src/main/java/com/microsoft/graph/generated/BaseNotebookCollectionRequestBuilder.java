@@ -45,7 +45,7 @@ public class BaseNotebookCollectionRequestBuilder extends BaseRequestBuilder imp
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public INotebookGetRecentNotebooksCollectionRequestBuilder getGetRecentNotebooks(final Boolean includePersonalNotebooks) {
+    public INotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(final Boolean includePersonalNotebooks) {
         return new NotebookGetRecentNotebooksCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRecentNotebooks"), getClient(), null, includePersonalNotebooks);
     }
 }

@@ -51,29 +51,29 @@ public class BaseOnenoteSectionRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for Notebook.
      */
-    public INotebookRequestBuilder getParentNotebook() {
+    public INotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
      * Gets the request builder for SectionGroup.
      */
-    public ISectionGroupRequestBuilder getParentSectionGroup() {
+    public ISectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
-    public IOnenotePageCollectionRequestBuilder getPages() {
+    public IOnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
-    public IOnenotePageRequestBuilder getPages(final String id) {
+    public IOnenotePageRequestBuilder pages(final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
 
-    public IOnenoteSectionCopyToNotebookRequestBuilder getCopyToNotebook(final String id, final String groupId, final String renameAs) {
+    public IOnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs) {
         return new OnenoteSectionCopyToNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToNotebook"), getClient(), null, id, groupId, renameAs);
     }
 
-    public IOnenoteSectionCopyToSectionGroupRequestBuilder getCopyToSectionGroup(final String id, final String groupId, final String renameAs) {
+    public IOnenoteSectionCopyToSectionGroupRequestBuilder copyToSectionGroup(final String id, final String groupId, final String renameAs) {
         return new OnenoteSectionCopyToSectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSectionGroup"), getClient(), null, id, groupId, renameAs);
     }
 }

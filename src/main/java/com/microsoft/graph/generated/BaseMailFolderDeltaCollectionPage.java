@@ -51,7 +51,7 @@ public class BaseMailFolderDeltaCollectionPage extends BaseCollectionPage<MailFo
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink() {
+    public String deltaLink() {
         return deltaLink;
     }
 }

@@ -28,7 +28,7 @@ public interface IBaseWorkbookTableCollectionRequestBuilder extends IRequestBuil
 
     IWorkbookTableRequestBuilder byId(final String id);
 
-    IWorkbookTableAddRequestBuilder getAdd(final String address, final Boolean hasHeaders);
-    IWorkbookTableItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookTableCountRequestBuilder getCount();
+    IWorkbookTableAddRequestBuilder add(final String address, final Boolean hasHeaders);
+    IWorkbookTableItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookTableCountRequestBuilder count();
 }

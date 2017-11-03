@@ -31,28 +31,28 @@ public interface IBaseDriveRequestBuilder extends IRequestBuilder {
      */
     IDriveRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDriveItemCollectionRequestBuilder getItems();
+    IDriveItemCollectionRequestBuilder items();
 
-    IDriveItemRequestBuilder getItems(final String id);
+    IDriveItemRequestBuilder items(final String id);
 
     /**
      * Gets the request builder for List.
      */
-    IListRequestBuilder getList();
+    IListRequestBuilder list();
 
     /**
      * Gets the request builder for DriveItem.
      */
-    IDriveItemRequestBuilder getRoot();
+    IDriveItemRequestBuilder root();
 
-    IDriveItemCollectionRequestBuilder getSpecial();
+    IDriveItemCollectionRequestBuilder special();
 
-    IDriveItemRequestBuilder getSpecial(final String id);
+    IDriveItemRequestBuilder special(final String id);
 
-    IDriveRecentCollectionRequestBuilder getRecent();
+    IDriveRecentCollectionRequestBuilder recent();
 
-    IDriveSearchCollectionRequestBuilder getSearch(final String q);
+    IDriveSearchCollectionRequestBuilder search(final String q);
 
-    IDriveSharedWithMeCollectionRequestBuilder getSharedWithMe();
+    IDriveSharedWithMeCollectionRequestBuilder sharedWithMe();
 
 }

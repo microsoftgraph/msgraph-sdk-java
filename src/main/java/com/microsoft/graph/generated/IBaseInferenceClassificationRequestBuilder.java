@@ -31,8 +31,8 @@ public interface IBaseInferenceClassificationRequestBuilder extends IRequestBuil
      */
     IInferenceClassificationRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IInferenceClassificationOverrideCollectionRequestBuilder getOverrides();
+    IInferenceClassificationOverrideCollectionRequestBuilder overrides();
 
-    IInferenceClassificationOverrideRequestBuilder getOverrides(final String id);
+    IInferenceClassificationOverrideRequestBuilder overrides(final String id);
 
 }

@@ -35,7 +35,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
@@ -53,7 +53,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Start Date.
-	 * 
+     * 
      */
     @SerializedName("startDate")
     @Expose
@@ -61,7 +61,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The End Date.
-	 * 
+     * 
      */
     @SerializedName("endDate")
     @Expose
@@ -69,7 +69,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Recurrence Time Zone.
-	 * 
+     * 
      */
     @SerializedName("recurrenceTimeZone")
     @Expose
@@ -77,7 +77,7 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
 
     /**
      * The Number Of Occurrences.
-	 * 
+     * 
      */
     @SerializedName("numberOfOccurrences")
     @Expose

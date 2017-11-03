@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsVarABody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

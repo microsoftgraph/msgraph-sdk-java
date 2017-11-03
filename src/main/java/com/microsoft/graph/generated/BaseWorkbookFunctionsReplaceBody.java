@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsReplaceBody {
 
     /**
      * The old Text.
-	 * 
+     * 
      */
     @SerializedName("oldText")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsReplaceBody {
 
     /**
      * The start Num.
-	 * 
+     * 
      */
     @SerializedName("startNum")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsReplaceBody {
 
     /**
      * The num Chars.
-	 * 
+     * 
      */
     @SerializedName("numChars")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsReplaceBody {
 
     /**
      * The new Text.
-	 * 
+     * 
      */
     @SerializedName("newText")
     @Expose

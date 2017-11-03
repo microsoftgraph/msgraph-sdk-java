@@ -131,3 +131,4 @@ public class BaseWorkbookChartSeriesRequest extends BaseRequest implements IBase
      }
 
 }
+

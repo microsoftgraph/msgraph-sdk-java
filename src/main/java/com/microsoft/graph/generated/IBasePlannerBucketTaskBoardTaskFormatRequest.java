@@ -94,3 +94,4 @@ public interface IBasePlannerBucketTaskBoardTaskFormatRequest extends IHttpReque
     IBasePlannerBucketTaskBoardTaskFormatRequest expand(final String value);
 
 }
+

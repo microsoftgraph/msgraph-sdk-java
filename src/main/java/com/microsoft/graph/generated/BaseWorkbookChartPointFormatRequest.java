@@ -131,3 +131,4 @@ public class BaseWorkbookChartPointFormatRequest extends BaseRequest implements 
      }
 
 }
+

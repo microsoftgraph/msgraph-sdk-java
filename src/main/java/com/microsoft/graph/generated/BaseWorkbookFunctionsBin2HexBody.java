@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBin2HexBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBin2HexBody {
 
     /**
      * The places.
-	 * 
+     * 
      */
     @SerializedName("places")
     @Expose

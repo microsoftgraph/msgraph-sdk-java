@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGaussBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose

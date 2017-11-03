@@ -35,7 +35,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Enabled.
-	 * The number of units that are enabled.
+     * The number of units that are enabled.
      */
     @SerializedName("enabled")
     @Expose
@@ -53,7 +53,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Suspended.
-	 * The number of units that are suspended.
+     * The number of units that are suspended.
      */
     @SerializedName("suspended")
     @Expose
@@ -61,7 +61,7 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
 
     /**
      * The Warning.
-	 * The number of units that are in warning status.
+     * The number of units that are in warning status.
      */
     @SerializedName("warning")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsHourBody {
 
     /**
      * The serial Number.
-	 * 
+     * 
      */
     @SerializedName("serialNumber")
     @Expose

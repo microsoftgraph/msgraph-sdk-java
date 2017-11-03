@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsVlookupBody {
 
     /**
      * The lookup Value.
-	 * 
+     * 
      */
     @SerializedName("lookupValue")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsVlookupBody {
 
     /**
      * The table Array.
-	 * 
+     * 
      */
     @SerializedName("tableArray")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsVlookupBody {
 
     /**
      * The col Index Num.
-	 * 
+     * 
      */
     @SerializedName("colIndexNum")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsVlookupBody {
 
     /**
      * The range Lookup.
-	 * 
+     * 
      */
     @SerializedName("rangeLookup")
     @Expose

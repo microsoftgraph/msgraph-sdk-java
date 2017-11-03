@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsConfidence_TBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsConfidence_TBody {
 
     /**
      * The standard Dev.
-	 * 
+     * 
      */
     @SerializedName("standardDev")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsConfidence_TBody {
 
     /**
      * The size.
-	 * 
+     * 
      */
     @SerializedName("size")
     @Expose

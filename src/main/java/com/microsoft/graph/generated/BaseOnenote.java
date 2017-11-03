@@ -35,37 +35,37 @@ public class BaseOnenote extends Entity implements IJsonBackedObject {
 
     /**
      * The Notebooks.
-	 * 
+     * 
      */
     public transient NotebookCollectionPage notebooks;
 
     /**
      * The Sections.
-	 * 
+     * 
      */
     public transient OnenoteSectionCollectionPage sections;
 
     /**
      * The Section Groups.
-	 * 
+     * 
      */
     public transient SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Pages.
-	 * 
+     * 
      */
     public transient OnenotePageCollectionPage pages;
 
     /**
      * The Resources.
-	 * 
+     * 
      */
     public transient OnenoteResourceCollectionPage resources;
 
     /**
      * The Operations.
-	 * 
+     * 
      */
     public transient OnenoteOperationCollectionPage operations;
 

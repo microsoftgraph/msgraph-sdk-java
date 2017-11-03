@@ -94,3 +94,4 @@ public interface IBaseOnenoteEntityBaseModelRequest extends IHttpRequest {
     IBaseOnenoteEntityBaseModelRequest expand(final String value);
 
 }
+

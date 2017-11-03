@@ -35,7 +35,7 @@ public class BasePlannerProgressTaskBoardTaskFormat extends Entity implements IJ
 
     /**
      * The Order Hint.
-	 * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
+     * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
      */
     @SerializedName("orderHint")
     @Expose

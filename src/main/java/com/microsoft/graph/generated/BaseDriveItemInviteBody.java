@@ -27,7 +27,7 @@ public class BaseDriveItemInviteBody {
 
     /**
      * The require Sign In.
-	 * 
+     * 
      */
     @SerializedName("requireSignIn")
     @Expose
@@ -35,7 +35,7 @@ public class BaseDriveItemInviteBody {
 
     /**
      * The roles.
-	 * 
+     * 
      */
     @SerializedName("roles")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDriveItemInviteBody {
 
     /**
      * The send Invitation.
-	 * 
+     * 
      */
     @SerializedName("sendInvitation")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDriveItemInviteBody {
 
     /**
      * The message.
-	 * 
+     * 
      */
     @SerializedName("message")
     @Expose
@@ -59,7 +59,7 @@ public class BaseDriveItemInviteBody {
 
     /**
      * The recipients.
-	 * 
+     * 
      */
     @SerializedName("recipients")
     @Expose

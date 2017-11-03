@@ -35,7 +35,7 @@ public class BaseSettingTemplateValue implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseSettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * Name of the setting.
+     * Name of the setting.
      */
     @SerializedName("name")
     @Expose
@@ -53,7 +53,7 @@ public class BaseSettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * Type of the setting.
+     * Type of the setting.
      */
     @SerializedName("type")
     @Expose
@@ -61,7 +61,7 @@ public class BaseSettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Default Value.
-	 * Default value for the setting.
+     * Default value for the setting.
      */
     @SerializedName("defaultValue")
     @Expose
@@ -69,7 +69,7 @@ public class BaseSettingTemplateValue implements IJsonBackedObject {
 
     /**
      * The Description.
-	 * Description of the setting.
+     * Description of the setting.
      */
     @SerializedName("description")
     @Expose

@@ -35,7 +35,7 @@ public class BaseSingleValueLegacyExtendedProperty extends Entity implements IJs
 
     /**
      * The Value.
-	 * 
+     * 
      */
     @SerializedName("value")
     @Expose

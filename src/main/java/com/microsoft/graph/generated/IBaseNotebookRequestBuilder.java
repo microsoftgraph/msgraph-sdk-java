@@ -31,13 +31,13 @@ public interface IBaseNotebookRequestBuilder extends IRequestBuilder {
      */
     INotebookRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IOnenoteSectionCollectionRequestBuilder getSections();
+    IOnenoteSectionCollectionRequestBuilder sections();
 
-    IOnenoteSectionRequestBuilder getSections(final String id);
+    IOnenoteSectionRequestBuilder sections(final String id);
 
-    ISectionGroupCollectionRequestBuilder getSectionGroups();
+    ISectionGroupCollectionRequestBuilder sectionGroups();
 
-    ISectionGroupRequestBuilder getSectionGroups(final String id);
-    INotebookCopyNotebookRequestBuilder getCopyNotebook(final String groupId, final String renameAs, final String notebookFolder);
+    ISectionGroupRequestBuilder sectionGroups(final String id);
+    INotebookCopyNotebookRequestBuilder copyNotebook(final String groupId, final String renameAs, final String notebookFolder);
 
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsEffectBody {
 
     /**
      * The nominal Rate.
-	 * 
+     * 
      */
     @SerializedName("nominalRate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsEffectBody {
 
     /**
      * The npery.
-	 * 
+     * 
      */
     @SerializedName("npery")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsCumPrincBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsCumPrincBody {
 
     /**
      * The nper.
-	 * 
+     * 
      */
     @SerializedName("nper")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsCumPrincBody {
 
     /**
      * The pv.
-	 * 
+     * 
      */
     @SerializedName("pv")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsCumPrincBody {
 
     /**
      * The start Period.
-	 * 
+     * 
      */
     @SerializedName("startPeriod")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsCumPrincBody {
 
     /**
      * The end Period.
-	 * 
+     * 
      */
     @SerializedName("endPeriod")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsCumPrincBody {
 
     /**
      * The type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose

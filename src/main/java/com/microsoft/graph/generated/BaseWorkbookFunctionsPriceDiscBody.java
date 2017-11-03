@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPriceDiscBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPriceDiscBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPriceDiscBody {
 
     /**
      * The discount.
-	 * 
+     * 
      */
     @SerializedName("discount")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPriceDiscBody {
 
     /**
      * The redemption.
-	 * 
+     * 
      */
     @SerializedName("redemption")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsPriceDiscBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

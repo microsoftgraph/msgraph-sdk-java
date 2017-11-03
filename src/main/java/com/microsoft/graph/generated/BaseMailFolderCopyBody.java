@@ -27,7 +27,7 @@ public class BaseMailFolderCopyBody {
 
     /**
      * The destination Id.
-	 * 
+     * 
      */
     @SerializedName("destinationId")
     @Expose

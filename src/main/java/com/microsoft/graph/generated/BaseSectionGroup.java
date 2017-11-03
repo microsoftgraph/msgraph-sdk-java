@@ -35,7 +35,7 @@ public class BaseSectionGroup extends OnenoteEntityHierarchyModel implements IJs
 
     /**
      * The Sections Url.
-	 * 
+     * 
      */
     @SerializedName("sectionsUrl")
     @Expose
@@ -43,7 +43,7 @@ public class BaseSectionGroup extends OnenoteEntityHierarchyModel implements IJs
 
     /**
      * The Section Groups Url.
-	 * 
+     * 
      */
     @SerializedName("sectionGroupsUrl")
     @Expose
@@ -51,7 +51,7 @@ public class BaseSectionGroup extends OnenoteEntityHierarchyModel implements IJs
 
     /**
      * The Parent Notebook.
-	 * 
+     * 
      */
     @SerializedName("parentNotebook")
     @Expose
@@ -59,7 +59,7 @@ public class BaseSectionGroup extends OnenoteEntityHierarchyModel implements IJs
 
     /**
      * The Parent Section Group.
-	 * 
+     * 
      */
     @SerializedName("parentSectionGroup")
     @Expose
@@ -67,13 +67,13 @@ public class BaseSectionGroup extends OnenoteEntityHierarchyModel implements IJs
 
     /**
      * The Sections.
-	 * 
+     * 
      */
     public transient OnenoteSectionCollectionPage sections;
 
     /**
      * The Section Groups.
-	 * 
+     * 
      */
     public transient SectionGroupCollectionPage sectionGroups;
 

@@ -51,28 +51,28 @@ public class BaseWorkbookChartAxisRequestBuilder extends BaseRequestBuilder impl
     /**
      * Gets the request builder for WorkbookChartAxisFormat.
      */
-    public IWorkbookChartAxisFormatRequestBuilder getFormat() {
+    public IWorkbookChartAxisFormatRequestBuilder format() {
         return new WorkbookChartAxisFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartGridlines.
      */
-    public IWorkbookChartGridlinesRequestBuilder getMajorGridlines() {
+    public IWorkbookChartGridlinesRequestBuilder majorGridlines() {
         return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("majorGridlines"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartGridlines.
      */
-    public IWorkbookChartGridlinesRequestBuilder getMinorGridlines() {
+    public IWorkbookChartGridlinesRequestBuilder minorGridlines() {
         return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("minorGridlines"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartAxisTitle.
      */
-    public IWorkbookChartAxisTitleRequestBuilder getTitle() {
+    public IWorkbookChartAxisTitleRequestBuilder title() {
         return new WorkbookChartAxisTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
     }
 }

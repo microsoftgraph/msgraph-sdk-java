@@ -35,7 +35,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Audio.
-	 * Audio metadata, if the item is an audio file. Read-only.
+     * Audio metadata, if the item is an audio file. Read-only.
      */
     @SerializedName("audio")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The CTag.
-	 * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
+     * An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only.
      */
     @SerializedName("cTag")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Deleted.
-	 * Information about the deleted state of the item. Read-only.
+     * Information about the deleted state of the item. Read-only.
      */
     @SerializedName("deleted")
     @Expose
@@ -59,7 +59,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The File.
-	 * File metadata, if the item is a file. Read-only.
+     * File metadata, if the item is a file. Read-only.
      */
     @SerializedName("file")
     @Expose
@@ -67,7 +67,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The File System Info.
-	 * File system information on client. Read-write.
+     * File system information on client. Read-write.
      */
     @SerializedName("fileSystemInfo")
     @Expose
@@ -75,7 +75,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Folder.
-	 * Folder metadata, if the item is a folder. Read-only.
+     * Folder metadata, if the item is a folder. Read-only.
      */
     @SerializedName("folder")
     @Expose
@@ -83,7 +83,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Image.
-	 * Image metadata, if the item is an image. Read-only.
+     * Image metadata, if the item is an image. Read-only.
      */
     @SerializedName("image")
     @Expose
@@ -91,7 +91,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Location.
-	 * Location metadata, if the item has location data. Read-only.
+     * Location metadata, if the item has location data. Read-only.
      */
     @SerializedName("location")
     @Expose
@@ -99,15 +99,15 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Package.
-	 * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      */
     @SerializedName("package")
     @Expose
-    public com.microsoft.graph.extensions.Package msgraph_package;
+    public com.microsoft.graph.extensions.Package msgraphpackage;
 
     /**
      * The Photo.
-	 * Photo metadata, if the item is a photo. Read-only.
+     * Photo metadata, if the item is a photo. Read-only.
      */
     @SerializedName("photo")
     @Expose
@@ -115,7 +115,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Remote Item.
-	 * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
+     * Remote item data, if the item is shared from a drive other than the one being accessed. Read-only.
      */
     @SerializedName("remoteItem")
     @Expose
@@ -123,7 +123,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Root.
-	 * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
+     * If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive.
      */
     @SerializedName("root")
     @Expose
@@ -131,7 +131,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Search Result.
-	 * Search metadata, if the item is from a search result. Read-only.
+     * Search metadata, if the item is from a search result. Read-only.
      */
     @SerializedName("searchResult")
     @Expose
@@ -139,7 +139,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Shared.
-	 * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      */
     @SerializedName("shared")
     @Expose
@@ -147,7 +147,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-	 * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
     @SerializedName("sharepointIds")
     @Expose
@@ -155,7 +155,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Size.
-	 * Size of the item in bytes. Read-only.
+     * Size of the item in bytes. Read-only.
      */
     @SerializedName("size")
     @Expose
@@ -163,7 +163,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Special Folder.
-	 * If the current item is also available as a special folder, this facet is returned. Read-only.
+     * If the current item is also available as a special folder, this facet is returned. Read-only.
      */
     @SerializedName("specialFolder")
     @Expose
@@ -171,7 +171,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Video.
-	 * Video metadata, if the item is a video. Read-only.
+     * Video metadata, if the item is a video. Read-only.
      */
     @SerializedName("video")
     @Expose
@@ -179,7 +179,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Web Dav Url.
-	 * WebDAV compatible URL for the item.
+     * WebDAV compatible URL for the item.
      */
     @SerializedName("webDavUrl")
     @Expose
@@ -187,10 +187,10 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Children.
-	 * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      */
     public transient DriveItemCollectionPage children;
-    
+
     /**
      * The List Item.
      * 
@@ -201,19 +201,19 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Permissions.
-	 * The set of permissions for the item. Read-only. Nullable.
+     * The set of permissions for the item. Read-only. Nullable.
      */
     public transient PermissionCollectionPage permissions;
 
     /**
      * The Thumbnails.
-	 * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
+     * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
      */
     public transient ThumbnailSetCollectionPage thumbnails;
 
     /**
      * The Workbook.
-	 * 
+     * 
      */
     @SerializedName("workbook")
     @Expose

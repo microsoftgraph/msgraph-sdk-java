@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The last Interest.
-	 * 
+     * 
      */
     @SerializedName("lastInterest")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The pr.
-	 * 
+     * 
      */
     @SerializedName("pr")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The redemption.
-	 * 
+     * 
      */
     @SerializedName("redemption")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The frequency.
-	 * 
+     * 
      */
     @SerializedName("frequency")
     @Expose
@@ -83,7 +83,7 @@ public class BaseWorkbookFunctionsOddLYieldBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

@@ -34,6 +34,6 @@ public interface IBaseWorkbookChartPointFormatRequestBuilder extends IRequestBui
     /**
      * Gets the request builder for WorkbookChartFill.
      */
-    IWorkbookChartFillRequestBuilder getFill();
+    IWorkbookChartFillRequestBuilder fill();
 
 }

@@ -51,11 +51,11 @@ public class BaseWorkbookNamedItemRequestBuilder extends BaseRequestBuilder impl
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    public IWorkbookWorksheetRequestBuilder getWorksheet() {
+    public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);
     }
 
-    public IWorkbookNamedItemRangeRequestBuilder getRange() {
+    public IWorkbookNamedItemRangeRequestBuilder range() {
         return new WorkbookNamedItemRangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.range"), getClient(), null);
     }
 }

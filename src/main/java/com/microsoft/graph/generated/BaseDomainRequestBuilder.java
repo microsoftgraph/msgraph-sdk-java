@@ -47,29 +47,29 @@ public class BaseDomainRequestBuilder extends BaseRequestBuilder implements IBas
         return new DomainRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDomainDnsRecordCollectionRequestBuilder getServiceConfigurationRecords() {
+    public IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
     }
 
-    public IDomainDnsRecordRequestBuilder getServiceConfigurationRecords(final String id) {
+    public IDomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords") + "/" + id, getClient(), null);
     }
-    public IDomainDnsRecordCollectionRequestBuilder getVerificationDnsRecords() {
+    public IDomainDnsRecordCollectionRequestBuilder verificationDnsRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords"), getClient(), null);
     }
 
-    public IDomainDnsRecordRequestBuilder getVerificationDnsRecords(final String id) {
+    public IDomainDnsRecordRequestBuilder verificationDnsRecords(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getDomainNameReferences() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getDomainNameReferences(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
     }
 
-    public IDomainVerifyRequestBuilder getVerify() {
+    public IDomainVerifyRequestBuilder verify() {
         return new DomainVerifyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.verify"), getClient(), null);
     }
 }

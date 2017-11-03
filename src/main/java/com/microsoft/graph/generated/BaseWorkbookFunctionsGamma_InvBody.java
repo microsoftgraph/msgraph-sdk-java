@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGamma_InvBody {
 
     /**
      * The probability.
-	 * 
+     * 
      */
     @SerializedName("probability")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsGamma_InvBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsGamma_InvBody {
 
     /**
      * The beta.
-	 * 
+     * 
      */
     @SerializedName("beta")
     @Expose

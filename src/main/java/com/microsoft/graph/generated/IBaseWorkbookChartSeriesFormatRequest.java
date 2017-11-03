@@ -94,3 +94,4 @@ public interface IBaseWorkbookChartSeriesFormatRequest extends IHttpRequest {
     IBaseWorkbookChartSeriesFormatRequest expand(final String value);
 
 }
+

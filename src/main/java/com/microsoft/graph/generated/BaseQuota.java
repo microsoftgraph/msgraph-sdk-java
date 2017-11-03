@@ -35,7 +35,7 @@ public class BaseQuota implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Deleted.
-	 * Total space consumed by files in the recycle bin, in bytes. Read-only.
+     * Total space consumed by files in the recycle bin, in bytes. Read-only.
      */
     @SerializedName("deleted")
     @Expose
@@ -53,7 +53,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Remaining.
-	 * Total space remaining before reaching the quota limit, in bytes. Read-only.
+     * Total space remaining before reaching the quota limit, in bytes. Read-only.
      */
     @SerializedName("remaining")
     @Expose
@@ -61,7 +61,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The State.
-	 * Enumeration value that indicates the state of the storage space. Read-only.
+     * Enumeration value that indicates the state of the storage space. Read-only.
      */
     @SerializedName("state")
     @Expose
@@ -69,7 +69,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Total.
-	 * Total allowed storage space, in bytes. Read-only.
+     * Total allowed storage space, in bytes. Read-only.
      */
     @SerializedName("total")
     @Expose
@@ -77,7 +77,7 @@ public class BaseQuota implements IJsonBackedObject {
 
     /**
      * The Used.
-	 * Total space used, in bytes. Read-only.
+     * Total space used, in bytes. Read-only.
      */
     @SerializedName("used")
     @Expose

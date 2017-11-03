@@ -29,7 +29,7 @@ public interface IBaseContactCollectionRequestBuilder extends IRequestBuilder {
     IContactRequestBuilder byId(final String id);
 
 
-    IContactDeltaCollectionRequestBuilder getDelta();
+    IContactDeltaCollectionRequestBuilder delta();
 
-	IContactDeltaCollectionRequestBuilder getDelta(final String deltaLink);
+	IContactDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

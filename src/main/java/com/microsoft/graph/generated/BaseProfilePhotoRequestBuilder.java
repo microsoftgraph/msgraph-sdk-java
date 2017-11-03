@@ -48,7 +48,7 @@ public class BaseProfilePhotoRequestBuilder extends BaseRequestBuilder implement
     }
 
 
-    public IProfilePhotoStreamRequestBuilder getContent() {
+    public IProfilePhotoStreamRequestBuilder content() {
         return new ProfilePhotoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }

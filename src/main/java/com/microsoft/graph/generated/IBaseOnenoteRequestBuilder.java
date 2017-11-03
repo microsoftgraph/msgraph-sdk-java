@@ -31,28 +31,28 @@ public interface IBaseOnenoteRequestBuilder extends IRequestBuilder {
      */
     IOnenoteRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    INotebookCollectionRequestBuilder getNotebooks();
+    INotebookCollectionRequestBuilder notebooks();
 
-    INotebookRequestBuilder getNotebooks(final String id);
+    INotebookRequestBuilder notebooks(final String id);
 
-    IOnenoteSectionCollectionRequestBuilder getSections();
+    IOnenoteSectionCollectionRequestBuilder sections();
 
-    IOnenoteSectionRequestBuilder getSections(final String id);
+    IOnenoteSectionRequestBuilder sections(final String id);
 
-    ISectionGroupCollectionRequestBuilder getSectionGroups();
+    ISectionGroupCollectionRequestBuilder sectionGroups();
 
-    ISectionGroupRequestBuilder getSectionGroups(final String id);
+    ISectionGroupRequestBuilder sectionGroups(final String id);
 
-    IOnenotePageCollectionRequestBuilder getPages();
+    IOnenotePageCollectionRequestBuilder pages();
 
-    IOnenotePageRequestBuilder getPages(final String id);
+    IOnenotePageRequestBuilder pages(final String id);
 
-    IOnenoteResourceCollectionRequestBuilder getResources();
+    IOnenoteResourceCollectionRequestBuilder resources();
 
-    IOnenoteResourceRequestBuilder getResources(final String id);
+    IOnenoteResourceRequestBuilder resources(final String id);
 
-    IOnenoteOperationCollectionRequestBuilder getOperations();
+    IOnenoteOperationCollectionRequestBuilder operations();
 
-    IOnenoteOperationRequestBuilder getOperations(final String id);
+    IOnenoteOperationRequestBuilder operations(final String id);
 
 }

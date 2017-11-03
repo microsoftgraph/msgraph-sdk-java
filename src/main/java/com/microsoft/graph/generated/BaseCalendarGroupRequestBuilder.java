@@ -47,11 +47,11 @@ public class BaseCalendarGroupRequestBuilder extends BaseRequestBuilder implemen
         return new CalendarGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public ICalendarCollectionRequestBuilder getCalendars() {
+    public ICalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
 
-    public ICalendarRequestBuilder getCalendars(final String id) {
+    public ICalendarRequestBuilder calendars(final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
 }

@@ -35,7 +35,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
 
     /**
      * The Street.
-	 * The street.
+     * The street.
      */
     @SerializedName("street")
     @Expose
@@ -53,7 +53,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
 
     /**
      * The City.
-	 * The city.
+     * The city.
      */
     @SerializedName("city")
     @Expose
@@ -61,7 +61,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
 
     /**
      * The State.
-	 * The state.
+     * The state.
      */
     @SerializedName("state")
     @Expose
@@ -69,7 +69,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
 
     /**
      * The Country Or Region.
-	 * The country or region. It's a free-format string value, for example, "United States".
+     * The country or region. It's a free-format string value, for example, "United States".
      */
     @SerializedName("countryOrRegion")
     @Expose
@@ -77,7 +77,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
 
     /**
      * The Postal Code.
-	 * The postal code.
+     * The postal code.
      */
     @SerializedName("postalCode")
     @Expose

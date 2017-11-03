@@ -27,7 +27,7 @@ public class BaseEventTentativelyAcceptBody {
 
     /**
      * The comment.
-	 * 
+     * 
      */
     @SerializedName("comment")
     @Expose
@@ -35,7 +35,7 @@ public class BaseEventTentativelyAcceptBody {
 
     /**
      * The send Response.
-	 * 
+     * 
      */
     @SerializedName("sendResponse")
     @Expose

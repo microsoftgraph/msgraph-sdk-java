@@ -31,95 +31,95 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
      */
     IGroupRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getMembers();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
-    IDirectoryObjectWithReferenceRequestBuilder getMembers(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder members(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getMemberOf();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
 
-    IDirectoryObjectWithReferenceRequestBuilder getMemberOf(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
     /**
      * Gets the request builder for DirectoryObject.
      */
-    IDirectoryObjectWithReferenceRequestBuilder getCreatedOnBehalfOf();
+    IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getOwners();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
 
-    IDirectoryObjectWithReferenceRequestBuilder getOwners(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
 
-    IGroupSettingCollectionRequestBuilder getSettings();
+    IGroupSettingCollectionRequestBuilder settings();
 
-    IGroupSettingRequestBuilder getSettings(final String id);
+    IGroupSettingRequestBuilder settings(final String id);
 
-    IExtensionCollectionRequestBuilder getExtensions();
+    IExtensionCollectionRequestBuilder extensions();
 
-    IExtensionRequestBuilder getExtensions(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
-    IConversationThreadCollectionRequestBuilder getThreads();
+    IConversationThreadCollectionRequestBuilder threads();
 
-    IConversationThreadRequestBuilder getThreads(final String id);
+    IConversationThreadRequestBuilder threads(final String id);
 
     /**
      * Gets the request builder for Calendar.
      */
-    ICalendarRequestBuilder getCalendar();
+    ICalendarRequestBuilder calendar();
 
-    IEventCollectionRequestBuilder getCalendarView();
+    IEventCollectionRequestBuilder calendarView();
 
-    IEventRequestBuilder getCalendarView(final String id);
+    IEventRequestBuilder calendarView(final String id);
 
-    IEventCollectionRequestBuilder getEvents();
+    IEventCollectionRequestBuilder events();
 
-    IEventRequestBuilder getEvents(final String id);
+    IEventRequestBuilder events(final String id);
 
-    IConversationCollectionRequestBuilder getConversations();
+    IConversationCollectionRequestBuilder conversations();
 
-    IConversationRequestBuilder getConversations(final String id);
+    IConversationRequestBuilder conversations(final String id);
 
     /**
      * Gets the request builder for ProfilePhoto.
      */
-    IProfilePhotoRequestBuilder getPhoto();
+    IProfilePhotoRequestBuilder photo();
 
-    IProfilePhotoCollectionRequestBuilder getPhotos();
+    IProfilePhotoCollectionRequestBuilder photos();
 
-    IProfilePhotoRequestBuilder getPhotos(final String id);
+    IProfilePhotoRequestBuilder photos(final String id);
 
-    IDirectoryObjectCollectionRequestBuilder getAcceptedSenders();
+    IDirectoryObjectCollectionRequestBuilder acceptedSenders();
 
-    IDirectoryObjectRequestBuilder getAcceptedSenders(final String id);
+    IDirectoryObjectRequestBuilder acceptedSenders(final String id);
 
-    IDirectoryObjectCollectionRequestBuilder getRejectedSenders();
+    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
 
-    IDirectoryObjectRequestBuilder getRejectedSenders(final String id);
+    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
 
     /**
      * Gets the request builder for Drive.
      */
-    IDriveRequestBuilder getDrive();
+    IDriveRequestBuilder drive();
 
-    IDriveCollectionRequestBuilder getDrives();
+    IDriveCollectionRequestBuilder drives();
 
-    IDriveRequestBuilder getDrives(final String id);
+    IDriveRequestBuilder drives(final String id);
 
-    ISiteCollectionRequestBuilder getSites();
+    ISiteCollectionRequestBuilder sites();
 
-    ISiteRequestBuilder getSites(final String id);
+    ISiteRequestBuilder sites(final String id);
 
     /**
      * Gets the request builder for PlannerGroup.
      */
-    IPlannerGroupRequestBuilder getPlanner();
+    IPlannerGroupRequestBuilder planner();
 
     /**
      * Gets the request builder for Onenote.
      */
-    IOnenoteRequestBuilder getOnenote();
-    IGroupSubscribeByMailRequestBuilder getSubscribeByMail();
-    IGroupUnsubscribeByMailRequestBuilder getUnsubscribeByMail();
-    IGroupAddFavoriteRequestBuilder getAddFavorite();
-    IGroupRemoveFavoriteRequestBuilder getRemoveFavorite();
-    IGroupResetUnseenCountRequestBuilder getResetUnseenCount();
+    IOnenoteRequestBuilder onenote();
+    IGroupSubscribeByMailRequestBuilder subscribeByMail();
+    IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();
+    IGroupAddFavoriteRequestBuilder addFavorite();
+    IGroupRemoveFavoriteRequestBuilder removeFavorite();
+    IGroupResetUnseenCountRequestBuilder resetUnseenCount();
 
 }

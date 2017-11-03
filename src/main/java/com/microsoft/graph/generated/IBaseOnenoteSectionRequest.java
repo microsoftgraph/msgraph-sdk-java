@@ -94,3 +94,4 @@ public interface IBaseOnenoteSectionRequest extends IHttpRequest {
     IBaseOnenoteSectionRequest expand(final String value);
 
 }
+

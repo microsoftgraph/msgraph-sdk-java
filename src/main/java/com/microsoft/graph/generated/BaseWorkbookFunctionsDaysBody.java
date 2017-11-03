@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDaysBody {
 
     /**
      * The end Date.
-	 * 
+     * 
      */
     @SerializedName("endDate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDaysBody {
 
     /**
      * The start Date.
-	 * 
+     * 
      */
     @SerializedName("startDate")
     @Expose

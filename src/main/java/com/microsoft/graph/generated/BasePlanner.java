@@ -35,19 +35,19 @@ public class BasePlanner extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-	 * Read-only. Nullable. Returns a collection of the specified tasks
+     * Read-only. Nullable. Returns a collection of the specified tasks
      */
     public transient PlannerTaskCollectionPage tasks;
 
     /**
      * The Plans.
-	 * Read-only. Nullable. Returns a collection of the specified plans
+     * Read-only. Nullable. Returns a collection of the specified plans
      */
     public transient PlannerPlanCollectionPage plans;
 
     /**
      * The Buckets.
-	 * Read-only. Nullable. Returns a collection of the specified buckets
+     * Read-only. Nullable. Returns a collection of the specified buckets
      */
     public transient PlannerBucketCollectionPage buckets;
 

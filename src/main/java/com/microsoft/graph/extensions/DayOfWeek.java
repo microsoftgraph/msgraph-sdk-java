@@ -23,31 +23,31 @@ public enum DayOfWeek
     /**
     * sunday
     */
-    sunday,
+    SUNDAY,
     /**
     * monday
     */
-    monday,
+    MONDAY,
     /**
     * tuesday
     */
-    tuesday,
+    TUESDAY,
     /**
     * wednesday
     */
-    wednesday,
+    WEDNESDAY,
     /**
     * thursday
     */
-    thursday,
+    THURSDAY,
     /**
     * friday
     */
-    friday,
+    FRIDAY,
     /**
     * saturday
     */
-    saturday,
+    SATURDAY,
     /**
     * For DayOfWeek values that were not expected from the service
     */

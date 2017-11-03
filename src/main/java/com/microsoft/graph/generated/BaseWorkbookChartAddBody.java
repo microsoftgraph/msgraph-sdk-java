@@ -27,7 +27,7 @@ public class BaseWorkbookChartAddBody {
 
     /**
      * The type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookChartAddBody {
 
     /**
      * The source Data.
-	 * 
+     * 
      */
     @SerializedName("sourceData")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartAddBody {
 
     /**
      * The series By.
-	 * 
+     * 
      */
     @SerializedName("seriesBy")
     @Expose

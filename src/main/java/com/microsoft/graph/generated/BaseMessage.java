@@ -35,7 +35,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
-	 * The date and time the message was received.
+     * The date and time the message was received.
      */
     @SerializedName("receivedDateTime")
     @Expose
@@ -43,7 +43,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sent Date Time.
-	 * The date and time the message was sent.
+     * The date and time the message was sent.
      */
     @SerializedName("sentDateTime")
     @Expose
@@ -51,7 +51,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-	 * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src="cid:image001.jpg@01D26CD8.6C05F070">.
+     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src="cid:image001.jpg@01D26CD8.6C05F070">.
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -59,7 +59,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Internet Message Id.
-	 * The message ID in the format specified by RFC2822.
+     * The message ID in the format specified by RFC2822.
      */
     @SerializedName("internetMessageId")
     @Expose
@@ -67,7 +67,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Subject.
-	 * The subject of the message.
+     * The subject of the message.
      */
     @SerializedName("subject")
     @Expose
@@ -75,7 +75,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
-	 * The body of the message. It can be in HTML or text format.
+     * The body of the message. It can be in HTML or text format.
      */
     @SerializedName("body")
     @Expose
@@ -83,7 +83,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
-	 * The first 255 characters of the message body. It is in text format.
+     * The first 255 characters of the message body. It is in text format.
      */
     @SerializedName("bodyPreview")
     @Expose
@@ -91,7 +91,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-	 * The importance of the message: Low, Normal, High.
+     * The importance of the message: Low, Normal, High.
      */
     @SerializedName("importance")
     @Expose
@@ -99,7 +99,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
-	 * The unique identifier for the message's parent mailFolder.
+     * The unique identifier for the message's parent mailFolder.
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -107,7 +107,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
-	 * The account that is actually used to generate the message.
+     * The account that is actually used to generate the message.
      */
     @SerializedName("sender")
     @Expose
@@ -115,7 +115,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
-	 * The mailbox owner and sender of the message.
+     * The mailbox owner and sender of the message.
      */
     @SerializedName("from")
     @Expose
@@ -123,7 +123,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The To Recipients.
-	 * The To: recipients for the message.
+     * The To: recipients for the message.
      */
     @SerializedName("toRecipients")
     @Expose
@@ -131,7 +131,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Cc Recipients.
-	 * The Cc: recipients for the message.
+     * The Cc: recipients for the message.
      */
     @SerializedName("ccRecipients")
     @Expose
@@ -139,7 +139,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Bcc Recipients.
-	 * The Bcc: recipients for the message.
+     * The Bcc: recipients for the message.
      */
     @SerializedName("bccRecipients")
     @Expose
@@ -147,7 +147,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Reply To.
-	 * The email addresses to use when replying.
+     * The email addresses to use when replying.
      */
     @SerializedName("replyTo")
     @Expose
@@ -155,7 +155,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Conversation Id.
-	 * The ID of the conversation the email belongs to.
+     * The ID of the conversation the email belongs to.
      */
     @SerializedName("conversationId")
     @Expose
@@ -163,7 +163,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Unique Body.
-	 * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
+     * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
      */
     @SerializedName("uniqueBody")
     @Expose
@@ -171,7 +171,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Delivery Receipt Requested.
-	 * Indicates whether a read receipt is requested for the message.
+     * Indicates whether a read receipt is requested for the message.
      */
     @SerializedName("isDeliveryReceiptRequested")
     @Expose
@@ -179,7 +179,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Read Receipt Requested.
-	 * Indicates whether a read receipt is requested for the message.
+     * Indicates whether a read receipt is requested for the message.
      */
     @SerializedName("isReadReceiptRequested")
     @Expose
@@ -187,7 +187,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Read.
-	 * Indicates whether the message has been read.
+     * Indicates whether the message has been read.
      */
     @SerializedName("isRead")
     @Expose
@@ -195,7 +195,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Draft.
-	 * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+     * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
      */
     @SerializedName("isDraft")
     @Expose
@@ -203,7 +203,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
-	 * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+     * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
      */
     @SerializedName("webLink")
     @Expose
@@ -211,7 +211,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Inference Classification.
-	 * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
+     * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
      */
     @SerializedName("inferenceClassification")
     @Expose
@@ -219,25 +219,25 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-	 * The fileAttachment and itemAttachment attachments for the message.
+     * The fileAttachment and itemAttachment attachments for the message.
      */
     public transient AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
-	 * The collection of open extensions defined for the message. Read-only. Nullable.
+     * The collection of open extensions defined for the message. Read-only. Nullable.
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The Single Value Extended Properties.
-	 * The collection of single-value extended properties defined for the message. Read-only. Nullable.
+     * The collection of single-value extended properties defined for the message. Read-only. Nullable.
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
-	 * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
+     * The collection of multi-value extended properties defined for the message. Read-only. Nullable.
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

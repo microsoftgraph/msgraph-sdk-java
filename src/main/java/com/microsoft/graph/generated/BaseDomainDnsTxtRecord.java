@@ -35,7 +35,7 @@ public class BaseDomainDnsTxtRecord extends DomainDnsRecord implements IJsonBack
 
     /**
      * The Text.
-	 * Value used when configuring the text property at the DNS host.
+     * Value used when configuring the text property at the DNS host.
      */
     @SerializedName("text")
     @Expose

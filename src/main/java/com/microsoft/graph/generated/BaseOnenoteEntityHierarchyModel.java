@@ -35,7 +35,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Display Name.
-	 * 
+     * 
      */
     @SerializedName("displayName")
     @Expose
@@ -43,7 +43,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Created By.
-	 * 
+     * 
      */
     @SerializedName("createdBy")
     @Expose
@@ -51,7 +51,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Last Modified By.
-	 * 
+     * 
      */
     @SerializedName("lastModifiedBy")
     @Expose
@@ -59,7 +59,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Last Modified Date Time.
-	 * 
+     * 
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

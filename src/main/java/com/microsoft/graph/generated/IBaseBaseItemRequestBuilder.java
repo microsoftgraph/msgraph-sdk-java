@@ -46,11 +46,11 @@ public interface IBaseBaseItemRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for User.
      */
-    IUserWithReferenceRequestBuilder getCreatedByUser();
+    IUserWithReferenceRequestBuilder createdByUser();
 
     /**
      * Gets the request builder for User.
      */
-    IUserWithReferenceRequestBuilder getLastModifiedByUser();
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
 }

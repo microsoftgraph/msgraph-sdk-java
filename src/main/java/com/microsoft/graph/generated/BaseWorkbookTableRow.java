@@ -35,7 +35,7 @@ public class BaseWorkbookTableRow extends Entity implements IJsonBackedObject {
 
     /**
      * The Index.
-	 * 
+     * 
      */
     @SerializedName("index")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookTableRow extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

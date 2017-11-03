@@ -80,15 +80,15 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
         return new GroupSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("groupSettingTemplate"), getClient(), null);
     }
 
-    public IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder getCheckMemberGroups(final java.util.List<String> groupIds) {
+    public IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds) {
         return new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberGroups"), getClient(), null, groupIds);
     }
 
-    public IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getGetMemberGroups(final Boolean securityEnabledOnly) {
+    public IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getMemberGroups(final Boolean securityEnabledOnly) {
         return new DirectoryObjectGetMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberGroups"), getClient(), null, securityEnabledOnly);
     }
 
-    public IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getGetMemberObjects(final Boolean securityEnabledOnly) {
+    public IDirectoryObjectGetMemberObjectsCollectionRequestBuilder getMemberObjects(final Boolean securityEnabledOnly) {
         return new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMemberObjects"), getClient(), null, securityEnabledOnly);
     }
 }

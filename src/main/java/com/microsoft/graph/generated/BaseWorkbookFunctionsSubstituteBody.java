@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSubstituteBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSubstituteBody {
 
     /**
      * The old Text.
-	 * 
+     * 
      */
     @SerializedName("oldText")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsSubstituteBody {
 
     /**
      * The new Text.
-	 * 
+     * 
      */
     @SerializedName("newText")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsSubstituteBody {
 
     /**
      * The instance Num.
-	 * 
+     * 
      */
     @SerializedName("instanceNum")
     @Expose

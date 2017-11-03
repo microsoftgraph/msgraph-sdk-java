@@ -27,7 +27,7 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      *
      * @return The request builder for the collection of DirectoryObjects objects
      */
-    IDirectoryObjectCollectionRequestBuilder getDirectoryObjects();
+    IDirectoryObjectCollectionRequestBuilder directoryObjects();
 
     /**
      * Gets a single DirectoryObjects.
@@ -35,14 +35,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the DirectoryObjects to retrieve.
      * @return The request builder for the DirectoryObjects object
      */
-    IDirectoryObjectRequestBuilder getDirectoryObjects(final String id);
+    IDirectoryObjectRequestBuilder directoryObjects(final String id);
 
     /**
      * Gets the collection of Devices objects.
      *
      * @return The request builder for the collection of Devices objects
      */
-    IDeviceCollectionRequestBuilder getDevices();
+    IDeviceCollectionRequestBuilder devices();
 
     /**
      * Gets a single Devices.
@@ -50,14 +50,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Devices to retrieve.
      * @return The request builder for the Devices object
      */
-    IDeviceRequestBuilder getDevices(final String id);
+    IDeviceRequestBuilder devices(final String id);
 
     /**
      * Gets the collection of Domains objects.
      *
      * @return The request builder for the collection of Domains objects
      */
-    IDomainCollectionRequestBuilder getDomains();
+    IDomainCollectionRequestBuilder domains();
 
     /**
      * Gets a single Domains.
@@ -65,14 +65,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Domains to retrieve.
      * @return The request builder for the Domains object
      */
-    IDomainRequestBuilder getDomains(final String id);
+    IDomainRequestBuilder domains(final String id);
 
     /**
      * Gets the collection of DomainDnsRecords objects.
      *
      * @return The request builder for the collection of DomainDnsRecords objects
      */
-    IDomainDnsRecordCollectionRequestBuilder getDomainDnsRecords();
+    IDomainDnsRecordCollectionRequestBuilder domainDnsRecords();
 
     /**
      * Gets a single DomainDnsRecords.
@@ -80,14 +80,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the DomainDnsRecords to retrieve.
      * @return The request builder for the DomainDnsRecords object
      */
-    IDomainDnsRecordRequestBuilder getDomainDnsRecords(final String id);
+    IDomainDnsRecordRequestBuilder domainDnsRecords(final String id);
 
     /**
      * Gets the collection of Groups objects.
      *
      * @return The request builder for the collection of Groups objects
      */
-    IGroupCollectionRequestBuilder getGroups();
+    IGroupCollectionRequestBuilder groups();
 
     /**
      * Gets a single Groups.
@@ -95,14 +95,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Groups to retrieve.
      * @return The request builder for the Groups object
      */
-    IGroupRequestBuilder getGroups(final String id);
+    IGroupRequestBuilder groups(final String id);
 
     /**
      * Gets the collection of DirectoryRoles objects.
      *
      * @return The request builder for the collection of DirectoryRoles objects
      */
-    IDirectoryRoleCollectionRequestBuilder getDirectoryRoles();
+    IDirectoryRoleCollectionRequestBuilder directoryRoles();
 
     /**
      * Gets a single DirectoryRoles.
@@ -110,14 +110,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the DirectoryRoles to retrieve.
      * @return The request builder for the DirectoryRoles object
      */
-    IDirectoryRoleRequestBuilder getDirectoryRoles(final String id);
+    IDirectoryRoleRequestBuilder directoryRoles(final String id);
 
     /**
      * Gets the collection of DirectoryRoleTemplates objects.
      *
      * @return The request builder for the collection of DirectoryRoleTemplates objects
      */
-    IDirectoryRoleTemplateCollectionRequestBuilder getDirectoryRoleTemplates();
+    IDirectoryRoleTemplateCollectionRequestBuilder directoryRoleTemplates();
 
     /**
      * Gets a single DirectoryRoleTemplates.
@@ -125,14 +125,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the DirectoryRoleTemplates to retrieve.
      * @return The request builder for the DirectoryRoleTemplates object
      */
-    IDirectoryRoleTemplateRequestBuilder getDirectoryRoleTemplates(final String id);
+    IDirectoryRoleTemplateRequestBuilder directoryRoleTemplates(final String id);
 
     /**
      * Gets the collection of Organization objects.
      *
      * @return The request builder for the collection of Organization objects
      */
-    IOrganizationCollectionRequestBuilder getOrganization();
+    IOrganizationCollectionRequestBuilder organization();
 
     /**
      * Gets a single Organization.
@@ -140,14 +140,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Organization to retrieve.
      * @return The request builder for the Organization object
      */
-    IOrganizationRequestBuilder getOrganization(final String id);
+    IOrganizationRequestBuilder organization(final String id);
 
     /**
      * Gets the collection of GroupSettings objects.
      *
      * @return The request builder for the collection of GroupSettings objects
      */
-    IGroupSettingCollectionRequestBuilder getGroupSettings();
+    IGroupSettingCollectionRequestBuilder groupSettings();
 
     /**
      * Gets a single GroupSettings.
@@ -155,14 +155,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the GroupSettings to retrieve.
      * @return The request builder for the GroupSettings object
      */
-    IGroupSettingRequestBuilder getGroupSettings(final String id);
+    IGroupSettingRequestBuilder groupSettings(final String id);
 
     /**
      * Gets the collection of GroupSettingTemplates objects.
      *
      * @return The request builder for the collection of GroupSettingTemplates objects
      */
-    IGroupSettingTemplateCollectionRequestBuilder getGroupSettingTemplates();
+    IGroupSettingTemplateCollectionRequestBuilder groupSettingTemplates();
 
     /**
      * Gets a single GroupSettingTemplates.
@@ -170,14 +170,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the GroupSettingTemplates to retrieve.
      * @return The request builder for the GroupSettingTemplates object
      */
-    IGroupSettingTemplateRequestBuilder getGroupSettingTemplates(final String id);
+    IGroupSettingTemplateRequestBuilder groupSettingTemplates(final String id);
 
     /**
      * Gets the collection of SubscribedSkus objects.
      *
      * @return The request builder for the collection of SubscribedSkus objects
      */
-    ISubscribedSkuCollectionRequestBuilder getSubscribedSkus();
+    ISubscribedSkuCollectionRequestBuilder subscribedSkus();
 
     /**
      * Gets a single SubscribedSkus.
@@ -185,14 +185,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the SubscribedSkus to retrieve.
      * @return The request builder for the SubscribedSkus object
      */
-    ISubscribedSkuRequestBuilder getSubscribedSkus(final String id);
+    ISubscribedSkuRequestBuilder subscribedSkus(final String id);
 
     /**
      * Gets the collection of Users objects.
      *
      * @return The request builder for the collection of Users objects
      */
-    IUserCollectionRequestBuilder getUsers();
+    IUserCollectionRequestBuilder users();
 
     /**
      * Gets a single Users.
@@ -200,14 +200,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Users to retrieve.
      * @return The request builder for the Users object
      */
-    IUserRequestBuilder getUsers(final String id);
+    IUserRequestBuilder users(final String id);
 
     /**
      * Gets the collection of Contracts objects.
      *
      * @return The request builder for the collection of Contracts objects
      */
-    IContractCollectionRequestBuilder getContracts();
+    IContractCollectionRequestBuilder contracts();
 
     /**
      * Gets a single Contracts.
@@ -215,14 +215,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Contracts to retrieve.
      * @return The request builder for the Contracts object
      */
-    IContractRequestBuilder getContracts(final String id);
+    IContractRequestBuilder contracts(final String id);
 
     /**
      * Gets the collection of SchemaExtensions objects.
      *
      * @return The request builder for the collection of SchemaExtensions objects
      */
-    ISchemaExtensionCollectionRequestBuilder getSchemaExtensions();
+    ISchemaExtensionCollectionRequestBuilder schemaExtensions();
 
     /**
      * Gets a single SchemaExtensions.
@@ -230,14 +230,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the SchemaExtensions to retrieve.
      * @return The request builder for the SchemaExtensions object
      */
-    ISchemaExtensionRequestBuilder getSchemaExtensions(final String id);
+    ISchemaExtensionRequestBuilder schemaExtensions(final String id);
 
     /**
      * Gets the collection of Drives objects.
      *
      * @return The request builder for the collection of Drives objects
      */
-    IDriveCollectionRequestBuilder getDrives();
+    IDriveCollectionRequestBuilder drives();
 
     /**
      * Gets a single Drives.
@@ -245,14 +245,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Drives to retrieve.
      * @return The request builder for the Drives object
      */
-    IDriveRequestBuilder getDrives(final String id);
+    IDriveRequestBuilder drives(final String id);
 
     /**
      * Gets the collection of Shares objects.
      *
      * @return The request builder for the collection of Shares objects
      */
-    ISharedDriveItemCollectionRequestBuilder getShares();
+    ISharedDriveItemCollectionRequestBuilder shares();
 
     /**
      * Gets a single Shares.
@@ -260,14 +260,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Shares to retrieve.
      * @return The request builder for the Shares object
      */
-    ISharedDriveItemRequestBuilder getShares(final String id);
+    ISharedDriveItemRequestBuilder shares(final String id);
 
     /**
      * Gets the collection of Sites objects.
      *
      * @return The request builder for the collection of Sites objects
      */
-    ISiteCollectionRequestBuilder getSites();
+    ISiteCollectionRequestBuilder sites();
 
     /**
      * Gets a single Sites.
@@ -275,14 +275,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Sites to retrieve.
      * @return The request builder for the Sites object
      */
-    ISiteRequestBuilder getSites(final String id);
+    ISiteRequestBuilder sites(final String id);
 
     /**
      * Gets the collection of Workbooks objects.
      *
      * @return The request builder for the collection of Workbooks objects
      */
-    IDriveItemCollectionRequestBuilder getWorkbooks();
+    IDriveItemCollectionRequestBuilder workbooks();
 
     /**
      * Gets a single Workbooks.
@@ -290,14 +290,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Workbooks to retrieve.
      * @return The request builder for the Workbooks object
      */
-    IDriveItemRequestBuilder getWorkbooks(final String id);
+    IDriveItemRequestBuilder workbooks(final String id);
 
     /**
      * Gets the collection of Subscriptions objects.
      *
      * @return The request builder for the collection of Subscriptions objects
      */
-    ISubscriptionCollectionRequestBuilder getSubscriptions();
+    ISubscriptionCollectionRequestBuilder subscriptions();
 
     /**
      * Gets a single Subscriptions.
@@ -305,14 +305,14 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Subscriptions to retrieve.
      * @return The request builder for the Subscriptions object
      */
-    ISubscriptionRequestBuilder getSubscriptions(final String id);
+    ISubscriptionRequestBuilder subscriptions(final String id);
 
     /**
      * Gets the collection of Invitations objects.
      *
      * @return The request builder for the collection of Invitations objects
      */
-    IInvitationCollectionRequestBuilder getInvitations();
+    IInvitationCollectionRequestBuilder invitations();
 
     /**
      * Gets a single Invitations.
@@ -320,27 +320,27 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @param id The id of the Invitations to retrieve.
      * @return The request builder for the Invitations object
      */
-    IInvitationRequestBuilder getInvitations(final String id);
+    IInvitationRequestBuilder invitations(final String id);
 
     /**
      * Gets GraphServiceRequestBuilder.
      *
      * @return the User.
      */
-    IUserRequestBuilder getMe();
+    IUserRequestBuilder me();
 
     /**
      * Gets GraphServiceRequestBuilder.
      *
      * @return the Drive.
      */
-    IDriveRequestBuilder getDrive();
+    IDriveRequestBuilder drive();
 
     /**
      * Gets GraphServiceRequestBuilder.
      *
      * @return the Planner.
      */
-    IPlannerRequestBuilder getPlanner();
+    IPlannerRequestBuilder planner();
 
 }

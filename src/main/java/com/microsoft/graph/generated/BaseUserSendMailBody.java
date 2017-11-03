@@ -27,7 +27,7 @@ public class BaseUserSendMailBody {
 
     /**
      * The message.
-	 * 
+     * 
      */
     @SerializedName("message")
     @Expose
@@ -35,7 +35,7 @@ public class BaseUserSendMailBody {
 
     /**
      * The save To Sent Items.
-	 * 
+     * 
      */
     @SerializedName("saveToSentItems")
     @Expose

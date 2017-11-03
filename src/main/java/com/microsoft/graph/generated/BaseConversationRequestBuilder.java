@@ -47,11 +47,11 @@ public class BaseConversationRequestBuilder extends BaseRequestBuilder implement
         return new ConversationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IConversationThreadCollectionRequestBuilder getThreads() {
+    public IConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
     }
 
-    public IConversationThreadRequestBuilder getThreads(final String id) {
+    public IConversationThreadRequestBuilder threads(final String id) {
         return new ConversationThreadRequestBuilder(getRequestUrlWithAdditionalSegment("threads") + "/" + id, getClient(), null);
     }
 }

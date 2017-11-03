@@ -35,7 +35,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Cell Addresses.
-	 * 
+     * 
      */
     @SerializedName("cellAddresses")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Count.
-	 * Returns the number of visible columns. Read-only.
+     * Returns the number of visible columns. Read-only.
      */
     @SerializedName("columnCount")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas.
-	 * Represents the formula in A1-style notation.
+     * Represents the formula in A1-style notation.
      */
     @SerializedName("formulas")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas Local.
-	 * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
+     * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
      */
     @SerializedName("formulasLocal")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas R1C1.
-	 * Represents the formula in R1C1-style notation.
+     * Represents the formula in R1C1-style notation.
      */
     @SerializedName("formulasR1C1")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Index.
-	 * Index of the range.
+     * Index of the range.
      */
     @SerializedName("index")
     @Expose
@@ -83,7 +83,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Number Format.
-	 * Represents Excel's number format code for the given cell. Read-only.
+     * Represents Excel's number format code for the given cell. Read-only.
      */
     @SerializedName("numberFormat")
     @Expose
@@ -91,7 +91,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Count.
-	 * Returns the number of visible rows. Read-only.
+     * Returns the number of visible rows. Read-only.
      */
     @SerializedName("rowCount")
     @Expose
@@ -99,7 +99,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Text.
-	 * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
+     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
      */
     @SerializedName("text")
     @Expose
@@ -107,7 +107,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
-	 * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      */
     @SerializedName("valueTypes")
     @Expose
@@ -115,7 +115,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-	 * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
     @SerializedName("values")
     @Expose
@@ -123,7 +123,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Rows.
-	 * Represents a collection of range views associated with the range. Read-only. Read-only.
+     * Represents a collection of range views associated with the range. Read-only. Read-only.
      */
     public transient WorkbookRangeViewCollectionPage rows;
 

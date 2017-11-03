@@ -39,3 +39,4 @@ public interface IBaseEntityRequest extends IHttpRequest {
     IBaseEntityRequest expand(final String value);
 
 }
+

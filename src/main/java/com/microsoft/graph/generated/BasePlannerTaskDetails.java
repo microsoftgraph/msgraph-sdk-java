@@ -35,7 +35,7 @@ public class BasePlannerTaskDetails extends Entity implements IJsonBackedObject 
 
     /**
      * The Description.
-	 * Description of the task
+     * Description of the task
      */
     @SerializedName("description")
     @Expose
@@ -43,7 +43,7 @@ public class BasePlannerTaskDetails extends Entity implements IJsonBackedObject 
 
     /**
      * The Preview Type.
-	 * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      */
     @SerializedName("previewType")
     @Expose
@@ -51,7 +51,7 @@ public class BasePlannerTaskDetails extends Entity implements IJsonBackedObject 
 
     /**
      * The References.
-	 * The collection of references on the task.
+     * The collection of references on the task.
      */
     @SerializedName("references")
     @Expose
@@ -59,7 +59,7 @@ public class BasePlannerTaskDetails extends Entity implements IJsonBackedObject 
 
     /**
      * The Checklist.
-	 * The collection of checklist items on the task.
+     * The collection of checklist items on the task.
      */
     @SerializedName("checklist")
     @Expose

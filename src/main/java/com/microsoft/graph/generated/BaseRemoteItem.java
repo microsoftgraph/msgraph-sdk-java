@@ -35,7 +35,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Created By.
-	 * Identity of the user, device, and application which created the item. Read-only.
+     * Identity of the user, device, and application which created the item. Read-only.
      */
     @SerializedName("createdBy")
     @Expose
@@ -53,7 +53,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-	 * Date and time of item creation. Read-only.
+     * Date and time of item creation. Read-only.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -61,7 +61,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The File.
-	 * Indicates that the remote item is a file. Read-only.
+     * Indicates that the remote item is a file. Read-only.
      */
     @SerializedName("file")
     @Expose
@@ -69,7 +69,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The File System Info.
-	 * Information about the remote item from the local file system. Read-only.
+     * Information about the remote item from the local file system. Read-only.
      */
     @SerializedName("fileSystemInfo")
     @Expose
@@ -77,7 +77,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Folder.
-	 * Indicates that the remote item is a folder. Read-only.
+     * Indicates that the remote item is a folder. Read-only.
      */
     @SerializedName("folder")
     @Expose
@@ -85,7 +85,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Id.
-	 * Unique identifier for the remote item in its drive. Read-only.
+     * Unique identifier for the remote item in its drive. Read-only.
      */
     @SerializedName("id")
     @Expose
@@ -93,7 +93,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-	 * Identity of the user, device, and application which last modified the item. Read-only.
+     * Identity of the user, device, and application which last modified the item. Read-only.
      */
     @SerializedName("lastModifiedBy")
     @Expose
@@ -101,7 +101,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-	 * Date and time the item was last modified. Read-only.
+     * Date and time the item was last modified. Read-only.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
@@ -109,7 +109,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * Optional. Filename of the remote item. Read-only.
+     * Optional. Filename of the remote item. Read-only.
      */
     @SerializedName("name")
     @Expose
@@ -117,15 +117,15 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Package.
-	 * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
+     * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      */
     @SerializedName("package")
     @Expose
-    public com.microsoft.graph.extensions.Package msgraph_package;
+    public com.microsoft.graph.extensions.Package msgraphpackage;
 
     /**
      * The Parent Reference.
-	 * Properties of the parent of the remote item. Read-only.
+     * Properties of the parent of the remote item. Read-only.
      */
     @SerializedName("parentReference")
     @Expose
@@ -133,7 +133,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Shared.
-	 * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
+     * Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only.
      */
     @SerializedName("shared")
     @Expose
@@ -141,7 +141,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-	 * Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
+     * Provides interop between items in OneDrive for Business and SharePoint with the full set of item identifiers. Read-only.
      */
     @SerializedName("sharepointIds")
     @Expose
@@ -149,7 +149,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Size.
-	 * Size of the remote item. Read-only.
+     * Size of the remote item. Read-only.
      */
     @SerializedName("size")
     @Expose
@@ -157,7 +157,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Special Folder.
-	 * If the current item is also available as a special folder, this facet is returned. Read-only.
+     * If the current item is also available as a special folder, this facet is returned. Read-only.
      */
     @SerializedName("specialFolder")
     @Expose
@@ -165,7 +165,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Web Dav Url.
-	 * DAV compatible URL for the item.
+     * DAV compatible URL for the item.
      */
     @SerializedName("webDavUrl")
     @Expose
@@ -173,7 +173,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Web Url.
-	 * URL that displays the resource in the browser. Read-only.
+     * URL that displays the resource in the browser. Read-only.
      */
     @SerializedName("webUrl")
     @Expose

@@ -131,3 +131,4 @@ public class BaseMessageRequest extends BaseRequest implements IBaseMessageReque
      }
 
 }
+

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsChooseBody {
 
     /**
      * The index Num.
-	 * 
+     * 
      */
     @SerializedName("indexNum")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsChooseBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

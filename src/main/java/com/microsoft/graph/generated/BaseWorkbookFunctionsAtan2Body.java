@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAtan2Body {
 
     /**
      * The x Num.
-	 * 
+     * 
      */
     @SerializedName("xNum")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsAtan2Body {
 
     /**
      * The y Num.
-	 * 
+     * 
      */
     @SerializedName("yNum")
     @Expose

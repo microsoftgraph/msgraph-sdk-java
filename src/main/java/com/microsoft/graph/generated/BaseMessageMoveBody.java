@@ -27,7 +27,7 @@ public class BaseMessageMoveBody {
 
     /**
      * The destination Id.
-	 * 
+     * 
      */
     @SerializedName("destinationId")
     @Expose

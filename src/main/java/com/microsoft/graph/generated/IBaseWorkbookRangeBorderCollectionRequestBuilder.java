@@ -28,6 +28,6 @@ public interface IBaseWorkbookRangeBorderCollectionRequestBuilder extends IReque
 
     IWorkbookRangeBorderRequestBuilder byId(final String id);
 
-    IWorkbookRangeBorderItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookRangeBorderCountRequestBuilder getCount();
+    IWorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookRangeBorderCountRequestBuilder count();
 }

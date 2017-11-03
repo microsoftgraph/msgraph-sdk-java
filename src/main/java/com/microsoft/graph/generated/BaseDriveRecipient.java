@@ -35,7 +35,7 @@ public class BaseDriveRecipient implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseDriveRecipient implements IJsonBackedObject {
 
     /**
      * The Alias.
-	 * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
      */
     @SerializedName("alias")
     @Expose
@@ -53,7 +53,7 @@ public class BaseDriveRecipient implements IJsonBackedObject {
 
     /**
      * The Email.
-	 * The email address for the recipient, if the recipient has an associated email address.
+     * The email address for the recipient, if the recipient has an associated email address.
      */
     @SerializedName("email")
     @Expose
@@ -61,7 +61,7 @@ public class BaseDriveRecipient implements IJsonBackedObject {
 
     /**
      * The Object Id.
-	 * The unique identifier for the recipient in the directory.
+     * The unique identifier for the recipient in the directory.
      */
     @SerializedName("objectId")
     @Expose

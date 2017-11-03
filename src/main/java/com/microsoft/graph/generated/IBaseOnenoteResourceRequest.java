@@ -94,3 +94,4 @@ public interface IBaseOnenoteResourceRequest extends IHttpRequest {
     IBaseOnenoteResourceRequest expand(final String value);
 
 }
+

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsIsLogicalBody {
 
     /**
      * The value.
-	 * 
+     * 
      */
     @SerializedName("value")
     @Expose

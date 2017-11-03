@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The issue.
-	 * 
+     * 
      */
     @SerializedName("issue")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The first Interest.
-	 * 
+     * 
      */
     @SerializedName("firstInterest")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The par.
-	 * 
+     * 
      */
     @SerializedName("par")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The frequency.
-	 * 
+     * 
      */
     @SerializedName("frequency")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose
@@ -83,7 +83,7 @@ public class BaseWorkbookFunctionsAccrIntBody {
 
     /**
      * The calc Method.
-	 * 
+     * 
      */
     @SerializedName("calcMethod")
     @Expose

@@ -45,7 +45,7 @@ public class BaseWorkbookWorksheetCollectionRequestBuilder extends BaseRequestBu
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookWorksheetAddRequestBuilder getAdd(final String name) {
+    public IWorkbookWorksheetAddRequestBuilder add(final String name) {
         return new WorkbookWorksheetAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, name);
     }
 }

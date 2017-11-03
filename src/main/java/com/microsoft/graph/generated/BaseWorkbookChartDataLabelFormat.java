@@ -35,7 +35,7 @@ public class BaseWorkbookChartDataLabelFormat extends Entity implements IJsonBac
 
     /**
      * The Fill.
-	 * 
+     * 
      */
     @SerializedName("fill")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartDataLabelFormat extends Entity implements IJsonBac
 
     /**
      * The Font.
-	 * 
+     * 
      */
     @SerializedName("font")
     @Expose

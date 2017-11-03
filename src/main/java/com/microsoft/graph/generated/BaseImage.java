@@ -35,7 +35,7 @@ public class BaseImage implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseImage implements IJsonBackedObject {
 
     /**
      * The Height.
-	 * Optional. Height of the image, in pixels. Read-only.
+     * Optional. Height of the image, in pixels. Read-only.
      */
     @SerializedName("height")
     @Expose
@@ -53,7 +53,7 @@ public class BaseImage implements IJsonBackedObject {
 
     /**
      * The Width.
-	 * Optional. Width of the image, in pixels. Read-only.
+     * Optional. Width of the image, in pixels. Read-only.
      */
     @SerializedName("width")
     @Expose

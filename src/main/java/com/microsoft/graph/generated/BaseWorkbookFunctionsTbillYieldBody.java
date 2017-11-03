@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsTbillYieldBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsTbillYieldBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsTbillYieldBody {
 
     /**
      * The pr.
-	 * 
+     * 
      */
     @SerializedName("pr")
     @Expose

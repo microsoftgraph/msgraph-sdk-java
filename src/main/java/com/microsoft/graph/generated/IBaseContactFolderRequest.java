@@ -94,3 +94,4 @@ public interface IBaseContactFolderRequest extends IHttpRequest {
     IBaseContactFolderRequest expand(final String value);
 
 }
+

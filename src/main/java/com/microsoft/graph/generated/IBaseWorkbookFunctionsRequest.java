@@ -94,3 +94,4 @@ public interface IBaseWorkbookFunctionsRequest extends IHttpRequest {
     IBaseWorkbookFunctionsRequest expand(final String value);
 
 }
+

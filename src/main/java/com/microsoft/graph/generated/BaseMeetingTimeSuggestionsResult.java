@@ -35,7 +35,7 @@ public class BaseMeetingTimeSuggestionsResult implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseMeetingTimeSuggestionsResult implements IJsonBackedObject {
 
     /**
      * The Meeting Time Suggestions.
-	 * An array of meeting suggestions.
+     * An array of meeting suggestions.
      */
     @SerializedName("meetingTimeSuggestions")
     @Expose
@@ -53,7 +53,7 @@ public class BaseMeetingTimeSuggestionsResult implements IJsonBackedObject {
 
     /**
      * The Empty Suggestions Reason.
-	 * A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
+     * A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
      */
     @SerializedName("emptySuggestionsReason")
     @Expose

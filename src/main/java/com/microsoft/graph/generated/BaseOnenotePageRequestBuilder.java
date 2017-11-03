@@ -51,30 +51,30 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
     /**
      * Gets the request builder for OnenoteSection.
      */
-    public IOnenoteSectionRequestBuilder getParentSection() {
+    public IOnenoteSectionRequestBuilder parentSection() {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Notebook.
      */
-    public INotebookRequestBuilder getParentNotebook() {
+    public INotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
-    public IOnenotePageStreamRequestBuilder getContent() {
+    public IOnenotePageStreamRequestBuilder content() {
         return new OnenotePageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
-    public IOnenotePageOnenotePatchContentRequestBuilder getOnenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
+    public IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
         return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
-    public IOnenotePageCopyToSectionRequestBuilder getCopyToSection(final String id, final String groupId) {
+    public IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId) {
         return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId);
     }
 
-    public IOnenotePagePreviewRequestBuilder getPreview() {
+    public IOnenotePagePreviewRequestBuilder preview() {
         return new OnenotePagePreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null);
     }
 }

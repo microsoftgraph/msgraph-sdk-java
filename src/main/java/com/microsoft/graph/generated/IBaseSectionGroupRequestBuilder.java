@@ -34,19 +34,19 @@ public interface IBaseSectionGroupRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for Notebook.
      */
-    INotebookRequestBuilder getParentNotebook();
+    INotebookRequestBuilder parentNotebook();
 
     /**
      * Gets the request builder for SectionGroup.
      */
-    ISectionGroupRequestBuilder getParentSectionGroup();
+    ISectionGroupRequestBuilder parentSectionGroup();
 
-    IOnenoteSectionCollectionRequestBuilder getSections();
+    IOnenoteSectionCollectionRequestBuilder sections();
 
-    IOnenoteSectionRequestBuilder getSections(final String id);
+    IOnenoteSectionRequestBuilder sections(final String id);
 
-    ISectionGroupCollectionRequestBuilder getSectionGroups();
+    ISectionGroupCollectionRequestBuilder sectionGroups();
 
-    ISectionGroupRequestBuilder getSectionGroups(final String id);
+    ISectionGroupRequestBuilder sectionGroups(final String id);
 
 }

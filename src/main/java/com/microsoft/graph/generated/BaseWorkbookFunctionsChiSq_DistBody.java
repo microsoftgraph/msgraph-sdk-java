@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsChiSq_DistBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsChiSq_DistBody {
 
     /**
      * The deg Freedom.
-	 * 
+     * 
      */
     @SerializedName("degFreedom")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsChiSq_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

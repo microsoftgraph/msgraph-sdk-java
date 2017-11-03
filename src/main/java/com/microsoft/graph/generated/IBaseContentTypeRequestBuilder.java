@@ -31,8 +31,8 @@ public interface IBaseContentTypeRequestBuilder extends IRequestBuilder {
      */
     IContentTypeRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IColumnLinkCollectionRequestBuilder getColumnLinks();
+    IColumnLinkCollectionRequestBuilder columnLinks();
 
-    IColumnLinkRequestBuilder getColumnLinks(final String id);
+    IColumnLinkRequestBuilder columnLinks(final String id);
 
 }

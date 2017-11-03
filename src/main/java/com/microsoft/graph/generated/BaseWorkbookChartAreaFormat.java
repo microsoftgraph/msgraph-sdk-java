@@ -35,7 +35,7 @@ public class BaseWorkbookChartAreaFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Fill.
-	 * 
+     * 
      */
     @SerializedName("fill")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartAreaFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Font.
-	 * 
+     * 
      */
     @SerializedName("font")
     @Expose

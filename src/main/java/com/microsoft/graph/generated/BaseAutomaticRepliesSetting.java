@@ -35,7 +35,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Status.
-	 * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+     * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
      */
     @SerializedName("status")
     @Expose
@@ -53,7 +53,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Audience.
-	 * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+     * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
      */
     @SerializedName("externalAudience")
     @Expose
@@ -61,7 +61,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Scheduled Start Date Time.
-	 * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
+     * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
      */
     @SerializedName("scheduledStartDateTime")
     @Expose
@@ -69,7 +69,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Scheduled End Date Time.
-	 * The date and time that automatic replies are set to end, if Status is set to Scheduled.
+     * The date and time that automatic replies are set to end, if Status is set to Scheduled.
      */
     @SerializedName("scheduledEndDateTime")
     @Expose
@@ -77,7 +77,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Internal Reply Message.
-	 * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
+     * The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
      */
     @SerializedName("internalReplyMessage")
     @Expose
@@ -85,7 +85,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Reply Message.
-	 * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
+     * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
      */
     @SerializedName("externalReplyMessage")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsIfBody {
 
     /**
      * The logical Test.
-	 * 
+     * 
      */
     @SerializedName("logicalTest")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsIfBody {
 
     /**
      * The value If True.
-	 * 
+     * 
      */
     @SerializedName("valueIfTrue")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsIfBody {
 
     /**
      * The value If False.
-	 * 
+     * 
      */
     @SerializedName("valueIfFalse")
     @Expose

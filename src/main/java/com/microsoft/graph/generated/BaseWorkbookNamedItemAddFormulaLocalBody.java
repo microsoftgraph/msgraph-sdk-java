@@ -27,7 +27,7 @@ public class BaseWorkbookNamedItemAddFormulaLocalBody {
 
     /**
      * The name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookNamedItemAddFormulaLocalBody {
 
     /**
      * The formula.
-	 * 
+     * 
      */
     @SerializedName("formula")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookNamedItemAddFormulaLocalBody {
 
     /**
      * The comment.
-	 * 
+     * 
      */
     @SerializedName("comment")
     @Expose

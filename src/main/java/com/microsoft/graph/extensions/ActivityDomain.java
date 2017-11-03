@@ -23,19 +23,19 @@ public enum ActivityDomain
     /**
     * unknown
     */
-    unknown,
+    UNKNOWN,
     /**
     * work
     */
-    work,
+    WORK,
     /**
     * personal
     */
-    personal,
+    PERSONAL,
     /**
     * unrestricted
     */
-    unrestricted,
+    UNRESTRICTED,
     /**
     * For ActivityDomain values that were not expected from the service
     */

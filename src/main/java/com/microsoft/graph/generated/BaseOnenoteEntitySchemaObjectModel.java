@@ -35,7 +35,7 @@ public class BaseOnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel i
 
     /**
      * The Created Date Time.
-	 * 
+     * 
      */
     @SerializedName("createdDateTime")
     @Expose

@@ -35,7 +35,7 @@ public class BaseOnenoteOperation extends Operation implements IJsonBackedObject
 
     /**
      * The Resource Location.
-	 * The resource URI for the object. For example, the resource URI for a copied page or section.
+     * The resource URI for the object. For example, the resource URI for a copied page or section.
      */
     @SerializedName("resourceLocation")
     @Expose
@@ -43,7 +43,7 @@ public class BaseOnenoteOperation extends Operation implements IJsonBackedObject
 
     /**
      * The Resource Id.
-	 * The resource id.
+     * The resource id.
      */
     @SerializedName("resourceId")
     @Expose
@@ -51,7 +51,7 @@ public class BaseOnenoteOperation extends Operation implements IJsonBackedObject
 
     /**
      * The Error.
-	 * The error returned by the operation.
+     * The error returned by the operation.
      */
     @SerializedName("error")
     @Expose
@@ -59,7 +59,7 @@ public class BaseOnenoteOperation extends Operation implements IJsonBackedObject
 
     /**
      * The Percent Complete.
-	 * The operation percent complete if the operation is still in running status
+     * The operation percent complete if the operation is still in running status
      */
     @SerializedName("percentComplete")
     @Expose

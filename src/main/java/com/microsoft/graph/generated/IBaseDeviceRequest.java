@@ -94,3 +94,4 @@ public interface IBaseDeviceRequest extends IHttpRequest {
     IBaseDeviceRequest expand(final String value);
 
 }
+

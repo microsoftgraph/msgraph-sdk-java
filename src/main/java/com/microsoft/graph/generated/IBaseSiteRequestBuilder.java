@@ -31,39 +31,39 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
      */
     ISiteRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IColumnDefinitionCollectionRequestBuilder getColumns();
+    IColumnDefinitionCollectionRequestBuilder columns();
 
-    IColumnDefinitionRequestBuilder getColumns(final String id);
+    IColumnDefinitionRequestBuilder columns(final String id);
 
-    IContentTypeCollectionRequestBuilder getContentTypes();
+    IContentTypeCollectionRequestBuilder contentTypes();
 
-    IContentTypeRequestBuilder getContentTypes(final String id);
+    IContentTypeRequestBuilder contentTypes(final String id);
 
     /**
      * Gets the request builder for Drive.
      */
-    IDriveRequestBuilder getDrive();
+    IDriveRequestBuilder drive();
 
-    IDriveCollectionRequestBuilder getDrives();
+    IDriveCollectionRequestBuilder drives();
 
-    IDriveRequestBuilder getDrives(final String id);
+    IDriveRequestBuilder drives(final String id);
 
-    IBaseItemCollectionRequestBuilder getItems();
+    IBaseItemCollectionRequestBuilder items();
 
-    IBaseItemRequestBuilder getItems(final String id);
+    IBaseItemRequestBuilder items(final String id);
 
-    IListCollectionRequestBuilder getLists();
+    IListCollectionRequestBuilder lists();
 
-    IListRequestBuilder getLists(final String id);
+    IListRequestBuilder lists(final String id);
 
-    ISiteCollectionRequestBuilder getSites();
+    ISiteCollectionRequestBuilder sites();
 
-    ISiteRequestBuilder getSites(final String id);
+    ISiteRequestBuilder sites(final String id);
 
     /**
      * Gets the request builder for Onenote.
      */
-    IOnenoteRequestBuilder getOnenote();
-    ISiteGetByPathRequestBuilder getGetByPath(final String path);
+    IOnenoteRequestBuilder onenote();
+    ISiteGetByPathRequestBuilder getByPath(final String path);
 
 }

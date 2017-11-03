@@ -47,40 +47,40 @@ public class BaseMailFolderRequestBuilder extends BaseRequestBuilder implements 
         return new MailFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMessageCollectionRequestBuilder getMessages() {
+    public IMessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public IMessageRequestBuilder getMessages(final String id) {
+    public IMessageRequestBuilder messages(final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
-    public IMailFolderCollectionRequestBuilder getChildFolders() {
+    public IMailFolderCollectionRequestBuilder childFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }
 
-    public IMailFolderRequestBuilder getChildFolders(final String id) {
+    public IMailFolderRequestBuilder childFolders(final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder getSingleValueExtendedProperties() {
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder getSingleValueExtendedProperties(final String id) {
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder getMultiValueExtendedProperties() {
+    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder getMultiValueExtendedProperties(final String id) {
+    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
-    public IMailFolderCopyRequestBuilder getCopy(final String destinationId) {
+    public IMailFolderCopyRequestBuilder copy(final String destinationId) {
         return new MailFolderCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
     }
 
-    public IMailFolderMoveRequestBuilder getMove(final String destinationId) {
+    public IMailFolderMoveRequestBuilder move(final String destinationId) {
         return new MailFolderMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSydBody {
 
     /**
      * The cost.
-	 * 
+     * 
      */
     @SerializedName("cost")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSydBody {
 
     /**
      * The salvage.
-	 * 
+     * 
      */
     @SerializedName("salvage")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsSydBody {
 
     /**
      * The life.
-	 * 
+     * 
      */
     @SerializedName("life")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsSydBody {
 
     /**
      * The per.
-	 * 
+     * 
      */
     @SerializedName("per")
     @Expose

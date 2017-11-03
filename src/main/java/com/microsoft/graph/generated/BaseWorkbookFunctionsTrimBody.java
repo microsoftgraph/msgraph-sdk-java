@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsTrimBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose

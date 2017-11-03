@@ -35,7 +35,7 @@ public class BaseDomainDnsCnameRecord extends DomainDnsRecord implements IJsonBa
 
     /**
      * The Canonical Name.
-	 * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
+     * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.
      */
     @SerializedName("canonicalName")
     @Expose

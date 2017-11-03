@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The pr.
-	 * 
+     * 
      */
     @SerializedName("pr")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The redemption.
-	 * 
+     * 
      */
     @SerializedName("redemption")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The frequency.
-	 * 
+     * 
      */
     @SerializedName("frequency")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookFunctionsYieldBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

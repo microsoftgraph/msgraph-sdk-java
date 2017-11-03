@@ -45,11 +45,11 @@ public class BaseUserCollectionRequestBuilder extends BaseRequestBuilder impleme
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IUserDeltaCollectionRequestBuilder getDelta() {
+    public IUserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IUserDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+	public IUserDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new UserDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

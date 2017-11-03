@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsImDivBody {
 
     /**
      * The inumber1.
-	 * 
+     * 
      */
     @SerializedName("inumber1")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsImDivBody {
 
     /**
      * The inumber2.
-	 * 
+     * 
      */
     @SerializedName("inumber2")
     @Expose

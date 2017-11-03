@@ -47,15 +47,15 @@ public class BaseConversationThreadRequestBuilder extends BaseRequestBuilder imp
         return new ConversationThreadRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPostCollectionRequestBuilder getPosts() {
+    public IPostCollectionRequestBuilder posts() {
         return new PostCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("posts"), getClient(), null);
     }
 
-    public IPostRequestBuilder getPosts(final String id) {
+    public IPostRequestBuilder posts(final String id) {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("posts") + "/" + id, getClient(), null);
     }
 
-    public IConversationThreadReplyRequestBuilder getReply(final Post post) {
+    public IConversationThreadReplyRequestBuilder reply(final Post post) {
         return new ConversationThreadReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }

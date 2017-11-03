@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFvscheduleBody {
 
     /**
      * The principal.
-	 * 
+     * 
      */
     @SerializedName("principal")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsFvscheduleBody {
 
     /**
      * The schedule.
-	 * 
+     * 
      */
     @SerializedName("schedule")
     @Expose

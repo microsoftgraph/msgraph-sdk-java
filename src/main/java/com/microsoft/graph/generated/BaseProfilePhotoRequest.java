@@ -131,3 +131,4 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
      }
 
 }
+

@@ -48,11 +48,11 @@ public class BaseWorkbookChartFillRequestBuilder extends BaseRequestBuilder impl
     }
 
 
-    public IWorkbookChartFillClearRequestBuilder getClear() {
+    public IWorkbookChartFillClearRequestBuilder clear() {
         return new WorkbookChartFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 
-    public IWorkbookChartFillSetSolidColorRequestBuilder getSetSolidColor(final String color) {
+    public IWorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color) {
         return new WorkbookChartFillSetSolidColorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setSolidColor"), getClient(), null, color);
     }
 }

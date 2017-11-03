@@ -27,7 +27,7 @@ public class BaseDriveItemCreateUploadSessionBody {
 
     /**
      * The item.
-	 * 
+     * 
      */
     @SerializedName("item")
     @Expose

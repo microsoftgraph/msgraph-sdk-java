@@ -35,7 +35,7 @@ public class BaseDeleted implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseDeleted implements IJsonBackedObject {
 
     /**
      * The State.
-	 * Represents the state of the deleted item.
+     * Represents the state of the deleted item.
      */
     @SerializedName("state")
     @Expose

@@ -47,25 +47,25 @@ public class BasePlannerRequestBuilder extends BaseRequestBuilder implements IBa
         return new PlannerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IPlannerTaskCollectionRequestBuilder getTasks() {
+    public IPlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder getTasks(final String id) {
+    public IPlannerTaskRequestBuilder tasks(final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
-    public IPlannerPlanCollectionRequestBuilder getPlans() {
+    public IPlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public IPlannerPlanRequestBuilder getPlans(final String id) {
+    public IPlannerPlanRequestBuilder plans(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
-    public IPlannerBucketCollectionRequestBuilder getBuckets() {
+    public IPlannerBucketCollectionRequestBuilder buckets() {
         return new PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
     }
 
-    public IPlannerBucketRequestBuilder getBuckets(final String id) {
+    public IPlannerBucketRequestBuilder buckets(final String id) {
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
     }
 }

@@ -45,19 +45,19 @@ public class BaseWorkbookChartCollectionRequestBuilder extends BaseRequestBuilde
         return new WorkbookChartRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookChartAddRequestBuilder getAdd(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
+    public IWorkbookChartAddRequestBuilder add(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         return new WorkbookChartAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, type, sourceData, seriesBy);
     }
 
-    public IWorkbookChartItemRequestBuilder getItem(final String name) {
+    public IWorkbookChartItemRequestBuilder item(final String name) {
         return new WorkbookChartItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.item"), getClient(), null, name);
     }
 
-    public IWorkbookChartItemAtRequestBuilder getItemAt(final Integer index) {
+    public IWorkbookChartItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 
-    public IWorkbookChartCountRequestBuilder getCount() {
+    public IWorkbookChartCountRequestBuilder count() {
         return new WorkbookChartCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 }

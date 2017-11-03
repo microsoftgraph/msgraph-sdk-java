@@ -94,3 +94,4 @@ public interface IBaseGroupSettingRequest extends IHttpRequest {
     IBaseGroupSettingRequest expand(final String value);
 
 }
+

@@ -35,7 +35,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * The calendar name.
+     * The calendar name.
      */
     @SerializedName("name")
     @Expose
@@ -43,7 +43,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-	 * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
+     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
      */
     @SerializedName("color")
     @Expose
@@ -51,7 +51,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-	 * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+     * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      */
     @SerializedName("changeKey")
     @Expose
@@ -59,7 +59,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Share.
-	 * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
      */
     @SerializedName("canShare")
     @Expose
@@ -67,7 +67,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can View Private Items.
-	 * True if the user can read calendar items that have been marked private, false otherwise.
+     * True if the user can read calendar items that have been marked private, false otherwise.
      */
     @SerializedName("canViewPrivateItems")
     @Expose
@@ -75,7 +75,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Edit.
-	 * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      */
     @SerializedName("canEdit")
     @Expose
@@ -83,7 +83,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-	 * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
      */
     @SerializedName("owner")
     @Expose
@@ -91,25 +91,25 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Events.
-	 * The events in the calendar. Navigation property. Read-only.
+     * The events in the calendar. Navigation property. Read-only.
      */
     public transient EventCollectionPage events;
 
     /**
      * The Calendar View.
-	 * The calendar view for the calendar. Navigation property. Read-only.
+     * The calendar view for the calendar. Navigation property. Read-only.
      */
     public transient EventCollectionPage calendarView;
 
     /**
      * The Single Value Extended Properties.
-	 * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
+     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
-	 * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

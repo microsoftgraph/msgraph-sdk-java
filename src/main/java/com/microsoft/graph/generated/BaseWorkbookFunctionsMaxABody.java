@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMaxABody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

@@ -39,7 +39,7 @@ public class BaseColumnDefinition extends Entity implements IJsonBackedObject {
      */
     @SerializedName("boolean")
     @Expose
-    public BooleanColumn msgraph_boolean;
+    public BooleanColumn msgraphboolean;
 
     /**
      * The Calculated.

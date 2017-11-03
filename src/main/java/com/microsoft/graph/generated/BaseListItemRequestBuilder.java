@@ -51,14 +51,14 @@ public class BaseListItemRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Gets the request builder for DriveItem.
      */
-    public IDriveItemRequestBuilder getDriveItem() {
+    public IDriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
     /**
      * Gets the request builder for FieldValueSet.
      */
-    public IFieldValueSetRequestBuilder getFields() {
+    public IFieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
 }

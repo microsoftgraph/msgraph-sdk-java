@@ -35,7 +35,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Comment.
-	 * 
+     * 
      */
     @SerializedName("comment")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-	 * 
+     * 
      */
     @SerializedName("scope")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Value.
-	 * 
+     * 
      */
     @SerializedName("value")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Visible.
-	 * 
+     * 
      */
     @SerializedName("visible")
     @Expose
@@ -83,7 +83,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
-	 * 
+     * 
      */
     @SerializedName("worksheet")
     @Expose

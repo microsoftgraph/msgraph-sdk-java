@@ -35,7 +35,7 @@ public class BaseDomainState implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseDomainState implements IJsonBackedObject {
 
     /**
      * The Status.
-	 * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+     * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
      */
     @SerializedName("status")
     @Expose
@@ -53,7 +53,7 @@ public class BaseDomainState implements IJsonBackedObject {
 
     /**
      * The Operation.
-	 * Type of asynchronous operation. The values can be ForceDelete or Verification
+     * Type of asynchronous operation. The values can be ForceDelete or Verification
      */
     @SerializedName("operation")
     @Expose
@@ -61,7 +61,7 @@ public class BaseDomainState implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-	 * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
+     * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
      */
     @SerializedName("lastActionDateTime")
     @Expose

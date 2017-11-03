@@ -27,7 +27,7 @@ public class BaseDriveItemCreateLinkBody {
 
     /**
      * The type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose
@@ -35,7 +35,7 @@ public class BaseDriveItemCreateLinkBody {
 
     /**
      * The scope.
-	 * 
+     * 
      */
     @SerializedName("scope")
     @Expose

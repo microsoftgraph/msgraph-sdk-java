@@ -27,7 +27,7 @@ public class BaseMailFolderMoveBody {
 
     /**
      * The destination Id.
-	 * 
+     * 
      */
     @SerializedName("destinationId")
     @Expose

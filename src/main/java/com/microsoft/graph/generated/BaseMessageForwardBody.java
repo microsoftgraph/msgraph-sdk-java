@@ -27,7 +27,7 @@ public class BaseMessageForwardBody {
 
     /**
      * The comment.
-	 * 
+     * 
      */
     @SerializedName("comment")
     @Expose
@@ -35,7 +35,7 @@ public class BaseMessageForwardBody {
 
     /**
      * The to Recipients.
-	 * 
+     * 
      */
     @SerializedName("toRecipients")
     @Expose

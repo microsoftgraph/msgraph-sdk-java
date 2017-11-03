@@ -35,7 +35,7 @@ public class BaseSharingLink implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseSharingLink implements IJsonBackedObject {
 
     /**
      * The Application.
-	 * The app the link is associated with.
+     * The app the link is associated with.
      */
     @SerializedName("application")
     @Expose
@@ -53,7 +53,7 @@ public class BaseSharingLink implements IJsonBackedObject {
 
     /**
      * The Scope.
-	 * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
+     * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      */
     @SerializedName("scope")
     @Expose
@@ -61,7 +61,7 @@ public class BaseSharingLink implements IJsonBackedObject {
 
     /**
      * The Type.
-	 * The type of the link created.
+     * The type of the link created.
      */
     @SerializedName("type")
     @Expose
@@ -69,7 +69,7 @@ public class BaseSharingLink implements IJsonBackedObject {
 
     /**
      * The Web Url.
-	 * A URL that opens the item in the browser on the OneDrive website.
+     * A URL that opens the item in the browser on the OneDrive website.
      */
     @SerializedName("webUrl")
     @Expose

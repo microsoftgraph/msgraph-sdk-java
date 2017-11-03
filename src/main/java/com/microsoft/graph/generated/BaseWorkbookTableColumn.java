@@ -35,7 +35,7 @@ public class BaseWorkbookTableColumn extends Entity implements IJsonBackedObject
 
     /**
      * The Index.
-	 * 
+     * 
      */
     @SerializedName("index")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookTableColumn extends Entity implements IJsonBackedObject
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookTableColumn extends Entity implements IJsonBackedObject
 
     /**
      * The Values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookTableColumn extends Entity implements IJsonBackedObject
 
     /**
      * The Filter.
-	 * 
+     * 
      */
     @SerializedName("filter")
     @Expose

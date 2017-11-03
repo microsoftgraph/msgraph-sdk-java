@@ -35,7 +35,7 @@ public class BaseGroupSettingTemplate extends DirectoryObject implements IJsonBa
 
     /**
      * The Display Name.
-	 * Display name of the template.
+     * Display name of the template.
      */
     @SerializedName("displayName")
     @Expose
@@ -43,7 +43,7 @@ public class BaseGroupSettingTemplate extends DirectoryObject implements IJsonBa
 
     /**
      * The Description.
-	 * Description of the template.
+     * Description of the template.
      */
     @SerializedName("description")
     @Expose
@@ -51,7 +51,7 @@ public class BaseGroupSettingTemplate extends DirectoryObject implements IJsonBa
 
     /**
      * The Values.
-	 * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
+     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.
      */
     @SerializedName("values")
     @Expose

@@ -35,7 +35,7 @@ public class BaseSpecialFolder implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseSpecialFolder implements IJsonBackedObject {
 
     /**
      * The Name.
-	 * The unique identifier for this item in the /drive/special collection
+     * The unique identifier for this item in the /drive/special collection
      */
     @SerializedName("name")
     @Expose

@@ -31,12 +31,12 @@ public interface IBasePlannerUserRequestBuilder extends IRequestBuilder {
      */
     IPlannerUserRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IPlannerTaskCollectionRequestBuilder getTasks();
+    IPlannerTaskCollectionRequestBuilder tasks();
 
-    IPlannerTaskRequestBuilder getTasks(final String id);
+    IPlannerTaskRequestBuilder tasks(final String id);
 
-    IPlannerPlanCollectionRequestBuilder getPlans();
+    IPlannerPlanCollectionRequestBuilder plans();
 
-    IPlannerPlanRequestBuilder getPlans(final String id);
+    IPlannerPlanRequestBuilder plans(final String id);
 
 }

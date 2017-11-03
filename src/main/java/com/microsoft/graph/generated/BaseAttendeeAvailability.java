@@ -35,7 +35,7 @@ public class BaseAttendeeAvailability implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseAttendeeAvailability implements IJsonBackedObject {
 
     /**
      * The Attendee.
-	 * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+     * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
      */
     @SerializedName("attendee")
     @Expose
@@ -53,7 +53,7 @@ public class BaseAttendeeAvailability implements IJsonBackedObject {
 
     /**
      * The Availability.
-	 * The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName("availability")
     @Expose

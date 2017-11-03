@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMatchBody {
 
     /**
      * The lookup Value.
-	 * 
+     * 
      */
     @SerializedName("lookupValue")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsMatchBody {
 
     /**
      * The lookup Array.
-	 * 
+     * 
      */
     @SerializedName("lookupArray")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsMatchBody {
 
     /**
      * The match Type.
-	 * 
+     * 
      */
     @SerializedName("matchType")
     @Expose

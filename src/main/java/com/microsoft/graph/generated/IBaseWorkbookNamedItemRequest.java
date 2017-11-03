@@ -94,3 +94,4 @@ public interface IBaseWorkbookNamedItemRequest extends IHttpRequest {
     IBaseWorkbookNamedItemRequest expand(final String value);
 
 }
+

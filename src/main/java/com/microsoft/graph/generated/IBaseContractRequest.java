@@ -94,3 +94,4 @@ public interface IBaseContractRequest extends IHttpRequest {
     IBaseContractRequest expand(final String value);
 
 }
+

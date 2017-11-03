@@ -27,7 +27,7 @@ public class BaseOnenoteSectionCopyToNotebookBody {
 
     /**
      * The id.
-	 * 
+     * 
      */
     @SerializedName("id")
     @Expose
@@ -35,7 +35,7 @@ public class BaseOnenoteSectionCopyToNotebookBody {
 
     /**
      * The group Id.
-	 * 
+     * 
      */
     @SerializedName("groupId")
     @Expose
@@ -43,7 +43,7 @@ public class BaseOnenoteSectionCopyToNotebookBody {
 
     /**
      * The rename As.
-	 * 
+     * 
      */
     @SerializedName("renameAs")
     @Expose

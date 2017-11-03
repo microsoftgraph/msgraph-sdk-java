@@ -35,7 +35,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Automatic Replies Setting.
-	 * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
+     * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
      */
     @SerializedName("automaticRepliesSetting")
     @Expose
@@ -53,7 +53,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Archive Folder.
-	 * 
+     * 
      */
     @SerializedName("archiveFolder")
     @Expose
@@ -61,7 +61,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-	 * The default time zone for the user's mailbox.
+     * The default time zone for the user's mailbox.
      */
     @SerializedName("timeZone")
     @Expose
@@ -69,7 +69,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Language.
-	 * The locale information for the user, including the preferred language and country/region.
+     * The locale information for the user, including the preferred language and country/region.
      */
     @SerializedName("language")
     @Expose

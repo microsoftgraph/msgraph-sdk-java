@@ -34,11 +34,11 @@ public interface IBaseListItemRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for DriveItem.
      */
-    IDriveItemRequestBuilder getDriveItem();
+    IDriveItemRequestBuilder driveItem();
 
     /**
      * Gets the request builder for FieldValueSet.
      */
-    IFieldValueSetRequestBuilder getFields();
+    IFieldValueSetRequestBuilder fields();
 
 }

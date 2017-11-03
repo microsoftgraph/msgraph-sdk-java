@@ -94,3 +94,4 @@ public interface IBaseWorkbookChartGridlinesRequest extends IHttpRequest {
     IBaseWorkbookChartGridlinesRequest expand(final String value);
 
 }
+

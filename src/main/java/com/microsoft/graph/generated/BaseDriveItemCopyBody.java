@@ -27,7 +27,7 @@ public class BaseDriveItemCopyBody {
 
     /**
      * The name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -35,7 +35,7 @@ public class BaseDriveItemCopyBody {
 
     /**
      * The parent Reference.
-	 * 
+     * 
      */
     @SerializedName("parentReference")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNotBody {
 
     /**
      * The logical.
-	 * 
+     * 
      */
     @SerializedName("logical")
     @Expose

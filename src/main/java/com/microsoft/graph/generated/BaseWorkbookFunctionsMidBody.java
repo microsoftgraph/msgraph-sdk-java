@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsMidBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsMidBody {
 
     /**
      * The start Num.
-	 * 
+     * 
      */
     @SerializedName("startNum")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsMidBody {
 
     /**
      * The num Chars.
-	 * 
+     * 
      */
     @SerializedName("numChars")
     @Expose

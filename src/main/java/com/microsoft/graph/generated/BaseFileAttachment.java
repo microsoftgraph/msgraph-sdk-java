@@ -35,7 +35,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Id.
-	 * The ID of the attachment in the Exchange store.
+     * The ID of the attachment in the Exchange store.
      */
     @SerializedName("contentId")
     @Expose
@@ -43,7 +43,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Location.
-	 * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
+     * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
      */
     @SerializedName("contentLocation")
     @Expose
@@ -51,7 +51,7 @@ public class BaseFileAttachment extends Attachment implements IJsonBackedObject 
 
     /**
      * The Content Bytes.
-	 * The binary contents of the file.
+     * The binary contents of the file.
      */
     @SerializedName("contentBytes")
     @Expose

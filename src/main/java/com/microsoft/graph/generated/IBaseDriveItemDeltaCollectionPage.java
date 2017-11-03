@@ -28,5 +28,5 @@ public interface IBaseDriveItemDeltaCollectionPage extends IBaseCollectionPage<D
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink();
+    public String deltaLink();
 }

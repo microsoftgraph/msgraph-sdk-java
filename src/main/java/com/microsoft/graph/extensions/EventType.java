@@ -23,19 +23,19 @@ public enum EventType
     /**
     * single Instance
     */
-    singleInstance,
+    SINGLEINSTANCE,
     /**
     * occurrence
     */
-    occurrence,
+    OCCURRENCE,
     /**
     * exception
     */
-    exception,
+    EXCEPTION,
     /**
     * series Master
     */
-    seriesMaster,
+    SERIESMASTER,
     /**
     * For EventType values that were not expected from the service
     */

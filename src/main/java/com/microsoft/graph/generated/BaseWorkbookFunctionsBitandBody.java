@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBitandBody {
 
     /**
      * The number1.
-	 * 
+     * 
      */
     @SerializedName("number1")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBitandBody {
 
     /**
      * The number2.
-	 * 
+     * 
      */
     @SerializedName("number2")
     @Expose

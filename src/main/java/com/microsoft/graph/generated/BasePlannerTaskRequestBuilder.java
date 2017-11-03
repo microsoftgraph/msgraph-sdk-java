@@ -51,28 +51,28 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
     /**
      * Gets the request builder for PlannerTaskDetails.
      */
-    public IPlannerTaskDetailsRequestBuilder getDetails() {
+    public IPlannerTaskDetailsRequestBuilder details() {
         return new PlannerTaskDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat.
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequestBuilder getAssignedToTaskBoardFormat() {
+    public IPlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
         return new PlannerAssignedToTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("assignedToTaskBoardFormat"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerProgressTaskBoardTaskFormat.
      */
-    public IPlannerProgressTaskBoardTaskFormatRequestBuilder getProgressTaskBoardFormat() {
+    public IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
         return new PlannerProgressTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("progressTaskBoardFormat"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerBucketTaskBoardTaskFormat.
      */
-    public IPlannerBucketTaskBoardTaskFormatRequestBuilder getBucketTaskBoardFormat() {
+    public IPlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
         return new PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);
     }
 }

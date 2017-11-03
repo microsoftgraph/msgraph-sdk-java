@@ -94,3 +94,4 @@ public interface IBaseDomainDnsUnavailableRecordRequest extends IHttpRequest {
     IBaseDomainDnsUnavailableRecordRequest expand(final String value);
 
 }
+

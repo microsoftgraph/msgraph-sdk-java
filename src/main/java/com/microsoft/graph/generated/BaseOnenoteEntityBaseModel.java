@@ -35,7 +35,7 @@ public class BaseOnenoteEntityBaseModel extends Entity implements IJsonBackedObj
 
     /**
      * The Self.
-	 * 
+     * 
      */
     @SerializedName("self")
     @Expose

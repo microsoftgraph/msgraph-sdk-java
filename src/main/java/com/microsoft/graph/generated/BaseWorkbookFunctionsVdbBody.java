@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The cost.
-	 * 
+     * 
      */
     @SerializedName("cost")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The salvage.
-	 * 
+     * 
      */
     @SerializedName("salvage")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The life.
-	 * 
+     * 
      */
     @SerializedName("life")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The start Period.
-	 * 
+     * 
      */
     @SerializedName("startPeriod")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The end Period.
-	 * 
+     * 
      */
     @SerializedName("endPeriod")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The factor.
-	 * 
+     * 
      */
     @SerializedName("factor")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookFunctionsVdbBody {
 
     /**
      * The no Switch.
-	 * 
+     * 
      */
     @SerializedName("noSwitch")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNorm_S_DistBody {
 
     /**
      * The z.
-	 * 
+     * 
      */
     @SerializedName("z")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsNorm_S_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

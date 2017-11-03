@@ -47,46 +47,46 @@ public class BaseOnenoteRequestBuilder extends BaseRequestBuilder implements IBa
         return new OnenoteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public INotebookCollectionRequestBuilder getNotebooks() {
+    public INotebookCollectionRequestBuilder notebooks() {
         return new NotebookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks"), getClient(), null);
     }
 
-    public INotebookRequestBuilder getNotebooks(final String id) {
+    public INotebookRequestBuilder notebooks(final String id) {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks") + "/" + id, getClient(), null);
     }
-    public IOnenoteSectionCollectionRequestBuilder getSections() {
+    public IOnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
-    public IOnenoteSectionRequestBuilder getSections(final String id) {
+    public IOnenoteSectionRequestBuilder sections(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
-    public ISectionGroupCollectionRequestBuilder getSectionGroups() {
+    public ISectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
-    public ISectionGroupRequestBuilder getSectionGroups(final String id) {
+    public ISectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
-    public IOnenotePageCollectionRequestBuilder getPages() {
+    public IOnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
     }
 
-    public IOnenotePageRequestBuilder getPages(final String id) {
+    public IOnenotePageRequestBuilder pages(final String id) {
         return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
-    public IOnenoteResourceCollectionRequestBuilder getResources() {
+    public IOnenoteResourceCollectionRequestBuilder resources() {
         return new OnenoteResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resources"), getClient(), null);
     }
 
-    public IOnenoteResourceRequestBuilder getResources(final String id) {
+    public IOnenoteResourceRequestBuilder resources(final String id) {
         return new OnenoteResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
-    public IOnenoteOperationCollectionRequestBuilder getOperations() {
+    public IOnenoteOperationCollectionRequestBuilder operations() {
         return new OnenoteOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IOnenoteOperationRequestBuilder getOperations(final String id) {
+    public IOnenoteOperationRequestBuilder operations(final String id) {
         return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }

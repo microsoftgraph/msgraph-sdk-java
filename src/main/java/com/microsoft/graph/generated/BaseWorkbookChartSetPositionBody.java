@@ -27,7 +27,7 @@ public class BaseWorkbookChartSetPositionBody {
 
     /**
      * The start Cell.
-	 * 
+     * 
      */
     @SerializedName("startCell")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookChartSetPositionBody {
 
     /**
      * The end Cell.
-	 * 
+     * 
      */
     @SerializedName("endCell")
     @Expose

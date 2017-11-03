@@ -131,3 +131,4 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
      }
 
 }
+

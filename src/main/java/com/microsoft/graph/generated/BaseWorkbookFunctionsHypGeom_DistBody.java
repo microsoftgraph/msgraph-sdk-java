@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The sample S.
-	 * 
+     * 
      */
     @SerializedName("sampleS")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The number Sample.
-	 * 
+     * 
      */
     @SerializedName("numberSample")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The population S.
-	 * 
+     * 
      */
     @SerializedName("populationS")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The number Pop.
-	 * 
+     * 
      */
     @SerializedName("numberPop")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsHypGeom_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsPoisson_DistBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsPoisson_DistBody {
 
     /**
      * The mean.
-	 * 
+     * 
      */
     @SerializedName("mean")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPoisson_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

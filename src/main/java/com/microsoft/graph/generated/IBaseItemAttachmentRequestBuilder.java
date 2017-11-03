@@ -34,6 +34,6 @@ public interface IBaseItemAttachmentRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for OutlookItem.
      */
-    IOutlookItemRequestBuilder getItem();
+    IOutlookItemRequestBuilder item();
 
 }

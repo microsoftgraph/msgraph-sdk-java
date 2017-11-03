@@ -28,6 +28,6 @@ public interface IBaseWorkbookNamedItemCollectionRequestBuilder extends IRequest
 
     IWorkbookNamedItemRequestBuilder byId(final String id);
 
-    IWorkbookNamedItemAddRequestBuilder getAdd(final String name, final com.google.gson.JsonElement reference, final String comment);
-    IWorkbookNamedItemAddFormulaLocalRequestBuilder getAddFormulaLocal(final String name, final String formula, final String comment);
+    IWorkbookNamedItemAddRequestBuilder add(final String name, final com.google.gson.JsonElement reference, final String comment);
+    IWorkbookNamedItemAddFormulaLocalRequestBuilder addFormulaLocal(final String name, final String formula, final String comment);
 }

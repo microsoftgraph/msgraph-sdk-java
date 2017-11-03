@@ -47,71 +47,71 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
         return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDriveItemCollectionRequestBuilder getChildren() {
+    public IDriveItemCollectionRequestBuilder children() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
 
-    public IDriveItemRequestBuilder getChildren(final String id) {
+    public IDriveItemRequestBuilder children(final String id) {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ListItem.
      */
-    public IListItemRequestBuilder getListItem() {
+    public IListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
-    public IPermissionCollectionRequestBuilder getPermissions() {
+    public IPermissionCollectionRequestBuilder permissions() {
         return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
     }
 
-    public IPermissionRequestBuilder getPermissions(final String id) {
+    public IPermissionRequestBuilder permissions(final String id) {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
-    public IThumbnailSetCollectionRequestBuilder getThumbnails() {
+    public IThumbnailSetCollectionRequestBuilder thumbnails() {
         return new ThumbnailSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails"), getClient(), null);
     }
 
-    public IThumbnailSetRequestBuilder getThumbnails(final String id) {
+    public IThumbnailSetRequestBuilder thumbnails(final String id) {
         return new ThumbnailSetRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Workbook.
      */
-    public IWorkbookRequestBuilder getWorkbook() {
+    public IWorkbookRequestBuilder workbook() {
         return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
     }
 
-    public IDriveItemStreamRequestBuilder getContent() {
+    public IDriveItemStreamRequestBuilder content() {
         return new DriveItemStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
-    public IDriveItemCopyRequestBuilder getCopy(final String name, final ItemReference parentReference) {
+    public IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference) {
         return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
     }
 
-    public IDriveItemCreateLinkRequestBuilder getCreateLink(final String type, final String scope) {
+    public IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope) {
         return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope);
     }
 
-    public IDriveItemCreateUploadSessionRequestBuilder getCreateUploadSession(final DriveItemUploadableProperties item) {
+    public IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item) {
         return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
     }
 
-    public IDriveItemInviteCollectionRequestBuilder getInvite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
+    public IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
         return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients);
     }
 
-    public IDriveItemDeltaCollectionRequestBuilder getDelta(final String token) {
+    public IDriveItemDeltaCollectionRequestBuilder delta(final String token) {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, token);
     }
 
-    public IDriveItemDeltaCollectionRequestBuilder getDelta() {
+    public IDriveItemDeltaCollectionRequestBuilder delta() {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-    public IDriveItemSearchCollectionRequestBuilder getSearch(final String q) {
+    public IDriveItemSearchCollectionRequestBuilder search(final String q) {
         return new DriveItemSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
     }
 }

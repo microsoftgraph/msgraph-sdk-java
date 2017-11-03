@@ -35,7 +35,7 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @Override
-    public final AdditionalDataManager getAdditionalDataManager() {
+    public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
 
     /**
      * The Date.
-	 * 
+     * 
      */
     @SerializedName("date")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
 
     /**
      * The Specificity.
-	 * 
+     * 
      */
     @SerializedName("specificity")
     @Expose

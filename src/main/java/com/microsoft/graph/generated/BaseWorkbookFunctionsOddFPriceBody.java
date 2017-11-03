@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The settlement.
-	 * 
+     * 
      */
     @SerializedName("settlement")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The maturity.
-	 * 
+     * 
      */
     @SerializedName("maturity")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The issue.
-	 * 
+     * 
      */
     @SerializedName("issue")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The first Coupon.
-	 * 
+     * 
      */
     @SerializedName("firstCoupon")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -67,7 +67,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The yld.
-	 * 
+     * 
      */
     @SerializedName("yld")
     @Expose
@@ -75,7 +75,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The redemption.
-	 * 
+     * 
      */
     @SerializedName("redemption")
     @Expose
@@ -83,7 +83,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The frequency.
-	 * 
+     * 
      */
     @SerializedName("frequency")
     @Expose
@@ -91,7 +91,7 @@ public class BaseWorkbookFunctionsOddFPriceBody {
 
     /**
      * The basis.
-	 * 
+     * 
      */
     @SerializedName("basis")
     @Expose

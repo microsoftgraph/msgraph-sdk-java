@@ -34,7 +34,7 @@ public interface IBaseWorkbookNamedItemRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    IWorkbookWorksheetRequestBuilder getWorksheet();
-    IWorkbookNamedItemRangeRequestBuilder getRange();
+    IWorkbookWorksheetRequestBuilder worksheet();
+    IWorkbookNamedItemRangeRequestBuilder range();
 
 }

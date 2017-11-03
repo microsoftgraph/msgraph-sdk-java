@@ -34,10 +34,10 @@ public interface IBaseWorkbookTableColumnRequestBuilder extends IRequestBuilder 
     /**
      * Gets the request builder for WorkbookFilter.
      */
-    IWorkbookFilterRequestBuilder getFilter();
-    IWorkbookTableColumnDataBodyRangeRequestBuilder getDataBodyRange();
-    IWorkbookTableColumnHeaderRowRangeRequestBuilder getHeaderRowRange();
-    IWorkbookTableColumnRangeRequestBuilder getRange();
-    IWorkbookTableColumnTotalRowRangeRequestBuilder getTotalRowRange();
+    IWorkbookFilterRequestBuilder filter();
+    IWorkbookTableColumnDataBodyRangeRequestBuilder dataBodyRange();
+    IWorkbookTableColumnHeaderRowRangeRequestBuilder headerRowRange();
+    IWorkbookTableColumnRangeRequestBuilder range();
+    IWorkbookTableColumnTotalRowRangeRequestBuilder totalRowRange();
 
 }

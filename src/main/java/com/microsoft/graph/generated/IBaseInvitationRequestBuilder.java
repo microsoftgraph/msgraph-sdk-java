@@ -34,6 +34,6 @@ public interface IBaseInvitationRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for User.
      */
-    IUserWithReferenceRequestBuilder getInvitedUser();
+    IUserWithReferenceRequestBuilder invitedUser();
 
 }

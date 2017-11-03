@@ -94,3 +94,4 @@ public interface IBaseMultiValueLegacyExtendedPropertyRequest extends IHttpReque
     IBaseMultiValueLegacyExtendedPropertyRequest expand(final String value);
 
 }
+

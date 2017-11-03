@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDdbBody {
 
     /**
      * The cost.
-	 * 
+     * 
      */
     @SerializedName("cost")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDdbBody {
 
     /**
      * The salvage.
-	 * 
+     * 
      */
     @SerializedName("salvage")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsDdbBody {
 
     /**
      * The life.
-	 * 
+     * 
      */
     @SerializedName("life")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsDdbBody {
 
     /**
      * The period.
-	 * 
+     * 
      */
     @SerializedName("period")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsDdbBody {
 
     /**
      * The factor.
-	 * 
+     * 
      */
     @SerializedName("factor")
     @Expose

@@ -31,17 +31,17 @@ public interface IBaseDomainRequestBuilder extends IRequestBuilder {
      */
     IDomainRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IDomainDnsRecordCollectionRequestBuilder getServiceConfigurationRecords();
+    IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords();
 
-    IDomainDnsRecordRequestBuilder getServiceConfigurationRecords(final String id);
+    IDomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id);
 
-    IDomainDnsRecordCollectionRequestBuilder getVerificationDnsRecords();
+    IDomainDnsRecordCollectionRequestBuilder verificationDnsRecords();
 
-    IDomainDnsRecordRequestBuilder getVerificationDnsRecords(final String id);
+    IDomainDnsRecordRequestBuilder verificationDnsRecords(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder getDomainNameReferences();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences();
 
-    IDirectoryObjectWithReferenceRequestBuilder getDomainNameReferences(final String id);
-    IDomainVerifyRequestBuilder getVerify();
+    IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id);
+    IDomainVerifyRequestBuilder verify();
 
 }

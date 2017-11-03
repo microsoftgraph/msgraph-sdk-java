@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBitrshiftBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBitrshiftBody {
 
     /**
      * The shift Amount.
-	 * 
+     * 
      */
     @SerializedName("shiftAmount")
     @Expose

@@ -47,22 +47,22 @@ public class BaseNotebookRequestBuilder extends BaseRequestBuilder implements IB
         return new NotebookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IOnenoteSectionCollectionRequestBuilder getSections() {
+    public IOnenoteSectionCollectionRequestBuilder sections() {
         return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
     }
 
-    public IOnenoteSectionRequestBuilder getSections(final String id) {
+    public IOnenoteSectionRequestBuilder sections(final String id) {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
-    public ISectionGroupCollectionRequestBuilder getSectionGroups() {
+    public ISectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
-    public ISectionGroupRequestBuilder getSectionGroups(final String id) {
+    public ISectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
     }
 
-    public INotebookCopyNotebookRequestBuilder getCopyNotebook(final String groupId, final String renameAs, final String notebookFolder) {
+    public INotebookCopyNotebookRequestBuilder copyNotebook(final String groupId, final String renameAs, final String notebookFolder) {
         return new NotebookCopyNotebookRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyNotebook"), getClient(), null, groupId, renameAs, notebookFolder);
     }
 }

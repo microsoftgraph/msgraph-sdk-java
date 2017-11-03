@@ -35,7 +35,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * The mailFolder's display name.
+     * The mailFolder's display name.
      */
     @SerializedName("displayName")
     @Expose
@@ -43,7 +43,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
-	 * The unique identifier for the mailFolder's parent mailFolder.
+     * The unique identifier for the mailFolder's parent mailFolder.
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -51,7 +51,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Child Folder Count.
-	 * The number of immediate child mailFolders in the current mailFolder.
+     * The number of immediate child mailFolders in the current mailFolder.
      */
     @SerializedName("childFolderCount")
     @Expose
@@ -59,7 +59,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Unread Item Count.
-	 * The number of items in the mailFolder marked as unread.
+     * The number of items in the mailFolder marked as unread.
      */
     @SerializedName("unreadItemCount")
     @Expose
@@ -67,7 +67,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Item Count.
-	 * The number of items in the mailFolder.
+     * The number of items in the mailFolder.
      */
     @SerializedName("totalItemCount")
     @Expose
@@ -75,25 +75,25 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Messages.
-	 * The collection of messages in the mailFolder.
+     * The collection of messages in the mailFolder.
      */
     public transient MessageCollectionPage messages;
 
     /**
      * The Child Folders.
-	 * The collection of child folders in the mailFolder.
+     * The collection of child folders in the mailFolder.
      */
     public transient MailFolderCollectionPage childFolders;
 
     /**
      * The Single Value Extended Properties.
-	 * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
-	 * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
+     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

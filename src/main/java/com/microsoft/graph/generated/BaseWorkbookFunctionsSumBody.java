@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSumBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

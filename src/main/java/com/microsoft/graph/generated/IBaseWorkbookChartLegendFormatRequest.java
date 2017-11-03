@@ -94,3 +94,4 @@ public interface IBaseWorkbookChartLegendFormatRequest extends IHttpRequest {
     IBaseWorkbookChartLegendFormatRequest expand(final String value);
 
 }
+

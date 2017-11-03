@@ -35,7 +35,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Display Name.
-	 * 
+     * 
      */
     @SerializedName("invitedUserDisplayName")
     @Expose
@@ -43,7 +43,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Type.
-	 * 
+     * 
      */
     @SerializedName("invitedUserType")
     @Expose
@@ -51,7 +51,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Email Address.
-	 * 
+     * 
      */
     @SerializedName("invitedUserEmailAddress")
     @Expose
@@ -59,7 +59,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Message Info.
-	 * 
+     * 
      */
     @SerializedName("invitedUserMessageInfo")
     @Expose
@@ -67,7 +67,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Send Invitation Message.
-	 * 
+     * 
      */
     @SerializedName("sendInvitationMessage")
     @Expose
@@ -75,7 +75,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redirect Url.
-	 * 
+     * 
      */
     @SerializedName("inviteRedirectUrl")
     @Expose
@@ -83,7 +83,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redeem Url.
-	 * 
+     * 
      */
     @SerializedName("inviteRedeemUrl")
     @Expose
@@ -91,7 +91,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-	 * 
+     * 
      */
     @SerializedName("status")
     @Expose
@@ -99,7 +99,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User.
-	 * 
+     * 
      */
     @SerializedName("invitedUser")
     @Expose

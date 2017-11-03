@@ -27,7 +27,7 @@ public class BaseOnenotePageCopyToSectionBody {
 
     /**
      * The id.
-	 * 
+     * 
      */
     @SerializedName("id")
     @Expose
@@ -35,7 +35,7 @@ public class BaseOnenotePageCopyToSectionBody {
 
     /**
      * The group Id.
-	 * 
+     * 
      */
     @SerializedName("groupId")
     @Expose

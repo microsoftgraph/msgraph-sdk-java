@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsComplexBody {
 
     /**
      * The real Num.
-	 * 
+     * 
      */
     @SerializedName("realNum")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsComplexBody {
 
     /**
      * The i Num.
-	 * 
+     * 
      */
     @SerializedName("iNum")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsComplexBody {
 
     /**
      * The suffix.
-	 * 
+     * 
      */
     @SerializedName("suffix")
     @Expose

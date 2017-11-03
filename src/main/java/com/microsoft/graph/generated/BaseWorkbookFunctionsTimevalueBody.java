@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsTimevalueBody {
 
     /**
      * The time Text.
-	 * 
+     * 
      */
     @SerializedName("timeText")
     @Expose

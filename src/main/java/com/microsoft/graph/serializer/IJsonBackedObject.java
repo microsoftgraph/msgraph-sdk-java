@@ -42,6 +42,6 @@ public interface IJsonBackedObject {
      *
      * @return
      */
-    AdditionalDataManager getAdditionalDataManager();
+    AdditionalDataManager additionalDataManager();
 
 }

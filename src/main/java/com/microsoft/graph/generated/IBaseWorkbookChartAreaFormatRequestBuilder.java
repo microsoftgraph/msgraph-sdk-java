@@ -34,11 +34,11 @@ public interface IBaseWorkbookChartAreaFormatRequestBuilder extends IRequestBuil
     /**
      * Gets the request builder for WorkbookChartFill.
      */
-    IWorkbookChartFillRequestBuilder getFill();
+    IWorkbookChartFillRequestBuilder fill();
 
     /**
      * Gets the request builder for WorkbookChartFont.
      */
-    IWorkbookChartFontRequestBuilder getFont();
+    IWorkbookChartFontRequestBuilder font();
 
 }

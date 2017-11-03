@@ -28,5 +28,5 @@ public interface IBaseWorkbookRangeViewCollectionRequestBuilder extends IRequest
 
     IWorkbookRangeViewRequestBuilder byId(final String id);
 
-    IWorkbookRangeViewItemAtRequestBuilder getItemAt(final Integer index);
+    IWorkbookRangeViewItemAtRequestBuilder itemAt(final Integer index);
 }

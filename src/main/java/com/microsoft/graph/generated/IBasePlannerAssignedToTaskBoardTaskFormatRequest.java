@@ -94,3 +94,4 @@ public interface IBasePlannerAssignedToTaskBoardTaskFormatRequest extends IHttpR
     IBasePlannerAssignedToTaskBoardTaskFormatRequest expand(final String value);
 
 }
+

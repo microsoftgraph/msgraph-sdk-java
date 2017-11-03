@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDecimalBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsDecimalBody {
 
     /**
      * The radix.
-	 * 
+     * 
      */
     @SerializedName("radix")
     @Expose

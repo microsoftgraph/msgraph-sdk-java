@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBeta_InvBody {
 
     /**
      * The probability.
-	 * 
+     * 
      */
     @SerializedName("probability")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsBeta_InvBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBeta_InvBody {
 
     /**
      * The beta.
-	 * 
+     * 
      */
     @SerializedName("beta")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsBeta_InvBody {
 
     /**
      * The a.
-	 * 
+     * 
      */
     @SerializedName("a")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsBeta_InvBody {
 
     /**
      * The b.
-	 * 
+     * 
      */
     @SerializedName("b")
     @Expose

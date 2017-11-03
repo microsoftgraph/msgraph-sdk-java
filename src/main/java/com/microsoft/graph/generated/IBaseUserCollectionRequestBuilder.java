@@ -29,7 +29,7 @@ public interface IBaseUserCollectionRequestBuilder extends IRequestBuilder {
     IUserRequestBuilder byId(final String id);
 
 
-    IUserDeltaCollectionRequestBuilder getDelta();
+    IUserDeltaCollectionRequestBuilder delta();
 
-	IUserDeltaCollectionRequestBuilder getDelta(final String deltaLink);
+	IUserDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

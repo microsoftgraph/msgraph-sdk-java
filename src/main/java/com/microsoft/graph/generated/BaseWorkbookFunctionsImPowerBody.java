@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsImPowerBody {
 
     /**
      * The inumber.
-	 * 
+     * 
      */
     @SerializedName("inumber")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsImPowerBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose

@@ -35,7 +35,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
-	 * The contents of the post. This is a default property. This property can be null.
+     * The contents of the post. This is a default property. This property can be null.
      */
     @SerializedName("body")
     @Expose
@@ -43,7 +43,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
-	 * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("receivedDateTime")
     @Expose
@@ -51,7 +51,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-	 * Indicates whether the post has at least one attachment. This is a default property.
+     * Indicates whether the post has at least one attachment. This is a default property.
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -59,7 +59,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
-	 * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
+     * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
      */
     @SerializedName("from")
     @Expose
@@ -67,7 +67,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
-	 * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
+     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
      */
     @SerializedName("sender")
     @Expose
@@ -75,7 +75,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Conversation Thread Id.
-	 * Unique ID of the conversation thread. Read-only.
+     * Unique ID of the conversation thread. Read-only.
      */
     @SerializedName("conversationThreadId")
     @Expose
@@ -83,7 +83,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The New Participants.
-	 * Conversation participants that were added to the thread as part of this post.
+     * Conversation participants that were added to the thread as part of this post.
      */
     @SerializedName("newParticipants")
     @Expose
@@ -91,7 +91,7 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Conversation Id.
-	 * Unique ID of the conversation. Read-only.
+     * Unique ID of the conversation. Read-only.
      */
     @SerializedName("conversationId")
     @Expose
@@ -99,13 +99,13 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-	 * The collection of open extensions defined for the post. Read-only. Nullable.
+     * The collection of open extensions defined for the post. Read-only. Nullable.
      */
     public transient ExtensionCollectionPage extensions;
 
     /**
      * The In Reply To.
-	 * Read-only.
+     * Read-only.
      */
     @SerializedName("inReplyTo")
     @Expose
@@ -113,19 +113,19 @@ public class BasePost extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-	 * Read-only. Nullable.
+     * Read-only. Nullable.
      */
     public transient AttachmentCollectionPage attachments;
 
     /**
      * The Single Value Extended Properties.
-	 * The collection of single-value extended properties defined for the post. Read-only. Nullable.
+     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
-	 * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
+     * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

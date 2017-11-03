@@ -94,3 +94,4 @@ public interface IBaseMailFolderRequest extends IHttpRequest {
     IBaseMailFolderRequest expand(final String value);
 
 }
+

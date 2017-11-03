@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSlnBody {
 
     /**
      * The cost.
-	 * 
+     * 
      */
     @SerializedName("cost")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSlnBody {
 
     /**
      * The salvage.
-	 * 
+     * 
      */
     @SerializedName("salvage")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsSlnBody {
 
     /**
      * The life.
-	 * 
+     * 
      */
     @SerializedName("life")
     @Expose

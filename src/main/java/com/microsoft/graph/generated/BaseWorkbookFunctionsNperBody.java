@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNperBody {
 
     /**
      * The rate.
-	 * 
+     * 
      */
     @SerializedName("rate")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsNperBody {
 
     /**
      * The pmt.
-	 * 
+     * 
      */
     @SerializedName("pmt")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNperBody {
 
     /**
      * The pv.
-	 * 
+     * 
      */
     @SerializedName("pv")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNperBody {
 
     /**
      * The fv.
-	 * 
+     * 
      */
     @SerializedName("fv")
     @Expose
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsNperBody {
 
     /**
      * The type.
-	 * 
+     * 
      */
     @SerializedName("type")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSeriesSumBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSeriesSumBody {
 
     /**
      * The n.
-	 * 
+     * 
      */
     @SerializedName("n")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsSeriesSumBody {
 
     /**
      * The m.
-	 * 
+     * 
      */
     @SerializedName("m")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsSeriesSumBody {
 
     /**
      * The coefficients.
-	 * 
+     * 
      */
     @SerializedName("coefficients")
     @Expose

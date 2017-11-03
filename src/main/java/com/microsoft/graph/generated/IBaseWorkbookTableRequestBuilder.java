@@ -31,29 +31,29 @@ public interface IBaseWorkbookTableRequestBuilder extends IRequestBuilder {
      */
     IWorkbookTableRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IWorkbookTableColumnCollectionRequestBuilder getColumns();
+    IWorkbookTableColumnCollectionRequestBuilder columns();
 
-    IWorkbookTableColumnRequestBuilder getColumns(final String id);
+    IWorkbookTableColumnRequestBuilder columns(final String id);
 
-    IWorkbookTableRowCollectionRequestBuilder getRows();
+    IWorkbookTableRowCollectionRequestBuilder rows();
 
-    IWorkbookTableRowRequestBuilder getRows(final String id);
+    IWorkbookTableRowRequestBuilder rows(final String id);
 
     /**
      * Gets the request builder for WorkbookTableSort.
      */
-    IWorkbookTableSortRequestBuilder getSort();
+    IWorkbookTableSortRequestBuilder sort();
 
     /**
      * Gets the request builder for WorkbookWorksheet.
      */
-    IWorkbookWorksheetRequestBuilder getWorksheet();
-    IWorkbookTableClearFiltersRequestBuilder getClearFilters();
-    IWorkbookTableConvertToRangeRequestBuilder getConvertToRange();
-    IWorkbookTableReapplyFiltersRequestBuilder getReapplyFilters();
-    IWorkbookTableDataBodyRangeRequestBuilder getDataBodyRange();
-    IWorkbookTableHeaderRowRangeRequestBuilder getHeaderRowRange();
-    IWorkbookTableRangeRequestBuilder getRange();
-    IWorkbookTableTotalRowRangeRequestBuilder getTotalRowRange();
+    IWorkbookWorksheetRequestBuilder worksheet();
+    IWorkbookTableClearFiltersRequestBuilder clearFilters();
+    IWorkbookTableConvertToRangeRequestBuilder convertToRange();
+    IWorkbookTableReapplyFiltersRequestBuilder reapplyFilters();
+    IWorkbookTableDataBodyRangeRequestBuilder dataBodyRange();
+    IWorkbookTableHeaderRowRangeRequestBuilder headerRowRange();
+    IWorkbookTableRangeRequestBuilder range();
+    IWorkbookTableTotalRowRangeRequestBuilder totalRowRange();
 
 }

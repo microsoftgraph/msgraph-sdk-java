@@ -28,6 +28,6 @@ public interface IBaseWorkbookChartPointCollectionRequestBuilder extends IReques
 
     IWorkbookChartPointRequestBuilder byId(final String id);
 
-    IWorkbookChartPointItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookChartPointCountRequestBuilder getCount();
+    IWorkbookChartPointItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookChartPointCountRequestBuilder count();
 }

@@ -47,11 +47,11 @@ public class BaseContentTypeRequestBuilder extends BaseRequestBuilder implements
         return new ContentTypeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IColumnLinkCollectionRequestBuilder getColumnLinks() {
+    public IColumnLinkCollectionRequestBuilder columnLinks() {
         return new ColumnLinkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks"), getClient(), null);
     }
 
-    public IColumnLinkRequestBuilder getColumnLinks(final String id) {
+    public IColumnLinkRequestBuilder columnLinks(final String id) {
         return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);
     }
 }

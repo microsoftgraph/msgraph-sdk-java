@@ -31,9 +31,9 @@ public interface IBaseConversationThreadRequestBuilder extends IRequestBuilder {
      */
     IConversationThreadRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IPostCollectionRequestBuilder getPosts();
+    IPostCollectionRequestBuilder posts();
 
-    IPostRequestBuilder getPosts(final String id);
-    IConversationThreadReplyRequestBuilder getReply(final Post post);
+    IPostRequestBuilder posts(final String id);
+    IConversationThreadReplyRequestBuilder reply(final Post post);
 
 }

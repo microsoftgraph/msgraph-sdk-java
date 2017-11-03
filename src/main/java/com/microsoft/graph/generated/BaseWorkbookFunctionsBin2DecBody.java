@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsBin2DecBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose

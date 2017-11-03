@@ -94,3 +94,4 @@ public interface IBaseWorkbookChartTitleRequest extends IHttpRequest {
     IBaseWorkbookChartTitleRequest expand(final String value);
 
 }
+

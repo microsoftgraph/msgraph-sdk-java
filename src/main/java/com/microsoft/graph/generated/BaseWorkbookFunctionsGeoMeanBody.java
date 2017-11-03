@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsGeoMeanBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

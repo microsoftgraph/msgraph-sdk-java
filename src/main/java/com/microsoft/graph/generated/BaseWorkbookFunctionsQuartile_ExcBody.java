@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsQuartile_ExcBody {
 
     /**
      * The array.
-	 * 
+     * 
      */
     @SerializedName("array")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsQuartile_ExcBody {
 
     /**
      * The quart.
-	 * 
+     * 
      */
     @SerializedName("quart")
     @Expose

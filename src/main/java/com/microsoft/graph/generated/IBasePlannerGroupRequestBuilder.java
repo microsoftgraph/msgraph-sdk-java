@@ -31,8 +31,8 @@ public interface IBasePlannerGroupRequestBuilder extends IRequestBuilder {
      */
     IPlannerGroupRequest buildRequest(final java.util.List<Option> requestOptions);
 
-    IPlannerPlanCollectionRequestBuilder getPlans();
+    IPlannerPlanCollectionRequestBuilder plans();
 
-    IPlannerPlanRequestBuilder getPlans(final String id);
+    IPlannerPlanRequestBuilder plans(final String id);
 
 }

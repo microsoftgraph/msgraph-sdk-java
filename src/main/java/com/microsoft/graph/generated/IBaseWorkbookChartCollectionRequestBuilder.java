@@ -28,8 +28,8 @@ public interface IBaseWorkbookChartCollectionRequestBuilder extends IRequestBuil
 
     IWorkbookChartRequestBuilder byId(final String id);
 
-    IWorkbookChartAddRequestBuilder getAdd(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy);
-    IWorkbookChartItemRequestBuilder getItem(final String name);
-    IWorkbookChartItemAtRequestBuilder getItemAt(final Integer index);
-    IWorkbookChartCountRequestBuilder getCount();
+    IWorkbookChartAddRequestBuilder add(final String type, final com.google.gson.JsonElement sourceData, final String seriesBy);
+    IWorkbookChartItemRequestBuilder item(final String name);
+    IWorkbookChartItemAtRequestBuilder itemAt(final Integer index);
+    IWorkbookChartCountRequestBuilder count();
 }

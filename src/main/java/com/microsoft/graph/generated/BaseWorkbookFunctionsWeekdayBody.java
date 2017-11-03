@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsWeekdayBody {
 
     /**
      * The serial Number.
-	 * 
+     * 
      */
     @SerializedName("serialNumber")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsWeekdayBody {
 
     /**
      * The return Type.
-	 * 
+     * 
      */
     @SerializedName("returnType")
     @Expose

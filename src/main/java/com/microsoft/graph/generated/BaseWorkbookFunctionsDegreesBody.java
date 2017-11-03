@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsDegreesBody {
 
     /**
      * The angle.
-	 * 
+     * 
      */
     @SerializedName("angle")
     @Expose

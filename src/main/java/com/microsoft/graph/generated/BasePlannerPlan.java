@@ -35,7 +35,7 @@ public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-	 * Read-only. The user who created the plan.
+     * Read-only. The user who created the plan.
      */
     @SerializedName("createdBy")
     @Expose
@@ -43,7 +43,7 @@ public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-	 * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -51,7 +51,7 @@ public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-	 * ID of the Group that owns the plan. A valid group must exist before this field can be set. Once set, this can only be updated by the owner.
+     * ID of the Group that owns the plan. A valid group must exist before this field can be set. Once set, this can only be updated by the owner.
      */
     @SerializedName("owner")
     @Expose
@@ -59,7 +59,7 @@ public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Title.
-	 * Required. Title of the plan.
+     * Required. Title of the plan.
      */
     @SerializedName("title")
     @Expose
@@ -67,19 +67,19 @@ public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-	 * Read-only. Nullable. Collection of tasks in the plan.
+     * Read-only. Nullable. Collection of tasks in the plan.
      */
     public transient PlannerTaskCollectionPage tasks;
 
     /**
      * The Buckets.
-	 * Read-only. Nullable. Collection of buckets in the plan.
+     * Read-only. Nullable. Collection of buckets in the plan.
      */
     public transient PlannerBucketCollectionPage buckets;
 
     /**
      * The Details.
-	 * Read-only. Nullable. Additional details about the plan.
+     * Read-only. Nullable. Additional details about the plan.
      */
     @SerializedName("details")
     @Expose

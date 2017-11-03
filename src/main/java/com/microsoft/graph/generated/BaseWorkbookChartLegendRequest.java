@@ -131,3 +131,4 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
      }
 
 }
+

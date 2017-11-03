@@ -35,7 +35,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Type.
-	 * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
      */
     @SerializedName("driveType")
     @Expose
@@ -43,7 +43,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Owner.
-	 * Optional. The user account that owns the drive. Read-only.
+     * Optional. The user account that owns the drive. Read-only.
      */
     @SerializedName("owner")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Quota.
-	 * Optional. Information about the drive's storage space quota. Read-only.
+     * Optional. Information about the drive's storage space quota. Read-only.
      */
     @SerializedName("quota")
     @Expose
@@ -59,7 +59,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Share Point Ids.
-	 * 
+     * 
      */
     @SerializedName("sharePointIds")
     @Expose
@@ -72,13 +72,13 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
     @SerializedName("system")
     @Expose
     public SystemFacet system;
-    
+
     /**
      * The Items.
-	 * All items contained in the drive. Read-only. Nullable.
+     * All items contained in the drive. Read-only. Nullable.
      */
     public transient DriveItemCollectionPage items;
-    
+
     /**
      * The List.
      * 
@@ -89,7 +89,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Root.
-	 * The root folder of the drive. Read-only.
+     * The root folder of the drive. Read-only.
      */
     @SerializedName("root")
     @Expose
@@ -97,7 +97,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Special.
-	 * Collection of common folders available in OneDrive. Read-only. Nullable.
+     * Collection of common folders available in OneDrive. Read-only. Nullable.
      */
     public transient DriveItemCollectionPage special;
 

@@ -35,7 +35,7 @@ public class BaseWorkbookChartSeries extends Entity implements IJsonBackedObject
 
     /**
      * The Name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookChartSeries extends Entity implements IJsonBackedObject
 
     /**
      * The Format.
-	 * 
+     * 
      */
     @SerializedName("format")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookChartSeries extends Entity implements IJsonBackedObject
 
     /**
      * The Points.
-	 * 
+     * 
      */
     public transient WorkbookChartPointCollectionPage points;
 

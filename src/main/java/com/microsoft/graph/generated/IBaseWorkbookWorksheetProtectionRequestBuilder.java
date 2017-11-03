@@ -30,7 +30,7 @@ public interface IBaseWorkbookWorksheetProtectionRequestBuilder extends IRequest
      * Creates the request with specific options instead of the existing options
      */
     IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<Option> requestOptions);
-    IWorkbookWorksheetProtectionProtectRequestBuilder getProtect(final WorkbookWorksheetProtectionOptions options);
-    IWorkbookWorksheetProtectionUnprotectRequestBuilder getUnprotect();
+    IWorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options);
+    IWorkbookWorksheetProtectionUnprotectRequestBuilder unprotect();
 
 }

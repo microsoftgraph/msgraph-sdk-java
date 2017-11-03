@@ -45,11 +45,11 @@ public class BaseWorkbookChartPointCollectionRequestBuilder extends BaseRequestB
         return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookChartPointItemAtRequestBuilder getItemAt(final Integer index) {
+    public IWorkbookChartPointItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartPointItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 
-    public IWorkbookChartPointCountRequestBuilder getCount() {
+    public IWorkbookChartPointCountRequestBuilder count() {
         return new WorkbookChartPointCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 }

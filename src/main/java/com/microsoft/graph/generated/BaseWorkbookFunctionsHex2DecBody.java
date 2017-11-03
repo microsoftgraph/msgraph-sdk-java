@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsHex2DecBody {
 
     /**
      * The number.
-	 * 
+     * 
      */
     @SerializedName("number")
     @Expose

@@ -34,21 +34,21 @@ public interface IBasePlannerTaskRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for PlannerTaskDetails.
      */
-    IPlannerTaskDetailsRequestBuilder getDetails();
+    IPlannerTaskDetailsRequestBuilder details();
 
     /**
      * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat.
      */
-    IPlannerAssignedToTaskBoardTaskFormatRequestBuilder getAssignedToTaskBoardFormat();
+    IPlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat();
 
     /**
      * Gets the request builder for PlannerProgressTaskBoardTaskFormat.
      */
-    IPlannerProgressTaskBoardTaskFormatRequestBuilder getProgressTaskBoardFormat();
+    IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat();
 
     /**
      * Gets the request builder for PlannerBucketTaskBoardTaskFormat.
      */
-    IPlannerBucketTaskBoardTaskFormatRequestBuilder getBucketTaskBoardFormat();
+    IPlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat();
 
 }

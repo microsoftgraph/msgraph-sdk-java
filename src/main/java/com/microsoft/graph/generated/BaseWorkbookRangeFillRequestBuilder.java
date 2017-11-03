@@ -48,7 +48,7 @@ public class BaseWorkbookRangeFillRequestBuilder extends BaseRequestBuilder impl
     }
 
 
-    public IWorkbookRangeFillClearRequestBuilder getClear() {
+    public IWorkbookRangeFillClearRequestBuilder clear() {
         return new WorkbookRangeFillClearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clear"), getClient(), null);
     }
 }

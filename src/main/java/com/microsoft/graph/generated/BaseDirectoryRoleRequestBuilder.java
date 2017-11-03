@@ -47,11 +47,11 @@ public class BaseDirectoryRoleRequestBuilder extends BaseRequestBuilder implemen
         return new DirectoryRoleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder getMembers() {
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder members() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder getMembers(final String id) {
+    public IDirectoryObjectWithReferenceRequestBuilder members(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsHyperlinkBody {
 
     /**
      * The link Location.
-	 * 
+     * 
      */
     @SerializedName("linkLocation")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsHyperlinkBody {
 
     /**
      * The friendly Name.
-	 * 
+     * 
      */
     @SerializedName("friendlyName")
     @Expose

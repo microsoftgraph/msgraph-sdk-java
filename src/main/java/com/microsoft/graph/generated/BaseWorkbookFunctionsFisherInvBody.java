@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFisherInvBody {
 
     /**
      * The y.
-	 * 
+     * 
      */
     @SerializedName("y")
     @Expose

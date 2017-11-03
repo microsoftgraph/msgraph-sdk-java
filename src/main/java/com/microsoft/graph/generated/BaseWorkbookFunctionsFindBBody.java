@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsFindBBody {
 
     /**
      * The find Text.
-	 * 
+     * 
      */
     @SerializedName("findText")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsFindBBody {
 
     /**
      * The within Text.
-	 * 
+     * 
      */
     @SerializedName("withinText")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsFindBBody {
 
     /**
      * The start Num.
-	 * 
+     * 
      */
     @SerializedName("startNum")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsSumIfBody {
 
     /**
      * The range.
-	 * 
+     * 
      */
     @SerializedName("range")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsSumIfBody {
 
     /**
      * The criteria.
-	 * 
+     * 
      */
     @SerializedName("criteria")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsSumIfBody {
 
     /**
      * The sum Range.
-	 * 
+     * 
      */
     @SerializedName("sumRange")
     @Expose

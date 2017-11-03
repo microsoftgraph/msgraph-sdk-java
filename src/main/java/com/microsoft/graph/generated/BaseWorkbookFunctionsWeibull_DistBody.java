@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsWeibull_DistBody {
 
     /**
      * The x.
-	 * 
+     * 
      */
     @SerializedName("x")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsWeibull_DistBody {
 
     /**
      * The alpha.
-	 * 
+     * 
      */
     @SerializedName("alpha")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsWeibull_DistBody {
 
     /**
      * The beta.
-	 * 
+     * 
      */
     @SerializedName("beta")
     @Expose
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsWeibull_DistBody {
 
     /**
      * The cumulative.
-	 * 
+     * 
      */
     @SerializedName("cumulative")
     @Expose

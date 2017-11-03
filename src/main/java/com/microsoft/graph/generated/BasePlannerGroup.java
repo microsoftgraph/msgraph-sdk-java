@@ -35,7 +35,7 @@ public class BasePlannerGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Plans.
-	 * Read-only. Nullable. Returns the plannerPlans owned by the group.
+     * Read-only. Nullable. Returns the plannerPlans owned by the group.
      */
     public transient PlannerPlanCollectionPage plans;
 

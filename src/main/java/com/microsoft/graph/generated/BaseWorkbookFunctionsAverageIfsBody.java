@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsAverageIfsBody {
 
     /**
      * The average Range.
-	 * 
+     * 
      */
     @SerializedName("averageRange")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsAverageIfsBody {
 
     /**
      * The values.
-	 * 
+     * 
      */
     @SerializedName("values")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNorm_S_InvBody {
 
     /**
      * The probability.
-	 * 
+     * 
      */
     @SerializedName("probability")
     @Expose

@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsCleanBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose

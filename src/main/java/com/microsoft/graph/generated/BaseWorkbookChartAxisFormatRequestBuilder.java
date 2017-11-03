@@ -51,14 +51,14 @@ public class BaseWorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilde
     /**
      * Gets the request builder for WorkbookChartFont.
      */
-    public IWorkbookChartFontRequestBuilder getFont() {
+    public IWorkbookChartFontRequestBuilder font() {
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartLineFormat.
      */
-    public IWorkbookChartLineFormatRequestBuilder getLine() {
+    public IWorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
     }
 }

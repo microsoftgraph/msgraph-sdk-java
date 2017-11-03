@@ -23,19 +23,19 @@ public enum OnenoteSourceService
     /**
     * Unknown
     */
-    Unknown,
+    UNKNOWN,
     /**
     * One Drive
     */
-    OneDrive,
+    ONEDRIVE,
     /**
     * One Drive For Business
     */
-    OneDriveForBusiness,
+    ONEDRIVEFORBUSINESS,
     /**
     * On Prem One Drive For Business
     */
-    OnPremOneDriveForBusiness,
+    ONPREMONEDRIVEFORBUSINESS,
     /**
     * For OnenoteSourceService values that were not expected from the service
     */

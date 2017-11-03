@@ -23,23 +23,23 @@ public enum WeekIndex
     /**
     * first
     */
-    first,
+    FIRST,
     /**
     * second
     */
-    second,
+    SECOND,
     /**
     * third
     */
-    third,
+    THIRD,
     /**
     * fourth
     */
-    fourth,
+    FOURTH,
     /**
     * last
     */
-    last,
+    LAST,
     /**
     * For WeekIndex values that were not expected from the service
     */

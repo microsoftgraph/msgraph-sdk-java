@@ -51,7 +51,7 @@ public class BaseContactDeltaCollectionPage extends BaseCollectionPage<Contact, 
      *
      * @return String The deltaLink URL
      */
-    public String getDeltaLink() {
+    public String deltaLink() {
         return deltaLink;
     }
 }

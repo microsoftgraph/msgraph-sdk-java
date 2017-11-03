@@ -35,7 +35,7 @@ public class BaseConversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Topic.
-	 * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      */
     @SerializedName("topic")
     @Expose
@@ -43,7 +43,7 @@ public class BaseConversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-	 * Indicates whether any of the posts within this Conversation has at least one attachment.
+     * Indicates whether any of the posts within this Conversation has at least one attachment.
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -51,7 +51,7 @@ public class BaseConversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Delivered Date Time.
-	 * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("lastDeliveredDateTime")
     @Expose
@@ -59,7 +59,7 @@ public class BaseConversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Unique Senders.
-	 * All the users that sent a message to this Conversation.
+     * All the users that sent a message to this Conversation.
      */
     @SerializedName("uniqueSenders")
     @Expose
@@ -67,7 +67,7 @@ public class BaseConversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview.
-	 * A short summary from the body of the latest post in this converstaion.
+     * A short summary from the body of the latest post in this converstaion.
      */
     @SerializedName("preview")
     @Expose
@@ -75,7 +75,7 @@ public class BaseConversation extends Entity implements IJsonBackedObject {
 
     /**
      * The Threads.
-	 * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
+     * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      */
     public transient ConversationThreadCollectionPage threads;
 

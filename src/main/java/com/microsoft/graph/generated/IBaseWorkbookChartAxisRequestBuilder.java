@@ -34,21 +34,21 @@ public interface IBaseWorkbookChartAxisRequestBuilder extends IRequestBuilder {
     /**
      * Gets the request builder for WorkbookChartAxisFormat.
      */
-    IWorkbookChartAxisFormatRequestBuilder getFormat();
+    IWorkbookChartAxisFormatRequestBuilder format();
 
     /**
      * Gets the request builder for WorkbookChartGridlines.
      */
-    IWorkbookChartGridlinesRequestBuilder getMajorGridlines();
+    IWorkbookChartGridlinesRequestBuilder majorGridlines();
 
     /**
      * Gets the request builder for WorkbookChartGridlines.
      */
-    IWorkbookChartGridlinesRequestBuilder getMinorGridlines();
+    IWorkbookChartGridlinesRequestBuilder minorGridlines();
 
     /**
      * Gets the request builder for WorkbookChartAxisTitle.
      */
-    IWorkbookChartAxisTitleRequestBuilder getTitle();
+    IWorkbookChartAxisTitleRequestBuilder title();
 
 }

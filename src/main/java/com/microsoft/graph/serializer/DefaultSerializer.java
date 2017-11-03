@@ -72,7 +72,7 @@ public class DefaultSerializer implements ISerializer {
             final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
             final JsonObject rawObject = mGson.fromJson(inputString, JsonObject.class);
             jsonBackedObject.setRawObject(this, rawObject);
-            jsonBackedObject.getAdditionalDataManager().setAdditionalData(rawObject);
+            jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
         } else {
             mLogger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
         }
@@ -95,7 +95,7 @@ public class DefaultSerializer implements ISerializer {
         if (serializableObject instanceof IJsonBackedObject) {
             AdditionalDataManager additionalData =
                     ((IJsonBackedObject) serializableObject)
-                            .getAdditionalDataManager();
+                            .additionalDataManager();
             if (outJsonTree.isJsonObject()) {
                 JsonObject outJson = outJsonTree.getAsJsonObject();
                 for (Map.Entry<String, JsonElement> entry : additionalData.entrySet()) {

@@ -45,11 +45,11 @@ public class BaseEventCollectionRequestBuilder extends BaseRequestBuilder implem
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IEventDeltaCollectionRequestBuilder getDelta() {
+    public IEventDeltaCollectionRequestBuilder delta() {
         return new EventDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
-	public IEventDeltaCollectionRequestBuilder getDelta(final String deltaLink) {
+	public IEventDeltaCollectionRequestBuilder delta(final String deltaLink) {
         return new EventDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
     }
 }

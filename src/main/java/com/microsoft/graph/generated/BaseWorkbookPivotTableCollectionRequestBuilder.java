@@ -45,7 +45,7 @@ public class BaseWorkbookPivotTableCollectionRequestBuilder extends BaseRequestB
         return new WorkbookPivotTableRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
 
-    public IWorkbookPivotTableRefreshAllRequestBuilder getRefreshAll() {
+    public IWorkbookPivotTableRefreshAllRequestBuilder refreshAll() {
         return new WorkbookPivotTableRefreshAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshAll"), getClient(), null);
     }
 }

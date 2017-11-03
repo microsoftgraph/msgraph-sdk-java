@@ -27,7 +27,7 @@ public class BaseWorkbookFunctionsNumberValueBody {
 
     /**
      * The text.
-	 * 
+     * 
      */
     @SerializedName("text")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookFunctionsNumberValueBody {
 
     /**
      * The decimal Separator.
-	 * 
+     * 
      */
     @SerializedName("decimalSeparator")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNumberValueBody {
 
     /**
      * The group Separator.
-	 * 
+     * 
      */
     @SerializedName("groupSeparator")
     @Expose

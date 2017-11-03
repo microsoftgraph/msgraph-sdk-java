@@ -27,7 +27,7 @@ public class BaseWorkbookNamedItemAddBody {
 
     /**
      * The name.
-	 * 
+     * 
      */
     @SerializedName("name")
     @Expose
@@ -35,7 +35,7 @@ public class BaseWorkbookNamedItemAddBody {
 
     /**
      * The reference.
-	 * 
+     * 
      */
     @SerializedName("reference")
     @Expose
@@ -43,7 +43,7 @@ public class BaseWorkbookNamedItemAddBody {
 
     /**
      * The comment.
-	 * 
+     * 
      */
     @SerializedName("comment")
     @Expose

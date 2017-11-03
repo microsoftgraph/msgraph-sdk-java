@@ -94,3 +94,4 @@ public interface IBaseDirectoryRoleRequest extends IHttpRequest {
     IBaseDirectoryRoleRequest expand(final String value);
 
 }
+

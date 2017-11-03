@@ -35,7 +35,7 @@ public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
-	 * The ID of the folder's parent folder.
+     * The ID of the folder's parent folder.
      */
     @SerializedName("parentFolderId")
     @Expose
@@ -43,7 +43,7 @@ public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-	 * The folder's display name.
+     * The folder's display name.
      */
     @SerializedName("displayName")
     @Expose
@@ -51,25 +51,25 @@ public class BaseContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Contacts.
-	 * The contacts in the folder. Navigation property. Read-only. Nullable.
+     * The contacts in the folder. Navigation property. Read-only. Nullable.
      */
     public transient ContactCollectionPage contacts;
 
     /**
      * The Child Folders.
-	 * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      */
     public transient ContactFolderCollectionPage childFolders;
 
     /**
      * The Single Value Extended Properties.
-	 * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+     * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
     public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
-	 * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
+     * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
     public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 

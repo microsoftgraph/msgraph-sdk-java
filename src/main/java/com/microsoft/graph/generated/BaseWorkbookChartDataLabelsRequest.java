@@ -131,3 +131,4 @@ public class BaseWorkbookChartDataLabelsRequest extends BaseRequest implements I
      }
 
 }
+

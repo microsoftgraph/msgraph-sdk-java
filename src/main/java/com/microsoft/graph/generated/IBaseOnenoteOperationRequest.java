@@ -94,3 +94,4 @@ public interface IBaseOnenoteOperationRequest extends IHttpRequest {
     IBaseOnenoteOperationRequest expand(final String value);
 
 }
+
