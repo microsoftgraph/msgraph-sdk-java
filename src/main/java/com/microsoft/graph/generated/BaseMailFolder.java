@@ -77,43 +77,43 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
      * The Messages.
      * The collection of messages in the mailFolder.
      */
-    public transient MessageCollectionPage messages;
+    public MessageCollectionPage messages;
 
     /**
      * The Child Folders.
      * The collection of child folders in the mailFolder.
      */
-    public transient MailFolderCollectionPage childFolders;
+    public MailFolderCollectionPage childFolders;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
-    public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
-    public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -121,7 +121,7 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -131,8 +131,8 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("messages")) {

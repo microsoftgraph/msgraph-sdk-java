@@ -50,19 +50,19 @@ public class BaseMessageCollectionResponse implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -70,7 +70,7 @@ public class BaseMessageCollectionResponse implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -80,14 +80,14 @@ public class BaseMessageCollectionResponse implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("value")) {
             final JsonArray array = json.getAsJsonArray("value");
             for (int i = 0; i < array.size(); i++) {
-                value.get(i).setRawObject(mSerializer, (JsonObject) array.get(i));
+                value.get(i).setRawObject(serializer, (JsonObject) array.get(i));
             }
         }
     }

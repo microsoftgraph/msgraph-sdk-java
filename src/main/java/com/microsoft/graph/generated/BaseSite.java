@@ -69,13 +69,13 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
      * The Columns.
      * 
      */
-    public transient ColumnDefinitionCollectionPage columns;
+    public ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
      * 
      */
-    public transient ContentTypeCollectionPage contentTypes;
+    public ContentTypeCollectionPage contentTypes;
 
     /**
      * The Drive.
@@ -89,25 +89,25 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
      * The Drives.
      * The collection of drives (document libraries) under this site.
      */
-    public transient DriveCollectionPage drives;
+    public DriveCollectionPage drives;
 
     /**
      * The Items.
      * Used to address any item contained in this site. This collection cannot be enumerated.
      */
-    public transient BaseItemCollectionPage items;
+    public BaseItemCollectionPage items;
 
     /**
      * The Lists.
      * 
      */
-    public transient ListCollectionPage lists;
+    public ListCollectionPage lists;
 
     /**
      * The Sites.
      * The collection of the sub-sites under this site.
      */
-    public transient SiteCollectionPage sites;
+    public SiteCollectionPage sites;
 
     /**
      * The Onenote.
@@ -121,19 +121,19 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -141,7 +141,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -151,8 +151,8 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("columns")) {

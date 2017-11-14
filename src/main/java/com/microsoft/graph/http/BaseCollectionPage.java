@@ -37,7 +37,7 @@ import java.util.List;
  */
 public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> implements IBaseCollectionPage<T1, T2> {
 
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+    private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     /**
      * The contents of this page.
@@ -52,12 +52,12 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     /**
      * The raw representation of this class.
      */
-    private transient JsonObject rawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer.
      */
-    private transient ISerializer serializer;
+    private ISerializer serializer;
 
     /**
      * Creates the collection page.

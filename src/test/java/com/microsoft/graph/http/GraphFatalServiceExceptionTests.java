@@ -13,7 +13,7 @@ public class GraphFatalServiceExceptionTests {
 	@Test
 	public void testGraphFatalServiceException() {
         GraphFatalServiceException exception = new GraphFatalServiceException(null,null,new ArrayList<String>(),null,401,"Unauthenticated",new ArrayList<String>(),null);
-        String expectedMessage = "[This is an unexpected error from Graph, please report this at https://github.com/microsoftgraph/msgraph-sdk-android/issues]\n" +
+        String expectedMessage = "[This is an unexpected error from Graph, please report this at https://github.com/microsoftgraph/msgraph-sdk-java/issues]\n" +
                 "null null\n" +
                 "\n" +
                 "\n" +

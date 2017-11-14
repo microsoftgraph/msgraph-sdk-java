@@ -74,9 +74,8 @@ public abstract class DefaultClientConfig implements IClientConfig {
         DefaultClientConfig config = new DefaultClientConfig() {
         };
         config.authenticationProvider = authenticationProvider;
-        config
-                .getLogger()
-                .logDebug(
+        config.getLogger()
+              .logDebug(
                         "Using provided auth provider "
                                 + authenticationProvider
                                 .getClass()

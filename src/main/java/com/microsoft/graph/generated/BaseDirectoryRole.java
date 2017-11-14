@@ -61,25 +61,25 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
      * The Members.
      * Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage members;
+    public DirectoryObjectCollectionPage members;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -87,7 +87,7 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -97,8 +97,8 @@ public class BaseDirectoryRole extends DirectoryObject implements IJsonBackedObj
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("members")) {

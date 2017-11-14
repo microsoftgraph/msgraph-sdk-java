@@ -61,19 +61,19 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Charts.
      * 
      */
-    public transient WorkbookChartCollectionPage charts;
+    public WorkbookChartCollectionPage charts;
 
     /**
      * The Names.
      * 
      */
-    public transient WorkbookNamedItemCollectionPage names;
+    public WorkbookNamedItemCollectionPage names;
 
     /**
      * The Pivot Tables.
      * 
      */
-    public transient WorkbookPivotTableCollectionPage pivotTables;
+    public WorkbookPivotTableCollectionPage pivotTables;
 
     /**
      * The Protection.
@@ -87,25 +87,25 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Tables.
      * 
      */
-    public transient WorkbookTableCollectionPage tables;
+    public WorkbookTableCollectionPage tables;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -113,7 +113,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -123,8 +123,8 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("charts")) {

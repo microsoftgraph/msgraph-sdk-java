@@ -66,7 +66,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     ) {
         this.requestUrl = requestUrl;
         this.client = client;
-        body = null;
+        this.body = null;
 
         if (options != null) {
             this.options.addAll(options);

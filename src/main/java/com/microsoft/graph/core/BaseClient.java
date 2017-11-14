@@ -68,20 +68,6 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Gets the service root.
-     * @return The service root.
-     */
-    @Override
-    public abstract String getServiceRoot();
-
-    /**
-     * Sets the service root.
-     * @param value The service root
-     */
-    @Override
-    public abstract void setServiceRoot(final String value);
-
-    /**
      * Gets the executors.
      * @return The executors.
      */

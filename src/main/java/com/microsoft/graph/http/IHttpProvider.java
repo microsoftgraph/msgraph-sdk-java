@@ -39,7 +39,7 @@ public interface IHttpProvider {
     ISerializer getSerializer();
 
     /**
-     * Sends the http request asynchronously.
+     * Sends the HTTP request asynchronously.
      *
      * @param request      The request description.
      * @param callback     The callback to be called after success or failure.

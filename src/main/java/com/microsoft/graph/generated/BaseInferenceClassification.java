@@ -37,25 +37,25 @@ public class BaseInferenceClassification extends Entity implements IJsonBackedOb
      * The Overrides.
      * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      */
-    public transient InferenceClassificationOverrideCollectionPage overrides;
+    public InferenceClassificationOverrideCollectionPage overrides;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -63,7 +63,7 @@ public class BaseInferenceClassification extends Entity implements IJsonBackedOb
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -73,8 +73,8 @@ public class BaseInferenceClassification extends Entity implements IJsonBackedOb
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("overrides")) {

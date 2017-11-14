@@ -82,7 +82,6 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return The response object.
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
-    @SuppressWarnings("unchecked")
     protected T1 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseClass, /* serialization object */ null);

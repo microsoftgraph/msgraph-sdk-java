@@ -31,7 +31,7 @@ import com.microsoft.graph.serializer.ISerializer;
 
 public class ReferenceRequestBody implements IJsonBackedObject {
 
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+    private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @SerializedName("@odata.id")
     @Expose
@@ -40,12 +40,12 @@ public class ReferenceRequestBody implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject rawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer serializer;
+    private ISerializer serializer;
 
     public ReferenceRequestBody(final String payload) {
         odataId = payload;

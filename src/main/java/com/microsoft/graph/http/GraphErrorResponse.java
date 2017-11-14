@@ -31,7 +31,7 @@ import com.microsoft.graph.serializer.ISerializer;
 
 public class GraphErrorResponse implements IJsonBackedObject {
 
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+    private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @SerializedName("error")
     public GraphError error;

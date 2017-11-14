@@ -157,37 +157,37 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
      * The Registered Owners.
      * Users that are registered owners of the device. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage registeredOwners;
+    public DirectoryObjectCollectionPage registeredOwners;
 
     /**
      * The Registered Users.
      * Users that are registered users of the device. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage registeredUsers;
+    public DirectoryObjectCollectionPage registeredUsers;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the device. Read-only. Nullable.
      */
-    public transient ExtensionCollectionPage extensions;
+    public ExtensionCollectionPage extensions;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -195,7 +195,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -205,8 +205,8 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("registeredOwners")) {

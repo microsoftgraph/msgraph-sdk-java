@@ -64,7 +64,7 @@ public class DefaultLogger implements ILogger {
             final StringBuilder sb = new StringBuilder();
             final int callerStackDepth = 4;
             final String className = Thread.currentThread().getStackTrace()[callerStackDepth].getClassName();
-            sb.append(className.substring(className.lastIndexOf(".") + 1));
+            sb.append(className.substring(className.lastIndexOf('.') + 1));
             sb.append("[");
             sb.append(Thread.currentThread().getStackTrace()[callerStackDepth].getMethodName());
             sb.append("] - ");
@@ -97,9 +97,9 @@ public class DefaultLogger implements ILogger {
     @Override
     public void logError(final String message, final Throwable throwable) {
         switch (level) {
-            default:
             case DEBUG:
             case ERROR:
+            default:
                 for (final String line : message.split("\n")) {
                 	LOGGER.severe(getTag() + line);
                 }

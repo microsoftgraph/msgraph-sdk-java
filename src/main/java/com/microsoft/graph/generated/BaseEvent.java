@@ -269,49 +269,49 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
      * The Instances.
      * The instances of the event. Navigation property. Read-only. Nullable.
      */
-    public transient EventCollectionPage instances;
+    public EventCollectionPage instances;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the event. Read-only. Nullable.
      */
-    public transient ExtensionCollectionPage extensions;
+    public ExtensionCollectionPage extensions;
 
     /**
      * The Attachments.
      * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
      */
-    public transient AttachmentCollectionPage attachments;
+    public AttachmentCollectionPage attachments;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the event. Read-only. Nullable.
      */
-    public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
      */
-    public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -319,7 +319,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -329,8 +329,8 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("instances")) {

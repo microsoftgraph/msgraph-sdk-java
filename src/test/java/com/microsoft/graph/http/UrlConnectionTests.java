@@ -28,7 +28,7 @@ public class UrlConnectionTests {
         request.addHeader("test-header2","test-value2");
         request.addHeader("test-header2","test-value23");
         UrlConnection connection = new UrlConnection(request);
-        Field mConnectionField = UrlConnection.class.getDeclaredField("mConnection");
+        Field mConnectionField = UrlConnection.class.getDeclaredField("connection");
         mConnectionField.setAccessible(true);
         HttpURLConnection mConnection = (HttpURLConnection)mConnectionField.get(connection);
         Map<String, List<String>> requestProperties = mConnection.getRequestProperties();

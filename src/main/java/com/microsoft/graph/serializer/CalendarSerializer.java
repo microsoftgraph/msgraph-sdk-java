@@ -66,15 +66,15 @@ public final class CalendarSerializer {
         final String datePattern;
         if (modifiedStrVal.contains(".")) {
             //SimpleDateFormat only supports 3 milliseconds
-            String milliseconds = modifiedStrVal.substring(modifiedStrVal.indexOf(".") + 1,
-                                                           modifiedStrVal.indexOf("+"));
+            String milliseconds = modifiedStrVal.substring(modifiedStrVal.indexOf('.') + 1,
+                                                           modifiedStrVal.indexOf('+'));
             final int millisSegmentLength = 3;
             if (milliseconds.length() > millisSegmentLength) {
                 milliseconds = milliseconds.substring(0, millisSegmentLength);
                 modifiedStrVal = modifiedStrVal.substring(0,
-                    modifiedStrVal.indexOf(".") + 1)
+                    modifiedStrVal.indexOf('.') + 1)
                     + milliseconds
-                    + modifiedStrVal.substring(modifiedStrVal.indexOf("+"));
+                    + modifiedStrVal.substring(modifiedStrVal.indexOf('+'));
             }
 
             datePattern = "yyyy-MM-dd'T'HH:mm:ss.SSS" + zSuffix;

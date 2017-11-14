@@ -173,13 +173,13 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * The Members.
      * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
      */
-    public transient DirectoryObjectCollectionPage members;
+    public DirectoryObjectCollectionPage members;
 
     /**
      * The Member Of.
      * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage memberOf;
+    public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Created On Behalf Of.
@@ -193,25 +193,25 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * The Owners.
      * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
      */
-    public transient DirectoryObjectCollectionPage owners;
+    public DirectoryObjectCollectionPage owners;
 
     /**
      * The Settings.
      * Read-only. Nullable.
      */
-    public transient GroupSettingCollectionPage settings;
+    public GroupSettingCollectionPage settings;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the group. Read-only. Nullable.
      */
-    public transient ExtensionCollectionPage extensions;
+    public ExtensionCollectionPage extensions;
 
     /**
      * The Threads.
      * The group's conversation threads. Nullable.
      */
-    public transient ConversationThreadCollectionPage threads;
+    public ConversationThreadCollectionPage threads;
 
     /**
      * The Calendar.
@@ -225,19 +225,19 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * The Calendar View.
      * The calendar view for the calendar. Read-only.
      */
-    public transient EventCollectionPage calendarView;
+    public EventCollectionPage calendarView;
 
     /**
      * The Events.
      * The group's calendar events.
      */
-    public transient EventCollectionPage events;
+    public EventCollectionPage events;
 
     /**
      * The Conversations.
      * The group's conversations.
      */
-    public transient ConversationCollectionPage conversations;
+    public ConversationCollectionPage conversations;
 
     /**
      * The Photo.
@@ -251,19 +251,19 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * The Photos.
      * The profile photos owned by the group. Read-only. Nullable.
      */
-    public transient ProfilePhotoCollectionPage photos;
+    public ProfilePhotoCollectionPage photos;
 
     /**
      * The Accepted Senders.
      * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      */
-    public transient DirectoryObjectCollectionPage acceptedSenders;
+    public DirectoryObjectCollectionPage acceptedSenders;
 
     /**
      * The Rejected Senders.
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
-    public transient DirectoryObjectCollectionPage rejectedSenders;
+    public DirectoryObjectCollectionPage rejectedSenders;
 
     /**
      * The Drive.
@@ -277,13 +277,13 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * 
      */
-    public transient DriveCollectionPage drives;
+    public DriveCollectionPage drives;
 
     /**
      * The Sites.
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      */
-    public transient SiteCollectionPage sites;
+    public SiteCollectionPage sites;
 
     /**
      * The Planner.
@@ -305,19 +305,19 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -325,7 +325,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -335,8 +335,8 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("members")) {

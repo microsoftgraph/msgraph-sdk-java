@@ -189,7 +189,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
      * The Children.
      * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      */
-    public transient DriveItemCollectionPage children;
+    public DriveItemCollectionPage children;
 
     /**
      * The List Item.
@@ -203,13 +203,13 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
      * The Permissions.
      * The set of permissions for the item. Read-only. Nullable.
      */
-    public transient PermissionCollectionPage permissions;
+    public PermissionCollectionPage permissions;
 
     /**
      * The Thumbnails.
      * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
      */
-    public transient ThumbnailSetCollectionPage thumbnails;
+    public ThumbnailSetCollectionPage thumbnails;
 
     /**
      * The Workbook.
@@ -223,19 +223,19 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -243,7 +243,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -253,8 +253,8 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("children")) {

@@ -48,6 +48,8 @@ import javax.xml.datatype.Duration;
  */
 final class GsonFactory {
 
+	private static String PARSING_MESSAGE = "Parsing issue on ";
+	
     /**
      * Default constructor.
      */
@@ -73,7 +75,7 @@ final class GsonFactory {
                 try {
                     return new JsonPrimitive(CalendarSerializer.serialize(src));
                 } catch (final Exception e) {
-                    logger.logError("Parsing issue on " + src, e);
+                    logger.logError(PARSING_MESSAGE + src, e);
                     return null;
                 }
             }
@@ -90,7 +92,7 @@ final class GsonFactory {
                 try {
                     return CalendarSerializer.deserialize(json.getAsString());
                 } catch (final ParseException e) {
-                    logger.logError("Parsing issue on " + json.getAsString(), e);
+                    logger.logError(PARSING_MESSAGE + json.getAsString(), e);
                     return null;
                 }
             }
@@ -107,7 +109,7 @@ final class GsonFactory {
                 try {
                     return new JsonPrimitive(ByteArraySerializer.serialize(src));
                 } catch (final Exception e) {
-                    logger.logError("Parsing issue on " + src, e);
+                    logger.logError(PARSING_MESSAGE + src, e);
                     return null;
                 }
             }
@@ -124,7 +126,7 @@ final class GsonFactory {
                 try {
                     return ByteArraySerializer.deserialize(json.getAsString());
                 } catch (final ParseException e) {
-                    logger.logError("Parsing issue on " + json.getAsString(), e);
+                    logger.logError(PARSING_MESSAGE + json.getAsString(), e);
                     return null;
                 }
             }
@@ -154,7 +156,7 @@ final class GsonFactory {
                 try {
                     return DateOnly.parse(json.getAsString());
                 } catch (final ParseException e) {
-                    logger.logError("Parsing issue on " + json.getAsString(), e);
+                    logger.logError(PARSING_MESSAGE + json.getAsString(), e);
                     return null;
                 }
             }
@@ -165,7 +167,7 @@ final class GsonFactory {
             public JsonElement serialize(final EnumSet src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
-                if (src == null || src.size() == 0) {
+                if (src == null || src.isEmpty()) {
                     return null;
                 }
 

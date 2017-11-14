@@ -381,13 +381,13 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Owned Devices.
      * Devices that are owned by the user. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage ownedDevices;
+    public DirectoryObjectCollectionPage ownedDevices;
 
     /**
      * The Registered Devices.
      * Devices that are registered for the user. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage registeredDevices;
+    public DirectoryObjectCollectionPage registeredDevices;
 
     /**
      * The Manager.
@@ -401,49 +401,49 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Direct Reports.
      * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage directReports;
+    public DirectoryObjectCollectionPage directReports;
 
     /**
      * The Member Of.
      * The groups and directory roles that the user is a member of. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage memberOf;
+    public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Created Objects.
      * Directory objects that were created by the user. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage createdObjects;
+    public DirectoryObjectCollectionPage createdObjects;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by the user. Read-only. Nullable.
      */
-    public transient DirectoryObjectCollectionPage ownedObjects;
+    public DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The License Details.
      * 
      */
-    public transient LicenseDetailsCollectionPage licenseDetails;
+    public LicenseDetailsCollectionPage licenseDetails;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the user. Read-only. Nullable.
      */
-    public transient ExtensionCollectionPage extensions;
+    public ExtensionCollectionPage extensions;
 
     /**
      * The Messages.
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
-    public transient MessageCollectionPage messages;
+    public MessageCollectionPage messages;
 
     /**
      * The Mail Folders.
      * The user's mail folders. Read-only. Nullable.
      */
-    public transient MailFolderCollectionPage mailFolders;
+    public MailFolderCollectionPage mailFolders;
 
     /**
      * The Calendar.
@@ -457,43 +457,43 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Calendars.
      * The user's calendars. Read-only. Nullable.
      */
-    public transient CalendarCollectionPage calendars;
+    public CalendarCollectionPage calendars;
 
     /**
      * The Calendar Groups.
      * The user's calendar groups. Read-only. Nullable.
      */
-    public transient CalendarGroupCollectionPage calendarGroups;
+    public CalendarGroupCollectionPage calendarGroups;
 
     /**
      * The Calendar View.
      * The calendar view for the calendar. Read-only. Nullable.
      */
-    public transient EventCollectionPage calendarView;
+    public EventCollectionPage calendarView;
 
     /**
      * The Events.
      * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      */
-    public transient EventCollectionPage events;
+    public EventCollectionPage events;
 
     /**
      * The People.
      * 
      */
-    public transient PersonCollectionPage people;
+    public PersonCollectionPage people;
 
     /**
      * The Contacts.
      * The user's contacts. Read-only. Nullable.
      */
-    public transient ContactCollectionPage contacts;
+    public ContactCollectionPage contacts;
 
     /**
      * The Contact Folders.
      * The user's contacts folders. Read-only. Nullable.
      */
-    public transient ContactFolderCollectionPage contactFolders;
+    public ContactFolderCollectionPage contactFolders;
 
     /**
      * The Inference Classification.
@@ -515,7 +515,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Photos.
      * 
      */
-    public transient ProfilePhotoCollectionPage photos;
+    public ProfilePhotoCollectionPage photos;
 
     /**
      * The Drive.
@@ -529,7 +529,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * A collection of drives available for this user. Read-only.
      */
-    public transient DriveCollectionPage drives;
+    public DriveCollectionPage drives;
 
     /**
      * The Planner.
@@ -551,19 +551,19 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -571,7 +571,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -581,8 +581,8 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("ownedDevices")) {

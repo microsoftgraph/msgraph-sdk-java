@@ -35,7 +35,7 @@ import java.util.Set;
 
 public class AdditionalDataManager extends HashMap<String, JsonElement> {
 
-    private final IJsonBackedObject jsonBackedObject;
+    private final transient IJsonBackedObject jsonBackedObject;
 
     public AdditionalDataManager(IJsonBackedObject jsonBackedObject) {
         this.jsonBackedObject = jsonBackedObject;

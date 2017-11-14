@@ -74,7 +74,7 @@ public class GraphServiceException extends ClientException {
     /**
      * The GraphError response.
      */
-    private final GraphErrorResponse error;
+    private final transient GraphErrorResponse error;
 
     /**
      * The HTTP method.

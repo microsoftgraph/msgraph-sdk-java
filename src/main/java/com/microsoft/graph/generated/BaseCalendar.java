@@ -93,43 +93,43 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
      * The Events.
      * The events in the calendar. Navigation property. Read-only.
      */
-    public transient EventCollectionPage events;
+    public EventCollectionPage events;
 
     /**
      * The Calendar View.
      * The calendar view for the calendar. Navigation property. Read-only.
      */
-    public transient EventCollectionPage calendarView;
+    public EventCollectionPage calendarView;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      */
-    public transient SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      */
-    public transient MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
      * The raw representation of this class
      */
-    private transient JsonObject mRawObject;
+    private JsonObject rawObject;
 
     /**
      * The serializer
      */
-    private transient ISerializer mSerializer;
+    private ISerializer serializer;
 
     /**
      * Gets the raw representation of this class
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
-        return mRawObject;
+        return rawObject;
     }
 
     /**
@@ -137,7 +137,7 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
      * @return the serializer
      */
     protected ISerializer getSerializer() {
-        return mSerializer;
+        return serializer;
     }
 
     /**
@@ -147,8 +147,8 @@ public class BaseCalendar extends Entity implements IJsonBackedObject {
      * @param json The json object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
-        mSerializer = serializer;
-        mRawObject = json;
+        this.serializer = serializer;
+        rawObject = json;
 
 
         if (json.has("events")) {
