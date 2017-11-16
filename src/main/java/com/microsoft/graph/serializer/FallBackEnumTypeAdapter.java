@@ -32,6 +32,8 @@ import com.google.gson.stream.JsonWriter;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.logger.ILogger;
 
+import com.google.common.base.*;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -74,7 +76,7 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
                 if (value == null) {
                     out.nullValue();
                 } else {
-                    out.value(value.toString());
+                	out.value(CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, value.toString()));
                 }
             }
 
@@ -84,7 +86,7 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
                     return null;
                 } else {
                     String value = reader.nextString();
-                    T incoming = enumValues.get(value);
+                    T incoming = enumValues.get(CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, value));
                     if (incoming == null) {
                         logger.logDebug(
                                 String.format(

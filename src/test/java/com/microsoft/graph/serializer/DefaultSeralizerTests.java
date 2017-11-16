@@ -43,7 +43,7 @@ public class DefaultSeralizerTests {
                 "}";
         BaseRecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, BaseRecurrenceRange.class);
         assertNotNull(source);
-        assertEquals(baseRecurrenceRange.type, RecurrenceRangeType.NO_END);
+        assertEquals(RecurrenceRangeType.NO_END, baseRecurrenceRange.type);
         assertEquals("2016-04-27", baseRecurrenceRange.startDate.toString());
         assertEquals("0001-01-01", baseRecurrenceRange.endDate.toString());
         assertEquals("China Standard Time", baseRecurrenceRange.recurrenceTimeZone);
@@ -62,7 +62,7 @@ public class DefaultSeralizerTests {
         brr.numberOfOccurrences = 4;
         String jsonOut = serializer.serializeObject(brr);
         assertNotNull(jsonOut);
-        assertEquals(jsonOut, expected);
+        assertEquals(expected, jsonOut);
     }
 
 }
