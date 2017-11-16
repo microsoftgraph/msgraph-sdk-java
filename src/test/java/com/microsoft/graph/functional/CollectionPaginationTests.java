@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.microsoft.graph.extensions.Drive;
@@ -16,6 +17,7 @@ import com.microsoft.graph.extensions.User;
 import com.microsoft.graph.generated.BaseGraphServiceClient;
 import com.microsoft.graph.generated.IBaseGraphServiceClient;
 
+@Ignore
 public class CollectionPaginationTests {
 
 	@Test

@@ -23,7 +23,7 @@ public class GraphServiceExceptionTests {
         errorResponse.error = error;
         GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),null,401,"Unauthorized",new ArrayList<String>(),errorResponse);
         String message = exception.getMessage();
-        assertTrue(message.indexOf("Error code: Unauthenticated") == 0);
+        assertTrue(message.indexOf("Error code: UNAUTHENTICATED") == 0);
         assertTrue(message.indexOf("401 : Unauthorized") > 0);
         assertEquals(error,exception.getServiceError());
         assertTrue(exception.isError(GraphErrorCodes.UNAUTHENTICATED));

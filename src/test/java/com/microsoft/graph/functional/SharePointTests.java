@@ -14,6 +14,7 @@ import java.util.Base64;
 import java.util.LinkedList;
 import java.util.List;
 
+@Ignore
 public class SharePointTests {
 
     private TestBase testBase;

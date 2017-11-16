@@ -2,12 +2,14 @@ package com.microsoft.graph.functional;
 
 import com.microsoft.graph.extensions.Subscription;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 import java.util.Base64;
 import java.util.Calendar;
 
+@Ignore
 public class WebhooksTests {
 
     @Test
