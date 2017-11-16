@@ -160,7 +160,7 @@ public abstract class BaseRequest implements IHttpRequest {
     private String addFunctionParameters() {
         final StringBuilder requestUrl = new StringBuilder(this.requestUrl);
 
-        if (getFunctionOptions().isEmpty()) {
+        if (!getFunctionOptions().isEmpty()) {
             requestUrl.append("(");
 
             for (int i = 0; i < functionOptions.size(); i++) {
