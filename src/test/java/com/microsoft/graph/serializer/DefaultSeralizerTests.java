@@ -6,11 +6,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.microsoft.graph.extensions.Drive;
-import com.microsoft.graph.extensions.RecurrenceRangeType;
-import com.microsoft.graph.generated.BaseRecurrenceRange;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.generated.RecurrenceRangeType;
+import com.microsoft.graph.models.generated.BaseRecurrenceRange;
 import com.microsoft.graph.logger.DefaultLogger;
-import com.microsoft.graph.model.DateOnly;
+import com.microsoft.graph.models.extensions.DateOnly;
 
 public class DefaultSeralizerTests {
 

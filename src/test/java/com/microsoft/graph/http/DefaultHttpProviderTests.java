@@ -27,8 +27,8 @@ import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.GraphErrorCodes;
-import com.microsoft.graph.extensions.Drive;
-import com.microsoft.graph.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.MockSerializer;
 

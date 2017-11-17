@@ -6,6 +6,8 @@ import java.lang.reflect.Method;
 
 import org.junit.Test;
 
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+
 public class IDriveItemRequestBuilderTests {
 
 	@Test

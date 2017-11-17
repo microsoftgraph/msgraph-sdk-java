@@ -22,8 +22,8 @@
 
 package com.microsoft.graph.concurrency;
 
-import com.microsoft.graph.extensions.ChunkedUploadResult;
-import com.microsoft.graph.extensions.UploadSession;
+import com.microsoft.graph.requests.extensions.ChunkedUploadResult;
+import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.http.DefaultHttpProvider;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.http.HttpResponseCode;

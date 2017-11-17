@@ -1,6 +1,6 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.extensions.Subscription;
+import com.microsoft.graph.models.extensions.Subscription;
 
 import org.junit.Ignore;
 import org.junit.Test;

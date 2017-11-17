@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.microsoft.graph.model.TimeOfDay;
+import com.microsoft.graph.models.extensions.TimeOfDay;
 
 public class TimeOfDayTests {
 

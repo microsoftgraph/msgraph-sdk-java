@@ -6,6 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.microsoft.graph.requests.extensions.IThumbnailRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
+
 import java.lang.reflect.Method;
 
 public class IThumbnailSetRequestBuilderTests {

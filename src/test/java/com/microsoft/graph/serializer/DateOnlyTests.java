@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.microsoft.graph.model.DateOnly;
+import com.microsoft.graph.models.extensions.DateOnly;
 
 public class DateOnlyTests {
 

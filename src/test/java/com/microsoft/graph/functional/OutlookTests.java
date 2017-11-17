@@ -1,14 +1,14 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.extensions.EmailAddress;
-import com.microsoft.graph.extensions.Message;
-import com.microsoft.graph.extensions.Recipient;
-import com.microsoft.graph.extensions.User;
+import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.User;
 
 import org.junit.Test;
 
 //import com.microsoft.graph.extensions.IDirectoryDeletedItemsCollectionPage;
-import com.microsoft.graph.extensions.*;
+import com.microsoft.graph.models.extensions.*;
 
 import org.junit.Assert;
 import org.junit.Ignore;

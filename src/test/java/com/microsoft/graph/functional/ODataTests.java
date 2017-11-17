@@ -1,9 +1,9 @@
 package com.microsoft.graph.functional;
 
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.extensions.ExtensionSchemaProperty;
-import com.microsoft.graph.extensions.Extension;
-import com.microsoft.graph.extensions.SchemaExtension;
+import com.microsoft.graph.models.extensions.ExtensionSchemaProperty;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.SchemaExtension;
 
 import org.junit.Assert;
 import org.junit.Before;
