@@ -4,6 +4,7 @@ import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.requests.extensions.IUserCollectionPage;
 
 import org.junit.Test;
 

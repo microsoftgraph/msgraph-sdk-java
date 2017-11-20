@@ -1,8 +1,8 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.models.extensions.IDriveCollectionPage;
-import com.microsoft.graph.models.extensions.IDriveItemCollectionPage;
-import com.microsoft.graph.models.extensions.ISiteCollectionPage;
+import com.microsoft.graph.requests.extensions.IDriveCollectionPage;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.ISiteCollectionPage;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;

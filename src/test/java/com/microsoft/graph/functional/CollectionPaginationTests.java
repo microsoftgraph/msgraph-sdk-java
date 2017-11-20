@@ -9,10 +9,10 @@ import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.GraphServiceClient;
-import com.microsoft.graph.models.extensions.IDriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
-import com.microsoft.graph.models.extensions.IUserCollectionPage;
+import com.microsoft.graph.requests.extensions.IUserCollectionPage;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.BaseGraphServiceClient;
 import com.microsoft.graph.models.generated.IBaseGraphServiceClient;

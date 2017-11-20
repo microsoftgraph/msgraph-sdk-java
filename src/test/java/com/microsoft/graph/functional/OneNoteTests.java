@@ -1,10 +1,10 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.models.extensions.INotebookCollectionPage;
-import com.microsoft.graph.models.extensions.INotebookGetRecentNotebooksCollectionPage;
-import com.microsoft.graph.models.extensions.IOnenotePageCollectionPage;
-import com.microsoft.graph.models.extensions.IOnenoteSectionCollectionPage;
-import com.microsoft.graph.models.extensions.ISectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.INotebookCollectionPage;
+import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionPage;
+import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
+import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.OnenotePage;
