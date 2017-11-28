@@ -23,5 +23,5 @@ import java.util.EnumSet;
  * The interface for the Drive Item Collection Request Builder.
  */
 public interface IDriveItemCollectionRequestBuilder extends IBaseDriveItemCollectionRequestBuilder {
-
+	IDriveItemRequestBuilder appRoot();
 }

@@ -34,4 +34,8 @@ public class DriveItemCollectionRequestBuilder extends BaseDriveItemCollectionRe
     public DriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
+    
+    public IDriveItemRequestBuilder appRoot() {
+    	return new DriveItemRequestBuilder(this.getRequestUrlWithAdditionalSegment("approot"), this.getClient(), null);
+    }
 }
