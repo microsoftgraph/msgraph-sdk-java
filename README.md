@@ -13,7 +13,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:1.2.+')
+    compile('com.microsoft.graph:1.0.+')
 
     // Include the gson dependency
     compile('com.google.code.gson:gson:2.3.1')
@@ -27,7 +27,7 @@ The nature of the Graph API is such that the SDK needs quite a large set of clas
 
 ### 2.1 Register your application
 
-Register your application by following [these](https://graph.microsoft.io/en-us/app-registration) steps.
+Register your application by following [these](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_register_app_v2) steps.
 
 ### 2.2 Create an IAuthenticationProvider object
 
@@ -54,7 +54,7 @@ final IGraphServiceClient mClient = new GraphServiceClient
 
 ## 3. Make requests against the service
 
-Once you have an GraphServiceClient that is authenticated you can begin making calls against the service. The requests against the service look like our [REST API](https://graph.microsoft.io/en-us/docs).
+Once you have an GraphServiceClient that is authenticated you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
 
 ### Get the drive
 
@@ -62,8 +62,8 @@ To retrieve a user's drive:
 
 ```java
 graphClient
-    .getMe()
-    .getDrive()
+    .me()
+    .drive()
     .buildRequest()
     .get(new ICallback<Drive>() {
   @Override
@@ -94,14 +94,14 @@ For a more detailed documentation see:
 
 ## 5. Issues
 
-For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-android/issues).
+For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues).
 
 ## 6. Contributions
 
 The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](docs/contributions.md).
 
 ## 7. Supported Java Versions
-The Microsoft Graph SDK for Java library is supported at runtime for Java 6+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater. To build the sdk you need to install Android API revision 23 or greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 6+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
 
 ## 8. License
 
