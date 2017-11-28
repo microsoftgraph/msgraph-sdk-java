@@ -36,7 +36,7 @@ public class DriveItemRequestBuilder extends BaseDriveItemRequestBuilder impleme
     }
 
     @Override
-    public IDriveItemRequestBuilder getItemWithPath(final String path) {
+    public IDriveItemRequestBuilder itemWithPath(final String path) {
         return new DriveItemRequestBuilder(getRequestUrl() + ":/" + path + ":", getClient(), null);
     }
 }

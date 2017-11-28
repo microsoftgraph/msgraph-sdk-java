@@ -30,5 +30,5 @@ public interface IDriveItemRequestBuilder extends IBaseDriveItemRequestBuilder {
      * @param path The path to the item
      * @return The request builder for the specified item
      */
-    IDriveItemRequestBuilder getItemWithPath(final String path);
+    IDriveItemRequestBuilder itemWithPath(final String path);
 }
