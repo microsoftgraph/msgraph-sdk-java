@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.models.generated;
 
-import com.google.gson.JsonObject;
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
@@ -48,14 +47,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
         endpoint = value;
     }
 
-    public CustomRequestBuilder customRequest(final String url, final Class responseType) {
-    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, responseType);
-    }
-    
-    public CustomRequestBuilder customRequest(final String url) {
-    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, JsonObject.class);
-    }
-    
     /**
      * Gets the collection of DirectoryObjects objects.
      *

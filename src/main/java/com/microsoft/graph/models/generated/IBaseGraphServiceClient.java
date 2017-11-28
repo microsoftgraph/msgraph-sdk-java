@@ -24,10 +24,6 @@ import java.util.EnumSet;
  */
 public interface IBaseGraphServiceClient extends IBaseClient {
 
-	CustomRequestBuilder customRequest(final String url, final Class responseType);
-	
-	CustomRequestBuilder customRequest(final String url);
-	
     /**
      * Gets the collection of DirectoryObjects objects.
      *

@@ -23,5 +23,8 @@ import java.util.EnumSet;
  * The interface for the Graph Service Client.
  */
 public interface IGraphServiceClient extends IBaseGraphServiceClient {
-
+	
+	CustomRequestBuilder customRequest(final String url, final Class responseType);
+	
+	CustomRequestBuilder customRequest(final String url);
 }

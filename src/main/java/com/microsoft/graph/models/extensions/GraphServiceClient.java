@@ -17,6 +17,7 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 
+import com.google.gson.JsonObject;
 import com.microsoft.graph.authentication.*;
 import com.microsoft.graph.logger.*;
 
@@ -31,6 +32,25 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * Restricted constructor
      */
     protected GraphServiceClient() {
+    }
+    
+    /**
+     * Send a custom request to Graph
+     * @param url The full URL to make a request with
+     * @param responseType The response class to deserialize the response into
+     * @return the instance of this builder
+     */
+    public CustomRequestBuilder customRequest(final String url, final Class responseType) {
+    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, responseType);
+    }
+    
+    /**
+     * end a custom request to Graph
+     * @param url THe full URL to make a request with
+     * @return the instance of this builder
+     */
+    public CustomRequestBuilder customRequest(final String url) {
+    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, JsonObject.class);
     }
 
     /**
