@@ -6,6 +6,7 @@ import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.models.extensions.Multipart;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.OnenotePage;
@@ -23,11 +24,8 @@ import static org.junit.Assert.*;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
-import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -383,70 +381,35 @@ public class OneNoteTests {
      */
     @Test
     public void testMultipartPost(){
-        String multipartBoundary = "part_" + new BigInteger(130, new SecureRandom()).toString();
         try {
+        	Multipart multipart = new Multipart();
         	
-        	// Write the multipart content
-        	// The HTML content of the page
-            String html =
-                "--" + multipartBoundary + "\r\n" +
-                        "Content-Disposition:form-data; name=\"Presentation\"" + "\r\n" +
-                        "Content-Type: text/html" + "\r\n" +
-                        "\r\n" +
-                        "<!DOCTYPE html>\r\n" +
-                        "<html lang=\"en-US\">\r\n" +
-                        "<head>\r\n" +
-                        "<title>Test Multipart Page</title>\r\n" +
-                        "<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\r\n" +
-                        "</head>\r\n" +
-                        "<body>\r\n" +
-                        "<p>\r\n" +
-                        "<img src=\"name:image\" />\r\n" +
-                        "</p>\r\n" +
-                        "<p>\r\n" +
-                        "<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
-                        "\r\n" +
-                        "</body>\r\n" +
-                        "</html>\r\n" +
-                        "\r\n" +
-                        "--" + multipartBoundary + "\r\n" +
-                        "Content-Disposition:form-data; name=\"image\"\r\n" +
-                        "Content-Type: image/jpeg\r\n\r\n";
-            
-            // The document metadata
-            String doc = "\r\n\r\n" +
-                    "--" + multipartBoundary + "\r\n" +
-                    "Content-Disposition:form-data; name=\"attachment\"\r\n" +
-                    "Content-Type:application/pdf\r\n\r\n";
-
-            // The multipart boundary
-            String end = "\r\n\r\n" +
-                    "--" + multipartBoundary + "--";
-                  
-            // Image to stream
-            File imageFile = new File("src/test/resources/hamilton.jpg");
-            InputStream imageStream = new FileInputStream(imageFile);
-            byte[] imgArray = getByteArray(imageStream);
-
-            // Document to stream
-            File docFile = new File("src/test/resources/document.pdf");
-            InputStream docStream = new FileInputStream(docFile);
-            byte[] docArray = getByteArray(docStream);
-
-            // Write the image and document to the multipart content
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            out.write(html.getBytes());
-            out.write(imgArray);
-            out.write(doc.getBytes());
-            out.write(docArray);
-            out.write(end.getBytes());
-
-            byte finalData[] = out.toByteArray();
-
+        	String htmlContent = "<!DOCTYPE html>\r\n" +
+                    "<html lang=\"en-US\">\r\n" +
+                    "<head>\r\n" +
+                    "<title>Test Multipart Page</title>\r\n" +
+                    "<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\r\n" +
+                    "</head>\r\n" +
+                    "<body>\r\n" +
+                    "<p>\r\n" +
+                    "<img src=\"name:image\" />\r\n" +
+                    "</p>\r\n" +
+                    "<p>\r\n" +
+                    "<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
+                    "\r\n" +
+                    "</body>\r\n" +
+                    "</html>";
+        	File imgFile = new File("src/test/resources/hamilton.jpg");
+        	File pdfFile = new File("src/test/resources/document.pdf");
+        	
+        	multipart.addHtmlPart("Presentation", htmlContent);
+        	multipart.addImagePart("hamilton", imgFile);
+        	multipart.addFilePart("metadata", "application/pdf", pdfFile);
+        	
             // Add multipart request header
             List<Option> options = new ArrayList<Option>();
             options.add(new HeaderOption(
-            		"Content-Type", "multipart/form-data; boundary=\"" + multipartBoundary + "\""
+            		"Content-Type", "multipart/form-data; boundary=\"" + multipart.boundary() + "\""
             		));
             
             // Post the multipart content
@@ -454,7 +417,7 @@ public class OneNoteTests {
             		.sections(testSection.id)
             		.pages()
             		.buildRequest(options)
-            		.post(finalData);
+            		.post(multipart.content());
             assertNotNull(page);
         } catch (Exception e) {
             fail("Unable to write to output stream");

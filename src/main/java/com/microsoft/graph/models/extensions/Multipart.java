@@ -1,0 +1,144 @@
+package com.microsoft.graph.models.extensions;
+
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigInteger;
+import java.security.SecureRandom;
+
+/**
+ * Helper for submitting multipart data
+ * 
+ * This follows the Network Working Group's RFC 
+ * on multipart/form-data posting format:
+ * https://www.ietf.org/rfc/rfc2388.txt
+ */
+public class Multipart {
+	private String boundary;
+	private static final String RETURN = "\r\n";
+	private ByteArrayOutputStream out;
+	
+	/**
+	 * Create a new multipart object
+	 */
+	public Multipart() {
+		out = new ByteArrayOutputStream();
+		boundary = "part_" + new BigInteger(130, new SecureRandom()).toString();
+	}
+	
+	/**
+	 * Get the multipart boundary for use in the request header
+	 * @return
+	 */
+	public String boundary() {
+		return boundary;
+	}
+	
+	/**
+	 * Add a string part to the multipart body
+	 * @param name The name of the part
+	 * @param contentType The MIME type (text/html, text/plain, etc.)
+	 * @param content The string content to include
+	 * @throws IOException
+	 */
+	public void addPart(String name, String contentType, String content) throws IOException {
+		addPart(name, contentType, content.getBytes());
+	}
+	
+	/**
+	 * Add a part to the multipart body
+	 * @param name The name of the part
+	 * @param contentType The MIME type (text/html, video/mp4, etc.)
+	 * @param byteArray The byte[] contents of the resource
+	 * @throws IOException
+	 */
+	public void addPart(String name, String contentType, byte[] byteArray) throws IOException {
+		String partContent = addBoundary();
+		partContent +=
+				"Content-Disposition:form-data; name=\"" + name + "\"" + RETURN +
+				"Content-Type:" + contentType + RETURN +
+				RETURN;
+		out.write(partContent.getBytes());
+		out.write(byteArray);
+		String returnContent = RETURN + RETURN;
+		out.write(returnContent.getBytes());
+	}
+	
+	/**
+	 * Add an HTML part to the multipart body
+	 * @param name The name of the part
+	 * @param content The HTML body for the part
+	 * @throws IOException
+	 */
+	public void addHtmlPart(String name, String content) throws IOException {
+		addPart(name, "text/html", content);
+	}
+	
+	/**
+	 * Add an image part to the multipart body
+	 * @param name The name of the part
+	 * @param imageFile The image file
+	 * @throws IOException
+	 */
+	public void addImagePart(String name, java.io.File imageFile) throws IOException {
+		addFilePart(name, "image/jpeg", imageFile);
+	}
+	
+	/**
+	 * Add a file part to the multipart body
+	 * @param name The name of the part
+	 * @param contentType The MIME type of the file (application/pdf, video/mp4, etc.)
+	 * @param file The file
+	 * @throws IOException
+	 */
+	public void addFilePart(String name, String contentType, java.io.File file) throws IOException {
+		InputStream fileStream = new FileInputStream(file);
+		byte[] fileBytes = getByteArray(fileStream);
+		addPart(name, contentType, fileBytes);
+	}
+	
+	/**
+	 * Adds a boundary at the beginning of a new part
+	 * @return
+	 */
+	private String addBoundary() {
+		return "--" + boundary + RETURN;
+	}
+	
+	/**
+	 * Adds a boundary at the end of the multipart body
+	 * @return
+	 */
+	private String addEnding() {
+		return "--" + boundary + "--";
+	}
+	
+	/**
+	 * Returns a full multipart body byte array
+	 * @return The byte[] representation of the multipart object
+	 * @throws IOException
+	 */
+	public byte[] content() throws IOException {
+		ByteArrayOutputStream finalStream = out;
+		finalStream.write(addEnding().getBytes());
+		return finalStream.toByteArray();
+	}
+	
+    /**
+     * Helper method to convert an InputStream to a byte[]
+     * @param in The input stream to convert
+     * @return The byte[]
+     * @throws IOException 
+     */
+    private byte[] getByteArray(InputStream in) throws IOException {
+            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+            int nRead;
+            byte[] data = new byte[16384];
+            while ((nRead = in.read(data, 0, data.length)) != -1) {
+                buffer.write(data, 0, nRead);
+            }
+            buffer.flush();
+            return buffer.toByteArray();
+    }
+}
