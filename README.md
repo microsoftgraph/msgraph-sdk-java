@@ -1,3 +1,12 @@
+# Preview Microsoft Graph SDK for Java
+This client library is currently in private preview status. This means that: 
+- The API surface may change significantly
+- Non-blocking issues *may* be triaged at a slower pace
+- You may submit feedback through issues or PRs. You will have a better chance of your changes being implemented if they are submitted before public preview release
+- We do not define an SLA or support strategy for this library
+
+We welcome your feedback as we drive the quality of this to general availability.
+
 # Get started with the Microsoft Graph SDK for Java
 
 Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
