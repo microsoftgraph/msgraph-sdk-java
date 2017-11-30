@@ -11,10 +11,10 @@ import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 public class IDriveItemRequestBuilderTests {
 
 	@Test
-	public void testGetItemWithPath() throws Exception {
-        final Method getItemWithPath = IDriveItemRequestBuilder.class.getDeclaredMethod("getItemWithPath", String.class);
-        assertNotNull(getItemWithPath);
-        assertEquals(IDriveItemRequestBuilder.class, getItemWithPath.getReturnType());
+	public void testitemWithPath() throws Exception {
+        final Method itemWithPath = IDriveItemRequestBuilder.class.getDeclaredMethod("itemWithPath", String.class);
+        assertNotNull(itemWithPath);
+        assertEquals(IDriveItemRequestBuilder.class, itemWithPath.getReturnType());
     }
 
 }

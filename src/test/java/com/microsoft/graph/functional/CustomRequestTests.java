@@ -3,6 +3,7 @@ package com.microsoft.graph.functional;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.gson.JsonObject;
@@ -11,6 +12,7 @@ import com.microsoft.graph.models.extensions.User;
 /**
  * Tests for sending custom requests using the SDK
  */
+@Ignore
 public class CustomRequestTests {
 	private TestBase testBase;
 

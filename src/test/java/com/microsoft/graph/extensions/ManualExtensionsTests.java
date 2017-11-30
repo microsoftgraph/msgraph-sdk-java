@@ -13,7 +13,7 @@ public class ManualExtensionsTests {
 
 	@Test
 	public void testChunkedUploadRequestPreserved() {
-        final String className = "com.microsoft.graph.extensions.ChunkedUploadRequest";
+        final String className = "com.microsoft.graph.requests.extensions.ChunkedUploadRequest";
         try {
             Class.forName(className);
         } catch (ClassNotFoundException e) {
@@ -23,7 +23,7 @@ public class ManualExtensionsTests {
 
 	@Test
     public void testChunkedUploadResultPreserved() {
-        final String className = "com.microsoft.graph.extensions.ChunkedUploadResult";
+        final String className = "com.microsoft.graph.requests.extensions.ChunkedUploadResult";
         try {
             Class.forName(className);
         } catch (ClassNotFoundException e) {
