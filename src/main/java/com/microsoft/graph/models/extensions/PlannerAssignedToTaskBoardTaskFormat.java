@@ -24,4 +24,12 @@ import java.util.EnumSet;
  */
 public class PlannerAssignedToTaskBoardTaskFormat extends BasePlannerAssignedToTaskBoardTaskFormat {
 
+	/**
+	 * The GetOrderHintForAssignee
+	 */
+	public String orderHintForAssignee(String userId)
+	{
+		String orderHints = this.orderHintsByAssignee.get(userId);
+		return (orderHints != null) ? orderHints : this.unassignedOrderHint;
+	}
 }
