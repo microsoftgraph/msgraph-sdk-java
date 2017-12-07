@@ -1,6 +1,6 @@
 language: java
 jdk:
-  - oraclejdk7
+  - openjdk7
 before_script:
   - "echo $JAVA_OPTS"
   - "export JAVA_OPTS=-Xmx512m"
