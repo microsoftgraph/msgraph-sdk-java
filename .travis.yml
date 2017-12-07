@@ -1,2 +1,2 @@
 language: java
-install: travis_wait compileJava
+install: travis_wait :compileJava
