@@ -12,8 +12,10 @@ We welcome your feedback as we drive the quality of this to general availability
 Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
 
 ## 1. Installation
-### 1.1 Install AAR via Gradle
-Add the JCenter repository and a compile dependency for `msicrosoft-graph` to your project's `build.gradle`
+### 1.1 Install via Gradle
+*This package will not be available via Gradle until it hits public preview. You will need to download the source and reference the package locally.*
+
+Add the JCenter repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`
 
 ```gradle
 repository {
