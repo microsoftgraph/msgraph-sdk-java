@@ -12,6 +12,7 @@ import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
+import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.models.extensions.PlannerBucketTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerCategoryDescriptions;
@@ -33,7 +34,7 @@ import static org.junit.Assert.*;
 import java.util.Calendar;
 import java.util.UUID;
 
-@Ignore
+//@Ignore
 public class PlannerTests {
     private TestBase testBase;
     // For now, you must specify a specific plan ID since the test cannot
@@ -104,17 +105,19 @@ public class PlannerTests {
 
         PlannerAssignment assignment = new PlannerAssignment();
         assignment.orderHint = " !";
+        AdditionalDataManager assignmentAdditionalData = assignment.additionalDataManager();
+        assignmentAdditionalData.put("@odata.Type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
         assignment.oDataType = "#microsoft.graph.plannerAssignment";
-        assignment.additionalDataManager().put("@odata.type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
 
-        AdditionalDataManager dataManager = task.additionalDataManager();
-        task.oDataType = "#microsoft.graph.plannerTask";
+        PlannerAssignments a2 = new PlannerAssignments();
+        a2.put(me.id, assignment);
+        task.assignments = a2;
 
-        JsonObject assignments = new JsonObject();
-        Gson gson = new Gson();
-        JsonElement assignmentJson = gson.toJsonTree(assignment);
-        assignments.add(me.id, assignmentJson);
-        dataManager.put("assignments", assignments);
+//        JsonObject assignments = new JsonObject();
+//        Gson gson = new Gson();
+//        JsonElement assignmentJson = gson.toJsonTree(assignment);
+//        assignments.add(me.id, assignmentJson);
+//        dataManager.put("assignments", assignments);
 
         IPlannerTaskRequest req = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
         req.addHeader("If-Match", getEtag(planTask.getRawObject()));
