@@ -14,6 +14,7 @@ import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -28,7 +29,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner User Ids.
  */
-public class BasePlannerUserIds implements IJsonBackedObject {
+public class BasePlannerUserIds extends ArrayList<String> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)

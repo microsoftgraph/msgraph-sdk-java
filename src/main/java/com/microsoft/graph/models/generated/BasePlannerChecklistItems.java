@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner Checklist Items.
  */
-public class BasePlannerChecklistItems implements IJsonBackedObject {
+public class BasePlannerChecklistItems extends HashMap<String, PlannerChecklistItem> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)
