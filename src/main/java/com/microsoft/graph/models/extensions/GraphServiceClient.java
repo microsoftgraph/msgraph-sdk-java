@@ -52,11 +52,19 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
     public CustomRequestBuilder customRequest(final String url) {
     	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, JsonObject.class);
     }
+    
+    public static Builder builder() {
+        return new Builder();
+    }
 
     /**
      * The builder for this GraphServiceClient
      */
     public static class Builder  {
+        
+        Builder() {
+            // ensure instantiation only from static factory method 
+        }
 
         /**
          * The client under construction

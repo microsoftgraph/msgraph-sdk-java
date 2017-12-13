@@ -43,7 +43,7 @@ Register your application by following [these](https://developer.microsoft.com/e
 ### 2.2 Create an IAuthenticationProvider object
 
 An instance of the **GraphServiceClient** class handles building requests,
-sending them to Microsoft Graph API, and processing the responses. To create a
+sending them to the Microsoft Graph API, and processing the responses. To create a
 new instance of this class, you need to provide an instance of
 `IAuthenticationProvider` which can authenticate requests to Microsoft Graph.
 
@@ -51,25 +51,27 @@ For an example of authentication in a client application see the [MSGraph SDK An
 
 ### 2.3 Get a GraphServiceClient object
 
+TODO: the para below needs expansion or removal. Would need to mention the different flows (authorization code flow, implicit flow, client credential flow) and give pointers on where to get sample code. Dave Moten can provide link for client credentials flow.
+
 Once you have set the correct application ID and url, you must get a **GraphServiceClient** object to make requests against the service. The SDK will store the account information for you, but when a user logs on for the first time, it will invoke UI to get the user's account information.
 
 ```java
-final IClientConfig mCLientConfig = DefaultClientConfig
-                                        .createWithAuthenticationProvider(mAuthenticationProvider);
+IClientConfig clientConfig = 
+  DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
 
-final IGraphServiceClient mClient = new GraphServiceClient
-                                            .Builder()
-                                            .fromConfig(mClientConfig)
-                                            .buildClient();
+IGraphServiceClient graphClient = 
+  GraphServiceClient.builder()
+    .fromConfig(mClientConfig)
+    .buildClient();
 ```
 
 ## 3. Make requests against the service
 
-Once you have an GraphServiceClient that is authenticated you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
+Once you have a GraphServiceClient that is authenticated you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
 
-### Get the drive
+### Get the user's drive
 
-To retrieve a user's drive:
+To retrieve the user's drive:
 
 ```java
 graphClient
@@ -77,14 +79,12 @@ graphClient
     .drive()
     .buildRequest()
     .get(new ICallback<Drive>() {
-  @Override
-  public void success(final Drive result) {
-    final String msg = "Found Drive " + result.id;
-    Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT)
-        .show();
-  }
-  ...
-  // Handle failure case
+       @Override
+       public void success(final Drive result) {
+          System.out.println("Found Drive " + result.id);
+       }
+       ...
+       // Handle failure case
 });
 ```
 
