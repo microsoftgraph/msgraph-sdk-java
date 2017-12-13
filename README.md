@@ -75,17 +75,17 @@ To retrieve the user's drive:
 
 ```java
 graphClient
-    .me()
-    .drive()
-    .buildRequest()
-    .get(new ICallback<Drive>() {
-       @Override
-       public void success(final Drive result) {
-          System.out.println("Found Drive " + result.id);
-       }
-       ...
-       // Handle failure case
-});
+  .me()
+  .drive()
+  .buildRequest()
+  .get(new ICallback<Drive>() {
+     @Override
+     public void success(final Drive result) {
+        System.out.println("Found Drive " + result.id);
+     }
+     ...
+     // Handle failure case
+  });
 ```
 
 For a general overview of how the SDK is designed, see [overview](docs/overview.md).
