@@ -126,8 +126,8 @@ public class PlannerTests {
         PlannerAssignment assignment = new PlannerAssignment();
         assignment.orderHint = " !";
         AdditionalDataManager assignmentAdditionalData = assignment.additionalDataManager();
-        assignmentAdditionalData.put("@odata.Type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
-        assignment.oDataType = "#microsoft.graph.plannerAssignment";
+        assignmentAdditionalData.put("@odata.type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
+        //assignment.oDataType = "#microsoft.graph.plannerAssignment";
 
         PlannerAssignments a2 = new PlannerAssignments();
         a2.put(me.id, assignment);
