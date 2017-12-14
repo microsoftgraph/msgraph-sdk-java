@@ -22,19 +22,18 @@
 
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
-import com.microsoft.graph.options.HeaderOption;
-import com.microsoft.graph.serializer.ISerializer;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.GraphErrorCodes;
+import com.microsoft.graph.options.HeaderOption;
+import com.microsoft.graph.serializer.ISerializer;
 
 /**
  * An exception from the Graph service.
@@ -60,11 +59,6 @@ public class GraphServiceException extends ClientException {
      * The number of bytes to display when showing byte array.
      */
     protected static final int MAX_BYTE_COUNT_BEFORE_TRUNCATION = 8;
-
-    /**
-     * The intent spacing on JSON based responses.
-     */
-    public static final int INDENT_SPACES = 3;
 
     /**
      * The internal server error threshold defined by the HTTP protocol.
@@ -201,9 +195,9 @@ public class GraphServiceException extends ClientException {
         }
         if (verbose && error != null && error.rawObject != null) {
             try {
-                final JSONObject jsonObject = new JSONObject(error.rawObject.toString());
-                sb.append(jsonObject.toString(INDENT_SPACES)).append(NEW_LINE);
-            } catch (final JSONException ignored) {
+                final Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                sb.append(gson.toJson(error.rawObject)).append(NEW_LINE);
+            } catch (final RuntimeException ignored) {
                 sb.append("[Warning: Unable to parse error message body]").append(NEW_LINE);
             }
         } else {
