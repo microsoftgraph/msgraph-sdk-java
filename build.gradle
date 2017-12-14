@@ -29,12 +29,9 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
     
-    compile 'com.google.code.gson:gson:2.2.4'
-    compile 'org.json:json:20141113'
-    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0-m02'
+    compile 'com.google.code.gson:gson:2.8.2'
     
-    // https://mvnrepository.com/artifact/com.sun.jersey/jersey-server
-	compile group: 'com.sun.jersey', name: 'jersey-server', version: '1.19.4'
+    compile 'com.sun.jersey:jersey-server:1.19.4'
 }
 
 publishing {
