@@ -45,6 +45,14 @@ publishing {
             version '0.1-SNAPSHOT'
 
             from components.java
+            
+            artifact sourceJar
         }
     }
 }
+
+task sourceJar(type: Jar) {
+  classifier = 'sources'
+  from sourceSets.main.allJava
+}
+
