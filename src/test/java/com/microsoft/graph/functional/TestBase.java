@@ -52,7 +52,7 @@ public class TestBase {
                 };
                 IClientConfig mClientConfig = DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
 
-                graphClient = new GraphServiceClient.Builder().fromConfig(mClientConfig).buildClient();
+                graphClient = GraphServiceClient.builder().fromConfig(mClientConfig).buildClient();
             }
             catch (Exception e)
             {
