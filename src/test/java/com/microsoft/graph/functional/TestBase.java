@@ -98,7 +98,7 @@ public class TestBase {
             conn.disconnect();
 
             JsonObject res = new GsonBuilder().create().fromJson(jsonString.toString(), JsonObject.class);
-            return res.get("access_token").toString();
+            return res.get("access_token").toString().replaceAll("\"", "");
 
         } catch (Exception e) {
             throw new Error("Error retrieving access token: " + e.getLocalizedMessage());
