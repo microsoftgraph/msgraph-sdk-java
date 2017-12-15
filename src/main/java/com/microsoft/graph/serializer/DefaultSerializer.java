@@ -64,6 +64,11 @@ public class DefaultSerializer implements ISerializer {
      */
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
+    	return deserializeObject(inputString, clazz, null);
+    }
+    
+    @Override
+    public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
         final T jsonObject = gson.fromJson(inputString, clazz);
 
         // Populate the json backed fields for any annotations that are not in the object model
@@ -72,6 +77,12 @@ public class DefaultSerializer implements ISerializer {
             final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
             final JsonObject rawObject = gson.fromJson(inputString, JsonObject.class);
             jsonBackedObject.setRawObject(this, rawObject);
+
+            if (responseHeaders != null) {
+	            JsonElement convertedHeaders = gson.toJsonTree(responseHeaders);
+	            jsonBackedObject.additionalDataManager().put("graphResponseHeaders", convertedHeaders);
+            }
+            
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
         } else {
             logger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());

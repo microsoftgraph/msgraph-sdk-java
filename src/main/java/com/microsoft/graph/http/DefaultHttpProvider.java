@@ -313,7 +313,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
                 if (contentType.contains(JSON_CONTENT_TYPE)) {
                     logger.logDebug("Response json");
-                    return handleJsonResponse(in, resultClass);
+                    return handleJsonResponse(in, connection.getResponseHeaders(), resultClass);
                 } else {
                     logger.logDebug("Response binary");
                     isBinaryStreamInput = true;
@@ -377,13 +377,13 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @param <Result> The type of the response object.
      * @return The JSON object.
      */
-    private <Result> Result handleJsonResponse(final InputStream in, final Class<Result> clazz) {
+    private <Result> Result handleJsonResponse(final InputStream in, Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
         if (clazz == null) {
             return null;
         }
 
         final String rawJson = streamToString(in);
-        return getSerializer().deserializeObject(rawJson, clazz);
+        return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
     }
 
     /**

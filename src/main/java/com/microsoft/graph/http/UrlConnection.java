@@ -30,6 +30,7 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -106,6 +107,10 @@ public class UrlConnection implements IConnection {
     @Override
     public int getResponseCode() throws IOException {
         return connection.getResponseCode();
+    }
+    
+    public Map<String, List<String>> getResponseHeaders() {
+    	return connection.getHeaderFields();
     }
 
     @Override

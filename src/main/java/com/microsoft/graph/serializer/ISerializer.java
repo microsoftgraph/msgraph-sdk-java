@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.serializer;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Serializes and deserializes items from strings into their types.
  */
@@ -35,6 +38,15 @@ public interface ISerializer {
      * @return The deserialized item from the input string.
      */
     <T> T deserializeObject(final String inputString, Class<T> clazz);
+    
+    /**
+     * Deserialize an object from the input string.
+     * @param inputString The string that stores the representation of the item.
+     * @param clazz The .class of the item to be deserialized.
+     * @param <T> The type of the item to be deserialized.
+     * @return The deserialized item from the input string.
+     */
+    <T> T deserializeObject(final String inputString, Class<T> clazz, Map<String, List<String>> responseHeaders);
 
     /**
      * Serializes an object into a string.
