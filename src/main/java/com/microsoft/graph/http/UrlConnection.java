@@ -29,6 +29,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -110,7 +111,20 @@ public class UrlConnection implements IConnection {
     }
     
     public Map<String, List<String>> getResponseHeaders() {
-    	return connection.getHeaderFields();
+    	// Copy unmodifiable map to hashmap
+    	HashMap<String, List<String>> headerFields = new HashMap<>();
+    	headerFields.putAll(connection.getHeaderFields());
+    	
+    	// Add the response code
+    	List<String> list = new ArrayList<>();
+    	try {
+			list.add(String.format("%d", connection.getResponseCode()));
+		} catch (IOException e) {
+			throw new IllegalArgumentException("Invalid connection response code: ", e);
+		}
+    
+    	headerFields.put("responseCode", list);
+    	return headerFields;
     }
 
     @Override
