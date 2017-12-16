@@ -2,13 +2,14 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.models.generated.BaseRecurrenceRange;
+import com.google.gson.JsonElement;
+import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.DateOnly;
 
@@ -64,5 +65,20 @@ public class DefaultSeralizerTests {
         assertNotNull(jsonOut);
         assertEquals(expected, jsonOut);
     }
+	
+	@Test
+	public void testResponseHeaders() throws Exception {
+		MockConnection connection = new MockConnection(null);
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, connection.getResponseHeaders());
+		
+		JsonElement responseHeaders = user.additionalDataManager().get("graphResponseHeaders");
+		assertNotNull(responseHeaders);
+		
+		JsonElement responseHeader = responseHeaders.getAsJsonObject().get("header1");
+		assertNotNull(responseHeader);
+		
+		assertEquals("value1", responseHeader.getAsJsonArray().get(0).getAsString());
+	}
 
 }
