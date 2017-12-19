@@ -12,7 +12,7 @@ public class GraphFatalServiceExceptionTests {
 
 	@Test
 	public void testGraphFatalServiceException() {
-        GraphFatalServiceException exception = new GraphFatalServiceException(null,null,new ArrayList<String>(),null,401,"Unauthenticated",new ArrayList<String>(),null);
+        GraphFatalServiceException exception = new GraphFatalServiceException(null,null,new ArrayList<String>(),null,401,"Unauthenticated",new ArrayList<String>(),null, false);
         String expectedMessage = "Unexpected exception returned from the service." +
                 "null null\n" +
                 "\n" +

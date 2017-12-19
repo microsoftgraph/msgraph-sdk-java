@@ -47,8 +47,9 @@ public class GraphFatalServiceException extends GraphServiceException {
                                          final int responseCode,
                                          final String responseMessage,
                                          final List<String> responseHeaders,
-                                         final GraphErrorResponse error) {
-        super(method, url, requestHeaders, requestBody, responseCode, responseMessage, responseHeaders, error);
+                                         final GraphErrorResponse error,
+                                         final boolean verbose) {
+        super(method, url, requestHeaders, requestBody, responseCode, responseMessage, responseHeaders, error, verbose);
     }
 
     @Override
@@ -56,7 +57,7 @@ public class GraphFatalServiceException extends GraphServiceException {
         //no inspection StringBufferReplaceableByString
         final StringBuilder sb = new StringBuilder();
         sb.append("Unexpected exception returned from the service.")
-                .append(super.getMessage(true));
+                .append(super.getMessage(verbose));
         return sb.toString();
     }
 }

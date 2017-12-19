@@ -32,6 +32,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.GraphErrorCodes;
+import com.microsoft.graph.logger.ILogger;
+import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
@@ -104,6 +106,11 @@ public class GraphServiceException extends ClientException {
      * The response headers.
      */
     private final List<String> responseHeaders;
+    
+    /**
+     * Whether to log the full error response.
+     */
+    private final boolean verbose;
 
     /**
      * Create a Graph service exception.
@@ -116,6 +123,7 @@ public class GraphServiceException extends ClientException {
      * @param responseMessage The response message.
      * @param responseHeaders The response headers.
      * @param error           The error response if available.
+     * @param verbose         The error response log level.
      */
     protected GraphServiceException(final String method,
                                     final String url,
@@ -124,7 +132,8 @@ public class GraphServiceException extends ClientException {
                                     final int responseCode,
                                     final String responseMessage,
                                     final List<String> responseHeaders,
-                                    final GraphErrorResponse error) {
+                                    final GraphErrorResponse error,
+                                    final boolean verbose) {
         super(responseMessage, null);
         this.method = method;
         this.url = url;
@@ -134,11 +143,12 @@ public class GraphServiceException extends ClientException {
         this.responseMessage = responseMessage;
         this.responseHeaders = responseHeaders;
         this.error = error;
+        this.verbose = verbose;
     }
 
     @Override
     public String getMessage() {
-        return getMessage(false);
+        return getMessage(verbose);
     }
 
     /**
@@ -232,7 +242,8 @@ public class GraphServiceException extends ClientException {
     public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
                                                                  final T serializable,
                                                                  final ISerializer serializer,
-                                                                 final IConnection connection)
+                                                                 final IConnection connection,
+                                                                 final ILogger logger)
             throws IOException {
         final String method = connection.getRequestMethod();
         final String url = request.getRequestUrl().toString();
@@ -240,6 +251,7 @@ public class GraphServiceException extends ClientException {
         for (final HeaderOption option : request.getHeaders()) {
             requestHeaders.add(option.getName() + " : " + option.getValue());
         }
+        boolean isVerbose = logger.getLoggingLevel() == LoggerLevel.DEBUG;
         final String requestBody;
         if (serializable instanceof byte[]) {
             final byte[] bytes = (byte[]) serializable;
@@ -247,11 +259,15 @@ public class GraphServiceException extends ClientException {
             sb.append("byte[").append(bytes.length).append("]");
 
             sb.append(" {");
-            for (int i = 0; i < MAX_BYTE_COUNT_BEFORE_TRUNCATION && i < bytes.length; i++) {
-                sb.append(bytes[i]).append(", ");
-            }
-            if (bytes.length > MAX_BYTE_COUNT_BEFORE_TRUNCATION) {
-                sb.append(TRUNCATION_MARKER).append("}");
+            if (isVerbose) {
+            	sb.append(bytes);
+            } else {
+	            for (int i = 0; i < MAX_BYTE_COUNT_BEFORE_TRUNCATION && i < bytes.length; i++) {
+	                sb.append(bytes[i]).append(", ");
+	            }
+	            if (bytes.length > MAX_BYTE_COUNT_BEFORE_TRUNCATION) {
+	                sb.append(TRUNCATION_MARKER).append("}");
+	            }
             }
             requestBody = sb.toString();
         } else if (serializable != null) {
@@ -295,7 +311,8 @@ public class GraphServiceException extends ClientException {
                     responseCode,
                     responseMessage,
                     responseHeaders,
-                    error);
+                    error,
+                    isVerbose);
         }
 
         return new GraphServiceException(method,
@@ -305,6 +322,7 @@ public class GraphServiceException extends ClientException {
                 responseCode,
                 responseMessage,
                 responseHeaders,
-                error);
+                error,
+                isVerbose);
     }
 }
