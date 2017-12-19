@@ -201,8 +201,10 @@ public class GraphServiceException extends ClientException {
                 sb.append("[Warning: Unable to parse error message body]").append(NEW_LINE);
             }
         } else {
-            sb.append(TRUNCATION_MARKER).append(NEW_LINE).append(NEW_LINE);
-            sb.append("[Some information was truncated for brevity, enable debug logging for more details]");
+        	if (!verbose) {
+        		sb.append(TRUNCATION_MARKER).append(NEW_LINE).append(NEW_LINE);
+                sb.append("[Some information was truncated for brevity, enable debug logging for more details]");
+        	}
         }
         return sb.toString();
     }
