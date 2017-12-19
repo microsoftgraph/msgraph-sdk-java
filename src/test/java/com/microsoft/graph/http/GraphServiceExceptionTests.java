@@ -25,8 +25,23 @@ public class GraphServiceExceptionTests {
         String message = exception.getMessage();
         assertTrue(message.indexOf("Error code: UNAUTHENTICATED") == 0);
         assertTrue(message.indexOf("401 : Unauthorized") > 0);
+        assertTrue(message.indexOf("truncated") > 0);
         assertEquals(error,exception.getServiceError());
     }
+	
+	@Test
+	public void testVerboseError() {
+		GraphErrorResponse errorResponse = new GraphErrorResponse();
+        GraphError error = new GraphError();
+        error.code = GraphErrorCodes.UNAUTHENTICATED.toString();
+        errorResponse.error = error;
+        GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),null,401,"Unauthorized",new ArrayList<String>(),errorResponse, true);
+        String message = exception.getMessage();
+        assertTrue(message.indexOf("Error code: UNAUTHENTICATED") == 0);
+        assertTrue(message.indexOf("401 : Unauthorized") > 0);
+        assertFalse(message.indexOf("truncated") > 0);
+        assertEquals(error,exception.getServiceError());
+	}
 
 	@Test
     public void testCreateFromConnection() {
