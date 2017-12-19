@@ -25,7 +25,7 @@ public class MockHttpRequest implements IHttpRequest {
         try {
             return new URL("http://localhost");
         } catch (final MalformedURLException ex) {
-            throw new ClientException("Invalid URL", ex, GraphErrorCodes.INVALID_REQUEST);
+            throw new ClientException("Invalid URL", ex);
         }
     }
 

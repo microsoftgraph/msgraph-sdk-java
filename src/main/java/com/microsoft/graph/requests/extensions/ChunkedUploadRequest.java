@@ -124,7 +124,6 @@ public class ChunkedUploadRequest {
         }
 
         return new ChunkedUploadResult(
-                new ClientException("Upload session failed to many times.", null,
-                        GraphErrorCodes.UPLOAD_SESSION_INCOMPLETE));
+                new ClientException("Upload session failed to many times.", null));
     }
 }

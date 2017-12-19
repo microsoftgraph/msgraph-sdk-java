@@ -30,11 +30,6 @@ import java.util.List;
 public class GraphFatalServiceException extends GraphServiceException {
 
     /**
-     * The web site to report issues on this SDK.
-     */
-    public static final String SDK_BUG_URL = "https://github.com/microsoftgraph/msgraph-sdk-java/issues";
-
-    /**
      * Create a fatal Graph service exception.
      * @param method The method that caused the exception.
      * @param url The URL.

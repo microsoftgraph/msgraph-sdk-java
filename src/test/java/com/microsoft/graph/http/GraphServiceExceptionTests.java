@@ -26,7 +26,6 @@ public class GraphServiceExceptionTests {
         assertTrue(message.indexOf("Error code: UNAUTHENTICATED") == 0);
         assertTrue(message.indexOf("401 : Unauthorized") > 0);
         assertEquals(error,exception.getServiceError());
-        assertTrue(exception.isError(GraphErrorCodes.UNAUTHENTICATED));
     }
 
 	@Test

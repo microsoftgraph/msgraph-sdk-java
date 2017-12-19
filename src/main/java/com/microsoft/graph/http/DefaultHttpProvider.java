@@ -335,8 +335,7 @@ public class DefaultHttpProvider implements IHttpProvider {
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
-                    ex,
-                    GraphErrorCodes.GENERAL_EXCEPTION);
+                    ex);
             logger.logError("Error during http request", clientException);
             throw clientException;
         }

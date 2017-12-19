@@ -28,27 +28,12 @@ package com.microsoft.graph.core;
 public class ClientException extends RuntimeException {
 
     /**
-     * The error code for this exception.
-     */
-    private final GraphErrorCodes errorCode;
-
-    /**
      * Creates the client exception.
      * @param message The message to display.
      * @param ex The exception from.
      * @param errorCode The error code for this exception.
      */
-    public ClientException(final String message, final Throwable ex, final GraphErrorCodes errorCode) {
+    public ClientException(final String message, final Throwable ex) {
         super(message, ex);
-        this.errorCode = errorCode;
-    }
-
-    /**
-     * Determines if the given error code is expected.
-     * @param expectedCode The expected error code.
-     * @return true if the error code matches, and false if there was no match.
-     */
-    public boolean isError(final GraphErrorCodes expectedCode) {
-        return this.errorCode == expectedCode;
     }
 }

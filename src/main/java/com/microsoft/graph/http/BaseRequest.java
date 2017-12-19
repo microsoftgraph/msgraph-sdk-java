@@ -153,7 +153,7 @@ public abstract class BaseRequest implements IHttpRequest {
         try {
             return new URL(uriBuilder.build().toString());
         } catch (final MalformedURLException e) {
-            throw new ClientException("Invalid URL: " + uriBuilder.toString(), e, GraphErrorCodes.INVALID_REQUEST);
+            throw new ClientException("Invalid URL: " + uriBuilder.toString(), e);
         }
     }
 

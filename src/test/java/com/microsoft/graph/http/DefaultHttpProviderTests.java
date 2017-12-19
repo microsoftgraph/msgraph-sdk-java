@@ -259,7 +259,6 @@ public class DefaultHttpProviderTests {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");
         } catch (final GraphServiceException e) {
-            assertTrue(e.isError(expectedErrorCode));
             assertEquals(expectedMessage, e.getServiceError().message);
         }
     }

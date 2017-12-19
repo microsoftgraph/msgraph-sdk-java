@@ -125,7 +125,7 @@ public class GraphServiceException extends ClientException {
                                     final String responseMessage,
                                     final List<String> responseHeaders,
                                     final GraphErrorResponse error) {
-        super(responseMessage, null, null);
+        super(responseMessage, null);
         this.method = method;
         this.url = url;
         this.requestHeaders = requestHeaders;
@@ -214,14 +214,6 @@ public class GraphServiceException extends ClientException {
      */
     public GraphError getServiceError() {
         return error.error;
-    }
-
-    @Override
-    public boolean isError(final GraphErrorCodes expectedCode) {
-        if (getServiceError() != null) {
-            return getServiceError().isError(expectedCode);
-        }
-        return false;
     }
 
     /**
