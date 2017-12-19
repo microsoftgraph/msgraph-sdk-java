@@ -60,10 +60,7 @@ public class GraphFatalServiceException extends GraphServiceException {
     public String getMessage(final boolean verbose) {
         //no inspection StringBufferReplaceableByString
         final StringBuilder sb = new StringBuilder();
-        sb.append("[This is an unexpected error from Graph, please report this at ")
-                .append(SDK_BUG_URL)
-                .append(']')
-                .append(NEW_LINE)
+        sb.append("Unexpected exception returned from the service.")
                 .append(super.getMessage(true));
         return sb.toString();
     }
