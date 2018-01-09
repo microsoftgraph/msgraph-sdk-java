@@ -43,7 +43,7 @@ public class TestBase {
     {
         if (graphClient == null) {
             try {
-                accessToken = GetAccessToken();
+                accessToken = GetAccessToken().replace("\"", "");
                 IAuthenticationProvider mAuthenticationProvider = new IAuthenticationProvider() {
                     @Override
                     public void authenticateRequest(final IHttpRequest request) {

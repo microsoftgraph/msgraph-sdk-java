@@ -41,7 +41,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @return the instance of this builder
      */
     public CustomRequestBuilder customRequest(final String url, final Class responseType) {
-    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, responseType);
+    	return new CustomRequestBuilder(getServiceRoot() + url, (IGraphServiceClient)this, null, responseType);
     }
     
     /**
@@ -50,7 +50,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @return the instance of this builder
      */
     public CustomRequestBuilder customRequest(final String url) {
-    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, JsonObject.class);
+    	return new CustomRequestBuilder(getServiceRoot() + url, (IGraphServiceClient)this, null, JsonObject.class);
     }
     
     public static Builder builder() {

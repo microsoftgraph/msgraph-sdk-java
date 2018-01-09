@@ -43,7 +43,7 @@ import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder
 import com.microsoft.graph.requests.generated.BaseCalendarCollectionResponse;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 
-public class CustomRequest extends BaseRequest {
+public class CustomRequest<T> extends BaseRequest {
 	
 	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Class responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
