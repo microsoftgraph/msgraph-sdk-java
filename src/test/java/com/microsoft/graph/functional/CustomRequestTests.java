@@ -12,7 +12,7 @@ import com.microsoft.graph.models.extensions.User;
 /**
  * Tests for sending custom requests using the SDK
  */
-//@Ignore
+@Ignore
 public class CustomRequestTests {
 	private TestBase testBase;
 
