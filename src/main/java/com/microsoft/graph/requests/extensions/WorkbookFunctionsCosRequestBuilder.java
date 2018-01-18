@@ -31,7 +31,7 @@ public class WorkbookFunctionsCosRequestBuilder extends BaseWorkbookFunctionsCos
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsCosRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public WorkbookFunctionsCosRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions, number);
     }
 }

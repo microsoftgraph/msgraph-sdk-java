@@ -26,7 +26,7 @@ public interface IBaseUserCollectionRequestBuilder extends IRequestBuilder {
 
     IUserCollectionRequest buildRequest();
 
-    IUserCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IUserCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IUserRequestBuilder byId(final String id);
 

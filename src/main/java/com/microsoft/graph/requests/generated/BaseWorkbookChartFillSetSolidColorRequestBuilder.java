@@ -30,7 +30,7 @@ public class BaseWorkbookChartFillSetSolidColorRequestBuilder extends BaseAction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartFillSetSolidColorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String color) {
+    public BaseWorkbookChartFillSetSolidColorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("color", color);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookChartFillSetSolidColorRequestBuilder extends BaseAction
      * @param requestOptions the options for the request
      * @return The IWorkbookChartFillSetSolidColorRequest instance
      */
-    public IWorkbookChartFillSetSolidColorRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartFillSetSolidColorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartFillSetSolidColorRequest request = new WorkbookChartFillSetSolidColorRequest(
                 getRequestUrl(),
                 getClient(),

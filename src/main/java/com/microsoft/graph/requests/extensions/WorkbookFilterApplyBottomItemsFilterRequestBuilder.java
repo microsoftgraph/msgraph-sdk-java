@@ -31,7 +31,7 @@ public class WorkbookFilterApplyBottomItemsFilterRequestBuilder extends BaseWork
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFilterApplyBottomItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer count) {
+    public WorkbookFilterApplyBottomItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions, count);
     }
 }

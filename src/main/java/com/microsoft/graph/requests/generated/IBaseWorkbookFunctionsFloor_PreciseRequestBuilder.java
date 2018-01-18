@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsFloor_PreciseRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFloor_PreciseRequest instance
      */
-    IWorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

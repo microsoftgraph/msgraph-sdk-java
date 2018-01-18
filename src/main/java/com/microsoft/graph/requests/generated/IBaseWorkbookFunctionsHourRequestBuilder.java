@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsHourRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsHourRequest instance
      */
-    IWorkbookFunctionsHourRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsHourRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

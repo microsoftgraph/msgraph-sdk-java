@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsFisherInvRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFisherInvRequest instance
      */
-    IWorkbookFunctionsFisherInvRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsFisherInvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

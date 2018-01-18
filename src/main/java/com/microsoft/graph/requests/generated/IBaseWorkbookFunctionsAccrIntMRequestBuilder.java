@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsAccrIntMRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAccrIntMRequest instance
      */
-    IWorkbookFunctionsAccrIntMRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsAccrIntMRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

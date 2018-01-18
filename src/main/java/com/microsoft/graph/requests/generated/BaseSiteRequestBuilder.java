@@ -31,7 +31,7 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public ISiteRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SiteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

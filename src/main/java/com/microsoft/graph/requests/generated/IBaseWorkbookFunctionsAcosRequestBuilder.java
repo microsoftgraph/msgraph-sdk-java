@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsAcosRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAcosRequest instance
      */
-    IWorkbookFunctionsAcosRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsAcosRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

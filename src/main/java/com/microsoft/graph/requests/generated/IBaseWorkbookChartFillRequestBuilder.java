@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartFillRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartFillRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookChartFillClearRequestBuilder clear();
     IWorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color);
 

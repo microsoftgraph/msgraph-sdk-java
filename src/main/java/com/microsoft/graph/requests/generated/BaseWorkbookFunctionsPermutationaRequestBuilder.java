@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPermutationaRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPermutationaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+    public BaseWorkbookFunctionsPermutationaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("numberChosen", numberChosen);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPermutationaRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPermutationaRequest instance
      */
-    public IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPermutationaRequest request = new WorkbookFunctionsPermutationaRequest(
                 getRequestUrl(),
                 getClient(),

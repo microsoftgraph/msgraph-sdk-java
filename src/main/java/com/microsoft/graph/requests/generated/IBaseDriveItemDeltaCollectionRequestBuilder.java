@@ -26,6 +26,6 @@ public interface IBaseDriveItemDeltaCollectionRequestBuilder extends IRequestBui
 
     IDriveItemDeltaCollectionRequest buildRequest();
 
-    IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

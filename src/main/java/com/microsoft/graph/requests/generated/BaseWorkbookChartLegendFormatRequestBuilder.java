@@ -31,7 +31,7 @@ public class BaseWorkbookChartLegendFormatRequestBuilder extends BaseRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartLegendFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartLegendFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookChartLegendFormatRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartLegendFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

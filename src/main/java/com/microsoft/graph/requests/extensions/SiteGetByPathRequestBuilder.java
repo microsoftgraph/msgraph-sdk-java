@@ -31,7 +31,7 @@ public class SiteGetByPathRequestBuilder extends BaseSiteGetByPathRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public SiteGetByPathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String path) {
+    public SiteGetByPathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String path) {
         super(requestUrl, client, requestOptions, path);
     }
 }

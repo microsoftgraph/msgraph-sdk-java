@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMatchRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsMatchRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupArray, final com.google.gson.JsonElement matchType) {
+    public BaseWorkbookFunctionsMatchRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupArray, final com.google.gson.JsonElement matchType) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("lookupValue", lookupValue);
         bodyParams.put("lookupArray", lookupArray);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsMatchRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMatchRequest instance
      */
-    public IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMatchRequest request = new WorkbookFunctionsMatchRequest(
                 getRequestUrl(),
                 getClient(),

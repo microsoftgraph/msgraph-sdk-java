@@ -68,7 +68,7 @@ public class ChunkedUploadRequest {
      */
     public ChunkedUploadRequest(final String requestUrl,
                                 final IGraphServiceClient client,
-                                final List<Option> options,
+                                final List<? extends Option> options,
                                 final byte[] chunk,
                                 final int chunkSize,
                                 final int maxRetry,

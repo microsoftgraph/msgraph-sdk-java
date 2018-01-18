@@ -26,6 +26,6 @@ public interface IBaseNotebookGetRecentNotebooksCollectionRequestBuilder extends
 
     INotebookGetRecentNotebooksCollectionRequest buildRequest();
 
-    INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

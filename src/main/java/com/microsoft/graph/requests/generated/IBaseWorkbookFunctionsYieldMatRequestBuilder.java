@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsYieldMatRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsYieldMatRequest instance
      */
-    IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

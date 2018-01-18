@@ -31,7 +31,7 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryObjectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IDirectoryObjectRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryObjectRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

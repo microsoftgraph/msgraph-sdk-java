@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsYearRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsYearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
+    public BaseWorkbookFunctionsYearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("serialNumber", serialNumber);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsYearRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsYearRequest instance
      */
-    public IWorkbookFunctionsYearRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsYearRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsYearRequest request = new WorkbookFunctionsYearRequest(
                 getRequestUrl(),
                 getClient(),

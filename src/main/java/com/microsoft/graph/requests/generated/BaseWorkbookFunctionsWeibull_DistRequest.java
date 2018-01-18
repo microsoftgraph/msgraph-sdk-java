@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsWeibull_DistRequest extends BaseRequest implem
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsWeibull_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsWeibull_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsWeibull_DistBody();
     }

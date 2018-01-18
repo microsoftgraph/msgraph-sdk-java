@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableSortReapplyRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookTableSortReapplyRequest instance
      */
-    IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

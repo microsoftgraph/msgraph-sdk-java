@@ -32,7 +32,7 @@ public class BaseEventCollectionRequest extends BaseCollectionRequest<BaseEventC
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseEventCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseEventCollectionResponse.class, IEventCollectionPage.class);
     }
 

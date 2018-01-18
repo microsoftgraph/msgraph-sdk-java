@@ -26,7 +26,7 @@ public interface IBaseWorkbookChartSeriesCollectionRequestBuilder extends IReque
 
     IWorkbookChartSeriesCollectionRequest buildRequest();
 
-    IWorkbookChartSeriesCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartSeriesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookChartSeriesRequestBuilder byId(final String id);
 

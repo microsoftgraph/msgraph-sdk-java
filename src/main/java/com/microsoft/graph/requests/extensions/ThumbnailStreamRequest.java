@@ -31,7 +31,7 @@ public class ThumbnailStreamRequest extends BaseThumbnailStreamRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public ThumbnailStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public ThumbnailStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Thumbnail.class);
     }
 }

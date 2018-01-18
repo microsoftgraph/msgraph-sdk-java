@@ -31,7 +31,7 @@ public class BaseOnenotePageCollectionRequestBuilder extends BaseRequestBuilder 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenotePageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenotePageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseOnenotePageCollectionRequestBuilder extends BaseRequestBuilder 
         return buildRequest(getOptions());
     }
 
-    public IOnenotePageCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenotePageCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenotePageCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

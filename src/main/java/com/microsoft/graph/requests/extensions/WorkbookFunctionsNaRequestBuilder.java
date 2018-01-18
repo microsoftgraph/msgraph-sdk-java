@@ -31,7 +31,7 @@ public class WorkbookFunctionsNaRequestBuilder extends BaseWorkbookFunctionsNaRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsNaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsNaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsAcosRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsAcosRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsAcosRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAcosRequest instance
      */
-    public IWorkbookFunctionsAcosRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsAcosRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAcosRequest request = new WorkbookFunctionsAcosRequest(
                 getRequestUrl(),
                 getClient(),

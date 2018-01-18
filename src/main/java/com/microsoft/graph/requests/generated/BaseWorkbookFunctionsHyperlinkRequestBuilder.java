@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsHyperlinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement linkLocation, final com.google.gson.JsonElement friendlyName) {
+    public BaseWorkbookFunctionsHyperlinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement linkLocation, final com.google.gson.JsonElement friendlyName) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("linkLocation", linkLocation);
         bodyParams.put("friendlyName", friendlyName);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsHyperlinkRequest instance
      */
-    public IWorkbookFunctionsHyperlinkRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsHyperlinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHyperlinkRequest request = new WorkbookFunctionsHyperlinkRequest(
                 getRequestUrl(),
                 getClient(),

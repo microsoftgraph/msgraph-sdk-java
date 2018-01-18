@@ -31,7 +31,7 @@ public class UserWithReferenceRequest extends BaseUserWithReferenceRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public UserWithReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public UserWithReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -26,7 +26,7 @@ public interface IBaseColumnDefinitionCollectionRequestBuilder extends IRequestB
 
     IColumnDefinitionCollectionRequest buildRequest();
 
-    IColumnDefinitionCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IColumnDefinitionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IColumnDefinitionRequestBuilder byId(final String id);
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsImCosRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsImCosRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement inumber) {
+    public BaseWorkbookFunctionsImCosRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("inumber", inumber);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsImCosRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImCosRequest instance
      */
-    public IWorkbookFunctionsImCosRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsImCosRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImCosRequest request = new WorkbookFunctionsImCosRequest(
                 getRequestUrl(),
                 getClient(),

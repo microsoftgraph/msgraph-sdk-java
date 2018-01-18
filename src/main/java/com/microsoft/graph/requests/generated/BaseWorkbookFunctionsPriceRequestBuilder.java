@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPriceRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPriceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsPriceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsPriceRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPriceRequest instance
      */
-    public IWorkbookFunctionsPriceRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPriceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPriceRequest request = new WorkbookFunctionsPriceRequest(
                 getRequestUrl(),
                 getClient(),

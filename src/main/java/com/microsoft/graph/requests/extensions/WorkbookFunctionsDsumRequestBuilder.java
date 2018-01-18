@@ -31,7 +31,7 @@ public class WorkbookFunctionsDsumRequestBuilder extends BaseWorkbookFunctionsDs
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDsumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public WorkbookFunctionsDsumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions, database, field, criteria);
     }
 }

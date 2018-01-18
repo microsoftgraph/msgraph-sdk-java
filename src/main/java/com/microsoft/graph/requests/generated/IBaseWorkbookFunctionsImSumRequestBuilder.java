@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsImSumRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImSumRequest instance
      */
-    IWorkbookFunctionsImSumRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsImSumRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

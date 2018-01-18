@@ -35,7 +35,7 @@ public class BaseDirectoryObjectGetByIdsCollectionRequest extends BaseCollection
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectGetByIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryObjectGetByIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDirectoryObjectGetByIdsCollectionResponse.class, IDirectoryObjectGetByIdsCollectionPage.class);
         body = new DirectoryObjectGetByIdsBody();
     }

@@ -26,6 +26,6 @@ public interface IBaseDriveSharedWithMeCollectionRequestBuilder extends IRequest
 
     IDriveSharedWithMeCollectionRequest buildRequest();
 
-    IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

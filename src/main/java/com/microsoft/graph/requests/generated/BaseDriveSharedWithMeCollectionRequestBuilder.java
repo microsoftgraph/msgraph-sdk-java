@@ -30,7 +30,7 @@ public class BaseDriveSharedWithMeCollectionRequestBuilder extends BaseFunctionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveSharedWithMeCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveSharedWithMeCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +38,7 @@ public class BaseDriveSharedWithMeCollectionRequestBuilder extends BaseFunctionR
         return buildRequest(getOptions());
     }
 
-    public IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveSharedWithMeCollectionRequest request = new DriveSharedWithMeCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -32,7 +32,7 @@ public class BaseWorkbookChartAddRequest extends BaseRequest implements IBaseWor
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChart.class);
         body = new WorkbookChartAddBody();
     }

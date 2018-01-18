@@ -31,7 +31,7 @@ public class BaseOrganizationCollectionRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOrganizationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOrganizationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseOrganizationCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public IOrganizationCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOrganizationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OrganizationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

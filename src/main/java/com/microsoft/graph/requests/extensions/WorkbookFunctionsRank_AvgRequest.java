@@ -31,7 +31,7 @@ public class WorkbookFunctionsRank_AvgRequest extends BaseWorkbookFunctionsRank_
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsRank_AvgRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsRank_AvgRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -31,7 +31,7 @@ public class WorkbookChartItemRequest extends BaseWorkbookChartItemRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookChartItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

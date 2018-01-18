@@ -31,7 +31,7 @@ public class WorkbookFunctionsRightbRequest extends BaseWorkbookFunctionsRightbR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsRightbRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsRightbRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

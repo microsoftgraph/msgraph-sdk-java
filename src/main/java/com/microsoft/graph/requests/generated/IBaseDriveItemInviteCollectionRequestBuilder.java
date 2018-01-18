@@ -26,6 +26,6 @@ public interface IBaseDriveItemInviteCollectionRequestBuilder extends IRequestBu
 
     IDriveItemInviteCollectionRequest buildRequest();
 
-    IDriveItemInviteCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

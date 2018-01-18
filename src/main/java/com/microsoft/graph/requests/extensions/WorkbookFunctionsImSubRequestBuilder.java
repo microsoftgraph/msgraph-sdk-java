@@ -31,7 +31,7 @@ public class WorkbookFunctionsImSubRequestBuilder extends BaseWorkbookFunctionsI
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsImSubRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
+    public WorkbookFunctionsImSubRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
         super(requestUrl, client, requestOptions, inumber1, inumber2);
     }
 }

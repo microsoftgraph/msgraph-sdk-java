@@ -31,7 +31,7 @@ public class BaseThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseThumbnailSetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseThumbnailSetCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseThumbnailSetCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public IThumbnailSetCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IThumbnailSetCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ThumbnailSetCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

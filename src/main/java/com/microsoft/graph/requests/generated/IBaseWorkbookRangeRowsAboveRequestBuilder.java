@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeRowsAboveRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeRowsAboveRequest instance
      */
-    IWorkbookRangeRowsAboveRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeRowsAboveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

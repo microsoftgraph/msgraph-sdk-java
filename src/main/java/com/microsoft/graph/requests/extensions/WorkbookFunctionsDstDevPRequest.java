@@ -31,7 +31,7 @@ public class WorkbookFunctionsDstDevPRequest extends BaseWorkbookFunctionsDstDev
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDstDevPRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsDstDevPRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

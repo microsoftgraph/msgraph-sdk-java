@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeDeleteRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeDeleteRequest instance
      */
-    IWorkbookRangeDeleteRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeDeleteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableClearFiltersRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookTableClearFiltersRequest instance
      */
-    IWorkbookTableClearFiltersRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableClearFiltersRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

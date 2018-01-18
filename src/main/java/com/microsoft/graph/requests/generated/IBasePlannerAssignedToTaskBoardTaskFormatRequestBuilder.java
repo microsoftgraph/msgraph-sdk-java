@@ -31,6 +31,6 @@ public interface IBasePlannerAssignedToTaskBoardTaskFormatRequestBuilder extends
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

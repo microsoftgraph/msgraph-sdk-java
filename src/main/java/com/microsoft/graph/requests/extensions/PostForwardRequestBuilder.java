@@ -31,7 +31,7 @@ public class PostForwardRequestBuilder extends BasePostForwardRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
+    public PostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
         super(requestUrl, client, requestOptions, comment, toRecipients);
     }
 }

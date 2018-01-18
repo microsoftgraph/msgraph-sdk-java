@@ -30,7 +30,7 @@ public class BaseWorkbookProcessQueryRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookProcessQueryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final byte[] input) {
+    public BaseWorkbookProcessQueryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final byte[] input) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("input", input);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookProcessQueryRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookProcessQueryRequest instance
      */
-    public IWorkbookProcessQueryRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookProcessQueryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookProcessQueryRequest request = new WorkbookProcessQueryRequest(
                 getRequestUrl(),
                 getClient(),

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDcountRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDcountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public BaseWorkbookFunctionsDcountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("database", database);
         bodyParams.put("field", field);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsDcountRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDcountRequest instance
      */
-    public IWorkbookFunctionsDcountRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDcountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDcountRequest request = new WorkbookFunctionsDcountRequest(
                 getRequestUrl(),
                 getClient(),

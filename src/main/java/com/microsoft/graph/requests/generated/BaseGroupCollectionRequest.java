@@ -32,7 +32,7 @@ public class BaseGroupCollectionRequest extends BaseCollectionRequest<BaseGroupC
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseGroupCollectionResponse.class, IGroupCollectionPage.class);
     }
 

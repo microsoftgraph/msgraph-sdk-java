@@ -26,7 +26,7 @@ public interface IBaseMailFolderCollectionRequestBuilder extends IRequestBuilder
 
     IMailFolderCollectionRequest buildRequest();
 
-    IMailFolderCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMailFolderCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IMailFolderRequestBuilder byId(final String id);
 

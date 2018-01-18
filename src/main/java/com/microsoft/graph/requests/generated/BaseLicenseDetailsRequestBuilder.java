@@ -31,7 +31,7 @@ public class BaseLicenseDetailsRequestBuilder extends BaseRequestBuilder impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseLicenseDetailsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseLicenseDetailsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseLicenseDetailsRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public ILicenseDetailsRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ILicenseDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new LicenseDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

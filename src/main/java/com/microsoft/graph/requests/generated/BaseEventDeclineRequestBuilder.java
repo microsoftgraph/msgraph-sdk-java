@@ -30,7 +30,7 @@ public class BaseEventDeclineRequestBuilder extends BaseActionRequestBuilder {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventDeclineRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment, final Boolean sendResponse) {
+    public BaseEventDeclineRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("comment", comment);
         bodyParams.put("sendResponse", sendResponse);
@@ -51,7 +51,7 @@ public class BaseEventDeclineRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IEventDeclineRequest instance
      */
-    public IEventDeclineRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IEventDeclineRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         EventDeclineRequest request = new EventDeclineRequest(
                 getRequestUrl(),
                 getClient(),

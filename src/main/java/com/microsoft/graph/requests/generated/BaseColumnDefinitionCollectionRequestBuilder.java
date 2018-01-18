@@ -31,7 +31,7 @@ public class BaseColumnDefinitionCollectionRequestBuilder extends BaseRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseColumnDefinitionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseColumnDefinitionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseColumnDefinitionCollectionRequestBuilder extends BaseRequestBui
         return buildRequest(getOptions());
     }
 
-    public IColumnDefinitionCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IColumnDefinitionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ColumnDefinitionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -30,7 +30,7 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -40,7 +40,7 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer count) {
+    public BaseWorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("count", count));
     }
@@ -60,7 +60,7 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeRowsBelowRequest instance
      */
-    public IWorkbookRangeRowsBelowRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeRowsBelowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeRowsBelowRequest request = new WorkbookRangeRowsBelowRequest(
                 getRequestUrl(),
                 getClient(),

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsAveDevRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAveDevRequest instance
      */
-    IWorkbookFunctionsAveDevRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsAveDevRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public interface IBaseWorkbookPivotTableRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookPivotTableRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookWorksheet.

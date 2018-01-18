@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsAtanhRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAtanhRequest instance
      */
-    IWorkbookFunctionsAtanhRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsAtanhRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

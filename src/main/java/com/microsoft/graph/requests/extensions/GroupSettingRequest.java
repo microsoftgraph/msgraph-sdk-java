@@ -31,7 +31,7 @@ public class GroupSettingRequest extends BaseGroupSettingRequest implements IGro
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public GroupSettingRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public GroupSettingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupSetting.class);
     }
 }

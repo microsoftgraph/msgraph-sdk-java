@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPermutRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPermutRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+    public BaseWorkbookFunctionsPermutRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("numberChosen", numberChosen);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPermutRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPermutRequest instance
      */
-    public IWorkbookFunctionsPermutRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPermutRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPermutRequest request = new WorkbookFunctionsPermutRequest(
                 getRequestUrl(),
                 getClient(),

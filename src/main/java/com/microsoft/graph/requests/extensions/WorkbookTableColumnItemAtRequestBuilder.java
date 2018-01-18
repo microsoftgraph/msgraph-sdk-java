@@ -31,7 +31,7 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseWorkbookTableCo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableColumnItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
+    public WorkbookTableColumnItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions, index);
     }
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDmaxRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDmaxRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public BaseWorkbookFunctionsDmaxRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("database", database);
         bodyParams.put("field", field);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsDmaxRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDmaxRequest instance
      */
-    public IWorkbookFunctionsDmaxRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDmaxRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDmaxRequest request = new WorkbookFunctionsDmaxRequest(
                 getRequestUrl(),
                 getClient(),

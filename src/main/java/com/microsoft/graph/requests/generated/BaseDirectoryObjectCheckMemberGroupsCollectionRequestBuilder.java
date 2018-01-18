@@ -30,7 +30,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extend
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<String> groupIds) {
+    public BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> groupIds) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("groupIds", groupIds);
       }
@@ -39,7 +39,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder extend
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DirectoryObjectCheckMemberGroupsCollectionRequest request = new DirectoryObjectCheckMemberGroupsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -30,7 +30,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookCreateSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean persistChanges) {
+    public BaseWorkbookCreateSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean persistChanges) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("persistChanges", persistChanges);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookCreateSessionRequest instance
      */
-    public IWorkbookCreateSessionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookCreateSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookCreateSessionRequest request = new WorkbookCreateSessionRequest(
                 getRequestUrl(),
                 getClient(),

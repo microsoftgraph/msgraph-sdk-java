@@ -31,7 +31,7 @@ public class BaseFunctionRequestBuilder extends BaseRequestBuilder {
     public BaseFunctionRequestBuilder(
             final String requestUrl,
             final IBaseClient client,
-            final List<Option> options
+            final List<? extends Option> options
     ) {
         super(requestUrl, client, options);
     }

@@ -31,7 +31,7 @@ public interface IBaseWorkbookRangeFillRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookRangeFillRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookRangeFillClearRequestBuilder clear();
 
 }

@@ -30,7 +30,7 @@ public class BaseContactDeltaCollectionRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseContactDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseContactDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +38,7 @@ public class BaseContactDeltaCollectionRequestBuilder extends BaseFunctionReques
         return buildRequest(getOptions());
     }
 
-    public IContactDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IContactDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         ContactDeltaCollectionRequest request = new ContactDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

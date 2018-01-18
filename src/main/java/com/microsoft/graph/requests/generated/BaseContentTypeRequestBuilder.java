@@ -31,7 +31,7 @@ public class BaseContentTypeRequestBuilder extends BaseRequestBuilder implements
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseContentTypeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseContentTypeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseContentTypeRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IContentTypeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContentTypeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -32,7 +32,7 @@ public class BaseEventDeclineRequest extends BaseRequest implements IBaseEventDe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventDeclineRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseEventDeclineRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new EventDeclineBody();
     }

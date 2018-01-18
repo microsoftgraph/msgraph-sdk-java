@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDeltaRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDeltaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+    public BaseWorkbookFunctionsDeltaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number1", number1);
         bodyParams.put("number2", number2);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsDeltaRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDeltaRequest instance
      */
-    public IWorkbookFunctionsDeltaRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDeltaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDeltaRequest request = new WorkbookFunctionsDeltaRequest(
                 getRequestUrl(),
                 getClient(),

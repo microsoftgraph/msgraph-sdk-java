@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPhiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
+    public BaseWorkbookFunctionsPhiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPhiRequest instance
      */
-    public IWorkbookFunctionsPhiRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPhiRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPhiRequest request = new WorkbookFunctionsPhiRequest(
                 getRequestUrl(),
                 getClient(),

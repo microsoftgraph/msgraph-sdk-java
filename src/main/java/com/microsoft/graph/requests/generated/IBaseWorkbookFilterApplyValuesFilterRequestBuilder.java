@@ -37,5 +37,5 @@ public interface IBaseWorkbookFilterApplyValuesFilterRequestBuilder extends IReq
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyValuesFilterRequest instance
      */
-    IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsDbRequest extends BaseWorkbookFunctionsDbRequest i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDbRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsDbRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

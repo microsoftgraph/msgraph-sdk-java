@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsIntRateRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsIntRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsIntRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsIntRateRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIntRateRequest instance
      */
-    public IWorkbookFunctionsIntRateRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsIntRateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIntRateRequest request = new WorkbookFunctionsIntRateRequest(
                 getRequestUrl(),
                 getClient(),

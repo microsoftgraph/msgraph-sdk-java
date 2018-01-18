@@ -31,7 +31,7 @@ public class BaseSingleValueLegacyExtendedPropertyCollectionRequestBuilder exten
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSingleValueLegacyExtendedPropertyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSingleValueLegacyExtendedPropertyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseSingleValueLegacyExtendedPropertyCollectionRequestBuilder exten
         return buildRequest(getOptions());
     }
 
-    public ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SingleValueLegacyExtendedPropertyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

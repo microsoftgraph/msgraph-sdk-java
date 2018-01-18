@@ -31,7 +31,7 @@ public interface IBaseCalendarRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ICalendarRequest buildRequest(final java.util.List<Option> requestOptions);
+    ICalendarRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IEventCollectionRequestBuilder events();
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDollarRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDollarRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
+    public BaseWorkbookFunctionsDollarRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("decimals", decimals);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsDollarRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDollarRequest instance
      */
-    public IWorkbookFunctionsDollarRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDollarRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDollarRequest request = new WorkbookFunctionsDollarRequest(
                 getRequestUrl(),
                 getClient(),

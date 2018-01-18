@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFisherInvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement y) {
+    public BaseWorkbookFunctionsFisherInvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement y) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("y", y);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsFisherInvRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFisherInvRequest instance
      */
-    public IWorkbookFunctionsFisherInvRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFisherInvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFisherInvRequest request = new WorkbookFunctionsFisherInvRequest(
                 getRequestUrl(),
                 getClient(),

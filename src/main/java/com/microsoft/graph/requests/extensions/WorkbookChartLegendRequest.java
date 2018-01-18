@@ -31,7 +31,7 @@ public class WorkbookChartLegendRequest extends BaseWorkbookChartLegendRequest i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartLegendRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookChartLegendRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartLegend.class);
     }
 }

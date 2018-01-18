@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsOddFYieldRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsOddFYieldRequest instance
      */
-    IWorkbookFunctionsOddFYieldRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsOddFYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

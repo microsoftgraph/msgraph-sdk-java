@@ -37,5 +37,5 @@ public interface IBasePostForwardRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IPostForwardRequest instance
      */
-    IPostForwardRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPostForwardRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

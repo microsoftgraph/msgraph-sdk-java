@@ -31,7 +31,7 @@ public class ExtensionRequestBuilder extends BaseExtensionRequestBuilder impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public ExtensionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public ExtensionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

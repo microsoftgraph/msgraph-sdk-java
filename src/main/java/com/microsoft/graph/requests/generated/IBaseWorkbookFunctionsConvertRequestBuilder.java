@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsConvertRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsConvertRequest instance
      */
-    IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookWorksheetCellRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookWorksheetCellRequest instance
      */
-    IWorkbookWorksheetCellRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookWorksheetCellRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

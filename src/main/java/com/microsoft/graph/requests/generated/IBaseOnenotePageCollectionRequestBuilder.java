@@ -26,7 +26,7 @@ public interface IBaseOnenotePageCollectionRequestBuilder extends IRequestBuilde
 
     IOnenotePageCollectionRequest buildRequest();
 
-    IOnenotePageCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenotePageCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IOnenotePageRequestBuilder byId(final String id);
 

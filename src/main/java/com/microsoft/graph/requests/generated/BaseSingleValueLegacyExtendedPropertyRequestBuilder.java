@@ -31,7 +31,7 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSingleValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSingleValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SingleValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

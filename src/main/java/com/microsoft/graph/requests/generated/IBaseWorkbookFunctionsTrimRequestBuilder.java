@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsTrimRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTrimRequest instance
      */
-    IWorkbookFunctionsTrimRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsTrimRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

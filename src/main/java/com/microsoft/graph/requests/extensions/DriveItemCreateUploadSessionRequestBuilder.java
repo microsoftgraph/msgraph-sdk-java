@@ -31,7 +31,7 @@ public class DriveItemCreateUploadSessionRequestBuilder extends BaseDriveItemCre
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final DriveItemUploadableProperties item) {
+    public DriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DriveItemUploadableProperties item) {
         super(requestUrl, client, requestOptions, item);
     }
 }

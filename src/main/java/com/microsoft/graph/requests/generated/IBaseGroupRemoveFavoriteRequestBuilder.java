@@ -37,5 +37,5 @@ public interface IBaseGroupRemoveFavoriteRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return The IGroupRemoveFavoriteRequest instance
      */
-    IGroupRemoveFavoriteRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupRemoveFavoriteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

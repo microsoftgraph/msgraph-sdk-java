@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsQuartile_IncRequest extends BaseRequest implem
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsQuartile_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsQuartile_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsQuartile_IncBody();
     }

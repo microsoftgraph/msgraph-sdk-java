@@ -34,7 +34,7 @@ public class DomainDnsRecordRequest extends BaseDomainDnsRecordRequest implement
      */
     public DomainDnsRecordRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
@@ -46,7 +46,7 @@ public class DomainDnsRecordRequest extends BaseDomainDnsRecordRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DomainDnsRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DomainDnsRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsRecord.class);
     }
 }

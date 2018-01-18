@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsMonthRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMonthRequest instance
      */
-    IWorkbookFunctionsMonthRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsMonthRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

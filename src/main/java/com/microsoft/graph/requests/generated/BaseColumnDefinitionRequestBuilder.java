@@ -31,7 +31,7 @@ public class BaseColumnDefinitionRequestBuilder extends BaseRequestBuilder imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseColumnDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseColumnDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseColumnDefinitionRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IColumnDefinitionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IColumnDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ColumnDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -31,7 +31,7 @@ public class BaseWorkbookChartPointCollectionRequestBuilder extends BaseRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartPointCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartPointCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseWorkbookChartPointCollectionRequestBuilder extends BaseRequestB
         return buildRequest(getOptions());
     }
 
-    public IWorkbookChartPointCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartPointCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartPointCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

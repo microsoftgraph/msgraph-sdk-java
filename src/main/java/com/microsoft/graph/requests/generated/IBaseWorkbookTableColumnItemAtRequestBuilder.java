@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableColumnItemAtRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnItemAtRequest instance
      */
-    IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

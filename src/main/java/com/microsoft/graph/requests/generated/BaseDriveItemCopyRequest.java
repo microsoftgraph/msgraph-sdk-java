@@ -32,7 +32,7 @@ public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveI
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveItemCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
         body = new DriveItemCopyBody();
     }

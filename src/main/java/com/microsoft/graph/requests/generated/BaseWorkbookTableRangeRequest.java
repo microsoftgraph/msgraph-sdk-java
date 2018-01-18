@@ -31,7 +31,7 @@ public class BaseWorkbookTableRangeRequest extends BaseRequest implements IBaseW
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 

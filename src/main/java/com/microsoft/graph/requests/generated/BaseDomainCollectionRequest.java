@@ -32,7 +32,7 @@ public class BaseDomainCollectionRequest extends BaseCollectionRequest<BaseDomai
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDomainCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDomainCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDomainCollectionResponse.class, IDomainCollectionPage.class);
     }
 

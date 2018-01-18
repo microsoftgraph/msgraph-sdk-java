@@ -31,7 +31,7 @@ public class WorkbookTableRowAddRequestBuilder extends BaseWorkbookTableRowAddRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableRowAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index, final com.google.gson.JsonElement values) {
+    public WorkbookTableRowAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions, index, values);
     }
 }

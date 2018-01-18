@@ -30,7 +30,7 @@ public class BaseWorkbookRangeUsedRangeRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -40,7 +40,7 @@ public class BaseWorkbookRangeUsedRangeRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean valuesOnly) {
+    public BaseWorkbookRangeUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean valuesOnly) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("valuesOnly", valuesOnly));
     }
@@ -60,7 +60,7 @@ public class BaseWorkbookRangeUsedRangeRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeUsedRangeRequest instance
      */
-    public IWorkbookRangeUsedRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeUsedRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeUsedRangeRequest request = new WorkbookRangeUsedRangeRequest(
                 getRequestUrl(),
                 getClient(),

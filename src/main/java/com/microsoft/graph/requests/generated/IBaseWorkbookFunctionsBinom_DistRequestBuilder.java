@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsBinom_DistRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBinom_DistRequest instance
      */
-    IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

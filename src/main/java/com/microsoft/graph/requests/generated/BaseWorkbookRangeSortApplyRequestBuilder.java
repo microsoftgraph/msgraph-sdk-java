@@ -30,7 +30,7 @@ public class BaseWorkbookRangeSortApplyRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
+    public BaseWorkbookRangeSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("fields", fields);
         bodyParams.put("matchCase", matchCase);
@@ -54,7 +54,7 @@ public class BaseWorkbookRangeSortApplyRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeSortApplyRequest instance
      */
-    public IWorkbookRangeSortApplyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeSortApplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeSortApplyRequest request = new WorkbookRangeSortApplyRequest(
                 getRequestUrl(),
                 getClient(),

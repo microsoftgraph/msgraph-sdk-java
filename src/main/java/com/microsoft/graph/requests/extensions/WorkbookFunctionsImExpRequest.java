@@ -31,7 +31,7 @@ public class WorkbookFunctionsImExpRequest extends BaseWorkbookFunctionsImExpReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsImExpRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsImExpRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

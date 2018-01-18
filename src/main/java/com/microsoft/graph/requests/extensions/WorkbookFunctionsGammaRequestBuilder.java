@@ -31,7 +31,7 @@ public class WorkbookFunctionsGammaRequestBuilder extends BaseWorkbookFunctionsG
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsGammaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
+    public WorkbookFunctionsGammaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions, x);
     }
 }

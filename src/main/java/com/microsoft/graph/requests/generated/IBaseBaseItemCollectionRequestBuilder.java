@@ -26,7 +26,7 @@ public interface IBaseBaseItemCollectionRequestBuilder extends IRequestBuilder {
 
     IBaseItemCollectionRequest buildRequest();
 
-    IBaseItemCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IBaseItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IBaseItemRequestBuilder byId(final String id);
 

@@ -32,7 +32,7 @@ public class BaseSiteCollectionRequest extends BaseCollectionRequest<BaseSiteCol
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSiteCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSiteCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseSiteCollectionResponse.class, ISiteCollectionPage.class);
     }
 

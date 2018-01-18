@@ -31,6 +31,6 @@ public interface IBaseOnenotePageStreamRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOnenotePageStreamRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenotePageStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

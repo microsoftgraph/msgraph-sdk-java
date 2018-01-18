@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsIsFormulaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement reference) {
+    public BaseWorkbookFunctionsIsFormulaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement reference) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("reference", reference);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsFormulaRequest instance
      */
-    public IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsFormulaRequest request = new WorkbookFunctionsIsFormulaRequest(
                 getRequestUrl(),
                 getClient(),

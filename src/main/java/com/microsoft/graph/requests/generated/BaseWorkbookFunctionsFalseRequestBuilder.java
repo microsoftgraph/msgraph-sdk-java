@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFalseRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFalseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsFalseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsFalseRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFalseRequest instance
      */
-    public IWorkbookFunctionsFalseRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFalseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFalseRequest request = new WorkbookFunctionsFalseRequest(
                 getRequestUrl(),
                 getClient(),

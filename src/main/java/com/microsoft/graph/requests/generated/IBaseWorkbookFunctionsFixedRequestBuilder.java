@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsFixedRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFixedRequest instance
      */
-    IWorkbookFunctionsFixedRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsFixedRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPercentRank_ExcRequest instance
      */
-    IWorkbookFunctionsPercentRank_ExcRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsPercentRank_ExcRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

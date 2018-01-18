@@ -26,6 +26,6 @@ public interface IBaseEventDeltaCollectionRequestBuilder extends IRequestBuilder
 
     IEventDeltaCollectionRequest buildRequest();
 
-    IEventDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IEventDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

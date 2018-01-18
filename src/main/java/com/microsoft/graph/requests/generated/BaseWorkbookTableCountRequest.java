@@ -31,7 +31,7 @@ public class BaseWorkbookTableCountRequest extends BaseRequest implements IBaseW
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Integer.class);
     }
 

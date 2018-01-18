@@ -32,7 +32,7 @@ public class BaseCalendarGroupCollectionRequest extends BaseCollectionRequest<Ba
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseCalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseCalendarGroupCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseCalendarGroupCollectionResponse.class, ICalendarGroupCollectionPage.class);
     }
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMroundRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsMroundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement multiple) {
+    public BaseWorkbookFunctionsMroundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement multiple) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("multiple", multiple);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsMroundRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMroundRequest instance
      */
-    public IWorkbookFunctionsMroundRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsMroundRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMroundRequest request = new WorkbookFunctionsMroundRequest(
                 getRequestUrl(),
                 getClient(),

@@ -30,7 +30,7 @@ public class BaseDriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String token) {
+    public BaseDriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String token) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("token", token));
       }
@@ -41,7 +41,7 @@ public class BaseDriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseDriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequ
         return buildRequest(getOptions());
     }
 
-    public IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveItemDeltaCollectionRequest request = new DriveItemDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

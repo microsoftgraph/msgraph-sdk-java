@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsExpRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsExpRequest instance
      */
-    IWorkbookFunctionsExpRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsExpRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

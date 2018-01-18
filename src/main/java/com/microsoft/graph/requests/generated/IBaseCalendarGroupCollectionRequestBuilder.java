@@ -26,7 +26,7 @@ public interface IBaseCalendarGroupCollectionRequestBuilder extends IRequestBuil
 
     ICalendarGroupCollectionRequest buildRequest();
 
-    ICalendarGroupCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ICalendarGroupCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ICalendarGroupRequestBuilder byId(final String id);
 

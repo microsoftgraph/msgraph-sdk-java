@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCleanRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCleanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text) {
+    public BaseWorkbookFunctionsCleanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsCleanRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCleanRequest instance
      */
-    public IWorkbookFunctionsCleanRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCleanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCleanRequest request = new WorkbookFunctionsCleanRequest(
                 getRequestUrl(),
                 getClient(),

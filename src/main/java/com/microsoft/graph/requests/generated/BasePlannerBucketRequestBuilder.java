@@ -31,7 +31,7 @@ public class BasePlannerBucketRequestBuilder extends BaseRequestBuilder implemen
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerBucketRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerBucketRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerBucketRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IPlannerBucketRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPlannerBucketRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerBucketRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -35,7 +35,7 @@ public class BaseDirectoryObjectCheckMemberGroupsCollectionRequest extends BaseC
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDirectoryObjectCheckMemberGroupsCollectionResponse.class, IDirectoryObjectCheckMemberGroupsCollectionPage.class);
         body = new DirectoryObjectCheckMemberGroupsBody();
     }

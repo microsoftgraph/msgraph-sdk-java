@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsCombinRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCombinRequest instance
      */
-    IWorkbookFunctionsCombinRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsCombinRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

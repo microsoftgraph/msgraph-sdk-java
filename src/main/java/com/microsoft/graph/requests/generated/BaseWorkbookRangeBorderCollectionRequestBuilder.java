@@ -31,7 +31,7 @@ public class BaseWorkbookRangeBorderCollectionRequestBuilder extends BaseRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeBorderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeBorderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseWorkbookRangeBorderCollectionRequestBuilder extends BaseRequest
         return buildRequest(getOptions());
     }
 
-    public IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeBorderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

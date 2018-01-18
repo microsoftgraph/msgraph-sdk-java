@@ -31,7 +31,7 @@ public class OnenotePageOnenotePatchContentRequestBuilder extends BaseOnenotePag
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public OnenotePageOnenotePatchContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<OnenotePatchContentCommand> commands) {
+    public OnenotePageOnenotePatchContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<OnenotePatchContentCommand> commands) {
         super(requestUrl, client, requestOptions, commands);
     }
 }

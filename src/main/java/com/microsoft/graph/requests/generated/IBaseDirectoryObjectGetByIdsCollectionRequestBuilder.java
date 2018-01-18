@@ -26,6 +26,6 @@ public interface IBaseDirectoryObjectGetByIdsCollectionRequestBuilder extends IR
 
     IDirectoryObjectGetByIdsCollectionRequest buildRequest();
 
-    IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

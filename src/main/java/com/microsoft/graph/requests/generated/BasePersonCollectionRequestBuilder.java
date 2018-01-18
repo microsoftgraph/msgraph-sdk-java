@@ -31,7 +31,7 @@ public class BasePersonCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePersonCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePersonCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BasePersonCollectionRequestBuilder extends BaseRequestBuilder imple
         return buildRequest(getOptions());
     }
 
-    public IPersonCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPersonCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PersonCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

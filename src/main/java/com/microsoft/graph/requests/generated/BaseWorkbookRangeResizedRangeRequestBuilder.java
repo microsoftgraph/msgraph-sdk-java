@@ -30,7 +30,7 @@ public class BaseWorkbookRangeResizedRangeRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeResizedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer deltaRows, final Integer deltaColumns) {
+    public BaseWorkbookRangeResizedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer deltaRows, final Integer deltaColumns) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("deltaRows", deltaRows));
         functionOptions.add(new FunctionOption("deltaColumns", deltaColumns));
@@ -51,7 +51,7 @@ public class BaseWorkbookRangeResizedRangeRequestBuilder extends BaseFunctionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeResizedRangeRequest instance
      */
-    public IWorkbookRangeResizedRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeResizedRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeResizedRangeRequest request = new WorkbookRangeResizedRangeRequest(
                 getRequestUrl(),
                 getClient(),

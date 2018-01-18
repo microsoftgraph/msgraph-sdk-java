@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsPiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPiRequest instance
      */
-    public IWorkbookFunctionsPiRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPiRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPiRequest request = new WorkbookFunctionsPiRequest(
                 getRequestUrl(),
                 getClient(),

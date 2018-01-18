@@ -31,7 +31,7 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseEventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IEventRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new EventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

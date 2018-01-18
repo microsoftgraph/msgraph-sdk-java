@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsConfidence_TRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsConfidence_TRequest instance
      */
-    IWorkbookFunctionsConfidence_TRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsConfidence_TRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

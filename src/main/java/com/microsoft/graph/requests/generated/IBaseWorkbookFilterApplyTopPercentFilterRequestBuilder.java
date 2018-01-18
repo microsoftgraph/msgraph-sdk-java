@@ -37,5 +37,5 @@ public interface IBaseWorkbookFilterApplyTopPercentFilterRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyTopPercentFilterRequest instance
      */
-    IWorkbookFilterApplyTopPercentFilterRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFilterApplyTopPercentFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

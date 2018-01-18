@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsSydRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
+    public BaseWorkbookFunctionsSydRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("cost", cost);
         bodyParams.put("salvage", salvage);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSydRequest instance
      */
-    public IWorkbookFunctionsSydRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsSydRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSydRequest request = new WorkbookFunctionsSydRequest(
                 getRequestUrl(),
                 getClient(),

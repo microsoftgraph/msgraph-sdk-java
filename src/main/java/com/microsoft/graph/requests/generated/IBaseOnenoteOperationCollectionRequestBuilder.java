@@ -26,7 +26,7 @@ public interface IBaseOnenoteOperationCollectionRequestBuilder extends IRequestB
 
     IOnenoteOperationCollectionRequest buildRequest();
 
-    IOnenoteOperationCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenoteOperationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IOnenoteOperationRequestBuilder byId(final String id);
 

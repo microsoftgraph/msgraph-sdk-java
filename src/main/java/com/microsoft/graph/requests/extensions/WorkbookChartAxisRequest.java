@@ -31,7 +31,7 @@ public class WorkbookChartAxisRequest extends BaseWorkbookChartAxisRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartAxisRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookChartAxisRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAxis.class);
     }
 }

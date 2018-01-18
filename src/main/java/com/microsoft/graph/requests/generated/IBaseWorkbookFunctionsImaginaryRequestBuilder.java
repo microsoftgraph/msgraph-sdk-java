@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsImaginaryRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImaginaryRequest instance
      */
-    IWorkbookFunctionsImaginaryRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsImaginaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

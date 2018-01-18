@@ -31,7 +31,7 @@ public class BaseListItemCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseListItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseListItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseListItemCollectionRequestBuilder extends BaseRequestBuilder imp
         return buildRequest(getOptions());
     }
 
-    public IListItemCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IListItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ListItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

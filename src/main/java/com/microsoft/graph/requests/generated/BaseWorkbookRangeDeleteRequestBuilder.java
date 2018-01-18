@@ -30,7 +30,7 @@ public class BaseWorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeDeleteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String shift) {
+    public BaseWorkbookRangeDeleteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String shift) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("shift", shift);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeDeleteRequest instance
      */
-    public IWorkbookRangeDeleteRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeDeleteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeDeleteRequest request = new WorkbookRangeDeleteRequest(
                 getRequestUrl(),
                 getClient(),

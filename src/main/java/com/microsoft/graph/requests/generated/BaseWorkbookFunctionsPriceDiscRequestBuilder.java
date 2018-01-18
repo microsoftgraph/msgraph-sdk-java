@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPriceDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsPriceDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPriceDiscRequest instance
      */
-    public IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPriceDiscRequest request = new WorkbookFunctionsPriceDiscRequest(
                 getRequestUrl(),
                 getClient(),

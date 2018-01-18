@@ -31,7 +31,7 @@ public class BaseDirectoryObjectCollectionWithReferencesRequestBuilder extends B
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryObjectCollectionWithReferencesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseDirectoryObjectCollectionWithReferencesRequestBuilder extends B
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryObjectCollectionWithReferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryObjectCollectionWithReferencesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

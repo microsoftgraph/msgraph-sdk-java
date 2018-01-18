@@ -26,7 +26,7 @@ public interface IBaseProfilePhotoCollectionRequestBuilder extends IRequestBuild
 
     IProfilePhotoCollectionRequest buildRequest();
 
-    IProfilePhotoCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IProfilePhotoCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IProfilePhotoRequestBuilder byId(final String id);
 

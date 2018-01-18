@@ -31,7 +31,7 @@ public class BasePlannerPlanDetailsRequestBuilder extends BaseRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerPlanDetailsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerPlanDetailsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerPlanDetailsRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IPlannerPlanDetailsRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPlannerPlanDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerPlanDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

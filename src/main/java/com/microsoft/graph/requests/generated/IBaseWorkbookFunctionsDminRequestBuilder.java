@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDminRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDminRequest instance
      */
-    IWorkbookFunctionsDminRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDminRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

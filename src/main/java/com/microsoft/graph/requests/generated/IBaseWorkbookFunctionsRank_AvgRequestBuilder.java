@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsRank_AvgRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsRank_AvgRequest instance
      */
-    IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookProcessQueryRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookProcessQueryRequest instance
      */
-    IWorkbookProcessQueryRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookProcessQueryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

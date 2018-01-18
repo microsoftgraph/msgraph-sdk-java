@@ -37,5 +37,5 @@ public interface IBaseWorkbookFilterApplyBottomItemsFilterRequestBuilder extends
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyBottomItemsFilterRequest instance
      */
-    IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

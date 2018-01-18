@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsAmorDegrcRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAmorDegrcRequest instance
      */
-    IWorkbookFunctionsAmorDegrcRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsAmorDegrcRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsIsErrorRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsIsErrorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement value) {
+    public BaseWorkbookFunctionsIsErrorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("value", value);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsIsErrorRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsErrorRequest instance
      */
-    public IWorkbookFunctionsIsErrorRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsIsErrorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsErrorRequest request = new WorkbookFunctionsIsErrorRequest(
                 getRequestUrl(),
                 getClient(),

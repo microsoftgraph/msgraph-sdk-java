@@ -30,7 +30,7 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
+    public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("requireSignIn", requireSignIn);
           bodyParams.put("roles", roles);
@@ -43,7 +43,7 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
         return buildRequest(getOptions());
     }
 
-    public IDriveItemInviteCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveItemInviteCollectionRequest request = new DriveItemInviteCollectionRequest(
                 getRequestUrl(),
                 getClient(),

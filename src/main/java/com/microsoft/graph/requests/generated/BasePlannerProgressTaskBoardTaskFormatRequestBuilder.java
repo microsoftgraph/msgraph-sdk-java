@@ -31,7 +31,7 @@ public class BasePlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerProgressTaskBoardTaskFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerProgressTaskBoardTaskFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseRe
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerProgressTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

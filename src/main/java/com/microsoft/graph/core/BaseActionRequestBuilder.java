@@ -31,7 +31,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
     public BaseActionRequestBuilder(
             final String requestUrl,
             final IBaseClient client,
-            final List<Option> options
+            final List<? extends Option> options
     ) {
         super(requestUrl, client, options);
     }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsBinom_InvRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBinom_InvRequest instance
      */
-    IWorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

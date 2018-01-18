@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
+    public BaseWorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
         bodyParams.put("decimalSeparator", decimalSeparator);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNumberValueRequest instance
      */
-    public IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNumberValueRequest request = new WorkbookFunctionsNumberValueRequest(
                 getRequestUrl(),
                 getClient(),

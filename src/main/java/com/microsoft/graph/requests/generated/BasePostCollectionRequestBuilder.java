@@ -31,7 +31,7 @@ public class BasePostCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePostCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BasePostCollectionRequestBuilder extends BaseRequestBuilder impleme
         return buildRequest(getOptions());
     }
 
-    public IPostCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPostCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PostCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsEoMonthRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsEoMonthRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
+    public BaseWorkbookFunctionsEoMonthRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startDate", startDate);
         bodyParams.put("months", months);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsEoMonthRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsEoMonthRequest instance
      */
-    public IWorkbookFunctionsEoMonthRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsEoMonthRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsEoMonthRequest request = new WorkbookFunctionsEoMonthRequest(
                 getRequestUrl(),
                 getClient(),

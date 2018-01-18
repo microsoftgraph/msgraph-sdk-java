@@ -34,7 +34,7 @@ public class BaseInferenceClassificationRequest extends BaseRequest implements I
      */
     public BaseInferenceClassificationRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

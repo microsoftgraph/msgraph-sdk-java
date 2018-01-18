@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCoupNumRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCoupNumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsCoupNumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsCoupNumRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCoupNumRequest instance
      */
-    public IWorkbookFunctionsCoupNumRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCoupNumRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCoupNumRequest request = new WorkbookFunctionsCoupNumRequest(
                 getRequestUrl(),
                 getClient(),

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsNetworkDaysRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNetworkDaysRequest instance
      */
-    IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

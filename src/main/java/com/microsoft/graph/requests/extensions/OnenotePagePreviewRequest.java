@@ -31,7 +31,7 @@ public class OnenotePagePreviewRequest extends BaseOnenotePagePreviewRequest imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public OnenotePagePreviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public OnenotePagePreviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

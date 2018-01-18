@@ -31,7 +31,7 @@ public class WorkbookRangeViewCollectionRequest extends BaseWorkbookRangeViewCol
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeViewCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookRangeViewCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

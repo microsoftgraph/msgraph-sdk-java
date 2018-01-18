@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsArabicRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsArabicRequest instance
      */
-    IWorkbookFunctionsArabicRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsArabicRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

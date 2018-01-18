@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsPercentile_ExcRequest extends BaseRequest impl
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPercentile_ExcRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsPercentile_ExcRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsPercentile_ExcBody();
     }

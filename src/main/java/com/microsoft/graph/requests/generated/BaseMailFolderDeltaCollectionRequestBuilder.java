@@ -30,7 +30,7 @@ public class BaseMailFolderDeltaCollectionRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMailFolderDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMailFolderDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +38,7 @@ public class BaseMailFolderDeltaCollectionRequestBuilder extends BaseFunctionReq
         return buildRequest(getOptions());
     }
 
-    public IMailFolderDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMailFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MailFolderDeltaCollectionRequest request = new MailFolderDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

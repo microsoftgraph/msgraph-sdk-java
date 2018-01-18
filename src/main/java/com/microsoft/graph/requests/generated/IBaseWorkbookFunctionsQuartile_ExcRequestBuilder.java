@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsQuartile_ExcRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsQuartile_ExcRequest instance
      */
-    IWorkbookFunctionsQuartile_ExcRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsQuartile_ExcRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

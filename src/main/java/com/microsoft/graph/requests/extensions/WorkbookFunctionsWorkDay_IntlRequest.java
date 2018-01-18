@@ -31,7 +31,7 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseWorkbookFunctionsW
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsWorkDay_IntlRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsWorkDay_IntlRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

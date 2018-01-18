@@ -31,7 +31,7 @@ public class BaseContractCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseContractCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseContractCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseContractCollectionRequestBuilder extends BaseRequestBuilder imp
         return buildRequest(getOptions());
     }
 
-    public IContractCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IContractCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContractCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

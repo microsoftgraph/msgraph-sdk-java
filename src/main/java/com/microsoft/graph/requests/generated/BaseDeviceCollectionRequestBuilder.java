@@ -31,7 +31,7 @@ public class BaseDeviceCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDeviceCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseDeviceCollectionRequestBuilder extends BaseRequestBuilder imple
         return buildRequest(getOptions());
     }
 
-    public IDeviceCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDeviceCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DeviceCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

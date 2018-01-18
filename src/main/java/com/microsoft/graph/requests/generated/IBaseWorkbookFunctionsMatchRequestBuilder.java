@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsMatchRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMatchRequest instance
      */
-    IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

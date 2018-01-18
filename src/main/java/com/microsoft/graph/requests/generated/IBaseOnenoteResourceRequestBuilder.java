@@ -31,7 +31,7 @@ public interface IBaseOnenoteResourceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOnenoteResourceRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenoteResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IOnenoteResourceStreamRequestBuilder content();
 

@@ -37,5 +37,5 @@ public interface IBaseSiteGetByPathRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The ISiteGetByPathRequest instance
      */
-    ISiteGetByPathRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISiteGetByPathRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

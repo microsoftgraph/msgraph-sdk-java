@@ -34,7 +34,7 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
      */
     public BaseFieldValueSetRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

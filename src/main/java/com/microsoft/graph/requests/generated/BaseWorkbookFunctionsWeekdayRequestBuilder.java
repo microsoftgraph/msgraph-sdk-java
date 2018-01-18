@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsWeekdayRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsWeekdayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber, final com.google.gson.JsonElement returnType) {
+    public BaseWorkbookFunctionsWeekdayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber, final com.google.gson.JsonElement returnType) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("serialNumber", serialNumber);
         bodyParams.put("returnType", returnType);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsWeekdayRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsWeekdayRequest instance
      */
-    public IWorkbookFunctionsWeekdayRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsWeekdayRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsWeekdayRequest request = new WorkbookFunctionsWeekdayRequest(
                 getRequestUrl(),
                 getClient(),

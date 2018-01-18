@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsCoupPcdRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCoupPcdRequest instance
      */
-    IWorkbookFunctionsCoupPcdRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsCoupPcdRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

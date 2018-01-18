@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartGridlinesFormatRequestBuilder extends IReques
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartGridlinesFormatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartGridlinesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartLineFormat.

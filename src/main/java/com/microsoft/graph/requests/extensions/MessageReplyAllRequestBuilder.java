@@ -31,7 +31,7 @@ public class MessageReplyAllRequestBuilder extends BaseMessageReplyAllRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment) {
+    public MessageReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment) {
         super(requestUrl, client, requestOptions, comment);
     }
 }

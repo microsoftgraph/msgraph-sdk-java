@@ -26,6 +26,6 @@ public interface IBaseDirectoryObjectCheckMemberGroupsCollectionRequestBuilder e
 
     IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest();
 
-    IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDirectoryObjectCheckMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

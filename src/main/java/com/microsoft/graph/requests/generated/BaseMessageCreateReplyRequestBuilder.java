@@ -30,7 +30,7 @@ public class BaseMessageCreateReplyRequestBuilder extends BaseActionRequestBuild
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMessageCreateReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMessageCreateReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseMessageCreateReplyRequestBuilder extends BaseActionRequestBuild
      * @param requestOptions the options for the request
      * @return The IMessageCreateReplyRequest instance
      */
-    public IMessageCreateReplyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMessageCreateReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MessageCreateReplyRequest request = new MessageCreateReplyRequest(
                 getRequestUrl(),
                 getClient(),

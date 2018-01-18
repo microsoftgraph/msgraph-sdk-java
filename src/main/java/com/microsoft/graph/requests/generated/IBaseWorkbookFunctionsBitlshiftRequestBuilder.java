@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsBitlshiftRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBitlshiftRequest instance
      */
-    IWorkbookFunctionsBitlshiftRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsBitlshiftRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

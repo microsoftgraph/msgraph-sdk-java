@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsGcdRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsGcdRequest instance
      */
-    IWorkbookFunctionsGcdRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsGcdRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

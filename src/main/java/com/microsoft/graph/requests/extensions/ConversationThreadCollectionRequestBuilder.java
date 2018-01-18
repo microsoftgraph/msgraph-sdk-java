@@ -31,7 +31,7 @@ public class ConversationThreadCollectionRequestBuilder extends BaseConversation
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public ConversationThreadCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public ConversationThreadCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

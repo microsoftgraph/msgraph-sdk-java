@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsChiSq_DistRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsChiSq_DistRequest instance
      */
-    IWorkbookFunctionsChiSq_DistRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsChiSq_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

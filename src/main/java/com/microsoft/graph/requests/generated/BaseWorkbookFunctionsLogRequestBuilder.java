@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsLogRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsLogRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement base) {
+    public BaseWorkbookFunctionsLogRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement base) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("base", base);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsLogRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLogRequest instance
      */
-    public IWorkbookFunctionsLogRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsLogRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLogRequest request = new WorkbookFunctionsLogRequest(
                 getRequestUrl(),
                 getClient(),

@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeEntireRowRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeEntireRowRequest instance
      */
-    IWorkbookRangeEntireRowRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeEntireRowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

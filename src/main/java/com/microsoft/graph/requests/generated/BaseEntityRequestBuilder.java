@@ -31,7 +31,7 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEntityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseEntityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IEntityRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new EntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

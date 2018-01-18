@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSmallRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsSmallRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+    public BaseWorkbookFunctionsSmallRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("k", k);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsSmallRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSmallRequest instance
      */
-    public IWorkbookFunctionsSmallRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsSmallRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSmallRequest request = new WorkbookFunctionsSmallRequest(
                 getRequestUrl(),
                 getClient(),

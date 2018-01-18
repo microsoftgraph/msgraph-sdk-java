@@ -32,7 +32,7 @@ public class BasePostForwardRequest extends BaseRequest implements IBasePostForw
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePostForwardRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePostForwardRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new PostForwardBody();
     }
