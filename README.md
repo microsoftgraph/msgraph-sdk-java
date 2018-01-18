@@ -24,10 +24,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:1.0.+')
-
-    // Include the gson dependency
-    compile('com.google.code.gson:gson:2.3.1')
+    compile('com.microsoft.graph:msgraph-sdk-java:1.0.+')
 }
 ```
 

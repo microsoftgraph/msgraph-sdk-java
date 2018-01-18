@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'msgraph-sdk-java-prototype'
+rootProject.name = 'msgraph-sdk-java'
