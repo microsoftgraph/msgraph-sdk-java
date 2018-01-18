@@ -51,7 +51,7 @@ public class BaseAttachmentRequestBuilder extends BaseRequestBuilder implements 
 
 
     public IFileAttachmentRequestBuilder fileAttachment() {
-        return new FileAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("fileAttachment"), getClient(), null);
+        return new FileAttachmentRequestBuilder(getRequestUrl(), getClient(), null);
     }
 
     public IItemAttachmentRequestBuilder itemAttachment() {

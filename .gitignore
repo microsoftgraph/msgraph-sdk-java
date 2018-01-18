@@ -28,3 +28,7 @@ hs_err_pid*
 .project
 .classpath
 .settings
+/target/
+
+# may be present to assist with Eclipse integration
+pom.xml
