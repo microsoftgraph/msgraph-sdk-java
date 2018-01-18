@@ -31,4 +31,4 @@ hs_err_pid*
 /target/
 
 # may be present to assist with Eclipse integration
-pom.xml
+/pom.xml
