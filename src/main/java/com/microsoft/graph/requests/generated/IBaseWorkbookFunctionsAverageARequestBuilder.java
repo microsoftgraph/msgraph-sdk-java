@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsAverageARequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAverageARequest instance
      */
-    IWorkbookFunctionsAverageARequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsAverageARequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

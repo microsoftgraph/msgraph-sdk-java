@@ -31,7 +31,7 @@ public interface IBaseWorkbookTableRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookTableRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookTableColumnCollectionRequestBuilder columns();
 

@@ -31,7 +31,7 @@ public class PostRequest extends BasePostRequest implements IPostRequest {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PostRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public PostRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Post.class);
     }
 }

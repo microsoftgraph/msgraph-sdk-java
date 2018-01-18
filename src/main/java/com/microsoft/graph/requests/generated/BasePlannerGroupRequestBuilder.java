@@ -31,7 +31,7 @@ public class BasePlannerGroupRequestBuilder extends BaseRequestBuilder implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerGroupRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IPlannerGroupRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPlannerGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

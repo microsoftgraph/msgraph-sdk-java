@@ -26,7 +26,7 @@ public interface IBaseSubscriptionCollectionRequestBuilder extends IRequestBuild
 
     ISubscriptionCollectionRequest buildRequest();
 
-    ISubscriptionCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISubscriptionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ISubscriptionRequestBuilder byId(final String id);
 

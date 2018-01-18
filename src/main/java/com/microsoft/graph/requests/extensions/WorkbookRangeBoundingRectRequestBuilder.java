@@ -31,7 +31,7 @@ public class WorkbookRangeBoundingRectRequestBuilder extends BaseWorkbookRangeBo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeBoundingRectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String anotherRange) {
+    public WorkbookRangeBoundingRectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String anotherRange) {
         super(requestUrl, client, requestOptions, anotherRange);
     }
 }

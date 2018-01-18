@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsChiSq_Inv_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+    public BaseWorkbookFunctionsChiSq_Inv_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("probability", probability);
         bodyParams.put("degFreedom", degFreedom);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsChiSq_Inv_RTRequest instance
      */
-    public IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsChiSq_Inv_RTRequest request = new WorkbookFunctionsChiSq_Inv_RTRequest(
                 getRequestUrl(),
                 getClient(),

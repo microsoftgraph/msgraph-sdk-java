@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsChooseRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsChooseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement indexNum, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsChooseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement indexNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("indexNum", indexNum);
         bodyParams.put("values", values);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsChooseRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsChooseRequest instance
      */
-    public IWorkbookFunctionsChooseRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsChooseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsChooseRequest request = new WorkbookFunctionsChooseRequest(
                 getRequestUrl(),
                 getClient(),

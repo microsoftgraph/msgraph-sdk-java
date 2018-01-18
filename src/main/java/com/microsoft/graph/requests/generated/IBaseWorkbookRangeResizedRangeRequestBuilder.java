@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeResizedRangeRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeResizedRangeRequest instance
      */
-    IWorkbookRangeResizedRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeResizedRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

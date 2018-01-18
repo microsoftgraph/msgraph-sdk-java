@@ -31,7 +31,7 @@ public class BaseOnenoteRequestBuilder extends BaseRequestBuilder implements IBa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseOnenoteRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IOnenoteRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenoteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

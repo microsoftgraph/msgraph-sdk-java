@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsAcothRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsAcothRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsAcothRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsAcothRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAcothRequest instance
      */
-    public IWorkbookFunctionsAcothRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsAcothRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAcothRequest request = new WorkbookFunctionsAcothRequest(
                 getRequestUrl(),
                 getClient(),

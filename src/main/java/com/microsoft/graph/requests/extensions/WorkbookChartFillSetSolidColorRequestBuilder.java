@@ -31,7 +31,7 @@ public class WorkbookChartFillSetSolidColorRequestBuilder extends BaseWorkbookCh
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartFillSetSolidColorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String color) {
+    public WorkbookChartFillSetSolidColorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions, color);
     }
 }

@@ -30,7 +30,7 @@ public class BaseDirectoryObjectGetByIdsCollectionRequestBuilder extends BaseAct
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
+    public BaseDirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("ids", ids);
           bodyParams.put("types", types);
@@ -40,7 +40,7 @@ public class BaseDirectoryObjectGetByIdsCollectionRequestBuilder extends BaseAct
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DirectoryObjectGetByIdsCollectionRequest request = new DirectoryObjectGetByIdsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

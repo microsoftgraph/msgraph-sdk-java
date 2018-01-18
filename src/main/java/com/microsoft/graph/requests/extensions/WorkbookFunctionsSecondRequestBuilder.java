@@ -31,7 +31,7 @@ public class WorkbookFunctionsSecondRequestBuilder extends BaseWorkbookFunctions
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsSecondRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
+    public WorkbookFunctionsSecondRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions, serialNumber);
     }
 }

@@ -31,7 +31,7 @@ public class SubscribedSkuRequest extends BaseSubscribedSkuRequest implements IS
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public SubscribedSkuRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public SubscribedSkuRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscribedSku.class);
     }
 }

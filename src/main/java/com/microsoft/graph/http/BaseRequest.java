@@ -106,7 +106,7 @@ public abstract class BaseRequest implements IHttpRequest {
      */
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
-                       final List<Option> options,
+                       final List<? extends Option> options,
                        final Class responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;

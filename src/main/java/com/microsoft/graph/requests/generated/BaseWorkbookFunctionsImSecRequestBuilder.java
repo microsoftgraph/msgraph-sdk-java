@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsImSecRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsImSecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement inumber) {
+    public BaseWorkbookFunctionsImSecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("inumber", inumber);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsImSecRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImSecRequest instance
      */
-    public IWorkbookFunctionsImSecRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsImSecRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImSecRequest request = new WorkbookFunctionsImSecRequest(
                 getRequestUrl(),
                 getClient(),

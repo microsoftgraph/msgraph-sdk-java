@@ -37,5 +37,5 @@ public interface IBaseOnenotePageOnenotePatchContentRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return The IOnenotePageOnenotePatchContentRequest instance
      */
-    IOnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

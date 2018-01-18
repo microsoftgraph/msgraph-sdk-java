@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsNegBinom_DistRequest extends BaseRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsNegBinom_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsNegBinom_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsNegBinom_DistBody();
     }

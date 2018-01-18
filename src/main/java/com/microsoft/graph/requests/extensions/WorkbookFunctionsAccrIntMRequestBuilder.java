@@ -31,7 +31,7 @@ public class WorkbookFunctionsAccrIntMRequestBuilder extends BaseWorkbookFunctio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsAccrIntMRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
+    public WorkbookFunctionsAccrIntMRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, issue, settlement, rate, par, basis);
     }
 }

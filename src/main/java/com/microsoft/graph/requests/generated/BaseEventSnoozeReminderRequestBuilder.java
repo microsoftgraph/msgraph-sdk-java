@@ -30,7 +30,7 @@ public class BaseEventSnoozeReminderRequestBuilder extends BaseActionRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final DateTimeTimeZone newReminderTime) {
+    public BaseEventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DateTimeTimeZone newReminderTime) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("newReminderTime", newReminderTime);
     }
@@ -50,7 +50,7 @@ public class BaseEventSnoozeReminderRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return The IEventSnoozeReminderRequest instance
      */
-    public IEventSnoozeReminderRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IEventSnoozeReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         EventSnoozeReminderRequest request = new EventSnoozeReminderRequest(
                 getRequestUrl(),
                 getClient(),

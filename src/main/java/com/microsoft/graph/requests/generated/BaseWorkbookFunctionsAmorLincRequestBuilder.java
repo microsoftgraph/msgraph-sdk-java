@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsAmorLincRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsAmorLincRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsAmorLincRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("cost", cost);
         bodyParams.put("datePurchased", datePurchased);
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsAmorLincRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAmorLincRequest instance
      */
-    public IWorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAmorLincRequest request = new WorkbookFunctionsAmorLincRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BasePlannerProgre
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PlannerProgressTaskBoardTaskFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public PlannerProgressTaskBoardTaskFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerProgressTaskBoardTaskFormat.class);
     }
 }

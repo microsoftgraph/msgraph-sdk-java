@@ -31,7 +31,7 @@ public class BaseNotebookCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseNotebookCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseNotebookCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseNotebookCollectionRequestBuilder extends BaseRequestBuilder imp
         return buildRequest(getOptions());
     }
 
-    public INotebookCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public INotebookCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new NotebookCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

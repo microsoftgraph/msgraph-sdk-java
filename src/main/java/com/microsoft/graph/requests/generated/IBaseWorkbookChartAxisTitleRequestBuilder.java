@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartAxisTitleRequestBuilder extends IRequestBuild
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartAxisTitleRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartAxisTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartAxisTitleFormat.

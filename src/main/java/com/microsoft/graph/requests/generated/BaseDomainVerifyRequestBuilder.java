@@ -30,7 +30,7 @@ public class BaseDomainVerifyRequestBuilder extends BaseActionRequestBuilder {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDomainVerifyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDomainVerifyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseDomainVerifyRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IDomainVerifyRequest instance
      */
-    public IDomainVerifyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDomainVerifyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DomainVerifyRequest request = new DomainVerifyRequest(
                 getRequestUrl(),
                 getClient(),

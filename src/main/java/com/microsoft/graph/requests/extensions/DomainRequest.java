@@ -31,7 +31,7 @@ public class DomainRequest extends BaseDomainRequest implements IDomainRequest {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DomainRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DomainRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Domain.class);
     }
 }

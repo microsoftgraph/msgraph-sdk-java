@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsSinhRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSinhRequest instance
      */
-    IWorkbookFunctionsSinhRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsSinhRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

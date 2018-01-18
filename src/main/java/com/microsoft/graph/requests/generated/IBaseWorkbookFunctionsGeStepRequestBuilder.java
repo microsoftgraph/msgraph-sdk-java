@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsGeStepRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsGeStepRequest instance
      */
-    IWorkbookFunctionsGeStepRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsGeStepRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

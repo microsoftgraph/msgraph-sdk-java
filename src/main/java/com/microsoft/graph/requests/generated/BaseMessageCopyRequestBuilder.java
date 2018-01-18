@@ -30,7 +30,7 @@ public class BaseMessageCopyRequestBuilder extends BaseActionRequestBuilder {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String destinationId) {
+    public BaseMessageCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("destinationId", destinationId);
     }
@@ -50,7 +50,7 @@ public class BaseMessageCopyRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IMessageCopyRequest instance
      */
-    public IMessageCopyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMessageCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MessageCopyRequest request = new MessageCopyRequest(
                 getRequestUrl(),
                 getClient(),

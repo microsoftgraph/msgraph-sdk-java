@@ -31,7 +31,7 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseWorkbookRangeCo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +42,7 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseWorkbookRangeCo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer count) {
+    public WorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions, count);
     }
 }

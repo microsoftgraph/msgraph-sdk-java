@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsGamma_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
+    public BaseWorkbookFunctionsGamma_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("probability", probability);
         bodyParams.put("alpha", alpha);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsGamma_InvRequest instance
      */
-    public IWorkbookFunctionsGamma_InvRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsGamma_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGamma_InvRequest request = new WorkbookFunctionsGamma_InvRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookFunctionsLookupRequestBuilder extends BaseWorkbookFunctions
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsLookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
+    public WorkbookFunctionsLookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
         super(requestUrl, client, requestOptions, lookupValue, lookupVector, resultVector);
     }
 }

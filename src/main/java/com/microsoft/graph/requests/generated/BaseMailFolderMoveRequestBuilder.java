@@ -30,7 +30,7 @@ public class BaseMailFolderMoveRequestBuilder extends BaseActionRequestBuilder {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String destinationId) {
+    public BaseMailFolderMoveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("destinationId", destinationId);
     }
@@ -50,7 +50,7 @@ public class BaseMailFolderMoveRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IMailFolderMoveRequest instance
      */
-    public IMailFolderMoveRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMailFolderMoveRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MailFolderMoveRequest request = new MailFolderMoveRequest(
                 getRequestUrl(),
                 getClient(),

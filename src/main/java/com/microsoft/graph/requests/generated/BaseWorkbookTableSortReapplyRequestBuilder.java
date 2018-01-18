@@ -30,7 +30,7 @@ public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableSortReapplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableSortReapplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookTableSortReapplyRequest instance
      */
-    public IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableSortReapplyRequest request = new WorkbookTableSortReapplyRequest(
                 getRequestUrl(),
                 getClient(),

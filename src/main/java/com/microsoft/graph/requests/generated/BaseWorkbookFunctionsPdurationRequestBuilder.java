@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPdurationRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
+    public BaseWorkbookFunctionsPdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("rate", rate);
         bodyParams.put("pv", pv);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsPdurationRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPdurationRequest instance
      */
-    public IWorkbookFunctionsPdurationRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPdurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPdurationRequest request = new WorkbookFunctionsPdurationRequest(
                 getRequestUrl(),
                 getClient(),

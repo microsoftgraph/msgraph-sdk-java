@@ -31,7 +31,7 @@ public class BasePermissionCollectionRequestBuilder extends BaseRequestBuilder i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePermissionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePermissionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BasePermissionCollectionRequestBuilder extends BaseRequestBuilder i
         return buildRequest(getOptions());
     }
 
-    public IPermissionCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPermissionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PermissionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

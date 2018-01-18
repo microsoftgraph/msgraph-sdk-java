@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsCountRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCountRequest instance
      */
-    IWorkbookFunctionsCountRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsCountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

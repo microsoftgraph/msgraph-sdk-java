@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsAsinhRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsAsinhRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAsinhRequest instance
      */
-    public IWorkbookFunctionsAsinhRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsAsinhRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAsinhRequest request = new WorkbookFunctionsAsinhRequest(
                 getRequestUrl(),
                 getClient(),

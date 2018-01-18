@@ -37,5 +37,5 @@ public interface IBaseWorkbookFilterApplyIconFilterRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyIconFilterRequest instance
      */
-    IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

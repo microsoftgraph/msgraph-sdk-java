@@ -30,7 +30,7 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final DriveItemUploadableProperties item) {
+    public BaseDriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DriveItemUploadableProperties item) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("item", item);
     }
@@ -50,7 +50,7 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return The IDriveItemCreateUploadSessionRequest instance
      */
-    public IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveItemCreateUploadSessionRequest request = new DriveItemCreateUploadSessionRequest(
                 getRequestUrl(),
                 getClient(),

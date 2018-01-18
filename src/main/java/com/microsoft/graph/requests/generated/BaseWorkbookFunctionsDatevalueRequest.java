@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsDatevalueRequest extends BaseRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDatevalueRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsDatevalueRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsDatevalueBody();
     }

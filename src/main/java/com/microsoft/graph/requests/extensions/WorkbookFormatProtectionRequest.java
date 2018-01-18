@@ -31,7 +31,7 @@ public class WorkbookFormatProtectionRequest extends BaseWorkbookFormatProtectio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFormatProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFormatProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFormatProtection.class);
     }
 }

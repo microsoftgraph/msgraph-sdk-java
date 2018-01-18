@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsReceivedRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsReceivedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsReceivedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsReceivedRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsReceivedRequest instance
      */
-    public IWorkbookFunctionsReceivedRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsReceivedRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsReceivedRequest request = new WorkbookFunctionsReceivedRequest(
                 getRequestUrl(),
                 getClient(),

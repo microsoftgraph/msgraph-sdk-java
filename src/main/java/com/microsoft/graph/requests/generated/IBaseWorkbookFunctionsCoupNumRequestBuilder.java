@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsCoupNumRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCoupNumRequest instance
      */
-    IWorkbookFunctionsCoupNumRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsCoupNumRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

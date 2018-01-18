@@ -31,7 +31,7 @@ public class WorkbookFunctionsGamma_InvRequest extends BaseWorkbookFunctionsGamm
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsGamma_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsGamma_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

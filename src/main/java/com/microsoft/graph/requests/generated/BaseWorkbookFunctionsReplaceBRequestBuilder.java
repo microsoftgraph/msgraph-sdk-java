@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsReplaceBRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsReplaceBRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes, final com.google.gson.JsonElement newText) {
+    public BaseWorkbookFunctionsReplaceBRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes, final com.google.gson.JsonElement newText) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("oldText", oldText);
         bodyParams.put("startNum", startNum);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsReplaceBRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsReplaceBRequest instance
      */
-    public IWorkbookFunctionsReplaceBRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsReplaceBRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsReplaceBRequest request = new WorkbookFunctionsReplaceBRequest(
                 getRequestUrl(),
                 getClient(),

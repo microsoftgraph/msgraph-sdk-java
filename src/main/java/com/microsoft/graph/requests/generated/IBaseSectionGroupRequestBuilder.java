@@ -31,7 +31,7 @@ public interface IBaseSectionGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ISectionGroupRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for Notebook.

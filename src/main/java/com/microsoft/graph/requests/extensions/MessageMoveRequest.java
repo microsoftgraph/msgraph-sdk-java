@@ -31,7 +31,7 @@ public class MessageMoveRequest extends BaseMessageMoveRequest implements IMessa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MessageMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public MessageMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

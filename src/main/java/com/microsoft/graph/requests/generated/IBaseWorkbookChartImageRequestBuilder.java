@@ -37,5 +37,5 @@ public interface IBaseWorkbookChartImageRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IWorkbookChartImageRequest instance
      */
-    IWorkbookChartImageRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartImageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

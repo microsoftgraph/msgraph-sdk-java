@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsTodayRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsTodayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsTodayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsTodayRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTodayRequest instance
      */
-    public IWorkbookFunctionsTodayRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsTodayRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTodayRequest request = new WorkbookFunctionsTodayRequest(
                 getRequestUrl(),
                 getClient(),

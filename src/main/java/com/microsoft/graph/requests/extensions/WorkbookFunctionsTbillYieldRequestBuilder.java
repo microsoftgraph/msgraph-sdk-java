@@ -31,7 +31,7 @@ public class WorkbookFunctionsTbillYieldRequestBuilder extends BaseWorkbookFunct
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsTbillYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr) {
+    public WorkbookFunctionsTbillYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr) {
         super(requestUrl, client, requestOptions, settlement, maturity, pr);
     }
 }

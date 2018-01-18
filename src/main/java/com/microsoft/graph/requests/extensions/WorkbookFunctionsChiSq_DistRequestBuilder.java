@@ -31,7 +31,7 @@ public class WorkbookFunctionsChiSq_DistRequestBuilder extends BaseWorkbookFunct
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsChiSq_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsChiSq_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions, x, degFreedom, cumulative);
     }
 }

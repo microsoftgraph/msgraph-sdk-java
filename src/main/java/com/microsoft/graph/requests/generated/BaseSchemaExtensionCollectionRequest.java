@@ -32,7 +32,7 @@ public class BaseSchemaExtensionCollectionRequest extends BaseCollectionRequest<
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSchemaExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSchemaExtensionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseSchemaExtensionCollectionResponse.class, ISchemaExtensionCollectionPage.class);
     }
 

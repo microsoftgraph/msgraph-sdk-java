@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsUnicharRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsUnicharRequest instance
      */
-    IWorkbookFunctionsUnicharRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsUnicharRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

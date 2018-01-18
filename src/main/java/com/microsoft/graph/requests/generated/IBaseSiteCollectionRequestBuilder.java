@@ -26,7 +26,7 @@ public interface IBaseSiteCollectionRequestBuilder extends IRequestBuilder {
 
     ISiteCollectionRequest buildRequest();
 
-    ISiteCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISiteCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ISiteRequestBuilder byId(final String id);
 

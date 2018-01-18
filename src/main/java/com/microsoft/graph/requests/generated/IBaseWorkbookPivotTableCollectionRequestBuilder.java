@@ -26,7 +26,7 @@ public interface IBaseWorkbookPivotTableCollectionRequestBuilder extends IReques
 
     IWorkbookPivotTableCollectionRequest buildRequest();
 
-    IWorkbookPivotTableCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookPivotTableCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookPivotTableRequestBuilder byId(final String id);
 

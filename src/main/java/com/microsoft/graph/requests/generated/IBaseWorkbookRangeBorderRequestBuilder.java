@@ -31,6 +31,6 @@ public interface IBaseWorkbookRangeBorderRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookRangeBorderRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeBorderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

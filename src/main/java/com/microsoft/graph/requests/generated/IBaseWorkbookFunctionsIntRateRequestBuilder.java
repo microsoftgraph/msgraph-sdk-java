@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIntRateRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIntRateRequest instance
      */
-    IWorkbookFunctionsIntRateRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIntRateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

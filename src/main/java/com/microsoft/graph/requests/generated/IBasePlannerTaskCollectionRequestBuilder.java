@@ -26,7 +26,7 @@ public interface IBasePlannerTaskCollectionRequestBuilder extends IRequestBuilde
 
     IPlannerTaskCollectionRequest buildRequest();
 
-    IPlannerTaskCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPlannerTaskCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IPlannerTaskRequestBuilder byId(final String id);
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsLogNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsLogNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("mean", mean);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLogNorm_DistRequest instance
      */
-    public IWorkbookFunctionsLogNorm_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsLogNorm_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLogNorm_DistRequest request = new WorkbookFunctionsLogNorm_DistRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookRangeFormatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

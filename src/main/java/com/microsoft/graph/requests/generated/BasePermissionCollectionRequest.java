@@ -32,7 +32,7 @@ public class BasePermissionCollectionRequest extends BaseCollectionRequest<BaseP
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePermissionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BasePermissionCollectionResponse.class, IPermissionCollectionPage.class);
     }
 

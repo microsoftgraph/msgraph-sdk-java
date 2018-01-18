@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsMultiNomialRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMultiNomialRequest instance
      */
-    IWorkbookFunctionsMultiNomialRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsMultiNomialRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

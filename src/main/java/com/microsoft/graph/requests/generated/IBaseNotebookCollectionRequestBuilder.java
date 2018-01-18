@@ -26,7 +26,7 @@ public interface IBaseNotebookCollectionRequestBuilder extends IRequestBuilder {
 
     INotebookCollectionRequest buildRequest();
 
-    INotebookCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    INotebookCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     INotebookRequestBuilder byId(final String id);
 

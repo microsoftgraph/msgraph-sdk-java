@@ -32,7 +32,7 @@ public class BaseMessageReplyAllRequest extends BaseRequest implements IBaseMess
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMessageReplyAllRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMessageReplyAllRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new MessageReplyAllBody();
     }

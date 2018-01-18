@@ -31,7 +31,7 @@ public class BaseGroupSubscribeByMailRequest extends BaseRequest implements IBas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupSubscribeByMailRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupSubscribeByMailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
     }
 

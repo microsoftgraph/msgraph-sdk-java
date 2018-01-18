@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Tests for OneNote API functionality
  */
-@Ignore
+//@Ignore
 public class OneNoteTests {
 
 	private IOnenoteRequestBuilder orb;
@@ -185,7 +185,7 @@ public class OneNoteTests {
         assert(countedBooks.getRawObject().get("@odata.count").getAsInt() > 0);
 
         // Test PageLevel on pages
-        List<Option> pageLevelOptions = new ArrayList<Option>();
+        List<QueryOption> pageLevelOptions = new ArrayList<QueryOption>();
         pageLevelOptions.add(new QueryOption("pagelevel", "true"));
         IOnenotePageCollectionPage pageLevelPages = orb
         		.sections(testSection.id)

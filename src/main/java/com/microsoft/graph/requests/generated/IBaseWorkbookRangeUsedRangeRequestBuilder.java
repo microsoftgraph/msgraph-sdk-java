@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeUsedRangeRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeUsedRangeRequest instance
      */
-    IWorkbookRangeUsedRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeUsedRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

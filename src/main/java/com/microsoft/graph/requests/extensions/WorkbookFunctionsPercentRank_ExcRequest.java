@@ -31,7 +31,7 @@ public class WorkbookFunctionsPercentRank_ExcRequest extends BaseWorkbookFunctio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsPercentRank_ExcRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsPercentRank_ExcRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

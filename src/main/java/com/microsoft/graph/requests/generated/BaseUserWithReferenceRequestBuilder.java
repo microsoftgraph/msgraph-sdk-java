@@ -31,7 +31,7 @@ public class BaseUserWithReferenceRequestBuilder extends BaseRequestBuilder impl
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseUserWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseUserWithReferenceRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request with specific options instead of the existing options
      */
-    public IUserWithReferenceRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IUserWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new UserWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

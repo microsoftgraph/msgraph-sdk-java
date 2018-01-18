@@ -31,7 +31,7 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IGroupRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new GroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

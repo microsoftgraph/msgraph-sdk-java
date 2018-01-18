@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNominalRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsNominalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement effectRate, final com.google.gson.JsonElement npery) {
+    public BaseWorkbookFunctionsNominalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement effectRate, final com.google.gson.JsonElement npery) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("effectRate", effectRate);
         bodyParams.put("npery", npery);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNominalRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNominalRequest instance
      */
-    public IWorkbookFunctionsNominalRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsNominalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNominalRequest request = new WorkbookFunctionsNominalRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookFunctionsExpon_DistRequest extends BaseWorkbookFunctionsExp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsExpon_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsExpon_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

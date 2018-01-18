@@ -31,6 +31,6 @@ public interface IBaseWorkbookFormatProtectionRequestBuilder extends IRequestBui
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookFormatProtectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFormatProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

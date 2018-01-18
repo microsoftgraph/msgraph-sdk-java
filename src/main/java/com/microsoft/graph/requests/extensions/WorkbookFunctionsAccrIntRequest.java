@@ -31,7 +31,7 @@ public class WorkbookFunctionsAccrIntRequest extends BaseWorkbookFunctionsAccrIn
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsAccrIntRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsAccrIntRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

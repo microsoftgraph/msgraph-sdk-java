@@ -30,7 +30,7 @@ public class BaseWorkbookRangeEntireColumnRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeEntireColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeEntireColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeEntireColumnRequestBuilder extends BaseFunctionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeEntireColumnRequest instance
      */
-    public IWorkbookRangeEntireColumnRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeEntireColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeEntireColumnRequest request = new WorkbookRangeEntireColumnRequest(
                 getRequestUrl(),
                 getClient(),

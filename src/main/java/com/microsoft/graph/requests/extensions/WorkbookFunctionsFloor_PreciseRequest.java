@@ -31,7 +31,7 @@ public class WorkbookFunctionsFloor_PreciseRequest extends BaseWorkbookFunctions
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsFloor_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsFloor_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

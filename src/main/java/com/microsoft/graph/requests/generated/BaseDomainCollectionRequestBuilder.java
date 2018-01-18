@@ -31,7 +31,7 @@ public class BaseDomainCollectionRequestBuilder extends BaseRequestBuilder imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDomainCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDomainCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseDomainCollectionRequestBuilder extends BaseRequestBuilder imple
         return buildRequest(getOptions());
     }
 
-    public IDomainCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDomainCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DomainCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

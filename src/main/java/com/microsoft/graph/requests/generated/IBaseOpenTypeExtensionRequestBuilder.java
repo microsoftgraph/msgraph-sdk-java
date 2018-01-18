@@ -31,6 +31,6 @@ public interface IBaseOpenTypeExtensionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOpenTypeExtensionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOpenTypeExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

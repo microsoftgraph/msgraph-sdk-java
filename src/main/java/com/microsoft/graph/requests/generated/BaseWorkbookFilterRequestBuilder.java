@@ -31,7 +31,7 @@ public class BaseWorkbookFilterRequestBuilder extends BaseRequestBuilder impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookFilterRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookFilterRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookFilterRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

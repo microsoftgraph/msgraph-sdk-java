@@ -30,7 +30,7 @@ public class BaseWorkbookRangeInsertRequestBuilder extends BaseActionRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeInsertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String shift) {
+    public BaseWorkbookRangeInsertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String shift) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("shift", shift);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookRangeInsertRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeInsertRequest instance
      */
-    public IWorkbookRangeInsertRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeInsertRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeInsertRequest request = new WorkbookRangeInsertRequest(
                 getRequestUrl(),
                 getClient(),

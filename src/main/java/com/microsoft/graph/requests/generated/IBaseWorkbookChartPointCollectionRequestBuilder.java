@@ -26,7 +26,7 @@ public interface IBaseWorkbookChartPointCollectionRequestBuilder extends IReques
 
     IWorkbookChartPointCollectionRequest buildRequest();
 
-    IWorkbookChartPointCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartPointCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookChartPointRequestBuilder byId(final String id);
 

@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeLastRowRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeLastRowRequest instance
      */
-    IWorkbookRangeLastRowRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeLastRowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

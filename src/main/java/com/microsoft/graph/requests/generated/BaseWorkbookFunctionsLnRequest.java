@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsLnRequest extends BaseRequest implements IBase
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsLnRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsLnRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsLnBody();
     }

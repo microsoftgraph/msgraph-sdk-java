@@ -30,7 +30,7 @@ public class BaseEventDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseEventDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +38,7 @@ public class BaseEventDeltaCollectionRequestBuilder extends BaseFunctionRequestB
         return buildRequest(getOptions());
     }
 
-    public IEventDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IEventDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         EventDeltaCollectionRequest request = new EventDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

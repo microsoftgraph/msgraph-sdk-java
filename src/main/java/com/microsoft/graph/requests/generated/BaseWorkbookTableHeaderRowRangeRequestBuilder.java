@@ -30,7 +30,7 @@ public class BaseWorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableHeaderRowRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableHeaderRowRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionR
      * @param requestOptions the options for the request
      * @return The IWorkbookTableHeaderRowRangeRequest instance
      */
-    public IWorkbookTableHeaderRowRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableHeaderRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableHeaderRowRangeRequest request = new WorkbookTableHeaderRowRangeRequest(
                 getRequestUrl(),
                 getClient(),

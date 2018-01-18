@@ -31,7 +31,7 @@ public interface IBaseDriveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDriveRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDriveItemCollectionRequestBuilder items();
 

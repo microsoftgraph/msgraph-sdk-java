@@ -31,7 +31,7 @@ public class WorkbookFilterApplyDynamicFilterRequestBuilder extends BaseWorkbook
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFilterApplyDynamicFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String criteria) {
+    public WorkbookFilterApplyDynamicFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String criteria) {
         super(requestUrl, client, requestOptions, criteria);
     }
 }

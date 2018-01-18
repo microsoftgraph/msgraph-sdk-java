@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsLeftRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLeftRequest instance
      */
-    IWorkbookFunctionsLeftRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsLeftRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

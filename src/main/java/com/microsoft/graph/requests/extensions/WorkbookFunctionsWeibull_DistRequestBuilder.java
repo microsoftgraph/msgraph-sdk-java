@@ -31,7 +31,7 @@ public class WorkbookFunctionsWeibull_DistRequestBuilder extends BaseWorkbookFun
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsWeibull_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+    public WorkbookFunctionsWeibull_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions, x, alpha, beta, cumulative);
     }
 }

@@ -31,11 +31,11 @@ import com.microsoft.graph.options.QueryOption;
 
 public class CustomRequest extends BaseRequest {
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Class responseClass) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, JsonObject.class);
     }
 

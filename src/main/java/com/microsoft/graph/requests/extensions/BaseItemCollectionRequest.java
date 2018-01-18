@@ -31,7 +31,7 @@ public class BaseItemCollectionRequest extends BaseBaseItemCollectionRequest imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseItemCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseItemCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

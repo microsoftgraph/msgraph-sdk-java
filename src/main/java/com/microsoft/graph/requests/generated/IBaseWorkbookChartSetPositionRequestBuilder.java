@@ -37,5 +37,5 @@ public interface IBaseWorkbookChartSetPositionRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookChartSetPositionRequest instance
      */
-    IWorkbookChartSetPositionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

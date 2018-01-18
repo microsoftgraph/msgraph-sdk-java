@@ -26,7 +26,7 @@ public interface IBaseInvitationCollectionRequestBuilder extends IRequestBuilder
 
     IInvitationCollectionRequest buildRequest();
 
-    IInvitationCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IInvitationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IInvitationRequestBuilder byId(final String id);
 

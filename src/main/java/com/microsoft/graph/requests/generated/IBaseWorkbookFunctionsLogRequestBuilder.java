@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsLogRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLogRequest instance
      */
-    IWorkbookFunctionsLogRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsLogRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

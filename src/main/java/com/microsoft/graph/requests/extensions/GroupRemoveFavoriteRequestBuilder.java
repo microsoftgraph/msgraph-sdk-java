@@ -31,7 +31,7 @@ public class GroupRemoveFavoriteRequestBuilder extends BaseGroupRemoveFavoriteRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public GroupRemoveFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public GroupRemoveFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

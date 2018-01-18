@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsFloor_MathRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFloor_MathRequest instance
      */
-    IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

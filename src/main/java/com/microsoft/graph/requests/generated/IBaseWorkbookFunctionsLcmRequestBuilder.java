@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsLcmRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLcmRequest instance
      */
-    IWorkbookFunctionsLcmRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsLcmRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

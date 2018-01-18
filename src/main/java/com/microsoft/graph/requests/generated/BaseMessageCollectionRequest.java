@@ -32,7 +32,7 @@ public class BaseMessageCollectionRequest extends BaseCollectionRequest<BaseMess
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMessageCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseMessageCollectionResponse.class, IMessageCollectionPage.class);
     }
 

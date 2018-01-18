@@ -31,7 +31,7 @@ public class WorkbookFunctionsGeoMeanRequest extends BaseWorkbookFunctionsGeoMea
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsGeoMeanRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsGeoMeanRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

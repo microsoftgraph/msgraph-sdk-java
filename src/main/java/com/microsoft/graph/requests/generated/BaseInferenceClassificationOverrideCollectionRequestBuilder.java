@@ -31,7 +31,7 @@ public class BaseInferenceClassificationOverrideCollectionRequestBuilder extends
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseInferenceClassificationOverrideCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseInferenceClassificationOverrideCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseInferenceClassificationOverrideCollectionRequestBuilder extends
         return buildRequest(getOptions());
     }
 
-    public IInferenceClassificationOverrideCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IInferenceClassificationOverrideCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new InferenceClassificationOverrideCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

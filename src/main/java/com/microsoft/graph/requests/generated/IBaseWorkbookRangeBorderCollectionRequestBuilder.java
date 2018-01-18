@@ -26,7 +26,7 @@ public interface IBaseWorkbookRangeBorderCollectionRequestBuilder extends IReque
 
     IWorkbookRangeBorderCollectionRequest buildRequest();
 
-    IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeBorderCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookRangeBorderRequestBuilder byId(final String id);
 

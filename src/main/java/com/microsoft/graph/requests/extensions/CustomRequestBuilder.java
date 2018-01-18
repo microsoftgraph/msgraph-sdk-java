@@ -11,7 +11,7 @@ import com.microsoft.graph.options.Option;
 public class CustomRequestBuilder extends BaseRequestBuilder {
 	public final Class responseType; 
 	
-	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<Option> requestOptions, final Class responseType) {
+	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class responseType) {
 		super(requestUrl, client, requestOptions);
 		this.responseType = responseType;
 	}
@@ -20,7 +20,7 @@ public class CustomRequestBuilder extends BaseRequestBuilder {
 		return buildRequest(getOptions());
 	}
 	
-	public CustomRequest buildRequest(final List<Option> requestOptions) {
+	public CustomRequest buildRequest(final List<? extends Option> requestOptions) {
 		return new CustomRequest(getRequestUrl(), getClient(), requestOptions, responseType);
 	}
 }

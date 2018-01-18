@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsLenRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLenRequest instance
      */
-    IWorkbookFunctionsLenRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsLenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

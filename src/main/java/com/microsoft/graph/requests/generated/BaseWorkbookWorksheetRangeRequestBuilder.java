@@ -30,7 +30,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -40,7 +40,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String address) {
+    public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String address) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("address", address));
     }
@@ -60,7 +60,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookWorksheetRangeRequest instance
      */
-    public IWorkbookWorksheetRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookWorksheetRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetRangeRequest request = new WorkbookWorksheetRangeRequest(
                 getRequestUrl(),
                 getClient(),

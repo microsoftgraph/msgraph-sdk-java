@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsPdurationRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPdurationRequest instance
      */
-    IWorkbookFunctionsPdurationRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsPdurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

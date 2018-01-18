@@ -31,7 +31,7 @@ public class DriveRecentCollectionRequest extends BaseDriveRecentCollectionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DriveRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

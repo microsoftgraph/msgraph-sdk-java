@@ -30,7 +30,7 @@ public class BaseDriveSearchCollectionRequestBuilder extends BaseFunctionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String q) {
+    public BaseDriveSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String q) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("q", q));
       }
@@ -39,7 +39,7 @@ public class BaseDriveSearchCollectionRequestBuilder extends BaseFunctionRequest
         return buildRequest(getOptions());
     }
 
-    public IDriveSearchCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveSearchCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveSearchCollectionRequest request = new DriveSearchCollectionRequest(
                 getRequestUrl(),
                 getClient(),

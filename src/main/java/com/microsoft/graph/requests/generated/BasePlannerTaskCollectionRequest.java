@@ -32,7 +32,7 @@ public class BasePlannerTaskCollectionRequest extends BaseCollectionRequest<Base
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BasePlannerTaskCollectionResponse.class, IPlannerTaskCollectionPage.class);
     }
 

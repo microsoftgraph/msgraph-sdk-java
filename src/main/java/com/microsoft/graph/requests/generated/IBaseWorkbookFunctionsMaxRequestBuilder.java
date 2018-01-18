@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsMaxRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMaxRequest instance
      */
-    IWorkbookFunctionsMaxRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsMaxRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

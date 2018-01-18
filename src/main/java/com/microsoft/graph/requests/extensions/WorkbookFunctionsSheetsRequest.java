@@ -31,7 +31,7 @@ public class WorkbookFunctionsSheetsRequest extends BaseWorkbookFunctionsSheetsR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsSheetsRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsSheetsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

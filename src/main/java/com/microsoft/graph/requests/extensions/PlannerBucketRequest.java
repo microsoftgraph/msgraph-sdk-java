@@ -31,7 +31,7 @@ public class PlannerBucketRequest extends BasePlannerBucketRequest implements IP
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PlannerBucketRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public PlannerBucketRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerBucket.class);
     }
 }

@@ -31,7 +31,7 @@ public class BaseProfilePhotoCollectionRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseProfilePhotoCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseProfilePhotoCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseProfilePhotoCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public IProfilePhotoCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IProfilePhotoCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ProfilePhotoCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

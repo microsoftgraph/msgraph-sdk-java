@@ -30,7 +30,7 @@ public class BaseWorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartPointItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
+    public BaseWorkbookChartPointItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("index", index));
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookChartPointItemAtRequest instance
      */
-    public IWorkbookChartPointItemAtRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartPointItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartPointItemAtRequest request = new WorkbookChartPointItemAtRequest(
                 getRequestUrl(),
                 getClient(),

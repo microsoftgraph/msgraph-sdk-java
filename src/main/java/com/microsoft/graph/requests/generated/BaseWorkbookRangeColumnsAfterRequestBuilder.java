@@ -30,7 +30,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -40,7 +40,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer count) {
+    public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("count", count));
     }
@@ -60,7 +60,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeColumnsAfterRequest instance
      */
-    public IWorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeColumnsAfterRequest request = new WorkbookRangeColumnsAfterRequest(
                 getRequestUrl(),
                 getClient(),

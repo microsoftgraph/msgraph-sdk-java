@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsVdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
+    public BaseWorkbookFunctionsVdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("cost", cost);
         bodyParams.put("salvage", salvage);
@@ -56,7 +56,7 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsVdbRequest instance
      */
-    public IWorkbookFunctionsVdbRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsVdbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsVdbRequest request = new WorkbookFunctionsVdbRequest(
                 getRequestUrl(),
                 getClient(),

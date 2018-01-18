@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableHeaderRowRangeRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookTableHeaderRowRangeRequest instance
      */
-    IWorkbookTableHeaderRowRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableHeaderRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

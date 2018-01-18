@@ -31,7 +31,7 @@ public class BaseConversationCollectionRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseConversationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseConversationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseConversationCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public IConversationCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IConversationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ConversationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

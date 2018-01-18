@@ -26,6 +26,6 @@ public interface IBaseMailFolderDeltaCollectionRequestBuilder extends IRequestBu
 
     IMailFolderDeltaCollectionRequest buildRequest();
 
-    IMailFolderDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMailFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

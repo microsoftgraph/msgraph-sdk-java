@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsHlookupRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsHlookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement rowIndexNum, final com.google.gson.JsonElement rangeLookup) {
+    public BaseWorkbookFunctionsHlookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement rowIndexNum, final com.google.gson.JsonElement rangeLookup) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("lookupValue", lookupValue);
         bodyParams.put("tableArray", tableArray);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsHlookupRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsHlookupRequest instance
      */
-    public IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHlookupRequest request = new WorkbookFunctionsHlookupRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookChartPointItemAtRequest extends BaseWorkbookChartPointItemA
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartPointItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookChartPointItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

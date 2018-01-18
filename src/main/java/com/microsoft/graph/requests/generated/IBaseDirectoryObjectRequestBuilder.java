@@ -31,7 +31,7 @@ public interface IBaseDirectoryObjectRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryObjectRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDeviceRequestBuilder device();
 

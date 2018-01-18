@@ -31,7 +31,7 @@ public class WorkbookFunctionsDevSqRequest extends BaseWorkbookFunctionsDevSqReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDevSqRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsDevSqRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

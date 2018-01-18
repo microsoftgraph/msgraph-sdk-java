@@ -32,7 +32,7 @@ public class BaseWorkbookChartSetPositionRequest extends BaseRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartSetPositionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartSetPositionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookChartSetPositionBody();
     }

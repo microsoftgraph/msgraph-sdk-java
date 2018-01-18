@@ -67,7 +67,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,
-                                 final List<Option> options,
+                                 final List<? extends Option> options,
                                  final Class<T1> responseClass,
                                  final Class<T2> collectionPageClass) {
         this.responseClass = responseClass;

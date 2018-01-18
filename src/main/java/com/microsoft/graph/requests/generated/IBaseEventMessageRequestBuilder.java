@@ -31,7 +31,7 @@ public interface IBaseEventMessageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IEventMessageRequest buildRequest(final java.util.List<Option> requestOptions);
+    IEventMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for Event.

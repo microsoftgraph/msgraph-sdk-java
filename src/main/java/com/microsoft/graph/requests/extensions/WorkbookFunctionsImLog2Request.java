@@ -31,7 +31,7 @@ public class WorkbookFunctionsImLog2Request extends BaseWorkbookFunctionsImLog2R
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsImLog2Request(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsImLog2Request(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

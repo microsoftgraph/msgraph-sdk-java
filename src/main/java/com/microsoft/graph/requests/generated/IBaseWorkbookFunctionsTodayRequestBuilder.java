@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsTodayRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTodayRequest instance
      */
-    IWorkbookFunctionsTodayRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsTodayRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsAtan2RequestBuilder extends BaseWorkbookFunctionsA
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsAtan2RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement xNum, final com.google.gson.JsonElement yNum) {
+    public WorkbookFunctionsAtan2RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement xNum, final com.google.gson.JsonElement yNum) {
         super(requestUrl, client, requestOptions, xNum, yNum);
     }
 }

@@ -26,7 +26,7 @@ public interface IBaseContactCollectionRequestBuilder extends IRequestBuilder {
 
     IContactCollectionRequest buildRequest();
 
-    IContactCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IContactCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IContactRequestBuilder byId(final String id);
 

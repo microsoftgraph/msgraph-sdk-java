@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsZ_TestRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsZ_TestRequest instance
      */
-    IWorkbookFunctionsZ_TestRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsZ_TestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

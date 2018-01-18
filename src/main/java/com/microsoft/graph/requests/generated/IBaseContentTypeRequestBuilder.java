@@ -31,7 +31,7 @@ public interface IBaseContentTypeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IContentTypeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IColumnLinkCollectionRequestBuilder columnLinks();
 

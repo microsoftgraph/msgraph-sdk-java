@@ -31,7 +31,7 @@ public class WorkbookFunctionsCountIfRequestBuilder extends BaseWorkbookFunction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsCountIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria) {
+    public WorkbookFunctionsCountIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions, range, criteria);
     }
 }

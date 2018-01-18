@@ -34,7 +34,7 @@ public class BaseWorkbookChartLineFormatRequest extends BaseRequest implements I
      */
     public BaseWorkbookChartLineFormatRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

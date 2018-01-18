@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsTbillEqRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTbillEqRequest instance
      */
-    IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

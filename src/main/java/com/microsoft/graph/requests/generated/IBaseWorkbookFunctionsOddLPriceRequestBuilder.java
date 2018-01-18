@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsOddLPriceRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsOddLPriceRequest instance
      */
-    IWorkbookFunctionsOddLPriceRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsOddLPriceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

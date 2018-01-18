@@ -30,7 +30,7 @@ public class BaseDriveRecentCollectionRequestBuilder extends BaseFunctionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveRecentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveRecentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +38,7 @@ public class BaseDriveRecentCollectionRequestBuilder extends BaseFunctionRequest
         return buildRequest(getOptions());
     }
 
-    public IDriveRecentCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveRecentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveRecentCollectionRequest request = new DriveRecentCollectionRequest(
                 getRequestUrl(),
                 getClient(),

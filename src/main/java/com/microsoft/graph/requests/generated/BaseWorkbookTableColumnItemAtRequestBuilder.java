@@ -30,7 +30,7 @@ public class BaseWorkbookTableColumnItemAtRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableColumnItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
+    public BaseWorkbookTableColumnItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("index", index));
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookTableColumnItemAtRequestBuilder extends BaseFunctionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnItemAtRequest instance
      */
-    public IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnItemAtRequest request = new WorkbookTableColumnItemAtRequest(
                 getRequestUrl(),
                 getClient(),

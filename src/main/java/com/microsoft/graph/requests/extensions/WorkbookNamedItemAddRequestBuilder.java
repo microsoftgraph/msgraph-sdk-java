@@ -31,7 +31,7 @@ public class WorkbookNamedItemAddRequestBuilder extends BaseWorkbookNamedItemAdd
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookNamedItemAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final com.google.gson.JsonElement reference, final String comment) {
+    public WorkbookNamedItemAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final com.google.gson.JsonElement reference, final String comment) {
         super(requestUrl, client, requestOptions, name, reference, comment);
     }
 }

@@ -30,7 +30,7 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserFindMeetingTimesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
+    public BaseUserFindMeetingTimesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("attendees", attendees);
         bodyParams.put("locationConstraint", locationConstraint);
@@ -57,7 +57,7 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IUserFindMeetingTimesRequest instance
      */
-    public IUserFindMeetingTimesRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IUserFindMeetingTimesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         UserFindMeetingTimesRequest request = new UserFindMeetingTimesRequest(
                 getRequestUrl(),
                 getClient(),

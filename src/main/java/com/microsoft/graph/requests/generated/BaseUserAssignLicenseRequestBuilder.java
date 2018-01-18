@@ -30,7 +30,7 @@ public class BaseUserAssignLicenseRequestBuilder extends BaseActionRequestBuilde
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
+    public BaseUserAssignLicenseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("addLicenses", addLicenses);
         bodyParams.put("removeLicenses", removeLicenses);
@@ -51,7 +51,7 @@ public class BaseUserAssignLicenseRequestBuilder extends BaseActionRequestBuilde
      * @param requestOptions the options for the request
      * @return The IUserAssignLicenseRequest instance
      */
-    public IUserAssignLicenseRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IUserAssignLicenseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         UserAssignLicenseRequest request = new UserAssignLicenseRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class MessageCreateReplyRequestBuilder extends BaseMessageCreateReplyRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MessageCreateReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public MessageCreateReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

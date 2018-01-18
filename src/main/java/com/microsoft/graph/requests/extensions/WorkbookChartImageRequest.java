@@ -31,7 +31,7 @@ public class WorkbookChartImageRequest extends BaseWorkbookChartImageRequest imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartImageRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookChartImageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

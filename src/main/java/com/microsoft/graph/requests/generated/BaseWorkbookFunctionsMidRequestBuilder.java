@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMidRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsMidRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numChars) {
+    public BaseWorkbookFunctionsMidRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numChars) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
         bodyParams.put("startNum", startNum);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsMidRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMidRequest instance
      */
-    public IWorkbookFunctionsMidRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsMidRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMidRequest request = new WorkbookFunctionsMidRequest(
                 getRequestUrl(),
                 getClient(),

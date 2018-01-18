@@ -31,7 +31,7 @@ public class WorkbookFunctionsModRequestBuilder extends BaseWorkbookFunctionsMod
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsModRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement divisor) {
+    public WorkbookFunctionsModRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement divisor) {
         super(requestUrl, client, requestOptions, number, divisor);
     }
 }

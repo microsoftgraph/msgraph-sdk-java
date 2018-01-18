@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
+    public BaseWorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("significance", significance);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFloor_MathRequest instance
      */
-    public IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFloor_MathRequest request = new WorkbookFunctionsFloor_MathRequest(
                 getRequestUrl(),
                 getClient(),

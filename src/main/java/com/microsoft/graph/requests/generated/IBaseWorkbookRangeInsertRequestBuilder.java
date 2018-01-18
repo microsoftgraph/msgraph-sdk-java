@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeInsertRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeInsertRequest instance
      */
-    IWorkbookRangeInsertRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeInsertRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

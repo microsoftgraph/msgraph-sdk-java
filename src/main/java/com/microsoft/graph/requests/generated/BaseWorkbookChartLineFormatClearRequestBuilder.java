@@ -30,7 +30,7 @@ public class BaseWorkbookChartLineFormatClearRequestBuilder extends BaseActionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartLineFormatClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartLineFormatClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookChartLineFormatClearRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return The IWorkbookChartLineFormatClearRequest instance
      */
-    public IWorkbookChartLineFormatClearRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartLineFormatClearRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartLineFormatClearRequest request = new WorkbookChartLineFormatClearRequest(
                 getRequestUrl(),
                 getClient(),

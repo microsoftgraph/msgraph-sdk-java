@@ -31,7 +31,7 @@ public class BaseColumnLinkCollectionRequestBuilder extends BaseRequestBuilder i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseColumnLinkCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseColumnLinkCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseColumnLinkCollectionRequestBuilder extends BaseRequestBuilder i
         return buildRequest(getOptions());
     }
 
-    public IColumnLinkCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IColumnLinkCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ColumnLinkCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

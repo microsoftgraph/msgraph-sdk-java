@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsLogNorm_DistRequest extends BaseRequest implem
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsLogNorm_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsLogNorm_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsLogNorm_DistBody();
     }

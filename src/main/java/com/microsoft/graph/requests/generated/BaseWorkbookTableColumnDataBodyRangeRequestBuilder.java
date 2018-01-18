@@ -30,7 +30,7 @@ public class BaseWorkbookTableColumnDataBodyRangeRequestBuilder extends BaseFunc
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableColumnDataBodyRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableColumnDataBodyRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookTableColumnDataBodyRangeRequestBuilder extends BaseFunc
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnDataBodyRangeRequest instance
      */
-    public IWorkbookTableColumnDataBodyRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableColumnDataBodyRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnDataBodyRangeRequest request = new WorkbookTableColumnDataBodyRangeRequest(
                 getRequestUrl(),
                 getClient(),

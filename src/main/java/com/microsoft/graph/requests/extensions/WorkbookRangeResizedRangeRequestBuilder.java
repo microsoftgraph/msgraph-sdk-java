@@ -31,7 +31,7 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseWorkbookRangeRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeResizedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer deltaRows, final Integer deltaColumns) {
+    public WorkbookRangeResizedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer deltaRows, final Integer deltaColumns) {
         super(requestUrl, client, requestOptions, deltaRows, deltaColumns);
     }
 }

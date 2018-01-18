@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsConfidence_NormRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
+    public BaseWorkbookFunctionsConfidence_NormRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("alpha", alpha);
         bodyParams.put("standardDev", standardDev);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsConfidence_NormRequest instance
      */
-    public IWorkbookFunctionsConfidence_NormRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsConfidence_NormRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsConfidence_NormRequest request = new WorkbookFunctionsConfidence_NormRequest(
                 getRequestUrl(),
                 getClient(),

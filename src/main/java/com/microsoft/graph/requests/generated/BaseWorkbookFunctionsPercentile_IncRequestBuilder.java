@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPercentile_IncRequestBuilder extends BaseActio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPercentile_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+    public BaseWorkbookFunctionsPercentile_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("k", k);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPercentile_IncRequestBuilder extends BaseActio
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPercentile_IncRequest instance
      */
-    public IWorkbookFunctionsPercentile_IncRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPercentile_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPercentile_IncRequest request = new WorkbookFunctionsPercentile_IncRequest(
                 getRequestUrl(),
                 getClient(),

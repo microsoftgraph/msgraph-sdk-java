@@ -31,7 +31,7 @@ public interface IBaseWorkbookRangeSortRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookRangeSortRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeSortRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookRangeSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method);
 
 }

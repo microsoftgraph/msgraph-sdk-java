@@ -30,7 +30,7 @@ public class BaseGroupResetUnseenCountRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupResetUnseenCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupResetUnseenCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseGroupResetUnseenCountRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IGroupResetUnseenCountRequest instance
      */
-    public IGroupResetUnseenCountRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IGroupResetUnseenCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         GroupResetUnseenCountRequest request = new GroupResetUnseenCountRequest(
                 getRequestUrl(),
                 getClient(),

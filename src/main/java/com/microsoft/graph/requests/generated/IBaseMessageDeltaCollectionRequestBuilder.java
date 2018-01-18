@@ -26,6 +26,6 @@ public interface IBaseMessageDeltaCollectionRequestBuilder extends IRequestBuild
 
     IMessageDeltaCollectionRequest buildRequest();
 
-    IMessageDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMessageDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

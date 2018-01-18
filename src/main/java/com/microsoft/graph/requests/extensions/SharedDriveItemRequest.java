@@ -31,7 +31,7 @@ public class SharedDriveItemRequest extends BaseSharedDriveItemRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public SharedDriveItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public SharedDriveItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedDriveItem.class);
     }
 }

@@ -31,6 +31,6 @@ public interface IBaseDomainDnsMxRecordRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDomainDnsMxRecordRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDomainDnsMxRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

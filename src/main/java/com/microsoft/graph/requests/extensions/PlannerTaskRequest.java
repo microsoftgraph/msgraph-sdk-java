@@ -31,7 +31,7 @@ public class PlannerTaskRequest extends BasePlannerTaskRequest implements IPlann
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PlannerTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public PlannerTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerTask.class);
     }
 }

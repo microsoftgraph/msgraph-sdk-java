@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCombinaRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCombinaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+    public BaseWorkbookFunctionsCombinaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("numberChosen", numberChosen);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsCombinaRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCombinaRequest instance
      */
-    public IWorkbookFunctionsCombinaRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCombinaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCombinaRequest request = new WorkbookFunctionsCombinaRequest(
                 getRequestUrl(),
                 getClient(),

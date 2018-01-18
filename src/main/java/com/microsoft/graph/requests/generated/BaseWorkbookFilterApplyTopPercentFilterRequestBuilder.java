@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseA
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFilterApplyTopPercentFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer percent) {
+    public BaseWorkbookFilterApplyTopPercentFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer percent) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("percent", percent);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseA
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyTopPercentFilterRequest instance
      */
-    public IWorkbookFilterApplyTopPercentFilterRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFilterApplyTopPercentFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyTopPercentFilterRequest request = new WorkbookFilterApplyTopPercentFilterRequest(
                 getRequestUrl(),
                 getClient(),

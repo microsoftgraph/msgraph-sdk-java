@@ -32,7 +32,7 @@ public class BaseOnenoteOperationCollectionRequest extends BaseCollectionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenoteOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenoteOperationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseOnenoteOperationCollectionResponse.class, IOnenoteOperationCollectionPage.class);
     }
 

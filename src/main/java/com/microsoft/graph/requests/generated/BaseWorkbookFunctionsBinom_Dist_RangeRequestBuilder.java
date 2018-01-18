@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseAct
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement numberS2) {
+    public BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement numberS2) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("trials", trials);
         bodyParams.put("probabilityS", probabilityS);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseAct
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBinom_Dist_RangeRequest instance
      */
-    public IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBinom_Dist_RangeRequest request = new WorkbookFunctionsBinom_Dist_RangeRequest(
                 getRequestUrl(),
                 getClient(),

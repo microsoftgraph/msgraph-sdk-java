@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPowerRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPowerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement power) {
+    public BaseWorkbookFunctionsPowerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement power) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("power", power);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPowerRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPowerRequest instance
      */
-    public IWorkbookFunctionsPowerRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPowerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPowerRequest request = new WorkbookFunctionsPowerRequest(
                 getRequestUrl(),
                 getClient(),

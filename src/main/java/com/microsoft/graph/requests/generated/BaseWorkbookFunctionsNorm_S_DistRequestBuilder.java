@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNorm_S_DistRequestBuilder extends BaseActionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsNorm_S_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement z, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsNorm_S_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement z, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("z", z);
         bodyParams.put("cumulative", cumulative);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNorm_S_DistRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNorm_S_DistRequest instance
      */
-    public IWorkbookFunctionsNorm_S_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsNorm_S_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNorm_S_DistRequest request = new WorkbookFunctionsNorm_S_DistRequest(
                 getRequestUrl(),
                 getClient(),

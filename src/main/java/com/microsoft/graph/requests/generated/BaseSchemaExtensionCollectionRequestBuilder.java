@@ -31,7 +31,7 @@ public class BaseSchemaExtensionCollectionRequestBuilder extends BaseRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSchemaExtensionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSchemaExtensionCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseSchemaExtensionCollectionRequestBuilder extends BaseRequestBuil
         return buildRequest(getOptions());
     }
 
-    public ISchemaExtensionCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISchemaExtensionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SchemaExtensionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -26,6 +26,6 @@ public interface IBaseDriveSearchCollectionRequestBuilder extends IRequestBuilde
 
     IDriveSearchCollectionRequest buildRequest();
 
-    IDriveSearchCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveSearchCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

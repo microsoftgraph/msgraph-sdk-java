@@ -31,7 +31,7 @@ public interface IBaseContactFolderRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IContactFolderRequest buildRequest(final java.util.List<Option> requestOptions);
+    IContactFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IContactCollectionRequestBuilder contacts();
 

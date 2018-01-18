@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsHlookupRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsHlookupRequest instance
      */
-    IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

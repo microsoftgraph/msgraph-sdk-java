@@ -31,7 +31,7 @@ public class PostRequestBuilder extends BasePostRequestBuilder implements IPostR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PostRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public PostRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

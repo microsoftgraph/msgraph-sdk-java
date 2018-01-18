@@ -32,7 +32,7 @@ public class BaseContractCollectionRequest extends BaseCollectionRequest<BaseCon
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseContractCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseContractCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseContractCollectionResponse.class, IContractCollectionPage.class);
     }
 

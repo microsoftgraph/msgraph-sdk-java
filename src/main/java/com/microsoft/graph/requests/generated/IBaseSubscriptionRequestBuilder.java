@@ -31,6 +31,6 @@ public interface IBaseSubscriptionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ISubscriptionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISubscriptionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

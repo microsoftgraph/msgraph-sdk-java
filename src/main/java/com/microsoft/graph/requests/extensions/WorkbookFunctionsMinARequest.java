@@ -31,7 +31,7 @@ public class WorkbookFunctionsMinARequest extends BaseWorkbookFunctionsMinAReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsMinARequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsMinARequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

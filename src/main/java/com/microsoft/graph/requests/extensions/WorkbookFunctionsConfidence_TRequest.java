@@ -31,7 +31,7 @@ public class WorkbookFunctionsConfidence_TRequest extends BaseWorkbookFunctionsC
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsConfidence_TRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsConfidence_TRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

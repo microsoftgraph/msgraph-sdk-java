@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsBaseRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix, final com.google.gson.JsonElement minLength) {
+    public BaseWorkbookFunctionsBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix, final com.google.gson.JsonElement minLength) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("radix", radix);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsBaseRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBaseRequest instance
      */
-    public IWorkbookFunctionsBaseRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBaseRequest request = new WorkbookFunctionsBaseRequest(
                 getRequestUrl(),
                 getClient(),

@@ -32,7 +32,7 @@ public class BaseInvitationCollectionRequest extends BaseCollectionRequest<BaseI
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseInvitationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseInvitationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseInvitationCollectionResponse.class, IInvitationCollectionPage.class);
     }
 

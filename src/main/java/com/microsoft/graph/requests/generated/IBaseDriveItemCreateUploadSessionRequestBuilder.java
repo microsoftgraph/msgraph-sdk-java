@@ -37,5 +37,5 @@ public interface IBaseDriveItemCreateUploadSessionRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IDriveItemCreateUploadSessionRequest instance
      */
-    IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

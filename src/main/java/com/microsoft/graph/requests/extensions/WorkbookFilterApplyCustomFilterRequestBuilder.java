@@ -31,7 +31,7 @@ public class WorkbookFilterApplyCustomFilterRequestBuilder extends BaseWorkbookF
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
+    public WorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
         super(requestUrl, client, requestOptions, criteria1, criteria2, oper);
     }
 }

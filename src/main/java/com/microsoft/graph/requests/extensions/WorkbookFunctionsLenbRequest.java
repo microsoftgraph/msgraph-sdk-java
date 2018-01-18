@@ -31,7 +31,7 @@ public class WorkbookFunctionsLenbRequest extends BaseWorkbookFunctionsLenbReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsLenbRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsLenbRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

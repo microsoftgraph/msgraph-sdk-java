@@ -31,7 +31,7 @@ public class WorkbookTableColumnRequestBuilder extends BaseWorkbookTableColumnRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookTableColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

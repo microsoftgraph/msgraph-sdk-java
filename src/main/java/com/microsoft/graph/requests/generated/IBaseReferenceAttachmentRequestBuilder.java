@@ -31,6 +31,6 @@ public interface IBaseReferenceAttachmentRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IReferenceAttachmentRequest buildRequest(final java.util.List<Option> requestOptions);
+    IReferenceAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

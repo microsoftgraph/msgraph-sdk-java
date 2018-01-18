@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyValuesFilterRequestBuilder extends BaseActio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFilterApplyValuesFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFilterApplyValuesFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFilterApplyValuesFilterRequestBuilder extends BaseActio
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyValuesFilterRequest instance
      */
-    public IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyValuesFilterRequest request = new WorkbookFilterApplyValuesFilterRequest(
                 getRequestUrl(),
                 getClient(),

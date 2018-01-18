@@ -31,7 +31,7 @@ public class UserRequestBuilder extends BaseUserRequestBuilder implements IUserR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public UserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public UserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

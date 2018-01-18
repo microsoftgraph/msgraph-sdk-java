@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartDataLabelFormatRequestBuilder extends IReques
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartFill.

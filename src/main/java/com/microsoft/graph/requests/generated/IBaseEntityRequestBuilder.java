@@ -31,7 +31,7 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IEntityRequest buildRequest(final java.util.List<Option> requestOptions);
+    IEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDirectoryObjectRequestBuilder directoryObject();
 

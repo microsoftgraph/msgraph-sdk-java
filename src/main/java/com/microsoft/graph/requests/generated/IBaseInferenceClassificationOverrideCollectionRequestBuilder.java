@@ -26,7 +26,7 @@ public interface IBaseInferenceClassificationOverrideCollectionRequestBuilder ex
 
     IInferenceClassificationOverrideCollectionRequest buildRequest();
 
-    IInferenceClassificationOverrideCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IInferenceClassificationOverrideCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IInferenceClassificationOverrideRequestBuilder byId(final String id);
 

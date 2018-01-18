@@ -31,7 +31,7 @@ public class WorkbookFunctionsLeftbRequestBuilder extends BaseWorkbookFunctionsL
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsLeftbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
+    public WorkbookFunctionsLeftbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions, text, numBytes);
     }
 }

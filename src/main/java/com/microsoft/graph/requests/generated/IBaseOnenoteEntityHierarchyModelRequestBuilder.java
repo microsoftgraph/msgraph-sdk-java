@@ -31,7 +31,7 @@ public interface IBaseOnenoteEntityHierarchyModelRequestBuilder extends IRequest
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     INotebookRequestBuilder notebook();
 

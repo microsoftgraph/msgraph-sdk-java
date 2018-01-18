@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsImCscRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImCscRequest instance
      */
-    IWorkbookFunctionsImCscRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsImCscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

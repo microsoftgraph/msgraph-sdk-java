@@ -30,7 +30,7 @@ public class BaseWorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeBorderItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
+    public BaseWorkbookRangeBorderItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("index", index));
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookRangeBorderItemAtRequestBuilder extends BaseFunctionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeBorderItemAtRequest instance
      */
-    public IWorkbookRangeBorderItemAtRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeBorderItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeBorderItemAtRequest request = new WorkbookRangeBorderItemAtRequest(
                 getRequestUrl(),
                 getClient(),

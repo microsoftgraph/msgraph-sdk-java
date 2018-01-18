@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsTimevalueRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTimevalueRequest instance
      */
-    IWorkbookFunctionsTimevalueRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsTimevalueRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

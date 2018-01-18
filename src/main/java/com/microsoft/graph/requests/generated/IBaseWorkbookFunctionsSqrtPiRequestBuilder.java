@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsSqrtPiRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSqrtPiRequest instance
      */
-    IWorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

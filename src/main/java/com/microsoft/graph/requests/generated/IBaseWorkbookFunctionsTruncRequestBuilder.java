@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsTruncRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTruncRequest instance
      */
-    IWorkbookFunctionsTruncRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsTruncRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

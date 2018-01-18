@@ -30,7 +30,7 @@ public class BaseWorkbookCloseSessionRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookCloseSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookCloseSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookCloseSessionRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookCloseSessionRequest instance
      */
-    public IWorkbookCloseSessionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookCloseSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookCloseSessionRequest request = new WorkbookCloseSessionRequest(
                 getRequestUrl(),
                 getClient(),

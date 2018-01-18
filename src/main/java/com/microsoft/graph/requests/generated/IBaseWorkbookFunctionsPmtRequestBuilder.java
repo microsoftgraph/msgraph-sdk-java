@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsPmtRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPmtRequest instance
      */
-    IWorkbookFunctionsPmtRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsPmtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

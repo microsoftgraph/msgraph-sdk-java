@@ -26,5 +26,5 @@ public interface IBaseDirectoryObjectCollectionReferenceRequestBuilder extends I
 
     IDirectoryObjectCollectionReferenceRequest buildRequest();
 
-    IDirectoryObjectCollectionReferenceRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDirectoryObjectCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

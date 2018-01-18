@@ -31,7 +31,7 @@ public class MessageCollectionRequestBuilder extends BaseMessageCollectionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MessageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public MessageCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

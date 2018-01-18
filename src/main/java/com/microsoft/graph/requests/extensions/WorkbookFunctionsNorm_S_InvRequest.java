@@ -31,7 +31,7 @@ public class WorkbookFunctionsNorm_S_InvRequest extends BaseWorkbookFunctionsNor
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsNorm_S_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsNorm_S_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

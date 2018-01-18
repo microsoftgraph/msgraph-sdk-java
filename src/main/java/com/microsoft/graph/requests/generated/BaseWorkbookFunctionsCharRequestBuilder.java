@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCharRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCharRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsCharRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsCharRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCharRequest instance
      */
-    public IWorkbookFunctionsCharRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCharRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCharRequest request = new WorkbookFunctionsCharRequest(
                 getRequestUrl(),
                 getClient(),

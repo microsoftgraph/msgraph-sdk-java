@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsF_Inv_RTRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsF_Inv_RTRequest instance
      */
-    IWorkbookFunctionsF_Inv_RTRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsF_Inv_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public class GroupCollectionRequestBuilder extends BaseGroupCollectionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public GroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public GroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

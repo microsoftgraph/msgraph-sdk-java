@@ -37,5 +37,5 @@ public interface IBaseWorkbookNamedItemAddRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookNamedItemAddRequest instance
      */
-    IWorkbookNamedItemAddRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookNamedItemAddRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

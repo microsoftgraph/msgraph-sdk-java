@@ -26,7 +26,7 @@ public interface IBaseSectionGroupCollectionRequestBuilder extends IRequestBuild
 
     ISectionGroupCollectionRequest buildRequest();
 
-    ISectionGroupCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISectionGroupCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ISectionGroupRequestBuilder byId(final String id);
 

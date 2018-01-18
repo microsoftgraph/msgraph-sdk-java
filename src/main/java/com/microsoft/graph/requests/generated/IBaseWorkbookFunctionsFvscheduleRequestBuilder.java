@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsFvscheduleRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFvscheduleRequest instance
      */
-    IWorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

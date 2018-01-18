@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartTitleFormatRequestBuilder extends IRequestBui
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartTitleFormatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartTitleFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartFill.

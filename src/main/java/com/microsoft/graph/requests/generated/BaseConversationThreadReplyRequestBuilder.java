@@ -30,7 +30,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Post post) {
+    public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Post post) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("post", post);
     }
@@ -50,7 +50,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IConversationThreadReplyRequest instance
      */
-    public IConversationThreadReplyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IConversationThreadReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(
                 getRequestUrl(),
                 getClient(),

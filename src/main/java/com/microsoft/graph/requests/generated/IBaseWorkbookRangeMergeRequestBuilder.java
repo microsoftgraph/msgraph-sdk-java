@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeMergeRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeMergeRequest instance
      */
-    IWorkbookRangeMergeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeMergeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

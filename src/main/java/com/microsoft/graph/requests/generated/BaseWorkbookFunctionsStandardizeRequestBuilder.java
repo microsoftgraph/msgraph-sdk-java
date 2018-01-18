@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsStandardizeRequestBuilder extends BaseActionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsStandardizeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
+    public BaseWorkbookFunctionsStandardizeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("mean", mean);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsStandardizeRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsStandardizeRequest instance
      */
-    public IWorkbookFunctionsStandardizeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsStandardizeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsStandardizeRequest request = new WorkbookFunctionsStandardizeRequest(
                 getRequestUrl(),
                 getClient(),
