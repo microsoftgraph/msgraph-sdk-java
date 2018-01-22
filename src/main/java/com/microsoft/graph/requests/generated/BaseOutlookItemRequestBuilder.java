@@ -49,20 +49,4 @@ public class BaseOutlookItemRequestBuilder extends BaseRequestBuilder implements
         return new OutlookItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IEventRequestBuilder event() {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
-    }
-
-    public IMessageRequestBuilder message() {
-        return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("message"), getClient(), null);
-    }
-
-    public IContactRequestBuilder contact() {
-        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contact"), getClient(), null);
-    }
-
-    public IPostRequestBuilder post() {
-        return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("post"), getClient(), null);
-    }
 }

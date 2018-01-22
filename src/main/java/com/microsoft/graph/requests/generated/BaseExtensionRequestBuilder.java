@@ -49,8 +49,4 @@ public class BaseExtensionRequestBuilder extends BaseRequestBuilder implements I
         return new ExtensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IOpenTypeExtensionRequestBuilder openTypeExtension() {
-        return new OpenTypeExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("openTypeExtension"), getClient(), null);
-    }
 }

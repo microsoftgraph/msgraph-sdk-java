@@ -49,12 +49,4 @@ public class BaseOnenoteEntitySchemaObjectModelRequestBuilder extends BaseReques
         return new OnenoteEntitySchemaObjectModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IOnenoteEntityHierarchyModelRequestBuilder onenoteEntityHierarchyModel() {
-        return new OnenoteEntityHierarchyModelRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteEntityHierarchyModel"), getClient(), null);
-    }
-
-    public IOnenotePageRequestBuilder onenotePage() {
-        return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("onenotePage"), getClient(), null);
-    }
 }

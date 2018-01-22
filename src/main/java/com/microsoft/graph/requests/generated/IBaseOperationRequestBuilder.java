@@ -33,6 +33,4 @@ public interface IBaseOperationRequestBuilder extends IRequestBuilder {
      */
     IOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IOnenoteOperationRequestBuilder onenoteOperation();
-
 }
