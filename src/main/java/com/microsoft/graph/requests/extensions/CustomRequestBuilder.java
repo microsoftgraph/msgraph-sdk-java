@@ -5,7 +5,7 @@ import java.util.List;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.http.CustomRequest;
-import com.microsoft.graph.models.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.options.Option;
 
 public class CustomRequestBuilder extends BaseRequestBuilder {
