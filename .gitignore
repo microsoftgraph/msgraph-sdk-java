@@ -28,3 +28,7 @@ hs_err_pid*
 .project
 .classpath
 .settings
+
+# Maven
+/target/
+/pom.xml
