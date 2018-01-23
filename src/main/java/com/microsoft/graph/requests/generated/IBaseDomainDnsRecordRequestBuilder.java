@@ -33,14 +33,4 @@ public interface IBaseDomainDnsRecordRequestBuilder extends IRequestBuilder {
      */
     IDomainDnsRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IDomainDnsCnameRecordRequestBuilder domainDnsCnameRecord();
-
-    IDomainDnsMxRecordRequestBuilder domainDnsMxRecord();
-
-    IDomainDnsSrvRecordRequestBuilder domainDnsSrvRecord();
-
-    IDomainDnsTxtRecordRequestBuilder domainDnsTxtRecord();
-
-    IDomainDnsUnavailableRecordRequestBuilder domainDnsUnavailableRecord();
-
 }

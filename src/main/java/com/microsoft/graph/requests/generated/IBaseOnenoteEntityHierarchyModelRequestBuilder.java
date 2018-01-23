@@ -33,10 +33,4 @@ public interface IBaseOnenoteEntityHierarchyModelRequestBuilder extends IRequest
      */
     IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    INotebookRequestBuilder notebook();
-
-    IOnenoteSectionRequestBuilder onenoteSection();
-
-    ISectionGroupRequestBuilder sectionGroup();
-
 }

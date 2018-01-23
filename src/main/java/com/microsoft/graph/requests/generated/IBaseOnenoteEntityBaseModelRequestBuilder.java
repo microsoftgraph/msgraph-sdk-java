@@ -33,8 +33,4 @@ public interface IBaseOnenoteEntityBaseModelRequestBuilder extends IRequestBuild
      */
     IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IOnenoteEntitySchemaObjectModelRequestBuilder onenoteEntitySchemaObjectModel();
-
-    IOnenoteResourceRequestBuilder onenoteResource();
-
 }

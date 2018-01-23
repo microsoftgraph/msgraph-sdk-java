@@ -33,8 +33,6 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
      */
     IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IEventMessageRequestBuilder eventMessage();
-
     IAttachmentCollectionRequestBuilder attachments();
 
     IAttachmentRequestBuilder attachments(final String id);

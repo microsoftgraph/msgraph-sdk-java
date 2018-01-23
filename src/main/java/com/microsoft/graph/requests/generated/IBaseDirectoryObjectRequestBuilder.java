@@ -33,22 +33,6 @@ public interface IBaseDirectoryObjectRequestBuilder extends IRequestBuilder {
      */
     IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IDeviceRequestBuilder device();
-
-    IDirectoryRoleRequestBuilder directoryRole();
-
-    IDirectoryRoleTemplateRequestBuilder directoryRoleTemplate();
-
-    IGroupRequestBuilder group();
-
-    IContractRequestBuilder contract();
-
-    IOrganizationRequestBuilder organization();
-
-    IUserRequestBuilder user();
-
-    IGroupSettingTemplateRequestBuilder groupSettingTemplate();
-
     IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds);
 
     IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getMemberGroups(final Boolean securityEnabledOnly);

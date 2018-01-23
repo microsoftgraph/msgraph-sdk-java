@@ -49,8 +49,4 @@ public class BaseOperationRequestBuilder extends BaseRequestBuilder implements I
         return new OperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IOnenoteOperationRequestBuilder onenoteOperation() {
-        return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteOperation"), getClient(), null);
-    }
 }

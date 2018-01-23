@@ -50,38 +50,6 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public IDeviceRequestBuilder device() {
-        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
-    }
-
-    public IDirectoryRoleRequestBuilder directoryRole() {
-        return new DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment("directoryRole"), getClient(), null);
-    }
-
-    public IDirectoryRoleTemplateRequestBuilder directoryRoleTemplate() {
-        return new DirectoryRoleTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("directoryRoleTemplate"), getClient(), null);
-    }
-
-    public IGroupRequestBuilder group() {
-        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
-    }
-
-    public IContractRequestBuilder contract() {
-        return new ContractRequestBuilder(getRequestUrlWithAdditionalSegment("contract"), getClient(), null);
-    }
-
-    public IOrganizationRequestBuilder organization() {
-        return new OrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("organization"), getClient(), null);
-    }
-
-    public IUserRequestBuilder user() {
-        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
-    }
-
-    public IGroupSettingTemplateRequestBuilder groupSettingTemplate() {
-        return new GroupSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("groupSettingTemplate"), getClient(), null);
-    }
-
     public IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds) {
         return new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberGroups"), getClient(), null, groupIds);
     }

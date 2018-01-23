@@ -33,18 +33,6 @@ public interface IBaseBaseItemRequestBuilder extends IRequestBuilder {
      */
     IBaseItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IDriveRequestBuilder drive();
-
-    ISiteRequestBuilder site();
-
-    IDriveItemRequestBuilder driveItem();
-
-    IListRequestBuilder list();
-
-    IListItemRequestBuilder listItem();
-
-    ISharedDriveItemRequestBuilder sharedDriveItem();
-
     /**
      * Gets the request builder for User.
      */

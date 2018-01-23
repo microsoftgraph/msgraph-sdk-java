@@ -49,24 +49,4 @@ public class BaseDomainDnsRecordRequestBuilder extends BaseRequestBuilder implem
         return new DomainDnsRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IDomainDnsCnameRecordRequestBuilder domainDnsCnameRecord() {
-        return new DomainDnsCnameRecordRequestBuilder(getRequestUrlWithAdditionalSegment("domainDnsCnameRecord"), getClient(), null);
-    }
-
-    public IDomainDnsMxRecordRequestBuilder domainDnsMxRecord() {
-        return new DomainDnsMxRecordRequestBuilder(getRequestUrlWithAdditionalSegment("domainDnsMxRecord"), getClient(), null);
-    }
-
-    public IDomainDnsSrvRecordRequestBuilder domainDnsSrvRecord() {
-        return new DomainDnsSrvRecordRequestBuilder(getRequestUrlWithAdditionalSegment("domainDnsSrvRecord"), getClient(), null);
-    }
-
-    public IDomainDnsTxtRecordRequestBuilder domainDnsTxtRecord() {
-        return new DomainDnsTxtRecordRequestBuilder(getRequestUrlWithAdditionalSegment("domainDnsTxtRecord"), getClient(), null);
-    }
-
-    public IDomainDnsUnavailableRecordRequestBuilder domainDnsUnavailableRecord() {
-        return new DomainDnsUnavailableRecordRequestBuilder(getRequestUrlWithAdditionalSegment("domainDnsUnavailableRecord"), getClient(), null);
-    }
 }

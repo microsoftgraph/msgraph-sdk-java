@@ -33,12 +33,4 @@ public interface IBaseOutlookItemRequestBuilder extends IRequestBuilder {
      */
     IOutlookItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IEventRequestBuilder event();
-
-    IMessageRequestBuilder message();
-
-    IContactRequestBuilder contact();
-
-    IPostRequestBuilder post();
-
 }
