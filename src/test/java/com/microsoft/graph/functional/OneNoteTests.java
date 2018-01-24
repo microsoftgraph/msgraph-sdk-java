@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Tests for OneNote API functionality
  */
-//@Ignore
+@Ignore
 public class OneNoteTests {
 
 	private IOnenoteRequestBuilder orb;
