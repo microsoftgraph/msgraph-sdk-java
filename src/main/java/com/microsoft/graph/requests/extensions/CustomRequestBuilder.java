@@ -8,6 +8,11 @@ import com.microsoft.graph.http.CustomRequest;
 import com.microsoft.graph.models.extensions.GraphServiceClient;
 import com.microsoft.graph.options.Option;
 
+/**
+ * The class for the CustomRequestBuilder
+ *
+ * @throws ClientException If the provided URL is malformed, the client exception will contain a MalformedURLException
+ */
 public class CustomRequestBuilder extends BaseRequestBuilder {
 	public final Class responseType; 
 	
