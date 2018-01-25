@@ -59,7 +59,7 @@ public class DefaultSerializer implements ISerializer {
      * Deserialize an object from the input string.
      *
      * @param inputString The string that stores the representation of the item.
-     * @param clazz       The .class of the item to be deserialized.
+     * @param clazz       The class of the item to be deserialized.
      * @param <T>         The type of the item to be deserialized.
      * @return The deserialized item from the input string.
      */
@@ -74,7 +74,7 @@ public class DefaultSerializer implements ISerializer {
             final JsonObject rawObject = gson.fromJson(inputString, JsonObject.class);
             
         	// If there is a derived class, try to get it and deserialize to it
-			Class derivedClass = this.getDerivedClass(rawObject);
+			Class derivedClass = this.getDerivedClass(rawObject, clazz);
 			if (derivedClass != null) {
 				jsonObject = (T) gson.fromJson(inputString, derivedClass);
 			}
@@ -130,9 +130,10 @@ public class DefaultSerializer implements ISerializer {
      * This covers scenarios in which the service may return one of several derived types
      * of a base object, which it defines using the odata.type parameter
      * @param jsonObject The raw JSON object of the response
+     * @param parentClass The parent class the derived class should inherit from
      * @return The derived class if found, or null if not applicable
      */
-    private Class getDerivedClass(JsonObject jsonObject) {
+    private Class getDerivedClass(JsonObject jsonObject, Class parentClass) {
     	//Identify the odata.type information if provided
         if (jsonObject.get("@odata.type") != null) {
         	String odataType = jsonObject.get("@odata.type").getAsString();
@@ -141,7 +142,12 @@ public class DefaultSerializer implements ISerializer {
         	derivedType = "com.microsoft.graph.models.extensions." + derivedType; //Add full package path
         	
         	try {
-        		return Class.forName(derivedType);
+        		Class derivedClass = Class.forName(derivedType);
+        		//Check that the derived class inherits from the given parent class
+        		if (parentClass.isAssignableFrom(derivedClass)) {
+        			return derivedClass;
+        		}
+        		return null;
         	} catch (ClassNotFoundException e) {
         		logger.logDebug("Unable to find a corresponding class for derived type " + derivedType + ". Falling back to parent class.");
         		//If we cannot determine the derived type to cast to, return null
