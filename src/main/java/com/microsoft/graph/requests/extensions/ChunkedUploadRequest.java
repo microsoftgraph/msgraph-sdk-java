@@ -45,7 +45,7 @@ public class ChunkedUploadRequest {
     private final BaseRequest baseRequest;
 
     /**
-     * The max retry for single request.
+     * The max retry for a single request.
      */
     private final int maxRetry;
 
@@ -57,8 +57,8 @@ public class ChunkedUploadRequest {
     /**
      * Construct the ChunkedUploadRequest
      *
-     * @param requestUrl The upload url.
-     * @param client     The OneDrive client.
+     * @param requestUrl The upload URL.
+     * @param client     The Graph client.
      * @param options    The query options.
      * @param chunk      The chunk byte array.
      * @param chunkSize  The chunk array size.
@@ -92,7 +92,7 @@ public class ChunkedUploadRequest {
     /**
      * Upload a chunk with tries.
      *
-     * @param responseHandler The handler handle http response.
+     * @param responseHandler The handler handle HTTP response.
      * @param <UploadType>    The upload item type.
      * @return The upload result.
      */
@@ -102,7 +102,7 @@ public class ChunkedUploadRequest {
             try {
                 Thread.sleep(RETRY_DELAY * this.retryCount * this.retryCount);
             } catch (final InterruptedException e) {
-                this.baseRequest.getClient().getLogger().logError("Exception while waiting upload file retry", e);
+                this.baseRequest.getClient().getLogger().logError("Exception while waiting to retry file upload.", e);
             }
 
             ChunkedUploadResult result = null;
@@ -113,7 +113,7 @@ public class ChunkedUploadRequest {
                         .getHttpProvider()
                         .send(baseRequest, ChunkedUploadResult.class, this.data, responseHandler);
             } catch (final ClientException e) {
-                this.baseRequest.getClient().getLogger().logDebug("Request failed with, retry if necessary.");
+                this.baseRequest.getClient().getLogger().logDebug("Request failed with error, retry if necessary.\r\n" + e);
             }
 
             if (result != null && result.chunkCompleted()) {
@@ -124,6 +124,6 @@ public class ChunkedUploadRequest {
         }
 
         return new ChunkedUploadResult(
-                new ClientException("Upload session failed to many times.", null));
+                new ClientException("Upload session failed too many times.", null));
     }
 }
