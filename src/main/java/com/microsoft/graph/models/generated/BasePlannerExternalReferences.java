@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner External References.
  */
-public class BasePlannerExternalReferences extends HashMap<String, String> implements IJsonBackedObject {
+public class BasePlannerExternalReferences extends HashMap<String, Object> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)
