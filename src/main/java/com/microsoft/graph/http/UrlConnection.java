@@ -120,7 +120,7 @@ public class UrlConnection implements IConnection {
     	try {
 			list.add(String.format("%d", connection.getResponseCode()));
 		} catch (IOException e) {
-			throw new IllegalArgumentException("Invalid connection response code: ", e);
+			throw new IllegalArgumentException("Invalid connection response code: could not connect to server", e);
 		}
     
     	headerFields.put("responseCode", list);
