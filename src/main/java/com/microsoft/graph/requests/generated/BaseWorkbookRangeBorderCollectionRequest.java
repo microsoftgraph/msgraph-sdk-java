@@ -32,7 +32,7 @@ public class BaseWorkbookRangeBorderCollectionRequest extends BaseCollectionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeBorderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeBorderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookRangeBorderCollectionResponse.class, IWorkbookRangeBorderCollectionPage.class);
     }
 

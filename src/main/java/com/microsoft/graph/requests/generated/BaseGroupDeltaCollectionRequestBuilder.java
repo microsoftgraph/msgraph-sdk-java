@@ -30,7 +30,7 @@ public class BaseGroupDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,7 +38,7 @@ public class BaseGroupDeltaCollectionRequestBuilder extends BaseFunctionRequestB
         return buildRequest(getOptions());
     }
 
-    public IGroupDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IGroupDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         GroupDeltaCollectionRequest request = new GroupDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseWorkbookFunctionsSkew_pR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsSkew_pRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsSkew_pRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

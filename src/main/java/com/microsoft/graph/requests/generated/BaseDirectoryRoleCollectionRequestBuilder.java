@@ -31,7 +31,7 @@ public class BaseDirectoryRoleCollectionRequestBuilder extends BaseRequestBuilde
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryRoleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseDirectoryRoleCollectionRequestBuilder extends BaseRequestBuilde
         return buildRequest(getOptions());
     }
 
-    public IDirectoryRoleCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryRoleCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryRoleCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

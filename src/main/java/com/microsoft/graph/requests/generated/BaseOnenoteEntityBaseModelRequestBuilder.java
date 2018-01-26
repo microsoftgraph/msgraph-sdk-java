@@ -31,7 +31,7 @@ public class BaseOnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenoteEntityBaseModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenoteEntityBaseModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,16 +45,8 @@ public class BaseOnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteEntityBaseModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IOnenoteEntitySchemaObjectModelRequestBuilder onenoteEntitySchemaObjectModel() {
-        return new OnenoteEntitySchemaObjectModelRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteEntitySchemaObjectModel"), getClient(), null);
-    }
-
-    public IOnenoteResourceRequestBuilder onenoteResource() {
-        return new OnenoteResourceRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteResource"), getClient(), null);
-    }
 }

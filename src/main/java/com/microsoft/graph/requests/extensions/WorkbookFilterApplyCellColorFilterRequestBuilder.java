@@ -31,7 +31,7 @@ public class WorkbookFilterApplyCellColorFilterRequestBuilder extends BaseWorkbo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFilterApplyCellColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String color) {
+    public WorkbookFilterApplyCellColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions, color);
     }
 }

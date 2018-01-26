@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsPercentRank_IncRequest extends BaseRequest imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPercentRank_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsPercentRank_IncRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsPercentRank_IncBody();
     }

@@ -32,7 +32,7 @@ public class BaseWorkbookTableAddRequest extends BaseRequest implements IBaseWor
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTable.class);
         body = new WorkbookTableAddBody();
     }

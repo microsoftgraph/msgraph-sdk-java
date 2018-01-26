@@ -31,7 +31,7 @@ public class MailFolderMoveRequest extends BaseMailFolderMoveRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MailFolderMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public MailFolderMoveRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

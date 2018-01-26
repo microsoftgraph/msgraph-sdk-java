@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsRandRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsRandRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsRandRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsRandRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsRandRequest instance
      */
-    public IWorkbookFunctionsRandRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsRandRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRandRequest request = new WorkbookFunctionsRandRequest(
                 getRequestUrl(),
                 getClient(),

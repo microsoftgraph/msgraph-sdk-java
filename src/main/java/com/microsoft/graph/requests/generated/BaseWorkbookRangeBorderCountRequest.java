@@ -31,7 +31,7 @@ public class BaseWorkbookRangeBorderCountRequest extends BaseRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeBorderCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeBorderCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Integer.class);
     }
 

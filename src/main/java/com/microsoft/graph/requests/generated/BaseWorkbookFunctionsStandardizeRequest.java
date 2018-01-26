@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsStandardizeRequest extends BaseRequest impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsStandardizeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsStandardizeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsStandardizeBody();
     }

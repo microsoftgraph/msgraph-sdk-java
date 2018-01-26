@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFixedRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFixedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals, final com.google.gson.JsonElement noCommas) {
+    public BaseWorkbookFunctionsFixedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals, final com.google.gson.JsonElement noCommas) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("decimals", decimals);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsFixedRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFixedRequest instance
      */
-    public IWorkbookFunctionsFixedRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFixedRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFixedRequest request = new WorkbookFunctionsFixedRequest(
                 getRequestUrl(),
                 getClient(),

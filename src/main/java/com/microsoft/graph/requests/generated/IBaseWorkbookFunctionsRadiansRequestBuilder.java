@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsRadiansRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsRadiansRequest instance
      */
-    IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public class BaseWorkbookChartPointFormatRequestBuilder extends BaseRequestBuild
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartPointFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartPointFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookChartPointFormatRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookChartPointFormatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartPointFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartPointFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

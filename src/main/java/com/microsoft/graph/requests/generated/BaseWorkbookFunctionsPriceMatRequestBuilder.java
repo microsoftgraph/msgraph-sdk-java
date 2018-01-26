@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPriceMatRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPriceMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsPriceMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsPriceMatRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPriceMatRequest instance
      */
-    public IWorkbookFunctionsPriceMatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPriceMatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPriceMatRequest request = new WorkbookFunctionsPriceMatRequest(
                 getRequestUrl(),
                 getClient(),

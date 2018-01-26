@@ -26,7 +26,7 @@ public interface IBaseWorkbookTableColumnCollectionRequestBuilder extends IReque
 
     IWorkbookTableColumnCollectionRequest buildRequest();
 
-    IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookTableColumnRequestBuilder byId(final String id);
 

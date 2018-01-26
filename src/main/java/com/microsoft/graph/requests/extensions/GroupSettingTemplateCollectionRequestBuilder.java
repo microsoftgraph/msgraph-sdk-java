@@ -31,7 +31,7 @@ public class GroupSettingTemplateCollectionRequestBuilder extends BaseGroupSetti
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public GroupSettingTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public GroupSettingTemplateCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

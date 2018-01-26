@@ -31,7 +31,7 @@ public class WorkbookTableAddRequestBuilder extends BaseWorkbookTableAddRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String address, final Boolean hasHeaders) {
+    public WorkbookTableAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String address, final Boolean hasHeaders) {
         super(requestUrl, client, requestOptions, address, hasHeaders);
     }
 }

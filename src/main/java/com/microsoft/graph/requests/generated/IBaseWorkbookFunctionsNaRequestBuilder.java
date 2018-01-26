@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsNaRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNaRequest instance
      */
-    IWorkbookFunctionsNaRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsNaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

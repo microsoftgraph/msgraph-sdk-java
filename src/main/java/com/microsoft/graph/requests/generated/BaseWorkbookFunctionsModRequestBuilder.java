@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsModRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsModRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement divisor) {
+    public BaseWorkbookFunctionsModRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement divisor) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("divisor", divisor);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsModRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsModRequest instance
      */
-    public IWorkbookFunctionsModRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsModRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsModRequest request = new WorkbookFunctionsModRequest(
                 getRequestUrl(),
                 getClient(),

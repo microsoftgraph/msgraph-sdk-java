@@ -37,5 +37,5 @@ public interface IBaseDriveItemCopyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IDriveItemCopyRequest instance
      */
-    IDriveItemCopyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDriveItemCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -26,7 +26,7 @@ public interface IBaseDomainCollectionRequestBuilder extends IRequestBuilder {
 
     IDomainCollectionRequest buildRequest();
 
-    IDomainCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDomainCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDomainRequestBuilder byId(final String id);
 

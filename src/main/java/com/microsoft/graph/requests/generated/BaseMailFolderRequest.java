@@ -34,7 +34,7 @@ public class BaseMailFolderRequest extends BaseRequest implements IBaseMailFolde
      */
     public BaseMailFolderRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

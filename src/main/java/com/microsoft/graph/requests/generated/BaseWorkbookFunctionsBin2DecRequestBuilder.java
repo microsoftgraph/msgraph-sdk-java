@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsBin2DecRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsBin2DecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsBin2DecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsBin2DecRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBin2DecRequest instance
      */
-    public IWorkbookFunctionsBin2DecRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsBin2DecRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBin2DecRequest request = new WorkbookFunctionsBin2DecRequest(
                 getRequestUrl(),
                 getClient(),

@@ -62,7 +62,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     public BaseRequestBuilder(
             final String requestUrl,
             final IBaseClient client,
-            final List<Option> options
+            final List<? extends Option> options
     ) {
         this.requestUrl = requestUrl;
         this.client = client;
@@ -77,7 +77,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
             final String requestUrl,
             final IJsonBackedObject body,
             final IBaseClient client,
-            final List<Option> options
+            final List<? extends Option> options
     ) {
         this.requestUrl = requestUrl;
         this.client = client;
@@ -111,7 +111,7 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      *
      * @return The full list of options for this request.
      */
-    public List<Option> getOptions() {
+    public List<? extends Option> getOptions() {
         return Collections.unmodifiableList(options);
     }
 

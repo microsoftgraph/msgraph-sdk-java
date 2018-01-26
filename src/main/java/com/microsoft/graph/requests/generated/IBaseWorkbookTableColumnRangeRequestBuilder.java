@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableColumnRangeRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnRangeRequest instance
      */
-    IWorkbookTableColumnRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableColumnRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

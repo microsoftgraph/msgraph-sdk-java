@@ -31,6 +31,6 @@ public interface IBaseThumbnailStreamRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IThumbnailStreamRequest buildRequest(final java.util.List<Option> requestOptions);
+    IThumbnailStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

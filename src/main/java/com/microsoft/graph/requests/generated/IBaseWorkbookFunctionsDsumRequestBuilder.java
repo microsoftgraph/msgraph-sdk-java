@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDsumRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDsumRequest instance
      */
-    IWorkbookFunctionsDsumRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDsumRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

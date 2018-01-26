@@ -32,7 +32,7 @@ public class BaseUserChangePasswordRequest extends BaseRequest implements IBaseU
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserChangePasswordRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseUserChangePasswordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new UserChangePasswordBody();
     }

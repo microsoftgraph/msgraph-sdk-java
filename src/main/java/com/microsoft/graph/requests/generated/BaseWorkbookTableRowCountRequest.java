@@ -31,7 +31,7 @@ public class BaseWorkbookTableRowCountRequest extends BaseRequest implements IBa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableRowCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableRowCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Integer.class);
     }
 

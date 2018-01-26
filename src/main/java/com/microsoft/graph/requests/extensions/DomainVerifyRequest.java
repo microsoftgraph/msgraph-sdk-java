@@ -31,7 +31,7 @@ public class DomainVerifyRequest extends BaseDomainVerifyRequest implements IDom
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DomainVerifyRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DomainVerifyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

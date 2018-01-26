@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDollarFrRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDollarFrRequest instance
      */
-    IWorkbookFunctionsDollarFrRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDollarFrRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

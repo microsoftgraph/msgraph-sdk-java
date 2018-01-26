@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFvscheduleRequestBuilder extends BaseActionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFvscheduleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement principal, final com.google.gson.JsonElement schedule) {
+    public BaseWorkbookFunctionsFvscheduleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement principal, final com.google.gson.JsonElement schedule) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("principal", principal);
         bodyParams.put("schedule", schedule);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsFvscheduleRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFvscheduleRequest instance
      */
-    public IWorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFvscheduleRequest request = new WorkbookFunctionsFvscheduleRequest(
                 getRequestUrl(),
                 getClient(),

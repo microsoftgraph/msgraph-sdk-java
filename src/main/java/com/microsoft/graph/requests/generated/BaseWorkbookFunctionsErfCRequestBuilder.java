@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsErfCRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
+    public BaseWorkbookFunctionsErfCRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsErfCRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsErfCRequest instance
      */
-    public IWorkbookFunctionsErfCRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsErfCRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsErfCRequest request = new WorkbookFunctionsErfCRequest(
                 getRequestUrl(),
                 getClient(),

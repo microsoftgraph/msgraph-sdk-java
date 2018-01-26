@@ -31,7 +31,7 @@ public class FileAttachmentRequest extends BaseFileAttachmentRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public FileAttachmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public FileAttachmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, FileAttachment.class);
     }
 }

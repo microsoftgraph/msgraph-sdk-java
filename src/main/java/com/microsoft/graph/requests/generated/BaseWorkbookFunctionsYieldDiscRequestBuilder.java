@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsYieldDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsYieldDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsYieldDiscRequest instance
      */
-    public IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsYieldDiscRequest request = new WorkbookFunctionsYieldDiscRequest(
                 getRequestUrl(),
                 getClient(),

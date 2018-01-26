@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsWorkDay_IntlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
+    public BaseWorkbookFunctionsWorkDay_IntlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startDate", startDate);
         bodyParams.put("days", days);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsWorkDay_IntlRequest instance
      */
-    public IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsWorkDay_IntlRequest request = new WorkbookFunctionsWorkDay_IntlRequest(
                 getRequestUrl(),
                 getClient(),

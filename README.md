@@ -24,10 +24,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:1.0.+')
-
-    // Include the gson dependency
-    compile('com.google.code.gson:gson:2.3.1')
+    compile('com.microsoft.graph:msgraph-sdk-java:1.0.+')
 }
 ```
 
@@ -88,20 +85,19 @@ graphClient
   });
 ```
 
-For a general overview of how the SDK is designed, see [overview](docs/overview.md).
+For a general overview of how the SDK is designed, see [overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview).
 
 ## 4. Documentation
 
 For a more detailed documentation see:
 
-* [Overview](docs/overview.md)
-* [Extensibility](docs/extensibility.md)
-* [Handling Open Types, PATCH support with `null` values](docs/opentypes.md)
-* [Collections](docs/collections.md)
-* [Errors](docs/errors.md)
-* [Making Custom Requests](docs/custom-queries.md)
-* [Known Issues](docs/known-issues.md)
-* [Contributions](docs/contributions.md)
+* [Overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview)
+* [Extending the library](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Extending-the-Library)
+* [Handling Open Types, PATCH support with `null` values](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Open-Types)
+* [Collections](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Collections)
+* [Making Custom Requests](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Custom-Requests)
+* [Known Issues](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Known-Issues)
+* [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md)
 
 ## 5. Issues
 
@@ -109,10 +105,10 @@ For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-jav
 
 ## 6. Contributions
 
-The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](docs/contributions.md).
+The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md).
 
 ## 7. Supported Java Versions
-The Microsoft Graph SDK for Java library is supported at runtime for Java 6+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 7+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
 
 ## 8. License
 

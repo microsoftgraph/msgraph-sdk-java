@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartLegendFormatRequestBuilder extends IRequestBu
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartFill.

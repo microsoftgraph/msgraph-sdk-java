@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMonthRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsMonthRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
+    public BaseWorkbookFunctionsMonthRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("serialNumber", serialNumber);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsMonthRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMonthRequest instance
      */
-    public IWorkbookFunctionsMonthRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsMonthRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMonthRequest request = new WorkbookFunctionsMonthRequest(
                 getRequestUrl(),
                 getClient(),

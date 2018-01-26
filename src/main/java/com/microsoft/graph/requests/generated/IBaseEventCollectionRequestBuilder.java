@@ -26,7 +26,7 @@ public interface IBaseEventCollectionRequestBuilder extends IRequestBuilder {
 
     IEventCollectionRequest buildRequest();
 
-    IEventCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IEventCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IEventRequestBuilder byId(final String id);
 

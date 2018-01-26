@@ -31,7 +31,7 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePostRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePostRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IPostRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PostRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

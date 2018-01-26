@@ -31,7 +31,7 @@ public class BaseOutlookItemRequestBuilder extends BaseRequestBuilder implements
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOutlookItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOutlookItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,24 +45,8 @@ public class BaseOutlookItemRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IOutlookItemRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOutlookItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OutlookItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IEventRequestBuilder event() {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
-    }
-
-    public IMessageRequestBuilder message() {
-        return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("message"), getClient(), null);
-    }
-
-    public IContactRequestBuilder contact() {
-        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contact"), getClient(), null);
-    }
-
-    public IPostRequestBuilder post() {
-        return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("post"), getClient(), null);
-    }
 }

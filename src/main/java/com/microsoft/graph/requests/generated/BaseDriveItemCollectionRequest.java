@@ -32,7 +32,7 @@ public class BaseDriveItemCollectionRequest extends BaseCollectionRequest<BaseDr
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDriveItemCollectionResponse.class, IDriveItemCollectionPage.class);
     }
 

@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableCountRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IWorkbookTableCountRequest instance
      */
-    IWorkbookTableCountRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableCountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeOffsetRangeRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeOffsetRangeRequest instance
      */
-    IWorkbookRangeOffsetRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeOffsetRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

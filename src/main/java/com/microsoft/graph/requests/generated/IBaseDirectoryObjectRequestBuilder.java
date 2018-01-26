@@ -31,23 +31,7 @@ public interface IBaseDirectoryObjectRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDirectoryObjectRequest buildRequest(final java.util.List<Option> requestOptions);
-
-    IDeviceRequestBuilder device();
-
-    IDirectoryRoleRequestBuilder directoryRole();
-
-    IDirectoryRoleTemplateRequestBuilder directoryRoleTemplate();
-
-    IGroupRequestBuilder group();
-
-    IContractRequestBuilder contract();
-
-    IOrganizationRequestBuilder organization();
-
-    IUserRequestBuilder user();
-
-    IGroupSettingTemplateRequestBuilder groupSettingTemplate();
+    IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds);
 

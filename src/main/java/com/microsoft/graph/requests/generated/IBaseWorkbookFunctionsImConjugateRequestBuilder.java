@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsImConjugateRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImConjugateRequest instance
      */
-    IWorkbookFunctionsImConjugateRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsImConjugateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

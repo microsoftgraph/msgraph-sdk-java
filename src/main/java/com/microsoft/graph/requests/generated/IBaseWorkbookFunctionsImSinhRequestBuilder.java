@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsImSinhRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImSinhRequest instance
      */
-    IWorkbookFunctionsImSinhRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsImSinhRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

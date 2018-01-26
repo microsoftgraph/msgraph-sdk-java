@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartPointRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartPointRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartPointRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartPointFormat.

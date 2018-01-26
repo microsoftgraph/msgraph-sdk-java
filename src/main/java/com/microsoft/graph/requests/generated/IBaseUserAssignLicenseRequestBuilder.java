@@ -37,5 +37,5 @@ public interface IBaseUserAssignLicenseRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IUserAssignLicenseRequest instance
      */
-    IUserAssignLicenseRequest buildRequest(final java.util.List<Option> requestOptions);
+    IUserAssignLicenseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

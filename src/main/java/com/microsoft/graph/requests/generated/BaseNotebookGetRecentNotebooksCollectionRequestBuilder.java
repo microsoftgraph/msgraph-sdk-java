@@ -30,7 +30,7 @@ public class BaseNotebookGetRecentNotebooksCollectionRequestBuilder extends Base
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseNotebookGetRecentNotebooksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean includePersonalNotebooks) {
+    public BaseNotebookGetRecentNotebooksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean includePersonalNotebooks) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("includePersonalNotebooks", includePersonalNotebooks));
       }
@@ -39,7 +39,7 @@ public class BaseNotebookGetRecentNotebooksCollectionRequestBuilder extends Base
         return buildRequest(getOptions());
     }
 
-    public INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         NotebookGetRecentNotebooksCollectionRequest request = new NotebookGetRecentNotebooksCollectionRequest(
                 getRequestUrl(),
                 getClient(),

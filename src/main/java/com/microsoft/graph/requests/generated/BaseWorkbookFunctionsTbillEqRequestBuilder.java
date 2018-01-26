@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsTbillEqRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsTbillEqRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount) {
+    public BaseWorkbookFunctionsTbillEqRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsTbillEqRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTbillEqRequest instance
      */
-    public IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTbillEqRequest request = new WorkbookFunctionsTbillEqRequest(
                 getRequestUrl(),
                 getClient(),

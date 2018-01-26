@@ -34,7 +34,7 @@ public class ExtensionRequest extends BaseExtensionRequest implements IExtension
      */
     public ExtensionRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
@@ -46,7 +46,7 @@ public class ExtensionRequest extends BaseExtensionRequest implements IExtension
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public ExtensionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public ExtensionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Extension.class);
     }
 }

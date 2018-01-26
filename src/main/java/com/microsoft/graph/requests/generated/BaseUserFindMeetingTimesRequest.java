@@ -32,7 +32,7 @@ public class BaseUserFindMeetingTimesRequest extends BaseRequest implements IBas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserFindMeetingTimesRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseUserFindMeetingTimesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, MeetingTimeSuggestionsResult.class);
         body = new UserFindMeetingTimesBody();
     }

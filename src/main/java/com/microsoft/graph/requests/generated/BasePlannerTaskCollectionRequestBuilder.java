@@ -31,7 +31,7 @@ public class BasePlannerTaskCollectionRequestBuilder extends BaseRequestBuilder 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerTaskCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerTaskCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BasePlannerTaskCollectionRequestBuilder extends BaseRequestBuilder 
         return buildRequest(getOptions());
     }
 
-    public IPlannerTaskCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPlannerTaskCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerTaskCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -31,7 +31,7 @@ public class WorkbookFunctionsOct2BinRequest extends BaseWorkbookFunctionsOct2Bi
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsOct2BinRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsOct2BinRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

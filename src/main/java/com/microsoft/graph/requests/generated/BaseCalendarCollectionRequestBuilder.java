@@ -31,7 +31,7 @@ public class BaseCalendarCollectionRequestBuilder extends BaseRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseCalendarCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseCalendarCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseCalendarCollectionRequestBuilder extends BaseRequestBuilder imp
         return buildRequest(getOptions());
     }
 
-    public ICalendarCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ICalendarCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new CalendarCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

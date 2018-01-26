@@ -26,7 +26,7 @@ public interface IBaseLicenseDetailsCollectionRequestBuilder extends IRequestBui
 
     ILicenseDetailsCollectionRequest buildRequest();
 
-    ILicenseDetailsCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ILicenseDetailsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ILicenseDetailsRequestBuilder byId(final String id);
 

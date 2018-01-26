@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsConvertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement fromUnit, final com.google.gson.JsonElement toUnit) {
+    public BaseWorkbookFunctionsConvertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement fromUnit, final com.google.gson.JsonElement toUnit) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("fromUnit", fromUnit);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsConvertRequest instance
      */
-    public IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsConvertRequest request = new WorkbookFunctionsConvertRequest(
                 getRequestUrl(),
                 getClient(),

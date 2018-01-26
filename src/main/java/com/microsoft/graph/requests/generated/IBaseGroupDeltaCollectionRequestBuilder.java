@@ -26,6 +26,6 @@ public interface IBaseGroupDeltaCollectionRequestBuilder extends IRequestBuilder
 
     IGroupDeltaCollectionRequest buildRequest();
 
-    IGroupDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

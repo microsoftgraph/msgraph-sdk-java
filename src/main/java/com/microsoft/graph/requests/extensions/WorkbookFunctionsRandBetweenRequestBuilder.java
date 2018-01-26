@@ -31,7 +31,7 @@ public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseWorkbookFunc
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsRandBetweenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement bottom, final com.google.gson.JsonElement top) {
+    public WorkbookFunctionsRandBetweenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement bottom, final com.google.gson.JsonElement top) {
         super(requestUrl, client, requestOptions, bottom, top);
     }
 }

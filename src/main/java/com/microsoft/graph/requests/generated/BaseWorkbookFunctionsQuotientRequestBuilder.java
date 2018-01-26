@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsQuotientRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsQuotientRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement numerator, final com.google.gson.JsonElement denominator) {
+    public BaseWorkbookFunctionsQuotientRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numerator, final com.google.gson.JsonElement denominator) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("numerator", numerator);
         bodyParams.put("denominator", denominator);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsQuotientRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsQuotientRequest instance
      */
-    public IWorkbookFunctionsQuotientRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsQuotientRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsQuotientRequest request = new WorkbookFunctionsQuotientRequest(
                 getRequestUrl(),
                 getClient(),

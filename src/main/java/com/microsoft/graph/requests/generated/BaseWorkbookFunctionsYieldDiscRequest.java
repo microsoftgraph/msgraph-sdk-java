@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsYieldDiscRequest extends BaseRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsYieldDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsYieldDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsYieldDiscBody();
     }

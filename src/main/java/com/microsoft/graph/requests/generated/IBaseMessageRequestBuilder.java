@@ -31,9 +31,7 @@ public interface IBaseMessageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IMessageRequest buildRequest(final java.util.List<Option> requestOptions);
-
-    IEventMessageRequestBuilder eventMessage();
+    IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IAttachmentCollectionRequestBuilder attachments();
 

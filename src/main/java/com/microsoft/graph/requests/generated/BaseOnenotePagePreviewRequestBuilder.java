@@ -30,7 +30,7 @@ public class BaseOnenotePagePreviewRequestBuilder extends BaseFunctionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenotePagePreviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenotePagePreviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseOnenotePagePreviewRequestBuilder extends BaseFunctionRequestBui
      * @param requestOptions the options for the request
      * @return The IOnenotePagePreviewRequest instance
      */
-    public IOnenotePagePreviewRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenotePagePreviewRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         OnenotePagePreviewRequest request = new OnenotePagePreviewRequest(
                 getRequestUrl(),
                 getClient(),

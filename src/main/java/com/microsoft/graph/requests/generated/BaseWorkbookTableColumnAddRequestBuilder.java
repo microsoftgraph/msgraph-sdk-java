@@ -30,7 +30,7 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableColumnAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index, final com.google.gson.JsonElement values, final String name) {
+    public BaseWorkbookTableColumnAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index, final com.google.gson.JsonElement values, final String name) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("index", index);
         bodyParams.put("values", values);
@@ -52,7 +52,7 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnAddRequest instance
      */
-    public IWorkbookTableColumnAddRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableColumnAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnAddRequest request = new WorkbookTableColumnAddRequest(
                 getRequestUrl(),
                 getClient(),

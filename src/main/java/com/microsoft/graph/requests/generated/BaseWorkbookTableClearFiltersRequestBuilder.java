@@ -30,7 +30,7 @@ public class BaseWorkbookTableClearFiltersRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableClearFiltersRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableClearFiltersRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookTableClearFiltersRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookTableClearFiltersRequest instance
      */
-    public IWorkbookTableClearFiltersRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableClearFiltersRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableClearFiltersRequest request = new WorkbookTableClearFiltersRequest(
                 getRequestUrl(),
                 getClient(),

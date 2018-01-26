@@ -31,6 +31,6 @@ public interface IBaseInferenceClassificationOverrideRequestBuilder extends IReq
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IInferenceClassificationOverrideRequest buildRequest(final java.util.List<Option> requestOptions);
+    IInferenceClassificationOverrideRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

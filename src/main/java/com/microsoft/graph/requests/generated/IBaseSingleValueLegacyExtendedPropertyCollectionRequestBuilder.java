@@ -26,7 +26,7 @@ public interface IBaseSingleValueLegacyExtendedPropertyCollectionRequestBuilder 
 
     ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest();
 
-    ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISingleValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ISingleValueLegacyExtendedPropertyRequestBuilder byId(final String id);
 

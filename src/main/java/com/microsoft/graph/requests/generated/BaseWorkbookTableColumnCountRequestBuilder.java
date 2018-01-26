@@ -30,7 +30,7 @@ public class BaseWorkbookTableColumnCountRequestBuilder extends BaseFunctionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableColumnCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableColumnCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookTableColumnCountRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnCountRequest instance
      */
-    public IWorkbookTableColumnCountRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnCountRequest request = new WorkbookTableColumnCountRequest(
                 getRequestUrl(),
                 getClient(),

@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.serializer;
 
+import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -58,7 +59,7 @@ public class DefaultSerializer implements ISerializer {
      * Deserialize an object from the input string.
      *
      * @param inputString The string that stores the representation of the item.
-     * @param clazz       The .class of the item to be deserialized.
+     * @param clazz       The class of the item to be deserialized.
      * @param <T>         The type of the item to be deserialized.
      * @return The deserialized item from the input string.
      */
@@ -69,13 +70,20 @@ public class DefaultSerializer implements ISerializer {
     
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
-        final T jsonObject = gson.fromJson(inputString, clazz);
+        T jsonObject = gson.fromJson(inputString, clazz);
 
-        // Populate the json backed fields for any annotations that are not in the object model
+        // Populate the JSON-backed fields for any annotations that are not in the object model
         if (jsonObject instanceof IJsonBackedObject) {
             logger.logDebug("Deserializing type " + clazz.getSimpleName());
             final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
             final JsonObject rawObject = gson.fromJson(inputString, JsonObject.class);
+            
+        	// If there is a derived class, try to get it and deserialize to it
+			Class derivedClass = this.getDerivedClass(rawObject, clazz);
+			if (derivedClass != null) {
+				jsonObject = (T) gson.fromJson(inputString, derivedClass);
+			}
+			
             jsonBackedObject.setRawObject(this, rawObject);
 
             if (responseHeaders != null) {
@@ -126,5 +134,39 @@ public class DefaultSerializer implements ISerializer {
 
     private boolean fieldIsOdataTransient(Map.Entry<String, JsonElement> entry) {
         return entry.getKey().startsWith("@");
+    }
+    
+    /**
+     * Get the derived class for the given JSON object
+     * This covers scenarios in which the service may return one of several derived types
+     * of a base object, which it defines using the odata.type parameter
+     * @param jsonObject The raw JSON object of the response
+     * @param parentClass The parent class the derived class should inherit from
+     * @return The derived class if found, or null if not applicable
+     */
+    private Class getDerivedClass(JsonObject jsonObject, Class parentClass) {
+    	//Identify the odata.type information if provided
+        if (jsonObject.get("@odata.type") != null) {
+        	String odataType = jsonObject.get("@odata.type").getAsString();
+        	String derivedType = odataType.substring(odataType.lastIndexOf('.') + 1); //Remove microsoft.graph prefix
+        	derivedType = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, derivedType);
+        	derivedType = "com.microsoft.graph.models.extensions." + derivedType; //Add full package path
+        	
+        	try {
+        		Class derivedClass = Class.forName(derivedType);
+        		//Check that the derived class inherits from the given parent class
+        		if (parentClass.isAssignableFrom(derivedClass)) {
+        			return derivedClass;
+        		}
+        		return null;
+        	} catch (ClassNotFoundException e) {
+        		logger.logDebug("Unable to find a corresponding class for derived type " + derivedType + ". Falling back to parent class.");
+        		//If we cannot determine the derived type to cast to, return null
+        		//This may happen if the API and the SDK are out of sync
+        		return null;
+        	}
+        }
+        //If there is no defined OData type, return null
+        return null;
     }
 }

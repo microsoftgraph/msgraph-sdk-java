@@ -31,7 +31,7 @@ public class BaseContactCollectionRequestBuilder extends BaseRequestBuilder impl
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseContactCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseContactCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseContactCollectionRequestBuilder extends BaseRequestBuilder impl
         return buildRequest(getOptions());
     }
 
-    public IContactCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IContactCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContactCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

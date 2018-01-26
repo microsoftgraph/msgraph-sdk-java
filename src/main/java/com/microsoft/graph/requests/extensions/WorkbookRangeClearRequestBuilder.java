@@ -31,7 +31,7 @@ public class WorkbookRangeClearRequestBuilder extends BaseWorkbookRangeClearRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String applyTo) {
+    public WorkbookRangeClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String applyTo) {
         super(requestUrl, client, requestOptions, applyTo);
     }
 }

@@ -31,7 +31,7 @@ public class BaseWorkbookTableColumnCollectionRequestBuilder extends BaseRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableColumnCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableColumnCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseWorkbookTableColumnCollectionRequestBuilder extends BaseRequest
         return buildRequest(getOptions());
     }
 
-    public IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableColumnCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableColumnCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

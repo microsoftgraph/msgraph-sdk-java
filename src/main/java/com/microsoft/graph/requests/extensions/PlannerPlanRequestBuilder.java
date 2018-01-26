@@ -31,7 +31,7 @@ public class PlannerPlanRequestBuilder extends BasePlannerPlanRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public PlannerPlanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public PlannerPlanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

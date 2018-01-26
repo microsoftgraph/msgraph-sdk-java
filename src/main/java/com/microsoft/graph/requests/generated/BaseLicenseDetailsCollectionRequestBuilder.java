@@ -31,7 +31,7 @@ public class BaseLicenseDetailsCollectionRequestBuilder extends BaseRequestBuild
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseLicenseDetailsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseLicenseDetailsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseLicenseDetailsCollectionRequestBuilder extends BaseRequestBuild
         return buildRequest(getOptions());
     }
 
-    public ILicenseDetailsCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ILicenseDetailsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new LicenseDetailsCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

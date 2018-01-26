@@ -31,7 +31,7 @@ public class WorkbookFunctionsIpmtRequestBuilder extends BaseWorkbookFunctionsIp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsIpmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+    public WorkbookFunctionsIpmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions, rate, per, nper, pv, fv, type);
     }
 }

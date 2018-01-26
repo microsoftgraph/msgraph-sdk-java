@@ -32,7 +32,7 @@ public class BaseSubscriptionCollectionRequest extends BaseCollectionRequest<Bas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSubscriptionCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseSubscriptionCollectionResponse.class, ISubscriptionCollectionPage.class);
     }
 

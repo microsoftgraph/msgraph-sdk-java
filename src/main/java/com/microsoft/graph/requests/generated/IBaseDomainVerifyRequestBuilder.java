@@ -37,5 +37,5 @@ public interface IBaseDomainVerifyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IDomainVerifyRequest instance
      */
-    IDomainVerifyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDomainVerifyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
+    public BaseWorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("criteria1", criteria1);
         bodyParams.put("criteria2", criteria2);
@@ -52,7 +52,7 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyCustomFilterRequest instance
      */
-    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(
                 getRequestUrl(),
                 getClient(),

@@ -30,7 +30,7 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder extends 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean securityEnabledOnly) {
+    public BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("securityEnabledOnly", securityEnabledOnly);
       }
@@ -39,7 +39,7 @@ public class BaseDirectoryObjectGetMemberGroupsCollectionRequestBuilder extends 
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DirectoryObjectGetMemberGroupsCollectionRequest request = new DirectoryObjectGetMemberGroupsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class BaseAttachmentCollectionRequestBuilder extends BaseRequestBuilder i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseAttachmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseAttachmentCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseAttachmentCollectionRequestBuilder extends BaseRequestBuilder i
         return buildRequest(getOptions());
     }
 
-    public IAttachmentCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IAttachmentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new AttachmentCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

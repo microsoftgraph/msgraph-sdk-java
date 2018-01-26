@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableColumnDataBodyRangeRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return The IWorkbookTableColumnDataBodyRangeRequest instance
      */
-    IWorkbookTableColumnDataBodyRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableColumnDataBodyRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

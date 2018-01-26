@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsRoundDownRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsRoundDownRequest instance
      */
-    IWorkbookFunctionsRoundDownRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsRoundDownRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

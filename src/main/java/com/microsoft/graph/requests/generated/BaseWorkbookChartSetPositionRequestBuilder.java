@@ -30,7 +30,7 @@ public class BaseWorkbookChartSetPositionRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartSetPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
+    public BaseWorkbookChartSetPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startCell", startCell);
         bodyParams.put("endCell", endCell);
@@ -51,7 +51,7 @@ public class BaseWorkbookChartSetPositionRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookChartSetPositionRequest instance
      */
-    public IWorkbookChartSetPositionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartSetPositionRequest request = new WorkbookChartSetPositionRequest(
                 getRequestUrl(),
                 getClient(),

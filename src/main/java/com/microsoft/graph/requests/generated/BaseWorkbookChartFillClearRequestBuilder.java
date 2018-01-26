@@ -30,7 +30,7 @@ public class BaseWorkbookChartFillClearRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartFillClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartFillClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookChartFillClearRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookChartFillClearRequest instance
      */
-    public IWorkbookChartFillClearRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartFillClearRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartFillClearRequest request = new WorkbookChartFillClearRequest(
                 getRequestUrl(),
                 getClient(),

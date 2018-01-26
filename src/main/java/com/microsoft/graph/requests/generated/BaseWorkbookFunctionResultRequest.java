@@ -34,7 +34,7 @@ public class BaseWorkbookFunctionResultRequest extends BaseRequest implements IB
      */
     public BaseWorkbookFunctionResultRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

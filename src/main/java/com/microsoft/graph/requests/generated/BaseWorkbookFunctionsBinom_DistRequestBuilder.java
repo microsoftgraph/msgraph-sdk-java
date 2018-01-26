@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("numberS", numberS);
         bodyParams.put("trials", trials);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBinom_DistRequest instance
      */
-    public IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBinom_DistRequest request = new WorkbookFunctionsBinom_DistRequest(
                 getRequestUrl(),
                 getClient(),

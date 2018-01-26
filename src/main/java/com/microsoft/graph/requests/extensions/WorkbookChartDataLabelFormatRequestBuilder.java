@@ -31,7 +31,7 @@ public class WorkbookChartDataLabelFormatRequestBuilder extends BaseWorkbookChar
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookChartDataLabelFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookChartDataLabelFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

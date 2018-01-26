@@ -31,7 +31,7 @@ public class MailFolderCopyRequestBuilder extends BaseMailFolderCopyRequestBuild
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String destinationId) {
+    public MailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions, destinationId);
     }
 }

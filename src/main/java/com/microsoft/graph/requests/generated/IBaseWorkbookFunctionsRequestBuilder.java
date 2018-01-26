@@ -31,7 +31,7 @@ public interface IBaseWorkbookFunctionsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookFunctionsRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number);
     IWorkbookFunctionsAccrIntRequestBuilder accrInt(final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstInterest, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis, final com.google.gson.JsonElement calcMethod);
     IWorkbookFunctionsAccrIntMRequestBuilder accrIntM(final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis);

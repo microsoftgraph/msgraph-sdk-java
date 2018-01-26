@@ -31,7 +31,7 @@ public interface IBaseWorkbookRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookApplication.

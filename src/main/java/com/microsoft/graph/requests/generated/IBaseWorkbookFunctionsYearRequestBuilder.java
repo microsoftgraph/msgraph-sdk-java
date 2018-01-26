@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsYearRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsYearRequest instance
      */
-    IWorkbookFunctionsYearRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsYearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

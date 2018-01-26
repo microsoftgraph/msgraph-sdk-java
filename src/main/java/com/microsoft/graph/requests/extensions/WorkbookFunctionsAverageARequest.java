@@ -31,7 +31,7 @@ public class WorkbookFunctionsAverageARequest extends BaseWorkbookFunctionsAvera
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsAverageARequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsAverageARequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -31,7 +31,7 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPostRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IExtensionCollectionRequestBuilder extensions();
 

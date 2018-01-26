@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsNegBinom_DistRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNegBinom_DistRequest instance
      */
-    IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

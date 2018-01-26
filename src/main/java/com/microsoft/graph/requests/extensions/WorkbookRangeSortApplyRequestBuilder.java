@@ -31,7 +31,7 @@ public class WorkbookRangeSortApplyRequestBuilder extends BaseWorkbookRangeSortA
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
+    public WorkbookRangeSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
         super(requestUrl, client, requestOptions, fields, matchCase, hasHeaders, orientation, method);
     }
 }

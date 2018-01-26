@@ -26,7 +26,7 @@ public interface IBaseGroupCollectionRequestBuilder extends IRequestBuilder {
 
     IGroupCollectionRequest buildRequest();
 
-    IGroupCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IGroupRequestBuilder byId(final String id);
 

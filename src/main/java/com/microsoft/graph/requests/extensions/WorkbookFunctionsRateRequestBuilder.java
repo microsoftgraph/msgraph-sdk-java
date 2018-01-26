@@ -31,7 +31,7 @@ public class WorkbookFunctionsRateRequestBuilder extends BaseWorkbookFunctionsRa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type, final com.google.gson.JsonElement guess) {
+    public WorkbookFunctionsRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions, nper, pmt, pv, fv, type, guess);
     }
 }

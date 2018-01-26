@@ -30,7 +30,7 @@ public class BaseWorkbookWorksheetProtectionUnprotectRequestBuilder extends Base
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookWorksheetProtectionUnprotectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookWorksheetProtectionUnprotectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookWorksheetProtectionUnprotectRequestBuilder extends Base
      * @param requestOptions the options for the request
      * @return The IWorkbookWorksheetProtectionUnprotectRequest instance
      */
-    public IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetProtectionUnprotectRequest request = new WorkbookWorksheetProtectionUnprotectRequest(
                 getRequestUrl(),
                 getClient(),

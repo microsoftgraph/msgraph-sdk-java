@@ -26,7 +26,7 @@ public interface IBaseSharedDriveItemCollectionRequestBuilder extends IRequestBu
 
     ISharedDriveItemCollectionRequest buildRequest();
 
-    ISharedDriveItemCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISharedDriveItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ISharedDriveItemRequestBuilder byId(final String id);
 

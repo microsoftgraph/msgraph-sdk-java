@@ -37,5 +37,5 @@ public interface IBaseMessageCopyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IMessageCopyRequest instance
      */
-    IMessageCopyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMessageCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

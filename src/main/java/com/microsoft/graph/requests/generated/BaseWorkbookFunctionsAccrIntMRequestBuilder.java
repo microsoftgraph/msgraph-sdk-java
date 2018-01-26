@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsAccrIntMRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsAccrIntMRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsAccrIntMRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("issue", issue);
         bodyParams.put("settlement", settlement);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsAccrIntMRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAccrIntMRequest instance
      */
-    public IWorkbookFunctionsAccrIntMRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsAccrIntMRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAccrIntMRequest request = new WorkbookFunctionsAccrIntMRequest(
                 getRequestUrl(),
                 getClient(),

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseAction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+    public BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("degFreedom", degFreedom);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseAction
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
-    public IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsChiSq_Dist_RTRequest request = new WorkbookFunctionsChiSq_Dist_RTRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookFunctionsFindBRequestBuilder extends BaseWorkbookFunctionsF
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsFindBRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
+    public WorkbookFunctionsFindBRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
         super(requestUrl, client, requestOptions, findText, withinText, startNum);
     }
 }

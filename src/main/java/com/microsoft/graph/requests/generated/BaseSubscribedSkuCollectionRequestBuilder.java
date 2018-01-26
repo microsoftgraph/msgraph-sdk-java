@@ -31,7 +31,7 @@ public class BaseSubscribedSkuCollectionRequestBuilder extends BaseRequestBuilde
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSubscribedSkuCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSubscribedSkuCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseSubscribedSkuCollectionRequestBuilder extends BaseRequestBuilde
         return buildRequest(getOptions());
     }
 
-    public ISubscribedSkuCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISubscribedSkuCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SubscribedSkuCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsGamma_DistRequestBuilder extends BaseActionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsGamma_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsGamma_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("alpha", alpha);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsGamma_DistRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsGamma_DistRequest instance
      */
-    public IWorkbookFunctionsGamma_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsGamma_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGamma_DistRequest request = new WorkbookFunctionsGamma_DistRequest(
                 getRequestUrl(),
                 getClient(),

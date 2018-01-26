@@ -31,7 +31,7 @@ public class EntityRequestBuilder extends BaseEntityRequestBuilder implements IE
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public EntityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public EntityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCumPrincRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCumPrincRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
+    public BaseWorkbookFunctionsCumPrincRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("rate", rate);
         bodyParams.put("nper", nper);
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsCumPrincRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCumPrincRequest instance
      */
-    public IWorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCumPrincRequest request = new WorkbookFunctionsCumPrincRequest(
                 getRequestUrl(),
                 getClient(),

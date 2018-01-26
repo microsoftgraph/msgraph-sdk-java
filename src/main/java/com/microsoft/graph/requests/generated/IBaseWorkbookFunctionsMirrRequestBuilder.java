@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsMirrRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMirrRequest instance
      */
-    IWorkbookFunctionsMirrRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsMirrRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

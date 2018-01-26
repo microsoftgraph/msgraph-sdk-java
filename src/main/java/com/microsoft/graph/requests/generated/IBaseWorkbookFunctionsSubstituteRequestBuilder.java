@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsSubstituteRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSubstituteRequest instance
      */
-    IWorkbookFunctionsSubstituteRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsSubstituteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

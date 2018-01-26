@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsVarARequest extends BaseRequest implements IBa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsVarARequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsVarARequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsVarABody();
     }

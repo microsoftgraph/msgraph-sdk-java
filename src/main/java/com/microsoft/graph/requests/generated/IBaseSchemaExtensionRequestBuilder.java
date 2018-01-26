@@ -31,6 +31,6 @@ public interface IBaseSchemaExtensionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ISchemaExtensionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISchemaExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

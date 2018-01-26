@@ -32,7 +32,7 @@ public class BaseOnenoteSectionCopyToNotebookRequest extends BaseRequest impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenoteSectionCopyToNotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenoteSectionCopyToNotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteOperation.class);
         body = new OnenoteSectionCopyToNotebookBody();
     }

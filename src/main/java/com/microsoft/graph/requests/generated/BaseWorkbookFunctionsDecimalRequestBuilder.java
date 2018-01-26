@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDecimalRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDecimalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix) {
+    public BaseWorkbookFunctionsDecimalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("radix", radix);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsDecimalRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDecimalRequest instance
      */
-    public IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDecimalRequest request = new WorkbookFunctionsDecimalRequest(
                 getRequestUrl(),
                 getClient(),

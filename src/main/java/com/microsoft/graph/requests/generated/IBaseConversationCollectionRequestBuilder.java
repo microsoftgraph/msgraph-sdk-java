@@ -26,7 +26,7 @@ public interface IBaseConversationCollectionRequestBuilder extends IRequestBuild
 
     IConversationCollectionRequest buildRequest();
 
-    IConversationCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IConversationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IConversationRequestBuilder byId(final String id);
 

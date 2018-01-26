@@ -37,5 +37,5 @@ public interface IBaseGroupUnsubscribeByMailRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IGroupUnsubscribeByMailRequest instance
      */
-    IGroupUnsubscribeByMailRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupUnsubscribeByMailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

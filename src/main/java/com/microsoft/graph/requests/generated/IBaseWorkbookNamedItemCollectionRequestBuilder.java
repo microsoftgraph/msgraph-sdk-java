@@ -26,7 +26,7 @@ public interface IBaseWorkbookNamedItemCollectionRequestBuilder extends IRequest
 
     IWorkbookNamedItemCollectionRequest buildRequest();
 
-    IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookNamedItemRequestBuilder byId(final String id);
 

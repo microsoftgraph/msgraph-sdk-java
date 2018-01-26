@@ -185,7 +185,7 @@ public class OneNoteTests {
         assert(countedBooks.getRawObject().get("@odata.count").getAsInt() > 0);
 
         // Test PageLevel on pages
-        List<Option> pageLevelOptions = new ArrayList<Option>();
+        List<QueryOption> pageLevelOptions = new ArrayList<QueryOption>();
         pageLevelOptions.add(new QueryOption("pagelevel", "true"));
         IOnenotePageCollectionPage pageLevelPages = orb
         		.sections(testSection.id)

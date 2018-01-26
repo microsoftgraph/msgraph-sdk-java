@@ -26,7 +26,7 @@ public interface IBasePostCollectionRequestBuilder extends IRequestBuilder {
 
     IPostCollectionRequest buildRequest();
 
-    IPostCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPostCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IPostRequestBuilder byId(final String id);
 

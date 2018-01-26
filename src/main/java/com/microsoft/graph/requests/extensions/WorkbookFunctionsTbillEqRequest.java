@@ -31,7 +31,7 @@ public class WorkbookFunctionsTbillEqRequest extends BaseWorkbookFunctionsTbillE
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsTbillEqRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsTbillEqRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

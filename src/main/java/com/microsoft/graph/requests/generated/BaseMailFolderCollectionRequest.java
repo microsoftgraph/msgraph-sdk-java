@@ -32,7 +32,7 @@ public class BaseMailFolderCollectionRequest extends BaseCollectionRequest<BaseM
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMailFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMailFolderCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseMailFolderCollectionResponse.class, IMailFolderCollectionPage.class);
     }
 

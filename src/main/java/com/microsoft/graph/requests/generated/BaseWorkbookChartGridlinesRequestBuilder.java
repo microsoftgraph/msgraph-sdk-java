@@ -31,7 +31,7 @@ public class BaseWorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartGridlinesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartGridlinesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookChartGridlinesRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartGridlinesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartGridlinesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

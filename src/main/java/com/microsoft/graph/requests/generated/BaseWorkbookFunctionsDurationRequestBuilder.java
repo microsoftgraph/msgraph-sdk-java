@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDurationRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsDurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsDurationRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDurationRequest instance
      */
-    public IWorkbookFunctionsDurationRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDurationRequest request = new WorkbookFunctionsDurationRequest(
                 getRequestUrl(),
                 getClient(),

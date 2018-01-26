@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsLargeRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsLargeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+    public BaseWorkbookFunctionsLargeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("k", k);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsLargeRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLargeRequest instance
      */
-    public IWorkbookFunctionsLargeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsLargeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLargeRequest request = new WorkbookFunctionsLargeRequest(
                 getRequestUrl(),
                 getClient(),

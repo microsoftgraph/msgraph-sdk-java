@@ -31,7 +31,7 @@ public class WorkbookFunctionsUnicodeRequest extends BaseWorkbookFunctionsUnicod
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsUnicodeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsUnicodeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

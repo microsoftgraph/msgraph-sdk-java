@@ -26,7 +26,7 @@ public interface IBaseDirectoryRoleCollectionRequestBuilder extends IRequestBuil
 
     IDirectoryRoleCollectionRequest buildRequest();
 
-    IDirectoryRoleCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDirectoryRoleCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDirectoryRoleRequestBuilder byId(final String id);
 

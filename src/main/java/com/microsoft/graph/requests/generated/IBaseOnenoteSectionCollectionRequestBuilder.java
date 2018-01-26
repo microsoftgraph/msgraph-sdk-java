@@ -26,7 +26,7 @@ public interface IBaseOnenoteSectionCollectionRequestBuilder extends IRequestBui
 
     IOnenoteSectionCollectionRequest buildRequest();
 
-    IOnenoteSectionCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenoteSectionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IOnenoteSectionRequestBuilder byId(final String id);
 

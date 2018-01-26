@@ -31,7 +31,7 @@ public interface IBaseSharedDriveItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ISharedDriveItemRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISharedDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for DriveItem.

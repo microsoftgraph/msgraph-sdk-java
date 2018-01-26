@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsChiSq_Inv_RTRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsChiSq_Inv_RTRequest instance
      */
-    IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

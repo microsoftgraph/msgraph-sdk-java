@@ -31,7 +31,7 @@ public class BaseContractRequestBuilder extends BaseRequestBuilder implements IB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseContractRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseContractRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseContractRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IContractRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IContractRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContractRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

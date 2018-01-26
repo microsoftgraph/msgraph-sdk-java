@@ -31,7 +31,7 @@ public class DeviceRequestBuilder extends BaseDeviceRequestBuilder implements ID
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

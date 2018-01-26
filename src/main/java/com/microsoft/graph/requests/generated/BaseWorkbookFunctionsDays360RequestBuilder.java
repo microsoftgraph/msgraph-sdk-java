@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
+    public BaseWorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startDate", startDate);
         bodyParams.put("endDate", endDate);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDays360Request instance
      */
-    public IWorkbookFunctionsDays360Request buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDays360Request buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDays360Request request = new WorkbookFunctionsDays360Request(
                 getRequestUrl(),
                 getClient(),

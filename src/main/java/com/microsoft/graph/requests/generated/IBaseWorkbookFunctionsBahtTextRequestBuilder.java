@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsBahtTextRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBahtTextRequest instance
      */
-    IWorkbookFunctionsBahtTextRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsBahtTextRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

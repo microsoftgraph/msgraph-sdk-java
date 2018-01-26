@@ -31,7 +31,7 @@ public class OnenoteSectionCopyToSectionGroupRequest extends BaseOnenoteSectionC
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public OnenoteSectionCopyToSectionGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public OnenoteSectionCopyToSectionGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

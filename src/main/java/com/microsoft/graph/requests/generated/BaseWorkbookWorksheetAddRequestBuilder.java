@@ -30,7 +30,7 @@ public class BaseWorkbookWorksheetAddRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookWorksheetAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name) {
+    public BaseWorkbookWorksheetAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("name", name);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookWorksheetAddRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookWorksheetAddRequest instance
      */
-    public IWorkbookWorksheetAddRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookWorksheetAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetAddRequest request = new WorkbookWorksheetAddRequest(
                 getRequestUrl(),
                 getClient(),

@@ -54,7 +54,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      */
     public BaseStreamRequest(final String requestUrl,
                              final IBaseClient client,
-                             final List<Option> options,
+                             final List<? extends Option> options,
                              final Class<T> responseClass) {
         baseRequest = new BaseRequest(requestUrl, client, options, responseClass) {
         };

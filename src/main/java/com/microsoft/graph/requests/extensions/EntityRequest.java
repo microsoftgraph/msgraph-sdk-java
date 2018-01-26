@@ -34,7 +34,7 @@ public class EntityRequest extends BaseEntityRequest implements IEntityRequest {
      */
     public EntityRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
@@ -46,7 +46,7 @@ public class EntityRequest extends BaseEntityRequest implements IEntityRequest {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public EntityRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public EntityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 }

@@ -31,7 +31,7 @@ public class BaseDirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryRoleTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryRoleTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseDirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IDirectoryRoleTemplateRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryRoleTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryRoleTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

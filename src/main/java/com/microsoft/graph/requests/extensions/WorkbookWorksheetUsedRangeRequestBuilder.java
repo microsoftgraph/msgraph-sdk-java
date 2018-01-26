@@ -31,7 +31,7 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseWorkbookWorksh
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,7 +42,7 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseWorkbookWorksh
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean valuesOnly) {
+    public WorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean valuesOnly) {
         super(requestUrl, client, requestOptions, valuesOnly);
     }
 }

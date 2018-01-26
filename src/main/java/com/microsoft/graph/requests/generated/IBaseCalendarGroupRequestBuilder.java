@@ -31,7 +31,7 @@ public interface IBaseCalendarGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    ICalendarGroupRequest buildRequest(final java.util.List<Option> requestOptions);
+    ICalendarGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ICalendarCollectionRequestBuilder calendars();
 

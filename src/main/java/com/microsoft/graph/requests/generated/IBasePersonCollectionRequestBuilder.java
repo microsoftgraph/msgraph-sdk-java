@@ -26,7 +26,7 @@ public interface IBasePersonCollectionRequestBuilder extends IRequestBuilder {
 
     IPersonCollectionRequest buildRequest();
 
-    IPersonCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPersonCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IPersonRequestBuilder byId(final String id);
 

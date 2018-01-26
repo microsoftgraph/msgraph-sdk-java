@@ -31,7 +31,7 @@ public class BasePlannerRequestBuilder extends BaseRequestBuilder implements IBa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePlannerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BasePlannerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BasePlannerRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IPlannerRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPlannerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -30,7 +30,7 @@ public class BaseWorkbookNamedItemAddRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookNamedItemAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final com.google.gson.JsonElement reference, final String comment) {
+    public BaseWorkbookNamedItemAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final com.google.gson.JsonElement reference, final String comment) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("name", name);
         bodyParams.put("reference", reference);
@@ -52,7 +52,7 @@ public class BaseWorkbookNamedItemAddRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookNamedItemAddRequest instance
      */
-    public IWorkbookNamedItemAddRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookNamedItemAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookNamedItemAddRequest request = new WorkbookNamedItemAddRequest(
                 getRequestUrl(),
                 getClient(),

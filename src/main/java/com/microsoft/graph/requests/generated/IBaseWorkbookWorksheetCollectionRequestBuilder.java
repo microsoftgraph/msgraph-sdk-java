@@ -26,7 +26,7 @@ public interface IBaseWorkbookWorksheetCollectionRequestBuilder extends IRequest
 
     IWorkbookWorksheetCollectionRequest buildRequest();
 
-    IWorkbookWorksheetCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookWorksheetCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookWorksheetRequestBuilder byId(final String id);
 

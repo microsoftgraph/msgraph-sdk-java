@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCoupDaysNcRequestBuilder extends BaseActionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCoupDaysNcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsCoupDaysNcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsCoupDaysNcRequestBuilder extends BaseActionReq
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCoupDaysNcRequest instance
      */
-    public IWorkbookFunctionsCoupDaysNcRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCoupDaysNcRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCoupDaysNcRequest request = new WorkbookFunctionsCoupDaysNcRequest(
                 getRequestUrl(),
                 getClient(),

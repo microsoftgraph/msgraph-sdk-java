@@ -32,7 +32,7 @@ public class BaseWorkbookNamedItemAddRequest extends BaseRequest implements IBas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookNamedItemAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookNamedItemAddRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookNamedItem.class);
         body = new WorkbookNamedItemAddBody();
     }

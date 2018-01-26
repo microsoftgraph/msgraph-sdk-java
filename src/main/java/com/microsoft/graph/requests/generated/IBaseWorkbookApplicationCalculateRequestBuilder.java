@@ -37,5 +37,5 @@ public interface IBaseWorkbookApplicationCalculateRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookApplicationCalculateRequest instance
      */
-    IWorkbookApplicationCalculateRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookApplicationCalculateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

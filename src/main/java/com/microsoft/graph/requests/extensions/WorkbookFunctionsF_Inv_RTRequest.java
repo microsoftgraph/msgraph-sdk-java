@@ -31,7 +31,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseWorkbookFunctionsF_Inv
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsF_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsF_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

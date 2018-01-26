@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFloor_PreciseRequestBuilder extends BaseAction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFloor_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+    public BaseWorkbookFunctionsFloor_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("significance", significance);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsFloor_PreciseRequestBuilder extends BaseAction
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFloor_PreciseRequest instance
      */
-    public IWorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFloor_PreciseRequest request = new WorkbookFunctionsFloor_PreciseRequest(
                 getRequestUrl(),
                 getClient(),

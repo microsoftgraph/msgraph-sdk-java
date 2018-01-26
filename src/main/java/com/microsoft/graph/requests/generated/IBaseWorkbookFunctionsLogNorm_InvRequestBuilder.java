@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsLogNorm_InvRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsLogNorm_InvRequest instance
      */
-    IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

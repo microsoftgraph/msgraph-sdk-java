@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDminRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDminRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public BaseWorkbookFunctionsDminRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("database", database);
         bodyParams.put("field", field);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsDminRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDminRequest instance
      */
-    public IWorkbookFunctionsDminRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDminRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDminRequest request = new WorkbookFunctionsDminRequest(
                 getRequestUrl(),
                 getClient(),

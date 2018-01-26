@@ -31,7 +31,7 @@ public class NotebookRequest extends BaseNotebookRequest implements INotebookReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public NotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public NotebookRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Notebook.class);
     }
 }

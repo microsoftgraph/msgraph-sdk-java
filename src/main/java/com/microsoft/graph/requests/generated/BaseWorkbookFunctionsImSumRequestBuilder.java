@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsImSumRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsImSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsImSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsImSumRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImSumRequest instance
      */
-    public IWorkbookFunctionsImSumRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsImSumRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImSumRequest request = new WorkbookFunctionsImSumRequest(
                 getRequestUrl(),
                 getClient(),

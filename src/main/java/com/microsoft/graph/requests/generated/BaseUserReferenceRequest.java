@@ -31,7 +31,7 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserReferenceRequest(String requestUrl, IBaseClient client, java.util.List<Option> requestOptions) {
+    public BaseUserReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
     }
 

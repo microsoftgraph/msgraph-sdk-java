@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsHex2OctRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsHex2OctRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+    public BaseWorkbookFunctionsHex2OctRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("places", places);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsHex2OctRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsHex2OctRequest instance
      */
-    public IWorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHex2OctRequest request = new WorkbookFunctionsHex2OctRequest(
                 getRequestUrl(),
                 getClient(),

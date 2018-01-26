@@ -31,6 +31,6 @@ public interface IBasePlannerProgressTaskBoardTaskFormatRequestBuilder extends I
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsPhiRequest extends BaseWorkbookFunctionsPhiRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsPhiRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsPhiRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsMirrRequestBuilder extends BaseWorkbookFunctionsMi
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsMirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement financeRate, final com.google.gson.JsonElement reinvestRate) {
+    public WorkbookFunctionsMirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement financeRate, final com.google.gson.JsonElement reinvestRate) {
         super(requestUrl, client, requestOptions, values, financeRate, reinvestRate);
     }
 }

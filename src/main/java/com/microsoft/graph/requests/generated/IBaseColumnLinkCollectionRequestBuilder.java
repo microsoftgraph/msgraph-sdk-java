@@ -26,7 +26,7 @@ public interface IBaseColumnLinkCollectionRequestBuilder extends IRequestBuilder
 
     IColumnLinkCollectionRequest buildRequest();
 
-    IColumnLinkCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IColumnLinkCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IColumnLinkRequestBuilder byId(final String id);
 

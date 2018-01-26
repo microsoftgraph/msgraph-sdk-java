@@ -31,6 +31,6 @@ public interface IBaseMultiValueLegacyExtendedPropertyRequestBuilder extends IRe
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

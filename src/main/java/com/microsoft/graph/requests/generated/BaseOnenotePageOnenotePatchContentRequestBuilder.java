@@ -30,7 +30,7 @@ public class BaseOnenotePageOnenotePatchContentRequestBuilder extends BaseAction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenotePageOnenotePatchContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<OnenotePatchContentCommand> commands) {
+    public BaseOnenotePageOnenotePatchContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<OnenotePatchContentCommand> commands) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("commands", commands);
     }
@@ -50,7 +50,7 @@ public class BaseOnenotePageOnenotePatchContentRequestBuilder extends BaseAction
      * @param requestOptions the options for the request
      * @return The IOnenotePageOnenotePatchContentRequest instance
      */
-    public IOnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         OnenotePageOnenotePatchContentRequest request = new OnenotePageOnenotePatchContentRequest(
                 getRequestUrl(),
                 getClient(),

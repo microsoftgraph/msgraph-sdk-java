@@ -30,7 +30,7 @@ public class BaseGroupUnsubscribeByMailRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupUnsubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupUnsubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseGroupUnsubscribeByMailRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IGroupUnsubscribeByMailRequest instance
      */
-    public IGroupUnsubscribeByMailRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IGroupUnsubscribeByMailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         GroupUnsubscribeByMailRequest request = new GroupUnsubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),

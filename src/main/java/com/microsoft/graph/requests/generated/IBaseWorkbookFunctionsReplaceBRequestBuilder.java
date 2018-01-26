@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsReplaceBRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsReplaceBRequest instance
      */
-    IWorkbookFunctionsReplaceBRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsReplaceBRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

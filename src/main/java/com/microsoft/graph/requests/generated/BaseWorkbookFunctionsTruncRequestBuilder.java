@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsTruncRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsTruncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
+    public BaseWorkbookFunctionsTruncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("numDigits", numDigits);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsTruncRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTruncRequest instance
      */
-    public IWorkbookFunctionsTruncRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsTruncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTruncRequest request = new WorkbookFunctionsTruncRequest(
                 getRequestUrl(),
                 getClient(),

@@ -32,7 +32,7 @@ public class BaseOrganizationCollectionRequest extends BaseCollectionRequest<Bas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOrganizationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOrganizationCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseOrganizationCollectionResponse.class, IOrganizationCollectionPage.class);
     }
 

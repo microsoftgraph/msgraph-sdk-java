@@ -31,7 +31,7 @@ public class OnenoteResourceCollectionRequest extends BaseOnenoteResourceCollect
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public OnenoteResourceCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public OnenoteResourceCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

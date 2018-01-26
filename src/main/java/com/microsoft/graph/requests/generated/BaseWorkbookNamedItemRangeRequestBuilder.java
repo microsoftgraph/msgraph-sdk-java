@@ -30,7 +30,7 @@ public class BaseWorkbookNamedItemRangeRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookNamedItemRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookNamedItemRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookNamedItemRangeRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookNamedItemRangeRequest instance
      */
-    public IWorkbookNamedItemRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookNamedItemRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookNamedItemRangeRequest request = new WorkbookNamedItemRangeRequest(
                 getRequestUrl(),
                 getClient(),

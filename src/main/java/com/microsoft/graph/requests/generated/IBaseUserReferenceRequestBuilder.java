@@ -32,5 +32,5 @@ public interface IBaseUserReferenceRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IUserReferenceRequest buildRequest(final java.util.List<Option> requestOptions);
+    IUserReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

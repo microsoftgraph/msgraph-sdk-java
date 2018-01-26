@@ -1,4 +1,4 @@
-# Contributing to the Microsoft Graph SDK for Android
+# Contributing to the Microsoft Graph SDK for Java
 
 The Microsoft Graph SDK is available for all manner of contribution. There are a couple of different recommended paths to get contributions into the released version of this SDK.
 
@@ -10,7 +10,7 @@ The best way to get started with a contribution is to start a dialog with the ow
 
 ## Submit pull requests for trivial changes
 
-If you are making a change that does not affect the interface components and does not affect other downstream callers, feel free to make a pull request against the __master__ branch.  The master branch will be updated frequently, and the gradle dependency will be kept closely inline with it.
+If you are making a change that does not affect the interface components and does not affect other downstream callers, feel free to make a pull request against the __dev__ branch.  The dev branch will be updated frequently.
 
 Revisions of this nature will result in a 0.0.X change of the version number.
 
@@ -19,3 +19,6 @@ Revisions of this nature will result in a 0.0.X change of the version number.
 If major functionality is being added, or there will need to be gestation time for a change, it should be submitted against the __feature__ branch.
 
 Revisions of this nature will result in a 0.X.X change of the version number.
+
+## Submit pull requests for model or request files
+You can revise code in the extension folders of these folders. See [Extending the Library](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Extending-the-Library) for more information on how to work with the generated parts of the library.

@@ -31,7 +31,7 @@ public class WorkbookFunctionsNowRequest extends BaseWorkbookFunctionsNowRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsNowRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsNowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

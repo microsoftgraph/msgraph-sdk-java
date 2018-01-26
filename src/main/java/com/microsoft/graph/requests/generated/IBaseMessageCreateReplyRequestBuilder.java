@@ -37,5 +37,5 @@ public interface IBaseMessageCreateReplyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IMessageCreateReplyRequest instance
      */
-    IMessageCreateReplyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMessageCreateReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

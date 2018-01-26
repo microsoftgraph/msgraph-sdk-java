@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsF_DistRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsF_DistRequest instance
      */
-    IWorkbookFunctionsF_DistRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsF_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

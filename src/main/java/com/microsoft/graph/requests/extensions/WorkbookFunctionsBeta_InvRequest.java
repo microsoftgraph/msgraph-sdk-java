@@ -31,7 +31,7 @@ public class WorkbookFunctionsBeta_InvRequest extends BaseWorkbookFunctionsBeta_
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsBeta_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsBeta_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

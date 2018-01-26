@@ -31,7 +31,7 @@ public interface IBaseOnenotePageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOnenotePageRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for OnenoteSection.

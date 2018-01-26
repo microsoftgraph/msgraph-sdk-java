@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsRandBetweenRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsRandBetweenRequest instance
      */
-    IWorkbookFunctionsRandBetweenRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsRandBetweenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

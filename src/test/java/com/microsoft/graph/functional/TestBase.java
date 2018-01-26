@@ -8,7 +8,7 @@ import com.microsoft.graph.core.DefaultClientConfig;
 import com.microsoft.graph.core.IClientConfig;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
-import com.microsoft.graph.models.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.core.Constants;
 
 import java.io.BufferedReader;
@@ -43,7 +43,7 @@ public class TestBase {
     {
         if (graphClient == null) {
             try {
-                accessToken = GetAccessToken();
+                accessToken = GetAccessToken().replace("\"", "");
                 IAuthenticationProvider mAuthenticationProvider = new IAuthenticationProvider() {
                     @Override
                     public void authenticateRequest(final IHttpRequest request) {

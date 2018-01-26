@@ -31,7 +31,7 @@ public class DriveSearchCollectionRequestBuilder extends BaseDriveSearchCollecti
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String q) {
+    public DriveSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String q) {
         super(requestUrl, client, requestOptions, q);
     }
 }

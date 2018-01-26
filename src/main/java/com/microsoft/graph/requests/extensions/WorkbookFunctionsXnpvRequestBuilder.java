@@ -31,7 +31,7 @@ public class WorkbookFunctionsXnpvRequestBuilder extends BaseWorkbookFunctionsXn
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsXnpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates) {
+    public WorkbookFunctionsXnpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates) {
         super(requestUrl, client, requestOptions, rate, values, dates);
     }
 }

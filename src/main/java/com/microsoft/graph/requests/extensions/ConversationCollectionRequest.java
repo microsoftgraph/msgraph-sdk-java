@@ -31,7 +31,7 @@ public class ConversationCollectionRequest extends BaseConversationCollectionReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public ConversationCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public ConversationCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

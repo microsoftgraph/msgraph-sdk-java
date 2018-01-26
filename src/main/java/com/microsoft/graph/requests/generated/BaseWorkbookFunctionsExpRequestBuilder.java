@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsExpRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsExpRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsExpRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsExpRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsExpRequest instance
      */
-    public IWorkbookFunctionsExpRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsExpRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsExpRequest request = new WorkbookFunctionsExpRequest(
                 getRequestUrl(),
                 getClient(),
