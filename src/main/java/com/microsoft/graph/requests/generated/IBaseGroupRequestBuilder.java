@@ -31,7 +31,7 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IGroupRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 

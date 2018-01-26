@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsYieldMatRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsYieldMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsYieldMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsYieldMatRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsYieldMatRequest instance
      */
-    public IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsYieldMatRequest request = new WorkbookFunctionsYieldMatRequest(
                 getRequestUrl(),
                 getClient(),

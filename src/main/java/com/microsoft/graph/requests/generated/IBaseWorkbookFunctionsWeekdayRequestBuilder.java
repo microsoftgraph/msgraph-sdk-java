@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsWeekdayRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsWeekdayRequest instance
      */
-    IWorkbookFunctionsWeekdayRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsWeekdayRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

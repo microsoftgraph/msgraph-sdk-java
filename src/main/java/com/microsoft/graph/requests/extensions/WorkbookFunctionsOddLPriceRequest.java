@@ -31,7 +31,7 @@ public class WorkbookFunctionsOddLPriceRequest extends BaseWorkbookFunctionsOddL
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsOddLPriceRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsOddLPriceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

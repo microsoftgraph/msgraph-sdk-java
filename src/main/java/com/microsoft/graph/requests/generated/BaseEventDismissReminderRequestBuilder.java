@@ -30,7 +30,7 @@ public class BaseEventDismissReminderRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseEventDismissReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseEventDismissReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseEventDismissReminderRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IEventDismissReminderRequest instance
      */
-    public IEventDismissReminderRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IEventDismissReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         EventDismissReminderRequest request = new EventDismissReminderRequest(
                 getRequestUrl(),
                 getClient(),

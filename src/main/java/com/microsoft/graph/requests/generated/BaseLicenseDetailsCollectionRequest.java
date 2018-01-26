@@ -32,7 +32,7 @@ public class BaseLicenseDetailsCollectionRequest extends BaseCollectionRequest<B
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseLicenseDetailsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseLicenseDetailsCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseLicenseDetailsCollectionResponse.class, ILicenseDetailsCollectionPage.class);
     }
 

@@ -12,8 +12,10 @@ We welcome your feedback as we drive the quality of this to general availability
 Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
 
 ## 1. Installation
-### 1.1 Install AAR via Gradle
-Add the JCenter repository and a compile dependency for `msicrosoft-graph` to your project's `build.gradle`
+### 1.1 Install via Gradle
+*This package will not be available via Gradle until it hits public preview. You will need to download the source and reference the package locally.*
+
+Add the JCenter repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`
 
 ```gradle
 repository {
@@ -22,10 +24,7 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:1.0.+')
-
-    // Include the gson dependency
-    compile('com.google.code.gson:gson:2.3.1')
+    compile('com.microsoft.graph:msgraph-sdk-java:1.0.+')
 }
 ```
 
@@ -41,7 +40,7 @@ Register your application by following [these](https://developer.microsoft.com/e
 ### 2.2 Create an IAuthenticationProvider object
 
 An instance of the **GraphServiceClient** class handles building requests,
-sending them to Microsoft Graph API, and processing the responses. To create a
+sending them to the Microsoft Graph API, and processing the responses. To create a
 new instance of this class, you need to provide an instance of
 `IAuthenticationProvider` which can authenticate requests to Microsoft Graph.
 
@@ -49,57 +48,56 @@ For an example of authentication in a client application see the [MSGraph SDK An
 
 ### 2.3 Get a GraphServiceClient object
 
+TODO: the para below needs expansion or removal. Would need to mention the different flows (authorization code flow, implicit flow, client credential flow) and give pointers on where to get sample code. Dave Moten can provide link for client credentials flow.
+
 Once you have set the correct application ID and url, you must get a **GraphServiceClient** object to make requests against the service. The SDK will store the account information for you, but when a user logs on for the first time, it will invoke UI to get the user's account information.
 
 ```java
-final IClientConfig mCLientConfig = DefaultClientConfig
-                                        .createWithAuthenticationProvider(mAuthenticationProvider);
+IClientConfig clientConfig = 
+  DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
 
-final IGraphServiceClient mClient = new GraphServiceClient
-                                            .Builder()
-                                            .fromConfig(mClientConfig)
-                                            .buildClient();
+IGraphServiceClient graphClient = 
+  GraphServiceClient.builder()
+    .fromConfig(mClientConfig)
+    .buildClient();
 ```
 
 ## 3. Make requests against the service
 
-Once you have an GraphServiceClient that is authenticated you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
+Once you have a GraphServiceClient that is authenticated you can begin making calls against the service. The requests against the service look like our [REST API](https://developer.microsoft.com/en-us/graph/docs/concepts/overview).
 
-### Get the drive
+### Get the user's drive
 
-To retrieve a user's drive:
+To retrieve the user's drive:
 
 ```java
 graphClient
-    .me()
-    .drive()
-    .buildRequest()
-    .get(new ICallback<Drive>() {
-  @Override
-  public void success(final Drive result) {
-    final String msg = "Found Drive " + result.id;
-    Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT)
-        .show();
-  }
-  ...
-  // Handle failure case
-});
+  .me()
+  .drive()
+  .buildRequest()
+  .get(new ICallback<Drive>() {
+     @Override
+     public void success(final Drive result) {
+        System.out.println("Found Drive " + result.id);
+     }
+     ...
+     // Handle failure case
+  });
 ```
 
-For a general overview of how the SDK is designed, see [overview](docs/overview.md).
+For a general overview of how the SDK is designed, see [overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview).
 
 ## 4. Documentation
 
 For a more detailed documentation see:
 
-* [Overview](docs/overview.md)
-* [Extensibility](docs/extensibility.md)
-* [Handling Open Types, PATCH support with `null` values](docs/opentypes.md)
-* [Collections](docs/collections.md)
-* [Errors](docs/errors.md)
-* [Making Custom Requests](docs/custom-queries.md)
-* [Known Issues](docs/known-issues.md)
-* [Contributions](docs/contributions.md)
+* [Overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview)
+* [Extending the library](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Extending-the-Library)
+* [Handling Open Types, PATCH support with `null` values](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Open-Types)
+* [Collections](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Collections)
+* [Making Custom Requests](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Custom-Requests)
+* [Known Issues](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Known-Issues)
+* [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md)
 
 ## 5. Issues
 
@@ -107,10 +105,10 @@ For known issues, see [issues](https://github.com/MicrosoftGraph/msgraph-sdk-jav
 
 ## 6. Contributions
 
-The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](docs/contributions.md).
+The Microsoft Graph SDK is open for contribution. Please read how to contribute to this project [here](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md).
 
 ## 7. Supported Java Versions
-The Microsoft Graph SDK for Java library is supported at runtime for Java 6+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
+The Microsoft Graph SDK for Java library is supported at runtime for Java 7+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
 
 ## 8. License
 

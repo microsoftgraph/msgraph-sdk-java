@@ -32,7 +32,7 @@ public class BaseMailFolderDeltaCollectionRequest extends BaseCollectionRequest<
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseMailFolderDeltaCollectionResponse.class, IMailFolderDeltaCollectionPage.class);
     }
 

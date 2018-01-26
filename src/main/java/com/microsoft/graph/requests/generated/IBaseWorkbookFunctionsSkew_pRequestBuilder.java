@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsSkew_pRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSkew_pRequest instance
      */
-    IWorkbookFunctionsSkew_pRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsSkew_pRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

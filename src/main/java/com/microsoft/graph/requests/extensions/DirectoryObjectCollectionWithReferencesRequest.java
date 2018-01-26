@@ -31,7 +31,7 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseDirector
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DirectoryObjectCollectionWithReferencesRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DirectoryObjectCollectionWithReferencesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

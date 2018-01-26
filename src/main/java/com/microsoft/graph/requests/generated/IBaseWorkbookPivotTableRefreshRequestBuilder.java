@@ -37,5 +37,5 @@ public interface IBaseWorkbookPivotTableRefreshRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookPivotTableRefreshRequest instance
      */
-    IWorkbookPivotTableRefreshRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookPivotTableRefreshRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

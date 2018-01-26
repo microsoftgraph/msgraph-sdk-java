@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsUnicodeRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsUnicodeRequest instance
      */
-    IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

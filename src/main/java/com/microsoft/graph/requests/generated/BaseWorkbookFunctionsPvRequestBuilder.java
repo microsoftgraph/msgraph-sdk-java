@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPvRequestBuilder extends BaseActionRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+    public BaseWorkbookFunctionsPvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("rate", rate);
         bodyParams.put("nper", nper);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsPvRequestBuilder extends BaseActionRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPvRequest instance
      */
-    public IWorkbookFunctionsPvRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPvRequest request = new WorkbookFunctionsPvRequest(
                 getRequestUrl(),
                 getClient(),

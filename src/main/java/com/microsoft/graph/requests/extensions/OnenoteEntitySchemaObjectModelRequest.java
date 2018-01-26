@@ -34,7 +34,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseOnenoteEntitySche
      */
     public OnenoteEntitySchemaObjectModelRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
@@ -46,7 +46,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseOnenoteEntitySche
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public OnenoteEntitySchemaObjectModelRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public OnenoteEntitySchemaObjectModelRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteEntitySchemaObjectModel.class);
     }
 }

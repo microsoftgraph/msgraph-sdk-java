@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsCumIPmtRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCumIPmtRequest instance
      */
-    IWorkbookFunctionsCumIPmtRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsCumIPmtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

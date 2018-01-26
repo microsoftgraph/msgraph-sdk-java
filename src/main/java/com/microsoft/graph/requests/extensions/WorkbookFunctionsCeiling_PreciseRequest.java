@@ -31,7 +31,7 @@ public class WorkbookFunctionsCeiling_PreciseRequest extends BaseWorkbookFunctio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsCeiling_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsCeiling_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -31,7 +31,7 @@ public class SiteRequestBuilder extends BaseSiteRequestBuilder implements ISiteR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public SiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public SiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

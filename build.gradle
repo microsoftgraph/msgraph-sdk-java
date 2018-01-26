@@ -10,6 +10,8 @@
 apply plugin: 'java-library'
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -27,11 +29,27 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
     
-    compile 'com.google.code.gson:gson:2.2.4'
-    compile 'org.json:json:20141113'
-    compile group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.0-m02'
+    compile 'com.google.code.gson:gson:2.8.2'
     
-    // https://mvnrepository.com/artifact/com.sun.jersey/jersey-server
-	compile group: 'com.sun.jersey', name: 'jersey-server', version: '1.19.4'
+    compile 'com.sun.jersey:jersey-server:1.19.4'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.microsoft.graph'
+            artifactId 'msgraph-sdk-java'
+            version '0.1-SNAPSHOT'
+
+            from components.java
+            
+            artifact sourceJar
+        }
+    }
+}
+
+task sourceJar(type: Jar) {
+  classifier = 'sources'
+  from sourceSets.main.allJava
 }
 

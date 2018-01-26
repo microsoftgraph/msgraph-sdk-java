@@ -26,7 +26,7 @@ public interface IBaseContentTypeCollectionRequestBuilder extends IRequestBuilde
 
     IContentTypeCollectionRequest buildRequest();
 
-    IContentTypeCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IContentTypeCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IContentTypeRequestBuilder byId(final String id);
 

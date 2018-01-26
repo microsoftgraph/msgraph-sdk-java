@@ -31,7 +31,7 @@ public class DirectoryRoleCollectionRequest extends BaseDirectoryRoleCollectionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DirectoryRoleCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DirectoryRoleCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

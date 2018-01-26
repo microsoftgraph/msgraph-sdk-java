@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsSkew_pRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsSkew_pRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsSkew_pRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSkew_pRequest instance
      */
-    public IWorkbookFunctionsSkew_pRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsSkew_pRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSkew_pRequest request = new WorkbookFunctionsSkew_pRequest(
                 getRequestUrl(),
                 getClient(),

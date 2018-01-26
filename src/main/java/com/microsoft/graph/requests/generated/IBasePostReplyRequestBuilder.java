@@ -37,5 +37,5 @@ public interface IBasePostReplyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IPostReplyRequest instance
      */
-    IPostReplyRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPostReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

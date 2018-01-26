@@ -32,7 +32,7 @@ public class BaseWorkbookChartFillSetSolidColorRequest extends BaseRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartFillSetSolidColorRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartFillSetSolidColorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new WorkbookChartFillSetSolidColorBody();
     }

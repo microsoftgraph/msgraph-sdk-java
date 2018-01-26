@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsIntRateRequest extends BaseRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsIntRateRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsIntRateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsIntRateBody();
     }

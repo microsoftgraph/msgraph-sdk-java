@@ -37,5 +37,5 @@ public interface IBaseWorkbookChartPointItemAtRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookChartPointItemAtRequest instance
      */
-    IWorkbookChartPointItemAtRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartPointItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

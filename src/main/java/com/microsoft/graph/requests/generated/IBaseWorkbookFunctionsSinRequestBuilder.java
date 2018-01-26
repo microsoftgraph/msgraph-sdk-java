@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsSinRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSinRequest instance
      */
-    IWorkbookFunctionsSinRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsSinRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

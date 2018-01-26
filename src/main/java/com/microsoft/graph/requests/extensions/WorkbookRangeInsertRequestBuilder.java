@@ -31,7 +31,7 @@ public class WorkbookRangeInsertRequestBuilder extends BaseWorkbookRangeInsertRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeInsertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String shift) {
+    public WorkbookRangeInsertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String shift) {
         super(requestUrl, client, requestOptions, shift);
     }
 }

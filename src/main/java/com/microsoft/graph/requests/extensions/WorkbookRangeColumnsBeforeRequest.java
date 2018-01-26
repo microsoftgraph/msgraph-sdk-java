@@ -31,7 +31,7 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseWorkbookRangeColumnsB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeColumnsBeforeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookRangeColumnsBeforeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

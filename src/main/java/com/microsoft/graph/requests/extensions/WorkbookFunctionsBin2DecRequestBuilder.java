@@ -31,7 +31,7 @@ public class WorkbookFunctionsBin2DecRequestBuilder extends BaseWorkbookFunction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsBin2DecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public WorkbookFunctionsBin2DecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions, number);
     }
 }

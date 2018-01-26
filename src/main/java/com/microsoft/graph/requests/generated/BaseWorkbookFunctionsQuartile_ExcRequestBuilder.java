@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsQuartile_ExcRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsQuartile_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
+    public BaseWorkbookFunctionsQuartile_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("quart", quart);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsQuartile_ExcRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsQuartile_ExcRequest instance
      */
-    public IWorkbookFunctionsQuartile_ExcRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsQuartile_ExcRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsQuartile_ExcRequest request = new WorkbookFunctionsQuartile_ExcRequest(
                 getRequestUrl(),
                 getClient(),

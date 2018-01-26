@@ -26,6 +26,6 @@ public interface IBaseContactDeltaCollectionRequestBuilder extends IRequestBuild
 
     IContactDeltaCollectionRequest buildRequest();
 
-    IContactDeltaCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IContactDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

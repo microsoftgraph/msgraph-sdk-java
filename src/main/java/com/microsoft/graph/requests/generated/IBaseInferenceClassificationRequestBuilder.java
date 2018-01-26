@@ -31,7 +31,7 @@ public interface IBaseInferenceClassificationRequestBuilder extends IRequestBuil
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IInferenceClassificationRequest buildRequest(final java.util.List<Option> requestOptions);
+    IInferenceClassificationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IInferenceClassificationOverrideCollectionRequestBuilder overrides();
 

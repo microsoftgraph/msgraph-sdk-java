@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsValueRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsValueRequest instance
      */
-    IWorkbookFunctionsValueRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsValueRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

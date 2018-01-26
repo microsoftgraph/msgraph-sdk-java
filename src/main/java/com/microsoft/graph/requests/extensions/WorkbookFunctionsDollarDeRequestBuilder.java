@@ -31,7 +31,7 @@ public class WorkbookFunctionsDollarDeRequestBuilder extends BaseWorkbookFunctio
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDollarDeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement fractionalDollar, final com.google.gson.JsonElement fraction) {
+    public WorkbookFunctionsDollarDeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement fractionalDollar, final com.google.gson.JsonElement fraction) {
         super(requestUrl, client, requestOptions, fractionalDollar, fraction);
     }
 }

@@ -30,7 +30,7 @@ public class BaseMessageCreateForwardRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseMessageCreateForwardRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IMessageCreateForwardRequest instance
      */
-    public IMessageCreateForwardRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMessageCreateForwardRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MessageCreateForwardRequest request = new MessageCreateForwardRequest(
                 getRequestUrl(),
                 getClient(),

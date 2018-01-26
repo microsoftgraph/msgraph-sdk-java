@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsCeiling_PreciseRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCeiling_PreciseRequest instance
      */
-    IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

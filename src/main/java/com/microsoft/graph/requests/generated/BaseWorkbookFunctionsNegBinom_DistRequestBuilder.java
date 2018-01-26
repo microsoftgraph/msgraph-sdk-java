@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNegBinom_DistRequestBuilder extends BaseAction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsNegBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement numberF, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsNegBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numberF, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("numberF", numberF);
         bodyParams.put("numberS", numberS);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsNegBinom_DistRequestBuilder extends BaseAction
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNegBinom_DistRequest instance
      */
-    public IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNegBinom_DistRequest request = new WorkbookFunctionsNegBinom_DistRequest(
                 getRequestUrl(),
                 getClient(),

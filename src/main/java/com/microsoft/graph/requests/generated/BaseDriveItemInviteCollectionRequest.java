@@ -35,7 +35,7 @@ public class BaseDriveItemInviteCollectionRequest extends BaseCollectionRequest<
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveItemInviteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDriveItemInviteCollectionResponse.class, IDriveItemInviteCollectionPage.class);
         body = new DriveItemInviteBody();
     }

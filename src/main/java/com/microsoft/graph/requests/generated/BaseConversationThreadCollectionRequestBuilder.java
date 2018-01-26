@@ -31,7 +31,7 @@ public class BaseConversationThreadCollectionRequestBuilder extends BaseRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseConversationThreadCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseConversationThreadCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseConversationThreadCollectionRequestBuilder extends BaseRequestB
         return buildRequest(getOptions());
     }
 
-    public IConversationThreadCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IConversationThreadCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ConversationThreadCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

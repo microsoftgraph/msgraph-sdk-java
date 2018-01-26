@@ -31,7 +31,7 @@ public class WorkbookFunctionsNorm_S_DistRequest extends BaseWorkbookFunctionsNo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsNorm_S_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsNorm_S_DistRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

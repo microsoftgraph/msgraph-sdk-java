@@ -37,5 +37,5 @@ public interface IBaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeFormatAutofitColumnsRequest instance
      */
-    IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

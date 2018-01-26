@@ -31,7 +31,7 @@ public class CalendarRequest extends BaseCalendarRequest implements ICalendarReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public CalendarRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public CalendarRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Calendar.class);
     }
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsZ_TestRequest extends BaseWorkbookFunctionsZ_TestR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsZ_TestRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsZ_TestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

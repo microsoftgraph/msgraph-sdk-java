@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsEdateRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsEdateRequest instance
      */
-    IWorkbookFunctionsEdateRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsEdateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

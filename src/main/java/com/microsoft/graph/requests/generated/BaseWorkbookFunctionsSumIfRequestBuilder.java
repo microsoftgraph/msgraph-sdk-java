@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsSumIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement sumRange) {
+    public BaseWorkbookFunctionsSumIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement sumRange) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("range", range);
         bodyParams.put("criteria", criteria);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsSumIfRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSumIfRequest instance
      */
-    public IWorkbookFunctionsSumIfRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsSumIfRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSumIfRequest request = new WorkbookFunctionsSumIfRequest(
                 getRequestUrl(),
                 getClient(),

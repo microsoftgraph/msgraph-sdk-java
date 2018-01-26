@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDegreesRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDegreesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement angle) {
+    public BaseWorkbookFunctionsDegreesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement angle) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("angle", angle);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsDegreesRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDegreesRequest instance
      */
-    public IWorkbookFunctionsDegreesRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDegreesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDegreesRequest request = new WorkbookFunctionsDegreesRequest(
                 getRequestUrl(),
                 getClient(),

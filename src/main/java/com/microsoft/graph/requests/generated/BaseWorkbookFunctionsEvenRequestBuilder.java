@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsEvenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsEvenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsEvenRequest instance
      */
-    public IWorkbookFunctionsEvenRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsEvenRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsEvenRequest request = new WorkbookFunctionsEvenRequest(
                 getRequestUrl(),
                 getClient(),

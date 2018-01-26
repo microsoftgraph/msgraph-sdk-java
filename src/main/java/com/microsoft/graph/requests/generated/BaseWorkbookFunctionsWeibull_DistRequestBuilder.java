@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsWeibull_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsWeibull_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("alpha", alpha);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsWeibull_DistRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsWeibull_DistRequest instance
      */
-    public IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsWeibull_DistRequest request = new WorkbookFunctionsWeibull_DistRequest(
                 getRequestUrl(),
                 getClient(),

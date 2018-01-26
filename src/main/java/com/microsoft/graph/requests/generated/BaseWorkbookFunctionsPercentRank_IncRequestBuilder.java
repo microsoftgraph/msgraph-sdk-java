@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActi
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPercentRank_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
+    public BaseWorkbookFunctionsPercentRank_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("x", x);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPercentRank_IncRequest instance
      */
-    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(
                 getRequestUrl(),
                 getClient(),

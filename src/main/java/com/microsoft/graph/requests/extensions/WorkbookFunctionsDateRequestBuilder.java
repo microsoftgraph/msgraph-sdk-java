@@ -31,7 +31,7 @@ public class WorkbookFunctionsDateRequestBuilder extends BaseWorkbookFunctionsDa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement year, final com.google.gson.JsonElement month, final com.google.gson.JsonElement day) {
+    public WorkbookFunctionsDateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement year, final com.google.gson.JsonElement month, final com.google.gson.JsonElement day) {
         super(requestUrl, client, requestOptions, year, month, day);
     }
 }

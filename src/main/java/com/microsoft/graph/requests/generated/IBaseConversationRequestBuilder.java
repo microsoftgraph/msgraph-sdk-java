@@ -31,7 +31,7 @@ public interface IBaseConversationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IConversationRequest buildRequest(final java.util.List<Option> requestOptions);
+    IConversationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IConversationThreadCollectionRequestBuilder threads();
 

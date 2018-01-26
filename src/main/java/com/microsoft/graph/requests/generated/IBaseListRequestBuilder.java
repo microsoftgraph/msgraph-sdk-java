@@ -31,7 +31,7 @@ public interface IBaseListRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IListRequest buildRequest(final java.util.List<Option> requestOptions);
+    IListRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IColumnDefinitionCollectionRequestBuilder columns();
 

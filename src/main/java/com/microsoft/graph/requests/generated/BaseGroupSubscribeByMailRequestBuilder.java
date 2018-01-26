@@ -30,7 +30,7 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupSubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupSubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IGroupSubscribeByMailRequest instance
      */
-    public IGroupSubscribeByMailRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IGroupSubscribeByMailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(
                 getRequestUrl(),
                 getClient(),

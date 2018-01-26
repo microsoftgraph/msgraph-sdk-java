@@ -31,7 +31,7 @@ public class WorkbookFunctionsCombinRequestBuilder extends BaseWorkbookFunctions
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsCombinRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+    public WorkbookFunctionsCombinRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions, number, numberChosen);
     }
 }

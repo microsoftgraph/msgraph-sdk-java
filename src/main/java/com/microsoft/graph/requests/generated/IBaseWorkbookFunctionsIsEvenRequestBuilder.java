@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIsEvenRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsEvenRequest instance
      */
-    IWorkbookFunctionsIsEvenRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIsEvenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

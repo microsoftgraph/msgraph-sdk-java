@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsEdateRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsEdateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
+    public BaseWorkbookFunctionsEdateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startDate", startDate);
         bodyParams.put("months", months);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsEdateRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsEdateRequest instance
      */
-    public IWorkbookFunctionsEdateRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsEdateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsEdateRequest request = new WorkbookFunctionsEdateRequest(
                 getRequestUrl(),
                 getClient(),

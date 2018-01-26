@@ -26,7 +26,7 @@ public interface IBaseSchemaExtensionCollectionRequestBuilder extends IRequestBu
 
     ISchemaExtensionCollectionRequest buildRequest();
 
-    ISchemaExtensionCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    ISchemaExtensionCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     ISchemaExtensionRequestBuilder byId(final String id);
 

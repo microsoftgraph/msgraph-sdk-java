@@ -31,7 +31,7 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IDriveItemRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

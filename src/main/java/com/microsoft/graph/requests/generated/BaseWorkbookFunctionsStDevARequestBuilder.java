@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsStDevARequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsStDevARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsStDevARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsStDevARequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsStDevARequest instance
      */
-    public IWorkbookFunctionsStDevARequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsStDevARequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsStDevARequest request = new WorkbookFunctionsStDevARequest(
                 getRequestUrl(),
                 getClient(),

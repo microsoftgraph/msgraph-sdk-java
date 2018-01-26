@@ -31,7 +31,7 @@ public class WorkbookFunctionsBinom_InvRequestBuilder extends BaseWorkbookFuncti
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsBinom_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement alpha) {
+    public WorkbookFunctionsBinom_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement alpha) {
         super(requestUrl, client, requestOptions, trials, probabilityS, alpha);
     }
 }

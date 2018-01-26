@@ -24,32 +24,18 @@ package com.microsoft.graph.http;
 
 import com.google.gson.JsonObject;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.requests.extensions.AttachmentRequest;
-import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
-import com.microsoft.graph.requests.extensions.CalendarCollectionRequest;
-import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequest;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionPage;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequest;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.generated.BaseCalendarCollectionResponse;
-import com.microsoft.graph.serializer.IJsonBackedObject;
 
 public class CustomRequest extends BaseRequest {
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Class responseClass) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, JsonObject.class);
     }
 

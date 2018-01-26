@@ -31,7 +31,7 @@ public class BaseWorkbookChartSeriesCollectionRequestBuilder extends BaseRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartSeriesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartSeriesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseWorkbookChartSeriesCollectionRequestBuilder extends BaseRequest
         return buildRequest(getOptions());
     }
 
-    public IWorkbookChartSeriesCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartSeriesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartSeriesCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

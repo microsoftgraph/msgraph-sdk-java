@@ -31,7 +31,7 @@ public class WorkbookFunctionsMaxARequestBuilder extends BaseWorkbookFunctionsMa
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsMaxARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public WorkbookFunctionsMaxARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions, values);
     }
 }

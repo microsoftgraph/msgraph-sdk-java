@@ -31,7 +31,7 @@ public class SiteCollectionRequest extends BaseSiteCollectionRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public SiteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public SiteCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -31,7 +31,7 @@ public interface IBaseDomainRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IDomainRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDomainRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords();
 

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsNetworkDaysRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement holidays) {
+    public BaseWorkbookFunctionsNetworkDaysRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("startDate", startDate);
         bodyParams.put("endDate", endDate);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNetworkDaysRequest instance
      */
-    public IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNetworkDaysRequest request = new WorkbookFunctionsNetworkDaysRequest(
                 getRequestUrl(),
                 getClient(),

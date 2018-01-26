@@ -31,7 +31,7 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryObjectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryObjectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,42 +45,10 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IDirectoryObjectRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryObjectRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IDeviceRequestBuilder device() {
-        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
-    }
-
-    public IDirectoryRoleRequestBuilder directoryRole() {
-        return new DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment("directoryRole"), getClient(), null);
-    }
-
-    public IDirectoryRoleTemplateRequestBuilder directoryRoleTemplate() {
-        return new DirectoryRoleTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("directoryRoleTemplate"), getClient(), null);
-    }
-
-    public IGroupRequestBuilder group() {
-        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
-    }
-
-    public IContractRequestBuilder contract() {
-        return new ContractRequestBuilder(getRequestUrlWithAdditionalSegment("contract"), getClient(), null);
-    }
-
-    public IOrganizationRequestBuilder organization() {
-        return new OrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("organization"), getClient(), null);
-    }
-
-    public IUserRequestBuilder user() {
-        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("user"), getClient(), null);
-    }
-
-    public IGroupSettingTemplateRequestBuilder groupSettingTemplate() {
-        return new GroupSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("groupSettingTemplate"), getClient(), null);
-    }
 
     public IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds) {
         return new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberGroups"), getClient(), null, groupIds);

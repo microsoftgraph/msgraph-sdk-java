@@ -31,7 +31,7 @@ public class EventAcceptRequestBuilder extends BaseEventAcceptRequestBuilder imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public EventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment, final Boolean sendResponse) {
+    public EventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, requestOptions, comment, sendResponse);
     }
 }

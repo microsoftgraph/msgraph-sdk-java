@@ -26,7 +26,7 @@ public interface IBaseGroupSettingTemplateCollectionRequestBuilder extends IRequ
 
     IGroupSettingTemplateCollectionRequest buildRequest();
 
-    IGroupSettingTemplateCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupSettingTemplateCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IGroupSettingTemplateRequestBuilder byId(final String id);
 

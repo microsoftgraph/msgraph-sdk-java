@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsF_DistRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsF_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsF_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("degFreedom1", degFreedom1);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsF_DistRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsF_DistRequest instance
      */
-    public IWorkbookFunctionsF_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsF_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsF_DistRequest request = new WorkbookFunctionsF_DistRequest(
                 getRequestUrl(),
                 getClient(),

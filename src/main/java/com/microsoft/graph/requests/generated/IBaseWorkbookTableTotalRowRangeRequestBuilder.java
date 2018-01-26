@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableTotalRowRangeRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookTableTotalRowRangeRequest instance
      */
-    IWorkbookTableTotalRowRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableTotalRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

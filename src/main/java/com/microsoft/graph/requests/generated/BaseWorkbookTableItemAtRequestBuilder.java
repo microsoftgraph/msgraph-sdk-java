@@ -30,7 +30,7 @@ public class BaseWorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
+    public BaseWorkbookTableItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("index", index));
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookTableItemAtRequest instance
      */
-    public IWorkbookTableItemAtRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableItemAtRequest request = new WorkbookTableItemAtRequest(
                 getRequestUrl(),
                 getClient(),

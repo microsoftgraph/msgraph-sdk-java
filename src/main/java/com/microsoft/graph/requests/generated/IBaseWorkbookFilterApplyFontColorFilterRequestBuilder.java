@@ -37,5 +37,5 @@ public interface IBaseWorkbookFilterApplyFontColorFilterRequestBuilder extends I
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyFontColorFilterRequest instance
      */
-    IWorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsHex2OctRequest extends BaseWorkbookFunctionsHex2Oc
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsHex2OctRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsHex2OctRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -31,7 +31,7 @@ public class WorkbookFunctionsRequest extends BaseWorkbookFunctionsRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctions.class);
     }
 }

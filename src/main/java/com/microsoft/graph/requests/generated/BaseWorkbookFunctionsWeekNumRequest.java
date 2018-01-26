@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsWeekNumRequest extends BaseRequest implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsWeekNumRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsWeekNumRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsWeekNumBody();
     }

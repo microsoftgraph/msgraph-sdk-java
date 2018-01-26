@@ -31,7 +31,7 @@ public class MessageRequestBuilder extends BaseMessageRequestBuilder implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public MessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public MessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActi
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x) {
+    public BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
-    public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGammaLn_PreciseRequest request = new WorkbookFunctionsGammaLn_PreciseRequest(
                 getRequestUrl(),
                 getClient(),

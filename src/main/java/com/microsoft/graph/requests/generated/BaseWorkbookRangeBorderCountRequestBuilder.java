@@ -30,7 +30,7 @@ public class BaseWorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeBorderCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeBorderCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeBorderCountRequestBuilder extends BaseFunctionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeBorderCountRequest instance
      */
-    public IWorkbookRangeBorderCountRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeBorderCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeBorderCountRequest request = new WorkbookRangeBorderCountRequest(
                 getRequestUrl(),
                 getClient(),

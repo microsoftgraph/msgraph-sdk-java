@@ -31,7 +31,7 @@ public class BaseWorkbookPivotTableCollectionRequestBuilder extends BaseRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookPivotTableCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookPivotTableCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseWorkbookPivotTableCollectionRequestBuilder extends BaseRequestB
         return buildRequest(getOptions());
     }
 
-    public IWorkbookPivotTableCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookPivotTableCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookPivotTableCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

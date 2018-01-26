@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsArabicRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsArabicRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement text) {
+    public BaseWorkbookFunctionsArabicRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("text", text);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsArabicRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsArabicRequest instance
      */
-    public IWorkbookFunctionsArabicRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsArabicRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsArabicRequest request = new WorkbookFunctionsArabicRequest(
                 getRequestUrl(),
                 getClient(),

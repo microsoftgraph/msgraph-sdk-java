@@ -31,7 +31,7 @@ public class ColumnLinkRequest extends BaseColumnLinkRequest implements IColumnL
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public ColumnLinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public ColumnLinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, ColumnLink.class);
     }
 }

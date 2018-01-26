@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSechRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsSechRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number) {
+    public BaseWorkbookFunctionsSechRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsSechRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSechRequest instance
      */
-    public IWorkbookFunctionsSechRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsSechRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSechRequest request = new WorkbookFunctionsSechRequest(
                 getRequestUrl(),
                 getClient(),

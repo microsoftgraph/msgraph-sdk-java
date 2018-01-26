@@ -31,7 +31,7 @@ public class BaseOnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenoteEntityHierarchyModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOnenoteEntityHierarchyModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,20 +45,8 @@ public class BaseOnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBu
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteEntityHierarchyModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public INotebookRequestBuilder notebook() {
-        return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("notebook"), getClient(), null);
-    }
-
-    public IOnenoteSectionRequestBuilder onenoteSection() {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteSection"), getClient(), null);
-    }
-
-    public ISectionGroupRequestBuilder sectionGroup() {
-        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroup"), getClient(), null);
-    }
 }

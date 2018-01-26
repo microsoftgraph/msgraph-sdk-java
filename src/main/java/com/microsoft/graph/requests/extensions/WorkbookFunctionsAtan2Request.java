@@ -31,7 +31,7 @@ public class WorkbookFunctionsAtan2Request extends BaseWorkbookFunctionsAtan2Req
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsAtan2Request(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsAtan2Request(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

@@ -32,7 +32,7 @@ public class BaseWorkbookTableRowCollectionRequest extends BaseCollectionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableRowCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableRowCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookTableRowCollectionResponse.class, IWorkbookTableRowCollectionPage.class);
     }
 

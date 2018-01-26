@@ -30,7 +30,7 @@ public class BaseWorkbookRangeLastColumnRequestBuilder extends BaseFunctionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeLastColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeLastColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeLastColumnRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeLastColumnRequest instance
      */
-    public IWorkbookRangeLastColumnRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeLastColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeLastColumnRequest request = new WorkbookRangeLastColumnRequest(
                 getRequestUrl(),
                 getClient(),

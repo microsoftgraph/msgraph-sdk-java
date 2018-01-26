@@ -31,7 +31,7 @@ public class BaseInvitationCollectionRequestBuilder extends BaseRequestBuilder i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseInvitationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseInvitationCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseInvitationCollectionRequestBuilder extends BaseRequestBuilder i
         return buildRequest(getOptions());
     }
 
-    public IInvitationCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IInvitationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new InvitationCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

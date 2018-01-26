@@ -31,7 +31,7 @@ public class DeviceRequest extends BaseDeviceRequest implements IDeviceRequest {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Device.class);
     }
 }

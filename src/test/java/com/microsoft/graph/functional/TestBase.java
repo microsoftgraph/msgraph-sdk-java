@@ -1,14 +1,15 @@
 package com.microsoft.graph.functional;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.core.DefaultClientConfig;
 import com.microsoft.graph.core.IClientConfig;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
-import com.microsoft.graph.models.extensions.GraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.core.Constants;
-
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -42,7 +43,7 @@ public class TestBase {
     {
         if (graphClient == null) {
             try {
-                accessToken = GetAccessToken();
+                accessToken = GetAccessToken().replace("\"", "");
                 IAuthenticationProvider mAuthenticationProvider = new IAuthenticationProvider() {
                     @Override
                     public void authenticateRequest(final IHttpRequest request) {
@@ -52,7 +53,7 @@ public class TestBase {
                 };
                 IClientConfig mClientConfig = DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
 
-                graphClient = new GraphServiceClient.Builder().fromConfig(mClientConfig).buildClient();
+                graphClient = GraphServiceClient.builder().fromConfig(mClientConfig).buildClient();
             }
             catch (Exception e)
             {
@@ -96,7 +97,7 @@ public class TestBase {
             }
             conn.disconnect();
 
-            JSONObject res = new JSONObject(jsonString.toString());
+            JsonObject res = new GsonBuilder().create().fromJson(jsonString.toString(), JsonObject.class);
             return res.get("access_token").toString();
 
         } catch (Exception e) {

@@ -26,7 +26,7 @@ public interface IBaseThumbnailSetCollectionRequestBuilder extends IRequestBuild
 
     IThumbnailSetCollectionRequest buildRequest();
 
-    IThumbnailSetCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IThumbnailSetCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IThumbnailSetRequestBuilder byId(final String id);
 

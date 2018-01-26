@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.models.extensions;
+package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
@@ -41,7 +41,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @return the instance of this builder
      */
     public CustomRequestBuilder customRequest(final String url, final Class responseType) {
-    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, responseType);
+    	return new CustomRequestBuilder(getServiceRoot() + url, (IGraphServiceClient)this, null, responseType);
     }
     
     /**
@@ -50,13 +50,21 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @return the instance of this builder
      */
     public CustomRequestBuilder customRequest(final String url) {
-    	return new CustomRequestBuilder(url, (IGraphServiceClient)this, null, JsonObject.class);
+    	return new CustomRequestBuilder(getServiceRoot() + url, (IGraphServiceClient)this, null, JsonObject.class);
+    }
+    
+    public static Builder builder() {
+        return new Builder();
     }
 
     /**
      * The builder for this GraphServiceClient
      */
     public static class Builder  {
+        
+        Builder() {
+            // ensure instantiation only from static factory method 
+        }
 
         /**
          * The client under construction

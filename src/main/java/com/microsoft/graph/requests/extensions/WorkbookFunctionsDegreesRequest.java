@@ -31,7 +31,7 @@ public class WorkbookFunctionsDegreesRequest extends BaseWorkbookFunctionsDegree
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDegreesRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsDegreesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

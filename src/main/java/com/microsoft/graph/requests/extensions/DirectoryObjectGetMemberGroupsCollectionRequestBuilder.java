@@ -31,7 +31,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Boolean securityEnabledOnly) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions, securityEnabledOnly);
     }
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsRandRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsRandRequest instance
      */
-    IWorkbookFunctionsRandRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsRandRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

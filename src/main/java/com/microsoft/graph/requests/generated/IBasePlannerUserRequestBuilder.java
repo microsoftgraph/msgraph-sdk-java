@@ -31,7 +31,7 @@ public interface IBasePlannerUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPlannerUserRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPlannerUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IPlannerTaskCollectionRequestBuilder tasks();
 

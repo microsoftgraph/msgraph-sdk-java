@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsStandardizeRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsStandardizeRequest instance
      */
-    IWorkbookFunctionsStandardizeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsStandardizeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

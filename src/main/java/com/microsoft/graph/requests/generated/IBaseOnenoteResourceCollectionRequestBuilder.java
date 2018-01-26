@@ -26,7 +26,7 @@ public interface IBaseOnenoteResourceCollectionRequestBuilder extends IRequestBu
 
     IOnenoteResourceCollectionRequest buildRequest();
 
-    IOnenoteResourceCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenoteResourceCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IOnenoteResourceRequestBuilder byId(final String id);
 

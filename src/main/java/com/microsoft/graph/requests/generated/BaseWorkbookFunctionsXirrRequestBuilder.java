@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsXirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
+    public BaseWorkbookFunctionsXirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
         bodyParams.put("dates", dates);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsXirrRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsXirrRequest instance
      */
-    public IWorkbookFunctionsXirrRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsXirrRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsXirrRequest request = new WorkbookFunctionsXirrRequest(
                 getRequestUrl(),
                 getClient(),

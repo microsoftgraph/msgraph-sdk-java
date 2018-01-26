@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsSydRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSydRequest instance
      */
-    IWorkbookFunctionsSydRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsSydRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

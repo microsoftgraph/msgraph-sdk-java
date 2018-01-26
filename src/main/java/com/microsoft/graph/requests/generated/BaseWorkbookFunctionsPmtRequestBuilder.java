@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPmtRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+    public BaseWorkbookFunctionsPmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("rate", rate);
         bodyParams.put("nper", nper);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsPmtRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPmtRequest instance
      */
-    public IWorkbookFunctionsPmtRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPmtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPmtRequest request = new WorkbookFunctionsPmtRequest(
                 getRequestUrl(),
                 getClient(),

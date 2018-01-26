@@ -26,7 +26,7 @@ public interface IBaseWorkbookRangeViewCollectionRequestBuilder extends IRequest
 
     IWorkbookRangeViewCollectionRequest buildRequest();
 
-    IWorkbookRangeViewCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookRangeViewCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IWorkbookRangeViewRequestBuilder byId(final String id);
 

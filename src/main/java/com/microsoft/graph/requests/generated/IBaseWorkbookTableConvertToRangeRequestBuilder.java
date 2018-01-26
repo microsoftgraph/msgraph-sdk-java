@@ -37,5 +37,5 @@ public interface IBaseWorkbookTableConvertToRangeRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookTableConvertToRangeRequest instance
      */
-    IWorkbookTableConvertToRangeRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableConvertToRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

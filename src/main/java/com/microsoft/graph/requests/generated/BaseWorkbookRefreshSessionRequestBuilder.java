@@ -30,7 +30,7 @@ public class BaseWorkbookRefreshSessionRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRefreshSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRefreshSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookRefreshSessionRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookRefreshSessionRequest instance
      */
-    public IWorkbookRefreshSessionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRefreshSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRefreshSessionRequest request = new WorkbookRefreshSessionRequest(
                 getRequestUrl(),
                 getClient(),

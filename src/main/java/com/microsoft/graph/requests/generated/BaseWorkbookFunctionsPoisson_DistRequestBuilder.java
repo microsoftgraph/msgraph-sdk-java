@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsPoisson_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement cumulative) {
+    public BaseWorkbookFunctionsPoisson_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("x", x);
         bodyParams.put("mean", mean);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPoisson_DistRequest instance
      */
-    public IWorkbookFunctionsPoisson_DistRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsPoisson_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPoisson_DistRequest request = new WorkbookFunctionsPoisson_DistRequest(
                 getRequestUrl(),
                 getClient(),

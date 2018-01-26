@@ -30,7 +30,7 @@ public class BaseWorkbookRangeFormatAutofitRowsRequestBuilder extends BaseAction
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeFormatAutofitRowsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeFormatAutofitRowsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeFormatAutofitRowsRequestBuilder extends BaseAction
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeFormatAutofitRowsRequest instance
      */
-    public IWorkbookRangeFormatAutofitRowsRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeFormatAutofitRowsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeFormatAutofitRowsRequest request = new WorkbookRangeFormatAutofitRowsRequest(
                 getRequestUrl(),
                 getClient(),

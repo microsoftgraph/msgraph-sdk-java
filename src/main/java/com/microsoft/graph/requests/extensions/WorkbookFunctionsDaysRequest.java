@@ -31,7 +31,7 @@ public class WorkbookFunctionsDaysRequest extends BaseWorkbookFunctionsDaysReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDaysRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsDaysRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

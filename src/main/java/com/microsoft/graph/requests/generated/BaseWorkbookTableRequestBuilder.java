@@ -31,7 +31,7 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookTableRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsLcmRequest extends BaseRequest implements IBas
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsLcmRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsLcmRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsLcmBody();
     }

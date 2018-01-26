@@ -26,7 +26,7 @@ public interface IBaseAttachmentCollectionRequestBuilder extends IRequestBuilder
 
     IAttachmentCollectionRequest buildRequest();
 
-    IAttachmentCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IAttachmentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IAttachmentRequestBuilder byId(final String id);
 

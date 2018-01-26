@@ -31,7 +31,7 @@ public class DomainDnsTxtRecordRequest extends BaseDomainDnsTxtRecordRequest imp
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DomainDnsTxtRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public DomainDnsTxtRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsTxtRecord.class);
     }
 }

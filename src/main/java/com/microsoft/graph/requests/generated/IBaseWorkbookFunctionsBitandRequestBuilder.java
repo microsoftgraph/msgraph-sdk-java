@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsBitandRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBitandRequest instance
      */
-    IWorkbookFunctionsBitandRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsBitandRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

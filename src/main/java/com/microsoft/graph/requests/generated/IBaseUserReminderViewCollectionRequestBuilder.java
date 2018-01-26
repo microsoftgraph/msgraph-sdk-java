@@ -26,6 +26,6 @@ public interface IBaseUserReminderViewCollectionRequestBuilder extends IRequestB
 
     IUserReminderViewCollectionRequest buildRequest();
 
-    IUserReminderViewCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IUserReminderViewCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

@@ -31,7 +31,7 @@ public class WorkbookTableSortClearRequest extends BaseWorkbookTableSortClearReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableSortClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookTableSortClearRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

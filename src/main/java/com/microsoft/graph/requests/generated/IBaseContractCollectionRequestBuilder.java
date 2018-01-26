@@ -26,7 +26,7 @@ public interface IBaseContractCollectionRequestBuilder extends IRequestBuilder {
 
     IContractCollectionRequest buildRequest();
 
-    IContractCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IContractCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IContractRequestBuilder byId(final String id);
 

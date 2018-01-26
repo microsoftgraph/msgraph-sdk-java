@@ -26,7 +26,7 @@ public interface IBaseMultiValueLegacyExtendedPropertyCollectionRequestBuilder e
 
     IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest();
 
-    IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IMultiValueLegacyExtendedPropertyRequestBuilder byId(final String id);
 

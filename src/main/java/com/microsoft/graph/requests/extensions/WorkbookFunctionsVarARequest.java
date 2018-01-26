@@ -31,7 +31,7 @@ public class WorkbookFunctionsVarARequest extends BaseWorkbookFunctionsVarAReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsVarARequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsVarARequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

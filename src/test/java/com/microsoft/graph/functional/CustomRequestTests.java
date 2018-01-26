@@ -29,12 +29,12 @@ public class CustomRequestTests {
 		User meOriginal = testBase.graphClient.me().buildRequest().get();
 
 		User meGraphService = testBase.graphClient
-				.customRequest("https://graph.microsoft.com/v1.0/me", User.class)
+				.customRequest("/me", User.class)
 				.buildRequest()
 				.get();
 
 		JsonObject meJson = testBase.graphClient
-				.customRequest("https://graph.microsoft.com/v1.0/me")
+				.customRequest("/me")
 				.buildRequest()
 				.get();
 

@@ -31,7 +31,7 @@ public class BaseWorkbookNamedItemCollectionRequestBuilder extends BaseRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookNamedItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookNamedItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseWorkbookNamedItemCollectionRequestBuilder extends BaseRequestBu
         return buildRequest(getOptions());
     }
 
-    public IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookNamedItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

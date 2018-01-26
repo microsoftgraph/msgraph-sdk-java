@@ -31,7 +31,7 @@ public class WorkbookTableDataBodyRangeRequest extends BaseWorkbookTableDataBody
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableDataBodyRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookTableDataBodyRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

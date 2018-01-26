@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsTrimMeanRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsTrimMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement percent) {
+    public BaseWorkbookFunctionsTrimMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement percent) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("array", array);
         bodyParams.put("percent", percent);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsTrimMeanRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTrimMeanRequest instance
      */
-    public IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTrimMeanRequest request = new WorkbookFunctionsTrimMeanRequest(
                 getRequestUrl(),
                 getClient(),

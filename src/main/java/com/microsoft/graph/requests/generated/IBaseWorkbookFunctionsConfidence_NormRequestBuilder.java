@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsConfidence_NormRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsConfidence_NormRequest instance
      */
-    IWorkbookFunctionsConfidence_NormRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsConfidence_NormRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

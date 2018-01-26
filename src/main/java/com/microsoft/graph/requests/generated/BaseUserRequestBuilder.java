@@ -31,7 +31,7 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseUserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseUserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IUserRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new UserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

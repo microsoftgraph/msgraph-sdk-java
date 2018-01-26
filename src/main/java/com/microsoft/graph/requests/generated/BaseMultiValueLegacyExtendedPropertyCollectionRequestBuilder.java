@@ -31,7 +31,7 @@ public class BaseMultiValueLegacyExtendedPropertyCollectionRequestBuilder extend
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMultiValueLegacyExtendedPropertyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMultiValueLegacyExtendedPropertyCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseMultiValueLegacyExtendedPropertyCollectionRequestBuilder extend
         return buildRequest(getOptions());
     }
 
-    public IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMultiValueLegacyExtendedPropertyCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MultiValueLegacyExtendedPropertyCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

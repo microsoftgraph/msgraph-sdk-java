@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsErf_PreciseRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsErf_PreciseRequest instance
      */
-    IWorkbookFunctionsErf_PreciseRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsErf_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

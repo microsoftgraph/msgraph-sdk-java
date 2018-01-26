@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIsOddRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsOddRequest instance
      */
-    IWorkbookFunctionsIsOddRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIsOddRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

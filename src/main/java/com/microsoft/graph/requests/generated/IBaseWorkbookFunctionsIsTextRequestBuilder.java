@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIsTextRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsTextRequest instance
      */
-    IWorkbookFunctionsIsTextRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIsTextRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

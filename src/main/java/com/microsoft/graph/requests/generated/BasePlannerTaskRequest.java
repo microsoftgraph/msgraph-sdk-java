@@ -34,7 +34,7 @@ public class BasePlannerTaskRequest extends BaseRequest implements IBasePlannerT
      */
     public BasePlannerTaskRequest(final String requestUrl,
             final IBaseClient client,
-            final java.util.List<Option> requestOptions,
+            final java.util.List<? extends Option> requestOptions,
             final Class responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }

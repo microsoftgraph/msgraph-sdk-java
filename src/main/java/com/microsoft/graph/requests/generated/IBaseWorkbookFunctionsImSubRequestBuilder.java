@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsImSubRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsImSubRequest instance
      */
-    IWorkbookFunctionsImSubRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsImSubRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

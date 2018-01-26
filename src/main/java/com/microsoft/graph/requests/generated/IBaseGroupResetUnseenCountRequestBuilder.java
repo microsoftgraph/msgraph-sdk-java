@@ -37,5 +37,5 @@ public interface IBaseGroupResetUnseenCountRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return The IGroupResetUnseenCountRequest instance
      */
-    IGroupResetUnseenCountRequest buildRequest(final java.util.List<Option> requestOptions);
+    IGroupResetUnseenCountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

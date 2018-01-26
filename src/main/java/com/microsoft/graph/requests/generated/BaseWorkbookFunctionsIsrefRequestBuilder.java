@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsIsrefRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement value) {
+    public BaseWorkbookFunctionsIsrefRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("value", value);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsIsrefRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsrefRequest instance
      */
-    public IWorkbookFunctionsIsrefRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsIsrefRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsrefRequest request = new WorkbookFunctionsIsrefRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookWorksheetAddRequestBuilder extends BaseWorkbookWorksheetAdd
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookWorksheetAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name) {
+    public WorkbookWorksheetAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name) {
         super(requestUrl, client, requestOptions, name);
     }
 }

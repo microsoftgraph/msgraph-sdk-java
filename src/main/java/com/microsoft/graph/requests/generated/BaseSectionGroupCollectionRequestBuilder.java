@@ -31,7 +31,7 @@ public class BaseSectionGroupCollectionRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSectionGroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSectionGroupCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseSectionGroupCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public ISectionGroupCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISectionGroupCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SectionGroupCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIsErrRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsErrRequest instance
      */
-    IWorkbookFunctionsIsErrRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIsErrRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

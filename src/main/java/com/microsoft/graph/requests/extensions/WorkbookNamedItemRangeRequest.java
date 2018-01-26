@@ -31,7 +31,7 @@ public class WorkbookNamedItemRangeRequest extends BaseWorkbookNamedItemRangeReq
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookNamedItemRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookNamedItemRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

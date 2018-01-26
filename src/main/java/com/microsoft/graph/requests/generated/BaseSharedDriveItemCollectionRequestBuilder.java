@@ -31,7 +31,7 @@ public class BaseSharedDriveItemCollectionRequestBuilder extends BaseRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSharedDriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSharedDriveItemCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseSharedDriveItemCollectionRequestBuilder extends BaseRequestBuil
         return buildRequest(getOptions());
     }
 
-    public ISharedDriveItemCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISharedDriveItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SharedDriveItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

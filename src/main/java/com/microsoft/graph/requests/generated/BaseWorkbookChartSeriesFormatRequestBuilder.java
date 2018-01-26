@@ -31,7 +31,7 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartSeriesFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartSeriesFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartSeriesFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

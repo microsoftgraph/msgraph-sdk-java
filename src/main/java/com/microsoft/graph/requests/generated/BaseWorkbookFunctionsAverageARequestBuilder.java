@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsAverageARequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsAverageARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsAverageARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsAverageARequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsAverageARequest instance
      */
-    public IWorkbookFunctionsAverageARequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsAverageARequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAverageARequest request = new WorkbookFunctionsAverageARequest(
                 getRequestUrl(),
                 getClient(),

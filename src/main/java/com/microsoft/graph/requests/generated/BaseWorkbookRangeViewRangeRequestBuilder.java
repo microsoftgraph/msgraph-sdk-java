@@ -30,7 +30,7 @@ public class BaseWorkbookRangeViewRangeRequestBuilder extends BaseFunctionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeViewRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookRangeViewRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeViewRangeRequestBuilder extends BaseFunctionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeViewRangeRequest instance
      */
-    public IWorkbookRangeViewRangeRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeViewRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeViewRangeRequest request = new WorkbookRangeViewRangeRequest(
                 getRequestUrl(),
                 getClient(),

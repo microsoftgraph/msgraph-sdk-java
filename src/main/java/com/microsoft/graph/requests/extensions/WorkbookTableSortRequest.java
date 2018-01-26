@@ -31,7 +31,7 @@ public class WorkbookTableSortRequest extends BaseWorkbookTableSortRequest imple
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookTableSortRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookTableSortRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableSort.class);
     }
 }

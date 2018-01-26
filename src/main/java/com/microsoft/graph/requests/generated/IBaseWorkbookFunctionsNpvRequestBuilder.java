@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsNpvRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsNpvRequest instance
      */
-    IWorkbookFunctionsNpvRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsNpvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

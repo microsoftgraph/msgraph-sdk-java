@@ -31,7 +31,7 @@ public class WorkbookFunctionsLargeRequestBuilder extends BaseWorkbookFunctionsL
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsLargeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+    public WorkbookFunctionsLargeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions, array, k);
     }
 }

@@ -26,7 +26,7 @@ public interface IBaseDeviceCollectionRequestBuilder extends IRequestBuilder {
 
     IDeviceCollectionRequest buildRequest();
 
-    IDeviceCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDeviceCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDeviceRequestBuilder byId(final String id);
 

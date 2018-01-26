@@ -31,7 +31,7 @@ public class SiteRequest extends BaseSiteRequest implements ISiteRequest {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public SiteRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public SiteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 }

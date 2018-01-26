@@ -26,7 +26,7 @@ public interface IBaseDomainDnsRecordCollectionRequestBuilder extends IRequestBu
 
     IDomainDnsRecordCollectionRequest buildRequest();
 
-    IDomainDnsRecordCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IDomainDnsRecordCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IDomainDnsRecordRequestBuilder byId(final String id);
 

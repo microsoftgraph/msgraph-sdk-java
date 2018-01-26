@@ -31,6 +31,6 @@ public interface IBasePersonRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IPersonRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPersonRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 }

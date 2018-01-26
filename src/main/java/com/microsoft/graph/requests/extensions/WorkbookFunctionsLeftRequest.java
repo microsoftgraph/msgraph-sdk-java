@@ -31,7 +31,7 @@ public class WorkbookFunctionsLeftRequest extends BaseWorkbookFunctionsLeftReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsLeftRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsLeftRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

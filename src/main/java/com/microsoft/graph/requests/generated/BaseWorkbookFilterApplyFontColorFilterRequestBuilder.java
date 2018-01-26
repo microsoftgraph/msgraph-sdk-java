@@ -30,7 +30,7 @@ public class BaseWorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAc
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFilterApplyFontColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String color) {
+    public BaseWorkbookFilterApplyFontColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("color", color);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAc
      * @param requestOptions the options for the request
      * @return The IWorkbookFilterApplyFontColorFilterRequest instance
      */
-    public IWorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyFontColorFilterRequest request = new WorkbookFilterApplyFontColorFilterRequest(
                 getRequestUrl(),
                 getClient(),

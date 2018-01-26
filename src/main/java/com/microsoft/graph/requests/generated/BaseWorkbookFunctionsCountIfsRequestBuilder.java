@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsCountIfsRequestBuilder extends BaseActionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsCountIfsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsCountIfsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsCountIfsRequestBuilder extends BaseActionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsCountIfsRequest instance
      */
-    public IWorkbookFunctionsCountIfsRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsCountIfsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCountIfsRequest request = new WorkbookFunctionsCountIfsRequest(
                 getRequestUrl(),
                 getClient(),

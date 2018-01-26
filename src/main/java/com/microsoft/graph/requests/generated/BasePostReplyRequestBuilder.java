@@ -30,7 +30,7 @@ public class BasePostReplyRequestBuilder extends BaseActionRequestBuilder {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePostReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Post post) {
+    public BasePostReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Post post) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("post", post);
     }
@@ -50,7 +50,7 @@ public class BasePostReplyRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IPostReplyRequest instance
      */
-    public IPostReplyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPostReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         PostReplyRequest request = new PostReplyRequest(
                 getRequestUrl(),
                 getClient(),

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsFindRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsFindRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
+    public BaseWorkbookFunctionsFindRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("findText", findText);
         bodyParams.put("withinText", withinText);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsFindRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsFindRequest instance
      */
-    public IWorkbookFunctionsFindRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsFindRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFindRequest request = new WorkbookFunctionsFindRequest(
                 getRequestUrl(),
                 getClient(),

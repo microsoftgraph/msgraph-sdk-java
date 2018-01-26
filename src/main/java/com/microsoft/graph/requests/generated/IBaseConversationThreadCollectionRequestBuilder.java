@@ -26,7 +26,7 @@ public interface IBaseConversationThreadCollectionRequestBuilder extends IReques
 
     IConversationThreadCollectionRequest buildRequest();
 
-    IConversationThreadCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IConversationThreadCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IConversationThreadRequestBuilder byId(final String id);
 

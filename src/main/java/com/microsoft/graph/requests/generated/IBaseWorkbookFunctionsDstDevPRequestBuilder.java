@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDstDevPRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDstDevPRequest instance
      */
-    IWorkbookFunctionsDstDevPRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDstDevPRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookChartSetDataRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartSetDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement sourceData, final String seriesBy) {
+    public BaseWorkbookChartSetDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("sourceData", sourceData);
         bodyParams.put("seriesBy", seriesBy);
@@ -51,7 +51,7 @@ public class BaseWorkbookChartSetDataRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookChartSetDataRequest instance
      */
-    public IWorkbookChartSetDataRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookChartSetDataRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartSetDataRequest request = new WorkbookChartSetDataRequest(
                 getRequestUrl(),
                 getClient(),

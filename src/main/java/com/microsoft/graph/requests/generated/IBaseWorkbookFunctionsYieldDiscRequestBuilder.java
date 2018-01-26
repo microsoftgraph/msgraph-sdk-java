@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsYieldDiscRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsYieldDiscRequest instance
      */
-    IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDecimalRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDecimalRequest instance
      */
-    IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

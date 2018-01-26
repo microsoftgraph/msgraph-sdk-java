@@ -30,7 +30,7 @@ public class BaseWorkbookTableSortApplyRequestBuilder extends BaseActionRequestB
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookTableSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method) {
+    public BaseWorkbookTableSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("fields", fields);
         bodyParams.put("matchCase", matchCase);
@@ -52,7 +52,7 @@ public class BaseWorkbookTableSortApplyRequestBuilder extends BaseActionRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookTableSortApplyRequest instance
      */
-    public IWorkbookTableSortApplyRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookTableSortApplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableSortApplyRequest request = new WorkbookTableSortApplyRequest(
                 getRequestUrl(),
                 getClient(),

@@ -31,7 +31,7 @@ public class WorkbookRangeCellRequestBuilder extends BaseWorkbookRangeCellReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer row, final Integer column) {
+    public WorkbookRangeCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions, row, column);
     }
 }

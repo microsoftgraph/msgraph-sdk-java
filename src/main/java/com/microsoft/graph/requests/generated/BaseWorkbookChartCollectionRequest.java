@@ -32,7 +32,7 @@ public class BaseWorkbookChartCollectionRequest extends BaseCollectionRequest<Ba
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookChartCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookChartCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookChartCollectionResponse.class, IWorkbookChartCollectionPage.class);
     }
 

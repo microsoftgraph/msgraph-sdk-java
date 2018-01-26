@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMdurationRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsMdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsMdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsMdurationRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMdurationRequest instance
      */
-    public IWorkbookFunctionsMdurationRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsMdurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMdurationRequest request = new WorkbookFunctionsMdurationRequest(
                 getRequestUrl(),
                 getClient(),

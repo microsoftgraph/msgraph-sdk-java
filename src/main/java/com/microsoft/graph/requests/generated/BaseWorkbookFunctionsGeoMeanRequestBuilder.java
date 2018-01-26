@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsGeoMeanRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsGeoMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement values) {
+    public BaseWorkbookFunctionsGeoMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("values", values);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsGeoMeanRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsGeoMeanRequest instance
      */
-    public IWorkbookFunctionsGeoMeanRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsGeoMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGeoMeanRequest request = new WorkbookFunctionsGeoMeanRequest(
                 getRequestUrl(),
                 getClient(),

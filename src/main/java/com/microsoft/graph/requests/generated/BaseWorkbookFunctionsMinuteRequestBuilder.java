@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsMinuteRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsMinuteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
+    public BaseWorkbookFunctionsMinuteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("serialNumber", serialNumber);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsMinuteRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsMinuteRequest instance
      */
-    public IWorkbookFunctionsMinuteRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsMinuteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMinuteRequest request = new WorkbookFunctionsMinuteRequest(
                 getRequestUrl(),
                 getClient(),

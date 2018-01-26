@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsPriceRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsPriceRequest instance
      */
-    IWorkbookFunctionsPriceRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsPriceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

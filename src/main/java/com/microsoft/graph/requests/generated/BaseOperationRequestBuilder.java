@@ -31,7 +31,7 @@ public class BaseOperationRequestBuilder extends BaseRequestBuilder implements I
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,12 +45,8 @@ public class BaseOperationRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IOperationRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IOnenoteOperationRequestBuilder onenoteOperation() {
-        return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("onenoteOperation"), getClient(), null);
-    }
 }

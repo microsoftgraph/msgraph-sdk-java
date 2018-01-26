@@ -31,7 +31,7 @@ public class WorkbookFunctionsPriceDiscRequest extends BaseWorkbookFunctionsPric
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsPriceDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsPriceDiscRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

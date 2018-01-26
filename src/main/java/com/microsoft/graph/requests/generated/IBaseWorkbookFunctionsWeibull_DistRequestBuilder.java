@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsWeibull_DistRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsWeibull_DistRequest instance
      */
-    IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -31,7 +31,7 @@ public interface IBaseOnenoteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IOnenoteRequest buildRequest(final java.util.List<Option> requestOptions);
+    IOnenoteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     INotebookCollectionRequestBuilder notebooks();
 

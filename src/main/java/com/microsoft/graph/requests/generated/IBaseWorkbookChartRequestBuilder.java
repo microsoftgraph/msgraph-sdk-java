@@ -31,7 +31,7 @@ public interface IBaseWorkbookChartRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookChartRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookChartRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartAxes.

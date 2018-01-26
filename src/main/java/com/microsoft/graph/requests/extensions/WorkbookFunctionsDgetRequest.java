@@ -31,7 +31,7 @@ public class WorkbookFunctionsDgetRequest extends BaseWorkbookFunctionsDgetReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDgetRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public WorkbookFunctionsDgetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 }

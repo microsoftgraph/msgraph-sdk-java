@@ -32,7 +32,7 @@ public class BaseDirectoryRoleTemplateCollectionRequest extends BaseCollectionRe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseDirectoryRoleTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseDirectoryRoleTemplateCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseDirectoryRoleTemplateCollectionResponse.class, IDirectoryRoleTemplateCollectionPage.class);
     }
 

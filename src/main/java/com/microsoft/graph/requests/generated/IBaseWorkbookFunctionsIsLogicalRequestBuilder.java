@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIsLogicalRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsLogicalRequest instance
      */
-    IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

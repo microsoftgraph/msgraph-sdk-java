@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDproductRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDproductRequest instance
      */
-    IWorkbookFunctionsDproductRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDproductRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

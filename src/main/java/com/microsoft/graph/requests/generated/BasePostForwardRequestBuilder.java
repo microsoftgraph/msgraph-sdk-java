@@ -30,7 +30,7 @@ public class BasePostForwardRequestBuilder extends BaseActionRequestBuilder {
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BasePostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
+    public BasePostForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("comment", comment);
         bodyParams.put("toRecipients", toRecipients);
@@ -51,7 +51,7 @@ public class BasePostForwardRequestBuilder extends BaseActionRequestBuilder {
      * @param requestOptions the options for the request
      * @return The IPostForwardRequest instance
      */
-    public IPostForwardRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IPostForwardRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         PostForwardRequest request = new PostForwardRequest(
                 getRequestUrl(),
                 getClient(),

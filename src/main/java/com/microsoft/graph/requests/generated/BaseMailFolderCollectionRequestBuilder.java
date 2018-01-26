@@ -31,7 +31,7 @@ public class BaseMailFolderCollectionRequestBuilder extends BaseRequestBuilder i
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseMailFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseMailFolderCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseMailFolderCollectionRequestBuilder extends BaseRequestBuilder i
         return buildRequest(getOptions());
     }
 
-    public IMailFolderCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IMailFolderCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MailFolderCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

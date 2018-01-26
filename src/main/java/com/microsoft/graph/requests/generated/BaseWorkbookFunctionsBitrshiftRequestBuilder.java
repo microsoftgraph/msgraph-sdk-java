@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsBitrshiftRequestBuilder extends BaseActionRequ
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsBitrshiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement shiftAmount) {
+    public BaseWorkbookFunctionsBitrshiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement shiftAmount) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("number", number);
         bodyParams.put("shiftAmount", shiftAmount);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsBitrshiftRequestBuilder extends BaseActionRequ
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsBitrshiftRequest instance
      */
-    public IWorkbookFunctionsBitrshiftRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsBitrshiftRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBitrshiftRequest request = new WorkbookFunctionsBitrshiftRequest(
                 getRequestUrl(),
                 getClient(),

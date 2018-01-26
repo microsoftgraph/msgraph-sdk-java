@@ -31,7 +31,7 @@ public interface IBaseWorkbookTableSortRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request with specific options instead of the existing options
      */
-    IWorkbookTableSortRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookTableSortRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookTableSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method);
     IWorkbookTableSortClearRequestBuilder clear();
     IWorkbookTableSortReapplyRequestBuilder reapply();

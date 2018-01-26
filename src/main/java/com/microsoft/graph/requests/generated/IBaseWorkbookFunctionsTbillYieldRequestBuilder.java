@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsTbillYieldRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsTbillYieldRequest instance
      */
-    IWorkbookFunctionsTbillYieldRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsTbillYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

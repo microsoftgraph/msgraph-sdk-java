@@ -30,7 +30,7 @@ public class BaseOnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActi
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseOnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String id, final String groupId, final String renameAs) {
+    public BaseOnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("id", id);
         bodyParams.put("groupId", groupId);
@@ -52,7 +52,7 @@ public class BaseOnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActi
      * @param requestOptions the options for the request
      * @return The IOnenoteSectionCopyToSectionGroupRequest instance
      */
-    public IOnenoteSectionCopyToSectionGroupRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IOnenoteSectionCopyToSectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         OnenoteSectionCopyToSectionGroupRequest request = new OnenoteSectionCopyToSectionGroupRequest(
                 getRequestUrl(),
                 getClient(),

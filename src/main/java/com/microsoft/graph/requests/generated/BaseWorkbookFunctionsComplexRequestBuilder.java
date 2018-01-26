@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsComplexRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement realNum, final com.google.gson.JsonElement iNum, final com.google.gson.JsonElement suffix) {
+    public BaseWorkbookFunctionsComplexRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement realNum, final com.google.gson.JsonElement iNum, final com.google.gson.JsonElement suffix) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("realNum", realNum);
         bodyParams.put("iNum", iNum);
@@ -52,7 +52,7 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsComplexRequest instance
      */
-    public IWorkbookFunctionsComplexRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsComplexRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsComplexRequest request = new WorkbookFunctionsComplexRequest(
                 getRequestUrl(),
                 getClient(),

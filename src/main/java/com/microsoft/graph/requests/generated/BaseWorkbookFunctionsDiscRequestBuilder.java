@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBu
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+    public BaseWorkbookFunctionsDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("settlement", settlement);
         bodyParams.put("maturity", maturity);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBu
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDiscRequest instance
      */
-    public IWorkbookFunctionsDiscRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDiscRequest request = new WorkbookFunctionsDiscRequest(
                 getRequestUrl(),
                 getClient(),

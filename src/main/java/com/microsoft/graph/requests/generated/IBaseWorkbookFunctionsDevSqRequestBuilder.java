@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsDevSqRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDevSqRequest instance
      */
-    IWorkbookFunctionsDevSqRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsDevSqRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

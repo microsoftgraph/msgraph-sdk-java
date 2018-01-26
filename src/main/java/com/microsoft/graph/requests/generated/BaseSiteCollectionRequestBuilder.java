@@ -31,7 +31,7 @@ public class BaseSiteCollectionRequestBuilder extends BaseRequestBuilder impleme
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSiteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSiteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseSiteCollectionRequestBuilder extends BaseRequestBuilder impleme
         return buildRequest(getOptions());
     }
 
-    public ISiteCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public ISiteCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SiteCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

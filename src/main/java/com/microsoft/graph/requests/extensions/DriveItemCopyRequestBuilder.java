@@ -31,7 +31,7 @@ public class DriveItemCopyRequestBuilder extends BaseDriveItemCopyRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public DriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String name, final ItemReference parentReference) {
+    public DriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final ItemReference parentReference) {
         super(requestUrl, client, requestOptions, name, parentReference);
     }
 }

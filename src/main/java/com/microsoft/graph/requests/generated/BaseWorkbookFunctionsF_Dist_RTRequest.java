@@ -32,7 +32,7 @@ public class BaseWorkbookFunctionsF_Dist_RTRequest extends BaseRequest implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsF_Dist_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseWorkbookFunctionsF_Dist_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsF_Dist_RTBody();
     }

@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsDdbRequestBuilder extends BaseActionRequestBui
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsDdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement period, final com.google.gson.JsonElement factor) {
+    public BaseWorkbookFunctionsDdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement period, final com.google.gson.JsonElement factor) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("cost", cost);
         bodyParams.put("salvage", salvage);
@@ -54,7 +54,7 @@ public class BaseWorkbookFunctionsDdbRequestBuilder extends BaseActionRequestBui
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsDdbRequest instance
      */
-    public IWorkbookFunctionsDdbRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsDdbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDdbRequest request = new WorkbookFunctionsDdbRequest(
                 getRequestUrl(),
                 getClient(),

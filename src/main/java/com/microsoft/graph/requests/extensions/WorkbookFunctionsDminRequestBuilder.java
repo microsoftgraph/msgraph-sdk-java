@@ -31,7 +31,7 @@ public class WorkbookFunctionsDminRequestBuilder extends BaseWorkbookFunctionsDm
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookFunctionsDminRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+    public WorkbookFunctionsDminRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions, database, field, criteria);
     }
 }

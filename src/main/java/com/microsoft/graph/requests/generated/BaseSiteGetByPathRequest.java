@@ -31,7 +31,7 @@ public class BaseSiteGetByPathRequest extends BaseRequest implements IBaseSiteGe
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseSiteGetByPathRequest(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseSiteGetByPathRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
 

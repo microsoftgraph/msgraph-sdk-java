@@ -37,5 +37,5 @@ public interface IBaseWorkbookFunctionsIsFormulaRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsIsFormulaRequest instance
      */
-    IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<Option> requestOptions);
+    IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

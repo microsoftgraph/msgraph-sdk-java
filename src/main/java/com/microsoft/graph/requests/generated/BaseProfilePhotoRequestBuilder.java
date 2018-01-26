@@ -31,7 +31,7 @@ public class BaseProfilePhotoRequestBuilder extends BaseRequestBuilder implement
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseProfilePhotoRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseProfilePhotoRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,7 +45,7 @@ public class BaseProfilePhotoRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IProfilePhotoRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IProfilePhotoRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ProfilePhotoRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

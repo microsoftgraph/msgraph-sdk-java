@@ -32,7 +32,7 @@ public class BaseInferenceClassificationOverrideCollectionRequest extends BaseCo
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseInferenceClassificationOverrideCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseInferenceClassificationOverrideCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseInferenceClassificationOverrideCollectionResponse.class, IInferenceClassificationOverrideCollectionPage.class);
     }
 

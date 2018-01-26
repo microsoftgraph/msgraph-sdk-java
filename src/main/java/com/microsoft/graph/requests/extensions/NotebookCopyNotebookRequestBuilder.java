@@ -31,7 +31,7 @@ public class NotebookCopyNotebookRequestBuilder extends BaseNotebookCopyNotebook
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public NotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
+    public NotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
         super(requestUrl, client, requestOptions, groupId, renameAs, notebookFolder);
     }
 }

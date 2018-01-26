@@ -30,7 +30,7 @@ public class BaseWorkbookFunctionsSecondRequestBuilder extends BaseActionRequest
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookFunctionsSecondRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
+    public BaseWorkbookFunctionsSecondRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("serialNumber", serialNumber);
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookFunctionsSecondRequestBuilder extends BaseActionRequest
      * @param requestOptions the options for the request
      * @return The IWorkbookFunctionsSecondRequest instance
      */
-    public IWorkbookFunctionsSecondRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookFunctionsSecondRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSecondRequest request = new WorkbookFunctionsSecondRequest(
                 getRequestUrl(),
                 getClient(),

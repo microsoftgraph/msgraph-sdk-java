@@ -26,7 +26,7 @@ public interface IBasePlannerBucketCollectionRequestBuilder extends IRequestBuil
 
     IPlannerBucketCollectionRequest buildRequest();
 
-    IPlannerBucketCollectionRequest buildRequest(final java.util.List<Option> requestOptions);
+    IPlannerBucketCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     IPlannerBucketRequestBuilder byId(final String id);
 

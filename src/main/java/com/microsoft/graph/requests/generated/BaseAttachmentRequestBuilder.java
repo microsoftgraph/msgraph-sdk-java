@@ -31,7 +31,7 @@ public class BaseAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,20 +45,8 @@ public class BaseAttachmentRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      */
-    public IAttachmentRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new AttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-
-    public IFileAttachmentRequestBuilder fileAttachment() {
-        return new FileAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("fileAttachment"), getClient(), null);
-    }
-
-    public IItemAttachmentRequestBuilder itemAttachment() {
-        return new ItemAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("itemAttachment"), getClient(), null);
-    }
-
-    public IReferenceAttachmentRequestBuilder referenceAttachment() {
-        return new ReferenceAttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("referenceAttachment"), getClient(), null);
-    }
 }

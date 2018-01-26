@@ -31,7 +31,7 @@ public class BaseGroupSettingCollectionRequestBuilder extends BaseRequestBuilder
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseGroupSettingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions) {
+    public BaseGroupSettingCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,7 +39,7 @@ public class BaseGroupSettingCollectionRequestBuilder extends BaseRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public IGroupSettingCollectionRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IGroupSettingCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new GroupSettingCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -30,7 +30,7 @@ public class BaseWorkbookRangeViewItemAtRequestBuilder extends BaseFunctionReque
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public BaseWorkbookRangeViewItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer index) {
+    public BaseWorkbookRangeViewItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
         functionOptions.add(new FunctionOption("index", index));
     }
@@ -50,7 +50,7 @@ public class BaseWorkbookRangeViewItemAtRequestBuilder extends BaseFunctionReque
      * @param requestOptions the options for the request
      * @return The IWorkbookRangeViewItemAtRequest instance
      */
-    public IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<Option> requestOptions) {
+    public IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeViewItemAtRequest request = new WorkbookRangeViewItemAtRequest(
                 getRequestUrl(),
                 getClient(),

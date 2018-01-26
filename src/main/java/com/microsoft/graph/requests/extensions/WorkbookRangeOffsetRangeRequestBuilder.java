@@ -31,7 +31,7 @@ public class WorkbookRangeOffsetRangeRequestBuilder extends BaseWorkbookRangeOff
      * @param client The service client
      * @param requestOptions The options for this request
      */
-    public WorkbookRangeOffsetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<Option> requestOptions, final Integer rowOffset, final Integer columnOffset) {
+    public WorkbookRangeOffsetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer rowOffset, final Integer columnOffset) {
         super(requestUrl, client, requestOptions, rowOffset, columnOffset);
     }
 }
