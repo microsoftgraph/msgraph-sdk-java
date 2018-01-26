@@ -38,7 +38,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId 'com.microsoft.graph'
-            artifactId 'msgraph-sdk-java'
+            artifactId 'microsoft-graph'
             version '0.1-SNAPSHOT'
 
             from components.java
