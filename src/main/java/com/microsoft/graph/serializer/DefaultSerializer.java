@@ -128,11 +128,11 @@ public class DefaultSerializer implements ISerializer {
 				
 				// If the object is a HashMap, iterate through its children
 				if (fieldObject instanceof HashMap) {
-					HashMap serializableChildren = (HashMap) fieldObject;
+					HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
 					Iterator it = serializableChildren.entrySet().iterator();
 					
 					while (it.hasNext()) {
-						HashMap.Entry pair = (HashMap.Entry)it.next();
+						HashMap.Entry<String, Object> pair = (HashMap.Entry<String, Object>)it.next();
 						Object child = pair.getValue();
 
 						// If the item is a valid Graph object, add its additional data
