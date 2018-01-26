@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner User Ids.
  */
-public class BasePlannerUserIds extends ArrayList<String> implements IJsonBackedObject {
+public class BasePlannerUserIds implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)
