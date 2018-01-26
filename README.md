@@ -1,20 +1,12 @@
 # Preview Microsoft Graph SDK for Java
-This client library is currently in private preview status. This means that: 
-- The API surface may change significantly
-- Non-blocking issues *may* be triaged at a slower pace
-- You may submit feedback through issues or PRs. You will have a better chance of your changes being implemented if they are submitted before public preview release
-- We do not define an SLA or support strategy for this library
-
-We welcome your feedback as we drive the quality of this to general availability.
+*This SDK is currently in preview. Please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-java/issues/new) as we iterate towards a production-supported library.*
 
 # Get started with the Microsoft Graph SDK for Java
 
-Integrate the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
+Integrate the [Microsoft Graph API](https://developer.microsoft.com/graph) into your Java application!
 
 ## 1. Installation
 ### 1.1 Install via Gradle
-*This package will not be available via Gradle until it hits public preview. You will need to download the source and reference the package locally.*
-
 Add the JCenter repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`
 
 ```gradle
@@ -24,11 +16,12 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:msgraph-sdk-java:1.0.+')
+    compile('com.microsoft.graph:microsoft-graph:0.1.+')
 }
 ```
 
 ### 1.2 Enable ProGuard (Android)
+
 The nature of the Graph API is such that the SDK needs quite a large set of classes to describe its functionality. You will need to ensure that [ProGuard](https://developer.android.com/studio/build/shrink-code.html) is enabled on your project. Otherwise, you will incur long build times for functionality that is not necessary relevant to your particular application. If you are still hitting the 64k method limit, you can also enable [multidexing](https://developer.android.com/studio/build/multidex.html).
 
 ## 2. Getting started
@@ -47,8 +40,6 @@ new instance of this class, you need to provide an instance of
 For an example of authentication in a client application see the [MSGraph SDK Android MSA Auth for Android Adapter](https://github.com/microsoftgraph/msgraph-sdk-android-msa-auth-for-android-adapter).
 
 ### 2.3 Get a GraphServiceClient object
-
-TODO: the para below needs expansion or removal. Would need to mention the different flows (authorization code flow, implicit flow, client credential flow) and give pointers on where to get sample code. Dave Moten can provide link for client credentials flow.
 
 Once you have set the correct application ID and url, you must get a **GraphServiceClient** object to make requests against the service. The SDK will store the account information for you, but when a user logs on for the first time, it will invoke UI to get the user's account information.
 
