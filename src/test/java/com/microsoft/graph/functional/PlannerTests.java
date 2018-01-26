@@ -41,7 +41,7 @@ public class PlannerTests {
     private static TestBase testBase;
     // For now, you must specify a specific plan ID since the test cannot
     // clean up after itself
-    private static String planId = "ebJ1qqxlQUCwR4Osxm6TzWUAGpq6";
+    private static String planId = "f1WS2LJ4_k2G-KXzHwH-lGUABSKq";
     private static PlannerBucket planBucket;
     private static PlannerTask planTask;
     private static IPlannerRequestBuilder prb;
@@ -298,6 +298,8 @@ public class PlannerTests {
         task.dueDateTime = Calendar.getInstance();
 
         IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        planTask = prb.tasks(planTask.id).buildRequest().get();
+        
         req.addHeader("If-Match", getEtag(planTask.getRawObject()));
         req.patch(task);
         
