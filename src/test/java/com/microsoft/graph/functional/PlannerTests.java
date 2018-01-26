@@ -5,8 +5,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequest;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
 import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
 import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
@@ -28,7 +26,9 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -36,18 +36,18 @@ import static org.junit.Assert.*;
 import java.util.Calendar;
 import java.util.UUID;
 
-@Ignore
+//@Ignore
 public class PlannerTests {
-    private TestBase testBase;
+    private static TestBase testBase;
     // For now, you must specify a specific plan ID since the test cannot
     // clean up after itself
-    private String planId = "ebJ1qqxlQUCwR4Osxm6TzWUAGpq6";
-    private PlannerBucket planBucket;
-    private PlannerTask planTask;
-    private IPlannerRequestBuilder prb;
+    private static String planId = "ebJ1qqxlQUCwR4Osxm6TzWUAGpq6";
+    private static PlannerBucket planBucket;
+    private static PlannerTask planTask;
+    private static IPlannerRequestBuilder prb;
 
-    @Before
-    public void setUp() {
+    @BeforeClass
+    public static void setUp() {
         testBase = new TestBase();
         prb = testBase.graphClient.planner();
 
@@ -411,8 +411,8 @@ public class PlannerTests {
         req.delete();
     }
 
-    @After
-    public void tearDown() throws InterruptedException {
+    @AfterClass
+    public static void tearDown() throws InterruptedException {
     	
     	Thread.sleep(4000);
     	
@@ -434,7 +434,7 @@ public class PlannerTests {
         // planReq.delete();
     }
 
-    public String getEtag(JsonObject obj) {
+    public static String getEtag(JsonObject obj) {
         String etag = obj.get("@odata.etag").toString();
         etag = etag.substring(1, etag.length()-1);
         etag = etag.replace("\\", "");;
