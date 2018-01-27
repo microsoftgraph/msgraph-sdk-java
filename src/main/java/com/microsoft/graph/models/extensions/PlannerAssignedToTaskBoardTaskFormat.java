@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.models.extensions;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
@@ -24,6 +26,13 @@ import java.util.EnumSet;
  */
 public class PlannerAssignedToTaskBoardTaskFormat extends BasePlannerAssignedToTaskBoardTaskFormat {
 
+	/**
+     * The Etag.
+     */
+    @SerializedName("@odata.etag")
+    @Expose
+    public String etag;
+    
 	/**
 	 * The GetOrderHintForAssignee
 	 */
