@@ -14,7 +14,6 @@ import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.EnumSet;
 
