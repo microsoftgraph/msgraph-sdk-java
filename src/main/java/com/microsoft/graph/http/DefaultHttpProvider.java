@@ -35,6 +35,7 @@ import com.microsoft.graph.serializer.ISerializer;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -297,13 +298,13 @@ public class DefaultHttpProvider implements IHttpProvider {
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_NOBODY
                         || connection.getResponseCode() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-                    logger.logDebug("Handling response with no body");
-                    return null;
+                    logger.logDebug("Handling response with no body");                  
+                    return handleEmptyResponse(connection.getResponseHeaders(), resultClass);
                 }
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
                     logger.logDebug("Handling accepted response");
-                    return null;
+                    return handleEmptyResponse(connection.getResponseHeaders(), resultClass);
                 }
 
                 in = new BufferedInputStream(connection.getInputStream());
@@ -313,7 +314,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
                 if (contentType.contains(JSON_CONTENT_TYPE)) {
                     logger.logDebug("Response json");
-                    return handleJsonResponse(in, resultClass);
+                    return handleJsonResponse(in, connection.getResponseHeaders(), resultClass);
                 } else {
                     logger.logDebug("Response binary");
                     isBinaryStreamInput = true;
@@ -372,18 +373,33 @@ public class DefaultHttpProvider implements IHttpProvider {
     /**
      * Handles the cause where the response is a JSON object.
      *
-     * @param in       The input stream from the response.
-     * @param clazz    The class of the response object.
+     * @param in              The input stream from the response.
+     * @param responseHeaders The response headers
+     * @param clazz           The class of the response object.
      * @param <Result> The type of the response object.
      * @return The JSON object.
      */
-    private <Result> Result handleJsonResponse(final InputStream in, final Class<Result> clazz) {
+    private <Result> Result handleJsonResponse(final InputStream in, Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
         if (clazz == null) {
             return null;
         }
 
         final String rawJson = streamToString(in);
-        return getSerializer().deserializeObject(rawJson, clazz);
+        return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
+    }
+    
+    /**
+     * Handles the case where the response body is empty.
+     * 
+     * @param responseHeaders The response headers
+     * @param clazz           The type of the response object
+     * @return The JSON object
+     */
+    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
+    	//Create an empty object to attach the response headers to
+        InputStream in = new ByteArrayInputStream("{}".getBytes());
+        
+    	return handleJsonResponse(in, responseHeaders, clazz);
     }
 
     /**

@@ -5,7 +5,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -75,5 +77,15 @@ public class MockConnection implements IConnection {
     public void setContentLength(int length) {
         // noop
     }
+
+	@Override
+	public Map<String, List<String>> getResponseHeaders() {
+		Map<String, List<String>> headers = new HashMap<String, List<String>>();
+		ArrayList<String> headerValues = new ArrayList<String>();
+		headerValues.add("value1");
+		headers.put("header1", headerValues);
+		
+		return headers;
+	}
 
 }

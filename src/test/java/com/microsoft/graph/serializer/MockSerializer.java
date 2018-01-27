@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.serializer;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * Mock instance of the {@see ISerializer}
  */
@@ -56,4 +59,10 @@ public class MockSerializer implements ISerializer {
     public <T> String serializeObject(final T serializableObject) {
         return mSerializeReturn;
     }
+
+	@Override
+	public <T> T deserializeObject(String inputString, Class<T> clazz, Map<String, List<String>> responseHeaders) {
+		// TODO Auto-generated method stub
+		return (T) mDeserializeReturn;
+	}
 }

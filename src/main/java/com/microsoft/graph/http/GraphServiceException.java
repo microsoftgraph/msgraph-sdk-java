@@ -283,7 +283,7 @@ public class GraphServiceException extends ClientException {
         final String rawOutput = DefaultHttpProvider.streamToString(connection.getInputStream());
         GraphErrorResponse error;
         try {
-            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class);
+            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, connection.getResponseHeaders());
         } catch (final Exception ex) {
             error = new GraphErrorResponse();
             error.error = new GraphError();
