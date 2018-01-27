@@ -108,7 +108,7 @@ public class ChunkedUploadResponseHandler<UploadType>
 
                 return new ChunkedUploadResult(
                         GraphServiceException.createFromConnection(request, null, serializer,
-                                connection));
+                                connection, logger));
             }
         } finally {
             if (in != null) {

@@ -30,11 +30,6 @@ import java.util.List;
 public class GraphFatalServiceException extends GraphServiceException {
 
     /**
-     * The web site to report issues on this SDK.
-     */
-    public static final String SDK_BUG_URL = "https://github.com/microsoftgraph/msgraph-sdk-java/issues";
-
-    /**
      * Create a fatal Graph service exception.
      * @param method The method that caused the exception.
      * @param url The URL.
@@ -52,19 +47,17 @@ public class GraphFatalServiceException extends GraphServiceException {
                                          final int responseCode,
                                          final String responseMessage,
                                          final List<String> responseHeaders,
-                                         final GraphErrorResponse error) {
-        super(method, url, requestHeaders, requestBody, responseCode, responseMessage, responseHeaders, error);
+                                         final GraphErrorResponse error,
+                                         final boolean verbose) {
+        super(method, url, requestHeaders, requestBody, responseCode, responseMessage, responseHeaders, error, verbose);
     }
 
     @Override
     public String getMessage(final boolean verbose) {
         //no inspection StringBufferReplaceableByString
         final StringBuilder sb = new StringBuilder();
-        sb.append("[This is an unexpected error from Graph, please report this at ")
-                .append(SDK_BUG_URL)
-                .append(']')
-                .append(NEW_LINE)
-                .append(super.getMessage(true));
+        sb.append("Unexpected exception returned from the service.")
+                .append(super.getMessage(verbose));
         return sb.toString();
     }
 }

@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.MockLogger;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -95,14 +94,13 @@ public class DefaultExecutorsTests {
         final String expectedLogMessage = "Starting foreground task, current active count:0, with exception com.microsoft.graph.core.ClientException: client exception message";
         final ExecutorTestCallback<String> callback = new ExecutorTestCallback<>();
 
-        defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null, GraphErrorCodes.INVALID_ACCEPT_TYPE),
+        defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null),
                 callback);
 
         callback._completionWaiter.waitForSignal();
         assertFalse(callback._successCalled.get());
         assertTrue(callback._failureCalled.get());
         assertEquals(expectedExceptionMessage, callback._exceptionResult.get().getMessage());
-        assertTrue(callback._exceptionResult.get().isError(GraphErrorCodes.INVALID_ACCEPT_TYPE));
         assertEquals(1,mLogger.getLogMessages().size());
         assertTrue(mLogger.hasMessage(expectedLogMessage));
     }

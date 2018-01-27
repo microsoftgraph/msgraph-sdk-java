@@ -12,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.core.GraphErrorCodes;
+import com.microsoft.graph.logger.DefaultLogger;
 
 public class GraphServiceExceptionTests {
 
@@ -21,16 +22,31 @@ public class GraphServiceExceptionTests {
         GraphError error = new GraphError();
         error.code = GraphErrorCodes.UNAUTHENTICATED.toString();
         errorResponse.error = error;
-        GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),null,401,"Unauthorized",new ArrayList<String>(),errorResponse);
+        GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),null,401,"Unauthorized",new ArrayList<String>(),errorResponse, false);
         String message = exception.getMessage();
         assertTrue(message.indexOf("Error code: UNAUTHENTICATED") == 0);
         assertTrue(message.indexOf("401 : Unauthorized") > 0);
+        assertTrue(message.indexOf("truncated") > 0);
         assertEquals(error,exception.getServiceError());
-        assertTrue(exception.isError(GraphErrorCodes.UNAUTHENTICATED));
     }
+	
+	@Test
+	public void testVerboseError() {
+		GraphErrorResponse errorResponse = new GraphErrorResponse();
+        GraphError error = new GraphError();
+        error.code = GraphErrorCodes.UNAUTHENTICATED.toString();
+        errorResponse.error = error;
+        GraphServiceException exception = new GraphServiceException(null,null,new ArrayList<String>(),null,401,"Unauthorized",new ArrayList<String>(),errorResponse, true);
+        String message = exception.getMessage();
+        assertTrue(message.indexOf("Error code: UNAUTHENTICATED") == 0);
+        assertTrue(message.indexOf("401 : Unauthorized") > 0);
+        assertFalse(message.indexOf("truncated") > 0);
+        assertEquals(error,exception.getServiceError());
+	}
 
 	@Test
     public void testCreateFromConnection() {
+		DefaultLogger logger = new DefaultLogger();
         GraphServiceException exception = null;
         Boolean success = false;
         Boolean failure = false;
@@ -51,7 +67,7 @@ public class GraphServiceExceptionTests {
             }
         };
         try{
-            exception = GraphServiceException.createFromConnection(new MockHttpRequest(),null,null,new MockConnection(data){});
+            exception = GraphServiceException.createFromConnection(new MockHttpRequest(),null,null,new MockConnection(data){},logger);
             success = true;
         }catch (IOException ex){
             failure = true;

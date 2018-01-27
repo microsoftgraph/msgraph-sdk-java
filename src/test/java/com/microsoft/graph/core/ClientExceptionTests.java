@@ -8,14 +8,12 @@ import org.junit.Test;
 
 public class ClientExceptionTests {
 
-	private GraphErrorCodes graphErrorCodes;
     private ClientException clientException;
     private String expectMessage = "This is test exception message";
 	
 	@Before
 	public void setUp() throws Exception {
-		graphErrorCodes = GraphErrorCodes.ACCESS_DENIED;
-        clientException = new ClientException(expectMessage, null, graphErrorCodes);
+        clientException = new ClientException(expectMessage, null);
 	}
 
 	@Test
@@ -25,7 +23,6 @@ public class ClientExceptionTests {
 
 	@Test
     public void testClientException() {
-        assertTrue(clientException.isError(graphErrorCodes));
         assertEquals(expectMessage, clientException.getMessage());
     }
 

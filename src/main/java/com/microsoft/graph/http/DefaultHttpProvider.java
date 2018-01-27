@@ -332,12 +332,11 @@ public class DefaultHttpProvider implements IHttpProvider {
             }
         } catch (final GraphServiceException ex) {
             final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
-            logger.logError("OneDrive Service exception " + ex.getMessage(shouldLogVerbosely), ex);
+            logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
-                    ex,
-                    GraphErrorCodes.GENERAL_EXCEPTION);
+                    ex);
             logger.logError("Error during http request", clientException);
             throw clientException;
         }
@@ -357,7 +356,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                                             final IConnection connection)
             throws IOException {
         throw GraphServiceException.createFromConnection(request, serializable, serializer,
-                connection);
+                connection, logger);
     }
 
     /**
