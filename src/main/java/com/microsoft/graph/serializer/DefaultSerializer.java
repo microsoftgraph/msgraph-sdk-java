@@ -70,22 +70,26 @@ public class DefaultSerializer implements ISerializer {
     	return deserializeObject(inputString, clazz, null);
     }
     
+    @SuppressWarnings("unchecked")
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
-        T jsonObject = gson.fromJson(inputString, clazz);
+        final T jsonObject = gson.fromJson(inputString, clazz);
 
         // Populate the JSON-backed fields for any annotations that are not in the object model
         if (jsonObject instanceof IJsonBackedObject) {
             logger.logDebug("Deserializing type " + clazz.getSimpleName());
-            final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jsonObject;
             final JsonObject rawObject = gson.fromJson(inputString, JsonObject.class);
-            
-        	// If there is a derived class, try to get it and deserialize to it
-			Class derivedClass = this.getDerivedClass(rawObject, clazz);
-			if (derivedClass != null) {
-				jsonObject = (T) gson.fromJson(inputString, derivedClass);
-			}
-			
+
+            // If there is a derived class, try to get it and deserialize to it
+            Class<?> derivedClass = this.getDerivedClass(rawObject, clazz);
+            final T jo;
+            if (derivedClass != null) {
+                jo = (T) gson.fromJson(inputString, derivedClass);
+            } else {
+                jo = jsonObject;
+            }
+
+            final IJsonBackedObject jsonBackedObject = (IJsonBackedObject) jo;
             jsonBackedObject.setRawObject(this, rawObject);
 
             if (responseHeaders != null) {
@@ -94,11 +98,11 @@ public class DefaultSerializer implements ISerializer {
             }
             
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
+            return jo;
         } else {
             logger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
+            return jsonObject;
         }
-
-        return jsonObject;
     }
 
     /**

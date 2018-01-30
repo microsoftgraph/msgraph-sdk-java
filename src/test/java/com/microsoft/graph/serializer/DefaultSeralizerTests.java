@@ -10,6 +10,7 @@ import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.models.generated.BaseRecurrenceRange;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
@@ -93,5 +94,8 @@ public class DefaultSeralizerTests {
 		
 		FileAttachment fileAttachment = (FileAttachment) result;
 		assertNotNull(fileAttachment.contentBytes);
+		JsonObject o = fileAttachment.getRawObject();
+		assertNotNull(o);
+		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
 	}
 }
