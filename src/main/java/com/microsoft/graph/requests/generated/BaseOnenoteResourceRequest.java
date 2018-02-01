@@ -27,15 +27,15 @@ public class BaseOnenoteResourceRequest extends BaseRequest implements IBaseOnen
     /**
      * The request for the OnenoteResource
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseOnenoteResourceRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<OnenoteResource> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
