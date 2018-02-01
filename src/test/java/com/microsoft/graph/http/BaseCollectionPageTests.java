@@ -20,7 +20,7 @@ public class BaseCollectionPageTests {
 
     private IRequestBuilder mRequestBuilder;
     private static ArrayList<String> list;
-    private BaseCollectionPage baseCollectionPage;
+    private BaseCollectionPage<String, IRequestBuilder> baseCollectionPage;
     private String requestUrl = "https://a.b.c";
 
     @Before
