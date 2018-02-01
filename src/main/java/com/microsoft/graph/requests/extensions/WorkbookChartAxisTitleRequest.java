@@ -27,7 +27,7 @@ public class WorkbookChartAxisTitleRequest extends BaseWorkbookChartAxisTitleReq
     /**
      * The request for the WorkbookChartAxisTitle
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

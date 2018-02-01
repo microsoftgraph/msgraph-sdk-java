@@ -27,7 +27,7 @@ public class WorkbookWorksheetRequest extends BaseWorkbookWorksheetRequest imple
     /**
      * The request for the WorkbookWorksheet
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

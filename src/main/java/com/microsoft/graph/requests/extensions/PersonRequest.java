@@ -27,7 +27,7 @@ public class PersonRequest extends BasePersonRequest implements IPersonRequest {
     /**
      * The request for the Person
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

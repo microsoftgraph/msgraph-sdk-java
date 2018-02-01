@@ -27,7 +27,7 @@ public class GroupSettingRequest extends BaseGroupSettingRequest implements IGro
     /**
      * The request for the GroupSetting
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

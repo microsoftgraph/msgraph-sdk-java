@@ -27,7 +27,7 @@ public class ItemAttachmentRequest extends BaseItemAttachmentRequest implements 
     /**
      * The request for the ItemAttachment
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

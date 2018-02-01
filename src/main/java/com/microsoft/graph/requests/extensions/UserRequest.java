@@ -27,7 +27,7 @@ public class UserRequest extends BaseUserRequest implements IUserRequest {
     /**
      * The request for the User
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

@@ -27,7 +27,7 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseMultiValueLegac
     /**
      * The request for the MultiValueLegacyExtendedProperty
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

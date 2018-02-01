@@ -27,7 +27,7 @@ public class ListItemRequest extends BaseListItemRequest implements IListItemReq
     /**
      * The request for the ListItem
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

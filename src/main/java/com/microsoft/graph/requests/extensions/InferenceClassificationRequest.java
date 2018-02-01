@@ -27,7 +27,7 @@ public class InferenceClassificationRequest extends BaseInferenceClassificationR
     /**
      * The request for the InferenceClassification
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

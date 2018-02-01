@@ -27,7 +27,7 @@ public class EventRequest extends BaseEventRequest implements IEventRequest {
     /**
      * The request for the Event
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

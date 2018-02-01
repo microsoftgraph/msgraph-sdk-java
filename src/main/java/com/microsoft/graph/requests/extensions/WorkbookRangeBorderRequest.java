@@ -27,7 +27,7 @@ public class WorkbookRangeBorderRequest extends BaseWorkbookRangeBorderRequest i
     /**
      * The request for the WorkbookRangeBorder
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

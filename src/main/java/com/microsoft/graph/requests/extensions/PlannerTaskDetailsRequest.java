@@ -27,7 +27,7 @@ public class PlannerTaskDetailsRequest extends BasePlannerTaskDetailsRequest imp
     /**
      * The request for the PlannerTaskDetails
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */
