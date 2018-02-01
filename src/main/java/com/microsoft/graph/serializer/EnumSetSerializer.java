@@ -48,10 +48,10 @@ public class EnumSetSerializer {
      * @param jsonStrToDeserialize The string to deserialize
      * @return EnumSet of values
      */
-    public static EnumSet deserialize(Type type, String jsonStrToDeserialize) {
+    public static EnumSet<?> deserialize(Type type, String jsonStrToDeserialize) {
             Gson gson = new Gson();
             String arrayString = "[" + jsonStrToDeserialize + "]";
-            return jsonStrToDeserialize == null ? null : (EnumSet) gson.fromJson(arrayString, type);
+            return jsonStrToDeserialize == null ? null : (EnumSet<?>) gson.fromJson(arrayString, type);
     }
 
     /**
