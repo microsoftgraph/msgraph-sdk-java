@@ -177,7 +177,7 @@ public class ChunkedUploadProvider<UploadType> {
             ChunkedUploadRequest request =
                     new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, read,
                             maxRetry, this.readSoFar, this.streamSize);
-            ChunkedUploadResult result = request.upload(this.responseHandler);
+            ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
 
             if (result.uploadCompleted()) {
                 callback.progress(this.streamSize, this.streamSize);

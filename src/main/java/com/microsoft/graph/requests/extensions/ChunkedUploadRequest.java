@@ -96,7 +96,7 @@ public class ChunkedUploadRequest {
      * @param <UploadType>    The upload item type.
      * @return The upload result.
      */
-    public <UploadType> ChunkedUploadResult upload(
+    public <UploadType> ChunkedUploadResult<UploadType> upload(
             final ChunkedUploadResponseHandler<UploadType> responseHandler) {
         while (this.retryCount < this.maxRetry) {
             try {
@@ -105,7 +105,7 @@ public class ChunkedUploadRequest {
                 throw new ClientException("Exception while waiting to retry file upload.", e);
             }
 
-            ChunkedUploadResult result = null;
+            ChunkedUploadResult<UploadType> result = null;
 
             try {
                 result = this.baseRequest
@@ -123,7 +123,7 @@ public class ChunkedUploadRequest {
             this.retryCount++;
         }
 
-        return new ChunkedUploadResult(
+        return new ChunkedUploadResult<UploadType>(
                 new ClientException("Upload session failed too many times.", null));
     }
 }
