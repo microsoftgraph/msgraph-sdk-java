@@ -24,7 +24,7 @@ import java.util.EnumSet;
  */
 public interface IGraphServiceClient extends IBaseGraphServiceClient {
 	
-	CustomRequestBuilder customRequest(final String url, final Class responseType);
+	CustomRequestBuilder customRequest(final String url, final Class<?> responseType);
 	
 	CustomRequestBuilder customRequest(final String url);
 }
