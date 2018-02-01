@@ -31,7 +31,7 @@ import com.microsoft.graph.options.QueryOption;
 
 public class CustomRequest extends BaseRequest {
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class responseClass) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class<?> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
@@ -68,36 +68,36 @@ public class CustomRequest extends BaseRequest {
      * @param sourceItem The source object with updates
      * @param callback The callback to be called after success or failure.
      */
-    public <T> void patch(final Class sourceObject, final ICallback<T> callback) {
+    public <T> void patch(final Class<?> sourceObject, final ICallback<T> callback) {
         send(HttpMethod.PATCH, callback, sourceObject);
     }
 
     /**
-     * Patches this Attachment with a source
+     * Patches this item with a source
      * @param sourceAttachment The source object with updates
-     * @return The updated Attachment
+     * @return The updated item
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public <T> T patch(final Class sourceObject) throws ClientException {
+    public <T> T patch(final Class<?> sourceObject) throws ClientException {
         return send(HttpMethod.PATCH, sourceObject);
     }
 
     /**
-     * Creates a Attachment with a new object
-     * @param newAttachment The new object to create
+     * Creates an item with a new object
+     * @param newObject The new object to create
      * @param callback The callback to be called after success or failure.
      */
-    public <T> void post(final Class newObject, final ICallback<T> callback) {
+    public <T> void post(final Class<?> newObject, final ICallback<T> callback) {
         send(HttpMethod.POST, callback, newObject);
     }
 
     /**
-     * Creates a Attachment with a new object
-     * @param newAttachment The new object to create
-     * @return The created Attachment
+     * Creates an item with a new object
+     * @param newObject The new object to create
+     * @return The created item
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public <T> T post(final Class newObject) throws ClientException {
+    public <T> T post(final Class<?> newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
     }
 

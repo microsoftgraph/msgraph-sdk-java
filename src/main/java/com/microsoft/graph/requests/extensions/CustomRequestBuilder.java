@@ -14,9 +14,9 @@ import com.microsoft.graph.options.Option;
  * @throws ClientException If the provided URL is malformed, the client exception will contain a MalformedURLException
  */
 public class CustomRequestBuilder extends BaseRequestBuilder {
-	public final Class responseType; 
+	public final Class<?> responseType; 
 	
-	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class responseType) {
+	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class<?> responseType) {
 		super(requestUrl, client, requestOptions);
 		this.responseType = responseType;
 	}
