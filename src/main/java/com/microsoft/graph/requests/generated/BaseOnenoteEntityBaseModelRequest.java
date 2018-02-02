@@ -43,7 +43,7 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
      * Gets the OnenoteEntityBaseModel from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOnenoteEntityBaseModel(final ICallback<OnenoteEntityBaseModel> callback) {
+    public void get(final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
      * @return The OnenoteEntityBaseModel from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OnenoteEntityBaseModel getOnenoteEntityBaseModel() throws ClientException {
+    public OnenoteEntityBaseModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

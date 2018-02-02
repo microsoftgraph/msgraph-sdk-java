@@ -28,14 +28,14 @@ public interface IBaseOutlookItemRequest extends IHttpRequest {
      * Gets the OutlookItem from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getOutlookItem(final ICallback<OutlookItem> callback);
+    void get(final ICallback<OutlookItem> callback);
 
     /**
      * Gets the OutlookItem from the service
      * @return The OutlookItem from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    OutlookItem getOutlookItem() throws ClientException;
+    OutlookItem get() throws ClientException;
 
     /**
      * Delete this item from the service.

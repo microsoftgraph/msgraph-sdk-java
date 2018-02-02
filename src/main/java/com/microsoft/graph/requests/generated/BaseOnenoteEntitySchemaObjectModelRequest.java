@@ -43,7 +43,7 @@ public class BaseOnenoteEntitySchemaObjectModelRequest extends BaseRequest imple
      * Gets the OnenoteEntitySchemaObjectModel from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOnenoteEntitySchemaObjectModel(final ICallback<OnenoteEntitySchemaObjectModel> callback) {
+    public void get(final ICallback<OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOnenoteEntitySchemaObjectModelRequest extends BaseRequest imple
      * @return The OnenoteEntitySchemaObjectModel from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OnenoteEntitySchemaObjectModel getOnenoteEntitySchemaObjectModel() throws ClientException {
+    public OnenoteEntitySchemaObjectModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

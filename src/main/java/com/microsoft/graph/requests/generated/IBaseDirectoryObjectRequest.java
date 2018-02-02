@@ -28,14 +28,14 @@ public interface IBaseDirectoryObjectRequest extends IHttpRequest {
      * Gets the DirectoryObject from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getDirectoryObject(final ICallback<DirectoryObject> callback);
+    void get(final ICallback<DirectoryObject> callback);
 
     /**
      * Gets the DirectoryObject from the service
      * @return The DirectoryObject from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    DirectoryObject getDirectoryObject() throws ClientException;
+    DirectoryObject get() throws ClientException;
 
     /**
      * Delete this item from the service.
