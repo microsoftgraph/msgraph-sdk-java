@@ -49,7 +49,7 @@ public interface IHttpProvider {
      * @param <BodyType>   The type of the object to send to the service in the body of the request.
      */
     <Result, BodyType> void send(final IHttpRequest request,
-                                 final ICallback<? super Result> callback,
+                                 final ICallback<Result> callback,
                                  final Class<Result> resultClass,
                                  final BodyType serializable);
 
