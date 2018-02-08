@@ -270,7 +270,7 @@ public abstract class BaseRequest<T> implements IHttpRequest {
     protected <S> T send(final HttpMethod method,
                                final S serializedObject) throws ClientException {
         this.method = method;
-        return (T) client.getHttpProvider().send(this, responseClass, serializedObject);
+        return client.getHttpProvider().send(this, responseClass, serializedObject);
     }
 
     /**
