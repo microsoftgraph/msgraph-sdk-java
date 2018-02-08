@@ -44,7 +44,7 @@ import java.util.List;
 /**
  * An HTTP request.
  */
-public abstract class BaseRequest implements IHttpRequest {
+public abstract class BaseRequest<T> implements IHttpRequest {
 
     /**
      * The request stats header name.
@@ -89,7 +89,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The class for the response.
      */
-    private final Class responseClass;
+    private final Class<T> responseClass;
 
     /**
      * Value to pass to setUseCaches in connection.
@@ -107,7 +107,7 @@ public abstract class BaseRequest implements IHttpRequest {
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
                        final List<? extends Option> options,
-                       final Class responseClass) {
+                       final Class<T> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -249,13 +249,11 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param method           The HTTP method.
      * @param callback         The callback when this request complements.
      * @param serializedObject The object to serialize as the body.
-     * @param <T1>             The type of the callback result.
-     * @param <T2>             The type of the serialized body.
+     * @param <S>             The type of the serialized body.
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> void send(final HttpMethod method,
-                                 final ICallback<T1> callback,
-                                 final T2 serializedObject) {
+    protected <S> void send(final HttpMethod method,
+                                 final ICallback<T> callback,
+                                 final S serializedObject) {
         this.method = method;
         client.getHttpProvider().send(this, callback, responseClass, serializedObject);
     }
@@ -265,16 +263,14 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @param method           The HTTP method.
      * @param serializedObject The object to serialize as the body.
-     * @param <T1>             The type of the callback result.
-     * @param <T2>             The type of the serialized body.
+     * @param <S>             The type of the serialized body.
      * @return The response object.
      * @throws ClientException An exception occurs if there was an error while the request was sent.
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> T1 send(final HttpMethod method,
-                               final T2 serializedObject) throws ClientException {
+    protected <S> T send(final HttpMethod method,
+                               final S serializedObject) throws ClientException {
         this.method = method;
-        return (T1) client.getHttpProvider().send(this, responseClass, serializedObject);
+        return (T) client.getHttpProvider().send(this, responseClass, serializedObject);
     }
 
     /**
@@ -349,7 +345,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return The response type.
      */
-    public Class getResponseType() {
+    public Class<T> getResponseType() {
         return responseClass;
     }
 }

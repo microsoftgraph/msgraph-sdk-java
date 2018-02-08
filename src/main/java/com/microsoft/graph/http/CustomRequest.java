@@ -29,21 +29,21 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 
-public class CustomRequest extends BaseRequest {
+public class CustomRequest<T> extends BaseRequest<T> {
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class responseClass) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class<T> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, JsonObject.class);
+	public static CustomRequest<JsonObject> create(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+        return new CustomRequest<JsonObject>(requestUrl, client, requestOptions, JsonObject.class);
     }
 
-    public <T> T get() throws ClientException {
+    public T get() throws ClientException {
         return send(HttpMethod.GET, null);
     }
     
-    public <T> void get(final ICallback<T> callback) {
+    public void get(final ICallback<T> callback) {
     	send(HttpMethod.GET, callback, null);
     }
     
@@ -51,24 +51,26 @@ public class CustomRequest extends BaseRequest {
      * Delete this item from the service.
      * @param callback The callback when the deletion action has completed
      */
-    public void delete(final ICallback<Void> callback) {{
-        send(HttpMethod.DELETE, callback, null);
-    }}
+    @SuppressWarnings("unchecked")
+    public void delete(final ICallback<Void> callback) {
+        // the callback should called with the null object
+        send(HttpMethod.DELETE, (ICallback<T>) callback, null);
+    }
 
     /**
      * Delete this item from the service.
      * @throws ClientException if there was an exception during the delete operation
      */
-    public void delete() throws ClientException {{
+    public void delete() throws ClientException {
         send(HttpMethod.DELETE, null);
-    }}
+    }
 
     /**
      * Patches this item with a source
      * @param sourceItem The source object with updates
      * @param callback The callback to be called after success or failure.
      */
-    public <T> void patch(final Class sourceObject, final ICallback<T> callback) {
+    public void patch(final Class<T> sourceObject, final ICallback<T> callback) {
         send(HttpMethod.PATCH, callback, sourceObject);
     }
 
@@ -78,7 +80,7 @@ public class CustomRequest extends BaseRequest {
      * @return The updated Attachment
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public <T> T patch(final Class sourceObject) throws ClientException {
+    public T patch(final Class<T> sourceObject) throws ClientException {
         return send(HttpMethod.PATCH, sourceObject);
     }
 
@@ -87,7 +89,7 @@ public class CustomRequest extends BaseRequest {
      * @param newAttachment The new object to create
      * @param callback The callback to be called after success or failure.
      */
-    public <T> void post(final Class newObject, final ICallback<T> callback) {
+    public void post(final Class<T> newObject, final ICallback<T> callback) {
         send(HttpMethod.POST, callback, newObject);
     }
 
@@ -97,7 +99,7 @@ public class CustomRequest extends BaseRequest {
      * @return The created Attachment
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public <T> T post(final Class newObject) throws ClientException {
+    public T post(final Class<T> newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
     }
 
@@ -107,7 +109,7 @@ public class CustomRequest extends BaseRequest {
      * @param value The select clause
      * @return The updated request
      */
-     public CustomRequest select(final String value) {
+     public CustomRequest<T> select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
          return this;
      }
@@ -118,7 +120,7 @@ public class CustomRequest extends BaseRequest {
      * @param value The expand clause
      * @return The updated request
      */
-     public CustomRequest expand(final String value) {
+     public CustomRequest<T> expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));
          return this;
      }
