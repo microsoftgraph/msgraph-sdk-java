@@ -43,6 +43,8 @@ import java.util.List;
 
 /**
  * An HTTP request.
+ * 
+ * @param <T> the response class
  */
 public abstract class BaseRequest<T> implements IHttpRequest {
 
