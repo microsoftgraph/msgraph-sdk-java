@@ -41,10 +41,6 @@ public class BasePlannerChecklistItem implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerChecklistItem() {
-        oDataType = "microsoft.graph.plannerChecklistItem";
-    }
-
     /**
      * The Is Checked.
      * Value is true if the item is checked and false otherwise.

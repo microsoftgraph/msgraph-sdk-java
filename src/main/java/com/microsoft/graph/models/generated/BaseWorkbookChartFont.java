@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartFont() {
-        oDataType = "microsoft.graph.workbookChartFont";
-    }
-
     /**
      * The Bold.
      * 

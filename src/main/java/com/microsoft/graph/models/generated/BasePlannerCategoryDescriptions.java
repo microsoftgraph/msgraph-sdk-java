@@ -41,10 +41,6 @@ public class BasePlannerCategoryDescriptions implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerCategoryDescriptions() {
-        oDataType = "microsoft.graph.plannerCategoryDescriptions";
-    }
-
     /**
      * The Category1.
      * The label associated with Category 1

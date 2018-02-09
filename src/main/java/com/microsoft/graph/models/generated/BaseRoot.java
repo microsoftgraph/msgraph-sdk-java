@@ -41,10 +41,6 @@ public class BaseRoot implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseRoot() {
-        oDataType = "microsoft.graph.root";
-    }
-
 
     /**
      * The raw representation of this class

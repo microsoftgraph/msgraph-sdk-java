@@ -41,10 +41,6 @@ public class BaseGeoCoordinates implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseGeoCoordinates() {
-        oDataType = "microsoft.graph.geoCoordinates";
-    }
-
     /**
      * The Altitude.
      * Optional. The altitude (height), in feet,  above sea level for the item. Read-only.

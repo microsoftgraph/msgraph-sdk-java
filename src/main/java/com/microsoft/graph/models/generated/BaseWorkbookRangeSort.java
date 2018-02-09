@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookRangeSort extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookRangeSort() {
-        oDataType = "microsoft.graph.workbookRangeSort";
-    }
-
 
     /**
      * The raw representation of this class

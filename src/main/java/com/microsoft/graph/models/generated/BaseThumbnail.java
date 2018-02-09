@@ -41,10 +41,6 @@ public class BaseThumbnail implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseThumbnail() {
-        oDataType = "microsoft.graph.thumbnail";
-    }
-
     /**
      * The Height.
      * The height of the thumbnail, in pixels.

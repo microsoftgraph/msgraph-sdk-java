@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseContentType extends Entity implements IJsonBackedObject {
 
 
-    public BaseContentType() {
-        oDataType = "microsoft.graph.contentType";
-    }
-
     /**
      * The Description.
      * 

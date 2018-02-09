@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseAttendeeBase extends Recipient implements IJsonBackedObject {
 
 
-    public BaseAttendeeBase() {
-        oDataType = "microsoft.graph.attendeeBase";
-    }
-
     /**
      * The Type.
      * The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.

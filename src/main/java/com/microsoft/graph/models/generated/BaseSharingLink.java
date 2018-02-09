@@ -41,10 +41,6 @@ public class BaseSharingLink implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSharingLink() {
-        oDataType = "microsoft.graph.sharingLink";
-    }
-
     /**
      * The Application.
      * The app the link is associated with.

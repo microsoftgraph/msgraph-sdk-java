@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel implements IJsonBackedObject {
 
 
-    public BaseOnenoteEntitySchemaObjectModel() {
-        oDataType = "microsoft.graph.onenoteEntitySchemaObjectModel";
-    }
-
     /**
      * The Created Date Time.
      * 

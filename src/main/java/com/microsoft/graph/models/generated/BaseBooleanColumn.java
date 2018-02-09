@@ -41,10 +41,6 @@ public class BaseBooleanColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseBooleanColumn() {
-        oDataType = "microsoft.graph.booleanColumn";
-    }
-
 
     /**
      * The raw representation of this class

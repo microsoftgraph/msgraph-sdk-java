@@ -41,10 +41,6 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDriveItemUploadableProperties() {
-        oDataType = "microsoft.graph.driveItemUploadableProperties";
-    }
-
     /**
      * The Description.
      * 

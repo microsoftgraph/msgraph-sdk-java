@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseInferenceClassificationOverride extends Entity implements IJsonBackedObject {
 
 
-    public BaseInferenceClassificationOverride() {
-        oDataType = "microsoft.graph.inferenceClassificationOverride";
-    }
-
     /**
      * The Classify As.
      * Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other.

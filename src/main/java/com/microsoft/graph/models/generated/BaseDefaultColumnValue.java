@@ -41,10 +41,6 @@ public class BaseDefaultColumnValue implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDefaultColumnValue() {
-        oDataType = "microsoft.graph.defaultColumnValue";
-    }
-
     /**
      * The Formula.
      * 

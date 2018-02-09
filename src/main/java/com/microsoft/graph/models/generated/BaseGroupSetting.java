@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseGroupSetting extends Entity implements IJsonBackedObject {
 
 
-    public BaseGroupSetting() {
-        oDataType = "microsoft.graph.groupSetting";
-    }
-
     /**
      * The Display Name.
      * Display name of this group of settings, which comes from the associated template.

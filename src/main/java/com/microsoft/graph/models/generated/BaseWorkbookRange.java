@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookRange() {
-        oDataType = "microsoft.graph.workbookRange";
-    }
-
     /**
      * The Address.
      * 

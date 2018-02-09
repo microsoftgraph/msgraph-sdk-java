@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseContract extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseContract() {
-        oDataType = "microsoft.graph.contract";
-    }
-
     /**
      * The Contract Type.
      * 

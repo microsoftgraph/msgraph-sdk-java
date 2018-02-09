@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseDevice() {
-        oDataType = "microsoft.graph.device";
-    }
-
     /**
      * The Account Enabled.
      * true if the account is enabled; otherwise, false. Required.

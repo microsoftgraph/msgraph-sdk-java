@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePermission extends Entity implements IJsonBackedObject {
 
 
-    public BasePermission() {
-        oDataType = "microsoft.graph.permission";
-    }
-
     /**
      * The Granted To.
      * For user type permissions, the details of the users & applications for this permission. Read-only.

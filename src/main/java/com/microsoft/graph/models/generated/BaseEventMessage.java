@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseEventMessage extends Message implements IJsonBackedObject {
 
 
-    public BaseEventMessage() {
-        oDataType = "microsoft.graph.eventMessage";
-    }
-
     /**
      * The Meeting Message Type.
      * 

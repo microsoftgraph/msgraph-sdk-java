@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookTableRow extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookTableRow() {
-        oDataType = "microsoft.graph.workbookTableRow";
-    }
-
     /**
      * The Index.
      * 

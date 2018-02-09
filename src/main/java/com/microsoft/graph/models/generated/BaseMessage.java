@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
 
-    public BaseMessage() {
-        oDataType = "microsoft.graph.message";
-    }
-
     /**
      * The Received Date Time.
      * The date and time the message was received.

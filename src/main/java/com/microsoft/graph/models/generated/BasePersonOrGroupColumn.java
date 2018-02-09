@@ -41,10 +41,6 @@ public class BasePersonOrGroupColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePersonOrGroupColumn() {
-        oDataType = "microsoft.graph.personOrGroupColumn";
-    }
-
     /**
      * The Allow Multiple Selection.
      * 

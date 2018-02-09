@@ -41,10 +41,6 @@ public class BaseIdentitySet implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseIdentitySet() {
-        oDataType = "microsoft.graph.identitySet";
-    }
-
     /**
      * The Application.
      * Optional. The application associated with this action.

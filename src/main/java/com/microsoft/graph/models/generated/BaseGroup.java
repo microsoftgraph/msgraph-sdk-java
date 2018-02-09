@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseGroup() {
-        oDataType = "microsoft.graph.group";
-    }
-
     /**
      * The Classification.
      * 

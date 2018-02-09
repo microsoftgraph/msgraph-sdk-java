@@ -41,10 +41,6 @@ public class BaseRemoteItem implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseRemoteItem() {
-        oDataType = "microsoft.graph.remoteItem";
-    }
-
     /**
      * The Created By.
      * Identity of the user, device, and application which created the item. Read-only.

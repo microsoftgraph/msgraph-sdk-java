@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseConversation extends Entity implements IJsonBackedObject {
 
 
-    public BaseConversation() {
-        oDataType = "microsoft.graph.conversation";
-    }
-
     /**
      * The Topic.
      * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.

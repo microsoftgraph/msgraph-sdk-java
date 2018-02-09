@@ -41,10 +41,6 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseContentTypeOrder() {
-        oDataType = "microsoft.graph.contentTypeOrder";
-    }
-
     /**
      * The Default.
      * 

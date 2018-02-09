@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseConversationThread extends Entity implements IJsonBackedObject {
 
 
-    public BaseConversationThread() {
-        oDataType = "microsoft.graph.conversationThread";
-    }
-
     /**
      * The To Recipients.
      * The To: recipients for the thread.

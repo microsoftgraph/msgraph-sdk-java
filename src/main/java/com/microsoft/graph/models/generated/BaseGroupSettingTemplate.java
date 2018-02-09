@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseGroupSettingTemplate extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseGroupSettingTemplate() {
-        oDataType = "microsoft.graph.groupSettingTemplate";
-    }
-
     /**
      * The Display Name.
      * Display name of the template.

@@ -41,10 +41,6 @@ public class BaseItemReference implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseItemReference() {
-        oDataType = "microsoft.graph.itemReference";
-    }
-
     /**
      * The Drive Id.
      * Unique identifier of the drive instance that contains the item. Read-only.

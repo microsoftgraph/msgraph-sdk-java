@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePlannerTaskDetails extends Entity implements IJsonBackedObject {
 
 
-    public BasePlannerTaskDetails() {
-        oDataType = "microsoft.graph.plannerTaskDetails";
-    }
-
     /**
      * The Description.
      * Description of the task

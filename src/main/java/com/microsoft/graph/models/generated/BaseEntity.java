@@ -41,10 +41,6 @@ public class BaseEntity implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseEntity() {
-        oDataType = "microsoft.graph.entity";
-    }
-
     /**
      * The Id.
      * Read-only.

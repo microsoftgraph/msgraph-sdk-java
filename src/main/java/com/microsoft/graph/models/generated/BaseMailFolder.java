@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseMailFolder extends Entity implements IJsonBackedObject {
 
 
-    public BaseMailFolder() {
-        oDataType = "microsoft.graph.mailFolder";
-    }
-
     /**
      * The Display Name.
      * The mailFolder's display name.

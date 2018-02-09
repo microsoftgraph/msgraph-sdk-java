@@ -41,10 +41,6 @@ public class BaseWorkbookFilterDatetime implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookFilterDatetime() {
-        oDataType = "microsoft.graph.workbookFilterDatetime";
-    }
-
     /**
      * The Date.
      * 

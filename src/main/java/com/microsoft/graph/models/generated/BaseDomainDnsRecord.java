@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDomainDnsRecord extends Entity implements IJsonBackedObject {
 
 
-    public BaseDomainDnsRecord() {
-        oDataType = "microsoft.graph.domainDnsRecord";
-    }
-
     /**
      * The Is Optional.
      * If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.

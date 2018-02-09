@@ -41,10 +41,6 @@ public class BasePlannerUserIds implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerUserIds() {
-        oDataType = "microsoft.graph.plannerUserIds";
-    }
-
 
     /**
      * The raw representation of this class

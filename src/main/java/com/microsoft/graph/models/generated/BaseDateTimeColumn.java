@@ -41,10 +41,6 @@ public class BaseDateTimeColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDateTimeColumn() {
-        oDataType = "microsoft.graph.dateTimeColumn";
-    }
-
     /**
      * The Display As.
      * 

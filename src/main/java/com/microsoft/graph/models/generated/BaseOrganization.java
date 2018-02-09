@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOrganization extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseOrganization() {
-        oDataType = "microsoft.graph.organization";
-    }
-
     /**
      * The Assigned Plans.
      * The collection of service plans associated with the tenant. Not nullable.

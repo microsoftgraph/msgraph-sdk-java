@@ -41,10 +41,6 @@ public class BasePlannerAssignment implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerAssignment() {
-        oDataType = "microsoft.graph.plannerAssignment";
-    }
-
     /**
      * The Assigned By.
      * The identity of the user that performed the assignment of the task, i.e. the assignor.

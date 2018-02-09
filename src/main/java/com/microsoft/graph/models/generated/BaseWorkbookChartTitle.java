@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartTitle() {
-        oDataType = "microsoft.graph.workbookChartTitle";
-    }
-
     /**
      * The Overlay.
      * 
