@@ -10,6 +10,8 @@ import java.util.logging.Logger;
 
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
+import com.microsoft.graph.logger.DefaultLogger;
+import com.microsoft.graph.logger.ILogger;
 
 /**
  * Test cases for {@see DefaultClientConfig}
@@ -35,6 +37,24 @@ public class DefaultClientConfigTests {
         assertNotNull(mClientConfig.getHttpProvider());
         assertNotNull(mClientConfig.getAuthenticationProvider());
         assertEquals(mAuthenticationProvider, mClientConfig.getAuthenticationProvider());
+    }
+	
+    @Test
+    public void testOverrideLoggerShouldNotThrow() {
+        final ILogger logger = new DefaultLogger();
+        DefaultClientConfig config = new DefaultClientConfig() {
+
+            @Override
+            public ILogger getLogger() {
+                return logger;
+            }
+
+        };
+        config.getExecutors();
+        config.getAuthenticationProvider();
+        config.getHttpProvider();
+        config.getSerializer();
+        config.getLogger();
     }
 
 }
