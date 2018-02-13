@@ -37,7 +37,7 @@ The nature of the Graph API is such that the SDK needs quite a large set of clas
 
 ### 2.1 Register your application
 
-Register your application by following [these steps](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_register_app_v2).
+Register your application by following the steps at [Register your app with the Azure AD v2.0 endpoint](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_register_app_v2).
 
 ### 2.2 Create an IAuthenticationProvider object
 
