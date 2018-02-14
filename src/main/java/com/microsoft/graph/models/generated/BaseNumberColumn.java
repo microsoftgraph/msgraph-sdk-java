@@ -41,10 +41,6 @@ public class BaseNumberColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseNumberColumn() {
-        oDataType = "microsoft.graph.numberColumn";
-    }
-
     /**
      * The Decimal Places.
      * 

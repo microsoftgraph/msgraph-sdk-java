@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseItemAttachment extends Attachment implements IJsonBackedObject {
 
 
-    public BaseItemAttachment() {
-        oDataType = "microsoft.graph.itemAttachment";
-    }
-
     /**
      * The Item.
      * The attached message or event. Navigation property.

@@ -41,10 +41,6 @@ public class BaseNotebookLinks implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseNotebookLinks() {
-        oDataType = "microsoft.graph.notebookLinks";
-    }
-
     /**
      * The One Note Client Url.
      * Opens the notebook in the OneNote native client if it's installed.

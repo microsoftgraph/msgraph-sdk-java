@@ -41,10 +41,6 @@ public class BaseQuota implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseQuota() {
-        oDataType = "microsoft.graph.quota";
-    }
-
     /**
      * The Deleted.
      * Total space consumed by files in the recycle bin, in bytes. Read-only.

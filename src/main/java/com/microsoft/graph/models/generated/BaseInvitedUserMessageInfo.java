@@ -41,10 +41,6 @@ public class BaseInvitedUserMessageInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseInvitedUserMessageInfo() {
-        oDataType = "microsoft.graph.invitedUserMessageInfo";
-    }
-
     /**
      * The Cc Recipients.
      * Additional recipients the invitation message should be sent to. Currently only 1 additional recipient is supported.

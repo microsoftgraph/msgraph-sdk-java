@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePerson extends Entity implements IJsonBackedObject {
 
 
-    public BasePerson() {
-        oDataType = "microsoft.graph.person";
-    }
-
     /**
      * The Display Name.
      * The person's display name.

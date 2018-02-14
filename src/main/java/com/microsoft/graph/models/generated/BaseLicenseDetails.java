@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseLicenseDetails extends Entity implements IJsonBackedObject {
 
 
-    public BaseLicenseDetails() {
-        oDataType = "microsoft.graph.licenseDetails";
-    }
-
     /**
      * The Service Plans.
      * Information about the service plans assigned with the license. Read-only, Not nullable

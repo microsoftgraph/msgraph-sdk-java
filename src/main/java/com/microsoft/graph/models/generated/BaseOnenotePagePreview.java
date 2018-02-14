@@ -41,10 +41,6 @@ public class BaseOnenotePagePreview implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseOnenotePagePreview() {
-        oDataType = "microsoft.graph.onenotePagePreview";
-    }
-
     /**
      * The Preview Text.
      * 

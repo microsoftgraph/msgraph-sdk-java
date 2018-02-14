@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookFilter extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookFilter() {
-        oDataType = "microsoft.graph.workbookFilter";
-    }
-
     /**
      * The Criteria.
      * 

@@ -41,10 +41,6 @@ public class BaseWorkbookFilterCriteria implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookFilterCriteria() {
-        oDataType = "microsoft.graph.workbookFilterCriteria";
-    }
-
     /**
      * The Color.
      * 

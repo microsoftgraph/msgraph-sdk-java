@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
 
-    public BasePlannerPlan() {
-        oDataType = "microsoft.graph.plannerPlan";
-    }
-
     /**
      * The Created By.
      * Read-only. The user who created the plan.

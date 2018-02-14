@@ -41,10 +41,6 @@ public class BaseMeetingTimeSuggestionsResult implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseMeetingTimeSuggestionsResult() {
-        oDataType = "microsoft.graph.meetingTimeSuggestionsResult";
-    }
-
     /**
      * The Meeting Time Suggestions.
      * An array of meeting suggestions.

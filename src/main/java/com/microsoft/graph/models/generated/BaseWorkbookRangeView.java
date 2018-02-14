@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookRangeView() {
-        oDataType = "microsoft.graph.workbookRangeView";
-    }
-
     /**
      * The Cell Addresses.
      * 

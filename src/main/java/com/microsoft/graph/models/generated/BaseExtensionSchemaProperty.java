@@ -41,10 +41,6 @@ public class BaseExtensionSchemaProperty implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseExtensionSchemaProperty() {
-        oDataType = "microsoft.graph.extensionSchemaProperty";
-    }
-
     /**
      * The Name.
      * The name of the strongly-typed property defined as part of a schema extension.

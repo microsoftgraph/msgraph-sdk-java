@@ -41,10 +41,6 @@ public class BaseWorkbookIcon implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookIcon() {
-        oDataType = "microsoft.graph.workbookIcon";
-    }
-
     /**
      * The Index.
      * 

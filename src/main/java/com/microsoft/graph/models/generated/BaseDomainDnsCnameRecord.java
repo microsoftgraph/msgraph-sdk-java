@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDomainDnsCnameRecord extends DomainDnsRecord implements IJsonBackedObject {
 
 
-    public BaseDomainDnsCnameRecord() {
-        oDataType = "microsoft.graph.domainDnsCnameRecord";
-    }
-
     /**
      * The Canonical Name.
      * The canonical name of the CNAME record. Used to configure the CNAME record at the DNS host.

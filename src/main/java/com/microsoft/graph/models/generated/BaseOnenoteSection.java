@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOnenoteSection extends OnenoteEntityHierarchyModel implements IJsonBackedObject {
 
 
-    public BaseOnenoteSection() {
-        oDataType = "microsoft.graph.onenoteSection";
-    }
-
     /**
      * The Is Default.
      * Indicates whether this is the user's default section. Read-only.

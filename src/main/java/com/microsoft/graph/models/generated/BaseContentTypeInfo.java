@@ -41,10 +41,6 @@ public class BaseContentTypeInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseContentTypeInfo() {
-        oDataType = "microsoft.graph.contentTypeInfo";
-    }
-
     /**
      * The Id.
      * 

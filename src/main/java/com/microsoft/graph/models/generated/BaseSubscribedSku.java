@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
 
-    public BaseSubscribedSku() {
-        oDataType = "microsoft.graph.subscribedSku";
-    }
-
     /**
      * The Capability Status.
      * For example, "Enabled".

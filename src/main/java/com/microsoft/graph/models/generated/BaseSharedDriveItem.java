@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseSharedDriveItem() {
-        oDataType = "microsoft.graph.sharedDriveItem";
-    }
-
     /**
      * The Owner.
      * Information about the owner of the shared item being referenced.

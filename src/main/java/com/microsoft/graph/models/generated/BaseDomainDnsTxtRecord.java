@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDomainDnsTxtRecord extends DomainDnsRecord implements IJsonBackedObject {
 
 
-    public BaseDomainDnsTxtRecord() {
-        oDataType = "microsoft.graph.domainDnsTxtRecord";
-    }
-
     /**
      * The Text.
      * Value used when configuring the text property at the DNS host.

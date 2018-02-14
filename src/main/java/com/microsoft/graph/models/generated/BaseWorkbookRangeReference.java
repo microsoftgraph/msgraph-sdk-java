@@ -41,10 +41,6 @@ public class BaseWorkbookRangeReference implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookRangeReference() {
-        oDataType = "microsoft.graph.workbookRangeReference";
-    }
-
     /**
      * The Address.
      * 

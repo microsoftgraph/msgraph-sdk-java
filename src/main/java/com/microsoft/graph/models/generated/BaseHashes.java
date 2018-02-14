@@ -41,10 +41,6 @@ public class BaseHashes implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseHashes() {
-        oDataType = "microsoft.graph.hashes";
-    }
-
     /**
      * The Crc32Hash.
      * The CRC32 value of the file (if available). Read-only.

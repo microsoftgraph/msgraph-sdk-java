@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseLocationConstraintItem extends Location implements IJsonBackedObject {
 
 
-    public BaseLocationConstraintItem() {
-        oDataType = "microsoft.graph.locationConstraintItem";
-    }
-
     /**
      * The Resolve Availability.
      * If set to true and the specified resource is busy, findMeetingTimes looks for another resource that is free. If set to false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without checking if it's free. Default is true.

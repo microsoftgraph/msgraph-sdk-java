@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookRangeFormat extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookRangeFormat() {
-        oDataType = "microsoft.graph.workbookRangeFormat";
-    }
-
     /**
      * The Column Width.
      * 

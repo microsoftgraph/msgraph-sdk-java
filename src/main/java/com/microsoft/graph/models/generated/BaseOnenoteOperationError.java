@@ -41,10 +41,6 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseOnenoteOperationError() {
-        oDataType = "microsoft.graph.onenoteOperationError";
-    }
-
     /**
      * The Code.
      * The error code.

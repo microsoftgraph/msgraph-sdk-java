@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDirectoryObject extends Entity implements IJsonBackedObject {
 
 
-    public BaseDirectoryObject() {
-        oDataType = "microsoft.graph.directoryObject";
-    }
-
 
     /**
      * The raw representation of this class

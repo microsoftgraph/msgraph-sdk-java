@@ -41,10 +41,6 @@ public class BaseRecurrencePattern implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseRecurrencePattern() {
-        oDataType = "microsoft.graph.recurrencePattern";
-    }
-
     /**
      * The Type.
      * 

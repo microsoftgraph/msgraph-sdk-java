@@ -41,10 +41,6 @@ public class BaseSharepointIds implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSharepointIds() {
-        oDataType = "microsoft.graph.sharepointIds";
-    }
-
     /**
      * The List Id.
      * The unique identifier (guid) for the item's list in SharePoint.

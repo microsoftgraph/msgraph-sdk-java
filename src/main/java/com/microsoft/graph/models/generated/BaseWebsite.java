@@ -41,10 +41,6 @@ public class BaseWebsite implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWebsite() {
-        oDataType = "microsoft.graph.website";
-    }
-
     /**
      * The Type.
      * Possible values are: other, home, work, blog, profile.

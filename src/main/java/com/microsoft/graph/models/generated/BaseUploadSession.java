@@ -41,10 +41,6 @@ public class BaseUploadSession implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseUploadSession() {
-        oDataType = "microsoft.graph.uploadSession";
-    }
-
     /**
      * The Expiration Date Time.
      * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.

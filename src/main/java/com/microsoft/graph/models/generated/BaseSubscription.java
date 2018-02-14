@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSubscription extends Entity implements IJsonBackedObject {
 
 
-    public BaseSubscription() {
-        oDataType = "microsoft.graph.subscription";
-    }
-
     /**
      * The Resource.
      * Specifies the resource that will be monitored for changes. Do not include the base URL ("https://graph.microsoft.com/v1.0/").

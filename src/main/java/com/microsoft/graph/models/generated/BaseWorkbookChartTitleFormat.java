@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartTitleFormat extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartTitleFormat() {
-        oDataType = "microsoft.graph.workbookChartTitleFormat";
-    }
-
     /**
      * The Fill.
      * 

@@ -41,10 +41,6 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseOnenotePatchContentCommand() {
-        oDataType = "microsoft.graph.onenotePatchContentCommand";
-    }
-
     /**
      * The Action.
      * The action to perform on the target element. Possible values are: replace, append, delete, insert, or prepend.

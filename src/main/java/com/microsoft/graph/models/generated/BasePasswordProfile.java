@@ -41,10 +41,6 @@ public class BasePasswordProfile implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePasswordProfile() {
-        oDataType = "microsoft.graph.passwordProfile";
-    }
-
     /**
      * The Password.
      * 

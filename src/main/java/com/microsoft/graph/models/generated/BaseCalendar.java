@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseCalendar extends Entity implements IJsonBackedObject {
 
 
-    public BaseCalendar() {
-        oDataType = "microsoft.graph.calendar";
-    }
-
     /**
      * The Name.
      * The calendar name.
