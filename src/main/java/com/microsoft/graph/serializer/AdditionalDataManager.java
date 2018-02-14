@@ -35,6 +35,8 @@ import java.util.Set;
 
 public class AdditionalDataManager extends HashMap<String, JsonElement> {
 
+    private static final long serialVersionUID = 8641634955796941429L;
+    
     private final transient IJsonBackedObject jsonBackedObject;
 
     public AdditionalDataManager(IJsonBackedObject jsonBackedObject) {
