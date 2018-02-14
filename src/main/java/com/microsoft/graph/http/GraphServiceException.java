@@ -42,6 +42,8 @@ import com.microsoft.graph.serializer.ISerializer;
  */
 public class GraphServiceException extends ClientException {
 
+    private static final long serialVersionUID = -7416427229421064119L;
+
     /**
      * New line delimiter.
      */

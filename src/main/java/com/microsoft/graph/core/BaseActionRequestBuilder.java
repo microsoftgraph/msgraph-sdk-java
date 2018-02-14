@@ -53,6 +53,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * @param <T>  The type to which this object should be cast
      * @return The stored instance of T, otherwise null
      */
+    @SuppressWarnings("unchecked")
     protected <T> T getParameter(final String name) {
         return (T) bodyParams.get(name);
     }
