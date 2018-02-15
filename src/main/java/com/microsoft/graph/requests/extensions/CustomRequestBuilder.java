@@ -5,7 +5,6 @@ import java.util.List;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.http.CustomRequest;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
 import com.microsoft.graph.options.Option;
 
 /**
@@ -13,19 +12,19 @@ import com.microsoft.graph.options.Option;
  *
  * @throws ClientException If the provided URL is malformed, the client exception will contain a MalformedURLException
  */
-public class CustomRequestBuilder extends BaseRequestBuilder {
-	public final Class responseType; 
+public class CustomRequestBuilder<T> extends BaseRequestBuilder {
+	public final Class<T> responseType; 
 	
-	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class responseType) {
+	public CustomRequestBuilder(final String requestUrl, final IBaseClient client, final List<? extends Option> requestOptions, final Class<T> responseType) {
 		super(requestUrl, client, requestOptions);
 		this.responseType = responseType;
 	}
 	
-	public CustomRequest buildRequest() {
+	public CustomRequest<T> buildRequest() {
 		return buildRequest(getOptions());
 	}
 	
-	public CustomRequest buildRequest(final List<? extends Option> requestOptions) {
-		return new CustomRequest(getRequestUrl(), getClient(), requestOptions, responseType);
+	public CustomRequest<T> buildRequest(final List<? extends Option> requestOptions) {
+		return new CustomRequest<T>(getRequestUrl(), getClient(), requestOptions, responseType);
 	}
 }
