@@ -22,36 +22,109 @@
 
 package com.microsoft.graph.concurrency;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * An executor that runs only on the main thread of an application
+ * An {@link Executor} that runs only on the current thread and queues tasks to
+ * ensure stack overflow does not occur.
  */
-public class SynchronousExecutor implements Executor {
+public final class SynchronousExecutor implements Executor {
 
-    /**
-     * The current number of synchronously executing actions
-     */
-    private AtomicInteger activeCount = new AtomicInteger(0);
+    private static final SynchronousExecutor INSTANCE = new SynchronousExecutor();
 
-    /**
-     * Executes the given Runnable task
-     * 
-     * @param runnable the task to run on the main thread
-     */
-    @Override public void execute(final Runnable runnable) {
-    	activeCount.incrementAndGet();
-    	runnable.run();
-    	activeCount.decrementAndGet();
+    public static SynchronousExecutor instance() {
+        return INSTANCE;
     }
 
     /**
-     * Get the account number of executing actions
+     * The current number of synchronously executing actions across all threads.
+     */
+    private final AtomicInteger activeCount = new AtomicInteger(0);
+
+    private final ThreadLocal<Tasks> tasks;
+
+    private SynchronousExecutor() {
+        this.tasks = new ThreadLocal<Tasks>() {
+            @Override
+            protected Tasks initialValue() {
+                return new Tasks();
+            }
+        };
+    }
+
+    @Override
+    public void execute(Runnable runnable) {
+        tasks.get().add(runnable);
+    }
+
+    /**
+     * Returns the current number of executing actions across all threads.
      * 
-     * @return the count
+     * @return the current number of executing actions across all threads
      */
     public int getActiveCount() {
         return activeCount.get();
     }
+
+    private final class Tasks {
+
+        private final Queue<Runnable> queue;
+        private boolean draining;
+
+        Tasks() {
+            // as we expect the queue to be recreated frequently we choose a
+            // low allocation cost implementation of Queue
+            queue = new LinkedList<Runnable>();
+        }
+
+        void add(Runnable runnable) {
+            activeCount.incrementAndGet();
+            queue.add(runnable);
+            drain();
+        }
+
+        private void drain() {
+            if (draining) {
+                // reentrancy detected
+                return;
+            } else {
+                draining = true;
+                try {
+                    Runnable r;
+                    while ((r = queue.poll()) != null) {
+                        try {
+                            r.run();
+                        } finally {
+                            activeCount.decrementAndGet();
+                        }
+                    }
+                } catch (Throwable e) {
+                    // clear the queue and reduce the activeCount
+                    while (queue.poll() != null) {
+                        activeCount.decrementAndGet();
+                    }
+                    // is not a checked exception so must be an Error or RuntimeException
+                    if (e instanceof RuntimeException) {
+                        throw (RuntimeException) e;
+                    } else {
+                        throw (Error) e;
+                    }
+                } finally {
+                    // clear the ThreadLocal value for this thread
+                    // so that memory leak detectors don't complain
+                    // on application shutdown. This is particularly
+                    // relevant for application servers that use
+                    // container-wide thread pools like Tomcat or 
+                    // JEE implementations.
+                    tasks.remove();
+                    draining = false;
+                }
+            }
+        }
+
+    };
+
 }
