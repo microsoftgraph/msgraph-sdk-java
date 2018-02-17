@@ -212,7 +212,6 @@ public class DefaultHttpProvider implements IHttpProvider {
                                                                        final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException {
         final int defaultBufferSize = 4096;
-        final String contentLengthHeaderName = "Content-Length";
         final String binaryContentType = "application/octet-stream";
 
         try {
@@ -234,7 +233,14 @@ public class DefaultHttpProvider implements IHttpProvider {
                 final byte[] bytesToWrite;
                 connection.addRequestHeader("Accept", "*/*");
                 if (serializable == null) {
-                    bytesToWrite = null;
+                	// Send an empty body through with a POST request
+                	// This ensures that the Content-Length header is properly set
+                	if (request.getHttpMethod() == HttpMethod.POST) {
+                		bytesToWrite = new byte[0];
+                	}
+                	else {
+                		bytesToWrite = null;
+                	}
                 } else if (serializable instanceof byte[]) {
                     logger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;

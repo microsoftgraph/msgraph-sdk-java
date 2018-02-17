@@ -4,6 +4,8 @@ import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.options.QueryOption;
+import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
 
 import org.junit.Test;
@@ -18,7 +20,6 @@ import static org.junit.Assert.*;
 
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
-import java.lang.reflect.Array;
 
 import java.util.ArrayList;
 
@@ -71,5 +72,37 @@ public class OutlookTests {
             Assert.fail("Duration could not be created from String");
         }
 
+    }
+    
+    @Test
+    public void testSendDraft() {
+    	TestBase testBase = new TestBase();
+    	
+    	//Attempt to identify the sent message via randomly generated subject
+    	String draftSubject = "Draft Test Message " + Double.toString(Math.random()*1000);
+    	
+        User me = testBase.graphClient.me().buildRequest().get();
+        Recipient r = new Recipient();
+        EmailAddress address = new EmailAddress();
+        address.address = me.mail;
+        r.emailAddress = address;
+        Message message = new Message();
+        message.subject = draftSubject;
+        ArrayList<Recipient> recipients = new ArrayList<Recipient>();
+        recipients.add(r);
+        message.toRecipients = recipients;
+        message.isDraft = true;
+        
+        //Save the message as a draft
+        Message newMessage = testBase.graphClient.me().messages().buildRequest().post(message);
+    	//Send the drafted message
+    	testBase.graphClient.me().mailFolders("Drafts").messages(newMessage.id).send().buildRequest().post();
+    	
+    	java.util.List<QueryOption> options = new ArrayList<QueryOption>();
+    	QueryOption o = new QueryOption("$filter", "subject eq '" + draftSubject + "'");
+    	options.add(o);
+    	//Check that the sent message exists on the server
+    	IMessageCollectionPage mcp = testBase.graphClient.me().messages().buildRequest(options).get();
+    	assertFalse(mcp.getCurrentPage().isEmpty());
     }
 }
