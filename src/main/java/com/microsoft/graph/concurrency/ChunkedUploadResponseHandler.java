@@ -89,10 +89,10 @@ public class ChunkedUploadResponseHandler<UploadType>
             if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
                 logger.logDebug("Chunk bytes has been accepted by the server.");
                 in = new BufferedInputStream(connection.getInputStream());
-                final UploadSession seesion = serializer.deserializeObject(
+                final UploadSession session = serializer.deserializeObject(
                         DefaultHttpProvider.streamToString(in), UploadSession.class);
 
-                return new ChunkedUploadResult<UploadType>(seesion);
+                return new ChunkedUploadResult<UploadType>(session);
 
             } else if (connection.getResponseCode() == HttpResponseCode.HTTP_CREATED
                     || connection.getResponseCode() == HttpResponseCode.HTTP_OK) {
