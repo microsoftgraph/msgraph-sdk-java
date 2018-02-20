@@ -41,10 +41,6 @@ public class BaseAttendeeAvailability implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseAttendeeAvailability() {
-        oDataType = "microsoft.graph.attendeeAvailability";
-    }
-
     /**
      * The Attendee.
      * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.

@@ -41,10 +41,6 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseAlternativeSecurityId() {
-        oDataType = "microsoft.graph.alternativeSecurityId";
-    }
-
     /**
      * The Type.
      * 

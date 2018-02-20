@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel implements IJsonBackedObject {
 
 
-    public BaseOnenoteEntityHierarchyModel() {
-        oDataType = "microsoft.graph.onenoteEntityHierarchyModel";
-    }
-
     /**
      * The Display Name.
      * 

@@ -41,10 +41,6 @@ public class BaseEmailAddress implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseEmailAddress() {
-        oDataType = "microsoft.graph.emailAddress";
-    }
-
     /**
      * The Name.
      * The display name of the person or entity.

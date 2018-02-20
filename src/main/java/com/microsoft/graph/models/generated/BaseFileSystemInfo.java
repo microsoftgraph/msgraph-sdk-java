@@ -41,10 +41,6 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseFileSystemInfo() {
-        oDataType = "microsoft.graph.fileSystemInfo";
-    }
-
     /**
      * The Created Date Time.
      * The UTC date and time the file was created on a client.

@@ -41,10 +41,6 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseAutomaticRepliesSetting() {
-        oDataType = "microsoft.graph.automaticRepliesSetting";
-    }
-
     /**
      * The Status.
      * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.

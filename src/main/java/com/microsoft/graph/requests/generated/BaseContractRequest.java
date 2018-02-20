@@ -27,15 +27,15 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
     /**
      * The request for the Contract
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseContractRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<Contract> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

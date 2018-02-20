@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner External References.
  */
-public class BasePlannerExternalReferences implements IJsonBackedObject {
+public class BasePlannerExternalReferences extends HashMap<String, Object> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)
@@ -39,10 +39,6 @@ public class BasePlannerExternalReferences implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BasePlannerExternalReferences() {
-        oDataType = "microsoft.graph.plannerExternalReferences";
     }
 
 

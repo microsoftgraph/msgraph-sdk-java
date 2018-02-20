@@ -27,22 +27,22 @@ public class OnenoteEntityBaseModelRequest extends BaseOnenoteEntityBaseModelReq
     /**
      * The request for the OnenoteEntityBaseModel
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public OnenoteEntityBaseModelRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends OnenoteEntityBaseModel> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
     /**
      * The request for the OnenoteEntityBaseModel
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

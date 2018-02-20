@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner Assignments.
  */
-public class BasePlannerAssignments implements IJsonBackedObject {
+public class BasePlannerAssignments extends HashMap<String, PlannerAssignment> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)
@@ -39,10 +39,6 @@ public class BasePlannerAssignments implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BasePlannerAssignments() {
-        oDataType = "microsoft.graph.plannerAssignments";
     }
 
 

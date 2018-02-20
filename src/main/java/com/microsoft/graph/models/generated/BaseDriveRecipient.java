@@ -41,10 +41,6 @@ public class BaseDriveRecipient implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDriveRecipient() {
-        oDataType = "microsoft.graph.driveRecipient";
-    }
-
     /**
      * The Alias.
      * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).

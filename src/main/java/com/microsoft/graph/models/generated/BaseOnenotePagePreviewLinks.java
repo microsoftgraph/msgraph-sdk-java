@@ -41,10 +41,6 @@ public class BaseOnenotePagePreviewLinks implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseOnenotePagePreviewLinks() {
-        oDataType = "microsoft.graph.onenotePagePreviewLinks";
-    }
-
     /**
      * The Preview Image Url.
      * 

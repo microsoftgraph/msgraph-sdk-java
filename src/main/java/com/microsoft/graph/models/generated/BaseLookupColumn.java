@@ -41,10 +41,6 @@ public class BaseLookupColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseLookupColumn() {
-        oDataType = "microsoft.graph.lookupColumn";
-    }
-
     /**
      * The Allow Multiple Values.
      * 

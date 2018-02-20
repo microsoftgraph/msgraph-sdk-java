@@ -41,10 +41,6 @@ public class BaseTimeConstraint implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseTimeConstraint() {
-        oDataType = "microsoft.graph.timeConstraint";
-    }
-
     /**
      * The Activity Domain.
      * 

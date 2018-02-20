@@ -41,10 +41,6 @@ public class BaseRecipient implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseRecipient() {
-        oDataType = "microsoft.graph.recipient";
-    }
-
     /**
      * The Email Address.
      * The recipient's email address.

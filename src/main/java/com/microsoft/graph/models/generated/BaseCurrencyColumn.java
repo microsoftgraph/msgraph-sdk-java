@@ -41,10 +41,6 @@ public class BaseCurrencyColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseCurrencyColumn() {
-        oDataType = "microsoft.graph.currencyColumn";
-    }
-
     /**
      * The Locale.
      * 

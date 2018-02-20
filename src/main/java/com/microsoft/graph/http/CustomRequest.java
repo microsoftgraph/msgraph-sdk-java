@@ -73,9 +73,9 @@ public class CustomRequest<T> extends BaseRequest {
     }
 
     /**
-     * Patches this with a source
+     * Patches this item with a source
      * @param sourceAttachment The source object with updates
-     * @return The updated Attachment
+     * @return The updated item
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
     public T patch(final T sourceObject) throws ClientException {

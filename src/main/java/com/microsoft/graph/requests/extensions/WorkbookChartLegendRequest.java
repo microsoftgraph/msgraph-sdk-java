@@ -27,7 +27,7 @@ public class WorkbookChartLegendRequest extends BaseWorkbookChartLegendRequest i
     /**
      * The request for the WorkbookChartLegend
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

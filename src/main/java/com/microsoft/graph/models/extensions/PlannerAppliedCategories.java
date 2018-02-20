@@ -4,18 +4,9 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
-import java.util.Arrays;
-import java.util.EnumSet;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import com.microsoft.graph.models.generated.BasePlannerAppliedCategories;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -23,5 +14,45 @@ import java.util.EnumSet;
  * The class for the Planner Applied Categories.
  */
 public class PlannerAppliedCategories extends BasePlannerAppliedCategories {
-
+	/**
+	 * The Category1
+	 */
+	@SerializedName("category1")
+	@Expose
+	public boolean category1;
+	
+	/**
+	 * The Category1
+	 */
+	@SerializedName("category2")
+	@Expose
+	public boolean category2;
+	
+	/**
+	 * The Category1
+	 */
+	@SerializedName("category3")
+	@Expose
+	public boolean category3;
+	
+	/**
+	 * The Category1
+	 */
+	@SerializedName("category4")
+	@Expose
+	public boolean category4;
+	
+	/**
+	 * The Category1
+	 */
+	@SerializedName("category5")
+	@Expose
+	public boolean category5;
+	
+	/**
+	 * The Category1
+	 */
+	@SerializedName("category6")
+	@Expose
+	public boolean category6;
 }

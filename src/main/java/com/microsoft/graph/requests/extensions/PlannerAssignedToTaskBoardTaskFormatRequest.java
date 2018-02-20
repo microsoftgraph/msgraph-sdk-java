@@ -27,7 +27,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BasePlannerAssi
     /**
      * The request for the PlannerAssignedToTaskBoardTaskFormat
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

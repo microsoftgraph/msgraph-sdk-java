@@ -41,10 +41,6 @@ public class BaseFolderView implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseFolderView() {
-        oDataType = "microsoft.graph.folderView";
-    }
-
     /**
      * The Sort By.
      * 

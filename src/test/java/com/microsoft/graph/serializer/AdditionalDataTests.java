@@ -64,15 +64,15 @@ public class AdditionalDataTests {
 	
 	@Test
 	public void testHashMapChildAnnotationData() {
-//		PlannerTask task = new PlannerTask();
-//		task.assignments = new PlannerAssignments();
-//		PlannerAssignment assignment = new PlannerAssignment();
-//		assignment.orderHint = "!";
-//		assignment.additionalDataManager().put("additionalData", new JsonPrimitive("additionalValue"));
-//		task.assignments.put("id", assignment);
-//		
-//		String serializedObject = serializer.serializeObject(task);
-//		
-//		assertEquals("{\"assignments\":{\"id\":{\"orderHint\":\"!\",\"additionalData\":\"additionalValue\"}}}", serializedObject);
+		PlannerTask task = new PlannerTask();
+		task.assignments = new PlannerAssignments();
+		PlannerAssignment assignment = new PlannerAssignment();
+		assignment.orderHint = "!";
+		assignment.additionalDataManager().put("additionalData", new JsonPrimitive("additionalValue"));
+		task.assignments.put("id", assignment);
+		
+		String serializedObject = serializer.serializeObject(task);
+		
+		assertEquals("{\"assignments\":{\"id\":{\"orderHint\":\"!\",\"additionalData\":\"additionalValue\"}}}", serializedObject);
 	}
 }

@@ -41,10 +41,6 @@ public class BaseResponseStatus implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseResponseStatus() {
-        oDataType = "microsoft.graph.responseStatus";
-    }
-
     /**
      * The Response.
      * The response type: None = 0, Organizer = 1, TentativelyAccepted = 2, Accepted = 3, Declined = 4, NotResponded = 5. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.

@@ -41,10 +41,6 @@ public class BaseProvisionedPlan implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseProvisionedPlan() {
-        oDataType = "microsoft.graph.provisionedPlan";
-    }
-
     /**
      * The Capability Status.
      * 

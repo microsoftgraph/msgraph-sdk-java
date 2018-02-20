@@ -41,10 +41,6 @@ public class BaseWorkbookWorksheetProtectionOptions implements IJsonBackedObject
         return additionalDataManager;
     }
 
-    public BaseWorkbookWorksheetProtectionOptions() {
-        oDataType = "microsoft.graph.workbookWorksheetProtectionOptions";
-    }
-
     /**
      * The Allow Auto Filter.
      * 

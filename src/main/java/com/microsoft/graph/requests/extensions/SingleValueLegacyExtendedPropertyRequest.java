@@ -27,7 +27,7 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseSingleValueLeg
     /**
      * The request for the SingleValueLegacyExtendedProperty
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

@@ -41,10 +41,6 @@ public class BaseCalculatedColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseCalculatedColumn() {
-        oDataType = "microsoft.graph.calculatedColumn";
-    }
-
     /**
      * The Format.
      * 

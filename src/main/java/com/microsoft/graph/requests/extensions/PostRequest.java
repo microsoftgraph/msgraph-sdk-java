@@ -27,7 +27,7 @@ public class PostRequest extends BasePostRequest implements IPostRequest {
     /**
      * The request for the Post
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

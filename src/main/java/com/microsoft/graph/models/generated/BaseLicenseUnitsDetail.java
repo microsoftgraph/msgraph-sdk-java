@@ -41,10 +41,6 @@ public class BaseLicenseUnitsDetail implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseLicenseUnitsDetail() {
-        oDataType = "microsoft.graph.licenseUnitsDetail";
-    }
-
     /**
      * The Enabled.
      * The number of units that are enabled.

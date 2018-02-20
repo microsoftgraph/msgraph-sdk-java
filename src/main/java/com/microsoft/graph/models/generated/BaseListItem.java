@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseListItem() {
-        oDataType = "microsoft.graph.listItem";
-    }
-
     /**
      * The Content Type.
      * 

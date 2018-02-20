@@ -27,15 +27,15 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
     /**
      * The request for the OnenoteEntityBaseModel
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseOnenoteEntityBaseModelRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends OnenoteEntityBaseModel> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +43,7 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
      * Gets the OnenoteEntityBaseModel from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOnenoteEntityBaseModel(final ICallback<OnenoteEntityBaseModel> callback) {
+    public void get(final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
      * @return The OnenoteEntityBaseModel from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OnenoteEntityBaseModel getOnenoteEntityBaseModel() throws ClientException {
+    public OnenoteEntityBaseModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

@@ -41,10 +41,6 @@ public class BaseVideo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseVideo() {
-        oDataType = "microsoft.graph.video";
-    }
-
     /**
      * The Audio Bits Per Sample.
      * 

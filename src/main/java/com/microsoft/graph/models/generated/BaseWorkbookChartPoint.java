@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartPoint extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartPoint() {
-        oDataType = "microsoft.graph.workbookChartPoint";
-    }
-
     /**
      * The Value.
      * 

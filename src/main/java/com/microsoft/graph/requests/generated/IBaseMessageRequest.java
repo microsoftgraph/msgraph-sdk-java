@@ -28,14 +28,14 @@ public interface IBaseMessageRequest extends IHttpRequest {
      * Gets the Message from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getMessage(final ICallback<Message> callback);
+    void get(final ICallback<Message> callback);
 
     /**
      * Gets the Message from the service
      * @return The Message from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    Message getMessage() throws ClientException;
+    Message get() throws ClientException;
 
     /**
      * Delete this item from the service.

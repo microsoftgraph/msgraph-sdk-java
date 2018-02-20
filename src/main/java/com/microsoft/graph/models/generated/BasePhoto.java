@@ -41,10 +41,6 @@ public class BasePhoto implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePhoto() {
-        oDataType = "microsoft.graph.photo";
-    }
-
     /**
      * The Camera Make.
      * Camera manufacturer. Read-only.

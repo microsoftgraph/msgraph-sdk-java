@@ -212,7 +212,6 @@ public class DefaultHttpProvider implements IHttpProvider {
                                                                        final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException {
         final int defaultBufferSize = 4096;
-        final String contentLengthHeaderName = "Content-Length";
         final String binaryContentType = "application/octet-stream";
 
         try {
@@ -234,7 +233,14 @@ public class DefaultHttpProvider implements IHttpProvider {
                 final byte[] bytesToWrite;
                 connection.addRequestHeader("Accept", "*/*");
                 if (serializable == null) {
-                    bytesToWrite = null;
+                	// Send an empty body through with a POST request
+                	// This ensures that the Content-Length header is properly set
+                	if (request.getHttpMethod() == HttpMethod.POST) {
+                		bytesToWrite = new byte[0];
+                	}
+                	else {
+                		bytesToWrite = null;
+                	}
                 } else if (serializable instanceof byte[]) {
                     logger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;
@@ -419,8 +425,14 @@ public class DefaultHttpProvider implements IHttpProvider {
     public static String streamToString(final InputStream input) {
         final String httpStreamEncoding = "UTF-8";
         final String endOfFile = "\\A";
-        final Scanner scanner = new Scanner(input, httpStreamEncoding).useDelimiter(endOfFile);
-        return scanner.next();
+        final Scanner scanner = new Scanner(input, httpStreamEncoding);
+        try {
+        	scanner.useDelimiter(endOfFile);
+            String scannerString = scanner.next();
+            return scannerString;
+        } finally {
+        	scanner.close();
+        }
     }
 
     /**

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOpenTypeExtension extends Extension implements IJsonBackedObject {
 
 
-    public BaseOpenTypeExtension() {
-        oDataType = "microsoft.graph.openTypeExtension";
-    }
-
     /**
      * The Extension Name.
      * 

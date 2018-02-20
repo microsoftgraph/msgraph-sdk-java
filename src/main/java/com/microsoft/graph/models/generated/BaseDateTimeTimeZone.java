@@ -41,10 +41,6 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDateTimeTimeZone() {
-        oDataType = "microsoft.graph.dateTimeTimeZone";
-    }
-
     /**
      * The Date Time.
      * 

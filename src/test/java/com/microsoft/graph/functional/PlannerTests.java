@@ -5,13 +5,14 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequest;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
 import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
+import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
+import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.models.extensions.PlannerBucketTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerCategoryDescriptions;
@@ -25,7 +26,9 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -33,65 +36,83 @@ import static org.junit.Assert.*;
 import java.util.Calendar;
 import java.util.UUID;
 
-@Ignore
+//@Ignore
 public class PlannerTests {
-    private TestBase testBase;
+    private static TestBase testBase;
     // For now, you must specify a specific plan ID since the test cannot
     // clean up after itself
-    private String planId = "ebJ1qqxlQUCwR4Osxm6TzWUAGpq6";
-    private PlannerBucket planBucket;
-    private PlannerTask planTask;
+    private static String planId = "f1WS2LJ4_k2G-KXzHwH-lGUABSKq";
+    private static PlannerBucket planBucket;
+    private static PlannerTask planTask;
+    private static IPlannerRequestBuilder prb;
 
-    @Before
-    public void setUp() {
+    @BeforeClass
+    public static void setUp() {
         testBase = new TestBase();
+        prb = testBase.graphClient.planner();
 
         PlannerBucket newBucket = new PlannerBucket();
         newBucket.name = "Test Bucket";
         newBucket.planId = planId;
 
-        planBucket = testBase.graphClient.planner().buckets().buildRequest().post(newBucket);
+        planBucket = prb.buckets().buildRequest().post(newBucket);
 
         PlannerTask newTask = new PlannerTask();
         newTask.title = "Test Task";
         newTask.planId = planId;
         newTask.bucketId = planBucket.id;
 
-        planTask = testBase.graphClient.planner().tasks().buildRequest().post(newTask);
+        planTask = prb.tasks().buildRequest().post(newTask);
     }
 
-    @Test
+    //@Test
     public void testPostTask() {
         PlannerTask newTask = new PlannerTask();
         newTask.title = "Test1";
         newTask.planId = planId;
         newTask.bucketId = planBucket.id;
 
-        PlannerTask task = testBase.graphClient.planner().tasks().buildRequest().post(newTask);
+        PlannerTask task = prb.tasks().buildRequest().post(newTask);
         assertNotNull(task);
     }
 
     @Test
     public void testBucketTaskBoardFormat() {
-        PlannerBucketTaskBoardTaskFormat format = testBase.graphClient.planner().tasks(planTask.id).bucketTaskBoardFormat().buildRequest().get();
+        PlannerBucketTaskBoardTaskFormat format = prb
+        		.tasks(planTask.id)
+        		.bucketTaskBoardFormat()
+        		.buildRequest()
+        		.get();
         assertNotNull(format);
     }
 
     @Test
     public void testAssignedToTaskBoardFormat() {
-        PlannerAssignedToTaskBoardTaskFormat format = testBase.graphClient.planner().tasks(planTask.id).assignedToTaskBoardFormat().buildRequest().get();
+        PlannerAssignedToTaskBoardTaskFormat format = prb
+        		.tasks(planTask.id)
+        		.assignedToTaskBoardFormat()
+        		.buildRequest()
+        		.get();
         assertNotNull(format);
     }
 
     @Test
     public void testProgressTaskBoardFormat() {
-        PlannerProgressTaskBoardTaskFormat format = testBase.graphClient.planner().tasks(planTask.id).progressTaskBoardFormat().buildRequest().get();
+        PlannerProgressTaskBoardTaskFormat format = prb
+        		.tasks(planTask.id)
+        		.progressTaskBoardFormat()
+        		.buildRequest()
+        		.get();
         assertNotNull(format);
     }
 
     @Test
     public void testGetTaskDetails() {
-        PlannerTaskDetails details = testBase.graphClient.planner().tasks(planTask.id).details().buildRequest().get();
+        PlannerTaskDetails details = prb
+        		.tasks(planTask.id)
+        		.details()
+        		.buildRequest()
+        		.get();
         assertNotNull(details);
     }
 
@@ -104,25 +125,26 @@ public class PlannerTests {
 
         PlannerAssignment assignment = new PlannerAssignment();
         assignment.orderHint = " !";
-        assignment.oDataType = "#microsoft.graph.plannerAssignment";
-        assignment.additionalDataManager().put("@odata.type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
+        AdditionalDataManager assignmentAdditionalData = assignment.additionalDataManager();
+        assignmentAdditionalData.put("@odata.type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
+        //assignment.oDataType = "#microsoft.graph.plannerAssignment";
 
-        AdditionalDataManager dataManager = task.additionalDataManager();
-        task.oDataType = "#microsoft.graph.plannerTask";
+        PlannerAssignments a2 = new PlannerAssignments();
+        a2.put(me.id, assignment);
+        task.assignments = a2;
 
-        JsonObject assignments = new JsonObject();
-        Gson gson = new Gson();
-        JsonElement assignmentJson = gson.toJsonTree(assignment);
-        assignments.add(me.id, assignmentJson);
-        dataManager.put("assignments", assignments);
-
-        IPlannerTaskRequest req = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", getEtag(planTask.getRawObject()));
+        IPlannerTaskRequest req = prb
+        		.tasks(planTask.id)
+        		.buildRequest();
+        req.addHeader("If-Match", planTask.etag);
         req.patch(task);
         
         Thread.sleep(4000);
 
-        PlannerTask updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
+        PlannerTask updatedTask = prb
+        		.tasks(planTask.id)
+        		.buildRequest()
+        		.get();
         JsonElement createdAssignment = updatedTask.getRawObject().get("assignments").getAsJsonObject().get(me.id);
 
         assertNotNull(createdAssignment);
@@ -163,22 +185,29 @@ public class PlannerTests {
         details.oDataType = "#microsoft.graph.plannerTaskDetails";
         dataManager.put("checklist", data);
 
-        PlannerTaskDetails d = testBase.graphClient.planner().tasks(planTask.id).details().buildRequest().get();
-        IPlannerTaskDetailsRequest req = testBase.graphClient.planner().tasks(planTask.id).details().buildRequest();
-        req.addHeader("If-Match", getEtag(d.getRawObject()));
-        req.addHeader("If-None-Match", getEtag(d.getRawObject()));
+        PlannerTaskDetails d = prb
+        		.tasks(planTask.id)
+        		.details()
+        		.buildRequest()
+        		.get();
+        IPlannerTaskDetailsRequest req = prb
+        		.tasks(planTask.id)
+        		.details()
+        		.buildRequest();
+        req.addHeader("If-Match", d.etag);
+        req.addHeader("If-None-Match", d.etag);
         req.patch(details);
 
         Thread.sleep(4000);
         
-        PlannerTask updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
+        PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
         int checklistItemCount = updatedTask.getRawObject().get("checklistItemCount").getAsInt();
 
         assertEquals(3, checklistItemCount);
     }
 
     // Fails due to delay from service
-    @Test
+     @Test
      public void testUpdateTaskDetailsReferences() {
         try {
             PlannerTaskDetails details = new PlannerTaskDetails();
@@ -198,16 +227,27 @@ public class PlannerTests {
             details.oDataType = "#microsoft.graph.plannerTaskDetails";
             dataManager.put("references", data);
 
-            PlannerTaskDetails d = testBase.graphClient.planner().tasks(planTask.id).details().buildRequest().get();
-            IPlannerTaskDetailsRequest req = testBase.graphClient.planner().tasks(planTask.id).details().buildRequest();
-            req.addHeader("If-Match", getEtag(d.getRawObject()));
-            req.addHeader("If-None-Match", getEtag(d.getRawObject()));
+            PlannerTaskDetails d = prb
+            		.tasks(planTask.id)
+            		.details()
+            		.buildRequest()
+            		.get();
+            IPlannerTaskDetailsRequest req = prb
+            		.tasks(planTask.id)
+            		.details()
+            		.buildRequest();
+            req.addHeader("If-Match", d.etag);
+            req.addHeader("If-None-Match", d.etag);
             req.addHeader("Prefer", "return=representation");
             PlannerTaskDetails updatedTaskDetails = req.patch(details);
             
             Thread.sleep(4000);
             
-            updatedTaskDetails = testBase.graphClient.planner().tasks(planTask.id).details().buildRequest().get();
+            updatedTaskDetails = prb
+            		.tasks(planTask.id)
+            		.details()
+            		.buildRequest()
+            		.get();
             JsonElement obj = updatedTaskDetails.getRawObject().get("references");
             JsonArray array = new JsonArray();
             array.add(obj);
@@ -224,13 +264,13 @@ public class PlannerTests {
         PlannerTask task = new PlannerTask();
         task.percentComplete = 50;
 
-        IPlannerTaskRequest req = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", getEtag(planTask.getRawObject()));
+        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        req.addHeader("If-Match", planTask.etag);
         req.patch(task);
         
         Thread.sleep(4000);
 
-        PlannerTask updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
+        PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
 
         assertEquals(task.percentComplete, updatedTask.percentComplete);
     }
@@ -240,14 +280,14 @@ public class PlannerTests {
         PlannerTask task = new PlannerTask();
         task.startDateTime = Calendar.getInstance();
 
-        IPlannerTaskRequest req = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", getEtag(planTask.getRawObject()));
+        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        req.addHeader("If-Match", planTask.etag);
         req.patch(task);
 
         Thread.sleep(2000);
         
-        PlannerTask updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
-        updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
+        PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
+        updatedTask = prb.tasks(planTask.id).buildRequest().get();
         assertEquals(task.startDateTime, updatedTask.startDateTime);
     }
 
@@ -257,14 +297,16 @@ public class PlannerTests {
         PlannerTask task = new PlannerTask();
         task.dueDateTime = Calendar.getInstance();
 
-        IPlannerTaskRequest req = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", getEtag(planTask.getRawObject()));
+        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        planTask = prb.tasks(planTask.id).buildRequest().get();
+        
+        req.addHeader("If-Match", planTask.etag);
         req.patch(task);
         
         Thread.sleep(6000);
 
-        PlannerTask updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
-        updatedTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
+        PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
+        updatedTask = prb.tasks(planTask.id).buildRequest().get();
         assertEquals(task.dueDateTime, updatedTask.dueDateTime);
     }
 
@@ -285,10 +327,10 @@ public class PlannerTests {
         task.oDataType = "#microsoft.graph.plannerTask";
         dataManager.put("appliedCategories", data);
 
-        PlannerTask newTask = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
-        IPlannerTaskRequest req = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", getEtag(newTask.getRawObject()));
-        req.addHeader("If-None-Match", getEtag(newTask.getRawObject()));
+        PlannerTask newTask = prb.tasks(planTask.id).buildRequest().get();
+        IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
+        req.addHeader("If-Match", newTask.etag);
+        req.addHeader("If-None-Match", newTask.etag);
         req.addHeader("Prefer", "return=representation");
         PlannerTask updatedTask = req.patch(task);
 
@@ -304,10 +346,10 @@ public class PlannerTests {
         descriptions.category2 = "Red";
         planDetails.categoryDescriptions = descriptions;
 
-        PlannerPlanDetails newDetails = testBase.graphClient.planner().plans(planId).details().buildRequest().get();
-        IPlannerPlanDetailsRequest req = testBase.graphClient.planner().plans(planId).details().buildRequest();
-        req.addHeader("If-Match", getEtag(newDetails.getRawObject()));
-        req.addHeader("If-None-Match", getEtag(newDetails.getRawObject()));
+        PlannerPlanDetails newDetails = prb.plans(planId).details().buildRequest().get();
+        IPlannerPlanDetailsRequest req = prb.plans(planId).details().buildRequest();
+        req.addHeader("If-Match", newDetails.etag);
+        req.addHeader("If-None-Match", newDetails.etag);
         req.addHeader("Prefer", "return=representation");
         PlannerPlanDetails updatedPlanDetails = req.patch(planDetails);
 
@@ -321,10 +363,10 @@ public class PlannerTests {
         newTask.planId = planId;
         newTask.bucketId = planBucket.id;
 
-        PlannerTask task = testBase.graphClient.planner().tasks().buildRequest().post(newTask);
+        PlannerTask task = prb.tasks().buildRequest().post(newTask);
 
         IPlannerTaskRequest req = testBase.graphClient.planner().tasks(task.id).buildRequest();
-        req.addHeader("If-Match", getEtag(task.getRawObject()));
+        req.addHeader("If-Match", task.etag);
         req.delete();
     }
 
@@ -334,7 +376,7 @@ public class PlannerTests {
         newBucket.name = "Create Bucket Test";
         newBucket.planId = planId;
 
-        PlannerBucket createdBucket = testBase.graphClient.planner().buckets().buildRequest().post(newBucket);
+        PlannerBucket createdBucket = prb.buckets().buildRequest().post(newBucket);
         assertEquals(newBucket.name, createdBucket.name);
     }
 
@@ -344,17 +386,17 @@ public class PlannerTests {
         patchBucket.name = "RenamedBucket";
         patchBucket.oDataType = "#microsoft.graph.plannerBucket";
 
-        IPlannerBucketRequest req = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
-        req.addHeader("If-Match", getEtag(planBucket.getRawObject()));
+        IPlannerBucketRequest req = prb.buckets(planBucket.id).buildRequest();
+        req.addHeader("If-Match", planBucket.etag);
 
         req.patch(patchBucket);
-        PlannerBucket updatedBucket = testBase.graphClient.planner().buckets(planBucket.id).buildRequest().get();
+        PlannerBucket updatedBucket = prb.buckets(planBucket.id).buildRequest().get();
 
         assertEquals(patchBucket.name, updatedBucket.name);
 
         patchBucket.name = "Test Bucket";
         IPlannerBucketRequest req2 = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
-        req2.addHeader("If-Match", getEtag(updatedBucket.getRawObject()));
+        req2.addHeader("If-Match", updatedBucket.etag);
         req2.patch(patchBucket);
     }
 
@@ -367,24 +409,24 @@ public class PlannerTests {
         PlannerBucket createdBucket = testBase.graphClient.planner().buckets().buildRequest().post(newBucket);
 
         IPlannerBucketRequest req = testBase.graphClient.planner().buckets(createdBucket.id).buildRequest();
-        req.addHeader("If-Match", getEtag(createdBucket.getRawObject()));
+        req.addHeader("If-Match", createdBucket.etag);
         req.delete();
     }
 
-    @After
-    public void tearDown() throws InterruptedException {
+    @AfterClass
+    public static void tearDown() throws InterruptedException {
     	
     	Thread.sleep(4000);
     	
         //This may have updated since we last saw it
         PlannerTask task = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
         IPlannerTaskRequest taskReq = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        taskReq.addHeader("If-Match", getEtag(task.getRawObject()));
+        taskReq.addHeader("If-Match", task.etag);
         taskReq.delete();
 
         PlannerBucket bucket = testBase.graphClient.planner().buckets(planBucket.id).buildRequest().get();
         IPlannerBucketRequest bucketReq = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
-        bucketReq.addHeader("If-Match", getEtag(bucket.getRawObject()));
+        bucketReq.addHeader("If-Match", bucket.etag);
         bucketReq.delete();
 
         //Fails with 403 Forbidden
@@ -392,12 +434,5 @@ public class PlannerTests {
         // IPlannerPlanRequest planReq = testBase.graphClient.getPlanner().getPlans(planId).buildRequest();
         // planReq.addHeader("If-Match", getEtag(plan.getRawObject()));
         // planReq.delete();
-    }
-
-    public String getEtag(JsonObject obj) {
-        String etag = obj.get("@odata.etag").toString();
-        etag = etag.substring(1, etag.length()-1);
-        etag = etag.replace("\\", "");;
-        return etag;
     }
 }

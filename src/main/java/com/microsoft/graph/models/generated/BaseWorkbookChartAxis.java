@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartAxis() {
-        oDataType = "microsoft.graph.workbookChartAxis";
-    }
-
     /**
      * The Major Unit.
      * 

@@ -28,14 +28,14 @@ public interface IBaseExtensionRequest extends IHttpRequest {
      * Gets the Extension from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getExtension(final ICallback<Extension> callback);
+    void get(final ICallback<Extension> callback);
 
     /**
      * Gets the Extension from the service
      * @return The Extension from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    Extension getExtension() throws ClientException;
+    Extension get() throws ClientException;
 
     /**
      * Delete this item from the service.

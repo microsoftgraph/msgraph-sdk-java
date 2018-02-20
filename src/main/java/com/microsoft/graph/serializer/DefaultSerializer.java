@@ -31,6 +31,7 @@ import com.microsoft.graph.logger.ILogger;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * The default serializer implementation for the SDK.
@@ -143,7 +144,8 @@ public class DefaultSerializer implements ISerializer {
      * @param outJson            The serialized output JSON to add to
      * @return The serialized output JSON including the additional child data
      */
-    private JsonObject getChildAdditionalData(IJsonBackedObject serializableObject, JsonObject outJson) {
+    @SuppressWarnings("unchecked")
+	private JsonObject getChildAdditionalData(IJsonBackedObject serializableObject, JsonObject outJson) {
     	// Use reflection to iterate through fields for eligible Graph children
         for (java.lang.reflect.Field field : serializableObject.getClass().getFields()) {
     		try {
@@ -151,8 +153,9 @@ public class DefaultSerializer implements ISerializer {
 				
 				// If the object is a HashMap, iterate through its children
 				if (fieldObject instanceof HashMap) {
-					HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
-					Iterator it = serializableChildren.entrySet().iterator();
+					@SuppressWarnings("unchecked")
+                    HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
+					Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 					
 					while (it.hasNext()) {
 						HashMap.Entry<String, Object> pair = (HashMap.Entry<String, Object>)it.next();
@@ -222,7 +225,7 @@ public class DefaultSerializer implements ISerializer {
      * @param parentClass The parent class the derived class should inherit from
      * @return The derived class if found, or null if not applicable
      */
-    private Class getDerivedClass(JsonObject jsonObject, Class parentClass) {
+    private Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
     	//Identify the odata.type information if provided
         if (jsonObject.get("@odata.type") != null) {
         	String odataType = jsonObject.get("@odata.type").getAsString();
@@ -231,7 +234,7 @@ public class DefaultSerializer implements ISerializer {
         	derivedType = "com.microsoft.graph.models.extensions." + derivedType; //Add full package path
         	
         	try {
-        		Class derivedClass = Class.forName(derivedType);
+        		Class<?> derivedClass = Class.forName(derivedType);
         		//Check that the derived class inherits from the given parent class
         		if (parentClass.isAssignableFrom(derivedClass)) {
         			return derivedClass;

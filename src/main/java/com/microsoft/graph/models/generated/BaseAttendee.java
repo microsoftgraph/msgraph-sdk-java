@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseAttendee extends AttendeeBase implements IJsonBackedObject {
 
 
-    public BaseAttendee() {
-        oDataType = "microsoft.graph.attendee";
-    }
-
     /**
      * The Status.
      * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.

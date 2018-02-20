@@ -41,10 +41,6 @@ public class BaseComplexExtensionValue implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseComplexExtensionValue() {
-        oDataType = "microsoft.graph.ComplexExtensionValue";
-    }
-
 
     /**
      * The raw representation of this class

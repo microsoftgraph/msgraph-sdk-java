@@ -41,10 +41,6 @@ public class BaseTextColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseTextColumn() {
-        oDataType = "microsoft.graph.textColumn";
-    }
-
     /**
      * The Allow Multiple Lines.
      * 

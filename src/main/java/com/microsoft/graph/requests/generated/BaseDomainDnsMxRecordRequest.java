@@ -27,15 +27,15 @@ public class BaseDomainDnsMxRecordRequest extends BaseRequest implements IBaseDo
     /**
      * The request for the DomainDnsMxRecord
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseDomainDnsMxRecordRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<DomainDnsMxRecord> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

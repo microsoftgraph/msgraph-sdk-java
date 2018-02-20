@@ -41,10 +41,6 @@ public class BaseListInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseListInfo() {
-        oDataType = "microsoft.graph.listInfo";
-    }
-
     /**
      * The Content Types Enabled.
      * 

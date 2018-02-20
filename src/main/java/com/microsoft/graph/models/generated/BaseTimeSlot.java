@@ -41,10 +41,6 @@ public class BaseTimeSlot implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseTimeSlot() {
-        oDataType = "microsoft.graph.timeSlot";
-    }
-
     /**
      * The Start.
      * The time the period ends.

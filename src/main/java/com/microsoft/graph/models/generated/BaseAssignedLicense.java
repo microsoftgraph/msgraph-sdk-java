@@ -41,10 +41,6 @@ public class BaseAssignedLicense implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseAssignedLicense() {
-        oDataType = "microsoft.graph.assignedLicense";
-    }
-
     /**
      * The Disabled Plans.
      * A collection of the unique identifiers for plans that have been disabled.

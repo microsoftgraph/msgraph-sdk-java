@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDomainDnsUnavailableRecord extends DomainDnsRecord implements IJsonBackedObject {
 
 
-    public BaseDomainDnsUnavailableRecord() {
-        oDataType = "microsoft.graph.domainDnsUnavailableRecord";
-    }
-
     /**
      * The Description.
      * Provides the reason why the DomainDnsUnavailableRecord entity is returned.

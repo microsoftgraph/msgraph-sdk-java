@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseThumbnailSet extends Entity implements IJsonBackedObject {
 
 
-    public BaseThumbnailSet() {
-        oDataType = "microsoft.graph.thumbnailSet";
-    }
-
     /**
      * The Large.
      * A 1920x1920 scaled thumbnail.

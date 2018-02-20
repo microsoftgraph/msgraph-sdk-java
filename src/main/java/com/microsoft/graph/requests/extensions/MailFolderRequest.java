@@ -27,7 +27,7 @@ public class MailFolderRequest extends BaseMailFolderRequest implements IMailFol
     /**
      * The request for the MailFolder
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartLineFormat extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartLineFormat() {
-        oDataType = "microsoft.graph.workbookChartLineFormat";
-    }
-
     /**
      * The Color.
      * 

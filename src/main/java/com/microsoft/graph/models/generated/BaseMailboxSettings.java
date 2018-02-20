@@ -41,10 +41,6 @@ public class BaseMailboxSettings implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseMailboxSettings() {
-        oDataType = "microsoft.graph.mailboxSettings";
-    }
-
     /**
      * The Automatic Replies Setting.
      * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.

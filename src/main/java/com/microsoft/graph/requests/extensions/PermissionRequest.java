@@ -27,7 +27,7 @@ public class PermissionRequest extends BasePermissionRequest implements IPermiss
     /**
      * The request for the Permission
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

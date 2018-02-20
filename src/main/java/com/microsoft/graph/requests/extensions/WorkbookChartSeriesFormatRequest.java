@@ -27,7 +27,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseWorkbookChartSeriesFor
     /**
      * The request for the WorkbookChartSeriesFormat
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

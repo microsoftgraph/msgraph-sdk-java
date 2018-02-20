@@ -41,10 +41,6 @@ public class BasePersonType implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePersonType() {
-        oDataType = "microsoft.graph.personType";
-    }
-
     /**
      * The Class.
      * 

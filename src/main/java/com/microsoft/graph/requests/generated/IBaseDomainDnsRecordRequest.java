@@ -28,14 +28,14 @@ public interface IBaseDomainDnsRecordRequest extends IHttpRequest {
      * Gets the DomainDnsRecord from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getDomainDnsRecord(final ICallback<DomainDnsRecord> callback);
+    void get(final ICallback<DomainDnsRecord> callback);
 
     /**
      * Gets the DomainDnsRecord from the service
      * @return The DomainDnsRecord from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    DomainDnsRecord getDomainDnsRecord() throws ClientException;
+    DomainDnsRecord get() throws ClientException;
 
     /**
      * Delete this item from the service.

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOnenoteOperation extends Operation implements IJsonBackedObject {
 
 
-    public BaseOnenoteOperation() {
-        oDataType = "microsoft.graph.onenoteOperation";
-    }
-
     /**
      * The Resource Location.
      * The resource URI for the object. For example, the resource URI for a copied page or section.

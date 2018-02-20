@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookWorksheetProtection extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookWorksheetProtection() {
-        oDataType = "microsoft.graph.workbookWorksheetProtection";
-    }
-
     /**
      * The Options.
      * 

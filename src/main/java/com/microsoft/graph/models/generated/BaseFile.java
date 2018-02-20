@@ -41,10 +41,6 @@ public class BaseFile implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseFile() {
-        oDataType = "microsoft.graph.file";
-    }
-
     /**
      * The Hashes.
      * Hashes of the file's binary content, if available. Read-only.

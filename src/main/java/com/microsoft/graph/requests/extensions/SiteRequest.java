@@ -27,7 +27,7 @@ public class SiteRequest extends BaseSiteRequest implements ISiteRequest {
     /**
      * The request for the Site
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

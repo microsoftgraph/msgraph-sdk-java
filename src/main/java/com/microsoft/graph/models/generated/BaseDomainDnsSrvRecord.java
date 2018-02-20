@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDomainDnsSrvRecord extends DomainDnsRecord implements IJsonBackedObject {
 
 
-    public BaseDomainDnsSrvRecord() {
-        oDataType = "microsoft.graph.domainDnsSrvRecord";
-    }
-
     /**
      * The Name Target.
      * Value to use when configuring the Target property of the SRV record at the DNS host.

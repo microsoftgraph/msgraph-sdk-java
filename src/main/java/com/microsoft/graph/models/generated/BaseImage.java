@@ -41,10 +41,6 @@ public class BaseImage implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseImage() {
-        oDataType = "microsoft.graph.image";
-    }
-
     /**
      * The Height.
      * Optional. Height of the image, in pixels. Read-only.

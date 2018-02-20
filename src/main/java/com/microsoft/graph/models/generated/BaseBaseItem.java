@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseBaseItem extends Entity implements IJsonBackedObject {
 
 
-    public BaseBaseItem() {
-        oDataType = "microsoft.graph.baseItem";
-    }
-
     /**
      * The Created By.
      * Identity of the user, device, or application which created the item. Read-only.

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartSeries extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartSeries() {
-        oDataType = "microsoft.graph.workbookChartSeries";
-    }
-
     /**
      * The Name.
      * 

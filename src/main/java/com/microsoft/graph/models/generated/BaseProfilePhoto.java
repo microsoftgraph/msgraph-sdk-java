@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseProfilePhoto extends Entity implements IJsonBackedObject {
 
 
-    public BaseProfilePhoto() {
-        oDataType = "microsoft.graph.profilePhoto";
-    }
-
     /**
      * The Height.
      * The height of the photo. Read-only.

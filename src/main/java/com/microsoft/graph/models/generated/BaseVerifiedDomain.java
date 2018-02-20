@@ -41,10 +41,6 @@ public class BaseVerifiedDomain implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseVerifiedDomain() {
-        oDataType = "microsoft.graph.verifiedDomain";
-    }
-
     /**
      * The Capabilities.
      * 

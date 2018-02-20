@@ -28,14 +28,14 @@ public interface IBaseOnenoteEntitySchemaObjectModelRequest extends IHttpRequest
      * Gets the OnenoteEntitySchemaObjectModel from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getOnenoteEntitySchemaObjectModel(final ICallback<OnenoteEntitySchemaObjectModel> callback);
+    void get(final ICallback<OnenoteEntitySchemaObjectModel> callback);
 
     /**
      * Gets the OnenoteEntitySchemaObjectModel from the service
      * @return The OnenoteEntitySchemaObjectModel from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    OnenoteEntitySchemaObjectModel getOnenoteEntitySchemaObjectModel() throws ClientException;
+    OnenoteEntitySchemaObjectModel get() throws ClientException;
 
     /**
      * Delete this item from the service.

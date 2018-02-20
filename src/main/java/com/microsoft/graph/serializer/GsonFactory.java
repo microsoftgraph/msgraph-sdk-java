@@ -162,9 +162,9 @@ final class GsonFactory {
             }
         };
 
-        final JsonSerializer<EnumSet> enumSetJsonSerializer = new JsonSerializer<EnumSet>() {
+        final JsonSerializer<EnumSet<?>> enumSetJsonSerializer = new JsonSerializer<EnumSet<?>>() {
             @Override
-            public JsonElement serialize(final EnumSet src,
+            public JsonElement serialize(final EnumSet<?> src,
                                          final Type typeOfSrc,
                                          final JsonSerializationContext context) {
                 if (src == null || src.isEmpty()) {
@@ -175,9 +175,9 @@ final class GsonFactory {
             }
         };
 
-        final JsonDeserializer<EnumSet> enumSetJsonDeserializer = new JsonDeserializer<EnumSet>() {
+        final JsonDeserializer<EnumSet<?>> enumSetJsonDeserializer = new JsonDeserializer<EnumSet<?>>() {
             @Override
-            public EnumSet deserialize(final JsonElement json,
+            public EnumSet<?> deserialize(final JsonElement json,
                                         final Type typeOfT,
                                         final JsonDeserializationContext context) throws JsonParseException {
                 if (json == null) {

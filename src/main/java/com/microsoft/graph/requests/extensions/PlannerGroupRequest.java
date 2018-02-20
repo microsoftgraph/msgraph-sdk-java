@@ -27,7 +27,7 @@ public class PlannerGroupRequest extends BasePlannerGroupRequest implements IPla
     /**
      * The request for the PlannerGroup
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

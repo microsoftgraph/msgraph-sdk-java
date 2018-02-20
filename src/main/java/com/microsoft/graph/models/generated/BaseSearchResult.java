@@ -41,10 +41,6 @@ public class BaseSearchResult implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSearchResult() {
-        oDataType = "microsoft.graph.searchResult";
-    }
-
     /**
      * The On Click Telemetry Url.
      * A callback URL that can be used to record telemetry information. The application should issue a GET on this URL if the user interacts with this item to improve the quality of results.

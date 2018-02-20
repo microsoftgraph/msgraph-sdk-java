@@ -41,10 +41,6 @@ public class BaseSiteCollection implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSiteCollection() {
-        oDataType = "microsoft.graph.siteCollection";
-    }
-
     /**
      * The Hostname.
      * The hostname for the site collection. Read-only.

@@ -41,10 +41,6 @@ public class BaseLocation implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseLocation() {
-        oDataType = "microsoft.graph.location";
-    }
-
     /**
      * The Display Name.
      * The name associated with the location.

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChartDataLabels extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChartDataLabels() {
-        oDataType = "microsoft.graph.workbookChartDataLabels";
-    }
-
     /**
      * The Position.
      * 
