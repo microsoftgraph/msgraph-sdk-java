@@ -43,7 +43,7 @@ public class BaseMessageRequest extends BaseRequest implements IBaseMessageReque
      * Gets the Message from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getMessage(final ICallback<Message> callback) {
+    public void get(final ICallback<Message> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseMessageRequest extends BaseRequest implements IBaseMessageReque
      * @return The Message from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public Message getMessage() throws ClientException {
+    public Message get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

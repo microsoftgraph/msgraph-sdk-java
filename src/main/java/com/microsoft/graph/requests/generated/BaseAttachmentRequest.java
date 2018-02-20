@@ -43,7 +43,7 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
      * Gets the Attachment from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getAttachment(final ICallback<Attachment> callback) {
+    public void get(final ICallback<Attachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
      * @return The Attachment from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public Attachment getAttachment() throws ClientException {
+    public Attachment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

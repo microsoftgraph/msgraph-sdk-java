@@ -43,7 +43,7 @@ public class BaseOperationRequest extends BaseRequest implements IBaseOperationR
      * Gets the Operation from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOperation(final ICallback<Operation> callback) {
+    public void get(final ICallback<Operation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOperationRequest extends BaseRequest implements IBaseOperationR
      * @return The Operation from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public Operation getOperation() throws ClientException {
+    public Operation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

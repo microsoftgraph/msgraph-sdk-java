@@ -43,7 +43,7 @@ public class BaseOnenoteEntityHierarchyModelRequest extends BaseRequest implemen
      * Gets the OnenoteEntityHierarchyModel from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOnenoteEntityHierarchyModel(final ICallback<OnenoteEntityHierarchyModel> callback) {
+    public void get(final ICallback<OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOnenoteEntityHierarchyModelRequest extends BaseRequest implemen
      * @return The OnenoteEntityHierarchyModel from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OnenoteEntityHierarchyModel getOnenoteEntityHierarchyModel() throws ClientException {
+    public OnenoteEntityHierarchyModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

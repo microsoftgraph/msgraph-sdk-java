@@ -28,14 +28,14 @@ public interface IBaseOnenoteEntityHierarchyModelRequest extends IHttpRequest {
      * Gets the OnenoteEntityHierarchyModel from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getOnenoteEntityHierarchyModel(final ICallback<OnenoteEntityHierarchyModel> callback);
+    void get(final ICallback<OnenoteEntityHierarchyModel> callback);
 
     /**
      * Gets the OnenoteEntityHierarchyModel from the service
      * @return The OnenoteEntityHierarchyModel from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    OnenoteEntityHierarchyModel getOnenoteEntityHierarchyModel() throws ClientException;
+    OnenoteEntityHierarchyModel get() throws ClientException;
 
     /**
      * Delete this item from the service.

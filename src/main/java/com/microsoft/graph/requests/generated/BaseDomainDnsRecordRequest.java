@@ -43,7 +43,7 @@ public class BaseDomainDnsRecordRequest extends BaseRequest implements IBaseDoma
      * Gets the DomainDnsRecord from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getDomainDnsRecord(final ICallback<DomainDnsRecord> callback) {
+    public void get(final ICallback<DomainDnsRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseDomainDnsRecordRequest extends BaseRequest implements IBaseDoma
      * @return The DomainDnsRecord from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public DomainDnsRecord getDomainDnsRecord() throws ClientException {
+    public DomainDnsRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

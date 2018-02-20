@@ -43,7 +43,7 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
      * Gets the OutlookItem from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOutlookItem(final ICallback<OutlookItem> callback) {
+    public void get(final ICallback<OutlookItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
      * @return The OutlookItem from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OutlookItem getOutlookItem() throws ClientException {
+    public OutlookItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
