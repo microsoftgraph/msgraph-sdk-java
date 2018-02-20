@@ -27,7 +27,7 @@ public class DriveRequest extends BaseDriveRequest implements IDriveRequest {
     /**
      * The request for the Drive
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

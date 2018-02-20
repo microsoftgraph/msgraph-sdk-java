@@ -27,7 +27,7 @@ public class ListRequest extends BaseListRequest implements IListRequest {
     /**
      * The request for the List
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

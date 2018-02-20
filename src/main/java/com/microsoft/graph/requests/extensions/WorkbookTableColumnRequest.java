@@ -27,7 +27,7 @@ public class WorkbookTableColumnRequest extends BaseWorkbookTableColumnRequest i
     /**
      * The request for the WorkbookTableColumn
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

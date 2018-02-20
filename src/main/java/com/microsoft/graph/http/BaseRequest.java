@@ -107,7 +107,7 @@ public abstract class BaseRequest implements IHttpRequest {
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
                        final List<? extends Option> options,
-                       final Class responseClass) {
+                       final Class<?> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -349,7 +349,8 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return The response type.
      */
-    public Class getResponseType() {
-        return responseClass;
+    @SuppressWarnings("unchecked")
+	public <T> Class<T> getResponseType() {
+        return (Class<T>) responseClass;
     }
 }

@@ -27,7 +27,7 @@ public class CalendarGroupRequest extends BaseCalendarGroupRequest implements IC
     /**
      * The request for the CalendarGroup
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

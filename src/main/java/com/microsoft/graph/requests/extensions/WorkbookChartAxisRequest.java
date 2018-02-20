@@ -27,7 +27,7 @@ public class WorkbookChartAxisRequest extends BaseWorkbookChartAxisRequest imple
     /**
      * The request for the WorkbookChartAxis
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

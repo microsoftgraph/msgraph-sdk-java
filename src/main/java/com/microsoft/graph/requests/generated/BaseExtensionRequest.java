@@ -27,15 +27,15 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
     /**
      * The request for the Extension
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseExtensionRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends Extension> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

@@ -27,15 +27,15 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
     /**
      * The request for the Attachment
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseAttachmentRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends Attachment> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

@@ -27,7 +27,7 @@ public class InvitationRequest extends BaseInvitationRequest implements IInvitat
     /**
      * The request for the Invitation
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

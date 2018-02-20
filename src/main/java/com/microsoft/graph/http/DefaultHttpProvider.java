@@ -419,8 +419,14 @@ public class DefaultHttpProvider implements IHttpProvider {
     public static String streamToString(final InputStream input) {
         final String httpStreamEncoding = "UTF-8";
         final String endOfFile = "\\A";
-        final Scanner scanner = new Scanner(input, httpStreamEncoding).useDelimiter(endOfFile);
-        return scanner.next();
+        final Scanner scanner = new Scanner(input, httpStreamEncoding);
+        try {
+        	scanner.useDelimiter(endOfFile);
+            String scannerString = scanner.next();
+            return scannerString;
+        } finally {
+        	scanner.close();
+        }
     }
 
     /**

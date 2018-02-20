@@ -27,7 +27,7 @@ public class ColumnLinkRequest extends BaseColumnLinkRequest implements IColumnL
     /**
      * The request for the ColumnLink
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

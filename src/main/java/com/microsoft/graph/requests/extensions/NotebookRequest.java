@@ -27,7 +27,7 @@ public class NotebookRequest extends BaseNotebookRequest implements INotebookReq
     /**
      * The request for the Notebook
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

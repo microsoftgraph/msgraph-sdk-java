@@ -27,7 +27,7 @@ public class WorkbookRangeFormatRequest extends BaseWorkbookRangeFormatRequest i
     /**
      * The request for the WorkbookRangeFormat
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

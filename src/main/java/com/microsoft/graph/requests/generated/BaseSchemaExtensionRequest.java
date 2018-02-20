@@ -27,15 +27,15 @@ public class BaseSchemaExtensionRequest extends BaseRequest implements IBaseSche
     /**
      * The request for the SchemaExtension
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseSchemaExtensionRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<SchemaExtension> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

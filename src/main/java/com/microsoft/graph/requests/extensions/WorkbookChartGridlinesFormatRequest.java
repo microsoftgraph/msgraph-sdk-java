@@ -27,7 +27,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseWorkbookChartGridli
     /**
      * The request for the WorkbookChartGridlinesFormat
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

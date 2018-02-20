@@ -144,7 +144,8 @@ public class DefaultSerializer implements ISerializer {
      * @param outJson            The serialized output JSON to add to
      * @return The serialized output JSON including the additional child data
      */
-    private JsonObject getChildAdditionalData(IJsonBackedObject serializableObject, JsonObject outJson) {
+    @SuppressWarnings("unchecked")
+	private JsonObject getChildAdditionalData(IJsonBackedObject serializableObject, JsonObject outJson) {
     	// Use reflection to iterate through fields for eligible Graph children
         for (java.lang.reflect.Field field : serializableObject.getClass().getFields()) {
     		try {

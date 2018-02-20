@@ -27,7 +27,7 @@ public class WorkbookChartRequest extends BaseWorkbookChartRequest implements IW
     /**
      * The request for the WorkbookChart
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */
