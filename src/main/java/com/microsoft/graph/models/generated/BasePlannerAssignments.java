@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * The class for the Base Planner Assignments.
  */
-public class BasePlannerAssignments implements IJsonBackedObject {
+public class BasePlannerAssignments extends HashMap<String, PlannerAssignment> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
     @Expose(serialize = false)
