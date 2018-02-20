@@ -41,10 +41,6 @@ public class BasePhone implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePhone() {
-        oDataType = "microsoft.graph.phone";
-    }
-
     /**
      * The Type.
      * The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.

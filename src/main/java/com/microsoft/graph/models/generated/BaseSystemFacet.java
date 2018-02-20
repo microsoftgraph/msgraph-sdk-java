@@ -41,10 +41,6 @@ public class BaseSystemFacet implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSystemFacet() {
-        oDataType = "microsoft.graph.systemFacet";
-    }
-
 
     /**
      * The raw representation of this class

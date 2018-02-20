@@ -29,6 +29,8 @@ import java.util.List;
  */
 public class GraphFatalServiceException extends GraphServiceException {
 
+    private static final long serialVersionUID = -4974392424026672738L;
+
     /**
      * Create a fatal Graph service exception.
      * @param method The method that caused the exception.

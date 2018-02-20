@@ -41,10 +41,6 @@ public class BaseWorkbookSessionInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookSessionInfo() {
-        oDataType = "microsoft.graph.workbookSessionInfo";
-    }
-
     /**
      * The Id.
      * 

@@ -41,10 +41,6 @@ public class BaseSectionLinks implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSectionLinks() {
-        oDataType = "microsoft.graph.sectionLinks";
-    }
-
     /**
      * The One Note Client Url.
      * Opens the section in the OneNote native client if it's installed.

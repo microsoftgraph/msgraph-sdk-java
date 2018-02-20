@@ -41,10 +41,6 @@ public class BaseMeetingTimeSuggestion implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseMeetingTimeSuggestion() {
-        oDataType = "microsoft.graph.meetingTimeSuggestion";
-    }
-
     /**
      * The Meeting Time Slot.
      * A time period suggested for the meeting.

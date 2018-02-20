@@ -41,10 +41,6 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseWorkbookSortField() {
-        oDataType = "microsoft.graph.workbookSortField";
-    }
-
     /**
      * The Ascending.
      * 

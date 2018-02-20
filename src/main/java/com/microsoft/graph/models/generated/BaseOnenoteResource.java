@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOnenoteResource extends OnenoteEntityBaseModel implements IJsonBackedObject {
 
 
-    public BaseOnenoteResource() {
-        oDataType = "microsoft.graph.onenoteResource";
-    }
-
     /**
      * The Content Url.
      * 

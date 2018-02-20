@@ -41,10 +41,6 @@ public class BaseItemBody implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseItemBody() {
-        oDataType = "microsoft.graph.itemBody";
-    }
-
     /**
      * The Content Type.
      * The type of the content. Possible values are Text and HTML.

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePlannerGroup extends Entity implements IJsonBackedObject {
 
 
-    public BasePlannerGroup() {
-        oDataType = "microsoft.graph.plannerGroup";
-    }
-
     /**
      * The Plans.
      * Read-only. Nullable. Returns the plannerPlans owned by the group.

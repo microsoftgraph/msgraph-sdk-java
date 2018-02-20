@@ -153,7 +153,8 @@ public class DefaultSerializer implements ISerializer {
 				
 				// If the object is a HashMap, iterate through its children
 				if (fieldObject instanceof HashMap) {
-					HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
+					@SuppressWarnings("unchecked")
+                    HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
 					Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 					
 					while (it.hasNext()) {

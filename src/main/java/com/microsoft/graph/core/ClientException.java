@@ -27,6 +27,8 @@ package com.microsoft.graph.core;
  */
 public class ClientException extends RuntimeException {
 
+    private static final long serialVersionUID = -1066560879567392559L;
+
     /**
      * Creates the client exception.
      * @param message The message to display.

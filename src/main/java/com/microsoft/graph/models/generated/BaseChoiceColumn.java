@@ -41,10 +41,6 @@ public class BaseChoiceColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseChoiceColumn() {
-        oDataType = "microsoft.graph.choiceColumn";
-    }
-
     /**
      * The Allow Text Entry.
      * 

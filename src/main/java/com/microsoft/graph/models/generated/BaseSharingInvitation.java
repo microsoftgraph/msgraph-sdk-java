@@ -41,10 +41,6 @@ public class BaseSharingInvitation implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSharingInvitation() {
-        oDataType = "microsoft.graph.sharingInvitation";
-    }
-
     /**
      * The Email.
      * The email address provided for the recipient of the sharing invitation. Read-only.

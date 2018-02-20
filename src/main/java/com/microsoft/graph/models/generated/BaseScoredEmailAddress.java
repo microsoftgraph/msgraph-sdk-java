@@ -41,10 +41,6 @@ public class BaseScoredEmailAddress implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseScoredEmailAddress() {
-        oDataType = "microsoft.graph.scoredEmailAddress";
-    }
-
     /**
      * The Address.
      * The email address.

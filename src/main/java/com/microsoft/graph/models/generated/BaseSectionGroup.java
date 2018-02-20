@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSectionGroup extends OnenoteEntityHierarchyModel implements IJsonBackedObject {
 
 
-    public BaseSectionGroup() {
-        oDataType = "microsoft.graph.sectionGroup";
-    }
-
     /**
      * The Sections Url.
      * 

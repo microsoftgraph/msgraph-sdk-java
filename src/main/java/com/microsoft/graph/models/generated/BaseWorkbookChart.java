@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookChart() {
-        oDataType = "microsoft.graph.workbookChart";
-    }
-
     /**
      * The Height.
      * 

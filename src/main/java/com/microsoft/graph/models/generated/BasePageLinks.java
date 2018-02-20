@@ -41,10 +41,6 @@ public class BasePageLinks implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePageLinks() {
-        oDataType = "microsoft.graph.pageLinks";
-    }
-
     /**
      * The One Note Client Url.
      * Opens the page in the OneNote native client if it's installed.

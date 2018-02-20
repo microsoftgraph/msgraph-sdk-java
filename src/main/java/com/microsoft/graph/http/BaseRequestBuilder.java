@@ -50,8 +50,6 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      */
     private final List<Option> options = new ArrayList<>();
 
-    private final IJsonBackedObject body;
-
     /**
      * Creates the request builder.
      *
@@ -66,23 +64,6 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     ) {
         this.requestUrl = requestUrl;
         this.client = client;
-        this.body = null;
-
-        if (options != null) {
-            this.options.addAll(options);
-        }
-    }
-
-    public BaseRequestBuilder(
-            final String requestUrl,
-            final IJsonBackedObject body,
-            final IBaseClient client,
-            final List<? extends Option> options
-    ) {
-        this.requestUrl = requestUrl;
-        this.client = client;
-        this.body = body;
-
         if (options != null) {
             this.options.addAll(options);
         }

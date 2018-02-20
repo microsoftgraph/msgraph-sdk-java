@@ -41,10 +41,6 @@ public class BaseDomainState implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDomainState() {
-        oDataType = "microsoft.graph.domainState";
-    }
-
     /**
      * The Status.
      * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.

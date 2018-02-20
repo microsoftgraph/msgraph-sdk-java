@@ -41,10 +41,6 @@ public class BaseSettingTemplateValue implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSettingTemplateValue() {
-        oDataType = "microsoft.graph.settingTemplateValue";
-    }
-
     /**
      * The Name.
      * Name of the setting.

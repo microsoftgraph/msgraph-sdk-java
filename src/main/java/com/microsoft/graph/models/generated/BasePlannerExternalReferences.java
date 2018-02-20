@@ -41,10 +41,6 @@ public class BasePlannerExternalReferences implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerExternalReferences() {
-        oDataType = "microsoft.graph.plannerExternalReferences";
-    }
-
 
     /**
      * The raw representation of this class

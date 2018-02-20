@@ -41,10 +41,6 @@ public class BaseSpecialFolder implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseSpecialFolder() {
-        oDataType = "microsoft.graph.specialFolder";
-    }
-
     /**
      * The Name.
      * The unique identifier for this item in the /drive/special collection

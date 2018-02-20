@@ -41,10 +41,6 @@ public class BasePlannerAssignments implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerAssignments() {
-        oDataType = "microsoft.graph.plannerAssignments";
-    }
-
 
     /**
      * The raw representation of this class

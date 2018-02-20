@@ -41,10 +41,6 @@ public class BaseRecentNotebook implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseRecentNotebook() {
-        oDataType = "microsoft.graph.recentNotebook";
-    }
-
     /**
      * The Display Name.
      * 

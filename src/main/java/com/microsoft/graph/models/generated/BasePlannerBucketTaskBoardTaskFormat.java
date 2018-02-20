@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePlannerBucketTaskBoardTaskFormat extends Entity implements IJsonBackedObject {
 
 
-    public BasePlannerBucketTaskBoardTaskFormat() {
-        oDataType = "microsoft.graph.plannerBucketTaskBoardTaskFormat";
-    }
-
     /**
      * The Order Hint.
      * Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.

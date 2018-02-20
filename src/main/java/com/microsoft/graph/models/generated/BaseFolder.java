@@ -41,10 +41,6 @@ public class BaseFolder implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseFolder() {
-        oDataType = "microsoft.graph.folder";
-    }
-
     /**
      * The Child Count.
      * Number of children contained immediately within this container.

@@ -41,10 +41,6 @@ public class BaseLocationConstraint implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseLocationConstraint() {
-        oDataType = "microsoft.graph.locationConstraint";
-    }
-
     /**
      * The Is Required.
      * 

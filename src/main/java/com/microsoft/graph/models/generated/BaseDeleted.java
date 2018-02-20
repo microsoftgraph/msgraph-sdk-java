@@ -41,10 +41,6 @@ public class BaseDeleted implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDeleted() {
-        oDataType = "microsoft.graph.deleted";
-    }
-
     /**
      * The State.
      * Represents the state of the deleted item.

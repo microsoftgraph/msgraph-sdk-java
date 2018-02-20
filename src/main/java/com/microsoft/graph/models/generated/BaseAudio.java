@@ -41,10 +41,6 @@ public class BaseAudio implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseAudio() {
-        oDataType = "microsoft.graph.audio";
-    }
-
     /**
      * The Album.
      * The title of the album for this audio file.

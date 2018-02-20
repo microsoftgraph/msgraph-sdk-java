@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSite extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseSite() {
-        oDataType = "microsoft.graph.site";
-    }
-
     /**
      * The Display Name.
      * The full title for the site. Read-only.

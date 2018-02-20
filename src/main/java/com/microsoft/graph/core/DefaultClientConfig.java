@@ -106,7 +106,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
                     getAuthenticationProvider(),
                     getExecutors(),
                     getLogger());
-            logger.logDebug("Created DefaultHttpProvider");
+            getLogger().logDebug("Created DefaultHttpProvider");
         }
         return httpProvider;
     }
@@ -120,7 +120,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     public ISerializer getSerializer() {
         if (serializer == null) {
             serializer = new DefaultSerializer(getLogger());
-            logger.logDebug("Created DefaultSerializer");
+            getLogger().logDebug("Created DefaultSerializer");
         }
         return serializer;
     }
@@ -134,7 +134,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     public IExecutors getExecutors() {
         if (executors == null) {
             executors = new DefaultExecutors(getLogger());
-            logger.logDebug("Created DefaultExecutors");
+            getLogger().logDebug("Created DefaultExecutors");
         }
         return executors;
     }

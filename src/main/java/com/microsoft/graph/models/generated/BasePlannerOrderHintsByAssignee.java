@@ -41,10 +41,6 @@ public class BasePlannerOrderHintsByAssignee implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerOrderHintsByAssignee() {
-        oDataType = "microsoft.graph.plannerOrderHintsByAssignee";
-    }
-
 
     /**
      * The raw representation of this class

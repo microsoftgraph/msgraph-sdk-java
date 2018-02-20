@@ -41,10 +41,6 @@ public class BasePlannerChecklistItems implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerChecklistItems() {
-        oDataType = "microsoft.graph.plannerChecklistItems";
-    }
-
 
     /**
      * The raw representation of this class

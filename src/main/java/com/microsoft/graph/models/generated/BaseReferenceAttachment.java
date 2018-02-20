@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseReferenceAttachment extends Attachment implements IJsonBackedObject {
 
 
-    public BaseReferenceAttachment() {
-        oDataType = "microsoft.graph.referenceAttachment";
-    }
-
 
     /**
      * The raw representation of this class

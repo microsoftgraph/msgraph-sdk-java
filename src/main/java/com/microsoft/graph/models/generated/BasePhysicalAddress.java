@@ -41,10 +41,6 @@ public class BasePhysicalAddress implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePhysicalAddress() {
-        oDataType = "microsoft.graph.physicalAddress";
-    }
-
     /**
      * The Street.
      * The street.

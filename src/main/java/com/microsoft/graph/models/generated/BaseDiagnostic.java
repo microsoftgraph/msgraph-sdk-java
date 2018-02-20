@@ -41,10 +41,6 @@ public class BaseDiagnostic implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseDiagnostic() {
-        oDataType = "microsoft.graph.diagnostic";
-    }
-
     /**
      * The Message.
      * 

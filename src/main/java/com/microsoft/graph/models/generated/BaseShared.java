@@ -41,10 +41,6 @@ public class BaseShared implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseShared() {
-        oDataType = "microsoft.graph.shared";
-    }
-
     /**
      * The Owner.
      * The identity of the owner of the shared item. Read-only.

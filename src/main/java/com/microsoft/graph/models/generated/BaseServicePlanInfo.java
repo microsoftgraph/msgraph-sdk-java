@@ -41,10 +41,6 @@ public class BaseServicePlanInfo implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseServicePlanInfo() {
-        oDataType = "microsoft.graph.servicePlanInfo";
-    }
-
     /**
      * The Service Plan Id.
      * The unique identifier of the service plan.

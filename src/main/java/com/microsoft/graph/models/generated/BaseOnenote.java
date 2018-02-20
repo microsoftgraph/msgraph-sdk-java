@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseOnenote extends Entity implements IJsonBackedObject {
 
 
-    public BaseOnenote() {
-        oDataType = "microsoft.graph.onenote";
-    }
-
     /**
      * The Notebooks.
      * 

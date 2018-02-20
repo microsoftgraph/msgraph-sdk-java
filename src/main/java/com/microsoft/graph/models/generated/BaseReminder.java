@@ -41,10 +41,6 @@ public class BaseReminder implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseReminder() {
-        oDataType = "microsoft.graph.reminder";
-    }
-
     /**
      * The Event Id.
      * The unique ID of the event. Read only.

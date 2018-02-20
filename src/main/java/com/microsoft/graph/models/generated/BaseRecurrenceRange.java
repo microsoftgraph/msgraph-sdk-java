@@ -41,10 +41,6 @@ public class BaseRecurrenceRange implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseRecurrenceRange() {
-        oDataType = "microsoft.graph.recurrenceRange";
-    }
-
     /**
      * The Type.
      * 

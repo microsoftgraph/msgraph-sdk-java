@@ -41,10 +41,6 @@ public class BasePackage implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePackage() {
-        oDataType = "microsoft.graph.package";
-    }
-
     /**
      * The Type.
      * 

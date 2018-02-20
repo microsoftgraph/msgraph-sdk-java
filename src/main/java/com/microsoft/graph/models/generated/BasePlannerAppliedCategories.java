@@ -41,10 +41,6 @@ public class BasePlannerAppliedCategories implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePlannerAppliedCategories() {
-        oDataType = "microsoft.graph.plannerAppliedCategories";
-    }
-
 
     /**
      * The raw representation of this class

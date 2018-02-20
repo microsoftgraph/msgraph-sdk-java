@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDirectoryRoleTemplate extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseDirectoryRoleTemplate() {
-        oDataType = "microsoft.graph.directoryRoleTemplate";
-    }
-
     /**
      * The Description.
      * The description to set for the directory role. Read-only.

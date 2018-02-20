@@ -41,10 +41,6 @@ public class BaseExternalLink implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseExternalLink() {
-        oDataType = "microsoft.graph.externalLink";
-    }
-
     /**
      * The Href.
      * The url of the link.
