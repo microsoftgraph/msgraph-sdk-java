@@ -426,13 +426,14 @@ public class DefaultHttpProvider implements IHttpProvider {
         final String httpStreamEncoding = "UTF-8";
         final String endOfFile = "\\A";
         final Scanner scanner = new Scanner(input, httpStreamEncoding);
+        String scannerString = "";
         try {
         	scanner.useDelimiter(endOfFile);
-            String scannerString = scanner.next();
-            return scannerString;
+            scannerString = scanner.next();
         } finally {
         	scanner.close();
         }
+        return scannerString;
     }
 
     /**
