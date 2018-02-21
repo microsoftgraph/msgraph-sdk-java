@@ -31,6 +31,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.MockSerializer;
@@ -38,6 +39,7 @@ import com.microsoft.graph.serializer.MockSerializer;
 import static org.junit.Assert.*;
 
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -345,6 +347,25 @@ public class DefaultHttpProviderTests {
         }
         assertEquals(codes.length, mAuthenticationProvider.getInterceptionCount());
     }
+    
+    @Test
+    public void testHasHeaderReturnsTrue() {
+        HeaderOption h = new HeaderOption("name", "value");
+        assertTrue(DefaultHttpProvider.hasHeader(Arrays.asList(h), "name"));
+    }
+    
+    @Test
+    public void testHasHeaderReturnsTrueWhenDifferentCase() {
+        HeaderOption h = new HeaderOption("name", "value");
+        assertTrue(DefaultHttpProvider.hasHeader(Arrays.asList(h), "NAME"));
+    }
+    
+    @Test
+    public void testHasHeaderReturnsFalse() {
+        HeaderOption h = new HeaderOption("name", "value");
+        assertFalse(DefaultHttpProvider.hasHeader(Arrays.asList(h), "blah"));
+    }
+    
 
     /**
      * Configures the http provider for test cases
