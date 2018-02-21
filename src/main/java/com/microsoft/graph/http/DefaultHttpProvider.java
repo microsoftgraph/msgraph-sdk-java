@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.http;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
@@ -440,13 +441,14 @@ public class DefaultHttpProvider implements IHttpProvider {
      * Searches for the given header in a list of HeaderOptions
      *
      * @param headers The list of headers to search through
-     * @param header The header name to search for
+     * @param header The header name to search for (case insensitive)
      *
      * @return true if the header has already been set
      */
-    private Boolean hasHeader(List<HeaderOption> headers, String header) {
+    @VisibleForTesting
+    static boolean hasHeader(List<HeaderOption> headers, String header) {
         for (HeaderOption option : headers) {
-            if (option.getName() == header) {
+            if (option.getName().equalsIgnoreCase(header)) {
                 return true;
             }
         }
