@@ -135,8 +135,12 @@ public class Multipart {
             ByteArrayOutputStream buffer = new ByteArrayOutputStream();
             int nRead;
             byte[] data = new byte[16384];
-            while ((nRead = in.read(data, 0, data.length)) != -1) {
-                buffer.write(data, 0, nRead);
+            try {
+                while ((nRead = in.read(data, 0, data.length)) != -1) {
+                    buffer.write(data, 0, nRead);
+                }
+            } finally {
+                in.close();
             }
             buffer.flush();
             return buffer.toByteArray();
