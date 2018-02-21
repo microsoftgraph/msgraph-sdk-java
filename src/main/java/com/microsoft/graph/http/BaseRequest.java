@@ -350,7 +350,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @return The response type.
      */
     @SuppressWarnings("unchecked")
-	public <T> Class<T> getResponseType() {
-        return (Class<T>) responseClass;
+	public Class getResponseType() {
+        return responseClass;
     }
 }

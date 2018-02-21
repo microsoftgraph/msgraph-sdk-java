@@ -40,7 +40,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @param responseType The response class to deserialize the response into
      * @return the instance of this builder
      */
-    public CustomRequestBuilder customRequest(final String url, final Class<?> responseType) {
+    public CustomRequestBuilder customRequest(final String url, final Class responseType) {
     	return new CustomRequestBuilder(getServiceRoot() + url, (IGraphServiceClient)this, null, responseType);
     }
     
