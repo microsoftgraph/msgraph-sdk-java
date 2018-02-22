@@ -65,13 +65,13 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * 
+     * The collection of column definitions reusable across lists under this site.
      */
     public ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
-     * 
+     * The collection of content types defined for this site.
      */
     public ContentTypeCollectionPage contentTypes;
 
@@ -97,7 +97,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Lists.
-     * 
+     * The collection of lists under this site.
      */
     public ListCollectionPage lists;
 

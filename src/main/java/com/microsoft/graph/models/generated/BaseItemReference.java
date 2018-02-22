@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseItemReference implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -51,7 +51,7 @@ public class BaseItemReference implements IJsonBackedObject {
 
     /**
      * The Drive Type.
-     * 
+     * Identifies the type of drive. See [drive][] resource for values.
      */
     @SerializedName("driveType")
     @Expose

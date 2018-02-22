@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseDefaultColumnValue implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -43,7 +43,7 @@ public class BaseDefaultColumnValue implements IJsonBackedObject {
 
     /**
      * The Formula.
-     * 
+     * The formula used to compute the default value for this column.
      */
     @SerializedName("formula")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDefaultColumnValue implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * The direct value to use as the default value for this column.
      */
     @SerializedName("value")
     @Expose

@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseContentTypeInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -43,7 +43,7 @@ public class BaseContentTypeInfo implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The id of the content type.
      */
     @SerializedName("id")
     @Expose

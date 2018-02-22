@@ -55,7 +55,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * 
+     * Used to access the underlying list
      */
     @SerializedName("list")
     @Expose
@@ -63,7 +63,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List Item.
-     * 
+     * Used to access the underlying listItem
      */
     @SerializedName("listItem")
     @Expose

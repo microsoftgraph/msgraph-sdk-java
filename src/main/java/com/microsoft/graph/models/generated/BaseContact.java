@@ -161,7 +161,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The contact’s job title.
+     * The contact's job title.
      */
     @SerializedName("jobTitle")
     @Expose

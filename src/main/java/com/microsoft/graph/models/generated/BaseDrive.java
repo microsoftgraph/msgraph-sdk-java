@@ -65,7 +65,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The System.
-     * 
+     * If present, indicates that this is a system-managed drive. Read-only.
      */
     @SerializedName("system")
     @Expose

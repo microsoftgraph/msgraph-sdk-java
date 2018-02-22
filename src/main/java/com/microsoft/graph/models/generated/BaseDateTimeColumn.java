@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseDateTimeColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -43,7 +43,7 @@ public class BaseDateTimeColumn implements IJsonBackedObject {
 
     /**
      * The Display As.
-     * 
+     * How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details. If unspecified, treated as default.
      */
     @SerializedName("displayAs")
     @Expose
@@ -51,7 +51,7 @@ public class BaseDateTimeColumn implements IJsonBackedObject {
 
     /**
      * The Format.
-     * 
+     * Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
      */
     @SerializedName("format")
     @Expose
