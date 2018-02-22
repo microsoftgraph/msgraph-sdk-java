@@ -29,7 +29,7 @@ public class Multipart {
 	
 	/**
 	 * Get the multipart boundary for use in the request header
-	 * @return
+	 * @return The multipart boundary
 	 */
 	public String boundary() {
 		return boundary;
@@ -40,7 +40,7 @@ public class Multipart {
 	 * @param name The name of the part
 	 * @param contentType The MIME type (text/html, text/plain, etc.)
 	 * @param content The string content to include
-	 * @throws IOException
+	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addPart(String name, String contentType, String content) throws IOException {
 		addPart(name, contentType, content.getBytes());
@@ -51,7 +51,7 @@ public class Multipart {
 	 * @param name The name of the part
 	 * @param contentType The MIME type (text/html, video/mp4, etc.)
 	 * @param byteArray The byte[] contents of the resource
-	 * @throws IOException
+	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addPart(String name, String contentType, byte[] byteArray) throws IOException {
 		String partContent = addBoundary();
@@ -69,7 +69,7 @@ public class Multipart {
 	 * Add an HTML part to the multipart body
 	 * @param name The name of the part
 	 * @param content The HTML body for the part
-	 * @throws IOException
+	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addHtmlPart(String name, String content) throws IOException {
 		addPart(name, "text/html", content);
@@ -79,7 +79,7 @@ public class Multipart {
 	 * Add an image part to the multipart body
 	 * @param name The name of the part
 	 * @param imageFile The image file
-	 * @throws IOException
+	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addImagePart(String name, java.io.File imageFile) throws IOException {
 		addFilePart(name, "image/jpeg", imageFile);
@@ -90,7 +90,7 @@ public class Multipart {
 	 * @param name The name of the part
 	 * @param contentType The MIME type of the file (application/pdf, video/mp4, etc.)
 	 * @param file The file
-	 * @throws IOException
+	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addFilePart(String name, String contentType, java.io.File file) throws IOException {
 		InputStream fileStream = new FileInputStream(file);
@@ -100,7 +100,7 @@ public class Multipart {
 	
 	/**
 	 * Adds a boundary at the beginning of a new part
-	 * @return
+	 * @return The boundary
 	 */
 	private String addBoundary() {
 		return "--" + boundary + RETURN;
@@ -108,7 +108,7 @@ public class Multipart {
 	
 	/**
 	 * Adds a boundary at the end of the multipart body
-	 * @return
+	 * @return The boundary
 	 */
 	private String addEnding() {
 		return "--" + boundary + "--";
@@ -117,7 +117,7 @@ public class Multipart {
 	/**
 	 * Returns a full multipart body byte array
 	 * @return The byte[] representation of the multipart object
-	 * @throws IOException
+	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public byte[] content() throws IOException {
 		ByteArrayOutputStream finalStream = out;
@@ -129,7 +129,7 @@ public class Multipart {
      * Helper method to convert an InputStream to a byte[]
      * @param in The input stream to convert
      * @return The byte[]
-     * @throws IOException 
+     * @throws IOException Throws an exception if the output stream cannot be written to
      */
     private byte[] getByteArray(InputStream in) throws IOException {
             ByteArrayOutputStream buffer = new ByteArrayOutputStream();

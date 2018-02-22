@@ -40,7 +40,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * Checks if the parameter map contains a object accessible by the supplied key
      *
      * @param name The key used to access the stored body parameter
-     * @return true, if {@link BaseActionRequestBuilder#mBodyParams} contains the key, otherwise false
+     * @return true, if {@link BaseActionRequestBuilder#bodyParams} contains the key, otherwise false
      */
     protected boolean hasParameter(final String name) {
         return bodyParams.containsKey(name);

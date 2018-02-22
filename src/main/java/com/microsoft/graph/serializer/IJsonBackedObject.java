@@ -38,9 +38,8 @@ public interface IJsonBackedObject {
     void setRawObject(final ISerializer serializer, final JsonObject json);
 
     /**
-     * TODO Document
-     *
-     * @return
+     * Provides access to objects not anticipated in the model, as well as 
+     * request and response data from the HTTP call
      */
     AdditionalDataManager additionalDataManager();
 

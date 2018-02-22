@@ -33,7 +33,6 @@ public class ClientException extends RuntimeException {
      * Creates the client exception.
      * @param message The message to display.
      * @param ex The exception from.
-     * @param errorCode The error code for this exception.
      */
     public ClientException(final String message, final Throwable ex) {
         super(message, ex);
