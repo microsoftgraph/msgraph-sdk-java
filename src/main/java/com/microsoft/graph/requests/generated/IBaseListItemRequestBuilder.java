@@ -25,21 +25,30 @@ import java.util.EnumSet;
 public interface IBaseListItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IListItemRequest instance
      */
     IListItemRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IListItemRequest instance
      */
     IListItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for DriveItem.
+     *
+     * @return The IDriveItemRequestBuilder instance
      */
     IDriveItemRequestBuilder driveItem();
 
     /**
      * Gets the request builder for FieldValueSet.
+     *
+     * @return The IFieldValueSetRequestBuilder instance
      */
     IFieldValueSetRequestBuilder fields();
 

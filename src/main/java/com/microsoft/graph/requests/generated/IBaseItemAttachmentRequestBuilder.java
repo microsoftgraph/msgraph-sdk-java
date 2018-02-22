@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseItemAttachmentRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IItemAttachmentRequest instance
      */
     IItemAttachmentRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IItemAttachmentRequest instance
      */
     IItemAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for OutlookItem.
+     *
+     * @return The IOutlookItemRequestBuilder instance
      */
     IOutlookItemRequestBuilder item();
 

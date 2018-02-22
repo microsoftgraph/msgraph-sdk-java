@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBasePlannerUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IPlannerUserRequest instance
      */
     IPlannerUserRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IPlannerUserRequest instance
      */
     IPlannerUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

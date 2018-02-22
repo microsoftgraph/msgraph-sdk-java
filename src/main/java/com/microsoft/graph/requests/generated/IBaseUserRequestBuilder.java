@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IUserRequest instance
      */
     IUserRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IUserRequest instance
      */
     IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -43,6 +48,8 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for DirectoryObject.
+     *
+     * @return The IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder manager();
 
@@ -80,6 +87,8 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for Calendar.
+     *
+     * @return The ICalendarRequestBuilder instance
      */
     ICalendarRequestBuilder calendar();
 
@@ -113,11 +122,15 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for InferenceClassification.
+     *
+     * @return The IInferenceClassificationRequestBuilder instance
      */
     IInferenceClassificationRequestBuilder inferenceClassification();
 
     /**
      * Gets the request builder for ProfilePhoto.
+     *
+     * @return The IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
 
@@ -127,6 +140,8 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for Drive.
+     *
+     * @return The IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 
@@ -136,11 +151,15 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for PlannerUser.
+     *
+     * @return The IPlannerUserRequestBuilder instance
      */
     IPlannerUserRequestBuilder planner();
 
     /**
      * Gets the request builder for Onenote.
+     *
+     * @return The IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);

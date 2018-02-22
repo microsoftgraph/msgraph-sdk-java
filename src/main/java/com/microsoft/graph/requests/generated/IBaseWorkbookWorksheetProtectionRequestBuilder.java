@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookWorksheetProtectionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookWorksheetProtectionRequest instance
      */
     IWorkbookWorksheetProtectionRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookWorksheetProtectionRequest instance
      */
     IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookWorksheetProtectionProtectRequestBuilder protect(final WorkbookWorksheetProtectionOptions options);

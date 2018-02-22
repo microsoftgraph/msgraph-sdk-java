@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookRangeBorderRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeBorderRequest instance
      */
     IWorkbookRangeBorderRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeBorderRequest instance
      */
     IWorkbookRangeBorderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

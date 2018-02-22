@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookRangeFillRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeFillRequest instance
      */
     IWorkbookRangeFillRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeFillRequest instance
      */
     IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookRangeFillClearRequestBuilder clear();

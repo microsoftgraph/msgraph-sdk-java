@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseOnenoteEntityBaseModelRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IOnenoteEntityBaseModelRequest instance
      */
     IOnenoteEntityBaseModelRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenoteEntityBaseModelRequest instance
      */
     IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

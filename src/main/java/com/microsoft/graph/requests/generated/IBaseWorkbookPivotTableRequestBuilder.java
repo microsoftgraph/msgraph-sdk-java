@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookPivotTableRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookPivotTableRequest instance
      */
     IWorkbookPivotTableRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookPivotTableRequest instance
      */
     IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookPivotTableRefreshRequestBuilder refresh();

@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IGroupRequest instance
      */
     IGroupRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IGroupRequest instance
      */
     IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -43,6 +48,8 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for DirectoryObject.
+     *
+     * @return The IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
 
@@ -64,6 +71,8 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for Calendar.
+     *
+     * @return The ICalendarRequestBuilder instance
      */
     ICalendarRequestBuilder calendar();
 
@@ -81,6 +90,8 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for ProfilePhoto.
+     *
+     * @return The IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
 
@@ -98,6 +109,8 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for Drive.
+     *
+     * @return The IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 
@@ -111,11 +124,15 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for PlannerGroup.
+     *
+     * @return The IPlannerGroupRequestBuilder instance
      */
     IPlannerGroupRequestBuilder planner();
 
     /**
      * Gets the request builder for Onenote.
+     *
+     * @return The IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
     IGroupSubscribeByMailRequestBuilder subscribeByMail();

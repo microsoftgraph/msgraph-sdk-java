@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseFieldValueSetRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IFieldValueSetRequest instance
      */
     IFieldValueSetRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IFieldValueSetRequest instance
      */
     IFieldValueSetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

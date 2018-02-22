@@ -25,26 +25,37 @@ import java.util.EnumSet;
 public interface IBaseWorkbookRangeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeRequest instance
      */
     IWorkbookRangeRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeRequest instance
      */
     IWorkbookRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookRangeFormat.
+     *
+     * @return The IWorkbookRangeFormatRequestBuilder instance
      */
     IWorkbookRangeFormatRequestBuilder format();
 
     /**
      * Gets the request builder for WorkbookRangeSort.
+     *
+     * @return The IWorkbookRangeSortRequestBuilder instance
      */
     IWorkbookRangeSortRequestBuilder sort();
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookRangeClearRequestBuilder clear(final String applyTo);

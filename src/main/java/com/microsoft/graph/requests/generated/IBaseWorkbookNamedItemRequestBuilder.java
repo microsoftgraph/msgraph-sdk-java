@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookNamedItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookNamedItemRequest instance
      */
     IWorkbookNamedItemRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookNamedItemRequest instance
      */
     IWorkbookNamedItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookNamedItemRangeRequestBuilder range();

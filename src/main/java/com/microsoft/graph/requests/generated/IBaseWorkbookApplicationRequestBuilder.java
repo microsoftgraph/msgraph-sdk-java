@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookApplicationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookApplicationRequest instance
      */
     IWorkbookApplicationRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookApplicationRequest instance
      */
     IWorkbookApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookApplicationCalculateRequestBuilder calculate(final String calculationType);

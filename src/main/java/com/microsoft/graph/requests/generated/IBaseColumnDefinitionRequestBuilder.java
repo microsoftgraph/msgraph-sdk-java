@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseColumnDefinitionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IColumnDefinitionRequest instance
      */
     IColumnDefinitionRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IColumnDefinitionRequest instance
      */
     IColumnDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

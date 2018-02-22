@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseMailFolderRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IMailFolderRequest instance
      */
     IMailFolderRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IMailFolderRequest instance
      */
     IMailFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

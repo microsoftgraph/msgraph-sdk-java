@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartGridlinesFormatRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartGridlinesFormatRequest instance
      */
     IWorkbookChartGridlinesFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartGridlinesFormatRequest instance
      */
     IWorkbookChartGridlinesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartLineFormat.
+     *
+     * @return The IWorkbookChartLineFormatRequestBuilder instance
      */
     IWorkbookChartLineFormatRequestBuilder line();
 

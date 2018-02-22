@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseInferenceClassificationOverrideRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IInferenceClassificationOverrideRequest instance
      */
     IInferenceClassificationOverrideRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IInferenceClassificationOverrideRequest instance
      */
     IInferenceClassificationOverrideRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

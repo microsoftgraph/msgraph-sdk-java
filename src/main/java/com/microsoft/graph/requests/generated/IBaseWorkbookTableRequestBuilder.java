@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookTableRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookTableRequest instance
      */
     IWorkbookTableRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookTableRequest instance
      */
     IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -43,11 +48,15 @@ public interface IBaseWorkbookTableRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for WorkbookTableSort.
+     *
+     * @return The IWorkbookTableSortRequestBuilder instance
      */
     IWorkbookTableSortRequestBuilder sort();
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookTableClearFiltersRequestBuilder clearFilters();

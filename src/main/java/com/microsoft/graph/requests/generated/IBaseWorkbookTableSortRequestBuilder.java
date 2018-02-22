@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookTableSortRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookTableSortRequest instance
      */
     IWorkbookTableSortRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookTableSortRequest instance
      */
     IWorkbookTableSortRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookTableSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method);

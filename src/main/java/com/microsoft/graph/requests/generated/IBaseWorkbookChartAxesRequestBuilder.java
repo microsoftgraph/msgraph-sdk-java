@@ -25,26 +25,37 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartAxesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartAxesRequest instance
      */
     IWorkbookChartAxesRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartAxesRequest instance
      */
     IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartAxis.
+     *
+     * @return The IWorkbookChartAxisRequestBuilder instance
      */
     IWorkbookChartAxisRequestBuilder categoryAxis();
 
     /**
      * Gets the request builder for WorkbookChartAxis.
+     *
+     * @return The IWorkbookChartAxisRequestBuilder instance
      */
     IWorkbookChartAxisRequestBuilder seriesAxis();
 
     /**
      * Gets the request builder for WorkbookChartAxis.
+     *
+     * @return The IWorkbookChartAxisRequestBuilder instance
      */
     IWorkbookChartAxisRequestBuilder valueAxis();
 

@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartAxisTitleFormatRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartAxisTitleFormatRequest instance
      */
     IWorkbookChartAxisTitleFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartAxisTitleFormatRequest instance
      */
     IWorkbookChartAxisTitleFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartFont.
+     *
+     * @return The IWorkbookChartFontRequestBuilder instance
      */
     IWorkbookChartFontRequestBuilder font();
 

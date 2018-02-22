@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseThumbnailStreamRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IThumbnailStreamRequest instance
      */
     IThumbnailStreamRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IThumbnailStreamRequest instance
      */
     IThumbnailStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

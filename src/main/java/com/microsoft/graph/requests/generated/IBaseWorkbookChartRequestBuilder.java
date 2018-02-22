@@ -25,31 +25,44 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartRequest instance
      */
     IWorkbookChartRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartRequest instance
      */
     IWorkbookChartRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for WorkbookChartAxes.
+     *
+     * @return The IWorkbookChartAxesRequestBuilder instance
      */
     IWorkbookChartAxesRequestBuilder axes();
 
     /**
      * Gets the request builder for WorkbookChartDataLabels.
+     *
+     * @return The IWorkbookChartDataLabelsRequestBuilder instance
      */
     IWorkbookChartDataLabelsRequestBuilder dataLabels();
 
     /**
      * Gets the request builder for WorkbookChartAreaFormat.
+     *
+     * @return The IWorkbookChartAreaFormatRequestBuilder instance
      */
     IWorkbookChartAreaFormatRequestBuilder format();
 
     /**
      * Gets the request builder for WorkbookChartLegend.
+     *
+     * @return The IWorkbookChartLegendRequestBuilder instance
      */
     IWorkbookChartLegendRequestBuilder legend();
 
@@ -59,11 +72,15 @@ public interface IBaseWorkbookChartRequestBuilder extends IRequestBuilder {
 
     /**
      * Gets the request builder for WorkbookChartTitle.
+     *
+     * @return The IWorkbookChartTitleRequestBuilder instance
      */
     IWorkbookChartTitleRequestBuilder title();
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookChartSetDataRequestBuilder setData(final com.google.gson.JsonElement sourceData, final String seriesBy);

@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseInvitationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IInvitationRequest instance
      */
     IInvitationRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IInvitationRequest instance
      */
     IInvitationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
      * Gets the request builder for User.
+     *
+     * @return The IUserWithReferenceRequestBuilder instance
      */
     IUserWithReferenceRequestBuilder invitedUser();
 

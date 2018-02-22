@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseDomainDnsCnameRecordRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return The IDomainDnsCnameRecordRequest instance
      */
     IDomainDnsCnameRecordRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
+     * @return The IDomainDnsCnameRecordRequest instance
      */
     IDomainDnsCnameRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

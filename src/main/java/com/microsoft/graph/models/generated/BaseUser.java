@@ -81,7 +81,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * The country/region in which the user is located; for example, “US” or “UK”. Supports $filter.
+     * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
      */
     @SerializedName("country")
     @Expose
@@ -185,7 +185,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. This value is an enumeration with one possible value being “DisableStrongPassword”, which allows weaker passwords than the default policy to be specified. “DisablePasswordExpiration” can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
+     * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
      */
     @SerializedName("passwordPolicies")
     @Expose
@@ -281,7 +281,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as “Member” and “Guest”. Supports $filter.
+     * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
      */
     @SerializedName("userType")
     @Expose
