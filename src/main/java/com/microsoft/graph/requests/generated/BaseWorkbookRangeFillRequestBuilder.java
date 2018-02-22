@@ -37,6 +37,8 @@ public class BaseWorkbookRangeFillRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeFillRequest instance
      */
     public IWorkbookRangeFillRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeFillRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeFillRequest instance
      */
     public IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeFillRequest(getRequestUrl(), getClient(), requestOptions);

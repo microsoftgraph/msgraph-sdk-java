@@ -37,6 +37,8 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Creates the request
+     *
+     * @return The IEventRequest instance
      */
     public IEventRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IEventRequest instance
      */
     public IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new EventRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseEventRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for Calendar.
+     *
+     * @return The ICalendarRequestBuilder instance
      */
     public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);

@@ -37,6 +37,8 @@ public class BaseWorkbookApplicationRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookApplicationRequest instance
      */
     public IWorkbookApplicationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookApplicationRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookApplicationRequest instance
      */
     public IWorkbookApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookApplicationRequest(getRequestUrl(), getClient(), requestOptions);

@@ -37,6 +37,8 @@ public class BaseNotebookRequestBuilder extends BaseRequestBuilder implements IB
 
     /**
      * Creates the request
+     *
+     * @return The INotebookRequest instance
      */
     public INotebookRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseNotebookRequestBuilder extends BaseRequestBuilder implements IB
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The INotebookRequest instance
      */
     public INotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new NotebookRequest(getRequestUrl(), getClient(), requestOptions);

@@ -37,6 +37,8 @@ public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request
+     *
+     * @return The IEventMessageRequest instance
      */
     public IEventMessageRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IEventMessageRequest instance
      */
     public IEventMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new EventMessageRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseEventMessageRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Gets the request builder for Event.
+     *
+     * @return The IEventRequestBuilder instance
      */
     public IEventRequestBuilder event() {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);

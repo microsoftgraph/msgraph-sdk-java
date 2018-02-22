@@ -37,6 +37,8 @@ public class BaseWorkbookChartSeriesRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartSeriesRequest instance
      */
     public IWorkbookChartSeriesRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartSeriesRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartSeriesRequest instance
      */
     public IWorkbookChartSeriesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartSeriesRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartSeriesRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Gets the request builder for WorkbookChartSeriesFormat.
+     *
+     * @return The IWorkbookChartSeriesFormatRequestBuilder instance
      */
     public IWorkbookChartSeriesFormatRequestBuilder format() {
         return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

@@ -37,6 +37,8 @@ public class BaseWorkbookRangeBorderRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeBorderRequest instance
      */
     public IWorkbookRangeBorderRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeBorderRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeBorderRequest instance
      */
     public IWorkbookRangeBorderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeBorderRequest(getRequestUrl(), getClient(), requestOptions);

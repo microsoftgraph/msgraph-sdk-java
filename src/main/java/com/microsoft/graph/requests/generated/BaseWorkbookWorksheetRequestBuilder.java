@@ -37,6 +37,8 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookWorksheetRequest instance
      */
     public IWorkbookWorksheetRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookWorksheetRequest instance
      */
     public IWorkbookWorksheetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookWorksheetRequest(getRequestUrl(), getClient(), requestOptions);
@@ -73,6 +78,8 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Gets the request builder for WorkbookWorksheetProtection.
+     *
+     * @return The IWorkbookWorksheetProtectionRequestBuilder instance
      */
     public IWorkbookWorksheetProtectionRequestBuilder protection() {
         return new WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);

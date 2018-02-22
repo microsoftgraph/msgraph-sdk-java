@@ -37,6 +37,8 @@ public class BaseThumbnailRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request
+     *
+     * @return The IThumbnailRequest instance
      */
     public IThumbnailRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseThumbnailRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IThumbnailRequest instance
      */
     public IThumbnailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ThumbnailRequest(getRequestUrl(), getClient(), requestOptions);

@@ -37,6 +37,8 @@ public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IOnenotePageStreamRequest instance
      */
     public IOnenotePageStreamRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenotePageStreamRequest instance
      */
     public IOnenotePageStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenotePageStreamRequest(getRequestUrl(), getClient(), requestOptions);

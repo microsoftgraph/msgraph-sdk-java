@@ -37,6 +37,8 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookTableRequest instance
      */
     public IWorkbookTableRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookTableRequest instance
      */
     public IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableRequest(getRequestUrl(), getClient(), requestOptions);
@@ -66,6 +71,8 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookTableSort.
+     *
+     * @return The IWorkbookTableSortRequestBuilder instance
      */
     public IWorkbookTableSortRequestBuilder sort() {
         return new WorkbookTableSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
@@ -73,6 +80,8 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

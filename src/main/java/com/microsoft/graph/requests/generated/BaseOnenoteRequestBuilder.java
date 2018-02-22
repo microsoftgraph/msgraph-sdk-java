@@ -37,6 +37,8 @@ public class BaseOnenoteRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Creates the request
+     *
+     * @return The IOnenoteRequest instance
      */
     public IOnenoteRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenoteRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenoteRequest instance
      */
     public IOnenoteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteRequest(getRequestUrl(), getClient(), requestOptions);

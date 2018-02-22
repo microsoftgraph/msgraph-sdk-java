@@ -37,6 +37,8 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookPivotTableRequest instance
      */
     public IWorkbookPivotTableRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookPivotTableRequest instance
      */
     public IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookPivotTableRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

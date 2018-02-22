@@ -37,6 +37,8 @@ public class BaseSectionGroupRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request
+     *
+     * @return The ISectionGroupRequest instance
      */
     public ISectionGroupRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSectionGroupRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The ISectionGroupRequest instance
      */
     public ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SectionGroupRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseSectionGroupRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Gets the request builder for Notebook.
+     *
+     * @return The INotebookRequestBuilder instance
      */
     public INotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
@@ -59,6 +66,8 @@ public class BaseSectionGroupRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Gets the request builder for SectionGroup.
+     *
+     * @return The ISectionGroupRequestBuilder instance
      */
     public ISectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);

@@ -37,6 +37,8 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request
+     *
+     * @return The IOrganizationRequest instance
      */
     public IOrganizationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOrganizationRequest instance
      */
     public IOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OrganizationRequest(getRequestUrl(), getClient(), requestOptions);

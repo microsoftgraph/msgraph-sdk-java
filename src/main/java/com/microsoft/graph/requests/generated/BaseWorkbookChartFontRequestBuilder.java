@@ -37,6 +37,8 @@ public class BaseWorkbookChartFontRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartFontRequest instance
      */
     public IWorkbookChartFontRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartFontRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartFontRequest instance
      */
     public IWorkbookChartFontRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartFontRequest(getRequestUrl(), getClient(), requestOptions);

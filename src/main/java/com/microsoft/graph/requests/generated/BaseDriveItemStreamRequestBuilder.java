@@ -37,6 +37,8 @@ public class BaseDriveItemStreamRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request
+     *
+     * @return The IDriveItemStreamRequest instance
      */
     public IDriveItemStreamRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDriveItemStreamRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IDriveItemStreamRequest instance
      */
     public IDriveItemStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DriveItemStreamRequest(getRequestUrl(), getClient(), requestOptions);

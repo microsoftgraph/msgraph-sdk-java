@@ -37,6 +37,8 @@ public class BasePermissionRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request
+     *
+     * @return The IPermissionRequest instance
      */
     public IPermissionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePermissionRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPermissionRequest instance
      */
     public IPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PermissionRequest(getRequestUrl(), getClient(), requestOptions);

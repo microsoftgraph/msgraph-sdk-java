@@ -37,6 +37,8 @@ public class BaseWorkbookChartLegendFormatRequestBuilder extends BaseRequestBuil
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartLegendFormatRequest instance
      */
     public IWorkbookChartLegendFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartLegendFormatRequestBuilder extends BaseRequestBuil
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartLegendFormatRequest instance
      */
     public IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartLegendFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartLegendFormatRequestBuilder extends BaseRequestBuil
 
     /**
      * Gets the request builder for WorkbookChartFill.
+     *
+     * @return The IWorkbookChartFillRequestBuilder instance
      */
     public IWorkbookChartFillRequestBuilder fill() {
         return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
@@ -59,6 +66,8 @@ public class BaseWorkbookChartLegendFormatRequestBuilder extends BaseRequestBuil
 
     /**
      * Gets the request builder for WorkbookChartFont.
+     *
+     * @return The IWorkbookChartFontRequestBuilder instance
      */
     public IWorkbookChartFontRequestBuilder font() {
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);

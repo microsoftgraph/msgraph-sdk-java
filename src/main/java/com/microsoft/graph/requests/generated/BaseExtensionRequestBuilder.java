@@ -37,6 +37,8 @@ public class BaseExtensionRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request
+     *
+     * @return The IExtensionRequest instance
      */
     public IExtensionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseExtensionRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IExtensionRequest instance
      */
     public IExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ExtensionRequest(getRequestUrl(), getClient(), requestOptions);

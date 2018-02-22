@@ -37,6 +37,8 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request
+     *
+     * @return The IItemAttachmentRequest instance
      */
     public IItemAttachmentRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IItemAttachmentRequest instance
      */
     public IItemAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ItemAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Gets the request builder for OutlookItem.
+     *
+     * @return The IOutlookItemRequestBuilder instance
      */
     public IOutlookItemRequestBuilder item() {
         return new OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);

@@ -37,6 +37,8 @@ public class BaseConversationThreadRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request
+     *
+     * @return The IConversationThreadRequest instance
      */
     public IConversationThreadRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseConversationThreadRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IConversationThreadRequest instance
      */
     public IConversationThreadRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ConversationThreadRequest(getRequestUrl(), getClient(), requestOptions);

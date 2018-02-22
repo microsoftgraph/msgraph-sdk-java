@@ -37,6 +37,8 @@ public class BaseInferenceClassificationOverrideRequestBuilder extends BaseReque
 
     /**
      * Creates the request
+     *
+     * @return The IInferenceClassificationOverrideRequest instance
      */
     public IInferenceClassificationOverrideRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseInferenceClassificationOverrideRequestBuilder extends BaseReque
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IInferenceClassificationOverrideRequest instance
      */
     public IInferenceClassificationOverrideRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new InferenceClassificationOverrideRequest(getRequestUrl(), getClient(), requestOptions);

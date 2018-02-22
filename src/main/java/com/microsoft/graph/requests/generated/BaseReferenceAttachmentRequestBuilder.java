@@ -37,6 +37,8 @@ public class BaseReferenceAttachmentRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IReferenceAttachmentRequest instance
      */
     public IReferenceAttachmentRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseReferenceAttachmentRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IReferenceAttachmentRequest instance
      */
     public IReferenceAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ReferenceAttachmentRequest(getRequestUrl(), getClient(), requestOptions);

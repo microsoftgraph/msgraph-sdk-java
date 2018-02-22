@@ -37,6 +37,8 @@ public class BaseDomainRequestBuilder extends BaseRequestBuilder implements IBas
 
     /**
      * Creates the request
+     *
+     * @return The IDomainRequest instance
      */
     public IDomainRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDomainRequestBuilder extends BaseRequestBuilder implements IBas
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IDomainRequest instance
      */
     public IDomainRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DomainRequest(getRequestUrl(), getClient(), requestOptions);

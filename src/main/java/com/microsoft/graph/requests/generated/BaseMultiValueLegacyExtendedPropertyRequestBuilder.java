@@ -37,6 +37,8 @@ public class BaseMultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequ
 
     /**
      * Creates the request
+     *
+     * @return The IMultiValueLegacyExtendedPropertyRequest instance
      */
     public IMultiValueLegacyExtendedPropertyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseMultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequ
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IMultiValueLegacyExtendedPropertyRequest instance
      */
     public IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MultiValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);

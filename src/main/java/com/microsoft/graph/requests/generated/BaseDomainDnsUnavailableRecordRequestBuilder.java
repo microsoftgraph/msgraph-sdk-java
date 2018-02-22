@@ -37,6 +37,8 @@ public class BaseDomainDnsUnavailableRecordRequestBuilder extends BaseRequestBui
 
     /**
      * Creates the request
+     *
+     * @return The IDomainDnsUnavailableRecordRequest instance
      */
     public IDomainDnsUnavailableRecordRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDomainDnsUnavailableRecordRequestBuilder extends BaseRequestBui
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IDomainDnsUnavailableRecordRequest instance
      */
     public IDomainDnsUnavailableRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DomainDnsUnavailableRecordRequest(getRequestUrl(), getClient(), requestOptions);

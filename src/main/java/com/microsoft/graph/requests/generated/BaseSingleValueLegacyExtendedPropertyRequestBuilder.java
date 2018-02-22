@@ -37,6 +37,8 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
 
     /**
      * Creates the request
+     *
+     * @return The ISingleValueLegacyExtendedPropertyRequest instance
      */
     public ISingleValueLegacyExtendedPropertyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The ISingleValueLegacyExtendedPropertyRequest instance
      */
     public ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SingleValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);

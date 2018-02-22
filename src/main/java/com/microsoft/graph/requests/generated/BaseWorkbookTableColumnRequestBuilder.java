@@ -37,6 +37,8 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookTableColumnRequest instance
      */
     public IWorkbookTableColumnRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookTableColumnRequest instance
      */
     public IWorkbookTableColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableColumnRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Gets the request builder for WorkbookFilter.
+     *
+     * @return The IWorkbookFilterRequestBuilder instance
      */
     public IWorkbookFilterRequestBuilder filter() {
         return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);

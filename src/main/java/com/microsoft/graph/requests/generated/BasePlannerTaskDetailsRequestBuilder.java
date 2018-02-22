@@ -37,6 +37,8 @@ public class BasePlannerTaskDetailsRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request
+     *
+     * @return The IPlannerTaskDetailsRequest instance
      */
     public IPlannerTaskDetailsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePlannerTaskDetailsRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPlannerTaskDetailsRequest instance
      */
     public IPlannerTaskDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerTaskDetailsRequest(getRequestUrl(), getClient(), requestOptions);

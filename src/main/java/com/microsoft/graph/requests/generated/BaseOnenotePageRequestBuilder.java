@@ -37,6 +37,8 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request
+     *
+     * @return The IOnenotePageRequest instance
      */
     public IOnenotePageRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenotePageRequest instance
      */
     public IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenotePageRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Gets the request builder for OnenoteSection.
+     *
+     * @return The IOnenoteSectionRequestBuilder instance
      */
     public IOnenoteSectionRequestBuilder parentSection() {
         return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
@@ -59,6 +66,8 @@ public class BaseOnenotePageRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Gets the request builder for Notebook.
+     *
+     * @return The INotebookRequestBuilder instance
      */
     public INotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);

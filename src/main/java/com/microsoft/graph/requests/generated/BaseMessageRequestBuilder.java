@@ -37,6 +37,8 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Creates the request
+     *
+     * @return The IMessageRequest instance
      */
     public IMessageRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IMessageRequest instance
      */
     public IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MessageRequest(getRequestUrl(), getClient(), requestOptions);

@@ -37,6 +37,8 @@ public class BaseOnenoteEntitySchemaObjectModelRequestBuilder extends BaseReques
 
     /**
      * Creates the request
+     *
+     * @return The IOnenoteEntitySchemaObjectModelRequest instance
      */
     public IOnenoteEntitySchemaObjectModelRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenoteEntitySchemaObjectModelRequestBuilder extends BaseReques
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenoteEntitySchemaObjectModelRequest instance
      */
     public IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteEntitySchemaObjectModelRequest(getRequestUrl(), getClient(), requestOptions);

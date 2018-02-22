@@ -37,6 +37,8 @@ public class BaseOutlookItemRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request
+     *
+     * @return The IOutlookItemRequest instance
      */
     public IOutlookItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOutlookItemRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOutlookItemRequest instance
      */
     public IOutlookItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OutlookItemRequest(getRequestUrl(), getClient(), requestOptions);

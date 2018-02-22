@@ -37,6 +37,8 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Creates the request
+     *
+     * @return The IContactRequest instance
      */
     public IContactRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IContactRequest instance
      */
     public IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContactRequest(getRequestUrl(), getClient(), requestOptions);
@@ -73,6 +78,8 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
 
     /**
      * Gets the request builder for ProfilePhoto.
+     *
+     * @return The IProfilePhotoRequestBuilder instance
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);

@@ -37,6 +37,8 @@ public class BaseOnenoteResourceStreamRequestBuilder extends BaseRequestBuilder 
 
     /**
      * Creates the request
+     *
+     * @return The IOnenoteResourceStreamRequest instance
      */
     public IOnenoteResourceStreamRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenoteResourceStreamRequestBuilder extends BaseRequestBuilder 
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenoteResourceStreamRequest instance
      */
     public IOnenoteResourceStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteResourceStreamRequest(getRequestUrl(), getClient(), requestOptions);

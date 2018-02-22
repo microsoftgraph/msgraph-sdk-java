@@ -37,6 +37,8 @@ public class BaseFieldValueSetRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return The IFieldValueSetRequest instance
      */
     public IFieldValueSetRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseFieldValueSetRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IFieldValueSetRequest instance
      */
     public IFieldValueSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new FieldValueSetRequest(getRequestUrl(), getClient(), requestOptions);

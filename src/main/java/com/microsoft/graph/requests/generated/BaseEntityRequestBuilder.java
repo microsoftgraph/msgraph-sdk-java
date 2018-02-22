@@ -37,6 +37,8 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
 
     /**
      * Creates the request
+     *
+     * @return The IEntityRequest instance
      */
     public IEntityRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseEntityRequestBuilder extends BaseRequestBuilder implements IBas
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IEntityRequest instance
      */
     public IEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new EntityRequest(getRequestUrl(), getClient(), requestOptions);

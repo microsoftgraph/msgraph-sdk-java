@@ -37,6 +37,8 @@ public class BaseWorkbookChartLineFormatRequestBuilder extends BaseRequestBuilde
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartLineFormatRequest instance
      */
     public IWorkbookChartLineFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartLineFormatRequestBuilder extends BaseRequestBuilde
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartLineFormatRequest instance
      */
     public IWorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartLineFormatRequest(getRequestUrl(), getClient(), requestOptions);

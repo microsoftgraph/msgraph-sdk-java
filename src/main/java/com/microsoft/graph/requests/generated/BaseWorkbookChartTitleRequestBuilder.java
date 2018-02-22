@@ -37,6 +37,8 @@ public class BaseWorkbookChartTitleRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartTitleRequest instance
      */
     public IWorkbookChartTitleRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartTitleRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartTitleRequest instance
      */
     public IWorkbookChartTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartTitleRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartTitleRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Gets the request builder for WorkbookChartTitleFormat.
+     *
+     * @return The IWorkbookChartTitleFormatRequestBuilder instance
      */
     public IWorkbookChartTitleFormatRequestBuilder format() {
         return new WorkbookChartTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

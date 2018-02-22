@@ -37,6 +37,8 @@ public class BaseWorkbookChartAxesRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartAxesRequest instance
      */
     public IWorkbookChartAxesRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartAxesRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartAxesRequest instance
      */
     public IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartAxesRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartAxesRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Gets the request builder for WorkbookChartAxis.
+     *
+     * @return The IWorkbookChartAxisRequestBuilder instance
      */
     public IWorkbookChartAxisRequestBuilder categoryAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("categoryAxis"), getClient(), null);
@@ -59,6 +66,8 @@ public class BaseWorkbookChartAxesRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Gets the request builder for WorkbookChartAxis.
+     *
+     * @return The IWorkbookChartAxisRequestBuilder instance
      */
     public IWorkbookChartAxisRequestBuilder seriesAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("seriesAxis"), getClient(), null);
@@ -66,6 +75,8 @@ public class BaseWorkbookChartAxesRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Gets the request builder for WorkbookChartAxis.
+     *
+     * @return The IWorkbookChartAxisRequestBuilder instance
      */
     public IWorkbookChartAxisRequestBuilder valueAxis() {
         return new WorkbookChartAxisRequestBuilder(getRequestUrlWithAdditionalSegment("valueAxis"), getClient(), null);

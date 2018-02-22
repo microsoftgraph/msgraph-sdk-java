@@ -37,6 +37,8 @@ public class BaseGroupSettingTemplateRequestBuilder extends BaseRequestBuilder i
 
     /**
      * Creates the request
+     *
+     * @return The IGroupSettingTemplateRequest instance
      */
     public IGroupSettingTemplateRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseGroupSettingTemplateRequestBuilder extends BaseRequestBuilder i
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IGroupSettingTemplateRequest instance
      */
     public IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new GroupSettingTemplateRequest(getRequestUrl(), getClient(), requestOptions);

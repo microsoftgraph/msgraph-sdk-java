@@ -37,6 +37,8 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     /**
      * Creates the request
+     *
+     * @return The ISiteRequest instance
      */
     public ISiteRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The ISiteRequest instance
      */
     public ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SiteRequest(getRequestUrl(), getClient(), requestOptions);
@@ -66,6 +71,8 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     /**
      * Gets the request builder for Drive.
+     *
+     * @return The IDriveRequestBuilder instance
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
@@ -101,6 +108,8 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     /**
      * Gets the request builder for Onenote.
+     *
+     * @return The IOnenoteRequestBuilder instance
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);

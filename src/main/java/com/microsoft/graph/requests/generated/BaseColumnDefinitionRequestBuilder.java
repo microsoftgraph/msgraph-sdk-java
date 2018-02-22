@@ -37,6 +37,8 @@ public class BaseColumnDefinitionRequestBuilder extends BaseRequestBuilder imple
 
     /**
      * Creates the request
+     *
+     * @return The IColumnDefinitionRequest instance
      */
     public IColumnDefinitionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseColumnDefinitionRequestBuilder extends BaseRequestBuilder imple
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IColumnDefinitionRequest instance
      */
     public IColumnDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ColumnDefinitionRequest(getRequestUrl(), getClient(), requestOptions);

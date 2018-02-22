@@ -37,6 +37,8 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeRequest instance
      */
     public IWorkbookRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeRequest instance
      */
     public IWorkbookRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookRangeFormat.
+     *
+     * @return The IWorkbookRangeFormatRequestBuilder instance
      */
     public IWorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
@@ -59,6 +66,8 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookRangeSort.
+     *
+     * @return The IWorkbookRangeSortRequestBuilder instance
      */
     public IWorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
@@ -66,6 +75,8 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

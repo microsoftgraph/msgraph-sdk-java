@@ -37,6 +37,8 @@ public class BaseThumbnailStreamRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request
+     *
+     * @return The IThumbnailStreamRequest instance
      */
     public IThumbnailStreamRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseThumbnailStreamRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IThumbnailStreamRequest instance
      */
     public IThumbnailStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ThumbnailStreamRequest(getRequestUrl(), getClient(), requestOptions);

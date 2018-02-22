@@ -37,6 +37,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartRequest instance
      */
     public IWorkbookChartRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartRequest instance
      */
     public IWorkbookChartRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookChartAxes.
+     *
+     * @return The IWorkbookChartAxesRequestBuilder instance
      */
     public IWorkbookChartAxesRequestBuilder axes() {
         return new WorkbookChartAxesRequestBuilder(getRequestUrlWithAdditionalSegment("axes"), getClient(), null);
@@ -59,6 +66,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookChartDataLabels.
+     *
+     * @return The IWorkbookChartDataLabelsRequestBuilder instance
      */
     public IWorkbookChartDataLabelsRequestBuilder dataLabels() {
         return new WorkbookChartDataLabelsRequestBuilder(getRequestUrlWithAdditionalSegment("dataLabels"), getClient(), null);
@@ -66,6 +75,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookChartAreaFormat.
+     *
+     * @return The IWorkbookChartAreaFormatRequestBuilder instance
      */
     public IWorkbookChartAreaFormatRequestBuilder format() {
         return new WorkbookChartAreaFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
@@ -73,6 +84,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookChartLegend.
+     *
+     * @return The IWorkbookChartLegendRequestBuilder instance
      */
     public IWorkbookChartLegendRequestBuilder legend() {
         return new WorkbookChartLegendRequestBuilder(getRequestUrlWithAdditionalSegment("legend"), getClient(), null);
@@ -87,6 +100,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookChartTitle.
+     *
+     * @return The IWorkbookChartTitleRequestBuilder instance
      */
     public IWorkbookChartTitleRequestBuilder title() {
         return new WorkbookChartTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);
@@ -94,6 +109,8 @@ public class BaseWorkbookChartRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Gets the request builder for WorkbookWorksheet.
+     *
+     * @return The IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

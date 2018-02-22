@@ -37,6 +37,8 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request
+     *
+     * @return The IDirectoryObjectRequest instance
      */
     public IDirectoryObjectRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDirectoryObjectRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IDirectoryObjectRequest instance
      */
     public IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryObjectRequest(getRequestUrl(), getClient(), requestOptions);

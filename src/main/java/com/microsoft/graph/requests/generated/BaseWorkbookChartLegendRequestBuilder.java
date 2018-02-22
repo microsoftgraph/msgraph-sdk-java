@@ -37,6 +37,8 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartLegendRequest instance
      */
     public IWorkbookChartLegendRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartLegendRequest instance
      */
     public IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartLegendRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Gets the request builder for WorkbookChartLegendFormat.
+     *
+     * @return The IWorkbookChartLegendFormatRequestBuilder instance
      */
     public IWorkbookChartLegendFormatRequestBuilder format() {
         return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

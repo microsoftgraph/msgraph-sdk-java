@@ -37,6 +37,8 @@ public class BaseWorkbookRangeSortRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeSortRequest instance
      */
     public IWorkbookRangeSortRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeSortRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeSortRequest instance
      */
     public IWorkbookRangeSortRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeSortRequest(getRequestUrl(), getClient(), requestOptions);

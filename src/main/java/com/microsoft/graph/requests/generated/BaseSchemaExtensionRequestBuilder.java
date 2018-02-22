@@ -37,6 +37,8 @@ public class BaseSchemaExtensionRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request
+     *
+     * @return The ISchemaExtensionRequest instance
      */
     public ISchemaExtensionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSchemaExtensionRequestBuilder extends BaseRequestBuilder implem
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The ISchemaExtensionRequest instance
      */
     public ISchemaExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SchemaExtensionRequest(getRequestUrl(), getClient(), requestOptions);

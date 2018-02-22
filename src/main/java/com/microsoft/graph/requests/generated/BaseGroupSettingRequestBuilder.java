@@ -37,6 +37,8 @@ public class BaseGroupSettingRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request
+     *
+     * @return The IGroupSettingRequest instance
      */
     public IGroupSettingRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseGroupSettingRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IGroupSettingRequest instance
      */
     public IGroupSettingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new GroupSettingRequest(getRequestUrl(), getClient(), requestOptions);

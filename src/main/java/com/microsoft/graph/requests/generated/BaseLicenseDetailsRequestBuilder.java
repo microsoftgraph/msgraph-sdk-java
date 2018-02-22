@@ -37,6 +37,8 @@ public class BaseLicenseDetailsRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request
+     *
+     * @return The ILicenseDetailsRequest instance
      */
     public ILicenseDetailsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseLicenseDetailsRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The ILicenseDetailsRequest instance
      */
     public ILicenseDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new LicenseDetailsRequest(getRequestUrl(), getClient(), requestOptions);

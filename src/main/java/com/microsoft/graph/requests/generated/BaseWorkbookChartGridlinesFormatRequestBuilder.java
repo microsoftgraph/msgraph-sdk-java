@@ -37,6 +37,8 @@ public class BaseWorkbookChartGridlinesFormatRequestBuilder extends BaseRequestB
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartGridlinesFormatRequest instance
      */
     public IWorkbookChartGridlinesFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartGridlinesFormatRequestBuilder extends BaseRequestB
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartGridlinesFormatRequest instance
      */
     public IWorkbookChartGridlinesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartGridlinesFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartGridlinesFormatRequestBuilder extends BaseRequestB
 
     /**
      * Gets the request builder for WorkbookChartLineFormat.
+     *
+     * @return The IWorkbookChartLineFormatRequestBuilder instance
      */
     public IWorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);

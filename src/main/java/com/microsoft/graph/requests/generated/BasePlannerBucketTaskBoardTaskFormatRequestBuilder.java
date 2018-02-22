@@ -37,6 +37,8 @@ public class BasePlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequ
 
     /**
      * Creates the request
+     *
+     * @return The IPlannerBucketTaskBoardTaskFormatRequest instance
      */
     public IPlannerBucketTaskBoardTaskFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequ
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPlannerBucketTaskBoardTaskFormatRequest instance
      */
     public IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerBucketTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);

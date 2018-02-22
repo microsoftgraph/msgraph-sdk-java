@@ -37,6 +37,8 @@ public class BaseContactFolderRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return The IContactFolderRequest instance
      */
     public IContactFolderRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseContactFolderRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IContactFolderRequest instance
      */
     public IContactFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContactFolderRequest(getRequestUrl(), getClient(), requestOptions);

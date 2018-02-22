@@ -37,6 +37,8 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request
+     *
+     * @return The IPlannerTaskRequest instance
      */
     public IPlannerTaskRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPlannerTaskRequest instance
      */
     public IPlannerTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerTaskRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Gets the request builder for PlannerTaskDetails.
+     *
+     * @return The IPlannerTaskDetailsRequestBuilder instance
      */
     public IPlannerTaskDetailsRequestBuilder details() {
         return new PlannerTaskDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
@@ -59,6 +66,8 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat.
+     *
+     * @return The IPlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
      */
     public IPlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat() {
         return new PlannerAssignedToTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("assignedToTaskBoardFormat"), getClient(), null);
@@ -66,6 +75,8 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Gets the request builder for PlannerProgressTaskBoardTaskFormat.
+     *
+     * @return The IPlannerProgressTaskBoardTaskFormatRequestBuilder instance
      */
     public IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat() {
         return new PlannerProgressTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("progressTaskBoardFormat"), getClient(), null);
@@ -73,6 +84,8 @@ public class BasePlannerTaskRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Gets the request builder for PlannerBucketTaskBoardTaskFormat.
+     *
+     * @return The IPlannerBucketTaskBoardTaskFormatRequestBuilder instance
      */
     public IPlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat() {
         return new PlannerBucketTaskBoardTaskFormatRequestBuilder(getRequestUrlWithAdditionalSegment("bucketTaskBoardFormat"), getClient(), null);

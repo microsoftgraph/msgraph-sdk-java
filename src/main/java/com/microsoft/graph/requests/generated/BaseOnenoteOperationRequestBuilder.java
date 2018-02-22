@@ -37,6 +37,8 @@ public class BaseOnenoteOperationRequestBuilder extends BaseRequestBuilder imple
 
     /**
      * Creates the request
+     *
+     * @return The IOnenoteOperationRequest instance
      */
     public IOnenoteOperationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenoteOperationRequestBuilder extends BaseRequestBuilder imple
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOnenoteOperationRequest instance
      */
     public IOnenoteOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteOperationRequest(getRequestUrl(), getClient(), requestOptions);

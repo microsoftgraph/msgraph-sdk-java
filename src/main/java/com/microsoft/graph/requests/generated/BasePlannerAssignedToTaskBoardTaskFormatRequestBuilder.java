@@ -37,6 +37,8 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequestBuilder extends Base
 
     /**
      * Creates the request
+     *
+     * @return The IPlannerAssignedToTaskBoardTaskFormatRequest instance
      */
     public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequestBuilder extends Base
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPlannerAssignedToTaskBoardTaskFormatRequest instance
      */
     public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerAssignedToTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);

@@ -37,6 +37,8 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookChartDataLabelsRequest instance
      */
     public IWorkbookChartDataLabelsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookChartDataLabelsRequest instance
      */
     public IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartDataLabelsRequest(getRequestUrl(), getClient(), requestOptions);
@@ -52,6 +57,8 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
 
     /**
      * Gets the request builder for WorkbookChartDataLabelFormat.
+     *
+     * @return The IWorkbookChartDataLabelFormatRequestBuilder instance
      */
     public IWorkbookChartDataLabelFormatRequestBuilder format() {
         return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

@@ -37,6 +37,8 @@ public class BaseOperationRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request
+     *
+     * @return The IOperationRequest instance
      */
     public IOperationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOperationRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOperationRequest instance
      */
     public IOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OperationRequest(getRequestUrl(), getClient(), requestOptions);

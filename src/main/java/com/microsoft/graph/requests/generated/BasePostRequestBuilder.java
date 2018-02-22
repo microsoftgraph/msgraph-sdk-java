@@ -37,6 +37,8 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
 
     /**
      * Creates the request
+     *
+     * @return The IPostRequest instance
      */
     public IPostRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPostRequest instance
      */
     public IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PostRequest(getRequestUrl(), getClient(), requestOptions);
@@ -59,6 +64,8 @@ public class BasePostRequestBuilder extends BaseRequestBuilder implements IBaseP
 
     /**
      * Gets the request builder for Post.
+     *
+     * @return The IPostRequestBuilder instance
      */
     public IPostRequestBuilder inReplyTo() {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("inReplyTo"), getClient(), null);

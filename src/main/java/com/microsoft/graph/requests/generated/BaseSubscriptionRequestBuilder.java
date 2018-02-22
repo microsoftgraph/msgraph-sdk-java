@@ -37,6 +37,8 @@ public class BaseSubscriptionRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request
+     *
+     * @return The ISubscriptionRequest instance
      */
     public ISubscriptionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSubscriptionRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The ISubscriptionRequest instance
      */
     public ISubscriptionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SubscriptionRequest(getRequestUrl(), getClient(), requestOptions);

@@ -37,6 +37,8 @@ public class BaseOpenTypeExtensionRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IOpenTypeExtensionRequest instance
      */
     public IOpenTypeExtensionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOpenTypeExtensionRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IOpenTypeExtensionRequest instance
      */
     public IOpenTypeExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OpenTypeExtensionRequest(getRequestUrl(), getClient(), requestOptions);

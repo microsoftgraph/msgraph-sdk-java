@@ -37,6 +37,8 @@ public class BaseColumnLinkRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request
+     *
+     * @return The IColumnLinkRequest instance
      */
     public IColumnLinkRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseColumnLinkRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IColumnLinkRequest instance
      */
     public IColumnLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ColumnLinkRequest(getRequestUrl(), getClient(), requestOptions);

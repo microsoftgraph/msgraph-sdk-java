@@ -37,6 +37,8 @@ public class BaseProfilePhotoRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request
+     *
+     * @return The IProfilePhotoRequest instance
      */
     public IProfilePhotoRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseProfilePhotoRequestBuilder extends BaseRequestBuilder implement
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IProfilePhotoRequest instance
      */
     public IProfilePhotoRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ProfilePhotoRequest(getRequestUrl(), getClient(), requestOptions);

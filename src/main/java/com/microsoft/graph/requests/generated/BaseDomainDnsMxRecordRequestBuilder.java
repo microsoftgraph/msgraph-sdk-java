@@ -37,6 +37,8 @@ public class BaseDomainDnsMxRecordRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IDomainDnsMxRecordRequest instance
      */
     public IDomainDnsMxRecordRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDomainDnsMxRecordRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IDomainDnsMxRecordRequest instance
      */
     public IDomainDnsMxRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DomainDnsMxRecordRequest(getRequestUrl(), getClient(), requestOptions);

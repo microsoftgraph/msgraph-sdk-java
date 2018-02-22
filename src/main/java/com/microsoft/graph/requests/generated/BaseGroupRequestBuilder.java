@@ -37,6 +37,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Creates the request
+     *
+     * @return The IGroupRequest instance
      */
     public IGroupRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IGroupRequest instance
      */
     public IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new GroupRequest(getRequestUrl(), getClient(), requestOptions);
@@ -66,6 +71,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for DirectoryObject.
+     *
+     * @return The IDirectoryObjectWithReferenceRequestBuilder instance
      */
     public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
@@ -101,6 +108,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for Calendar.
+     *
+     * @return The ICalendarRequestBuilder instance
      */
     public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
@@ -129,6 +138,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for ProfilePhoto.
+     *
+     * @return The IProfilePhotoRequestBuilder instance
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
@@ -157,6 +168,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for Drive.
+     *
+     * @return The IDriveRequestBuilder instance
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
@@ -178,6 +191,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for PlannerGroup.
+     *
+     * @return The IPlannerGroupRequestBuilder instance
      */
     public IPlannerGroupRequestBuilder planner() {
         return new PlannerGroupRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
@@ -185,6 +200,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Gets the request builder for Onenote.
+     *
+     * @return The IOnenoteRequestBuilder instance
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);

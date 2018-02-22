@@ -37,6 +37,8 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookRangeFormatRequest instance
      */
     public IWorkbookRangeFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookRangeFormatRequest instance
      */
     public IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -59,6 +64,8 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Gets the request builder for WorkbookRangeFill.
+     *
+     * @return The IWorkbookRangeFillRequestBuilder instance
      */
     public IWorkbookRangeFillRequestBuilder fill() {
         return new WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
@@ -66,6 +73,8 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Gets the request builder for WorkbookRangeFont.
+     *
+     * @return The IWorkbookRangeFontRequestBuilder instance
      */
     public IWorkbookRangeFontRequestBuilder font() {
         return new WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
@@ -73,6 +82,8 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
 
     /**
      * Gets the request builder for WorkbookFormatProtection.
+     *
+     * @return The IWorkbookFormatProtectionRequestBuilder instance
      */
     public IWorkbookFormatProtectionRequestBuilder protection() {
         return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);

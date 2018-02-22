@@ -37,6 +37,8 @@ public class BaseMailFolderRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request
+     *
+     * @return The IMailFolderRequest instance
      */
     public IMailFolderRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseMailFolderRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IMailFolderRequest instance
      */
     public IMailFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MailFolderRequest(getRequestUrl(), getClient(), requestOptions);

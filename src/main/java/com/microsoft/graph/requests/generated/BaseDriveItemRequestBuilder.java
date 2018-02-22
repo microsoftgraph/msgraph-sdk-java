@@ -37,6 +37,8 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request
+     *
+     * @return The IDriveItemRequest instance
      */
     public IDriveItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IDriveItemRequest instance
      */
     public IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
@@ -59,6 +64,8 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Gets the request builder for ListItem.
+     *
+     * @return The IListItemRequestBuilder instance
      */
     public IListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
@@ -80,6 +87,8 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
 
     /**
      * Gets the request builder for Workbook.
+     *
+     * @return The IWorkbookRequestBuilder instance
      */
     public IWorkbookRequestBuilder workbook() {
         return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);

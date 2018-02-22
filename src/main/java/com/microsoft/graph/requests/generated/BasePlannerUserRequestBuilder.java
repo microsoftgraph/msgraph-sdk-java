@@ -37,6 +37,8 @@ public class BasePlannerUserRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request
+     *
+     * @return The IPlannerUserRequest instance
      */
     public IPlannerUserRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePlannerUserRequestBuilder extends BaseRequestBuilder implements
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IPlannerUserRequest instance
      */
     public IPlannerUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PlannerUserRequest(getRequestUrl(), getClient(), requestOptions);

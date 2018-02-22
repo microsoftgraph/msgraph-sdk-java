@@ -37,6 +37,8 @@ public class BaseWorkbookTableRowRequestBuilder extends BaseRequestBuilder imple
 
     /**
      * Creates the request
+     *
+     * @return The IWorkbookTableRowRequest instance
      */
     public IWorkbookTableRowRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookTableRowRequestBuilder extends BaseRequestBuilder imple
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions The options for this request
+     * @return The IWorkbookTableRowRequest instance
      */
     public IWorkbookTableRowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableRowRequest(getRequestUrl(), getClient(), requestOptions);
