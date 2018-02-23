@@ -49,7 +49,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src="cid:image001.jpg@01D26CD8.6C05F070">.
+     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src="cid:image001.jpg@01D26CD8.6C05F070"&amp;gt;.
      */
     @SerializedName("hasAttachments")
     @Expose

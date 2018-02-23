@@ -33,7 +33,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To.
-     * For user type permissions, the details of the users & applications for this permission. Read-only.
+     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
      */
     @SerializedName("grantedTo")
     @Expose

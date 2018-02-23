@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -51,7 +51,7 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * The Target.
-     * The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
+     * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
      */
     @SerializedName("target")
     @Expose
