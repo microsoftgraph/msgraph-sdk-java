@@ -41,6 +41,7 @@ public class GraphFatalServiceException extends GraphServiceException {
      * @param responseMessage The response message.
      * @param responseHeaders The response headers.
      * @param error The error response if available.
+     * @param verbose Whether or not to log verbosely.
      */
     protected GraphFatalServiceException(final String method,
                                          final String url,

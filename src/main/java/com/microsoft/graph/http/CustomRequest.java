@@ -65,7 +65,6 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Patches this item with a source
-     * @param sourceItem The source object with updates
      * @param callback The callback to be called after success or failure.
      */
     public void patch(final ICallback<T> callback) {
@@ -74,7 +73,7 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Patches this item with a source
-     * @param sourceAttachment The source object with updates
+     * @param sourceObject The source object with updates
      * @return The updated item
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
@@ -84,7 +83,7 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Creates a new object
-     * @param newAttachment The new object to create
+     * @param newObject The new object to create
      * @param callback The callback to be called after success or failure.
      */
     public void post(final T newObject, final ICallback<T> callback) {
@@ -93,8 +92,8 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Creates a new object
-     * @param newAttachment The new object to create
-     * @return The created Attachment
+     * @param newObject The new object to create
+     * @return The created object
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
     public T post(final T newObject) throws ClientException {

@@ -58,7 +58,7 @@ public class FallBackEnumTypeAdapter implements TypeAdapterFactory {
      *
      * @param gson GSON
      * @param type The type.
-     * @return <T> The type adapter
+     * @return The type adapter
      */
     public <T> TypeAdapter<T> create(final Gson gson, final TypeToken<T> type) {
         //no inspection unchecked

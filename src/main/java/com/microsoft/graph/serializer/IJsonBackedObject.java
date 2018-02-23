@@ -40,6 +40,7 @@ public interface IJsonBackedObject {
     /**
      * Provides access to objects not anticipated in the model, as well as 
      * request and response data from the HTTP call
+     * @return The AddtionalDataManager
      */
     AdditionalDataManager additionalDataManager();
 

@@ -45,8 +45,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
     }
     
     /**
-     * end a custom request to Graph
-     * @param url THe full URL to make a request with
+     * Send a custom request to Graph
+     * @param url The full URL to make a request with
      * @return the instance of this builder
      */
     public CustomRequestBuilder customRequest(final String url) {
@@ -137,6 +137,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
         /**
          * Builds and returns the GraphServiceClient
          * @throws ClientException if there was an exception creating the client
+         * @return The GraphServiceClient object
          */
         public IGraphServiceClient buildClient() throws ClientException  {
             client.validate();

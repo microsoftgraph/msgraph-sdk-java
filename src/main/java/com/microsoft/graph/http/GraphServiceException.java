@@ -237,6 +237,7 @@ public class GraphServiceException extends ClientException {
      * @param serializable The serialized object that was sent with this request.
      * @param serializer   The serializer to re-create the option in its over the wire state.
      * @param connection   The connection that was used to extract the response information from.
+     * @param logger       The logger to log exception information to.
      * @param <T>          The type of the serializable object.
      * @return The new GraphServiceException instance.
      * @throws IOException An exception occurs if there were any problems processing the connection.
