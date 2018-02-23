@@ -39,6 +39,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param address The address
      */
     public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String address) {
         super(requestUrl, client, requestOptions);

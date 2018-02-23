@@ -29,6 +29,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param post The post
      */
     public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Post post) {
         super(requestUrl, client, requestOptions);

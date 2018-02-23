@@ -29,6 +29,13 @@ public class BaseWorkbookFunctionsYieldRequestBuilder extends BaseActionRequestB
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param settlement The settlement
+     * @param maturity The maturity
+     * @param rate The rate
+     * @param pr The pr
+     * @param redemption The redemption
+     * @param frequency The frequency
+     * @param basis The basis
      */
     public BaseWorkbookFunctionsYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);

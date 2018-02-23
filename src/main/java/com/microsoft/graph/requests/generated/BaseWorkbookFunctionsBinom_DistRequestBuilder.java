@@ -29,6 +29,10 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param numberS The numberS
+     * @param trials The trials
+     * @param probabilityS The probabilityS
+     * @param cumulative The cumulative
      */
     public BaseWorkbookFunctionsBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsDegreesRequestBuilder extends BaseActionReques
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param angle The angle
      */
     public BaseWorkbookFunctionsDegreesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement angle) {
         super(requestUrl, client, requestOptions);

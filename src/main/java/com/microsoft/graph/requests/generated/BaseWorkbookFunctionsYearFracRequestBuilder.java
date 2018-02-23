@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param startDate The startDate
+     * @param endDate The endDate
+     * @param basis The basis
      */
     public BaseWorkbookFunctionsYearFracRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionReque
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param probability The probability
+     * @param degFreedom1 The degFreedom1
+     * @param degFreedom2 The degFreedom2
      */
     public BaseWorkbookFunctionsF_Inv_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
         super(requestUrl, client, requestOptions);

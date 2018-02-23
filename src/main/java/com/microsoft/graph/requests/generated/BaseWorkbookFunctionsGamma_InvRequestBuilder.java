@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param probability The probability
+     * @param alpha The alpha
+     * @param beta The beta
      */
     public BaseWorkbookFunctionsGamma_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
         super(requestUrl, client, requestOptions);

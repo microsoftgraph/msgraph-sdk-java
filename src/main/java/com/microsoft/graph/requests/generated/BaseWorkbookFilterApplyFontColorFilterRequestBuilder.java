@@ -29,6 +29,7 @@ public class BaseWorkbookFilterApplyFontColorFilterRequestBuilder extends BaseAc
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param color The color
      */
     public BaseWorkbookFilterApplyFontColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsAtan2RequestBuilder extends BaseActionRequestB
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param xNum The xNum
+     * @param yNum The yNum
      */
     public BaseWorkbookFunctionsAtan2RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement xNum, final com.google.gson.JsonElement yNum) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,8 @@ public class BaseMessageForwardRequestBuilder extends BaseActionRequestBuilder {
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param comment The comment
+     * @param toRecipients The toRecipients
      */
     public BaseMessageForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
         super(requestUrl, client, requestOptions);

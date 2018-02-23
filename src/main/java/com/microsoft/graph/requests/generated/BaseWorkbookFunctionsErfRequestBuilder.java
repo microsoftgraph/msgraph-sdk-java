@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param lowerLimit The lowerLimit
+     * @param upperLimit The upperLimit
      */
     public BaseWorkbookFunctionsErfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lowerLimit, final com.google.gson.JsonElement upperLimit) {
         super(requestUrl, client, requestOptions);

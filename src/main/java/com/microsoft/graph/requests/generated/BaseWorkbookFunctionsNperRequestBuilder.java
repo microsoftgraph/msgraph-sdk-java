@@ -29,6 +29,11 @@ public class BaseWorkbookFunctionsNperRequestBuilder extends BaseActionRequestBu
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param rate The rate
+     * @param pmt The pmt
+     * @param pv The pv
+     * @param fv The fv
+     * @param type The type
      */
     public BaseWorkbookFunctionsNperRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);

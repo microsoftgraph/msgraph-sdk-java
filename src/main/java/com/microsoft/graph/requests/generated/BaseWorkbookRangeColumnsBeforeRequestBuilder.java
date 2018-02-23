@@ -39,6 +39,7 @@ public class BaseWorkbookRangeColumnsBeforeRequestBuilder extends BaseFunctionRe
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param count The count
      */
     public BaseWorkbookRangeColumnsBeforeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);

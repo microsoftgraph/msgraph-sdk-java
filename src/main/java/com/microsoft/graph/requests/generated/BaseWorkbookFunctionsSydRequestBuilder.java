@@ -29,6 +29,10 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param cost The cost
+     * @param salvage The salvage
+     * @param life The life
+     * @param per The per
      */
     public BaseWorkbookFunctionsSydRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
         super(requestUrl, client, requestOptions);

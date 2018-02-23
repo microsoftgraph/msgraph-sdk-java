@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsRightRequestBuilder extends BaseActionRequestB
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param text The text
+     * @param numChars The numChars
      */
     public BaseWorkbookFunctionsRightRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numChars) {
         super(requestUrl, client, requestOptions);

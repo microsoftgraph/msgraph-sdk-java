@@ -29,6 +29,9 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param groupId The groupId
+     * @param renameAs The renameAs
+     * @param notebookFolder The notebookFolder
      */
     public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
         super(requestUrl, client, requestOptions);

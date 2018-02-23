@@ -29,6 +29,10 @@ public class BaseWorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestB
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param rate The rate
+     * @param per The per
+     * @param nper The nper
+     * @param pv The pv
      */
     public BaseWorkbookFunctionsIspmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv) {
         super(requestUrl, client, requestOptions);

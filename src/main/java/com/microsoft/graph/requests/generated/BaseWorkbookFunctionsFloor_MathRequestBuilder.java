@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
+     * @param significance The significance
+     * @param mode The mode
      */
     public BaseWorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
         super(requestUrl, client, requestOptions);

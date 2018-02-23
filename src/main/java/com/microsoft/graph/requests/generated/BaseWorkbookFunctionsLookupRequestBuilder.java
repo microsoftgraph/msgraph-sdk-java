@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param lookupValue The lookupValue
+     * @param lookupVector The lookupVector
+     * @param resultVector The resultVector
      */
     public BaseWorkbookFunctionsLookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
         super(requestUrl, client, requestOptions);

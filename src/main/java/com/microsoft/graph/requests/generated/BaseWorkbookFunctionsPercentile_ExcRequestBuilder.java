@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsPercentile_ExcRequestBuilder extends BaseActio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param array The array
+     * @param k The k
      */
     public BaseWorkbookFunctionsPercentile_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,14 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param attendees The attendees
+     * @param locationConstraint The locationConstraint
+     * @param timeConstraint The timeConstraint
+     * @param meetingDuration The meetingDuration
+     * @param maxCandidates The maxCandidates
+     * @param isOrganizerOptional The isOrganizerOptional
+     * @param returnSuggestionReasons The returnSuggestionReasons
+     * @param minimumAttendeePercentage The minimumAttendeePercentage
      */
     public BaseUserFindMeetingTimesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         super(requestUrl, client, requestOptions);

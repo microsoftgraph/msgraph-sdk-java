@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsTextRequestBuilder extends BaseActionRequestBu
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param value The value
+     * @param formatText The formatText
      */
     public BaseWorkbookFunctionsTextRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value, final com.google.gson.JsonElement formatText) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsDcountRequestBuilder extends BaseActionRequest
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param database The database
+     * @param field The field
+     * @param criteria The criteria
      */
     public BaseWorkbookFunctionsDcountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);

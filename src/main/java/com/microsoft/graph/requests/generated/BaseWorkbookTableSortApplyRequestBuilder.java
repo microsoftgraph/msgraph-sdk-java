@@ -29,6 +29,9 @@ public class BaseWorkbookTableSortApplyRequestBuilder extends BaseActionRequestB
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param fields The fields
+     * @param matchCase The matchCase
+     * @param method The method
      */
     public BaseWorkbookTableSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,9 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param criteria1 The criteria1
+     * @param criteria2 The criteria2
+     * @param oper The oper
      */
     public BaseWorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
         super(requestUrl, client, requestOptions);

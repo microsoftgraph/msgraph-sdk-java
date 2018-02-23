@@ -29,6 +29,8 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param name The name
+     * @param parentReference The parentReference
      */
     public BaseDriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final ItemReference parentReference) {
         super(requestUrl, client, requestOptions);

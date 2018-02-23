@@ -29,6 +29,9 @@ public class BaseOnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActi
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param id The id
+     * @param groupId The groupId
+     * @param renameAs The renameAs
      */
     public BaseOnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs) {
         super(requestUrl, client, requestOptions);

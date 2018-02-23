@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsMroundRequestBuilder extends BaseActionRequest
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
+     * @param multiple The multiple
      */
     public BaseWorkbookFunctionsMroundRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement multiple) {
         super(requestUrl, client, requestOptions);

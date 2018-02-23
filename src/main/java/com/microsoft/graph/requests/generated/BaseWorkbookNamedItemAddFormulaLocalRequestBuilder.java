@@ -29,6 +29,9 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActi
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param name The name
+     * @param formula The formula
+     * @param comment The comment
      */
     public BaseWorkbookNamedItemAddFormulaLocalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final String formula, final String comment) {
         super(requestUrl, client, requestOptions);

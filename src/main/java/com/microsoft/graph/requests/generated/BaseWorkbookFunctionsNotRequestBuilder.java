@@ -29,6 +29,7 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param logical The logical
      */
     public BaseWorkbookFunctionsNotRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement logical) {
         super(requestUrl, client, requestOptions);

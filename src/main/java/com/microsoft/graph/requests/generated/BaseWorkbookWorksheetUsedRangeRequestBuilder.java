@@ -39,6 +39,7 @@ public class BaseWorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionRe
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param valuesOnly The valuesOnly
      */
     public BaseWorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean valuesOnly) {
         super(requestUrl, client, requestOptions);

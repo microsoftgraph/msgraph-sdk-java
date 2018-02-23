@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsImDivRequestBuilder extends BaseActionRequestB
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param inumber1 The inumber1
+     * @param inumber2 The inumber2
      */
     public BaseWorkbookFunctionsImDivRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
         super(requestUrl, client, requestOptions);

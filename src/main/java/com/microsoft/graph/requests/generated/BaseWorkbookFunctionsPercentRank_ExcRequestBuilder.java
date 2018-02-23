@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param array The array
+     * @param x The x
+     * @param significance The significance
      */
     public BaseWorkbookFunctionsPercentRank_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);

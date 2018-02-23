@@ -29,6 +29,7 @@ public class BaseWorkbookRangeClearRequestBuilder extends BaseActionRequestBuild
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param applyTo The applyTo
      */
     public BaseWorkbookRangeClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String applyTo) {
         super(requestUrl, client, requestOptions);

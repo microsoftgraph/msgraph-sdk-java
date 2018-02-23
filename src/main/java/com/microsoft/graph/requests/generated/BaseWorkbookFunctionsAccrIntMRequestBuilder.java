@@ -29,6 +29,11 @@ public class BaseWorkbookFunctionsAccrIntMRequestBuilder extends BaseActionReque
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param issue The issue
+     * @param settlement The settlement
+     * @param rate The rate
+     * @param par The par
+     * @param basis The basis
      */
     public BaseWorkbookFunctionsAccrIntMRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);

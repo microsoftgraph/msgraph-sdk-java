@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param x The x
+     * @param lambda The lambda
+     * @param cumulative The cumulative
      */
     public BaseWorkbookFunctionsExpon_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement lambda, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);

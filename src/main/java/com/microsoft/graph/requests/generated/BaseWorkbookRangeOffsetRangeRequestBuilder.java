@@ -29,6 +29,8 @@ public class BaseWorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequ
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param rowOffset The rowOffset
+     * @param columnOffset The columnOffset
      */
     public BaseWorkbookRangeOffsetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer rowOffset, final Integer columnOffset) {
         super(requestUrl, client, requestOptions);

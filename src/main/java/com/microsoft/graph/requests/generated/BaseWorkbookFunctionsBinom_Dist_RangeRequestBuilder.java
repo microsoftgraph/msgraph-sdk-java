@@ -29,6 +29,10 @@ public class BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseAct
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param trials The trials
+     * @param probabilityS The probabilityS
+     * @param numberS The numberS
+     * @param numberS2 The numberS2
      */
     public BaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement numberS2) {
         super(requestUrl, client, requestOptions);

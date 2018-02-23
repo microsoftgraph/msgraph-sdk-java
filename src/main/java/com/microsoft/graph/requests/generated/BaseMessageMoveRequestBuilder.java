@@ -29,6 +29,7 @@ public class BaseMessageMoveRequestBuilder extends BaseActionRequestBuilder {
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param destinationId The destinationId
      */
     public BaseMessageMoveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);

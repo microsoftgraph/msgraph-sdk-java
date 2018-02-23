@@ -29,6 +29,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param persistChanges The persistChanges
      */
     public BaseWorkbookCreateSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean persistChanges) {
         super(requestUrl, client, requestOptions);

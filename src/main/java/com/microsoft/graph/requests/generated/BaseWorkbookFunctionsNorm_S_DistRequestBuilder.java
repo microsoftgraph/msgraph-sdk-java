@@ -29,6 +29,8 @@ public class BaseWorkbookFunctionsNorm_S_DistRequestBuilder extends BaseActionRe
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param z The z
+     * @param cumulative The cumulative
      */
     public BaseWorkbookFunctionsNorm_S_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement z, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);

@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param realNum The realNum
+     * @param iNum The iNum
+     * @param suffix The suffix
      */
     public BaseWorkbookFunctionsComplexRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement realNum, final com.google.gson.JsonElement iNum, final com.google.gson.JsonElement suffix) {
         super(requestUrl, client, requestOptions);

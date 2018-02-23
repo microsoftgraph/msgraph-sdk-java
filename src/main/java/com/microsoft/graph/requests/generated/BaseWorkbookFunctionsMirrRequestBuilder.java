@@ -29,6 +29,9 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param values The values
+     * @param financeRate The financeRate
+     * @param reinvestRate The reinvestRate
      */
     public BaseWorkbookFunctionsMirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement financeRate, final com.google.gson.JsonElement reinvestRate) {
         super(requestUrl, client, requestOptions);
