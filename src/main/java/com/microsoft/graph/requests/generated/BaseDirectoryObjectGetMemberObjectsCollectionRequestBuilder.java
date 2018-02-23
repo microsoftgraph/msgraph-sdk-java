@@ -29,6 +29,7 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder extends
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param securityEnabledOnly The securityEnabledOnly
      */
     public BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions);

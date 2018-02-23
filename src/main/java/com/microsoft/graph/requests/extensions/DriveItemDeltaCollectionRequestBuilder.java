@@ -30,6 +30,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param token The token
      */
     public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String token) {
         super(requestUrl, client, requestOptions, token);

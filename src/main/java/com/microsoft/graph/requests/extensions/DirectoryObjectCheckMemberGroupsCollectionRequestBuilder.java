@@ -30,6 +30,7 @@ public class DirectoryObjectCheckMemberGroupsCollectionRequestBuilder extends Ba
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param groupIds The groupIds
      */
     public DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> groupIds) {
         super(requestUrl, client, requestOptions, groupIds);

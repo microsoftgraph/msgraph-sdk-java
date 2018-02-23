@@ -30,6 +30,8 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseDirecto
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param ids The ids
+     * @param types The types
      */
     public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
         super(requestUrl, client, requestOptions, ids, types);

@@ -29,6 +29,11 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param requireSignIn The requireSignIn
+     * @param roles The roles
+     * @param sendInvitation The sendInvitation
+     * @param message The message
+     * @param recipients The recipients
      */
     public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);

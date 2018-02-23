@@ -30,6 +30,8 @@ public class UserReminderViewCollectionRequestBuilder extends BaseUserReminderVi
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param startDateTime The startDateTime
+     * @param endDateTime The endDateTime
      */
     public UserReminderViewCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String startDateTime, final String endDateTime) {
         super(requestUrl, client, requestOptions, startDateTime, endDateTime);

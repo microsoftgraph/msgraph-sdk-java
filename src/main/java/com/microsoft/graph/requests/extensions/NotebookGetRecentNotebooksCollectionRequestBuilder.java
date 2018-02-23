@@ -30,6 +30,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseNote
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param includePersonalNotebooks The includePersonalNotebooks
      */
     public NotebookGetRecentNotebooksCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean includePersonalNotebooks) {
         super(requestUrl, client, requestOptions, includePersonalNotebooks);
