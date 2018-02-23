@@ -33,7 +33,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Meeting Message Type.
-     * 
+     * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      */
     @SerializedName("meetingMessageType")
     @Expose
@@ -41,7 +41,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Event.
-     * 
+     * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      */
     @SerializedName("event")
     @Expose

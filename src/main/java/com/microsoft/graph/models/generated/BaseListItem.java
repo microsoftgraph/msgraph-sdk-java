@@ -33,7 +33,7 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * The content type of this list item
      */
     @SerializedName("contentType")
     @Expose
@@ -49,7 +49,7 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Item.
-     * 
+     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      */
     @SerializedName("driveItem")
     @Expose

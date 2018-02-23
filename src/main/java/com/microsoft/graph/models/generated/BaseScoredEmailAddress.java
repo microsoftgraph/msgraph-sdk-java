@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseScoredEmailAddress implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -51,7 +51,7 @@ public class BaseScoredEmailAddress implements IJsonBackedObject {
 
     /**
      * The Relevance Score.
-     * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user’s communication and collaboration patterns and business relationships.
+     * The relevance score of the email address. A relevance score is used as a sort key, in relation to the other returned results. A higher relevance score value corresponds to a more relevant result. Relevance is determined by the user's communication and collaboration patterns and business relationships.
      */
     @SerializedName("relevanceScore")
     @Expose

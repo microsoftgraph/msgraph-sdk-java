@@ -81,7 +81,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * The country/region in which the user is located; for example, “US” or “UK”. Supports $filter.
+     * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
      */
     @SerializedName("country")
     @Expose
@@ -121,7 +121,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The user’s job title. Supports $filter.
+     * The user's job title. Supports $filter.
      */
     @SerializedName("jobTitle")
     @Expose
@@ -153,7 +153,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Immutable Id.
-     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
+     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
      */
     @SerializedName("onPremisesImmutableId")
     @Expose
@@ -185,7 +185,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. This value is an enumeration with one possible value being “DisableStrongPassword”, which allows weaker passwords than the default policy to be specified. “DisablePasswordExpiration” can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
+     * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
      */
     @SerializedName("passwordPolicies")
     @Expose
@@ -193,7 +193,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      */
     @SerializedName("passwordProfile")
     @Expose
@@ -273,7 +273,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
      */
     @SerializedName("userPrincipalName")
     @Expose
@@ -281,7 +281,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as “Member” and “Guest”. Supports $filter.
+     * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
      */
     @SerializedName("userType")
     @Expose
@@ -389,7 +389,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Manager.
-     * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+     * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
      */
     @SerializedName("manager")
     @Expose

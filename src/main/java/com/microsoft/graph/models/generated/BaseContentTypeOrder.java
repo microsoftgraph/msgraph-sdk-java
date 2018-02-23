@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseContentTypeOrder implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -43,7 +43,7 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
 
     /**
      * The Default.
-     * 
+     * Whether this is the default Content Type
      */
     @SerializedName("default")
     @Expose
@@ -51,7 +51,7 @@ public class BaseContentTypeOrder implements IJsonBackedObject {
 
     /**
      * The Position.
-     * 
+     * Specifies the position in which the Content Type appears in the selection UI.
      */
     @SerializedName("position")
     @Expose

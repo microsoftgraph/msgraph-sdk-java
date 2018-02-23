@@ -33,7 +33,7 @@ public class BaseList extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The displayable title of the list.
      */
     @SerializedName("displayName")
     @Expose
@@ -41,7 +41,7 @@ public class BaseList extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * 
+     * Provides additional details about the list.
      */
     @SerializedName("list")
     @Expose
@@ -57,7 +57,7 @@ public class BaseList extends BaseItem implements IJsonBackedObject {
 
     /**
      * The System.
-     * 
+     * If present, indicates that this is a system-managed list. Read-only.
      */
     @SerializedName("system")
     @Expose
@@ -77,7 +77,7 @@ public class BaseList extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive.
-     * 
+     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
      */
     @SerializedName("drive")
     @Expose
@@ -85,7 +85,7 @@ public class BaseList extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-     * 
+     * All items contained in the list.
      */
     public ListItemCollectionPage items;
 
