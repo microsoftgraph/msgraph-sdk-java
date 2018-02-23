@@ -29,54 +29,61 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * A client that communications with an OData service.
+ * A client that communications with an OData service
  */
 public interface IBaseClient {
 
     /**
-     * Gets the authentication provider.
-     * @return The authentication provider.
+     * Gets the authentication provider
+     * 
+     * @return the authentication provider
      */
     IAuthenticationProvider getAuthenticationProvider();
 
     /**
-     * Gets the service root.
-     * @return The service root.
+     * Gets the service root
+     * 
+     * @return the service root
      */
     String getServiceRoot();
 
     /**
-     * Sets the service root.
-     * @param value The service root
+     * Sets the service root
+     * 
+     * @param value the service root
      */
     void setServiceRoot(final String value);
 
     /**
-     * Gets the executors.
-     * @return The executors.
+     * Gets the executors
+     * 
+     * @return the executors
      */
     IExecutors getExecutors();
 
     /**
-     * Gets the HTTP provider.
-     * @return The HTTP provider.
+     * Gets the HTTP provider
+     * 
+     * @return the HTTP provider
      */
     IHttpProvider getHttpProvider();
 
     /**
-     * Gets the logger.
-     * @return The logger.
+     * Gets the logger
+     * 
+     * @return the logger
      */
     ILogger getLogger();
 
     /**
-     * Gets the serializer.
-     * @return The serializer.
+     * Gets the serializer
+     * 
+     * @return the serializer
      */
     ISerializer getSerializer();
 
     /**
-     * Validates this client.
+     * Validates this client
      */
     void validate();
 }

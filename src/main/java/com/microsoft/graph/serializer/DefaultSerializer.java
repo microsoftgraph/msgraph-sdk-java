@@ -34,24 +34,24 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 /**
- * The default serializer implementation for the SDK.
+ * The default serializer implementation for the SDK
  */
 public class DefaultSerializer implements ISerializer {
 
     /**
-     * The instance of the internal serializer.
+     * The instance of the internal serializer
      */
     private final Gson gson;
 
     /**
-     * The logger.
+     * The logger
      */
     private final ILogger logger;
 
     /**
-     * Creates a DefaultSerializer.
+     * Creates a DefaultSerializer
      *
-     * @param logger The logger.
+     * @param logger the logger
      */
     public DefaultSerializer(final ILogger logger) {
         this.logger = logger;
@@ -59,12 +59,12 @@ public class DefaultSerializer implements ISerializer {
     }
 
     /**
-     * Deserializes an object from the input string.
+     * Deserializes an object from the input string
      *
-     * @param inputString The string that stores the representation of the item.
-     * @param clazz       The class of the item to be deserialized.
-     * @param <T>         The type of the item to be deserialized.
-     * @return The deserialized item from the input string.
+     * @param inputString the string that stores the representation of the item
+     * @param clazz       the class of the item to be deserialized
+     * @param <T>         the type of the item to be deserialized
+     * @return            the deserialized item from the input string
      */
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
@@ -107,11 +107,11 @@ public class DefaultSerializer implements ISerializer {
     }
 
     /**
-     * Serializes an object into a string.
+     * Serializes an object into a string
      *
-     * @param serializableObject The object to convert into a string.
-     * @param <T>                The type of the item to be serialized.
-     * @return The string representation of that item.
+     * @param serializableObject the object to convert into a string
+     * @param <T>                the type of the item to be serialized
+     * @return 					 the string representation of that item
      */
     @Override
     public <T> String serializeObject(final T serializableObject) {
@@ -140,9 +140,9 @@ public class DefaultSerializer implements ISerializer {
     /**
      * Recursively populates additional data for each child object
      * 
-     * @param serializableObject The child to get additional data for
-     * @param outJson            The serialized output JSON to add to
-     * @return The serialized output JSON including the additional child data
+     * @param serializableObject the child to get additional data for
+     * @param outJson            the serialized output JSON to add to
+     * @return                   the serialized output JSON including the additional child data
      */
     @SuppressWarnings("unchecked")
 	private JsonObject getChildAdditionalData(IJsonBackedObject serializableObject, JsonObject outJson) {
@@ -199,8 +199,9 @@ public class DefaultSerializer implements ISerializer {
     
     /**
      * Add each non-transient additional data property to the given JSON node
-     * @param additionalDataManager The additional data bag to iterate through
-     * @param jsonNode The JSON node to add the additional data properties to
+     * 
+     * @param additionalDataManager the additional data bag to iterate through
+     * @param jsonNode              the JSON node to add the additional data properties to
      */
     private void addAdditionalDataToJson(AdditionalDataManager additionalDataManager, JsonObject jsonNode) {
     	for (Map.Entry<String, JsonElement> entry : additionalDataManager.entrySet()) {
@@ -221,9 +222,10 @@ public class DefaultSerializer implements ISerializer {
      * Get the derived class for the given JSON object
      * This covers scenarios in which the service may return one of several derived types
      * of a base object, which it defines using the odata.type parameter
-     * @param jsonObject The raw JSON object of the response
-     * @param parentClass The parent class the derived class should inherit from
-     * @return The derived class if found, or null if not applicable
+     * 
+     * @param jsonObject  the raw JSON object of the response
+     * @param parentClass the parent class the derived class should inherit from
+     * @return            the derived class if found, or null if not applicable
      */
     private Class<?> getDerivedClass(JsonObject jsonObject, Class<?> parentClass) {
     	//Identify the odata.type information if provided

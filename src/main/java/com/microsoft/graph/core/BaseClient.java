@@ -29,38 +29,39 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * A client that communications with an OData service.
+ * A client that communications with an OData service
  */
 public abstract class BaseClient implements IBaseClient {
 
     /**
-     * The authentication provider instance.
+     * The authentication provider instance
      */
     private IAuthenticationProvider authenticationProvider;
 
     /**
-     * The executors instance.
+     * The executors instance
      */
     private IExecutors executors;
 
     /**
-     * The HTTP provider instance.
+     * The HTTP provider instance
      */
     private IHttpProvider httpProvider;
 
     /**
-     * The logger.
+     * The logger
      */
     private ILogger logger;
 
     /**
-     * The serializer instance.
+     * The serializer instance
      */
     private ISerializer serializer;
 
     /**
-     * Gets the authentication provider.
-     * @return The authentication provider.
+     * Gets the authentication provider
+     * 
+     * @return The authentication provider
      */
     @Override
     public IAuthenticationProvider getAuthenticationProvider() {
@@ -68,8 +69,9 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Gets the executors.
-     * @return The executors.
+     * Gets the executors
+     * 
+     * @return The executors
      */
     @Override
     public IExecutors getExecutors() {
@@ -77,8 +79,9 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Gets the HTTP provider.
-     * @return The HTTP provider.
+     * Gets the HTTP provider
+     * 
+     * @return The HTTP provider
      */
     @Override
     public IHttpProvider getHttpProvider() {
@@ -86,16 +89,18 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Gets the logger.
-     * @return The logger.
+     * Gets the logger
+     * 
+     * @return The logger
      */
     public ILogger getLogger() {
         return logger;
     }
 
     /**
-     * Gets the serializer.
-     * @return The serializer.
+     * Gets the serializer
+     * 
+     * @return The serializer
      */
     @Override
     public ISerializer getSerializer() {
@@ -103,7 +108,7 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Validates this client.
+     * Validates this client
      */
     @Override
     public void validate() {
@@ -125,40 +130,45 @@ public abstract class BaseClient implements IBaseClient {
     }
 
     /**
-     * Sets the logger.
-     * @param logger The logger.
+     * Sets the logger
+     * 
+     * @param logger The logger
      */
     protected void setLogger(final ILogger logger) {
         this.logger = logger;
     }
 
     /**
-     * Sets the executors.
-     * @param executors The executors.
+     * Sets the executors
+     * 
+     * @param executors The executors
      */
     protected void setExecutors(final IExecutors executors) {
         this.executors = executors;
     }
 
     /**
-     * Sets the authentication provider.
-     * @param authenticationProvider The authentication provider.
+     * Sets the authentication provider
+     * 
+     * @param authenticationProvider The authentication provider
      */
     protected void setAuthenticationProvider(final IAuthenticationProvider authenticationProvider) {
         this.authenticationProvider = authenticationProvider;
     }
 
     /**
-     * Sets the HTTP provider.
-     * @param httpProvider The HTTP provider.
+     * Sets the HTTP provider
+     * 
+     * @param httpProvider The HTTP provider
      */
     protected void setHttpProvider(final IHttpProvider httpProvider) {
         this.httpProvider = httpProvider;
     }
 
     /**
-     * Sets the serializer.
-     * @param serializer The serializer.
+     * Sets the serializer
+     * 
+     * @param serializer The serializer
      */
     public void setSerializer(final ISerializer serializer) {
         this.serializer = serializer;

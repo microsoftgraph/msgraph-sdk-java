@@ -23,7 +23,7 @@
 package com.microsoft.graph.core;
 
 /**
- * The common Graph error codes.
+ * The common Graph error codes
  * See http://graph.microsoft.io/GraphDocuments/en-us/overview/errors.htm for more details.
  */
 public enum GraphErrorCodes {

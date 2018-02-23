@@ -25,23 +25,24 @@ package com.microsoft.graph.http;
 import java.util.List;
 
 /**
- * An unexpected exception from the Graph service.
+ * An unexpected exception from the Graph service
  */
 public class GraphFatalServiceException extends GraphServiceException {
 
     private static final long serialVersionUID = -4974392424026672738L;
 
     /**
-     * Create a fatal Graph service exception.
-     * @param method The method that caused the exception.
-     * @param url The URL.
-     * @param requestHeaders The request headers.
-     * @param requestBody The request body.
-     * @param responseCode The response code.
-     * @param responseMessage The response message.
-     * @param responseHeaders The response headers.
-     * @param error The error response if available.
-     * @param verbose Whether or not to log verbosely.
+     * Create a fatal Graph service exception
+     * 
+     * @param method          the method that caused the exception
+     * @param url             the URL
+     * @param requestHeaders  the request headers
+     * @param requestBody     the request body
+     * @param responseCode    the response code
+     * @param responseMessage the response message
+     * @param responseHeaders the response headers
+     * @param error           the error response if available
+     * @param verbose         whether or not to log verbosely
      */
     protected GraphFatalServiceException(final String method,
                                          final String url,

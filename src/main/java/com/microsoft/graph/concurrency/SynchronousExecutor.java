@@ -26,18 +26,19 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * An executor that runs only on the main thread of an Android application.
+ * An executor that runs only on the main thread of an application
  */
 public class SynchronousExecutor implements Executor {
 
     /**
-     * The current number of synchronously executing actions.
+     * The current number of synchronously executing actions
      */
     private AtomicInteger activeCount = new AtomicInteger(0);
 
     /**
-     * Executes the given Runnable task.
-     * @param runnable The task to run on the main thread.
+     * Executes the given Runnable task
+     * 
+     * @param runnable the task to run on the main thread
      */
     @Override public void execute(final Runnable runnable) {
     	activeCount.incrementAndGet();
@@ -46,8 +47,9 @@ public class SynchronousExecutor implements Executor {
     }
 
     /**
-     * Get the account number of executing actions.
-     * @return The count.
+     * Get the account number of executing actions
+     * 
+     * @return the count
      */
     public int getActiveCount() {
         return activeCount.get();

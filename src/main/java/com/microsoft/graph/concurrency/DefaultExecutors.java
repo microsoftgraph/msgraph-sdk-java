@@ -29,28 +29,29 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * The default executors implementation for the SDK.
+ * The default executors implementation for the SDK
  */
 public class DefaultExecutors implements IExecutors {
 
     /**
-     * The executor for handling background actions.
+     * The executor for handling background actions
      */
     private final ThreadPoolExecutor backgroundExecutor;
 
     /**
-     * The executor for handling foreground actions.
+     * The executor for handling foreground actions
      */
     private final SynchronousExecutor foregroundExecutor;
     
     /**
-     * The logger.
+     * The logger
      */
     private final ILogger logger;
 
     /**
-     * Creates a new instance of the DefaultExecutors.
-     * @param logger The logger.
+     * Creates a new instance of the DefaultExecutors
+     * 
+     * @param logger the logger
      */
     public DefaultExecutors(final ILogger logger) {
     	this.logger = logger;
@@ -59,8 +60,9 @@ public class DefaultExecutors implements IExecutors {
     }
 
     /**
-     * Runs the given Runnable on the background thread.
-     * @param runnable The Runnable to execute.
+     * Runs the given Runnable on the background thread
+     * 
+     * @param runnable the Runnable to execute
      */
     @Override
     public void performOnBackground(final Runnable runnable) {
@@ -70,10 +72,11 @@ public class DefaultExecutors implements IExecutors {
     }
 
     /**
-     * Performs the given callback with the result object.
-     * @param result The result value.
-     * @param callback The callback to call on the foreground with this result.
-     * @param <Result> The result type.
+     * Performs the given callback with the result object
+     * 
+     * @param result   the result value
+     * @param callback the callback to call on the foreground with this result
+     * @param <Result> the result type
      */
     @Override
     public <Result> void performOnForeground(final Result result,
@@ -91,11 +94,12 @@ public class DefaultExecutors implements IExecutors {
     }
 
     /**
-     * Performs the given callback with the result object.
-     * @param progress The progress value.
-     * @param progressMax The progress value.
-     * @param callback The callback to call on the foreground with this result.
-     * @param <Result> The result type.
+     * Performs the given callback with the result object
+     * 
+     * @param progress    the progress value
+     * @param progressMax the progress value
+     * @param callback    the callback to call on the foreground with this result
+     * @param <Result>    the result type
      */
     public <Result> void performOnForeground(final int progress,
                                              final int progressMax,
@@ -114,10 +118,11 @@ public class DefaultExecutors implements IExecutors {
         });
     }
     /**
-     * Performs the given callback with the exception object.
-     * @param exception The exception value.
-     * @param callback The callback to call on the foreground with this exception.
-     * @param <Result> The result type.
+     * Performs the given callback with the exception object
+     * 
+     * @param exception the exception value
+     * @param callback  the callback to call on the foreground with this exception
+     * @param <Result>  the result type
      */
     @Override
     public <Result> void performOnForeground(final ClientException exception,

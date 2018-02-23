@@ -29,36 +29,41 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * The default configuration for a service client.
+ * The default configuration for a service client
  */
 public interface IClientConfig {
     /**
-     * Gets the authentication provider.
-     * @return The authentication provider.
+     * Gets the authentication provider
+     * 
+     * @return the authentication provider
      */
     IAuthenticationProvider getAuthenticationProvider();
 
     /**
-     * Gets the executors.
-     * @return The executors.
+     * Gets the executors
+     * 
+     * @return the executors
      */
     IExecutors getExecutors();
 
     /**
-     * Gets the HTTP provider.
-     * @return The HTTP provider.
+     * Gets the HTTP provider
+     * 
+     * @return the HTTP provider
      */
     IHttpProvider getHttpProvider();
 
     /**
-     * Gets the logger.
-     * @return The logger.
+     * Gets the logger
+     * 
+     * @return the logger
      */
     ILogger getLogger();
 
     /**
-     * Gets the serializer.
-     * @return The serializer.
+     * Gets the serializer
+     * 
+     * @return the serializer
      */
     ISerializer getSerializer();
 }

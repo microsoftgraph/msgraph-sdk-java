@@ -25,19 +25,22 @@ package com.microsoft.graph.concurrency;
 import com.microsoft.graph.core.ClientException;
 
 /**
- * A callback that describes how to deal with success and failure.
- * @param <Result> The result type of the successful action.
+ * A callback that describes how to deal with success and failure
+ * 
+ * @param <Result> the result type of the successful action
  */
 public interface ICallback<Result> {
     /**
-     * How successful results are handled.
-     * @param result The result.
+     * How successful results are handled
+     * 
+     * @param result the result
      */
     void success(final Result result);
 
     /**
-     * How failures are handled.
-     * @param ex The exception.
+     * How failures are handled
+     * 
+     * @param ex the exception
      */
     void failure(final ClientException ex);
 }

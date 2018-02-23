@@ -33,37 +33,37 @@ import java.net.URL;
 import java.util.List;
 
 /**
- * A request against a collection.
+ * A request against a collection
  *
- * @param <T1> The raw response class returned by the service.
- * @param <T2> The class of the collection page.
+ * @param <T1> the raw response class returned by the service
+ * @param <T2> the class of the collection page
  */
 public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
 
     /**
-     * The base request for this collection request.
+     * The base request for this collection request
      */
     private final BaseRequest baseRequest;
 
     /**
-     * The class for the response.
+     * The class for the response
      */
     private final Class<T1> responseClass;
 
     /**
-     * The class for the collection page.
+     * The class for the collection page
      */
     private final Class<T2> collectionPageClass;
 
 
     /**
-     * Create the collection request.
+     * Create the collection request
      *
-     * @param requestUrl          The URL to make the request against.
-     * @param client              The client which can issue the request.
-     * @param options             The options for this request.
-     * @param responseClass       The class for the response.
-     * @param collectionPageClass The class for the collection page.
+     * @param requestUrl          the URL to make the request against
+     * @param client              the client which can issue the request
+     * @param options             the options for this request
+     * @param responseClass       the class for the response
+     * @param collectionPageClass the class for the collection page
      */
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,
@@ -77,10 +77,10 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Send this request.
+     * Send this request
      *
-     * @return The response object.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the response object
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     protected T1 send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
@@ -88,13 +88,13 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Posts this request.
+     * Posts this request
      *
-     * @param serializedObject The object to serialize as the body.
-     * @param <T1>             The type of the callback result.
-     * @param <T2>             The type of the serialized body.
-     * @return The response object.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @param serializedObject the object to serialize as the body
+     * @param <T1>             the type of the callback result
+     * @param <T2>             the type of the serialized body
+     * @return the response object
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @SuppressWarnings("unchecked")
     protected <T1, T2> T1 post(final T2 serializedObject) throws ClientException {
@@ -103,9 +103,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Gets the request URL.
+     * Gets the request URL
      *
-     * @return The request URL.
+     * @return the request URL
      */
     @Override
     public URL getRequestUrl() {
@@ -113,9 +113,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Gets the HTTP method.
+     * Gets the HTTP method
      *
-     * @return The HTTP method.
+     * @return the HTTP method
      */
     @Override
     public HttpMethod getHttpMethod() {
@@ -123,9 +123,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Gets the headers.
+     * Gets the headers
      *
-     * @return The headers.
+     * @return the headers
      */
     @Override
     public List<HeaderOption> getHeaders() {
@@ -133,10 +133,10 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Adds a header to this request.
+     * Adds a header to this request
      *
-     * @param header The name of the header.
-     * @param value  The value of the header.
+     * @param header the name of the header
+     * @param value  the value of the header
      */
     @Override
     public void addHeader(final String header, final String value) {
@@ -144,9 +144,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Sets useCaches parameter to cache the response.
+     * Sets useCaches parameter to cache the response
      *
-     * @param useCaches The value of useCaches.
+     * @param useCaches the value of useCaches
      */
     @Override
     public void setUseCaches(boolean useCaches) {
@@ -154,9 +154,9 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Gets useCaches parameter.
+     * Gets useCaches parameter
      *
-     * @return The value of useCaches.
+     * @return the value of useCaches
      */
     @Override
     public boolean getUseCaches() {
@@ -164,45 +164,45 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
-     * Gets the full list of options for this request.
+     * Gets the full list of options for this request
      *
-     * @return The full list of options for this request.
+     * @return the full list of options for this request
      */
     public List<Option> getOptions() {
         return baseRequest.getOptions();
     }
 
     /**
-     * Adds a query option.
+     * Adds a query option
      *
-     * @param option The query option to add.
+     * @param option the query option to add
      */
     public void addQueryOption(final QueryOption option) {
         baseRequest.getQueryOptions().add(option);
     }
 
     /**
-     * Adds a query option.
+     * Adds a query option
      *
-     * @param option The query option to add.
+     * @param option the query option to add
      */
     public void addFunctionOption(final FunctionOption option) {
         baseRequest.getFunctionOptions().add(option);
     }
 
     /**
-     * Gets the base request for this collection request.
+     * Gets the base request for this collection request
      *
-     * @return The base request for this collection request.
+     * @return the base request for this collection request
      */
     protected BaseRequest getBaseRequest() {
         return baseRequest;
     }
 
     /**
-     * Gets the class for the collection page.
+     * Gets the class for the collection page
      *
-     * @return The class for the collection page.
+     * @return the class for the collection page
      */
     public Class<T2> getCollectionPageClass() {
         return collectionPageClass;

@@ -40,20 +40,20 @@ import java.util.Map;
 public class UrlConnection implements IConnection {
 
     /**
-     * The backing HTTP URL connection instance.
+     * The backing HTTP URL connection instance
      */
     private final HttpURLConnection connection;
 
     /**
-     * The response header cache.
+     * The response header cache
      */
     private HashMap<String, String> headers;
 
     /**
-     * Creates a new UrlConnection.
+     * Creates a new UrlConnection
      *
-     * @param request The IHttpRequest to create the connection from.
-     * @throws IOException An exception occurs if there was a problem creating the connection.
+     * @param request      the IHttpRequest to create the connection from
+     * @throws IOException an exception occurs if there was a problem creating the connection
      */
     public UrlConnection(final IHttpRequest request) throws IOException {
         connection = (HttpURLConnection) request.getRequestUrl().openConnection();
@@ -156,10 +156,10 @@ public class UrlConnection implements IConnection {
     }
 
     /**
-     * Gets the response headers from an HTTP URL connection.
+     * Gets the response headers from an HTTP URL connection
      *
-     * @param connection The HTTP connection.
-     * @return The set of headers names and value.
+     * @param connection the HTTP connection
+     * @return           the set of headers names and value
      */
     private static HashMap<String, String> getResponseHeaders(final HttpURLConnection connection) {
         final HashMap<String, String> headers = new HashMap<>();

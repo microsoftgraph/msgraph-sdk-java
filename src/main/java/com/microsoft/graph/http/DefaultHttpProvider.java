@@ -46,7 +46,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * HTTP provider based off of URLConnection.
+ * HTTP provider based off of URLConnection
  */
 public class DefaultHttpProvider implements IHttpProvider {
 
@@ -61,37 +61,37 @@ public class DefaultHttpProvider implements IHttpProvider {
     static final String JSON_CONTENT_TYPE = "application/json";
 
     /**
-     * The serializer.
+     * The serializer
      */
     private final ISerializer serializer;
 
     /**
-     * The authentication provider.
+     * The authentication provider
      */
     private final IAuthenticationProvider authenticationProvider;
 
     /**
-     * The executors.
+     * The executors
      */
     private final IExecutors executors;
 
     /**
-     * The logger.
+     * The logger
      */
     private final ILogger logger;
 
     /**
-     * The connection factory.
+     * The connection factory
      */
     private IConnectionFactory connectionFactory;
 
     /**
-     * Creates the DefaultHttpProvider.
+     * Creates the DefaultHttpProvider
      *
-     * @param serializer             The serializer.
-     * @param authenticationProvider The authentication provider.
-     * @param executors              The executors.
-     * @param logger                 The logger for diagnostic information.
+     * @param serializer             the serializer
+     * @param authenticationProvider the authentication provider
+     * @param executors              the executors
+     * @param logger                 the logger for diagnostic information
      */
     public DefaultHttpProvider(final ISerializer serializer,
                                final IAuthenticationProvider authenticationProvider,
@@ -105,9 +105,9 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Gets the serializer for this HTTP provider.
+     * Gets the serializer for this HTTP provider
      *
-     * @return The serializer for this provider.
+     * @return the serializer for this provider
      */
     @Override
     public ISerializer getSerializer() {
@@ -115,14 +115,14 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the HTTP request asynchronously.
+     * Sends the HTTP request asynchronously
      *
-     * @param request      The request description.
-     * @param callback     The callback to be called after success or failure.
-     * @param resultClass  The class of the response from the service.
-     * @param serializable The object to send to the service in the body of the request.
-     * @param <Result>     The type of the response object.
-     * @param <Body>       The type of the object to send to the service in the body of the request.
+     * @param request      the request description
+     * @param callback     the callback to be called after success or failure
+     * @param resultClass  the class of the response from the service
+     * @param serializable the object to send to the service in the body of the request
+     * @param <Result>     the type of the response object
+     * @param <Body>       the type of the object to send to the service in the body of the request
      */
     @Override
     public <Result, Body> void send(final IHttpRequest request,
@@ -154,15 +154,15 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the HTTP request.
+     * Sends the HTTP request
      *
-     * @param request      The request description.
-     * @param resultClass  The class of the response from the service.
-     * @param serializable The object to send to the service in the body of the request.
-     * @param <Result>     The type of the response object.
-     * @param <Body>       The type of the object to send to the service in the body of the request.
-     * @return The result from the request.
-     * @throws ClientException An exception occurs if the request was unable to complete for any reason.
+     * @param request      the request description
+     * @param resultClass  the class of the response from the service
+     * @param serializable the object to send to the service in the body of the request
+     * @param <Result>     the type of the response object
+     * @param <Body>       the type of the object to send to the service in the body of the request
+     * @return             the result from the request
+     * @throws ClientException an exception occurs if the request was unable to complete for any reason
      */
     @Override
     public <Result, Body> Result send(final IHttpRequest request,
@@ -173,17 +173,17 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the HTTP request.
+     * Sends the HTTP request
      *
-     * @param request           The request description.
-     * @param resultClass       The class of the response from the service.
-     * @param serializable      The object to send to the service in the body of the request.
-     * @param handler           The handler for stateful response.
-     * @param <Result>          The type of the response object.
-     * @param <Body>            The type of the object to send to the service in the body of the request.
-     * @param <DeserializeType> The response handler for stateful response.
-     * @return The result from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     * @param request           the request description
+     * @param resultClass       the class of the response from the service
+     * @param serializable      the object to send to the service in the body of the request
+     * @param handler           the handler for stateful response
+     * @param <Result>          the type of the response object
+     * @param <Body>            the type of the object to send to the service in the body of the request
+     * @param <DeserializeType> the response handler for stateful response
+     * @return                  the result from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public <Result, Body, DeserializeType> Result send(final IHttpRequest request,
                                                        final Class<Result> resultClass,
@@ -193,18 +193,18 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sends the HTTP request.
+     * Sends the HTTP request
      *
-     * @param request           The request description.
-     * @param resultClass       The class of the response from the service.
-     * @param serializable      The object to send to the service in the body of the request.
-     * @param progress          The progress callback for the request.
-     * @param handler           The handler for stateful response.
-     * @param <Result>          The type of the response object.
-     * @param <Body>            The type of the object to send to the service in the body of the request.
-     * @param <DeserializeType> The response handler for stateful response.
-     * @return The result from the request.
-     * @throws ClientException An exception occurs if the request was unable to complete for any reason.
+     * @param request           the request description
+     * @param resultClass       the class of the response from the service
+     * @param serializable      the object to send to the service in the body of the request
+     * @param progress          the progress callback for the request
+     * @param handler           the handler for stateful response
+     * @param <Result>          the type of the response object
+     * @param <Body>            the type of the object to send to the service in the body of the request
+     * @param <DeserializeType> the response handler for stateful response
+     * @return                  the result from the request
+     * @throws ClientException an exception occurs if the request was unable to complete for any reason
      */
     private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
                                                                        final Class<Result> resultClass,
@@ -350,13 +350,13 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Handles the event of an error response.
+     * Handles the event of an error response
      *
-     * @param request      The request that caused the failed response.
-     * @param serializable The body of the request.
-     * @param connection   The URL connection.
-     * @param <Body>       The type of the request body.
-     * @throws IOException An exception occurs if there were any problems interacting with the connection object.
+     * @param request      the request that caused the failed response
+     * @param serializable the body of the request
+     * @param connection   the URL connection
+     * @param <Body>       the type of the request body
+     * @throws IOException an exception occurs if there were any problems interacting with the connection object
      */
     private <Body> void handleErrorResponse(final IHttpRequest request,
                                             final Body serializable,
@@ -367,23 +367,23 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Handles the cause where the response is a binary stream.
+     * Handles the cause where the response is a binary stream
      *
-     * @param in The input stream from the response.
-     * @return The input stream to return to the caller.
+     * @param in the input stream from the response
+     * @return   the input stream to return to the caller
      */
     private InputStream handleBinaryStream(final InputStream in) {
         return in;
     }
 
     /**
-     * Handles the cause where the response is a JSON object.
+     * Handles the cause where the response is a JSON object
      *
-     * @param in              The input stream from the response.
-     * @param responseHeaders The response headers
-     * @param clazz           The class of the response object.
-     * @param <Result> The type of the response object.
-     * @return The JSON object.
+     * @param in              the input stream from the response
+     * @param responseHeaders the response header
+     * @param clazz           the class of the response object
+     * @param <Result>        the type of the response object
+     * @return                the JSON object
      */
     private <Result> Result handleJsonResponse(final InputStream in, Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
         if (clazz == null) {
@@ -395,11 +395,11 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
     
     /**
-     * Handles the case where the response body is empty.
+     * Handles the case where the response body is empty
      * 
-     * @param responseHeaders The response headers
-     * @param clazz           The type of the response object
-     * @return The JSON object
+     * @param responseHeaders the response headers
+     * @param clazz           the type of the response object
+     * @return                the JSON object
      */
     private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
     	//Create an empty object to attach the response headers to
@@ -409,19 +409,19 @@ public class DefaultHttpProvider implements IHttpProvider {
     }
 
     /**
-     * Sets the connection factory for this provider.
+     * Sets the connection factory for this provider
      *
-     * @param factory The new factory.
+     * @param factory the new factory
      */
     void setConnectionFactory(final IConnectionFactory factory) {
         connectionFactory = factory;
     }
 
     /**
-     * Reads in a stream and converts it into a string.
+     * Reads in a stream and converts it into a string
      *
-     * @param input The response body stream.
-     * @return The string result.
+     * @param input the response body stream
+     * @return      the string result
      */
     public static String streamToString(final InputStream input) {
         final String httpStreamEncoding = "UTF-8";
@@ -440,10 +440,9 @@ public class DefaultHttpProvider implements IHttpProvider {
     /**
      * Searches for the given header in a list of HeaderOptions
      *
-     * @param headers The list of headers to search through
-     * @param header The header name to search for (case insensitive)
-     *
-     * @return true if the header has already been set
+     * @param headers the list of headers to search through
+     * @param header  the header name to search for (case insensitive)
+     * @return        true if the header has already been set
      */
     @VisibleForTesting
     static boolean hasHeader(List<HeaderOption> headers, String header) {

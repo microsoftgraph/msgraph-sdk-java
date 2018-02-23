@@ -29,28 +29,32 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import java.util.List;
 
 /**
- * A page of results from a collection.
- * @param <T1> The type of the item contained within the collection.
- * @param <T2> The type of the request builder for the next page in this collection.
+ * A page of results from a collection
+ * 
+ * @param <T1> the type of the item contained within the collection
+ * @param <T2> the type of the request builder for the next page in this collection
  */
 
 public interface IBaseCollectionPage<T1, T2 extends IRequestBuilder> extends IJsonBackedObject {
 
     /**
-     * Gets the raw representation of this class.
-     * @return The raw representation of this class.
+     * Gets the raw representation of this class
+     * 
+     * @return the raw representation of this class
      */
     JsonObject getRawObject();
 
     /**
-     * Gets the next page request builder.
-     * @return The next page request builder.
+     * Gets the next page request builder
+     * 
+     * @return the next page request builder
      */
     T2 getNextPage();
 
     /**
-     * Gets the current page.
-     * @return The current page.
+     * Gets the current page
+     * 
+     * @return the current page
      */
     List<T1> getCurrentPage();
 }

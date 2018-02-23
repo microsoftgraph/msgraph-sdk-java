@@ -37,9 +37,9 @@ import java.security.InvalidParameterException;
 import java.util.List;
 
 /**
- * ChunkedUpload service provider.
+ * ChunkedUpload service provider
  *
- * @param <UploadType> The upload item type.
+ * @param <UploadType> the upload item type
  */
 public class ChunkedUploadProvider<UploadType> {
 
@@ -49,7 +49,7 @@ public class ChunkedUploadProvider<UploadType> {
     private static final int DEFAULT_CHUNK_SIZE = 5 * 1024 * 1024;
 
     /**
-     * The required chunk size increment by OneDrive service, which is 320 KiB.
+     * The required chunk size increment by OneDrive service, which is 320 KiB
      */
     private static final int REQUIRED_CHUNK_SIZE_INCREMENT = 320 * 1024;
 
@@ -60,48 +60,48 @@ public class ChunkedUploadProvider<UploadType> {
     private static final int MAXIMUM_CHUNK_SIZE = 60 * 1024 * 1024;
 
     /**
-     * The default retry times for a simple chunk upload if failure happened.
+     * The default retry times for a simple chunk upload if failure happened
      */
     private static final int MAXIMUM_RETRY_TIMES = 3;
 
     /**
-     * The client.
+     * The client
      */
     private final IGraphServiceClient client;
 
     /**
-     * The input stream.
+     * The input stream
      */
     private final InputStream inputStream;
 
     /**
-     * The upload session URL.
+     * The upload session URL
      */
     private final String uploadUrl;
 
     /**
-     * The stream size.
+     * The stream size
      */
     private final int streamSize;
 
     /**
-     * The upload response handler.
+     * The upload response handler
      */
     private final ChunkedUploadResponseHandler<UploadType> responseHandler;
 
     /**
-     * The counter for how many bytes have been read from input stream.
+     * The counter for how many bytes have been read from input stream
      */
     private int readSoFar;
 
     /**
-     * Create the ChunkedUploadProvider
+     * Creates the ChunkedUploadProvider
      *
-     * @param uploadSession   The initial upload session.
-     * @param client          The OneDrive client.
-     * @param inputStream     The input stream.
-     * @param streamSize      The stream size.
-     * @param uploadTypeClass The upload type class.
+     * @param uploadSession   the initial upload session
+     * @param client          the Graph client
+     * @param inputStream     the input stream
+     * @param streamSize      the stream size
+     * @param uploadTypeClass the upload type class
      */
     public ChunkedUploadProvider(final UploadSession uploadSession,
                                  final IGraphServiceClient client,
@@ -133,13 +133,13 @@ public class ChunkedUploadProvider<UploadType> {
     }
 
     /**
-     * Upload content to remote upload session based on the input stream.
+     * Uploads content to remote upload session based on the input stream
      *
-     * @param options  The upload options.
-     * @param callback The progress callback invoked during uploading.
-     * @param configs  The optional configurations for the upload options, [0] should be the customized chunk
-     *                 size and the [1] should be the maxRetry for upload retry.
-     * @throws IOException The IO exception happened during upload.
+     * @param options  the upload options
+     * @param callback the progress callback invoked during uploading
+     * @param configs  the optional configurations for the upload options. [0] should be the customized chunk
+     *                 size and [1] should be the maxRetry for upload retry.
+     * @throws IOException the IO exception that occurred during upload
      */
     public void upload(final List<Option> options,
                        final IProgressCallback<UploadType> callback,

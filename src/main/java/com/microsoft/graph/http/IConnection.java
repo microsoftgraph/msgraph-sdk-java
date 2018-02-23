@@ -29,82 +29,82 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * An HTTP connection with a remote server.
+ * An HTTP connection with a remote server
  */
 public interface IConnection {
 
     /**
-     * Follow 3XX series redirects.
+     * Follow 3XX series redirects
      *
-     * @param followRedirects true to follow redirects, false otherwise.
+     * @param followRedirects true to follow redirects, false otherwise
      */
     void setFollowRedirects(final boolean followRedirects);
 
     /**
-     * Adds a header to the connection (Must be done before reading/writing).
+     * Adds a header to the connection (Must be done before reading/writing)
      *
-     * @param headerName  The header name.
-     * @param headerValue The header value.
+     * @param headerName  the header name
+     * @param headerValue the header value
      */
     void addRequestHeader(String headerName, String headerValue);
 
     /**
-     * Gets the stream to write to the request.
+     * Gets the stream to write to the request
      *
-     * @return The output stream to write onto.
-     * @throws IOException if something goes wrong while getting the stream.
+     * @return the output stream to write onto
+     * @throws IOException if something goes wrong while getting the stream
      */
     OutputStream getOutputStream() throws IOException;
 
     /**
-     * Gets the stream to read to the response.
+     * Gets the stream to read to the response
      *
-     * @return The input stream to read from.
-     * @throws IOException if something goes wrong while getting the stream.
+     * @return the input stream to read from
+     * @throws IOException if something goes wrong while getting the stream
      */
     InputStream getInputStream() throws IOException;
 
     /**
-     * Gets the response code for the request.
+     * Gets the response code for the request
      *
-     * @return The HTTP status code.
-     * @throws IOException if something goes wrong while getting the response code.
+     * @return the HTTP status code
+     * @throws IOException if something goes wrong while getting the response code
      */
     int getResponseCode() throws IOException;
 
     /**
-     * Get the response message.
+     * Get the response message
      *
-     * @return The response message.
-     * @throws IOException if something goes wrong while getting the response message.
+     * @return the response message
+     * @throws IOException if something goes wrong while getting the response message
      */
     String getResponseMessage() throws IOException;
 
     /**
-     * Closes this connection, and all streams become inaccessible.
+     * Closes this connection, and all streams become inaccessible
      */
     void close();
 
     /**
-     * Gets the response headers for this connection.
+     * Gets the response headers for this connection
      *
-     * @return The map of headers.
+     * @return the map of headers
      */
     Map<String, String> getHeaders();
     
     Map<String, List<String>> getResponseHeaders();
 
     /**
-     * Gets the HTTP request method.
+     * Gets the HTTP request method
      *
-     * @return The request method.
+     * @return the request method
      */
     String getRequestMethod();
 
     /**
-     * Returns the Content-Length.
+     * Returns the Content-Length
      *
-     * @return The content length.
+     * @return the content length
      */
     int getContentLength();
 

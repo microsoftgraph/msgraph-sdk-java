@@ -23,7 +23,7 @@
 package com.microsoft.graph.http;
 
 /**
- * A request for a binary stream.
+ * A request for a binary stream
  */
 public interface IHttpStreamRequest extends IHttpRequest {
 }

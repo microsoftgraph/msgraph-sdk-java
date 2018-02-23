@@ -29,50 +29,57 @@ import java.net.URL;
 import java.util.List;
 
 /**
- * An HTTP request.
+ * An HTTP request
  */
 public interface IHttpRequest {
 
     /**
-     * Gets the request URL.
-     * @return The request URL.
+     * Gets the request URL
+     * 
+     * @return the request URL
      */
     URL getRequestUrl();
 
     /**
-     * Gets the HTTP method.
-     * @return The HTTP method.
+     * Gets the HTTP method
+     * 
+     * @return the HTTP method
      */
     HttpMethod getHttpMethod();
 
     /**
-     * Gets the headers.
-     * @return The headers.
+     * Gets the headers
+     * 
+     * @return the headers
      */
     List<HeaderOption> getHeaders();
 
     /**
-     * Gets the options.
-     * @return The options.
+     * Gets the options
+     * 
+     * @return the options
      */
     List<Option> getOptions();
 
     /**
-     * Adds a header to this request.
-     * @param header The name of the header.
-     * @param value The value of the header.
+     * Adds a header to this request
+     * 
+     * @param header the name of the header
+     * @param value  the value of the header
      */
     void addHeader(String header, String value);
 
     /**
-     * Sets useCaches parameter to cache the response.
-     * @param useCaches The value of useCaches.
+     * Sets useCaches parameter to cache the response
+     * 
+     * @param useCaches the value of useCaches
      */
     void setUseCaches(boolean useCaches);
 
     /**
-     * Gets useCaches parameter.
-     * @return The value of useCaches.
+     * Gets useCaches parameter
+     * 
+     * @return the value of useCaches
      */
     boolean getUseCaches();
 }

@@ -30,40 +30,40 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A page of results from a collection.
+ * A page of results from a collection
  *
- * @param <T1> The type of the item contained within the collection.
- * @param <T2> The type of the request builder for the next page in this collection
+ * @param <T1> the type of the item contained within the collection
+ * @param <T2> the type of the request builder for the next page in this collection
  */
 public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> implements IBaseCollectionPage<T1, T2> {
 
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     /**
-     * The contents of this page.
+     * The contents of this page
      */
     private final List<T1> pageContents;
 
     /**
-     * The request builder for the next page.
+     * The request builder for the next page
      */
     private final T2 requestBuilder;
 
     /**
-     * The raw representation of this class.
+     * The raw representation of this class
      */
     private JsonObject rawObject;
 
     /**
-     * The serializer.
+     * The serializer
      */
     private ISerializer serializer;
 
     /**
-     * Creates the collection page.
+     * Creates the collection page
      *
-     * @param pageContents       The contents of this page.
-     * @param nextRequestBuilder The request builder for the next page.
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
      */
     public BaseCollectionPage(final List<T1> pageContents, final T2 nextRequestBuilder) {
         // CollectionPages are never directly modifiable, either 'update'/'delete' the specific child or 'add' the new
@@ -73,46 +73,46 @@ public abstract class BaseCollectionPage<T1, T2 extends IRequestBuilder> impleme
     }
 
     /**
-     * Gets the next page request builder.
+     * Gets the next page request builder
      *
-     * @return The next page request builder.
+     * @return the next page request builder
      */
     public T2 getNextPage() {
         return requestBuilder;
     }
 
     /**
-     * Gets the current page.
+     * Gets the current page
      *
-     * @return The current page.
+     * @return the current page
      */
     public List<T1> getCurrentPage() {
         return pageContents;
     }
 
     /**
-     * Gets the raw representation of this class.
+     * Gets the raw representation of this class
      *
-     * @return The raw representation of this class.
+     * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
         return rawObject;
     }
 
     /**
-     * Gets the serializer.
+     * Gets the serializer
      *
-     * @return The serializer.
+     * @return the serializer
      */
     protected ISerializer getSerializer() {
         return serializer;
     }
 
     /**
-     * Sets the raw JSON object.
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer.
-     * @param json       The JSON object to set this object to.
+     * @param serializer the serializer
+     * @param json       the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

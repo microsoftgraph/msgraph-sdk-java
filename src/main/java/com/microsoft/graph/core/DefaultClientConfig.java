@@ -33,40 +33,40 @@ import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * The default configuration for a service client.
+ * The default configuration for a service client
  */
 public abstract class DefaultClientConfig implements IClientConfig {
 
     /**
-     * The authentication provider instance.
+     * The authentication provider instance
      */
     private IAuthenticationProvider authenticationProvider;
 
     /**
-     * The executors instance.
+     * The executors instance
      */
     private IExecutors executors;
 
     /**
-     * The HTTP provider instance.
+     * The HTTP provider instance
      */
     private DefaultHttpProvider httpProvider;
 
     /**
-     * The logger.
+     * The logger
      */
     private ILogger logger;
 
     /**
-     * The serializer instance.
+     * The serializer instance
      */
     private DefaultSerializer serializer;
 
     /**
-     * Creates an instance of this configuration with an authentication provider.
+     * Creates an instance of this configuration with an authentication provider
      *
-     * @param authenticationProvider The authentication provider.
-     * @return The IClientConfig.
+     * @param authenticationProvider the authentication provider
+     * @return the IClientConfig
      */
     public static IClientConfig createWithAuthenticationProvider(
             final IAuthenticationProvider authenticationProvider
@@ -85,9 +85,9 @@ public abstract class DefaultClientConfig implements IClientConfig {
     }
 
     /**
-     * Gets the authentication provider.
+     * Gets the authentication provider
      *
-     * @return The authentication provider.
+     * @return the authentication provider
      */
     @Override
     public IAuthenticationProvider getAuthenticationProvider() {
@@ -95,9 +95,9 @@ public abstract class DefaultClientConfig implements IClientConfig {
     }
 
     /**
-     * Gets the HTTP provider.
+     * Gets the HTTP provider
      *
-     * @return The HTTP provider.
+     * @return the HTTP provider
      */
     @Override
     public IHttpProvider getHttpProvider() {
@@ -112,9 +112,9 @@ public abstract class DefaultClientConfig implements IClientConfig {
     }
 
     /**
-     * Gets the serializer.
+     * Gets the serializer
      *
-     * @return The serializer.
+     * @return the serializer
      */
     @Override
     public ISerializer getSerializer() {
@@ -126,9 +126,9 @@ public abstract class DefaultClientConfig implements IClientConfig {
     }
 
     /**
-     * Gets the executors.
+     * Gets the executors
      *
-     * @return The executors.
+     * @return the executors
      */
     @Override
     public IExecutors getExecutors() {
@@ -140,9 +140,9 @@ public abstract class DefaultClientConfig implements IClientConfig {
     }
 
     /**
-     * Gets the logger.
+     * Gets the logger
      *
-     * @return The logger.
+     * @return the logger
      */
     public ILogger getLogger() {
         if (logger == null) {

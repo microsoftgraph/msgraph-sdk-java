@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The base method request builder class.
+ * The base method request builder class
  */
 public class BaseFunctionRequestBuilder extends BaseRequestBuilder {
 

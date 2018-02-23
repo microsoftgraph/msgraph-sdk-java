@@ -23,14 +23,15 @@
 package com.microsoft.graph.options;
 
 /**
- * A query parameter.
+ * A query parameter
  */
 public class QueryOption extends Option {
 
     /**
-     * Create a query parameter option object.
-     * @param name The name of the query parameter.
-     * @param value The value of the query parameter.
+     * Create a query parameter option object
+     * 
+     * @param name  the name of the query parameter
+     * @param value the value of the query parameter
      */
     public QueryOption(final String name, final Object value) {
         super(name, value);

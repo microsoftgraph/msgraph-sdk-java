@@ -37,16 +37,17 @@ import java.util.Iterator;
 public class EnumSetSerializer {
 
     /**
-     * Not available for instantiation.
+     * Not available for instantiation
      */
     private EnumSetSerializer() {
     }
 
     /**
      * Deserializes a comma-delimited string of enum values
-     * @param type The type
-     * @param jsonStrToDeserialize The string to deserialize
-     * @return EnumSet of values
+     * 
+     * @param type                 the type
+     * @param jsonStrToDeserialize the string to deserialize
+     * @return                     EnumSet of values
      */
     public static EnumSet<?> deserialize(Type type, String jsonStrToDeserialize) {
             Gson gson = new Gson();
@@ -56,8 +57,9 @@ public class EnumSetSerializer {
 
     /**
      * Serializes an EnumSet into a comma-delimited string
-     * @param src The source EnumSet
-     * @return A comma-delimited string of enum values
+     * 
+     * @param src the source EnumSet
+     * @return    a comma-delimited string of enum values
      */
     public static JsonPrimitive serialize(EnumSet<?> src) {
         String serializedString = "";

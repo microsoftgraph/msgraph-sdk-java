@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The base method request builder class used for POST actions.
+ * The base method request builder class used for POST actions
  */
 public class BaseActionRequestBuilder extends BaseRequestBuilder {
 
@@ -39,7 +39,7 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
     /**
      * Checks if the parameter map contains a object accessible by the supplied key
      *
-     * @param name The key used to access the stored body parameter
+     * @param name the key used to access the stored body parameter
      * @return true, if {@link BaseActionRequestBuilder#bodyParams} contains the key, otherwise false
      */
     protected boolean hasParameter(final String name) {
@@ -50,8 +50,8 @@ public class BaseActionRequestBuilder extends BaseRequestBuilder {
      * Gets the requested parameter if present, otherwise null
      *
      * @param name the named object to retrieve
-     * @param <T>  The type to which this object should be cast
-     * @return The stored instance of T, otherwise null
+     * @param <T>  the type to which this object should be cast
+     * @return the stored instance of T, otherwise null
      */
     @SuppressWarnings("unchecked")
     protected <T> T getParameter(final String name) {

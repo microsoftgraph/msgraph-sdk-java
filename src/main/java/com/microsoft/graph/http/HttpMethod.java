@@ -23,7 +23,7 @@
 package com.microsoft.graph.http;
 
 /**
- * The HTTP method for a request.
+ * The HTTP method for a request
  */
 public enum HttpMethod {
 
