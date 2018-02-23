@@ -30,6 +30,11 @@ public class WorkbookFunctionsDiscRequestBuilder extends BaseWorkbookFunctionsDi
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param settlement The settlement
+     * @param maturity The maturity
+     * @param pr The pr
+     * @param redemption The redemption
+     * @param basis The basis
      */
     public WorkbookFunctionsDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, pr, redemption, basis);

@@ -30,6 +30,13 @@ public class WorkbookFunctionsAmorLincRequestBuilder extends BaseWorkbookFunctio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param cost The cost
+     * @param datePurchased The datePurchased
+     * @param firstPeriod The firstPeriod
+     * @param salvage The salvage
+     * @param period The period
+     * @param rate The rate
+     * @param basis The basis
      */
     public WorkbookFunctionsAmorLincRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, cost, datePurchased, firstPeriod, salvage, period, rate, basis);

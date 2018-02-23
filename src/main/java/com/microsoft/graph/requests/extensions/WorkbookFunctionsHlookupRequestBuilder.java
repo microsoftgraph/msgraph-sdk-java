@@ -30,6 +30,10 @@ public class WorkbookFunctionsHlookupRequestBuilder extends BaseWorkbookFunction
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param lookupValue The lookupValue
+     * @param tableArray The tableArray
+     * @param rowIndexNum The rowIndexNum
+     * @param rangeLookup The rangeLookup
      */
     public WorkbookFunctionsHlookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement rowIndexNum, final com.google.gson.JsonElement rangeLookup) {
         super(requestUrl, client, requestOptions, lookupValue, tableArray, rowIndexNum, rangeLookup);

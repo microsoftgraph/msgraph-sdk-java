@@ -30,6 +30,11 @@ public class WorkbookRangeSortApplyRequestBuilder extends BaseWorkbookRangeSortA
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param fields The fields
+     * @param matchCase The matchCase
+     * @param hasHeaders The hasHeaders
+     * @param orientation The orientation
+     * @param method The method
      */
     public WorkbookRangeSortApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method) {
         super(requestUrl, client, requestOptions, fields, matchCase, hasHeaders, orientation, method);

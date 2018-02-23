@@ -30,6 +30,9 @@ public class WorkbookFunctionsXirrRequestBuilder extends BaseWorkbookFunctionsXi
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param values The values
+     * @param dates The dates
+     * @param guess The guess
      */
     public WorkbookFunctionsXirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions, values, dates, guess);

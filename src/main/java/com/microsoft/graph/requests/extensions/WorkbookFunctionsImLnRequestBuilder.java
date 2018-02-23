@@ -30,6 +30,7 @@ public class WorkbookFunctionsImLnRequestBuilder extends BaseWorkbookFunctionsIm
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param inumber The inumber
      */
     public WorkbookFunctionsImLnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions, inumber);

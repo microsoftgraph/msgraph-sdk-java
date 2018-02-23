@@ -30,6 +30,7 @@ public class WorkbookFunctionsSheetsRequestBuilder extends BaseWorkbookFunctions
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param reference The reference
      */
     public WorkbookFunctionsSheetsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement reference) {
         super(requestUrl, client, requestOptions, reference);

@@ -30,6 +30,8 @@ public class WorkbookFunctionsPermutRequestBuilder extends BaseWorkbookFunctions
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
+     * @param numberChosen The numberChosen
      */
     public WorkbookFunctionsPermutRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions, number, numberChosen);

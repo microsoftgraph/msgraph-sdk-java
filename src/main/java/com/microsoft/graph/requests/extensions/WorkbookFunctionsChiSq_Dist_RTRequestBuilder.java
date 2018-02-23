@@ -30,6 +30,8 @@ public class WorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseWorkbookFu
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param x The x
+     * @param degFreedom The degFreedom
      */
     public WorkbookFunctionsChiSq_Dist_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions, x, degFreedom);

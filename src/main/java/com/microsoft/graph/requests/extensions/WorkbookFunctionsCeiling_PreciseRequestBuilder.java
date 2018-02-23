@@ -30,6 +30,8 @@ public class WorkbookFunctionsCeiling_PreciseRequestBuilder extends BaseWorkbook
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
+     * @param significance The significance
      */
     public WorkbookFunctionsCeiling_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions, number, significance);

@@ -30,6 +30,9 @@ public class WorkbookFunctionsConvertRequestBuilder extends BaseWorkbookFunction
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
+     * @param fromUnit The fromUnit
+     * @param toUnit The toUnit
      */
     public WorkbookFunctionsConvertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement fromUnit, final com.google.gson.JsonElement toUnit) {
         super(requestUrl, client, requestOptions, number, fromUnit, toUnit);

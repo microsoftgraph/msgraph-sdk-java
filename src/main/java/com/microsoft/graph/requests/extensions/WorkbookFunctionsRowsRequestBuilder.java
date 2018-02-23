@@ -30,6 +30,7 @@ public class WorkbookFunctionsRowsRequestBuilder extends BaseWorkbookFunctionsRo
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param array The array
      */
     public WorkbookFunctionsRowsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array) {
         super(requestUrl, client, requestOptions, array);

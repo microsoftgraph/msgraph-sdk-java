@@ -30,6 +30,8 @@ public class WorkbookFunctionsPercentile_IncRequestBuilder extends BaseWorkbookF
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param array The array
+     * @param k The k
      */
     public WorkbookFunctionsPercentile_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions, array, k);

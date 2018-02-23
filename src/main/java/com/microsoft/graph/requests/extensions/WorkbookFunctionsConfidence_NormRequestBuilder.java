@@ -30,6 +30,9 @@ public class WorkbookFunctionsConfidence_NormRequestBuilder extends BaseWorkbook
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param alpha The alpha
+     * @param standardDev The standardDev
+     * @param size The size
      */
     public WorkbookFunctionsConfidence_NormRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
         super(requestUrl, client, requestOptions, alpha, standardDev, size);

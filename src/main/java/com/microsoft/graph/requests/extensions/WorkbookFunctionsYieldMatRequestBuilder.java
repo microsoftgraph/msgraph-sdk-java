@@ -30,6 +30,12 @@ public class WorkbookFunctionsYieldMatRequestBuilder extends BaseWorkbookFunctio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param settlement The settlement
+     * @param maturity The maturity
+     * @param issue The issue
+     * @param rate The rate
+     * @param pr The pr
+     * @param basis The basis
      */
     public WorkbookFunctionsYieldMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, issue, rate, pr, basis);

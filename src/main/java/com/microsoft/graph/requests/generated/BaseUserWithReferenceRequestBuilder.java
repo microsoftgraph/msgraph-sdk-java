@@ -37,6 +37,8 @@ public class BaseUserWithReferenceRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return The IUserWithReferenceRequest instance
      */
     public IUserWithReferenceRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseUserWithReferenceRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific options instead of the existing options
+	 *
+     * @param requestOptions The options for this request
+     * @return The IUserWithReferenceRequest instance
      */
     public IUserWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new UserWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);

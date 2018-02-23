@@ -30,6 +30,7 @@ public class WorkbookFunctionsErf_PreciseRequestBuilder extends BaseWorkbookFunc
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param x The x
      */
     public WorkbookFunctionsErf_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions, x);

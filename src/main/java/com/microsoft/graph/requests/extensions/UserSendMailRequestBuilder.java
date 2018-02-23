@@ -30,6 +30,8 @@ public class UserSendMailRequestBuilder extends BaseUserSendMailRequestBuilder i
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param message The message
+     * @param saveToSentItems The saveToSentItems
      */
     public UserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Message message, final Boolean saveToSentItems) {
         super(requestUrl, client, requestOptions, message, saveToSentItems);

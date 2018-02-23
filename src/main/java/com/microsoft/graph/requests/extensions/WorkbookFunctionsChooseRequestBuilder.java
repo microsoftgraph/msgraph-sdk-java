@@ -30,6 +30,8 @@ public class WorkbookFunctionsChooseRequestBuilder extends BaseWorkbookFunctions
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param indexNum The indexNum
+     * @param values The values
      */
     public WorkbookFunctionsChooseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement indexNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions, indexNum, values);

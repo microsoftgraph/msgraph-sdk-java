@@ -30,6 +30,8 @@ public class WorkbookFunctionsSubtotalRequestBuilder extends BaseWorkbookFunctio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param functionNum The functionNum
+     * @param values The values
      */
     public WorkbookFunctionsSubtotalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement functionNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions, functionNum, values);

@@ -30,6 +30,8 @@ public class WorkbookChartSetDataRequestBuilder extends BaseWorkbookChartSetData
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param sourceData The sourceData
+     * @param seriesBy The seriesBy
      */
     public WorkbookChartSetDataRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         super(requestUrl, client, requestOptions, sourceData, seriesBy);

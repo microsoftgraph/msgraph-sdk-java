@@ -31,6 +31,8 @@ public interface IBaseDirectoryObjectReferenceRequestBuilder extends IRequestBui
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions The options for this request
      */
     IDirectoryObjectReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

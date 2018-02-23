@@ -30,6 +30,7 @@ public class WorkbookChartItemAtRequestBuilder extends BaseWorkbookChartItemAtRe
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param index The index
      */
     public WorkbookChartItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions, index);

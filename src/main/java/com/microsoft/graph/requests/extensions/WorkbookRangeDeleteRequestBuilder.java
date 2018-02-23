@@ -30,6 +30,7 @@ public class WorkbookRangeDeleteRequestBuilder extends BaseWorkbookRangeDeleteRe
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param shift The shift
      */
     public WorkbookRangeDeleteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String shift) {
         super(requestUrl, client, requestOptions, shift);

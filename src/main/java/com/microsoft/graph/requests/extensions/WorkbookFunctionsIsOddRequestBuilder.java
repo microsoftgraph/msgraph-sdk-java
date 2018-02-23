@@ -30,6 +30,7 @@ public class WorkbookFunctionsIsOddRequestBuilder extends BaseWorkbookFunctionsI
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
      */
     public WorkbookFunctionsIsOddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions, number);

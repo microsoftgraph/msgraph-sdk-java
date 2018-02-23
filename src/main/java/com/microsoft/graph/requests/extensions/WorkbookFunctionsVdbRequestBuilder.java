@@ -30,6 +30,13 @@ public class WorkbookFunctionsVdbRequestBuilder extends BaseWorkbookFunctionsVdb
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param cost The cost
+     * @param salvage The salvage
+     * @param life The life
+     * @param startPeriod The startPeriod
+     * @param endPeriod The endPeriod
+     * @param factor The factor
+     * @param noSwitch The noSwitch
      */
     public WorkbookFunctionsVdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
         super(requestUrl, client, requestOptions, cost, salvage, life, startPeriod, endPeriod, factor, noSwitch);

@@ -30,6 +30,7 @@ public class WorkbookFunctionsUpperRequestBuilder extends BaseWorkbookFunctionsU
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param text The text
      */
     public WorkbookFunctionsUpperRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions, text);

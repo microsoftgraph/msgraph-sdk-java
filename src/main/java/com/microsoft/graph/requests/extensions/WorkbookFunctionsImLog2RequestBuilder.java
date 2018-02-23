@@ -30,6 +30,7 @@ public class WorkbookFunctionsImLog2RequestBuilder extends BaseWorkbookFunctions
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param inumber The inumber
      */
     public WorkbookFunctionsImLog2RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions, inumber);

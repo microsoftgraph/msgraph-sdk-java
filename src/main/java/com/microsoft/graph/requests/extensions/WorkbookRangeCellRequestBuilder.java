@@ -30,6 +30,8 @@ public class WorkbookRangeCellRequestBuilder extends BaseWorkbookRangeCellReques
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param row The row
+     * @param column The column
      */
     public WorkbookRangeCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions, row, column);

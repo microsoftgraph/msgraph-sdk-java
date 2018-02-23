@@ -30,6 +30,10 @@ public class WorkbookFunctionsNetworkDays_IntlRequestBuilder extends BaseWorkboo
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param startDate The startDate
+     * @param endDate The endDate
+     * @param weekend The weekend
+     * @param holidays The holidays
      */
     public WorkbookFunctionsNetworkDays_IntlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions, startDate, endDate, weekend, holidays);

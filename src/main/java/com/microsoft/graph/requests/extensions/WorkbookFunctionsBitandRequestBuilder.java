@@ -30,6 +30,8 @@ public class WorkbookFunctionsBitandRequestBuilder extends BaseWorkbookFunctions
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number1 The number1
+     * @param number2 The number2
      */
     public WorkbookFunctionsBitandRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
         super(requestUrl, client, requestOptions, number1, number2);

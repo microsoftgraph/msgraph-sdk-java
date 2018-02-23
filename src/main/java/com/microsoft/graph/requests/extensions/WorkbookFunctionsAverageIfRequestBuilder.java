@@ -30,6 +30,9 @@ public class WorkbookFunctionsAverageIfRequestBuilder extends BaseWorkbookFuncti
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param range The range
+     * @param criteria The criteria
+     * @param averageRange The averageRange
      */
     public WorkbookFunctionsAverageIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement averageRange) {
         super(requestUrl, client, requestOptions, range, criteria, averageRange);

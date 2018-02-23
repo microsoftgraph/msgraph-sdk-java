@@ -30,6 +30,11 @@ public class WorkbookFunctionsHypGeom_DistRequestBuilder extends BaseWorkbookFun
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param sampleS The sampleS
+     * @param numberSample The numberSample
+     * @param populationS The populationS
+     * @param numberPop The numberPop
+     * @param cumulative The cumulative
      */
     public WorkbookFunctionsHypGeom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement sampleS, final com.google.gson.JsonElement numberSample, final com.google.gson.JsonElement populationS, final com.google.gson.JsonElement numberPop, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions, sampleS, numberSample, populationS, numberPop, cumulative);

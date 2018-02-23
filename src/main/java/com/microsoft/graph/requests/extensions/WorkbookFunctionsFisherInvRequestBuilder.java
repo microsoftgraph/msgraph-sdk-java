@@ -30,6 +30,7 @@ public class WorkbookFunctionsFisherInvRequestBuilder extends BaseWorkbookFuncti
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param y The y
      */
     public WorkbookFunctionsFisherInvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement y) {
         super(requestUrl, client, requestOptions, y);

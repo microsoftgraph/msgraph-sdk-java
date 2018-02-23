@@ -41,6 +41,7 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseWorkbookRangeCo
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param count The count
      */
     public WorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions, count);

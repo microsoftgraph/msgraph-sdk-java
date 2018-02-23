@@ -37,6 +37,8 @@ public class BaseDirectoryObjectWithReferenceRequestBuilder extends BaseRequestB
 
     /**
      * Creates the request
+     *
+     * @return The IDirectoryObjectWithReferenceRequest instance
      */
     public IDirectoryObjectWithReferenceRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseDirectoryObjectWithReferenceRequestBuilder extends BaseRequestB
 
     /**
      * Creates the request with specific options instead of the existing options
+	 *
+     * @param requestOptions The options for this request
+     * @return The IDirectoryObjectWithReferenceRequest instance
      */
     public IDirectoryObjectWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DirectoryObjectWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);

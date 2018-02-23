@@ -30,6 +30,9 @@ public class WorkbookFunctionsDays360RequestBuilder extends BaseWorkbookFunction
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param startDate The startDate
+     * @param endDate The endDate
+     * @param method The method
      */
     public WorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
         super(requestUrl, client, requestOptions, startDate, endDate, method);

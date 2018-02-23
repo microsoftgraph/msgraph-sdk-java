@@ -30,6 +30,11 @@ public class WorkbookFunctionsReceivedRequestBuilder extends BaseWorkbookFunctio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param settlement The settlement
+     * @param maturity The maturity
+     * @param investment The investment
+     * @param discount The discount
+     * @param basis The basis
      */
     public WorkbookFunctionsReceivedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, investment, discount, basis);

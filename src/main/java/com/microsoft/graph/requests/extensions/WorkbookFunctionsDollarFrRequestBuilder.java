@@ -30,6 +30,8 @@ public class WorkbookFunctionsDollarFrRequestBuilder extends BaseWorkbookFunctio
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param decimalDollar The decimalDollar
+     * @param fraction The fraction
      */
     public WorkbookFunctionsDollarFrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement decimalDollar, final com.google.gson.JsonElement fraction) {
         super(requestUrl, client, requestOptions, decimalDollar, fraction);

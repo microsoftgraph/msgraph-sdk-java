@@ -30,6 +30,8 @@ public class WorkbookFunctionsDollarRequestBuilder extends BaseWorkbookFunctions
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
+     * @param decimals The decimals
      */
     public WorkbookFunctionsDollarRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
         super(requestUrl, client, requestOptions, number, decimals);

@@ -30,6 +30,7 @@ public class WorkbookFunctionsIntRequestBuilder extends BaseWorkbookFunctionsInt
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param number The number
      */
     public WorkbookFunctionsIntRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions, number);

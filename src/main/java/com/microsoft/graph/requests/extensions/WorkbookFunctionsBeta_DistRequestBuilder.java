@@ -30,6 +30,12 @@ public class WorkbookFunctionsBeta_DistRequestBuilder extends BaseWorkbookFuncti
      * @param requestUrl The request url
      * @param client The service client
      * @param requestOptions The options for this request
+     * @param x The x
+     * @param alpha The alpha
+     * @param beta The beta
+     * @param cumulative The cumulative
+     * @param a The a
+     * @param b The b
      */
     public WorkbookFunctionsBeta_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
         super(requestUrl, client, requestOptions, x, alpha, beta, cumulative, a, b);
