@@ -10,7 +10,7 @@ import com.microsoft.graph.options.Option;
 /**
  * The class for the CustomRequestBuilder
  *
- * @throws ClientException If the provided URL is malformed, the client exception will contain a MalformedURLException
+ * If the provided URL is malformed, the ClientException will contain a MalformedURLException
  */
 public class CustomRequestBuilder<T> extends BaseRequestBuilder {
 	public final Class<T> responseType; 
