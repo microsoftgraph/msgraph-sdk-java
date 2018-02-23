@@ -27,7 +27,7 @@ public class FileAttachmentRequest extends BaseFileAttachmentRequest implements 
     /**
      * The request for the FileAttachment
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

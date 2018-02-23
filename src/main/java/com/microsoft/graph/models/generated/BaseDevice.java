@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
 
-    public BaseDevice() {
-        oDataType = "microsoft.graph.device";
-    }
-
     /**
      * The Account Enabled.
      * true if the account is enabled; otherwise, false. Required.
@@ -69,7 +65,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Metadata.
-     * 
+     * For interal use only. Set to null.
      */
     @SerializedName("deviceMetadata")
     @Expose
@@ -77,7 +73,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Version.
-     * 
+     * For interal use only.
      */
     @SerializedName("deviceVersion")
     @Expose
@@ -149,7 +145,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * 
+     * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
      */
     @SerializedName("trustType")
     @Expose

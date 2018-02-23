@@ -31,7 +31,7 @@ import java.util.Map;
 public class BasePersonOrGroupColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -41,13 +41,9 @@ public class BasePersonOrGroupColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BasePersonOrGroupColumn() {
-        oDataType = "microsoft.graph.personOrGroupColumn";
-    }
-
     /**
      * The Allow Multiple Selection.
-     * 
+     * Indicates whether multiple values can be selected from the source.
      */
     @SerializedName("allowMultipleSelection")
     @Expose
@@ -55,7 +51,7 @@ public class BasePersonOrGroupColumn implements IJsonBackedObject {
 
     /**
      * The Display As.
-     * 
+     * How to display the information about the person or group chosen. See below.
      */
     @SerializedName("displayAs")
     @Expose
@@ -63,7 +59,7 @@ public class BasePersonOrGroupColumn implements IJsonBackedObject {
 
     /**
      * The Choose From Type.
-     * 
+     * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
      */
     @SerializedName("chooseFromType")
     @Expose

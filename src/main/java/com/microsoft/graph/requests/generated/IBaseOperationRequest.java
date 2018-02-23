@@ -28,14 +28,14 @@ public interface IBaseOperationRequest extends IHttpRequest {
      * Gets the Operation from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getOperation(final ICallback<Operation> callback);
+    void get(final ICallback<Operation> callback);
 
     /**
      * Gets the Operation from the service
      * @return The Operation from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    Operation getOperation() throws ClientException;
+    Operation get() throws ClientException;
 
     /**
      * Delete this item from the service.

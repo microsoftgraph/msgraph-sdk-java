@@ -27,15 +27,15 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
     /**
      * The request for the WorkbookChartLegend
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseWorkbookChartLegendRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<WorkbookChartLegend> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

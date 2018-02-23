@@ -107,7 +107,7 @@ public abstract class BaseRequest implements IHttpRequest {
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
                        final List<? extends Option> options,
-                       final Class responseClass) {
+                       final Class<?> responseClass) {
         this.requestUrl = requestUrl;
         this.client = client;
         this.responseClass = responseClass;
@@ -153,8 +153,13 @@ public abstract class BaseRequest implements IHttpRequest {
         try {
             return new URL(uriBuilder.build().toString());
         } catch (final MalformedURLException e) {
-            throw new ClientException("Invalid URL: " + uriBuilder.toString(), e, GraphErrorCodes.INVALID_REQUEST);
+        	if (this instanceof CustomRequest) {
+        		this.getClient().getLogger().logError("Invalid custom URL: " + uriBuilder.toString(), e);
+        	} else {
+        		throw new ClientException("Invalid URL: " + uriBuilder.toString(), e);
+        	}
         }
+		return null;
     }
 
     private String addFunctionParameters() {
@@ -344,7 +349,8 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return The response type.
      */
-    public Class getResponseType() {
+    @SuppressWarnings("unchecked")
+	public Class getResponseType() {
         return responseClass;
     }
 }

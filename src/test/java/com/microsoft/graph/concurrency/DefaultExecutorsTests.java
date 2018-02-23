@@ -2,14 +2,15 @@ package com.microsoft.graph.concurrency;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.MockLogger;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
@@ -47,7 +48,7 @@ public class DefaultExecutorsTests {
             }
         });
 
-        callback._completionWaiter.waitForSignal();
+        callback.waitForCompletion();;
         assertTrue(callback._successCalled.get());
         assertEquals(expectedResult, callback._successResult.get());
         assertEquals(1,mLogger.getLogMessages().size());
@@ -62,7 +63,7 @@ public class DefaultExecutorsTests {
 
         defaultExecutors.performOnForeground(expectedResult,callback);
 
-        callback._completionWaiter.waitForSignal();
+        callback.waitForCompletion();
         assertTrue(callback._successCalled.get());
         assertFalse(callback._failureCalled.get());
         assertEquals(expectedResult, callback._successResult.get());
@@ -79,7 +80,7 @@ public class DefaultExecutorsTests {
 
         defaultExecutors.performOnForeground(expectedCurrentValue, expectedMaxValue, callback);
 
-        callback._completionWaiter.waitForSignal();
+        callback.waitForCompletion();;
         assertFalse(callback._successCalled.get());
         assertFalse(callback._failureCalled.get());
         assertTrue(callback._progressCalled.get());
@@ -95,20 +96,19 @@ public class DefaultExecutorsTests {
         final String expectedLogMessage = "Starting foreground task, current active count:0, with exception com.microsoft.graph.core.ClientException: client exception message";
         final ExecutorTestCallback<String> callback = new ExecutorTestCallback<>();
 
-        defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null, GraphErrorCodes.INVALID_ACCEPT_TYPE),
+        defaultExecutors.performOnForeground(new ClientException(expectedExceptionMessage,null),
                 callback);
 
-        callback._completionWaiter.waitForSignal();
+        callback.waitForCompletion();
         assertFalse(callback._successCalled.get());
         assertTrue(callback._failureCalled.get());
         assertEquals(expectedExceptionMessage, callback._exceptionResult.get().getMessage());
-        assertTrue(callback._exceptionResult.get().isError(GraphErrorCodes.INVALID_ACCEPT_TYPE));
         assertEquals(1,mLogger.getLogMessages().size());
         assertTrue(mLogger.hasMessage(expectedLogMessage));
     }
 
 	private class ExecutorTestCallback<T> implements IProgressCallback<T> {
-        SimpleWaiter _completionWaiter = new SimpleWaiter();
+        CountDownLatch latch = new CountDownLatch(1);
 
         AtomicBoolean _successCalled = new AtomicBoolean(false);
         AtomicReference<T> _successResult = new AtomicReference<>();
@@ -124,14 +124,14 @@ public class DefaultExecutorsTests {
         public void success(final T result) {
             _successCalled.set(true);
             _successResult.set(result);
-            _completionWaiter.signal();
+            latch.countDown();
         }
 
         @Override
         public void failure(final ClientException ex) {
             _failureCalled.set(true);
             _exceptionResult.set(ex);
-            _completionWaiter.signal();
+            latch.countDown();
         }
 
         @Override
@@ -139,7 +139,16 @@ public class DefaultExecutorsTests {
             _progressCalled.set(true);
             _progressResultCurrent.set(current);
             _progressResultMax.set(max);
-            _completionWaiter.signal();
+            latch.countDown();
+        }
+        
+        void waitForCompletion() {
+            try {
+                // use a big enough wait to handle a big gc
+                Assert.assertTrue(latch.await(20, TimeUnit.SECONDS));
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

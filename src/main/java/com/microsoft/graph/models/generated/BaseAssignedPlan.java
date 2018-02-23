@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseAssignedPlan implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,10 +39,6 @@ public class BaseAssignedPlan implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseAssignedPlan() {
-        oDataType = "microsoft.graph.assignedPlan";
     }
 
     /**
@@ -55,7 +51,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * For example, “Enabled”.
+     * For example, "Enabled".
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -63,7 +59,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Service.
-     * The name of the service; for example, “Exchange”.
+     * The name of the service; for example, "Exchange".
      */
     @SerializedName("service")
     @Expose

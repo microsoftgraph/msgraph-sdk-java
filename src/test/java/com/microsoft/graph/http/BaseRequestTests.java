@@ -76,7 +76,8 @@ public class BaseRequestTests {
     public void testSendWithCallback() {
         final AtomicBoolean success = new AtomicBoolean(false);
         final AtomicBoolean failure = new AtomicBoolean(false);
-        ICallback callback = new ICallback() {
+
+		ICallback<Object> callback = new ICallback<Object>() {
             @Override
             public void success(Object o) {
                 success.set(true);

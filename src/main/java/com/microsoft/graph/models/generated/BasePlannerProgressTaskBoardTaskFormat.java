@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePlannerProgressTaskBoardTaskFormat extends Entity implements IJsonBackedObject {
 
 
-    public BasePlannerProgressTaskBoardTaskFormat() {
-        oDataType = "microsoft.graph.plannerProgressTaskBoardTaskFormat";
-    }
-
     /**
      * The Order Hint.
      * Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.

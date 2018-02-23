@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseFolder implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,10 +39,6 @@ public class BaseFolder implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseFolder() {
-        oDataType = "microsoft.graph.folder";
     }
 
     /**
@@ -55,7 +51,7 @@ public class BaseFolder implements IJsonBackedObject {
 
     /**
      * The View.
-     * 
+     * A collection of properties defining the recommended view for the folder.
      */
     @SerializedName("view")
     @Expose

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseDrive() {
-        oDataType = "microsoft.graph.drive";
-    }
-
     /**
      * The Drive Type.
      * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
@@ -69,7 +65,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The System.
-     * 
+     * If present, indicates that this is a system-managed drive. Read-only.
      */
     @SerializedName("system")
     @Expose

@@ -27,15 +27,15 @@ public class BaseDomainDnsCnameRecordRequest extends BaseRequest implements IBas
     /**
      * The request for the DomainDnsCnameRecord
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseDomainDnsCnameRecordRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<DomainDnsCnameRecord> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

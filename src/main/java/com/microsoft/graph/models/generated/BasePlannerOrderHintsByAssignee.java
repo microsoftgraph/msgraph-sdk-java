@@ -28,10 +28,10 @@ import java.util.Map;
 /**
  * The class for the Base Planner Order Hints By Assignee.
  */
-public class BasePlannerOrderHintsByAssignee implements IJsonBackedObject {
+public class BasePlannerOrderHintsByAssignee extends HashMap<String, String> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,10 +39,6 @@ public class BasePlannerOrderHintsByAssignee implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BasePlannerOrderHintsByAssignee() {
-        oDataType = "microsoft.graph.plannerOrderHintsByAssignee";
     }
 
 

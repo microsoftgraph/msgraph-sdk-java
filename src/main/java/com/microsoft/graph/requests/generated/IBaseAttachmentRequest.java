@@ -28,14 +28,14 @@ public interface IBaseAttachmentRequest extends IHttpRequest {
      * Gets the Attachment from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getAttachment(final ICallback<Attachment> callback);
+    void get(final ICallback<Attachment> callback);
 
     /**
      * Gets the Attachment from the service
      * @return The Attachment from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    Attachment getAttachment() throws ClientException;
+    Attachment get() throws ClientException;
 
     /**
      * Delete this item from the service.

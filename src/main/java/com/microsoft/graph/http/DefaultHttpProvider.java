@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.http;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
@@ -35,6 +36,7 @@ import com.microsoft.graph.serializer.ISerializer;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -211,7 +213,6 @@ public class DefaultHttpProvider implements IHttpProvider {
                                                                        final IStatefulResponseHandler<Result, DeserializeType> handler)
             throws ClientException {
         final int defaultBufferSize = 4096;
-        final String contentLengthHeaderName = "Content-Length";
         final String binaryContentType = "application/octet-stream";
 
         try {
@@ -233,7 +234,14 @@ public class DefaultHttpProvider implements IHttpProvider {
                 final byte[] bytesToWrite;
                 connection.addRequestHeader("Accept", "*/*");
                 if (serializable == null) {
-                    bytesToWrite = null;
+                	// Send an empty body through with a POST request
+                	// This ensures that the Content-Length header is properly set
+                	if (request.getHttpMethod() == HttpMethod.POST) {
+                		bytesToWrite = new byte[0];
+                	}
+                	else {
+                		bytesToWrite = null;
+                	}
                 } else if (serializable instanceof byte[]) {
                     logger.logDebug("Sending byte[] as request body");
                     bytesToWrite = (byte[]) serializable;
@@ -297,13 +305,13 @@ public class DefaultHttpProvider implements IHttpProvider {
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_NOBODY
                         || connection.getResponseCode() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-                    logger.logDebug("Handling response with no body");
-                    return null;
+                    logger.logDebug("Handling response with no body");                  
+                    return handleEmptyResponse(connection.getResponseHeaders(), resultClass);
                 }
 
                 if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
                     logger.logDebug("Handling accepted response");
-                    return null;
+                    return handleEmptyResponse(connection.getResponseHeaders(), resultClass);
                 }
 
                 in = new BufferedInputStream(connection.getInputStream());
@@ -313,7 +321,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
                 if (contentType.contains(JSON_CONTENT_TYPE)) {
                     logger.logDebug("Response json");
-                    return handleJsonResponse(in, resultClass);
+                    return handleJsonResponse(in, connection.getResponseHeaders(), resultClass);
                 } else {
                     logger.logDebug("Response binary");
                     isBinaryStreamInput = true;
@@ -331,12 +339,11 @@ public class DefaultHttpProvider implements IHttpProvider {
             }
         } catch (final GraphServiceException ex) {
             final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
-            logger.logError("OneDrive Service exception " + ex.getMessage(shouldLogVerbosely), ex);
+            logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
-                    ex,
-                    GraphErrorCodes.GENERAL_EXCEPTION);
+                    ex);
             logger.logError("Error during http request", clientException);
             throw clientException;
         }
@@ -356,7 +363,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                                             final IConnection connection)
             throws IOException {
         throw GraphServiceException.createFromConnection(request, serializable, serializer,
-                connection);
+                connection, logger);
     }
 
     /**
@@ -372,18 +379,33 @@ public class DefaultHttpProvider implements IHttpProvider {
     /**
      * Handles the cause where the response is a JSON object.
      *
-     * @param in       The input stream from the response.
-     * @param clazz    The class of the response object.
+     * @param in              The input stream from the response.
+     * @param responseHeaders The response headers
+     * @param clazz           The class of the response object.
      * @param <Result> The type of the response object.
      * @return The JSON object.
      */
-    private <Result> Result handleJsonResponse(final InputStream in, final Class<Result> clazz) {
+    private <Result> Result handleJsonResponse(final InputStream in, Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
         if (clazz == null) {
             return null;
         }
 
         final String rawJson = streamToString(in);
-        return getSerializer().deserializeObject(rawJson, clazz);
+        return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
+    }
+    
+    /**
+     * Handles the case where the response body is empty.
+     * 
+     * @param responseHeaders The response headers
+     * @param clazz           The type of the response object
+     * @return The JSON object
+     */
+    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
+    	//Create an empty object to attach the response headers to
+        InputStream in = new ByteArrayInputStream("{}".getBytes());
+        
+    	return handleJsonResponse(in, responseHeaders, clazz);
     }
 
     /**
@@ -404,21 +426,29 @@ public class DefaultHttpProvider implements IHttpProvider {
     public static String streamToString(final InputStream input) {
         final String httpStreamEncoding = "UTF-8";
         final String endOfFile = "\\A";
-        final Scanner scanner = new Scanner(input, httpStreamEncoding).useDelimiter(endOfFile);
-        return scanner.next();
+        final Scanner scanner = new Scanner(input, httpStreamEncoding);
+        String scannerString = "";
+        try {
+        	scanner.useDelimiter(endOfFile);
+            scannerString = scanner.next();
+        } finally {
+        	scanner.close();
+        }
+        return scannerString;
     }
 
     /**
      * Searches for the given header in a list of HeaderOptions
      *
      * @param headers The list of headers to search through
-     * @param header The header name to search for
+     * @param header The header name to search for (case insensitive)
      *
      * @return true if the header has already been set
      */
-    private Boolean hasHeader(List<HeaderOption> headers, String header) {
+    @VisibleForTesting
+    static boolean hasHeader(List<HeaderOption> headers, String header) {
         for (HeaderOption option : headers) {
-            if (option.getName() == header) {
+            if (option.getName().equalsIgnoreCase(header)) {
                 return true;
             }
         }

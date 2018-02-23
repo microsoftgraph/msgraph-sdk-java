@@ -27,7 +27,7 @@ public class WorkbookApplicationRequest extends BaseWorkbookApplicationRequest i
     /**
      * The request for the WorkbookApplication
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

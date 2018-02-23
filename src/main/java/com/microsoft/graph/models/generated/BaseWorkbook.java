@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbook extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbook() {
-        oDataType = "microsoft.graph.workbook";
-    }
-
     /**
      * The Application.
      * 

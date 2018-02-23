@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseAlternativeSecurityId implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,10 +39,6 @@ public class BaseAlternativeSecurityId implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseAlternativeSecurityId() {
-        oDataType = "microsoft.graph.alternativeSecurityId";
     }
 
     /**

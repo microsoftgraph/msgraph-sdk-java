@@ -31,13 +31,9 @@ import java.util.Map;
 public class BaseSingleValueLegacyExtendedProperty extends Entity implements IJsonBackedObject {
 
 
-    public BaseSingleValueLegacyExtendedProperty() {
-        oDataType = "microsoft.graph.singleValueLegacyExtendedProperty";
-    }
-
     /**
      * The Value.
-     * 
+     * A property value.
      */
     @SerializedName("value")
     @Expose

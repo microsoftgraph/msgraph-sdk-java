@@ -29,21 +29,21 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 
-public class CustomRequest extends BaseRequest {
+public class CustomRequest<T> extends BaseRequest {
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class responseClass) {
+	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Class<T> responseClass) {
 		super(requestUrl, client, requestOptions, responseClass);
     }
 	
-	public CustomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, JsonObject.class);
+	public static CustomRequest<JsonObject> create(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+        return new CustomRequest<JsonObject>(requestUrl, client, requestOptions, JsonObject.class);
     }
 
-    public <T> T get() throws ClientException {
+    public T get() throws ClientException {
         return send(HttpMethod.GET, null);
     }
     
-    public <T> void get(final ICallback<T> callback) {
+    public void get(final ICallback<T> callback) {
     	send(HttpMethod.GET, callback, null);
     }
     
@@ -68,36 +68,36 @@ public class CustomRequest extends BaseRequest {
      * @param sourceItem The source object with updates
      * @param callback The callback to be called after success or failure.
      */
-    public <T> void patch(final Class sourceObject, final ICallback<T> callback) {
-        send(HttpMethod.PATCH, callback, sourceObject);
+    public void patch(final ICallback<T> callback) {
+        send(HttpMethod.PATCH, callback, super.getResponseType());
     }
 
     /**
-     * Patches this Attachment with a source
+     * Patches this item with a source
      * @param sourceAttachment The source object with updates
-     * @return The updated Attachment
+     * @return The updated item
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public <T> T patch(final Class sourceObject) throws ClientException {
+    public T patch(final T sourceObject) throws ClientException {
         return send(HttpMethod.PATCH, sourceObject);
     }
 
     /**
-     * Creates a Attachment with a new object
+     * Creates a new object
      * @param newAttachment The new object to create
      * @param callback The callback to be called after success or failure.
      */
-    public <T> void post(final Class newObject, final ICallback<T> callback) {
+    public void post(final T newObject, final ICallback<T> callback) {
         send(HttpMethod.POST, callback, newObject);
     }
 
     /**
-     * Creates a Attachment with a new object
+     * Creates a new object
      * @param newAttachment The new object to create
      * @return The created Attachment
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public <T> T post(final Class newObject) throws ClientException {
+    public T post(final T newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
     }
 
@@ -107,7 +107,7 @@ public class CustomRequest extends BaseRequest {
      * @param value The select clause
      * @return The updated request
      */
-     public CustomRequest select(final String value) {
+     public CustomRequest<T> select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
          return this;
      }
@@ -118,7 +118,7 @@ public class CustomRequest extends BaseRequest {
      * @param value The expand clause
      * @return The updated request
      */
-     public CustomRequest expand(final String value) {
+     public CustomRequest<T> expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));
          return this;
      }

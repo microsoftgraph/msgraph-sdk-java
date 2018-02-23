@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePerson extends Entity implements IJsonBackedObject {
 
 
-    public BasePerson() {
-        oDataType = "microsoft.graph.person";
-    }
-
     /**
      * The Display Name.
      * The person's display name.
@@ -181,7 +177,7 @@ public class BasePerson extends Entity implements IJsonBackedObject {
 
     /**
      * The Im Address.
-     * 
+     * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
      */
     @SerializedName("imAddress")
     @Expose

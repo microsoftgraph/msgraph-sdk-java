@@ -27,7 +27,7 @@ public class DriveItemStreamRequest extends BaseDriveItemStreamRequest implement
     /**
      * The request for the DriveItemStream
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

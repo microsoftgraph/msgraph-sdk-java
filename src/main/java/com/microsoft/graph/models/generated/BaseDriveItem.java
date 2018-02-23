@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseDriveItem() {
-        oDataType = "microsoft.graph.driveItem";
-    }
-
     /**
      * The Audio.
      * Audio metadata, if the item is an audio file. Read-only.

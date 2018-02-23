@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
 
-    public BaseEvent() {
-        oDataType = "microsoft.graph.event";
-    }
-
     /**
      * The Original Start Time Zone.
      * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.

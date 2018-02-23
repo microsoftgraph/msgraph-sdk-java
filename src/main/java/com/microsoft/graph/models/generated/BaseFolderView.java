@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseFolderView implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -41,13 +41,9 @@ public class BaseFolderView implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseFolderView() {
-        oDataType = "microsoft.graph.folderView";
-    }
-
     /**
      * The Sort By.
-     * 
+     * The method by which the folder should be sorted.
      */
     @SerializedName("sortBy")
     @Expose
@@ -63,7 +59,7 @@ public class BaseFolderView implements IJsonBackedObject {
 
     /**
      * The View Type.
-     * 
+     * The type of view that should be used to represent the folder.
      */
     @SerializedName("viewType")
     @Expose

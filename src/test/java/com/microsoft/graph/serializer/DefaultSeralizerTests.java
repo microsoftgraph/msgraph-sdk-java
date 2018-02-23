@@ -2,14 +2,18 @@ package com.microsoft.graph.serializer;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 import com.microsoft.graph.models.generated.BaseRecurrenceRange;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
+import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.DateOnly;
 
 public class DefaultSeralizerTests {
@@ -64,5 +68,34 @@ public class DefaultSeralizerTests {
         assertNotNull(jsonOut);
         assertEquals(expected, jsonOut);
     }
+	
+	@Test
+	public void testResponseHeaders() throws Exception {
+		MockConnection connection = new MockConnection(null);
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+		User user = serializer.deserializeObject("{\"id\":\"1\"}", User.class, connection.getResponseHeaders());
+		
+		JsonElement responseHeaders = user.additionalDataManager().get("graphResponseHeaders");
+		assertNotNull(responseHeaders);
+		
+		JsonElement responseHeader = responseHeaders.getAsJsonObject().get("header1");
+		assertNotNull(responseHeader);
+		
+		assertEquals("value1", responseHeader.getAsJsonArray().get(0).getAsString());
+	}
 
+  @Test
+	public void testDeserializeDerivedType() throws Exception {
+		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+		String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
+		Attachment result = serializer.deserializeObject(source, Attachment.class);
+		
+		assert(result instanceof FileAttachment);
+		
+		FileAttachment fileAttachment = (FileAttachment) result;
+		assertNotNull(fileAttachment.contentBytes);
+		JsonObject o = fileAttachment.getRawObject();
+		assertNotNull(o);
+		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
+	}
 }

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePlannerBucket extends Entity implements IJsonBackedObject {
 
 
-    public BasePlannerBucket() {
-        oDataType = "microsoft.graph.plannerBucket";
-    }
-
     /**
      * The Name.
      * Name of the bucket.

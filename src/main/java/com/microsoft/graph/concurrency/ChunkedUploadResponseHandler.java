@@ -78,7 +78,7 @@ public class ChunkedUploadResponseHandler<UploadType>
      * @throws Exception An exception occurs if the request was unable to complete for any reason.
      */
     @Override
-    public ChunkedUploadResult generateResult(
+    public ChunkedUploadResult<UploadType> generateResult(
             final IHttpRequest request,
             final IConnection connection,
             final ISerializer serializer,
@@ -89,10 +89,10 @@ public class ChunkedUploadResponseHandler<UploadType>
             if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
                 logger.logDebug("Chunk bytes has been accepted by the server.");
                 in = new BufferedInputStream(connection.getInputStream());
-                final UploadSession seesion = serializer.deserializeObject(
+                final UploadSession session = serializer.deserializeObject(
                         DefaultHttpProvider.streamToString(in), UploadSession.class);
 
-                return new ChunkedUploadResult(seesion);
+                return new ChunkedUploadResult<UploadType>(session);
 
             } else if (connection.getResponseCode() == HttpResponseCode.HTTP_CREATED
                     || connection.getResponseCode() == HttpResponseCode.HTTP_OK) {
@@ -102,13 +102,13 @@ public class ChunkedUploadResponseHandler<UploadType>
                 UploadType uploadedItem = serializer.deserializeObject(rawJson,
                         this.deserializeTypeClass);
 
-                return new ChunkedUploadResult(uploadedItem);
+                return new ChunkedUploadResult<UploadType>(uploadedItem);
             } else if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
                 logger.logDebug("Receiving error during upload, see detail on result error");
 
-                return new ChunkedUploadResult(
+                return new ChunkedUploadResult<UploadType>(
                         GraphServiceException.createFromConnection(request, null, serializer,
-                                connection));
+                                connection, logger));
             }
         } finally {
             if (in != null) {

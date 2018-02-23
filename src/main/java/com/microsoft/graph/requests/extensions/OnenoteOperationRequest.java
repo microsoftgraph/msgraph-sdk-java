@@ -27,7 +27,7 @@ public class OnenoteOperationRequest extends BaseOnenoteOperationRequest impleme
     /**
      * The request for the OnenoteOperation
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

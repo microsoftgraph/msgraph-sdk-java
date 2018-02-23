@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseNumberColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -41,13 +41,9 @@ public class BaseNumberColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseNumberColumn() {
-        oDataType = "microsoft.graph.numberColumn";
-    }
-
     /**
      * The Decimal Places.
-     * 
+     * How many decimal places to display. See below for information about the possible values.
      */
     @SerializedName("decimalPlaces")
     @Expose
@@ -55,7 +51,7 @@ public class BaseNumberColumn implements IJsonBackedObject {
 
     /**
      * The Display As.
-     * 
+     * How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
      */
     @SerializedName("displayAs")
     @Expose
@@ -63,7 +59,7 @@ public class BaseNumberColumn implements IJsonBackedObject {
 
     /**
      * The Maximum.
-     * 
+     * The maximum permitted value.
      */
     @SerializedName("maximum")
     @Expose
@@ -71,7 +67,7 @@ public class BaseNumberColumn implements IJsonBackedObject {
 
     /**
      * The Minimum.
-     * 
+     * The minimum permitted value.
      */
     @SerializedName("minimum")
     @Expose

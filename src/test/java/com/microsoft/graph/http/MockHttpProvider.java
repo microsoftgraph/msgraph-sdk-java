@@ -72,7 +72,7 @@ public class MockHttpProvider implements IHttpProvider {
             }
         } catch (Exception ex){
             final ClientException clientException = new ClientException("Error during http request",
-                    ex, GraphErrorCodes.GENERAL_EXCEPTION);
+                    ex);
             callback.failure(clientException);
         }
         callback.success(result);
@@ -96,7 +96,7 @@ public class MockHttpProvider implements IHttpProvider {
             }
         } catch (Exception ex){
             final ClientException clientException = new ClientException("Error during http request",
-                    ex, GraphErrorCodes.GENERAL_EXCEPTION);
+                    ex);
             throw clientException;
         }
         return null;

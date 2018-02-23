@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseFileAttachment extends Attachment implements IJsonBackedObject {
 
 
-    public BaseFileAttachment() {
-        oDataType = "microsoft.graph.fileAttachment";
-    }
-
     /**
      * The Content Id.
      * The ID of the attachment in the Exchange store.

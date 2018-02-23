@@ -27,15 +27,15 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
     /**
      * The request for the OutlookItem
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseOutlookItemRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends OutlookItem> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +43,7 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
      * Gets the OutlookItem from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getOutlookItem(final ICallback<OutlookItem> callback) {
+    public void get(final ICallback<OutlookItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
      * @return The OutlookItem from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public OutlookItem getOutlookItem() throws ClientException {
+    public OutlookItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

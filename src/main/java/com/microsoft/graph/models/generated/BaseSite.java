@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSite extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseSite() {
-        oDataType = "microsoft.graph.site";
-    }
-
     /**
      * The Display Name.
      * The full title for the site. Read-only.
@@ -69,13 +65,13 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * 
+     * The collection of column definitions reusable across lists under this site.
      */
     public ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
-     * 
+     * The collection of content types defined for this site.
      */
     public ContentTypeCollectionPage contentTypes;
 
@@ -101,7 +97,7 @@ public class BaseSite extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Lists.
-     * 
+     * The collection of lists under this site.
      */
     public ListCollectionPage lists;
 

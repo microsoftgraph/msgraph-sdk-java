@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
 
-    public BaseContact() {
-        oDataType = "microsoft.graph.contact";
-    }
-
     /**
      * The Parent Folder Id.
      * The ID of the contact's parent folder.
@@ -165,7 +161,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The contact’s job title.
+     * The contact's job title.
      */
     @SerializedName("jobTitle")
     @Expose

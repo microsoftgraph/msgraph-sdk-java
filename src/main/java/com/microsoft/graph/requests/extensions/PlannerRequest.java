@@ -27,7 +27,7 @@ public class PlannerRequest extends BasePlannerRequest implements IPlannerReques
     /**
      * The request for the Planner
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

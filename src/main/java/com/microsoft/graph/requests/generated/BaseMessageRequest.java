@@ -27,15 +27,15 @@ public class BaseMessageRequest extends BaseRequest implements IBaseMessageReque
     /**
      * The request for the Message
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseMessageRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends Message> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +43,7 @@ public class BaseMessageRequest extends BaseRequest implements IBaseMessageReque
      * Gets the Message from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getMessage(final ICallback<Message> callback) {
+    public void get(final ICallback<Message> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseMessageRequest extends BaseRequest implements IBaseMessageReque
      * @return The Message from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public Message getMessage() throws ClientException {
+    public Message get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

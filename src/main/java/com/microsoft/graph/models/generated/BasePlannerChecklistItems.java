@@ -28,10 +28,10 @@ import java.util.Map;
 /**
  * The class for the Base Planner Checklist Items.
  */
-public class BasePlannerChecklistItems implements IJsonBackedObject {
+public class BasePlannerChecklistItems extends HashMap<String, PlannerChecklistItem> implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,10 +39,6 @@ public class BasePlannerChecklistItems implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BasePlannerChecklistItems() {
-        oDataType = "microsoft.graph.plannerChecklistItems";
     }
 
 

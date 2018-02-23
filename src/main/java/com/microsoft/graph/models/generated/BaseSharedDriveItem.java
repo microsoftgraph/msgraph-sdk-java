@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
 
-    public BaseSharedDriveItem() {
-        oDataType = "microsoft.graph.sharedDriveItem";
-    }
-
     /**
      * The Owner.
      * Information about the owner of the shared item being referenced.
@@ -59,7 +55,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * 
+     * Used to access the underlying list
      */
     @SerializedName("list")
     @Expose
@@ -67,7 +63,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List Item.
-     * 
+     * Used to access the underlying listItem
      */
     @SerializedName("listItem")
     @Expose

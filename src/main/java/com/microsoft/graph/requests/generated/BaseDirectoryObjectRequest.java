@@ -27,15 +27,15 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
     /**
      * The request for the DirectoryObject
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseDirectoryObjectRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends DirectoryObject> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +43,7 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
      * Gets the DirectoryObject from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getDirectoryObject(final ICallback<DirectoryObject> callback) {
+    public void get(final ICallback<DirectoryObject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
      * @return The DirectoryObject from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public DirectoryObject getDirectoryObject() throws ClientException {
+    public DirectoryObject get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

@@ -27,7 +27,7 @@ public class ThumbnailSetRequest extends BaseThumbnailSetRequest implements IThu
     /**
      * The request for the ThumbnailSet
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

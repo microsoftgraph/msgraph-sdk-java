@@ -28,14 +28,14 @@ public interface IBaseBaseItemRequest extends IHttpRequest {
      * Gets the BaseItem from the service
      * @param callback The callback to be called after success or failure.
      */
-    void getBaseItem(final ICallback<BaseItem> callback);
+    void get(final ICallback<BaseItem> callback);
 
     /**
      * Gets the BaseItem from the service
      * @return The BaseItem from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    BaseItem getBaseItem() throws ClientException;
+    BaseItem get() throws ClientException;
 
     /**
      * Delete this item from the service.

@@ -27,15 +27,15 @@ public class BaseDomainDnsRecordRequest extends BaseRequest implements IBaseDoma
     /**
      * The request for the DomainDnsRecord
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseDomainDnsRecordRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends DomainDnsRecord> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +43,7 @@ public class BaseDomainDnsRecordRequest extends BaseRequest implements IBaseDoma
      * Gets the DomainDnsRecord from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getDomainDnsRecord(final ICallback<DomainDnsRecord> callback) {
+    public void get(final ICallback<DomainDnsRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseDomainDnsRecordRequest extends BaseRequest implements IBaseDoma
      * @return The DomainDnsRecord from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public DomainDnsRecord getDomainDnsRecord() throws ClientException {
+    public DomainDnsRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

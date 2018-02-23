@@ -27,15 +27,15 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
     /**
      * The request for the Extension
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseExtensionRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<? extends Extension> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -43,7 +43,7 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
      * Gets the Extension from the service
      * @param callback The callback to be called after success or failure.
      */
-    public void getExtension(final ICallback<Extension> callback) {
+    public void get(final ICallback<Extension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,7 +52,7 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
      * @return The Extension from the request.
      * @throws ClientException This exception occurs if the request was unable to complete for any reason.
      */
-    public Extension getExtension() throws ClientException {
+    public Extension get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

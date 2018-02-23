@@ -27,7 +27,7 @@ public class FieldValueSetRequest extends BaseFieldValueSetRequest implements IF
     /**
      * The request for the FieldValueSet
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

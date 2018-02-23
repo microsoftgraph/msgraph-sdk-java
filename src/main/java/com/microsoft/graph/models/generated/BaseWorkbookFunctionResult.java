@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookFunctionResult extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookFunctionResult() {
-        oDataType = "microsoft.graph.workbookFunctionResult";
-    }
-
     /**
      * The Error.
      * 

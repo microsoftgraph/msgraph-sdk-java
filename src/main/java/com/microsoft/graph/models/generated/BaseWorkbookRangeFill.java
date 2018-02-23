@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseWorkbookRangeFill extends Entity implements IJsonBackedObject {
 
 
-    public BaseWorkbookRangeFill() {
-        oDataType = "microsoft.graph.workbookRangeFill";
-    }
-
     /**
      * The Color.
      * 

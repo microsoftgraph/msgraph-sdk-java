@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseCalculatedColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -41,13 +41,9 @@ public class BaseCalculatedColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseCalculatedColumn() {
-        oDataType = "microsoft.graph.calculatedColumn";
-    }
-
     /**
      * The Format.
-     * 
+     * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
      */
     @SerializedName("format")
     @Expose
@@ -55,7 +51,7 @@ public class BaseCalculatedColumn implements IJsonBackedObject {
 
     /**
      * The Formula.
-     * 
+     * The formula used to compute the value for this column.
      */
     @SerializedName("formula")
     @Expose
@@ -63,7 +59,7 @@ public class BaseCalculatedColumn implements IJsonBackedObject {
 
     /**
      * The Output Type.
-     * 
+     * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
      */
     @SerializedName("outputType")
     @Expose

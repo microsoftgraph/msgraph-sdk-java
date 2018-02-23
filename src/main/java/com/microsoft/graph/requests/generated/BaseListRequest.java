@@ -27,15 +27,15 @@ public class BaseListRequest extends BaseRequest implements IBaseListRequest {
     /**
      * The request for the List
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
-     * @param responseClass The class of the reponse
+     * @param responseClass The class of the response
      */
     public BaseListRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class responseClass) {
+            final Class<List> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

@@ -27,7 +27,7 @@ public class ProfilePhotoRequest extends BaseProfilePhotoRequest implements IPro
     /**
      * The request for the ProfilePhoto
      *
-     * @param requestUrl The request url
+     * @param requestUrl The request URL
      * @param client The service client
      * @param requestOptions The options for this request
      */

@@ -25,6 +25,7 @@ package com.microsoft.graph.http;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -90,6 +91,8 @@ public interface IConnection {
      * @return The map of headers.
      */
     Map<String, String> getHeaders();
+    
+    Map<String, List<String>> getResponseHeaders();
 
     /**
      * Gets the HTTP request method.

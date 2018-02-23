@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseChoiceColumn implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -41,13 +41,9 @@ public class BaseChoiceColumn implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    public BaseChoiceColumn() {
-        oDataType = "microsoft.graph.choiceColumn";
-    }
-
     /**
      * The Allow Text Entry.
-     * 
+     * If true, allows custom values that aren't in the configured choices.
      */
     @SerializedName("allowTextEntry")
     @Expose
@@ -55,7 +51,7 @@ public class BaseChoiceColumn implements IJsonBackedObject {
 
     /**
      * The Choices.
-     * 
+     * The list of values available for this column.
      */
     @SerializedName("choices")
     @Expose
@@ -63,7 +59,7 @@ public class BaseChoiceColumn implements IJsonBackedObject {
 
     /**
      * The Display As.
-     * 
+     * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
      */
     @SerializedName("displayAs")
     @Expose

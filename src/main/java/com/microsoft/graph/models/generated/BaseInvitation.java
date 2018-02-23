@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseInvitation extends Entity implements IJsonBackedObject {
 
 
-    public BaseInvitation() {
-        oDataType = "microsoft.graph.invitation";
-    }
-
     /**
      * The Invited User Display Name.
      * 

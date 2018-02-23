@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseOnenoteOperationError implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -39,10 +39,6 @@ public class BaseOnenoteOperationError implements IJsonBackedObject {
     @Override
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
-    }
-
-    public BaseOnenoteOperationError() {
-        oDataType = "microsoft.graph.onenoteOperationError";
     }
 
     /**

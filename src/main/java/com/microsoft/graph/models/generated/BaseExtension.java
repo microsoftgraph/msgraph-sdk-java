@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseExtension extends Entity implements IJsonBackedObject {
 
 
-    public BaseExtension() {
-        oDataType = "microsoft.graph.extension";
-    }
-
 
     /**
      * The raw representation of this class

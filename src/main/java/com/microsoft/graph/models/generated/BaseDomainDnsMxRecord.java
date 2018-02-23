@@ -31,10 +31,6 @@ import java.util.Map;
 public class BaseDomainDnsMxRecord extends DomainDnsRecord implements IJsonBackedObject {
 
 
-    public BaseDomainDnsMxRecord() {
-        oDataType = "microsoft.graph.domainDnsMxRecord";
-    }
-
     /**
      * The Mail Exchange.
      * Value used when configuring the answer/destination/value of the MX record at the DNS host.

@@ -31,10 +31,6 @@ import java.util.Map;
 public class BasePost extends OutlookItem implements IJsonBackedObject {
 
 
-    public BasePost() {
-        oDataType = "microsoft.graph.post";
-    }
-
     /**
      * The Body.
      * The contents of the post. This is a default property. This property can be null.
