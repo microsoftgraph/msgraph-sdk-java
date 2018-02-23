@@ -27,7 +27,7 @@ public class DomainVerifyRequest extends BaseDomainVerifyRequest implements IDom
     /**
      * The request for this DomainVerify
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

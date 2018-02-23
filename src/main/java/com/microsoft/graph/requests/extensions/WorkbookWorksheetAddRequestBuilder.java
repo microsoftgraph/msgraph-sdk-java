@@ -27,7 +27,7 @@ public class WorkbookWorksheetAddRequestBuilder extends BaseWorkbookWorksheetAdd
     /**
      * The request builder for this WorkbookWorksheetAdd
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param name the name

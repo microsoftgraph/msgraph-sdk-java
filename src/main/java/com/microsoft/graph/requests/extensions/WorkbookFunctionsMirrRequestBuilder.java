@@ -27,7 +27,7 @@ public class WorkbookFunctionsMirrRequestBuilder extends BaseWorkbookFunctionsMi
     /**
      * The request builder for this WorkbookFunctionsMirr
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

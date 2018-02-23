@@ -27,7 +27,7 @@ public class WorkbookFunctionsDbRequestBuilder extends BaseWorkbookFunctionsDbRe
     /**
      * The request builder for this WorkbookFunctionsDb
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param cost the cost

@@ -27,7 +27,7 @@ public class WorkbookNamedItemAddRequest extends BaseWorkbookNamedItemAddRequest
     /**
      * The request for this WorkbookNamedItemAdd
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsZ_TestRequest extends BaseWorkbookFunctionsZ_TestR
     /**
      * The request for this WorkbookFunctionsZ_Test
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

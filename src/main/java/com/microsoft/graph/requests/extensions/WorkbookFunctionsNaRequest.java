@@ -27,7 +27,7 @@ public class WorkbookFunctionsNaRequest extends BaseWorkbookFunctionsNaRequest i
     /**
      * The request for this WorkbookFunctionsNa
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

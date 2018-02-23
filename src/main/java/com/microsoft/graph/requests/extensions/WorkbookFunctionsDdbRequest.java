@@ -27,7 +27,7 @@ public class WorkbookFunctionsDdbRequest extends BaseWorkbookFunctionsDdbRequest
     /**
      * The request for this WorkbookFunctionsDdb
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

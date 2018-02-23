@@ -27,7 +27,7 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseWorkbookChartLine
     /**
      * The request builder for the WorkbookChartLineFormat
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

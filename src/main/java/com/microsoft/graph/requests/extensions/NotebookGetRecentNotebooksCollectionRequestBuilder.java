@@ -27,7 +27,7 @@ public class NotebookGetRecentNotebooksCollectionRequestBuilder extends BaseNote
     /**
      * The request builder for this collection of Notebook
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param includePersonalNotebooks the includePersonalNotebooks

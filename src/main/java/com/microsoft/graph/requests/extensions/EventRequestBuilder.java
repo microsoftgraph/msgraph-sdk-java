@@ -27,7 +27,7 @@ public class EventRequestBuilder extends BaseEventRequestBuilder implements IEve
     /**
      * The request builder for the Event
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

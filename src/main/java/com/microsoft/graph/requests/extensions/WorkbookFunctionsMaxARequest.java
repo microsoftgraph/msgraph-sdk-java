@@ -27,7 +27,7 @@ public class WorkbookFunctionsMaxARequest extends BaseWorkbookFunctionsMaxAReque
     /**
      * The request for this WorkbookFunctionsMaxA
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

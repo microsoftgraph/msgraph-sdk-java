@@ -27,7 +27,7 @@ public class EventDismissReminderRequestBuilder extends BaseEventDismissReminder
     /**
      * The request builder for this EventDismissReminder
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

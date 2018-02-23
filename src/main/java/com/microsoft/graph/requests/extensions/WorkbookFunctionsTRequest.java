@@ -27,7 +27,7 @@ public class WorkbookFunctionsTRequest extends BaseWorkbookFunctionsTRequest imp
     /**
      * The request for this WorkbookFunctionsT
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

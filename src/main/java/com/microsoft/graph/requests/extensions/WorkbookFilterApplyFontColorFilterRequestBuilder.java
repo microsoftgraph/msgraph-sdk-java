@@ -27,7 +27,7 @@ public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseWorkbo
     /**
      * The request builder for this WorkbookFilterApplyFontColorFilter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param color the color

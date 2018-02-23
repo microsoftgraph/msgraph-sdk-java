@@ -27,7 +27,7 @@ public class MessageCopyRequest extends BaseMessageCopyRequest implements IMessa
     /**
      * The request for this MessageCopy
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

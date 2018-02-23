@@ -27,7 +27,7 @@ public class WorkbookTableColumnHeaderRowRangeRequest extends BaseWorkbookTableC
     /**
      * The request for this WorkbookTableColumnHeaderRowRange
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

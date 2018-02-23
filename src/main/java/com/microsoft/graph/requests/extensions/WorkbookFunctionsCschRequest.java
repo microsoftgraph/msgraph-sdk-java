@@ -27,7 +27,7 @@ public class WorkbookFunctionsCschRequest extends BaseWorkbookFunctionsCschReque
     /**
      * The request for this WorkbookFunctionsCsch
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

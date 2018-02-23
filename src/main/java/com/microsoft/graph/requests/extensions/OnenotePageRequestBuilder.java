@@ -27,7 +27,7 @@ public class OnenotePageRequestBuilder extends BaseOnenotePageRequestBuilder imp
     /**
      * The request builder for the OnenotePage
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

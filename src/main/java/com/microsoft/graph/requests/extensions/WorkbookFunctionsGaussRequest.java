@@ -27,7 +27,7 @@ public class WorkbookFunctionsGaussRequest extends BaseWorkbookFunctionsGaussReq
     /**
      * The request for this WorkbookFunctionsGauss
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

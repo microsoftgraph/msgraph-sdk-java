@@ -27,7 +27,7 @@ public class WorkbookChartSeriesRequestBuilder extends BaseWorkbookChartSeriesRe
     /**
      * The request builder for the WorkbookChartSeries
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

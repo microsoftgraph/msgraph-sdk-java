@@ -27,7 +27,7 @@ public class WorkbookFunctionsDays360Request extends BaseWorkbookFunctionsDays36
     /**
      * The request for this WorkbookFunctionsDays360
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

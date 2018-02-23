@@ -27,7 +27,7 @@ public class WorkbookTableRangeRequestBuilder extends BaseWorkbookTableRangeRequ
     /**
      * The request builder for this WorkbookTableRange
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsCotRequest extends BaseWorkbookFunctionsCotRequest
     /**
      * The request for this WorkbookFunctionsCot
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

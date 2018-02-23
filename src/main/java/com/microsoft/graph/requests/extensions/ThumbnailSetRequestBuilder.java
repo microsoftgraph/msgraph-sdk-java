@@ -27,7 +27,7 @@ public class ThumbnailSetRequestBuilder extends BaseThumbnailSetRequestBuilder i
     /**
      * The request builder for the ThumbnailSet
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

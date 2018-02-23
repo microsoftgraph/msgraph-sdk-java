@@ -27,7 +27,7 @@ public class WorkbookFunctionsYieldRequest extends BaseWorkbookFunctionsYieldReq
     /**
      * The request for this WorkbookFunctionsYield
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseWorkbookFil
     /**
      * The request builder for this WorkbookFilterApplyIconFilter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param icon the icon

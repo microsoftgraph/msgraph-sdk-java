@@ -27,7 +27,7 @@ public class WorkbookFunctionsRowsRequest extends BaseWorkbookFunctionsRowsReque
     /**
      * The request for this WorkbookFunctionsRows
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

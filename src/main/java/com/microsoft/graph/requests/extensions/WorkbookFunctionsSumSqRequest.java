@@ -27,7 +27,7 @@ public class WorkbookFunctionsSumSqRequest extends BaseWorkbookFunctionsSumSqReq
     /**
      * The request for this WorkbookFunctionsSumSq
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

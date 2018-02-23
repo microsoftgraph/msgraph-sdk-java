@@ -27,7 +27,7 @@ public class PlannerUserRequestBuilder extends BasePlannerUserRequestBuilder imp
     /**
      * The request builder for the PlannerUser
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

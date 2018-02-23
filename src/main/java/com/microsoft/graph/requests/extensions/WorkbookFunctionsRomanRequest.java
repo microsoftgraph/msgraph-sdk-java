@@ -27,7 +27,7 @@ public class WorkbookFunctionsRomanRequest extends BaseWorkbookFunctionsRomanReq
     /**
      * The request for this WorkbookFunctionsRoman
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

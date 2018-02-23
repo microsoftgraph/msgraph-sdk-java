@@ -27,7 +27,7 @@ public class WorkbookFunctionsCountIfRequest extends BaseWorkbookFunctionsCountI
     /**
      * The request for this WorkbookFunctionsCountIf
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsDec2OctRequest extends BaseWorkbookFunctionsDec2Oc
     /**
      * The request for this WorkbookFunctionsDec2Oct
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

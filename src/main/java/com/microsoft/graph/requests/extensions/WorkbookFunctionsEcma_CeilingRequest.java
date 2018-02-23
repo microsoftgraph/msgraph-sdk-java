@@ -27,7 +27,7 @@ public class WorkbookFunctionsEcma_CeilingRequest extends BaseWorkbookFunctionsE
     /**
      * The request for this WorkbookFunctionsEcma_Ceiling
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

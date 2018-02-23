@@ -27,7 +27,7 @@ public class WorkbookFunctionsBinom_DistRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsBinom_Dist
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param numberS the numberS

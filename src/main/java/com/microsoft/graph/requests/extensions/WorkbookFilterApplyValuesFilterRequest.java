@@ -27,7 +27,7 @@ public class WorkbookFilterApplyValuesFilterRequest extends BaseWorkbookFilterAp
     /**
      * The request for this WorkbookFilterApplyValuesFilter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

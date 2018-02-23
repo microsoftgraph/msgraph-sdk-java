@@ -27,7 +27,7 @@ public class WorkbookFunctionsSechRequestBuilder extends BaseWorkbookFunctionsSe
     /**
      * The request builder for this WorkbookFunctionsSech
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param number the number

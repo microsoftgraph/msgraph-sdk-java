@@ -27,7 +27,7 @@ public class WorkbookFunctionsMidRequest extends BaseWorkbookFunctionsMidRequest
     /**
      * The request for this WorkbookFunctionsMid
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

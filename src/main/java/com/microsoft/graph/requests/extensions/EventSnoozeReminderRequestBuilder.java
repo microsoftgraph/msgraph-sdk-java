@@ -27,7 +27,7 @@ public class EventSnoozeReminderRequestBuilder extends BaseEventSnoozeReminderRe
     /**
      * The request builder for this EventSnoozeReminder
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param newReminderTime the newReminderTime

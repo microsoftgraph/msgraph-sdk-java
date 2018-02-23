@@ -27,7 +27,7 @@ public class WorkbookFunctionsNegBinom_DistRequestBuilder extends BaseWorkbookFu
     /**
      * The request builder for this WorkbookFunctionsNegBinom_Dist
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param numberF the numberF

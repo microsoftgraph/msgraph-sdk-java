@@ -27,7 +27,7 @@ public class WorkbookFunctionsIso_CeilingRequest extends BaseWorkbookFunctionsIs
     /**
      * The request for this WorkbookFunctionsIso_Ceiling
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

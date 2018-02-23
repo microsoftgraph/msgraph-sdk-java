@@ -27,7 +27,7 @@ public class WorkbookFunctionsReplaceBRequest extends BaseWorkbookFunctionsRepla
     /**
      * The request for this WorkbookFunctionsReplaceB
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

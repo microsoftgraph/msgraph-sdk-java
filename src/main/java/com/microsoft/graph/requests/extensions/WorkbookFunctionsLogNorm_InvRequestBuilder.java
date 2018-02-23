@@ -27,7 +27,7 @@ public class WorkbookFunctionsLogNorm_InvRequestBuilder extends BaseWorkbookFunc
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Inv
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param probability the probability

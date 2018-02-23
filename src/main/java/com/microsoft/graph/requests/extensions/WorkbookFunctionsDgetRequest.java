@@ -27,7 +27,7 @@ public class WorkbookFunctionsDgetRequest extends BaseWorkbookFunctionsDgetReque
     /**
      * The request for this WorkbookFunctionsDget
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseWorkboo
     /**
      * The request builder for this WorkbookRangeFormatAutofitColumns
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

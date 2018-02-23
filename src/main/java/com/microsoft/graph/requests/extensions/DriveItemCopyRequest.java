@@ -27,7 +27,7 @@ public class DriveItemCopyRequest extends BaseDriveItemCopyRequest implements ID
     /**
      * The request for this DriveItemCopy
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsLog10Request extends BaseWorkbookFunctionsLog10Req
     /**
      * The request for this WorkbookFunctionsLog10
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

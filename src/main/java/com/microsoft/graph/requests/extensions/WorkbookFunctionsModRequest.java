@@ -27,7 +27,7 @@ public class WorkbookFunctionsModRequest extends BaseWorkbookFunctionsModRequest
     /**
      * The request for this WorkbookFunctionsMod
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

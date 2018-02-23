@@ -27,7 +27,7 @@ public class WorkbookFunctionsMirrRequest extends BaseWorkbookFunctionsMirrReque
     /**
      * The request for this WorkbookFunctionsMirr
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

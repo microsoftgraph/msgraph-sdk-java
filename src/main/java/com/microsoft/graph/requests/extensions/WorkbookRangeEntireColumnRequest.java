@@ -27,7 +27,7 @@ public class WorkbookRangeEntireColumnRequest extends BaseWorkbookRangeEntireCol
     /**
      * The request for this WorkbookRangeEntireColumn
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

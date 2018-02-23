@@ -27,7 +27,7 @@ public class ColumnLinkCollectionRequest extends BaseColumnLinkCollectionRequest
     /**
      * The request for this collection of ContentType
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsFactDoubleRequest extends BaseWorkbookFunctionsFac
     /**
      * The request for this WorkbookFunctionsFactDouble
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

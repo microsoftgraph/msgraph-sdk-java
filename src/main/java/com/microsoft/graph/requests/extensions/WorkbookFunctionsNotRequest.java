@@ -27,7 +27,7 @@ public class WorkbookFunctionsNotRequest extends BaseWorkbookFunctionsNotRequest
     /**
      * The request for this WorkbookFunctionsNot
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

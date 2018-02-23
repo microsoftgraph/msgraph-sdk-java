@@ -27,7 +27,7 @@ public class DirectoryObjectCollectionReferenceRequest extends BaseDirectoryObje
     /**
      * The request for this collection of User
      *
-     * @param requestUrl the request url
+     * @param requestUrl the request URL
      * @param client     the service client
      * @param options    the options for this request
      */

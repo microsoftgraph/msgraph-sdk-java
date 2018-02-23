@@ -27,7 +27,7 @@ public class PostForwardRequestBuilder extends BasePostForwardRequestBuilder imp
     /**
      * The request builder for this PostForward
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param comment the comment

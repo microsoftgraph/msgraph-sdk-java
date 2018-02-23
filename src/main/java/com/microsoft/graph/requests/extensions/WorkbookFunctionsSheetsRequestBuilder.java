@@ -27,7 +27,7 @@ public class WorkbookFunctionsSheetsRequestBuilder extends BaseWorkbookFunctions
     /**
      * The request builder for this WorkbookFunctionsSheets
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param reference the reference

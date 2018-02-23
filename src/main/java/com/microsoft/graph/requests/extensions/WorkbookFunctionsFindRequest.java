@@ -27,7 +27,7 @@ public class WorkbookFunctionsFindRequest extends BaseWorkbookFunctionsFindReque
     /**
      * The request for this WorkbookFunctionsFind
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsTimevalueRequest extends BaseWorkbookFunctionsTime
     /**
      * The request for this WorkbookFunctionsTimevalue
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

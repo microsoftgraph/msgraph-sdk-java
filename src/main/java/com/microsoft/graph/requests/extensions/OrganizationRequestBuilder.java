@@ -27,7 +27,7 @@ public class OrganizationRequestBuilder extends BaseOrganizationRequestBuilder i
     /**
      * The request builder for the Organization
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookChartImageRequestBuilder extends BaseWorkbookChartImageRequ
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
@@ -38,7 +38,7 @@ public class WorkbookChartImageRequestBuilder extends BaseWorkbookChartImageRequ
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param width the width
@@ -50,7 +50,7 @@ public class WorkbookChartImageRequestBuilder extends BaseWorkbookChartImageRequ
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param width the width
@@ -63,7 +63,7 @@ public class WorkbookChartImageRequestBuilder extends BaseWorkbookChartImageRequ
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param width the width

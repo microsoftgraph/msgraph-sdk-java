@@ -27,7 +27,7 @@ public class WorkbookFunctionsRightbRequest extends BaseWorkbookFunctionsRightbR
     /**
      * The request for this WorkbookFunctionsRightb
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsErf_PreciseRequest extends BaseWorkbookFunctionsEr
     /**
      * The request for this WorkbookFunctionsErf_Precise
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

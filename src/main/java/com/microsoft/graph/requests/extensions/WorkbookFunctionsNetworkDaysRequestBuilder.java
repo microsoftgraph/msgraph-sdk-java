@@ -27,7 +27,7 @@ public class WorkbookFunctionsNetworkDaysRequestBuilder extends BaseWorkbookFunc
     /**
      * The request builder for this WorkbookFunctionsNetworkDays
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param startDate the startDate

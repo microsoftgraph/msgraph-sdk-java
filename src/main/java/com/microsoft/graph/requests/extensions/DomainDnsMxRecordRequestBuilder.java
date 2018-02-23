@@ -27,7 +27,7 @@ public class DomainDnsMxRecordRequestBuilder extends BaseDomainDnsMxRecordReques
     /**
      * The request builder for the DomainDnsMxRecord
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

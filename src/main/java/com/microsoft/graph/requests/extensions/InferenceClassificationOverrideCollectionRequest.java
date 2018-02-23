@@ -27,7 +27,7 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseInfere
     /**
      * The request for this collection of InferenceClassification
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

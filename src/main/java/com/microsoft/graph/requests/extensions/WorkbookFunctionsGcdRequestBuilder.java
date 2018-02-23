@@ -27,7 +27,7 @@ public class WorkbookFunctionsGcdRequestBuilder extends BaseWorkbookFunctionsGcd
     /**
      * The request builder for this WorkbookFunctionsGcd
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

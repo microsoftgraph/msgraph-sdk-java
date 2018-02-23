@@ -27,7 +27,7 @@ public class DomainVerifyRequestBuilder extends BaseDomainVerifyRequestBuilder i
     /**
      * The request builder for this DomainVerify
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

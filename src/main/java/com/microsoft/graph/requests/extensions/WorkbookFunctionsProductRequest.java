@@ -27,7 +27,7 @@ public class WorkbookFunctionsProductRequest extends BaseWorkbookFunctionsProduc
     /**
      * The request for this WorkbookFunctionsProduct
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

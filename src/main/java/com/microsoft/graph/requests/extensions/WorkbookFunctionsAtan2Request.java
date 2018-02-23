@@ -27,7 +27,7 @@ public class WorkbookFunctionsAtan2Request extends BaseWorkbookFunctionsAtan2Req
     /**
      * The request for this WorkbookFunctionsAtan2
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsAcothRequest extends BaseWorkbookFunctionsAcothReq
     /**
      * The request for this WorkbookFunctionsAcoth
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

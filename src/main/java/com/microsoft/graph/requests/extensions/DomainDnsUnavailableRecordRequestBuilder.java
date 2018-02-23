@@ -27,7 +27,7 @@ public class DomainDnsUnavailableRecordRequestBuilder extends BaseDomainDnsUnava
     /**
      * The request builder for the DomainDnsUnavailableRecord
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

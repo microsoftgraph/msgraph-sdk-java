@@ -27,7 +27,7 @@ public class WorkbookFunctionsLcmRequestBuilder extends BaseWorkbookFunctionsLcm
     /**
      * The request builder for this WorkbookFunctionsLcm
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

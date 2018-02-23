@@ -27,7 +27,7 @@ public class WorkbookFunctionsYieldMatRequest extends BaseWorkbookFunctionsYield
     /**
      * The request for this WorkbookFunctionsYieldMat
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookTableAddRequestBuilder extends BaseWorkbookTableAddRequestB
     /**
      * The request builder for this WorkbookTableAdd
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param address the address

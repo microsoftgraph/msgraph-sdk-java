@@ -27,7 +27,7 @@ public class WorkbookFunctionsPdurationRequest extends BaseWorkbookFunctionsPdur
     /**
      * The request for this WorkbookFunctionsPduration
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

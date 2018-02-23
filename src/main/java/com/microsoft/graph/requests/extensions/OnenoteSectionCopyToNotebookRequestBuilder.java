@@ -27,7 +27,7 @@ public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseOnenoteSecti
     /**
      * The request builder for this OnenoteSectionCopyToNotebook
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param id the id

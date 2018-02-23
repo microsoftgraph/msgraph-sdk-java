@@ -27,7 +27,7 @@ public class WorkbookFunctionsT_DistRequest extends BaseWorkbookFunctionsT_DistR
     /**
      * The request for this WorkbookFunctionsT_Dist
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

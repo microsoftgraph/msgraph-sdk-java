@@ -27,7 +27,7 @@ public class WorkbookFunctionsSumIfRequest extends BaseWorkbookFunctionsSumIfReq
     /**
      * The request for this WorkbookFunctionsSumIf
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

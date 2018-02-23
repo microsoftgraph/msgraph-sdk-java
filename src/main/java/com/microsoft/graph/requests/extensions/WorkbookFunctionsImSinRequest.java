@@ -27,7 +27,7 @@ public class WorkbookFunctionsImSinRequest extends BaseWorkbookFunctionsImSinReq
     /**
      * The request for this WorkbookFunctionsImSin
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

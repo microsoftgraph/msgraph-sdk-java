@@ -27,7 +27,7 @@ public class WorkbookFunctionsDaverageRequest extends BaseWorkbookFunctionsDaver
     /**
      * The request for this WorkbookFunctionsDaverage
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

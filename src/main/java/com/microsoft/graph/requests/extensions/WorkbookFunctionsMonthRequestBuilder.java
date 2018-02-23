@@ -27,7 +27,7 @@ public class WorkbookFunctionsMonthRequestBuilder extends BaseWorkbookFunctionsM
     /**
      * The request builder for this WorkbookFunctionsMonth
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param serialNumber the serialNumber

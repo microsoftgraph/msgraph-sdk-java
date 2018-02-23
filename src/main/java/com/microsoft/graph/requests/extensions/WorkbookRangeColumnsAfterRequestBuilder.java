@@ -27,7 +27,7 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseWorkbookRangeCo
     /**
      * The request builder for this WorkbookRangeColumnsAfter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
@@ -38,7 +38,7 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseWorkbookRangeCo
     /**
      * The request builder for this WorkbookRangeColumnsAfter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param count the count

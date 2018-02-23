@@ -27,7 +27,7 @@ public class WorkbookFunctionsDegreesRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsDegrees
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param angle the angle

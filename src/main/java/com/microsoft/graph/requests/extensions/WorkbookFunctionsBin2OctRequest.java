@@ -27,7 +27,7 @@ public class WorkbookFunctionsBin2OctRequest extends BaseWorkbookFunctionsBin2Oc
     /**
      * The request for this WorkbookFunctionsBin2Oct
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

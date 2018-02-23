@@ -27,7 +27,7 @@ public class WorkbookFunctionsValueRequest extends BaseWorkbookFunctionsValueReq
     /**
      * The request for this WorkbookFunctionsValue
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

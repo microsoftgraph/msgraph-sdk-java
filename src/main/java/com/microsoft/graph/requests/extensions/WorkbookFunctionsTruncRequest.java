@@ -27,7 +27,7 @@ public class WorkbookFunctionsTruncRequest extends BaseWorkbookFunctionsTruncReq
     /**
      * The request for this WorkbookFunctionsTrunc
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

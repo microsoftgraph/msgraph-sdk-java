@@ -27,7 +27,7 @@ public class WorkbookFunctionsCumIPmtRequest extends BaseWorkbookFunctionsCumIPm
     /**
      * The request for this WorkbookFunctionsCumIPmt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

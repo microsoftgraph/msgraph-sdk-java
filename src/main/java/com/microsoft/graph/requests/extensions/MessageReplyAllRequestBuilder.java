@@ -27,7 +27,7 @@ public class MessageReplyAllRequestBuilder extends BaseMessageReplyAllRequestBui
     /**
      * The request builder for this MessageReplyAll
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param comment the comment

@@ -27,7 +27,7 @@ public class WorkbookFunctionsRandBetweenRequestBuilder extends BaseWorkbookFunc
     /**
      * The request builder for this WorkbookFunctionsRandBetween
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param bottom the bottom

@@ -27,7 +27,7 @@ public class WorkbookFunctionsSkew_pRequest extends BaseWorkbookFunctionsSkew_pR
     /**
      * The request for this WorkbookFunctionsSkew_p
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

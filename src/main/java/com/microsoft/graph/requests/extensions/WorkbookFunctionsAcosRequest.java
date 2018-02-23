@@ -27,7 +27,7 @@ public class WorkbookFunctionsAcosRequest extends BaseWorkbookFunctionsAcosReque
     /**
      * The request for this WorkbookFunctionsAcos
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

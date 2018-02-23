@@ -27,7 +27,7 @@ public class UserWithReferenceRequest extends BaseUserWithReferenceRequest imple
     /**
      * The request for the User
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

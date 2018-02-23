@@ -27,7 +27,7 @@ public class WorkbookChartFontRequestBuilder extends BaseWorkbookChartFontReques
     /**
      * The request builder for the WorkbookChartFont
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

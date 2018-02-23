@@ -27,7 +27,7 @@ public class WorkbookFunctionsQuartile_ExcRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsQuartile_Exc
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param array the array

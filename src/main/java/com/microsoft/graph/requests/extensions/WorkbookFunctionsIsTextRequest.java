@@ -27,7 +27,7 @@ public class WorkbookFunctionsIsTextRequest extends BaseWorkbookFunctionsIsTextR
     /**
      * The request for this WorkbookFunctionsIsText
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

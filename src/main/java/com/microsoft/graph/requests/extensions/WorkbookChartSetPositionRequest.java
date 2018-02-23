@@ -27,7 +27,7 @@ public class WorkbookChartSetPositionRequest extends BaseWorkbookChartSetPositio
     /**
      * The request for this WorkbookChartSetPosition
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

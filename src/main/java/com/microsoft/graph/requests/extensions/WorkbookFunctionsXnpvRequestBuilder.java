@@ -27,7 +27,7 @@ public class WorkbookFunctionsXnpvRequestBuilder extends BaseWorkbookFunctionsXn
     /**
      * The request builder for this WorkbookFunctionsXnpv
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param rate the rate

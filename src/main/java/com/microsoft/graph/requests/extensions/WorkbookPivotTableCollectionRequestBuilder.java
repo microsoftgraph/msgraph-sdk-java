@@ -27,7 +27,7 @@ public class WorkbookPivotTableCollectionRequestBuilder extends BaseWorkbookPivo
     /**
      * The request builder for this collection of WorkbookWorksheet
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

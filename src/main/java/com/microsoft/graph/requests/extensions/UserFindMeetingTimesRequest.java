@@ -27,7 +27,7 @@ public class UserFindMeetingTimesRequest extends BaseUserFindMeetingTimesRequest
     /**
      * The request for this UserFindMeetingTimes
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

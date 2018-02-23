@@ -27,7 +27,7 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseWorkbookWorksh
     /**
      * The request builder for this WorkbookWorksheetUsedRange
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
@@ -38,7 +38,7 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseWorkbookWorksh
     /**
      * The request builder for this WorkbookWorksheetUsedRange
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param valuesOnly the valuesOnly

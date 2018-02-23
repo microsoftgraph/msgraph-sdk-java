@@ -27,7 +27,7 @@ public class MessageMoveRequestBuilder extends BaseMessageMoveRequestBuilder imp
     /**
      * The request builder for this MessageMove
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param destinationId the destinationId

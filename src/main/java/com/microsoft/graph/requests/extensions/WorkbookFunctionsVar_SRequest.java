@@ -27,7 +27,7 @@ public class WorkbookFunctionsVar_SRequest extends BaseWorkbookFunctionsVar_SReq
     /**
      * The request for this WorkbookFunctionsVar_S
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class SectionGroupRequestBuilder extends BaseSectionGroupRequestBuilder i
     /**
      * The request builder for the SectionGroup
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

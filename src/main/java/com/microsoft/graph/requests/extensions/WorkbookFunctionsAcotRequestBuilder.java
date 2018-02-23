@@ -27,7 +27,7 @@ public class WorkbookFunctionsAcotRequestBuilder extends BaseWorkbookFunctionsAc
     /**
      * The request builder for this WorkbookFunctionsAcot
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param number the number

@@ -27,7 +27,7 @@ public class WorkbookFunctionsErfRequestBuilder extends BaseWorkbookFunctionsErf
     /**
      * The request builder for this WorkbookFunctionsErf
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param lowerLimit the lowerLimit

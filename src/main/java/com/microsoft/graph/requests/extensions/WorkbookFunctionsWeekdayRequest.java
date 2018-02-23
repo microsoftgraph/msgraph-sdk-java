@@ -27,7 +27,7 @@ public class WorkbookFunctionsWeekdayRequest extends BaseWorkbookFunctionsWeekda
     /**
      * The request for this WorkbookFunctionsWeekday
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

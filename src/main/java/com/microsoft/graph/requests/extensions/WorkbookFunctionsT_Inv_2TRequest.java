@@ -27,7 +27,7 @@ public class WorkbookFunctionsT_Inv_2TRequest extends BaseWorkbookFunctionsT_Inv
     /**
      * The request for this WorkbookFunctionsT_Inv_2T
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

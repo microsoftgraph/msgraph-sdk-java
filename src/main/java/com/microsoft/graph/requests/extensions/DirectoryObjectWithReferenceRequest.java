@@ -27,7 +27,7 @@ public class DirectoryObjectWithReferenceRequest extends BaseDirectoryObjectWith
     /**
      * The request for the DirectoryObject
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsImPowerRequest extends BaseWorkbookFunctionsImPowe
     /**
      * The request for this WorkbookFunctionsImPower
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class GroupAddFavoriteRequest extends BaseGroupAddFavoriteRequest impleme
     /**
      * The request for this GroupAddFavorite
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

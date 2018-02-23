@@ -27,7 +27,7 @@ public class WorkbookFunctionsEcma_CeilingRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsEcma_Ceiling
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param number the number

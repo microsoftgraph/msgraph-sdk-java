@@ -27,7 +27,7 @@ public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsConfidence_T
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param alpha the alpha

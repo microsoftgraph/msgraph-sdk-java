@@ -27,7 +27,7 @@ public class WorkbookFunctionsMinRequestBuilder extends BaseWorkbookFunctionsMin
     /**
      * The request builder for this WorkbookFunctionsMin
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

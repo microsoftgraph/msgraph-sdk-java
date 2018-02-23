@@ -27,7 +27,7 @@ public class WorkbookFunctionsNorm_S_DistRequest extends BaseWorkbookFunctionsNo
     /**
      * The request for this WorkbookFunctionsNorm_S_Dist
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

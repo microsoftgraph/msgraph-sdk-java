@@ -27,7 +27,7 @@ public class WorkbookFunctionsDollarFrRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsDollarFr
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param decimalDollar the decimalDollar

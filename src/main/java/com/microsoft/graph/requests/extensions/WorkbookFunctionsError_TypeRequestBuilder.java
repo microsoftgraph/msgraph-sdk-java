@@ -27,7 +27,7 @@ public class WorkbookFunctionsError_TypeRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsError_Type
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param errorVal the errorVal

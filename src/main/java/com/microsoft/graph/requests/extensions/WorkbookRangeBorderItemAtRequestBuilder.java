@@ -27,7 +27,7 @@ public class WorkbookRangeBorderItemAtRequestBuilder extends BaseWorkbookRangeBo
     /**
      * The request builder for this WorkbookRangeBorderItemAt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param index the index

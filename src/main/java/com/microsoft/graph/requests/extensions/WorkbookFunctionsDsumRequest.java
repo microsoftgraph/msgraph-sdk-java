@@ -27,7 +27,7 @@ public class WorkbookFunctionsDsumRequest extends BaseWorkbookFunctionsDsumReque
     /**
      * The request for this WorkbookFunctionsDsum
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

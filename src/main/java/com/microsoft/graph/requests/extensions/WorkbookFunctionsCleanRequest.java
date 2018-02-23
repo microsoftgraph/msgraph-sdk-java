@@ -27,7 +27,7 @@ public class WorkbookFunctionsCleanRequest extends BaseWorkbookFunctionsCleanReq
     /**
      * The request for this WorkbookFunctionsClean
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

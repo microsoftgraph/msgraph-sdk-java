@@ -27,7 +27,7 @@ public class ListItemRequestBuilder extends BaseListItemRequestBuilder implement
     /**
      * The request builder for the ListItem
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

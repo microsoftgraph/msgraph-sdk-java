@@ -27,7 +27,7 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseDirectoryRoleTempla
     /**
      * The request builder for the DirectoryRoleTemplate
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

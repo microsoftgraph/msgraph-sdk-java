@@ -27,7 +27,7 @@ public class WorkbookFunctionsAmorLincRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsAmorLinc
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param cost the cost

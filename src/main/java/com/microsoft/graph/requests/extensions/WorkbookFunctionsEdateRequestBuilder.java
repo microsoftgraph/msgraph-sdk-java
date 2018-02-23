@@ -27,7 +27,7 @@ public class WorkbookFunctionsEdateRequestBuilder extends BaseWorkbookFunctionsE
     /**
      * The request builder for this WorkbookFunctionsEdate
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param startDate the startDate

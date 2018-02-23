@@ -27,7 +27,7 @@ public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseSingleV
     /**
      * The request builder for the SingleValueLegacyExtendedProperty
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class UserSendMailRequest extends BaseUserSendMailRequest implements IUse
     /**
      * The request for this UserSendMail
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

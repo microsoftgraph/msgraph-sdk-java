@@ -27,7 +27,7 @@ public class PersonCollectionRequestBuilder extends BasePersonCollectionRequestB
     /**
      * The request builder for this collection of User
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

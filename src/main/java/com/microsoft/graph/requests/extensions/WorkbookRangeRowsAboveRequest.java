@@ -27,7 +27,7 @@ public class WorkbookRangeRowsAboveRequest extends BaseWorkbookRangeRowsAboveReq
     /**
      * The request for this WorkbookRangeRowsAbove
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

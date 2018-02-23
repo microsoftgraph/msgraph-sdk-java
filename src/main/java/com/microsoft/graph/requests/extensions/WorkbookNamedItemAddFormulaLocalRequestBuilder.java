@@ -27,7 +27,7 @@ public class WorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseWorkbook
     /**
      * The request builder for this WorkbookNamedItemAddFormulaLocal
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param name the name

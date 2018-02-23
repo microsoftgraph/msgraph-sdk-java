@@ -27,7 +27,7 @@ public class WorkbookTableDataBodyRangeRequestBuilder extends BaseWorkbookTableD
     /**
      * The request builder for this WorkbookTableDataBodyRange
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

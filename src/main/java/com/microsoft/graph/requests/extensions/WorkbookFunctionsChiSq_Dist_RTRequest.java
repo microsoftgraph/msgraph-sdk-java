@@ -27,7 +27,7 @@ public class WorkbookFunctionsChiSq_Dist_RTRequest extends BaseWorkbookFunctions
     /**
      * The request for this WorkbookFunctionsChiSq_Dist_RT
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

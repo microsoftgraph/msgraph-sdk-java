@@ -27,7 +27,7 @@ public class WorkbookFunctionsTrimMeanRequest extends BaseWorkbookFunctionsTrimM
     /**
      * The request for this WorkbookFunctionsTrimMean
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

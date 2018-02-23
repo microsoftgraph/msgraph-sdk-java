@@ -27,7 +27,7 @@ public class WorkbookPivotTableRefreshRequestBuilder extends BaseWorkbookPivotTa
     /**
      * The request builder for this WorkbookPivotTableRefresh
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

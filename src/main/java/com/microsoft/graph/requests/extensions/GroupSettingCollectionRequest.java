@@ -27,7 +27,7 @@ public class GroupSettingCollectionRequest extends BaseGroupSettingCollectionReq
     /**
      * The request for this collection of GroupSetting
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

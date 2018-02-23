@@ -27,7 +27,7 @@ public class ConversationThreadReplyRequestBuilder extends BaseConversationThrea
     /**
      * The request builder for this ConversationThreadReply
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param post the post

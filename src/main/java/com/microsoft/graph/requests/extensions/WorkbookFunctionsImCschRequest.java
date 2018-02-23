@@ -27,7 +27,7 @@ public class WorkbookFunctionsImCschRequest extends BaseWorkbookFunctionsImCschR
     /**
      * The request for this WorkbookFunctionsImCsch
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

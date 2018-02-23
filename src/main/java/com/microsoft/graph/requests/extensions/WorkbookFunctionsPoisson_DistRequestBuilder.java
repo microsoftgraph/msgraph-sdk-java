@@ -27,7 +27,7 @@ public class WorkbookFunctionsPoisson_DistRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsPoisson_Dist
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param x the x

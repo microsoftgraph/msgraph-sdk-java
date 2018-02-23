@@ -27,7 +27,7 @@ public class WorkbookFunctionsImaginaryRequest extends BaseWorkbookFunctionsImag
     /**
      * The request for this WorkbookFunctionsImaginary
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

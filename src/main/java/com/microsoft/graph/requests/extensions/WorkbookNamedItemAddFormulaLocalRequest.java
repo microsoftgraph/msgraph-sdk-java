@@ -27,7 +27,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseWorkbookNamedIt
     /**
      * The request for this WorkbookNamedItemAddFormulaLocal
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

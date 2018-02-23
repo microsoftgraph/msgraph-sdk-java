@@ -27,7 +27,7 @@ public class WorkbookChartPointFormatRequestBuilder extends BaseWorkbookChartPoi
     /**
      * The request builder for the WorkbookChartPointFormat
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

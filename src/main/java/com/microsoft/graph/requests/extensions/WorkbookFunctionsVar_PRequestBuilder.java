@@ -27,7 +27,7 @@ public class WorkbookFunctionsVar_PRequestBuilder extends BaseWorkbookFunctionsV
     /**
      * The request builder for this WorkbookFunctionsVar_P
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

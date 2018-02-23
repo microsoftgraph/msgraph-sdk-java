@@ -27,7 +27,7 @@ public class WorkbookFunctionsDvarRequest extends BaseWorkbookFunctionsDvarReque
     /**
      * The request for this WorkbookFunctionsDvar
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

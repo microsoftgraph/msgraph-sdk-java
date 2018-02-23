@@ -27,7 +27,7 @@ public class WorkbookFunctionsCoupDayBsRequest extends BaseWorkbookFunctionsCoup
     /**
      * The request for this WorkbookFunctionsCoupDayBs
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

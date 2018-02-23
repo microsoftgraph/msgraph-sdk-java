@@ -27,7 +27,7 @@ public class WorkbookFunctionsAverageIfsRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsAverageIfs
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param averageRange the averageRange

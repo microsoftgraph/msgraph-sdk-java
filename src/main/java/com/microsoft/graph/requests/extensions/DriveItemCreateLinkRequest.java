@@ -27,7 +27,7 @@ public class DriveItemCreateLinkRequest extends BaseDriveItemCreateLinkRequest i
     /**
      * The request for this DriveItemCreateLink
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

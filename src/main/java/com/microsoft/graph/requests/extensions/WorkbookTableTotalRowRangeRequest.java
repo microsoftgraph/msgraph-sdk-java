@@ -27,7 +27,7 @@ public class WorkbookTableTotalRowRangeRequest extends BaseWorkbookTableTotalRow
     /**
      * The request for this WorkbookTableTotalRowRange
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsXorRequest extends BaseWorkbookFunctionsXorRequest
     /**
      * The request for this WorkbookFunctionsXor
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

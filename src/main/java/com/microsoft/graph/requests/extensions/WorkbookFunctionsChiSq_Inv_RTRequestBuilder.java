@@ -27,7 +27,7 @@ public class WorkbookFunctionsChiSq_Inv_RTRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsChiSq_Inv_RT
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param probability the probability

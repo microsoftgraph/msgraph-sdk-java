@@ -27,7 +27,7 @@ public class WorkbookFunctionsAsinRequest extends BaseWorkbookFunctionsAsinReque
     /**
      * The request for this WorkbookFunctionsAsin
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

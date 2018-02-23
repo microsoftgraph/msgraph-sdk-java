@@ -27,7 +27,7 @@ public class WorkbookFunctionsVdbRequestBuilder extends BaseWorkbookFunctionsVdb
     /**
      * The request builder for this WorkbookFunctionsVdb
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param cost the cost

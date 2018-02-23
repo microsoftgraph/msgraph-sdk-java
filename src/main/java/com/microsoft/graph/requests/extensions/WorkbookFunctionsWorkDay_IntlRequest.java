@@ -27,7 +27,7 @@ public class WorkbookFunctionsWorkDay_IntlRequest extends BaseWorkbookFunctionsW
     /**
      * The request for this WorkbookFunctionsWorkDay_Intl
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class ColumnDefinitionCollectionRequest extends BaseColumnDefinitionColle
     /**
      * The request for this collection of List
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

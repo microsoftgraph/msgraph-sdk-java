@@ -27,7 +27,7 @@ public class WorkbookFunctionsNRequest extends BaseWorkbookFunctionsNRequest imp
     /**
      * The request for this WorkbookFunctionsN
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

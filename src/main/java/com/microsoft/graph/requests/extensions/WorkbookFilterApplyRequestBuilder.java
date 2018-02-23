@@ -27,7 +27,7 @@ public class WorkbookFilterApplyRequestBuilder extends BaseWorkbookFilterApplyRe
     /**
      * The request builder for this WorkbookFilterApply
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param criteria the criteria

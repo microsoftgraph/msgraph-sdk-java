@@ -27,7 +27,7 @@ public class UserChangePasswordRequestBuilder extends BaseUserChangePasswordRequ
     /**
      * The request builder for this UserChangePassword
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param currentPassword the currentPassword

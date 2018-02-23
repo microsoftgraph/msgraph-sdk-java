@@ -27,7 +27,7 @@ public class ReferenceAttachmentRequestBuilder extends BaseReferenceAttachmentRe
     /**
      * The request builder for the ReferenceAttachment
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsKurtRequest extends BaseWorkbookFunctionsKurtReque
     /**
      * The request for this WorkbookFunctionsKurt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsNominalRequest extends BaseWorkbookFunctionsNomina
     /**
      * The request for this WorkbookFunctionsNominal
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

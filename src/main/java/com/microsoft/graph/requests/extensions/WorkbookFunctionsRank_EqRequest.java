@@ -27,7 +27,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseWorkbookFunctionsRank_E
     /**
      * The request for this WorkbookFunctionsRank_Eq
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

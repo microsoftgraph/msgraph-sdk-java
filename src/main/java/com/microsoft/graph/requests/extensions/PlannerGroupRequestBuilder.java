@@ -27,7 +27,7 @@ public class PlannerGroupRequestBuilder extends BasePlannerGroupRequestBuilder i
     /**
      * The request builder for the PlannerGroup
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

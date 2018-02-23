@@ -27,7 +27,7 @@ public class WorkbookFunctionsBin2DecRequest extends BaseWorkbookFunctionsBin2De
     /**
      * The request for this WorkbookFunctionsBin2Dec
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

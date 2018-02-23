@@ -27,7 +27,7 @@ public class PostCollectionRequest extends BasePostCollectionRequest implements 
     /**
      * The request for this collection of ConversationThread
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

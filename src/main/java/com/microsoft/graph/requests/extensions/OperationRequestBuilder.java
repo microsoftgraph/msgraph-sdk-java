@@ -27,7 +27,7 @@ public class OperationRequestBuilder extends BaseOperationRequestBuilder impleme
     /**
      * The request builder for the Operation
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

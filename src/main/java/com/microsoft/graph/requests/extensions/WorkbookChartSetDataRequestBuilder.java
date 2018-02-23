@@ -27,7 +27,7 @@ public class WorkbookChartSetDataRequestBuilder extends BaseWorkbookChartSetData
     /**
      * The request builder for this WorkbookChartSetData
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param sourceData the sourceData

@@ -27,7 +27,7 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseOnenoteEntity
     /**
      * The request builder for the OnenoteEntityHierarchyModel
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsDatevalueRequest extends BaseWorkbookFunctionsDate
     /**
      * The request for this WorkbookFunctionsDatevalue
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

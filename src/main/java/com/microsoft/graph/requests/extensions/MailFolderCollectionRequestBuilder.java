@@ -27,7 +27,7 @@ public class MailFolderCollectionRequestBuilder extends BaseMailFolderCollection
     /**
      * The request builder for this collection of MailFolder
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

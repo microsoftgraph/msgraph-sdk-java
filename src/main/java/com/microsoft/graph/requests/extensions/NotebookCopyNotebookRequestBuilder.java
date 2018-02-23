@@ -27,7 +27,7 @@ public class NotebookCopyNotebookRequestBuilder extends BaseNotebookCopyNotebook
     /**
      * The request builder for this NotebookCopyNotebook
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param groupId the groupId

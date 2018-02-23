@@ -27,7 +27,7 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseWorkbookRangeRowsB
     /**
      * The request builder for this WorkbookRangeRowsBelow
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
@@ -38,7 +38,7 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseWorkbookRangeRowsB
     /**
      * The request builder for this WorkbookRangeRowsBelow
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param count the count

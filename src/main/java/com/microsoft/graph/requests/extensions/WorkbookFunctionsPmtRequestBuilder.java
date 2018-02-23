@@ -27,7 +27,7 @@ public class WorkbookFunctionsPmtRequestBuilder extends BaseWorkbookFunctionsPmt
     /**
      * The request builder for this WorkbookFunctionsPmt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param rate the rate

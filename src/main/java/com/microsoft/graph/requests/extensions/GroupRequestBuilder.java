@@ -27,7 +27,7 @@ public class GroupRequestBuilder extends BaseGroupRequestBuilder implements IGro
     /**
      * The request builder for the Group
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

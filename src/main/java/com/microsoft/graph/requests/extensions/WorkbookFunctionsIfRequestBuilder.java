@@ -27,7 +27,7 @@ public class WorkbookFunctionsIfRequestBuilder extends BaseWorkbookFunctionsIfRe
     /**
      * The request builder for this WorkbookFunctionsIf
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param logicalTest the logicalTest

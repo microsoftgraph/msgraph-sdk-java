@@ -27,7 +27,7 @@ public class WorkbookFunctionsGamma_InvRequest extends BaseWorkbookFunctionsGamm
     /**
      * The request for this WorkbookFunctionsGamma_Inv
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

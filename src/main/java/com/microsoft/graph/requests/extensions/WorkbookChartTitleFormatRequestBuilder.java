@@ -27,7 +27,7 @@ public class WorkbookChartTitleFormatRequestBuilder extends BaseWorkbookChartTit
     /**
      * The request builder for the WorkbookChartTitleFormat
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

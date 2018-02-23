@@ -27,7 +27,7 @@ public class WorkbookFunctionsYearFracRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsYearFrac
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param startDate the startDate

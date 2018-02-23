@@ -27,7 +27,7 @@ public class WorkbookFunctionsStDev_SRequest extends BaseWorkbookFunctionsStDev_
     /**
      * The request for this WorkbookFunctionsStDev_S
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

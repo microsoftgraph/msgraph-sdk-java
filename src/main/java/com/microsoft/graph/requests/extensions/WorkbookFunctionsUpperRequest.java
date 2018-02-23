@@ -27,7 +27,7 @@ public class WorkbookFunctionsUpperRequest extends BaseWorkbookFunctionsUpperReq
     /**
      * The request for this WorkbookFunctionsUpper
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

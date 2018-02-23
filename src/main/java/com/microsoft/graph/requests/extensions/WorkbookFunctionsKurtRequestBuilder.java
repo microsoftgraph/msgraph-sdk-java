@@ -27,7 +27,7 @@ public class WorkbookFunctionsKurtRequestBuilder extends BaseWorkbookFunctionsKu
     /**
      * The request builder for this WorkbookFunctionsKurt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

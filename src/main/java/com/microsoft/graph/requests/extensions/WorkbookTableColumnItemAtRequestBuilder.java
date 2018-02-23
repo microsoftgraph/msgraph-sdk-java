@@ -27,7 +27,7 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseWorkbookTableCo
     /**
      * The request builder for this WorkbookTableColumnItemAt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param index the index

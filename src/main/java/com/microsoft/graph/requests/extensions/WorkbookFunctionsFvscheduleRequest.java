@@ -27,7 +27,7 @@ public class WorkbookFunctionsFvscheduleRequest extends BaseWorkbookFunctionsFvs
     /**
      * The request for this WorkbookFunctionsFvschedule
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

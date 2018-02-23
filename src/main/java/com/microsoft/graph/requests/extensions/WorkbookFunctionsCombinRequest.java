@@ -27,7 +27,7 @@ public class WorkbookFunctionsCombinRequest extends BaseWorkbookFunctionsCombinR
     /**
      * The request for this WorkbookFunctionsCombin
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

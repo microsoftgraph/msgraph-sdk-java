@@ -27,7 +27,7 @@ public class SchemaExtensionCollectionRequest extends BaseSchemaExtensionCollect
     /**
      * The request for this collection of SchemaExtension
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

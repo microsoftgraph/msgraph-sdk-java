@@ -27,7 +27,7 @@ public class WorkbookFunctionsImConjugateRequest extends BaseWorkbookFunctionsIm
     /**
      * The request for this WorkbookFunctionsImConjugate
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

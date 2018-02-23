@@ -27,7 +27,7 @@ public class WorkbookFunctionsAverageARequest extends BaseWorkbookFunctionsAvera
     /**
      * The request for this WorkbookFunctionsAverageA
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

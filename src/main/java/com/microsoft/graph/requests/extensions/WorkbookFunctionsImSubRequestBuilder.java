@@ -27,7 +27,7 @@ public class WorkbookFunctionsImSubRequestBuilder extends BaseWorkbookFunctionsI
     /**
      * The request builder for this WorkbookFunctionsImSub
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param inumber1 the inumber1

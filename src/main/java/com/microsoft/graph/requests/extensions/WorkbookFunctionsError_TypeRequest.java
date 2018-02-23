@@ -27,7 +27,7 @@ public class WorkbookFunctionsError_TypeRequest extends BaseWorkbookFunctionsErr
     /**
      * The request for this WorkbookFunctionsError_Type
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

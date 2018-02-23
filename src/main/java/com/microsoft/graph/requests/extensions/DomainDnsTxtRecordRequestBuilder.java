@@ -27,7 +27,7 @@ public class DomainDnsTxtRecordRequestBuilder extends BaseDomainDnsTxtRecordRequ
     /**
      * The request builder for the DomainDnsTxtRecord
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

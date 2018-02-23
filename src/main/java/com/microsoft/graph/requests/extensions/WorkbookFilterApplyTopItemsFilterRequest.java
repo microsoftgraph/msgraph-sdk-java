@@ -27,7 +27,7 @@ public class WorkbookFilterApplyTopItemsFilterRequest extends BaseWorkbookFilter
     /**
      * The request for this WorkbookFilterApplyTopItemsFilter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

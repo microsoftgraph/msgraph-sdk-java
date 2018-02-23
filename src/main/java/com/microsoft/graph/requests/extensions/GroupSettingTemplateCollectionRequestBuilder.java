@@ -27,7 +27,7 @@ public class GroupSettingTemplateCollectionRequestBuilder extends BaseGroupSetti
     /**
      * The request builder for this collection of GroupSettingTemplate
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

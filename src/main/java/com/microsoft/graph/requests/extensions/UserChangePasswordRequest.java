@@ -27,7 +27,7 @@ public class UserChangePasswordRequest extends BaseUserChangePasswordRequest imp
     /**
      * The request for this UserChangePassword
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

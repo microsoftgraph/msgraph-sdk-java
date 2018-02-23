@@ -27,7 +27,7 @@ public class WorkbookFunctionsNowRequest extends BaseWorkbookFunctionsNowRequest
     /**
      * The request for this WorkbookFunctionsNow
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

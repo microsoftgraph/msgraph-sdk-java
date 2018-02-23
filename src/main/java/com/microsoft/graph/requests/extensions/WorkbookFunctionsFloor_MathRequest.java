@@ -27,7 +27,7 @@ public class WorkbookFunctionsFloor_MathRequest extends BaseWorkbookFunctionsFlo
     /**
      * The request for this WorkbookFunctionsFloor_Math
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

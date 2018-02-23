@@ -27,7 +27,7 @@ public class WorkbookFunctionsAbsRequest extends BaseWorkbookFunctionsAbsRequest
     /**
      * The request for this WorkbookFunctionsAbs
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

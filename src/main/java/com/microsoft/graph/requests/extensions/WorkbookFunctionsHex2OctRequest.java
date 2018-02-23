@@ -27,7 +27,7 @@ public class WorkbookFunctionsHex2OctRequest extends BaseWorkbookFunctionsHex2Oc
     /**
      * The request for this WorkbookFunctionsHex2Oct
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class WorkbookFunctionsFloor_PreciseRequest extends BaseWorkbookFunctions
     /**
      * The request for this WorkbookFunctionsFloor_Precise
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

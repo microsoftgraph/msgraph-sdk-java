@@ -27,7 +27,7 @@ public class WorkbookFunctionsCountRequestBuilder extends BaseWorkbookFunctionsC
     /**
      * The request builder for this WorkbookFunctionsCount
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

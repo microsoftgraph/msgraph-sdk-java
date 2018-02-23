@@ -27,7 +27,7 @@ public class WorkbookFunctionsRateRequestBuilder extends BaseWorkbookFunctionsRa
     /**
      * The request builder for this WorkbookFunctionsRate
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param nper the nper

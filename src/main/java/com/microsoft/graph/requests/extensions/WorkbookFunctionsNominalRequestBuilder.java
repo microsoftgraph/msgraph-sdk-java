@@ -27,7 +27,7 @@ public class WorkbookFunctionsNominalRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsNominal
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param effectRate the effectRate

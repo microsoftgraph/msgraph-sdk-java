@@ -27,7 +27,7 @@ public class WorkbookFunctionsYearRequestBuilder extends BaseWorkbookFunctionsYe
     /**
      * The request builder for this WorkbookFunctionsYear
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param serialNumber the serialNumber

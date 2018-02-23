@@ -27,7 +27,7 @@ public class WorkbookFunctionsOrRequestBuilder extends BaseWorkbookFunctionsOrRe
     /**
      * The request builder for this WorkbookFunctionsOr
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param values the values

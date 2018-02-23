@@ -27,7 +27,7 @@ public class WorkbookFunctionsBitxorRequest extends BaseWorkbookFunctionsBitxorR
     /**
      * The request for this WorkbookFunctionsBitxor
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

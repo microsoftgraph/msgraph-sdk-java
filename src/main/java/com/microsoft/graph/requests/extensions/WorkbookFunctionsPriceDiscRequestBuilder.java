@@ -27,7 +27,7 @@ public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsPriceDisc
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param settlement the settlement

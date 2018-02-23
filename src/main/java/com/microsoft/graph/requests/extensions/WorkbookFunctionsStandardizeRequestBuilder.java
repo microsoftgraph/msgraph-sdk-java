@@ -27,7 +27,7 @@ public class WorkbookFunctionsStandardizeRequestBuilder extends BaseWorkbookFunc
     /**
      * The request builder for this WorkbookFunctionsStandardize
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param x the x

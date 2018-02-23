@@ -27,7 +27,7 @@ public class DriveItemCopyRequestBuilder extends BaseDriveItemCopyRequestBuilder
     /**
      * The request builder for this DriveItemCopy
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param name the name

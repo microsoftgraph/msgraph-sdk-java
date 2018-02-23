@@ -27,7 +27,7 @@ public class WorkbookFunctionsRoundRequest extends BaseWorkbookFunctionsRoundReq
     /**
      * The request for this WorkbookFunctionsRound
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

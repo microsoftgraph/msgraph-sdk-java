@@ -27,7 +27,7 @@ public class DriveItemCreateUploadSessionRequest extends BaseDriveItemCreateUplo
     /**
      * The request for this DriveItemCreateUploadSession
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

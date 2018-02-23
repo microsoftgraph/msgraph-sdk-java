@@ -27,7 +27,7 @@ public class WorkbookFunctionsLnRequestBuilder extends BaseWorkbookFunctionsLnRe
     /**
      * The request builder for this WorkbookFunctionsLn
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param number the number

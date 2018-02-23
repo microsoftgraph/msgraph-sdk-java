@@ -27,7 +27,7 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseWorkboo
     /**
      * The request builder for this WorkbookFilterApplyTopItemsFilter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param count the count

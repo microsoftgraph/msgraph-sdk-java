@@ -27,7 +27,7 @@ public class PostForwardRequest extends BasePostForwardRequest implements IPostF
     /**
      * The request for this PostForward
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class NotebookCollectionRequestBuilder extends BaseNotebookCollectionRequ
     /**
      * The request builder for this collection of Onenote
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

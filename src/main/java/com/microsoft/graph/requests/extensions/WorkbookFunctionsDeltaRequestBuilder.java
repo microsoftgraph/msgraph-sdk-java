@@ -27,7 +27,7 @@ public class WorkbookFunctionsDeltaRequestBuilder extends BaseWorkbookFunctionsD
     /**
      * The request builder for this WorkbookFunctionsDelta
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param number1 the number1

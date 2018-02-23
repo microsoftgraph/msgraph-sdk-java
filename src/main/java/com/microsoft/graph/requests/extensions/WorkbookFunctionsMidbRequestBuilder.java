@@ -27,7 +27,7 @@ public class WorkbookFunctionsMidbRequestBuilder extends BaseWorkbookFunctionsMi
     /**
      * The request builder for this WorkbookFunctionsMidb
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param text the text

@@ -27,7 +27,7 @@ public class ConversationThreadCollectionRequest extends BaseConversationThreadC
     /**
      * The request for this collection of Conversation
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

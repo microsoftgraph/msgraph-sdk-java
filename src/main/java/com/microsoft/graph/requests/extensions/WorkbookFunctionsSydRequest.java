@@ -27,7 +27,7 @@ public class WorkbookFunctionsSydRequest extends BaseWorkbookFunctionsSydRequest
     /**
      * The request for this WorkbookFunctionsSyd
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

@@ -27,7 +27,7 @@ public class AttachmentRequestBuilder extends BaseAttachmentRequestBuilder imple
     /**
      * The request builder for the Attachment
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

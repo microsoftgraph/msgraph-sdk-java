@@ -27,7 +27,7 @@ public class WorkbookFunctionsTimeRequestBuilder extends BaseWorkbookFunctionsTi
     /**
      * The request builder for this WorkbookFunctionsTime
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param hour the hour

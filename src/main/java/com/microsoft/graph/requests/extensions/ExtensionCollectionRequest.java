@@ -27,7 +27,7 @@ public class ExtensionCollectionRequest extends BaseExtensionCollectionRequest i
     /**
      * The request for this collection of Post
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

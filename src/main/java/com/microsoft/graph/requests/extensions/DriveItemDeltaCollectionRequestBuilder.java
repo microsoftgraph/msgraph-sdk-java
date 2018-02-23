@@ -27,7 +27,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
     /**
      * The request builder for this collection of DriveItem
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param token the token
@@ -39,7 +39,7 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
     /**
      * The request builder for this collection of DriveItem
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

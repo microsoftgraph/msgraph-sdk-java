@@ -27,7 +27,7 @@ public class WorkbookFunctionsLogNorm_InvRequest extends BaseWorkbookFunctionsLo
     /**
      * The request for this WorkbookFunctionsLogNorm_Inv
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

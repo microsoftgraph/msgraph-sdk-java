@@ -27,7 +27,7 @@ public class WorkbookFunctionsDstDevRequestBuilder extends BaseWorkbookFunctions
     /**
      * The request builder for this WorkbookFunctionsDstDev
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param database the database

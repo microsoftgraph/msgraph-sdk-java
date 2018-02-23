@@ -27,7 +27,7 @@ public class OpenTypeExtensionRequestBuilder extends BaseOpenTypeExtensionReques
     /**
      * The request builder for the OpenTypeExtension
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

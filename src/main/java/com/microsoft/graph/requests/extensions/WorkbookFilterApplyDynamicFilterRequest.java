@@ -27,7 +27,7 @@ public class WorkbookFilterApplyDynamicFilterRequest extends BaseWorkbookFilterA
     /**
      * The request for this WorkbookFilterApplyDynamicFilter
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */

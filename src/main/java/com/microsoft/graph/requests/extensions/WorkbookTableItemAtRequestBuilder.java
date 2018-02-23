@@ -27,7 +27,7 @@ public class WorkbookTableItemAtRequestBuilder extends BaseWorkbookTableItemAtRe
     /**
      * The request builder for this WorkbookTableItemAt
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param index the index

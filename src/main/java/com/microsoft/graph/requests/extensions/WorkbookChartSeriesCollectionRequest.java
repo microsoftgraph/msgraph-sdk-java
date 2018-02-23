@@ -27,7 +27,7 @@ public class WorkbookChartSeriesCollectionRequest extends BaseWorkbookChartSerie
     /**
      * The request for this collection of WorkbookChart
      *
-     * @param requestUrl     the request url
+     * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
