@@ -26,6 +26,8 @@ public interface IBaseDirectoryObjectWithReferenceRequestBuilder extends IReques
 
     /**
      * Creates the request
+     *
+     * @return The IDirectoryObjectWithReferenceRequest instance
      */
     IDirectoryObjectWithReferenceRequest buildRequest();
 
@@ -33,6 +35,7 @@ public interface IBaseDirectoryObjectWithReferenceRequestBuilder extends IReques
      * Creates the request with specific options instead of the existing options
      *
      * @param requestOptions The options for this request
+     * @return The IDirectoryObjectWithReferenceRequest instance
      */
     IDirectoryObjectWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
