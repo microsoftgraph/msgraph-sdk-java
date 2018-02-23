@@ -27,9 +27,9 @@ public class WorkbookChartTitleRequestBuilder extends BaseWorkbookChartTitleRequ
     /**
      * The request builder for the WorkbookChartTitle
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookChartTitleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

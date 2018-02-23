@@ -27,8 +27,8 @@ public class OnenoteSectionCollectionPage extends BaseOnenoteSectionCollectionPa
     /**
      * A collection page for SectionGroup.
      *
-     * @param response The serialized BaseOnenoteSectionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseOnenoteSectionCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public OnenoteSectionCollectionPage(final BaseOnenoteSectionCollectionResponse response, final IOnenoteSectionCollectionRequestBuilder builder) {
         super(response, builder);

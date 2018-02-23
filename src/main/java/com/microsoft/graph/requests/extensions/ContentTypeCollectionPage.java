@@ -27,8 +27,8 @@ public class ContentTypeCollectionPage extends BaseContentTypeCollectionPage imp
     /**
      * A collection page for List.
      *
-     * @param response The serialized BaseContentTypeCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContentTypeCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ContentTypeCollectionPage(final BaseContentTypeCollectionResponse response, final IContentTypeCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,9 +27,9 @@ public class OnenoteRequestBuilder extends BaseOnenoteRequestBuilder implements 
     /**
      * The request builder for the Onenote
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public OnenoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

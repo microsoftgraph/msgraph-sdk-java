@@ -27,11 +27,11 @@ public class WorkbookFunctionsT_Inv_2TRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsT_Inv_2T
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param probability The probability
-     * @param degFreedom The degFreedom
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
+     * @param degFreedom the degFreedom
      */
     public WorkbookFunctionsT_Inv_2TRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions, probability, degFreedom);

@@ -27,11 +27,11 @@ public class EventTentativelyAcceptRequestBuilder extends BaseEventTentativelyAc
     /**
      * The request builder for this EventTentativelyAccept
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param comment The comment
-     * @param sendResponse The sendResponse
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param comment the comment
+     * @param sendResponse the sendResponse
      */
     public EventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, requestOptions, comment, sendResponse);

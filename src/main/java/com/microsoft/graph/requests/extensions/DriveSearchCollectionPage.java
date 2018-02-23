@@ -27,8 +27,8 @@ public class DriveSearchCollectionPage extends BaseDriveSearchCollectionPage imp
     /**
      * A collection page for Drive.
      *
-     * @param response The serialized BaseDriveSearchCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDriveSearchCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public DriveSearchCollectionPage(final BaseDriveSearchCollectionResponse response, final IDriveSearchCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,10 +27,10 @@ public class WorkbookProcessQueryRequestBuilder extends BaseWorkbookProcessQuery
     /**
      * The request builder for this WorkbookProcessQuery
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param input The input
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param input the input
      */
     public WorkbookProcessQueryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final byte[] input) {
         super(requestUrl, client, requestOptions, input);

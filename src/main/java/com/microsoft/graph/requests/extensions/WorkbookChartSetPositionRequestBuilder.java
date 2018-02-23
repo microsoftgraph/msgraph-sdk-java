@@ -27,11 +27,11 @@ public class WorkbookChartSetPositionRequestBuilder extends BaseWorkbookChartSet
     /**
      * The request builder for this WorkbookChartSetPosition
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param startCell The startCell
-     * @param endCell The endCell
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startCell the startCell
+     * @param endCell the endCell
      */
     public WorkbookChartSetPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startCell, final com.google.gson.JsonElement endCell) {
         super(requestUrl, client, requestOptions, startCell, endCell);

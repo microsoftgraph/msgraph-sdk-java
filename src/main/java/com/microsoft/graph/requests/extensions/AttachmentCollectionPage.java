@@ -27,8 +27,8 @@ public class AttachmentCollectionPage extends BaseAttachmentCollectionPage imple
     /**
      * A collection page for Post.
      *
-     * @param response The serialized BaseAttachmentCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseAttachmentCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public AttachmentCollectionPage(final BaseAttachmentCollectionResponse response, final IAttachmentCollectionRequestBuilder builder) {
         super(response, builder);

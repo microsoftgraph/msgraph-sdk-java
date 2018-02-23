@@ -27,8 +27,8 @@ public class ColumnLinkCollectionPage extends BaseColumnLinkCollectionPage imple
     /**
      * A collection page for ContentType.
      *
-     * @param response The serialized BaseColumnLinkCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseColumnLinkCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ColumnLinkCollectionPage(final BaseColumnLinkCollectionResponse response, final IColumnLinkCollectionRequestBuilder builder) {
         super(response, builder);

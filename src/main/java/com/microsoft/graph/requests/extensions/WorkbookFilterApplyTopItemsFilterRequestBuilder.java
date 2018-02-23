@@ -27,10 +27,10 @@ public class WorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseWorkboo
     /**
      * The request builder for this WorkbookFilterApplyTopItemsFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param count The count
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param count the count
      */
     public WorkbookFilterApplyTopItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions, count);

@@ -27,12 +27,12 @@ public class WorkbookFunctionsFixedRequestBuilder extends BaseWorkbookFunctionsF
     /**
      * The request builder for this WorkbookFunctionsFixed
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param decimals The decimals
-     * @param noCommas The noCommas
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param decimals the decimals
+     * @param noCommas the noCommas
      */
     public WorkbookFunctionsFixedRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals, final com.google.gson.JsonElement noCommas) {
         super(requestUrl, client, requestOptions, number, decimals, noCommas);

@@ -27,8 +27,8 @@ public class UserDeltaCollectionPage extends BaseUserDeltaCollectionPage impleme
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseUserDeltaCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseUserDeltaCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public UserDeltaCollectionPage(final BaseUserDeltaCollectionResponse response, final IUserDeltaCollectionRequestBuilder builder) {
         super(response, builder);

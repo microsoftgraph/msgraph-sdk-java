@@ -27,8 +27,8 @@ public class DriveCollectionPage extends BaseDriveCollectionPage implements IDri
     /**
      * A collection page for Drive.
      *
-     * @param response The serialized BaseDriveCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDriveCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public DriveCollectionPage(final BaseDriveCollectionResponse response, final IDriveCollectionRequestBuilder builder) {
         super(response, builder);

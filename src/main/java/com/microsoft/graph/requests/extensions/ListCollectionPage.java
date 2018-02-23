@@ -27,8 +27,8 @@ public class ListCollectionPage extends BaseListCollectionPage implements IListC
     /**
      * A collection page for Site.
      *
-     * @param response The serialized BaseListCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseListCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ListCollectionPage(final BaseListCollectionResponse response, final IListCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,8 +27,8 @@ public class UserReminderViewCollectionPage extends BaseUserReminderViewCollecti
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseUserReminderViewCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseUserReminderViewCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public UserReminderViewCollectionPage(final BaseUserReminderViewCollectionResponse response, final IUserReminderViewCollectionRequestBuilder builder) {
         super(response, builder);

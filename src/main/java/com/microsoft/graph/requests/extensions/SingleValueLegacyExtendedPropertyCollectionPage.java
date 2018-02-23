@@ -27,8 +27,8 @@ public class SingleValueLegacyExtendedPropertyCollectionPage extends BaseSingleV
     /**
      * A collection page for Post.
      *
-     * @param response The serialized BaseSingleValueLegacyExtendedPropertyCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSingleValueLegacyExtendedPropertyCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public SingleValueLegacyExtendedPropertyCollectionPage(final BaseSingleValueLegacyExtendedPropertyCollectionResponse response, final ISingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response, builder);

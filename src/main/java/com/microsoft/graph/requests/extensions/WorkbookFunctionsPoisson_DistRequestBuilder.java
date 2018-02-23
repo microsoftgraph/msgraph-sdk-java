@@ -27,12 +27,12 @@ public class WorkbookFunctionsPoisson_DistRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsPoisson_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param mean The mean
-     * @param cumulative The cumulative
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param mean the mean
+     * @param cumulative the cumulative
      */
     public WorkbookFunctionsPoisson_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions, x, mean, cumulative);

@@ -27,9 +27,9 @@ public class WorkbookFunctionsT_Dist_2TRequest extends BaseWorkbookFunctionsT_Di
     /**
      * The request for this WorkbookFunctionsT_Dist_2T
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsT_Dist_2TRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

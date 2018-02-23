@@ -27,8 +27,8 @@ public class InferenceClassificationOverrideCollectionPage extends BaseInference
     /**
      * A collection page for InferenceClassification.
      *
-     * @param response The serialized BaseInferenceClassificationOverrideCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseInferenceClassificationOverrideCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public InferenceClassificationOverrideCollectionPage(final BaseInferenceClassificationOverrideCollectionResponse response, final IInferenceClassificationOverrideCollectionRequestBuilder builder) {
         super(response, builder);

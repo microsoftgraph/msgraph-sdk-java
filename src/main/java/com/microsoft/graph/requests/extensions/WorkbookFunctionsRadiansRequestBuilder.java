@@ -27,10 +27,10 @@ public class WorkbookFunctionsRadiansRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsRadians
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param angle The angle
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param angle the angle
      */
     public WorkbookFunctionsRadiansRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement angle) {
         super(requestUrl, client, requestOptions, angle);

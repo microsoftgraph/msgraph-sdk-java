@@ -27,8 +27,8 @@ public class DirectoryObjectGetByIdsCollectionPage extends BaseDirectoryObjectGe
     /**
      * A collection page for DirectoryObject.
      *
-     * @param response The serialized BaseDirectoryObjectGetByIdsCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDirectoryObjectGetByIdsCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public DirectoryObjectGetByIdsCollectionPage(final BaseDirectoryObjectGetByIdsCollectionResponse response, final IDirectoryObjectGetByIdsCollectionRequestBuilder builder) {
         super(response, builder);

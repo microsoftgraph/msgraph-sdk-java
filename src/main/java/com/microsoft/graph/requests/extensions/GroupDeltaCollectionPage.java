@@ -27,8 +27,8 @@ public class GroupDeltaCollectionPage extends BaseGroupDeltaCollectionPage imple
     /**
      * A collection page for Group.
      *
-     * @param response The serialized BaseGroupDeltaCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseGroupDeltaCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public GroupDeltaCollectionPage(final BaseGroupDeltaCollectionResponse response, final IGroupDeltaCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,10 +27,10 @@ public class WorkbookWorksheetProtectionProtectRequestBuilder extends BaseWorkbo
     /**
      * The request builder for this WorkbookWorksheetProtectionProtect
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param options The options
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param options the options
      */
     public WorkbookWorksheetProtectionProtectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final WorkbookWorksheetProtectionOptions options) {
         super(requestUrl, client, requestOptions, options);

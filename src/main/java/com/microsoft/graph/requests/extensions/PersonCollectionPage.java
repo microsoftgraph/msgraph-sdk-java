@@ -27,8 +27,8 @@ public class PersonCollectionPage extends BasePersonCollectionPage implements IP
     /**
      * A collection page for User.
      *
-     * @param response The serialized BasePersonCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BasePersonCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public PersonCollectionPage(final BasePersonCollectionResponse response, final IPersonCollectionRequestBuilder builder) {
         super(response, builder);

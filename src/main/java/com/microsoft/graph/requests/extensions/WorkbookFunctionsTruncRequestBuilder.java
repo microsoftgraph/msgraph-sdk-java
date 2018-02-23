@@ -27,11 +27,11 @@ public class WorkbookFunctionsTruncRequestBuilder extends BaseWorkbookFunctionsT
     /**
      * The request builder for this WorkbookFunctionsTrunc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param numDigits The numDigits
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param numDigits the numDigits
      */
     public WorkbookFunctionsTruncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
         super(requestUrl, client, requestOptions, number, numDigits);

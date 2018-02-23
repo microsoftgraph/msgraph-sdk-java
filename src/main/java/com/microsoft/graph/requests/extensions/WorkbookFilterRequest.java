@@ -27,9 +27,9 @@ public class WorkbookFilterRequest extends BaseWorkbookFilterRequest implements 
     /**
      * The request for the WorkbookFilter
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFilter.class);

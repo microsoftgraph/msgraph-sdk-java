@@ -27,8 +27,8 @@ public class SubscribedSkuCollectionPage extends BaseSubscribedSkuCollectionPage
     /**
      * A collection page for SubscribedSku.
      *
-     * @param response The serialized BaseSubscribedSkuCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSubscribedSkuCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public SubscribedSkuCollectionPage(final BaseSubscribedSkuCollectionResponse response, final ISubscribedSkuCollectionRequestBuilder builder) {
         super(response, builder);

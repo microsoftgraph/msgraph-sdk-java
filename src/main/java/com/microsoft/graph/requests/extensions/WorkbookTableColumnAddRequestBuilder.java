@@ -27,12 +27,12 @@ public class WorkbookTableColumnAddRequestBuilder extends BaseWorkbookTableColum
     /**
      * The request builder for this WorkbookTableColumnAdd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param index The index
-     * @param values The values
-     * @param name The name
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param index the index
+     * @param values the values
+     * @param name the name
      */
     public WorkbookTableColumnAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index, final com.google.gson.JsonElement values, final String name) {
         super(requestUrl, client, requestOptions, index, values, name);

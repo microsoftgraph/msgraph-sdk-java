@@ -27,9 +27,9 @@ public class ThumbnailRequest extends BaseThumbnailRequest implements IThumbnail
     /**
      * The request for the Thumbnail
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public ThumbnailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Thumbnail.class);

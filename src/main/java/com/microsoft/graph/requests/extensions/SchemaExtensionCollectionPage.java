@@ -27,8 +27,8 @@ public class SchemaExtensionCollectionPage extends BaseSchemaExtensionCollection
     /**
      * A collection page for SchemaExtension.
      *
-     * @param response The serialized BaseSchemaExtensionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSchemaExtensionCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public SchemaExtensionCollectionPage(final BaseSchemaExtensionCollectionResponse response, final ISchemaExtensionCollectionRequestBuilder builder) {
         super(response, builder);

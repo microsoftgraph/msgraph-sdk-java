@@ -27,8 +27,8 @@ public class SharedDriveItemCollectionPage extends BaseSharedDriveItemCollection
     /**
      * A collection page for SharedDriveItem.
      *
-     * @param response The serialized BaseSharedDriveItemCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSharedDriveItemCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public SharedDriveItemCollectionPage(final BaseSharedDriveItemCollectionResponse response, final ISharedDriveItemCollectionRequestBuilder builder) {
         super(response, builder);

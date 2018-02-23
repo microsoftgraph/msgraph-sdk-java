@@ -27,10 +27,10 @@ public class EventSnoozeReminderRequestBuilder extends BaseEventSnoozeReminderRe
     /**
      * The request builder for this EventSnoozeReminder
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param newReminderTime The newReminderTime
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param newReminderTime the newReminderTime
      */
     public EventSnoozeReminderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DateTimeTimeZone newReminderTime) {
         super(requestUrl, client, requestOptions, newReminderTime);

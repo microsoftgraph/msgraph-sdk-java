@@ -27,11 +27,11 @@ public class WorkbookFunctionsWeekNumRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsWeekNum
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param serialNumber The serialNumber
-     * @param returnType The returnType
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param serialNumber the serialNumber
+     * @param returnType the returnType
      */
     public WorkbookFunctionsWeekNumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber, final com.google.gson.JsonElement returnType) {
         super(requestUrl, client, requestOptions, serialNumber, returnType);

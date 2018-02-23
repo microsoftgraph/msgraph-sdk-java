@@ -27,10 +27,10 @@ public class WorkbookFilterApplyFontColorFilterRequestBuilder extends BaseWorkbo
     /**
      * The request builder for this WorkbookFilterApplyFontColorFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param color The color
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param color the color
      */
     public WorkbookFilterApplyFontColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions, color);

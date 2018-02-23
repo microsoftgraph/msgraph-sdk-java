@@ -27,8 +27,8 @@ public class PostCollectionPage extends BasePostCollectionPage implements IPostC
     /**
      * A collection page for ConversationThread.
      *
-     * @param response The serialized BasePostCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BasePostCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public PostCollectionPage(final BasePostCollectionResponse response, final IPostCollectionRequestBuilder builder) {
         super(response, builder);

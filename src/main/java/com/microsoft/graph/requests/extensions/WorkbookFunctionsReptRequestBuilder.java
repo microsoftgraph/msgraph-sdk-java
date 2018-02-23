@@ -27,11 +27,11 @@ public class WorkbookFunctionsReptRequestBuilder extends BaseWorkbookFunctionsRe
     /**
      * The request builder for this WorkbookFunctionsRept
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param text The text
-     * @param numberTimes The numberTimes
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param numberTimes the numberTimes
      */
     public WorkbookFunctionsReptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numberTimes) {
         super(requestUrl, client, requestOptions, text, numberTimes);

@@ -27,11 +27,11 @@ public class MessageForwardRequestBuilder extends BaseMessageForwardRequestBuild
     /**
      * The request builder for this MessageForward
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param comment The comment
-     * @param toRecipients The toRecipients
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param comment the comment
+     * @param toRecipients the toRecipients
      */
     public MessageForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
         super(requestUrl, client, requestOptions, comment, toRecipients);

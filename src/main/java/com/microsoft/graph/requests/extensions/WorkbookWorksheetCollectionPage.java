@@ -27,8 +27,8 @@ public class WorkbookWorksheetCollectionPage extends BaseWorkbookWorksheetCollec
     /**
      * A collection page for Workbook.
      *
-     * @param response The serialized BaseWorkbookWorksheetCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookWorksheetCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public WorkbookWorksheetCollectionPage(final BaseWorkbookWorksheetCollectionResponse response, final IWorkbookWorksheetCollectionRequestBuilder builder) {
         super(response, builder);

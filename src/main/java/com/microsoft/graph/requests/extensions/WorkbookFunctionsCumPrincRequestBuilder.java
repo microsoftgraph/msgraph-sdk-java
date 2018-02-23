@@ -27,15 +27,15 @@ public class WorkbookFunctionsCumPrincRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsCumPrinc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param rate The rate
-     * @param nper The nper
-     * @param pv The pv
-     * @param startPeriod The startPeriod
-     * @param endPeriod The endPeriod
-     * @param type The type
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param nper the nper
+     * @param pv the pv
+     * @param startPeriod the startPeriod
+     * @param endPeriod the endPeriod
+     * @param type the type
      */
     public WorkbookFunctionsCumPrincRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions, rate, nper, pv, startPeriod, endPeriod, type);

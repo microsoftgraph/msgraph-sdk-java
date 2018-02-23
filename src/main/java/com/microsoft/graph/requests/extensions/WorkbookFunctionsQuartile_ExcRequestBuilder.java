@@ -27,11 +27,11 @@ public class WorkbookFunctionsQuartile_ExcRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsQuartile_Exc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param array The array
-     * @param quart The quart
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param quart the quart
      */
     public WorkbookFunctionsQuartile_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
         super(requestUrl, client, requestOptions, array, quart);

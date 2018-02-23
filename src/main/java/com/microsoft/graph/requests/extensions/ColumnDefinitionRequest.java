@@ -27,9 +27,9 @@ public class ColumnDefinitionRequest extends BaseColumnDefinitionRequest impleme
     /**
      * The request for the ColumnDefinition
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public ColumnDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, ColumnDefinition.class);

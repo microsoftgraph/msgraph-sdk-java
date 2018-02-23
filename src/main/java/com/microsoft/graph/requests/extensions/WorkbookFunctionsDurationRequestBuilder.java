@@ -27,15 +27,15 @@ public class WorkbookFunctionsDurationRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsDuration
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param coupon The coupon
-     * @param yld The yld
-     * @param frequency The frequency
-     * @param basis The basis
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param coupon the coupon
+     * @param yld the yld
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public WorkbookFunctionsDurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, coupon, yld, frequency, basis);

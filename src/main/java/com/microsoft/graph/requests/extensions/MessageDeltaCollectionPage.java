@@ -27,8 +27,8 @@ public class MessageDeltaCollectionPage extends BaseMessageDeltaCollectionPage i
     /**
      * A collection page for Message.
      *
-     * @param response The serialized BaseMessageDeltaCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseMessageDeltaCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public MessageDeltaCollectionPage(final BaseMessageDeltaCollectionResponse response, final IMessageDeltaCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,10 +27,10 @@ public class WorkbookFunctionsIsLogicalRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsIsLogical
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param value The value
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param value the value
      */
     public WorkbookFunctionsIsLogicalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions, value);

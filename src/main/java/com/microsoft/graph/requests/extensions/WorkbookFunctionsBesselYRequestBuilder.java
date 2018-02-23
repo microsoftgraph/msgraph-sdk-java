@@ -27,11 +27,11 @@ public class WorkbookFunctionsBesselYRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsBesselY
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param n The n
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param n the n
      */
     public WorkbookFunctionsBesselYRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
         super(requestUrl, client, requestOptions, x, n);

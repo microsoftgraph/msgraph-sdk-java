@@ -27,9 +27,9 @@ public class WorkbookWorksheetRequest extends BaseWorkbookWorksheetRequest imple
     /**
      * The request for the WorkbookWorksheet
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookWorksheetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookWorksheet.class);

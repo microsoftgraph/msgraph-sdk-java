@@ -27,8 +27,8 @@ public class OnenoteResourceCollectionPage extends BaseOnenoteResourceCollection
     /**
      * A collection page for Onenote.
      *
-     * @param response The serialized BaseOnenoteResourceCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseOnenoteResourceCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public OnenoteResourceCollectionPage(final BaseOnenoteResourceCollectionResponse response, final IOnenoteResourceCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,9 +27,9 @@ public class WorkbookFunctionsOddFPriceRequest extends BaseWorkbookFunctionsOddF
     /**
      * The request for this WorkbookFunctionsOddFPrice
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsOddFPriceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

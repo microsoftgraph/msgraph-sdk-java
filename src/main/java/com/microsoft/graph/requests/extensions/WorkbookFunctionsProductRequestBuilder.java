@@ -27,10 +27,10 @@ public class WorkbookFunctionsProductRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsProduct
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param values The values
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public WorkbookFunctionsProductRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions, values);

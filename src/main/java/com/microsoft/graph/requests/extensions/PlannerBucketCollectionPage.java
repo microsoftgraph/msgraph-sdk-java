@@ -27,8 +27,8 @@ public class PlannerBucketCollectionPage extends BasePlannerBucketCollectionPage
     /**
      * A collection page for Planner.
      *
-     * @param response The serialized BasePlannerBucketCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BasePlannerBucketCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public PlannerBucketCollectionPage(final BasePlannerBucketCollectionResponse response, final IPlannerBucketCollectionRequestBuilder builder) {
         super(response, builder);

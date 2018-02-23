@@ -27,14 +27,14 @@ public class WorkbookFunctionsIntRateRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsIntRate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param investment The investment
-     * @param redemption The redemption
-     * @param basis The basis
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param investment the investment
+     * @param redemption the redemption
+     * @param basis the basis
      */
     public WorkbookFunctionsIntRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, investment, redemption, basis);

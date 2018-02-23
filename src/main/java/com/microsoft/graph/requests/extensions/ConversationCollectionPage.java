@@ -27,8 +27,8 @@ public class ConversationCollectionPage extends BaseConversationCollectionPage i
     /**
      * A collection page for Group.
      *
-     * @param response The serialized BaseConversationCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseConversationCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ConversationCollectionPage(final BaseConversationCollectionResponse response, final IConversationCollectionRequestBuilder builder) {
         super(response, builder);

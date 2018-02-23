@@ -27,13 +27,13 @@ public class WorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsWorkDay_Intl
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param startDate The startDate
-     * @param days The days
-     * @param weekend The weekend
-     * @param holidays The holidays
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDate the startDate
+     * @param days the days
+     * @param weekend the weekend
+     * @param holidays the holidays
      */
     public WorkbookFunctionsWorkDay_IntlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions, startDate, days, weekend, holidays);

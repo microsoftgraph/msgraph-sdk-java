@@ -27,13 +27,13 @@ public class WorkbookFunctionsVlookupRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsVlookup
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param lookupValue The lookupValue
-     * @param tableArray The tableArray
-     * @param colIndexNum The colIndexNum
-     * @param rangeLookup The rangeLookup
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param lookupValue the lookupValue
+     * @param tableArray the tableArray
+     * @param colIndexNum the colIndexNum
+     * @param rangeLookup the rangeLookup
      */
     public WorkbookFunctionsVlookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement colIndexNum, final com.google.gson.JsonElement rangeLookup) {
         super(requestUrl, client, requestOptions, lookupValue, tableArray, colIndexNum, rangeLookup);

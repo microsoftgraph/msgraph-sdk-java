@@ -27,10 +27,10 @@ public class WorkbookRangeMergeRequestBuilder extends BaseWorkbookRangeMergeRequ
     /**
      * The request builder for this WorkbookRangeMerge
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param across The across
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param across the across
      */
     public WorkbookRangeMergeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean across) {
         super(requestUrl, client, requestOptions, across);

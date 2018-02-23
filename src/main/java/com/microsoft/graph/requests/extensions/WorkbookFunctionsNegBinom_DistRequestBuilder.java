@@ -27,13 +27,13 @@ public class WorkbookFunctionsNegBinom_DistRequestBuilder extends BaseWorkbookFu
     /**
      * The request builder for this WorkbookFunctionsNegBinom_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param numberF The numberF
-     * @param numberS The numberS
-     * @param probabilityS The probabilityS
-     * @param cumulative The cumulative
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param numberF the numberF
+     * @param numberS the numberS
+     * @param probabilityS the probabilityS
+     * @param cumulative the cumulative
      */
     public WorkbookFunctionsNegBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numberF, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions, numberF, numberS, probabilityS, cumulative);

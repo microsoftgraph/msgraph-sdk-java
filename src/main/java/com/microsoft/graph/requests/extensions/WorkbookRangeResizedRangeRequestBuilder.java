@@ -27,11 +27,11 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseWorkbookRangeRe
     /**
      * The request builder for this WorkbookRangeResizedRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param deltaRows The deltaRows
-     * @param deltaColumns The deltaColumns
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param deltaRows the deltaRows
+     * @param deltaColumns the deltaColumns
      */
     public WorkbookRangeResizedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer deltaRows, final Integer deltaColumns) {
         super(requestUrl, client, requestOptions, deltaRows, deltaColumns);

@@ -27,8 +27,8 @@ public class MailFolderCollectionPage extends BaseMailFolderCollectionPage imple
     /**
      * A collection page for MailFolder.
      *
-     * @param response The serialized BaseMailFolderCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseMailFolderCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public MailFolderCollectionPage(final BaseMailFolderCollectionResponse response, final IMailFolderCollectionRequestBuilder builder) {
         super(response, builder);

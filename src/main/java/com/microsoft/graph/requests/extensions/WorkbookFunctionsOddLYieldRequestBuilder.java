@@ -27,17 +27,17 @@ public class WorkbookFunctionsOddLYieldRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsOddLYield
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param lastInterest The lastInterest
-     * @param rate The rate
-     * @param pr The pr
-     * @param redemption The redemption
-     * @param frequency The frequency
-     * @param basis The basis
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param lastInterest the lastInterest
+     * @param rate the rate
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public WorkbookFunctionsOddLYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, lastInterest, rate, pr, redemption, frequency, basis);

@@ -27,8 +27,8 @@ public class DriveItemInviteCollectionPage extends BaseDriveItemInviteCollection
     /**
      * A collection page for DriveItem.
      *
-     * @param response The serialized BaseDriveItemInviteCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDriveItemInviteCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public DriveItemInviteCollectionPage(final BaseDriveItemInviteCollectionResponse response, final IDriveItemInviteCollectionRequestBuilder builder) {
         super(response, builder);

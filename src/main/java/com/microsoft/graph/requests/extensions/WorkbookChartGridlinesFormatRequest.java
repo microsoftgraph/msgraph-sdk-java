@@ -27,9 +27,9 @@ public class WorkbookChartGridlinesFormatRequest extends BaseWorkbookChartGridli
     /**
      * The request for the WorkbookChartGridlinesFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookChartGridlinesFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartGridlinesFormat.class);

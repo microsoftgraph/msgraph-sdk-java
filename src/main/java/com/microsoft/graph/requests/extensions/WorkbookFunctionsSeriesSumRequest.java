@@ -27,9 +27,9 @@ public class WorkbookFunctionsSeriesSumRequest extends BaseWorkbookFunctionsSeri
     /**
      * The request for this WorkbookFunctionsSeriesSum
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsSeriesSumRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

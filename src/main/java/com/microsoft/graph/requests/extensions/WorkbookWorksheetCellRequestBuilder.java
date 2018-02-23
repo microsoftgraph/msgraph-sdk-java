@@ -27,11 +27,11 @@ public class WorkbookWorksheetCellRequestBuilder extends BaseWorkbookWorksheetCe
     /**
      * The request builder for this WorkbookWorksheetCell
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param row The row
-     * @param column The column
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param row the row
+     * @param column the column
      */
     public WorkbookWorksheetCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions, row, column);

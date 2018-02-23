@@ -27,8 +27,8 @@ public class DirectoryObjectCollectionWithReferencesPage extends BaseDirectoryOb
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseDirectoryObjectCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDirectoryObjectCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public DirectoryObjectCollectionWithReferencesPage(final BaseDirectoryObjectCollectionResponse response, final IDirectoryObjectCollectionWithReferencesRequestBuilder builder) {
         super(response, builder);

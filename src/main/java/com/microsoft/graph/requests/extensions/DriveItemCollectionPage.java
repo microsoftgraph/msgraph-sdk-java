@@ -27,8 +27,8 @@ public class DriveItemCollectionPage extends BaseDriveItemCollectionPage impleme
     /**
      * A collection page for DriveItem.
      *
-     * @param response The serialized BaseDriveItemCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDriveItemCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public DriveItemCollectionPage(final BaseDriveItemCollectionResponse response, final IDriveItemCollectionRequestBuilder builder) {
         super(response, builder);

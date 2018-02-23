@@ -27,8 +27,8 @@ public class WorkbookTableColumnCollectionPage extends BaseWorkbookTableColumnCo
     /**
      * A collection page for WorkbookTable.
      *
-     * @param response The serialized BaseWorkbookTableColumnCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookTableColumnCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public WorkbookTableColumnCollectionPage(final BaseWorkbookTableColumnCollectionResponse response, final IWorkbookTableColumnCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,10 +27,10 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseWorkbookTableCo
     /**
      * The request builder for this WorkbookTableColumnItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param index The index
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param index the index
      */
     public WorkbookTableColumnItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions, index);

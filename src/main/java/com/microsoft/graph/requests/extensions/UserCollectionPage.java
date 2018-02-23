@@ -27,8 +27,8 @@ public class UserCollectionPage extends BaseUserCollectionPage implements IUserC
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseUserCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseUserCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public UserCollectionPage(final BaseUserCollectionResponse response, final IUserCollectionRequestBuilder builder) {
         super(response, builder);

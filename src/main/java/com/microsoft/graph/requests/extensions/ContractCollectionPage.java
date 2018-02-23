@@ -27,8 +27,8 @@ public class ContractCollectionPage extends BaseContractCollectionPage implement
     /**
      * A collection page for Contract.
      *
-     * @param response The serialized BaseContractCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContractCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ContractCollectionPage(final BaseContractCollectionResponse response, final IContractCollectionRequestBuilder builder) {
         super(response, builder);

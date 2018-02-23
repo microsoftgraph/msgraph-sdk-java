@@ -27,10 +27,10 @@ public class WorkbookFunctionsMinARequestBuilder extends BaseWorkbookFunctionsMi
     /**
      * The request builder for this WorkbookFunctionsMinA
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param values The values
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public WorkbookFunctionsMinARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions, values);

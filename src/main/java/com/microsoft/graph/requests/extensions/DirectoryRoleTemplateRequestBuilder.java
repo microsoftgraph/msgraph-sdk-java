@@ -27,9 +27,9 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseDirectoryRoleTempla
     /**
      * The request builder for the DirectoryRoleTemplate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public DirectoryRoleTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

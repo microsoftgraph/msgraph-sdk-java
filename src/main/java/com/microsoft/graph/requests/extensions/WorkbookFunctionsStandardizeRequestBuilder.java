@@ -27,12 +27,12 @@ public class WorkbookFunctionsStandardizeRequestBuilder extends BaseWorkbookFunc
     /**
      * The request builder for this WorkbookFunctionsStandardize
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param mean The mean
-     * @param standardDev The standardDev
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param mean the mean
+     * @param standardDev the standardDev
      */
     public WorkbookFunctionsStandardizeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         super(requestUrl, client, requestOptions, x, mean, standardDev);

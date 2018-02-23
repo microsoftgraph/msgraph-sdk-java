@@ -27,18 +27,18 @@ public class WorkbookFunctionsOddFPriceRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsOddFPrice
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param issue The issue
-     * @param firstCoupon The firstCoupon
-     * @param rate The rate
-     * @param yld The yld
-     * @param redemption The redemption
-     * @param frequency The frequency
-     * @param basis The basis
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param firstCoupon the firstCoupon
+     * @param rate the rate
+     * @param yld the yld
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public WorkbookFunctionsOddFPriceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstCoupon, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, issue, firstCoupon, rate, yld, redemption, frequency, basis);

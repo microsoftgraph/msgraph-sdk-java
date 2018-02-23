@@ -27,12 +27,12 @@ public class WorkbookFunctionsF_Dist_RTRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsF_Dist_RT
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param degFreedom1 The degFreedom1
-     * @param degFreedom2 The degFreedom2
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
      */
     public WorkbookFunctionsF_Dist_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
         super(requestUrl, client, requestOptions, x, degFreedom1, degFreedom2);

@@ -27,11 +27,11 @@ public class WorkbookFunctionsNominalRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsNominal
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param effectRate The effectRate
-     * @param npery The npery
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param effectRate the effectRate
+     * @param npery the npery
      */
     public WorkbookFunctionsNominalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement effectRate, final com.google.gson.JsonElement npery) {
         super(requestUrl, client, requestOptions, effectRate, npery);

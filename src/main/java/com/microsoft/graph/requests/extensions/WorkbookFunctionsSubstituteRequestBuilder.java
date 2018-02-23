@@ -27,13 +27,13 @@ public class WorkbookFunctionsSubstituteRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsSubstitute
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param text The text
-     * @param oldText The oldText
-     * @param newText The newText
-     * @param instanceNum The instanceNum
+     * @param requestUrl     the request url
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param oldText the oldText
+     * @param newText the newText
+     * @param instanceNum the instanceNum
      */
     public WorkbookFunctionsSubstituteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement newText, final com.google.gson.JsonElement instanceNum) {
         super(requestUrl, client, requestOptions, text, oldText, newText, instanceNum);

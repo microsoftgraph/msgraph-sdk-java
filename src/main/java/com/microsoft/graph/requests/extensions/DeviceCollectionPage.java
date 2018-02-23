@@ -27,8 +27,8 @@ public class DeviceCollectionPage extends BaseDeviceCollectionPage implements ID
     /**
      * A collection page for Device.
      *
-     * @param response The serialized BaseDeviceCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDeviceCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public DeviceCollectionPage(final BaseDeviceCollectionResponse response, final IDeviceCollectionRequestBuilder builder) {
         super(response, builder);

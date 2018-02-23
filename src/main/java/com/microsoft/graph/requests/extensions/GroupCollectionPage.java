@@ -27,8 +27,8 @@ public class GroupCollectionPage extends BaseGroupCollectionPage implements IGro
     /**
      * A collection page for Group.
      *
-     * @param response The serialized BaseGroupCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseGroupCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public GroupCollectionPage(final BaseGroupCollectionResponse response, final IGroupCollectionRequestBuilder builder) {
         super(response, builder);
