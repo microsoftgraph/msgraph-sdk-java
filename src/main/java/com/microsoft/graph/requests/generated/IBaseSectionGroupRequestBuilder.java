@@ -26,29 +26,29 @@ public interface IBaseSectionGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The ISectionGroupRequest instance
+     * @return the ISectionGroupRequest instance
      */
     ISectionGroupRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The ISectionGroupRequest instance
+     * @param requestOptions the options for this request
+     * @return the ISectionGroupRequest instance
      */
     ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for Notebook.
+     * Gets the request builder for Notebook
      *
-     * @return The INotebookRequestBuilder instance
+     * @return the INotebookRequestBuilder instance
      */
     INotebookRequestBuilder parentNotebook();
 
     /**
-     * Gets the request builder for SectionGroup.
+     * Gets the request builder for SectionGroup
      *
-     * @return The ISectionGroupRequestBuilder instance
+     * @return the ISectionGroupRequestBuilder instance
      */
     ISectionGroupRequestBuilder parentSectionGroup();
 

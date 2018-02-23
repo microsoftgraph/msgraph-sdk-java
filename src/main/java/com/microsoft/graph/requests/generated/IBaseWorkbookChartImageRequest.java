@@ -29,31 +29,32 @@ public interface IBaseWorkbookChartImageRequest {
 
     /**
      * Gets the String
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<String> callback);
 
     /**
      * Gets the String
      *
-     * @return The String
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the String
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     String get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookChartImageRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookChartImageRequest expand(final String value);
 

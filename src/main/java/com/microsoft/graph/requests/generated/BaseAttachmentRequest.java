@@ -27,10 +27,10 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
     /**
      * The request for the Attachment
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseAttachmentRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
 
     /**
      * Gets the Attachment from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Attachment> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
 
     /**
      * Gets the Attachment from the service
-     * @return The Attachment from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Attachment from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Attachment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
 
     /**
      * Patches this Attachment with a source
-     * @param sourceAttachment The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceAttachment the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Attachment sourceAttachment, final ICallback<Attachment> callback) {
         send(HttpMethod.PATCH, callback, sourceAttachment);
@@ -83,9 +88,10 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
 
     /**
      * Patches this Attachment with a source
-     * @param sourceAttachment The source object with updates
-     * @return The updated Attachment
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceAttachment the source object with updates
+     * @return the updated Attachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Attachment patch(final Attachment sourceAttachment) throws ClientException {
         return send(HttpMethod.PATCH, sourceAttachment);
@@ -93,8 +99,9 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
 
     /**
      * Creates a Attachment with a new object
-     * @param newAttachment The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newAttachment the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Attachment newAttachment, final ICallback<Attachment> callback) {
         send(HttpMethod.POST, callback, newAttachment);
@@ -102,9 +109,10 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
 
     /**
      * Creates a Attachment with a new object
-     * @param newAttachment The new object to create
-     * @return The created Attachment
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newAttachment the new object to create
+     * @return the created Attachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Attachment post(final Attachment newAttachment) throws ClientException {
         return send(HttpMethod.POST, newAttachment);
@@ -113,8 +121,8 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IAttachmentRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseAttachmentRequest extends BaseRequest implements IBaseAttachmen
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IAttachmentRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

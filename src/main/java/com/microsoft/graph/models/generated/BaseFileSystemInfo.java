@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseFileSystemInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -51,7 +51,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * The Last Accessed Date Time.
-     * 
+     * The UTC date and time the file was last accessed. Available for the recent file list only.
      */
     @SerializedName("lastAccessedDateTime")
     @Expose
@@ -78,6 +78,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -86,6 +87,7 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -93,10 +95,10 @@ public class BaseFileSystemInfo implements IJsonBackedObject {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

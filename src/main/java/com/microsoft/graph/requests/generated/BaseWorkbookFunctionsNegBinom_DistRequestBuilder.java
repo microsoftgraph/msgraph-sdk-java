@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsNegBinom_DistRequestBuilder extends BaseAction
     /**
      * The request builder for this WorkbookFunctionsNegBinom_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param numberF The numberF
-     * @param numberS The numberS
-     * @param probabilityS The probabilityS
-     * @param cumulative The cumulative
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param numberF the numberF
+     * @param numberS the numberS
+     * @param probabilityS the probabilityS
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsNegBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numberF, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsNegBinom_DistRequestBuilder extends BaseAction
     /**
      * Creates the IWorkbookFunctionsNegBinom_DistRequest
      *
-     * @return The IWorkbookFunctionsNegBinom_DistRequest instance
+     * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
     public IWorkbookFunctionsNegBinom_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsNegBinom_DistRequestBuilder extends BaseAction
      * Creates the IWorkbookFunctionsNegBinom_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNegBinom_DistRequest instance
+     * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
     public IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNegBinom_DistRequest request = new WorkbookFunctionsNegBinom_DistRequest(

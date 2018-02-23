@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseEventCollectionPage extends BaseCollectionPage<Event, IEventCollectionRequestBuilder> implements IBaseEventCollectionPage {
 
     /**
-     * A collection page for Event.
+     * A collection page for Event
      *
-     * @param response The serialized BaseEventCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseEventCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseEventCollectionPage(final BaseEventCollectionResponse response, final IEventCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -26,9 +26,9 @@ public class BaseWorkbookTableConvertToRangeRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookTableConvertToRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableConvertToRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableConvertToRangeRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookTableConvertToRangeRequest
      *
-     * @return The IWorkbookTableConvertToRangeRequest instance
+     * @return the IWorkbookTableConvertToRangeRequest instance
      */
     public IWorkbookTableConvertToRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableConvertToRangeRequestBuilder extends BaseActionReq
      * Creates the IWorkbookTableConvertToRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableConvertToRangeRequest instance
+     * @return the IWorkbookTableConvertToRangeRequest instance
      */
     public IWorkbookTableConvertToRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableConvertToRangeRequest request = new WorkbookTableConvertToRangeRequest(

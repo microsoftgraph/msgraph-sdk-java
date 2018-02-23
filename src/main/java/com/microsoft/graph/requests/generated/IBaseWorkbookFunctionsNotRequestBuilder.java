@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsNotRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsNotRequest
      *
-     * @return The IWorkbookFunctionsNotRequest instance
+     * @return the IWorkbookFunctionsNotRequest instance
      */
     IWorkbookFunctionsNotRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsNotRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsNotRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNotRequest instance
+     * @return the IWorkbookFunctionsNotRequest instance
      */
     IWorkbookFunctionsNotRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -26,29 +26,29 @@ public interface IBaseWorkbookChartLegendFormatRequestBuilder extends IRequestBu
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartLegendFormatRequest instance
+     * @return the IWorkbookChartLegendFormatRequest instance
      */
     IWorkbookChartLegendFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartLegendFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartLegendFormatRequest instance
      */
     IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartFill.
+     * Gets the request builder for WorkbookChartFill
      *
-     * @return The IWorkbookChartFillRequestBuilder instance
+     * @return the IWorkbookChartFillRequestBuilder instance
      */
     IWorkbookChartFillRequestBuilder fill();
 
     /**
-     * Gets the request builder for WorkbookChartFont.
+     * Gets the request builder for WorkbookChartFont
      *
-     * @return The IWorkbookChartFontRequestBuilder instance
+     * @return the IWorkbookChartFontRequestBuilder instance
      */
     IWorkbookChartFontRequestBuilder font();
 

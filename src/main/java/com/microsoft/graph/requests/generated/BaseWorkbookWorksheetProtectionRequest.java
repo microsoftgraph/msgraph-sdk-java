@@ -27,10 +27,10 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
     /**
      * The request for the WorkbookWorksheetProtection
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookWorksheetProtectionRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
 
     /**
      * Gets the WorkbookWorksheetProtection from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookWorksheetProtection> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
 
     /**
      * Gets the WorkbookWorksheetProtection from the service
-     * @return The WorkbookWorksheetProtection from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookWorksheetProtection from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookWorksheetProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
 
     /**
      * Patches this WorkbookWorksheetProtection with a source
-     * @param sourceWorkbookWorksheetProtection The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookWorksheetProtection the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookWorksheetProtection);
@@ -83,9 +88,10 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
 
     /**
      * Patches this WorkbookWorksheetProtection with a source
-     * @param sourceWorkbookWorksheetProtection The source object with updates
-     * @return The updated WorkbookWorksheetProtection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookWorksheetProtection the source object with updates
+     * @return the updated WorkbookWorksheetProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookWorksheetProtection patch(final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookWorksheetProtection);
@@ -93,8 +99,9 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
 
     /**
      * Creates a WorkbookWorksheetProtection with a new object
-     * @param newWorkbookWorksheetProtection The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookWorksheetProtection the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback) {
         send(HttpMethod.POST, callback, newWorkbookWorksheetProtection);
@@ -102,9 +109,10 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
 
     /**
      * Creates a WorkbookWorksheetProtection with a new object
-     * @param newWorkbookWorksheetProtection The new object to create
-     * @return The created WorkbookWorksheetProtection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookWorksheetProtection the new object to create
+     * @return the created WorkbookWorksheetProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookWorksheetProtection post(final WorkbookWorksheetProtection newWorkbookWorksheetProtection) throws ClientException {
         return send(HttpMethod.POST, newWorkbookWorksheetProtection);
@@ -113,8 +121,8 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookWorksheetProtectionRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookWorksheetProtectionRequest extends BaseRequest implemen
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookWorksheetProtectionRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

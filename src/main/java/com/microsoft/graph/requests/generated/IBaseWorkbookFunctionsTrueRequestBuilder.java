@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsTrueRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsTrueRequest
      *
-     * @return The IWorkbookFunctionsTrueRequest instance
+     * @return the IWorkbookFunctionsTrueRequest instance
      */
     IWorkbookFunctionsTrueRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsTrueRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsTrueRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTrueRequest instance
+     * @return the IWorkbookFunctionsTrueRequest instance
      */
     IWorkbookFunctionsTrueRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

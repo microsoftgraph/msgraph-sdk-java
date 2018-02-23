@@ -26,11 +26,11 @@ public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuild
     /**
      * The request builder for this UserChangePassword
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param currentPassword The currentPassword
-     * @param newPassword The newPassword
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param currentPassword the currentPassword
+     * @param newPassword the newPassword
      */
     public BaseUserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String currentPassword, final String newPassword) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IUserChangePasswordRequest
      *
-     * @return The IUserChangePasswordRequest instance
+     * @return the IUserChangePasswordRequest instance
      */
     public IUserChangePasswordRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseUserChangePasswordRequestBuilder extends BaseActionRequestBuild
      * Creates the IUserChangePasswordRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IUserChangePasswordRequest instance
+     * @return the IUserChangePasswordRequest instance
      */
     public IUserChangePasswordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         UserChangePasswordRequest request = new UserChangePasswordRequest(

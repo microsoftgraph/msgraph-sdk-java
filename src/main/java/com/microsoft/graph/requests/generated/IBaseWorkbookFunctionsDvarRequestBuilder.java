@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDvarRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDvarRequest
      *
-     * @return The IWorkbookFunctionsDvarRequest instance
+     * @return the IWorkbookFunctionsDvarRequest instance
      */
     IWorkbookFunctionsDvarRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDvarRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsDvarRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDvarRequest instance
+     * @return the IWorkbookFunctionsDvarRequest instance
      */
     IWorkbookFunctionsDvarRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

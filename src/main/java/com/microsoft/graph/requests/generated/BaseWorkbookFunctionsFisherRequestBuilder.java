@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsFisherRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsFisher
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
      */
     public BaseWorkbookFunctionsFisherRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsFisherRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsFisherRequest
      *
-     * @return The IWorkbookFunctionsFisherRequest instance
+     * @return the IWorkbookFunctionsFisherRequest instance
      */
     public IWorkbookFunctionsFisherRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsFisherRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsFisherRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFisherRequest instance
+     * @return the IWorkbookFunctionsFisherRequest instance
      */
     public IWorkbookFunctionsFisherRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFisherRequest request = new WorkbookFunctionsFisherRequest(

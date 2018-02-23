@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsIspmt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param rate The rate
-     * @param per The per
-     * @param nper The nper
-     * @param pv The pv
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param per the per
+     * @param nper the nper
+     * @param pv the pv
      */
     public BaseWorkbookFunctionsIspmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsIspmtRequest
      *
-     * @return The IWorkbookFunctionsIspmtRequest instance
+     * @return the IWorkbookFunctionsIspmtRequest instance
      */
     public IWorkbookFunctionsIspmtRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsIspmtRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsIspmtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIspmtRequest instance
+     * @return the IWorkbookFunctionsIspmtRequest instance
      */
     public IWorkbookFunctionsIspmtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIspmtRequest request = new WorkbookFunctionsIspmtRequest(

@@ -26,10 +26,10 @@ public class BaseWorkbookRangeIntersectionRequestBuilder extends BaseFunctionReq
     /**
      * The request builder for this WorkbookRangeIntersection
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param anotherRange The anotherRange
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param anotherRange the anotherRange
      */
     public BaseWorkbookRangeIntersectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String anotherRange) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookRangeIntersectionRequestBuilder extends BaseFunctionReq
     /**
      * Creates the IWorkbookRangeIntersectionRequest
      *
-     * @return The IWorkbookRangeIntersectionRequest instance
+     * @return the IWorkbookRangeIntersectionRequest instance
      */
     public IWorkbookRangeIntersectionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeIntersectionRequestBuilder extends BaseFunctionReq
      * Creates the IWorkbookRangeIntersectionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeIntersectionRequest instance
+     * @return the IWorkbookRangeIntersectionRequest instance
      */
     public IWorkbookRangeIntersectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeIntersectionRequest request = new WorkbookRangeIntersectionRequest(

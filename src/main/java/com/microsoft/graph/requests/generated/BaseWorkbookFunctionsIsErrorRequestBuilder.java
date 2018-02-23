@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsIsErrorRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsIsError
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param value The value
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param value the value
      */
     public BaseWorkbookFunctionsIsErrorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsIsErrorRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsIsErrorRequest
      *
-     * @return The IWorkbookFunctionsIsErrorRequest instance
+     * @return the IWorkbookFunctionsIsErrorRequest instance
      */
     public IWorkbookFunctionsIsErrorRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsIsErrorRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsIsErrorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsErrorRequest instance
+     * @return the IWorkbookFunctionsIsErrorRequest instance
      */
     public IWorkbookFunctionsIsErrorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsErrorRequest request = new WorkbookFunctionsIsErrorRequest(

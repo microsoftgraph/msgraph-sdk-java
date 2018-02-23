@@ -27,9 +27,9 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
     /**
      * The request builder for the WorkbookPivotTable
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookPivotTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
-     * @return The IWorkbookPivotTableRequest instance
+     * @return the IWorkbookPivotTableRequest instance
      */
     public IWorkbookPivotTableRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookPivotTableRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookPivotTableRequest instance
      */
     public IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookPivotTableRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseWorkbookPivotTableRequestBuilder extends BaseRequestBuilder imp
 
 
     /**
-     * Gets the request builder for WorkbookWorksheet.
+     * Gets the request builder for WorkbookWorksheet
      *
-     * @return The IWorkbookWorksheetRequestBuilder instance
+     * @return the IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

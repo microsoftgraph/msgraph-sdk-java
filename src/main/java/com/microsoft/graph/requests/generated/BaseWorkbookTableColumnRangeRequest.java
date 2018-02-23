@@ -27,9 +27,9 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * The request for this WorkbookTableColumnRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
 
     /**
      * Patches the WorkbookTableColumnRange
-     * @param srcWorkbookRange The WorkbookRange with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRange the WorkbookRange with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRange);
@@ -47,9 +47,9 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Patches the WorkbookTableColumnRange
      *
-     * @param srcWorkbookRange The WorkbookRange with which to PATCH
-     * @return The WorkbookRange
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRange the WorkbookRange with which to PATCH
+     * @return the WorkbookRange
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookRange patch(WorkbookRange srcWorkbookRange) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookRange);
@@ -58,8 +58,8 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Puts the WorkbookTableColumnRange
      *
-     * @param srcWorkbookRange The WorkbookRange to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRange the WorkbookRange to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRange);
@@ -68,9 +68,9 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Puts the WorkbookTableColumnRange
      *
-     * @param srcWorkbookRange The WorkbookRange to PUT
-     * @return The WorkbookRange
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRange the WorkbookRange to PUT
+     * @return the WorkbookRange
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookRange put(WorkbookRange srcWorkbookRange) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookRange);
@@ -78,7 +78,7 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Gets the WorkbookRange
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Gets the WorkbookRange
      *
-     * @return The WorkbookRange
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookRange
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookRange get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookTableColumnRangeRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookTableColumnRangeRequest extends BaseRequest implements 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookTableColumnRangeRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

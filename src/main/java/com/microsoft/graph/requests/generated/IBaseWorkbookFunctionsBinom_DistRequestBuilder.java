@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBinom_DistRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsBinom_DistRequest
      *
-     * @return The IWorkbookFunctionsBinom_DistRequest instance
+     * @return the IWorkbookFunctionsBinom_DistRequest instance
      */
     IWorkbookFunctionsBinom_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBinom_DistRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsBinom_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBinom_DistRequest instance
+     * @return the IWorkbookFunctionsBinom_DistRequest instance
      */
     IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

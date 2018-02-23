@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsNumberValueRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsNumberValueRequest
      *
-     * @return The IWorkbookFunctionsNumberValueRequest instance
+     * @return the IWorkbookFunctionsNumberValueRequest instance
      */
     IWorkbookFunctionsNumberValueRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsNumberValueRequestBuilder extends IReques
      * Creates the IWorkbookFunctionsNumberValueRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNumberValueRequest instance
+     * @return the IWorkbookFunctionsNumberValueRequest instance
      */
     IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

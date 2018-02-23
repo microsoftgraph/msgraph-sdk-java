@@ -26,22 +26,22 @@ public interface IBaseWorkbookChartAxisTitleFormatRequestBuilder extends IReques
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartAxisTitleFormatRequest instance
+     * @return the IWorkbookChartAxisTitleFormatRequest instance
      */
     IWorkbookChartAxisTitleFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartAxisTitleFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartAxisTitleFormatRequest instance
      */
     IWorkbookChartAxisTitleFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartFont.
+     * Gets the request builder for WorkbookChartFont
      *
-     * @return The IWorkbookChartFontRequestBuilder instance
+     * @return the IWorkbookChartFontRequestBuilder instance
      */
     IWorkbookChartFontRequestBuilder font();
 

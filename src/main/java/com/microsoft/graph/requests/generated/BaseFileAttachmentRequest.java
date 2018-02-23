@@ -27,10 +27,10 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
     /**
      * The request for the FileAttachment
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseFileAttachmentRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
 
     /**
      * Gets the FileAttachment from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<FileAttachment> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
 
     /**
      * Gets the FileAttachment from the service
-     * @return The FileAttachment from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the FileAttachment from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public FileAttachment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
 
     /**
      * Patches this FileAttachment with a source
-     * @param sourceFileAttachment The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceFileAttachment the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final FileAttachment sourceFileAttachment, final ICallback<FileAttachment> callback) {
         send(HttpMethod.PATCH, callback, sourceFileAttachment);
@@ -83,9 +88,10 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
 
     /**
      * Patches this FileAttachment with a source
-     * @param sourceFileAttachment The source object with updates
-     * @return The updated FileAttachment
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceFileAttachment the source object with updates
+     * @return the updated FileAttachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public FileAttachment patch(final FileAttachment sourceFileAttachment) throws ClientException {
         return send(HttpMethod.PATCH, sourceFileAttachment);
@@ -93,8 +99,9 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
 
     /**
      * Creates a FileAttachment with a new object
-     * @param newFileAttachment The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newFileAttachment the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final FileAttachment newFileAttachment, final ICallback<FileAttachment> callback) {
         send(HttpMethod.POST, callback, newFileAttachment);
@@ -102,9 +109,10 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
 
     /**
      * Creates a FileAttachment with a new object
-     * @param newFileAttachment The new object to create
-     * @return The created FileAttachment
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newFileAttachment the new object to create
+     * @return the created FileAttachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public FileAttachment post(final FileAttachment newFileAttachment) throws ClientException {
         return send(HttpMethod.POST, newFileAttachment);
@@ -113,8 +121,8 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IFileAttachmentRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseFileAttachmentRequest extends BaseRequest implements IBaseFileA
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IFileAttachmentRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

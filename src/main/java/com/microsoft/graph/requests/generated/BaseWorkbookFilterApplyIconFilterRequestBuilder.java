@@ -26,10 +26,10 @@ public class BaseWorkbookFilterApplyIconFilterRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFilterApplyIconFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param icon The icon
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param icon the icon
      */
     public BaseWorkbookFilterApplyIconFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final WorkbookIcon icon) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFilterApplyIconFilterRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFilterApplyIconFilterRequest
      *
-     * @return The IWorkbookFilterApplyIconFilterRequest instance
+     * @return the IWorkbookFilterApplyIconFilterRequest instance
      */
     public IWorkbookFilterApplyIconFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFilterApplyIconFilterRequestBuilder extends BaseActionR
      * Creates the IWorkbookFilterApplyIconFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyIconFilterRequest instance
+     * @return the IWorkbookFilterApplyIconFilterRequest instance
      */
     public IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyIconFilterRequest request = new WorkbookFilterApplyIconFilterRequest(

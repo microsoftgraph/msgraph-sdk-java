@@ -27,10 +27,10 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
     /**
      * The request for the DomainDnsUnavailableRecord
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseDomainDnsUnavailableRecordRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
 
     /**
      * Gets the DomainDnsUnavailableRecord from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
 
     /**
      * Gets the DomainDnsUnavailableRecord from the service
-     * @return The DomainDnsUnavailableRecord from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the DomainDnsUnavailableRecord from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DomainDnsUnavailableRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
 
     /**
      * Patches this DomainDnsUnavailableRecord with a source
-     * @param sourceDomainDnsUnavailableRecord The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDomainDnsUnavailableRecord the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsUnavailableRecord);
@@ -83,9 +88,10 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
 
     /**
      * Patches this DomainDnsUnavailableRecord with a source
-     * @param sourceDomainDnsUnavailableRecord The source object with updates
-     * @return The updated DomainDnsUnavailableRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDomainDnsUnavailableRecord the source object with updates
+     * @return the updated DomainDnsUnavailableRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DomainDnsUnavailableRecord patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord) throws ClientException {
         return send(HttpMethod.PATCH, sourceDomainDnsUnavailableRecord);
@@ -93,8 +99,9 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
 
     /**
      * Creates a DomainDnsUnavailableRecord with a new object
-     * @param newDomainDnsUnavailableRecord The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDomainDnsUnavailableRecord the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsUnavailableRecord);
@@ -102,9 +109,10 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
 
     /**
      * Creates a DomainDnsUnavailableRecord with a new object
-     * @param newDomainDnsUnavailableRecord The new object to create
-     * @return The created DomainDnsUnavailableRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDomainDnsUnavailableRecord the new object to create
+     * @return the created DomainDnsUnavailableRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DomainDnsUnavailableRecord post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) throws ClientException {
         return send(HttpMethod.POST, newDomainDnsUnavailableRecord);
@@ -113,8 +121,8 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IDomainDnsUnavailableRecordRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseDomainDnsUnavailableRecordRequest extends BaseRequest implement
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IDomainDnsUnavailableRecordRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

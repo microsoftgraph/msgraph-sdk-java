@@ -26,17 +26,17 @@ public class BaseWorkbookFunctionsAccrIntRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsAccrInt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param issue The issue
-     * @param firstInterest The firstInterest
-     * @param settlement The settlement
-     * @param rate The rate
-     * @param par The par
-     * @param frequency The frequency
-     * @param basis The basis
-     * @param calcMethod The calcMethod
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param issue the issue
+     * @param firstInterest the firstInterest
+     * @param settlement the settlement
+     * @param rate the rate
+     * @param par the par
+     * @param frequency the frequency
+     * @param basis the basis
+     * @param calcMethod the calcMethod
      */
     public BaseWorkbookFunctionsAccrIntRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstInterest, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis, final com.google.gson.JsonElement calcMethod) {
         super(requestUrl, client, requestOptions);
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsAccrIntRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsAccrIntRequest
      *
-     * @return The IWorkbookFunctionsAccrIntRequest instance
+     * @return the IWorkbookFunctionsAccrIntRequest instance
      */
     public IWorkbookFunctionsAccrIntRequest buildRequest() {
         return buildRequest(getOptions());
@@ -63,7 +63,7 @@ public class BaseWorkbookFunctionsAccrIntRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsAccrIntRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAccrIntRequest instance
+     * @return the IWorkbookFunctionsAccrIntRequest instance
      */
     public IWorkbookFunctionsAccrIntRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAccrIntRequest request = new WorkbookFunctionsAccrIntRequest(

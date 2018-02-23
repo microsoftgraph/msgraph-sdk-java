@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsKurtRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsKurtRequest
      *
-     * @return The IWorkbookFunctionsKurtRequest instance
+     * @return the IWorkbookFunctionsKurtRequest instance
      */
     IWorkbookFunctionsKurtRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsKurtRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsKurtRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsKurtRequest instance
+     * @return the IWorkbookFunctionsKurtRequest instance
      */
     IWorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

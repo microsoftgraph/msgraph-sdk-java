@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsNominalRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsNominal
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param effectRate The effectRate
-     * @param npery The npery
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param effectRate the effectRate
+     * @param npery the npery
      */
     public BaseWorkbookFunctionsNominalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement effectRate, final com.google.gson.JsonElement npery) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsNominalRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsNominalRequest
      *
-     * @return The IWorkbookFunctionsNominalRequest instance
+     * @return the IWorkbookFunctionsNominalRequest instance
      */
     public IWorkbookFunctionsNominalRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNominalRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsNominalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNominalRequest instance
+     * @return the IWorkbookFunctionsNominalRequest instance
      */
     public IWorkbookFunctionsNominalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNominalRequest request = new WorkbookFunctionsNominalRequest(

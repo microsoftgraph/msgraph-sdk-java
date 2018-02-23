@@ -26,9 +26,9 @@ public class BaseWorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookRangeUnmerge
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeUnmergeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookRangeUnmergeRequest
      *
-     * @return The IWorkbookRangeUnmergeRequest instance
+     * @return the IWorkbookRangeUnmergeRequest instance
      */
     public IWorkbookRangeUnmergeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookRangeUnmergeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeUnmergeRequest instance
+     * @return the IWorkbookRangeUnmergeRequest instance
      */
     public IWorkbookRangeUnmergeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeUnmergeRequest request = new WorkbookRangeUnmergeRequest(

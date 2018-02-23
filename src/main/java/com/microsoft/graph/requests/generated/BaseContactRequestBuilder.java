@@ -27,9 +27,9 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * The request builder for the Contact
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseContactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * Creates the request
      *
-     * @return The IContactRequest instance
+     * @return the IContactRequest instance
      */
     public IContactRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IContactRequest instance
+     * @param requestOptions the options for this request
+     * @return the IContactRequest instance
      */
     public IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ContactRequest(getRequestUrl(), getClient(), requestOptions);
@@ -77,9 +77,9 @@ public class BaseContactRequestBuilder extends BaseRequestBuilder implements IBa
     }
 
     /**
-     * Gets the request builder for ProfilePhoto.
+     * Gets the request builder for ProfilePhoto
      *
-     * @return The IProfilePhotoRequestBuilder instance
+     * @return the IProfilePhotoRequestBuilder instance
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);

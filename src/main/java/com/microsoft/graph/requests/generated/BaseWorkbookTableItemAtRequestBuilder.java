@@ -26,10 +26,10 @@ public class BaseWorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBu
     /**
      * The request builder for this WorkbookTableItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param index The index
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param index the index
      */
     public BaseWorkbookTableItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBu
     /**
      * Creates the IWorkbookTableItemAtRequest
      *
-     * @return The IWorkbookTableItemAtRequest instance
+     * @return the IWorkbookTableItemAtRequest instance
      */
     public IWorkbookTableItemAtRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookTableItemAtRequestBuilder extends BaseFunctionRequestBu
      * Creates the IWorkbookTableItemAtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableItemAtRequest instance
+     * @return the IWorkbookTableItemAtRequest instance
      */
     public IWorkbookTableItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableItemAtRequest request = new WorkbookTableItemAtRequest(

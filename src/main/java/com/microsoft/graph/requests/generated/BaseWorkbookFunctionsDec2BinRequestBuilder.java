@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsDec2BinRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsDec2Bin
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param places The places
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param places the places
      */
     public BaseWorkbookFunctionsDec2BinRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsDec2BinRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsDec2BinRequest
      *
-     * @return The IWorkbookFunctionsDec2BinRequest instance
+     * @return the IWorkbookFunctionsDec2BinRequest instance
      */
     public IWorkbookFunctionsDec2BinRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsDec2BinRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsDec2BinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDec2BinRequest instance
+     * @return the IWorkbookFunctionsDec2BinRequest instance
      */
     public IWorkbookFunctionsDec2BinRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDec2BinRequest request = new WorkbookFunctionsDec2BinRequest(

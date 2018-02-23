@@ -27,10 +27,10 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
     /**
      * The request for the SingleValueLegacyExtendedProperty
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseSingleValueLegacyExtendedPropertyRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
 
     /**
      * Gets the SingleValueLegacyExtendedProperty from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
 
     /**
      * Gets the SingleValueLegacyExtendedProperty from the service
-     * @return The SingleValueLegacyExtendedProperty from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the SingleValueLegacyExtendedProperty from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public SingleValueLegacyExtendedProperty get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
 
     /**
      * Patches this SingleValueLegacyExtendedProperty with a source
-     * @param sourceSingleValueLegacyExtendedProperty The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceSingleValueLegacyExtendedProperty the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceSingleValueLegacyExtendedProperty);
@@ -83,9 +88,10 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
 
     /**
      * Patches this SingleValueLegacyExtendedProperty with a source
-     * @param sourceSingleValueLegacyExtendedProperty The source object with updates
-     * @return The updated SingleValueLegacyExtendedProperty
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceSingleValueLegacyExtendedProperty the source object with updates
+     * @return the updated SingleValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public SingleValueLegacyExtendedProperty patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.PATCH, sourceSingleValueLegacyExtendedProperty);
@@ -93,8 +99,9 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
 
     /**
      * Creates a SingleValueLegacyExtendedProperty with a new object
-     * @param newSingleValueLegacyExtendedProperty The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newSingleValueLegacyExtendedProperty the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
         send(HttpMethod.POST, callback, newSingleValueLegacyExtendedProperty);
@@ -102,9 +109,10 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
 
     /**
      * Creates a SingleValueLegacyExtendedProperty with a new object
-     * @param newSingleValueLegacyExtendedProperty The new object to create
-     * @return The created SingleValueLegacyExtendedProperty
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newSingleValueLegacyExtendedProperty the new object to create
+     * @return the created SingleValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         return send(HttpMethod.POST, newSingleValueLegacyExtendedProperty);
@@ -113,8 +121,8 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public ISingleValueLegacyExtendedPropertyRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseSingleValueLegacyExtendedPropertyRequest extends BaseRequest im
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public ISingleValueLegacyExtendedPropertyRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

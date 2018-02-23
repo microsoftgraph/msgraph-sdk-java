@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActi
     /**
      * The request builder for this WorkbookFunctionsGammaLn_Precise
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
      */
     public BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest
      *
-     * @return The IWorkbookFunctionsGammaLn_PreciseRequest instance
+     * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
     public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends BaseActi
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGammaLn_PreciseRequest instance
+     * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
     public IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGammaLn_PreciseRequest request = new WorkbookFunctionsGammaLn_PreciseRequest(

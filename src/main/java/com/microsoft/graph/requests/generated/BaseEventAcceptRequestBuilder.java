@@ -26,11 +26,11 @@ public class BaseEventAcceptRequestBuilder extends BaseActionRequestBuilder {
     /**
      * The request builder for this EventAccept
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param comment The comment
-     * @param sendResponse The sendResponse
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param comment the comment
+     * @param sendResponse the sendResponse
      */
     public BaseEventAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseEventAcceptRequestBuilder extends BaseActionRequestBuilder {
     /**
      * Creates the IEventAcceptRequest
      *
-     * @return The IEventAcceptRequest instance
+     * @return the IEventAcceptRequest instance
      */
     public IEventAcceptRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseEventAcceptRequestBuilder extends BaseActionRequestBuilder {
      * Creates the IEventAcceptRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IEventAcceptRequest instance
+     * @return the IEventAcceptRequest instance
      */
     public IEventAcceptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         EventAcceptRequest request = new EventAcceptRequest(

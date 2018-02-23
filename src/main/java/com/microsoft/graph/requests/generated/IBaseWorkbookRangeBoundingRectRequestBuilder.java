@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeBoundingRectRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookRangeBoundingRectRequest
      *
-     * @return The IWorkbookRangeBoundingRectRequest instance
+     * @return the IWorkbookRangeBoundingRectRequest instance
      */
     IWorkbookRangeBoundingRectRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeBoundingRectRequestBuilder extends IRequestBu
      * Creates the IWorkbookRangeBoundingRectRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeBoundingRectRequest instance
+     * @return the IWorkbookRangeBoundingRectRequest instance
      */
     IWorkbookRangeBoundingRectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

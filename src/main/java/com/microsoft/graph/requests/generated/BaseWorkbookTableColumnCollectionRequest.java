@@ -28,9 +28,9 @@ public class BaseWorkbookTableColumnCollectionRequest extends BaseCollectionRequ
     /**
      * The request builder for this collection of WorkbookTableColumn
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookTableColumnCollectionResponse.class, IWorkbookTableColumnCollectionPage.class);
@@ -72,8 +72,8 @@ public class BaseWorkbookTableColumnCollectionRequest extends BaseCollectionRequ
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookTableColumnCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));
@@ -83,8 +83,8 @@ public class BaseWorkbookTableColumnCollectionRequest extends BaseCollectionRequ
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookTableColumnCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -94,8 +94,8 @@ public class BaseWorkbookTableColumnCollectionRequest extends BaseCollectionRequ
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IWorkbookTableColumnCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value + ""));

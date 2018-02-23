@@ -29,32 +29,32 @@ public interface IBaseOnenoteResourceStreamRequest extends IHttpStreamRequest {
     /**
      * Gets the contents of this stream
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<InputStream> callback);
 
     /**
      * Gets the contents of this stream
      *
-     * @return The stream that the caller needs to close.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the stream that the caller needs to close
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     InputStream get() throws ClientException;
 
     /**
      * Uploads to the stream
      *
-     * @param fileContents The contents of the stream to upload.
-     * @param callback The callback to be called after success or failure.
+     * @param fileContents the contents of the stream to upload
+     * @param callback the callback to be called after success or failure
      */
     void put(final byte[] fileContents, final ICallback<OnenoteResource> callback);
 
     /**
      * Uploads to the stream
      *
-     * @param fileContents The contents of the stream to upload.
-     * @return The result of the upload.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @param fileContents the contents of the stream to upload
+     * @return the result of the upload
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     OnenoteResource put(final byte[] fileContents) throws ClientException;
 }

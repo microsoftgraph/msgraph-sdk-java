@@ -27,9 +27,9 @@ public class BaseDirectoryObjectWithReferenceRequest extends BaseRequest impleme
     /**
      * The request for the DirectoryObject
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDirectoryObjectWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
@@ -58,8 +58,8 @@ public class BaseDirectoryObjectWithReferenceRequest extends BaseRequest impleme
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IDirectoryObjectWithReferenceRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -69,8 +69,8 @@ public class BaseDirectoryObjectWithReferenceRequest extends BaseRequest impleme
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IDirectoryObjectWithReferenceRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

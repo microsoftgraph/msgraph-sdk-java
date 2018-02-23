@@ -26,9 +26,9 @@ public class BaseWorkbookFunctionsTodayRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsToday
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsTodayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookFunctionsTodayRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsTodayRequest
      *
-     * @return The IWorkbookFunctionsTodayRequest instance
+     * @return the IWorkbookFunctionsTodayRequest instance
      */
     public IWorkbookFunctionsTodayRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsTodayRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsTodayRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTodayRequest instance
+     * @return the IWorkbookFunctionsTodayRequest instance
      */
     public IWorkbookFunctionsTodayRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTodayRequest request = new WorkbookFunctionsTodayRequest(

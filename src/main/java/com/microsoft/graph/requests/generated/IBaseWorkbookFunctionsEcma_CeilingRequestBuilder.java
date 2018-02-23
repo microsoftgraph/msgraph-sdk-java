@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsEcma_CeilingRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsEcma_CeilingRequest
      *
-     * @return The IWorkbookFunctionsEcma_CeilingRequest instance
+     * @return the IWorkbookFunctionsEcma_CeilingRequest instance
      */
     IWorkbookFunctionsEcma_CeilingRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsEcma_CeilingRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsEcma_CeilingRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsEcma_CeilingRequest instance
+     * @return the IWorkbookFunctionsEcma_CeilingRequest instance
      */
     IWorkbookFunctionsEcma_CeilingRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

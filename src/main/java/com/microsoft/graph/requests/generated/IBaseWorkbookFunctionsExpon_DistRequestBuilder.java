@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsExpon_DistRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsExpon_DistRequest
      *
-     * @return The IWorkbookFunctionsExpon_DistRequest instance
+     * @return the IWorkbookFunctionsExpon_DistRequest instance
      */
     IWorkbookFunctionsExpon_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsExpon_DistRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsExpon_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsExpon_DistRequest instance
+     * @return the IWorkbookFunctionsExpon_DistRequest instance
      */
     IWorkbookFunctionsExpon_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

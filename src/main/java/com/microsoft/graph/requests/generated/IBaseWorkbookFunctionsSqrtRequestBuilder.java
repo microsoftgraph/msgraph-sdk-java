@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSqrtRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSqrtRequest
      *
-     * @return The IWorkbookFunctionsSqrtRequest instance
+     * @return the IWorkbookFunctionsSqrtRequest instance
      */
     IWorkbookFunctionsSqrtRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSqrtRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsSqrtRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSqrtRequest instance
+     * @return the IWorkbookFunctionsSqrtRequest instance
      */
     IWorkbookFunctionsSqrtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

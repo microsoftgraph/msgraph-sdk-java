@@ -27,7 +27,7 @@ public interface IBaseEventDeclineRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IEventDeclineRequest
      *
-     * @return The IEventDeclineRequest instance
+     * @return the IEventDeclineRequest instance
      */
     IEventDeclineRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseEventDeclineRequestBuilder extends IRequestBuilder {
      * Creates the IEventDeclineRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IEventDeclineRequest instance
+     * @return the IEventDeclineRequest instance
      */
     IEventDeclineRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

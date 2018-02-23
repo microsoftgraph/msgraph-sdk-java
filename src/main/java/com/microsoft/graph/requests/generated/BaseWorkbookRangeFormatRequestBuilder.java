@@ -27,9 +27,9 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * The request builder for the WorkbookRangeFormat
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
-     * @return The IWorkbookRangeFormatRequest instance
+     * @return the IWorkbookRangeFormatRequest instance
      */
     public IWorkbookRangeFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookRangeFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeFormatRequest instance
      */
     public IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -63,27 +63,27 @@ public class BaseWorkbookRangeFormatRequestBuilder extends BaseRequestBuilder im
     }
 
     /**
-     * Gets the request builder for WorkbookRangeFill.
+     * Gets the request builder for WorkbookRangeFill
      *
-     * @return The IWorkbookRangeFillRequestBuilder instance
+     * @return the IWorkbookRangeFillRequestBuilder instance
      */
     public IWorkbookRangeFillRequestBuilder fill() {
         return new WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookRangeFont.
+     * Gets the request builder for WorkbookRangeFont
      *
-     * @return The IWorkbookRangeFontRequestBuilder instance
+     * @return the IWorkbookRangeFontRequestBuilder instance
      */
     public IWorkbookRangeFontRequestBuilder font() {
         return new WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookFormatProtection.
+     * Gets the request builder for WorkbookFormatProtection
      *
-     * @return The IWorkbookFormatProtectionRequestBuilder instance
+     * @return the IWorkbookFormatProtectionRequestBuilder instance
      */
     public IWorkbookFormatProtectionRequestBuilder protection() {
         return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);

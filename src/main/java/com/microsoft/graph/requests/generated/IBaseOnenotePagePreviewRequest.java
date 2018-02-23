@@ -29,31 +29,32 @@ public interface IBaseOnenotePagePreviewRequest {
 
     /**
      * Gets the OnenotePagePreview
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<OnenotePagePreview> callback);
 
     /**
      * Gets the OnenotePagePreview
      *
-     * @return The OnenotePagePreview
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the OnenotePagePreview
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     OnenotePagePreview get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IOnenotePagePreviewRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IOnenotePagePreviewRequest expand(final String value);
 

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsWeekNumRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsWeekNumRequest
      *
-     * @return The IWorkbookFunctionsWeekNumRequest instance
+     * @return the IWorkbookFunctionsWeekNumRequest instance
      */
     IWorkbookFunctionsWeekNumRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsWeekNumRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsWeekNumRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsWeekNumRequest instance
+     * @return the IWorkbookFunctionsWeekNumRequest instance
      */
     IWorkbookFunctionsWeekNumRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

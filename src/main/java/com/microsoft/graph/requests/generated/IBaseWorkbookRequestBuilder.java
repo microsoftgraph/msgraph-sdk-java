@@ -26,22 +26,22 @@ public interface IBaseWorkbookRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookRequest instance
+     * @return the IWorkbookRequest instance
      */
     IWorkbookRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRequest instance
      */
     IWorkbookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookApplication.
+     * Gets the request builder for WorkbookApplication
      *
-     * @return The IWorkbookApplicationRequestBuilder instance
+     * @return the IWorkbookApplicationRequestBuilder instance
      */
     IWorkbookApplicationRequestBuilder application();
 
@@ -58,9 +58,9 @@ public interface IBaseWorkbookRequestBuilder extends IRequestBuilder {
     IWorkbookWorksheetRequestBuilder worksheets(final String id);
 
     /**
-     * Gets the request builder for WorkbookFunctions.
+     * Gets the request builder for WorkbookFunctions
      *
-     * @return The IWorkbookFunctionsRequestBuilder instance
+     * @return the IWorkbookFunctionsRequestBuilder instance
      */
     IWorkbookFunctionsRequestBuilder functions();
     IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);

@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsNorm_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param mean The mean
-     * @param standardDev The standardDev
-     * @param cumulative The cumulative
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param mean the mean
+     * @param standardDev the standardDev
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsNorm_DistRequest
      *
-     * @return The IWorkbookFunctionsNorm_DistRequest instance
+     * @return the IWorkbookFunctionsNorm_DistRequest instance
      */
     public IWorkbookFunctionsNorm_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsNorm_DistRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsNorm_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNorm_DistRequest instance
+     * @return the IWorkbookFunctionsNorm_DistRequest instance
      */
     public IWorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNorm_DistRequest request = new WorkbookFunctionsNorm_DistRequest(

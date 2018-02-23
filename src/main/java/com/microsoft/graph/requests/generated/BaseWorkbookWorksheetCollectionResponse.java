@@ -36,7 +36,7 @@ public class BaseWorkbookWorksheetCollectionResponse implements IJsonBackedObjec
     public java.util.List<WorkbookWorksheet> value;
 
     /**
-     * The url to the next page of this collection, or null
+     * The URL to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)

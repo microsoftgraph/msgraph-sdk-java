@@ -27,9 +27,9 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * The request builder for the ItemAttachment
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseItemAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
-     * @return The IItemAttachmentRequest instance
+     * @return the IItemAttachmentRequest instance
      */
     public IItemAttachmentRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IItemAttachmentRequest instance
+     * @param requestOptions the options for this request
+     * @return the IItemAttachmentRequest instance
      */
     public IItemAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ItemAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseItemAttachmentRequestBuilder extends BaseRequestBuilder impleme
 
 
     /**
-     * Gets the request builder for OutlookItem.
+     * Gets the request builder for OutlookItem
      *
-     * @return The IOutlookItemRequestBuilder instance
+     * @return the IOutlookItemRequestBuilder instance
      */
     public IOutlookItemRequestBuilder item() {
         return new OutlookItemRequestBuilder(getRequestUrlWithAdditionalSegment("item"), getClient(), null);

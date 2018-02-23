@@ -26,15 +26,15 @@ public interface IBaseOnenoteEntitySchemaObjectModelRequestBuilder extends IRequ
     /**
      * Creates the request
      *
-     * @return The IOnenoteEntitySchemaObjectModelRequest instance
+     * @return the IOnenoteEntitySchemaObjectModelRequest instance
      */
     IOnenoteEntitySchemaObjectModelRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IOnenoteEntitySchemaObjectModelRequest instance
+     * @param requestOptions the options for this request
+     * @return the IOnenoteEntitySchemaObjectModelRequest instance
      */
     IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

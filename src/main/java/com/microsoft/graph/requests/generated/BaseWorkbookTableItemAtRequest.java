@@ -27,9 +27,9 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * The request for this WorkbookTableItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTable.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
 
     /**
      * Patches the WorkbookTableItemAt
-     * @param srcWorkbookTable The WorkbookTable with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTable the WorkbookTable with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookTable);
@@ -47,9 +47,9 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Patches the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable with which to PATCH
-     * @return The WorkbookTable
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTable the WorkbookTable with which to PATCH
+     * @return the WorkbookTable
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookTable patch(WorkbookTable srcWorkbookTable) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookTable);
@@ -58,8 +58,8 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Puts the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTable the WorkbookTable to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookTable);
@@ -68,9 +68,9 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Puts the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable to PUT
-     * @return The WorkbookTable
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTable the WorkbookTable to PUT
+     * @return the WorkbookTable
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookTable put(WorkbookTable srcWorkbookTable) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookTable);
@@ -78,7 +78,7 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Gets the WorkbookTable
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookTable> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Gets the WorkbookTable
      *
-     * @return The WorkbookTable
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookTable
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookTable get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookTableItemAtRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookTableItemAtRequest extends BaseRequest implements IBase
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookTableItemAtRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

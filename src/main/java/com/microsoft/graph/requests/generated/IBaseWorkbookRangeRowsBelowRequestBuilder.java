@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeRowsBelowRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookRangeRowsBelowRequest
      *
-     * @return The IWorkbookRangeRowsBelowRequest instance
+     * @return the IWorkbookRangeRowsBelowRequest instance
      */
     IWorkbookRangeRowsBelowRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeRowsBelowRequestBuilder extends IRequestBuild
      * Creates the IWorkbookRangeRowsBelowRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeRowsBelowRequest instance
+     * @return the IWorkbookRangeRowsBelowRequest instance
      */
     IWorkbookRangeRowsBelowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

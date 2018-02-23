@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseColumnLinkCollectionPage extends BaseCollectionPage<ColumnLink, IColumnLinkCollectionRequestBuilder> implements IBaseColumnLinkCollectionPage {
 
     /**
-     * A collection page for ColumnLink.
+     * A collection page for ColumnLink
      *
-     * @param response The serialized BaseColumnLinkCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseColumnLinkCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseColumnLinkCollectionPage(final BaseColumnLinkCollectionResponse response, final IColumnLinkCollectionRequestBuilder builder) {
         super(response.value, builder);

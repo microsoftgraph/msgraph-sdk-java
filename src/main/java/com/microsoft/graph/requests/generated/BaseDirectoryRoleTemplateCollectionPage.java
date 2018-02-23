@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseDirectoryRoleTemplateCollectionPage extends BaseCollectionPage<DirectoryRoleTemplate, IDirectoryRoleTemplateCollectionRequestBuilder> implements IBaseDirectoryRoleTemplateCollectionPage {
 
     /**
-     * A collection page for DirectoryRoleTemplate.
+     * A collection page for DirectoryRoleTemplate
      *
-     * @param response The serialized BaseDirectoryRoleTemplateCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDirectoryRoleTemplateCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseDirectoryRoleTemplateCollectionPage(final BaseDirectoryRoleTemplateCollectionResponse response, final IDirectoryRoleTemplateCollectionRequestBuilder builder) {
         super(response.value, builder);

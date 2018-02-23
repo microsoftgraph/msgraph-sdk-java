@@ -34,24 +34,24 @@ public interface IBaseWorkbookFunctionsFloor_MathRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookFunctionsFloor_MathRequest select(final String value) ;
 
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     IWorkbookFunctionsFloor_MathRequest top(final int value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookFunctionsFloor_MathRequest expand(final String value);
 

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsXorRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsXorRequest
      *
-     * @return The IWorkbookFunctionsXorRequest instance
+     * @return the IWorkbookFunctionsXorRequest instance
      */
     IWorkbookFunctionsXorRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsXorRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsXorRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsXorRequest instance
+     * @return the IWorkbookFunctionsXorRequest instance
      */
     IWorkbookFunctionsXorRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

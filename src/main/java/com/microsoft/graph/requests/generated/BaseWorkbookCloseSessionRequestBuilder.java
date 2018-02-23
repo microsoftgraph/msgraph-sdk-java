@@ -26,9 +26,9 @@ public class BaseWorkbookCloseSessionRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookCloseSession
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookCloseSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookCloseSessionRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookCloseSessionRequest
      *
-     * @return The IWorkbookCloseSessionRequest instance
+     * @return the IWorkbookCloseSessionRequest instance
      */
     public IWorkbookCloseSessionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookCloseSessionRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookCloseSessionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookCloseSessionRequest instance
+     * @return the IWorkbookCloseSessionRequest instance
      */
     public IWorkbookCloseSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookCloseSessionRequest request = new WorkbookCloseSessionRequest(

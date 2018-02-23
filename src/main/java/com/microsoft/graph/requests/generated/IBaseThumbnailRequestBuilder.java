@@ -26,15 +26,15 @@ public interface IBaseThumbnailRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IThumbnailRequest instance
+     * @return the IThumbnailRequest instance
      */
     IThumbnailRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IThumbnailRequest instance
+     * @param requestOptions the options for this request
+     * @return the IThumbnailRequest instance
      */
     IThumbnailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

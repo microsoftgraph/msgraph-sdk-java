@@ -27,10 +27,10 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
     /**
      * The request for the PlannerProgressTaskBoardTaskFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BasePlannerProgressTaskBoardTaskFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
 
     /**
      * Gets the PlannerProgressTaskBoardTaskFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
 
     /**
      * Gets the PlannerProgressTaskBoardTaskFormat from the service
-     * @return The PlannerProgressTaskBoardTaskFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the PlannerProgressTaskBoardTaskFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerProgressTaskBoardTaskFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
 
     /**
      * Patches this PlannerProgressTaskBoardTaskFormat with a source
-     * @param sourcePlannerProgressTaskBoardTaskFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePlannerProgressTaskBoardTaskFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerProgressTaskBoardTaskFormat);
@@ -83,9 +88,10 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
 
     /**
      * Patches this PlannerProgressTaskBoardTaskFormat with a source
-     * @param sourcePlannerProgressTaskBoardTaskFormat The source object with updates
-     * @return The updated PlannerProgressTaskBoardTaskFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePlannerProgressTaskBoardTaskFormat the source object with updates
+     * @return the updated PlannerProgressTaskBoardTaskFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerProgressTaskBoardTaskFormat patch(final PlannerProgressTaskBoardTaskFormat sourcePlannerProgressTaskBoardTaskFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerProgressTaskBoardTaskFormat);
@@ -93,8 +99,9 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
 
     /**
      * Creates a PlannerProgressTaskBoardTaskFormat with a new object
-     * @param newPlannerProgressTaskBoardTaskFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPlannerProgressTaskBoardTaskFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
         send(HttpMethod.POST, callback, newPlannerProgressTaskBoardTaskFormat);
@@ -102,9 +109,10 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
 
     /**
      * Creates a PlannerProgressTaskBoardTaskFormat with a new object
-     * @param newPlannerProgressTaskBoardTaskFormat The new object to create
-     * @return The created PlannerProgressTaskBoardTaskFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPlannerProgressTaskBoardTaskFormat the new object to create
+     * @return the created PlannerProgressTaskBoardTaskFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerProgressTaskBoardTaskFormat post(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat) throws ClientException {
         return send(HttpMethod.POST, newPlannerProgressTaskBoardTaskFormat);
@@ -113,8 +121,8 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IPlannerProgressTaskBoardTaskFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BasePlannerProgressTaskBoardTaskFormatRequest extends BaseRequest i
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IPlannerProgressTaskBoardTaskFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

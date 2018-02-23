@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCleanRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsCleanRequest
      *
-     * @return The IWorkbookFunctionsCleanRequest instance
+     * @return the IWorkbookFunctionsCleanRequest instance
      */
     IWorkbookFunctionsCleanRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCleanRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsCleanRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCleanRequest instance
+     * @return the IWorkbookFunctionsCleanRequest instance
      */
     IWorkbookFunctionsCleanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

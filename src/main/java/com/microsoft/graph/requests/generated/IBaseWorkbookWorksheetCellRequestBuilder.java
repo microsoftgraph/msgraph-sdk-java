@@ -27,7 +27,7 @@ public interface IBaseWorkbookWorksheetCellRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookWorksheetCellRequest
      *
-     * @return The IWorkbookWorksheetCellRequest instance
+     * @return the IWorkbookWorksheetCellRequest instance
      */
     IWorkbookWorksheetCellRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookWorksheetCellRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookWorksheetCellRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookWorksheetCellRequest instance
+     * @return the IWorkbookWorksheetCellRequest instance
      */
     IWorkbookWorksheetCellRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

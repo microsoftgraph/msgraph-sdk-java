@@ -27,7 +27,7 @@ public interface IBaseWorkbookFilterClearRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFilterClearRequest
      *
-     * @return The IWorkbookFilterClearRequest instance
+     * @return the IWorkbookFilterClearRequest instance
      */
     IWorkbookFilterClearRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFilterClearRequestBuilder extends IRequestBuilder 
      * Creates the IWorkbookFilterClearRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterClearRequest instance
+     * @return the IWorkbookFilterClearRequest instance
      */
     IWorkbookFilterClearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -33,7 +33,7 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * The content type of this list item
      */
     @SerializedName("contentType")
     @Expose
@@ -49,7 +49,7 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Item.
-     * 
+     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
      */
     @SerializedName("driveItem")
     @Expose
@@ -76,6 +76,7 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -84,6 +85,7 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -91,10 +93,10 @@ public class BaseListItem extends BaseItem implements IJsonBackedObject {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

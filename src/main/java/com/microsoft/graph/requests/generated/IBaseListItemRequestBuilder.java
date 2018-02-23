@@ -26,29 +26,29 @@ public interface IBaseListItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IListItemRequest instance
+     * @return the IListItemRequest instance
      */
     IListItemRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IListItemRequest instance
+     * @param requestOptions the options for this request
+     * @return the IListItemRequest instance
      */
     IListItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
      *
-     * @return The IDriveItemRequestBuilder instance
+     * @return the IDriveItemRequestBuilder instance
      */
     IDriveItemRequestBuilder driveItem();
 
     /**
-     * Gets the request builder for FieldValueSet.
+     * Gets the request builder for FieldValueSet
      *
-     * @return The IFieldValueSetRequestBuilder instance
+     * @return the IFieldValueSetRequestBuilder instance
      */
     IFieldValueSetRequestBuilder fields();
 

@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseGroupSettingTemplateCollectionPage extends BaseCollectionPage<GroupSettingTemplate, IGroupSettingTemplateCollectionRequestBuilder> implements IBaseGroupSettingTemplateCollectionPage {
 
     /**
-     * A collection page for GroupSettingTemplate.
+     * A collection page for GroupSettingTemplate
      *
-     * @param response The serialized BaseGroupSettingTemplateCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseGroupSettingTemplateCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseGroupSettingTemplateCollectionPage(final BaseGroupSettingTemplateCollectionResponse response, final IGroupSettingTemplateCollectionRequestBuilder builder) {
         super(response.value, builder);

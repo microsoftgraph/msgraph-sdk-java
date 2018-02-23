@@ -27,10 +27,10 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
     /**
      * The request for the OnenotePage
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseOnenotePageRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
 
     /**
      * Gets the OnenotePage from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<OnenotePage> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
 
     /**
      * Gets the OnenotePage from the service
-     * @return The OnenotePage from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OnenotePage from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenotePage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
 
     /**
      * Patches this OnenotePage with a source
-     * @param sourceOnenotePage The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOnenotePage the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final OnenotePage sourceOnenotePage, final ICallback<OnenotePage> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenotePage);
@@ -83,9 +88,10 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
 
     /**
      * Patches this OnenotePage with a source
-     * @param sourceOnenotePage The source object with updates
-     * @return The updated OnenotePage
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOnenotePage the source object with updates
+     * @return the updated OnenotePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenotePage patch(final OnenotePage sourceOnenotePage) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenotePage);
@@ -93,8 +99,9 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
 
     /**
      * Creates a OnenotePage with a new object
-     * @param newOnenotePage The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOnenotePage the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback) {
         send(HttpMethod.POST, callback, newOnenotePage);
@@ -102,9 +109,10 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
 
     /**
      * Creates a OnenotePage with a new object
-     * @param newOnenotePage The new object to create
-     * @return The created OnenotePage
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOnenotePage the new object to create
+     * @return the created OnenotePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenotePage post(final byte[] newOnenotePage) throws ClientException {
         return send(HttpMethod.POST, newOnenotePage);
@@ -113,8 +121,8 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IOnenotePageRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseOnenotePageRequest extends BaseRequest implements IBaseOnenoteP
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IOnenotePageRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

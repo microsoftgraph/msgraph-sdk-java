@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsIsNA
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param value The value
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param value the value
      */
     public BaseWorkbookFunctionsIsNARequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsIsNARequest
      *
-     * @return The IWorkbookFunctionsIsNARequest instance
+     * @return the IWorkbookFunctionsIsNARequest instance
      */
     public IWorkbookFunctionsIsNARequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsIsNARequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsIsNARequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsNARequest instance
+     * @return the IWorkbookFunctionsIsNARequest instance
      */
     public IWorkbookFunctionsIsNARequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsNARequest request = new WorkbookFunctionsIsNARequest(

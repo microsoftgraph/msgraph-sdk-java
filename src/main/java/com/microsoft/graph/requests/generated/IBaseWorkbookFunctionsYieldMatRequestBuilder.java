@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsYieldMatRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsYieldMatRequest
      *
-     * @return The IWorkbookFunctionsYieldMatRequest instance
+     * @return the IWorkbookFunctionsYieldMatRequest instance
      */
     IWorkbookFunctionsYieldMatRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsYieldMatRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsYieldMatRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsYieldMatRequest instance
+     * @return the IWorkbookFunctionsYieldMatRequest instance
      */
     IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

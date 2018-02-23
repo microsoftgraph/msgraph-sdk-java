@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBin2DecRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsBin2DecRequest
      *
-     * @return The IWorkbookFunctionsBin2DecRequest instance
+     * @return the IWorkbookFunctionsBin2DecRequest instance
      */
     IWorkbookFunctionsBin2DecRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBin2DecRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsBin2DecRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBin2DecRequest instance
+     * @return the IWorkbookFunctionsBin2DecRequest instance
      */
     IWorkbookFunctionsBin2DecRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsRriRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsRri
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param nper The nper
-     * @param pv The pv
-     * @param fv The fv
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
      */
     public BaseWorkbookFunctionsRriRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsRriRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsRriRequest
      *
-     * @return The IWorkbookFunctionsRriRequest instance
+     * @return the IWorkbookFunctionsRriRequest instance
      */
     public IWorkbookFunctionsRriRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsRriRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsRriRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRriRequest instance
+     * @return the IWorkbookFunctionsRriRequest instance
      */
     public IWorkbookFunctionsRriRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRriRequest request = new WorkbookFunctionsRriRequest(

@@ -26,15 +26,15 @@ public interface IBaseContractRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IContractRequest instance
+     * @return the IContractRequest instance
      */
     IContractRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IContractRequest instance
+     * @param requestOptions the options for this request
+     * @return the IContractRequest instance
      */
     IContractRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

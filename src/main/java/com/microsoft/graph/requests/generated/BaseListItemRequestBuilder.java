@@ -27,9 +27,9 @@ public class BaseListItemRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * The request builder for the ListItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseListItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseListItemRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Creates the request
      *
-     * @return The IListItemRequest instance
+     * @return the IListItemRequest instance
      */
     public IListItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseListItemRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IListItemRequest instance
+     * @param requestOptions the options for this request
+     * @return the IListItemRequest instance
      */
     public IListItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ListItemRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,18 +56,18 @@ public class BaseListItemRequestBuilder extends BaseRequestBuilder implements IB
 
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
      *
-     * @return The IDriveItemRequestBuilder instance
+     * @return the IDriveItemRequestBuilder instance
      */
     public IDriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for FieldValueSet.
+     * Gets the request builder for FieldValueSet
      *
-     * @return The IFieldValueSetRequestBuilder instance
+     * @return the IFieldValueSetRequestBuilder instance
      */
     public IFieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);

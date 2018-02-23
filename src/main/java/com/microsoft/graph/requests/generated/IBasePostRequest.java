@@ -26,72 +26,80 @@ public interface IBasePostRequest extends IHttpRequest {
 
     /**
      * Gets the Post from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<Post> callback);
 
     /**
      * Gets the Post from the service
-     * @return The Post from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Post from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Post get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this Post with a source
-     * @param sourcePost The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePost the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final Post sourcePost, final ICallback<Post> callback);
 
     /**
      * Patches this Post with a source
-     * @param sourcePost The source object with updates
-     * @return The updated Post
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePost the source object with updates
+     * @return the updated Post
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Post patch(final Post sourcePost) throws ClientException;
 
     /**
      * Posts a Post with a new object
-     * @param newPost The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPost the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final Post newPost, final ICallback<Post> callback);
 
     /**
      * Posts a Post with a new object
-     * @param newPost The new object to create
-     * @return The created Post
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPost the new object to create
+     * @return the created Post
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Post post(final Post newPost) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBasePostRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBasePostRequest expand(final String value);
 

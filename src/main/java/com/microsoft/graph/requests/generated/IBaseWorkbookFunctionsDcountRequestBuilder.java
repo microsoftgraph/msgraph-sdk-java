@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDcountRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsDcountRequest
      *
-     * @return The IWorkbookFunctionsDcountRequest instance
+     * @return the IWorkbookFunctionsDcountRequest instance
      */
     IWorkbookFunctionsDcountRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDcountRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsDcountRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDcountRequest instance
+     * @return the IWorkbookFunctionsDcountRequest instance
      */
     IWorkbookFunctionsDcountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

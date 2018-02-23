@@ -27,10 +27,10 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
     /**
      * The request for the WorkbookTableRow
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookTableRowRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
 
     /**
      * Gets the WorkbookTableRow from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookTableRow> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
 
     /**
      * Gets the WorkbookTableRow from the service
-     * @return The WorkbookTableRow from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookTableRow from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookTableRow get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
 
     /**
      * Patches this WorkbookTableRow with a source
-     * @param sourceWorkbookTableRow The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookTableRow the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookTableRow sourceWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTableRow);
@@ -83,9 +88,10 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
 
     /**
      * Patches this WorkbookTableRow with a source
-     * @param sourceWorkbookTableRow The source object with updates
-     * @return The updated WorkbookTableRow
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookTableRow the source object with updates
+     * @return the updated WorkbookTableRow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookTableRow patch(final WorkbookTableRow sourceWorkbookTableRow) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookTableRow);
@@ -93,8 +99,9 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
 
     /**
      * Creates a WorkbookTableRow with a new object
-     * @param newWorkbookTableRow The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookTableRow the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<WorkbookTableRow> callback) {
         send(HttpMethod.POST, callback, newWorkbookTableRow);
@@ -102,9 +109,10 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
 
     /**
      * Creates a WorkbookTableRow with a new object
-     * @param newWorkbookTableRow The new object to create
-     * @return The created WorkbookTableRow
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookTableRow the new object to create
+     * @return the created WorkbookTableRow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookTableRow post(final WorkbookTableRow newWorkbookTableRow) throws ClientException {
         return send(HttpMethod.POST, newWorkbookTableRow);
@@ -113,8 +121,8 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookTableRowRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookTableRowRequest extends BaseRequest implements IBaseWor
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookTableRowRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

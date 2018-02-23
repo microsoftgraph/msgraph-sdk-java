@@ -27,9 +27,9 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     /**
      * The request builder for the User
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseUserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     /**
      * Creates the request
      *
-     * @return The IUserRequest instance
+     * @return the IUserRequest instance
      */
     public IUserRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IUserRequest instance
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
      */
     public IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new UserRequest(getRequestUrl(), getClient(), requestOptions);
@@ -70,9 +70,9 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     }
 
     /**
-     * Gets the request builder for DirectoryObject.
+     * Gets the request builder for DirectoryObject
      *
-     * @return The IDirectoryObjectWithReferenceRequestBuilder instance
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     public IDirectoryObjectWithReferenceRequestBuilder manager() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("manager"), getClient(), null);
@@ -135,9 +135,9 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     }
 
     /**
-     * Gets the request builder for Calendar.
+     * Gets the request builder for Calendar
      *
-     * @return The ICalendarRequestBuilder instance
+     * @return the ICalendarRequestBuilder instance
      */
     public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
@@ -193,18 +193,18 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     }
 
     /**
-     * Gets the request builder for InferenceClassification.
+     * Gets the request builder for InferenceClassification
      *
-     * @return The IInferenceClassificationRequestBuilder instance
+     * @return the IInferenceClassificationRequestBuilder instance
      */
     public IInferenceClassificationRequestBuilder inferenceClassification() {
         return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for ProfilePhoto.
+     * Gets the request builder for ProfilePhoto
      *
-     * @return The IProfilePhotoRequestBuilder instance
+     * @return the IProfilePhotoRequestBuilder instance
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
@@ -218,9 +218,9 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     }
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
      *
-     * @return The IDriveRequestBuilder instance
+     * @return the IDriveRequestBuilder instance
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
@@ -234,18 +234,18 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     }
 
     /**
-     * Gets the request builder for PlannerUser.
+     * Gets the request builder for PlannerUser
      *
-     * @return The IPlannerUserRequestBuilder instance
+     * @return the IPlannerUserRequestBuilder instance
      */
     public IPlannerUserRequestBuilder planner() {
         return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
      *
-     * @return The IOnenoteRequestBuilder instance
+     * @return the IOnenoteRequestBuilder instance
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);

@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsCountIfRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsCountIf
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param range The range
-     * @param criteria The criteria
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param range the range
+     * @param criteria the criteria
      */
     public BaseWorkbookFunctionsCountIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsCountIfRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsCountIfRequest
      *
-     * @return The IWorkbookFunctionsCountIfRequest instance
+     * @return the IWorkbookFunctionsCountIfRequest instance
      */
     public IWorkbookFunctionsCountIfRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsCountIfRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsCountIfRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCountIfRequest instance
+     * @return the IWorkbookFunctionsCountIfRequest instance
      */
     public IWorkbookFunctionsCountIfRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCountIfRequest request = new WorkbookFunctionsCountIfRequest(

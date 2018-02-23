@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsConvertRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsConvertRequest
      *
-     * @return The IWorkbookFunctionsConvertRequest instance
+     * @return the IWorkbookFunctionsConvertRequest instance
      */
     IWorkbookFunctionsConvertRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsConvertRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsConvertRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsConvertRequest instance
+     * @return the IWorkbookFunctionsConvertRequest instance
      */
     IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

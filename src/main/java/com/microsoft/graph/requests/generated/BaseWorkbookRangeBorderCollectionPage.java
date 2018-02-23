@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookRangeBorderCollectionPage extends BaseCollectionPage<WorkbookRangeBorder, IWorkbookRangeBorderCollectionRequestBuilder> implements IBaseWorkbookRangeBorderCollectionPage {
 
     /**
-     * A collection page for WorkbookRangeBorder.
+     * A collection page for WorkbookRangeBorder
      *
-     * @param response The serialized BaseWorkbookRangeBorderCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookRangeBorderCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseWorkbookRangeBorderCollectionPage(final BaseWorkbookRangeBorderCollectionResponse response, final IWorkbookRangeBorderCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -27,10 +27,10 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
     /**
      * The request for the PlannerAssignedToTaskBoardTaskFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BasePlannerAssignedToTaskBoardTaskFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
 
     /**
      * Gets the PlannerAssignedToTaskBoardTaskFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
 
     /**
      * Gets the PlannerAssignedToTaskBoardTaskFormat from the service
-     * @return The PlannerAssignedToTaskBoardTaskFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the PlannerAssignedToTaskBoardTaskFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerAssignedToTaskBoardTaskFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
 
     /**
      * Patches this PlannerAssignedToTaskBoardTaskFormat with a source
-     * @param sourcePlannerAssignedToTaskBoardTaskFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePlannerAssignedToTaskBoardTaskFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerAssignedToTaskBoardTaskFormat);
@@ -83,9 +88,10 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
 
     /**
      * Patches this PlannerAssignedToTaskBoardTaskFormat with a source
-     * @param sourcePlannerAssignedToTaskBoardTaskFormat The source object with updates
-     * @return The updated PlannerAssignedToTaskBoardTaskFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePlannerAssignedToTaskBoardTaskFormat the source object with updates
+     * @return the updated PlannerAssignedToTaskBoardTaskFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerAssignedToTaskBoardTaskFormat patch(final PlannerAssignedToTaskBoardTaskFormat sourcePlannerAssignedToTaskBoardTaskFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerAssignedToTaskBoardTaskFormat);
@@ -93,8 +99,9 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
 
     /**
      * Creates a PlannerAssignedToTaskBoardTaskFormat with a new object
-     * @param newPlannerAssignedToTaskBoardTaskFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPlannerAssignedToTaskBoardTaskFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat, final ICallback<PlannerAssignedToTaskBoardTaskFormat> callback) {
         send(HttpMethod.POST, callback, newPlannerAssignedToTaskBoardTaskFormat);
@@ -102,9 +109,10 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
 
     /**
      * Creates a PlannerAssignedToTaskBoardTaskFormat with a new object
-     * @param newPlannerAssignedToTaskBoardTaskFormat The new object to create
-     * @return The created PlannerAssignedToTaskBoardTaskFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPlannerAssignedToTaskBoardTaskFormat the new object to create
+     * @return the created PlannerAssignedToTaskBoardTaskFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerAssignedToTaskBoardTaskFormat post(final PlannerAssignedToTaskBoardTaskFormat newPlannerAssignedToTaskBoardTaskFormat) throws ClientException {
         return send(HttpMethod.POST, newPlannerAssignedToTaskBoardTaskFormat);
@@ -113,8 +121,8 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IPlannerAssignedToTaskBoardTaskFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BasePlannerAssignedToTaskBoardTaskFormatRequest extends BaseRequest
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IPlannerAssignedToTaskBoardTaskFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

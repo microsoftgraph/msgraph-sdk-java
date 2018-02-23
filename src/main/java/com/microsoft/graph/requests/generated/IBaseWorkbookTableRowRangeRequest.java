@@ -30,63 +30,64 @@ public interface IBaseWorkbookTableRowRangeRequest {
     /**
      * Patches the WorkbookTableRowRange
      *
-     * @param srcWorkbookRange The WorkbookRange with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRange the WorkbookRange with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback);
 
     /**
      * Patches the WorkbookTableRowRange
      *
-     * @param srcWorkbookRange The WorkbookRange with which to PATCH
-     * @return The WorkbookRange
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRange the WorkbookRange with which to PATCH
+     * @return the WorkbookRange
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookRange patch(WorkbookRange srcWorkbookRange) throws ClientException;
 
     /**
      * Puts the WorkbookTableRowRange
      *
-     * @param srcWorkbookRange The WorkbookRange to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRange the WorkbookRange to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(WorkbookRange srcWorkbookRange, final ICallback<WorkbookRange> callback);
 
     /**
      * Puts the WorkbookTableRowRange
      *
-     * @param srcWorkbookRange The WorkbookRange to PUT
-     * @return The WorkbookRange
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRange the WorkbookRange to PUT
+     * @return the WorkbookRange
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      WorkbookRange put(WorkbookRange srcWorkbookRange) throws ClientException;
     /**
      * Gets the WorkbookRange
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookRange> callback);
 
     /**
      * Gets the WorkbookRange
      *
-     * @return The WorkbookRange
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookRange
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookRange get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookTableRowRangeRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookTableRowRangeRequest expand(final String value);
 

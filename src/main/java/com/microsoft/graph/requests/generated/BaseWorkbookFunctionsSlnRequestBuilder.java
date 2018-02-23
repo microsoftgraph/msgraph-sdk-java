@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsSln
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param cost The cost
-     * @param salvage The salvage
-     * @param life The life
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
      */
     public BaseWorkbookFunctionsSlnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsSlnRequest
      *
-     * @return The IWorkbookFunctionsSlnRequest instance
+     * @return the IWorkbookFunctionsSlnRequest instance
      */
     public IWorkbookFunctionsSlnRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsSlnRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsSlnRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSlnRequest instance
+     * @return the IWorkbookFunctionsSlnRequest instance
      */
     public IWorkbookFunctionsSlnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSlnRequest request = new WorkbookFunctionsSlnRequest(

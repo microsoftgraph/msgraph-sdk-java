@@ -26,72 +26,80 @@ public interface IBaseWorkbookChartPointRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookChartPoint from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Gets the WorkbookChartPoint from the service
-     * @return The WorkbookChartPoint from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartPoint from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartPoint get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookChartPoint with a source
-     * @param sourceWorkbookChartPoint The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartPoint the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookChartPoint sourceWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Patches this WorkbookChartPoint with a source
-     * @param sourceWorkbookChartPoint The source object with updates
-     * @return The updated WorkbookChartPoint
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartPoint the source object with updates
+     * @return the updated WorkbookChartPoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartPoint patch(final WorkbookChartPoint sourceWorkbookChartPoint) throws ClientException;
 
     /**
      * Posts a WorkbookChartPoint with a new object
-     * @param newWorkbookChartPoint The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartPoint the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Posts a WorkbookChartPoint with a new object
-     * @param newWorkbookChartPoint The new object to create
-     * @return The created WorkbookChartPoint
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartPoint the new object to create
+     * @return the created WorkbookChartPoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookChartPointRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookChartPointRequest expand(final String value);
 

@@ -26,72 +26,80 @@ public interface IBaseSiteRequest extends IHttpRequest {
 
     /**
      * Gets the Site from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<Site> callback);
 
     /**
      * Gets the Site from the service
-     * @return The Site from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Site from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Site get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this Site with a source
-     * @param sourceSite The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceSite the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final Site sourceSite, final ICallback<Site> callback);
 
     /**
      * Patches this Site with a source
-     * @param sourceSite The source object with updates
-     * @return The updated Site
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceSite the source object with updates
+     * @return the updated Site
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Site patch(final Site sourceSite) throws ClientException;
 
     /**
      * Posts a Site with a new object
-     * @param newSite The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newSite the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final Site newSite, final ICallback<Site> callback);
 
     /**
      * Posts a Site with a new object
-     * @param newSite The new object to create
-     * @return The created Site
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newSite the new object to create
+     * @return the created Site
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Site post(final Site newSite) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseSiteRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseSiteRequest expand(final String value);
 

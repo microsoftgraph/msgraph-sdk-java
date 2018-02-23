@@ -26,15 +26,15 @@ public interface IBaseEntityRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IEntityRequest instance
+     * @return the IEntityRequest instance
      */
     IEntityRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IEntityRequest instance
+     * @param requestOptions the options for this request
+     * @return the IEntityRequest instance
      */
     IEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

@@ -28,9 +28,9 @@ public class BaseWorkbookNamedItemCollectionRequest extends BaseCollectionReques
     /**
      * The request builder for this collection of WorkbookNamedItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookNamedItemCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseWorkbookNamedItemCollectionResponse.class, IWorkbookNamedItemCollectionPage.class);
@@ -72,8 +72,8 @@ public class BaseWorkbookNamedItemCollectionRequest extends BaseCollectionReques
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookNamedItemCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));
@@ -83,8 +83,8 @@ public class BaseWorkbookNamedItemCollectionRequest extends BaseCollectionReques
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookNamedItemCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -94,8 +94,8 @@ public class BaseWorkbookNamedItemCollectionRequest extends BaseCollectionReques
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IWorkbookNamedItemCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value + ""));

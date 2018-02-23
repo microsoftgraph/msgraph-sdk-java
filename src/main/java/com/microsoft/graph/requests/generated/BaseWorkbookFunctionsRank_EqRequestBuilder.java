@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsRank_EqRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsRank_Eq
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param ref The ref
-     * @param order The order
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param ref the ref
+     * @param order the order
      */
     public BaseWorkbookFunctionsRank_EqRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement ref, final com.google.gson.JsonElement order) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsRank_EqRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsRank_EqRequest
      *
-     * @return The IWorkbookFunctionsRank_EqRequest instance
+     * @return the IWorkbookFunctionsRank_EqRequest instance
      */
     public IWorkbookFunctionsRank_EqRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsRank_EqRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsRank_EqRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRank_EqRequest instance
+     * @return the IWorkbookFunctionsRank_EqRequest instance
      */
     public IWorkbookFunctionsRank_EqRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRank_EqRequest request = new WorkbookFunctionsRank_EqRequest(

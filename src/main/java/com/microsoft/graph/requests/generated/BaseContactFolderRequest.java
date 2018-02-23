@@ -27,10 +27,10 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
     /**
      * The request for the ContactFolder
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseContactFolderRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
 
     /**
      * Gets the ContactFolder from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<ContactFolder> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
 
     /**
      * Gets the ContactFolder from the service
-     * @return The ContactFolder from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the ContactFolder from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ContactFolder get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
 
     /**
      * Patches this ContactFolder with a source
-     * @param sourceContactFolder The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceContactFolder the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final ContactFolder sourceContactFolder, final ICallback<ContactFolder> callback) {
         send(HttpMethod.PATCH, callback, sourceContactFolder);
@@ -83,9 +88,10 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
 
     /**
      * Patches this ContactFolder with a source
-     * @param sourceContactFolder The source object with updates
-     * @return The updated ContactFolder
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceContactFolder the source object with updates
+     * @return the updated ContactFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ContactFolder patch(final ContactFolder sourceContactFolder) throws ClientException {
         return send(HttpMethod.PATCH, sourceContactFolder);
@@ -93,8 +99,9 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
 
     /**
      * Creates a ContactFolder with a new object
-     * @param newContactFolder The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newContactFolder the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback) {
         send(HttpMethod.POST, callback, newContactFolder);
@@ -102,9 +109,10 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
 
     /**
      * Creates a ContactFolder with a new object
-     * @param newContactFolder The new object to create
-     * @return The created ContactFolder
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newContactFolder the new object to create
+     * @return the created ContactFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ContactFolder post(final ContactFolder newContactFolder) throws ClientException {
         return send(HttpMethod.POST, newContactFolder);
@@ -113,8 +121,8 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IContactFolderRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseContactFolderRequest extends BaseRequest implements IBaseContac
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IContactFolderRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

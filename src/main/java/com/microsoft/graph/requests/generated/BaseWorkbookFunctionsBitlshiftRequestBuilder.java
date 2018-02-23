@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsBitlshiftRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsBitlshift
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param shiftAmount The shiftAmount
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param shiftAmount the shiftAmount
      */
     public BaseWorkbookFunctionsBitlshiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement shiftAmount) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsBitlshiftRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsBitlshiftRequest
      *
-     * @return The IWorkbookFunctionsBitlshiftRequest instance
+     * @return the IWorkbookFunctionsBitlshiftRequest instance
      */
     public IWorkbookFunctionsBitlshiftRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsBitlshiftRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsBitlshiftRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBitlshiftRequest instance
+     * @return the IWorkbookFunctionsBitlshiftRequest instance
      */
     public IWorkbookFunctionsBitlshiftRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBitlshiftRequest request = new WorkbookFunctionsBitlshiftRequest(

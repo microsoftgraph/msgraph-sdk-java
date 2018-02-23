@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsMinuteRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsMinute
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param serialNumber The serialNumber
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param serialNumber the serialNumber
      */
     public BaseWorkbookFunctionsMinuteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsMinuteRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsMinuteRequest
      *
-     * @return The IWorkbookFunctionsMinuteRequest instance
+     * @return the IWorkbookFunctionsMinuteRequest instance
      */
     public IWorkbookFunctionsMinuteRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsMinuteRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsMinuteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMinuteRequest instance
+     * @return the IWorkbookFunctionsMinuteRequest instance
      */
     public IWorkbookFunctionsMinuteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMinuteRequest request = new WorkbookFunctionsMinuteRequest(

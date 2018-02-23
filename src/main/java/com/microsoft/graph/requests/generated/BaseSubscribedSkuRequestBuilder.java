@@ -27,9 +27,9 @@ public class BaseSubscribedSkuRequestBuilder extends BaseRequestBuilder implemen
     /**
      * The request builder for the SubscribedSku
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseSubscribedSkuRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseSubscribedSkuRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
-     * @return The ISubscribedSkuRequest instance
+     * @return the ISubscribedSkuRequest instance
      */
     public ISubscribedSkuRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseSubscribedSkuRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The ISubscribedSkuRequest instance
+     * @param requestOptions the options for this request
+     * @return the ISubscribedSkuRequest instance
      */
     public ISubscribedSkuRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SubscribedSkuRequest(getRequestUrl(), getClient(), requestOptions);

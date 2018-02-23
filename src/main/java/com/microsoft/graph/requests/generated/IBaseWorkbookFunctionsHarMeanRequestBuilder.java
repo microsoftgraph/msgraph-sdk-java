@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsHarMeanRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsHarMeanRequest
      *
-     * @return The IWorkbookFunctionsHarMeanRequest instance
+     * @return the IWorkbookFunctionsHarMeanRequest instance
      */
     IWorkbookFunctionsHarMeanRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsHarMeanRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsHarMeanRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHarMeanRequest instance
+     * @return the IWorkbookFunctionsHarMeanRequest instance
      */
     IWorkbookFunctionsHarMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

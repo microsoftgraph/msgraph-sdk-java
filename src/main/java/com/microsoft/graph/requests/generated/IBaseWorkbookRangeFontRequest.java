@@ -26,72 +26,80 @@ public interface IBaseWorkbookRangeFontRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookRangeFont from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookRangeFont> callback);
 
     /**
      * Gets the WorkbookRangeFont from the service
-     * @return The WorkbookRangeFont from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookRangeFont from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookRangeFont get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookRangeFont with a source
-     * @param sourceWorkbookRangeFont The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookRangeFont the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookRangeFont sourceWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback);
 
     /**
      * Patches this WorkbookRangeFont with a source
-     * @param sourceWorkbookRangeFont The source object with updates
-     * @return The updated WorkbookRangeFont
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookRangeFont the source object with updates
+     * @return the updated WorkbookRangeFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookRangeFont patch(final WorkbookRangeFont sourceWorkbookRangeFont) throws ClientException;
 
     /**
      * Posts a WorkbookRangeFont with a new object
-     * @param newWorkbookRangeFont The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookRangeFont the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback);
 
     /**
      * Posts a WorkbookRangeFont with a new object
-     * @param newWorkbookRangeFont The new object to create
-     * @return The created WorkbookRangeFont
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookRangeFont the new object to create
+     * @return the created WorkbookRangeFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookRangeFont post(final WorkbookRangeFont newWorkbookRangeFont) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookRangeFontRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookRangeFontRequest expand(final String value);
 

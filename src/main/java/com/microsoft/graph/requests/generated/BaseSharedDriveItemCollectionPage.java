@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseSharedDriveItemCollectionPage extends BaseCollectionPage<SharedDriveItem, ISharedDriveItemCollectionRequestBuilder> implements IBaseSharedDriveItemCollectionPage {
 
     /**
-     * A collection page for SharedDriveItem.
+     * A collection page for SharedDriveItem
      *
-     * @param response The serialized BaseSharedDriveItemCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSharedDriveItemCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseSharedDriveItemCollectionPage(final BaseSharedDriveItemCollectionResponse response, final ISharedDriveItemCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -27,9 +27,9 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
     /**
      * The request builder for the WorkbookChartSeriesFormat
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartSeriesFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartSeriesFormatRequest instance
+     * @return the IWorkbookChartSeriesFormatRequest instance
      */
     public IWorkbookChartSeriesFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartSeriesFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartSeriesFormatRequest instance
      */
     public IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartSeriesFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,18 +56,18 @@ public class BaseWorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuil
 
 
     /**
-     * Gets the request builder for WorkbookChartFill.
+     * Gets the request builder for WorkbookChartFill
      *
-     * @return The IWorkbookChartFillRequestBuilder instance
+     * @return the IWorkbookChartFillRequestBuilder instance
      */
     public IWorkbookChartFillRequestBuilder fill() {
         return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookChartLineFormat.
+     * Gets the request builder for WorkbookChartLineFormat
      *
-     * @return The IWorkbookChartLineFormatRequestBuilder instance
+     * @return the IWorkbookChartLineFormatRequestBuilder instance
      */
     public IWorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);

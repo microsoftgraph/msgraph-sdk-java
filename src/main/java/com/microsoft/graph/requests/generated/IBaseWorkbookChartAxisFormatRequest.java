@@ -26,72 +26,80 @@ public interface IBaseWorkbookChartAxisFormatRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookChartAxisFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartAxisFormat> callback);
 
     /**
      * Gets the WorkbookChartAxisFormat from the service
-     * @return The WorkbookChartAxisFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartAxisFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartAxisFormat get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookChartAxisFormat with a source
-     * @param sourceWorkbookChartAxisFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartAxisFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback);
 
     /**
      * Patches this WorkbookChartAxisFormat with a source
-     * @param sourceWorkbookChartAxisFormat The source object with updates
-     * @return The updated WorkbookChartAxisFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartAxisFormat the source object with updates
+     * @return the updated WorkbookChartAxisFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartAxisFormat patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat) throws ClientException;
 
     /**
      * Posts a WorkbookChartAxisFormat with a new object
-     * @param newWorkbookChartAxisFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartAxisFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback);
 
     /**
      * Posts a WorkbookChartAxisFormat with a new object
-     * @param newWorkbookChartAxisFormat The new object to create
-     * @return The created WorkbookChartAxisFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartAxisFormat the new object to create
+     * @return the created WorkbookChartAxisFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartAxisFormat post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookChartAxisFormatRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookChartAxisFormatRequest expand(final String value);
 

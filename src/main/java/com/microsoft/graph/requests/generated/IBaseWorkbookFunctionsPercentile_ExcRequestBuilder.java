@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPercentile_ExcRequestBuilder extends IReq
     /**
      * Creates the IWorkbookFunctionsPercentile_ExcRequest
      *
-     * @return The IWorkbookFunctionsPercentile_ExcRequest instance
+     * @return the IWorkbookFunctionsPercentile_ExcRequest instance
      */
     IWorkbookFunctionsPercentile_ExcRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPercentile_ExcRequestBuilder extends IReq
      * Creates the IWorkbookFunctionsPercentile_ExcRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPercentile_ExcRequest instance
+     * @return the IWorkbookFunctionsPercentile_ExcRequest instance
      */
     IWorkbookFunctionsPercentile_ExcRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

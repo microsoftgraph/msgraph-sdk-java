@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsWeibull_DistRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsWeibull_DistRequest
      *
-     * @return The IWorkbookFunctionsWeibull_DistRequest instance
+     * @return the IWorkbookFunctionsWeibull_DistRequest instance
      */
     IWorkbookFunctionsWeibull_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsWeibull_DistRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsWeibull_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsWeibull_DistRequest instance
+     * @return the IWorkbookFunctionsWeibull_DistRequest instance
      */
     IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

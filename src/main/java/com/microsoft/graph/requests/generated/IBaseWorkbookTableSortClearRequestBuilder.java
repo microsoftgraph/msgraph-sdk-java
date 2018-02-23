@@ -27,7 +27,7 @@ public interface IBaseWorkbookTableSortClearRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookTableSortClearRequest
      *
-     * @return The IWorkbookTableSortClearRequest instance
+     * @return the IWorkbookTableSortClearRequest instance
      */
     IWorkbookTableSortClearRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookTableSortClearRequestBuilder extends IRequestBuild
      * Creates the IWorkbookTableSortClearRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableSortClearRequest instance
+     * @return the IWorkbookTableSortClearRequest instance
      */
     IWorkbookTableSortClearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

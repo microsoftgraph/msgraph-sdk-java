@@ -27,10 +27,10 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
     /**
      * The request for the WorkbookChartAxisFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookChartAxisFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
 
     /**
      * Gets the WorkbookChartAxisFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartAxisFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
 
     /**
      * Gets the WorkbookChartAxisFormat from the service
-     * @return The WorkbookChartAxisFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartAxisFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartAxisFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
 
     /**
      * Patches this WorkbookChartAxisFormat with a source
-     * @param sourceWorkbookChartAxisFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartAxisFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisFormat);
@@ -83,9 +88,10 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
 
     /**
      * Patches this WorkbookChartAxisFormat with a source
-     * @param sourceWorkbookChartAxisFormat The source object with updates
-     * @return The updated WorkbookChartAxisFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartAxisFormat the source object with updates
+     * @return the updated WorkbookChartAxisFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartAxisFormat patch(final WorkbookChartAxisFormat sourceWorkbookChartAxisFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAxisFormat);
@@ -93,8 +99,9 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
 
     /**
      * Creates a WorkbookChartAxisFormat with a new object
-     * @param newWorkbookChartAxisFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartAxisFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisFormat);
@@ -102,9 +109,10 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
 
     /**
      * Creates a WorkbookChartAxisFormat with a new object
-     * @param newWorkbookChartAxisFormat The new object to create
-     * @return The created WorkbookChartAxisFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartAxisFormat the new object to create
+     * @return the created WorkbookChartAxisFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartAxisFormat post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAxisFormat);
@@ -113,8 +121,8 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookChartAxisFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookChartAxisFormatRequest extends BaseRequest implements I
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookChartAxisFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

@@ -26,15 +26,15 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IPostRequest instance
+     * @return the IPostRequest instance
      */
     IPostRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IPostRequest instance
+     * @param requestOptions the options for this request
+     * @return the IPostRequest instance
      */
     IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -43,9 +43,9 @@ public interface IBasePostRequestBuilder extends IRequestBuilder {
     IExtensionRequestBuilder extensions(final String id);
 
     /**
-     * Gets the request builder for Post.
+     * Gets the request builder for Post
      *
-     * @return The IPostRequestBuilder instance
+     * @return the IPostRequestBuilder instance
      */
     IPostRequestBuilder inReplyTo();
 

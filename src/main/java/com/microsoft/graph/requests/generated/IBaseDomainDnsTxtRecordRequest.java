@@ -26,72 +26,80 @@ public interface IBaseDomainDnsTxtRecordRequest extends IHttpRequest {
 
     /**
      * Gets the DomainDnsTxtRecord from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<DomainDnsTxtRecord> callback);
 
     /**
      * Gets the DomainDnsTxtRecord from the service
-     * @return The DomainDnsTxtRecord from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the DomainDnsTxtRecord from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsTxtRecord get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this DomainDnsTxtRecord with a source
-     * @param sourceDomainDnsTxtRecord The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDomainDnsTxtRecord the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final DomainDnsTxtRecord sourceDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback);
 
     /**
      * Patches this DomainDnsTxtRecord with a source
-     * @param sourceDomainDnsTxtRecord The source object with updates
-     * @return The updated DomainDnsTxtRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDomainDnsTxtRecord the source object with updates
+     * @return the updated DomainDnsTxtRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsTxtRecord patch(final DomainDnsTxtRecord sourceDomainDnsTxtRecord) throws ClientException;
 
     /**
      * Posts a DomainDnsTxtRecord with a new object
-     * @param newDomainDnsTxtRecord The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDomainDnsTxtRecord the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback);
 
     /**
      * Posts a DomainDnsTxtRecord with a new object
-     * @param newDomainDnsTxtRecord The new object to create
-     * @return The created DomainDnsTxtRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDomainDnsTxtRecord the new object to create
+     * @return the created DomainDnsTxtRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsTxtRecord post(final DomainDnsTxtRecord newDomainDnsTxtRecord) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseDomainDnsTxtRecordRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseDomainDnsTxtRecordRequest expand(final String value);
 

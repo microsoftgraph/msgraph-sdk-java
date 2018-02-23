@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeEntireColumnRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookRangeEntireColumnRequest
      *
-     * @return The IWorkbookRangeEntireColumnRequest instance
+     * @return the IWorkbookRangeEntireColumnRequest instance
      */
     IWorkbookRangeEntireColumnRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeEntireColumnRequestBuilder extends IRequestBu
      * Creates the IWorkbookRangeEntireColumnRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeEntireColumnRequest instance
+     * @return the IWorkbookRangeEntireColumnRequest instance
      */
     IWorkbookRangeEntireColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -26,15 +26,15 @@ public interface IBaseWorkbookChartFillRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartFillRequest instance
+     * @return the IWorkbookChartFillRequest instance
      */
     IWorkbookChartFillRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartFillRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartFillRequest instance
      */
     IWorkbookChartFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookChartFillClearRequestBuilder clear();

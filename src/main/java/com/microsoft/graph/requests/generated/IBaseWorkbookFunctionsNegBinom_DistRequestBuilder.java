@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsNegBinom_DistRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookFunctionsNegBinom_DistRequest
      *
-     * @return The IWorkbookFunctionsNegBinom_DistRequest instance
+     * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
     IWorkbookFunctionsNegBinom_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsNegBinom_DistRequestBuilder extends IRequ
      * Creates the IWorkbookFunctionsNegBinom_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNegBinom_DistRequest instance
+     * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
     IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

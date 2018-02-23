@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsNot
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param logical The logical
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param logical the logical
      */
     public BaseWorkbookFunctionsNotRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement logical) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsNotRequest
      *
-     * @return The IWorkbookFunctionsNotRequest instance
+     * @return the IWorkbookFunctionsNotRequest instance
      */
     public IWorkbookFunctionsNotRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsNotRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsNotRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNotRequest instance
+     * @return the IWorkbookFunctionsNotRequest instance
      */
     public IWorkbookFunctionsNotRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNotRequest request = new WorkbookFunctionsNotRequest(

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsColumnsRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsColumnsRequest
      *
-     * @return The IWorkbookFunctionsColumnsRequest instance
+     * @return the IWorkbookFunctionsColumnsRequest instance
      */
     IWorkbookFunctionsColumnsRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsColumnsRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsColumnsRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsColumnsRequest instance
+     * @return the IWorkbookFunctionsColumnsRequest instance
      */
     IWorkbookFunctionsColumnsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

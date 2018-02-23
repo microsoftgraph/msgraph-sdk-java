@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseExtensionCollectionPage extends BaseCollectionPage<Extension, IExtensionCollectionRequestBuilder> implements IBaseExtensionCollectionPage {
 
     /**
-     * A collection page for Extension.
+     * A collection page for Extension
      *
-     * @param response The serialized BaseExtensionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseExtensionCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseExtensionCollectionPage(final BaseExtensionCollectionResponse response, final IExtensionCollectionRequestBuilder builder) {
         super(response.value, builder);

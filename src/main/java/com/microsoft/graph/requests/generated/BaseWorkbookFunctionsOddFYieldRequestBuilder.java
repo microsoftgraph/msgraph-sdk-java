@@ -26,18 +26,18 @@ public class BaseWorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsOddFYield
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param issue The issue
-     * @param firstCoupon The firstCoupon
-     * @param rate The rate
-     * @param pr The pr
-     * @param redemption The redemption
-     * @param frequency The frequency
-     * @param basis The basis
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param firstCoupon the firstCoupon
+     * @param rate the rate
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsOddFYieldRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstCoupon, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsOddFYieldRequest
      *
-     * @return The IWorkbookFunctionsOddFYieldRequest instance
+     * @return the IWorkbookFunctionsOddFYieldRequest instance
      */
     public IWorkbookFunctionsOddFYieldRequest buildRequest() {
         return buildRequest(getOptions());
@@ -65,7 +65,7 @@ public class BaseWorkbookFunctionsOddFYieldRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsOddFYieldRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsOddFYieldRequest instance
+     * @return the IWorkbookFunctionsOddFYieldRequest instance
      */
     public IWorkbookFunctionsOddFYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsOddFYieldRequest request = new WorkbookFunctionsOddFYieldRequest(

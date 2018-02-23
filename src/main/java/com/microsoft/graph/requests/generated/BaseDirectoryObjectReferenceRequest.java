@@ -27,9 +27,9 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
     /**
      * The request for the DirectoryObject
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDirectoryObjectReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryObject.class);
@@ -46,8 +46,8 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IDirectoryObjectReferenceRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -57,8 +57,8 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IDirectoryObjectReferenceRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));
@@ -67,8 +67,8 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
     /**
      * Puts the DirectoryObject
      *
-     * @param srcDirectoryObject The DirectoryObject reference to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcDirectoryObject the DirectoryObject reference to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback) {
         send(HttpMethod.PUT, callback, srcDirectoryObject);
@@ -77,9 +77,9 @@ public class BaseDirectoryObjectReferenceRequest extends BaseRequest implements 
     /**
      * Puts the DirectoryObject
      *
-     * @param srcDirectoryObject The DirectoryObject reference to PUT
-     * @return The DirectoryObject
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcDirectoryObject the DirectoryObject reference to PUT
+     * @return the DirectoryObject
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException {
         return send(HttpMethod.PUT, srcDirectoryObject);

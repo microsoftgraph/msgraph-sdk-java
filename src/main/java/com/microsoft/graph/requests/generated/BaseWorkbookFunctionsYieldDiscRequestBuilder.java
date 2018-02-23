@@ -26,14 +26,14 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsYieldDisc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param pr The pr
-     * @param redemption The redemption
-     * @param basis The basis
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsYieldDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsYieldDiscRequest
      *
-     * @return The IWorkbookFunctionsYieldDiscRequest instance
+     * @return the IWorkbookFunctionsYieldDiscRequest instance
      */
     public IWorkbookFunctionsYieldDiscRequest buildRequest() {
         return buildRequest(getOptions());
@@ -57,7 +57,7 @@ public class BaseWorkbookFunctionsYieldDiscRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsYieldDiscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsYieldDiscRequest instance
+     * @return the IWorkbookFunctionsYieldDiscRequest instance
      */
     public IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsYieldDiscRequest request = new WorkbookFunctionsYieldDiscRequest(

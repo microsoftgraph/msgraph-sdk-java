@@ -26,15 +26,15 @@ public interface IBaseOnenoteOperationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IOnenoteOperationRequest instance
+     * @return the IOnenoteOperationRequest instance
      */
     IOnenoteOperationRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IOnenoteOperationRequest instance
+     * @param requestOptions the options for this request
+     * @return the IOnenoteOperationRequest instance
      */
     IOnenoteOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

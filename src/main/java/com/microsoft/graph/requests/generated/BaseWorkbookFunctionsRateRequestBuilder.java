@@ -26,15 +26,15 @@ public class BaseWorkbookFunctionsRateRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsRate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param nper The nper
-     * @param pmt The pmt
-     * @param pv The pv
-     * @param fv The fv
-     * @param type The type
-     * @param guess The guess
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param nper the nper
+     * @param pmt the pmt
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
+     * @param guess the guess
      */
     public BaseWorkbookFunctionsRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions);
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsRateRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsRateRequest
      *
-     * @return The IWorkbookFunctionsRateRequest instance
+     * @return the IWorkbookFunctionsRateRequest instance
      */
     public IWorkbookFunctionsRateRequest buildRequest() {
         return buildRequest(getOptions());
@@ -59,7 +59,7 @@ public class BaseWorkbookFunctionsRateRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsRateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRateRequest instance
+     * @return the IWorkbookFunctionsRateRequest instance
      */
     public IWorkbookFunctionsRateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRateRequest request = new WorkbookFunctionsRateRequest(

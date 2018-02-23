@@ -26,11 +26,11 @@ public class BaseWorkbookTableAddRequestBuilder extends BaseActionRequestBuilder
     /**
      * The request builder for this WorkbookTableAdd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param address The address
-     * @param hasHeaders The hasHeaders
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param address the address
+     * @param hasHeaders the hasHeaders
      */
     public BaseWorkbookTableAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String address, final Boolean hasHeaders) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookTableAddRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookTableAddRequest
      *
-     * @return The IWorkbookTableAddRequest instance
+     * @return the IWorkbookTableAddRequest instance
      */
     public IWorkbookTableAddRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookTableAddRequestBuilder extends BaseActionRequestBuilder
      * Creates the IWorkbookTableAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableAddRequest instance
+     * @return the IWorkbookTableAddRequest instance
      */
     public IWorkbookTableAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableAddRequest request = new WorkbookTableAddRequest(

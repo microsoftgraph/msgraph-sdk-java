@@ -26,36 +26,36 @@ public interface IBaseWorkbookRangeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookRangeRequest instance
+     * @return the IWorkbookRangeRequest instance
      */
     IWorkbookRangeRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookRangeRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeRequest instance
      */
     IWorkbookRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookRangeFormat.
+     * Gets the request builder for WorkbookRangeFormat
      *
-     * @return The IWorkbookRangeFormatRequestBuilder instance
+     * @return the IWorkbookRangeFormatRequestBuilder instance
      */
     IWorkbookRangeFormatRequestBuilder format();
 
     /**
-     * Gets the request builder for WorkbookRangeSort.
+     * Gets the request builder for WorkbookRangeSort
      *
-     * @return The IWorkbookRangeSortRequestBuilder instance
+     * @return the IWorkbookRangeSortRequestBuilder instance
      */
     IWorkbookRangeSortRequestBuilder sort();
 
     /**
-     * Gets the request builder for WorkbookWorksheet.
+     * Gets the request builder for WorkbookWorksheet
      *
-     * @return The IWorkbookWorksheetRequestBuilder instance
+     * @return the IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookRangeClearRequestBuilder clear(final String applyTo);

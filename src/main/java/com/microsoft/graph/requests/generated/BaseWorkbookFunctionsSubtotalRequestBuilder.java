@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsSubtotalRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsSubtotal
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param functionNum The functionNum
-     * @param values The values
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param functionNum the functionNum
+     * @param values the values
      */
     public BaseWorkbookFunctionsSubtotalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement functionNum, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsSubtotalRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsSubtotalRequest
      *
-     * @return The IWorkbookFunctionsSubtotalRequest instance
+     * @return the IWorkbookFunctionsSubtotalRequest instance
      */
     public IWorkbookFunctionsSubtotalRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsSubtotalRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsSubtotalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSubtotalRequest instance
+     * @return the IWorkbookFunctionsSubtotalRequest instance
      */
     public IWorkbookFunctionsSubtotalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSubtotalRequest request = new WorkbookFunctionsSubtotalRequest(

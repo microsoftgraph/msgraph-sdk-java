@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsMirr
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param values The values
-     * @param financeRate The financeRate
-     * @param reinvestRate The reinvestRate
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
+     * @param financeRate the financeRate
+     * @param reinvestRate the reinvestRate
      */
     public BaseWorkbookFunctionsMirrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement financeRate, final com.google.gson.JsonElement reinvestRate) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsMirrRequest
      *
-     * @return The IWorkbookFunctionsMirrRequest instance
+     * @return the IWorkbookFunctionsMirrRequest instance
      */
     public IWorkbookFunctionsMirrRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsMirrRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMirrRequest instance
+     * @return the IWorkbookFunctionsMirrRequest instance
      */
     public IWorkbookFunctionsMirrRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMirrRequest request = new WorkbookFunctionsMirrRequest(

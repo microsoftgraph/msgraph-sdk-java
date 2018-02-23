@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsCountBlankRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsCountBlank
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param range The range
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param range the range
      */
     public BaseWorkbookFunctionsCountBlankRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsCountBlankRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsCountBlankRequest
      *
-     * @return The IWorkbookFunctionsCountBlankRequest instance
+     * @return the IWorkbookFunctionsCountBlankRequest instance
      */
     public IWorkbookFunctionsCountBlankRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsCountBlankRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsCountBlankRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCountBlankRequest instance
+     * @return the IWorkbookFunctionsCountBlankRequest instance
      */
     public IWorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCountBlankRequest request = new WorkbookFunctionsCountBlankRequest(

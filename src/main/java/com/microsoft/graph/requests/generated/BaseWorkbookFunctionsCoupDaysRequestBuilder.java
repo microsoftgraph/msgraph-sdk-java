@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsCoupDaysRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsCoupDays
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param frequency The frequency
-     * @param basis The basis
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsCoupDaysRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsCoupDaysRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsCoupDaysRequest
      *
-     * @return The IWorkbookFunctionsCoupDaysRequest instance
+     * @return the IWorkbookFunctionsCoupDaysRequest instance
      */
     public IWorkbookFunctionsCoupDaysRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsCoupDaysRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsCoupDaysRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCoupDaysRequest instance
+     * @return the IWorkbookFunctionsCoupDaysRequest instance
      */
     public IWorkbookFunctionsCoupDaysRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCoupDaysRequest request = new WorkbookFunctionsCoupDaysRequest(

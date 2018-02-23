@@ -26,10 +26,10 @@ public class BaseMessageMoveRequestBuilder extends BaseActionRequestBuilder {
     /**
      * The request builder for this MessageMove
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param destinationId The destinationId
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param destinationId the destinationId
      */
     public BaseMessageMoveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseMessageMoveRequestBuilder extends BaseActionRequestBuilder {
     /**
      * Creates the IMessageMoveRequest
      *
-     * @return The IMessageMoveRequest instance
+     * @return the IMessageMoveRequest instance
      */
     public IMessageMoveRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseMessageMoveRequestBuilder extends BaseActionRequestBuilder {
      * Creates the IMessageMoveRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IMessageMoveRequest instance
+     * @return the IMessageMoveRequest instance
      */
     public IMessageMoveRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MessageMoveRequest request = new MessageMoveRequest(

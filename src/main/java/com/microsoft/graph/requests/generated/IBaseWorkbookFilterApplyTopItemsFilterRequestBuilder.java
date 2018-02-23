@@ -27,7 +27,7 @@ public interface IBaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends IR
     /**
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest
      *
-     * @return The IWorkbookFilterApplyTopItemsFilterRequest instance
+     * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
     IWorkbookFilterApplyTopItemsFilterRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends IR
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyTopItemsFilterRequest instance
+     * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
     IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

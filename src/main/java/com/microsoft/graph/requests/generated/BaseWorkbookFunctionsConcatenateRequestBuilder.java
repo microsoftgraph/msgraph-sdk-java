@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsConcatenateRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsConcatenate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param values The values
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsConcatenateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsConcatenateRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsConcatenateRequest
      *
-     * @return The IWorkbookFunctionsConcatenateRequest instance
+     * @return the IWorkbookFunctionsConcatenateRequest instance
      */
     public IWorkbookFunctionsConcatenateRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsConcatenateRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsConcatenateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsConcatenateRequest instance
+     * @return the IWorkbookFunctionsConcatenateRequest instance
      */
     public IWorkbookFunctionsConcatenateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsConcatenateRequest request = new WorkbookFunctionsConcatenateRequest(

@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsSyd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param cost The cost
-     * @param salvage The salvage
-     * @param life The life
-     * @param per The per
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param per the per
      */
     public BaseWorkbookFunctionsSydRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsSydRequest
      *
-     * @return The IWorkbookFunctionsSydRequest instance
+     * @return the IWorkbookFunctionsSydRequest instance
      */
     public IWorkbookFunctionsSydRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsSydRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsSydRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSydRequest instance
+     * @return the IWorkbookFunctionsSydRequest instance
      */
     public IWorkbookFunctionsSydRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSydRequest request = new WorkbookFunctionsSydRequest(

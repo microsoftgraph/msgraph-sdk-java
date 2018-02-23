@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActi
     /**
      * The request builder for this WorkbookFunctionsPercentRank_Inc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param array The array
-     * @param x The x
-     * @param significance The significance
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param x the x
+     * @param significance the significance
      */
     public BaseWorkbookFunctionsPercentRank_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookFunctionsPercentRank_IncRequest
      *
-     * @return The IWorkbookFunctionsPercentRank_IncRequest instance
+     * @return the IWorkbookFunctionsPercentRank_IncRequest instance
      */
     public IWorkbookFunctionsPercentRank_IncRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsPercentRank_IncRequestBuilder extends BaseActi
      * Creates the IWorkbookFunctionsPercentRank_IncRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPercentRank_IncRequest instance
+     * @return the IWorkbookFunctionsPercentRank_IncRequest instance
      */
     public IWorkbookFunctionsPercentRank_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPercentRank_IncRequest request = new WorkbookFunctionsPercentRank_IncRequest(

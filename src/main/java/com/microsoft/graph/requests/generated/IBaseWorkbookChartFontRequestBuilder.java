@@ -26,15 +26,15 @@ public interface IBaseWorkbookChartFontRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartFontRequest instance
+     * @return the IWorkbookChartFontRequest instance
      */
     IWorkbookChartFontRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartFontRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartFontRequest instance
      */
     IWorkbookChartFontRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

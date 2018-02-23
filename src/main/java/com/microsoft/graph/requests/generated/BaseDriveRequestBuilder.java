@@ -27,9 +27,9 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * The request builder for the Drive
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDriveRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * Creates the request
      *
-     * @return The IDriveRequest instance
+     * @return the IDriveRequest instance
      */
     public IDriveRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IDriveRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDriveRequest instance
      */
     public IDriveRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DriveRequest(getRequestUrl(), getClient(), requestOptions);
@@ -63,18 +63,18 @@ public class BaseDriveRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Gets the request builder for List.
+     * Gets the request builder for List
      *
-     * @return The IListRequestBuilder instance
+     * @return the IListRequestBuilder instance
      */
     public IListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
      *
-     * @return The IDriveItemRequestBuilder instance
+     * @return the IDriveItemRequestBuilder instance
      */
     public IDriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);

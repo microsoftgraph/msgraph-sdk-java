@@ -27,9 +27,9 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
     /**
      * The request builder for the WorkbookChartLegend
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartLegendRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartLegendRequest instance
+     * @return the IWorkbookChartLegendRequest instance
      */
     public IWorkbookChartLegendRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartLegendRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartLegendRequest instance
      */
     public IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartLegendRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseWorkbookChartLegendRequestBuilder extends BaseRequestBuilder im
 
 
     /**
-     * Gets the request builder for WorkbookChartLegendFormat.
+     * Gets the request builder for WorkbookChartLegendFormat
      *
-     * @return The IWorkbookChartLegendFormatRequestBuilder instance
+     * @return the IWorkbookChartLegendFormatRequestBuilder instance
      */
     public IWorkbookChartLegendFormatRequestBuilder format() {
         return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

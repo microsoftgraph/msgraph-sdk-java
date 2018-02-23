@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseSingleValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<SingleValueLegacyExtendedProperty, ISingleValueLegacyExtendedPropertyCollectionRequestBuilder> implements IBaseSingleValueLegacyExtendedPropertyCollectionPage {
 
     /**
-     * A collection page for SingleValueLegacyExtendedProperty.
+     * A collection page for SingleValueLegacyExtendedProperty
      *
-     * @param response The serialized BaseSingleValueLegacyExtendedPropertyCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSingleValueLegacyExtendedPropertyCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseSingleValueLegacyExtendedPropertyCollectionPage(final BaseSingleValueLegacyExtendedPropertyCollectionResponse response, final ISingleValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response.value, builder);

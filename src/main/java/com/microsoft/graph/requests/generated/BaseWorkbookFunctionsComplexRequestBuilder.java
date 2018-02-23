@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsComplex
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param realNum The realNum
-     * @param iNum The iNum
-     * @param suffix The suffix
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param realNum the realNum
+     * @param iNum the iNum
+     * @param suffix the suffix
      */
     public BaseWorkbookFunctionsComplexRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement realNum, final com.google.gson.JsonElement iNum, final com.google.gson.JsonElement suffix) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsComplexRequest
      *
-     * @return The IWorkbookFunctionsComplexRequest instance
+     * @return the IWorkbookFunctionsComplexRequest instance
      */
     public IWorkbookFunctionsComplexRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsComplexRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsComplexRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsComplexRequest instance
+     * @return the IWorkbookFunctionsComplexRequest instance
      */
     public IWorkbookFunctionsComplexRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsComplexRequest request = new WorkbookFunctionsComplexRequest(

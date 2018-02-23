@@ -27,7 +27,7 @@ public interface IBaseWorkbookFilterApplyValuesFilterRequestBuilder extends IReq
     /**
      * Creates the IWorkbookFilterApplyValuesFilterRequest
      *
-     * @return The IWorkbookFilterApplyValuesFilterRequest instance
+     * @return the IWorkbookFilterApplyValuesFilterRequest instance
      */
     IWorkbookFilterApplyValuesFilterRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFilterApplyValuesFilterRequestBuilder extends IReq
      * Creates the IWorkbookFilterApplyValuesFilterRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyValuesFilterRequest instance
+     * @return the IWorkbookFilterApplyValuesFilterRequest instance
      */
     IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

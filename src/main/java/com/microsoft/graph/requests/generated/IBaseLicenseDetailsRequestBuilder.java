@@ -26,15 +26,15 @@ public interface IBaseLicenseDetailsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The ILicenseDetailsRequest instance
+     * @return the ILicenseDetailsRequest instance
      */
     ILicenseDetailsRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The ILicenseDetailsRequest instance
+     * @param requestOptions the options for this request
+     * @return the ILicenseDetailsRequest instance
      */
     ILicenseDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

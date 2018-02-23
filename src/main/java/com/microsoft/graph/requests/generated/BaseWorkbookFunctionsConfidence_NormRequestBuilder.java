@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
     /**
      * The request builder for this WorkbookFunctionsConfidence_Norm
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param alpha The alpha
-     * @param standardDev The standardDev
-     * @param size The size
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param alpha the alpha
+     * @param standardDev the standardDev
+     * @param size the size
      */
     public BaseWorkbookFunctionsConfidence_NormRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookFunctionsConfidence_NormRequest
      *
-     * @return The IWorkbookFunctionsConfidence_NormRequest instance
+     * @return the IWorkbookFunctionsConfidence_NormRequest instance
      */
     public IWorkbookFunctionsConfidence_NormRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsConfidence_NormRequestBuilder extends BaseActi
      * Creates the IWorkbookFunctionsConfidence_NormRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsConfidence_NormRequest instance
+     * @return the IWorkbookFunctionsConfidence_NormRequest instance
      */
     public IWorkbookFunctionsConfidence_NormRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsConfidence_NormRequest request = new WorkbookFunctionsConfidence_NormRequest(

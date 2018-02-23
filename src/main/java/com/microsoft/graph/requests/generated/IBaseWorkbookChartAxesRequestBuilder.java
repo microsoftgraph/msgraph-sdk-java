@@ -26,36 +26,36 @@ public interface IBaseWorkbookChartAxesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartAxesRequest instance
+     * @return the IWorkbookChartAxesRequest instance
      */
     IWorkbookChartAxesRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartAxesRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartAxesRequest instance
      */
     IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartAxis.
+     * Gets the request builder for WorkbookChartAxis
      *
-     * @return The IWorkbookChartAxisRequestBuilder instance
+     * @return the IWorkbookChartAxisRequestBuilder instance
      */
     IWorkbookChartAxisRequestBuilder categoryAxis();
 
     /**
-     * Gets the request builder for WorkbookChartAxis.
+     * Gets the request builder for WorkbookChartAxis
      *
-     * @return The IWorkbookChartAxisRequestBuilder instance
+     * @return the IWorkbookChartAxisRequestBuilder instance
      */
     IWorkbookChartAxisRequestBuilder seriesAxis();
 
     /**
-     * Gets the request builder for WorkbookChartAxis.
+     * Gets the request builder for WorkbookChartAxis
      *
-     * @return The IWorkbookChartAxisRequestBuilder instance
+     * @return the IWorkbookChartAxisRequestBuilder instance
      */
     IWorkbookChartAxisRequestBuilder valueAxis();
 

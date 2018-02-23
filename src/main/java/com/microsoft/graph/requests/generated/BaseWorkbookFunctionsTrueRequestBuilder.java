@@ -26,9 +26,9 @@ public class BaseWorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsTrue
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsTrueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsTrueRequest
      *
-     * @return The IWorkbookFunctionsTrueRequest instance
+     * @return the IWorkbookFunctionsTrueRequest instance
      */
     public IWorkbookFunctionsTrueRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsTrueRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsTrueRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTrueRequest instance
+     * @return the IWorkbookFunctionsTrueRequest instance
      */
     public IWorkbookFunctionsTrueRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTrueRequest request = new WorkbookFunctionsTrueRequest(

@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsTime
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param hour The hour
-     * @param minute The minute
-     * @param second The second
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param hour the hour
+     * @param minute the minute
+     * @param second the second
      */
     public BaseWorkbookFunctionsTimeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement hour, final com.google.gson.JsonElement minute, final com.google.gson.JsonElement second) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsTimeRequest
      *
-     * @return The IWorkbookFunctionsTimeRequest instance
+     * @return the IWorkbookFunctionsTimeRequest instance
      */
     public IWorkbookFunctionsTimeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsTimeRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsTimeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTimeRequest instance
+     * @return the IWorkbookFunctionsTimeRequest instance
      */
     public IWorkbookFunctionsTimeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTimeRequest request = new WorkbookFunctionsTimeRequest(

@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsTimevalue
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param timeText The timeText
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param timeText the timeText
      */
     public BaseWorkbookFunctionsTimevalueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement timeText) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsTimevalueRequest
      *
-     * @return The IWorkbookFunctionsTimevalueRequest instance
+     * @return the IWorkbookFunctionsTimevalueRequest instance
      */
     public IWorkbookFunctionsTimevalueRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsTimevalueRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTimevalueRequest instance
+     * @return the IWorkbookFunctionsTimevalueRequest instance
      */
     public IWorkbookFunctionsTimevalueRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTimevalueRequest request = new WorkbookFunctionsTimevalueRequest(

@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsF_InvRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsF_Inv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param probability The probability
-     * @param degFreedom1 The degFreedom1
-     * @param degFreedom2 The degFreedom2
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
      */
     public BaseWorkbookFunctionsF_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsF_InvRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsF_InvRequest
      *
-     * @return The IWorkbookFunctionsF_InvRequest instance
+     * @return the IWorkbookFunctionsF_InvRequest instance
      */
     public IWorkbookFunctionsF_InvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsF_InvRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsF_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsF_InvRequest instance
+     * @return the IWorkbookFunctionsF_InvRequest instance
      */
     public IWorkbookFunctionsF_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsF_InvRequest request = new WorkbookFunctionsF_InvRequest(

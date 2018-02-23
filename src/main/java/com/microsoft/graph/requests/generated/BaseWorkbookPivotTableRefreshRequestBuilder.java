@@ -26,9 +26,9 @@ public class BaseWorkbookPivotTableRefreshRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookPivotTableRefresh
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookPivotTableRefreshRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookPivotTableRefreshRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookPivotTableRefreshRequest
      *
-     * @return The IWorkbookPivotTableRefreshRequest instance
+     * @return the IWorkbookPivotTableRefreshRequest instance
      */
     public IWorkbookPivotTableRefreshRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookPivotTableRefreshRequestBuilder extends BaseActionReque
      * Creates the IWorkbookPivotTableRefreshRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookPivotTableRefreshRequest instance
+     * @return the IWorkbookPivotTableRefreshRequest instance
      */
     public IWorkbookPivotTableRefreshRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookPivotTableRefreshRequest request = new WorkbookPivotTableRefreshRequest(

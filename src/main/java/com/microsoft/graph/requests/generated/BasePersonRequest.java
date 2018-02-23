@@ -27,10 +27,10 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
     /**
      * The request for the Person
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BasePersonRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
 
     /**
      * Gets the Person from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Person> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
 
     /**
      * Gets the Person from the service
-     * @return The Person from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Person from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Person get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
 
     /**
      * Patches this Person with a source
-     * @param sourcePerson The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePerson the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Person sourcePerson, final ICallback<Person> callback) {
         send(HttpMethod.PATCH, callback, sourcePerson);
@@ -83,9 +88,10 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
 
     /**
      * Patches this Person with a source
-     * @param sourcePerson The source object with updates
-     * @return The updated Person
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePerson the source object with updates
+     * @return the updated Person
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Person patch(final Person sourcePerson) throws ClientException {
         return send(HttpMethod.PATCH, sourcePerson);
@@ -93,8 +99,9 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
 
     /**
      * Creates a Person with a new object
-     * @param newPerson The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPerson the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Person newPerson, final ICallback<Person> callback) {
         send(HttpMethod.POST, callback, newPerson);
@@ -102,9 +109,10 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
 
     /**
      * Creates a Person with a new object
-     * @param newPerson The new object to create
-     * @return The created Person
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPerson the new object to create
+     * @return the created Person
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Person post(final Person newPerson) throws ClientException {
         return send(HttpMethod.POST, newPerson);
@@ -113,8 +121,8 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IPersonRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BasePersonRequest extends BaseRequest implements IBasePersonRequest
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IPersonRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

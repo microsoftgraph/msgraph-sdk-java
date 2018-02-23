@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsTrimMeanRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsTrimMeanRequest
      *
-     * @return The IWorkbookFunctionsTrimMeanRequest instance
+     * @return the IWorkbookFunctionsTrimMeanRequest instance
      */
     IWorkbookFunctionsTrimMeanRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsTrimMeanRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsTrimMeanRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTrimMeanRequest instance
+     * @return the IWorkbookFunctionsTrimMeanRequest instance
      */
     IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

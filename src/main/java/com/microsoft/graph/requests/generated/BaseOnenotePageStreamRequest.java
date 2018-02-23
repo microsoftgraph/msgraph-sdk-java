@@ -29,10 +29,10 @@ public class BaseOnenotePageStreamRequest extends BaseStreamRequest<OnenotePage>
     /**
      * The request for this OnenotePageStream
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseOnenotePageStreamRequest(
                          final String requestUrl,
@@ -45,7 +45,7 @@ public class BaseOnenotePageStreamRequest extends BaseStreamRequest<OnenotePage>
     /**
      * Gets the contents of this stream
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<InputStream> callback) {
         send(callback);
@@ -54,8 +54,8 @@ public class BaseOnenotePageStreamRequest extends BaseStreamRequest<OnenotePage>
     /**
      * Gets the contents of this stream
      *
-     * @return The stream that the caller needs to close.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the stream that the caller needs to close
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public InputStream get() throws ClientException {
        return send();
@@ -64,8 +64,8 @@ public class BaseOnenotePageStreamRequest extends BaseStreamRequest<OnenotePage>
     /**
      * Uploads to the stream
      *
-     * @param fileContents The contents of the stream to upload.
-     * @param callback The callback to be called after success or failure.
+     * @param fileContents the contents of the stream to upload
+     * @param callback the callback to be called after success or failure
      */
     public void put(final byte[] fileContents, final ICallback<OnenotePage> callback) {
         send(fileContents, callback);
@@ -74,9 +74,9 @@ public class BaseOnenotePageStreamRequest extends BaseStreamRequest<OnenotePage>
     /**
      * Uploads to the stream
      *
-     * @param fileContents The contents of the stream to upload.
-     * @return The result of the upload.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @param fileContents the contents of the stream to upload
+     * @return the result of the upload
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public OnenotePage put(final byte[] fileContents) throws ClientException {
         return send(fileContents);

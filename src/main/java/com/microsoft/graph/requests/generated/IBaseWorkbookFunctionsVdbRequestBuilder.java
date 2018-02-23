@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsVdbRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsVdbRequest
      *
-     * @return The IWorkbookFunctionsVdbRequest instance
+     * @return the IWorkbookFunctionsVdbRequest instance
      */
     IWorkbookFunctionsVdbRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsVdbRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsVdbRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsVdbRequest instance
+     * @return the IWorkbookFunctionsVdbRequest instance
      */
     IWorkbookFunctionsVdbRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

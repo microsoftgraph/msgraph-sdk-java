@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsStDev_SRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsStDev_SRequest
      *
-     * @return The IWorkbookFunctionsStDev_SRequest instance
+     * @return the IWorkbookFunctionsStDev_SRequest instance
      */
     IWorkbookFunctionsStDev_SRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsStDev_SRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsStDev_SRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsStDev_SRequest instance
+     * @return the IWorkbookFunctionsStDev_SRequest instance
      */
     IWorkbookFunctionsStDev_SRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

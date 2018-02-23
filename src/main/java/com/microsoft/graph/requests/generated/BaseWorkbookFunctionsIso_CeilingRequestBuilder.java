@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsIso_Ceiling
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param significance The significance
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param significance the significance
      */
     public BaseWorkbookFunctionsIso_CeilingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsIso_CeilingRequest
      *
-     * @return The IWorkbookFunctionsIso_CeilingRequest instance
+     * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
     public IWorkbookFunctionsIso_CeilingRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsIso_CeilingRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsIso_CeilingRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIso_CeilingRequest instance
+     * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
     public IWorkbookFunctionsIso_CeilingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIso_CeilingRequest request = new WorkbookFunctionsIso_CeilingRequest(

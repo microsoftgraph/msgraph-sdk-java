@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsNorm_S_Inv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param probability The probability
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
      */
     public BaseWorkbookFunctionsNorm_S_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsNorm_S_InvRequest
      *
-     * @return The IWorkbookFunctionsNorm_S_InvRequest instance
+     * @return the IWorkbookFunctionsNorm_S_InvRequest instance
      */
     public IWorkbookFunctionsNorm_S_InvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsNorm_S_InvRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsNorm_S_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNorm_S_InvRequest instance
+     * @return the IWorkbookFunctionsNorm_S_InvRequest instance
      */
     public IWorkbookFunctionsNorm_S_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNorm_S_InvRequest request = new WorkbookFunctionsNorm_S_InvRequest(

@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseInferenceClassificationOverrideCollectionPage extends BaseCollectionPage<InferenceClassificationOverride, IInferenceClassificationOverrideCollectionRequestBuilder> implements IBaseInferenceClassificationOverrideCollectionPage {
 
     /**
-     * A collection page for InferenceClassificationOverride.
+     * A collection page for InferenceClassificationOverride
      *
-     * @param response The serialized BaseInferenceClassificationOverrideCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseInferenceClassificationOverrideCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseInferenceClassificationOverrideCollectionPage(final BaseInferenceClassificationOverrideCollectionResponse response, final IInferenceClassificationOverrideCollectionRequestBuilder builder) {
         super(response.value, builder);

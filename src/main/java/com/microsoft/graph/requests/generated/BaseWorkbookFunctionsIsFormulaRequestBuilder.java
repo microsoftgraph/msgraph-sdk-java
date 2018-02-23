@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsIsFormula
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param reference The reference
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param reference the reference
      */
     public BaseWorkbookFunctionsIsFormulaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement reference) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsIsFormulaRequest
      *
-     * @return The IWorkbookFunctionsIsFormulaRequest instance
+     * @return the IWorkbookFunctionsIsFormulaRequest instance
      */
     public IWorkbookFunctionsIsFormulaRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsIsFormulaRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsFormulaRequest instance
+     * @return the IWorkbookFunctionsIsFormulaRequest instance
      */
     public IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsFormulaRequest request = new WorkbookFunctionsIsFormulaRequest(

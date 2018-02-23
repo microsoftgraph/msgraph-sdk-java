@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsDproductRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsDproduct
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param database The database
-     * @param field The field
-     * @param criteria The criteria
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
      */
     public BaseWorkbookFunctionsDproductRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsDproductRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsDproductRequest
      *
-     * @return The IWorkbookFunctionsDproductRequest instance
+     * @return the IWorkbookFunctionsDproductRequest instance
      */
     public IWorkbookFunctionsDproductRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsDproductRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsDproductRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDproductRequest instance
+     * @return the IWorkbookFunctionsDproductRequest instance
      */
     public IWorkbookFunctionsDproductRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDproductRequest request = new WorkbookFunctionsDproductRequest(

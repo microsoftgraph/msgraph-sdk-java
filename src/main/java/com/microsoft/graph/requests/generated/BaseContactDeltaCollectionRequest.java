@@ -28,9 +28,9 @@ public class BaseContactDeltaCollectionRequest extends BaseCollectionRequest<Bas
     /**
      * The request for this ContactDelta
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseContactDeltaCollectionResponse.class, IContactDeltaCollectionPage.class);
@@ -72,8 +72,8 @@ public class BaseContactDeltaCollectionRequest extends BaseCollectionRequest<Bas
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IContactDeltaCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -83,8 +83,8 @@ public class BaseContactDeltaCollectionRequest extends BaseCollectionRequest<Bas
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IContactDeltaCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value+""));
@@ -94,8 +94,8 @@ public class BaseContactDeltaCollectionRequest extends BaseCollectionRequest<Bas
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IContactDeltaCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));

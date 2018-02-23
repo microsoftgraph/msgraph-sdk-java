@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsAverageIf
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param range The range
-     * @param criteria The criteria
-     * @param averageRange The averageRange
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param range the range
+     * @param criteria the criteria
+     * @param averageRange the averageRange
      */
     public BaseWorkbookFunctionsAverageIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement averageRange) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsAverageIfRequest
      *
-     * @return The IWorkbookFunctionsAverageIfRequest instance
+     * @return the IWorkbookFunctionsAverageIfRequest instance
      */
     public IWorkbookFunctionsAverageIfRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsAverageIfRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsAverageIfRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAverageIfRequest instance
+     * @return the IWorkbookFunctionsAverageIfRequest instance
      */
     public IWorkbookFunctionsAverageIfRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAverageIfRequest request = new WorkbookFunctionsAverageIfRequest(

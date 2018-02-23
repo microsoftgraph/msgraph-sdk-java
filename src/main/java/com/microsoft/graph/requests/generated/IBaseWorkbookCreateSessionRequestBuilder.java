@@ -27,7 +27,7 @@ public interface IBaseWorkbookCreateSessionRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookCreateSessionRequest
      *
-     * @return The IWorkbookCreateSessionRequest instance
+     * @return the IWorkbookCreateSessionRequest instance
      */
     IWorkbookCreateSessionRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookCreateSessionRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookCreateSessionRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookCreateSessionRequest instance
+     * @return the IWorkbookCreateSessionRequest instance
      */
     IWorkbookCreateSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

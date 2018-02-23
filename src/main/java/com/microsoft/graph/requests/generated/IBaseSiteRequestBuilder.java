@@ -26,15 +26,15 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The ISiteRequest instance
+     * @return the ISiteRequest instance
      */
     ISiteRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The ISiteRequest instance
+     * @param requestOptions the options for this request
+     * @return the ISiteRequest instance
      */
     ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -47,9 +47,9 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     IContentTypeRequestBuilder contentTypes(final String id);
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
      *
-     * @return The IDriveRequestBuilder instance
+     * @return the IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 
@@ -70,9 +70,9 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     ISiteRequestBuilder sites(final String id);
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
      *
-     * @return The IOnenoteRequestBuilder instance
+     * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
     ISiteGetByPathRequestBuilder getByPath(final String path);

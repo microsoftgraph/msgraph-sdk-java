@@ -27,9 +27,9 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
     /**
      * The request builder for the Organization
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseOrganizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
-     * @return The IOrganizationRequest instance
+     * @return the IOrganizationRequest instance
      */
     public IOrganizationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IOrganizationRequest instance
+     * @param requestOptions the options for this request
+     * @return the IOrganizationRequest instance
      */
     public IOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OrganizationRequest(getRequestUrl(), getClient(), requestOptions);

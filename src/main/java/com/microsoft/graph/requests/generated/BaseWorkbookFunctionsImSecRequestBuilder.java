@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsImSecRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsImSec
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param inumber The inumber
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
      */
     public BaseWorkbookFunctionsImSecRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsImSecRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsImSecRequest
      *
-     * @return The IWorkbookFunctionsImSecRequest instance
+     * @return the IWorkbookFunctionsImSecRequest instance
      */
     public IWorkbookFunctionsImSecRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsImSecRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsImSecRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImSecRequest instance
+     * @return the IWorkbookFunctionsImSecRequest instance
      */
     public IWorkbookFunctionsImSecRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImSecRequest request = new WorkbookFunctionsImSecRequest(

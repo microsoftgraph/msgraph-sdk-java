@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsRoundUpRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsRoundUp
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param numDigits The numDigits
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param numDigits the numDigits
      */
     public BaseWorkbookFunctionsRoundUpRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsRoundUpRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsRoundUpRequest
      *
-     * @return The IWorkbookFunctionsRoundUpRequest instance
+     * @return the IWorkbookFunctionsRoundUpRequest instance
      */
     public IWorkbookFunctionsRoundUpRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsRoundUpRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsRoundUpRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRoundUpRequest instance
+     * @return the IWorkbookFunctionsRoundUpRequest instance
      */
     public IWorkbookFunctionsRoundUpRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRoundUpRequest request = new WorkbookFunctionsRoundUpRequest(

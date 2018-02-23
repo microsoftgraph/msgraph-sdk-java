@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBeta_DistRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsBeta_DistRequest
      *
-     * @return The IWorkbookFunctionsBeta_DistRequest instance
+     * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
     IWorkbookFunctionsBeta_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBeta_DistRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsBeta_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBeta_DistRequest instance
+     * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
     IWorkbookFunctionsBeta_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,10 +27,10 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
     /**
      * The request for the WorkbookChartAreaFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookChartAreaFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
 
     /**
      * Gets the WorkbookChartAreaFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartAreaFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
 
     /**
      * Gets the WorkbookChartAreaFormat from the service
-     * @return The WorkbookChartAreaFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartAreaFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartAreaFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
 
     /**
      * Patches this WorkbookChartAreaFormat with a source
-     * @param sourceWorkbookChartAreaFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartAreaFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat, final ICallback<WorkbookChartAreaFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAreaFormat);
@@ -83,9 +88,10 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
 
     /**
      * Patches this WorkbookChartAreaFormat with a source
-     * @param sourceWorkbookChartAreaFormat The source object with updates
-     * @return The updated WorkbookChartAreaFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartAreaFormat the source object with updates
+     * @return the updated WorkbookChartAreaFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartAreaFormat patch(final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAreaFormat);
@@ -93,8 +99,9 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
 
     /**
      * Creates a WorkbookChartAreaFormat with a new object
-     * @param newWorkbookChartAreaFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartAreaFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<WorkbookChartAreaFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAreaFormat);
@@ -102,9 +109,10 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
 
     /**
      * Creates a WorkbookChartAreaFormat with a new object
-     * @param newWorkbookChartAreaFormat The new object to create
-     * @return The created WorkbookChartAreaFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartAreaFormat the new object to create
+     * @return the created WorkbookChartAreaFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartAreaFormat post(final WorkbookChartAreaFormat newWorkbookChartAreaFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAreaFormat);
@@ -113,8 +121,8 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookChartAreaFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookChartAreaFormatRequest extends BaseRequest implements I
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookChartAreaFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

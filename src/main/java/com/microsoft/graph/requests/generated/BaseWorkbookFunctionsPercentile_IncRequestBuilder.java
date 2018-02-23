@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsPercentile_IncRequestBuilder extends BaseActio
     /**
      * The request builder for this WorkbookFunctionsPercentile_Inc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param array The array
-     * @param k The k
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param k the k
      */
     public BaseWorkbookFunctionsPercentile_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsPercentile_IncRequestBuilder extends BaseActio
     /**
      * Creates the IWorkbookFunctionsPercentile_IncRequest
      *
-     * @return The IWorkbookFunctionsPercentile_IncRequest instance
+     * @return the IWorkbookFunctionsPercentile_IncRequest instance
      */
     public IWorkbookFunctionsPercentile_IncRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPercentile_IncRequestBuilder extends BaseActio
      * Creates the IWorkbookFunctionsPercentile_IncRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPercentile_IncRequest instance
+     * @return the IWorkbookFunctionsPercentile_IncRequest instance
      */
     public IWorkbookFunctionsPercentile_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPercentile_IncRequest request = new WorkbookFunctionsPercentile_IncRequest(

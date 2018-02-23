@@ -26,72 +26,80 @@ public interface IBaseWorkbookChartLegendFormatRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookChartLegendFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartLegendFormat> callback);
 
     /**
      * Gets the WorkbookChartLegendFormat from the service
-     * @return The WorkbookChartLegendFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartLegendFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartLegendFormat get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookChartLegendFormat with a source
-     * @param sourceWorkbookChartLegendFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartLegendFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback);
 
     /**
      * Patches this WorkbookChartLegendFormat with a source
-     * @param sourceWorkbookChartLegendFormat The source object with updates
-     * @return The updated WorkbookChartLegendFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartLegendFormat the source object with updates
+     * @return the updated WorkbookChartLegendFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartLegendFormat patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat) throws ClientException;
 
     /**
      * Posts a WorkbookChartLegendFormat with a new object
-     * @param newWorkbookChartLegendFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartLegendFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback);
 
     /**
      * Posts a WorkbookChartLegendFormat with a new object
-     * @param newWorkbookChartLegendFormat The new object to create
-     * @return The created WorkbookChartLegendFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartLegendFormat the new object to create
+     * @return the created WorkbookChartLegendFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartLegendFormat post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookChartLegendFormatRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookChartLegendFormatRequest expand(final String value);
 

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsHypGeom_DistRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsHypGeom_DistRequest
      *
-     * @return The IWorkbookFunctionsHypGeom_DistRequest instance
+     * @return the IWorkbookFunctionsHypGeom_DistRequest instance
      */
     IWorkbookFunctionsHypGeom_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsHypGeom_DistRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsHypGeom_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHypGeom_DistRequest instance
+     * @return the IWorkbookFunctionsHypGeom_DistRequest instance
      */
     IWorkbookFunctionsHypGeom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

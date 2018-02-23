@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsAsin
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsAsinRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsAsinRequest
      *
-     * @return The IWorkbookFunctionsAsinRequest instance
+     * @return the IWorkbookFunctionsAsinRequest instance
      */
     public IWorkbookFunctionsAsinRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsAsinRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsAsinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAsinRequest instance
+     * @return the IWorkbookFunctionsAsinRequest instance
      */
     public IWorkbookFunctionsAsinRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAsinRequest request = new WorkbookFunctionsAsinRequest(

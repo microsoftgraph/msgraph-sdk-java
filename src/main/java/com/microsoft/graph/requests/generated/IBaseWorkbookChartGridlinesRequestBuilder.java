@@ -26,22 +26,22 @@ public interface IBaseWorkbookChartGridlinesRequestBuilder extends IRequestBuild
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartGridlinesRequest instance
+     * @return the IWorkbookChartGridlinesRequest instance
      */
     IWorkbookChartGridlinesRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartGridlinesRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartGridlinesRequest instance
      */
     IWorkbookChartGridlinesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartGridlinesFormat.
+     * Gets the request builder for WorkbookChartGridlinesFormat
      *
-     * @return The IWorkbookChartGridlinesFormatRequestBuilder instance
+     * @return the IWorkbookChartGridlinesFormatRequestBuilder instance
      */
     IWorkbookChartGridlinesFormatRequestBuilder format();
 

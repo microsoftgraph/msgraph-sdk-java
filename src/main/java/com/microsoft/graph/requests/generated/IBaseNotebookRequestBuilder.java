@@ -26,15 +26,15 @@ public interface IBaseNotebookRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The INotebookRequest instance
+     * @return the INotebookRequest instance
      */
     INotebookRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The INotebookRequest instance
+     * @param requestOptions the options for this request
+     * @return the INotebookRequest instance
      */
     INotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

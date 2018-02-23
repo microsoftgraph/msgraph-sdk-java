@@ -26,29 +26,29 @@ public interface IBaseOnenotePageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IOnenotePageRequest instance
+     * @return the IOnenotePageRequest instance
      */
     IOnenotePageRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IOnenotePageRequest instance
+     * @param requestOptions the options for this request
+     * @return the IOnenotePageRequest instance
      */
     IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for OnenoteSection.
+     * Gets the request builder for OnenoteSection
      *
-     * @return The IOnenoteSectionRequestBuilder instance
+     * @return the IOnenoteSectionRequestBuilder instance
      */
     IOnenoteSectionRequestBuilder parentSection();
 
     /**
-     * Gets the request builder for Notebook.
+     * Gets the request builder for Notebook
      *
-     * @return The INotebookRequestBuilder instance
+     * @return the INotebookRequestBuilder instance
      */
     INotebookRequestBuilder parentNotebook();
 

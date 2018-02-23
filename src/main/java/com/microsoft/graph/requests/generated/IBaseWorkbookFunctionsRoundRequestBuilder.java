@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsRoundRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsRoundRequest
      *
-     * @return The IWorkbookFunctionsRoundRequest instance
+     * @return the IWorkbookFunctionsRoundRequest instance
      */
     IWorkbookFunctionsRoundRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsRoundRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsRoundRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRoundRequest instance
+     * @return the IWorkbookFunctionsRoundRequest instance
      */
     IWorkbookFunctionsRoundRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

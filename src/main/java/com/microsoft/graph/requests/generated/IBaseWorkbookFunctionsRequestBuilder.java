@@ -26,15 +26,15 @@ public interface IBaseWorkbookFunctionsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookFunctionsRequest instance
+     * @return the IWorkbookFunctionsRequest instance
      */
     IWorkbookFunctionsRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookFunctionsRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookFunctionsRequest instance
      */
     IWorkbookFunctionsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number);

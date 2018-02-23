@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsVarARequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsVarARequest
      *
-     * @return The IWorkbookFunctionsVarARequest instance
+     * @return the IWorkbookFunctionsVarARequest instance
      */
     IWorkbookFunctionsVarARequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsVarARequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsVarARequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsVarARequest instance
+     * @return the IWorkbookFunctionsVarARequest instance
      */
     IWorkbookFunctionsVarARequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

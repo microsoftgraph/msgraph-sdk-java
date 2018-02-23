@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsLowerRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsLowerRequest
      *
-     * @return The IWorkbookFunctionsLowerRequest instance
+     * @return the IWorkbookFunctionsLowerRequest instance
      */
     IWorkbookFunctionsLowerRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsLowerRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsLowerRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLowerRequest instance
+     * @return the IWorkbookFunctionsLowerRequest instance
      */
     IWorkbookFunctionsLowerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

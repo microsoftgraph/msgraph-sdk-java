@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDec2OctRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsDec2OctRequest
      *
-     * @return The IWorkbookFunctionsDec2OctRequest instance
+     * @return the IWorkbookFunctionsDec2OctRequest instance
      */
     IWorkbookFunctionsDec2OctRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDec2OctRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsDec2OctRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDec2OctRequest instance
+     * @return the IWorkbookFunctionsDec2OctRequest instance
      */
     IWorkbookFunctionsDec2OctRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,9 +27,9 @@ public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder impl
     /**
      * The request builder for the OnenotePageStream
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseOnenotePageStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
-     * @return The IOnenotePageStreamRequest instance
+     * @return the IOnenotePageStreamRequest instance
      */
     public IOnenotePageStreamRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseOnenotePageStreamRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IOnenotePageStreamRequest instance
+     * @param requestOptions the options for this request
+     * @return the IOnenotePageStreamRequest instance
      */
     public IOnenotePageStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenotePageStreamRequest(getRequestUrl(), getClient(), requestOptions);

@@ -26,10 +26,10 @@ public class BaseWorkbookFilterApplyRequestBuilder extends BaseActionRequestBuil
     /**
      * The request builder for this WorkbookFilterApply
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param criteria The criteria
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param criteria the criteria
      */
     public BaseWorkbookFilterApplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final WorkbookFilterCriteria criteria) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFilterApplyRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFilterApplyRequest
      *
-     * @return The IWorkbookFilterApplyRequest instance
+     * @return the IWorkbookFilterApplyRequest instance
      */
     public IWorkbookFilterApplyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFilterApplyRequestBuilder extends BaseActionRequestBuil
      * Creates the IWorkbookFilterApplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyRequest instance
+     * @return the IWorkbookFilterApplyRequest instance
      */
     public IWorkbookFilterApplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyRequest request = new WorkbookFilterApplyRequest(

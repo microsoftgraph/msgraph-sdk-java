@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIso_CeilingRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsIso_CeilingRequest
      *
-     * @return The IWorkbookFunctionsIso_CeilingRequest instance
+     * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
     IWorkbookFunctionsIso_CeilingRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIso_CeilingRequestBuilder extends IReques
      * Creates the IWorkbookFunctionsIso_CeilingRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIso_CeilingRequest instance
+     * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
     IWorkbookFunctionsIso_CeilingRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsNaRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsNaRequest
      *
-     * @return The IWorkbookFunctionsNaRequest instance
+     * @return the IWorkbookFunctionsNaRequest instance
      */
     IWorkbookFunctionsNaRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsNaRequestBuilder extends IRequestBuilder 
      * Creates the IWorkbookFunctionsNaRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNaRequest instance
+     * @return the IWorkbookFunctionsNaRequest instance
      */
     IWorkbookFunctionsNaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

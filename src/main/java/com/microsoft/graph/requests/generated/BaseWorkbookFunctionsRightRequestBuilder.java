@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsRightRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsRight
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param text The text
-     * @param numChars The numChars
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param numChars the numChars
      */
     public BaseWorkbookFunctionsRightRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numChars) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsRightRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsRightRequest
      *
-     * @return The IWorkbookFunctionsRightRequest instance
+     * @return the IWorkbookFunctionsRightRequest instance
      */
     public IWorkbookFunctionsRightRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsRightRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsRightRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRightRequest instance
+     * @return the IWorkbookFunctionsRightRequest instance
      */
     public IWorkbookFunctionsRightRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRightRequest request = new WorkbookFunctionsRightRequest(

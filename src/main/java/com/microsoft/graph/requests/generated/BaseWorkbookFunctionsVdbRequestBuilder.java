@@ -26,16 +26,16 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsVdb
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param cost The cost
-     * @param salvage The salvage
-     * @param life The life
-     * @param startPeriod The startPeriod
-     * @param endPeriod The endPeriod
-     * @param factor The factor
-     * @param noSwitch The noSwitch
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param startPeriod the startPeriod
+     * @param endPeriod the endPeriod
+     * @param factor the factor
+     * @param noSwitch the noSwitch
      */
     public BaseWorkbookFunctionsVdbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
         super(requestUrl, client, requestOptions);
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsVdbRequest
      *
-     * @return The IWorkbookFunctionsVdbRequest instance
+     * @return the IWorkbookFunctionsVdbRequest instance
      */
     public IWorkbookFunctionsVdbRequest buildRequest() {
         return buildRequest(getOptions());
@@ -61,7 +61,7 @@ public class BaseWorkbookFunctionsVdbRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsVdbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsVdbRequest instance
+     * @return the IWorkbookFunctionsVdbRequest instance
      */
     public IWorkbookFunctionsVdbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsVdbRequest request = new WorkbookFunctionsVdbRequest(

@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsBinom_Inv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param trials The trials
-     * @param probabilityS The probabilityS
-     * @param alpha The alpha
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param trials the trials
+     * @param probabilityS the probabilityS
+     * @param alpha the alpha
      */
     public BaseWorkbookFunctionsBinom_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement alpha) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsBinom_InvRequest
      *
-     * @return The IWorkbookFunctionsBinom_InvRequest instance
+     * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
     public IWorkbookFunctionsBinom_InvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsBinom_InvRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsBinom_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBinom_InvRequest instance
+     * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
     public IWorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBinom_InvRequest request = new WorkbookFunctionsBinom_InvRequest(

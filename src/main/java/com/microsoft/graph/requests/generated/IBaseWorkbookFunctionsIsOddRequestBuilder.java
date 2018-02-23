@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIsOddRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsOddRequest
      *
-     * @return The IWorkbookFunctionsIsOddRequest instance
+     * @return the IWorkbookFunctionsIsOddRequest instance
      */
     IWorkbookFunctionsIsOddRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIsOddRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsIsOddRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsOddRequest instance
+     * @return the IWorkbookFunctionsIsOddRequest instance
      */
     IWorkbookFunctionsIsOddRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

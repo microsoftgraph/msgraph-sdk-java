@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsVlookupRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsVlookup
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param lookupValue The lookupValue
-     * @param tableArray The tableArray
-     * @param colIndexNum The colIndexNum
-     * @param rangeLookup The rangeLookup
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param lookupValue the lookupValue
+     * @param tableArray the tableArray
+     * @param colIndexNum the colIndexNum
+     * @param rangeLookup the rangeLookup
      */
     public BaseWorkbookFunctionsVlookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement colIndexNum, final com.google.gson.JsonElement rangeLookup) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsVlookupRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsVlookupRequest
      *
-     * @return The IWorkbookFunctionsVlookupRequest instance
+     * @return the IWorkbookFunctionsVlookupRequest instance
      */
     public IWorkbookFunctionsVlookupRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsVlookupRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsVlookupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsVlookupRequest instance
+     * @return the IWorkbookFunctionsVlookupRequest instance
      */
     public IWorkbookFunctionsVlookupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsVlookupRequest request = new WorkbookFunctionsVlookupRequest(

@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseDriveCollectionPage extends BaseCollectionPage<Drive, IDriveCollectionRequestBuilder> implements IBaseDriveCollectionPage {
 
     /**
-     * A collection page for Drive.
+     * A collection page for Drive
      *
-     * @param response The serialized BaseDriveCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDriveCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseDriveCollectionPage(final BaseDriveCollectionResponse response, final IDriveCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -27,9 +27,9 @@ public class BaseWorkbookChartImageRequest extends BaseRequest implements IBaseW
     /**
      * The request for this WorkbookChartImage
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartImageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, String.class);
@@ -38,7 +38,7 @@ public class BaseWorkbookChartImageRequest extends BaseRequest implements IBaseW
     /**
      * Gets the String
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<String> callback) {
         send(HttpMethod.GET, callback, null);
@@ -47,8 +47,8 @@ public class BaseWorkbookChartImageRequest extends BaseRequest implements IBaseW
     /**
      * Gets the String
      *
-     * @return The String
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the String
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public String get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -57,8 +57,8 @@ public class BaseWorkbookChartImageRequest extends BaseRequest implements IBaseW
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookChartImageRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -68,8 +68,8 @@ public class BaseWorkbookChartImageRequest extends BaseRequest implements IBaseW
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookChartImageRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

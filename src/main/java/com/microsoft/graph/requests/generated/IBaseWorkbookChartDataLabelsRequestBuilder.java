@@ -26,22 +26,22 @@ public interface IBaseWorkbookChartDataLabelsRequestBuilder extends IRequestBuil
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartDataLabelsRequest instance
+     * @return the IWorkbookChartDataLabelsRequest instance
      */
     IWorkbookChartDataLabelsRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartDataLabelsRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartDataLabelsRequest instance
      */
     IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartDataLabelFormat.
+     * Gets the request builder for WorkbookChartDataLabelFormat
      *
-     * @return The IWorkbookChartDataLabelFormatRequestBuilder instance
+     * @return the IWorkbookChartDataLabelFormatRequestBuilder instance
      */
     IWorkbookChartDataLabelFormatRequestBuilder format();
 

@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsGaussRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsGauss
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
      */
     public BaseWorkbookFunctionsGaussRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsGaussRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsGaussRequest
      *
-     * @return The IWorkbookFunctionsGaussRequest instance
+     * @return the IWorkbookFunctionsGaussRequest instance
      */
     public IWorkbookFunctionsGaussRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsGaussRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsGaussRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGaussRequest instance
+     * @return the IWorkbookFunctionsGaussRequest instance
      */
     public IWorkbookFunctionsGaussRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGaussRequest request = new WorkbookFunctionsGaussRequest(

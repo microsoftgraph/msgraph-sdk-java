@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsConvert
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param fromUnit The fromUnit
-     * @param toUnit The toUnit
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param fromUnit the fromUnit
+     * @param toUnit the toUnit
      */
     public BaseWorkbookFunctionsConvertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement fromUnit, final com.google.gson.JsonElement toUnit) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsConvertRequest
      *
-     * @return The IWorkbookFunctionsConvertRequest instance
+     * @return the IWorkbookFunctionsConvertRequest instance
      */
     public IWorkbookFunctionsConvertRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsConvertRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsConvertRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsConvertRequest instance
+     * @return the IWorkbookFunctionsConvertRequest instance
      */
     public IWorkbookFunctionsConvertRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsConvertRequest request = new WorkbookFunctionsConvertRequest(

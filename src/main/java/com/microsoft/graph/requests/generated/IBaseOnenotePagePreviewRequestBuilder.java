@@ -27,7 +27,7 @@ public interface IBaseOnenotePagePreviewRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IOnenotePagePreviewRequest
      *
-     * @return The IOnenotePagePreviewRequest instance
+     * @return the IOnenotePagePreviewRequest instance
      */
     IOnenotePagePreviewRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseOnenotePagePreviewRequestBuilder extends IRequestBuilder {
      * Creates the IOnenotePagePreviewRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IOnenotePagePreviewRequest instance
+     * @return the IOnenotePagePreviewRequest instance
      */
     IOnenotePagePreviewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

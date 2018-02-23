@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseConversationThreadCollectionPage extends BaseCollectionPage<ConversationThread, IConversationThreadCollectionRequestBuilder> implements IBaseConversationThreadCollectionPage {
 
     /**
-     * A collection page for ConversationThread.
+     * A collection page for ConversationThread
      *
-     * @param response The serialized BaseConversationThreadCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseConversationThreadCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseConversationThreadCollectionPage(final BaseConversationThreadCollectionResponse response, final IConversationThreadCollectionRequestBuilder builder) {
         super(response.value, builder);

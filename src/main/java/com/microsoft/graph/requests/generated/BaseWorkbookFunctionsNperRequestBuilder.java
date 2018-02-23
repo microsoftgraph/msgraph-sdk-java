@@ -26,14 +26,14 @@ public class BaseWorkbookFunctionsNperRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsNper
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param rate The rate
-     * @param pmt The pmt
-     * @param pv The pv
-     * @param fv The fv
-     * @param type The type
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param pmt the pmt
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
      */
     public BaseWorkbookFunctionsNperRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsNperRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsNperRequest
      *
-     * @return The IWorkbookFunctionsNperRequest instance
+     * @return the IWorkbookFunctionsNperRequest instance
      */
     public IWorkbookFunctionsNperRequest buildRequest() {
         return buildRequest(getOptions());
@@ -57,7 +57,7 @@ public class BaseWorkbookFunctionsNperRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsNperRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNperRequest instance
+     * @return the IWorkbookFunctionsNperRequest instance
      */
     public IWorkbookFunctionsNperRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNperRequest request = new WorkbookFunctionsNperRequest(

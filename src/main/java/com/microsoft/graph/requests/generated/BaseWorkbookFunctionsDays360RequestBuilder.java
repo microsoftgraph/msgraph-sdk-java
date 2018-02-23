@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsDays360
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param startDate The startDate
-     * @param endDate The endDate
-     * @param method The method
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param method the method
      */
     public BaseWorkbookFunctionsDays360RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsDays360Request
      *
-     * @return The IWorkbookFunctionsDays360Request instance
+     * @return the IWorkbookFunctionsDays360Request instance
      */
     public IWorkbookFunctionsDays360Request buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsDays360RequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsDays360Request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDays360Request instance
+     * @return the IWorkbookFunctionsDays360Request instance
      */
     public IWorkbookFunctionsDays360Request buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDays360Request request = new WorkbookFunctionsDays360Request(

@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsHarMeanRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsHarMean
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param values The values
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsHarMeanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsHarMeanRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsHarMeanRequest
      *
-     * @return The IWorkbookFunctionsHarMeanRequest instance
+     * @return the IWorkbookFunctionsHarMeanRequest instance
      */
     public IWorkbookFunctionsHarMeanRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsHarMeanRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsHarMeanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHarMeanRequest instance
+     * @return the IWorkbookFunctionsHarMeanRequest instance
      */
     public IWorkbookFunctionsHarMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHarMeanRequest request = new WorkbookFunctionsHarMeanRequest(

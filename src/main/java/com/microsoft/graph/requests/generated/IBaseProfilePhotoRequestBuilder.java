@@ -26,15 +26,15 @@ public interface IBaseProfilePhotoRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IProfilePhotoRequest instance
+     * @return the IProfilePhotoRequest instance
      */
     IProfilePhotoRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IProfilePhotoRequest instance
+     * @param requestOptions the options for this request
+     * @return the IProfilePhotoRequest instance
      */
     IProfilePhotoRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

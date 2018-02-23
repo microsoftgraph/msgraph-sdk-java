@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsOddRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsOdd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsOddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsOddRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsOddRequest
      *
-     * @return The IWorkbookFunctionsOddRequest instance
+     * @return the IWorkbookFunctionsOddRequest instance
      */
     public IWorkbookFunctionsOddRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsOddRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsOddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsOddRequest instance
+     * @return the IWorkbookFunctionsOddRequest instance
      */
     public IWorkbookFunctionsOddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsOddRequest request = new WorkbookFunctionsOddRequest(

@@ -26,72 +26,80 @@ public interface IBaseGroupRequest extends IHttpRequest {
 
     /**
      * Gets the Group from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<Group> callback);
 
     /**
      * Gets the Group from the service
-     * @return The Group from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Group from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Group get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this Group with a source
-     * @param sourceGroup The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceGroup the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final Group sourceGroup, final ICallback<Group> callback);
 
     /**
      * Patches this Group with a source
-     * @param sourceGroup The source object with updates
-     * @return The updated Group
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceGroup the source object with updates
+     * @return the updated Group
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Group patch(final Group sourceGroup) throws ClientException;
 
     /**
      * Posts a Group with a new object
-     * @param newGroup The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newGroup the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final Group newGroup, final ICallback<Group> callback);
 
     /**
      * Posts a Group with a new object
-     * @param newGroup The new object to create
-     * @return The created Group
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newGroup the new object to create
+     * @return the created Group
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Group post(final Group newGroup) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseGroupRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseGroupRequest expand(final String value);
 

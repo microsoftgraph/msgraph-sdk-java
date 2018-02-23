@@ -26,72 +26,80 @@ public interface IBaseDomainDnsUnavailableRecordRequest extends IHttpRequest {
 
     /**
      * Gets the DomainDnsUnavailableRecord from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<DomainDnsUnavailableRecord> callback);
 
     /**
      * Gets the DomainDnsUnavailableRecord from the service
-     * @return The DomainDnsUnavailableRecord from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the DomainDnsUnavailableRecord from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsUnavailableRecord get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this DomainDnsUnavailableRecord with a source
-     * @param sourceDomainDnsUnavailableRecord The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDomainDnsUnavailableRecord the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback);
 
     /**
      * Patches this DomainDnsUnavailableRecord with a source
-     * @param sourceDomainDnsUnavailableRecord The source object with updates
-     * @return The updated DomainDnsUnavailableRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDomainDnsUnavailableRecord the source object with updates
+     * @return the updated DomainDnsUnavailableRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsUnavailableRecord patch(final DomainDnsUnavailableRecord sourceDomainDnsUnavailableRecord) throws ClientException;
 
     /**
      * Posts a DomainDnsUnavailableRecord with a new object
-     * @param newDomainDnsUnavailableRecord The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDomainDnsUnavailableRecord the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback);
 
     /**
      * Posts a DomainDnsUnavailableRecord with a new object
-     * @param newDomainDnsUnavailableRecord The new object to create
-     * @return The created DomainDnsUnavailableRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDomainDnsUnavailableRecord the new object to create
+     * @return the created DomainDnsUnavailableRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsUnavailableRecord post(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseDomainDnsUnavailableRecordRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseDomainDnsUnavailableRecordRequest expand(final String value);
 

@@ -30,14 +30,14 @@ public interface IBaseWorkbookWorksheetProtectionUnprotectRequest {
     /**
      * Creates the WorkbookWorksheetProtectionUnprotect
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     void post(final ICallback<Void> callback);
 
     /**
      * Creates the WorkbookWorksheetProtectionUnprotect
      *
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     void post() throws ClientException;
 

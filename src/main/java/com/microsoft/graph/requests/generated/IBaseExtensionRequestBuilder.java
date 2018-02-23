@@ -26,15 +26,15 @@ public interface IBaseExtensionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IExtensionRequest instance
+     * @return the IExtensionRequest instance
      */
     IExtensionRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IExtensionRequest instance
+     * @param requestOptions the options for this request
+     * @return the IExtensionRequest instance
      */
     IExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

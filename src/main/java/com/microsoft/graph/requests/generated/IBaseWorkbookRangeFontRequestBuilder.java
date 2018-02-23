@@ -26,15 +26,15 @@ public interface IBaseWorkbookRangeFontRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookRangeFontRequest instance
+     * @return the IWorkbookRangeFontRequest instance
      */
     IWorkbookRangeFontRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookRangeFontRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeFontRequest instance
      */
     IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

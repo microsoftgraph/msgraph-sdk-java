@@ -27,9 +27,9 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
     /**
      * The request builder for the WorkbookTableColumn
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
-     * @return The IWorkbookTableColumnRequest instance
+     * @return the IWorkbookTableColumnRequest instance
      */
     public IWorkbookTableColumnRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookTableColumnRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookTableColumnRequest instance
      */
     public IWorkbookTableColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableColumnRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseWorkbookTableColumnRequestBuilder extends BaseRequestBuilder im
 
 
     /**
-     * Gets the request builder for WorkbookFilter.
+     * Gets the request builder for WorkbookFilter
      *
-     * @return The IWorkbookFilterRequestBuilder instance
+     * @return the IWorkbookFilterRequestBuilder instance
      */
     public IWorkbookFilterRequestBuilder filter() {
         return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);

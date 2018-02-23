@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsErf
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param lowerLimit The lowerLimit
-     * @param upperLimit The upperLimit
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param lowerLimit the lowerLimit
+     * @param upperLimit the upperLimit
      */
     public BaseWorkbookFunctionsErfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lowerLimit, final com.google.gson.JsonElement upperLimit) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsErfRequest
      *
-     * @return The IWorkbookFunctionsErfRequest instance
+     * @return the IWorkbookFunctionsErfRequest instance
      */
     public IWorkbookFunctionsErfRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsErfRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsErfRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsErfRequest instance
+     * @return the IWorkbookFunctionsErfRequest instance
      */
     public IWorkbookFunctionsErfRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsErfRequest request = new WorkbookFunctionsErfRequest(

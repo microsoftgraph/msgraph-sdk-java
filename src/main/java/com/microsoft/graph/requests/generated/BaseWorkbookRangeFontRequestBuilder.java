@@ -27,9 +27,9 @@ public class BaseWorkbookRangeFontRequestBuilder extends BaseRequestBuilder impl
     /**
      * The request builder for the WorkbookRangeFont
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeFontRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookRangeFontRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
-     * @return The IWorkbookRangeFontRequest instance
+     * @return the IWorkbookRangeFontRequest instance
      */
     public IWorkbookRangeFontRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookRangeFontRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookRangeFontRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeFontRequest instance
      */
     public IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeFontRequest(getRequestUrl(), getClient(), requestOptions);

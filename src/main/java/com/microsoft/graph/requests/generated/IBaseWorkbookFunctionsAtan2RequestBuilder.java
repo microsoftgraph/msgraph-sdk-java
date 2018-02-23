@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAtan2RequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsAtan2Request
      *
-     * @return The IWorkbookFunctionsAtan2Request instance
+     * @return the IWorkbookFunctionsAtan2Request instance
      */
     IWorkbookFunctionsAtan2Request buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAtan2RequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsAtan2Request with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAtan2Request instance
+     * @return the IWorkbookFunctionsAtan2Request instance
      */
     IWorkbookFunctionsAtan2Request buildRequest(final java.util.List<? extends Option> requestOptions);
 }

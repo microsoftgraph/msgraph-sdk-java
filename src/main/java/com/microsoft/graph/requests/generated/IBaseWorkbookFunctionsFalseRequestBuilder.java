@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsFalseRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsFalseRequest
      *
-     * @return The IWorkbookFunctionsFalseRequest instance
+     * @return the IWorkbookFunctionsFalseRequest instance
      */
     IWorkbookFunctionsFalseRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsFalseRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsFalseRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFalseRequest instance
+     * @return the IWorkbookFunctionsFalseRequest instance
      */
     IWorkbookFunctionsFalseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

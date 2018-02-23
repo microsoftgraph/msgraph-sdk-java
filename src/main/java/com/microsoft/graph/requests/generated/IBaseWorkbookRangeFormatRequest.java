@@ -26,72 +26,80 @@ public interface IBaseWorkbookRangeFormatRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookRangeFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookRangeFormat> callback);
 
     /**
      * Gets the WorkbookRangeFormat from the service
-     * @return The WorkbookRangeFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookRangeFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookRangeFormat get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookRangeFormat with a source
-     * @param sourceWorkbookRangeFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookRangeFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookRangeFormat sourceWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback);
 
     /**
      * Patches this WorkbookRangeFormat with a source
-     * @param sourceWorkbookRangeFormat The source object with updates
-     * @return The updated WorkbookRangeFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookRangeFormat the source object with updates
+     * @return the updated WorkbookRangeFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookRangeFormat patch(final WorkbookRangeFormat sourceWorkbookRangeFormat) throws ClientException;
 
     /**
      * Posts a WorkbookRangeFormat with a new object
-     * @param newWorkbookRangeFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookRangeFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback);
 
     /**
      * Posts a WorkbookRangeFormat with a new object
-     * @param newWorkbookRangeFormat The new object to create
-     * @return The created WorkbookRangeFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookRangeFormat the new object to create
+     * @return the created WorkbookRangeFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookRangeFormat post(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookRangeFormatRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookRangeFormatRequest expand(final String value);
 

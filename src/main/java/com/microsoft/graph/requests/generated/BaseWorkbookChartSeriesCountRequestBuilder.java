@@ -26,9 +26,9 @@ public class BaseWorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequ
     /**
      * The request builder for this WorkbookChartSeriesCount
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartSeriesCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequ
     /**
      * Creates the IWorkbookChartSeriesCountRequest
      *
-     * @return The IWorkbookChartSeriesCountRequest instance
+     * @return the IWorkbookChartSeriesCountRequest instance
      */
     public IWorkbookChartSeriesCountRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookChartSeriesCountRequestBuilder extends BaseFunctionRequ
      * Creates the IWorkbookChartSeriesCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartSeriesCountRequest instance
+     * @return the IWorkbookChartSeriesCountRequest instance
      */
     public IWorkbookChartSeriesCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartSeriesCountRequest request = new WorkbookChartSeriesCountRequest(

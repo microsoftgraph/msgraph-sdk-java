@@ -30,63 +30,64 @@ public interface IBaseWorkbookTableItemAtRequest {
     /**
      * Patches the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTable the WorkbookTable with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback);
 
     /**
      * Patches the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable with which to PATCH
-     * @return The WorkbookTable
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTable the WorkbookTable with which to PATCH
+     * @return the WorkbookTable
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookTable patch(WorkbookTable srcWorkbookTable) throws ClientException;
 
     /**
      * Puts the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTable the WorkbookTable to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(WorkbookTable srcWorkbookTable, final ICallback<WorkbookTable> callback);
 
     /**
      * Puts the WorkbookTableItemAt
      *
-     * @param srcWorkbookTable The WorkbookTable to PUT
-     * @return The WorkbookTable
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTable the WorkbookTable to PUT
+     * @return the WorkbookTable
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      WorkbookTable put(WorkbookTable srcWorkbookTable) throws ClientException;
     /**
      * Gets the WorkbookTable
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookTable> callback);
 
     /**
      * Gets the WorkbookTable
      *
-     * @return The WorkbookTable
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookTable
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookTable get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookTableItemAtRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookTableItemAtRequest expand(final String value);
 

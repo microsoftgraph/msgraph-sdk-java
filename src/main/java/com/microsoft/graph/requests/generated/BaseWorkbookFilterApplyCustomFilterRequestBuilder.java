@@ -26,12 +26,12 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
     /**
      * The request builder for this WorkbookFilterApplyCustomFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param criteria1 The criteria1
-     * @param criteria2 The criteria2
-     * @param oper The oper
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param criteria1 the criteria1
+     * @param criteria2 the criteria2
+     * @param oper the oper
      */
     public BaseWorkbookFilterApplyCustomFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String criteria1, final String criteria2, final String oper) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
     /**
      * Creates the IWorkbookFilterApplyCustomFilterRequest
      *
-     * @return The IWorkbookFilterApplyCustomFilterRequest instance
+     * @return the IWorkbookFilterApplyCustomFilterRequest instance
      */
     public IWorkbookFilterApplyCustomFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFilterApplyCustomFilterRequestBuilder extends BaseActio
      * Creates the IWorkbookFilterApplyCustomFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyCustomFilterRequest instance
+     * @return the IWorkbookFilterApplyCustomFilterRequest instance
      */
     public IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyCustomFilterRequest request = new WorkbookFilterApplyCustomFilterRequest(

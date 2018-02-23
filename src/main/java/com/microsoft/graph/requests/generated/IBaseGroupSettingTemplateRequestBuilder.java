@@ -26,15 +26,15 @@ public interface IBaseGroupSettingTemplateRequestBuilder extends IRequestBuilder
     /**
      * Creates the request
      *
-     * @return The IGroupSettingTemplateRequest instance
+     * @return the IGroupSettingTemplateRequest instance
      */
     IGroupSettingTemplateRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IGroupSettingTemplateRequest instance
+     * @param requestOptions the options for this request
+     * @return the IGroupSettingTemplateRequest instance
      */
     IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

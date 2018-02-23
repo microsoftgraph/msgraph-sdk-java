@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCumPrincRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsCumPrincRequest
      *
-     * @return The IWorkbookFunctionsCumPrincRequest instance
+     * @return the IWorkbookFunctionsCumPrincRequest instance
      */
     IWorkbookFunctionsCumPrincRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCumPrincRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsCumPrincRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCumPrincRequest instance
+     * @return the IWorkbookFunctionsCumPrincRequest instance
      */
     IWorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

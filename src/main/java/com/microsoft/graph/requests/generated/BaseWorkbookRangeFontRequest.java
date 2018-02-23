@@ -27,10 +27,10 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
     /**
      * The request for the WorkbookRangeFont
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookRangeFontRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
 
     /**
      * Gets the WorkbookRangeFont from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
 
     /**
      * Gets the WorkbookRangeFont from the service
-     * @return The WorkbookRangeFont from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookRangeFont from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookRangeFont get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
 
     /**
      * Patches this WorkbookRangeFont with a source
-     * @param sourceWorkbookRangeFont The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookRangeFont the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookRangeFont sourceWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeFont);
@@ -83,9 +88,10 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
 
     /**
      * Patches this WorkbookRangeFont with a source
-     * @param sourceWorkbookRangeFont The source object with updates
-     * @return The updated WorkbookRangeFont
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookRangeFont the source object with updates
+     * @return the updated WorkbookRangeFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookRangeFont patch(final WorkbookRangeFont sourceWorkbookRangeFont) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRangeFont);
@@ -93,8 +99,9 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
 
     /**
      * Creates a WorkbookRangeFont with a new object
-     * @param newWorkbookRangeFont The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookRangeFont the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeFont);
@@ -102,9 +109,10 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
 
     /**
      * Creates a WorkbookRangeFont with a new object
-     * @param newWorkbookRangeFont The new object to create
-     * @return The created WorkbookRangeFont
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookRangeFont the new object to create
+     * @return the created WorkbookRangeFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookRangeFont post(final WorkbookRangeFont newWorkbookRangeFont) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRangeFont);
@@ -113,8 +121,8 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookRangeFontRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookRangeFontRequest extends BaseRequest implements IBaseWo
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookRangeFontRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

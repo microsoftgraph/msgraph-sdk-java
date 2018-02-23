@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsConcatenateRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsConcatenateRequest
      *
-     * @return The IWorkbookFunctionsConcatenateRequest instance
+     * @return the IWorkbookFunctionsConcatenateRequest instance
      */
     IWorkbookFunctionsConcatenateRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsConcatenateRequestBuilder extends IReques
      * Creates the IWorkbookFunctionsConcatenateRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsConcatenateRequest instance
+     * @return the IWorkbookFunctionsConcatenateRequest instance
      */
     IWorkbookFunctionsConcatenateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

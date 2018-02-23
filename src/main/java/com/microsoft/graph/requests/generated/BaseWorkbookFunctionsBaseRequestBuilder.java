@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsBaseRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsBase
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param radix The radix
-     * @param minLength The minLength
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param radix the radix
+     * @param minLength the minLength
      */
     public BaseWorkbookFunctionsBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix, final com.google.gson.JsonElement minLength) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsBaseRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsBaseRequest
      *
-     * @return The IWorkbookFunctionsBaseRequest instance
+     * @return the IWorkbookFunctionsBaseRequest instance
      */
     public IWorkbookFunctionsBaseRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsBaseRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsBaseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBaseRequest instance
+     * @return the IWorkbookFunctionsBaseRequest instance
      */
     public IWorkbookFunctionsBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBaseRequest request = new WorkbookFunctionsBaseRequest(

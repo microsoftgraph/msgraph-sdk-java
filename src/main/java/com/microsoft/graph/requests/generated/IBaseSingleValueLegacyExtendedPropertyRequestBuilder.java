@@ -26,15 +26,15 @@ public interface IBaseSingleValueLegacyExtendedPropertyRequestBuilder extends IR
     /**
      * Creates the request
      *
-     * @return The ISingleValueLegacyExtendedPropertyRequest instance
+     * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
     ISingleValueLegacyExtendedPropertyRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The ISingleValueLegacyExtendedPropertyRequest instance
+     * @param requestOptions the options for this request
+     * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
     ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

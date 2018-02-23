@@ -27,9 +27,9 @@ public class BaseWorkbookChartFillRequestBuilder extends BaseRequestBuilder impl
     /**
      * The request builder for the WorkbookChartFill
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartFillRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookChartFillRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartFillRequest instance
+     * @return the IWorkbookChartFillRequest instance
      */
     public IWorkbookChartFillRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookChartFillRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartFillRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartFillRequest instance
      */
     public IWorkbookChartFillRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartFillRequest(getRequestUrl(), getClient(), requestOptions);

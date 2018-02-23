@@ -26,72 +26,80 @@ public interface IBaseWorkbookFormatProtectionRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookFormatProtection from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookFormatProtection> callback);
 
     /**
      * Gets the WorkbookFormatProtection from the service
-     * @return The WorkbookFormatProtection from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookFormatProtection from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookFormatProtection get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookFormatProtection with a source
-     * @param sourceWorkbookFormatProtection The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookFormatProtection the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookFormatProtection sourceWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback);
 
     /**
      * Patches this WorkbookFormatProtection with a source
-     * @param sourceWorkbookFormatProtection The source object with updates
-     * @return The updated WorkbookFormatProtection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookFormatProtection the source object with updates
+     * @return the updated WorkbookFormatProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookFormatProtection patch(final WorkbookFormatProtection sourceWorkbookFormatProtection) throws ClientException;
 
     /**
      * Posts a WorkbookFormatProtection with a new object
-     * @param newWorkbookFormatProtection The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookFormatProtection the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback);
 
     /**
      * Posts a WorkbookFormatProtection with a new object
-     * @param newWorkbookFormatProtection The new object to create
-     * @return The created WorkbookFormatProtection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookFormatProtection the new object to create
+     * @return the created WorkbookFormatProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookFormatProtection post(final WorkbookFormatProtection newWorkbookFormatProtection) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookFormatProtectionRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookFormatProtectionRequest expand(final String value);
 

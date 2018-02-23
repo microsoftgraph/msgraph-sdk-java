@@ -26,22 +26,22 @@ public interface IBaseItemAttachmentRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IItemAttachmentRequest instance
+     * @return the IItemAttachmentRequest instance
      */
     IItemAttachmentRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IItemAttachmentRequest instance
+     * @param requestOptions the options for this request
+     * @return the IItemAttachmentRequest instance
      */
     IItemAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for OutlookItem.
+     * Gets the request builder for OutlookItem
      *
-     * @return The IOutlookItemRequestBuilder instance
+     * @return the IOutlookItemRequestBuilder instance
      */
     IOutlookItemRequestBuilder item();
 

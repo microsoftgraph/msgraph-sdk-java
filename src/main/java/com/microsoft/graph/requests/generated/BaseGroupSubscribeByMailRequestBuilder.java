@@ -26,9 +26,9 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this GroupSubscribeByMail
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseGroupSubscribeByMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IGroupSubscribeByMailRequest
      *
-     * @return The IGroupSubscribeByMailRequest instance
+     * @return the IGroupSubscribeByMailRequest instance
      */
     public IGroupSubscribeByMailRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseGroupSubscribeByMailRequestBuilder extends BaseActionRequestBui
      * Creates the IGroupSubscribeByMailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IGroupSubscribeByMailRequest instance
+     * @return the IGroupSubscribeByMailRequest instance
      */
     public IGroupSubscribeByMailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         GroupSubscribeByMailRequest request = new GroupSubscribeByMailRequest(

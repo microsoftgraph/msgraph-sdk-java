@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsErfCRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsErfCRequest
      *
-     * @return The IWorkbookFunctionsErfCRequest instance
+     * @return the IWorkbookFunctionsErfCRequest instance
      */
     IWorkbookFunctionsErfCRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsErfCRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsErfCRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsErfCRequest instance
+     * @return the IWorkbookFunctionsErfCRequest instance
      */
     IWorkbookFunctionsErfCRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

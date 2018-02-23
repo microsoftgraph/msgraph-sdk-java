@@ -27,7 +27,7 @@ public interface IBaseUserSendMailRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserSendMailRequest
      *
-     * @return The IUserSendMailRequest instance
+     * @return the IUserSendMailRequest instance
      */
     IUserSendMailRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseUserSendMailRequestBuilder extends IRequestBuilder {
      * Creates the IUserSendMailRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IUserSendMailRequest instance
+     * @return the IUserSendMailRequest instance
      */
     IUserSendMailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

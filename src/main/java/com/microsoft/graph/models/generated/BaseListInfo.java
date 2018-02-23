@@ -31,7 +31,7 @@ import java.util.Map;
 public class BaseListInfo implements IJsonBackedObject {
 
     @SerializedName("@odata.type")
-    @Expose(serialize = false)
+    @Expose
     public String oDataType;
 
     private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
@@ -43,7 +43,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * The Content Types Enabled.
-     * 
+     * If true, indicates that content types are enabled for this list.
      */
     @SerializedName("contentTypesEnabled")
     @Expose
@@ -51,7 +51,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * The Hidden.
-     * 
+     * If true, indicates that the list is not normally visible in the SharePoint user experience.
      */
     @SerializedName("hidden")
     @Expose
@@ -59,7 +59,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * The Template.
-     * 
+     * An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      */
     @SerializedName("template")
     @Expose
@@ -78,6 +78,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -86,6 +87,7 @@ public class BaseListInfo implements IJsonBackedObject {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -93,10 +95,10 @@ public class BaseListInfo implements IJsonBackedObject {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

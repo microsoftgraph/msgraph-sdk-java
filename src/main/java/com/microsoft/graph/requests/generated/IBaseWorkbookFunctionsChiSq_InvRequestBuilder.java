@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsChiSq_InvRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsChiSq_InvRequest
      *
-     * @return The IWorkbookFunctionsChiSq_InvRequest instance
+     * @return the IWorkbookFunctionsChiSq_InvRequest instance
      */
     IWorkbookFunctionsChiSq_InvRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsChiSq_InvRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsChiSq_InvRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsChiSq_InvRequest instance
+     * @return the IWorkbookFunctionsChiSq_InvRequest instance
      */
     IWorkbookFunctionsChiSq_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

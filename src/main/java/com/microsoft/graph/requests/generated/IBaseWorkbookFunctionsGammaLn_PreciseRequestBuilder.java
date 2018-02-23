@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends IRe
     /**
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest
      *
-     * @return The IWorkbookFunctionsGammaLn_PreciseRequest instance
+     * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
     IWorkbookFunctionsGammaLn_PreciseRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsGammaLn_PreciseRequestBuilder extends IRe
      * Creates the IWorkbookFunctionsGammaLn_PreciseRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGammaLn_PreciseRequest instance
+     * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
     IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

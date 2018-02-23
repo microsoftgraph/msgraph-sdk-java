@@ -27,9 +27,9 @@ public class BaseMultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequ
     /**
      * The request builder for the MultiValueLegacyExtendedProperty
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseMultiValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseMultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequ
     /**
      * Creates the request
      *
-     * @return The IMultiValueLegacyExtendedPropertyRequest instance
+     * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
     public IMultiValueLegacyExtendedPropertyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseMultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequ
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IMultiValueLegacyExtendedPropertyRequest instance
+     * @param requestOptions the options for this request
+     * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
     public IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MultiValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);

@@ -28,9 +28,9 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequest extends BaseRequest imp
     /**
      * The request for this WorkbookFunctionsPercentRank_Exc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsPercentRank_ExcRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
@@ -48,8 +48,8 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequest extends BaseRequest imp
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookFunctionsPercentRank_ExcRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -59,8 +59,8 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequest extends BaseRequest imp
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IWorkbookFunctionsPercentRank_ExcRequest top(final int value) {
         getQueryOptions().add(new QueryOption("$top", value+""));
@@ -70,8 +70,8 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequest extends BaseRequest imp
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookFunctionsPercentRank_ExcRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

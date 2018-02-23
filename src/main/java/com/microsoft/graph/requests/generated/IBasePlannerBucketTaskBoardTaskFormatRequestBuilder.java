@@ -26,15 +26,15 @@ public interface IBasePlannerBucketTaskBoardTaskFormatRequestBuilder extends IRe
     /**
      * Creates the request
      *
-     * @return The IPlannerBucketTaskBoardTaskFormatRequest instance
+     * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
      */
     IPlannerBucketTaskBoardTaskFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IPlannerBucketTaskBoardTaskFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
      */
     IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

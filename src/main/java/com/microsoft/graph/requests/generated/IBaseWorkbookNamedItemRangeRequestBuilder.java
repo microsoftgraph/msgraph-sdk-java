@@ -27,7 +27,7 @@ public interface IBaseWorkbookNamedItemRangeRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookNamedItemRangeRequest
      *
-     * @return The IWorkbookNamedItemRangeRequest instance
+     * @return the IWorkbookNamedItemRangeRequest instance
      */
     IWorkbookNamedItemRangeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookNamedItemRangeRequestBuilder extends IRequestBuild
      * Creates the IWorkbookNamedItemRangeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookNamedItemRangeRequest instance
+     * @return the IWorkbookNamedItemRangeRequest instance
      */
     IWorkbookNamedItemRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

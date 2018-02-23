@@ -30,63 +30,64 @@ public interface IBaseSiteGetByPathRequest {
     /**
      * Patches the SiteGetByPath
      *
-     * @param srcSite The Site with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcSite the Site with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(Site srcSite, final ICallback<Site> callback);
 
     /**
      * Patches the SiteGetByPath
      *
-     * @param srcSite The Site with which to PATCH
-     * @return The Site
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcSite the Site with which to PATCH
+     * @return the Site
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     Site patch(Site srcSite) throws ClientException;
 
     /**
      * Puts the SiteGetByPath
      *
-     * @param srcSite The Site to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcSite the Site to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(Site srcSite, final ICallback<Site> callback);
 
     /**
      * Puts the SiteGetByPath
      *
-     * @param srcSite The Site to PUT
-     * @return The Site
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcSite the Site to PUT
+     * @return the Site
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      Site put(Site srcSite) throws ClientException;
     /**
      * Gets the Site
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<Site> callback);
 
     /**
      * Gets the Site
      *
-     * @return The Site
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the Site
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     Site get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     ISiteGetByPathRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     ISiteGetByPathRequest expand(final String value);
 

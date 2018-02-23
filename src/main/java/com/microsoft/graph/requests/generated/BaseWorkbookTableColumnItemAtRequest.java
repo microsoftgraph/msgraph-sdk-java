@@ -27,9 +27,9 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * The request for this WorkbookTableColumnItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableColumn.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
 
     /**
      * Patches the WorkbookTableColumnItemAt
-     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTableColumn the WorkbookTableColumn with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookTableColumn);
@@ -47,9 +47,9 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Patches the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
-     * @return The WorkbookTableColumn
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTableColumn the WorkbookTableColumn with which to PATCH
+     * @return the WorkbookTableColumn
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookTableColumn patch(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookTableColumn);
@@ -58,8 +58,8 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Puts the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTableColumn the WorkbookTableColumn to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookTableColumn);
@@ -68,9 +68,9 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Puts the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
-     * @return The WorkbookTableColumn
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTableColumn the WorkbookTableColumn to PUT
+     * @return the WorkbookTableColumn
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookTableColumn put(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookTableColumn);
@@ -78,7 +78,7 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Gets the WorkbookTableColumn
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookTableColumn> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Gets the WorkbookTableColumn
      *
-     * @return The WorkbookTableColumn
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookTableColumn
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookTableColumn get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookTableColumnItemAtRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookTableColumnItemAtRequest extends BaseRequest implements
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookTableColumnItemAtRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

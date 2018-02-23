@@ -27,10 +27,10 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
     /**
      * The request for the OutlookItem
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseOutlookItemRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
 
     /**
      * Gets the OutlookItem from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<OutlookItem> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
 
     /**
      * Gets the OutlookItem from the service
-     * @return The OutlookItem from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OutlookItem from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OutlookItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
 
     /**
      * Patches this OutlookItem with a source
-     * @param sourceOutlookItem The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOutlookItem the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final OutlookItem sourceOutlookItem, final ICallback<OutlookItem> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookItem);
@@ -83,9 +88,10 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
 
     /**
      * Patches this OutlookItem with a source
-     * @param sourceOutlookItem The source object with updates
-     * @return The updated OutlookItem
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOutlookItem the source object with updates
+     * @return the updated OutlookItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OutlookItem patch(final OutlookItem sourceOutlookItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookItem);
@@ -93,8 +99,9 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
 
     /**
      * Creates a OutlookItem with a new object
-     * @param newOutlookItem The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOutlookItem the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final OutlookItem newOutlookItem, final ICallback<OutlookItem> callback) {
         send(HttpMethod.POST, callback, newOutlookItem);
@@ -102,9 +109,10 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
 
     /**
      * Creates a OutlookItem with a new object
-     * @param newOutlookItem The new object to create
-     * @return The created OutlookItem
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOutlookItem the new object to create
+     * @return the created OutlookItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OutlookItem post(final OutlookItem newOutlookItem) throws ClientException {
         return send(HttpMethod.POST, newOutlookItem);
@@ -113,8 +121,8 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IOutlookItemRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseOutlookItemRequest extends BaseRequest implements IBaseOutlookI
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IOutlookItemRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

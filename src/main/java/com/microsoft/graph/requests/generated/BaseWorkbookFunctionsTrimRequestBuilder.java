@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsTrim
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param text The text
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
      */
     public BaseWorkbookFunctionsTrimRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsTrimRequest
      *
-     * @return The IWorkbookFunctionsTrimRequest instance
+     * @return the IWorkbookFunctionsTrimRequest instance
      */
     public IWorkbookFunctionsTrimRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsTrimRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTrimRequest instance
+     * @return the IWorkbookFunctionsTrimRequest instance
      */
     public IWorkbookFunctionsTrimRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTrimRequest request = new WorkbookFunctionsTrimRequest(

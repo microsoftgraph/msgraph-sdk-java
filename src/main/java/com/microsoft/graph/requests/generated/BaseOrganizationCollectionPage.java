@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseOrganizationCollectionPage extends BaseCollectionPage<Organization, IOrganizationCollectionRequestBuilder> implements IBaseOrganizationCollectionPage {
 
     /**
-     * A collection page for Organization.
+     * A collection page for Organization
      *
-     * @param response The serialized BaseOrganizationCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseOrganizationCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseOrganizationCollectionPage(final BaseOrganizationCollectionResponse response, final IOrganizationCollectionRequestBuilder builder) {
         super(response.value, builder);

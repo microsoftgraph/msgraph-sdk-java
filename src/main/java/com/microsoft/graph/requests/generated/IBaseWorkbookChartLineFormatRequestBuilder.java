@@ -26,15 +26,15 @@ public interface IBaseWorkbookChartLineFormatRequestBuilder extends IRequestBuil
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartLineFormatRequest instance
+     * @return the IWorkbookChartLineFormatRequest instance
      */
     IWorkbookChartLineFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartLineFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartLineFormatRequest instance
      */
     IWorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookChartLineFormatClearRequestBuilder clear();

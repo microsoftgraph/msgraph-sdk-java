@@ -26,15 +26,15 @@ public interface IBaseContactRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IContactRequest instance
+     * @return the IContactRequest instance
      */
     IContactRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IContactRequest instance
+     * @param requestOptions the options for this request
+     * @return the IContactRequest instance
      */
     IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -51,9 +51,9 @@ public interface IBaseContactRequestBuilder extends IRequestBuilder {
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
 
     /**
-     * Gets the request builder for ProfilePhoto.
+     * Gets the request builder for ProfilePhoto
      *
-     * @return The IProfilePhotoRequestBuilder instance
+     * @return the IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
 

@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsSeriesSum
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param n The n
-     * @param m The m
-     * @param coefficients The coefficients
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param n the n
+     * @param m the m
+     * @param coefficients the coefficients
      */
     public BaseWorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsSeriesSumRequest
      *
-     * @return The IWorkbookFunctionsSeriesSumRequest instance
+     * @return the IWorkbookFunctionsSeriesSumRequest instance
      */
     public IWorkbookFunctionsSeriesSumRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsSeriesSumRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsSeriesSumRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSeriesSumRequest instance
+     * @return the IWorkbookFunctionsSeriesSumRequest instance
      */
     public IWorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSeriesSumRequest request = new WorkbookFunctionsSeriesSumRequest(

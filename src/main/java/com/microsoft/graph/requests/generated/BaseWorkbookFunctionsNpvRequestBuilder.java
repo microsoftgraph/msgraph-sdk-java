@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsNpvRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsNpv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param rate The rate
-     * @param values The values
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param values the values
      */
     public BaseWorkbookFunctionsNpvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsNpvRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsNpvRequest
      *
-     * @return The IWorkbookFunctionsNpvRequest instance
+     * @return the IWorkbookFunctionsNpvRequest instance
      */
     public IWorkbookFunctionsNpvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsNpvRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsNpvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNpvRequest instance
+     * @return the IWorkbookFunctionsNpvRequest instance
      */
     public IWorkbookFunctionsNpvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNpvRequest request = new WorkbookFunctionsNpvRequest(

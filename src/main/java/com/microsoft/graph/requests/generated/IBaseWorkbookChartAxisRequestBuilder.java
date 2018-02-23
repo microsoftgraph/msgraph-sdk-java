@@ -26,43 +26,43 @@ public interface IBaseWorkbookChartAxisRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartAxisRequest instance
+     * @return the IWorkbookChartAxisRequest instance
      */
     IWorkbookChartAxisRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartAxisRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartAxisRequest instance
      */
     IWorkbookChartAxisRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartAxisFormat.
+     * Gets the request builder for WorkbookChartAxisFormat
      *
-     * @return The IWorkbookChartAxisFormatRequestBuilder instance
+     * @return the IWorkbookChartAxisFormatRequestBuilder instance
      */
     IWorkbookChartAxisFormatRequestBuilder format();
 
     /**
-     * Gets the request builder for WorkbookChartGridlines.
+     * Gets the request builder for WorkbookChartGridlines
      *
-     * @return The IWorkbookChartGridlinesRequestBuilder instance
+     * @return the IWorkbookChartGridlinesRequestBuilder instance
      */
     IWorkbookChartGridlinesRequestBuilder majorGridlines();
 
     /**
-     * Gets the request builder for WorkbookChartGridlines.
+     * Gets the request builder for WorkbookChartGridlines
      *
-     * @return The IWorkbookChartGridlinesRequestBuilder instance
+     * @return the IWorkbookChartGridlinesRequestBuilder instance
      */
     IWorkbookChartGridlinesRequestBuilder minorGridlines();
 
     /**
-     * Gets the request builder for WorkbookChartAxisTitle.
+     * Gets the request builder for WorkbookChartAxisTitle
      *
-     * @return The IWorkbookChartAxisTitleRequestBuilder instance
+     * @return the IWorkbookChartAxisTitleRequestBuilder instance
      */
     IWorkbookChartAxisTitleRequestBuilder title();
 

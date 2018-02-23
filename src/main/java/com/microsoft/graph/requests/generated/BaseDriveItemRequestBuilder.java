@@ -27,9 +27,9 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     /**
      * The request builder for the DriveItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
-     * @return The IDriveItemRequest instance
+     * @return the IDriveItemRequest instance
      */
     public IDriveItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IDriveItemRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDriveItemRequest instance
      */
     public IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
@@ -63,9 +63,9 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     /**
-     * Gets the request builder for ListItem.
+     * Gets the request builder for ListItem
      *
-     * @return The IListItemRequestBuilder instance
+     * @return the IListItemRequestBuilder instance
      */
     public IListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
@@ -86,9 +86,9 @@ public class BaseDriveItemRequestBuilder extends BaseRequestBuilder implements I
     }
 
     /**
-     * Gets the request builder for Workbook.
+     * Gets the request builder for Workbook
      *
-     * @return The IWorkbookRequestBuilder instance
+     * @return the IWorkbookRequestBuilder instance
      */
     public IWorkbookRequestBuilder workbook() {
         return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);

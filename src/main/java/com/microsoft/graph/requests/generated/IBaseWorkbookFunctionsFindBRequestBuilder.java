@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsFindBRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsFindBRequest
      *
-     * @return The IWorkbookFunctionsFindBRequest instance
+     * @return the IWorkbookFunctionsFindBRequest instance
      */
     IWorkbookFunctionsFindBRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsFindBRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsFindBRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFindBRequest instance
+     * @return the IWorkbookFunctionsFindBRequest instance
      */
     IWorkbookFunctionsFindBRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

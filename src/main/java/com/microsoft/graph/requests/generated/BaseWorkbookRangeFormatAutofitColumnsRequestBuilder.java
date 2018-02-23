@@ -26,9 +26,9 @@ public class BaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseAct
     /**
      * The request builder for this WorkbookRangeFormatAutofitColumns
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeFormatAutofitColumnsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseAct
     /**
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest
      *
-     * @return The IWorkbookRangeFormatAutofitColumnsRequest instance
+     * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
     public IWorkbookRangeFormatAutofitColumnsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseAct
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeFormatAutofitColumnsRequest instance
+     * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
     public IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeFormatAutofitColumnsRequest request = new WorkbookRangeFormatAutofitColumnsRequest(

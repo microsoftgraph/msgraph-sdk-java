@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsIntRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsInt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsIntRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsIntRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsIntRequest
      *
-     * @return The IWorkbookFunctionsIntRequest instance
+     * @return the IWorkbookFunctionsIntRequest instance
      */
     public IWorkbookFunctionsIntRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsIntRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsIntRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIntRequest instance
+     * @return the IWorkbookFunctionsIntRequest instance
      */
     public IWorkbookFunctionsIntRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIntRequest request = new WorkbookFunctionsIntRequest(

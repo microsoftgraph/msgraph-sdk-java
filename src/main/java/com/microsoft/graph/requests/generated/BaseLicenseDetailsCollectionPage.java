@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseLicenseDetailsCollectionPage extends BaseCollectionPage<LicenseDetails, ILicenseDetailsCollectionRequestBuilder> implements IBaseLicenseDetailsCollectionPage {
 
     /**
-     * A collection page for LicenseDetails.
+     * A collection page for LicenseDetails
      *
-     * @param response The serialized BaseLicenseDetailsCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseLicenseDetailsCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseLicenseDetailsCollectionPage(final BaseLicenseDetailsCollectionResponse response, final ILicenseDetailsCollectionRequestBuilder builder) {
         super(response.value, builder);

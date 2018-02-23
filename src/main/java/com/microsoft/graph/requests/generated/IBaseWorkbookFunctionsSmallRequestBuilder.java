@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSmallRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsSmallRequest
      *
-     * @return The IWorkbookFunctionsSmallRequest instance
+     * @return the IWorkbookFunctionsSmallRequest instance
      */
     IWorkbookFunctionsSmallRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSmallRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsSmallRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSmallRequest instance
+     * @return the IWorkbookFunctionsSmallRequest instance
      */
     IWorkbookFunctionsSmallRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSqrtPiRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsSqrtPiRequest
      *
-     * @return The IWorkbookFunctionsSqrtPiRequest instance
+     * @return the IWorkbookFunctionsSqrtPiRequest instance
      */
     IWorkbookFunctionsSqrtPiRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSqrtPiRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsSqrtPiRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSqrtPiRequest instance
+     * @return the IWorkbookFunctionsSqrtPiRequest instance
      */
     IWorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

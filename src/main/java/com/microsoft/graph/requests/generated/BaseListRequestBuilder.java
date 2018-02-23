@@ -27,9 +27,9 @@ public class BaseListRequestBuilder extends BaseRequestBuilder implements IBaseL
     /**
      * The request builder for the List
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseListRequestBuilder extends BaseRequestBuilder implements IBaseL
     /**
      * Creates the request
      *
-     * @return The IListRequest instance
+     * @return the IListRequest instance
      */
     public IListRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseListRequestBuilder extends BaseRequestBuilder implements IBaseL
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IListRequest instance
+     * @param requestOptions the options for this request
+     * @return the IListRequest instance
      */
     public IListRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ListRequest(getRequestUrl(), getClient(), requestOptions);
@@ -70,9 +70,9 @@ public class BaseListRequestBuilder extends BaseRequestBuilder implements IBaseL
     }
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
      *
-     * @return The IDriveRequestBuilder instance
+     * @return the IDriveRequestBuilder instance
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);

@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsPermutRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsPermut
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param numberChosen The numberChosen
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param numberChosen the numberChosen
      */
     public BaseWorkbookFunctionsPermutRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsPermutRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsPermutRequest
      *
-     * @return The IWorkbookFunctionsPermutRequest instance
+     * @return the IWorkbookFunctionsPermutRequest instance
      */
     public IWorkbookFunctionsPermutRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsPermutRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsPermutRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPermutRequest instance
+     * @return the IWorkbookFunctionsPermutRequest instance
      */
     public IWorkbookFunctionsPermutRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPermutRequest request = new WorkbookFunctionsPermutRequest(

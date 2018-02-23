@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsFloor_Math
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param significance The significance
-     * @param mode The mode
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param significance the significance
+     * @param mode the mode
      */
     public BaseWorkbookFunctionsFloor_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsFloor_MathRequest
      *
-     * @return The IWorkbookFunctionsFloor_MathRequest instance
+     * @return the IWorkbookFunctionsFloor_MathRequest instance
      */
     public IWorkbookFunctionsFloor_MathRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsFloor_MathRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsFloor_MathRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFloor_MathRequest instance
+     * @return the IWorkbookFunctionsFloor_MathRequest instance
      */
     public IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFloor_MathRequest request = new WorkbookFunctionsFloor_MathRequest(

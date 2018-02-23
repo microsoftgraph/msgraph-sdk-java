@@ -26,15 +26,15 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IDriveItemRequest instance
+     * @return the IDriveItemRequest instance
      */
     IDriveItemRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IDriveItemRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDriveItemRequest instance
      */
     IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -43,9 +43,9 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemRequestBuilder children(final String id);
 
     /**
-     * Gets the request builder for ListItem.
+     * Gets the request builder for ListItem
      *
-     * @return The IListItemRequestBuilder instance
+     * @return the IListItemRequestBuilder instance
      */
     IListItemRequestBuilder listItem();
 
@@ -58,9 +58,9 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
     IThumbnailSetRequestBuilder thumbnails(final String id);
 
     /**
-     * Gets the request builder for Workbook.
+     * Gets the request builder for Workbook
      *
-     * @return The IWorkbookRequestBuilder instance
+     * @return the IWorkbookRequestBuilder instance
      */
     IWorkbookRequestBuilder workbook();
 

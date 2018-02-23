@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsAreasRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsAreas
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param reference The reference
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param reference the reference
      */
     public BaseWorkbookFunctionsAreasRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement reference) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsAreasRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsAreasRequest
      *
-     * @return The IWorkbookFunctionsAreasRequest instance
+     * @return the IWorkbookFunctionsAreasRequest instance
      */
     public IWorkbookFunctionsAreasRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsAreasRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsAreasRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAreasRequest instance
+     * @return the IWorkbookFunctionsAreasRequest instance
      */
     public IWorkbookFunctionsAreasRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAreasRequest request = new WorkbookFunctionsAreasRequest(

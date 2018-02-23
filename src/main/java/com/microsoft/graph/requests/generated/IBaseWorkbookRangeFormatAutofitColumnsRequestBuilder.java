@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends IR
     /**
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest
      *
-     * @return The IWorkbookRangeFormatAutofitColumnsRequest instance
+     * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
     IWorkbookRangeFormatAutofitColumnsRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeFormatAutofitColumnsRequestBuilder extends IR
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeFormatAutofitColumnsRequest instance
+     * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
     IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

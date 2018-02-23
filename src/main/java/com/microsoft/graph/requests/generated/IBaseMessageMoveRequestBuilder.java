@@ -27,7 +27,7 @@ public interface IBaseMessageMoveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMessageMoveRequest
      *
-     * @return The IMessageMoveRequest instance
+     * @return the IMessageMoveRequest instance
      */
     IMessageMoveRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseMessageMoveRequestBuilder extends IRequestBuilder {
      * Creates the IMessageMoveRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IMessageMoveRequest instance
+     * @return the IMessageMoveRequest instance
      */
     IMessageMoveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -28,9 +28,9 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
     /**
      * The request for this UserReminderView
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseUserReminderViewCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseUserReminderViewCollectionResponse.class, IUserReminderViewCollectionPage.class);
@@ -72,8 +72,8 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IUserReminderViewCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -83,8 +83,8 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IUserReminderViewCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value+""));
@@ -94,8 +94,8 @@ public class BaseUserReminderViewCollectionRequest extends BaseCollectionRequest
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IUserReminderViewCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));

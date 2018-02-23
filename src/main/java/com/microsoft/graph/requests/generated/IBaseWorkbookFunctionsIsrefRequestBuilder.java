@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIsrefRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsrefRequest
      *
-     * @return The IWorkbookFunctionsIsrefRequest instance
+     * @return the IWorkbookFunctionsIsrefRequest instance
      */
     IWorkbookFunctionsIsrefRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIsrefRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsIsrefRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsrefRequest instance
+     * @return the IWorkbookFunctionsIsrefRequest instance
      */
     IWorkbookFunctionsIsrefRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

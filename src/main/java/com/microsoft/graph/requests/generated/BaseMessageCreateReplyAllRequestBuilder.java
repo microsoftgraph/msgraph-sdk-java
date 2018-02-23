@@ -26,9 +26,9 @@ public class BaseMessageCreateReplyAllRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this MessageCreateReplyAll
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseMessageCreateReplyAllRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseMessageCreateReplyAllRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IMessageCreateReplyAllRequest
      *
-     * @return The IMessageCreateReplyAllRequest instance
+     * @return the IMessageCreateReplyAllRequest instance
      */
     public IMessageCreateReplyAllRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseMessageCreateReplyAllRequestBuilder extends BaseActionRequestBu
      * Creates the IMessageCreateReplyAllRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IMessageCreateReplyAllRequest instance
+     * @return the IMessageCreateReplyAllRequest instance
      */
     public IMessageCreateReplyAllRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MessageCreateReplyAllRequest request = new MessageCreateReplyAllRequest(

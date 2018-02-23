@@ -26,22 +26,22 @@ public interface IBaseWorkbookChartPointFormatRequestBuilder extends IRequestBui
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartPointFormatRequest instance
+     * @return the IWorkbookChartPointFormatRequest instance
      */
     IWorkbookChartPointFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartPointFormatRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartPointFormatRequest instance
      */
     IWorkbookChartPointFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartFill.
+     * Gets the request builder for WorkbookChartFill
      *
-     * @return The IWorkbookChartFillRequestBuilder instance
+     * @return the IWorkbookChartFillRequestBuilder instance
      */
     IWorkbookChartFillRequestBuilder fill();
 

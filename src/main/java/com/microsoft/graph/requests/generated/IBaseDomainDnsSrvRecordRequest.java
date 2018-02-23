@@ -26,72 +26,80 @@ public interface IBaseDomainDnsSrvRecordRequest extends IHttpRequest {
 
     /**
      * Gets the DomainDnsSrvRecord from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<DomainDnsSrvRecord> callback);
 
     /**
      * Gets the DomainDnsSrvRecord from the service
-     * @return The DomainDnsSrvRecord from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the DomainDnsSrvRecord from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsSrvRecord get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this DomainDnsSrvRecord with a source
-     * @param sourceDomainDnsSrvRecord The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDomainDnsSrvRecord the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback);
 
     /**
      * Patches this DomainDnsSrvRecord with a source
-     * @param sourceDomainDnsSrvRecord The source object with updates
-     * @return The updated DomainDnsSrvRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDomainDnsSrvRecord the source object with updates
+     * @return the updated DomainDnsSrvRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsSrvRecord patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord) throws ClientException;
 
     /**
      * Posts a DomainDnsSrvRecord with a new object
-     * @param newDomainDnsSrvRecord The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDomainDnsSrvRecord the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<DomainDnsSrvRecord> callback);
 
     /**
      * Posts a DomainDnsSrvRecord with a new object
-     * @param newDomainDnsSrvRecord The new object to create
-     * @return The created DomainDnsSrvRecord
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDomainDnsSrvRecord the new object to create
+     * @return the created DomainDnsSrvRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     DomainDnsSrvRecord post(final DomainDnsSrvRecord newDomainDnsSrvRecord) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseDomainDnsSrvRecordRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseDomainDnsSrvRecordRequest expand(final String value);
 

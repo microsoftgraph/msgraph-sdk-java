@@ -26,10 +26,10 @@ public class BaseWorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuild
     /**
      * The request builder for this WorkbookRangeRow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param row The row
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param row the row
      */
     public BaseWorkbookRangeRowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuild
     /**
      * Creates the IWorkbookRangeRowRequest
      *
-     * @return The IWorkbookRangeRowRequest instance
+     * @return the IWorkbookRangeRowRequest instance
      */
     public IWorkbookRangeRowRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeRowRequestBuilder extends BaseFunctionRequestBuild
      * Creates the IWorkbookRangeRowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeRowRequest instance
+     * @return the IWorkbookRangeRowRequest instance
      */
     public IWorkbookRangeRowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeRowRequest request = new WorkbookRangeRowRequest(

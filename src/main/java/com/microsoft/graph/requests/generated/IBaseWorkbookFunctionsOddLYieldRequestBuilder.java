@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsOddLYieldRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsOddLYieldRequest
      *
-     * @return The IWorkbookFunctionsOddLYieldRequest instance
+     * @return the IWorkbookFunctionsOddLYieldRequest instance
      */
     IWorkbookFunctionsOddLYieldRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsOddLYieldRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsOddLYieldRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsOddLYieldRequest instance
+     * @return the IWorkbookFunctionsOddLYieldRequest instance
      */
     IWorkbookFunctionsOddLYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

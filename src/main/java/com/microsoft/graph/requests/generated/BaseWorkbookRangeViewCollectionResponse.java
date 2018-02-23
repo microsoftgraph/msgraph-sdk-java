@@ -36,7 +36,7 @@ public class BaseWorkbookRangeViewCollectionResponse implements IJsonBackedObjec
     public java.util.List<WorkbookRangeView> value;
 
     /**
-     * The url to the next page of this collection, or null
+     * The URL to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)

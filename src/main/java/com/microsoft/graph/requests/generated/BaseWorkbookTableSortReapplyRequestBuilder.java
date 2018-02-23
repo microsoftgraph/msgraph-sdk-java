@@ -26,9 +26,9 @@ public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookTableSortReapply
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableSortReapplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookTableSortReapplyRequest
      *
-     * @return The IWorkbookTableSortReapplyRequest instance
+     * @return the IWorkbookTableSortReapplyRequest instance
      */
     public IWorkbookTableSortReapplyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableSortReapplyRequestBuilder extends BaseActionReques
      * Creates the IWorkbookTableSortReapplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableSortReapplyRequest instance
+     * @return the IWorkbookTableSortReapplyRequest instance
      */
     public IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableSortReapplyRequest request = new WorkbookTableSortReapplyRequest(

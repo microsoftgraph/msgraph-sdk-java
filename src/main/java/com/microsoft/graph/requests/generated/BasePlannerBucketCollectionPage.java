@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BasePlannerBucketCollectionPage extends BaseCollectionPage<PlannerBucket, IPlannerBucketCollectionRequestBuilder> implements IBasePlannerBucketCollectionPage {
 
     /**
-     * A collection page for PlannerBucket.
+     * A collection page for PlannerBucket
      *
-     * @param response The serialized BasePlannerBucketCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BasePlannerBucketCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BasePlannerBucketCollectionPage(final BasePlannerBucketCollectionResponse response, final IPlannerBucketCollectionRequestBuilder builder) {
         super(response.value, builder);

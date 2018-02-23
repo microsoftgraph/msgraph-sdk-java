@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSignRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSignRequest
      *
-     * @return The IWorkbookFunctionsSignRequest instance
+     * @return the IWorkbookFunctionsSignRequest instance
      */
     IWorkbookFunctionsSignRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSignRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsSignRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSignRequest instance
+     * @return the IWorkbookFunctionsSignRequest instance
      */
     IWorkbookFunctionsSignRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

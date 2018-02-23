@@ -27,9 +27,9 @@ public class BaseThumbnailSetRequestBuilder extends BaseRequestBuilder implement
     /**
      * The request builder for the ThumbnailSet
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseThumbnailSetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseThumbnailSetRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
-     * @return The IThumbnailSetRequest instance
+     * @return the IThumbnailSetRequest instance
      */
     public IThumbnailSetRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseThumbnailSetRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IThumbnailSetRequest instance
+     * @param requestOptions the options for this request
+     * @return the IThumbnailSetRequest instance
      */
     public IThumbnailSetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);

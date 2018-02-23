@@ -27,7 +27,7 @@ public interface IBaseMailFolderMoveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMailFolderMoveRequest
      *
-     * @return The IMailFolderMoveRequest instance
+     * @return the IMailFolderMoveRequest instance
      */
     IMailFolderMoveRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseMailFolderMoveRequestBuilder extends IRequestBuilder {
      * Creates the IMailFolderMoveRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IMailFolderMoveRequest instance
+     * @return the IMailFolderMoveRequest instance
      */
     IMailFolderMoveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

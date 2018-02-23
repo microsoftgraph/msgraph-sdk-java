@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsYieldRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsYieldRequest
      *
-     * @return The IWorkbookFunctionsYieldRequest instance
+     * @return the IWorkbookFunctionsYieldRequest instance
      */
     IWorkbookFunctionsYieldRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsYieldRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsYieldRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsYieldRequest instance
+     * @return the IWorkbookFunctionsYieldRequest instance
      */
     IWorkbookFunctionsYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

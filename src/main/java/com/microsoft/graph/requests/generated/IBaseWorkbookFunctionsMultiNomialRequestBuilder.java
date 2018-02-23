@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsMultiNomialRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsMultiNomialRequest
      *
-     * @return The IWorkbookFunctionsMultiNomialRequest instance
+     * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
     IWorkbookFunctionsMultiNomialRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsMultiNomialRequestBuilder extends IReques
      * Creates the IWorkbookFunctionsMultiNomialRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMultiNomialRequest instance
+     * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
     IWorkbookFunctionsMultiNomialRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

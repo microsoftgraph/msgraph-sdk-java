@@ -33,7 +33,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Meeting Message Type.
-     * 
+     * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
      */
     @SerializedName("meetingMessageType")
     @Expose
@@ -41,7 +41,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Event.
-     * 
+     * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      */
     @SerializedName("event")
     @Expose
@@ -60,6 +60,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -68,6 +69,7 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -75,10 +77,10 @@ public class BaseEventMessage extends Message implements IJsonBackedObject {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

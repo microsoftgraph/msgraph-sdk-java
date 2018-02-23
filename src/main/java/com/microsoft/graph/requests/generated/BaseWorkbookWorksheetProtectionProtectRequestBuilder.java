@@ -26,10 +26,10 @@ public class BaseWorkbookWorksheetProtectionProtectRequestBuilder extends BaseAc
     /**
      * The request builder for this WorkbookWorksheetProtectionProtect
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param options The options
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param options the options
      */
     public BaseWorkbookWorksheetProtectionProtectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final WorkbookWorksheetProtectionOptions options) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookWorksheetProtectionProtectRequestBuilder extends BaseAc
     /**
      * Creates the IWorkbookWorksheetProtectionProtectRequest
      *
-     * @return The IWorkbookWorksheetProtectionProtectRequest instance
+     * @return the IWorkbookWorksheetProtectionProtectRequest instance
      */
     public IWorkbookWorksheetProtectionProtectRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookWorksheetProtectionProtectRequestBuilder extends BaseAc
      * Creates the IWorkbookWorksheetProtectionProtectRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookWorksheetProtectionProtectRequest instance
+     * @return the IWorkbookWorksheetProtectionProtectRequest instance
      */
     public IWorkbookWorksheetProtectionProtectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetProtectionProtectRequest request = new WorkbookWorksheetProtectionProtectRequest(

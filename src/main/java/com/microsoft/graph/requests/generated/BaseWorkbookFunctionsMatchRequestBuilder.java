@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsMatchRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsMatch
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param lookupValue The lookupValue
-     * @param lookupArray The lookupArray
-     * @param matchType The matchType
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param lookupValue the lookupValue
+     * @param lookupArray the lookupArray
+     * @param matchType the matchType
      */
     public BaseWorkbookFunctionsMatchRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupArray, final com.google.gson.JsonElement matchType) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsMatchRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsMatchRequest
      *
-     * @return The IWorkbookFunctionsMatchRequest instance
+     * @return the IWorkbookFunctionsMatchRequest instance
      */
     public IWorkbookFunctionsMatchRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsMatchRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsMatchRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMatchRequest instance
+     * @return the IWorkbookFunctionsMatchRequest instance
      */
     public IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMatchRequest request = new WorkbookFunctionsMatchRequest(

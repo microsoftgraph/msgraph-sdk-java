@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseThumbnailSetCollectionPage extends BaseCollectionPage<ThumbnailSet, IThumbnailSetCollectionRequestBuilder> implements IBaseThumbnailSetCollectionPage {
 
     /**
-     * A collection page for ThumbnailSet.
+     * A collection page for ThumbnailSet
      *
-     * @param response The serialized BaseThumbnailSetCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseThumbnailSetCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseThumbnailSetCollectionPage(final BaseThumbnailSetCollectionResponse response, final IThumbnailSetCollectionRequestBuilder builder) {
         super(response.value, builder);

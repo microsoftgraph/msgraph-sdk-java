@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsGamma_Inv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param probability The probability
-     * @param alpha The alpha
-     * @param beta The beta
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
+     * @param alpha the alpha
+     * @param beta the beta
      */
     public BaseWorkbookFunctionsGamma_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsGamma_InvRequest
      *
-     * @return The IWorkbookFunctionsGamma_InvRequest instance
+     * @return the IWorkbookFunctionsGamma_InvRequest instance
      */
     public IWorkbookFunctionsGamma_InvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsGamma_InvRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsGamma_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGamma_InvRequest instance
+     * @return the IWorkbookFunctionsGamma_InvRequest instance
      */
     public IWorkbookFunctionsGamma_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGamma_InvRequest request = new WorkbookFunctionsGamma_InvRequest(

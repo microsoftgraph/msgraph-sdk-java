@@ -27,7 +27,7 @@ public interface IBaseNotebookCopyNotebookRequestBuilder extends IRequestBuilder
     /**
      * Creates the INotebookCopyNotebookRequest
      *
-     * @return The INotebookCopyNotebookRequest instance
+     * @return the INotebookCopyNotebookRequest instance
      */
     INotebookCopyNotebookRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseNotebookCopyNotebookRequestBuilder extends IRequestBuilder
      * Creates the INotebookCopyNotebookRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The INotebookCopyNotebookRequest instance
+     * @return the INotebookCopyNotebookRequest instance
      */
     INotebookCopyNotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

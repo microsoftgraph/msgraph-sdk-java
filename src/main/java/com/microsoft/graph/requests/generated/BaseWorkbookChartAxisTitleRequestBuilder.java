@@ -27,9 +27,9 @@ public class BaseWorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder
     /**
      * The request builder for the WorkbookChartAxisTitle
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartAxisTitleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartAxisTitleRequest instance
+     * @return the IWorkbookChartAxisTitleRequest instance
      */
     public IWorkbookChartAxisTitleRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartAxisTitleRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartAxisTitleRequest instance
      */
     public IWorkbookChartAxisTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartAxisTitleRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseWorkbookChartAxisTitleRequestBuilder extends BaseRequestBuilder
 
 
     /**
-     * Gets the request builder for WorkbookChartAxisTitleFormat.
+     * Gets the request builder for WorkbookChartAxisTitleFormat
      *
-     * @return The IWorkbookChartAxisTitleFormatRequestBuilder instance
+     * @return the IWorkbookChartAxisTitleFormatRequestBuilder instance
      */
     public IWorkbookChartAxisTitleFormatRequestBuilder format() {
         return new WorkbookChartAxisTitleFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

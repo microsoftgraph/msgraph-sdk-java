@@ -27,7 +27,7 @@ public interface IBaseConversationThreadReplyRequestBuilder extends IRequestBuil
     /**
      * Creates the IConversationThreadReplyRequest
      *
-     * @return The IConversationThreadReplyRequest instance
+     * @return the IConversationThreadReplyRequest instance
      */
     IConversationThreadReplyRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseConversationThreadReplyRequestBuilder extends IRequestBuil
      * Creates the IConversationThreadReplyRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IConversationThreadReplyRequest instance
+     * @return the IConversationThreadReplyRequest instance
      */
     IConversationThreadReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

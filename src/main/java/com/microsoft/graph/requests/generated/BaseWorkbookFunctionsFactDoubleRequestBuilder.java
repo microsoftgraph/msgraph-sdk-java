@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsFactDoubleRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsFactDouble
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsFactDoubleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsFactDoubleRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsFactDoubleRequest
      *
-     * @return The IWorkbookFunctionsFactDoubleRequest instance
+     * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
     public IWorkbookFunctionsFactDoubleRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsFactDoubleRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsFactDoubleRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFactDoubleRequest instance
+     * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
     public IWorkbookFunctionsFactDoubleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFactDoubleRequest request = new WorkbookFunctionsFactDoubleRequest(

@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsReplaceRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsReplace
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param oldText The oldText
-     * @param startNum The startNum
-     * @param numChars The numChars
-     * @param newText The newText
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param oldText the oldText
+     * @param startNum the startNum
+     * @param numChars the numChars
+     * @param newText the newText
      */
     public BaseWorkbookFunctionsReplaceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numChars, final com.google.gson.JsonElement newText) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsReplaceRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsReplaceRequest
      *
-     * @return The IWorkbookFunctionsReplaceRequest instance
+     * @return the IWorkbookFunctionsReplaceRequest instance
      */
     public IWorkbookFunctionsReplaceRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsReplaceRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsReplaceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsReplaceRequest instance
+     * @return the IWorkbookFunctionsReplaceRequest instance
      */
     public IWorkbookFunctionsReplaceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsReplaceRequest request = new WorkbookFunctionsReplaceRequest(

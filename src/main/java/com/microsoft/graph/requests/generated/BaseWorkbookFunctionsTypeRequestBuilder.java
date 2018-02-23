@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsTypeRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsType
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param value The value
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param value the value
      */
     public BaseWorkbookFunctionsTypeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsTypeRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsTypeRequest
      *
-     * @return The IWorkbookFunctionsTypeRequest instance
+     * @return the IWorkbookFunctionsTypeRequest instance
      */
     public IWorkbookFunctionsTypeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsTypeRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsTypeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTypeRequest instance
+     * @return the IWorkbookFunctionsTypeRequest instance
      */
     public IWorkbookFunctionsTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTypeRequest request = new WorkbookFunctionsTypeRequest(

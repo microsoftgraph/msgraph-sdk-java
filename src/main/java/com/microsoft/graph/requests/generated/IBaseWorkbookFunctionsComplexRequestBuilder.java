@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsComplexRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsComplexRequest
      *
-     * @return The IWorkbookFunctionsComplexRequest instance
+     * @return the IWorkbookFunctionsComplexRequest instance
      */
     IWorkbookFunctionsComplexRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsComplexRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsComplexRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsComplexRequest instance
+     * @return the IWorkbookFunctionsComplexRequest instance
      */
     IWorkbookFunctionsComplexRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

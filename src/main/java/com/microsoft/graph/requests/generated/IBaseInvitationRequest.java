@@ -26,72 +26,80 @@ public interface IBaseInvitationRequest extends IHttpRequest {
 
     /**
      * Gets the Invitation from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<Invitation> callback);
 
     /**
      * Gets the Invitation from the service
-     * @return The Invitation from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Invitation from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Invitation get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this Invitation with a source
-     * @param sourceInvitation The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceInvitation the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final Invitation sourceInvitation, final ICallback<Invitation> callback);
 
     /**
      * Patches this Invitation with a source
-     * @param sourceInvitation The source object with updates
-     * @return The updated Invitation
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceInvitation the source object with updates
+     * @return the updated Invitation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Invitation patch(final Invitation sourceInvitation) throws ClientException;
 
     /**
      * Posts a Invitation with a new object
-     * @param newInvitation The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newInvitation the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final Invitation newInvitation, final ICallback<Invitation> callback);
 
     /**
      * Posts a Invitation with a new object
-     * @param newInvitation The new object to create
-     * @return The created Invitation
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newInvitation the new object to create
+     * @return the created Invitation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     Invitation post(final Invitation newInvitation) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseInvitationRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseInvitationRequest expand(final String value);
 

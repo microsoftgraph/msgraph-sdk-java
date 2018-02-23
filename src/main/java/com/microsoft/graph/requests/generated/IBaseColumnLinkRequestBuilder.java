@@ -26,15 +26,15 @@ public interface IBaseColumnLinkRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IColumnLinkRequest instance
+     * @return the IColumnLinkRequest instance
      */
     IColumnLinkRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IColumnLinkRequest instance
+     * @param requestOptions the options for this request
+     * @return the IColumnLinkRequest instance
      */
     IColumnLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

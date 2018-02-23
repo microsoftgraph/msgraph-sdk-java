@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsImPowerRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsImPower
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param inumber The inumber
-     * @param number The number
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
+     * @param number the number
      */
     public BaseWorkbookFunctionsImPowerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsImPowerRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsImPowerRequest
      *
-     * @return The IWorkbookFunctionsImPowerRequest instance
+     * @return the IWorkbookFunctionsImPowerRequest instance
      */
     public IWorkbookFunctionsImPowerRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsImPowerRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsImPowerRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImPowerRequest instance
+     * @return the IWorkbookFunctionsImPowerRequest instance
      */
     public IWorkbookFunctionsImPowerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImPowerRequest request = new WorkbookFunctionsImPowerRequest(

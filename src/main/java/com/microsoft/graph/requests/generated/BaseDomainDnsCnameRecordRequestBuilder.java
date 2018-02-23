@@ -27,9 +27,9 @@ public class BaseDomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder i
     /**
      * The request builder for the DomainDnsCnameRecord
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDomainDnsCnameRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseDomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
-     * @return The IDomainDnsCnameRecordRequest instance
+     * @return the IDomainDnsCnameRecordRequest instance
      */
     public IDomainDnsCnameRecordRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseDomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IDomainDnsCnameRecordRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDomainDnsCnameRecordRequest instance
      */
     public IDomainDnsCnameRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DomainDnsCnameRecordRequest(getRequestUrl(), getClient(), requestOptions);

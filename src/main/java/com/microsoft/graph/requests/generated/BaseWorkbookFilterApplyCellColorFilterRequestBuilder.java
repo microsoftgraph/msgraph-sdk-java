@@ -26,10 +26,10 @@ public class BaseWorkbookFilterApplyCellColorFilterRequestBuilder extends BaseAc
     /**
      * The request builder for this WorkbookFilterApplyCellColorFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param color The color
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param color the color
      */
     public BaseWorkbookFilterApplyCellColorFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String color) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFilterApplyCellColorFilterRequestBuilder extends BaseAc
     /**
      * Creates the IWorkbookFilterApplyCellColorFilterRequest
      *
-     * @return The IWorkbookFilterApplyCellColorFilterRequest instance
+     * @return the IWorkbookFilterApplyCellColorFilterRequest instance
      */
     public IWorkbookFilterApplyCellColorFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFilterApplyCellColorFilterRequestBuilder extends BaseAc
      * Creates the IWorkbookFilterApplyCellColorFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyCellColorFilterRequest instance
+     * @return the IWorkbookFilterApplyCellColorFilterRequest instance
      */
     public IWorkbookFilterApplyCellColorFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyCellColorFilterRequest request = new WorkbookFilterApplyCellColorFilterRequest(

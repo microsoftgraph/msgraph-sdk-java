@@ -36,7 +36,7 @@ public class BaseWorkbookRangeBorderCollectionResponse implements IJsonBackedObj
     public java.util.List<WorkbookRangeBorder> value;
 
     /**
-     * The url to the next page of this collection, or null
+     * The URL to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)

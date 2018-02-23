@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsXnpvRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsXnpvRequest
      *
-     * @return The IWorkbookFunctionsXnpvRequest instance
+     * @return the IWorkbookFunctionsXnpvRequest instance
      */
     IWorkbookFunctionsXnpvRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsXnpvRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsXnpvRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsXnpvRequest instance
+     * @return the IWorkbookFunctionsXnpvRequest instance
      */
     IWorkbookFunctionsXnpvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

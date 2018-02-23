@@ -26,13 +26,13 @@ public class BaseWorkbookFunctionsSubstituteRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsSubstitute
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param text The text
-     * @param oldText The oldText
-     * @param newText The newText
-     * @param instanceNum The instanceNum
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param oldText the oldText
+     * @param newText the newText
+     * @param instanceNum the instanceNum
      */
     public BaseWorkbookFunctionsSubstituteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement newText, final com.google.gson.JsonElement instanceNum) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +45,7 @@ public class BaseWorkbookFunctionsSubstituteRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsSubstituteRequest
      *
-     * @return The IWorkbookFunctionsSubstituteRequest instance
+     * @return the IWorkbookFunctionsSubstituteRequest instance
      */
     public IWorkbookFunctionsSubstituteRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +55,7 @@ public class BaseWorkbookFunctionsSubstituteRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsSubstituteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSubstituteRequest instance
+     * @return the IWorkbookFunctionsSubstituteRequest instance
      */
     public IWorkbookFunctionsSubstituteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSubstituteRequest request = new WorkbookFunctionsSubstituteRequest(

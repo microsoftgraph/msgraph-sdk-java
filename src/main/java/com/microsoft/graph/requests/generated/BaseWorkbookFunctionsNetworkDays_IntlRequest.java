@@ -28,9 +28,9 @@ public class BaseWorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest im
     /**
      * The request for this WorkbookFunctionsNetworkDays_Intl
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsNetworkDays_IntlRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
@@ -48,8 +48,8 @@ public class BaseWorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest im
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookFunctionsNetworkDays_IntlRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -59,8 +59,8 @@ public class BaseWorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest im
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IWorkbookFunctionsNetworkDays_IntlRequest top(final int value) {
         getQueryOptions().add(new QueryOption("$top", value+""));
@@ -70,8 +70,8 @@ public class BaseWorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest im
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookFunctionsNetworkDays_IntlRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

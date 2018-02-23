@@ -27,10 +27,10 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
     /**
      * The request for the LicenseDetails
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseLicenseDetailsRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
 
     /**
      * Gets the LicenseDetails from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<LicenseDetails> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
 
     /**
      * Gets the LicenseDetails from the service
-     * @return The LicenseDetails from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the LicenseDetails from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public LicenseDetails get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
 
     /**
      * Patches this LicenseDetails with a source
-     * @param sourceLicenseDetails The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceLicenseDetails the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final LicenseDetails sourceLicenseDetails, final ICallback<LicenseDetails> callback) {
         send(HttpMethod.PATCH, callback, sourceLicenseDetails);
@@ -83,9 +88,10 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
 
     /**
      * Patches this LicenseDetails with a source
-     * @param sourceLicenseDetails The source object with updates
-     * @return The updated LicenseDetails
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceLicenseDetails the source object with updates
+     * @return the updated LicenseDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public LicenseDetails patch(final LicenseDetails sourceLicenseDetails) throws ClientException {
         return send(HttpMethod.PATCH, sourceLicenseDetails);
@@ -93,8 +99,9 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
 
     /**
      * Creates a LicenseDetails with a new object
-     * @param newLicenseDetails The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newLicenseDetails the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback) {
         send(HttpMethod.POST, callback, newLicenseDetails);
@@ -102,9 +109,10 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
 
     /**
      * Creates a LicenseDetails with a new object
-     * @param newLicenseDetails The new object to create
-     * @return The created LicenseDetails
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newLicenseDetails the new object to create
+     * @return the created LicenseDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException {
         return send(HttpMethod.POST, newLicenseDetails);
@@ -113,8 +121,8 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public ILicenseDetailsRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseLicenseDetailsRequest extends BaseRequest implements IBaseLicen
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public ILicenseDetailsRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

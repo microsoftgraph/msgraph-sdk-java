@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPermutRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsPermutRequest
      *
-     * @return The IWorkbookFunctionsPermutRequest instance
+     * @return the IWorkbookFunctionsPermutRequest instance
      */
     IWorkbookFunctionsPermutRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPermutRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsPermutRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPermutRequest instance
+     * @return the IWorkbookFunctionsPermutRequest instance
      */
     IWorkbookFunctionsPermutRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

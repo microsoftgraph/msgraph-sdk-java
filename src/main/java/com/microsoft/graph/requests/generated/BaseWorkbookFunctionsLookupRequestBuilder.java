@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsLookup
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param lookupValue The lookupValue
-     * @param lookupVector The lookupVector
-     * @param resultVector The resultVector
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param lookupValue the lookupValue
+     * @param lookupVector the lookupVector
+     * @param resultVector the resultVector
      */
     public BaseWorkbookFunctionsLookupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsLookupRequest
      *
-     * @return The IWorkbookFunctionsLookupRequest instance
+     * @return the IWorkbookFunctionsLookupRequest instance
      */
     public IWorkbookFunctionsLookupRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsLookupRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsLookupRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLookupRequest instance
+     * @return the IWorkbookFunctionsLookupRequest instance
      */
     public IWorkbookFunctionsLookupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLookupRequest request = new WorkbookFunctionsLookupRequest(

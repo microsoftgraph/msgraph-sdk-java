@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsGammaRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsGammaRequest
      *
-     * @return The IWorkbookFunctionsGammaRequest instance
+     * @return the IWorkbookFunctionsGammaRequest instance
      */
     IWorkbookFunctionsGammaRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsGammaRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsGammaRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGammaRequest instance
+     * @return the IWorkbookFunctionsGammaRequest instance
      */
     IWorkbookFunctionsGammaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

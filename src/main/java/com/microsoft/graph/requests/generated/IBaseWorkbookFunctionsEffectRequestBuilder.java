@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsEffectRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsEffectRequest
      *
-     * @return The IWorkbookFunctionsEffectRequest instance
+     * @return the IWorkbookFunctionsEffectRequest instance
      */
     IWorkbookFunctionsEffectRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsEffectRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsEffectRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsEffectRequest instance
+     * @return the IWorkbookFunctionsEffectRequest instance
      */
     IWorkbookFunctionsEffectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

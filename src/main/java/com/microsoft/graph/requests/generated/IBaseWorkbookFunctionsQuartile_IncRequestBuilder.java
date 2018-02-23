@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsQuartile_IncRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsQuartile_IncRequest
      *
-     * @return The IWorkbookFunctionsQuartile_IncRequest instance
+     * @return the IWorkbookFunctionsQuartile_IncRequest instance
      */
     IWorkbookFunctionsQuartile_IncRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsQuartile_IncRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsQuartile_IncRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsQuartile_IncRequest instance
+     * @return the IWorkbookFunctionsQuartile_IncRequest instance
      */
     IWorkbookFunctionsQuartile_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

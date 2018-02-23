@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsIsTextRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsIsText
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param value The value
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param value the value
      */
     public BaseWorkbookFunctionsIsTextRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsIsTextRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsIsTextRequest
      *
-     * @return The IWorkbookFunctionsIsTextRequest instance
+     * @return the IWorkbookFunctionsIsTextRequest instance
      */
     public IWorkbookFunctionsIsTextRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsIsTextRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsIsTextRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsTextRequest instance
+     * @return the IWorkbookFunctionsIsTextRequest instance
      */
     public IWorkbookFunctionsIsTextRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIsTextRequest request = new WorkbookFunctionsIsTextRequest(

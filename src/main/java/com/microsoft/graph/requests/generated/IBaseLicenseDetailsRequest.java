@@ -26,72 +26,80 @@ public interface IBaseLicenseDetailsRequest extends IHttpRequest {
 
     /**
      * Gets the LicenseDetails from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<LicenseDetails> callback);
 
     /**
      * Gets the LicenseDetails from the service
-     * @return The LicenseDetails from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the LicenseDetails from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     LicenseDetails get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this LicenseDetails with a source
-     * @param sourceLicenseDetails The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceLicenseDetails the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final LicenseDetails sourceLicenseDetails, final ICallback<LicenseDetails> callback);
 
     /**
      * Patches this LicenseDetails with a source
-     * @param sourceLicenseDetails The source object with updates
-     * @return The updated LicenseDetails
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceLicenseDetails the source object with updates
+     * @return the updated LicenseDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     LicenseDetails patch(final LicenseDetails sourceLicenseDetails) throws ClientException;
 
     /**
      * Posts a LicenseDetails with a new object
-     * @param newLicenseDetails The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newLicenseDetails the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback);
 
     /**
      * Posts a LicenseDetails with a new object
-     * @param newLicenseDetails The new object to create
-     * @return The created LicenseDetails
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newLicenseDetails the new object to create
+     * @return the created LicenseDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseLicenseDetailsRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseLicenseDetailsRequest expand(final String value);
 

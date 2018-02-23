@@ -27,9 +27,9 @@ public class BaseDomainDnsTxtRecordRequestBuilder extends BaseRequestBuilder imp
     /**
      * The request builder for the DomainDnsTxtRecord
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDomainDnsTxtRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseDomainDnsTxtRecordRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
-     * @return The IDomainDnsTxtRecordRequest instance
+     * @return the IDomainDnsTxtRecordRequest instance
      */
     public IDomainDnsTxtRecordRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseDomainDnsTxtRecordRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IDomainDnsTxtRecordRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDomainDnsTxtRecordRequest instance
      */
     public IDomainDnsTxtRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DomainDnsTxtRecordRequest(getRequestUrl(), getClient(), requestOptions);

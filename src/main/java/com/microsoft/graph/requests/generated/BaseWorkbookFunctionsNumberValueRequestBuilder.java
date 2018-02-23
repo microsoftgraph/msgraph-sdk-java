@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsNumberValue
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param text The text
-     * @param decimalSeparator The decimalSeparator
-     * @param groupSeparator The groupSeparator
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param decimalSeparator the decimalSeparator
+     * @param groupSeparator the groupSeparator
      */
     public BaseWorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsNumberValueRequest
      *
-     * @return The IWorkbookFunctionsNumberValueRequest instance
+     * @return the IWorkbookFunctionsNumberValueRequest instance
      */
     public IWorkbookFunctionsNumberValueRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsNumberValueRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsNumberValueRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNumberValueRequest instance
+     * @return the IWorkbookFunctionsNumberValueRequest instance
      */
     public IWorkbookFunctionsNumberValueRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNumberValueRequest request = new WorkbookFunctionsNumberValueRequest(

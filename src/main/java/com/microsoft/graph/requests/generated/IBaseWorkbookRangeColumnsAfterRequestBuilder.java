@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeColumnsAfterRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookRangeColumnsAfterRequest
      *
-     * @return The IWorkbookRangeColumnsAfterRequest instance
+     * @return the IWorkbookRangeColumnsAfterRequest instance
      */
     IWorkbookRangeColumnsAfterRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeColumnsAfterRequestBuilder extends IRequestBu
      * Creates the IWorkbookRangeColumnsAfterRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeColumnsAfterRequest instance
+     * @return the IWorkbookRangeColumnsAfterRequest instance
      */
     IWorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

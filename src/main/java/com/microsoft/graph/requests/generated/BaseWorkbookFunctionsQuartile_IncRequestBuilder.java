@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsQuartile_Inc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param array The array
-     * @param quart The quart
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param quart the quart
      */
     public BaseWorkbookFunctionsQuartile_IncRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsQuartile_IncRequest
      *
-     * @return The IWorkbookFunctionsQuartile_IncRequest instance
+     * @return the IWorkbookFunctionsQuartile_IncRequest instance
      */
     public IWorkbookFunctionsQuartile_IncRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsQuartile_IncRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsQuartile_IncRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsQuartile_IncRequest instance
+     * @return the IWorkbookFunctionsQuartile_IncRequest instance
      */
     public IWorkbookFunctionsQuartile_IncRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsQuartile_IncRequest request = new WorkbookFunctionsQuartile_IncRequest(

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsQuotientRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsQuotientRequest
      *
-     * @return The IWorkbookFunctionsQuotientRequest instance
+     * @return the IWorkbookFunctionsQuotientRequest instance
      */
     IWorkbookFunctionsQuotientRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsQuotientRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsQuotientRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsQuotientRequest instance
+     * @return the IWorkbookFunctionsQuotientRequest instance
      */
     IWorkbookFunctionsQuotientRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

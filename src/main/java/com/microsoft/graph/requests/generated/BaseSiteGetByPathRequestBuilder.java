@@ -26,10 +26,10 @@ public class BaseSiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder 
     /**
      * The request builder for this SiteGetByPath
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param path The path
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param path the path
      */
     public BaseSiteGetByPathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String path) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseSiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder 
     /**
      * Creates the ISiteGetByPathRequest
      *
-     * @return The ISiteGetByPathRequest instance
+     * @return the ISiteGetByPathRequest instance
      */
     public ISiteGetByPathRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseSiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder 
      * Creates the ISiteGetByPathRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The ISiteGetByPathRequest instance
+     * @return the ISiteGetByPathRequest instance
      */
     public ISiteGetByPathRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         SiteGetByPathRequest request = new SiteGetByPathRequest(

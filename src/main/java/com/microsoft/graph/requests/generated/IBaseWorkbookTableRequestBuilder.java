@@ -26,15 +26,15 @@ public interface IBaseWorkbookTableRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IWorkbookTableRequest instance
+     * @return the IWorkbookTableRequest instance
      */
     IWorkbookTableRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookTableRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookTableRequest instance
      */
     IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -47,16 +47,16 @@ public interface IBaseWorkbookTableRequestBuilder extends IRequestBuilder {
     IWorkbookTableRowRequestBuilder rows(final String id);
 
     /**
-     * Gets the request builder for WorkbookTableSort.
+     * Gets the request builder for WorkbookTableSort
      *
-     * @return The IWorkbookTableSortRequestBuilder instance
+     * @return the IWorkbookTableSortRequestBuilder instance
      */
     IWorkbookTableSortRequestBuilder sort();
 
     /**
-     * Gets the request builder for WorkbookWorksheet.
+     * Gets the request builder for WorkbookWorksheet
      *
-     * @return The IWorkbookWorksheetRequestBuilder instance
+     * @return the IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookTableClearFiltersRequestBuilder clearFilters();

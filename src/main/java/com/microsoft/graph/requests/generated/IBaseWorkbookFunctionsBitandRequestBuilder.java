@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBitandRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsBitandRequest
      *
-     * @return The IWorkbookFunctionsBitandRequest instance
+     * @return the IWorkbookFunctionsBitandRequest instance
      */
     IWorkbookFunctionsBitandRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBitandRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsBitandRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBitandRequest instance
+     * @return the IWorkbookFunctionsBitandRequest instance
      */
     IWorkbookFunctionsBitandRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

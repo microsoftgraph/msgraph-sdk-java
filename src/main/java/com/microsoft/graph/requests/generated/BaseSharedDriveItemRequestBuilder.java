@@ -27,9 +27,9 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
     /**
      * The request builder for the SharedDriveItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseSharedDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
-     * @return The ISharedDriveItemRequest instance
+     * @return the ISharedDriveItemRequest instance
      */
     public ISharedDriveItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The ISharedDriveItemRequest instance
+     * @param requestOptions the options for this request
+     * @return the ISharedDriveItemRequest instance
      */
     public ISharedDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SharedDriveItemRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
 
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
      *
-     * @return The IDriveItemRequestBuilder instance
+     * @return the IDriveItemRequestBuilder instance
      */
     public IDriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
@@ -72,36 +72,36 @@ public class BaseSharedDriveItemRequestBuilder extends BaseRequestBuilder implem
     }
 
     /**
-     * Gets the request builder for List.
+     * Gets the request builder for List
      *
-     * @return The IListRequestBuilder instance
+     * @return the IListRequestBuilder instance
      */
     public IListRequestBuilder list() {
         return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("list"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for ListItem.
+     * Gets the request builder for ListItem
      *
-     * @return The IListItemRequestBuilder instance
+     * @return the IListItemRequestBuilder instance
      */
     public IListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
      *
-     * @return The IDriveItemRequestBuilder instance
+     * @return the IDriveItemRequestBuilder instance
      */
     public IDriveItemRequestBuilder root() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("root"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for Site.
+     * Gets the request builder for Site
      *
-     * @return The ISiteRequestBuilder instance
+     * @return the ISiteRequestBuilder instance
      */
     public ISiteRequestBuilder site() {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("site"), getClient(), null);

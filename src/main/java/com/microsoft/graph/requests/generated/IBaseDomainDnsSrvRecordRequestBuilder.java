@@ -26,15 +26,15 @@ public interface IBaseDomainDnsSrvRecordRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IDomainDnsSrvRecordRequest instance
+     * @return the IDomainDnsSrvRecordRequest instance
      */
     IDomainDnsSrvRecordRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IDomainDnsSrvRecordRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDomainDnsSrvRecordRequest instance
      */
     IDomainDnsSrvRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

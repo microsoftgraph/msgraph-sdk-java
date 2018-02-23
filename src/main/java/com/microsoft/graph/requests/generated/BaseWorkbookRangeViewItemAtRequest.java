@@ -27,9 +27,9 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * The request for this WorkbookRangeViewItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeViewItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeView.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
 
     /**
      * Patches the WorkbookRangeViewItemAt
-     * @param srcWorkbookRangeView The WorkbookRangeView with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookRangeView);
@@ -47,9 +47,9 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Patches the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView with which to PATCH
-     * @return The WorkbookRangeView
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
+     * @return the WorkbookRangeView
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookRangeView patch(WorkbookRangeView srcWorkbookRangeView) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookRangeView);
@@ -58,8 +58,8 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Puts the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRangeView the WorkbookRangeView to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookRangeView);
@@ -68,9 +68,9 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Puts the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView to PUT
-     * @return The WorkbookRangeView
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRangeView the WorkbookRangeView to PUT
+     * @return the WorkbookRangeView
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookRangeView put(WorkbookRangeView srcWorkbookRangeView) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookRangeView);
@@ -78,7 +78,7 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Gets the WorkbookRangeView
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookRangeView> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Gets the WorkbookRangeView
      *
-     * @return The WorkbookRangeView
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookRangeView
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookRangeView get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookRangeViewItemAtRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookRangeViewItemAtRequest extends BaseRequest implements I
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookRangeViewItemAtRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

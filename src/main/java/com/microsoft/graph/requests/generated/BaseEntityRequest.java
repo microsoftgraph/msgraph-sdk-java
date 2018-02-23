@@ -27,10 +27,10 @@ public class BaseEntityRequest extends BaseRequest implements IBaseEntityRequest
     /**
      * The request for the Entity
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseEntityRequest(final String requestUrl,
             final IBaseClient client,
@@ -42,8 +42,8 @@ public class BaseEntityRequest extends BaseRequest implements IBaseEntityRequest
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IEntityRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -53,8 +53,8 @@ public class BaseEntityRequest extends BaseRequest implements IBaseEntityRequest
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IEntityRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsSumIfsRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsSumIfs
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param sumRange The sumRange
-     * @param values The values
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param sumRange the sumRange
+     * @param values the values
      */
     public BaseWorkbookFunctionsSumIfsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement sumRange, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsSumIfsRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsSumIfsRequest
      *
-     * @return The IWorkbookFunctionsSumIfsRequest instance
+     * @return the IWorkbookFunctionsSumIfsRequest instance
      */
     public IWorkbookFunctionsSumIfsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsSumIfsRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsSumIfsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSumIfsRequest instance
+     * @return the IWorkbookFunctionsSumIfsRequest instance
      */
     public IWorkbookFunctionsSumIfsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSumIfsRequest request = new WorkbookFunctionsSumIfsRequest(

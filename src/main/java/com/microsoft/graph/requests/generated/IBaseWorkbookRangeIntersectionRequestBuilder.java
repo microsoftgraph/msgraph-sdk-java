@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeIntersectionRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookRangeIntersectionRequest
      *
-     * @return The IWorkbookRangeIntersectionRequest instance
+     * @return the IWorkbookRangeIntersectionRequest instance
      */
     IWorkbookRangeIntersectionRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeIntersectionRequestBuilder extends IRequestBu
      * Creates the IWorkbookRangeIntersectionRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeIntersectionRequest instance
+     * @return the IWorkbookRangeIntersectionRequest instance
      */
     IWorkbookRangeIntersectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

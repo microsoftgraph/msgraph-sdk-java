@@ -27,9 +27,9 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
     /**
      * The request builder for the WorkbookTable
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
-     * @return The IWorkbookTableRequest instance
+     * @return the IWorkbookTableRequest instance
      */
     public IWorkbookTableRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookTableRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookTableRequest instance
      */
     public IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookTableRequest(getRequestUrl(), getClient(), requestOptions);
@@ -70,18 +70,18 @@ public class BaseWorkbookTableRequestBuilder extends BaseRequestBuilder implemen
     }
 
     /**
-     * Gets the request builder for WorkbookTableSort.
+     * Gets the request builder for WorkbookTableSort
      *
-     * @return The IWorkbookTableSortRequestBuilder instance
+     * @return the IWorkbookTableSortRequestBuilder instance
      */
     public IWorkbookTableSortRequestBuilder sort() {
         return new WorkbookTableSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookWorksheet.
+     * Gets the request builder for WorkbookWorksheet
      *
-     * @return The IWorkbookWorksheetRequestBuilder instance
+     * @return the IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

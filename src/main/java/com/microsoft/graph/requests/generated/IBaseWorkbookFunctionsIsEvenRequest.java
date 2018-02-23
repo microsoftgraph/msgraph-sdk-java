@@ -34,24 +34,24 @@ public interface IBaseWorkbookFunctionsIsEvenRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookFunctionsIsEvenRequest select(final String value) ;
 
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     IWorkbookFunctionsIsEvenRequest top(final int value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookFunctionsIsEvenRequest expand(final String value);
 

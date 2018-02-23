@@ -27,10 +27,10 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
     /**
      * The request for the InferenceClassificationOverride
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseInferenceClassificationOverrideRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
 
     /**
      * Gets the InferenceClassificationOverride from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<InferenceClassificationOverride> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
 
     /**
      * Gets the InferenceClassificationOverride from the service
-     * @return The InferenceClassificationOverride from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the InferenceClassificationOverride from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public InferenceClassificationOverride get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
 
     /**
      * Patches this InferenceClassificationOverride with a source
-     * @param sourceInferenceClassificationOverride The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceInferenceClassificationOverride the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final InferenceClassificationOverride sourceInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
         send(HttpMethod.PATCH, callback, sourceInferenceClassificationOverride);
@@ -83,9 +88,10 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
 
     /**
      * Patches this InferenceClassificationOverride with a source
-     * @param sourceInferenceClassificationOverride The source object with updates
-     * @return The updated InferenceClassificationOverride
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceInferenceClassificationOverride the source object with updates
+     * @return the updated InferenceClassificationOverride
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public InferenceClassificationOverride patch(final InferenceClassificationOverride sourceInferenceClassificationOverride) throws ClientException {
         return send(HttpMethod.PATCH, sourceInferenceClassificationOverride);
@@ -93,8 +99,9 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
 
     /**
      * Creates a InferenceClassificationOverride with a new object
-     * @param newInferenceClassificationOverride The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newInferenceClassificationOverride the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
         send(HttpMethod.POST, callback, newInferenceClassificationOverride);
@@ -102,9 +109,10 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
 
     /**
      * Creates a InferenceClassificationOverride with a new object
-     * @param newInferenceClassificationOverride The new object to create
-     * @return The created InferenceClassificationOverride
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newInferenceClassificationOverride the new object to create
+     * @return the created InferenceClassificationOverride
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public InferenceClassificationOverride post(final InferenceClassificationOverride newInferenceClassificationOverride) throws ClientException {
         return send(HttpMethod.POST, newInferenceClassificationOverride);
@@ -113,8 +121,8 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IInferenceClassificationOverrideRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseInferenceClassificationOverrideRequest extends BaseRequest impl
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IInferenceClassificationOverrideRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

@@ -26,10 +26,10 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookCreateSession
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param persistChanges The persistChanges
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param persistChanges the persistChanges
      */
     public BaseWorkbookCreateSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean persistChanges) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookCreateSessionRequest
      *
-     * @return The IWorkbookCreateSessionRequest instance
+     * @return the IWorkbookCreateSessionRequest instance
      */
     public IWorkbookCreateSessionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookCreateSessionRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookCreateSessionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookCreateSessionRequest instance
+     * @return the IWorkbookCreateSessionRequest instance
      */
     public IWorkbookCreateSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookCreateSessionRequest request = new WorkbookCreateSessionRequest(

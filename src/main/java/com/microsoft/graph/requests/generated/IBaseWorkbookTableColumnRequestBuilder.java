@@ -26,22 +26,22 @@ public interface IBaseWorkbookTableColumnRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
-     * @return The IWorkbookTableColumnRequest instance
+     * @return the IWorkbookTableColumnRequest instance
      */
     IWorkbookTableColumnRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookTableColumnRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookTableColumnRequest instance
      */
     IWorkbookTableColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookFilter.
+     * Gets the request builder for WorkbookFilter
      *
-     * @return The IWorkbookFilterRequestBuilder instance
+     * @return the IWorkbookFilterRequestBuilder instance
      */
     IWorkbookFilterRequestBuilder filter();
     IWorkbookTableColumnDataBodyRangeRequestBuilder dataBodyRange();

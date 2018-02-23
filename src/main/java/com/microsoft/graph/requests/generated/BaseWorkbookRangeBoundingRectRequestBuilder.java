@@ -26,10 +26,10 @@ public class BaseWorkbookRangeBoundingRectRequestBuilder extends BaseFunctionReq
     /**
      * The request builder for this WorkbookRangeBoundingRect
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param anotherRange The anotherRange
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param anotherRange the anotherRange
      */
     public BaseWorkbookRangeBoundingRectRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String anotherRange) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookRangeBoundingRectRequestBuilder extends BaseFunctionReq
     /**
      * Creates the IWorkbookRangeBoundingRectRequest
      *
-     * @return The IWorkbookRangeBoundingRectRequest instance
+     * @return the IWorkbookRangeBoundingRectRequest instance
      */
     public IWorkbookRangeBoundingRectRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookRangeBoundingRectRequestBuilder extends BaseFunctionReq
      * Creates the IWorkbookRangeBoundingRectRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeBoundingRectRequest instance
+     * @return the IWorkbookRangeBoundingRectRequest instance
      */
     public IWorkbookRangeBoundingRectRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeBoundingRectRequest request = new WorkbookRangeBoundingRectRequest(

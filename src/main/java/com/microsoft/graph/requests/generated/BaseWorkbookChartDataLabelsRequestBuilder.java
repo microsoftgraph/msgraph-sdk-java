@@ -27,9 +27,9 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
     /**
      * The request builder for the WorkbookChartDataLabels
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartDataLabelsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
-     * @return The IWorkbookChartDataLabelsRequest instance
+     * @return the IWorkbookChartDataLabelsRequest instance
      */
     public IWorkbookChartDataLabelsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IWorkbookChartDataLabelsRequest instance
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartDataLabelsRequest instance
      */
     public IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartDataLabelsRequest(getRequestUrl(), getClient(), requestOptions);
@@ -56,9 +56,9 @@ public class BaseWorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilde
 
 
     /**
-     * Gets the request builder for WorkbookChartDataLabelFormat.
+     * Gets the request builder for WorkbookChartDataLabelFormat
      *
-     * @return The IWorkbookChartDataLabelFormatRequestBuilder instance
+     * @return the IWorkbookChartDataLabelFormatRequestBuilder instance
      */
     public IWorkbookChartDataLabelFormatRequestBuilder format() {
         return new WorkbookChartDataLabelFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

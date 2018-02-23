@@ -26,12 +26,12 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this NotebookCopyNotebook
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param groupId The groupId
-     * @param renameAs The renameAs
-     * @param notebookFolder The notebookFolder
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param groupId the groupId
+     * @param renameAs the renameAs
+     * @param notebookFolder the notebookFolder
      */
     public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the INotebookCopyNotebookRequest
      *
-     * @return The INotebookCopyNotebookRequest instance
+     * @return the INotebookCopyNotebookRequest instance
      */
     public INotebookCopyNotebookRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
      * Creates the INotebookCopyNotebookRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The INotebookCopyNotebookRequest instance
+     * @return the INotebookCopyNotebookRequest instance
      */
     public INotebookCopyNotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         NotebookCopyNotebookRequest request = new NotebookCopyNotebookRequest(

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDaverageRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsDaverageRequest
      *
-     * @return The IWorkbookFunctionsDaverageRequest instance
+     * @return the IWorkbookFunctionsDaverageRequest instance
      */
     IWorkbookFunctionsDaverageRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDaverageRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsDaverageRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDaverageRequest instance
+     * @return the IWorkbookFunctionsDaverageRequest instance
      */
     IWorkbookFunctionsDaverageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

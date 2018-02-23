@@ -26,15 +26,15 @@ public interface IBaseOnenoteEntityHierarchyModelRequestBuilder extends IRequest
     /**
      * Creates the request
      *
-     * @return The IOnenoteEntityHierarchyModelRequest instance
+     * @return the IOnenoteEntityHierarchyModelRequest instance
      */
     IOnenoteEntityHierarchyModelRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IOnenoteEntityHierarchyModelRequest instance
+     * @param requestOptions the options for this request
+     * @return the IOnenoteEntityHierarchyModelRequest instance
      */
     IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

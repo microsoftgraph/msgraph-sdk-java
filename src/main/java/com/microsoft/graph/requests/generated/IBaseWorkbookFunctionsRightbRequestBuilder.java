@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsRightbRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsRightbRequest
      *
-     * @return The IWorkbookFunctionsRightbRequest instance
+     * @return the IWorkbookFunctionsRightbRequest instance
      */
     IWorkbookFunctionsRightbRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsRightbRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsRightbRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRightbRequest instance
+     * @return the IWorkbookFunctionsRightbRequest instance
      */
     IWorkbookFunctionsRightbRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

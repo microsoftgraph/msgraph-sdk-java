@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsConfidence_TRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsConfidence_T
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param alpha The alpha
-     * @param standardDev The standardDev
-     * @param size The size
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param alpha the alpha
+     * @param standardDev the standardDev
+     * @param size the size
      */
     public BaseWorkbookFunctionsConfidence_TRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsConfidence_TRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsConfidence_TRequest
      *
-     * @return The IWorkbookFunctionsConfidence_TRequest instance
+     * @return the IWorkbookFunctionsConfidence_TRequest instance
      */
     public IWorkbookFunctionsConfidence_TRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsConfidence_TRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsConfidence_TRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsConfidence_TRequest instance
+     * @return the IWorkbookFunctionsConfidence_TRequest instance
      */
     public IWorkbookFunctionsConfidence_TRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsConfidence_TRequest request = new WorkbookFunctionsConfidence_TRequest(

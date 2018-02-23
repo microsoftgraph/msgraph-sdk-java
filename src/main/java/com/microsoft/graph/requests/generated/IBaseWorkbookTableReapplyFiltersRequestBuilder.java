@@ -27,7 +27,7 @@ public interface IBaseWorkbookTableReapplyFiltersRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookTableReapplyFiltersRequest
      *
-     * @return The IWorkbookTableReapplyFiltersRequest instance
+     * @return the IWorkbookTableReapplyFiltersRequest instance
      */
     IWorkbookTableReapplyFiltersRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookTableReapplyFiltersRequestBuilder extends IRequest
      * Creates the IWorkbookTableReapplyFiltersRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableReapplyFiltersRequest instance
+     * @return the IWorkbookTableReapplyFiltersRequest instance
      */
     IWorkbookTableReapplyFiltersRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

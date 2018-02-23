@@ -27,7 +27,7 @@ public interface IBaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends IRe
     /**
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest
      *
-     * @return The IWorkbookNamedItemAddFormulaLocalRequest instance
+     * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
     IWorkbookNamedItemAddFormulaLocalRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends IRe
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookNamedItemAddFormulaLocalRequest instance
+     * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
     IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

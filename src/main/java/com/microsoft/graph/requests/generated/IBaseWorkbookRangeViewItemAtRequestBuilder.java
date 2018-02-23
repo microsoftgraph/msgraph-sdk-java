@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeViewItemAtRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookRangeViewItemAtRequest
      *
-     * @return The IWorkbookRangeViewItemAtRequest instance
+     * @return the IWorkbookRangeViewItemAtRequest instance
      */
     IWorkbookRangeViewItemAtRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeViewItemAtRequestBuilder extends IRequestBuil
      * Creates the IWorkbookRangeViewItemAtRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeViewItemAtRequest instance
+     * @return the IWorkbookRangeViewItemAtRequest instance
      */
     IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

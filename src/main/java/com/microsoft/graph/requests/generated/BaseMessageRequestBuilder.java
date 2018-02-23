@@ -27,9 +27,9 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * The request builder for the Message
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseMessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * Creates the request
      *
-     * @return The IMessageRequest instance
+     * @return the IMessageRequest instance
      */
     public IMessageRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseMessageRequestBuilder extends BaseRequestBuilder implements IBa
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IMessageRequest instance
+     * @param requestOptions the options for this request
+     * @return the IMessageRequest instance
      */
     public IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new MessageRequest(getRequestUrl(), getClient(), requestOptions);

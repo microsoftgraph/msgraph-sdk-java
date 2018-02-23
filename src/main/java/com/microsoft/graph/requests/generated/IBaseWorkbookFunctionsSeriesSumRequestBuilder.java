@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSeriesSumRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsSeriesSumRequest
      *
-     * @return The IWorkbookFunctionsSeriesSumRequest instance
+     * @return the IWorkbookFunctionsSeriesSumRequest instance
      */
     IWorkbookFunctionsSeriesSumRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSeriesSumRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsSeriesSumRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSeriesSumRequest instance
+     * @return the IWorkbookFunctionsSeriesSumRequest instance
      */
     IWorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -26,15 +26,15 @@ public interface IBaseListRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IListRequest instance
+     * @return the IListRequest instance
      */
     IListRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IListRequest instance
+     * @param requestOptions the options for this request
+     * @return the IListRequest instance
      */
     IListRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -47,9 +47,9 @@ public interface IBaseListRequestBuilder extends IRequestBuilder {
     IContentTypeRequestBuilder contentTypes(final String id);
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
      *
-     * @return The IDriveRequestBuilder instance
+     * @return the IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 

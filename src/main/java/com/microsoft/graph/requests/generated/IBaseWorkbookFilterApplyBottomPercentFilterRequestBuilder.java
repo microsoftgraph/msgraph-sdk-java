@@ -27,7 +27,7 @@ public interface IBaseWorkbookFilterApplyBottomPercentFilterRequestBuilder exten
     /**
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest
      *
-     * @return The IWorkbookFilterApplyBottomPercentFilterRequest instance
+     * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
     IWorkbookFilterApplyBottomPercentFilterRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFilterApplyBottomPercentFilterRequestBuilder exten
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyBottomPercentFilterRequest instance
+     * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
     IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

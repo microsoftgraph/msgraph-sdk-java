@@ -26,10 +26,10 @@ public class BaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseAct
     /**
      * The request builder for this WorkbookFilterApplyTopItemsFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param count The count
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param count the count
      */
     public BaseWorkbookFilterApplyTopItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseAct
     /**
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest
      *
-     * @return The IWorkbookFilterApplyTopItemsFilterRequest instance
+     * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
     public IWorkbookFilterApplyTopItemsFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFilterApplyTopItemsFilterRequestBuilder extends BaseAct
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyTopItemsFilterRequest instance
+     * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
     public IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyTopItemsFilterRequest request = new WorkbookFilterApplyTopItemsFilterRequest(

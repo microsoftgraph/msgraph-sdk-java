@@ -26,12 +26,12 @@ public class BaseOnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRe
     /**
      * The request builder for this OnenoteSectionCopyToNotebook
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param id The id
-     * @param groupId The groupId
-     * @param renameAs The renameAs
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param id the id
+     * @param groupId the groupId
+     * @param renameAs the renameAs
      */
     public BaseOnenoteSectionCopyToNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseOnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRe
     /**
      * Creates the IOnenoteSectionCopyToNotebookRequest
      *
-     * @return The IOnenoteSectionCopyToNotebookRequest instance
+     * @return the IOnenoteSectionCopyToNotebookRequest instance
      */
     public IOnenoteSectionCopyToNotebookRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseOnenoteSectionCopyToNotebookRequestBuilder extends BaseActionRe
      * Creates the IOnenoteSectionCopyToNotebookRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IOnenoteSectionCopyToNotebookRequest instance
+     * @return the IOnenoteSectionCopyToNotebookRequest instance
      */
     public IOnenoteSectionCopyToNotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         OnenoteSectionCopyToNotebookRequest request = new OnenoteSectionCopyToNotebookRequest(

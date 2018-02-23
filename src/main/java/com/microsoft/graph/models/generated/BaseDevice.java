@@ -65,7 +65,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Metadata.
-     * 
+     * For interal use only. Set to null.
      */
     @SerializedName("deviceMetadata")
     @Expose
@@ -73,7 +73,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Version.
-     * 
+     * For interal use only.
      */
     @SerializedName("deviceVersion")
     @Expose
@@ -145,7 +145,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * 
+     * Type of trust for the joined device. Read-only. Possible values: Workplace - indicates bring your own personal devicesAzureAd - Cloud only joined devicesServerAd - on-premises domain joined devices joined to Azure AD. For more details, see Introduction to device management in Azure Active Directory
      */
     @SerializedName("trustType")
     @Expose
@@ -182,6 +182,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -190,6 +191,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -197,10 +199,10 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

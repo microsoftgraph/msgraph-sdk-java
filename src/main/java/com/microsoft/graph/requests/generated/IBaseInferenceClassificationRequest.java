@@ -26,72 +26,80 @@ public interface IBaseInferenceClassificationRequest extends IHttpRequest {
 
     /**
      * Gets the InferenceClassification from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<InferenceClassification> callback);
 
     /**
      * Gets the InferenceClassification from the service
-     * @return The InferenceClassification from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the InferenceClassification from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     InferenceClassification get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this InferenceClassification with a source
-     * @param sourceInferenceClassification The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceInferenceClassification the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final InferenceClassification sourceInferenceClassification, final ICallback<InferenceClassification> callback);
 
     /**
      * Patches this InferenceClassification with a source
-     * @param sourceInferenceClassification The source object with updates
-     * @return The updated InferenceClassification
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceInferenceClassification the source object with updates
+     * @return the updated InferenceClassification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     InferenceClassification patch(final InferenceClassification sourceInferenceClassification) throws ClientException;
 
     /**
      * Posts a InferenceClassification with a new object
-     * @param newInferenceClassification The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newInferenceClassification the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final InferenceClassification newInferenceClassification, final ICallback<InferenceClassification> callback);
 
     /**
      * Posts a InferenceClassification with a new object
-     * @param newInferenceClassification The new object to create
-     * @return The created InferenceClassification
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newInferenceClassification the new object to create
+     * @return the created InferenceClassification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     InferenceClassification post(final InferenceClassification newInferenceClassification) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseInferenceClassificationRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseInferenceClassificationRequest expand(final String value);
 

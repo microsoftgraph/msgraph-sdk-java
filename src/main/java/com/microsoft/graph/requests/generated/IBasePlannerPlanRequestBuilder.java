@@ -26,15 +26,15 @@ public interface IBasePlannerPlanRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IPlannerPlanRequest instance
+     * @return the IPlannerPlanRequest instance
      */
     IPlannerPlanRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IPlannerPlanRequest instance
+     * @param requestOptions the options for this request
+     * @return the IPlannerPlanRequest instance
      */
     IPlannerPlanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -47,9 +47,9 @@ public interface IBasePlannerPlanRequestBuilder extends IRequestBuilder {
     IPlannerBucketRequestBuilder buckets(final String id);
 
     /**
-     * Gets the request builder for PlannerPlanDetails.
+     * Gets the request builder for PlannerPlanDetails
      *
-     * @return The IPlannerPlanDetailsRequestBuilder instance
+     * @return the IPlannerPlanDetailsRequestBuilder instance
      */
     IPlannerPlanDetailsRequestBuilder details();
 

@@ -26,14 +26,14 @@ public class BaseWorkbookFunctionsIntRateRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsIntRate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param settlement The settlement
-     * @param maturity The maturity
-     * @param investment The investment
-     * @param redemption The redemption
-     * @param basis The basis
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param investment the investment
+     * @param redemption the redemption
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsIntRateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsIntRateRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsIntRateRequest
      *
-     * @return The IWorkbookFunctionsIntRateRequest instance
+     * @return the IWorkbookFunctionsIntRateRequest instance
      */
     public IWorkbookFunctionsIntRateRequest buildRequest() {
         return buildRequest(getOptions());
@@ -57,7 +57,7 @@ public class BaseWorkbookFunctionsIntRateRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsIntRateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIntRateRequest instance
+     * @return the IWorkbookFunctionsIntRateRequest instance
      */
     public IWorkbookFunctionsIntRateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIntRateRequest request = new WorkbookFunctionsIntRateRequest(

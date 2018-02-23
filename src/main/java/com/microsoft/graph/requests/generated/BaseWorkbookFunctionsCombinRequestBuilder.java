@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsCombinRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsCombin
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param number The number
-     * @param numberChosen The numberChosen
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param numberChosen the numberChosen
      */
     public BaseWorkbookFunctionsCombinRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsCombinRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsCombinRequest
      *
-     * @return The IWorkbookFunctionsCombinRequest instance
+     * @return the IWorkbookFunctionsCombinRequest instance
      */
     public IWorkbookFunctionsCombinRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsCombinRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsCombinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCombinRequest instance
+     * @return the IWorkbookFunctionsCombinRequest instance
      */
     public IWorkbookFunctionsCombinRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCombinRequest request = new WorkbookFunctionsCombinRequest(

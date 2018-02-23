@@ -30,31 +30,31 @@ public interface IBaseDomainVerifyRequest {
     /**
      * Creates the DomainVerify
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     void post(final ICallback<Domain> callback);
 
     /**
      * Creates the DomainVerify
      *
-     * @return The Domain
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the Domain
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     Domain post() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IDomainVerifyRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IDomainVerifyRequest expand(final String value);
 

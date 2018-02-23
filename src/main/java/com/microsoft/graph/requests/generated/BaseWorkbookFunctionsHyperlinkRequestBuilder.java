@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsHyperlink
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param linkLocation The linkLocation
-     * @param friendlyName The friendlyName
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param linkLocation the linkLocation
+     * @param friendlyName the friendlyName
      */
     public BaseWorkbookFunctionsHyperlinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement linkLocation, final com.google.gson.JsonElement friendlyName) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsHyperlinkRequest
      *
-     * @return The IWorkbookFunctionsHyperlinkRequest instance
+     * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
     public IWorkbookFunctionsHyperlinkRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsHyperlinkRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHyperlinkRequest instance
+     * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
     public IWorkbookFunctionsHyperlinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHyperlinkRequest request = new WorkbookFunctionsHyperlinkRequest(

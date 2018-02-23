@@ -26,72 +26,80 @@ public interface IBaseWorkbookWorksheetProtectionRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookWorksheetProtection from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookWorksheetProtection> callback);
 
     /**
      * Gets the WorkbookWorksheetProtection from the service
-     * @return The WorkbookWorksheetProtection from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookWorksheetProtection from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookWorksheetProtection get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookWorksheetProtection with a source
-     * @param sourceWorkbookWorksheetProtection The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookWorksheetProtection the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback);
 
     /**
      * Patches this WorkbookWorksheetProtection with a source
-     * @param sourceWorkbookWorksheetProtection The source object with updates
-     * @return The updated WorkbookWorksheetProtection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookWorksheetProtection the source object with updates
+     * @return the updated WorkbookWorksheetProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookWorksheetProtection patch(final WorkbookWorksheetProtection sourceWorkbookWorksheetProtection) throws ClientException;
 
     /**
      * Posts a WorkbookWorksheetProtection with a new object
-     * @param newWorkbookWorksheetProtection The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookWorksheetProtection the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback);
 
     /**
      * Posts a WorkbookWorksheetProtection with a new object
-     * @param newWorkbookWorksheetProtection The new object to create
-     * @return The created WorkbookWorksheetProtection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookWorksheetProtection the new object to create
+     * @return the created WorkbookWorksheetProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookWorksheetProtection post(final WorkbookWorksheetProtection newWorkbookWorksheetProtection) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookWorksheetProtectionRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookWorksheetProtectionRequest expand(final String value);
 

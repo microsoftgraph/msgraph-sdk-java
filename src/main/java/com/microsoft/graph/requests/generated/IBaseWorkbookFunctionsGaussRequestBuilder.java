@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsGaussRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsGaussRequest
      *
-     * @return The IWorkbookFunctionsGaussRequest instance
+     * @return the IWorkbookFunctionsGaussRequest instance
      */
     IWorkbookFunctionsGaussRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsGaussRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsGaussRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGaussRequest instance
+     * @return the IWorkbookFunctionsGaussRequest instance
      */
     IWorkbookFunctionsGaussRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

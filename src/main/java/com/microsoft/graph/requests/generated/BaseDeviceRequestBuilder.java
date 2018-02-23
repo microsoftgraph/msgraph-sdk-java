@@ -27,9 +27,9 @@ public class BaseDeviceRequestBuilder extends BaseRequestBuilder implements IBas
     /**
      * The request builder for the Device
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +38,7 @@ public class BaseDeviceRequestBuilder extends BaseRequestBuilder implements IBas
     /**
      * Creates the request
      *
-     * @return The IDeviceRequest instance
+     * @return the IDeviceRequest instance
      */
     public IDeviceRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,8 +47,8 @@ public class BaseDeviceRequestBuilder extends BaseRequestBuilder implements IBas
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
-     * @param requestOptions The options for this request
-     * @return The IDeviceRequest instance
+     * @param requestOptions the options for this request
+     * @return the IDeviceRequest instance
      */
     public IDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new DeviceRequest(getRequestUrl(), getClient(), requestOptions);

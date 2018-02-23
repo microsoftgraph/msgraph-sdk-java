@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsWorkDay_IntlRequest
      *
-     * @return The IWorkbookFunctionsWorkDay_IntlRequest instance
+     * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
      */
     IWorkbookFunctionsWorkDay_IntlRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsWorkDay_IntlRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsWorkDay_IntlRequest instance
+     * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
      */
     IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

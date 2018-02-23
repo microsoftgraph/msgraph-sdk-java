@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsVlookupRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsVlookupRequest
      *
-     * @return The IWorkbookFunctionsVlookupRequest instance
+     * @return the IWorkbookFunctionsVlookupRequest instance
      */
     IWorkbookFunctionsVlookupRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsVlookupRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsVlookupRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsVlookupRequest instance
+     * @return the IWorkbookFunctionsVlookupRequest instance
      */
     IWorkbookFunctionsVlookupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

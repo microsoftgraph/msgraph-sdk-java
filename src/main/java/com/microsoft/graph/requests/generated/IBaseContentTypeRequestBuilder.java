@@ -26,15 +26,15 @@ public interface IBaseContentTypeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
-     * @return The IContentTypeRequest instance
+     * @return the IContentTypeRequest instance
      */
     IContentTypeRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
      *
-     * @param requestOptions The options for this request
-     * @return The IContentTypeRequest instance
+     * @param requestOptions the options for this request
+     * @return the IContentTypeRequest instance
      */
     IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseAction
     /**
      * The request builder for this WorkbookFunctionsChiSq_Dist_RT
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param x The x
-     * @param degFreedom The degFreedom
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param degFreedom the degFreedom
      */
     public BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseAction
     /**
      * Creates the IWorkbookFunctionsChiSq_Dist_RTRequest
      *
-     * @return The IWorkbookFunctionsChiSq_Dist_RTRequest instance
+     * @return the IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
     public IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends BaseAction
      * Creates the IWorkbookFunctionsChiSq_Dist_RTRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsChiSq_Dist_RTRequest instance
+     * @return the IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
     public IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsChiSq_Dist_RTRequest request = new WorkbookFunctionsChiSq_Dist_RTRequest(

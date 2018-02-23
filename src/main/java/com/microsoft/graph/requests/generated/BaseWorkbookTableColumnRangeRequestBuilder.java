@@ -26,9 +26,9 @@ public class BaseWorkbookTableColumnRangeRequestBuilder extends BaseFunctionRequ
     /**
      * The request builder for this WorkbookTableColumnRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableColumnRangeRequestBuilder extends BaseFunctionRequ
     /**
      * Creates the IWorkbookTableColumnRangeRequest
      *
-     * @return The IWorkbookTableColumnRangeRequest instance
+     * @return the IWorkbookTableColumnRangeRequest instance
      */
     public IWorkbookTableColumnRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableColumnRangeRequestBuilder extends BaseFunctionRequ
      * Creates the IWorkbookTableColumnRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableColumnRangeRequest instance
+     * @return the IWorkbookTableColumnRangeRequest instance
      */
     public IWorkbookTableColumnRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnRangeRequest request = new WorkbookTableColumnRangeRequest(

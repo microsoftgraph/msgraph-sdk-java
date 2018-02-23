@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsMidbRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsMidbRequest
      *
-     * @return The IWorkbookFunctionsMidbRequest instance
+     * @return the IWorkbookFunctionsMidbRequest instance
      */
     IWorkbookFunctionsMidbRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsMidbRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsMidbRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMidbRequest instance
+     * @return the IWorkbookFunctionsMidbRequest instance
      */
     IWorkbookFunctionsMidbRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

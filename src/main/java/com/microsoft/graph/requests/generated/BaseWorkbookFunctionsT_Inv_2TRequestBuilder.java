@@ -26,11 +26,11 @@ public class BaseWorkbookFunctionsT_Inv_2TRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsT_Inv_2T
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param probability The probability
-     * @param degFreedom The degFreedom
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
+     * @param degFreedom the degFreedom
      */
     public BaseWorkbookFunctionsT_Inv_2TRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +41,7 @@ public class BaseWorkbookFunctionsT_Inv_2TRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsT_Inv_2TRequest
      *
-     * @return The IWorkbookFunctionsT_Inv_2TRequest instance
+     * @return the IWorkbookFunctionsT_Inv_2TRequest instance
      */
     public IWorkbookFunctionsT_Inv_2TRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +51,7 @@ public class BaseWorkbookFunctionsT_Inv_2TRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsT_Inv_2TRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsT_Inv_2TRequest instance
+     * @return the IWorkbookFunctionsT_Inv_2TRequest instance
      */
     public IWorkbookFunctionsT_Inv_2TRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsT_Inv_2TRequest request = new WorkbookFunctionsT_Inv_2TRequest(

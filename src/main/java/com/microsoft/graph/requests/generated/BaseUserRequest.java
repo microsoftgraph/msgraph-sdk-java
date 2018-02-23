@@ -27,10 +27,10 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
     /**
      * The request for the User
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseUserRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * Gets the User from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<User> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * Gets the User from the service
-     * @return The User from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the User from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public User get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * Patches this User with a source
-     * @param sourceUser The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceUser the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final User sourceUser, final ICallback<User> callback) {
         send(HttpMethod.PATCH, callback, sourceUser);
@@ -83,9 +88,10 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * Patches this User with a source
-     * @param sourceUser The source object with updates
-     * @return The updated User
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceUser the source object with updates
+     * @return the updated User
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public User patch(final User sourceUser) throws ClientException {
         return send(HttpMethod.PATCH, sourceUser);
@@ -93,8 +99,9 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * Creates a User with a new object
-     * @param newUser The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newUser the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final User newUser, final ICallback<User> callback) {
         send(HttpMethod.POST, callback, newUser);
@@ -102,9 +109,10 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
 
     /**
      * Creates a User with a new object
-     * @param newUser The new object to create
-     * @return The created User
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newUser the new object to create
+     * @return the created User
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public User post(final User newUser) throws ClientException {
         return send(HttpMethod.POST, newUser);
@@ -113,8 +121,8 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IUserRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseUserRequest extends BaseRequest implements IBaseUserRequest {
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IUserRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

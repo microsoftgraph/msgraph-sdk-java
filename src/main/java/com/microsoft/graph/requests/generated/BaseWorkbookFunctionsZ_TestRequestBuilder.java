@@ -26,12 +26,12 @@ public class BaseWorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsZ_Test
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param array The array
-     * @param x The x
-     * @param sigma The sigma
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param x the x
+     * @param sigma the sigma
      */
     public BaseWorkbookFunctionsZ_TestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement sigma) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +43,7 @@ public class BaseWorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsZ_TestRequest
      *
-     * @return The IWorkbookFunctionsZ_TestRequest instance
+     * @return the IWorkbookFunctionsZ_TestRequest instance
      */
     public IWorkbookFunctionsZ_TestRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +53,7 @@ public class BaseWorkbookFunctionsZ_TestRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsZ_TestRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsZ_TestRequest instance
+     * @return the IWorkbookFunctionsZ_TestRequest instance
      */
     public IWorkbookFunctionsZ_TestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsZ_TestRequest request = new WorkbookFunctionsZ_TestRequest(

@@ -26,10 +26,10 @@ public class BaseWorkbookFunctionsColumnsRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsColumns
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param array The array
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
      */
     public BaseWorkbookFunctionsColumnsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +39,7 @@ public class BaseWorkbookFunctionsColumnsRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsColumnsRequest
      *
-     * @return The IWorkbookFunctionsColumnsRequest instance
+     * @return the IWorkbookFunctionsColumnsRequest instance
      */
     public IWorkbookFunctionsColumnsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +49,7 @@ public class BaseWorkbookFunctionsColumnsRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsColumnsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsColumnsRequest instance
+     * @return the IWorkbookFunctionsColumnsRequest instance
      */
     public IWorkbookFunctionsColumnsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsColumnsRequest request = new WorkbookFunctionsColumnsRequest(

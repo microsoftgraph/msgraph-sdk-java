@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIsErrorRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsIsErrorRequest
      *
-     * @return The IWorkbookFunctionsIsErrorRequest instance
+     * @return the IWorkbookFunctionsIsErrorRequest instance
      */
     IWorkbookFunctionsIsErrorRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIsErrorRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsIsErrorRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsErrorRequest instance
+     * @return the IWorkbookFunctionsIsErrorRequest instance
      */
     IWorkbookFunctionsIsErrorRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

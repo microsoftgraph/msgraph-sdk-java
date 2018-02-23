@@ -27,7 +27,7 @@ public interface IBaseWorkbookApplicationCalculateRequestBuilder extends IReques
     /**
      * Creates the IWorkbookApplicationCalculateRequest
      *
-     * @return The IWorkbookApplicationCalculateRequest instance
+     * @return the IWorkbookApplicationCalculateRequest instance
      */
     IWorkbookApplicationCalculateRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookApplicationCalculateRequestBuilder extends IReques
      * Creates the IWorkbookApplicationCalculateRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookApplicationCalculateRequest instance
+     * @return the IWorkbookApplicationCalculateRequest instance
      */
     IWorkbookApplicationCalculateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

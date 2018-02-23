@@ -36,7 +36,7 @@ public class BaseOrganizationCollectionResponse implements IJsonBackedObject {
     public java.util.List<Organization> value;
 
     /**
-     * The url to the next page of this collection, or null
+     * The URL to the next page of this collection, or null
      */
     @SerializedName("@odata.nextLink")
     @Expose(serialize = false)

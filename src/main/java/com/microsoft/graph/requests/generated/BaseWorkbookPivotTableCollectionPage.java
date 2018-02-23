@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookPivotTableCollectionPage extends BaseCollectionPage<WorkbookPivotTable, IWorkbookPivotTableCollectionRequestBuilder> implements IBaseWorkbookPivotTableCollectionPage {
 
     /**
-     * A collection page for WorkbookPivotTable.
+     * A collection page for WorkbookPivotTable
      *
-     * @param response The serialized BaseWorkbookPivotTableCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookPivotTableCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseWorkbookPivotTableCollectionPage(final BaseWorkbookPivotTableCollectionResponse response, final IWorkbookPivotTableCollectionRequestBuilder builder) {
         super(response.value, builder);
