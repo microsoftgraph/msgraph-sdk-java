@@ -26,72 +26,80 @@ public interface IBaseWorkbookChartSeriesRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookChartSeries from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartSeries> callback);
 
     /**
      * Gets the WorkbookChartSeries from the service
-     * @return The WorkbookChartSeries from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartSeries from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartSeries get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookChartSeries with a source
-     * @param sourceWorkbookChartSeries The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartSeries the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookChartSeries sourceWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
 
     /**
      * Patches this WorkbookChartSeries with a source
-     * @param sourceWorkbookChartSeries The source object with updates
-     * @return The updated WorkbookChartSeries
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartSeries the source object with updates
+     * @return the updated WorkbookChartSeries
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartSeries patch(final WorkbookChartSeries sourceWorkbookChartSeries) throws ClientException;
 
     /**
      * Posts a WorkbookChartSeries with a new object
-     * @param newWorkbookChartSeries The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartSeries the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback);
 
     /**
      * Posts a WorkbookChartSeries with a new object
-     * @param newWorkbookChartSeries The new object to create
-     * @return The created WorkbookChartSeries
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartSeries the new object to create
+     * @return the created WorkbookChartSeries
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartSeries post(final WorkbookChartSeries newWorkbookChartSeries) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookChartSeriesRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookChartSeriesRequest expand(final String value);
 

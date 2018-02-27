@@ -27,9 +27,9 @@ public class WorkbookProcessQueryRequest extends BaseWorkbookProcessQueryRequest
     /**
      * The request for this WorkbookProcessQuery
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookProcessQueryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

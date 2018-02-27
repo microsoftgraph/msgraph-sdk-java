@@ -27,9 +27,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     /**
      * The request builder for the Group
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Creates the request
+     *
+     * @return the IGroupRequest instance
      */
     public IGroupRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IGroupRequest instance
      */
     public IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new GroupRequest(getRequestUrl(), getClient(), requestOptions);
@@ -65,7 +70,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Gets the request builder for DirectoryObject.
+     * Gets the request builder for DirectoryObject
+     *
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     public IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdOnBehalfOf"), getClient(), null);
@@ -100,7 +107,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Gets the request builder for Calendar.
+     * Gets the request builder for Calendar
+     *
+     * @return the ICalendarRequestBuilder instance
      */
     public ICalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
@@ -128,7 +137,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Gets the request builder for ProfilePhoto.
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the IProfilePhotoRequestBuilder instance
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
@@ -156,7 +167,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
+     *
+     * @return the IDriveRequestBuilder instance
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
@@ -177,14 +190,18 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     }
 
     /**
-     * Gets the request builder for PlannerGroup.
+     * Gets the request builder for PlannerGroup
+     *
+     * @return the IPlannerGroupRequestBuilder instance
      */
     public IPlannerGroupRequestBuilder planner() {
         return new PlannerGroupRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);

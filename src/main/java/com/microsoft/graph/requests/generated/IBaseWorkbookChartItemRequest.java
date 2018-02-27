@@ -30,63 +30,64 @@ public interface IBaseWorkbookChartItemRequest {
     /**
      * Patches the WorkbookChartItem
      *
-     * @param srcWorkbookChart The WorkbookChart with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChart the WorkbookChart with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback);
 
     /**
      * Patches the WorkbookChartItem
      *
-     * @param srcWorkbookChart The WorkbookChart with which to PATCH
-     * @return The WorkbookChart
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChart the WorkbookChart with which to PATCH
+     * @return the WorkbookChart
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookChart patch(WorkbookChart srcWorkbookChart) throws ClientException;
 
     /**
      * Puts the WorkbookChartItem
      *
-     * @param srcWorkbookChart The WorkbookChart to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChart the WorkbookChart to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback);
 
     /**
      * Puts the WorkbookChartItem
      *
-     * @param srcWorkbookChart The WorkbookChart to PUT
-     * @return The WorkbookChart
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChart the WorkbookChart to PUT
+     * @return the WorkbookChart
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      WorkbookChart put(WorkbookChart srcWorkbookChart) throws ClientException;
     /**
      * Gets the WorkbookChart
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChart> callback);
 
     /**
      * Gets the WorkbookChart
      *
-     * @return The WorkbookChart
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookChart
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookChart get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookChartItemRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookChartItemRequest expand(final String value);
 

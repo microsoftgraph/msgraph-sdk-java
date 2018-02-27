@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAsinhRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsAsinhRequest
      *
-     * @return The IWorkbookFunctionsAsinhRequest instance
+     * @return the IWorkbookFunctionsAsinhRequest instance
      */
     IWorkbookFunctionsAsinhRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAsinhRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsAsinhRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAsinhRequest instance
+     * @return the IWorkbookFunctionsAsinhRequest instance
      */
     IWorkbookFunctionsAsinhRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

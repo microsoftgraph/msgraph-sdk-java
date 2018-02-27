@@ -27,9 +27,11 @@ public class WorkbookFunctionsExactRequestBuilder extends BaseWorkbookFunctionsE
     /**
      * The request builder for this WorkbookFunctionsExact
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text1 the text1
+     * @param text2 the text2
      */
     public WorkbookFunctionsExactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text1, final com.google.gson.JsonElement text2) {
         super(requestUrl, client, requestOptions, text1, text2);

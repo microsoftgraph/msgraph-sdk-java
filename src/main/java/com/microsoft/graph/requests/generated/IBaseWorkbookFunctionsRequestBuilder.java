@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookFunctionsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookFunctionsRequest instance
      */
     IWorkbookFunctionsRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookFunctionsRequest instance
      */
     IWorkbookFunctionsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number);

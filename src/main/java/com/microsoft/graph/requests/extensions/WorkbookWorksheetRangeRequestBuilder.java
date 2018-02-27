@@ -27,9 +27,9 @@ public class WorkbookWorksheetRangeRequestBuilder extends BaseWorkbookWorksheetR
     /**
      * The request builder for this WorkbookWorksheetRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,9 +38,10 @@ public class WorkbookWorksheetRangeRequestBuilder extends BaseWorkbookWorksheetR
     /**
      * The request builder for this WorkbookWorksheetRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param address the address
      */
     public WorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String address) {
         super(requestUrl, client, requestOptions, address);

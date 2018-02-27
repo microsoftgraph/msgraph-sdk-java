@@ -27,9 +27,11 @@ public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsFvschedule
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param principal the principal
+     * @param schedule the schedule
      */
     public WorkbookFunctionsFvscheduleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement principal, final com.google.gson.JsonElement schedule) {
         super(requestUrl, client, requestOptions, principal, schedule);

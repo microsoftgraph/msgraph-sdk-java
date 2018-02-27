@@ -26,9 +26,9 @@ public class BaseWorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionRe
     /**
      * The request builder for this WorkbookWorksheetUsedRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -36,9 +36,10 @@ public class BaseWorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionRe
     /**
      * The request builder for this WorkbookWorksheetUsedRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param valuesOnly the valuesOnly
      */
     public BaseWorkbookWorksheetUsedRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean valuesOnly) {
         super(requestUrl, client, requestOptions);
@@ -48,7 +49,7 @@ public class BaseWorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionRe
     /**
      * Creates the IWorkbookWorksheetUsedRangeRequest
      *
-     * @return The IWorkbookWorksheetUsedRangeRequest instance
+     * @return the IWorkbookWorksheetUsedRangeRequest instance
      */
     public IWorkbookWorksheetUsedRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -58,7 +59,7 @@ public class BaseWorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionRe
      * Creates the IWorkbookWorksheetUsedRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookWorksheetUsedRangeRequest instance
+     * @return the IWorkbookWorksheetUsedRangeRequest instance
      */
     public IWorkbookWorksheetUsedRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetUsedRangeRequest request = new WorkbookWorksheetUsedRangeRequest(

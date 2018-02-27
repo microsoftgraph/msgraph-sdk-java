@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCotRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsCotRequest
      *
-     * @return The IWorkbookFunctionsCotRequest instance
+     * @return the IWorkbookFunctionsCotRequest instance
      */
     IWorkbookFunctionsCotRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCotRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsCotRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCotRequest instance
+     * @return the IWorkbookFunctionsCotRequest instance
      */
     IWorkbookFunctionsCotRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

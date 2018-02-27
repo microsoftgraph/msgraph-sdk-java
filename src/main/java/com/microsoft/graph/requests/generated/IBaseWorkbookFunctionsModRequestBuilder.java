@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsModRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsModRequest
      *
-     * @return The IWorkbookFunctionsModRequest instance
+     * @return the IWorkbookFunctionsModRequest instance
      */
     IWorkbookFunctionsModRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsModRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsModRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsModRequest instance
+     * @return the IWorkbookFunctionsModRequest instance
      */
     IWorkbookFunctionsModRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

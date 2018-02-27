@@ -27,9 +27,9 @@ public class WorkbookFunctionsIso_CeilingRequest extends BaseWorkbookFunctionsIs
     /**
      * The request for this WorkbookFunctionsIso_Ceiling
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsIso_CeilingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

@@ -28,9 +28,9 @@ public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveI
     /**
      * The request for this DriveItemCopy
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseDriveItemCopyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
@@ -48,8 +48,8 @@ public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveI
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IDriveItemCopyRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -59,8 +59,8 @@ public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveI
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IDriveItemCopyRequest top(final int value) {
         getQueryOptions().add(new QueryOption("$top", value+""));
@@ -70,8 +70,8 @@ public class BaseDriveItemCopyRequest extends BaseRequest implements IBaseDriveI
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IDriveItemCopyRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

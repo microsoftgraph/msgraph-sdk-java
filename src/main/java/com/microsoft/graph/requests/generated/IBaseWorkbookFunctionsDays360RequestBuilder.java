@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDays360RequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsDays360Request
      *
-     * @return The IWorkbookFunctionsDays360Request instance
+     * @return the IWorkbookFunctionsDays360Request instance
      */
     IWorkbookFunctionsDays360Request buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDays360RequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsDays360Request with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDays360Request instance
+     * @return the IWorkbookFunctionsDays360Request instance
      */
     IWorkbookFunctionsDays360Request buildRequest(final java.util.List<? extends Option> requestOptions);
 }

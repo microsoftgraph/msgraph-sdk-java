@@ -27,9 +27,11 @@ public class WorkbookFunctionsPowerRequestBuilder extends BaseWorkbookFunctionsP
     /**
      * The request builder for this WorkbookFunctionsPower
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param power the power
      */
     public WorkbookFunctionsPowerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement power) {
         super(requestUrl, client, requestOptions, number, power);

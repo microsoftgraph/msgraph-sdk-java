@@ -42,67 +42,67 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * An HTTP request.
+ * An HTTP request
  */
 public abstract class BaseRequest implements IHttpRequest {
 
     /**
-     * The request stats header name.
+     * The request stats header name
      */
     private static final String REQUEST_STATS_HEADER_NAME = "SdkVersion";
 
     /**
-     * The request stats header value format string.
+     * The request stats header value format string
      */
     public static final String REQUEST_STATS_HEADER_VALUE_FORMAT_STRING = "graph-java-v%s";
 
     /**
-     * The HTTP method for this request.
+     * The HTTP method for this request
      */
     private HttpMethod method;
 
     /**
-     * The URL for this request.
+     * The URL for this request
      */
     private final String requestUrl;
 
     /**
-     * The backing client for this request.
+     * The backing client for this request
      */
     private final IBaseClient client;
 
     /**
-     * The header options for this request.
+     * The header options for this request
      */
     private final List<HeaderOption> headersOptions;
 
     /**
-     * The query options for this request.
+     * The query options for this request
      */
     protected final List<QueryOption> queryOptions;
 
     /**
-     * The function options for this request.
+     * The function options for this request
      */
     protected final List<FunctionOption> functionOptions;
 
     /**
-     * The class for the response.
+     * The class for the response
      */
     private final Class responseClass;
 
     /**
-     * Value to pass to setUseCaches in connection.
+     * Value to pass to setUseCaches in connection
      */
     private boolean useCaches;
 
     /**
-     * Create the request.
+     * Creates the request
      *
-     * @param requestUrl    The URL to make the request against.
-     * @param client        The client which can issue the request.
-     * @param options       The options for this request.
-     * @param responseClass The class for the response.
+     * @param requestUrl    the URL to make the request against
+     * @param client        the client which can issue the request
+     * @param options       the options for this request
+     * @param responseClass the class for the response
      */
     public BaseRequest(final String requestUrl,
                        final IBaseClient client,
@@ -136,9 +136,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets the request URL.
+     * Gets the request URL
      *
-     * @return The request URL.
+     * @return the request URL
      */
     @Override
     public URL getRequestUrl() {
@@ -193,9 +193,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets the HTTP method.
+     * Gets the HTTP method
      *
-     * @return The HTTP method.
+     * @return the HTTP method
      */
     @Override
     public HttpMethod getHttpMethod() {
@@ -203,9 +203,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets the headers.
+     * Gets the headers
      *
-     * @return The headers.
+     * @return the headers
      */
     @Override
     public List<HeaderOption> getHeaders() {
@@ -213,10 +213,10 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Adds a header to this request.
+     * Adds a header to this request
      *
-     * @param header The name of the header.
-     * @param value  The value of the header.
+     * @param header the name of the header
+     * @param value  the value of the header
      */
     @Override
     public void addHeader(final String header, final String value) {
@@ -224,9 +224,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Sets useCaches parameter to cache the response.
+     * Sets useCaches parameter to cache the response
      *
-     * @param useCaches The value of useCaches.
+     * @param useCaches the value of useCaches
      */
     @Override
     public void setUseCaches(boolean useCaches) {
@@ -234,9 +234,9 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets useCaches parameter.
+     * Gets useCaches parameter
      *
-     * @return The value of useCaches.
+     * @return the value of useCaches
      */
     @Override
     public boolean getUseCaches() {
@@ -244,13 +244,13 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Sends this request.
+     * Sends this request
      *
-     * @param method           The HTTP method.
-     * @param callback         The callback when this request complements.
-     * @param serializedObject The object to serialize as the body.
-     * @param <T1>             The type of the callback result.
-     * @param <T2>             The type of the serialized body.
+     * @param method           the HTTP method
+     * @param callback         the callback when this request complements
+     * @param serializedObject the object to serialize as the body
+     * @param <T1>             the type of the callback result
+     * @param <T2>             the type of the serialized body
      */
     @SuppressWarnings("unchecked")
     protected <T1, T2> void send(final HttpMethod method,
@@ -261,14 +261,14 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Sends this request.
+     * Sends this request
      *
-     * @param method           The HTTP method.
-     * @param serializedObject The object to serialize as the body.
-     * @param <T1>             The type of the callback result.
-     * @param <T2>             The type of the serialized body.
-     * @return The response object.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @param method           the HTTP method
+     * @param serializedObject the object to serialize as the body
+     * @param <T1>             the type of the callback result
+     * @param <T2>             the type of the serialized body
+     * @return the response object
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @SuppressWarnings("unchecked")
     protected <T1, T2> T1 send(final HttpMethod method,
@@ -278,27 +278,27 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Gets the query options for this request.
+     * Gets the query options for this request
      *
-     * @return The query options for this request.
+     * @return the query options for this request
      */
     public List<QueryOption> getQueryOptions() {
         return queryOptions;
     }
 
     /**
-     * Gets the function options for this request.
+     * Gets the function options for this request
      *
-     * @return The function options for this request.
+     * @return the function options for this request
      */
     public List<FunctionOption> getFunctionOptions() {
         return functionOptions;
     }
 
     /**
-     * Gets the full list of options for this request.
+     * Gets the full list of options for this request
      *
-     * @return The full list of options for this request.
+     * @return the full list of options for this request
      */
     public List<Option> getOptions() {
         final LinkedList<Option> list = new LinkedList<>();
@@ -309,45 +309,45 @@ public abstract class BaseRequest implements IHttpRequest {
     }
 
     /**
-     * Adds a query option.
+     * Adds a query option
      *
-     * @param option The query option to add.
+     * @param option the query option to add
      */
     public void addQueryOption(final QueryOption option) {
         getQueryOptions().add(option);
     }
 
     /**
-     * Adds a function option.
+     * Adds a function option
      *
-     * @param option The function option to add.
+     * @param option the function option to add
      */
     public void addFunctionOption(final FunctionOption option) {
         getFunctionOptions().add(option);
     }
 
     /**
-     * Sets the HTTP method.
+     * Sets the HTTP method
      *
-     * @param httpMethod The HTTP method.
+     * @param httpMethod the HTTP method
      */
     public void setHttpMethod(final HttpMethod httpMethod) {
         method = httpMethod;
     }
 
     /**
-     * Gets the client.
+     * Gets the client
      *
-     * @return The client.
+     * @return the client
      */
     public IBaseClient getClient() {
         return client;
     }
 
     /**
-     * Gets the response type.
+     * Gets the response type
      *
-     * @return The response type.
+     * @return the response type
      */
     @SuppressWarnings("unchecked")
 	public Class getResponseType() {

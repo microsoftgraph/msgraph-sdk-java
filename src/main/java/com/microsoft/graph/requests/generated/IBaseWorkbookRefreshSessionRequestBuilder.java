@@ -27,7 +27,7 @@ public interface IBaseWorkbookRefreshSessionRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookRefreshSessionRequest
      *
-     * @return The IWorkbookRefreshSessionRequest instance
+     * @return the IWorkbookRefreshSessionRequest instance
      */
     IWorkbookRefreshSessionRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRefreshSessionRequestBuilder extends IRequestBuild
      * Creates the IWorkbookRefreshSessionRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRefreshSessionRequest instance
+     * @return the IWorkbookRefreshSessionRequest instance
      */
     IWorkbookRefreshSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -25,20 +25,21 @@ package com.microsoft.graph.logger;
 import java.util.logging.Logger;
 
 /**
- * The default logger for the service client, which writes to logcat.
+ * The default logger for the service client
  */
 public class DefaultLogger implements ILogger {
 
     /**
-     * The logging level.
+     * The logging level
      */
     private LoggerLevel level = LoggerLevel.ERROR;
     
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
     /**
-     * Sets the logging level of this logger.
-     * @param level The level to log at.
+     * Sets the logging level of this logger
+     * 
+     * @param level the level to log at
      */
     public void setLoggingLevel(final LoggerLevel level) {
     	LOGGER.info("Setting logging level to " + level);
@@ -46,16 +47,18 @@ public class DefaultLogger implements ILogger {
     }
 
     /**
-     * Gets the logging level of this logger.
-     * @return The level the logger is set to.
+     * Gets the logging level of this logger
+     * 
+     * @return the level the logger is set to
      */
     public LoggerLevel getLoggingLevel() {
         return level;
     }
 
     /**
-     * Creates the tag automatically.
-     * @return The tag for the current method.
+     * Creates the tag automatically
+     * 
+     * @return the tag for the current method
      * Sourced from https://gist.github.com/eefret/a9c7ac052854a10a8936
      */
     private String getTag() {
@@ -76,8 +79,9 @@ public class DefaultLogger implements ILogger {
     }
 
     /**
-     * Logs a debug message.
-     * @param message The message.
+     * Logs a debug message
+     * 
+     * @param message the message
      */
     @Override
     public void logDebug(final String message) {
@@ -89,9 +93,10 @@ public class DefaultLogger implements ILogger {
     }
 
     /**
-     * Logs an error message with throwable.
-     * @param message The message.
-     * @param throwable The throwable.
+     * Logs an error message with throwable
+     * 
+     * @param message   the message
+     * @param throwable the throwable
      */
     @Override
     public void logError(final String message, final Throwable throwable) {

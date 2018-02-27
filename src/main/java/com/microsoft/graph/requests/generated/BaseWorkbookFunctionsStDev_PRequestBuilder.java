@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsStDev_PRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsStDev_P
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsStDev_PRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsStDev_PRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsStDev_PRequest
      *
-     * @return The IWorkbookFunctionsStDev_PRequest instance
+     * @return the IWorkbookFunctionsStDev_PRequest instance
      */
     public IWorkbookFunctionsStDev_PRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsStDev_PRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsStDev_PRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsStDev_PRequest instance
+     * @return the IWorkbookFunctionsStDev_PRequest instance
      */
     public IWorkbookFunctionsStDev_PRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsStDev_PRequest request = new WorkbookFunctionsStDev_PRequest(

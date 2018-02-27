@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsImDivRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsImDiv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber1 the inumber1
+     * @param inumber2 the inumber2
      */
     public BaseWorkbookFunctionsImDivRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsImDivRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsImDivRequest
      *
-     * @return The IWorkbookFunctionsImDivRequest instance
+     * @return the IWorkbookFunctionsImDivRequest instance
      */
     public IWorkbookFunctionsImDivRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsImDivRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsImDivRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImDivRequest instance
+     * @return the IWorkbookFunctionsImDivRequest instance
      */
     public IWorkbookFunctionsImDivRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImDivRequest request = new WorkbookFunctionsImDivRequest(

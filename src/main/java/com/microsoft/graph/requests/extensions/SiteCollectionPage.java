@@ -27,8 +27,8 @@ public class SiteCollectionPage extends BaseSiteCollectionPage implements ISiteC
     /**
      * A collection page for Site.
      *
-     * @param response The serialized BaseSiteCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSiteCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public SiteCollectionPage(final BaseSiteCollectionResponse response, final ISiteCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,10 +27,10 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
     /**
      * The request for the OnenoteEntityBaseModel
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseOnenoteEntityBaseModelRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
 
     /**
      * Gets the OnenoteEntityBaseModel from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
 
     /**
      * Gets the OnenoteEntityBaseModel from the service
-     * @return The OnenoteEntityBaseModel from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OnenoteEntityBaseModel from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenoteEntityBaseModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
 
     /**
      * Patches this OnenoteEntityBaseModel with a source
-     * @param sourceOnenoteEntityBaseModel The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOnenoteEntityBaseModel the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteEntityBaseModel);
@@ -83,9 +88,10 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
 
     /**
      * Patches this OnenoteEntityBaseModel with a source
-     * @param sourceOnenoteEntityBaseModel The source object with updates
-     * @return The updated OnenoteEntityBaseModel
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOnenoteEntityBaseModel the source object with updates
+     * @return the updated OnenoteEntityBaseModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenoteEntityBaseModel patch(final OnenoteEntityBaseModel sourceOnenoteEntityBaseModel) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteEntityBaseModel);
@@ -93,8 +99,9 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
 
     /**
      * Creates a OnenoteEntityBaseModel with a new object
-     * @param newOnenoteEntityBaseModel The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOnenoteEntityBaseModel the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback) {
         send(HttpMethod.POST, callback, newOnenoteEntityBaseModel);
@@ -102,9 +109,10 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
 
     /**
      * Creates a OnenoteEntityBaseModel with a new object
-     * @param newOnenoteEntityBaseModel The new object to create
-     * @return The created OnenoteEntityBaseModel
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOnenoteEntityBaseModel the new object to create
+     * @return the created OnenoteEntityBaseModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenoteEntityBaseModel post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel) throws ClientException {
         return send(HttpMethod.POST, newOnenoteEntityBaseModel);
@@ -113,8 +121,8 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IOnenoteEntityBaseModelRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseOnenoteEntityBaseModelRequest extends BaseRequest implements IB
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IOnenoteEntityBaseModelRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

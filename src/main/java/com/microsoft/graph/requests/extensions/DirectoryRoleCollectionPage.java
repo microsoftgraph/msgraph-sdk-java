@@ -27,8 +27,8 @@ public class DirectoryRoleCollectionPage extends BaseDirectoryRoleCollectionPage
     /**
      * A collection page for DirectoryRole.
      *
-     * @param response The serialized BaseDirectoryRoleCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDirectoryRoleCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public DirectoryRoleCollectionPage(final BaseDirectoryRoleCollectionResponse response, final IDirectoryRoleCollectionRequestBuilder builder) {
         super(response, builder);

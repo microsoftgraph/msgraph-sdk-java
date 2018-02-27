@@ -38,94 +38,94 @@ import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
 /**
- * An exception from the Graph service.
+ * An exception from the Graph service
  */
 public class GraphServiceException extends ClientException {
 
     private static final long serialVersionUID = -7416427229421064119L;
 
     /**
-     * New line delimiter.
+     * New line delimiter
      */
     protected static final char NEW_LINE = '\n';
 
     /**
-     * How truncated values are shown.
+     * How truncated values are shown
      */
     protected static final String TRUNCATION_MARKER = "[...]";
 
     /**
-     * The maximum length for a single line string when trying to be brief.
+     * The maximum length for a single line string when trying to be brief
      */
     protected static final int MAX_BREVITY_LENGTH = 50;
 
     /**
-     * The number of bytes to display when showing byte array.
+     * The number of bytes to display when showing byte array
      */
     protected static final int MAX_BYTE_COUNT_BEFORE_TRUNCATION = 8;
 
     /**
-     * The internal server error threshold defined by the HTTP protocol.
+     * The internal server error threshold defined by the HTTP protocol
      */
     public static final int INTERNAL_SERVER_ERROR = 500;
 
     /**
-     * The GraphError response.
+     * The GraphError response
      */
     private final transient GraphErrorResponse error;
 
     /**
-     * The HTTP method.
+     * The HTTP method
      */
     private final String method;
 
     /**
-     * The request URL.
+     * The request URL
      */
     private final String url;
 
     /**
-     * The request headers.
+     * The request headers
      */
     private final List<String> requestHeaders;
 
     /**
-     * The request body represented as a string.
+     * The request body represented as a string
      */
     private final String requestBody;
 
     /**
-     * The HTTP status code.
+     * The HTTP status code
      */
     private final int responseCode;
 
     /**
-     * The HTTP status message.
+     * The HTTP status message
      */
     private final String responseMessage;
 
     /**
-     * The response headers.
+     * The response headers
      */
     private final List<String> responseHeaders;
     
     /**
-     * Whether to log the full error response.
+     * Whether to log the full error response
      */
     private final boolean verbose;
 
     /**
-     * Create a Graph service exception.
+     * Create a Graph service exception
      *
-     * @param method          The method that caused the exception.
-     * @param url             The URL.
-     * @param requestHeaders  The request headers.
-     * @param requestBody     The request body.
-     * @param responseCode    The response code.
-     * @param responseMessage The response message.
-     * @param responseHeaders The response headers.
-     * @param error           The error response if available.
-     * @param verbose         The error response log level.
+     * @param method          the method that caused the exception
+     * @param url             the URL
+     * @param requestHeaders  the request headers
+     * @param requestBody     the request body
+     * @param responseCode    the response code
+     * @param responseMessage the response message
+     * @param responseHeaders the response headers
+     * @param error           the error response if available
+     * @param verbose         the error response log level
      */
     protected GraphServiceException(final String method,
                                     final String url,
@@ -154,10 +154,10 @@ public class GraphServiceException extends ClientException {
     }
 
     /**
-     * Gets the message for this exception.
+     * Gets the message for this exception
      *
-     * @param verbose If the message should be brief or more verbose.
-     * @return The message.
+     * @param verbose if the message should be brief or more verbose
+     * @return        the message.
      */
     public String getMessage(final boolean verbose) {
         final StringBuilder sb = new StringBuilder();
@@ -222,24 +222,25 @@ public class GraphServiceException extends ClientException {
     }
 
     /**
-     * Gets the error message from the Graph service object.
+     * Gets the error message from the Graph service object
      *
-     * @return The error message.
+     * @return the error message
      */
     public GraphError getServiceError() {
         return error.error;
     }
 
     /**
-     * Creates a Graph service exception from a given failed HTTP request.
+     * Creates a Graph service exception from a given failed HTTP request
      *
-     * @param request      The request that resulted in this failure.
-     * @param serializable The serialized object that was sent with this request.
-     * @param serializer   The serializer to re-create the option in its over the wire state.
-     * @param connection   The connection that was used to extract the response information from.
-     * @param <T>          The type of the serializable object.
-     * @return The new GraphServiceException instance.
-     * @throws IOException An exception occurs if there were any problems processing the connection.
+     * @param request      the request that resulted in this failure
+     * @param serializable the serialized object that was sent with this request
+     * @param serializer   the serializer to re-create the option in its over the wire state
+     * @param connection   the connection that was used to extract the response information from
+     * @param logger       the logger to log exception information to
+     * @param <T>          the type of the serializable object
+     * @return             the new GraphServiceException instance
+     * @throws IOException an exception occurs if there were any problems processing the connection
      */
     public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
                                                                  final T serializable,

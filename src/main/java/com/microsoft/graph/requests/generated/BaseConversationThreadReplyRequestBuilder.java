@@ -26,9 +26,10 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this ConversationThreadReply
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param post the post
      */
     public BaseConversationThreadReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Post post) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
     /**
      * Creates the IConversationThreadReplyRequest
      *
-     * @return The IConversationThreadReplyRequest instance
+     * @return the IConversationThreadReplyRequest instance
      */
     public IConversationThreadReplyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseConversationThreadReplyRequestBuilder extends BaseActionRequest
      * Creates the IConversationThreadReplyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IConversationThreadReplyRequest instance
+     * @return the IConversationThreadReplyRequest instance
      */
     public IConversationThreadReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         ConversationThreadReplyRequest request = new ConversationThreadReplyRequest(

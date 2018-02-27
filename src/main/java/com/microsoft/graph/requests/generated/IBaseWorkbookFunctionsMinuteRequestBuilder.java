@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsMinuteRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsMinuteRequest
      *
-     * @return The IWorkbookFunctionsMinuteRequest instance
+     * @return the IWorkbookFunctionsMinuteRequest instance
      */
     IWorkbookFunctionsMinuteRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsMinuteRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsMinuteRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMinuteRequest instance
+     * @return the IWorkbookFunctionsMinuteRequest instance
      */
     IWorkbookFunctionsMinuteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

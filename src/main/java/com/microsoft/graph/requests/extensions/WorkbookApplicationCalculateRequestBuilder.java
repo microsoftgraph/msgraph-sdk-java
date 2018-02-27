@@ -27,9 +27,10 @@ public class WorkbookApplicationCalculateRequestBuilder extends BaseWorkbookAppl
     /**
      * The request builder for this WorkbookApplicationCalculate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param calculationType the calculationType
      */
     public WorkbookApplicationCalculateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String calculationType) {
         super(requestUrl, client, requestOptions, calculationType);

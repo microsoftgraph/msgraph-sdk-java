@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeBorderCountRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookRangeBorderCountRequest
      *
-     * @return The IWorkbookRangeBorderCountRequest instance
+     * @return the IWorkbookRangeBorderCountRequest instance
      */
     IWorkbookRangeBorderCountRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeBorderCountRequestBuilder extends IRequestBui
      * Creates the IWorkbookRangeBorderCountRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeBorderCountRequest instance
+     * @return the IWorkbookRangeBorderCountRequest instance
      */
     IWorkbookRangeBorderCountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

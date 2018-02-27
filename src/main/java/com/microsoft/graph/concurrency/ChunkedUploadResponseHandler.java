@@ -37,30 +37,30 @@ import java.io.BufferedInputStream;
 import java.io.InputStream;
 
 /**
- * The class handles the stateful response from OneDrive upload session.
+ * Handles the stateful response from the OneDrive upload session
  *
- * @param <UploadType> The expected uploaded item.
+ * @param <UploadType> the expected uploaded item
  */
 public class ChunkedUploadResponseHandler<UploadType>
         implements IStatefulResponseHandler<ChunkedUploadResult, UploadType> {
     /**
-     * The expected deserialize type for upload type.
+     * The expected deserialized upload type
      */
     private final Class<UploadType> deserializeTypeClass;
 
     /**
-     * Create a chunked upload response handler.
+     * Creates a chunked upload response handler
      *
-     * @param uploadType The expected upload item type.
+     * @param uploadType the expected upload item type
      */
     public ChunkedUploadResponseHandler(final Class<UploadType> uploadType) {
         this.deserializeTypeClass = uploadType;
     }
 
     /**
-     * Do nothing before get response.
+     * Do nothing before getting the response
      *
-     * @param connection The connection.
+     * @param connection the connection
      */
     @Override
     public void configConnection(final IConnection connection) {
@@ -68,14 +68,14 @@ public class ChunkedUploadResponseHandler<UploadType>
     }
 
     /**
-     * Generate the chunked upload response result.
+     * Generate the chunked upload response result
      *
-     * @param request    The HTTP request.
-     * @param connection The HTTP connection.
-     * @param serializer The serializer.
-     * @param logger     The system logger.
-     * @return The chunked upload result which could be upload session/uploaded item or error.
-     * @throws Exception An exception occurs if the request was unable to complete for any reason.
+     * @param request    the HTTP request
+     * @param connection the HTTP connection
+     * @param serializer the serializer
+     * @param logger     the system logger
+     * @return the chunked upload result, which could be either an uploaded item or error
+     * @throws Exception an exception occurs if the request was unable to complete for any reason
      */
     @Override
     public ChunkedUploadResult<UploadType> generateResult(

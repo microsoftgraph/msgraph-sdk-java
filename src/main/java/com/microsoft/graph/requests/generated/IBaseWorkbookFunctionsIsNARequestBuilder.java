@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIsNARequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsIsNARequest
      *
-     * @return The IWorkbookFunctionsIsNARequest instance
+     * @return the IWorkbookFunctionsIsNARequest instance
      */
     IWorkbookFunctionsIsNARequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIsNARequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsIsNARequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsNARequest instance
+     * @return the IWorkbookFunctionsIsNARequest instance
      */
     IWorkbookFunctionsIsNARequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

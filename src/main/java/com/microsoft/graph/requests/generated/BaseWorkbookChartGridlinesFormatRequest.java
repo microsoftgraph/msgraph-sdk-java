@@ -27,10 +27,10 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
     /**
      * The request for the WorkbookChartGridlinesFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookChartGridlinesFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
 
     /**
      * Gets the WorkbookChartGridlinesFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
 
     /**
      * Gets the WorkbookChartGridlinesFormat from the service
-     * @return The WorkbookChartGridlinesFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartGridlinesFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartGridlinesFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
 
     /**
      * Patches this WorkbookChartGridlinesFormat with a source
-     * @param sourceWorkbookChartGridlinesFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartGridlinesFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartGridlinesFormat);
@@ -83,9 +88,10 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
 
     /**
      * Patches this WorkbookChartGridlinesFormat with a source
-     * @param sourceWorkbookChartGridlinesFormat The source object with updates
-     * @return The updated WorkbookChartGridlinesFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartGridlinesFormat the source object with updates
+     * @return the updated WorkbookChartGridlinesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartGridlinesFormat patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartGridlinesFormat);
@@ -93,8 +99,9 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
 
     /**
      * Creates a WorkbookChartGridlinesFormat with a new object
-     * @param newWorkbookChartGridlinesFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartGridlinesFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartGridlinesFormat);
@@ -102,9 +109,10 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
 
     /**
      * Creates a WorkbookChartGridlinesFormat with a new object
-     * @param newWorkbookChartGridlinesFormat The new object to create
-     * @return The created WorkbookChartGridlinesFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartGridlinesFormat the new object to create
+     * @return the created WorkbookChartGridlinesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartGridlinesFormat post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartGridlinesFormat);
@@ -113,8 +121,8 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookChartGridlinesFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookChartGridlinesFormatRequest extends BaseRequest impleme
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookChartGridlinesFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

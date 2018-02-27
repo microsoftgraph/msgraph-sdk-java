@@ -27,9 +27,9 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     /**
      * The request for this WorkbookFunctionsNow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsNowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
@@ -38,7 +38,7 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     /**
      * Creates the WorkbookFunctionsNow
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
@@ -47,8 +47,8 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     /**
      * Creates the WorkbookFunctionsNow
      *
-     * @return The WorkbookFunctionResult
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookFunctionResult
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookFunctionResult post() throws ClientException {
        return send(HttpMethod.POST, null);
@@ -57,8 +57,8 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookFunctionsNowRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -68,8 +68,8 @@ public class BaseWorkbookFunctionsNowRequest extends BaseRequest implements IBas
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookFunctionsNowRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

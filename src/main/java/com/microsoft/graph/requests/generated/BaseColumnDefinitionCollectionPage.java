@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseColumnDefinitionCollectionPage extends BaseCollectionPage<ColumnDefinition, IColumnDefinitionCollectionRequestBuilder> implements IBaseColumnDefinitionCollectionPage {
 
     /**
-     * A collection page for ColumnDefinition.
+     * A collection page for ColumnDefinition
      *
-     * @param response The serialized BaseColumnDefinitionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseColumnDefinitionCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseColumnDefinitionCollectionPage(final BaseColumnDefinitionCollectionResponse response, final IColumnDefinitionCollectionRequestBuilder builder) {
         super(response.value, builder);

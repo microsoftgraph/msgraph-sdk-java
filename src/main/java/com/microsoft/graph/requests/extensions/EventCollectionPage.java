@@ -27,8 +27,8 @@ public class EventCollectionPage extends BaseEventCollectionPage implements IEve
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseEventCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseEventCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public EventCollectionPage(final BaseEventCollectionResponse response, final IEventCollectionRequestBuilder builder) {
         super(response, builder);

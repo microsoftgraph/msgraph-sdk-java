@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPriceMatRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsPriceMatRequest
      *
-     * @return The IWorkbookFunctionsPriceMatRequest instance
+     * @return the IWorkbookFunctionsPriceMatRequest instance
      */
     IWorkbookFunctionsPriceMatRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPriceMatRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsPriceMatRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPriceMatRequest instance
+     * @return the IWorkbookFunctionsPriceMatRequest instance
      */
     IWorkbookFunctionsPriceMatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

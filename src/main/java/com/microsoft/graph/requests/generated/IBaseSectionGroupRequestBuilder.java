@@ -25,21 +25,30 @@ import java.util.EnumSet;
 public interface IBaseSectionGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the ISectionGroupRequest instance
      */
     ISectionGroupRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the ISectionGroupRequest instance
      */
     ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for Notebook.
+     * Gets the request builder for Notebook
+     *
+     * @return the INotebookRequestBuilder instance
      */
     INotebookRequestBuilder parentNotebook();
 
     /**
-     * Gets the request builder for SectionGroup.
+     * Gets the request builder for SectionGroup
+     *
+     * @return the ISectionGroupRequestBuilder instance
      */
     ISectionGroupRequestBuilder parentSectionGroup();
 

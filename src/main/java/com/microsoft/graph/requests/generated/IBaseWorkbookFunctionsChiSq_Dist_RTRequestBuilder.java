@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookFunctionsChiSq_Dist_RTRequest
      *
-     * @return The IWorkbookFunctionsChiSq_Dist_RTRequest instance
+     * @return the IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
     IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends IRequ
      * Creates the IWorkbookFunctionsChiSq_Dist_RTRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsChiSq_Dist_RTRequest instance
+     * @return the IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
     IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

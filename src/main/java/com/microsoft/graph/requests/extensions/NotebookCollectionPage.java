@@ -27,8 +27,8 @@ public class NotebookCollectionPage extends BaseNotebookCollectionPage implement
     /**
      * A collection page for Onenote.
      *
-     * @param response The serialized BaseNotebookCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseNotebookCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public NotebookCollectionPage(final BaseNotebookCollectionResponse response, final INotebookCollectionRequestBuilder builder) {
         super(response, builder);

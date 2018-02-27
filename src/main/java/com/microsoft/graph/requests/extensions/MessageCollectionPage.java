@@ -27,8 +27,8 @@ public class MessageCollectionPage extends BaseMessageCollectionPage implements 
     /**
      * A collection page for MailFolder.
      *
-     * @param response The serialized BaseMessageCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseMessageCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public MessageCollectionPage(final BaseMessageCollectionResponse response, final IMessageCollectionRequestBuilder builder) {
         super(response, builder);

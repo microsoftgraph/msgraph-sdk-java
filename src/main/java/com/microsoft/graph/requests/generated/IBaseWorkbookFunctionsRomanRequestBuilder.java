@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsRomanRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsRomanRequest
      *
-     * @return The IWorkbookFunctionsRomanRequest instance
+     * @return the IWorkbookFunctionsRomanRequest instance
      */
     IWorkbookFunctionsRomanRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsRomanRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsRomanRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRomanRequest instance
+     * @return the IWorkbookFunctionsRomanRequest instance
      */
     IWorkbookFunctionsRomanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

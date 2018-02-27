@@ -27,9 +27,10 @@ public class WorkbookFilterApplyIconFilterRequestBuilder extends BaseWorkbookFil
     /**
      * The request builder for this WorkbookFilterApplyIconFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param icon the icon
      */
     public WorkbookFilterApplyIconFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final WorkbookIcon icon) {
         super(requestUrl, client, requestOptions, icon);

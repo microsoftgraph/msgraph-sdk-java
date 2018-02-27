@@ -26,9 +26,11 @@ public class BaseEventTentativelyAcceptRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this EventTentativelyAccept
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param comment the comment
+     * @param sendResponse the sendResponse
      */
     public BaseEventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final Boolean sendResponse) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseEventTentativelyAcceptRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IEventTentativelyAcceptRequest
      *
-     * @return The IEventTentativelyAcceptRequest instance
+     * @return the IEventTentativelyAcceptRequest instance
      */
     public IEventTentativelyAcceptRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseEventTentativelyAcceptRequestBuilder extends BaseActionRequestB
      * Creates the IEventTentativelyAcceptRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IEventTentativelyAcceptRequest instance
+     * @return the IEventTentativelyAcceptRequest instance
      */
     public IEventTentativelyAcceptRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         EventTentativelyAcceptRequest request = new EventTentativelyAcceptRequest(

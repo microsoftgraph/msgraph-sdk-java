@@ -27,9 +27,16 @@ public class WorkbookFunctionsAmorDegrcRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsAmorDegrc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param cost the cost
+     * @param datePurchased the datePurchased
+     * @param firstPeriod the firstPeriod
+     * @param salvage the salvage
+     * @param period the period
+     * @param rate the rate
+     * @param basis the basis
      */
     public WorkbookFunctionsAmorDegrcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, cost, datePurchased, firstPeriod, salvage, period, rate, basis);

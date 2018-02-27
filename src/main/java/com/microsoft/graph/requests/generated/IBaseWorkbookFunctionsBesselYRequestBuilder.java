@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBesselYRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsBesselYRequest
      *
-     * @return The IWorkbookFunctionsBesselYRequest instance
+     * @return the IWorkbookFunctionsBesselYRequest instance
      */
     IWorkbookFunctionsBesselYRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBesselYRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsBesselYRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBesselYRequest instance
+     * @return the IWorkbookFunctionsBesselYRequest instance
      */
     IWorkbookFunctionsBesselYRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

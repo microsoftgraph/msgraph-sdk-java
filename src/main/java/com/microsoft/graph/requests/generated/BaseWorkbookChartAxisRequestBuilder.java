@@ -27,9 +27,9 @@ public class BaseWorkbookChartAxisRequestBuilder extends BaseRequestBuilder impl
     /**
      * The request builder for the WorkbookChartAxis
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartAxisRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookChartAxisRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartAxisRequest instance
      */
     public IWorkbookChartAxisRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartAxisRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartAxisRequest instance
      */
     public IWorkbookChartAxisRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartAxisRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,28 +56,36 @@ public class BaseWorkbookChartAxisRequestBuilder extends BaseRequestBuilder impl
 
 
     /**
-     * Gets the request builder for WorkbookChartAxisFormat.
+     * Gets the request builder for WorkbookChartAxisFormat
+     *
+     * @return the IWorkbookChartAxisFormatRequestBuilder instance
      */
     public IWorkbookChartAxisFormatRequestBuilder format() {
         return new WorkbookChartAxisFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookChartGridlines.
+     * Gets the request builder for WorkbookChartGridlines
+     *
+     * @return the IWorkbookChartGridlinesRequestBuilder instance
      */
     public IWorkbookChartGridlinesRequestBuilder majorGridlines() {
         return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("majorGridlines"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookChartGridlines.
+     * Gets the request builder for WorkbookChartGridlines
+     *
+     * @return the IWorkbookChartGridlinesRequestBuilder instance
      */
     public IWorkbookChartGridlinesRequestBuilder minorGridlines() {
         return new WorkbookChartGridlinesRequestBuilder(getRequestUrlWithAdditionalSegment("minorGridlines"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookChartAxisTitle.
+     * Gets the request builder for WorkbookChartAxisTitle
+     *
+     * @return the IWorkbookChartAxisTitleRequestBuilder instance
      */
     public IWorkbookChartAxisTitleRequestBuilder title() {
         return new WorkbookChartAxisTitleRequestBuilder(getRequestUrlWithAdditionalSegment("title"), getClient(), null);

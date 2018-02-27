@@ -26,9 +26,17 @@ public class BaseWorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsOddLPrice
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param lastInterest the lastInterest
+     * @param rate the rate
+     * @param yld the yld
+     * @param redemption the redemption
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsOddLPriceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +53,7 @@ public class BaseWorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsOddLPriceRequest
      *
-     * @return The IWorkbookFunctionsOddLPriceRequest instance
+     * @return the IWorkbookFunctionsOddLPriceRequest instance
      */
     public IWorkbookFunctionsOddLPriceRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +63,7 @@ public class BaseWorkbookFunctionsOddLPriceRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsOddLPriceRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsOddLPriceRequest instance
+     * @return the IWorkbookFunctionsOddLPriceRequest instance
      */
     public IWorkbookFunctionsOddLPriceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsOddLPriceRequest request = new WorkbookFunctionsOddLPriceRequest(

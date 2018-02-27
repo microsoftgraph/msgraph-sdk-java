@@ -27,10 +27,10 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
     /**
      * The request for the Thumbnail
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseThumbnailRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
 
     /**
      * Gets the Thumbnail from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Thumbnail> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
 
     /**
      * Gets the Thumbnail from the service
-     * @return The Thumbnail from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Thumbnail from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Thumbnail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
 
     /**
      * Patches this Thumbnail with a source
-     * @param sourceThumbnail The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceThumbnail the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Thumbnail sourceThumbnail, final ICallback<Thumbnail> callback) {
         send(HttpMethod.PATCH, callback, sourceThumbnail);
@@ -83,9 +88,10 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
 
     /**
      * Patches this Thumbnail with a source
-     * @param sourceThumbnail The source object with updates
-     * @return The updated Thumbnail
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceThumbnail the source object with updates
+     * @return the updated Thumbnail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Thumbnail patch(final Thumbnail sourceThumbnail) throws ClientException {
         return send(HttpMethod.PATCH, sourceThumbnail);
@@ -93,8 +99,9 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
 
     /**
      * Creates a Thumbnail with a new object
-     * @param newThumbnail The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newThumbnail the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback) {
         send(HttpMethod.POST, callback, newThumbnail);
@@ -102,9 +109,10 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
 
     /**
      * Creates a Thumbnail with a new object
-     * @param newThumbnail The new object to create
-     * @return The created Thumbnail
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newThumbnail the new object to create
+     * @return the created Thumbnail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Thumbnail post(final Thumbnail newThumbnail) throws ClientException {
         return send(HttpMethod.POST, newThumbnail);
@@ -113,8 +121,8 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IThumbnailRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseThumbnailRequest extends BaseRequest implements IBaseThumbnailR
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IThumbnailRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

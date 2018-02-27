@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsLogNorm_DistRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsLogNorm_DistRequest
      *
-     * @return The IWorkbookFunctionsLogNorm_DistRequest instance
+     * @return the IWorkbookFunctionsLogNorm_DistRequest instance
      */
     IWorkbookFunctionsLogNorm_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsLogNorm_DistRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsLogNorm_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLogNorm_DistRequest instance
+     * @return the IWorkbookFunctionsLogNorm_DistRequest instance
      */
     IWorkbookFunctionsLogNorm_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

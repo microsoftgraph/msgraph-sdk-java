@@ -48,15 +48,17 @@ public class CustomRequest<T> extends BaseRequest {
     }
     
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     * 
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     * 
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -65,8 +67,8 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Patches this item with a source
-     * @param sourceItem The source object with updates
-     * @param callback The callback to be called after success or failure.
+     * 
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final ICallback<T> callback) {
         send(HttpMethod.PATCH, callback, super.getResponseType());
@@ -74,9 +76,10 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Patches this item with a source
-     * @param sourceAttachment The source object with updates
-     * @return The updated item
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     * 
+     * @param sourceObject     the source object with updates
+     * @return                 the updated item
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public T patch(final T sourceObject) throws ClientException {
         return send(HttpMethod.PATCH, sourceObject);
@@ -84,8 +87,9 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Creates a new object
-     * @param newAttachment The new object to create
-     * @param callback The callback to be called after success or failure.
+     * 
+     * @param newObject the new object to create
+     * @param callback  the callback to be called after success or failure
      */
     public void post(final T newObject, final ICallback<T> callback) {
         send(HttpMethod.POST, callback, newObject);
@@ -93,9 +97,10 @@ public class CustomRequest<T> extends BaseRequest {
 
     /**
      * Creates a new object
-     * @param newAttachment The new object to create
-     * @return The created Attachment
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     * 
+     * @param newObject        the new object to create
+     * @return                 the created object
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public T post(final T newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
@@ -104,8 +109,8 @@ public class CustomRequest<T> extends BaseRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return      the updated request
      */
      public CustomRequest<T> select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -115,8 +120,8 @@ public class CustomRequest<T> extends BaseRequest {
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return      the updated request
      */
      public CustomRequest<T> expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

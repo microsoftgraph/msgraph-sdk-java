@@ -27,10 +27,10 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
     /**
      * The request for the ColumnDefinition
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseColumnDefinitionRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
 
     /**
      * Gets the ColumnDefinition from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<ColumnDefinition> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
 
     /**
      * Gets the ColumnDefinition from the service
-     * @return The ColumnDefinition from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the ColumnDefinition from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ColumnDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
 
     /**
      * Patches this ColumnDefinition with a source
-     * @param sourceColumnDefinition The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceColumnDefinition the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final ColumnDefinition sourceColumnDefinition, final ICallback<ColumnDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceColumnDefinition);
@@ -83,9 +88,10 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
 
     /**
      * Patches this ColumnDefinition with a source
-     * @param sourceColumnDefinition The source object with updates
-     * @return The updated ColumnDefinition
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceColumnDefinition the source object with updates
+     * @return the updated ColumnDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ColumnDefinition patch(final ColumnDefinition sourceColumnDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceColumnDefinition);
@@ -93,8 +99,9 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
 
     /**
      * Creates a ColumnDefinition with a new object
-     * @param newColumnDefinition The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newColumnDefinition the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback) {
         send(HttpMethod.POST, callback, newColumnDefinition);
@@ -102,9 +109,10 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
 
     /**
      * Creates a ColumnDefinition with a new object
-     * @param newColumnDefinition The new object to create
-     * @return The created ColumnDefinition
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newColumnDefinition the new object to create
+     * @return the created ColumnDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ColumnDefinition post(final ColumnDefinition newColumnDefinition) throws ClientException {
         return send(HttpMethod.POST, newColumnDefinition);
@@ -113,8 +121,8 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IColumnDefinitionRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseColumnDefinitionRequest extends BaseRequest implements IBaseCol
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IColumnDefinitionRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

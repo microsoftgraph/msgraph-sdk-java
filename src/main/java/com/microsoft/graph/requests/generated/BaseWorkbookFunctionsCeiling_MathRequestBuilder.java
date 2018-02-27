@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsCeiling_Math
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param significance the significance
+     * @param mode the mode
      */
     public BaseWorkbookFunctionsCeiling_MathRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsCeiling_MathRequest
      *
-     * @return The IWorkbookFunctionsCeiling_MathRequest instance
+     * @return the IWorkbookFunctionsCeiling_MathRequest instance
      */
     public IWorkbookFunctionsCeiling_MathRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsCeiling_MathRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsCeiling_MathRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCeiling_MathRequest instance
+     * @return the IWorkbookFunctionsCeiling_MathRequest instance
      */
     public IWorkbookFunctionsCeiling_MathRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCeiling_MathRequest request = new WorkbookFunctionsCeiling_MathRequest(

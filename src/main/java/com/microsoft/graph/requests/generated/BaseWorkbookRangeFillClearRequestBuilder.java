@@ -26,9 +26,9 @@ public class BaseWorkbookRangeFillClearRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookRangeFillClear
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeFillClearRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookRangeFillClearRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookRangeFillClearRequest
      *
-     * @return The IWorkbookRangeFillClearRequest instance
+     * @return the IWorkbookRangeFillClearRequest instance
      */
     public IWorkbookRangeFillClearRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookRangeFillClearRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookRangeFillClearRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeFillClearRequest instance
+     * @return the IWorkbookRangeFillClearRequest instance
      */
     public IWorkbookRangeFillClearRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeFillClearRequest request = new WorkbookRangeFillClearRequest(

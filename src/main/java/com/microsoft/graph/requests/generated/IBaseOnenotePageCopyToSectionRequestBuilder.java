@@ -27,7 +27,7 @@ public interface IBaseOnenotePageCopyToSectionRequestBuilder extends IRequestBui
     /**
      * Creates the IOnenotePageCopyToSectionRequest
      *
-     * @return The IOnenotePageCopyToSectionRequest instance
+     * @return the IOnenotePageCopyToSectionRequest instance
      */
     IOnenotePageCopyToSectionRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseOnenotePageCopyToSectionRequestBuilder extends IRequestBui
      * Creates the IOnenotePageCopyToSectionRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IOnenotePageCopyToSectionRequest instance
+     * @return the IOnenotePageCopyToSectionRequest instance
      */
     IOnenotePageCopyToSectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

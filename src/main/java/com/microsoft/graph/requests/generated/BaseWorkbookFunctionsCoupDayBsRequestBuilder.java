@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsCoupDayBs
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsCoupDayBsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsCoupDayBsRequest
      *
-     * @return The IWorkbookFunctionsCoupDayBsRequest instance
+     * @return the IWorkbookFunctionsCoupDayBsRequest instance
      */
     public IWorkbookFunctionsCoupDayBsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsCoupDayBsRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsCoupDayBsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCoupDayBsRequest instance
+     * @return the IWorkbookFunctionsCoupDayBsRequest instance
      */
     public IWorkbookFunctionsCoupDayBsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCoupDayBsRequest request = new WorkbookFunctionsCoupDayBsRequest(

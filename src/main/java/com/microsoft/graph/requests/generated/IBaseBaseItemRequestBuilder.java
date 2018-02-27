@@ -25,21 +25,30 @@ import java.util.EnumSet;
 public interface IBaseBaseItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IBaseItemRequest instance
      */
     IBaseItemRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IBaseItemRequest instance
      */
     IBaseItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for User.
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
      */
     IUserWithReferenceRequestBuilder createdByUser();
 
     /**
-     * Gets the request builder for User.
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
      */
     IUserWithReferenceRequestBuilder lastModifiedByUser();
 

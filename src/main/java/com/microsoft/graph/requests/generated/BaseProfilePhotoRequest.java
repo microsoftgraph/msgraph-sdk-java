@@ -27,10 +27,10 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
     /**
      * The request for the ProfilePhoto
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseProfilePhotoRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
 
     /**
      * Gets the ProfilePhoto from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<ProfilePhoto> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
 
     /**
      * Gets the ProfilePhoto from the service
-     * @return The ProfilePhoto from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the ProfilePhoto from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ProfilePhoto get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
 
     /**
      * Patches this ProfilePhoto with a source
-     * @param sourceProfilePhoto The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceProfilePhoto the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final ProfilePhoto sourceProfilePhoto, final ICallback<ProfilePhoto> callback) {
         send(HttpMethod.PATCH, callback, sourceProfilePhoto);
@@ -83,9 +88,10 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
 
     /**
      * Patches this ProfilePhoto with a source
-     * @param sourceProfilePhoto The source object with updates
-     * @return The updated ProfilePhoto
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceProfilePhoto the source object with updates
+     * @return the updated ProfilePhoto
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ProfilePhoto patch(final ProfilePhoto sourceProfilePhoto) throws ClientException {
         return send(HttpMethod.PATCH, sourceProfilePhoto);
@@ -93,8 +99,9 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
 
     /**
      * Creates a ProfilePhoto with a new object
-     * @param newProfilePhoto The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newProfilePhoto the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback) {
         send(HttpMethod.POST, callback, newProfilePhoto);
@@ -102,9 +109,10 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
 
     /**
      * Creates a ProfilePhoto with a new object
-     * @param newProfilePhoto The new object to create
-     * @return The created ProfilePhoto
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newProfilePhoto the new object to create
+     * @return the created ProfilePhoto
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException {
         return send(HttpMethod.POST, newProfilePhoto);
@@ -113,8 +121,8 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IProfilePhotoRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseProfilePhotoRequest extends BaseRequest implements IBaseProfile
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IProfilePhotoRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

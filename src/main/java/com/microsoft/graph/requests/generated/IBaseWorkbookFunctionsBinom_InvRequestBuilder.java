@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBinom_InvRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsBinom_InvRequest
      *
-     * @return The IWorkbookFunctionsBinom_InvRequest instance
+     * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
     IWorkbookFunctionsBinom_InvRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBinom_InvRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsBinom_InvRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBinom_InvRequest instance
+     * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
     IWorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

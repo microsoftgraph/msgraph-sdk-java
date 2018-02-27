@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsDayRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsDay
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param serialNumber the serialNumber
      */
     public BaseWorkbookFunctionsDayRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsDayRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsDayRequest
      *
-     * @return The IWorkbookFunctionsDayRequest instance
+     * @return the IWorkbookFunctionsDayRequest instance
      */
     public IWorkbookFunctionsDayRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsDayRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsDayRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDayRequest instance
+     * @return the IWorkbookFunctionsDayRequest instance
      */
     public IWorkbookFunctionsDayRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDayRequest request = new WorkbookFunctionsDayRequest(

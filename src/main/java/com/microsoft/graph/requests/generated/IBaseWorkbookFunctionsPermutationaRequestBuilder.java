@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPermutationaRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsPermutationaRequest
      *
-     * @return The IWorkbookFunctionsPermutationaRequest instance
+     * @return the IWorkbookFunctionsPermutationaRequest instance
      */
     IWorkbookFunctionsPermutationaRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPermutationaRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsPermutationaRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPermutationaRequest instance
+     * @return the IWorkbookFunctionsPermutationaRequest instance
      */
     IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

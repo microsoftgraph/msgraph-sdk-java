@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsYearFrac
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsYearFracRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsYearFracRequest
      *
-     * @return The IWorkbookFunctionsYearFracRequest instance
+     * @return the IWorkbookFunctionsYearFracRequest instance
      */
     public IWorkbookFunctionsYearFracRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsYearFracRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsYearFracRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsYearFracRequest instance
+     * @return the IWorkbookFunctionsYearFracRequest instance
      */
     public IWorkbookFunctionsYearFracRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsYearFracRequest request = new WorkbookFunctionsYearFracRequest(

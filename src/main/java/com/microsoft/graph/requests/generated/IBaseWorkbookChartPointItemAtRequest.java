@@ -30,63 +30,64 @@ public interface IBaseWorkbookChartPointItemAtRequest {
     /**
      * Patches the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChartPoint the WorkbookChartPoint with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Patches the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
-     * @return The WorkbookChartPoint
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChartPoint the WorkbookChartPoint with which to PATCH
+     * @return the WorkbookChartPoint
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookChartPoint patch(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException;
 
     /**
      * Puts the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChartPoint the WorkbookChartPoint to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Puts the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
-     * @return The WorkbookChartPoint
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChartPoint the WorkbookChartPoint to PUT
+     * @return the WorkbookChartPoint
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      WorkbookChartPoint put(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException;
     /**
      * Gets the WorkbookChartPoint
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartPoint> callback);
 
     /**
      * Gets the WorkbookChartPoint
      *
-     * @return The WorkbookChartPoint
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookChartPoint
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookChartPoint get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookChartPointItemAtRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookChartPointItemAtRequest expand(final String value);
 

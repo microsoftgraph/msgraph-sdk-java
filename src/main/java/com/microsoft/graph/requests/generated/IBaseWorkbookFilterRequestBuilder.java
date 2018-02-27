@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookFilterRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookFilterRequest instance
      */
     IWorkbookFilterRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookFilterRequest instance
      */
     IWorkbookFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
     IWorkbookFilterApplyRequestBuilder apply(final WorkbookFilterCriteria criteria);

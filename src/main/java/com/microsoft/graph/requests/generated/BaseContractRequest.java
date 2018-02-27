@@ -27,10 +27,10 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
     /**
      * The request for the Contract
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseContractRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
 
     /**
      * Gets the Contract from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Contract> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
 
     /**
      * Gets the Contract from the service
-     * @return The Contract from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Contract from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Contract get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
 
     /**
      * Patches this Contract with a source
-     * @param sourceContract The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceContract the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Contract sourceContract, final ICallback<Contract> callback) {
         send(HttpMethod.PATCH, callback, sourceContract);
@@ -83,9 +88,10 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
 
     /**
      * Patches this Contract with a source
-     * @param sourceContract The source object with updates
-     * @return The updated Contract
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceContract the source object with updates
+     * @return the updated Contract
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Contract patch(final Contract sourceContract) throws ClientException {
         return send(HttpMethod.PATCH, sourceContract);
@@ -93,8 +99,9 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
 
     /**
      * Creates a Contract with a new object
-     * @param newContract The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newContract the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Contract newContract, final ICallback<Contract> callback) {
         send(HttpMethod.POST, callback, newContract);
@@ -102,9 +109,10 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
 
     /**
      * Creates a Contract with a new object
-     * @param newContract The new object to create
-     * @return The created Contract
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newContract the new object to create
+     * @return the created Contract
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Contract post(final Contract newContract) throws ClientException {
         return send(HttpMethod.POST, newContract);
@@ -113,8 +121,8 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IContractRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseContractRequest extends BaseRequest implements IBaseContractReq
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IContractRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

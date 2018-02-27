@@ -27,8 +27,8 @@ public class ThumbnailSetCollectionPage extends BaseThumbnailSetCollectionPage i
     /**
      * A collection page for DriveItem.
      *
-     * @param response The serialized BaseThumbnailSetCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseThumbnailSetCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ThumbnailSetCollectionPage(final BaseThumbnailSetCollectionResponse response, final IThumbnailSetCollectionRequestBuilder builder) {
         super(response, builder);

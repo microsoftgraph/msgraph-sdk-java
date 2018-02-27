@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsEoMonthRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsEoMonthRequest
      *
-     * @return The IWorkbookFunctionsEoMonthRequest instance
+     * @return the IWorkbookFunctionsEoMonthRequest instance
      */
     IWorkbookFunctionsEoMonthRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsEoMonthRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsEoMonthRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsEoMonthRequest instance
+     * @return the IWorkbookFunctionsEoMonthRequest instance
      */
     IWorkbookFunctionsEoMonthRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,9 +27,9 @@ public class BaseAttachmentRequestBuilder extends BaseRequestBuilder implements 
     /**
      * The request builder for the Attachment
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseAttachmentRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request
+     *
+     * @return the IAttachmentRequest instance
      */
     public IAttachmentRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseAttachmentRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IAttachmentRequest instance
      */
     public IAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new AttachmentRequest(getRequestUrl(), getClient(), requestOptions);

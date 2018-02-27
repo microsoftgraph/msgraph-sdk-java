@@ -27,9 +27,11 @@ public class WorkbookFunctionsBitorRequestBuilder extends BaseWorkbookFunctionsB
     /**
      * The request builder for this WorkbookFunctionsBitor
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number1 the number1
+     * @param number2 the number2
      */
     public WorkbookFunctionsBitorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
         super(requestUrl, client, requestOptions, number1, number2);

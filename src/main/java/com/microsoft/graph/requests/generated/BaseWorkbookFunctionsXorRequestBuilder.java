@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsXorRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsXor
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsXorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsXorRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsXorRequest
      *
-     * @return The IWorkbookFunctionsXorRequest instance
+     * @return the IWorkbookFunctionsXorRequest instance
      */
     public IWorkbookFunctionsXorRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsXorRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsXorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsXorRequest instance
+     * @return the IWorkbookFunctionsXorRequest instance
      */
     public IWorkbookFunctionsXorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsXorRequest request = new WorkbookFunctionsXorRequest(

@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsDollarDeRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsDollarDe
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param fractionalDollar the fractionalDollar
+     * @param fraction the fraction
      */
     public BaseWorkbookFunctionsDollarDeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement fractionalDollar, final com.google.gson.JsonElement fraction) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsDollarDeRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsDollarDeRequest
      *
-     * @return The IWorkbookFunctionsDollarDeRequest instance
+     * @return the IWorkbookFunctionsDollarDeRequest instance
      */
     public IWorkbookFunctionsDollarDeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsDollarDeRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsDollarDeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDollarDeRequest instance
+     * @return the IWorkbookFunctionsDollarDeRequest instance
      */
     public IWorkbookFunctionsDollarDeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDollarDeRequest request = new WorkbookFunctionsDollarDeRequest(

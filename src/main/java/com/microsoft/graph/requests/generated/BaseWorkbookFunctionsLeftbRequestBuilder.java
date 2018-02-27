@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsLeftb
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param numBytes the numBytes
      */
     public BaseWorkbookFunctionsLeftbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsLeftbRequest
      *
-     * @return The IWorkbookFunctionsLeftbRequest instance
+     * @return the IWorkbookFunctionsLeftbRequest instance
      */
     public IWorkbookFunctionsLeftbRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsLeftbRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsLeftbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLeftbRequest instance
+     * @return the IWorkbookFunctionsLeftbRequest instance
      */
     public IWorkbookFunctionsLeftbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLeftbRequest request = new WorkbookFunctionsLeftbRequest(

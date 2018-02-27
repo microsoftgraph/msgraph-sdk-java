@@ -27,9 +27,15 @@ public class WorkbookFunctionsCumIPmtRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsCumIPmt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param nper the nper
+     * @param pv the pv
+     * @param startPeriod the startPeriod
+     * @param endPeriod the endPeriod
+     * @param type the type
      */
     public WorkbookFunctionsCumIPmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions, rate, nper, pv, startPeriod, endPeriod, type);

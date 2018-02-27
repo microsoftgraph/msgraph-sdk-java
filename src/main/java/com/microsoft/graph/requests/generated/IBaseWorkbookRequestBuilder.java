@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookRequest instance
      */
     IWorkbookRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRequest instance
      */
     IWorkbookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookApplication.
+     * Gets the request builder for WorkbookApplication
+     *
+     * @return the IWorkbookApplicationRequestBuilder instance
      */
     IWorkbookApplicationRequestBuilder application();
 
@@ -51,7 +58,9 @@ public interface IBaseWorkbookRequestBuilder extends IRequestBuilder {
     IWorkbookWorksheetRequestBuilder worksheets(final String id);
 
     /**
-     * Gets the request builder for WorkbookFunctions.
+     * Gets the request builder for WorkbookFunctions
+     *
+     * @return the IWorkbookFunctionsRequestBuilder instance
      */
     IWorkbookFunctionsRequestBuilder functions();
     IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);

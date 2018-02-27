@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsRank_EqRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsRank_EqRequest
      *
-     * @return The IWorkbookFunctionsRank_EqRequest instance
+     * @return the IWorkbookFunctionsRank_EqRequest instance
      */
     IWorkbookFunctionsRank_EqRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsRank_EqRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsRank_EqRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRank_EqRequest instance
+     * @return the IWorkbookFunctionsRank_EqRequest instance
      */
     IWorkbookFunctionsRank_EqRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

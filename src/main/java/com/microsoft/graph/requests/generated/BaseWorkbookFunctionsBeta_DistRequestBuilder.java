@@ -26,9 +26,15 @@ public class BaseWorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsBeta_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param alpha the alpha
+     * @param beta the beta
+     * @param cumulative the cumulative
+     * @param a the a
+     * @param b the b
      */
     public BaseWorkbookFunctionsBeta_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +49,7 @@ public class BaseWorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsBeta_DistRequest
      *
-     * @return The IWorkbookFunctionsBeta_DistRequest instance
+     * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
     public IWorkbookFunctionsBeta_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +59,7 @@ public class BaseWorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsBeta_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBeta_DistRequest instance
+     * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
     public IWorkbookFunctionsBeta_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBeta_DistRequest request = new WorkbookFunctionsBeta_DistRequest(

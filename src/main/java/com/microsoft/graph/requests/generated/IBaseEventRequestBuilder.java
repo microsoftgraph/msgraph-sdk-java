@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseEventRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IEventRequest instance
      */
     IEventRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IEventRequest instance
      */
     IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for Calendar.
+     * Gets the request builder for Calendar
+     *
+     * @return the ICalendarRequestBuilder instance
      */
     ICalendarRequestBuilder calendar();
 

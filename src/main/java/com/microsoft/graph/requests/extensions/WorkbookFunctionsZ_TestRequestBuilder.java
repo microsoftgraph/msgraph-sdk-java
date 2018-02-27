@@ -27,9 +27,12 @@ public class WorkbookFunctionsZ_TestRequestBuilder extends BaseWorkbookFunctions
     /**
      * The request builder for this WorkbookFunctionsZ_Test
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param x the x
+     * @param sigma the sigma
      */
     public WorkbookFunctionsZ_TestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement sigma) {
         super(requestUrl, client, requestOptions, array, x, sigma);

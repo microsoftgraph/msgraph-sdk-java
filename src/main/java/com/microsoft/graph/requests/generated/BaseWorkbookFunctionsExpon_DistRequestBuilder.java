@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsExpon_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param lambda the lambda
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsExpon_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement lambda, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsExpon_DistRequest
      *
-     * @return The IWorkbookFunctionsExpon_DistRequest instance
+     * @return the IWorkbookFunctionsExpon_DistRequest instance
      */
     public IWorkbookFunctionsExpon_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsExpon_DistRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsExpon_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsExpon_DistRequest instance
+     * @return the IWorkbookFunctionsExpon_DistRequest instance
      */
     public IWorkbookFunctionsExpon_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsExpon_DistRequest request = new WorkbookFunctionsExpon_DistRequest(

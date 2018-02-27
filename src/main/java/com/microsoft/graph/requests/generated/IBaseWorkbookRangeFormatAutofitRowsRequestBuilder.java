@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeFormatAutofitRowsRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookRangeFormatAutofitRowsRequest
      *
-     * @return The IWorkbookRangeFormatAutofitRowsRequest instance
+     * @return the IWorkbookRangeFormatAutofitRowsRequest instance
      */
     IWorkbookRangeFormatAutofitRowsRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeFormatAutofitRowsRequestBuilder extends IRequ
      * Creates the IWorkbookRangeFormatAutofitRowsRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeFormatAutofitRowsRequest instance
+     * @return the IWorkbookRangeFormatAutofitRowsRequest instance
      */
     IWorkbookRangeFormatAutofitRowsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

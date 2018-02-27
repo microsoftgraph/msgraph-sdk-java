@@ -27,9 +27,12 @@ public class WorkbookFunctionsRriRequestBuilder extends BaseWorkbookFunctionsRri
     /**
      * The request builder for this WorkbookFunctionsRri
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
      */
     public WorkbookFunctionsRriRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
         super(requestUrl, client, requestOptions, nper, pv, fv);

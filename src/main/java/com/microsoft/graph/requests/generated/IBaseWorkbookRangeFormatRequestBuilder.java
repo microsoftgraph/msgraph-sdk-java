@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookRangeFormatRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookRangeFormatRequest instance
      */
     IWorkbookRangeFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeFormatRequest instance
      */
     IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -38,17 +43,23 @@ public interface IBaseWorkbookRangeFormatRequestBuilder extends IRequestBuilder 
     IWorkbookRangeBorderRequestBuilder borders(final String id);
 
     /**
-     * Gets the request builder for WorkbookRangeFill.
+     * Gets the request builder for WorkbookRangeFill
+     *
+     * @return the IWorkbookRangeFillRequestBuilder instance
      */
     IWorkbookRangeFillRequestBuilder fill();
 
     /**
-     * Gets the request builder for WorkbookRangeFont.
+     * Gets the request builder for WorkbookRangeFont
+     *
+     * @return the IWorkbookRangeFontRequestBuilder instance
      */
     IWorkbookRangeFontRequestBuilder font();
 
     /**
-     * Gets the request builder for WorkbookFormatProtection.
+     * Gets the request builder for WorkbookFormatProtection
+     *
+     * @return the IWorkbookFormatProtectionRequestBuilder instance
      */
     IWorkbookFormatProtectionRequestBuilder protection();
     IWorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns();

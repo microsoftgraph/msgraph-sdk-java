@@ -27,9 +27,9 @@ public class DriveItemRequestBuilder extends BaseDriveItemRequestBuilder impleme
     /**
      * The request builder for the DriveItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

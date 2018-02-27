@@ -27,7 +27,7 @@ public interface IBaseWorkbookChartSetDataRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookChartSetDataRequest
      *
-     * @return The IWorkbookChartSetDataRequest instance
+     * @return the IWorkbookChartSetDataRequest instance
      */
     IWorkbookChartSetDataRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookChartSetDataRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookChartSetDataRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartSetDataRequest instance
+     * @return the IWorkbookChartSetDataRequest instance
      */
     IWorkbookChartSetDataRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

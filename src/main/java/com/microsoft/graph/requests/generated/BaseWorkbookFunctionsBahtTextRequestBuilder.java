@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsBahtTextRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsBahtText
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsBahtTextRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsBahtTextRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsBahtTextRequest
      *
-     * @return The IWorkbookFunctionsBahtTextRequest instance
+     * @return the IWorkbookFunctionsBahtTextRequest instance
      */
     public IWorkbookFunctionsBahtTextRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsBahtTextRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsBahtTextRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBahtTextRequest instance
+     * @return the IWorkbookFunctionsBahtTextRequest instance
      */
     public IWorkbookFunctionsBahtTextRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBahtTextRequest request = new WorkbookFunctionsBahtTextRequest(

@@ -27,10 +27,10 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
     /**
      * The request for the Organization
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseOrganizationRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
 
     /**
      * Gets the Organization from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Organization> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
 
     /**
      * Gets the Organization from the service
-     * @return The Organization from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Organization from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Organization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
 
     /**
      * Patches this Organization with a source
-     * @param sourceOrganization The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOrganization the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Organization sourceOrganization, final ICallback<Organization> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganization);
@@ -83,9 +88,10 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
 
     /**
      * Patches this Organization with a source
-     * @param sourceOrganization The source object with updates
-     * @return The updated Organization
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOrganization the source object with updates
+     * @return the updated Organization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Organization patch(final Organization sourceOrganization) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrganization);
@@ -93,8 +99,9 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
 
     /**
      * Creates a Organization with a new object
-     * @param newOrganization The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOrganization the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Organization newOrganization, final ICallback<Organization> callback) {
         send(HttpMethod.POST, callback, newOrganization);
@@ -102,9 +109,10 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
 
     /**
      * Creates a Organization with a new object
-     * @param newOrganization The new object to create
-     * @return The created Organization
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOrganization the new object to create
+     * @return the created Organization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Organization post(final Organization newOrganization) throws ClientException {
         return send(HttpMethod.POST, newOrganization);
@@ -113,8 +121,8 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IOrganizationRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseOrganizationRequest extends BaseRequest implements IBaseOrganiz
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IOrganizationRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

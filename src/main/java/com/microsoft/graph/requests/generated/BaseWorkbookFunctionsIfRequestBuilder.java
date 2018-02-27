@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuil
     /**
      * The request builder for this WorkbookFunctionsIf
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param logicalTest the logicalTest
+     * @param valueIfTrue the valueIfTrue
+     * @param valueIfFalse the valueIfFalse
      */
     public BaseWorkbookFunctionsIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement logicalTest, final com.google.gson.JsonElement valueIfTrue, final com.google.gson.JsonElement valueIfFalse) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsIfRequest
      *
-     * @return The IWorkbookFunctionsIfRequest instance
+     * @return the IWorkbookFunctionsIfRequest instance
      */
     public IWorkbookFunctionsIfRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsIfRequestBuilder extends BaseActionRequestBuil
      * Creates the IWorkbookFunctionsIfRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIfRequest instance
+     * @return the IWorkbookFunctionsIfRequest instance
      */
     public IWorkbookFunctionsIfRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsIfRequest request = new WorkbookFunctionsIfRequest(

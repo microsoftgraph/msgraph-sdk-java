@@ -27,8 +27,8 @@ public class InvitationCollectionPage extends BaseInvitationCollectionPage imple
     /**
      * A collection page for Invitation.
      *
-     * @param response The serialized BaseInvitationCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseInvitationCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public InvitationCollectionPage(final BaseInvitationCollectionResponse response, final IInvitationCollectionRequestBuilder builder) {
         super(response, builder);

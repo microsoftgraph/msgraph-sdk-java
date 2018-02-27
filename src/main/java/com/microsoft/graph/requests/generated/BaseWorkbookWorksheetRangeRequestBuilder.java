@@ -26,9 +26,9 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
     /**
      * The request builder for this WorkbookWorksheetRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -36,9 +36,10 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
     /**
      * The request builder for this WorkbookWorksheetRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param address the address
      */
     public BaseWorkbookWorksheetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String address) {
         super(requestUrl, client, requestOptions);
@@ -48,7 +49,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
     /**
      * Creates the IWorkbookWorksheetRangeRequest
      *
-     * @return The IWorkbookWorksheetRangeRequest instance
+     * @return the IWorkbookWorksheetRangeRequest instance
      */
     public IWorkbookWorksheetRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -58,7 +59,7 @@ public class BaseWorkbookWorksheetRangeRequestBuilder extends BaseFunctionReques
      * Creates the IWorkbookWorksheetRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookWorksheetRangeRequest instance
+     * @return the IWorkbookWorksheetRangeRequest instance
      */
     public IWorkbookWorksheetRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetRangeRequest request = new WorkbookWorksheetRangeRequest(

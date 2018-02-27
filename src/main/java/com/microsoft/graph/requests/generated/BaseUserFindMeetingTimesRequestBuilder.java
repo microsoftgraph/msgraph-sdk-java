@@ -26,9 +26,17 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this UserFindMeetingTimes
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param attendees the attendees
+     * @param locationConstraint the locationConstraint
+     * @param timeConstraint the timeConstraint
+     * @param meetingDuration the meetingDuration
+     * @param maxCandidates the maxCandidates
+     * @param isOrganizerOptional the isOrganizerOptional
+     * @param returnSuggestionReasons the returnSuggestionReasons
+     * @param minimumAttendeePercentage the minimumAttendeePercentage
      */
     public BaseUserFindMeetingTimesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         super(requestUrl, client, requestOptions);
@@ -45,7 +53,7 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IUserFindMeetingTimesRequest
      *
-     * @return The IUserFindMeetingTimesRequest instance
+     * @return the IUserFindMeetingTimesRequest instance
      */
     public IUserFindMeetingTimesRequest buildRequest() {
         return buildRequest(getOptions());
@@ -55,7 +63,7 @@ public class BaseUserFindMeetingTimesRequestBuilder extends BaseActionRequestBui
      * Creates the IUserFindMeetingTimesRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IUserFindMeetingTimesRequest instance
+     * @return the IUserFindMeetingTimesRequest instance
      */
     public IUserFindMeetingTimesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         UserFindMeetingTimesRequest request = new UserFindMeetingTimesRequest(

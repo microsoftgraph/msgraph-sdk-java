@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsRadiansRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsRadiansRequest
      *
-     * @return The IWorkbookFunctionsRadiansRequest instance
+     * @return the IWorkbookFunctionsRadiansRequest instance
      */
     IWorkbookFunctionsRadiansRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsRadiansRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsRadiansRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRadiansRequest instance
+     * @return the IWorkbookFunctionsRadiansRequest instance
      */
     IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsImCosRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsImCosRequest
      *
-     * @return The IWorkbookFunctionsImCosRequest instance
+     * @return the IWorkbookFunctionsImCosRequest instance
      */
     IWorkbookFunctionsImCosRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsImCosRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsImCosRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImCosRequest instance
+     * @return the IWorkbookFunctionsImCosRequest instance
      */
     IWorkbookFunctionsImCosRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsLargeRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsLargeRequest
      *
-     * @return The IWorkbookFunctionsLargeRequest instance
+     * @return the IWorkbookFunctionsLargeRequest instance
      */
     IWorkbookFunctionsLargeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsLargeRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsLargeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLargeRequest instance
+     * @return the IWorkbookFunctionsLargeRequest instance
      */
     IWorkbookFunctionsLargeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

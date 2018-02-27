@@ -27,9 +27,9 @@ public class BasePersonRequestBuilder extends BaseRequestBuilder implements IBas
     /**
      * The request builder for the Person
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BasePersonRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BasePersonRequestBuilder extends BaseRequestBuilder implements IBas
 
     /**
      * Creates the request
+     *
+     * @return the IPersonRequest instance
      */
     public IPersonRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BasePersonRequestBuilder extends BaseRequestBuilder implements IBas
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IPersonRequest instance
      */
     public IPersonRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new PersonRequest(getRequestUrl(), getClient(), requestOptions);

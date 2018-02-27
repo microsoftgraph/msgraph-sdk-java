@@ -51,7 +51,7 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * The Target.
-     * The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
+     * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
      */
     @SerializedName("target")
     @Expose
@@ -86,6 +86,7 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -94,6 +95,7 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -101,10 +103,10 @@ public class BaseOnenotePatchContentCommand implements IJsonBackedObject {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

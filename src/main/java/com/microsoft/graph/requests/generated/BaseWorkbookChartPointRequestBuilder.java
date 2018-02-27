@@ -27,9 +27,9 @@ public class BaseWorkbookChartPointRequestBuilder extends BaseRequestBuilder imp
     /**
      * The request builder for the WorkbookChartPoint
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartPointRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookChartPointRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartPointRequest instance
      */
     public IWorkbookChartPointRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartPointRequestBuilder extends BaseRequestBuilder imp
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartPointRequest instance
      */
     public IWorkbookChartPointRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartPointRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,7 +56,9 @@ public class BaseWorkbookChartPointRequestBuilder extends BaseRequestBuilder imp
 
 
     /**
-     * Gets the request builder for WorkbookChartPointFormat.
+     * Gets the request builder for WorkbookChartPointFormat
+     *
+     * @return the IWorkbookChartPointFormatRequestBuilder instance
      */
     public IWorkbookChartPointFormatRequestBuilder format() {
         return new WorkbookChartPointFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

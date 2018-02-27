@@ -30,63 +30,64 @@ public interface IBaseWorkbookTableColumnItemAtRequest {
     /**
      * Patches the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTableColumn the WorkbookTableColumn with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
 
     /**
      * Patches the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn with which to PATCH
-     * @return The WorkbookTableColumn
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTableColumn the WorkbookTableColumn with which to PATCH
+     * @return the WorkbookTableColumn
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookTableColumn patch(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException;
 
     /**
      * Puts the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookTableColumn the WorkbookTableColumn to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(WorkbookTableColumn srcWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback);
 
     /**
      * Puts the WorkbookTableColumnItemAt
      *
-     * @param srcWorkbookTableColumn The WorkbookTableColumn to PUT
-     * @return The WorkbookTableColumn
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookTableColumn the WorkbookTableColumn to PUT
+     * @return the WorkbookTableColumn
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      WorkbookTableColumn put(WorkbookTableColumn srcWorkbookTableColumn) throws ClientException;
     /**
      * Gets the WorkbookTableColumn
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookTableColumn> callback);
 
     /**
      * Gets the WorkbookTableColumn
      *
-     * @return The WorkbookTableColumn
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookTableColumn
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookTableColumn get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookTableColumnItemAtRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookTableColumnItemAtRequest expand(final String value);
 

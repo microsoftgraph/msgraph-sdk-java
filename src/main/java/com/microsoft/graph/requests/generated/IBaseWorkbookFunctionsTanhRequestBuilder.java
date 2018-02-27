@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsTanhRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsTanhRequest
      *
-     * @return The IWorkbookFunctionsTanhRequest instance
+     * @return the IWorkbookFunctionsTanhRequest instance
      */
     IWorkbookFunctionsTanhRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsTanhRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsTanhRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTanhRequest instance
+     * @return the IWorkbookFunctionsTanhRequest instance
      */
     IWorkbookFunctionsTanhRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

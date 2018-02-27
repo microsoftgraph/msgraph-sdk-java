@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCountIfRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsCountIfRequest
      *
-     * @return The IWorkbookFunctionsCountIfRequest instance
+     * @return the IWorkbookFunctionsCountIfRequest instance
      */
     IWorkbookFunctionsCountIfRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCountIfRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsCountIfRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCountIfRequest instance
+     * @return the IWorkbookFunctionsCountIfRequest instance
      */
     IWorkbookFunctionsCountIfRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

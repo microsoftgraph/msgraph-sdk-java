@@ -27,9 +27,17 @@ public class UserFindMeetingTimesRequestBuilder extends BaseUserFindMeetingTimes
     /**
      * The request builder for this UserFindMeetingTimes
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param attendees the attendees
+     * @param locationConstraint the locationConstraint
+     * @param timeConstraint the timeConstraint
+     * @param meetingDuration the meetingDuration
+     * @param maxCandidates the maxCandidates
+     * @param isOrganizerOptional the isOrganizerOptional
+     * @param returnSuggestionReasons the returnSuggestionReasons
+     * @param minimumAttendeePercentage the minimumAttendeePercentage
      */
     public UserFindMeetingTimesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
         super(requestUrl, client, requestOptions, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);

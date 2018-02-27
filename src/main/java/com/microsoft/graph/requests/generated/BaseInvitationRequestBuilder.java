@@ -27,9 +27,9 @@ public class BaseInvitationRequestBuilder extends BaseRequestBuilder implements 
     /**
      * The request builder for the Invitation
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseInvitationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseInvitationRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request
+     *
+     * @return the IInvitationRequest instance
      */
     public IInvitationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseInvitationRequestBuilder extends BaseRequestBuilder implements 
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IInvitationRequest instance
      */
     public IInvitationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new InvitationRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,7 +56,9 @@ public class BaseInvitationRequestBuilder extends BaseRequestBuilder implements 
 
 
     /**
-     * Gets the request builder for User.
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
      */
     public IUserWithReferenceRequestBuilder invitedUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUser"), getClient(), null);

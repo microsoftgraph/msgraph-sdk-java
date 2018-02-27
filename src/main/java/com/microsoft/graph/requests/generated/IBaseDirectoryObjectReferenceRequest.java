@@ -31,33 +31,33 @@ public interface IBaseDirectoryObjectReferenceRequest extends IHttpRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseDirectoryObjectReferenceRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseDirectoryObjectReferenceRequest expand(final String value);
 
     /**
      * Puts the DirectoryObject
      *
-     * @param srcDirectoryObject The DirectoryObject to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcDirectoryObject the DirectoryObject to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(DirectoryObject srcDirectoryObject, final ICallback<DirectoryObject> callback);
 
     /**
      * Puts the DirectoryObject
      *
-     * @param srcDirectoryObject The DirectoryObject to PUT
-     * @return The DirectoryObject
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcDirectoryObject the DirectoryObject to PUT
+     * @return the DirectoryObject
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     DirectoryObject put(DirectoryObject srcDirectoryObject) throws ClientException;
 }

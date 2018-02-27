@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsMinRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsMin
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsMinRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsMinRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsMinRequest
      *
-     * @return The IWorkbookFunctionsMinRequest instance
+     * @return the IWorkbookFunctionsMinRequest instance
      */
     public IWorkbookFunctionsMinRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsMinRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsMinRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMinRequest instance
+     * @return the IWorkbookFunctionsMinRequest instance
      */
     public IWorkbookFunctionsMinRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMinRequest request = new WorkbookFunctionsMinRequest(

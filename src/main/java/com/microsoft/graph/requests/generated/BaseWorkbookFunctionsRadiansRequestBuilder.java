@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsRadiansRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsRadians
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param angle the angle
      */
     public BaseWorkbookFunctionsRadiansRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement angle) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsRadiansRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsRadiansRequest
      *
-     * @return The IWorkbookFunctionsRadiansRequest instance
+     * @return the IWorkbookFunctionsRadiansRequest instance
      */
     public IWorkbookFunctionsRadiansRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsRadiansRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsRadiansRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRadiansRequest instance
+     * @return the IWorkbookFunctionsRadiansRequest instance
      */
     public IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRadiansRequest request = new WorkbookFunctionsRadiansRequest(

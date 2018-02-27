@@ -27,9 +27,15 @@ public class WorkbookFunctionsPpmtRequestBuilder extends BaseWorkbookFunctionsPp
     /**
      * The request builder for this WorkbookFunctionsPpmt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param per the per
+     * @param nper the nper
+     * @param pv the pv
+     * @param fv the fv
+     * @param type the type
      */
     public WorkbookFunctionsPpmtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions, rate, per, nper, pv, fv, type);

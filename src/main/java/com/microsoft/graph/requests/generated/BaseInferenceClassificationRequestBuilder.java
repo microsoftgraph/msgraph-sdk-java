@@ -27,9 +27,9 @@ public class BaseInferenceClassificationRequestBuilder extends BaseRequestBuilde
     /**
      * The request builder for the InferenceClassification
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseInferenceClassificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseInferenceClassificationRequestBuilder extends BaseRequestBuilde
 
     /**
      * Creates the request
+     *
+     * @return the IInferenceClassificationRequest instance
      */
     public IInferenceClassificationRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseInferenceClassificationRequestBuilder extends BaseRequestBuilde
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IInferenceClassificationRequest instance
      */
     public IInferenceClassificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new InferenceClassificationRequest(getRequestUrl(), getClient(), requestOptions);

@@ -27,9 +27,11 @@ public class WorkbookFunctionsHyperlinkRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsHyperlink
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param linkLocation the linkLocation
+     * @param friendlyName the friendlyName
      */
     public WorkbookFunctionsHyperlinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement linkLocation, final com.google.gson.JsonElement friendlyName) {
         super(requestUrl, client, requestOptions, linkLocation, friendlyName);

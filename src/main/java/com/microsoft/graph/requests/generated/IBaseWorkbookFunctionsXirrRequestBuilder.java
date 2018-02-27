@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsXirrRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsXirrRequest
      *
-     * @return The IWorkbookFunctionsXirrRequest instance
+     * @return the IWorkbookFunctionsXirrRequest instance
      */
     IWorkbookFunctionsXirrRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsXirrRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsXirrRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsXirrRequest instance
+     * @return the IWorkbookFunctionsXirrRequest instance
      */
     IWorkbookFunctionsXirrRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

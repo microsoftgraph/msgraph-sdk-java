@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseContentTypeCollectionPage extends BaseCollectionPage<ContentType, IContentTypeCollectionRequestBuilder> implements IBaseContentTypeCollectionPage {
 
     /**
-     * A collection page for ContentType.
+     * A collection page for ContentType
      *
-     * @param response The serialized BaseContentTypeCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContentTypeCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseContentTypeCollectionPage(final BaseContentTypeCollectionResponse response, final IContentTypeCollectionRequestBuilder builder) {
         super(response.value, builder);

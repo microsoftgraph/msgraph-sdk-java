@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsMultiNomial
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsMultiNomialRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsMultiNomialRequest
      *
-     * @return The IWorkbookFunctionsMultiNomialRequest instance
+     * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
     public IWorkbookFunctionsMultiNomialRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsMultiNomialRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsMultiNomialRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMultiNomialRequest instance
+     * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
     public IWorkbookFunctionsMultiNomialRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMultiNomialRequest request = new WorkbookFunctionsMultiNomialRequest(

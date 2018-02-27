@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseUserRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IUserRequest instance
      */
     IUserRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
      */
     IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -42,7 +47,9 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IDirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id);
 
     /**
-     * Gets the request builder for DirectoryObject.
+     * Gets the request builder for DirectoryObject
+     *
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder manager();
 
@@ -79,7 +86,9 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IMailFolderRequestBuilder mailFolders(final String id);
 
     /**
-     * Gets the request builder for Calendar.
+     * Gets the request builder for Calendar
+     *
+     * @return the ICalendarRequestBuilder instance
      */
     ICalendarRequestBuilder calendar();
 
@@ -112,12 +121,16 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IContactFolderRequestBuilder contactFolders(final String id);
 
     /**
-     * Gets the request builder for InferenceClassification.
+     * Gets the request builder for InferenceClassification
+     *
+     * @return the IInferenceClassificationRequestBuilder instance
      */
     IInferenceClassificationRequestBuilder inferenceClassification();
 
     /**
-     * Gets the request builder for ProfilePhoto.
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
 
@@ -126,7 +139,9 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IProfilePhotoRequestBuilder photos(final String id);
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
+     *
+     * @return the IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 
@@ -135,12 +150,16 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IDriveRequestBuilder drives(final String id);
 
     /**
-     * Gets the request builder for PlannerUser.
+     * Gets the request builder for PlannerUser
+     *
+     * @return the IPlannerUserRequestBuilder instance
      */
     IPlannerUserRequestBuilder planner();
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);

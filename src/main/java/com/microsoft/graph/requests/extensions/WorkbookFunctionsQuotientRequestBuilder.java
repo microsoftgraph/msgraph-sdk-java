@@ -27,9 +27,11 @@ public class WorkbookFunctionsQuotientRequestBuilder extends BaseWorkbookFunctio
     /**
      * The request builder for this WorkbookFunctionsQuotient
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param numerator the numerator
+     * @param denominator the denominator
      */
     public WorkbookFunctionsQuotientRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numerator, final com.google.gson.JsonElement denominator) {
         super(requestUrl, client, requestOptions, numerator, denominator);

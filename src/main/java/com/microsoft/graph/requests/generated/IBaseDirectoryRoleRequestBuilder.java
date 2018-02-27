@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseDirectoryRoleRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IDirectoryRoleRequest instance
      */
     IDirectoryRoleRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IDirectoryRoleRequest instance
      */
     IDirectoryRoleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

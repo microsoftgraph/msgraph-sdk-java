@@ -27,8 +27,8 @@ public class OrganizationCollectionPage extends BaseOrganizationCollectionPage i
     /**
      * A collection page for Organization.
      *
-     * @param response The serialized BaseOrganizationCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseOrganizationCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public OrganizationCollectionPage(final BaseOrganizationCollectionResponse response, final IOrganizationCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,9 +27,11 @@ public class DriveItemCreateLinkRequestBuilder extends BaseDriveItemCreateLinkRe
     /**
      * The request builder for this DriveItemCreateLink
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param type the type
+     * @param scope the scope
      */
     public DriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final String scope) {
         super(requestUrl, client, requestOptions, type, scope);

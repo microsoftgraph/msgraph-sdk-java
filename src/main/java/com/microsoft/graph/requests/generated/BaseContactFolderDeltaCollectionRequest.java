@@ -28,9 +28,9 @@ public class BaseContactFolderDeltaCollectionRequest extends BaseCollectionReque
     /**
      * The request for this ContactFolderDelta
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseContactFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseContactFolderDeltaCollectionResponse.class, IContactFolderDeltaCollectionPage.class);
@@ -72,8 +72,8 @@ public class BaseContactFolderDeltaCollectionRequest extends BaseCollectionReque
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IContactFolderDeltaCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -83,8 +83,8 @@ public class BaseContactFolderDeltaCollectionRequest extends BaseCollectionReque
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IContactFolderDeltaCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value+""));
@@ -94,8 +94,8 @@ public class BaseContactFolderDeltaCollectionRequest extends BaseCollectionReque
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IContactFolderDeltaCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));

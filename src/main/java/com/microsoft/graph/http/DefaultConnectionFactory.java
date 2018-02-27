@@ -25,15 +25,16 @@ package com.microsoft.graph.http;
 import java.io.IOException;
 
 /**
- * Creates connections to remove servers.
+ * Creates connections to remove servers
  */
 public class DefaultConnectionFactory implements IConnectionFactory {
 
     /**
-     * Creates a connection from an IHttpRequest.
-     * @param request The request to make the connection from.
-     * @return The connection object.
-     * @throws IOException An exception occurs if there was a network issue creating the connection.
+     * Creates a connection from an IHttpRequest
+     * 
+     * @param request      the request to make the connection from
+     * @return             the connection object
+     * @throws IOException an exception occurs if there was a network issue creating the connection
      */
     @Override
     public IConnection createFromRequest(final IHttpRequest request) throws IOException {

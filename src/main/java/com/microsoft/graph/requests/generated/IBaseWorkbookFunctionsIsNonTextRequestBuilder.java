@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIsNonTextRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsIsNonTextRequest
      *
-     * @return The IWorkbookFunctionsIsNonTextRequest instance
+     * @return the IWorkbookFunctionsIsNonTextRequest instance
      */
     IWorkbookFunctionsIsNonTextRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIsNonTextRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsIsNonTextRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIsNonTextRequest instance
+     * @return the IWorkbookFunctionsIsNonTextRequest instance
      */
     IWorkbookFunctionsIsNonTextRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

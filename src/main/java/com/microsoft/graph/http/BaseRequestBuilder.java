@@ -31,7 +31,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * A request builder.
+ * A request builder
  */
 public abstract class BaseRequestBuilder implements IRequestBuilder {
 
@@ -41,21 +41,21 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     private final IBaseClient client;
 
     /**
-     * The URL for this request.
+     * The URL for this request
      */
     private final String requestUrl;
 
     /**
-     * The options for this request.
+     * The options for this request
      */
     private final List<Option> options = new ArrayList<>();
 
     /**
-     * Creates the request builder.
+     * Creates the request builder
      *
-     * @param requestUrl The URL to make the request against.
-     * @param client     The client which can issue the request.
-     * @param options    The options for this request.
+     * @param requestUrl the URL to make the request against
+     * @param client     the client which can issue the request
+     * @param options    the options for this request
      */
     public BaseRequestBuilder(
             final String requestUrl,
@@ -70,37 +70,37 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     }
 
     /**
-     * Gets the client.
+     * Gets the client
      *
-     * @return The client.
+     * @return the client
      */
     public IBaseClient getClient() {
         return client;
     }
 
     /**
-     * Gets the request URL.
+     * Gets the request URL
      *
-     * @return The request URL.
+     * @return the request URL
      */
     public String getRequestUrl() {
         return requestUrl;
     }
 
     /**
-     * Get the full list of options for this request.
+     * Get the full list of options for this request
      *
-     * @return The full list of options for this request.
+     * @return the full list of options for this request
      */
     public List<? extends Option> getOptions() {
         return Collections.unmodifiableList(options);
     }
 
     /**
-     * Gets the request URL with an extra segment added to it.
+     * Gets the request URL with an extra segment added to it
      *
-     * @param urlSegment The section to add.
-     * @return The base URL for this request.
+     * @param  urlSegment the section to add
+     * @return the base URL for this request
      */
     public String getRequestUrlWithAdditionalSegment(final String urlSegment) {
         return requestUrl + "/" + urlSegment;

@@ -26,9 +26,12 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActi
     /**
      * The request builder for this WorkbookNamedItemAddFormulaLocal
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param name the name
+     * @param formula the formula
+     * @param comment the comment
      */
     public BaseWorkbookNamedItemAddFormulaLocalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final String formula, final String comment) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest
      *
-     * @return The IWorkbookNamedItemAddFormulaLocalRequest instance
+     * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
     public IWorkbookNamedItemAddFormulaLocalRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookNamedItemAddFormulaLocalRequestBuilder extends BaseActi
      * Creates the IWorkbookNamedItemAddFormulaLocalRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookNamedItemAddFormulaLocalRequest instance
+     * @return the IWorkbookNamedItemAddFormulaLocalRequest instance
      */
     public IWorkbookNamedItemAddFormulaLocalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookNamedItemAddFormulaLocalRequest request = new WorkbookNamedItemAddFormulaLocalRequest(

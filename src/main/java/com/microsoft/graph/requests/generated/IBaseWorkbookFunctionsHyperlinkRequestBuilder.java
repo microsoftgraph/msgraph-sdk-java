@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsHyperlinkRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsHyperlinkRequest
      *
-     * @return The IWorkbookFunctionsHyperlinkRequest instance
+     * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
     IWorkbookFunctionsHyperlinkRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsHyperlinkRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsHyperlinkRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHyperlinkRequest instance
+     * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
     IWorkbookFunctionsHyperlinkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

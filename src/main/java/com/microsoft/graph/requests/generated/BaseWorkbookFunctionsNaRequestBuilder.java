@@ -26,9 +26,9 @@ public class BaseWorkbookFunctionsNaRequestBuilder extends BaseActionRequestBuil
     /**
      * The request builder for this WorkbookFunctionsNa
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsNaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookFunctionsNaRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsNaRequest
      *
-     * @return The IWorkbookFunctionsNaRequest instance
+     * @return the IWorkbookFunctionsNaRequest instance
      */
     public IWorkbookFunctionsNaRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsNaRequestBuilder extends BaseActionRequestBuil
      * Creates the IWorkbookFunctionsNaRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNaRequest instance
+     * @return the IWorkbookFunctionsNaRequest instance
      */
     public IWorkbookFunctionsNaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNaRequest request = new WorkbookFunctionsNaRequest(

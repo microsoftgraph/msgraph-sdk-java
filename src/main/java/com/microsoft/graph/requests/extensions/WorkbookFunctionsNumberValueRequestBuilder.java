@@ -27,9 +27,12 @@ public class WorkbookFunctionsNumberValueRequestBuilder extends BaseWorkbookFunc
     /**
      * The request builder for this WorkbookFunctionsNumberValue
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param decimalSeparator the decimalSeparator
+     * @param groupSeparator the groupSeparator
      */
     public WorkbookFunctionsNumberValueRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
         super(requestUrl, client, requestOptions, text, decimalSeparator, groupSeparator);

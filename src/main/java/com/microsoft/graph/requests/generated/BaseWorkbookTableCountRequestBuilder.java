@@ -26,9 +26,9 @@ public class BaseWorkbookTableCountRequestBuilder extends BaseFunctionRequestBui
     /**
      * The request builder for this WorkbookTableCount
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableCountRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookTableCountRequest
      *
-     * @return The IWorkbookTableCountRequest instance
+     * @return the IWorkbookTableCountRequest instance
      */
     public IWorkbookTableCountRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableCountRequestBuilder extends BaseFunctionRequestBui
      * Creates the IWorkbookTableCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableCountRequest instance
+     * @return the IWorkbookTableCountRequest instance
      */
     public IWorkbookTableCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableCountRequest request = new WorkbookTableCountRequest(

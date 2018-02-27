@@ -27,9 +27,9 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
     /**
      * The request builder for the Site
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseSiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     /**
      * Creates the request
+     *
+     * @return the ISiteRequest instance
      */
     public ISiteRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the ISiteRequest instance
      */
     public ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SiteRequest(getRequestUrl(), getClient(), requestOptions);
@@ -65,7 +70,9 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
     }
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
+     *
+     * @return the IDriveRequestBuilder instance
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
@@ -100,7 +107,9 @@ public class BaseSiteRequestBuilder extends BaseRequestBuilder implements IBaseS
     }
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);

@@ -27,9 +27,10 @@ public class WorkbookFunctionsLog10RequestBuilder extends BaseWorkbookFunctionsL
     /**
      * The request builder for this WorkbookFunctionsLog10
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public WorkbookFunctionsLog10RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions, number);

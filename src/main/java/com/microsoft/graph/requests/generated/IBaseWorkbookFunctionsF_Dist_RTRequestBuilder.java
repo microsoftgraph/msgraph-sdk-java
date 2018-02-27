@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsF_Dist_RTRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsF_Dist_RTRequest
      *
-     * @return The IWorkbookFunctionsF_Dist_RTRequest instance
+     * @return the IWorkbookFunctionsF_Dist_RTRequest instance
      */
     IWorkbookFunctionsF_Dist_RTRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsF_Dist_RTRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsF_Dist_RTRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsF_Dist_RTRequest instance
+     * @return the IWorkbookFunctionsF_Dist_RTRequest instance
      */
     IWorkbookFunctionsF_Dist_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

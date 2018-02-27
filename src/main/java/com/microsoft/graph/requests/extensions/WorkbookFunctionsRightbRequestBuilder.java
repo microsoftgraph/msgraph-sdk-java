@@ -27,9 +27,11 @@ public class WorkbookFunctionsRightbRequestBuilder extends BaseWorkbookFunctions
     /**
      * The request builder for this WorkbookFunctionsRightb
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param numBytes the numBytes
      */
     public WorkbookFunctionsRightbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions, text, numBytes);

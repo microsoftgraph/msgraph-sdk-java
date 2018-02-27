@@ -27,8 +27,8 @@ public class DirectoryObjectGetMemberObjectsCollectionPage extends BaseDirectory
     /**
      * A collection page for DirectoryObject.
      *
-     * @param response The serialized BaseDirectoryObjectGetMemberObjectsCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDirectoryObjectGetMemberObjectsCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public DirectoryObjectGetMemberObjectsCollectionPage(final BaseDirectoryObjectGetMemberObjectsCollectionResponse response, final IDirectoryObjectGetMemberObjectsCollectionRequestBuilder builder) {
         super(response, builder);

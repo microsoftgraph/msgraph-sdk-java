@@ -27,7 +27,7 @@ public interface IBaseWorkbookChartLineFormatClearRequestBuilder extends IReques
     /**
      * Creates the IWorkbookChartLineFormatClearRequest
      *
-     * @return The IWorkbookChartLineFormatClearRequest instance
+     * @return the IWorkbookChartLineFormatClearRequest instance
      */
     IWorkbookChartLineFormatClearRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookChartLineFormatClearRequestBuilder extends IReques
      * Creates the IWorkbookChartLineFormatClearRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartLineFormatClearRequest instance
+     * @return the IWorkbookChartLineFormatClearRequest instance
      */
     IWorkbookChartLineFormatClearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

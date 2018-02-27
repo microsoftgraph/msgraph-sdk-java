@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsCscRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this WorkbookFunctionsCsc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsCscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsCscRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsCscRequest
      *
-     * @return The IWorkbookFunctionsCscRequest instance
+     * @return the IWorkbookFunctionsCscRequest instance
      */
     public IWorkbookFunctionsCscRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsCscRequestBuilder extends BaseActionRequestBui
      * Creates the IWorkbookFunctionsCscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCscRequest instance
+     * @return the IWorkbookFunctionsCscRequest instance
      */
     public IWorkbookFunctionsCscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCscRequest request = new WorkbookFunctionsCscRequest(

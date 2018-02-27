@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsAveDevRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsAveDev
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsAveDevRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsAveDevRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsAveDevRequest
      *
-     * @return The IWorkbookFunctionsAveDevRequest instance
+     * @return the IWorkbookFunctionsAveDevRequest instance
      */
     public IWorkbookFunctionsAveDevRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsAveDevRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsAveDevRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAveDevRequest instance
+     * @return the IWorkbookFunctionsAveDevRequest instance
      */
     public IWorkbookFunctionsAveDevRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsAveDevRequest request = new WorkbookFunctionsAveDevRequest(

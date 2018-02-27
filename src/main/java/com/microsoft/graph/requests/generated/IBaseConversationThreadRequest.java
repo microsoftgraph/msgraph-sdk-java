@@ -26,72 +26,80 @@ public interface IBaseConversationThreadRequest extends IHttpRequest {
 
     /**
      * Gets the ConversationThread from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<ConversationThread> callback);
 
     /**
      * Gets the ConversationThread from the service
-     * @return The ConversationThread from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the ConversationThread from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     ConversationThread get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this ConversationThread with a source
-     * @param sourceConversationThread The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceConversationThread the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final ConversationThread sourceConversationThread, final ICallback<ConversationThread> callback);
 
     /**
      * Patches this ConversationThread with a source
-     * @param sourceConversationThread The source object with updates
-     * @return The updated ConversationThread
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceConversationThread the source object with updates
+     * @return the updated ConversationThread
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     ConversationThread patch(final ConversationThread sourceConversationThread) throws ClientException;
 
     /**
      * Posts a ConversationThread with a new object
-     * @param newConversationThread The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newConversationThread the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final ConversationThread newConversationThread, final ICallback<ConversationThread> callback);
 
     /**
      * Posts a ConversationThread with a new object
-     * @param newConversationThread The new object to create
-     * @return The created ConversationThread
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newConversationThread the new object to create
+     * @return the created ConversationThread
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     ConversationThread post(final ConversationThread newConversationThread) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseConversationThreadRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseConversationThreadRequest expand(final String value);
 

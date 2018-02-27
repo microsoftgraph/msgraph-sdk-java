@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsNetworkDaysRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsNetworkDaysRequest
      *
-     * @return The IWorkbookFunctionsNetworkDaysRequest instance
+     * @return the IWorkbookFunctionsNetworkDaysRequest instance
      */
     IWorkbookFunctionsNetworkDaysRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsNetworkDaysRequestBuilder extends IReques
      * Creates the IWorkbookFunctionsNetworkDaysRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNetworkDaysRequest instance
+     * @return the IWorkbookFunctionsNetworkDaysRequest instance
      */
     IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

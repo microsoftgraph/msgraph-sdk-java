@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBasePlannerTaskDetailsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IPlannerTaskDetailsRequest instance
      */
     IPlannerTaskDetailsRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IPlannerTaskDetailsRequest instance
      */
     IPlannerTaskDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

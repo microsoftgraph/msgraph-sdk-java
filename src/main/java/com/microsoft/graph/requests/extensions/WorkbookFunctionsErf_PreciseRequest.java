@@ -27,9 +27,9 @@ public class WorkbookFunctionsErf_PreciseRequest extends BaseWorkbookFunctionsEr
     /**
      * The request for this WorkbookFunctionsErf_Precise
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsErf_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

@@ -27,9 +27,9 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * The request for this WorkbookChartPointItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartPointItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartPoint.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
 
     /**
      * Patches the WorkbookChartPointItemAt
-     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChartPoint the WorkbookChartPoint with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChartPoint);
@@ -47,9 +47,9 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Patches the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint with which to PATCH
-     * @return The WorkbookChartPoint
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChartPoint the WorkbookChartPoint with which to PATCH
+     * @return the WorkbookChartPoint
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookChartPoint patch(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookChartPoint);
@@ -58,8 +58,8 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Puts the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChartPoint the WorkbookChartPoint to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookChartPoint srcWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChartPoint);
@@ -68,9 +68,9 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Puts the WorkbookChartPointItemAt
      *
-     * @param srcWorkbookChartPoint The WorkbookChartPoint to PUT
-     * @return The WorkbookChartPoint
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChartPoint the WorkbookChartPoint to PUT
+     * @return the WorkbookChartPoint
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookChartPoint put(WorkbookChartPoint srcWorkbookChartPoint) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookChartPoint);
@@ -78,7 +78,7 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Gets the WorkbookChartPoint
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartPoint> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Gets the WorkbookChartPoint
      *
-     * @return The WorkbookChartPoint
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookChartPoint
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookChartPoint get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookChartPointItemAtRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookChartPointItemAtRequest extends BaseRequest implements 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookChartPointItemAtRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

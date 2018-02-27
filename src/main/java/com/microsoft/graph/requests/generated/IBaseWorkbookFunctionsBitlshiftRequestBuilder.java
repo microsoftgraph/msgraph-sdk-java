@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBitlshiftRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsBitlshiftRequest
      *
-     * @return The IWorkbookFunctionsBitlshiftRequest instance
+     * @return the IWorkbookFunctionsBitlshiftRequest instance
      */
     IWorkbookFunctionsBitlshiftRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBitlshiftRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsBitlshiftRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBitlshiftRequest instance
+     * @return the IWorkbookFunctionsBitlshiftRequest instance
      */
     IWorkbookFunctionsBitlshiftRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

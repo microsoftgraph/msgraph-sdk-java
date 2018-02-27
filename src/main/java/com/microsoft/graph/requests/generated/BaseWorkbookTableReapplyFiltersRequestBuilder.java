@@ -26,9 +26,9 @@ public class BaseWorkbookTableReapplyFiltersRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookTableReapplyFilters
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableReapplyFiltersRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableReapplyFiltersRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookTableReapplyFiltersRequest
      *
-     * @return The IWorkbookTableReapplyFiltersRequest instance
+     * @return the IWorkbookTableReapplyFiltersRequest instance
      */
     public IWorkbookTableReapplyFiltersRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableReapplyFiltersRequestBuilder extends BaseActionReq
      * Creates the IWorkbookTableReapplyFiltersRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableReapplyFiltersRequest instance
+     * @return the IWorkbookTableReapplyFiltersRequest instance
      */
     public IWorkbookTableReapplyFiltersRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableReapplyFiltersRequest request = new WorkbookTableReapplyFiltersRequest(

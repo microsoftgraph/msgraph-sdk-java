@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseNotebookCollectionPage extends BaseCollectionPage<Notebook, INotebookCollectionRequestBuilder> implements IBaseNotebookCollectionPage {
 
     /**
-     * A collection page for Notebook.
+     * A collection page for Notebook
      *
-     * @param response The serialized BaseNotebookCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseNotebookCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseNotebookCollectionPage(final BaseNotebookCollectionResponse response, final INotebookCollectionRequestBuilder builder) {
         super(response.value, builder);

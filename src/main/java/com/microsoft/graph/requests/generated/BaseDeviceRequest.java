@@ -27,10 +27,10 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
     /**
      * The request for the Device
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseDeviceRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
 
     /**
      * Gets the Device from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Device> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
 
     /**
      * Gets the Device from the service
-     * @return The Device from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Device from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Device get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
 
     /**
      * Patches this Device with a source
-     * @param sourceDevice The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDevice the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Device sourceDevice, final ICallback<Device> callback) {
         send(HttpMethod.PATCH, callback, sourceDevice);
@@ -83,9 +88,10 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
 
     /**
      * Patches this Device with a source
-     * @param sourceDevice The source object with updates
-     * @return The updated Device
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDevice the source object with updates
+     * @return the updated Device
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Device patch(final Device sourceDevice) throws ClientException {
         return send(HttpMethod.PATCH, sourceDevice);
@@ -93,8 +99,9 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
 
     /**
      * Creates a Device with a new object
-     * @param newDevice The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDevice the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Device newDevice, final ICallback<Device> callback) {
         send(HttpMethod.POST, callback, newDevice);
@@ -102,9 +109,10 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
 
     /**
      * Creates a Device with a new object
-     * @param newDevice The new object to create
-     * @return The created Device
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDevice the new object to create
+     * @return the created Device
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Device post(final Device newDevice) throws ClientException {
         return send(HttpMethod.POST, newDevice);
@@ -113,8 +121,8 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IDeviceRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseDeviceRequest extends BaseRequest implements IBaseDeviceRequest
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IDeviceRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

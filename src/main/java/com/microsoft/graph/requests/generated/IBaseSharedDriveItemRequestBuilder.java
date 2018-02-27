@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseSharedDriveItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the ISharedDriveItemRequest instance
      */
     ISharedDriveItemRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the ISharedDriveItemRequest instance
      */
     ISharedDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
      */
     IDriveItemRequestBuilder driveItem();
 
@@ -43,22 +50,30 @@ public interface IBaseSharedDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemRequestBuilder items(final String id);
 
     /**
-     * Gets the request builder for List.
+     * Gets the request builder for List
+     *
+     * @return the IListRequestBuilder instance
      */
     IListRequestBuilder list();
 
     /**
-     * Gets the request builder for ListItem.
+     * Gets the request builder for ListItem
+     *
+     * @return the IListItemRequestBuilder instance
      */
     IListItemRequestBuilder listItem();
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
      */
     IDriveItemRequestBuilder root();
 
     /**
-     * Gets the request builder for Site.
+     * Gets the request builder for Site
+     *
+     * @return the ISiteRequestBuilder instance
      */
     ISiteRequestBuilder site();
 

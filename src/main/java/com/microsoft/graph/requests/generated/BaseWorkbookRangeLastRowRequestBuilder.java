@@ -26,9 +26,9 @@ public class BaseWorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestB
     /**
      * The request builder for this WorkbookRangeLastRow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeLastRowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookRangeLastRowRequest
      *
-     * @return The IWorkbookRangeLastRowRequest instance
+     * @return the IWorkbookRangeLastRowRequest instance
      */
     public IWorkbookRangeLastRowRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestB
      * Creates the IWorkbookRangeLastRowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeLastRowRequest instance
+     * @return the IWorkbookRangeLastRowRequest instance
      */
     public IWorkbookRangeLastRowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeLastRowRequest request = new WorkbookRangeLastRowRequest(

@@ -26,72 +26,80 @@ public interface IBaseOnenotePageRequest extends IHttpRequest {
 
     /**
      * Gets the OnenotePage from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<OnenotePage> callback);
 
     /**
      * Gets the OnenotePage from the service
-     * @return The OnenotePage from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OnenotePage from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenotePage get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this OnenotePage with a source
-     * @param sourceOnenotePage The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOnenotePage the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final OnenotePage sourceOnenotePage, final ICallback<OnenotePage> callback);
 
     /**
      * Patches this OnenotePage with a source
-     * @param sourceOnenotePage The source object with updates
-     * @return The updated OnenotePage
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOnenotePage the source object with updates
+     * @return the updated OnenotePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenotePage patch(final OnenotePage sourceOnenotePage) throws ClientException;
 
     /**
      * Posts a OnenotePage with a new object
-     * @param newOnenotePage The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOnenotePage the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final byte[] newOnenotePage, final ICallback<OnenotePage> callback);
 
     /**
      * Posts a OnenotePage with a new object
-     * @param newOnenotePage The new object to create
-     * @return The created OnenotePage
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOnenotePage the new object to create
+     * @return the created OnenotePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenotePage post(final byte[] newOnenotePage) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseOnenotePageRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseOnenotePageRequest expand(final String value);
 

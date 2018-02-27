@@ -26,9 +26,9 @@ public class BaseGroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder
     /**
      * The request builder for this GroupAddFavorite
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseGroupAddFavoriteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseGroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IGroupAddFavoriteRequest
      *
-     * @return The IGroupAddFavoriteRequest instance
+     * @return the IGroupAddFavoriteRequest instance
      */
     public IGroupAddFavoriteRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseGroupAddFavoriteRequestBuilder extends BaseActionRequestBuilder
      * Creates the IGroupAddFavoriteRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IGroupAddFavoriteRequest instance
+     * @return the IGroupAddFavoriteRequest instance
      */
     public IGroupAddFavoriteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         GroupAddFavoriteRequest request = new GroupAddFavoriteRequest(

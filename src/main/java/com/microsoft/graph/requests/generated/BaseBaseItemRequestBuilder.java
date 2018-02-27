@@ -27,9 +27,9 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
     /**
      * The request builder for the BaseItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseBaseItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
 
     /**
      * Creates the request
+     *
+     * @return the IBaseItemRequest instance
      */
     public IBaseItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IBaseItemRequest instance
      */
     public IBaseItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new BaseItemRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,14 +56,18 @@ public class BaseBaseItemRequestBuilder extends BaseRequestBuilder implements IB
 
 
     /**
-     * Gets the request builder for User.
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
      */
     public IUserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for User.
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
      */
     public IUserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);

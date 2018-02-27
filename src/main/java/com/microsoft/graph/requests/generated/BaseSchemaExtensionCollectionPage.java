@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseSchemaExtensionCollectionPage extends BaseCollectionPage<SchemaExtension, ISchemaExtensionCollectionRequestBuilder> implements IBaseSchemaExtensionCollectionPage {
 
     /**
-     * A collection page for SchemaExtension.
+     * A collection page for SchemaExtension
      *
-     * @param response The serialized BaseSchemaExtensionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSchemaExtensionCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseSchemaExtensionCollectionPage(final BaseSchemaExtensionCollectionResponse response, final ISchemaExtensionCollectionRequestBuilder builder) {
         super(response.value, builder);

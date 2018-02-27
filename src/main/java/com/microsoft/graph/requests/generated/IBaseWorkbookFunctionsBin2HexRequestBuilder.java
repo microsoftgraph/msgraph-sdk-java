@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBin2HexRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsBin2HexRequest
      *
-     * @return The IWorkbookFunctionsBin2HexRequest instance
+     * @return the IWorkbookFunctionsBin2HexRequest instance
      */
     IWorkbookFunctionsBin2HexRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBin2HexRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsBin2HexRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBin2HexRequest instance
+     * @return the IWorkbookFunctionsBin2HexRequest instance
      */
     IWorkbookFunctionsBin2HexRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

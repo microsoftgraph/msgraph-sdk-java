@@ -27,8 +27,8 @@ public class GroupSettingTemplateCollectionPage extends BaseGroupSettingTemplate
     /**
      * A collection page for GroupSettingTemplate.
      *
-     * @param response The serialized BaseGroupSettingTemplateCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseGroupSettingTemplateCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public GroupSettingTemplateCollectionPage(final BaseGroupSettingTemplateCollectionResponse response, final IGroupSettingTemplateCollectionRequestBuilder builder) {
         super(response, builder);

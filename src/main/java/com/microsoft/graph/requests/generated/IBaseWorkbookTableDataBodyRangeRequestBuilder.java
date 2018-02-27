@@ -27,7 +27,7 @@ public interface IBaseWorkbookTableDataBodyRangeRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookTableDataBodyRangeRequest
      *
-     * @return The IWorkbookTableDataBodyRangeRequest instance
+     * @return the IWorkbookTableDataBodyRangeRequest instance
      */
     IWorkbookTableDataBodyRangeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookTableDataBodyRangeRequestBuilder extends IRequestB
      * Creates the IWorkbookTableDataBodyRangeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableDataBodyRangeRequest instance
+     * @return the IWorkbookTableDataBodyRangeRequest instance
      */
     IWorkbookTableDataBodyRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

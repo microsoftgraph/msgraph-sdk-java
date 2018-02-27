@@ -26,9 +26,11 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
     /**
      * The request builder for this DriveItemCopy
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param name the name
+     * @param parentReference the parentReference
      */
     public BaseDriveItemCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name, final ItemReference parentReference) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
     /**
      * Creates the IDriveItemCopyRequest
      *
-     * @return The IDriveItemCopyRequest instance
+     * @return the IDriveItemCopyRequest instance
      */
     public IDriveItemCopyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseDriveItemCopyRequestBuilder extends BaseActionRequestBuilder {
      * Creates the IDriveItemCopyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IDriveItemCopyRequest instance
+     * @return the IDriveItemCopyRequest instance
      */
     public IDriveItemCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveItemCopyRequest request = new DriveItemCopyRequest(

@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsBitxorRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsBitxor
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number1 the number1
+     * @param number2 the number2
      */
     public BaseWorkbookFunctionsBitxorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsBitxorRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsBitxorRequest
      *
-     * @return The IWorkbookFunctionsBitxorRequest instance
+     * @return the IWorkbookFunctionsBitxorRequest instance
      */
     public IWorkbookFunctionsBitxorRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsBitxorRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsBitxorRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBitxorRequest instance
+     * @return the IWorkbookFunctionsBitxorRequest instance
      */
     public IWorkbookFunctionsBitxorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBitxorRequest request = new WorkbookFunctionsBitxorRequest(

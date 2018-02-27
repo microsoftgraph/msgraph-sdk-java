@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseOperationRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IOperationRequest instance
      */
     IOperationRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IOperationRequest instance
      */
     IOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

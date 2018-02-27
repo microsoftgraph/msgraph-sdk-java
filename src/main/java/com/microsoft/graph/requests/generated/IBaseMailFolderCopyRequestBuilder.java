@@ -27,7 +27,7 @@ public interface IBaseMailFolderCopyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMailFolderCopyRequest
      *
-     * @return The IMailFolderCopyRequest instance
+     * @return the IMailFolderCopyRequest instance
      */
     IMailFolderCopyRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseMailFolderCopyRequestBuilder extends IRequestBuilder {
      * Creates the IMailFolderCopyRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IMailFolderCopyRequest instance
+     * @return the IMailFolderCopyRequest instance
      */
     IMailFolderCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

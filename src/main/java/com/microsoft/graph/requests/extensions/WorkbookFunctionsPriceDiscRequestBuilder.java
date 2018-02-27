@@ -27,9 +27,14 @@ public class WorkbookFunctionsPriceDiscRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsPriceDisc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param discount the discount
+     * @param redemption the redemption
+     * @param basis the basis
      */
     public WorkbookFunctionsPriceDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions, settlement, maturity, discount, redemption, basis);

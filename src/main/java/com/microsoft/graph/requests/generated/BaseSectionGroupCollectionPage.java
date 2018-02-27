@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseSectionGroupCollectionPage extends BaseCollectionPage<SectionGroup, ISectionGroupCollectionRequestBuilder> implements IBaseSectionGroupCollectionPage {
 
     /**
-     * A collection page for SectionGroup.
+     * A collection page for SectionGroup
      *
-     * @param response The serialized BaseSectionGroupCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSectionGroupCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseSectionGroupCollectionPage(final BaseSectionGroupCollectionResponse response, final ISectionGroupCollectionRequestBuilder builder) {
         super(response.value, builder);

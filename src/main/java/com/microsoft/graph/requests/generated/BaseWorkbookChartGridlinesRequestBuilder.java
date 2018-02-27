@@ -27,9 +27,9 @@ public class BaseWorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder
     /**
      * The request builder for the WorkbookChartGridlines
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartGridlinesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartGridlinesRequest instance
      */
     public IWorkbookChartGridlinesRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartGridlinesRequest instance
      */
     public IWorkbookChartGridlinesRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartGridlinesRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,7 +56,9 @@ public class BaseWorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder
 
 
     /**
-     * Gets the request builder for WorkbookChartGridlinesFormat.
+     * Gets the request builder for WorkbookChartGridlinesFormat
+     *
+     * @return the IWorkbookChartGridlinesFormatRequestBuilder instance
      */
     public IWorkbookChartGridlinesFormatRequestBuilder format() {
         return new WorkbookChartGridlinesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);

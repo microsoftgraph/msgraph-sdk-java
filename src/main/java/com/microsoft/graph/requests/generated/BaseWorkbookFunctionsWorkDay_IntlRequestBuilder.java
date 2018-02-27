@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsWorkDay_Intl
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDate the startDate
+     * @param days the days
+     * @param weekend the weekend
+     * @param holidays the holidays
      */
     public BaseWorkbookFunctionsWorkDay_IntlRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsWorkDay_IntlRequest
      *
-     * @return The IWorkbookFunctionsWorkDay_IntlRequest instance
+     * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
      */
     public IWorkbookFunctionsWorkDay_IntlRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsWorkDay_IntlRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsWorkDay_IntlRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsWorkDay_IntlRequest instance
+     * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
      */
     public IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsWorkDay_IntlRequest request = new WorkbookFunctionsWorkDay_IntlRequest(

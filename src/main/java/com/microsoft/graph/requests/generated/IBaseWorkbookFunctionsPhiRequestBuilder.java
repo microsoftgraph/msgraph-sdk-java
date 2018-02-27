@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPhiRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsPhiRequest
      *
-     * @return The IWorkbookFunctionsPhiRequest instance
+     * @return the IWorkbookFunctionsPhiRequest instance
      */
     IWorkbookFunctionsPhiRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPhiRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsPhiRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPhiRequest instance
+     * @return the IWorkbookFunctionsPhiRequest instance
      */
     IWorkbookFunctionsPhiRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

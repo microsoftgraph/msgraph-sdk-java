@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseSiteCollectionPage extends BaseCollectionPage<Site, ISiteCollectionRequestBuilder> implements IBaseSiteCollectionPage {
 
     /**
-     * A collection page for Site.
+     * A collection page for Site
      *
-     * @param response The serialized BaseSiteCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseSiteCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseSiteCollectionPage(final BaseSiteCollectionResponse response, final ISiteCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -26,72 +26,80 @@ public interface IBaseOnenoteEntityHierarchyModelRequest extends IHttpRequest {
 
     /**
      * Gets the OnenoteEntityHierarchyModel from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<OnenoteEntityHierarchyModel> callback);
 
     /**
      * Gets the OnenoteEntityHierarchyModel from the service
-     * @return The OnenoteEntityHierarchyModel from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OnenoteEntityHierarchyModel from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenoteEntityHierarchyModel get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this OnenoteEntityHierarchyModel with a source
-     * @param sourceOnenoteEntityHierarchyModel The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOnenoteEntityHierarchyModel the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback);
 
     /**
      * Patches this OnenoteEntityHierarchyModel with a source
-     * @param sourceOnenoteEntityHierarchyModel The source object with updates
-     * @return The updated OnenoteEntityHierarchyModel
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOnenoteEntityHierarchyModel the source object with updates
+     * @return the updated OnenoteEntityHierarchyModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenoteEntityHierarchyModel patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel) throws ClientException;
 
     /**
      * Posts a OnenoteEntityHierarchyModel with a new object
-     * @param newOnenoteEntityHierarchyModel The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOnenoteEntityHierarchyModel the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback);
 
     /**
      * Posts a OnenoteEntityHierarchyModel with a new object
-     * @param newOnenoteEntityHierarchyModel The new object to create
-     * @return The created OnenoteEntityHierarchyModel
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOnenoteEntityHierarchyModel the new object to create
+     * @return the created OnenoteEntityHierarchyModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenoteEntityHierarchyModel post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseOnenoteEntityHierarchyModelRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseOnenoteEntityHierarchyModelRequest expand(final String value);
 

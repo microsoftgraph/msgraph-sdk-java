@@ -26,9 +26,10 @@ public class BaseWorkbookRangeColumnRequestBuilder extends BaseFunctionRequestBu
     /**
      * The request builder for this WorkbookRangeColumn
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param column the column
      */
     public BaseWorkbookRangeColumnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer column) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookRangeColumnRequestBuilder extends BaseFunctionRequestBu
     /**
      * Creates the IWorkbookRangeColumnRequest
      *
-     * @return The IWorkbookRangeColumnRequest instance
+     * @return the IWorkbookRangeColumnRequest instance
      */
     public IWorkbookRangeColumnRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookRangeColumnRequestBuilder extends BaseFunctionRequestBu
      * Creates the IWorkbookRangeColumnRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeColumnRequest instance
+     * @return the IWorkbookRangeColumnRequest instance
      */
     public IWorkbookRangeColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeColumnRequest request = new WorkbookRangeColumnRequest(

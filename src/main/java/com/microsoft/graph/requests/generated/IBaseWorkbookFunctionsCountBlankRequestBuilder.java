@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCountBlankRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsCountBlankRequest
      *
-     * @return The IWorkbookFunctionsCountBlankRequest instance
+     * @return the IWorkbookFunctionsCountBlankRequest instance
      */
     IWorkbookFunctionsCountBlankRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCountBlankRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsCountBlankRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCountBlankRequest instance
+     * @return the IWorkbookFunctionsCountBlankRequest instance
      */
     IWorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

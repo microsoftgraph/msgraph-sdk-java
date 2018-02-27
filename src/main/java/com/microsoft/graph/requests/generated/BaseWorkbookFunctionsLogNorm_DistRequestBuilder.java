@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param mean the mean
+     * @param standardDev the standardDev
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsLogNorm_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsLogNorm_DistRequest
      *
-     * @return The IWorkbookFunctionsLogNorm_DistRequest instance
+     * @return the IWorkbookFunctionsLogNorm_DistRequest instance
      */
     public IWorkbookFunctionsLogNorm_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsLogNorm_DistRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsLogNorm_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLogNorm_DistRequest instance
+     * @return the IWorkbookFunctionsLogNorm_DistRequest instance
      */
     public IWorkbookFunctionsLogNorm_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLogNorm_DistRequest request = new WorkbookFunctionsLogNorm_DistRequest(

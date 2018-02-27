@@ -27,9 +27,9 @@ public class InvitationRequest extends BaseInvitationRequest implements IInvitat
     /**
      * The request for the Invitation
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public InvitationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Invitation.class);

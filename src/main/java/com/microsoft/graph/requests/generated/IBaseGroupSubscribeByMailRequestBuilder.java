@@ -27,7 +27,7 @@ public interface IBaseGroupSubscribeByMailRequestBuilder extends IRequestBuilder
     /**
      * Creates the IGroupSubscribeByMailRequest
      *
-     * @return The IGroupSubscribeByMailRequest instance
+     * @return the IGroupSubscribeByMailRequest instance
      */
     IGroupSubscribeByMailRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseGroupSubscribeByMailRequestBuilder extends IRequestBuilder
      * Creates the IGroupSubscribeByMailRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IGroupSubscribeByMailRequest instance
+     * @return the IGroupSubscribeByMailRequest instance
      */
     IGroupSubscribeByMailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

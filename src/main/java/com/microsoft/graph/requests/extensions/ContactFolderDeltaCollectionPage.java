@@ -27,8 +27,8 @@ public class ContactFolderDeltaCollectionPage extends BaseContactFolderDeltaColl
     /**
      * A collection page for ContactFolder.
      *
-     * @param response The serialized BaseContactFolderDeltaCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContactFolderDeltaCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public ContactFolderDeltaCollectionPage(final BaseContactFolderDeltaCollectionResponse response, final IContactFolderDeltaCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,7 +27,7 @@ public interface IBaseWorkbookChartItemAtRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookChartItemAtRequest
      *
-     * @return The IWorkbookChartItemAtRequest instance
+     * @return the IWorkbookChartItemAtRequest instance
      */
     IWorkbookChartItemAtRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookChartItemAtRequestBuilder extends IRequestBuilder 
      * Creates the IWorkbookChartItemAtRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartItemAtRequest instance
+     * @return the IWorkbookChartItemAtRequest instance
      */
     IWorkbookChartItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

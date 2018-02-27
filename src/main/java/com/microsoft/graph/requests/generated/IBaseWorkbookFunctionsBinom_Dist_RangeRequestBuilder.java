@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends IR
     /**
      * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest
      *
-     * @return The IWorkbookFunctionsBinom_Dist_RangeRequest instance
+     * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
      */
     IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends IR
      * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBinom_Dist_RangeRequest instance
+     * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
      */
     IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

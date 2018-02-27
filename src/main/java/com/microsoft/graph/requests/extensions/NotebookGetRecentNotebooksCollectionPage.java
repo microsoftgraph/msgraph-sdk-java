@@ -27,8 +27,8 @@ public class NotebookGetRecentNotebooksCollectionPage extends BaseNotebookGetRec
     /**
      * A collection page for Notebook.
      *
-     * @param response The serialized BaseNotebookGetRecentNotebooksCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseNotebookGetRecentNotebooksCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public NotebookGetRecentNotebooksCollectionPage(final BaseNotebookGetRecentNotebooksCollectionResponse response, final INotebookGetRecentNotebooksCollectionRequestBuilder builder) {
         super(response, builder);

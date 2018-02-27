@@ -27,9 +27,12 @@ public class WorkbookFunctionsTimeRequestBuilder extends BaseWorkbookFunctionsTi
     /**
      * The request builder for this WorkbookFunctionsTime
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param hour the hour
+     * @param minute the minute
+     * @param second the second
      */
     public WorkbookFunctionsTimeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement hour, final com.google.gson.JsonElement minute, final com.google.gson.JsonElement second) {
         super(requestUrl, client, requestOptions, hour, minute, second);

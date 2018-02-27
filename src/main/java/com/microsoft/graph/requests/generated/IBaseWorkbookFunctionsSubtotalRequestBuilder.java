@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSubtotalRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsSubtotalRequest
      *
-     * @return The IWorkbookFunctionsSubtotalRequest instance
+     * @return the IWorkbookFunctionsSubtotalRequest instance
      */
     IWorkbookFunctionsSubtotalRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSubtotalRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsSubtotalRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSubtotalRequest instance
+     * @return the IWorkbookFunctionsSubtotalRequest instance
      */
     IWorkbookFunctionsSubtotalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

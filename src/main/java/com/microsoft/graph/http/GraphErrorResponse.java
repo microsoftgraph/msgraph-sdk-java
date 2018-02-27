@@ -37,13 +37,13 @@ public class GraphErrorResponse implements IJsonBackedObject {
     public GraphError error;
 
     /**
-     * The raw representation of this class when deserialized.
+     * The raw representation of this class when deserialized
      */
     @Expose(serialize = false, deserialize = false)
     public JsonObject rawObject;
 
     /**
-     * Sets the raw JSON object.
+     * Sets the raw JSON object
      */
     @Override
     public void setRawObject(final ISerializer serializer, final JsonObject json) {

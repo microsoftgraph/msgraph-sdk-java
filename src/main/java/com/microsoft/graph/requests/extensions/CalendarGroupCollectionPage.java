@@ -27,8 +27,8 @@ public class CalendarGroupCollectionPage extends BaseCalendarGroupCollectionPage
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseCalendarGroupCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseCalendarGroupCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public CalendarGroupCollectionPage(final BaseCalendarGroupCollectionResponse response, final ICalendarGroupCollectionRequestBuilder builder) {
         super(response, builder);

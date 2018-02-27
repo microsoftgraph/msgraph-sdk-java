@@ -30,10 +30,10 @@ public class ClientException extends RuntimeException {
     private static final long serialVersionUID = -1066560879567392559L;
 
     /**
-     * Creates the client exception.
-     * @param message The message to display.
-     * @param ex The exception from.
-     * @param errorCode The error code for this exception.
+     * Creates the client exception
+     * 
+     * @param message the message to display
+     * @param ex      the exception from
      */
     public ClientException(final String message, final Throwable ex) {
         super(message, ex);

@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsLenbRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsLenb
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
      */
     public BaseWorkbookFunctionsLenbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsLenbRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsLenbRequest
      *
-     * @return The IWorkbookFunctionsLenbRequest instance
+     * @return the IWorkbookFunctionsLenbRequest instance
      */
     public IWorkbookFunctionsLenbRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsLenbRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsLenbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLenbRequest instance
+     * @return the IWorkbookFunctionsLenbRequest instance
      */
     public IWorkbookFunctionsLenbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLenbRequest request = new WorkbookFunctionsLenbRequest(

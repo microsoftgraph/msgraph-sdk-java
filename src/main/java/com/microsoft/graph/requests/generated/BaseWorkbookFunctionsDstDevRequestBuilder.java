@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsDstDevRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsDstDev
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param database the database
+     * @param field the field
+     * @param criteria the criteria
      */
     public BaseWorkbookFunctionsDstDevRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsDstDevRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsDstDevRequest
      *
-     * @return The IWorkbookFunctionsDstDevRequest instance
+     * @return the IWorkbookFunctionsDstDevRequest instance
      */
     public IWorkbookFunctionsDstDevRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsDstDevRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsDstDevRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDstDevRequest instance
+     * @return the IWorkbookFunctionsDstDevRequest instance
      */
     public IWorkbookFunctionsDstDevRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDstDevRequest request = new WorkbookFunctionsDstDevRequest(

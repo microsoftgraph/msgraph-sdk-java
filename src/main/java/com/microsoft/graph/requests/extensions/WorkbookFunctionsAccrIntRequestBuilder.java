@@ -27,9 +27,17 @@ public class WorkbookFunctionsAccrIntRequestBuilder extends BaseWorkbookFunction
     /**
      * The request builder for this WorkbookFunctionsAccrInt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param issue the issue
+     * @param firstInterest the firstInterest
+     * @param settlement the settlement
+     * @param rate the rate
+     * @param par the par
+     * @param frequency the frequency
+     * @param basis the basis
+     * @param calcMethod the calcMethod
      */
     public WorkbookFunctionsAccrIntRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstInterest, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis, final com.google.gson.JsonElement calcMethod) {
         super(requestUrl, client, requestOptions, issue, firstInterest, settlement, rate, par, frequency, basis, calcMethod);

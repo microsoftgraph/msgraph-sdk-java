@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseAttachmentRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IAttachmentRequest instance
      */
     IAttachmentRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IAttachmentRequest instance
      */
     IAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

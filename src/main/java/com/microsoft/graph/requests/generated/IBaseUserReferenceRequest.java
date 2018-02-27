@@ -31,33 +31,33 @@ public interface IBaseUserReferenceRequest extends IHttpRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseUserReferenceRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseUserReferenceRequest expand(final String value);
 
     /**
      * Puts the User
      *
-     * @param srcUser The User to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcUser the User to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(User srcUser, final ICallback<User> callback);
 
     /**
      * Puts the User
      *
-     * @param srcUser The User to PUT
-     * @return The User
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcUser the User to PUT
+     * @return the User
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     User put(User srcUser) throws ClientException;
 }

@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsRomanRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsRoman
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param form the form
      */
     public BaseWorkbookFunctionsRomanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement form) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsRomanRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsRomanRequest
      *
-     * @return The IWorkbookFunctionsRomanRequest instance
+     * @return the IWorkbookFunctionsRomanRequest instance
      */
     public IWorkbookFunctionsRomanRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsRomanRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsRomanRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRomanRequest instance
+     * @return the IWorkbookFunctionsRomanRequest instance
      */
     public IWorkbookFunctionsRomanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRomanRequest request = new WorkbookFunctionsRomanRequest(

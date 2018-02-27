@@ -26,9 +26,9 @@ public class BaseMessageCreateForwardRequestBuilder extends BaseActionRequestBui
     /**
      * The request builder for this MessageCreateForward
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseMessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseMessageCreateForwardRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IMessageCreateForwardRequest
      *
-     * @return The IMessageCreateForwardRequest instance
+     * @return the IMessageCreateForwardRequest instance
      */
     public IMessageCreateForwardRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseMessageCreateForwardRequestBuilder extends BaseActionRequestBui
      * Creates the IMessageCreateForwardRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IMessageCreateForwardRequest instance
+     * @return the IMessageCreateForwardRequest instance
      */
     public IMessageCreateForwardRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MessageCreateForwardRequest request = new MessageCreateForwardRequest(

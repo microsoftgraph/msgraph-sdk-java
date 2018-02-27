@@ -26,9 +26,9 @@ public class BaseWorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunc
     /**
      * The request builder for this WorkbookTableColumnTotalRowRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnTotalRowRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunc
     /**
      * Creates the IWorkbookTableColumnTotalRowRangeRequest
      *
-     * @return The IWorkbookTableColumnTotalRowRangeRequest instance
+     * @return the IWorkbookTableColumnTotalRowRangeRequest instance
      */
     public IWorkbookTableColumnTotalRowRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunc
      * Creates the IWorkbookTableColumnTotalRowRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableColumnTotalRowRangeRequest instance
+     * @return the IWorkbookTableColumnTotalRowRangeRequest instance
      */
     public IWorkbookTableColumnTotalRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnTotalRowRangeRequest request = new WorkbookTableColumnTotalRowRangeRequest(

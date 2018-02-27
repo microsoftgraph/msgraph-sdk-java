@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookWorksheetCollectionPage extends BaseCollectionPage<WorkbookWorksheet, IWorkbookWorksheetCollectionRequestBuilder> implements IBaseWorkbookWorksheetCollectionPage {
 
     /**
-     * A collection page for WorkbookWorksheet.
+     * A collection page for WorkbookWorksheet
      *
-     * @param response The serialized BaseWorkbookWorksheetCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookWorksheetCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseWorkbookWorksheetCollectionPage(final BaseWorkbookWorksheetCollectionResponse response, final IWorkbookWorksheetCollectionRequestBuilder builder) {
         super(response.value, builder);

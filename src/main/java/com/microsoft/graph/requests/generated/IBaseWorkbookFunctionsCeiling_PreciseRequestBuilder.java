@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCeiling_PreciseRequestBuilder extends IRe
     /**
      * Creates the IWorkbookFunctionsCeiling_PreciseRequest
      *
-     * @return The IWorkbookFunctionsCeiling_PreciseRequest instance
+     * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
      */
     IWorkbookFunctionsCeiling_PreciseRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCeiling_PreciseRequestBuilder extends IRe
      * Creates the IWorkbookFunctionsCeiling_PreciseRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCeiling_PreciseRequest instance
+     * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
      */
     IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

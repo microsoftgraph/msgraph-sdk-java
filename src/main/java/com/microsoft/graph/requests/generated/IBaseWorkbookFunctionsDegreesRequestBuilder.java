@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDegreesRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsDegreesRequest
      *
-     * @return The IWorkbookFunctionsDegreesRequest instance
+     * @return the IWorkbookFunctionsDegreesRequest instance
      */
     IWorkbookFunctionsDegreesRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDegreesRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsDegreesRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDegreesRequest instance
+     * @return the IWorkbookFunctionsDegreesRequest instance
      */
     IWorkbookFunctionsDegreesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeLastColumnRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookRangeLastColumnRequest
      *
-     * @return The IWorkbookRangeLastColumnRequest instance
+     * @return the IWorkbookRangeLastColumnRequest instance
      */
     IWorkbookRangeLastColumnRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeLastColumnRequestBuilder extends IRequestBuil
      * Creates the IWorkbookRangeLastColumnRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeLastColumnRequest instance
+     * @return the IWorkbookRangeLastColumnRequest instance
      */
     IWorkbookRangeLastColumnRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

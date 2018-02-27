@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsFixedRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsFixedRequest
      *
-     * @return The IWorkbookFunctionsFixedRequest instance
+     * @return the IWorkbookFunctionsFixedRequest instance
      */
     IWorkbookFunctionsFixedRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsFixedRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsFixedRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFixedRequest instance
+     * @return the IWorkbookFunctionsFixedRequest instance
      */
     IWorkbookFunctionsFixedRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

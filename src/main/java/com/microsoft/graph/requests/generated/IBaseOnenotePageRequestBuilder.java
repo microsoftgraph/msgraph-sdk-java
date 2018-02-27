@@ -25,21 +25,30 @@ import java.util.EnumSet;
 public interface IBaseOnenotePageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IOnenotePageRequest instance
      */
     IOnenotePageRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IOnenotePageRequest instance
      */
     IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for OnenoteSection.
+     * Gets the request builder for OnenoteSection
+     *
+     * @return the IOnenoteSectionRequestBuilder instance
      */
     IOnenoteSectionRequestBuilder parentSection();
 
     /**
-     * Gets the request builder for Notebook.
+     * Gets the request builder for Notebook
+     *
+     * @return the INotebookRequestBuilder instance
      */
     INotebookRequestBuilder parentNotebook();
 

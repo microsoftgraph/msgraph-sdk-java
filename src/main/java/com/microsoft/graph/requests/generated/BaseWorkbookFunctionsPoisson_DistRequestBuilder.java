@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsPoisson_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param mean the mean
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsPoisson_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsPoisson_DistRequest
      *
-     * @return The IWorkbookFunctionsPoisson_DistRequest instance
+     * @return the IWorkbookFunctionsPoisson_DistRequest instance
      */
     public IWorkbookFunctionsPoisson_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsPoisson_DistRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsPoisson_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPoisson_DistRequest instance
+     * @return the IWorkbookFunctionsPoisson_DistRequest instance
      */
     public IWorkbookFunctionsPoisson_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPoisson_DistRequest request = new WorkbookFunctionsPoisson_DistRequest(

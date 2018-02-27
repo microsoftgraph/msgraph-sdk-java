@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsLogNorm_InvRequestBuilder extends IReques
     /**
      * Creates the IWorkbookFunctionsLogNorm_InvRequest
      *
-     * @return The IWorkbookFunctionsLogNorm_InvRequest instance
+     * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
     IWorkbookFunctionsLogNorm_InvRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsLogNorm_InvRequestBuilder extends IReques
      * Creates the IWorkbookFunctionsLogNorm_InvRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLogNorm_InvRequest instance
+     * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
     IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

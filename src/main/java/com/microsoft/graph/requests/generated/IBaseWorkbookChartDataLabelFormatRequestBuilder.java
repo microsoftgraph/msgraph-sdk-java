@@ -25,21 +25,30 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartDataLabelFormatRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartDataLabelFormatRequest instance
      */
     IWorkbookChartDataLabelFormatRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartDataLabelFormatRequest instance
      */
     IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartFill.
+     * Gets the request builder for WorkbookChartFill
+     *
+     * @return the IWorkbookChartFillRequestBuilder instance
      */
     IWorkbookChartFillRequestBuilder fill();
 
     /**
-     * Gets the request builder for WorkbookChartFont.
+     * Gets the request builder for WorkbookChartFont
+     *
+     * @return the IWorkbookChartFontRequestBuilder instance
      */
     IWorkbookChartFontRequestBuilder font();
 

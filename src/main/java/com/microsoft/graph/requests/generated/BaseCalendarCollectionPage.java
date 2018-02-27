@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseCalendarCollectionPage extends BaseCollectionPage<Calendar, ICalendarCollectionRequestBuilder> implements IBaseCalendarCollectionPage {
 
     /**
-     * A collection page for Calendar.
+     * A collection page for Calendar
      *
-     * @param response The serialized BaseCalendarCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseCalendarCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseCalendarCollectionPage(final BaseCalendarCollectionResponse response, final ICalendarCollectionRequestBuilder builder) {
         super(response.value, builder);

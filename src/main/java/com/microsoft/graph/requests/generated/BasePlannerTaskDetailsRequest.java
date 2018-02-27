@@ -27,10 +27,10 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
     /**
      * The request for the PlannerTaskDetails
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BasePlannerTaskDetailsRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
 
     /**
      * Gets the PlannerTaskDetails from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<PlannerTaskDetails> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
 
     /**
      * Gets the PlannerTaskDetails from the service
-     * @return The PlannerTaskDetails from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the PlannerTaskDetails from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerTaskDetails get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
 
     /**
      * Patches this PlannerTaskDetails with a source
-     * @param sourcePlannerTaskDetails The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePlannerTaskDetails the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final PlannerTaskDetails sourcePlannerTaskDetails, final ICallback<PlannerTaskDetails> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerTaskDetails);
@@ -83,9 +88,10 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
 
     /**
      * Patches this PlannerTaskDetails with a source
-     * @param sourcePlannerTaskDetails The source object with updates
-     * @return The updated PlannerTaskDetails
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePlannerTaskDetails the source object with updates
+     * @return the updated PlannerTaskDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerTaskDetails patch(final PlannerTaskDetails sourcePlannerTaskDetails) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerTaskDetails);
@@ -93,8 +99,9 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
 
     /**
      * Creates a PlannerTaskDetails with a new object
-     * @param newPlannerTaskDetails The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPlannerTaskDetails the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final PlannerTaskDetails newPlannerTaskDetails, final ICallback<PlannerTaskDetails> callback) {
         send(HttpMethod.POST, callback, newPlannerTaskDetails);
@@ -102,9 +109,10 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
 
     /**
      * Creates a PlannerTaskDetails with a new object
-     * @param newPlannerTaskDetails The new object to create
-     * @return The created PlannerTaskDetails
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPlannerTaskDetails the new object to create
+     * @return the created PlannerTaskDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerTaskDetails post(final PlannerTaskDetails newPlannerTaskDetails) throws ClientException {
         return send(HttpMethod.POST, newPlannerTaskDetails);
@@ -113,8 +121,8 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IPlannerTaskDetailsRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BasePlannerTaskDetailsRequest extends BaseRequest implements IBaseP
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IPlannerTaskDetailsRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBasePlannerPlanRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IPlannerPlanRequest instance
      */
     IPlannerPlanRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IPlannerPlanRequest instance
      */
     IPlannerPlanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -42,7 +47,9 @@ public interface IBasePlannerPlanRequestBuilder extends IRequestBuilder {
     IPlannerBucketRequestBuilder buckets(final String id);
 
     /**
-     * Gets the request builder for PlannerPlanDetails.
+     * Gets the request builder for PlannerPlanDetails
+     *
+     * @return the IPlannerPlanDetailsRequestBuilder instance
      */
     IPlannerPlanDetailsRequestBuilder details();
 

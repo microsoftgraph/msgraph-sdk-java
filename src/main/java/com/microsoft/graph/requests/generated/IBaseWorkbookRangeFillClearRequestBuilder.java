@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeFillClearRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookRangeFillClearRequest
      *
-     * @return The IWorkbookRangeFillClearRequest instance
+     * @return the IWorkbookRangeFillClearRequest instance
      */
     IWorkbookRangeFillClearRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeFillClearRequestBuilder extends IRequestBuild
      * Creates the IWorkbookRangeFillClearRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeFillClearRequest instance
+     * @return the IWorkbookRangeFillClearRequest instance
      */
     IWorkbookRangeFillClearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

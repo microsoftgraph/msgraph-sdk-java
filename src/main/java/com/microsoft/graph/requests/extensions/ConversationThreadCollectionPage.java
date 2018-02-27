@@ -27,8 +27,8 @@ public class ConversationThreadCollectionPage extends BaseConversationThreadColl
     /**
      * A collection page for Conversation.
      *
-     * @param response The serialized BaseConversationThreadCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseConversationThreadCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ConversationThreadCollectionPage(final BaseConversationThreadCollectionResponse response, final IConversationThreadCollectionRequestBuilder builder) {
         super(response, builder);

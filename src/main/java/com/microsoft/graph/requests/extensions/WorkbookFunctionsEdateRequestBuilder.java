@@ -27,9 +27,11 @@ public class WorkbookFunctionsEdateRequestBuilder extends BaseWorkbookFunctionsE
     /**
      * The request builder for this WorkbookFunctionsEdate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDate the startDate
+     * @param months the months
      */
     public WorkbookFunctionsEdateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
         super(requestUrl, client, requestOptions, startDate, months);

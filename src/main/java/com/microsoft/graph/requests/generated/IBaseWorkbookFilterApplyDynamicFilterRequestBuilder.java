@@ -27,7 +27,7 @@ public interface IBaseWorkbookFilterApplyDynamicFilterRequestBuilder extends IRe
     /**
      * Creates the IWorkbookFilterApplyDynamicFilterRequest
      *
-     * @return The IWorkbookFilterApplyDynamicFilterRequest instance
+     * @return the IWorkbookFilterApplyDynamicFilterRequest instance
      */
     IWorkbookFilterApplyDynamicFilterRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFilterApplyDynamicFilterRequestBuilder extends IRe
      * Creates the IWorkbookFilterApplyDynamicFilterRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyDynamicFilterRequest instance
+     * @return the IWorkbookFilterApplyDynamicFilterRequest instance
      */
     IWorkbookFilterApplyDynamicFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

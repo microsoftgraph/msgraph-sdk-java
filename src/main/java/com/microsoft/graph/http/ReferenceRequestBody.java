@@ -72,8 +72,8 @@ public class ReferenceRequestBody implements IJsonBackedObject {
     /**
      * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json       The JSON object to set this object to
+     * @param serializer the serializer
+     * @param json       the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsSqrtPi
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsSqrtPiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsSqrtPiRequest
      *
-     * @return The IWorkbookFunctionsSqrtPiRequest instance
+     * @return the IWorkbookFunctionsSqrtPiRequest instance
      */
     public IWorkbookFunctionsSqrtPiRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsSqrtPiRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsSqrtPiRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSqrtPiRequest instance
+     * @return the IWorkbookFunctionsSqrtPiRequest instance
      */
     public IWorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsSqrtPiRequest request = new WorkbookFunctionsSqrtPiRequest(

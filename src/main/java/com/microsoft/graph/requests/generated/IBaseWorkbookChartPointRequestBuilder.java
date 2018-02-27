@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartPointRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartPointRequest instance
      */
     IWorkbookChartPointRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartPointRequest instance
      */
     IWorkbookChartPointRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartPointFormat.
+     * Gets the request builder for WorkbookChartPointFormat
+     *
+     * @return the IWorkbookChartPointFormatRequestBuilder instance
      */
     IWorkbookChartPointFormatRequestBuilder format();
 

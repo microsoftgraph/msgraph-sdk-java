@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsImSqrtRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsImSqrt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
      */
     public BaseWorkbookFunctionsImSqrtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsImSqrtRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsImSqrtRequest
      *
-     * @return The IWorkbookFunctionsImSqrtRequest instance
+     * @return the IWorkbookFunctionsImSqrtRequest instance
      */
     public IWorkbookFunctionsImSqrtRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsImSqrtRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsImSqrtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImSqrtRequest instance
+     * @return the IWorkbookFunctionsImSqrtRequest instance
      */
     public IWorkbookFunctionsImSqrtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImSqrtRequest request = new WorkbookFunctionsImSqrtRequest(

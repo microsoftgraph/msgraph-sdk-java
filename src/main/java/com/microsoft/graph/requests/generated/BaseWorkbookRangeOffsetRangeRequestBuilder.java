@@ -26,9 +26,11 @@ public class BaseWorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequ
     /**
      * The request builder for this WorkbookRangeOffsetRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rowOffset the rowOffset
+     * @param columnOffset the columnOffset
      */
     public BaseWorkbookRangeOffsetRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer rowOffset, final Integer columnOffset) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequ
     /**
      * Creates the IWorkbookRangeOffsetRangeRequest
      *
-     * @return The IWorkbookRangeOffsetRangeRequest instance
+     * @return the IWorkbookRangeOffsetRangeRequest instance
      */
     public IWorkbookRangeOffsetRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequ
      * Creates the IWorkbookRangeOffsetRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeOffsetRangeRequest instance
+     * @return the IWorkbookRangeOffsetRangeRequest instance
      */
     public IWorkbookRangeOffsetRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeOffsetRangeRequest request = new WorkbookRangeOffsetRangeRequest(

@@ -26,9 +26,9 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
     /**
      * The request builder for this WorkbookRangeRowsBelow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -36,9 +36,10 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
     /**
      * The request builder for this WorkbookRangeRowsBelow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param count the count
      */
     public BaseWorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
@@ -48,7 +49,7 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
     /**
      * Creates the IWorkbookRangeRowsBelowRequest
      *
-     * @return The IWorkbookRangeRowsBelowRequest instance
+     * @return the IWorkbookRangeRowsBelowRequest instance
      */
     public IWorkbookRangeRowsBelowRequest buildRequest() {
         return buildRequest(getOptions());
@@ -58,7 +59,7 @@ public class BaseWorkbookRangeRowsBelowRequestBuilder extends BaseFunctionReques
      * Creates the IWorkbookRangeRowsBelowRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeRowsBelowRequest instance
+     * @return the IWorkbookRangeRowsBelowRequest instance
      */
     public IWorkbookRangeRowsBelowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeRowsBelowRequest request = new WorkbookRangeRowsBelowRequest(

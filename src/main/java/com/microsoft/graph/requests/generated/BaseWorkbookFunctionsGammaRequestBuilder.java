@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsGammaRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsGamma
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
      */
     public BaseWorkbookFunctionsGammaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsGammaRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsGammaRequest
      *
-     * @return The IWorkbookFunctionsGammaRequest instance
+     * @return the IWorkbookFunctionsGammaRequest instance
      */
     public IWorkbookFunctionsGammaRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsGammaRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsGammaRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGammaRequest instance
+     * @return the IWorkbookFunctionsGammaRequest instance
      */
     public IWorkbookFunctionsGammaRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGammaRequest request = new WorkbookFunctionsGammaRequest(

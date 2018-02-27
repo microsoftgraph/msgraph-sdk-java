@@ -27,9 +27,9 @@ public class BaseCalendarGroupRequestBuilder extends BaseRequestBuilder implemen
     /**
      * The request builder for the CalendarGroup
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseCalendarGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseCalendarGroupRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return the ICalendarGroupRequest instance
      */
     public ICalendarGroupRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseCalendarGroupRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the ICalendarGroupRequest instance
      */
     public ICalendarGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new CalendarGroupRequest(getRequestUrl(), getClient(), requestOptions);

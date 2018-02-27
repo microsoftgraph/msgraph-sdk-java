@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsBesselKRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsBesselK
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param n the n
      */
     public BaseWorkbookFunctionsBesselKRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsBesselKRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsBesselKRequest
      *
-     * @return The IWorkbookFunctionsBesselKRequest instance
+     * @return the IWorkbookFunctionsBesselKRequest instance
      */
     public IWorkbookFunctionsBesselKRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsBesselKRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsBesselKRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBesselKRequest instance
+     * @return the IWorkbookFunctionsBesselKRequest instance
      */
     public IWorkbookFunctionsBesselKRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBesselKRequest request = new WorkbookFunctionsBesselKRequest(

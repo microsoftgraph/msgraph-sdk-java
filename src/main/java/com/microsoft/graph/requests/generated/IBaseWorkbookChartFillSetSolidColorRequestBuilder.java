@@ -27,7 +27,7 @@ public interface IBaseWorkbookChartFillSetSolidColorRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookChartFillSetSolidColorRequest
      *
-     * @return The IWorkbookChartFillSetSolidColorRequest instance
+     * @return the IWorkbookChartFillSetSolidColorRequest instance
      */
     IWorkbookChartFillSetSolidColorRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookChartFillSetSolidColorRequestBuilder extends IRequ
      * Creates the IWorkbookChartFillSetSolidColorRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartFillSetSolidColorRequest instance
+     * @return the IWorkbookChartFillSetSolidColorRequest instance
      */
     IWorkbookChartFillSetSolidColorRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

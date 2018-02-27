@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsHourRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsHour
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param serialNumber the serialNumber
      */
     public BaseWorkbookFunctionsHourRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsHourRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsHourRequest
      *
-     * @return The IWorkbookFunctionsHourRequest instance
+     * @return the IWorkbookFunctionsHourRequest instance
      */
     public IWorkbookFunctionsHourRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsHourRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsHourRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHourRequest instance
+     * @return the IWorkbookFunctionsHourRequest instance
      */
     public IWorkbookFunctionsHourRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHourRequest request = new WorkbookFunctionsHourRequest(

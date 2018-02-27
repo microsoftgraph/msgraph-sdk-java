@@ -26,72 +26,80 @@ public interface IBaseWorkbookTableRowRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookTableRow from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookTableRow> callback);
 
     /**
      * Gets the WorkbookTableRow from the service
-     * @return The WorkbookTableRow from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookTableRow from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookTableRow get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookTableRow with a source
-     * @param sourceWorkbookTableRow The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookTableRow the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookTableRow sourceWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
 
     /**
      * Patches this WorkbookTableRow with a source
-     * @param sourceWorkbookTableRow The source object with updates
-     * @return The updated WorkbookTableRow
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookTableRow the source object with updates
+     * @return the updated WorkbookTableRow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookTableRow patch(final WorkbookTableRow sourceWorkbookTableRow) throws ClientException;
 
     /**
      * Posts a WorkbookTableRow with a new object
-     * @param newWorkbookTableRow The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookTableRow the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookTableRow newWorkbookTableRow, final ICallback<WorkbookTableRow> callback);
 
     /**
      * Posts a WorkbookTableRow with a new object
-     * @param newWorkbookTableRow The new object to create
-     * @return The created WorkbookTableRow
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookTableRow the new object to create
+     * @return the created WorkbookTableRow
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookTableRow post(final WorkbookTableRow newWorkbookTableRow) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookTableRowRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookTableRowRequest expand(final String value);
 

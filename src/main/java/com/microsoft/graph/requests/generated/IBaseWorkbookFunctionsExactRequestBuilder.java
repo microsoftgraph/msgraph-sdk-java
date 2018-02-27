@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsExactRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsExactRequest
      *
-     * @return The IWorkbookFunctionsExactRequest instance
+     * @return the IWorkbookFunctionsExactRequest instance
      */
     IWorkbookFunctionsExactRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsExactRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsExactRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsExactRequest instance
+     * @return the IWorkbookFunctionsExactRequest instance
      */
     IWorkbookFunctionsExactRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

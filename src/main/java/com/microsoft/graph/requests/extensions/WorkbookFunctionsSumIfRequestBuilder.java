@@ -27,9 +27,12 @@ public class WorkbookFunctionsSumIfRequestBuilder extends BaseWorkbookFunctionsS
     /**
      * The request builder for this WorkbookFunctionsSumIf
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param range the range
+     * @param criteria the criteria
+     * @param sumRange the sumRange
      */
     public WorkbookFunctionsSumIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement sumRange) {
         super(requestUrl, client, requestOptions, range, criteria, sumRange);

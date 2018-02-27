@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsMidb
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param startNum the startNum
+     * @param numBytes the numBytes
      */
     public BaseWorkbookFunctionsMidbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsMidbRequest
      *
-     * @return The IWorkbookFunctionsMidbRequest instance
+     * @return the IWorkbookFunctionsMidbRequest instance
      */
     public IWorkbookFunctionsMidbRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsMidbRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsMidbRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsMidbRequest instance
+     * @return the IWorkbookFunctionsMidbRequest instance
      */
     public IWorkbookFunctionsMidbRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsMidbRequest request = new WorkbookFunctionsMidbRequest(

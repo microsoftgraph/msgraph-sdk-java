@@ -26,9 +26,9 @@ public class BaseWorkbookFunctionsRandRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsRand
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsRandRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookFunctionsRandRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsRandRequest
      *
-     * @return The IWorkbookFunctionsRandRequest instance
+     * @return the IWorkbookFunctionsRandRequest instance
      */
     public IWorkbookFunctionsRandRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsRandRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsRandRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRandRequest instance
+     * @return the IWorkbookFunctionsRandRequest instance
      */
     public IWorkbookFunctionsRandRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRandRequest request = new WorkbookFunctionsRandRequest(

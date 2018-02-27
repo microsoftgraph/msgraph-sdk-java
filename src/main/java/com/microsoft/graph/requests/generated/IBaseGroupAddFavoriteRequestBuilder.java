@@ -27,7 +27,7 @@ public interface IBaseGroupAddFavoriteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IGroupAddFavoriteRequest
      *
-     * @return The IGroupAddFavoriteRequest instance
+     * @return the IGroupAddFavoriteRequest instance
      */
     IGroupAddFavoriteRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseGroupAddFavoriteRequestBuilder extends IRequestBuilder {
      * Creates the IGroupAddFavoriteRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IGroupAddFavoriteRequest instance
+     * @return the IGroupAddFavoriteRequest instance
      */
     IGroupAddFavoriteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartSeriesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartSeriesRequest instance
      */
     IWorkbookChartSeriesRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartSeriesRequest instance
      */
     IWorkbookChartSeriesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartSeriesFormat.
+     * Gets the request builder for WorkbookChartSeriesFormat
+     *
+     * @return the IWorkbookChartSeriesFormatRequestBuilder instance
      */
     IWorkbookChartSeriesFormatRequestBuilder format();
 

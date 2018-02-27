@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSecRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsSecRequest
      *
-     * @return The IWorkbookFunctionsSecRequest instance
+     * @return the IWorkbookFunctionsSecRequest instance
      */
     IWorkbookFunctionsSecRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSecRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsSecRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSecRequest instance
+     * @return the IWorkbookFunctionsSecRequest instance
      */
     IWorkbookFunctionsSecRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

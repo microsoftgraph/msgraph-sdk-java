@@ -23,15 +23,17 @@
 package com.microsoft.graph.concurrency;
 
 /**
- * A callback that describes how to deal with success, failure, and progress.
- * @param <Result> The result type of the successful action.
+ * A callback that describes how to deal with success, failure, and progress
+ * 
+ * @param <Result> the result type of the successful action
  */
 public interface IProgressCallback<Result> extends ICallback<Result> {
 
     /**
-     * How progress updates are handled for this callback.
-     * @param current The current amount of progress.
-     * @param max The max amount of progress.
+     * How progress updates are handled for this callback
+     * 
+     * @param current the current amount of progress
+     * @param max     the max amount of progress
      */
     void progress(final long current, final long max);
 }

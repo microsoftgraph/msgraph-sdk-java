@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPriceDiscRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsPriceDiscRequest
      *
-     * @return The IWorkbookFunctionsPriceDiscRequest instance
+     * @return the IWorkbookFunctionsPriceDiscRequest instance
      */
     IWorkbookFunctionsPriceDiscRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPriceDiscRequestBuilder extends IRequestB
      * Creates the IWorkbookFunctionsPriceDiscRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPriceDiscRequest instance
+     * @return the IWorkbookFunctionsPriceDiscRequest instance
      */
     IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

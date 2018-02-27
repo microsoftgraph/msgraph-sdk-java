@@ -26,9 +26,9 @@ public class BaseWorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuil
     /**
      * The request builder for this WorkbookFunctionsPi
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsPiRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsPiRequest
      *
-     * @return The IWorkbookFunctionsPiRequest instance
+     * @return the IWorkbookFunctionsPiRequest instance
      */
     public IWorkbookFunctionsPiRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookFunctionsPiRequestBuilder extends BaseActionRequestBuil
      * Creates the IWorkbookFunctionsPiRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPiRequest instance
+     * @return the IWorkbookFunctionsPiRequest instance
      */
     public IWorkbookFunctionsPiRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPiRequest request = new WorkbookFunctionsPiRequest(

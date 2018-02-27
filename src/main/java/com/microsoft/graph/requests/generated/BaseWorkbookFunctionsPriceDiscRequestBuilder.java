@@ -26,9 +26,14 @@ public class BaseWorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsPriceDisc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param discount the discount
+     * @param redemption the redemption
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsPriceDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -42,7 +47,7 @@ public class BaseWorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsPriceDiscRequest
      *
-     * @return The IWorkbookFunctionsPriceDiscRequest instance
+     * @return the IWorkbookFunctionsPriceDiscRequest instance
      */
     public IWorkbookFunctionsPriceDiscRequest buildRequest() {
         return buildRequest(getOptions());
@@ -52,7 +57,7 @@ public class BaseWorkbookFunctionsPriceDiscRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsPriceDiscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPriceDiscRequest instance
+     * @return the IWorkbookFunctionsPriceDiscRequest instance
      */
     public IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPriceDiscRequest request = new WorkbookFunctionsPriceDiscRequest(

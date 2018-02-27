@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsUnicodeRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsUnicodeRequest
      *
-     * @return The IWorkbookFunctionsUnicodeRequest instance
+     * @return the IWorkbookFunctionsUnicodeRequest instance
      */
     IWorkbookFunctionsUnicodeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsUnicodeRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsUnicodeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsUnicodeRequest instance
+     * @return the IWorkbookFunctionsUnicodeRequest instance
      */
     IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -35,6 +35,9 @@ public class PlannerAssignedToTaskBoardTaskFormat extends BasePlannerAssignedToT
     
 	/**
 	 * The GetOrderHintForAssignee
+	 * 
+	 * @param userId The assignee ID to get the order hint for
+	 * @return The order hint for the given user
 	 */
 	public String orderHintForAssignee(String userId)
 	{

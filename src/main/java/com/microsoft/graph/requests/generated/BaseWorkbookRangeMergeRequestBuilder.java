@@ -26,9 +26,10 @@ public class BaseWorkbookRangeMergeRequestBuilder extends BaseActionRequestBuild
     /**
      * The request builder for this WorkbookRangeMerge
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param across the across
      */
     public BaseWorkbookRangeMergeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean across) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookRangeMergeRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookRangeMergeRequest
      *
-     * @return The IWorkbookRangeMergeRequest instance
+     * @return the IWorkbookRangeMergeRequest instance
      */
     public IWorkbookRangeMergeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookRangeMergeRequestBuilder extends BaseActionRequestBuild
      * Creates the IWorkbookRangeMergeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeMergeRequest instance
+     * @return the IWorkbookRangeMergeRequest instance
      */
     public IWorkbookRangeMergeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeMergeRequest request = new WorkbookRangeMergeRequest(

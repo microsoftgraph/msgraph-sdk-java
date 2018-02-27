@@ -26,9 +26,10 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder extends Ba
     /**
      * The request builder for this WorkbookFilterApplyBottomPercentFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param percent the percent
      */
     public BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer percent) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder extends Ba
     /**
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest
      *
-     * @return The IWorkbookFilterApplyBottomPercentFilterRequest instance
+     * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
     public IWorkbookFilterApplyBottomPercentFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFilterApplyBottomPercentFilterRequestBuilder extends Ba
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyBottomPercentFilterRequest instance
+     * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
     public IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyBottomPercentFilterRequest request = new WorkbookFilterApplyBottomPercentFilterRequest(

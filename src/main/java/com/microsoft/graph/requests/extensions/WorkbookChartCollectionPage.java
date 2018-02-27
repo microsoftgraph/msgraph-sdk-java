@@ -27,8 +27,8 @@ public class WorkbookChartCollectionPage extends BaseWorkbookChartCollectionPage
     /**
      * A collection page for WorkbookWorksheet.
      *
-     * @param response The serialized BaseWorkbookChartCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookChartCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public WorkbookChartCollectionPage(final BaseWorkbookChartCollectionResponse response, final IWorkbookChartCollectionRequestBuilder builder) {
         super(response, builder);

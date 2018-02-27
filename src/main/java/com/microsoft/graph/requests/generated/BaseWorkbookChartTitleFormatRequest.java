@@ -27,10 +27,10 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
     /**
      * The request for the WorkbookChartTitleFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookChartTitleFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
 
     /**
      * Gets the WorkbookChartTitleFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartTitleFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
 
     /**
      * Gets the WorkbookChartTitleFormat from the service
-     * @return The WorkbookChartTitleFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartTitleFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartTitleFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
 
     /**
      * Patches this WorkbookChartTitleFormat with a source
-     * @param sourceWorkbookChartTitleFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartTitleFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat, final ICallback<WorkbookChartTitleFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartTitleFormat);
@@ -83,9 +88,10 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
 
     /**
      * Patches this WorkbookChartTitleFormat with a source
-     * @param sourceWorkbookChartTitleFormat The source object with updates
-     * @return The updated WorkbookChartTitleFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartTitleFormat the source object with updates
+     * @return the updated WorkbookChartTitleFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartTitleFormat patch(final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartTitleFormat);
@@ -93,8 +99,9 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
 
     /**
      * Creates a WorkbookChartTitleFormat with a new object
-     * @param newWorkbookChartTitleFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartTitleFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<WorkbookChartTitleFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartTitleFormat);
@@ -102,9 +109,10 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
 
     /**
      * Creates a WorkbookChartTitleFormat with a new object
-     * @param newWorkbookChartTitleFormat The new object to create
-     * @return The created WorkbookChartTitleFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartTitleFormat the new object to create
+     * @return the created WorkbookChartTitleFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartTitleFormat post(final WorkbookChartTitleFormat newWorkbookChartTitleFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartTitleFormat);
@@ -113,8 +121,8 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookChartTitleFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookChartTitleFormatRequest extends BaseRequest implements 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookChartTitleFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

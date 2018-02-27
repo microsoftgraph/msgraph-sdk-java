@@ -27,8 +27,8 @@ public class WorkbookChartPointCollectionPage extends BaseWorkbookChartPointColl
     /**
      * A collection page for WorkbookChartSeries.
      *
-     * @param response The serialized BaseWorkbookChartPointCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookChartPointCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public WorkbookChartPointCollectionPage(final BaseWorkbookChartPointCollectionResponse response, final IWorkbookChartPointCollectionRequestBuilder builder) {
         super(response, builder);

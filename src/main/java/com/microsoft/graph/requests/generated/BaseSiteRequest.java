@@ -27,10 +27,10 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
     /**
      * The request for the Site
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseSiteRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
 
     /**
      * Gets the Site from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Site> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
 
     /**
      * Gets the Site from the service
-     * @return The Site from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Site from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Site get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
 
     /**
      * Patches this Site with a source
-     * @param sourceSite The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceSite the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Site sourceSite, final ICallback<Site> callback) {
         send(HttpMethod.PATCH, callback, sourceSite);
@@ -83,9 +88,10 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
 
     /**
      * Patches this Site with a source
-     * @param sourceSite The source object with updates
-     * @return The updated Site
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceSite the source object with updates
+     * @return the updated Site
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Site patch(final Site sourceSite) throws ClientException {
         return send(HttpMethod.PATCH, sourceSite);
@@ -93,8 +99,9 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
 
     /**
      * Creates a Site with a new object
-     * @param newSite The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newSite the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Site newSite, final ICallback<Site> callback) {
         send(HttpMethod.POST, callback, newSite);
@@ -102,9 +109,10 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
 
     /**
      * Creates a Site with a new object
-     * @param newSite The new object to create
-     * @return The created Site
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newSite the new object to create
+     * @return the created Site
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Site post(final Site newSite) throws ClientException {
         return send(HttpMethod.POST, newSite);
@@ -113,8 +121,8 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public ISiteRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseSiteRequest extends BaseRequest implements IBaseSiteRequest {
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public ISiteRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

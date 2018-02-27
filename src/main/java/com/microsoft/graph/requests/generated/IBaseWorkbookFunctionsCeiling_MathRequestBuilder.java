@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCeiling_MathRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsCeiling_MathRequest
      *
-     * @return The IWorkbookFunctionsCeiling_MathRequest instance
+     * @return the IWorkbookFunctionsCeiling_MathRequest instance
      */
     IWorkbookFunctionsCeiling_MathRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCeiling_MathRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsCeiling_MathRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCeiling_MathRequest instance
+     * @return the IWorkbookFunctionsCeiling_MathRequest instance
      */
     IWorkbookFunctionsCeiling_MathRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

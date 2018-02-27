@@ -26,9 +26,14 @@ public class BaseWorkbookFunctionsFvRequestBuilder extends BaseActionRequestBuil
     /**
      * The request builder for this WorkbookFunctionsFv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param nper the nper
+     * @param pmt the pmt
+     * @param pv the pv
+     * @param type the type
      */
     public BaseWorkbookFunctionsFvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement type) {
         super(requestUrl, client, requestOptions);
@@ -42,7 +47,7 @@ public class BaseWorkbookFunctionsFvRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsFvRequest
      *
-     * @return The IWorkbookFunctionsFvRequest instance
+     * @return the IWorkbookFunctionsFvRequest instance
      */
     public IWorkbookFunctionsFvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -52,7 +57,7 @@ public class BaseWorkbookFunctionsFvRequestBuilder extends BaseActionRequestBuil
      * Creates the IWorkbookFunctionsFvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFvRequest instance
+     * @return the IWorkbookFunctionsFvRequest instance
      */
     public IWorkbookFunctionsFvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsFvRequest request = new WorkbookFunctionsFvRequest(

@@ -26,9 +26,10 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
     /**
      * The request builder for this DriveItemCreateUploadSession
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param item the item
      */
     public BaseDriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DriveItemUploadableProperties item) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
     /**
      * Creates the IDriveItemCreateUploadSessionRequest
      *
-     * @return The IDriveItemCreateUploadSessionRequest instance
+     * @return the IDriveItemCreateUploadSessionRequest instance
      */
     public IDriveItemCreateUploadSessionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseDriveItemCreateUploadSessionRequestBuilder extends BaseActionRe
      * Creates the IDriveItemCreateUploadSessionRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IDriveItemCreateUploadSessionRequest instance
+     * @return the IDriveItemCreateUploadSessionRequest instance
      */
     public IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveItemCreateUploadSessionRequest request = new DriveItemCreateUploadSessionRequest(

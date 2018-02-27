@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsRandBetween
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param bottom the bottom
+     * @param top the top
      */
     public BaseWorkbookFunctionsRandBetweenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement bottom, final com.google.gson.JsonElement top) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsRandBetweenRequest
      *
-     * @return The IWorkbookFunctionsRandBetweenRequest instance
+     * @return the IWorkbookFunctionsRandBetweenRequest instance
      */
     public IWorkbookFunctionsRandBetweenRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsRandBetweenRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsRandBetweenRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsRandBetweenRequest instance
+     * @return the IWorkbookFunctionsRandBetweenRequest instance
      */
     public IWorkbookFunctionsRandBetweenRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsRandBetweenRequest request = new WorkbookFunctionsRandBetweenRequest(

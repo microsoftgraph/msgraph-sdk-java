@@ -27,9 +27,12 @@ public class WorkbookFunctionsIfRequestBuilder extends BaseWorkbookFunctionsIfRe
     /**
      * The request builder for this WorkbookFunctionsIf
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param logicalTest the logicalTest
+     * @param valueIfTrue the valueIfTrue
+     * @param valueIfFalse the valueIfFalse
      */
     public WorkbookFunctionsIfRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement logicalTest, final com.google.gson.JsonElement valueIfTrue, final com.google.gson.JsonElement valueIfFalse) {
         super(requestUrl, client, requestOptions, logicalTest, valueIfTrue, valueIfFalse);

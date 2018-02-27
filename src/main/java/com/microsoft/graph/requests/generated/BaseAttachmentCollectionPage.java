@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseAttachmentCollectionPage extends BaseCollectionPage<Attachment, IAttachmentCollectionRequestBuilder> implements IBaseAttachmentCollectionPage {
 
     /**
-     * A collection page for Attachment.
+     * A collection page for Attachment
      *
-     * @param response The serialized BaseAttachmentCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseAttachmentCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseAttachmentCollectionPage(final BaseAttachmentCollectionResponse response, final IAttachmentCollectionRequestBuilder builder) {
         super(response.value, builder);

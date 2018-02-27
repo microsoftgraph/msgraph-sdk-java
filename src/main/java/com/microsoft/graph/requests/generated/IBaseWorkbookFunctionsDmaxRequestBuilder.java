@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDmaxRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDmaxRequest
      *
-     * @return The IWorkbookFunctionsDmaxRequest instance
+     * @return the IWorkbookFunctionsDmaxRequest instance
      */
     IWorkbookFunctionsDmaxRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDmaxRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsDmaxRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDmaxRequest instance
+     * @return the IWorkbookFunctionsDmaxRequest instance
      */
     IWorkbookFunctionsDmaxRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

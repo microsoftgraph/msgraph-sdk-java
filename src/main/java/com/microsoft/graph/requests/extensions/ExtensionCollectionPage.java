@@ -27,8 +27,8 @@ public class ExtensionCollectionPage extends BaseExtensionCollectionPage impleme
     /**
      * A collection page for Post.
      *
-     * @param response The serialized BaseExtensionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseExtensionCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ExtensionCollectionPage(final BaseExtensionCollectionResponse response, final IExtensionCollectionRequestBuilder builder) {
         super(response, builder);

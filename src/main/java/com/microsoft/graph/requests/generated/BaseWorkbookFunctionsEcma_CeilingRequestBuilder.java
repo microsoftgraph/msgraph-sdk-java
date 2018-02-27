@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsEcma_Ceiling
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param significance the significance
      */
     public BaseWorkbookFunctionsEcma_CeilingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsEcma_CeilingRequest
      *
-     * @return The IWorkbookFunctionsEcma_CeilingRequest instance
+     * @return the IWorkbookFunctionsEcma_CeilingRequest instance
      */
     public IWorkbookFunctionsEcma_CeilingRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsEcma_CeilingRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsEcma_CeilingRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsEcma_CeilingRequest instance
+     * @return the IWorkbookFunctionsEcma_CeilingRequest instance
      */
     public IWorkbookFunctionsEcma_CeilingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsEcma_CeilingRequest request = new WorkbookFunctionsEcma_CeilingRequest(

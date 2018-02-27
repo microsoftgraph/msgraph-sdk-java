@@ -26,9 +26,11 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
     /**
      * The request builder for this DriveItemCreateLink
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param type the type
+     * @param scope the scope
      */
     public BaseDriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final String scope) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IDriveItemCreateLinkRequest
      *
-     * @return The IDriveItemCreateLinkRequest instance
+     * @return the IDriveItemCreateLinkRequest instance
      */
     public IDriveItemCreateLinkRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseDriveItemCreateLinkRequestBuilder extends BaseActionRequestBuil
      * Creates the IDriveItemCreateLinkRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IDriveItemCreateLinkRequest instance
+     * @return the IDriveItemCreateLinkRequest instance
      */
     public IDriveItemCreateLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         DriveItemCreateLinkRequest request = new DriveItemCreateLinkRequest(

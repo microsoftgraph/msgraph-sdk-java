@@ -30,31 +30,31 @@ public interface IBaseWorkbookFunctionsPiRequest {
     /**
      * Creates the WorkbookFunctionsPi
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     void post(final ICallback<WorkbookFunctionResult> callback);
 
     /**
      * Creates the WorkbookFunctionsPi
      *
-     * @return The WorkbookFunctionResult
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookFunctionResult
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookFunctionResult post() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookFunctionsPiRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookFunctionsPiRequest expand(final String value);
 

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsNominalRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsNominalRequest
      *
-     * @return The IWorkbookFunctionsNominalRequest instance
+     * @return the IWorkbookFunctionsNominalRequest instance
      */
     IWorkbookFunctionsNominalRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsNominalRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsNominalRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNominalRequest instance
+     * @return the IWorkbookFunctionsNominalRequest instance
      */
     IWorkbookFunctionsNominalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

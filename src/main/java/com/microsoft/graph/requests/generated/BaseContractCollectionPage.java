@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseContractCollectionPage extends BaseCollectionPage<Contract, IContractCollectionRequestBuilder> implements IBaseContractCollectionPage {
 
     /**
-     * A collection page for Contract.
+     * A collection page for Contract
      *
-     * @param response The serialized BaseContractCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContractCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseContractCollectionPage(final BaseContractCollectionResponse response, final IContractCollectionRequestBuilder builder) {
         super(response.value, builder);

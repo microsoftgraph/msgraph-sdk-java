@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsLookupRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsLookupRequest
      *
-     * @return The IWorkbookFunctionsLookupRequest instance
+     * @return the IWorkbookFunctionsLookupRequest instance
      */
     IWorkbookFunctionsLookupRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsLookupRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsLookupRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLookupRequest instance
+     * @return the IWorkbookFunctionsLookupRequest instance
      */
     IWorkbookFunctionsLookupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

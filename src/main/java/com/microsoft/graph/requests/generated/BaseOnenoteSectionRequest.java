@@ -27,10 +27,10 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
     /**
      * The request for the OnenoteSection
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseOnenoteSectionRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
 
     /**
      * Gets the OnenoteSection from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<OnenoteSection> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
 
     /**
      * Gets the OnenoteSection from the service
-     * @return The OnenoteSection from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OnenoteSection from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenoteSection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
 
     /**
      * Patches this OnenoteSection with a source
-     * @param sourceOnenoteSection The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOnenoteSection the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final OnenoteSection sourceOnenoteSection, final ICallback<OnenoteSection> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteSection);
@@ -83,9 +88,10 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
 
     /**
      * Patches this OnenoteSection with a source
-     * @param sourceOnenoteSection The source object with updates
-     * @return The updated OnenoteSection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOnenoteSection the source object with updates
+     * @return the updated OnenoteSection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenoteSection patch(final OnenoteSection sourceOnenoteSection) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteSection);
@@ -93,8 +99,9 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
 
     /**
      * Creates a OnenoteSection with a new object
-     * @param newOnenoteSection The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOnenoteSection the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
         send(HttpMethod.POST, callback, newOnenoteSection);
@@ -102,9 +109,10 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
 
     /**
      * Creates a OnenoteSection with a new object
-     * @param newOnenoteSection The new object to create
-     * @return The created OnenoteSection
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOnenoteSection the new object to create
+     * @return the created OnenoteSection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public OnenoteSection post(final OnenoteSection newOnenoteSection) throws ClientException {
         return send(HttpMethod.POST, newOnenoteSection);
@@ -113,8 +121,8 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IOnenoteSectionRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseOnenoteSectionRequest extends BaseRequest implements IBaseOneno
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IOnenoteSectionRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

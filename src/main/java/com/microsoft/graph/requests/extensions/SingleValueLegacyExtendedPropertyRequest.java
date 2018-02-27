@@ -27,9 +27,9 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseSingleValueLeg
     /**
      * The request for the SingleValueLegacyExtendedProperty
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public SingleValueLegacyExtendedPropertyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, SingleValueLegacyExtendedProperty.class);

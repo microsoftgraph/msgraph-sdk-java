@@ -27,9 +27,9 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * The request for this WorkbookChartItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChart.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
 
     /**
      * Patches the WorkbookChartItemAt
-     * @param srcWorkbookChart The WorkbookChart with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChart the WorkbookChart with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChart);
@@ -47,9 +47,9 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Patches the WorkbookChartItemAt
      *
-     * @param srcWorkbookChart The WorkbookChart with which to PATCH
-     * @return The WorkbookChart
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChart the WorkbookChart with which to PATCH
+     * @return the WorkbookChart
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookChart patch(WorkbookChart srcWorkbookChart) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookChart);
@@ -58,8 +58,8 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Puts the WorkbookChartItemAt
      *
-     * @param srcWorkbookChart The WorkbookChart to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChart the WorkbookChart to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookChart srcWorkbookChart, final ICallback<WorkbookChart> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChart);
@@ -68,9 +68,9 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Puts the WorkbookChartItemAt
      *
-     * @param srcWorkbookChart The WorkbookChart to PUT
-     * @return The WorkbookChart
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChart the WorkbookChart to PUT
+     * @return the WorkbookChart
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookChart put(WorkbookChart srcWorkbookChart) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookChart);
@@ -78,7 +78,7 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Gets the WorkbookChart
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChart> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Gets the WorkbookChart
      *
-     * @return The WorkbookChart
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookChart
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookChart get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookChartItemAtRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookChartItemAtRequest extends BaseRequest implements IBase
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookChartItemAtRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

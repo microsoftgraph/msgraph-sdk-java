@@ -27,8 +27,8 @@ public class MailFolderDeltaCollectionPage extends BaseMailFolderDeltaCollection
     /**
      * A collection page for MailFolder.
      *
-     * @param response The serialized BaseMailFolderDeltaCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseMailFolderDeltaCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public MailFolderDeltaCollectionPage(final BaseMailFolderDeltaCollectionResponse response, final IMailFolderDeltaCollectionRequestBuilder builder) {
         super(response, builder);

@@ -27,9 +27,12 @@ public class WorkbookFunctionsConfidence_TRequestBuilder extends BaseWorkbookFun
     /**
      * The request builder for this WorkbookFunctionsConfidence_T
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param alpha the alpha
+     * @param standardDev the standardDev
+     * @param size the size
      */
     public WorkbookFunctionsConfidence_TRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
         super(requestUrl, client, requestOptions, alpha, standardDev, size);

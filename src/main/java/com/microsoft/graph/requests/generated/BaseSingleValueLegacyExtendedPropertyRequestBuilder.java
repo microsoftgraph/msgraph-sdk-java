@@ -27,9 +27,9 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
     /**
      * The request builder for the SingleValueLegacyExtendedProperty
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseSingleValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
 
     /**
      * Creates the request
+     *
+     * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
     public ISingleValueLegacyExtendedPropertyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseSingleValueLegacyExtendedPropertyRequestBuilder extends BaseReq
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
     public ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new SingleValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);

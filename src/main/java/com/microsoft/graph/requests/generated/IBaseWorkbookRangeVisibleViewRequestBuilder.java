@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeVisibleViewRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookRangeVisibleViewRequest
      *
-     * @return The IWorkbookRangeVisibleViewRequest instance
+     * @return the IWorkbookRangeVisibleViewRequest instance
      */
     IWorkbookRangeVisibleViewRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeVisibleViewRequestBuilder extends IRequestBui
      * Creates the IWorkbookRangeVisibleViewRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeVisibleViewRequest instance
+     * @return the IWorkbookRangeVisibleViewRequest instance
      */
     IWorkbookRangeVisibleViewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

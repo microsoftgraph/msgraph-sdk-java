@@ -26,9 +26,9 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
     /**
      * The request builder for this WorkbookRangeColumnsAfter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -36,9 +36,10 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
     /**
      * The request builder for this WorkbookRangeColumnsAfter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param count the count
      */
     public BaseWorkbookRangeColumnsAfterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
@@ -48,7 +49,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
     /**
      * Creates the IWorkbookRangeColumnsAfterRequest
      *
-     * @return The IWorkbookRangeColumnsAfterRequest instance
+     * @return the IWorkbookRangeColumnsAfterRequest instance
      */
     public IWorkbookRangeColumnsAfterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -58,7 +59,7 @@ public class BaseWorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionReq
      * Creates the IWorkbookRangeColumnsAfterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeColumnsAfterRequest instance
+     * @return the IWorkbookRangeColumnsAfterRequest instance
      */
     public IWorkbookRangeColumnsAfterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeColumnsAfterRequest request = new WorkbookRangeColumnsAfterRequest(

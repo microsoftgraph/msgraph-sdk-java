@@ -26,72 +26,80 @@ public interface IBaseColumnLinkRequest extends IHttpRequest {
 
     /**
      * Gets the ColumnLink from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<ColumnLink> callback);
 
     /**
      * Gets the ColumnLink from the service
-     * @return The ColumnLink from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the ColumnLink from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     ColumnLink get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this ColumnLink with a source
-     * @param sourceColumnLink The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceColumnLink the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final ColumnLink sourceColumnLink, final ICallback<ColumnLink> callback);
 
     /**
      * Patches this ColumnLink with a source
-     * @param sourceColumnLink The source object with updates
-     * @return The updated ColumnLink
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceColumnLink the source object with updates
+     * @return the updated ColumnLink
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     ColumnLink patch(final ColumnLink sourceColumnLink) throws ClientException;
 
     /**
      * Posts a ColumnLink with a new object
-     * @param newColumnLink The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newColumnLink the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback);
 
     /**
      * Posts a ColumnLink with a new object
-     * @param newColumnLink The new object to create
-     * @return The created ColumnLink
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newColumnLink the new object to create
+     * @return the created ColumnLink
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     ColumnLink post(final ColumnLink newColumnLink) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseColumnLinkRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseColumnLinkRequest expand(final String value);
 

@@ -27,9 +27,9 @@ public class WorkbookFunctionsCombinaRequest extends BaseWorkbookFunctionsCombin
     /**
      * The request for this WorkbookFunctionsCombina
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsCombinaRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

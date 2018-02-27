@@ -27,10 +27,10 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
     /**
      * The request for the Extension
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseExtensionRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
 
     /**
      * Gets the Extension from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Extension> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
 
     /**
      * Gets the Extension from the service
-     * @return The Extension from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Extension from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Extension get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
 
     /**
      * Patches this Extension with a source
-     * @param sourceExtension The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceExtension the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Extension sourceExtension, final ICallback<Extension> callback) {
         send(HttpMethod.PATCH, callback, sourceExtension);
@@ -83,9 +88,10 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
 
     /**
      * Patches this Extension with a source
-     * @param sourceExtension The source object with updates
-     * @return The updated Extension
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceExtension the source object with updates
+     * @return the updated Extension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Extension patch(final Extension sourceExtension) throws ClientException {
         return send(HttpMethod.PATCH, sourceExtension);
@@ -93,8 +99,9 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
 
     /**
      * Creates a Extension with a new object
-     * @param newExtension The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newExtension the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Extension newExtension, final ICallback<Extension> callback) {
         send(HttpMethod.POST, callback, newExtension);
@@ -102,9 +109,10 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
 
     /**
      * Creates a Extension with a new object
-     * @param newExtension The new object to create
-     * @return The created Extension
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newExtension the new object to create
+     * @return the created Extension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Extension post(final Extension newExtension) throws ClientException {
         return send(HttpMethod.POST, newExtension);
@@ -113,8 +121,8 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IExtensionRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseExtensionRequest extends BaseRequest implements IBaseExtensionR
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IExtensionRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsHex2OctRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsHex2OctRequest
      *
-     * @return The IWorkbookFunctionsHex2OctRequest instance
+     * @return the IWorkbookFunctionsHex2OctRequest instance
      */
     IWorkbookFunctionsHex2OctRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsHex2OctRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsHex2OctRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHex2OctRequest instance
+     * @return the IWorkbookFunctionsHex2OctRequest instance
      */
     IWorkbookFunctionsHex2OctRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

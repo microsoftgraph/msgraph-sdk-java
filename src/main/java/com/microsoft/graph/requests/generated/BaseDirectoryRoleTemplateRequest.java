@@ -27,10 +27,10 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
     /**
      * The request for the DirectoryRoleTemplate
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseDirectoryRoleTemplateRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
 
     /**
      * Gets the DirectoryRoleTemplate from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<DirectoryRoleTemplate> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
 
     /**
      * Gets the DirectoryRoleTemplate from the service
-     * @return The DirectoryRoleTemplate from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the DirectoryRoleTemplate from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DirectoryRoleTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
 
     /**
      * Patches this DirectoryRoleTemplate with a source
-     * @param sourceDirectoryRoleTemplate The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDirectoryRoleTemplate the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final DirectoryRoleTemplate sourceDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryRoleTemplate);
@@ -83,9 +88,10 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
 
     /**
      * Patches this DirectoryRoleTemplate with a source
-     * @param sourceDirectoryRoleTemplate The source object with updates
-     * @return The updated DirectoryRoleTemplate
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDirectoryRoleTemplate the source object with updates
+     * @return the updated DirectoryRoleTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DirectoryRoleTemplate patch(final DirectoryRoleTemplate sourceDirectoryRoleTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryRoleTemplate);
@@ -93,8 +99,9 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
 
     /**
      * Creates a DirectoryRoleTemplate with a new object
-     * @param newDirectoryRoleTemplate The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDirectoryRoleTemplate the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
         send(HttpMethod.POST, callback, newDirectoryRoleTemplate);
@@ -102,9 +109,10 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
 
     /**
      * Creates a DirectoryRoleTemplate with a new object
-     * @param newDirectoryRoleTemplate The new object to create
-     * @return The created DirectoryRoleTemplate
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDirectoryRoleTemplate the new object to create
+     * @return the created DirectoryRoleTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException {
         return send(HttpMethod.POST, newDirectoryRoleTemplate);
@@ -113,8 +121,8 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IDirectoryRoleTemplateRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseDirectoryRoleTemplateRequest extends BaseRequest implements IBa
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IDirectoryRoleTemplateRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

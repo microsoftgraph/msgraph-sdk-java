@@ -25,41 +25,45 @@ package com.microsoft.graph.concurrency;
 import com.microsoft.graph.core.ClientException;
 
 /**
- * A way to manage scheduled actions that are run in the foreground or background threading environments.
+ * A way to manage scheduled actions that are run in the foreground or background threading environments
  */
 public interface IExecutors {
 
     /**
-     * Runs the given Runnable on the background thread.
-     * @param runnable The Runnable to execute.
+     * Runs the given Runnable on the background thread
+     * 
+     * @param runnable the Runnable to execute
      */
     void performOnBackground(final Runnable runnable);
 
     /**
-     * Performs the given callback with the result object.
-     * @param result The result value.
-     * @param callback The callback to call on the foreground with this result.
-     * @param <Result> The result type.
+     * Performs the given callback with the result object
+     *
+     * @param result   the result value
+     * @param callback the callback to call on the foreground with this result
+     * @param <Result> the result type
      */
     <Result> void performOnForeground(final Result result,
                                       final ICallback<Result> callback);
 
     /**
-     * Performs the given callback with the result object.
-     * @param progress The progress value.
-     * @param progressMax The progress value.
-     * @param callback The callback to call on the foreground with this result.
-     * @param <Result> The result type.
+     * Performs the given callback with the result object
+     * 
+     * @param progress    the progress value
+     * @param progressMax the max progress value
+     * @param callback    the callback to call on the foreground with this result
+     * @param <Result>    the result type
      */
     <Result> void performOnForeground(final int progress,
                                       final int progressMax,
                                       final IProgressCallback<Result> callback);
 
     /**
-     * Performs the given callback with the exception object.
-     * @param exception The exception value.
-     * @param callback The callback to call on the foreground with this exception.
-     * @param <Result> The result type.
+     * Performs the given callback with the exception object
+     * 
+     * @param exception the exception value
+     * @param callback the callback to call on the foreground with this exception
+     * @param <Result> the result type
      */
     <Result> void performOnForeground(final ClientException exception,
                                       final ICallback<Result> callback);

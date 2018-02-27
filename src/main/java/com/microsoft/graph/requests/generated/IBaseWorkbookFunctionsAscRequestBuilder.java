@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAscRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsAscRequest
      *
-     * @return The IWorkbookFunctionsAscRequest instance
+     * @return the IWorkbookFunctionsAscRequest instance
      */
     IWorkbookFunctionsAscRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAscRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsAscRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAscRequest instance
+     * @return the IWorkbookFunctionsAscRequest instance
      */
     IWorkbookFunctionsAscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

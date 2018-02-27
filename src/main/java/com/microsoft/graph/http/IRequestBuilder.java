@@ -26,26 +26,29 @@ package com.microsoft.graph.http;
 import com.microsoft.graph.core.IBaseClient;
 
 /**
- * Builder for a request.
+ * Builder for a request
  */
 public interface IRequestBuilder {
 
     /**
-     * Gets the client for this request builder.
-     * @return The client for this request builder.
+     * Gets the client for this request builder
+     * 
+     * @return the client for this request builder
      */
     IBaseClient getClient();
 
     /**
-     * Gets the request URL.
-     * @return The request URL.
+     * Gets the request URL
+     * 
+     * @return the request URL
      */
     String getRequestUrl();
 
     /**
-     * Gets the request URL with an additional segment.
-     * @param urlSegment The segment to add to the URL.
-     * @return The new request URL.
+     * Gets the request URL with an additional segment
+     * 
+     * @param urlSegment the segment to add to the URL
+     * @return           the new request URL
      */
     String getRequestUrlWithAdditionalSegment(final String urlSegment);
 }

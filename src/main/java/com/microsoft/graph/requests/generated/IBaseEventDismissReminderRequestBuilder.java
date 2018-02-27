@@ -27,7 +27,7 @@ public interface IBaseEventDismissReminderRequestBuilder extends IRequestBuilder
     /**
      * Creates the IEventDismissReminderRequest
      *
-     * @return The IEventDismissReminderRequest instance
+     * @return the IEventDismissReminderRequest instance
      */
     IEventDismissReminderRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseEventDismissReminderRequestBuilder extends IRequestBuilder
      * Creates the IEventDismissReminderRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IEventDismissReminderRequest instance
+     * @return the IEventDismissReminderRequest instance
      */
     IEventDismissReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

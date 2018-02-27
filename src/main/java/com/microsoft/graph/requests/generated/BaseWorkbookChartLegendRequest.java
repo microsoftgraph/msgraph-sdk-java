@@ -27,10 +27,10 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
     /**
      * The request for the WorkbookChartLegend
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookChartLegendRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
 
     /**
      * Gets the WorkbookChartLegend from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartLegend> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
 
     /**
      * Gets the WorkbookChartLegend from the service
-     * @return The WorkbookChartLegend from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartLegend from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartLegend get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
 
     /**
      * Patches this WorkbookChartLegend with a source
-     * @param sourceWorkbookChartLegend The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartLegend the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookChartLegend sourceWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartLegend);
@@ -83,9 +88,10 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
 
     /**
      * Patches this WorkbookChartLegend with a source
-     * @param sourceWorkbookChartLegend The source object with updates
-     * @return The updated WorkbookChartLegend
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartLegend the source object with updates
+     * @return the updated WorkbookChartLegend
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartLegend patch(final WorkbookChartLegend sourceWorkbookChartLegend) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartLegend);
@@ -93,8 +99,9 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
 
     /**
      * Creates a WorkbookChartLegend with a new object
-     * @param newWorkbookChartLegend The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartLegend the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartLegend);
@@ -102,9 +109,10 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
 
     /**
      * Creates a WorkbookChartLegend with a new object
-     * @param newWorkbookChartLegend The new object to create
-     * @return The created WorkbookChartLegend
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartLegend the new object to create
+     * @return the created WorkbookChartLegend
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartLegend post(final WorkbookChartLegend newWorkbookChartLegend) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartLegend);
@@ -113,8 +121,8 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookChartLegendRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookChartLegendRequest extends BaseRequest implements IBase
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookChartLegendRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

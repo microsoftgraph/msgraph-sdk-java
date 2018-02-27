@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsLog10RequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsLog10
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsLog10RequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsLog10RequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsLog10Request
      *
-     * @return The IWorkbookFunctionsLog10Request instance
+     * @return the IWorkbookFunctionsLog10Request instance
      */
     public IWorkbookFunctionsLog10Request buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsLog10RequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsLog10Request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLog10Request instance
+     * @return the IWorkbookFunctionsLog10Request instance
      */
     public IWorkbookFunctionsLog10Request buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLog10Request request = new WorkbookFunctionsLog10Request(

@@ -27,9 +27,9 @@ public class BaseWorkbookRangeViewRequestBuilder extends BaseRequestBuilder impl
     /**
      * The request builder for the WorkbookRangeView
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeViewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookRangeViewRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookRangeViewRequest instance
      */
     public IWorkbookRangeViewRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeViewRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeViewRequest instance
      */
     public IWorkbookRangeViewRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeViewRequest(getRequestUrl(), getClient(), requestOptions);

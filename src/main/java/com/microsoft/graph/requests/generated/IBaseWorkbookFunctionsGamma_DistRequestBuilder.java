@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsGamma_DistRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsGamma_DistRequest
      *
-     * @return The IWorkbookFunctionsGamma_DistRequest instance
+     * @return the IWorkbookFunctionsGamma_DistRequest instance
      */
     IWorkbookFunctionsGamma_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsGamma_DistRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsGamma_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGamma_DistRequest instance
+     * @return the IWorkbookFunctionsGamma_DistRequest instance
      */
     IWorkbookFunctionsGamma_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

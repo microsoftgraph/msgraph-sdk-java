@@ -27,9 +27,10 @@ public class WorkbookFunctionsIsNonTextRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsIsNonText
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param value the value
      */
     public WorkbookFunctionsIsNonTextRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement value) {
         super(requestUrl, client, requestOptions, value);

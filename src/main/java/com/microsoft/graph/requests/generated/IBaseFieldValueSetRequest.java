@@ -26,72 +26,80 @@ public interface IBaseFieldValueSetRequest extends IHttpRequest {
 
     /**
      * Gets the FieldValueSet from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<FieldValueSet> callback);
 
     /**
      * Gets the FieldValueSet from the service
-     * @return The FieldValueSet from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the FieldValueSet from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     FieldValueSet get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this FieldValueSet with a source
-     * @param sourceFieldValueSet The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceFieldValueSet the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final FieldValueSet sourceFieldValueSet, final ICallback<FieldValueSet> callback);
 
     /**
      * Patches this FieldValueSet with a source
-     * @param sourceFieldValueSet The source object with updates
-     * @return The updated FieldValueSet
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceFieldValueSet the source object with updates
+     * @return the updated FieldValueSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     FieldValueSet patch(final FieldValueSet sourceFieldValueSet) throws ClientException;
 
     /**
      * Posts a FieldValueSet with a new object
-     * @param newFieldValueSet The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newFieldValueSet the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback);
 
     /**
      * Posts a FieldValueSet with a new object
-     * @param newFieldValueSet The new object to create
-     * @return The created FieldValueSet
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newFieldValueSet the new object to create
+     * @return the created FieldValueSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     FieldValueSet post(final FieldValueSet newFieldValueSet) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseFieldValueSetRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseFieldValueSetRequest expand(final String value);
 

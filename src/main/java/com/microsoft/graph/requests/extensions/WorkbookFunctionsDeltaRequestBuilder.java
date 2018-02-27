@@ -27,9 +27,11 @@ public class WorkbookFunctionsDeltaRequestBuilder extends BaseWorkbookFunctionsD
     /**
      * The request builder for this WorkbookFunctionsDelta
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number1 the number1
+     * @param number2 the number2
      */
     public WorkbookFunctionsDeltaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
         super(requestUrl, client, requestOptions, number1, number2);

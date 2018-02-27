@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseOnenotePageCollectionPage extends BaseCollectionPage<OnenotePage, IOnenotePageCollectionRequestBuilder> implements IBaseOnenotePageCollectionPage {
 
     /**
-     * A collection page for OnenotePage.
+     * A collection page for OnenotePage
      *
-     * @param response The serialized BaseOnenotePageCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseOnenotePageCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseOnenotePageCollectionPage(final BaseOnenotePageCollectionResponse response, final IOnenotePageCollectionRequestBuilder builder) {
         super(response.value, builder);

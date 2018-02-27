@@ -27,9 +27,9 @@ public class WorkbookApplicationRequest extends BaseWorkbookApplicationRequest i
     /**
      * The request for the WorkbookApplication
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookApplicationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookApplication.class);

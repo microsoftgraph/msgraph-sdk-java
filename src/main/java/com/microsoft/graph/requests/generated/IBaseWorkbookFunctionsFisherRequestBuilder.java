@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsFisherRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsFisherRequest
      *
-     * @return The IWorkbookFunctionsFisherRequest instance
+     * @return the IWorkbookFunctionsFisherRequest instance
      */
     IWorkbookFunctionsFisherRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsFisherRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsFisherRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFisherRequest instance
+     * @return the IWorkbookFunctionsFisherRequest instance
      */
     IWorkbookFunctionsFisherRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

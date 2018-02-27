@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeUnmergeRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookRangeUnmergeRequest
      *
-     * @return The IWorkbookRangeUnmergeRequest instance
+     * @return the IWorkbookRangeUnmergeRequest instance
      */
     IWorkbookRangeUnmergeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeUnmergeRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookRangeUnmergeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeUnmergeRequest instance
+     * @return the IWorkbookRangeUnmergeRequest instance
      */
     IWorkbookRangeUnmergeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

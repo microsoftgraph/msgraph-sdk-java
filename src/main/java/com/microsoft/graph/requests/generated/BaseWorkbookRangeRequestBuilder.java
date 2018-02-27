@@ -27,9 +27,9 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
     /**
      * The request builder for the WorkbookRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookRangeRequest instance
      */
     public IWorkbookRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeRequest instance
      */
     public IWorkbookRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookRangeRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,21 +56,27 @@ public class BaseWorkbookRangeRequestBuilder extends BaseRequestBuilder implemen
 
 
     /**
-     * Gets the request builder for WorkbookRangeFormat.
+     * Gets the request builder for WorkbookRangeFormat
+     *
+     * @return the IWorkbookRangeFormatRequestBuilder instance
      */
     public IWorkbookRangeFormatRequestBuilder format() {
         return new WorkbookRangeFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookRangeSort.
+     * Gets the request builder for WorkbookRangeSort
+     *
+     * @return the IWorkbookRangeSortRequestBuilder instance
      */
     public IWorkbookRangeSortRequestBuilder sort() {
         return new WorkbookRangeSortRequestBuilder(getRequestUrlWithAdditionalSegment("sort"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for WorkbookWorksheet.
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
      */
     public IWorkbookWorksheetRequestBuilder worksheet() {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheet"), getClient(), null);

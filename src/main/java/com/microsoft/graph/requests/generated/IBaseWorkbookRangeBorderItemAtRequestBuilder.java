@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeBorderItemAtRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookRangeBorderItemAtRequest
      *
-     * @return The IWorkbookRangeBorderItemAtRequest instance
+     * @return the IWorkbookRangeBorderItemAtRequest instance
      */
     IWorkbookRangeBorderItemAtRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeBorderItemAtRequestBuilder extends IRequestBu
      * Creates the IWorkbookRangeBorderItemAtRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeBorderItemAtRequest instance
+     * @return the IWorkbookRangeBorderItemAtRequest instance
      */
     IWorkbookRangeBorderItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

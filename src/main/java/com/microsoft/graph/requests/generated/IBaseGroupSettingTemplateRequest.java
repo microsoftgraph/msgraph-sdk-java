@@ -26,72 +26,80 @@ public interface IBaseGroupSettingTemplateRequest extends IHttpRequest {
 
     /**
      * Gets the GroupSettingTemplate from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<GroupSettingTemplate> callback);
 
     /**
      * Gets the GroupSettingTemplate from the service
-     * @return The GroupSettingTemplate from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the GroupSettingTemplate from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     GroupSettingTemplate get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this GroupSettingTemplate with a source
-     * @param sourceGroupSettingTemplate The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceGroupSettingTemplate the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final GroupSettingTemplate sourceGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
 
     /**
      * Patches this GroupSettingTemplate with a source
-     * @param sourceGroupSettingTemplate The source object with updates
-     * @return The updated GroupSettingTemplate
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceGroupSettingTemplate the source object with updates
+     * @return the updated GroupSettingTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     GroupSettingTemplate patch(final GroupSettingTemplate sourceGroupSettingTemplate) throws ClientException;
 
     /**
      * Posts a GroupSettingTemplate with a new object
-     * @param newGroupSettingTemplate The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newGroupSettingTemplate the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback);
 
     /**
      * Posts a GroupSettingTemplate with a new object
-     * @param newGroupSettingTemplate The new object to create
-     * @return The created GroupSettingTemplate
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newGroupSettingTemplate the new object to create
+     * @return the created GroupSettingTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     GroupSettingTemplate post(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseGroupSettingTemplateRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseGroupSettingTemplateRequest expand(final String value);
 

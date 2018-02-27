@@ -26,9 +26,12 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookTableColumnAdd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param index the index
+     * @param values the values
+     * @param name the name
      */
     public BaseWorkbookTableColumnAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index, final com.google.gson.JsonElement values, final String name) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookTableColumnAddRequest
      *
-     * @return The IWorkbookTableColumnAddRequest instance
+     * @return the IWorkbookTableColumnAddRequest instance
      */
     public IWorkbookTableColumnAddRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookTableColumnAddRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookTableColumnAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableColumnAddRequest instance
+     * @return the IWorkbookTableColumnAddRequest instance
      */
     public IWorkbookTableColumnAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnAddRequest request = new WorkbookTableColumnAddRequest(

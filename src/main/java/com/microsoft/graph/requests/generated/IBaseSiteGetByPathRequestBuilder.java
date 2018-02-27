@@ -27,7 +27,7 @@ public interface IBaseSiteGetByPathRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ISiteGetByPathRequest
      *
-     * @return The ISiteGetByPathRequest instance
+     * @return the ISiteGetByPathRequest instance
      */
     ISiteGetByPathRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseSiteGetByPathRequestBuilder extends IRequestBuilder {
      * Creates the ISiteGetByPathRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The ISiteGetByPathRequest instance
+     * @return the ISiteGetByPathRequest instance
      */
     ISiteGetByPathRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

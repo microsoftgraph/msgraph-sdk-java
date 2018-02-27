@@ -27,9 +27,9 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
     /**
      * The request builder for the WorkbookWorksheet
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookWorksheetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookWorksheetRequest instance
      */
     public IWorkbookWorksheetRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookWorksheetRequest instance
      */
     public IWorkbookWorksheetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookWorksheetRequest(getRequestUrl(), getClient(), requestOptions);
@@ -72,7 +77,9 @@ public class BaseWorkbookWorksheetRequestBuilder extends BaseRequestBuilder impl
     }
 
     /**
-     * Gets the request builder for WorkbookWorksheetProtection.
+     * Gets the request builder for WorkbookWorksheetProtection
+     *
+     * @return the IWorkbookWorksheetProtectionRequestBuilder instance
      */
     public IWorkbookWorksheetProtectionRequestBuilder protection() {
         return new WorkbookWorksheetProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);

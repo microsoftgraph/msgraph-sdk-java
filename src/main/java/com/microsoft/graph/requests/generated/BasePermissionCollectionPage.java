@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BasePermissionCollectionPage extends BaseCollectionPage<Permission, IPermissionCollectionRequestBuilder> implements IBasePermissionCollectionPage {
 
     /**
-     * A collection page for Permission.
+     * A collection page for Permission
      *
-     * @param response The serialized BasePermissionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BasePermissionCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BasePermissionCollectionPage(final BasePermissionCollectionResponse response, final IPermissionCollectionRequestBuilder builder) {
         super(response.value, builder);

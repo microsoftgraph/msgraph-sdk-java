@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsDbcsRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsDbcs
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
      */
     public BaseWorkbookFunctionsDbcsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsDbcsRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsDbcsRequest
      *
-     * @return The IWorkbookFunctionsDbcsRequest instance
+     * @return the IWorkbookFunctionsDbcsRequest instance
      */
     public IWorkbookFunctionsDbcsRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsDbcsRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsDbcsRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDbcsRequest instance
+     * @return the IWorkbookFunctionsDbcsRequest instance
      */
     public IWorkbookFunctionsDbcsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDbcsRequest request = new WorkbookFunctionsDbcsRequest(

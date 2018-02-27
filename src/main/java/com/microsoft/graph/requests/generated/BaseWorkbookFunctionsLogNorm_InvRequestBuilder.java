@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsLogNorm_Inv
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
+     * @param mean the mean
+     * @param standardDev the standardDev
      */
     public BaseWorkbookFunctionsLogNorm_InvRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsLogNorm_InvRequest
      *
-     * @return The IWorkbookFunctionsLogNorm_InvRequest instance
+     * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
     public IWorkbookFunctionsLogNorm_InvRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsLogNorm_InvRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsLogNorm_InvRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsLogNorm_InvRequest instance
+     * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
     public IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsLogNorm_InvRequest request = new WorkbookFunctionsLogNorm_InvRequest(

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsImCoshRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsImCoshRequest
      *
-     * @return The IWorkbookFunctionsImCoshRequest instance
+     * @return the IWorkbookFunctionsImCoshRequest instance
      */
     IWorkbookFunctionsImCoshRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsImCoshRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsImCoshRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImCoshRequest instance
+     * @return the IWorkbookFunctionsImCoshRequest instance
      */
     IWorkbookFunctionsImCoshRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

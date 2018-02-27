@@ -27,9 +27,10 @@ public class WorkbookRangeBorderItemAtRequestBuilder extends BaseWorkbookRangeBo
     /**
      * The request builder for this WorkbookRangeBorderItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param index the index
      */
     public WorkbookRangeBorderItemAtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer index) {
         super(requestUrl, client, requestOptions, index);

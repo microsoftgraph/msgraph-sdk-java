@@ -38,9 +38,10 @@ public class GraphError {
     public GraphInnerError innererror;
 
     /**
-     * Determine if the given error code is the one that is expected.
-     * @param expectedCode The expected error code.
-     * @return <b>true</b> if the error code matches, and <b>false</b> if there was no match.
+     * Determine if the given error code is the one that is expected
+     * 
+     * @param expectedCode the expected error code
+     * @return <b>true</b> if the error code matches, and <b>false</b> if there was no match
      */
     public boolean isError(final GraphErrorCodes expectedCode) {
         if (code.equalsIgnoreCase(expectedCode.toString())) {

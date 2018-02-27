@@ -26,9 +26,10 @@ public class BaseWorkbookApplicationCalculateRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookApplicationCalculate
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param calculationType the calculationType
      */
     public BaseWorkbookApplicationCalculateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String calculationType) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookApplicationCalculateRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookApplicationCalculateRequest
      *
-     * @return The IWorkbookApplicationCalculateRequest instance
+     * @return the IWorkbookApplicationCalculateRequest instance
      */
     public IWorkbookApplicationCalculateRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookApplicationCalculateRequestBuilder extends BaseActionRe
      * Creates the IWorkbookApplicationCalculateRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookApplicationCalculateRequest instance
+     * @return the IWorkbookApplicationCalculateRequest instance
      */
     public IWorkbookApplicationCalculateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookApplicationCalculateRequest request = new WorkbookApplicationCalculateRequest(

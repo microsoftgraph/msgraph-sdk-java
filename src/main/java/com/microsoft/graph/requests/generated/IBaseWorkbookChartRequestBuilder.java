@@ -25,31 +25,44 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartRequest instance
      */
     IWorkbookChartRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartRequest instance
      */
     IWorkbookChartRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartAxes.
+     * Gets the request builder for WorkbookChartAxes
+     *
+     * @return the IWorkbookChartAxesRequestBuilder instance
      */
     IWorkbookChartAxesRequestBuilder axes();
 
     /**
-     * Gets the request builder for WorkbookChartDataLabels.
+     * Gets the request builder for WorkbookChartDataLabels
+     *
+     * @return the IWorkbookChartDataLabelsRequestBuilder instance
      */
     IWorkbookChartDataLabelsRequestBuilder dataLabels();
 
     /**
-     * Gets the request builder for WorkbookChartAreaFormat.
+     * Gets the request builder for WorkbookChartAreaFormat
+     *
+     * @return the IWorkbookChartAreaFormatRequestBuilder instance
      */
     IWorkbookChartAreaFormatRequestBuilder format();
 
     /**
-     * Gets the request builder for WorkbookChartLegend.
+     * Gets the request builder for WorkbookChartLegend
+     *
+     * @return the IWorkbookChartLegendRequestBuilder instance
      */
     IWorkbookChartLegendRequestBuilder legend();
 
@@ -58,12 +71,16 @@ public interface IBaseWorkbookChartRequestBuilder extends IRequestBuilder {
     IWorkbookChartSeriesRequestBuilder series(final String id);
 
     /**
-     * Gets the request builder for WorkbookChartTitle.
+     * Gets the request builder for WorkbookChartTitle
+     *
+     * @return the IWorkbookChartTitleRequestBuilder instance
      */
     IWorkbookChartTitleRequestBuilder title();
 
     /**
-     * Gets the request builder for WorkbookWorksheet.
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
      */
     IWorkbookWorksheetRequestBuilder worksheet();
     IWorkbookChartSetDataRequestBuilder setData(final com.google.gson.JsonElement sourceData, final String seriesBy);

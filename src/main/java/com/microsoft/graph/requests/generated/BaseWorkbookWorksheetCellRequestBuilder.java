@@ -26,9 +26,11 @@ public class BaseWorkbookWorksheetCellRequestBuilder extends BaseFunctionRequest
     /**
      * The request builder for this WorkbookWorksheetCell
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param row the row
+     * @param column the column
      */
     public BaseWorkbookWorksheetCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookWorksheetCellRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookWorksheetCellRequest
      *
-     * @return The IWorkbookWorksheetCellRequest instance
+     * @return the IWorkbookWorksheetCellRequest instance
      */
     public IWorkbookWorksheetCellRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookWorksheetCellRequestBuilder extends BaseFunctionRequest
      * Creates the IWorkbookWorksheetCellRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookWorksheetCellRequest instance
+     * @return the IWorkbookWorksheetCellRequest instance
      */
     public IWorkbookWorksheetCellRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookWorksheetCellRequest request = new WorkbookWorksheetCellRequest(

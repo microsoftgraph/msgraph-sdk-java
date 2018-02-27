@@ -26,72 +26,80 @@ public interface IBaseCalendarGroupRequest extends IHttpRequest {
 
     /**
      * Gets the CalendarGroup from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<CalendarGroup> callback);
 
     /**
      * Gets the CalendarGroup from the service
-     * @return The CalendarGroup from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the CalendarGroup from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     CalendarGroup get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this CalendarGroup with a source
-     * @param sourceCalendarGroup The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceCalendarGroup the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final CalendarGroup sourceCalendarGroup, final ICallback<CalendarGroup> callback);
 
     /**
      * Patches this CalendarGroup with a source
-     * @param sourceCalendarGroup The source object with updates
-     * @return The updated CalendarGroup
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceCalendarGroup the source object with updates
+     * @return the updated CalendarGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     CalendarGroup patch(final CalendarGroup sourceCalendarGroup) throws ClientException;
 
     /**
      * Posts a CalendarGroup with a new object
-     * @param newCalendarGroup The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newCalendarGroup the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback);
 
     /**
      * Posts a CalendarGroup with a new object
-     * @param newCalendarGroup The new object to create
-     * @return The created CalendarGroup
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newCalendarGroup the new object to create
+     * @return the created CalendarGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     CalendarGroup post(final CalendarGroup newCalendarGroup) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseCalendarGroupRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseCalendarGroupRequest expand(final String value);
 

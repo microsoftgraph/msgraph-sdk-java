@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsFactDoubleRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsFactDoubleRequest
      *
-     * @return The IWorkbookFunctionsFactDoubleRequest instance
+     * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
     IWorkbookFunctionsFactDoubleRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsFactDoubleRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsFactDoubleRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsFactDoubleRequest instance
+     * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
     IWorkbookFunctionsFactDoubleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

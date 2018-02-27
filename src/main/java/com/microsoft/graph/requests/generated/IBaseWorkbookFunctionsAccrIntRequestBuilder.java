@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAccrIntRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsAccrIntRequest
      *
-     * @return The IWorkbookFunctionsAccrIntRequest instance
+     * @return the IWorkbookFunctionsAccrIntRequest instance
      */
     IWorkbookFunctionsAccrIntRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAccrIntRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsAccrIntRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAccrIntRequest instance
+     * @return the IWorkbookFunctionsAccrIntRequest instance
      */
     IWorkbookFunctionsAccrIntRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

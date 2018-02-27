@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIntRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsIntRequest
      *
-     * @return The IWorkbookFunctionsIntRequest instance
+     * @return the IWorkbookFunctionsIntRequest instance
      */
     IWorkbookFunctionsIntRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIntRequestBuilder extends IRequestBuilder
      * Creates the IWorkbookFunctionsIntRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIntRequest instance
+     * @return the IWorkbookFunctionsIntRequest instance
      */
     IWorkbookFunctionsIntRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

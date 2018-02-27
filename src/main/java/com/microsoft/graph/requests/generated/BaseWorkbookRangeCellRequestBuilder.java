@@ -26,9 +26,11 @@ public class BaseWorkbookRangeCellRequestBuilder extends BaseFunctionRequestBuil
     /**
      * The request builder for this WorkbookRangeCell
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param row the row
+     * @param column the column
      */
     public BaseWorkbookRangeCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookRangeCellRequestBuilder extends BaseFunctionRequestBuil
     /**
      * Creates the IWorkbookRangeCellRequest
      *
-     * @return The IWorkbookRangeCellRequest instance
+     * @return the IWorkbookRangeCellRequest instance
      */
     public IWorkbookRangeCellRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookRangeCellRequestBuilder extends BaseFunctionRequestBuil
      * Creates the IWorkbookRangeCellRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeCellRequest instance
+     * @return the IWorkbookRangeCellRequest instance
      */
     public IWorkbookRangeCellRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookRangeCellRequest request = new WorkbookRangeCellRequest(

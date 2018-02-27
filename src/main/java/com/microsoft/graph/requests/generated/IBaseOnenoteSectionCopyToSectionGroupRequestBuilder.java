@@ -27,7 +27,7 @@ public interface IBaseOnenoteSectionCopyToSectionGroupRequestBuilder extends IRe
     /**
      * Creates the IOnenoteSectionCopyToSectionGroupRequest
      *
-     * @return The IOnenoteSectionCopyToSectionGroupRequest instance
+     * @return the IOnenoteSectionCopyToSectionGroupRequest instance
      */
     IOnenoteSectionCopyToSectionGroupRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseOnenoteSectionCopyToSectionGroupRequestBuilder extends IRe
      * Creates the IOnenoteSectionCopyToSectionGroupRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IOnenoteSectionCopyToSectionGroupRequest instance
+     * @return the IOnenoteSectionCopyToSectionGroupRequest instance
      */
     IOnenoteSectionCopyToSectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

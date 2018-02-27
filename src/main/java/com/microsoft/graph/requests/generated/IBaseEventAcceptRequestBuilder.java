@@ -27,7 +27,7 @@ public interface IBaseEventAcceptRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IEventAcceptRequest
      *
-     * @return The IEventAcceptRequest instance
+     * @return the IEventAcceptRequest instance
      */
     IEventAcceptRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseEventAcceptRequestBuilder extends IRequestBuilder {
      * Creates the IEventAcceptRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IEventAcceptRequest instance
+     * @return the IEventAcceptRequest instance
      */
     IEventAcceptRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

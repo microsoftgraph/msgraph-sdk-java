@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsUnicodeRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsUnicode
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
      */
     public BaseWorkbookFunctionsUnicodeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsUnicodeRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsUnicodeRequest
      *
-     * @return The IWorkbookFunctionsUnicodeRequest instance
+     * @return the IWorkbookFunctionsUnicodeRequest instance
      */
     public IWorkbookFunctionsUnicodeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsUnicodeRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsUnicodeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsUnicodeRequest instance
+     * @return the IWorkbookFunctionsUnicodeRequest instance
      */
     public IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsUnicodeRequest request = new WorkbookFunctionsUnicodeRequest(

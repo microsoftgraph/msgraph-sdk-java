@@ -27,9 +27,9 @@ public class BaseWorkbookFormatProtectionRequestBuilder extends BaseRequestBuild
     /**
      * The request builder for the WorkbookFormatProtection
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFormatProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookFormatProtectionRequestBuilder extends BaseRequestBuild
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookFormatProtectionRequest instance
      */
     public IWorkbookFormatProtectionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookFormatProtectionRequestBuilder extends BaseRequestBuild
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookFormatProtectionRequest instance
      */
     public IWorkbookFormatProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookFormatProtectionRequest(getRequestUrl(), getClient(), requestOptions);

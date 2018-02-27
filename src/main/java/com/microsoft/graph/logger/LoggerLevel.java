@@ -23,16 +23,16 @@
 package com.microsoft.graph.logger;
 
 /**
- * Describes the logging levels supported by this client.
+ * Describes the logging levels supported by this client
  */
 public enum LoggerLevel {
     /**
-     * Log only errors, the default.
+     * Log only errors, the default
      */
     ERROR,
 
     /**
-     * Log debug information.
+     * Log debug information
      */
     DEBUG
 }

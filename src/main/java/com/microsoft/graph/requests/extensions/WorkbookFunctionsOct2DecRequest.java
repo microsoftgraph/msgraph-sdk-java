@@ -27,9 +27,9 @@ public class WorkbookFunctionsOct2DecRequest extends BaseWorkbookFunctionsOct2De
     /**
      * The request for this WorkbookFunctionsOct2Dec
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsOct2DecRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

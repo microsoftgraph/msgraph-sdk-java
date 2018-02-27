@@ -27,9 +27,13 @@ public class WorkbookFunctionsSeriesSumRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsSeriesSum
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param n the n
+     * @param m the m
+     * @param coefficients the coefficients
      */
     public WorkbookFunctionsSeriesSumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
         super(requestUrl, client, requestOptions, x, n, m, coefficients);

@@ -27,10 +27,10 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
     /**
      * The request for the DirectoryObject
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseDirectoryObjectRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
 
     /**
      * Gets the DirectoryObject from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<DirectoryObject> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
 
     /**
      * Gets the DirectoryObject from the service
-     * @return The DirectoryObject from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the DirectoryObject from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DirectoryObject get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
 
     /**
      * Patches this DirectoryObject with a source
-     * @param sourceDirectoryObject The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDirectoryObject the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryObject);
@@ -83,9 +88,10 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
 
     /**
      * Patches this DirectoryObject with a source
-     * @param sourceDirectoryObject The source object with updates
-     * @return The updated DirectoryObject
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDirectoryObject the source object with updates
+     * @return the updated DirectoryObject
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DirectoryObject patch(final DirectoryObject sourceDirectoryObject) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryObject);
@@ -93,8 +99,9 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
 
     /**
      * Creates a DirectoryObject with a new object
-     * @param newDirectoryObject The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDirectoryObject the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
         send(HttpMethod.POST, callback, newDirectoryObject);
@@ -102,9 +109,10 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
 
     /**
      * Creates a DirectoryObject with a new object
-     * @param newDirectoryObject The new object to create
-     * @return The created DirectoryObject
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDirectoryObject the new object to create
+     * @return the created DirectoryObject
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException {
         return send(HttpMethod.POST, newDirectoryObject);
@@ -113,8 +121,8 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IDirectoryObjectRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseDirectoryObjectRequest extends BaseRequest implements IBaseDire
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IDirectoryObjectRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

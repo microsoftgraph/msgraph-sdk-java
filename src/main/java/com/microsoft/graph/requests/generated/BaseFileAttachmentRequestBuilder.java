@@ -27,9 +27,9 @@ public class BaseFileAttachmentRequestBuilder extends BaseRequestBuilder impleme
     /**
      * The request builder for the FileAttachment
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseFileAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseFileAttachmentRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request
+     *
+     * @return the IFileAttachmentRequest instance
      */
     public IFileAttachmentRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseFileAttachmentRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IFileAttachmentRequest instance
      */
     public IFileAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new FileAttachmentRequest(getRequestUrl(), getClient(), requestOptions);

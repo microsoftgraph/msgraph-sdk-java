@@ -28,21 +28,22 @@ import java.util.Base64.Encoder;
 import java.text.ParseException;
 
 /**
- * Serializer for Byte[]s
+ * Serializer for byte[]s
  */
 public final class ByteArraySerializer {
 
     /**
-     * Not available for instantiation.
+     * Not available for instantiation
      */
     private ByteArraySerializer() {
     }
 
     /**
      * Deserializes a string
-     * @param strVal the value to deserialize
-     * @return The string encoded bytes
-     * @throws ParseException If there is any problem processing the value
+     * 
+     * @param strVal          the value to deserialize
+     * @return                the string encoded bytes
+     * @throws ParseException if there is any problem processing the value
      */
     public static byte[] deserialize(final String strVal) throws ParseException {
     	Decoder base64Decoder = Base64.getDecoder();
@@ -50,10 +51,10 @@ public final class ByteArraySerializer {
     }
 
     /**
-     * Serializes the string.
+     * Serializes the string
      *
-     * @param src The source array.
-     * @return The string.
+     * @param src the source array
+     * @return    the string
      */
     public static String serialize(final byte[] src) {
     	Encoder base64Encoder = Base64.getEncoder();

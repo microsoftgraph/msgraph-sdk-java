@@ -27,9 +27,12 @@ public class WorkbookFunctionsMatchRequestBuilder extends BaseWorkbookFunctionsM
     /**
      * The request builder for this WorkbookFunctionsMatch
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param lookupValue the lookupValue
+     * @param lookupArray the lookupArray
+     * @param matchType the matchType
      */
     public WorkbookFunctionsMatchRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupArray, final com.google.gson.JsonElement matchType) {
         super(requestUrl, client, requestOptions, lookupValue, lookupArray, matchType);

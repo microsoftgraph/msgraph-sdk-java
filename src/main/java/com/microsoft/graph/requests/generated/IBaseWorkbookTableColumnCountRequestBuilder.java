@@ -27,7 +27,7 @@ public interface IBaseWorkbookTableColumnCountRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookTableColumnCountRequest
      *
-     * @return The IWorkbookTableColumnCountRequest instance
+     * @return the IWorkbookTableColumnCountRequest instance
      */
     IWorkbookTableColumnCountRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookTableColumnCountRequestBuilder extends IRequestBui
      * Creates the IWorkbookTableColumnCountRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableColumnCountRequest instance
+     * @return the IWorkbookTableColumnCountRequest instance
      */
     IWorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

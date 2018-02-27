@@ -27,10 +27,10 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
     /**
      * The request for the Drive
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseDriveRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * Gets the Drive from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<Drive> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * Gets the Drive from the service
-     * @return The Drive from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the Drive from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Drive get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * Patches this Drive with a source
-     * @param sourceDrive The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceDrive the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final Drive sourceDrive, final ICallback<Drive> callback) {
         send(HttpMethod.PATCH, callback, sourceDrive);
@@ -83,9 +88,10 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * Patches this Drive with a source
-     * @param sourceDrive The source object with updates
-     * @return The updated Drive
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceDrive the source object with updates
+     * @return the updated Drive
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Drive patch(final Drive sourceDrive) throws ClientException {
         return send(HttpMethod.PATCH, sourceDrive);
@@ -93,8 +99,9 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * Creates a Drive with a new object
-     * @param newDrive The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newDrive the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final Drive newDrive, final ICallback<Drive> callback) {
         send(HttpMethod.POST, callback, newDrive);
@@ -102,9 +109,10 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
 
     /**
      * Creates a Drive with a new object
-     * @param newDrive The new object to create
-     * @return The created Drive
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newDrive the new object to create
+     * @return the created Drive
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public Drive post(final Drive newDrive) throws ClientException {
         return send(HttpMethod.POST, newDrive);
@@ -113,8 +121,8 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IDriveRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseDriveRequest extends BaseRequest implements IBaseDriveRequest {
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IDriveRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

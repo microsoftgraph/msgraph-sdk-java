@@ -27,9 +27,13 @@ public class WorkbookFunctionsSydRequestBuilder extends BaseWorkbookFunctionsSyd
     /**
      * The request builder for this WorkbookFunctionsSyd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
+     * @param per the per
      */
     public WorkbookFunctionsSydRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
         super(requestUrl, client, requestOptions, cost, salvage, life, per);

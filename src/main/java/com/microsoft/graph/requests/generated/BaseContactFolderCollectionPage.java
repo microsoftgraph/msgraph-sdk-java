@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseContactFolderCollectionPage extends BaseCollectionPage<ContactFolder, IContactFolderCollectionRequestBuilder> implements IBaseContactFolderCollectionPage {
 
     /**
-     * A collection page for ContactFolder.
+     * A collection page for ContactFolder
      *
-     * @param response The serialized BaseContactFolderCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContactFolderCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseContactFolderCollectionPage(final BaseContactFolderCollectionResponse response, final IContactFolderCollectionRequestBuilder builder) {
         super(response.value, builder);

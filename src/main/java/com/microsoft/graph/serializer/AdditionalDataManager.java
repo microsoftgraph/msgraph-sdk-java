@@ -44,9 +44,10 @@ public class AdditionalDataManager extends HashMap<String, JsonElement> {
     }
 
     /**
-     * TODO Document
+     * Populates the additional data object with the raw JSON from the
+     * HTTP response
      *
-     * @param json
+     * @param json the raw JSON to set as additionalData
      */
     final void setAdditionalData(JsonObject json) {
         // Get the names of all the fields on this object's hierarchy

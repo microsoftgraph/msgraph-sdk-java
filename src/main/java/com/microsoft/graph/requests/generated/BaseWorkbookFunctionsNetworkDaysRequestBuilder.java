@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsNetworkDays
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDate the startDate
+     * @param endDate the endDate
+     * @param holidays the holidays
      */
     public BaseWorkbookFunctionsNetworkDaysRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement holidays) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsNetworkDaysRequest
      *
-     * @return The IWorkbookFunctionsNetworkDaysRequest instance
+     * @return the IWorkbookFunctionsNetworkDaysRequest instance
      */
     public IWorkbookFunctionsNetworkDaysRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsNetworkDaysRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsNetworkDaysRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsNetworkDaysRequest instance
+     * @return the IWorkbookFunctionsNetworkDaysRequest instance
      */
     public IWorkbookFunctionsNetworkDaysRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsNetworkDaysRequest request = new WorkbookFunctionsNetworkDaysRequest(

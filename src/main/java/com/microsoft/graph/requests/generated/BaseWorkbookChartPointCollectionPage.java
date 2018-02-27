@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseWorkbookChartPointCollectionPage extends BaseCollectionPage<WorkbookChartPoint, IWorkbookChartPointCollectionRequestBuilder> implements IBaseWorkbookChartPointCollectionPage {
 
     /**
-     * A collection page for WorkbookChartPoint.
+     * A collection page for WorkbookChartPoint
      *
-     * @param response The serialized BaseWorkbookChartPointCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookChartPointCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseWorkbookChartPointCollectionPage(final BaseWorkbookChartPointCollectionResponse response, final IWorkbookChartPointCollectionRequestBuilder builder) {
         super(response.value, builder);

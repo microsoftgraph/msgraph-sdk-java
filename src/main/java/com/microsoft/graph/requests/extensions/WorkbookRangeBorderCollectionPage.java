@@ -27,8 +27,8 @@ public class WorkbookRangeBorderCollectionPage extends BaseWorkbookRangeBorderCo
     /**
      * A collection page for WorkbookRangeFormat.
      *
-     * @param response The serialized BaseWorkbookRangeBorderCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookRangeBorderCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public WorkbookRangeBorderCollectionPage(final BaseWorkbookRangeBorderCollectionResponse response, final IWorkbookRangeBorderCollectionRequestBuilder builder) {
         super(response, builder);

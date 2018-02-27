@@ -25,31 +25,44 @@ import java.util.EnumSet;
 public interface IBasePlannerTaskRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IPlannerTaskRequest instance
      */
     IPlannerTaskRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IPlannerTaskRequest instance
      */
     IPlannerTaskRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for PlannerTaskDetails.
+     * Gets the request builder for PlannerTaskDetails
+     *
+     * @return the IPlannerTaskDetailsRequestBuilder instance
      */
     IPlannerTaskDetailsRequestBuilder details();
 
     /**
-     * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat.
+     * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat
+     *
+     * @return the IPlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
      */
     IPlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat();
 
     /**
-     * Gets the request builder for PlannerProgressTaskBoardTaskFormat.
+     * Gets the request builder for PlannerProgressTaskBoardTaskFormat
+     *
+     * @return the IPlannerProgressTaskBoardTaskFormatRequestBuilder instance
      */
     IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat();
 
     /**
-     * Gets the request builder for PlannerBucketTaskBoardTaskFormat.
+     * Gets the request builder for PlannerBucketTaskBoardTaskFormat
+     *
+     * @return the IPlannerBucketTaskBoardTaskFormatRequestBuilder instance
      */
     IPlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat();
 

@@ -27,9 +27,9 @@ public class PlannerAssignedToTaskBoardTaskFormatRequest extends BasePlannerAssi
     /**
      * The request for the PlannerAssignedToTaskBoardTaskFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public PlannerAssignedToTaskBoardTaskFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerAssignedToTaskBoardTaskFormat.class);

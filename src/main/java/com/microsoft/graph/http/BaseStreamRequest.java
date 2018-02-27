@@ -33,24 +33,24 @@ import java.net.URL;
 import java.util.List;
 
 /**
- * A request for a binary stream.
+ * A request for a binary stream
  *
- * @param <T> The class of the response type.
+ * @param <T> the class of the response type
  */
 public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
 
     /**
-     * The base request for this collection request.
+     * The base request for this collection request
      */
     private final BaseRequest baseRequest;
 
     /**
      * Creates the stream request.
      *
-     * @param requestUrl    The URL to make the request against.
-     * @param client        The client which can issue the request.
-     * @param options       The options for this request.
-     * @param responseClass The class for the response.
+     * @param requestUrl    the URL to make the request against
+     * @param client        the client which can issue the request
+     * @param options       the options for this request
+     * @param responseClass the class for the response
      */
     public BaseStreamRequest(final String requestUrl,
                              final IBaseClient client,
@@ -61,9 +61,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Sends this request.
+     * Sends this request
      *
-     * @param callback The callback when this request complements. The caller needs to close the stream.
+     * @param callback the callback when this request complements. The caller needs to close the stream
      */
     protected void send(final ICallback<InputStream> callback) {
         baseRequest.setHttpMethod(HttpMethod.GET);
@@ -71,10 +71,10 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Sends this request.
+     * Sends this request
      *
-     * @return The stream that the caller needs to close.
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the stream that the caller needs to close
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     protected InputStream send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
@@ -82,10 +82,10 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Sends this request.
+     * Sends this request
      *
-     * @param fileContents The file to upload.
-     * @param callback     The callback when this request complements. The caller needs to close the stream.
+     * @param fileContents the file to upload
+     * @param callback     the callback when this request complements. The caller needs to close the stream
      */
     @SuppressWarnings("unchecked")
     protected void send(final byte[] fileContents, final ICallback<T> callback) {
@@ -94,10 +94,10 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Sends this request.
+     * Sends this request
      *
-     * @param fileContents The file to upload.
-     * @return The stream that the caller needs to close.
+     * @param fileContents the file to upload
+     * @return             the stream that the caller needs to close
      */
     @SuppressWarnings("unchecked")
     protected T send(final byte[] fileContents) {
@@ -106,9 +106,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Gets the request URL.
+     * Gets the request URL
      *
-     * @return The request URL.
+     * @return the request URL
      */
     @Override
     public URL getRequestUrl() {
@@ -116,9 +116,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Gets the HTTP method.
+     * Gets the HTTP method
      *
-     * @return The HTTP method.
+     * @return the HTTP method
      */
     @Override
     public HttpMethod getHttpMethod() {
@@ -126,10 +126,10 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Adds a header to this request.
+     * Adds a header to this request
      *
-     * @param header The name of the header.
-     * @param value  The value of the header.
+     * @param header the name of the header
+     * @param value  the value of the header
      */
     @Override
     public void addHeader(final String header, final String value) {
@@ -137,9 +137,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Sets useCaches parameter to cache the response.
+     * Sets useCaches parameter to cache the response
      *
-     * @param useCaches The value of useCaches.
+     * @param useCaches the value of useCaches
      */
     @Override
     public void setUseCaches(boolean useCaches) {
@@ -147,9 +147,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Gets useCaches parameter.
+     * Gets useCaches parameter
      *
-     * @return The value of useCaches.
+     * @return the value of useCaches
      */
     @Override
     public boolean getUseCaches() {
@@ -157,9 +157,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Gets the headers.
+     * Gets the headers
      *
-     * @return The headers.
+     * @return the headers
      */
     @Override
     public List<HeaderOption> getHeaders() {
@@ -167,9 +167,9 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
-     * Gets the query options for this request.
+     * Gets the query options for this request
      *
-     * @return The query options for this request.
+     * @return the query options for this request
      */
     @Override
     public List<Option> getOptions() {

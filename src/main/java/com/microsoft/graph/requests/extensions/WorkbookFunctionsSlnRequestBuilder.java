@@ -27,9 +27,12 @@ public class WorkbookFunctionsSlnRequestBuilder extends BaseWorkbookFunctionsSln
     /**
      * The request builder for this WorkbookFunctionsSln
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param cost the cost
+     * @param salvage the salvage
+     * @param life the life
      */
     public WorkbookFunctionsSlnRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life) {
         super(requestUrl, client, requestOptions, cost, salvage, life);

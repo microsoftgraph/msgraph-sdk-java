@@ -27,9 +27,12 @@ public class WorkbookFunctionsMidbRequestBuilder extends BaseWorkbookFunctionsMi
     /**
      * The request builder for this WorkbookFunctionsMidb
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text the text
+     * @param startNum the startNum
+     * @param numBytes the numBytes
      */
     public WorkbookFunctionsMidbRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes) {
         super(requestUrl, client, requestOptions, text, startNum, numBytes);

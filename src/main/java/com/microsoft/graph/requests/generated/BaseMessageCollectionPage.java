@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseMessageCollectionPage extends BaseCollectionPage<Message, IMessageCollectionRequestBuilder> implements IBaseMessageCollectionPage {
 
     /**
-     * A collection page for Message.
+     * A collection page for Message
      *
-     * @param response The serialized BaseMessageCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseMessageCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseMessageCollectionPage(final BaseMessageCollectionResponse response, final IMessageCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsErf_PreciseRequestBuilder extends BaseActionRe
     /**
      * The request builder for this WorkbookFunctionsErf_Precise
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
      */
     public BaseWorkbookFunctionsErf_PreciseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsErf_PreciseRequestBuilder extends BaseActionRe
     /**
      * Creates the IWorkbookFunctionsErf_PreciseRequest
      *
-     * @return The IWorkbookFunctionsErf_PreciseRequest instance
+     * @return the IWorkbookFunctionsErf_PreciseRequest instance
      */
     public IWorkbookFunctionsErf_PreciseRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsErf_PreciseRequestBuilder extends BaseActionRe
      * Creates the IWorkbookFunctionsErf_PreciseRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsErf_PreciseRequest instance
+     * @return the IWorkbookFunctionsErf_PreciseRequest instance
      */
     public IWorkbookFunctionsErf_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsErf_PreciseRequest request = new WorkbookFunctionsErf_PreciseRequest(

@@ -27,9 +27,9 @@ public class WorkbookFunctionsGammaLn_PreciseRequest extends BaseWorkbookFunctio
     /**
      * The request for this WorkbookFunctionsGammaLn_Precise
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsGammaLn_PreciseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

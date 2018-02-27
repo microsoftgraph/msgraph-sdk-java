@@ -26,9 +26,10 @@ public class BaseMailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
     /**
      * The request builder for this MailFolderCopy
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param destinationId the destinationId
      */
     public BaseMailFolderCopyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String destinationId) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseMailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
     /**
      * Creates the IMailFolderCopyRequest
      *
-     * @return The IMailFolderCopyRequest instance
+     * @return the IMailFolderCopyRequest instance
      */
     public IMailFolderCopyRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseMailFolderCopyRequestBuilder extends BaseActionRequestBuilder {
      * Creates the IMailFolderCopyRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IMailFolderCopyRequest instance
+     * @return the IMailFolderCopyRequest instance
      */
     public IMailFolderCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         MailFolderCopyRequest request = new MailFolderCopyRequest(

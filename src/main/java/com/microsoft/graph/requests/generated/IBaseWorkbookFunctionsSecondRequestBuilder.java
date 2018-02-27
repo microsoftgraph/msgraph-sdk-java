@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsSecondRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsSecondRequest
      *
-     * @return The IWorkbookFunctionsSecondRequest instance
+     * @return the IWorkbookFunctionsSecondRequest instance
      */
     IWorkbookFunctionsSecondRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsSecondRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsSecondRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsSecondRequest instance
+     * @return the IWorkbookFunctionsSecondRequest instance
      */
     IWorkbookFunctionsSecondRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

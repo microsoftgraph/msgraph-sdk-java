@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsImArgumentRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsImArgument
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
      */
     public BaseWorkbookFunctionsImArgumentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsImArgumentRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsImArgumentRequest
      *
-     * @return The IWorkbookFunctionsImArgumentRequest instance
+     * @return the IWorkbookFunctionsImArgumentRequest instance
      */
     public IWorkbookFunctionsImArgumentRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsImArgumentRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsImArgumentRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImArgumentRequest instance
+     * @return the IWorkbookFunctionsImArgumentRequest instance
      */
     public IWorkbookFunctionsImArgumentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImArgumentRequest request = new WorkbookFunctionsImArgumentRequest(

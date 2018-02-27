@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAmorLincRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsAmorLincRequest
      *
-     * @return The IWorkbookFunctionsAmorLincRequest instance
+     * @return the IWorkbookFunctionsAmorLincRequest instance
      */
     IWorkbookFunctionsAmorLincRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAmorLincRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsAmorLincRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAmorLincRequest instance
+     * @return the IWorkbookFunctionsAmorLincRequest instance
      */
     IWorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

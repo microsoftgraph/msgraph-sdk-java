@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequ
     /**
      * The request builder for this WorkbookFunctionsImaginary
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
      */
     public BaseWorkbookFunctionsImaginaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequ
     /**
      * Creates the IWorkbookFunctionsImaginaryRequest
      *
-     * @return The IWorkbookFunctionsImaginaryRequest instance
+     * @return the IWorkbookFunctionsImaginaryRequest instance
      */
     public IWorkbookFunctionsImaginaryRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsImaginaryRequestBuilder extends BaseActionRequ
      * Creates the IWorkbookFunctionsImaginaryRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImaginaryRequest instance
+     * @return the IWorkbookFunctionsImaginaryRequest instance
      */
     public IWorkbookFunctionsImaginaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImaginaryRequest request = new WorkbookFunctionsImaginaryRequest(

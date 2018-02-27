@@ -72,6 +72,7 @@ public class BaseWorkbookFunctionsCoupPcdBody {
 
     /**
      * Gets the raw representation of this class
+     *
      * @return the raw representation of this class
      */
     public JsonObject getRawObject() {
@@ -80,6 +81,7 @@ public class BaseWorkbookFunctionsCoupPcdBody {
 
     /**
      * Gets serializer
+     *
      * @return the serializer
      */
     protected ISerializer getSerializer() {
@@ -87,10 +89,10 @@ public class BaseWorkbookFunctionsCoupPcdBody {
     }
 
     /**
-     * Sets the raw json object
+     * Sets the raw JSON object
      *
-     * @param serializer The serializer
-     * @param json The json object to set this object to
+     * @param serializer the serializer
+     * @param json the JSON object to set this object to
      */
     public void setRawObject(final ISerializer serializer, final JsonObject json) {
         this.serializer = serializer;

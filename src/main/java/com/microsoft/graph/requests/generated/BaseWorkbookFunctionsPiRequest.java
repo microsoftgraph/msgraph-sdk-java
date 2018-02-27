@@ -27,9 +27,9 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     /**
      * The request for this WorkbookFunctionsPi
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookFunctionsPiRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
@@ -38,7 +38,7 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     /**
      * Creates the WorkbookFunctionsPi
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void post(final ICallback<WorkbookFunctionResult> callback) {
         send(HttpMethod.POST, callback, null);
@@ -47,8 +47,8 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     /**
      * Creates the WorkbookFunctionsPi
      *
-     * @return The WorkbookFunctionResult
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookFunctionResult
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookFunctionResult post() throws ClientException {
        return send(HttpMethod.POST, null);
@@ -57,8 +57,8 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookFunctionsPiRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -68,8 +68,8 @@ public class BaseWorkbookFunctionsPiRequest extends BaseRequest implements IBase
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookFunctionsPiRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

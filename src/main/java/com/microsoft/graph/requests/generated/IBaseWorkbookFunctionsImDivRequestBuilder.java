@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsImDivRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsImDivRequest
      *
-     * @return The IWorkbookFunctionsImDivRequest instance
+     * @return the IWorkbookFunctionsImDivRequest instance
      */
     IWorkbookFunctionsImDivRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsImDivRequestBuilder extends IRequestBuild
      * Creates the IWorkbookFunctionsImDivRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImDivRequest instance
+     * @return the IWorkbookFunctionsImDivRequest instance
      */
     IWorkbookFunctionsImDivRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

@@ -27,8 +27,8 @@ public class EventDeltaCollectionPage extends BaseEventDeltaCollectionPage imple
     /**
      * A collection page for Event.
      *
-     * @param response The serialized BaseEventDeltaCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseEventDeltaCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public EventDeltaCollectionPage(final BaseEventDeltaCollectionResponse response, final IEventDeltaCollectionRequestBuilder builder) {
         super(response, builder);

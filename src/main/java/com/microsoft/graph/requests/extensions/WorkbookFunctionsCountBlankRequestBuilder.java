@@ -27,9 +27,10 @@ public class WorkbookFunctionsCountBlankRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsCountBlank
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param range the range
      */
     public WorkbookFunctionsCountBlankRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement range) {
         super(requestUrl, client, requestOptions, range);

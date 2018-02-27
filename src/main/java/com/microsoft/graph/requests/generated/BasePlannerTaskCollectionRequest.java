@@ -28,9 +28,9 @@ public class BasePlannerTaskCollectionRequest extends BaseCollectionRequest<Base
     /**
      * The request builder for this collection of PlannerTask
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BasePlannerTaskCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BasePlannerTaskCollectionResponse.class, IPlannerTaskCollectionPage.class);
@@ -72,8 +72,8 @@ public class BasePlannerTaskCollectionRequest extends BaseCollectionRequest<Base
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IPlannerTaskCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));
@@ -83,8 +83,8 @@ public class BasePlannerTaskCollectionRequest extends BaseCollectionRequest<Base
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IPlannerTaskCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -94,8 +94,8 @@ public class BasePlannerTaskCollectionRequest extends BaseCollectionRequest<Base
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IPlannerTaskCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value + ""));

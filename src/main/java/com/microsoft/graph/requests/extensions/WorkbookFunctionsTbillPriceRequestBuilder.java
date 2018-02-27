@@ -27,9 +27,12 @@ public class WorkbookFunctionsTbillPriceRequestBuilder extends BaseWorkbookFunct
     /**
      * The request builder for this WorkbookFunctionsTbillPrice
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param discount the discount
      */
     public WorkbookFunctionsTbillPriceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount) {
         super(requestUrl, client, requestOptions, settlement, maturity, discount);

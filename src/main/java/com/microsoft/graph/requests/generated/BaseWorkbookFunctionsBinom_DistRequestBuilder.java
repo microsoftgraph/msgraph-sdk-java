@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
     /**
      * The request builder for this WorkbookFunctionsBinom_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param numberS the numberS
+     * @param trials the trials
+     * @param probabilityS the probabilityS
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsBinom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
     /**
      * Creates the IWorkbookFunctionsBinom_DistRequest
      *
-     * @return The IWorkbookFunctionsBinom_DistRequest instance
+     * @return the IWorkbookFunctionsBinom_DistRequest instance
      */
     public IWorkbookFunctionsBinom_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsBinom_DistRequestBuilder extends BaseActionReq
      * Creates the IWorkbookFunctionsBinom_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsBinom_DistRequest instance
+     * @return the IWorkbookFunctionsBinom_DistRequest instance
      */
     public IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsBinom_DistRequest request = new WorkbookFunctionsBinom_DistRequest(

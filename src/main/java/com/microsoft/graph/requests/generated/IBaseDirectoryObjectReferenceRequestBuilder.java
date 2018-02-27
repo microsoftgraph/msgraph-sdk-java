@@ -26,11 +26,16 @@ public interface IBaseDirectoryObjectReferenceRequestBuilder extends IRequestBui
 
     /**
      * Creates the request
+     *
+     * @return the IDirectoryObjectReferenceRequest instance
      */
     IDirectoryObjectReferenceRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IDirectoryObjectReferenceRequest instance
      */
     IDirectoryObjectReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

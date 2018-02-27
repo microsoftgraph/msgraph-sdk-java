@@ -28,9 +28,9 @@ public class BaseSiteCollectionRequest extends BaseCollectionRequest<BaseSiteCol
     /**
      * The request builder for this collection of Site
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseSiteCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseSiteCollectionResponse.class, ISiteCollectionPage.class);
@@ -72,8 +72,8 @@ public class BaseSiteCollectionRequest extends BaseCollectionRequest<BaseSiteCol
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public ISiteCollectionRequest expand(final String value) {
         addQueryOption(new QueryOption("$expand", value));
@@ -83,8 +83,8 @@ public class BaseSiteCollectionRequest extends BaseCollectionRequest<BaseSiteCol
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public ISiteCollectionRequest select(final String value) {
         addQueryOption(new QueryOption("$select", value));
@@ -94,8 +94,8 @@ public class BaseSiteCollectionRequest extends BaseCollectionRequest<BaseSiteCol
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public ISiteCollectionRequest top(final int value) {
         addQueryOption(new QueryOption("$top", value + ""));

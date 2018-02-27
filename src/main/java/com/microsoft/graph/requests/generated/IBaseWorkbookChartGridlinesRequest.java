@@ -26,72 +26,80 @@ public interface IBaseWorkbookChartGridlinesRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookChartGridlines from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartGridlines> callback);
 
     /**
      * Gets the WorkbookChartGridlines from the service
-     * @return The WorkbookChartGridlines from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartGridlines from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartGridlines get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookChartGridlines with a source
-     * @param sourceWorkbookChartGridlines The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartGridlines the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookChartGridlines sourceWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback);
 
     /**
      * Patches this WorkbookChartGridlines with a source
-     * @param sourceWorkbookChartGridlines The source object with updates
-     * @return The updated WorkbookChartGridlines
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartGridlines the source object with updates
+     * @return the updated WorkbookChartGridlines
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartGridlines patch(final WorkbookChartGridlines sourceWorkbookChartGridlines) throws ClientException;
 
     /**
      * Posts a WorkbookChartGridlines with a new object
-     * @param newWorkbookChartGridlines The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartGridlines the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback);
 
     /**
      * Posts a WorkbookChartGridlines with a new object
-     * @param newWorkbookChartGridlines The new object to create
-     * @return The created WorkbookChartGridlines
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartGridlines the new object to create
+     * @return the created WorkbookChartGridlines
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartGridlines post(final WorkbookChartGridlines newWorkbookChartGridlines) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookChartGridlinesRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookChartGridlinesRequest expand(final String value);
 

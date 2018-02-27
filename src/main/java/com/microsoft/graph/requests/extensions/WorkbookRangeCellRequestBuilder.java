@@ -27,9 +27,11 @@ public class WorkbookRangeCellRequestBuilder extends BaseWorkbookRangeCellReques
     /**
      * The request builder for this WorkbookRangeCell
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param row the row
+     * @param column the column
      */
     public WorkbookRangeCellRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer row, final Integer column) {
         super(requestUrl, client, requestOptions, row, column);

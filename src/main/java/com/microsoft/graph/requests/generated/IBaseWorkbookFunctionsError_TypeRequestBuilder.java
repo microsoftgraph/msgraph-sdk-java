@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsError_TypeRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsError_TypeRequest
      *
-     * @return The IWorkbookFunctionsError_TypeRequest instance
+     * @return the IWorkbookFunctionsError_TypeRequest instance
      */
     IWorkbookFunctionsError_TypeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsError_TypeRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsError_TypeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsError_TypeRequest instance
+     * @return the IWorkbookFunctionsError_TypeRequest instance
      */
     IWorkbookFunctionsError_TypeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

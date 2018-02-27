@@ -27,9 +27,11 @@ public class WorkbookFunctionsIrrRequestBuilder extends BaseWorkbookFunctionsIrr
     /**
      * The request builder for this WorkbookFunctionsIrr
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
+     * @param guess the guess
      */
     public WorkbookFunctionsIrrRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values, final com.google.gson.JsonElement guess) {
         super(requestUrl, client, requestOptions, values, guess);

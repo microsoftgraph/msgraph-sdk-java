@@ -27,9 +27,9 @@ public class BaseGroupAddFavoriteRequest extends BaseRequest implements IBaseGro
     /**
      * The request for this GroupAddFavorite
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseGroupAddFavoriteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
@@ -38,7 +38,7 @@ public class BaseGroupAddFavoriteRequest extends BaseRequest implements IBaseGro
     /**
      * Creates the GroupAddFavorite
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void post(final ICallback<Void> callback) {
         final IExecutors executors = getClient().getExecutors();
@@ -58,7 +58,7 @@ public class BaseGroupAddFavoriteRequest extends BaseRequest implements IBaseGro
     /**
      * Creates the GroupAddFavorite
      *
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public void post() throws ClientException {
         this.send(HttpMethod.POST, null);

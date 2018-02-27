@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseEventMessageRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IEventMessageRequest instance
      */
     IEventMessageRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IEventMessageRequest instance
      */
     IEventMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for Event.
+     * Gets the request builder for Event
+     *
+     * @return the IEventRequestBuilder instance
      */
     IEventRequestBuilder event();
 

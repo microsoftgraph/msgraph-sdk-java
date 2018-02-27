@@ -25,22 +25,23 @@ package com.microsoft.graph.serializer;
 import com.google.gson.JsonObject;
 
 /**
- * An object was parsed from JSON.
+ * An object that was parsed from JSON
  */
 public interface IJsonBackedObject {
 
     /**
-     * Sets the raw JSON object this object was parsed from.
+     * Sets the raw JSON object this object was parsed from
      *
-     * @param serializer The serializer for sub class deserialization.
-     * @param json       The JSON that this object was derived from.
+     * @param serializer the serializer for sub class deserialization
+     * @param json       the JSON that this object was derived from
      */
     void setRawObject(final ISerializer serializer, final JsonObject json);
 
     /**
-     * TODO Document
-     *
-     * @return
+     * Provides access to objects not anticipated in the model, as well as 
+     * request and response data from the HTTP call
+     * 
+     * @return the AddtionalDataManager
      */
     AdditionalDataManager additionalDataManager();
 

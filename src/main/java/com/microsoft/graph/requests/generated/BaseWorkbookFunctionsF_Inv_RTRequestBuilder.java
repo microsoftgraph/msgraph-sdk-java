@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsF_Inv_RT
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param probability the probability
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
      */
     public BaseWorkbookFunctionsF_Inv_RTRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsF_Inv_RTRequest
      *
-     * @return The IWorkbookFunctionsF_Inv_RTRequest instance
+     * @return the IWorkbookFunctionsF_Inv_RTRequest instance
      */
     public IWorkbookFunctionsF_Inv_RTRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsF_Inv_RTRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsF_Inv_RTRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsF_Inv_RTRequest instance
+     * @return the IWorkbookFunctionsF_Inv_RTRequest instance
      */
     public IWorkbookFunctionsF_Inv_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsF_Inv_RTRequest request = new WorkbookFunctionsF_Inv_RTRequest(

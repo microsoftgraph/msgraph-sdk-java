@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsChooseRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsChooseRequest
      *
-     * @return The IWorkbookFunctionsChooseRequest instance
+     * @return the IWorkbookFunctionsChooseRequest instance
      */
     IWorkbookFunctionsChooseRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsChooseRequestBuilder extends IRequestBuil
      * Creates the IWorkbookFunctionsChooseRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsChooseRequest instance
+     * @return the IWorkbookFunctionsChooseRequest instance
      */
     IWorkbookFunctionsChooseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

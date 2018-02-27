@@ -23,32 +23,36 @@
 package com.microsoft.graph.logger;
 
 /**
- * The logger for the service client.
+ * The logger for the service client
  */
 public interface ILogger {
 
     /**
-     * Sets the logging level of this logger.
-     * @param level The level to log at.
+     * Sets the logging level of this logger
+     * 
+     * @param level the level to log at
      */
     void setLoggingLevel(final LoggerLevel level);
 
     /**
-     * Gets the logging level of this logger.
-     * @return The level the logger is set to.
+     * Gets the logging level of this logger
+     * 
+     * @return the level the logger is set to
      */
     LoggerLevel getLoggingLevel();
 
     /**
-     * Log a debug message.
-     * @param message The message.
+     * Log a debug message
+     * 
+     * @param message the message
      */
     void logDebug(final String message);
 
     /**
-     * Log an error message with throwable.
-     * @param message The message.
-     * @param throwable The throwable.
+     * Log an error message with throwable
+     * 
+     * @param message   the message
+     * @param throwable the throwable
      */
     void logError(final String message, final Throwable throwable);
 }

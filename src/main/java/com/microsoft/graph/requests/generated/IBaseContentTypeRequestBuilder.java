@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseContentTypeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IContentTypeRequest instance
      */
     IContentTypeRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IContentTypeRequest instance
      */
     IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

@@ -26,9 +26,12 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
     /**
      * The request builder for this WorkbookFunctionsPercentRank_Exc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param array the array
+     * @param x the x
+     * @param significance the significance
      */
     public BaseWorkbookFunctionsPercentRank_ExcRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookFunctionsPercentRank_ExcRequest
      *
-     * @return The IWorkbookFunctionsPercentRank_ExcRequest instance
+     * @return the IWorkbookFunctionsPercentRank_ExcRequest instance
      */
     public IWorkbookFunctionsPercentRank_ExcRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookFunctionsPercentRank_ExcRequestBuilder extends BaseActi
      * Creates the IWorkbookFunctionsPercentRank_ExcRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPercentRank_ExcRequest instance
+     * @return the IWorkbookFunctionsPercentRank_ExcRequest instance
      */
     public IWorkbookFunctionsPercentRank_ExcRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsPercentRank_ExcRequest request = new WorkbookFunctionsPercentRank_ExcRequest(

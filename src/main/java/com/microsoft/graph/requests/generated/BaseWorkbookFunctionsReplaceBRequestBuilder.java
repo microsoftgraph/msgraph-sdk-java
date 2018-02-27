@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsReplaceBRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsReplaceB
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param oldText the oldText
+     * @param startNum the startNum
+     * @param numBytes the numBytes
+     * @param newText the newText
      */
     public BaseWorkbookFunctionsReplaceBRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes, final com.google.gson.JsonElement newText) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsReplaceBRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsReplaceBRequest
      *
-     * @return The IWorkbookFunctionsReplaceBRequest instance
+     * @return the IWorkbookFunctionsReplaceBRequest instance
      */
     public IWorkbookFunctionsReplaceBRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsReplaceBRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsReplaceBRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsReplaceBRequest instance
+     * @return the IWorkbookFunctionsReplaceBRequest instance
      */
     public IWorkbookFunctionsReplaceBRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsReplaceBRequest request = new WorkbookFunctionsReplaceBRequest(

@@ -27,8 +27,8 @@ public class DomainDnsRecordCollectionPage extends BaseDomainDnsRecordCollection
     /**
      * A collection page for DomainDnsRecord.
      *
-     * @param response The serialized BaseDomainDnsRecordCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDomainDnsRecordCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public DomainDnsRecordCollectionPage(final BaseDomainDnsRecordCollectionResponse response, final IDomainDnsRecordCollectionRequestBuilder builder) {
         super(response, builder);

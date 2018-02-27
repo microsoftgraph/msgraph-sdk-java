@@ -26,9 +26,11 @@ public class BaseDirectoryObjectGetByIdsCollectionRequestBuilder extends BaseAct
     /**
      * The request builder for this collection of DirectoryObject
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param ids the ids
+     * @param types the types
      */
     public BaseDirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
         super(requestUrl, client, requestOptions);

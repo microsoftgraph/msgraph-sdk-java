@@ -27,10 +27,10 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
     /**
      * The request for the CalendarGroup
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseCalendarGroupRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
 
     /**
      * Gets the CalendarGroup from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<CalendarGroup> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
 
     /**
      * Gets the CalendarGroup from the service
-     * @return The CalendarGroup from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the CalendarGroup from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public CalendarGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
 
     /**
      * Patches this CalendarGroup with a source
-     * @param sourceCalendarGroup The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceCalendarGroup the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final CalendarGroup sourceCalendarGroup, final ICallback<CalendarGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendarGroup);
@@ -83,9 +88,10 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
 
     /**
      * Patches this CalendarGroup with a source
-     * @param sourceCalendarGroup The source object with updates
-     * @return The updated CalendarGroup
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceCalendarGroup the source object with updates
+     * @return the updated CalendarGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public CalendarGroup patch(final CalendarGroup sourceCalendarGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceCalendarGroup);
@@ -93,8 +99,9 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
 
     /**
      * Creates a CalendarGroup with a new object
-     * @param newCalendarGroup The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newCalendarGroup the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback) {
         send(HttpMethod.POST, callback, newCalendarGroup);
@@ -102,9 +109,10 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
 
     /**
      * Creates a CalendarGroup with a new object
-     * @param newCalendarGroup The new object to create
-     * @return The created CalendarGroup
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newCalendarGroup the new object to create
+     * @return the created CalendarGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public CalendarGroup post(final CalendarGroup newCalendarGroup) throws ClientException {
         return send(HttpMethod.POST, newCalendarGroup);
@@ -113,8 +121,8 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public ICalendarGroupRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseCalendarGroupRequest extends BaseRequest implements IBaseCalend
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public ICalendarGroupRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

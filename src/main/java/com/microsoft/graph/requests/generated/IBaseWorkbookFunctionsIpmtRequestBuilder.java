@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsIpmtRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsIpmtRequest
      *
-     * @return The IWorkbookFunctionsIpmtRequest instance
+     * @return the IWorkbookFunctionsIpmtRequest instance
      */
     IWorkbookFunctionsIpmtRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsIpmtRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsIpmtRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsIpmtRequest instance
+     * @return the IWorkbookFunctionsIpmtRequest instance
      */
     IWorkbookFunctionsIpmtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

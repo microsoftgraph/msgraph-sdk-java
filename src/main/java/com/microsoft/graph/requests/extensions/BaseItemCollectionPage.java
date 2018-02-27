@@ -27,8 +27,8 @@ public class BaseItemCollectionPage extends BaseBaseItemCollectionPage implement
     /**
      * A collection page for Site.
      *
-     * @param response The serialized BaseBaseItemCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseBaseItemCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public BaseItemCollectionPage(final BaseBaseItemCollectionResponse response, final IBaseItemCollectionRequestBuilder builder) {
         super(response, builder);

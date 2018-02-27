@@ -26,33 +26,37 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Serializes and deserializes items from strings into their types.
+ * Serializes and deserializes items from strings into their types
  */
 public interface ISerializer {
 
     /**
-     * Deserialize an object from the input string.
-     * @param inputString The string that stores the representation of the item.
-     * @param clazz The .class of the item to be deserialized.
-     * @param <T> The type of the item to be deserialized.
-     * @return The deserialized item from the input string.
+     * Deserialize an object from the input string
+     * 
+     * @param inputString the string that stores the representation of the item
+     * @param clazz       the .class of the item to be deserialized
+     * @param <T>         the type of the item to be deserialized
+     * @return            the deserialized item from the input string
      */
     <T> T deserializeObject(final String inputString, Class<T> clazz);
     
     /**
-     * Deserialize an object from the input string.
-     * @param inputString The string that stores the representation of the item.
-     * @param clazz The .class of the item to be deserialized.
-     * @param <T> The type of the item to be deserialized.
-     * @return The deserialized item from the input string.
+     * Deserialize an object from the input string
+     * 
+     * @param inputString     the string that stores the representation of the item
+     * @param clazz           the .class of the item to be deserialized
+     * @param responseHeaders the HTTP response headers
+     * @param <T>             the type of the item to be deserialized
+     * @return                the deserialized item from the input string
      */
     <T> T deserializeObject(final String inputString, Class<T> clazz, Map<String, List<String>> responseHeaders);
 
     /**
-     * Serializes an object into a string.
-     * @param serializableObject The object to convert into a string.
-     * @param <T> The type of the item to be serialized.
-     * @return The string representation of that item.
+     * Serializes an object into a string
+     * 
+     * @param serializableObject the object to convert into a string
+     * @param <T>                the type of the item to be serialized
+     * @return                   the string representation of that item
      */
     <T> String serializeObject(final T serializableObject);
 }

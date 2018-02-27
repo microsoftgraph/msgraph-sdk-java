@@ -25,13 +25,14 @@ package com.microsoft.graph.authentication;
 import com.microsoft.graph.http.IHttpRequest;
 
 /**
- * Provides authentication for a requests before it is sent by an HTTP provider.
+ * Provides authentication for a requests before it is sent by an HTTP provider
  */
 public interface IAuthenticationProvider {
 
     /**
-     * Authenticates the request.
-     * @param request The request to authenticate.
+     * Authenticates the request
+     * 
+     * @param request the request to authenticate
      */
     void authenticateRequest(final IHttpRequest request);
 }

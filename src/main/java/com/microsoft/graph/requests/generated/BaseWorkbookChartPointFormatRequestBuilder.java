@@ -27,9 +27,9 @@ public class BaseWorkbookChartPointFormatRequestBuilder extends BaseRequestBuild
     /**
      * The request builder for the WorkbookChartPointFormat
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartPointFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookChartPointFormatRequestBuilder extends BaseRequestBuild
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartPointFormatRequest instance
      */
     public IWorkbookChartPointFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartPointFormatRequestBuilder extends BaseRequestBuild
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartPointFormatRequest instance
      */
     public IWorkbookChartPointFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartPointFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,7 +56,9 @@ public class BaseWorkbookChartPointFormatRequestBuilder extends BaseRequestBuild
 
 
     /**
-     * Gets the request builder for WorkbookChartFill.
+     * Gets the request builder for WorkbookChartFill
+     *
+     * @return the IWorkbookChartFillRequestBuilder instance
      */
     public IWorkbookChartFillRequestBuilder fill() {
         return new WorkbookChartFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);

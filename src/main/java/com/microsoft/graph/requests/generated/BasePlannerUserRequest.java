@@ -27,10 +27,10 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
     /**
      * The request for the PlannerUser
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BasePlannerUserRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
 
     /**
      * Gets the PlannerUser from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<PlannerUser> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
 
     /**
      * Gets the PlannerUser from the service
-     * @return The PlannerUser from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the PlannerUser from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerUser get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
 
     /**
      * Patches this PlannerUser with a source
-     * @param sourcePlannerUser The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePlannerUser the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final PlannerUser sourcePlannerUser, final ICallback<PlannerUser> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerUser);
@@ -83,9 +88,10 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
 
     /**
      * Patches this PlannerUser with a source
-     * @param sourcePlannerUser The source object with updates
-     * @return The updated PlannerUser
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePlannerUser the source object with updates
+     * @return the updated PlannerUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerUser patch(final PlannerUser sourcePlannerUser) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerUser);
@@ -93,8 +99,9 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
 
     /**
      * Creates a PlannerUser with a new object
-     * @param newPlannerUser The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPlannerUser the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final PlannerUser newPlannerUser, final ICallback<PlannerUser> callback) {
         send(HttpMethod.POST, callback, newPlannerUser);
@@ -102,9 +109,10 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
 
     /**
      * Creates a PlannerUser with a new object
-     * @param newPlannerUser The new object to create
-     * @return The created PlannerUser
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPlannerUser the new object to create
+     * @return the created PlannerUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerUser post(final PlannerUser newPlannerUser) throws ClientException {
         return send(HttpMethod.POST, newPlannerUser);
@@ -113,8 +121,8 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IPlannerUserRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BasePlannerUserRequest extends BaseRequest implements IBasePlannerU
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IPlannerUserRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

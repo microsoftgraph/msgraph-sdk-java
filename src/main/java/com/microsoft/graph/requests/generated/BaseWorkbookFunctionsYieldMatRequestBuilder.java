@@ -26,9 +26,15 @@ public class BaseWorkbookFunctionsYieldMatRequestBuilder extends BaseActionReque
     /**
      * The request builder for this WorkbookFunctionsYieldMat
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param issue the issue
+     * @param rate the rate
+     * @param pr the pr
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsYieldMatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -43,7 +49,7 @@ public class BaseWorkbookFunctionsYieldMatRequestBuilder extends BaseActionReque
     /**
      * Creates the IWorkbookFunctionsYieldMatRequest
      *
-     * @return The IWorkbookFunctionsYieldMatRequest instance
+     * @return the IWorkbookFunctionsYieldMatRequest instance
      */
     public IWorkbookFunctionsYieldMatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -53,7 +59,7 @@ public class BaseWorkbookFunctionsYieldMatRequestBuilder extends BaseActionReque
      * Creates the IWorkbookFunctionsYieldMatRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsYieldMatRequest instance
+     * @return the IWorkbookFunctionsYieldMatRequest instance
      */
     public IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsYieldMatRequest request = new WorkbookFunctionsYieldMatRequest(

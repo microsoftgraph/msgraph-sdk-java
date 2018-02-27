@@ -26,9 +26,10 @@ public class BaseWorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseA
     /**
      * The request builder for this WorkbookFilterApplyTopPercentFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param percent the percent
      */
     public BaseWorkbookFilterApplyTopPercentFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer percent) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseA
     /**
      * Creates the IWorkbookFilterApplyTopPercentFilterRequest
      *
-     * @return The IWorkbookFilterApplyTopPercentFilterRequest instance
+     * @return the IWorkbookFilterApplyTopPercentFilterRequest instance
      */
     public IWorkbookFilterApplyTopPercentFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFilterApplyTopPercentFilterRequestBuilder extends BaseA
      * Creates the IWorkbookFilterApplyTopPercentFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyTopPercentFilterRequest instance
+     * @return the IWorkbookFilterApplyTopPercentFilterRequest instance
      */
     public IWorkbookFilterApplyTopPercentFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyTopPercentFilterRequest request = new WorkbookFilterApplyTopPercentFilterRequest(

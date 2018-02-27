@@ -27,7 +27,7 @@ public interface IBaseWorkbookRangeCellRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeCellRequest
      *
-     * @return The IWorkbookRangeCellRequest instance
+     * @return the IWorkbookRangeCellRequest instance
      */
     IWorkbookRangeCellRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookRangeCellRequestBuilder extends IRequestBuilder {
      * Creates the IWorkbookRangeCellRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookRangeCellRequest instance
+     * @return the IWorkbookRangeCellRequest instance
      */
     IWorkbookRangeCellRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

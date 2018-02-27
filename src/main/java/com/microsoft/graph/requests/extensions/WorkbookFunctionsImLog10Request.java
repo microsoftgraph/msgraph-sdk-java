@@ -27,9 +27,9 @@ public class WorkbookFunctionsImLog10Request extends BaseWorkbookFunctionsImLog1
     /**
      * The request for this WorkbookFunctionsImLog10
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookFunctionsImLog10Request(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);

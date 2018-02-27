@@ -27,10 +27,10 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
     /**
      * The request for the FieldValueSet
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseFieldValueSetRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
 
     /**
      * Gets the FieldValueSet from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<FieldValueSet> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
 
     /**
      * Gets the FieldValueSet from the service
-     * @return The FieldValueSet from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the FieldValueSet from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public FieldValueSet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
 
     /**
      * Patches this FieldValueSet with a source
-     * @param sourceFieldValueSet The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceFieldValueSet the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final FieldValueSet sourceFieldValueSet, final ICallback<FieldValueSet> callback) {
         send(HttpMethod.PATCH, callback, sourceFieldValueSet);
@@ -83,9 +88,10 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
 
     /**
      * Patches this FieldValueSet with a source
-     * @param sourceFieldValueSet The source object with updates
-     * @return The updated FieldValueSet
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceFieldValueSet the source object with updates
+     * @return the updated FieldValueSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public FieldValueSet patch(final FieldValueSet sourceFieldValueSet) throws ClientException {
         return send(HttpMethod.PATCH, sourceFieldValueSet);
@@ -93,8 +99,9 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
 
     /**
      * Creates a FieldValueSet with a new object
-     * @param newFieldValueSet The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newFieldValueSet the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback) {
         send(HttpMethod.POST, callback, newFieldValueSet);
@@ -102,9 +109,10 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
 
     /**
      * Creates a FieldValueSet with a new object
-     * @param newFieldValueSet The new object to create
-     * @return The created FieldValueSet
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newFieldValueSet the new object to create
+     * @return the created FieldValueSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public FieldValueSet post(final FieldValueSet newFieldValueSet) throws ClientException {
         return send(HttpMethod.POST, newFieldValueSet);
@@ -113,8 +121,8 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IFieldValueSetRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseFieldValueSetRequest extends BaseRequest implements IBaseFieldV
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IFieldValueSetRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

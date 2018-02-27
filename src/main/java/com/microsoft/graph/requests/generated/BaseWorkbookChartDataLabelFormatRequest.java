@@ -27,10 +27,10 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
     /**
      * The request for the WorkbookChartDataLabelFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookChartDataLabelFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
 
     /**
      * Gets the WorkbookChartDataLabelFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
 
     /**
      * Gets the WorkbookChartDataLabelFormat from the service
-     * @return The WorkbookChartDataLabelFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartDataLabelFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartDataLabelFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
 
     /**
      * Patches this WorkbookChartDataLabelFormat with a source
-     * @param sourceWorkbookChartDataLabelFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartDataLabelFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartDataLabelFormat);
@@ -83,9 +88,10 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
 
     /**
      * Patches this WorkbookChartDataLabelFormat with a source
-     * @param sourceWorkbookChartDataLabelFormat The source object with updates
-     * @return The updated WorkbookChartDataLabelFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartDataLabelFormat the source object with updates
+     * @return the updated WorkbookChartDataLabelFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartDataLabelFormat patch(final WorkbookChartDataLabelFormat sourceWorkbookChartDataLabelFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartDataLabelFormat);
@@ -93,8 +99,9 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
 
     /**
      * Creates a WorkbookChartDataLabelFormat with a new object
-     * @param newWorkbookChartDataLabelFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartDataLabelFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartDataLabelFormat);
@@ -102,9 +109,10 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
 
     /**
      * Creates a WorkbookChartDataLabelFormat with a new object
-     * @param newWorkbookChartDataLabelFormat The new object to create
-     * @return The created WorkbookChartDataLabelFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartDataLabelFormat the new object to create
+     * @return the created WorkbookChartDataLabelFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookChartDataLabelFormat post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartDataLabelFormat);
@@ -113,8 +121,8 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookChartDataLabelFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookChartDataLabelFormatRequest extends BaseRequest impleme
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookChartDataLabelFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

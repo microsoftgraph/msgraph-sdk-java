@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsTanh
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsTanhRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsTanhRequest
      *
-     * @return The IWorkbookFunctionsTanhRequest instance
+     * @return the IWorkbookFunctionsTanhRequest instance
      */
     public IWorkbookFunctionsTanhRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsTanhRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsTanhRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsTanhRequest instance
+     * @return the IWorkbookFunctionsTanhRequest instance
      */
     public IWorkbookFunctionsTanhRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsTanhRequest request = new WorkbookFunctionsTanhRequest(

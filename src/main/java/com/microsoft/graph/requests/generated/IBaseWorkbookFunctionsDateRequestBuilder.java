@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDateRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDateRequest
      *
-     * @return The IWorkbookFunctionsDateRequest instance
+     * @return the IWorkbookFunctionsDateRequest instance
      */
     IWorkbookFunctionsDateRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDateRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsDateRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDateRequest instance
+     * @return the IWorkbookFunctionsDateRequest instance
      */
     IWorkbookFunctionsDateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

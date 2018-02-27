@@ -26,9 +26,10 @@ public class BaseWorkbookChartItemRequestBuilder extends BaseFunctionRequestBuil
     /**
      * The request builder for this WorkbookChartItem
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param name the name
      */
     public BaseWorkbookChartItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String name) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookChartItemRequestBuilder extends BaseFunctionRequestBuil
     /**
      * Creates the IWorkbookChartItemRequest
      *
-     * @return The IWorkbookChartItemRequest instance
+     * @return the IWorkbookChartItemRequest instance
      */
     public IWorkbookChartItemRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookChartItemRequestBuilder extends BaseFunctionRequestBuil
      * Creates the IWorkbookChartItemRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartItemRequest instance
+     * @return the IWorkbookChartItemRequest instance
      */
     public IWorkbookChartItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartItemRequest request = new WorkbookChartItemRequest(

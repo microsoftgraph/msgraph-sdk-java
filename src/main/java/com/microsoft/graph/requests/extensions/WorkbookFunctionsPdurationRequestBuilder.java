@@ -27,9 +27,12 @@ public class WorkbookFunctionsPdurationRequestBuilder extends BaseWorkbookFuncti
     /**
      * The request builder for this WorkbookFunctionsPduration
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param rate the rate
+     * @param pv the pv
+     * @param fv the fv
      */
     public WorkbookFunctionsPdurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
         super(requestUrl, client, requestOptions, rate, pv, fv);

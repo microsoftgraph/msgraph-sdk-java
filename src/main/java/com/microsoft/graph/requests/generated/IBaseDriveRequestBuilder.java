@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseDriveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IDriveRequest instance
      */
     IDriveRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IDriveRequest instance
      */
     IDriveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -38,12 +43,16 @@ public interface IBaseDriveRequestBuilder extends IRequestBuilder {
     IDriveItemRequestBuilder items(final String id);
 
     /**
-     * Gets the request builder for List.
+     * Gets the request builder for List
+     *
+     * @return the IListRequestBuilder instance
      */
     IListRequestBuilder list();
 
     /**
-     * Gets the request builder for DriveItem.
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
      */
     IDriveItemRequestBuilder root();
 

@@ -27,7 +27,7 @@ public interface IBaseMessageCreateReplyAllRequestBuilder extends IRequestBuilde
     /**
      * Creates the IMessageCreateReplyAllRequest
      *
-     * @return The IMessageCreateReplyAllRequest instance
+     * @return the IMessageCreateReplyAllRequest instance
      */
     IMessageCreateReplyAllRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseMessageCreateReplyAllRequestBuilder extends IRequestBuilde
      * Creates the IMessageCreateReplyAllRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IMessageCreateReplyAllRequest instance
+     * @return the IMessageCreateReplyAllRequest instance
      */
     IMessageCreateReplyAllRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

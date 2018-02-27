@@ -27,7 +27,7 @@ public interface IBaseUserFindMeetingTimesRequestBuilder extends IRequestBuilder
     /**
      * Creates the IUserFindMeetingTimesRequest
      *
-     * @return The IUserFindMeetingTimesRequest instance
+     * @return the IUserFindMeetingTimesRequest instance
      */
     IUserFindMeetingTimesRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseUserFindMeetingTimesRequestBuilder extends IRequestBuilder
      * Creates the IUserFindMeetingTimesRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IUserFindMeetingTimesRequest instance
+     * @return the IUserFindMeetingTimesRequest instance
      */
     IUserFindMeetingTimesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

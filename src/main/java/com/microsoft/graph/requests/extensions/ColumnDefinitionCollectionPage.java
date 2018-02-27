@@ -27,8 +27,8 @@ public class ColumnDefinitionCollectionPage extends BaseColumnDefinitionCollecti
     /**
      * A collection page for List.
      *
-     * @param response The serialized BaseColumnDefinitionCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseColumnDefinitionCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ColumnDefinitionCollectionPage(final BaseColumnDefinitionCollectionResponse response, final IColumnDefinitionCollectionRequestBuilder builder) {
         super(response, builder);

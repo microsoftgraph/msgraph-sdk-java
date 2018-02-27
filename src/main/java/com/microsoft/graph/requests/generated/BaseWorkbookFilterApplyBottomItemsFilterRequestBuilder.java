@@ -26,9 +26,10 @@ public class BaseWorkbookFilterApplyBottomItemsFilterRequestBuilder extends Base
     /**
      * The request builder for this WorkbookFilterApplyBottomItemsFilter
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param count the count
      */
     public BaseWorkbookFilterApplyBottomItemsFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFilterApplyBottomItemsFilterRequestBuilder extends Base
     /**
      * Creates the IWorkbookFilterApplyBottomItemsFilterRequest
      *
-     * @return The IWorkbookFilterApplyBottomItemsFilterRequest instance
+     * @return the IWorkbookFilterApplyBottomItemsFilterRequest instance
      */
     public IWorkbookFilterApplyBottomItemsFilterRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFilterApplyBottomItemsFilterRequestBuilder extends Base
      * Creates the IWorkbookFilterApplyBottomItemsFilterRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFilterApplyBottomItemsFilterRequest instance
+     * @return the IWorkbookFilterApplyBottomItemsFilterRequest instance
      */
     public IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFilterApplyBottomItemsFilterRequest request = new WorkbookFilterApplyBottomItemsFilterRequest(

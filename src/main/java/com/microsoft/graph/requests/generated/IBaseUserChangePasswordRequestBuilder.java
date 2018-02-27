@@ -27,7 +27,7 @@ public interface IBaseUserChangePasswordRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserChangePasswordRequest
      *
-     * @return The IUserChangePasswordRequest instance
+     * @return the IUserChangePasswordRequest instance
      */
     IUserChangePasswordRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseUserChangePasswordRequestBuilder extends IRequestBuilder {
      * Creates the IUserChangePasswordRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IUserChangePasswordRequest instance
+     * @return the IUserChangePasswordRequest instance
      */
     IUserChangePasswordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

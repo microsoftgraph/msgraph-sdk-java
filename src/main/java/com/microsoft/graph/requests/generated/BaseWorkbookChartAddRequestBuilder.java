@@ -26,9 +26,12 @@ public class BaseWorkbookChartAddRequestBuilder extends BaseActionRequestBuilder
     /**
      * The request builder for this WorkbookChartAdd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param type the type
+     * @param sourceData the sourceData
+     * @param seriesBy the seriesBy
      */
     public BaseWorkbookChartAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         super(requestUrl, client, requestOptions);
@@ -40,7 +43,7 @@ public class BaseWorkbookChartAddRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookChartAddRequest
      *
-     * @return The IWorkbookChartAddRequest instance
+     * @return the IWorkbookChartAddRequest instance
      */
     public IWorkbookChartAddRequest buildRequest() {
         return buildRequest(getOptions());
@@ -50,7 +53,7 @@ public class BaseWorkbookChartAddRequestBuilder extends BaseActionRequestBuilder
      * Creates the IWorkbookChartAddRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartAddRequest instance
+     * @return the IWorkbookChartAddRequest instance
      */
     public IWorkbookChartAddRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartAddRequest request = new WorkbookChartAddRequest(

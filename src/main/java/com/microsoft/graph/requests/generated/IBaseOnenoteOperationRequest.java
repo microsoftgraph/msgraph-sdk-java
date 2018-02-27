@@ -26,72 +26,80 @@ public interface IBaseOnenoteOperationRequest extends IHttpRequest {
 
     /**
      * Gets the OnenoteOperation from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<OnenoteOperation> callback);
 
     /**
      * Gets the OnenoteOperation from the service
-     * @return The OnenoteOperation from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the OnenoteOperation from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenoteOperation get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this OnenoteOperation with a source
-     * @param sourceOnenoteOperation The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceOnenoteOperation the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final OnenoteOperation sourceOnenoteOperation, final ICallback<OnenoteOperation> callback);
 
     /**
      * Patches this OnenoteOperation with a source
-     * @param sourceOnenoteOperation The source object with updates
-     * @return The updated OnenoteOperation
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceOnenoteOperation the source object with updates
+     * @return the updated OnenoteOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenoteOperation patch(final OnenoteOperation sourceOnenoteOperation) throws ClientException;
 
     /**
      * Posts a OnenoteOperation with a new object
-     * @param newOnenoteOperation The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newOnenoteOperation the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback);
 
     /**
      * Posts a OnenoteOperation with a new object
-     * @param newOnenoteOperation The new object to create
-     * @return The created OnenoteOperation
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newOnenoteOperation the new object to create
+     * @return the created OnenoteOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     OnenoteOperation post(final OnenoteOperation newOnenoteOperation) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseOnenoteOperationRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseOnenoteOperationRequest expand(final String value);
 

@@ -26,72 +26,80 @@ public interface IBaseMailFolderRequest extends IHttpRequest {
 
     /**
      * Gets the MailFolder from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<MailFolder> callback);
 
     /**
      * Gets the MailFolder from the service
-     * @return The MailFolder from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the MailFolder from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     MailFolder get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this MailFolder with a source
-     * @param sourceMailFolder The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceMailFolder the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final MailFolder sourceMailFolder, final ICallback<MailFolder> callback);
 
     /**
      * Patches this MailFolder with a source
-     * @param sourceMailFolder The source object with updates
-     * @return The updated MailFolder
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceMailFolder the source object with updates
+     * @return the updated MailFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     MailFolder patch(final MailFolder sourceMailFolder) throws ClientException;
 
     /**
      * Posts a MailFolder with a new object
-     * @param newMailFolder The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newMailFolder the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final MailFolder newMailFolder, final ICallback<MailFolder> callback);
 
     /**
      * Posts a MailFolder with a new object
-     * @param newMailFolder The new object to create
-     * @return The created MailFolder
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newMailFolder the new object to create
+     * @return the created MailFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     MailFolder post(final MailFolder newMailFolder) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseMailFolderRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseMailFolderRequest expand(final String value);
 

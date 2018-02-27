@@ -26,9 +26,14 @@ public class BaseWorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionR
     /**
      * The request builder for this WorkbookFunctionsHypGeom_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param sampleS the sampleS
+     * @param numberSample the numberSample
+     * @param populationS the populationS
+     * @param numberPop the numberPop
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsHypGeom_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement sampleS, final com.google.gson.JsonElement numberSample, final com.google.gson.JsonElement populationS, final com.google.gson.JsonElement numberPop, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -42,7 +47,7 @@ public class BaseWorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsHypGeom_DistRequest
      *
-     * @return The IWorkbookFunctionsHypGeom_DistRequest instance
+     * @return the IWorkbookFunctionsHypGeom_DistRequest instance
      */
     public IWorkbookFunctionsHypGeom_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -52,7 +57,7 @@ public class BaseWorkbookFunctionsHypGeom_DistRequestBuilder extends BaseActionR
      * Creates the IWorkbookFunctionsHypGeom_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsHypGeom_DistRequest instance
+     * @return the IWorkbookFunctionsHypGeom_DistRequest instance
      */
     public IWorkbookFunctionsHypGeom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsHypGeom_DistRequest request = new WorkbookFunctionsHypGeom_DistRequest(

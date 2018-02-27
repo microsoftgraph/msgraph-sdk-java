@@ -28,9 +28,9 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
     /**
      * The request for this UserSendMail
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseUserSendMailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
@@ -48,8 +48,8 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IUserSendMailRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -59,8 +59,8 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
     /**
      * Sets the top value for the request
      *
-     * @param value The max number of items to return
-     * @return The updated request
+     * @param value the max number of items to return
+     * @return the updated request
      */
     public IUserSendMailRequest top(final int value) {
         getQueryOptions().add(new QueryOption("$top", value+""));
@@ -70,8 +70,8 @@ public class BaseUserSendMailRequest extends BaseRequest implements IBaseUserSen
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IUserSendMailRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

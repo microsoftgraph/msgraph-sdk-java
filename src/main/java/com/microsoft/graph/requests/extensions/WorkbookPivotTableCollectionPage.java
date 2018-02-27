@@ -27,8 +27,8 @@ public class WorkbookPivotTableCollectionPage extends BaseWorkbookPivotTableColl
     /**
      * A collection page for WorkbookWorksheet.
      *
-     * @param response The serialized BaseWorkbookPivotTableCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseWorkbookPivotTableCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public WorkbookPivotTableCollectionPage(final BaseWorkbookPivotTableCollectionResponse response, final IWorkbookPivotTableCollectionRequestBuilder builder) {
         super(response, builder);

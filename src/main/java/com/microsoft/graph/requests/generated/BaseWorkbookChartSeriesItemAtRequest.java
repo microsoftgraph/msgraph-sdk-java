@@ -27,9 +27,9 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * The request for this WorkbookChartSeriesItemAt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartSeriesItemAtRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartSeries.class);
@@ -37,8 +37,8 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
 
     /**
      * Patches the WorkbookChartSeriesItemAt
-     * @param srcWorkbookChartSeries The WorkbookChartSeries with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChartSeries the WorkbookChartSeries with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     public void patch(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.PATCH, callback, srcWorkbookChartSeries);
@@ -47,9 +47,9 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Patches the WorkbookChartSeriesItemAt
      *
-     * @param srcWorkbookChartSeries The WorkbookChartSeries with which to PATCH
-     * @return The WorkbookChartSeries
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChartSeries the WorkbookChartSeries with which to PATCH
+     * @return the WorkbookChartSeries
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookChartSeries patch(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
         return this.send(HttpMethod.PATCH, srcWorkbookChartSeries);
@@ -58,8 +58,8 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Puts the WorkbookChartSeriesItemAt
      *
-     * @param srcWorkbookChartSeries The WorkbookChartSeries to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookChartSeries the WorkbookChartSeries to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(WorkbookChartSeries srcWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.PUT, callback, srcWorkbookChartSeries);
@@ -68,9 +68,9 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Puts the WorkbookChartSeriesItemAt
      *
-     * @param srcWorkbookChartSeries The WorkbookChartSeries to PUT
-     * @return The WorkbookChartSeries
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookChartSeries the WorkbookChartSeries to PUT
+     * @return the WorkbookChartSeries
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      public WorkbookChartSeries put(WorkbookChartSeries srcWorkbookChartSeries) throws ClientException {
         return this.send(HttpMethod.PUT, srcWorkbookChartSeries);
@@ -78,7 +78,7 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Gets the WorkbookChartSeries
      *
-     * @param callback The callback to be called after success or failure.
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookChartSeries> callback) {
         send(HttpMethod.GET, callback, null);
@@ -87,8 +87,8 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Gets the WorkbookChartSeries
      *
-     * @return The WorkbookChartSeries
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookChartSeries
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public WorkbookChartSeries get() throws ClientException {
        return send(HttpMethod.GET, null);
@@ -97,8 +97,8 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IWorkbookChartSeriesItemAtRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -108,8 +108,8 @@ public class BaseWorkbookChartSeriesItemAtRequest extends BaseRequest implements
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IWorkbookChartSeriesItemAtRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));

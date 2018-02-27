@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseDeviceCollectionPage extends BaseCollectionPage<Device, IDeviceCollectionRequestBuilder> implements IBaseDeviceCollectionPage {
 
     /**
-     * A collection page for Device.
+     * A collection page for Device
      *
-     * @param response The serialized BaseDeviceCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseDeviceCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseDeviceCollectionPage(final BaseDeviceCollectionResponse response, final IDeviceCollectionRequestBuilder builder) {
         super(response.value, builder);

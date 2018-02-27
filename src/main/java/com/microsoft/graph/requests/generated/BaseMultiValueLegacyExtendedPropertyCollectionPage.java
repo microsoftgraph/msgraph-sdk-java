@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseMultiValueLegacyExtendedPropertyCollectionPage extends BaseCollectionPage<MultiValueLegacyExtendedProperty, IMultiValueLegacyExtendedPropertyCollectionRequestBuilder> implements IBaseMultiValueLegacyExtendedPropertyCollectionPage {
 
     /**
-     * A collection page for MultiValueLegacyExtendedProperty.
+     * A collection page for MultiValueLegacyExtendedProperty
      *
-     * @param response The serialized BaseMultiValueLegacyExtendedPropertyCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseMultiValueLegacyExtendedPropertyCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseMultiValueLegacyExtendedPropertyCollectionPage(final BaseMultiValueLegacyExtendedPropertyCollectionResponse response, final IMultiValueLegacyExtendedPropertyCollectionRequestBuilder builder) {
         super(response.value, builder);

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsPoisson_DistRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFunctionsPoisson_DistRequest
      *
-     * @return The IWorkbookFunctionsPoisson_DistRequest instance
+     * @return the IWorkbookFunctionsPoisson_DistRequest instance
      */
     IWorkbookFunctionsPoisson_DistRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsPoisson_DistRequestBuilder extends IReque
      * Creates the IWorkbookFunctionsPoisson_DistRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsPoisson_DistRequest instance
+     * @return the IWorkbookFunctionsPoisson_DistRequest instance
      */
     IWorkbookFunctionsPoisson_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

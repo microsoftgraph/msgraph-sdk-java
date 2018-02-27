@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsGeStepRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsGeStep
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
+     * @param step the step
      */
     public BaseWorkbookFunctionsGeStepRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number, final com.google.gson.JsonElement step) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsGeStepRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsGeStepRequest
      *
-     * @return The IWorkbookFunctionsGeStepRequest instance
+     * @return the IWorkbookFunctionsGeStepRequest instance
      */
     public IWorkbookFunctionsGeStepRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsGeStepRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsGeStepRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsGeStepRequest instance
+     * @return the IWorkbookFunctionsGeStepRequest instance
      */
     public IWorkbookFunctionsGeStepRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsGeStepRequest request = new WorkbookFunctionsGeStepRequest(

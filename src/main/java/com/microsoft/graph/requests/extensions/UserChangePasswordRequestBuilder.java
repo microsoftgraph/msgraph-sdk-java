@@ -27,9 +27,11 @@ public class UserChangePasswordRequestBuilder extends BaseUserChangePasswordRequ
     /**
      * The request builder for this UserChangePassword
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param currentPassword the currentPassword
+     * @param newPassword the newPassword
      */
     public UserChangePasswordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String currentPassword, final String newPassword) {
         super(requestUrl, client, requestOptions, currentPassword, newPassword);

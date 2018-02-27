@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the ISiteRequest instance
      */
     ISiteRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the ISiteRequest instance
      */
     ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -42,7 +47,9 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     IContentTypeRequestBuilder contentTypes(final String id);
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
+     *
+     * @return the IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 
@@ -63,7 +70,9 @@ public interface IBaseSiteRequestBuilder extends IRequestBuilder {
     ISiteRequestBuilder sites(final String id);
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
     ISiteGetByPathRequestBuilder getByPath(final String path);

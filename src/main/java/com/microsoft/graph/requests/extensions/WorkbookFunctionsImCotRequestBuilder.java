@@ -27,9 +27,10 @@ public class WorkbookFunctionsImCotRequestBuilder extends BaseWorkbookFunctionsI
     /**
      * The request builder for this WorkbookFunctionsImCot
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
      */
     public WorkbookFunctionsImCotRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions, inumber);

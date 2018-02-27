@@ -27,9 +27,9 @@ public class WorkbookChartSeriesFormatRequest extends BaseWorkbookChartSeriesFor
     /**
      * The request for the WorkbookChartSeriesFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookChartSeriesFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartSeriesFormat.class);

@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAverageRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsAverageRequest
      *
-     * @return The IWorkbookFunctionsAverageRequest instance
+     * @return the IWorkbookFunctionsAverageRequest instance
      */
     IWorkbookFunctionsAverageRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAverageRequestBuilder extends IRequestBui
      * Creates the IWorkbookFunctionsAverageRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAverageRequest instance
+     * @return the IWorkbookFunctionsAverageRequest instance
      */
     IWorkbookFunctionsAverageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

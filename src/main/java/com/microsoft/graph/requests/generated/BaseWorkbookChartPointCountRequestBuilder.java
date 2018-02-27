@@ -26,9 +26,9 @@ public class BaseWorkbookChartPointCountRequestBuilder extends BaseFunctionReque
     /**
      * The request builder for this WorkbookChartPointCount
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartPointCountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookChartPointCountRequestBuilder extends BaseFunctionReque
     /**
      * Creates the IWorkbookChartPointCountRequest
      *
-     * @return The IWorkbookChartPointCountRequest instance
+     * @return the IWorkbookChartPointCountRequest instance
      */
     public IWorkbookChartPointCountRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookChartPointCountRequestBuilder extends BaseFunctionReque
      * Creates the IWorkbookChartPointCountRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartPointCountRequest instance
+     * @return the IWorkbookChartPointCountRequest instance
      */
     public IWorkbookChartPointCountRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartPointCountRequest request = new WorkbookChartPointCountRequest(

@@ -27,9 +27,9 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseWorkbookRangeRowsB
     /**
      * The request builder for this WorkbookRangeRowsBelow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public WorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -38,9 +38,10 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseWorkbookRangeRowsB
     /**
      * The request builder for this WorkbookRangeRowsBelow
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param count the count
      */
     public WorkbookRangeRowsBelowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer count) {
         super(requestUrl, client, requestOptions, count);

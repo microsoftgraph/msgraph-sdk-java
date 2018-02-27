@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsKurt
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param values the values
      */
     public BaseWorkbookFunctionsKurtRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement values) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsKurtRequest
      *
-     * @return The IWorkbookFunctionsKurtRequest instance
+     * @return the IWorkbookFunctionsKurtRequest instance
      */
     public IWorkbookFunctionsKurtRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsKurtRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsKurtRequest instance
+     * @return the IWorkbookFunctionsKurtRequest instance
      */
     public IWorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsKurtRequest request = new WorkbookFunctionsKurtRequest(

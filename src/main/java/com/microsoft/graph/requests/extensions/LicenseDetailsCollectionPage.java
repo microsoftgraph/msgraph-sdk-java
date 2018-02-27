@@ -27,8 +27,8 @@ public class LicenseDetailsCollectionPage extends BaseLicenseDetailsCollectionPa
     /**
      * A collection page for User.
      *
-     * @param response The serialized BaseLicenseDetailsCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseLicenseDetailsCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public LicenseDetailsCollectionPage(final BaseLicenseDetailsCollectionResponse response, final ILicenseDetailsCollectionRequestBuilder builder) {
         super(response, builder);

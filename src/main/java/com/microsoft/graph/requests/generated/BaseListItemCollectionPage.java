@@ -29,10 +29,10 @@ import com.google.gson.annotations.*;
 public class BaseListItemCollectionPage extends BaseCollectionPage<ListItem, IListItemCollectionRequestBuilder> implements IBaseListItemCollectionPage {
 
     /**
-     * A collection page for ListItem.
+     * A collection page for ListItem
      *
-     * @param response The serialized BaseListItemCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseListItemCollectionResponse from the service
+     * @param builder  the request builder for the next collection page
      */
     public BaseListItemCollectionPage(final BaseListItemCollectionResponse response, final IListItemCollectionRequestBuilder builder) {
         super(response.value, builder);

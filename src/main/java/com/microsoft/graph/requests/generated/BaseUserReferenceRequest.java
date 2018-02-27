@@ -27,9 +27,9 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
     /**
      * The request for the User
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseUserReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, User.class);
@@ -46,8 +46,8 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     public IUserReferenceRequest select(final String value) {
         getQueryOptions().add(new QueryOption("$select", value));
@@ -57,8 +57,8 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     public IUserReferenceRequest expand(final String value) {
         getQueryOptions().add(new QueryOption("$expand", value));
@@ -67,8 +67,8 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
     /**
      * Puts the User
      *
-     * @param srcUser The User reference to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcUser the User reference to PUT
+     * @param callback the callback to be called after success or failure
      */
     public void put(User srcUser, final ICallback<User> callback) {
         send(HttpMethod.PUT, callback, srcUser);
@@ -77,9 +77,9 @@ public class BaseUserReferenceRequest extends BaseRequest implements IBaseUserRe
     /**
      * Puts the User
      *
-     * @param srcUser The User reference to PUT
-     * @return The User
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcUser the User reference to PUT
+     * @return the User
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     public User put(User srcUser) throws ClientException {
         return send(HttpMethod.PUT, srcUser);

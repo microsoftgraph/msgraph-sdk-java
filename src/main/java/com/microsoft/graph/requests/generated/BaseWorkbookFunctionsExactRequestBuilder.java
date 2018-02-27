@@ -26,9 +26,11 @@ public class BaseWorkbookFunctionsExactRequestBuilder extends BaseActionRequestB
     /**
      * The request builder for this WorkbookFunctionsExact
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param text1 the text1
+     * @param text2 the text2
      */
     public BaseWorkbookFunctionsExactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement text1, final com.google.gson.JsonElement text2) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseWorkbookFunctionsExactRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsExactRequest
      *
-     * @return The IWorkbookFunctionsExactRequest instance
+     * @return the IWorkbookFunctionsExactRequest instance
      */
     public IWorkbookFunctionsExactRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseWorkbookFunctionsExactRequestBuilder extends BaseActionRequestB
      * Creates the IWorkbookFunctionsExactRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsExactRequest instance
+     * @return the IWorkbookFunctionsExactRequest instance
      */
     public IWorkbookFunctionsExactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsExactRequest request = new WorkbookFunctionsExactRequest(

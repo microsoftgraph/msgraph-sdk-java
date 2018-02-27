@@ -30,23 +30,25 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 /**
- * Serializes and deserializes a string.
+ * Serializes and deserializes a string
+ * 
  * https://github.com/MSOpenTech/orc-for-android/blob/master/src/orc-android/
  *  src/main/java/com/microsoft/services/orc/serialization/impl/CalendarSerializer.java
  */
 public final class CalendarSerializer {
 
     /**
-     * Not available for instantiation.
+     * Not available for instantiation
      */
     private CalendarSerializer() {
     }
 
     /**
-     * Deserializes an ISO-8601 formatted date.
-     * @param strVal The string value.
-     * @return The calendar.
-     * @throws java.text.ParseException The parse exception.
+     * Deserializes an ISO-8601 formatted date
+     * 
+     * @param strVal the string value
+     * @return       the calendar
+     * @throws java.text.ParseException the parse exception
      */
     public static Calendar deserialize(final String strVal) throws ParseException {
         // Change Z to +0000 to adapt the string to a format
@@ -93,10 +95,10 @@ public final class CalendarSerializer {
     }
 
     /**
-     * Serializes the string.
+     * Serializes the string
      *
-     * @param src The source calendar.
-     * @return The string.
+     * @param src the source calendar
+     * @return    the string
      */
     public static String serialize(final Calendar src) {
         final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'.'SSS'Z'", Locale.ROOT);

@@ -27,10 +27,10 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
     /**
      * The request for the WorkbookRangeFormat
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BaseWorkbookRangeFormatRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
 
     /**
      * Gets the WorkbookRangeFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<WorkbookRangeFormat> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
 
     /**
      * Gets the WorkbookRangeFormat from the service
-     * @return The WorkbookRangeFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookRangeFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookRangeFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
 
     /**
      * Patches this WorkbookRangeFormat with a source
-     * @param sourceWorkbookRangeFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookRangeFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final WorkbookRangeFormat sourceWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeFormat);
@@ -83,9 +88,10 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
 
     /**
      * Patches this WorkbookRangeFormat with a source
-     * @param sourceWorkbookRangeFormat The source object with updates
-     * @return The updated WorkbookRangeFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookRangeFormat the source object with updates
+     * @return the updated WorkbookRangeFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookRangeFormat patch(final WorkbookRangeFormat sourceWorkbookRangeFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRangeFormat);
@@ -93,8 +99,9 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
 
     /**
      * Creates a WorkbookRangeFormat with a new object
-     * @param newWorkbookRangeFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookRangeFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeFormat);
@@ -102,9 +109,10 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
 
     /**
      * Creates a WorkbookRangeFormat with a new object
-     * @param newWorkbookRangeFormat The new object to create
-     * @return The created WorkbookRangeFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookRangeFormat the new object to create
+     * @return the created WorkbookRangeFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public WorkbookRangeFormat post(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRangeFormat);
@@ -113,8 +121,8 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IWorkbookRangeFormatRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BaseWorkbookRangeFormatRequest extends BaseRequest implements IBase
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IWorkbookRangeFormatRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

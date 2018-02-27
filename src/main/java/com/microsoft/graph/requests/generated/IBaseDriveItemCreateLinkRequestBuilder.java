@@ -27,7 +27,7 @@ public interface IBaseDriveItemCreateLinkRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IDriveItemCreateLinkRequest
      *
-     * @return The IDriveItemCreateLinkRequest instance
+     * @return the IDriveItemCreateLinkRequest instance
      */
     IDriveItemCreateLinkRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseDriveItemCreateLinkRequestBuilder extends IRequestBuilder 
      * Creates the IDriveItemCreateLinkRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IDriveItemCreateLinkRequest instance
+     * @return the IDriveItemCreateLinkRequest instance
      */
     IDriveItemCreateLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

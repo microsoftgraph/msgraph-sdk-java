@@ -25,16 +25,23 @@ import java.util.EnumSet;
 public interface IBaseWorkbookChartLegendRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartLegendRequest instance
      */
     IWorkbookChartLegendRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartLegendRequest instance
      */
     IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
     /**
-     * Gets the request builder for WorkbookChartLegendFormat.
+     * Gets the request builder for WorkbookChartLegendFormat
+     *
+     * @return the IWorkbookChartLegendFormatRequestBuilder instance
      */
     IWorkbookChartLegendFormatRequestBuilder format();
 

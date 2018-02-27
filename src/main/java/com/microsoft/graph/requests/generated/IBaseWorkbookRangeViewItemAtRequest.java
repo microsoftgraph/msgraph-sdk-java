@@ -30,63 +30,64 @@ public interface IBaseWorkbookRangeViewItemAtRequest {
     /**
      * Patches the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView with which to PATCH
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
+     * @param callback the callback to be called after success or failure
      */
     void patch(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
 
     /**
      * Patches the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView with which to PATCH
-     * @return The WorkbookRangeView
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRangeView the WorkbookRangeView with which to PATCH
+     * @return the WorkbookRangeView
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookRangeView patch(WorkbookRangeView srcWorkbookRangeView) throws ClientException;
 
     /**
      * Puts the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView to PUT
-     * @param callback The callback to be called after success or failure
+     * @param srcWorkbookRangeView the WorkbookRangeView to PUT
+     * @param callback the callback to be called after success or failure
      */
     void put(WorkbookRangeView srcWorkbookRangeView, final ICallback<WorkbookRangeView> callback);
 
     /**
      * Puts the WorkbookRangeViewItemAt
      *
-     * @param srcWorkbookRangeView The WorkbookRangeView to PUT
-     * @return The WorkbookRangeView
-     * @throws ClientException An exception occurs if there was an error while the request was sent
+     * @param srcWorkbookRangeView the WorkbookRangeView to PUT
+     * @return the WorkbookRangeView
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
      WorkbookRangeView put(WorkbookRangeView srcWorkbookRangeView) throws ClientException;
     /**
      * Gets the WorkbookRangeView
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookRangeView> callback);
 
     /**
      * Gets the WorkbookRangeView
      *
-     * @return The WorkbookRangeView
-     * @throws ClientException An exception occurs if there was an error while the request was sent.
+     * @return the WorkbookRangeView
+     * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     WorkbookRangeView get() throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IWorkbookRangeViewItemAtRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IWorkbookRangeViewItemAtRequest expand(final String value);
 

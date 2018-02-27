@@ -44,23 +44,23 @@ import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
 
 /**
- * Produce GSON instances that can parse HTTP responses.
+ * Produce GSON instances that can parse HTTP responses
  */
 final class GsonFactory {
 
 	private static String PARSING_MESSAGE = "Parsing issue on ";
 	
     /**
-     * Default constructor.
+     * Default constructor
      */
     private GsonFactory() {
     }
 
     /**
-     * Creates an instance of GSON.
+     * Creates an instance of GSON
      *
-     * @param logger The logger.
-     * @return The new instance.
+     * @param logger the logger
+     * @return the new instance
      */
     public static Gson getGsonInstance(final ILogger logger) {
 

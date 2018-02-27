@@ -26,9 +26,14 @@ public class BaseWorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsDisc
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param pr the pr
+     * @param redemption the redemption
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsDiscRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -42,7 +47,7 @@ public class BaseWorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsDiscRequest
      *
-     * @return The IWorkbookFunctionsDiscRequest instance
+     * @return the IWorkbookFunctionsDiscRequest instance
      */
     public IWorkbookFunctionsDiscRequest buildRequest() {
         return buildRequest(getOptions());
@@ -52,7 +57,7 @@ public class BaseWorkbookFunctionsDiscRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsDiscRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDiscRequest instance
+     * @return the IWorkbookFunctionsDiscRequest instance
      */
     public IWorkbookFunctionsDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsDiscRequest request = new WorkbookFunctionsDiscRequest(

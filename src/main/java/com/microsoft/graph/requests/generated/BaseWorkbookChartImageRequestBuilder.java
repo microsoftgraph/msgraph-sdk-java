@@ -26,9 +26,9 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -36,9 +36,10 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param width the width
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer width) {
         super(requestUrl, client, requestOptions);
@@ -47,9 +48,11 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param width the width
+     * @param height the height
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer width, final Integer height) {
         super(requestUrl, client, requestOptions);
@@ -59,9 +62,12 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
     /**
      * The request builder for this WorkbookChartImage
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param width the width
+     * @param height the height
+     * @param fittingMode the fittingMode
      */
     public BaseWorkbookChartImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Integer width, final Integer height, final String fittingMode) {
         super(requestUrl, client, requestOptions);
@@ -73,7 +79,7 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookChartImageRequest
      *
-     * @return The IWorkbookChartImageRequest instance
+     * @return the IWorkbookChartImageRequest instance
      */
     public IWorkbookChartImageRequest buildRequest() {
         return buildRequest(getOptions());
@@ -83,7 +89,7 @@ public class BaseWorkbookChartImageRequestBuilder extends BaseFunctionRequestBui
      * Creates the IWorkbookChartImageRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookChartImageRequest instance
+     * @return the IWorkbookChartImageRequest instance
      */
     public IWorkbookChartImageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookChartImageRequest request = new WorkbookChartImageRequest(

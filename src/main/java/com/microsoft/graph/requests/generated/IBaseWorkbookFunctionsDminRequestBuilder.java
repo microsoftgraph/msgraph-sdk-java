@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDminRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDminRequest
      *
-     * @return The IWorkbookFunctionsDminRequest instance
+     * @return the IWorkbookFunctionsDminRequest instance
      */
     IWorkbookFunctionsDminRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDminRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsDminRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDminRequest instance
+     * @return the IWorkbookFunctionsDminRequest instance
      */
     IWorkbookFunctionsDminRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

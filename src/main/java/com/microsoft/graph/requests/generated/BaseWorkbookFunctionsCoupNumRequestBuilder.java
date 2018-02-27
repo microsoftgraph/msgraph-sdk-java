@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsCoupNumRequestBuilder extends BaseActionReques
     /**
      * The request builder for this WorkbookFunctionsCoupNum
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param settlement the settlement
+     * @param maturity the maturity
+     * @param frequency the frequency
+     * @param basis the basis
      */
     public BaseWorkbookFunctionsCoupNumRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsCoupNumRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsCoupNumRequest
      *
-     * @return The IWorkbookFunctionsCoupNumRequest instance
+     * @return the IWorkbookFunctionsCoupNumRequest instance
      */
     public IWorkbookFunctionsCoupNumRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsCoupNumRequestBuilder extends BaseActionReques
      * Creates the IWorkbookFunctionsCoupNumRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCoupNumRequest instance
+     * @return the IWorkbookFunctionsCoupNumRequest instance
      */
     public IWorkbookFunctionsCoupNumRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsCoupNumRequest request = new WorkbookFunctionsCoupNumRequest(

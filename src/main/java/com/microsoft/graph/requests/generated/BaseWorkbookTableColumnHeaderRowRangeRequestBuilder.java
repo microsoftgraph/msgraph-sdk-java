@@ -26,9 +26,9 @@ public class BaseWorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFun
     /**
      * The request builder for this WorkbookTableColumnHeaderRowRange
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookTableColumnHeaderRowRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,7 +37,7 @@ public class BaseWorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFun
     /**
      * Creates the IWorkbookTableColumnHeaderRowRangeRequest
      *
-     * @return The IWorkbookTableColumnHeaderRowRangeRequest instance
+     * @return the IWorkbookTableColumnHeaderRowRangeRequest instance
      */
     public IWorkbookTableColumnHeaderRowRangeRequest buildRequest() {
         return buildRequest(getOptions());
@@ -47,7 +47,7 @@ public class BaseWorkbookTableColumnHeaderRowRangeRequestBuilder extends BaseFun
      * Creates the IWorkbookTableColumnHeaderRowRangeRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableColumnHeaderRowRangeRequest instance
+     * @return the IWorkbookTableColumnHeaderRowRangeRequest instance
      */
     public IWorkbookTableColumnHeaderRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookTableColumnHeaderRowRangeRequest request = new WorkbookTableColumnHeaderRowRangeRequest(

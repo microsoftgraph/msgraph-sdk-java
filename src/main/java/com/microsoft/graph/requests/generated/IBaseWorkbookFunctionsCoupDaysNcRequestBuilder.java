@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsCoupDaysNcRequestBuilder extends IRequest
     /**
      * Creates the IWorkbookFunctionsCoupDaysNcRequest
      *
-     * @return The IWorkbookFunctionsCoupDaysNcRequest instance
+     * @return the IWorkbookFunctionsCoupDaysNcRequest instance
      */
     IWorkbookFunctionsCoupDaysNcRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsCoupDaysNcRequestBuilder extends IRequest
      * Creates the IWorkbookFunctionsCoupDaysNcRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsCoupDaysNcRequest instance
+     * @return the IWorkbookFunctionsCoupDaysNcRequest instance
      */
     IWorkbookFunctionsCoupDaysNcRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

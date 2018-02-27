@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseWorkbookRangeFontRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IWorkbookRangeFontRequest instance
      */
     IWorkbookRangeFontRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookRangeFontRequest instance
      */
     IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 

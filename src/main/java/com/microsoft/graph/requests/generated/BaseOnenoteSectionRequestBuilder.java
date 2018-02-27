@@ -27,9 +27,9 @@ public class BaseOnenoteSectionRequestBuilder extends BaseRequestBuilder impleme
     /**
      * The request builder for the OnenoteSection
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseOnenoteSectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseOnenoteSectionRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request
+     *
+     * @return the IOnenoteSectionRequest instance
      */
     public IOnenoteSectionRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseOnenoteSectionRequestBuilder extends BaseRequestBuilder impleme
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IOnenoteSectionRequest instance
      */
     public IOnenoteSectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new OnenoteSectionRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,14 +56,18 @@ public class BaseOnenoteSectionRequestBuilder extends BaseRequestBuilder impleme
 
 
     /**
-     * Gets the request builder for Notebook.
+     * Gets the request builder for Notebook
+     *
+     * @return the INotebookRequestBuilder instance
      */
     public INotebookRequestBuilder parentNotebook() {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
     /**
-     * Gets the request builder for SectionGroup.
+     * Gets the request builder for SectionGroup
+     *
+     * @return the ISectionGroupRequestBuilder instance
      */
     public ISectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);

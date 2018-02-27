@@ -26,9 +26,11 @@ public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
     /**
      * The request builder for this UserSendMail
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param message the message
+     * @param saveToSentItems the saveToSentItems
      */
     public BaseUserSendMailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Message message, final Boolean saveToSentItems) {
         super(requestUrl, client, requestOptions);
@@ -39,7 +41,7 @@ public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
     /**
      * Creates the IUserSendMailRequest
      *
-     * @return The IUserSendMailRequest instance
+     * @return the IUserSendMailRequest instance
      */
     public IUserSendMailRequest buildRequest() {
         return buildRequest(getOptions());
@@ -49,7 +51,7 @@ public class BaseUserSendMailRequestBuilder extends BaseActionRequestBuilder {
      * Creates the IUserSendMailRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IUserSendMailRequest instance
+     * @return the IUserSendMailRequest instance
      */
     public IUserSendMailRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         UserSendMailRequest request = new UserSendMailRequest(

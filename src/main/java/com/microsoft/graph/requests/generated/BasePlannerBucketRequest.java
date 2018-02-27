@@ -27,10 +27,10 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
     /**
      * The request for the PlannerBucket
      *
-     * @param requestUrl The request URL
-     * @param client The service client
-     * @param requestOptions The options for this request
-     * @param responseClass The class of the response
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
      */
     public BasePlannerBucketRequest(final String requestUrl,
             final IBaseClient client,
@@ -41,7 +41,8 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
 
     /**
      * Gets the PlannerBucket from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     public void get(final ICallback<PlannerBucket> callback) {
         send(HttpMethod.GET, callback, null);
@@ -49,23 +50,26 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
 
     /**
      * Gets the PlannerBucket from the service
-     * @return The PlannerBucket from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the PlannerBucket from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerBucket get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     public void delete(final ICallback<Void> callback) {{
         send(HttpMethod.DELETE, callback, null);
     }}
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     public void delete() throws ClientException {{
@@ -74,8 +78,9 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
 
     /**
      * Patches this PlannerBucket with a source
-     * @param sourcePlannerBucket The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourcePlannerBucket the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     public void patch(final PlannerBucket sourcePlannerBucket, final ICallback<PlannerBucket> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerBucket);
@@ -83,9 +88,10 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
 
     /**
      * Patches this PlannerBucket with a source
-     * @param sourcePlannerBucket The source object with updates
-     * @return The updated PlannerBucket
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourcePlannerBucket the source object with updates
+     * @return the updated PlannerBucket
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerBucket patch(final PlannerBucket sourcePlannerBucket) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerBucket);
@@ -93,8 +99,9 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
 
     /**
      * Creates a PlannerBucket with a new object
-     * @param newPlannerBucket The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newPlannerBucket the new object to create
+     * @param callback the callback to be called after success or failure
      */
     public void post(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback) {
         send(HttpMethod.POST, callback, newPlannerBucket);
@@ -102,9 +109,10 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
 
     /**
      * Creates a PlannerBucket with a new object
-     * @param newPlannerBucket The new object to create
-     * @return The created PlannerBucket
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newPlannerBucket the new object to create
+     * @return the created PlannerBucket
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     public PlannerBucket post(final PlannerBucket newPlannerBucket) throws ClientException {
         return send(HttpMethod.POST, newPlannerBucket);
@@ -113,8 +121,8 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
      public IPlannerBucketRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
@@ -124,8 +132,8 @@ public class BasePlannerBucketRequest extends BaseRequest implements IBasePlanne
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
      public IPlannerBucketRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));

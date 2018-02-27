@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBu
     /**
      * The request builder for this WorkbookFunctionsEven
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param number the number
      */
     public BaseWorkbookFunctionsEvenRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement number) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsEvenRequest
      *
-     * @return The IWorkbookFunctionsEvenRequest instance
+     * @return the IWorkbookFunctionsEvenRequest instance
      */
     public IWorkbookFunctionsEvenRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsEvenRequestBuilder extends BaseActionRequestBu
      * Creates the IWorkbookFunctionsEvenRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsEvenRequest instance
+     * @return the IWorkbookFunctionsEvenRequest instance
      */
     public IWorkbookFunctionsEvenRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsEvenRequest request = new WorkbookFunctionsEvenRequest(

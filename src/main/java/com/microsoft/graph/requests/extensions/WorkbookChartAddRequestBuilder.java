@@ -27,9 +27,12 @@ public class WorkbookChartAddRequestBuilder extends BaseWorkbookChartAddRequestB
     /**
      * The request builder for this WorkbookChartAdd
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param type the type
+     * @param sourceData the sourceData
+     * @param seriesBy the seriesBy
      */
     public WorkbookChartAddRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final com.google.gson.JsonElement sourceData, final String seriesBy) {
         super(requestUrl, client, requestOptions, type, sourceData, seriesBy);

@@ -27,9 +27,10 @@ public class WorkbookFunctionsMonthRequestBuilder extends BaseWorkbookFunctionsM
     /**
      * The request builder for this WorkbookFunctionsMonth
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param serialNumber the serialNumber
      */
     public WorkbookFunctionsMonthRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement serialNumber) {
         super(requestUrl, client, requestOptions, serialNumber);

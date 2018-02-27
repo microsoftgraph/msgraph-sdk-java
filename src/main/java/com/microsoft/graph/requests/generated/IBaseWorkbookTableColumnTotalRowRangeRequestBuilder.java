@@ -27,7 +27,7 @@ public interface IBaseWorkbookTableColumnTotalRowRangeRequestBuilder extends IRe
     /**
      * Creates the IWorkbookTableColumnTotalRowRangeRequest
      *
-     * @return The IWorkbookTableColumnTotalRowRangeRequest instance
+     * @return the IWorkbookTableColumnTotalRowRangeRequest instance
      */
     IWorkbookTableColumnTotalRowRangeRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookTableColumnTotalRowRangeRequestBuilder extends IRe
      * Creates the IWorkbookTableColumnTotalRowRangeRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookTableColumnTotalRowRangeRequest instance
+     * @return the IWorkbookTableColumnTotalRowRangeRequest instance
      */
     IWorkbookTableColumnTotalRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

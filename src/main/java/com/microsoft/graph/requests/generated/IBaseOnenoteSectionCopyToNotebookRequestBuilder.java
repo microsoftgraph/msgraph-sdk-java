@@ -27,7 +27,7 @@ public interface IBaseOnenoteSectionCopyToNotebookRequestBuilder extends IReques
     /**
      * Creates the IOnenoteSectionCopyToNotebookRequest
      *
-     * @return The IOnenoteSectionCopyToNotebookRequest instance
+     * @return the IOnenoteSectionCopyToNotebookRequest instance
      */
     IOnenoteSectionCopyToNotebookRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseOnenoteSectionCopyToNotebookRequestBuilder extends IReques
      * Creates the IOnenoteSectionCopyToNotebookRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IOnenoteSectionCopyToNotebookRequest instance
+     * @return the IOnenoteSectionCopyToNotebookRequest instance
      */
     IOnenoteSectionCopyToNotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

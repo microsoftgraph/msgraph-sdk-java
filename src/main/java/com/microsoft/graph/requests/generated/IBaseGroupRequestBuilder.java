@@ -25,11 +25,16 @@ import java.util.EnumSet;
 public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
+     *
+     * @return the IGroupRequest instance
      */
     IGroupRequest buildRequest();
 
     /**
      * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IGroupRequest instance
      */
     IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
@@ -42,7 +47,9 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
     /**
-     * Gets the request builder for DirectoryObject.
+     * Gets the request builder for DirectoryObject
+     *
+     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
 
@@ -63,7 +70,9 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     IConversationThreadRequestBuilder threads(final String id);
 
     /**
-     * Gets the request builder for Calendar.
+     * Gets the request builder for Calendar
+     *
+     * @return the ICalendarRequestBuilder instance
      */
     ICalendarRequestBuilder calendar();
 
@@ -80,7 +89,9 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     IConversationRequestBuilder conversations(final String id);
 
     /**
-     * Gets the request builder for ProfilePhoto.
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
 
@@ -97,7 +108,9 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     IDirectoryObjectRequestBuilder rejectedSenders(final String id);
 
     /**
-     * Gets the request builder for Drive.
+     * Gets the request builder for Drive
+     *
+     * @return the IDriveRequestBuilder instance
      */
     IDriveRequestBuilder drive();
 
@@ -110,12 +123,16 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     ISiteRequestBuilder sites(final String id);
 
     /**
-     * Gets the request builder for PlannerGroup.
+     * Gets the request builder for PlannerGroup
+     *
+     * @return the IPlannerGroupRequestBuilder instance
      */
     IPlannerGroupRequestBuilder planner();
 
     /**
-     * Gets the request builder for Onenote.
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
     IGroupSubscribeByMailRequestBuilder subscribeByMail();

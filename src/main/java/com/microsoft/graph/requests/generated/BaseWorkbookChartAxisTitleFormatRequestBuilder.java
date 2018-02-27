@@ -27,9 +27,9 @@ public class BaseWorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestB
     /**
      * The request builder for the WorkbookChartAxisTitleFormat
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public BaseWorkbookChartAxisTitleFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
@@ -37,6 +37,8 @@ public class BaseWorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestB
 
     /**
      * Creates the request
+     *
+     * @return the IWorkbookChartAxisTitleFormatRequest instance
      */
     public IWorkbookChartAxisTitleFormatRequest buildRequest() {
         return buildRequest(getOptions());
@@ -44,6 +46,9 @@ public class BaseWorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestB
 
     /**
      * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookChartAxisTitleFormatRequest instance
      */
     public IWorkbookChartAxisTitleFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         return new WorkbookChartAxisTitleFormatRequest(getRequestUrl(), getClient(), requestOptions);
@@ -51,7 +56,9 @@ public class BaseWorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestB
 
 
     /**
-     * Gets the request builder for WorkbookChartFont.
+     * Gets the request builder for WorkbookChartFont
+     *
+     * @return the IWorkbookChartFontRequestBuilder instance
      */
     public IWorkbookChartFontRequestBuilder font() {
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);

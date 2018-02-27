@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsDurationRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsDurationRequest
      *
-     * @return The IWorkbookFunctionsDurationRequest instance
+     * @return the IWorkbookFunctionsDurationRequest instance
      */
     IWorkbookFunctionsDurationRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsDurationRequestBuilder extends IRequestBu
      * Creates the IWorkbookFunctionsDurationRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsDurationRequest instance
+     * @return the IWorkbookFunctionsDurationRequest instance
      */
     IWorkbookFunctionsDurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

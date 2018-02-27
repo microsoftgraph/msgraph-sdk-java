@@ -27,7 +27,7 @@ public interface IBaseWorkbookFunctionsAcotRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAcotRequest
      *
-     * @return The IWorkbookFunctionsAcotRequest instance
+     * @return the IWorkbookFunctionsAcotRequest instance
      */
     IWorkbookFunctionsAcotRequest buildRequest();
 
@@ -35,7 +35,7 @@ public interface IBaseWorkbookFunctionsAcotRequestBuilder extends IRequestBuilde
      * Creates the IWorkbookFunctionsAcotRequest with specific options instead of the existing options
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsAcotRequest instance
+     * @return the IWorkbookFunctionsAcotRequest instance
      */
     IWorkbookFunctionsAcotRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 }

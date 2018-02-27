@@ -27,8 +27,8 @@ public class ContactCollectionPage extends BaseContactCollectionPage implements 
     /**
      * A collection page for ContactFolder.
      *
-     * @param response The serialized BaseContactCollectionResponse from the service
-     * @param builder The request builder for the next collection page
+     * @param response the serialized BaseContactCollectionResponse from the service
+     * @param builder the request builder for the next collection page
      */
     public ContactCollectionPage(final BaseContactCollectionResponse response, final IContactCollectionRequestBuilder builder) {
         super(response, builder);

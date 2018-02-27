@@ -26,9 +26,13 @@ public class BaseWorkbookFunctionsF_DistRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsF_Dist
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param x the x
+     * @param degFreedom1 the degFreedom1
+     * @param degFreedom2 the degFreedom2
+     * @param cumulative the cumulative
      */
     public BaseWorkbookFunctionsF_DistRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2, final com.google.gson.JsonElement cumulative) {
         super(requestUrl, client, requestOptions);
@@ -41,7 +45,7 @@ public class BaseWorkbookFunctionsF_DistRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsF_DistRequest
      *
-     * @return The IWorkbookFunctionsF_DistRequest instance
+     * @return the IWorkbookFunctionsF_DistRequest instance
      */
     public IWorkbookFunctionsF_DistRequest buildRequest() {
         return buildRequest(getOptions());
@@ -51,7 +55,7 @@ public class BaseWorkbookFunctionsF_DistRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsF_DistRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsF_DistRequest instance
+     * @return the IWorkbookFunctionsF_DistRequest instance
      */
     public IWorkbookFunctionsF_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsF_DistRequest request = new WorkbookFunctionsF_DistRequest(

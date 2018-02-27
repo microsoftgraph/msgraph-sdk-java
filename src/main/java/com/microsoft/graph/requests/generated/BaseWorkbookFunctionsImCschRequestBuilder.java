@@ -26,9 +26,10 @@ public class BaseWorkbookFunctionsImCschRequestBuilder extends BaseActionRequest
     /**
      * The request builder for this WorkbookFunctionsImCsch
      *
-     * @param requestUrl The request url
-     * @param client The service client
-     * @param requestOptions The options for this request
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param inumber the inumber
      */
     public BaseWorkbookFunctionsImCschRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final com.google.gson.JsonElement inumber) {
         super(requestUrl, client, requestOptions);
@@ -38,7 +39,7 @@ public class BaseWorkbookFunctionsImCschRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsImCschRequest
      *
-     * @return The IWorkbookFunctionsImCschRequest instance
+     * @return the IWorkbookFunctionsImCschRequest instance
      */
     public IWorkbookFunctionsImCschRequest buildRequest() {
         return buildRequest(getOptions());
@@ -48,7 +49,7 @@ public class BaseWorkbookFunctionsImCschRequestBuilder extends BaseActionRequest
      * Creates the IWorkbookFunctionsImCschRequest with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for the request
-     * @return The IWorkbookFunctionsImCschRequest instance
+     * @return the IWorkbookFunctionsImCschRequest instance
      */
     public IWorkbookFunctionsImCschRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
         WorkbookFunctionsImCschRequest request = new WorkbookFunctionsImCschRequest(

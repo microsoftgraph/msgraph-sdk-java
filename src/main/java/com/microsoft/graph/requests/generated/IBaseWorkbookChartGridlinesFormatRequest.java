@@ -26,72 +26,80 @@ public interface IBaseWorkbookChartGridlinesFormatRequest extends IHttpRequest {
 
     /**
      * Gets the WorkbookChartGridlinesFormat from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<WorkbookChartGridlinesFormat> callback);
 
     /**
      * Gets the WorkbookChartGridlinesFormat from the service
-     * @return The WorkbookChartGridlinesFormat from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the WorkbookChartGridlinesFormat from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartGridlinesFormat get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this WorkbookChartGridlinesFormat with a source
-     * @param sourceWorkbookChartGridlinesFormat The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceWorkbookChartGridlinesFormat the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback);
 
     /**
      * Patches this WorkbookChartGridlinesFormat with a source
-     * @param sourceWorkbookChartGridlinesFormat The source object with updates
-     * @return The updated WorkbookChartGridlinesFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceWorkbookChartGridlinesFormat the source object with updates
+     * @return the updated WorkbookChartGridlinesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartGridlinesFormat patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat) throws ClientException;
 
     /**
      * Posts a WorkbookChartGridlinesFormat with a new object
-     * @param newWorkbookChartGridlinesFormat The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newWorkbookChartGridlinesFormat the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback);
 
     /**
      * Posts a WorkbookChartGridlinesFormat with a new object
-     * @param newWorkbookChartGridlinesFormat The new object to create
-     * @return The created WorkbookChartGridlinesFormat
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newWorkbookChartGridlinesFormat the new object to create
+     * @return the created WorkbookChartGridlinesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     WorkbookChartGridlinesFormat post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseWorkbookChartGridlinesFormatRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseWorkbookChartGridlinesFormatRequest expand(final String value);
 

@@ -26,72 +26,80 @@ public interface IBaseSingleValueLegacyExtendedPropertyRequest extends IHttpRequ
 
     /**
      * Gets the SingleValueLegacyExtendedProperty from the service
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param callback the callback to be called after success or failure
      */
     void get(final ICallback<SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Gets the SingleValueLegacyExtendedProperty from the service
-     * @return The SingleValueLegacyExtendedProperty from the request.
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @return the SingleValueLegacyExtendedProperty from the request
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     SingleValueLegacyExtendedProperty get() throws ClientException;
 
     /**
-     * Delete this item from the service.
-     * @param callback The callback when the deletion action has completed
+     * Delete this item from the service
+     *
+     * @param callback the callback when the deletion action has completed
      */
     void delete(final ICallback<Void> callback);
 
     /**
-     * Delete this item from the service.
+     * Delete this item from the service
+     *
      * @throws ClientException if there was an exception during the delete operation
      */
     void delete() throws ClientException;
 
     /**
      * Patches this SingleValueLegacyExtendedProperty with a source
-     * @param sourceSingleValueLegacyExtendedProperty The source object with updates
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param sourceSingleValueLegacyExtendedProperty the source object with updates
+     * @param callback the callback to be called after success or failure
      */
     void patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Patches this SingleValueLegacyExtendedProperty with a source
-     * @param sourceSingleValueLegacyExtendedProperty The source object with updates
-     * @return The updated SingleValueLegacyExtendedProperty
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param sourceSingleValueLegacyExtendedProperty the source object with updates
+     * @return the updated SingleValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     SingleValueLegacyExtendedProperty patch(final SingleValueLegacyExtendedProperty sourceSingleValueLegacyExtendedProperty) throws ClientException;
 
     /**
      * Posts a SingleValueLegacyExtendedProperty with a new object
-     * @param newSingleValueLegacyExtendedProperty The new object to create
-     * @param callback The callback to be called after success or failure.
+     *
+     * @param newSingleValueLegacyExtendedProperty the new object to create
+     * @param callback the callback to be called after success or failure
      */
     void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback);
 
     /**
      * Posts a SingleValueLegacyExtendedProperty with a new object
-     * @param newSingleValueLegacyExtendedProperty The new object to create
-     * @return The created SingleValueLegacyExtendedProperty
-     * @throws ClientException This exception occurs if the request was unable to complete for any reason.
+     *
+     * @param newSingleValueLegacyExtendedProperty the new object to create
+     * @return the created SingleValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException;
 
     /**
      * Sets the select clause for the request
      *
-     * @param value The select clause
-     * @return The updated request
+     * @param value the select clause
+     * @return the updated request
      */
     IBaseSingleValueLegacyExtendedPropertyRequest select(final String value);
 
     /**
      * Sets the expand clause for the request
      *
-     * @param value The expand clause
-     * @return The updated request
+     * @param value the expand clause
+     * @return the updated request
      */
     IBaseSingleValueLegacyExtendedPropertyRequest expand(final String value);
 
