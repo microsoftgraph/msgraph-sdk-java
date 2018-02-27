@@ -10,6 +10,7 @@
 apply plugin: 'java-library'
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
 // In this section you declare where to find the dependencies of your project
@@ -38,7 +39,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId 'com.microsoft.graph'
-            artifactId 'msgraph-sdk-java'
+            artifactId 'microsoft-graph'
             version '0.1-SNAPSHOT'
 
             from components.java
@@ -51,5 +52,63 @@ publishing {
 task sourceJar(type: Jar) {
   classifier = 'sources'
   from sourceSets.main.allJava
+}
+
+def getVersionCode() {
+    return mavenMajorVersion.toInteger() * 10000 + mavenMinorVersion.toInteger() * 100 + mavenPatchVersion.toInteger()
+}
+
+def getVersionName() {
+    return "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
+}
+
+uploadArchives {
+
+    def bintrayUsername = ""
+
+    def bintrayApikey = ""
+
+    if (project.rootProject.file('local.properties').exists()) {
+
+        Properties properties = new Properties()
+
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        bintrayUsername = properties.getProperty('bintray.user')
+
+        bintrayApikey = properties.getProperty('bintray.apikey')
+
+    }
+
+    configuration = configurations.archives
+
+    repositories.mavenDeployer {
+
+        pom {
+
+           setGroupId project.mavenGroupId
+
+           setArtifactId project.mavenArtifactId
+
+           setVersion getVersionName()
+
+        }
+
+        repository (url: project.mavenRepoUrl) {
+
+            authentication(
+
+                 // put these values in local file ~/.gradle/gradle.properties
+
+                 userName: project.hasProperty("bintrayUsername") ? project.bintrayUsername : bintrayUsername,
+
+                 password: project.hasProperty("bintrayApikey") ? project.bintrayApikey : bintrayApikey
+
+            )
+
+        }
+
+    }
+
 }
 

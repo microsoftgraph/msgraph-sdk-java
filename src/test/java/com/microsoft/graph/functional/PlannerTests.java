@@ -36,7 +36,7 @@ import static org.junit.Assert.*;
 import java.util.Calendar;
 import java.util.UUID;
 
-//@Ignore
+@Ignore
 public class PlannerTests {
     private static TestBase testBase;
     // For now, you must specify a specific plan ID since the test cannot
