@@ -31,6 +31,7 @@ import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 
@@ -131,7 +132,7 @@ public abstract class BaseRequest implements IHttpRequest {
             }
         }
         final HeaderOption requestStatsHeader = new HeaderOption(REQUEST_STATS_HEADER_NAME,
-                String.format(REQUEST_STATS_HEADER_VALUE_FORMAT_STRING, "1.0.0"));
+                String.format(REQUEST_STATS_HEADER_VALUE_FORMAT_STRING, Constants.VERSION_NAME));
         headersOptions.add(requestStatsHeader);
     }
 
