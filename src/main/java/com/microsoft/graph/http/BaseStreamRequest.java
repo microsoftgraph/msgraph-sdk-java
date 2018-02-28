@@ -90,7 +90,7 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     @SuppressWarnings("unchecked")
     protected void send(final byte[] fileContents, final ICallback<T> callback) {
         baseRequest.setHttpMethod(HttpMethod.PUT);
-        baseRequest.getClient().getHttpProvider().send(this, callback, baseRequest.getResponseType(), fileContents);
+        baseRequest.getClient().getHttpProvider().send(this, callback, (Class<T>) baseRequest.getResponseType(), fileContents);
     }
 
     /**

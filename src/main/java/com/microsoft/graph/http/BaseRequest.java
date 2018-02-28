@@ -27,7 +27,6 @@ import javax.ws.rs.core.UriBuilder;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.ClientException;
@@ -89,7 +88,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The class for the response
      */
-    private final Class responseClass;
+    private final Class<?> responseClass;
 
     /**
      * Value to pass to setUseCaches in connection
@@ -257,7 +256,7 @@ public abstract class BaseRequest implements IHttpRequest {
                                  final ICallback<T1> callback,
                                  final T2 serializedObject) {
         this.method = method;
-        client.getHttpProvider().send(this, callback, responseClass, serializedObject);
+        client.getHttpProvider().send(this, callback, (Class<T1>) responseClass, serializedObject);
     }
 
     /**
@@ -349,8 +348,7 @@ public abstract class BaseRequest implements IHttpRequest {
      *
      * @return the response type
      */
-    @SuppressWarnings("unchecked")
-	public Class getResponseType() {
+	public Class<?> getResponseType() {
         return responseClass;
     }
 }
