@@ -23,5 +23,7 @@ import java.util.EnumSet;
  * The class for the Planner Assignment.
  */
 public class PlannerAssignment extends BasePlannerAssignment {
-
+	public PlannerAssignment() {
+		oDataType = "#microsoft.graph.plannerAssignment";
+	}
 }

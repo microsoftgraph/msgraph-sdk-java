@@ -32,4 +32,8 @@ public class PlannerTask extends BasePlannerTask {
     @SerializedName("@odata.etag")
     @Expose
     public String etag;
+    
+    public PlannerTask() {
+    	oDataType = "#microsoft.graph.plannerTask";
+    }
 }

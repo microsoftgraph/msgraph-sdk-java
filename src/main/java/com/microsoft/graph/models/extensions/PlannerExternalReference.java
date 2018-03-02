@@ -23,5 +23,7 @@ import java.util.EnumSet;
  * The class for the Planner External Reference.
  */
 public class PlannerExternalReference extends BasePlannerExternalReference {
-
+	public PlannerExternalReference() {
+		oDataType = "#microsoft.graph.plannerExternalReference";
+	}
 }
