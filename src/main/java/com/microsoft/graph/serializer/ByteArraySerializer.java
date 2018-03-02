@@ -22,9 +22,8 @@
 
 package com.microsoft.graph.serializer;
 
-import java.util.Base64;
-import java.util.Base64.Decoder;
-import java.util.Base64.Encoder;
+import com.google.common.io.BaseEncoding;
+
 import java.text.ParseException;
 
 /**
@@ -46,8 +45,7 @@ public final class ByteArraySerializer {
      * @throws ParseException if there is any problem processing the value
      */
     public static byte[] deserialize(final String strVal) throws ParseException {
-    	Decoder base64Decoder = Base64.getDecoder();
-    	return base64Decoder.decode(strVal);
+    	return BaseEncoding.base64().decode(strVal);
     }
 
     /**
@@ -57,7 +55,6 @@ public final class ByteArraySerializer {
      * @return    the string
      */
     public static String serialize(final byte[] src) {
-    	Encoder base64Encoder = Base64.getEncoder();
-        return base64Encoder.encodeToString(src);
+        return BaseEncoding.base64().encode(src);
     }
 }
