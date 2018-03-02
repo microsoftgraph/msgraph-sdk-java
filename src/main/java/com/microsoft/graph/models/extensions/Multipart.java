@@ -7,6 +7,8 @@ import java.io.InputStream;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 
+import com.microsoft.graph.options.HeaderOption;
+
 /**
  * Helper for submitting multipart data
  * 
@@ -29,10 +31,18 @@ public class Multipart {
 	
 	/**
 	 * Get the multipart boundary for use in the request header
-	 * @return The multipart boundary
+	 * @return the multipart boundary
 	 */
 	public String boundary() {
 		return boundary;
+	}
+	
+	/**
+	 * Get the Content-Type header to send the multipart request
+	 * @return the multipart header option
+	 */
+	public HeaderOption header() {
+		return new HeaderOption("Content-Type", "multipart/form-data; boundary=\"" + boundary + "\"");
 	}
 	
 	/**
@@ -76,7 +86,7 @@ public class Multipart {
 	}
 	
 	/**
-	 * Add an image part to the multipart body
+	 * Add an image/jpeg part to the multipart body
 	 * @param name The name of the part
 	 * @param imageFile The image file
 	 * @throws IOException Throws an exception if the output stream cannot be written to
