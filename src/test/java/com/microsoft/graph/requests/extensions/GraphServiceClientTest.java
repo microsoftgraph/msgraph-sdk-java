@@ -10,6 +10,7 @@ import java.util.Map;
 import org.junit.Test;
 
 import com.microsoft.graph.authentication.IAuthenticationProvider;
+import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
@@ -28,11 +29,19 @@ import com.microsoft.graph.serializer.ISerializer;
 
 public class GraphServiceClientTest {
 
+    private static final IAuthenticationProvider auth = new MockAuthenticationProvider();
+
     @Test
     public void testClientMethodsReturnStuff() {
+
         IGraphServiceClient client = GraphServiceClient.fromConfig(new DefaultClientConfig() {
+
+            @Override
+            public IAuthenticationProvider getAuthenticationProvider() {
+                return auth;
+            }
         });
-        assertNull(client.getAuthenticationProvider());
+        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
@@ -43,9 +52,10 @@ public class GraphServiceClientTest {
     public void testOverrideOfDefaultLogger() {
         ILogger logger = createLogger();
         IGraphServiceClient client = GraphServiceClient.builder() //
+                .authenticationProvider(auth) //
                 .logger(logger) //
                 .buildClient();
-        assertNull(client.getAuthenticationProvider());
+        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getExecutors());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
@@ -73,7 +83,8 @@ public class GraphServiceClientTest {
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
-        assertEquals(ap, ((DefaultHttpProvider) client.getHttpProvider()).getAuthenticationProvider());
+        assertEquals(ap,
+                ((DefaultHttpProvider) client.getHttpProvider()).getAuthenticationProvider());
     }
 
     @Test
@@ -97,16 +108,18 @@ public class GraphServiceClientTest {
             }
 
             @Override
-            public <Result> void performOnForeground(ClientException exception, ICallback<Result> callback) {
+            public <Result> void performOnForeground(ClientException exception,
+                    ICallback<Result> callback) {
                 // do nothing
             }
 
         };
         IGraphServiceClient client = GraphServiceClient.builder() //
+                .authenticationProvider(auth) //
                 .executors(ex) //
                 .buildClient();
         assertEquals(ex, client.getExecutors());
-        assertNull(client.getAuthenticationProvider());
+        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
@@ -134,10 +147,11 @@ public class GraphServiceClientTest {
             }
         };
         IGraphServiceClient client = GraphServiceClient.builder() //
+                .authenticationProvider(auth) //
                 .serializer(serializer) //
                 .buildClient();
         assertEquals(serializer, client.getSerializer());
-        assertNull(client.getAuthenticationProvider());
+        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getExecutors());
@@ -166,21 +180,43 @@ public class GraphServiceClientTest {
             }
 
             @Override
-            public <Result, BodyType, DeserializeType> Result send(IHttpRequest request, Class<Result> resultClass,
-                    BodyType serializable, IStatefulResponseHandler<Result, DeserializeType> handler)
+            public <Result, BodyType, DeserializeType> Result send(IHttpRequest request,
+                    Class<Result> resultClass, BodyType serializable,
+                    IStatefulResponseHandler<Result, DeserializeType> handler)
                     throws ClientException {
                 return null;
             }
         };
         IGraphServiceClient client = GraphServiceClient //
                 .builder() //
+                .authenticationProvider(auth) //
                 .httpProvider(hp) //
                 .buildClient();
         assertEquals(hp, client.getHttpProvider());
-        assertNull(client.getAuthenticationProvider());
+        assertEquals(auth, client.getAuthenticationProvider());
         assertNotNull(client.getSerializer());
         assertNotNull(client.getLogger());
         assertNotNull(client.getExecutors());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testAuthenticationProviderCannotBeNull() {
+        GraphServiceClient.builder().authenticationProvider(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testHttpProviderCannotBeNull() {
+        GraphServiceClient.builder().authenticationProvider(auth).httpProvider(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testExecutorsCannotBeNull() {
+        GraphServiceClient.builder().authenticationProvider(auth).executors(null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testLoggerCannotBeNull() {
+        GraphServiceClient.builder().authenticationProvider(auth).logger(null);
     }
 
     private static ILogger createLogger() {

@@ -38,11 +38,6 @@ import com.microsoft.graph.serializer.ISerializer;
 public abstract class DefaultClientConfig implements IClientConfig {
 
     /**
-     * The authentication provider instance
-     */
-    private IAuthenticationProvider authenticationProvider;
-
-    /**
      * The executors instance
      */
     private IExecutors executors;
@@ -72,8 +67,12 @@ public abstract class DefaultClientConfig implements IClientConfig {
             final IAuthenticationProvider authenticationProvider
     ) {
         DefaultClientConfig config = new DefaultClientConfig() {
+
+            @Override
+            public IAuthenticationProvider getAuthenticationProvider() {
+                return authenticationProvider;
+            }
         };
-        config.authenticationProvider = authenticationProvider;
         config.getLogger()
               .logDebug(
                         "Using provided auth provider "
@@ -90,10 +89,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
      * @return the authentication provider
      */
     @Override
-    public IAuthenticationProvider getAuthenticationProvider() {
-        return authenticationProvider;
-    }
-
+    public abstract IAuthenticationProvider getAuthenticationProvider();
     /**
      * Gets the HTTP provider
      *

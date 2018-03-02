@@ -74,20 +74,40 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
     public static Builder builder() {
         return new Builder();
     }
+    
+    public static final class Builder {
+        
+        Builder() {
+            // restrict instantiation
+        }
 
+        /**
+         * Sets the authentication provider
+         * 
+         * @param authenticationProvider
+         *            the authentication provider
+         * @return a new builder that allows specification of other aspects of the GraphServiceClient
+         */
+        public Builder2 authenticationProvider(IAuthenticationProvider authenticationProvider) {
+            checkNotNull(authenticationProvider, "authenticationProvider");
+            return new Builder2(authenticationProvider);
+        }
+    }
+    
     /**
      * The builder for this GraphServiceClient
      */
-    public static final class Builder {
-
+    public static final class Builder2 {
+        
+        private final IAuthenticationProvider authenticationProvider;
         private ISerializer serializer;
         private IHttpProvider httpProvider;
-        private IAuthenticationProvider authenticationProvider;
         private IExecutors executors;
         private ILogger logger;
 
-        Builder() {
-            // ensure instantiation only from static factory method
+        
+        Builder2(IAuthenticationProvider authenticationProvider) {
+            this.authenticationProvider = authenticationProvider;
         }
 
         /**
@@ -97,7 +117,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the serializer
          * @return the instance of this builder
          */
-        public Builder serializer(final ISerializer serializer) {
+        public Builder2 serializer(final ISerializer serializer) {
+            checkNotNull(serializer, "serializer");
             this.serializer = serializer;
             return this;
         }
@@ -109,20 +130,9 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the httpProvider
          * @return the instance of this builder
          */
-        public Builder httpProvider(final IHttpProvider httpProvider) {
+        public Builder2 httpProvider(final IHttpProvider httpProvider) {
+            checkNotNull(httpProvider, "httpProvider");
             this.httpProvider = httpProvider;
-            return this;
-        }
-
-        /**
-         * Sets the authentication provider
-         * 
-         * @param authenticationProvider
-         *            the authentication provider
-         * @return the instance of this builder
-         */
-        public Builder authenticationProvider(final IAuthenticationProvider authenticationProvider) {
-            this.authenticationProvider = authenticationProvider;
             return this;
         }
 
@@ -133,7 +143,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the executors
          * @return the instance of this builder
          */
-        public Builder executors(final IExecutors executors) {
+        public Builder2 executors(final IExecutors executors) {
+            checkNotNull(executors, "executors");
             this.executors = executors;
             return this;
         }
@@ -145,7 +156,8 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
          *            the logger
          * @return the instance of this builder
          */
-        public Builder logger(final ILogger logger) {
+        public Builder2 logger(final ILogger logger) {
+            checkNotNull(logger, "logger");
             this.logger = logger;
             return this;
         }
@@ -162,11 +174,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
 
                 @Override
                 public IAuthenticationProvider getAuthenticationProvider() {
-                    if (authenticationProvider != null) {
-                        return authenticationProvider;
-                    } else {
-                        return super.getAuthenticationProvider();
-                    }
+                    return authenticationProvider; 
                 }
 
                 @Override
@@ -209,4 +217,9 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
         }
     }
     
+    private static void checkNotNull(Object o, String name) {
+        if (o==null) {
+            throw new NullPointerException(name + " cannot be null");
+        }
+    }
 }
