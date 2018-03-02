@@ -6,7 +6,6 @@ package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.concurrency.ChunkedUploadResponseHandler;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
@@ -96,6 +95,7 @@ public class ChunkedUploadRequest {
      * @param <UploadType>    The upload item type.
      * @return The upload result.
      */
+    @SuppressWarnings("unchecked")
     public <UploadType> ChunkedUploadResult<UploadType> upload(
             final ChunkedUploadResponseHandler<UploadType> responseHandler) {
         while (this.retryCount < this.maxRetry) {
@@ -111,7 +111,7 @@ public class ChunkedUploadRequest {
                 result = this.baseRequest
                         .getClient()
                         .getHttpProvider()
-                        .send(baseRequest, ChunkedUploadResult.class, this.data, responseHandler);
+                        .send(baseRequest, (Class<ChunkedUploadResult<UploadType>>)(Class<?>) ChunkedUploadResult.class, this.data, responseHandler);
             } catch (final ClientException e) {
                 throw new ClientException("Request failed with error, retry if necessary.", e);
             }
