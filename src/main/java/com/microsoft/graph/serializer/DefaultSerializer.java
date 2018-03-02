@@ -158,7 +158,7 @@ public class DefaultSerializer implements ISerializer {
 					Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 					
 					while (it.hasNext()) {
-						HashMap.Entry<String, Object> pair = (HashMap.Entry<String, Object>)it.next();
+						Map.Entry<String, Object> pair = (Map.Entry<String, Object>)it.next();
 						Object child = pair.getValue();
 
 						// If the item is a valid Graph object, add its additional data
