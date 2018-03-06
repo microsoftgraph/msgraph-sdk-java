@@ -43,12 +43,10 @@ For an example of authentication in a client application, see the [MSGraph SDK A
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-IClientConfig clientConfig = 
-  DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
-
 IGraphServiceClient graphClient = 
-  GraphServiceClient.builder()
-    .fromConfig(mClientConfig)
+  GraphServiceClient
+    .builder()
+    .authenticationProvider(authenticationProvider)
     .buildClient();
 ```
 

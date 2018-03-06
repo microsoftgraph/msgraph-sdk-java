@@ -453,4 +453,19 @@ public class DefaultHttpProvider implements IHttpProvider {
         }
         return false;
     }
+
+    @VisibleForTesting
+    public ILogger getLogger() {
+        return logger;
+    }
+
+    @VisibleForTesting
+    public IExecutors getExecutors() {
+        return executors;
+    }
+
+    @VisibleForTesting
+    public IAuthenticationProvider getAuthenticationProvider() {
+        return authenticationProvider;
+    }
 }

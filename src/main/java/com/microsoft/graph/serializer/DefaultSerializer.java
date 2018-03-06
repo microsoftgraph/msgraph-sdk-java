@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.serializer;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -251,5 +252,10 @@ public class DefaultSerializer implements ISerializer {
         }
         //If there is no defined OData type, return null
         return null;
+    }
+
+    @VisibleForTesting
+    public ILogger getLogger() {
+        return logger;
     }
 }

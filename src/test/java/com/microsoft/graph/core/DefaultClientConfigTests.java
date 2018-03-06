@@ -49,6 +49,11 @@ public class DefaultClientConfigTests {
                 return logger;
             }
 
+            @Override
+            public IAuthenticationProvider getAuthenticationProvider() {
+                return new MockAuthenticationProvider();
+            }
+
         };
         config.getExecutors();
         config.getAuthenticationProvider();
