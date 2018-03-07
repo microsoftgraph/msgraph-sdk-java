@@ -35,6 +35,29 @@ dependencies {
     compile 'com.sun.jersey:jersey-server:1.19.4'
 }
 
+
+publishing {
+
+    publications {
+
+        maven(MavenPublication) {
+
+            groupId 'com.microsoft.graph'
+
+            artifactId 'microsoft-graph'
+
+            version '${mavenMajorVersion}.${mavenMinorVersion}.SNAPSHOT'
+
+            from components.java
+
+            artifact sourceJar
+
+        }
+
+    }
+
+}
+
 task sourceJar(type: Jar) {
   classifier = 'sources'
   from sourceSets.main.allJava
