@@ -86,16 +86,6 @@ public class Multipart {
 	}
 	
 	/**
-	 * Add an image/jpeg part to the multipart body
-	 * @param name The name of the part
-	 * @param imageFile The image file
-	 * @throws IOException Throws an exception if the output stream cannot be written to
-	 */
-	public void addImagePart(String name, java.io.File imageFile) throws IOException {
-		addFilePart(name, "image/jpeg", imageFile);
-	}
-	
-	/**
 	 * Add a file part to the multipart body
 	 * @param name The name of the part
 	 * @param contentType The MIME type of the file (application/pdf, video/mp4, etc.)

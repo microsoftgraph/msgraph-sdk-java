@@ -404,7 +404,7 @@ public class OneNoteTests {
         	File pdfFile = new File("src/test/resources/document.pdf");
         	
         	multipart.addHtmlPart("Presentation", htmlContent);
-        	multipart.addImagePart("hamilton", imgFile);
+        	multipart.addFilePart("hamilton", "image/jpg", imgFile);
         	multipart.addFilePart("metadata", "application/pdf", pdfFile);
         	
             // Add multipart request header
