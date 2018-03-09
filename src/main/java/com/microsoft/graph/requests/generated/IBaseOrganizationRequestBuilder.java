@@ -41,5 +41,6 @@ public interface IBaseOrganizationRequestBuilder extends IRequestBuilder {
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
+    IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder setMobileDeviceManagementAuthority();
 
 }

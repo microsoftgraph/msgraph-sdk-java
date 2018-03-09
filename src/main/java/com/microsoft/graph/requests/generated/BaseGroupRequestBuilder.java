@@ -206,6 +206,13 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
+    public IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
+        return new GroupLifecyclePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies"), getClient(), null);
+    }
+
+    public IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id) {
+        return new GroupLifecyclePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies") + "/" + id, getClient(), null);
+    }
 
     public IGroupSubscribeByMailRequestBuilder subscribeByMail() {
         return new GroupSubscribeByMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subscribeByMail"), getClient(), null);
@@ -225,5 +232,9 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     public IGroupResetUnseenCountRequestBuilder resetUnseenCount() {
         return new GroupResetUnseenCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetUnseenCount"), getClient(), null);
+    }
+
+    public IGroupRenewRequestBuilder renew() {
+        return new GroupRenewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renew"), getClient(), null);
     }
 }

@@ -162,11 +162,29 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
      * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
+
+    IManagedDeviceCollectionRequestBuilder managedDevices();
+
+    IManagedDeviceRequestBuilder managedDevices(final String id);
+
+    IManagedAppRegistrationCollectionWithReferencesRequestBuilder managedAppRegistrations();
+
+    IManagedAppRegistrationWithReferenceRequestBuilder managedAppRegistrations(final String id);
+
+    IDeviceManagementTroubleshootingEventCollectionRequestBuilder deviceManagementTroubleshootingEvents();
+
+    IDeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(final String id);
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);
     IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage);
+    IUserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement();
+    IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(final String deviceTag);
 
     IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime);
+
+    IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder getManagedAppDiagnosticStatuses();
+
+    IUserGetManagedAppPoliciesCollectionRequestBuilder getManagedAppPolicies();
 
 }

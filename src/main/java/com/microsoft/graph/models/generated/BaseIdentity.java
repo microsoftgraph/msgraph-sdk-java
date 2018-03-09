@@ -43,7 +43,7 @@ public class BaseIdentity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta
+     * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
      */
     @SerializedName("displayName")
     @Expose

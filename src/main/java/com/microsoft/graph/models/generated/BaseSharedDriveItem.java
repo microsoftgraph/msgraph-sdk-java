@@ -41,7 +41,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Item.
-     * A driveItem for the resource that was shared.  This is identical to the root property.
+     * Used to access the underlying driveItem
      */
     @SerializedName("driveItem")
     @Expose
@@ -49,7 +49,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-     * A collection of shared driveItem resources. This collection cannot be enumerated, but items can be accessed by their unique ID.
+     * All driveItems contained in the sharing root. This collection cannot be enumerated.
      */
     public DriveItemCollectionPage items;
 
@@ -71,7 +71,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Root.
-     * The top level shared driveItem. If a single file is shared, this item is the file. If a folder is shared, this item will be the folder. You can use the item's facets to determine which case applies.
+     * 
      */
     @SerializedName("root")
     @Expose
@@ -79,7 +79,7 @@ public class BaseSharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Site.
-     * A site resource that contains the item that was shared.
+     * Used to access the underlying site
      */
     @SerializedName("site")
     @Expose
