@@ -25,11 +25,15 @@ import java.util.EnumSet;
  * The class for the Planner Task Details.
  */
 public class PlannerTaskDetails extends BasePlannerTaskDetails {
-
+	
 	/**
      * The Etag.
      */
     @SerializedName("@odata.etag")
     @Expose
     public String etag;
+    
+    public PlannerTaskDetails() {
+    	oDataType = "#microsoft.graph.plannerTaskDetails";
+    }
 }
