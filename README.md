@@ -7,13 +7,11 @@ Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft 
 
 ### 1.1 Install via Gradle
 
-*The JCenter deployment is not available quite yet. Please use the direct Maven install URL until the JCenter version is ready*
-
 Add the repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`:
 
 ```gradle
 repository {
-    maven {
+    jcenter {
         url "https://dl.bintray.com/microsoftgraph/Maven"
     }
 }
