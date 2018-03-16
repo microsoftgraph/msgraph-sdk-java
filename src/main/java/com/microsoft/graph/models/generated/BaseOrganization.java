@@ -176,6 +176,14 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
     public java.util.List<VerifiedDomain> verifiedDomains;
 
     /**
+     * The Mobile Device Management Authority.
+     * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
+     */
+    @SerializedName("mobileDeviceManagementAuthority")
+    @Expose
+    public MdmAuthority mobileDeviceManagementAuthority;
+
+    /**
      * The Extensions.
      * The collection of open extensions defined for the organization. Read-only. Nullable.
      */

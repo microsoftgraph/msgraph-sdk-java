@@ -135,10 +135,15 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
      * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
+
+    IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies();
+
+    IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
     IGroupSubscribeByMailRequestBuilder subscribeByMail();
     IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();
     IGroupAddFavoriteRequestBuilder addFavorite();
     IGroupRemoveFavoriteRequestBuilder removeFavorite();
     IGroupResetUnseenCountRequestBuilder resetUnseenCount();
+    IGroupRenewRequestBuilder renew();
 
 }
