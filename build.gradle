@@ -46,7 +46,7 @@ publishing {
 
             artifactId 'microsoft-graph'
 
-            version '${mavenMajorVersion}.${mavenMinorVersion}.SNAPSHOT'
+            version '${mavenMajorVersion}.${mavenMinorVersion}-SNAPSHOT'
 
             from components.java
 
