@@ -5,6 +5,7 @@ import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollec
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.models.extensions.Multipart;
 import com.microsoft.graph.models.extensions.Notebook;
@@ -403,14 +404,12 @@ public class OneNoteTests {
         	File pdfFile = new File("src/test/resources/document.pdf");
         	
         	multipart.addHtmlPart("Presentation", htmlContent);
-        	multipart.addImagePart("hamilton", imgFile);
+        	multipart.addFilePart("hamilton", "image/jpg", imgFile);
         	multipart.addFilePart("metadata", "application/pdf", pdfFile);
         	
             // Add multipart request header
             List<Option> options = new ArrayList<Option>();
-            options.add(new HeaderOption(
-            		"Content-Type", "multipart/form-data; boundary=\"" + multipart.boundary() + "\""
-            		));
+            options.add(multipart.header());
             
             // Post the multipart content
             OnenotePage page = orb

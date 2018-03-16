@@ -125,10 +125,6 @@ public class PlannerTests {
 
         PlannerAssignment assignment = new PlannerAssignment();
         assignment.orderHint = " !";
-        AdditionalDataManager assignmentAdditionalData = assignment.additionalDataManager();
-        assignmentAdditionalData.put("@odata.type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
-        //assignment.oDataType = "#microsoft.graph.plannerAssignment";
-
         PlannerAssignments a2 = new PlannerAssignments();
         a2.put(me.id, assignment);
         task.assignments = a2;
@@ -157,11 +153,12 @@ public class PlannerTests {
         JsonObject data = new JsonObject();
         Gson gson = new Gson();
 
+        Thread.sleep(2000);
+        
         PlannerChecklistItem checklistItem1 = new PlannerChecklistItem();
         checklistItem1.orderHint = "  !!";
         checklistItem1.isChecked = true;
         checklistItem1.title = "C1";
-        checklistItem1.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerChecklistItem"));
         JsonElement checklist1Json = gson.toJsonTree(checklistItem1);
         data.add(uuid, checklist1Json);
 
@@ -169,7 +166,6 @@ public class PlannerTests {
         checklistItem2.orderHint = " !";
         checklistItem2.isChecked = false;
         checklistItem2.title = "C2";
-        checklistItem2.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerChecklistItem"));
         JsonElement checklist2Json = gson.toJsonTree(checklistItem2);
         data.add(UUID.randomUUID().toString(), checklist2Json);
 
@@ -177,12 +173,10 @@ public class PlannerTests {
         checklistItem3.orderHint = "   !!!";
         checklistItem3.isChecked = false;
         checklistItem3.title = "C3";
-        checklistItem3.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerChecklistItem"));
         JsonElement checklist3Json = gson.toJsonTree(checklistItem3);
         data.add(UUID.randomUUID().toString(), checklist3Json);
 
         AdditionalDataManager dataManager = details.additionalDataManager();
-        details.oDataType = "#microsoft.graph.plannerTaskDetails";
         dataManager.put("checklist", data);
 
         PlannerTaskDetails d = prb
@@ -198,7 +192,7 @@ public class PlannerTests {
         req.addHeader("If-None-Match", d.etag);
         req.patch(details);
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         
         PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
         int checklistItemCount = updatedTask.getRawObject().get("checklistItemCount").getAsInt();
@@ -215,7 +209,6 @@ public class PlannerTests {
             JsonObject data = new JsonObject();
             PlannerExternalReference reference = new PlannerExternalReference();
 
-            reference.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerExternalReference"));
             reference.alias = "Msn";
             reference.previewPriority = " !";
             reference.type = "Other";
@@ -224,7 +217,6 @@ public class PlannerTests {
             data.add("http%3A//www%2Emsn%2Ecom", referenceJson);
 
             AdditionalDataManager dataManager = details.additionalDataManager();
-            details.oDataType = "#microsoft.graph.plannerTaskDetails";
             dataManager.put("references", data);
 
             PlannerTaskDetails d = prb
@@ -324,7 +316,6 @@ public class PlannerTests {
         data.add("category6", new JsonPrimitive(false));
 
         AdditionalDataManager dataManager = task.additionalDataManager();
-        task.oDataType = "#microsoft.graph.plannerTask";
         dataManager.put("appliedCategories", data);
 
         PlannerTask newTask = prb.tasks(planTask.id).buildRequest().get();
@@ -384,7 +375,6 @@ public class PlannerTests {
     public void testUpdateBucket() {
         PlannerBucket patchBucket = new PlannerBucket();
         patchBucket.name = "RenamedBucket";
-        patchBucket.oDataType = "#microsoft.graph.plannerBucket";
 
         IPlannerBucketRequest req = prb.buckets(planBucket.id).buildRequest();
         req.addHeader("If-Match", planBucket.etag);

@@ -41,7 +41,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Alternative Security Ids.
-     * The any operator is required for filter expressions on multi-valued properties. Not nullable. Required.
+     * 
      */
     @SerializedName("alternativeSecurityIds")
     @Expose
@@ -49,7 +49,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
      */
     @SerializedName("approximateLastSignInDateTime")
     @Expose
@@ -57,7 +57,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Unique client specified GUID to represent the device. Required.
+     * Unique identifier set by Azure Device Registration Service at the time of registration.
      */
     @SerializedName("deviceId")
     @Expose
@@ -89,7 +89,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
-     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false.
+     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
      */
     @SerializedName("isCompliant")
     @Expose
@@ -97,7 +97,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Managed.
-     * true if the device is managed by a Mobile Device Management (MDM) app such as Intune; otherwise, false.
+     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
      */
     @SerializedName("isManaged")
     @Expose
@@ -105,7 +105,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The last time at which the object was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -113,7 +113,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default).
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only.
      */
     @SerializedName("onPremisesSyncEnabled")
     @Expose
@@ -137,7 +137,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
-     * Not nullable.
+     * For interal use only. Not nullable.
      */
     @SerializedName("physicalIds")
     @Expose
@@ -153,13 +153,13 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Registered Owners.
-     * Users that are registered owners of the device. Read-only. Nullable.
+     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage registeredOwners;
 
     /**
      * The Registered Users.
-     * Users that are registered users of the device. Read-only. Nullable.
+     * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage registeredUsers;
 

@@ -65,7 +65,7 @@ public class BasePerson extends Entity implements IJsonBackedObject {
 
     /**
      * The Person Notes.
-     * Free-form notes that the the user has taken about this person.
+     * Free-form notes that the user has taken about this person.
      */
     @SerializedName("personNotes")
     @Expose

@@ -73,7 +73,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated.
+     * The company name which the user is associated. Read-only.
      */
     @SerializedName("companyName")
     @Expose
@@ -376,6 +376,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> skills;
 
     /**
+     * The Device Enrollment Limit.
+     * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
+     */
+    @SerializedName("deviceEnrollmentLimit")
+    @Expose
+    public Integer deviceEnrollmentLimit;
+
+    /**
      * The Owned Devices.
      * Devices that are owned by the user. Read-only. Nullable.
      */
@@ -544,6 +552,24 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("onenote")
     @Expose
     public Onenote onenote;
+
+    /**
+     * The Managed Devices.
+     * The managed devices associated with the user.
+     */
+    public ManagedDeviceCollectionPage managedDevices;
+
+    /**
+     * The Managed App Registrations.
+     * Zero or more managed app registrations that belong to the user.
+     */
+    public ManagedAppRegistrationCollectionPage managedAppRegistrations;
+
+    /**
+     * The Device Management Troubleshooting Events.
+     * The list of troubleshooting events for this user.
+     */
+    public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
 
 
     /**
@@ -887,6 +913,54 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             drives = new DriveCollectionPage(response, null);
+        }
+
+        if (json.has("managedDevices")) {
+            final BaseManagedDeviceCollectionResponse response = new BaseManagedDeviceCollectionResponse();
+            if (json.has("managedDevices@odata.nextLink")) {
+                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
+            final ManagedDevice[] array = new ManagedDevice[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDevice.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedDevices = new ManagedDeviceCollectionPage(response, null);
+        }
+
+        if (json.has("managedAppRegistrations")) {
+            final BaseManagedAppRegistrationCollectionResponse response = new BaseManagedAppRegistrationCollectionResponse();
+            if (json.has("managedAppRegistrations@odata.nextLink")) {
+                response.nextLink = json.get("managedAppRegistrations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppRegistrations").toString(), JsonObject[].class);
+            final ManagedAppRegistration[] array = new ManagedAppRegistration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppRegistration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedAppRegistrations = new ManagedAppRegistrationCollectionPage(response, null);
+        }
+
+        if (json.has("deviceManagementTroubleshootingEvents")) {
+            final BaseDeviceManagementTroubleshootingEventCollectionResponse response = new BaseDeviceManagementTroubleshootingEventCollectionResponse();
+            if (json.has("deviceManagementTroubleshootingEvents@odata.nextLink")) {
+                response.nextLink = json.get("deviceManagementTroubleshootingEvents@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceManagementTroubleshootingEvents").toString(), JsonObject[].class);
+            final DeviceManagementTroubleshootingEvent[] array = new DeviceManagementTroubleshootingEvent[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTroubleshootingEvent.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceManagementTroubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
         }
     }
 }

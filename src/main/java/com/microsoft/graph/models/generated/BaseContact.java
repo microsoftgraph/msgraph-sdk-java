@@ -273,7 +273,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Spouse Name.
-     * The name of the contact's spouse.
+     * The name of the contact's spouse/partner.
      */
     @SerializedName("spouseName")
     @Expose

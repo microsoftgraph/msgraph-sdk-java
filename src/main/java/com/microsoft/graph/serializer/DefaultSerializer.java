@@ -22,6 +22,7 @@
 
 package com.microsoft.graph.serializer;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
@@ -158,7 +159,7 @@ public class DefaultSerializer implements ISerializer {
 					Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 					
 					while (it.hasNext()) {
-						HashMap.Entry<String, Object> pair = (HashMap.Entry<String, Object>)it.next();
+						Map.Entry<String, Object> pair = (Map.Entry<String, Object>)it.next();
 						Object child = pair.getValue();
 
 						// If the item is a valid Graph object, add its additional data
@@ -251,5 +252,10 @@ public class DefaultSerializer implements ISerializer {
         }
         //If there is no defined OData type, return null
         return null;
+    }
+
+    @VisibleForTesting
+    public ILogger getLogger() {
+        return logger;
     }
 }

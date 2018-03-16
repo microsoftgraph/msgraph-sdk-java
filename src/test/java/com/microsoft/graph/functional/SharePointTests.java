@@ -10,7 +10,6 @@ import com.microsoft.graph.options.QueryOption;
 import org.junit.*;
 import static org.junit.Assert.*;
 
-import java.util.Base64;
 import java.util.LinkedList;
 import java.util.List;
 

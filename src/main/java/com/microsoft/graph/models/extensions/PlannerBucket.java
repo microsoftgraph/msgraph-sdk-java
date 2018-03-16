@@ -31,4 +31,8 @@ public class PlannerBucket extends BasePlannerBucket {
     @SerializedName("@odata.etag")
     @Expose
     public String etag;
+    
+    public PlannerBucket() {
+    	oDataType = "#microsoft.graph.plannerBucket";
+    }
 }

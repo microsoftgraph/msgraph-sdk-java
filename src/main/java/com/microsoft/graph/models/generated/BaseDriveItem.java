@@ -205,7 +205,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Thumbnails.
-     * Collection containing ThumbnailSet objects associated with the item. For more info, see getting thumbnails. Read-only. Nullable.
+     * Collection containing [ThumbnailSet][] objects associated with the item. For more info, see [getting thumbnails][]. Read-only. Nullable.
      */
     public ThumbnailSetCollectionPage thumbnails;
 

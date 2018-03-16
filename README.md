@@ -1,16 +1,22 @@
 # Preview Microsoft Graph SDK for Java
 *This SDK is currently in preview. Please continue to provide [feedback](https://github.com/microsoftgraph/msgraph-sdk-java/issues/new) as we iterate towards a production-supported library.*
 
+[ ![Download](https://api.bintray.com/packages/microsoftgraph/Maven/microsoft-graph/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/microsoft-graph/_latestVersion)
+
+
 Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://graph.microsoft.io/en-us/getting-started) into your Java application!
 
 ## 1. Installation
 
 ### 1.1 Install via Gradle
-Add the JCenter repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`:
+
+Add the repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`:
 
 ```gradle
 repository {
-    jcenter()
+    jcenter {
+        url "https://dl.bintray.com/microsoftgraph/Maven"
+    }
 }
 
 dependency {
@@ -38,12 +44,10 @@ For an example of authentication in a client application, see the [MSGraph SDK A
 After you have set the correct application ID and URL, you must get a **GraphServiceClient** object to make requests against the service. The SDK stores the account information for you, but when a user signs in for the first time, it invokes the UI to get the user's account information.
 
 ```java
-IClientConfig clientConfig = 
-  DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
-
 IGraphServiceClient graphClient = 
-  GraphServiceClient.builder()
-    .fromConfig(mClientConfig)
+  GraphServiceClient
+    .builder()
+    .authenticationProvider(authenticationProvider)
     .buildClient();
 ```
 
