@@ -40,7 +40,7 @@ import com.microsoft.graph.logger.ILogger;
  * Handles serialization/deserialization for special types (especially of 
  * fields which are not caught by registering a type adapter).
  */
-public final class FallBackTypeAdapter implements TypeAdapterFactory {
+public final class FallbackTypeAdapter implements TypeAdapterFactory {
 
     /**
      * The unexpected value constant
@@ -69,7 +69,7 @@ public final class FallBackTypeAdapter implements TypeAdapterFactory {
         
     };
     
-    public FallBackTypeAdapter(ILogger logger) {
+    public FallbackTypeAdapter(ILogger logger) {
         this.logger = logger;
     }
 
