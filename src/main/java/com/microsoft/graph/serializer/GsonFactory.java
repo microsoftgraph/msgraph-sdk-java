@@ -209,7 +209,6 @@ final class GsonFactory {
                 }
             }
         };
-
         return new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
@@ -224,7 +223,7 @@ final class GsonFactory {
                 .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
                 .registerTypeAdapter(Duration.class, durationJsonSerializer)
                 .registerTypeAdapter(Duration.class, durationJsonDeserializer)
-                .registerTypeAdapterFactory(new FallBackEnumTypeAdapter())
+                .registerTypeAdapterFactory(new FallBackTypeAdapter(logger))
                 .create();
     }
 }
