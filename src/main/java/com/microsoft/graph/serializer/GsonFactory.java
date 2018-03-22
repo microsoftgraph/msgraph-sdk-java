@@ -223,7 +223,7 @@ final class GsonFactory {
                 .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
                 .registerTypeAdapter(Duration.class, durationJsonSerializer)
                 .registerTypeAdapter(Duration.class, durationJsonDeserializer)
-                .registerTypeAdapterFactory(new FallbackTypeAdapter(logger))
+                .registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger))
                 .create();
     }
 }
