@@ -103,16 +103,21 @@ public class DefaultSerializerTests {
 	}
   
     @Test
-    public void testSerializerCanSerializeVoid() {
+    public void testSerializerCanSerializeVoidWithoutEmittingWarning() {
+        // Unfortunately does not assert for existence of Java 9 illegal access warnings
+        // which seem to written to the console without use of System.err/System.out (so cannot be captured AFAIK). 
+        // @davidmoten
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-        Test1 t = new Test1();
+        HasVoidMember t = new HasVoidMember();
         String json = serializer.serializeObject(t);
         // this line will emit a warning from Java 9 about illegal access to the constructor of Void 
         // if gson TypeAdapterFactory is not handling Void properly
-        serializer.deserializeObject(json, Test1.class);
+        HasVoidMember t2 = serializer.deserializeObject(json, HasVoidMember.class);
+        assertEquals(t.x, t2.x);
+        assertEquals(t.y, t2.y);
     }
   
-  public static final class Test1 {
+  public static final class HasVoidMember {
       @SerializedName("x")
       @Expose
       int x = 1;
