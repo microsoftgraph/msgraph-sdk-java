@@ -35,6 +35,15 @@ dependencies {
     compile 'com.sun.jersey:jersey-server:1.19.4'
 }
 
+def pomConfig = {
+    licenses {
+        license([:]) {
+            name "MIT License"
+            url "http://opensource.org/licenses/MIT"
+            distribution "repo"
+        }
+    }
+}
 
 publishing {
 
@@ -51,6 +60,12 @@ publishing {
             from components.java
 
             artifact sourceJar
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('name', 'Preview Microsoft Graph SDK for Java')
+                root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-sdk-java')
+                root.children().last() + pomConfig
+            }
 
         }
 
