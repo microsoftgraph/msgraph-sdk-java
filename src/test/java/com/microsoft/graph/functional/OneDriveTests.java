@@ -5,6 +5,7 @@ import java.io.InputStream;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.microsoft.graph.concurrency.ChunkedUploadProvider;
@@ -14,6 +15,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
 
+@Ignore
 public class OneDriveTests {
     private TestBase testBase;
 
@@ -34,8 +36,7 @@ public class OneDriveTests {
     	String itemId = "01BQHXQL5GQVAGCFJLYRH3EAG2YHGERMQA"; //Test upload folder
     	
     	//Get resource file from file system
-    	ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-    	InputStream uploadFile = classloader.getResourceAsStream("hamilton.jpg");
+    	InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("hamilton.jpg");
     	int fileSize = uploadFile.available();
     	
     	IProgressCallback<DriveItem> callback = new IProgressCallback<DriveItem> () {
@@ -74,7 +75,7 @@ public class OneDriveTests {
     			fileSize, 
     			DriveItem.class);
 		
-    	chunkedUploadProvider.upload(null, callback);
+    	chunkedUploadProvider.upload(callback);
     }
     
 }
