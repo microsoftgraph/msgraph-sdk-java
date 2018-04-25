@@ -113,7 +113,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * The importance of the event: Low = 0, Normal = 1, High = 2. Possible values are: Low, Normal, High.
+     * The importance of the event. Possible values are: Low, Normal, High.
      */
     @SerializedName("importance")
     @Expose
@@ -209,7 +209,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
-     * The status to show: Free = 0, Tentative = 1, Busy = 2, Oof = 3, WorkingElsewhere = 4, Unknown = -1. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+     * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
      */
     @SerializedName("showAs")
     @Expose
@@ -217,7 +217,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The event type: SingleInstance = 0, Occurrence = 1, Exception = 2, SeriesMaster = 3. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster.
+     * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
      */
     @SerializedName("type")
     @Expose

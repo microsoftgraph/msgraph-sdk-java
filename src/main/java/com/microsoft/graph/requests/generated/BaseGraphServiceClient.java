@@ -428,6 +428,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of GroupLifecyclePolicies objects
+     *
+     * @return the request builder for the collection of GroupLifecyclePolicies objects
+     */
+    public IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
+        return new GroupLifecyclePolicyCollectionRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single GroupLifecyclePolicies
+     *
+     * @param id the id of the GroupLifecyclePolicies to retrieve
+     * @return the request builder for the GroupLifecyclePolicies object
+     */
+    public IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id) {
+        return new GroupLifecyclePolicyRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
@@ -452,5 +471,41 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IPlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(getServiceRoot() + "/planner", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the ReportRoot
+     */
+    public IReportRootRequestBuilder reports() {
+        return new ReportRootRequestBuilder(getServiceRoot() + "/reports", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the EducationRoot
+     */
+    public IEducationRootRequestBuilder education() {
+        return new EducationRootRequestBuilder(getServiceRoot() + "/education", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the DeviceAppManagement
+     */
+    public IDeviceAppManagementRequestBuilder deviceAppManagement() {
+        return new DeviceAppManagementRequestBuilder(getServiceRoot() + "/deviceAppManagement", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the DeviceManagement
+     */
+    public IDeviceManagementRequestBuilder deviceManagement() {
+        return new DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", (IGraphServiceClient)this, null);
     }
 }

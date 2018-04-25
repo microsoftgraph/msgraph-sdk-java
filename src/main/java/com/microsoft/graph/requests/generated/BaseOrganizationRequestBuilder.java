@@ -61,4 +61,8 @@ public class BaseOrganizationRequestBuilder extends BaseRequestBuilder implement
     public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
+
+    public IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder setMobileDeviceManagementAuthority() {
+        return new OrganizationSetMobileDeviceManagementAuthorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setMobileDeviceManagementAuthority"), getClient(), null);
+    }
 }

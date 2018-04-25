@@ -3,7 +3,7 @@
  *
  * This generated file contains a sample Java Library project to get you started.
  * For more details take a look at the Java Libraries chapter in the Gradle
- * user guide available at https://docs.gradle.org/3.5/userguide/java_library_plugin.html
+ * user guide available at https://docs.gradle.org/4.5/userguide/java_library_plugin.html
  */
 
 // Apply the java-library plugin to add support for Java Library
@@ -25,7 +25,7 @@ dependencies {
     api 'org.apache.commons:commons-math3:3.6.1'
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:21.0'
+    implementation 'com.google.guava:guava:20.0'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
@@ -35,23 +35,37 @@ dependencies {
     compile 'com.sun.jersey:jersey-server:1.19.4'
 }
 
+
 publishing {
+
     publications {
+
         maven(MavenPublication) {
+
             groupId 'com.microsoft.graph'
+
             artifactId 'microsoft-graph'
-            version '0.1-SNAPSHOT'
+
+            version '${mavenMajorVersion}.${mavenMinorVersion}-SNAPSHOT'
 
             from components.java
-            
+
             artifact sourceJar
+
         }
+
     }
+
 }
 
 task sourceJar(type: Jar) {
   classifier = 'sources'
   from sourceSets.main.allJava
+}
+
+compileJava {
+  sourceCompatibility = 1.7
+  targetCompatibility = 1.7
 }
 
 def getVersionCode() {

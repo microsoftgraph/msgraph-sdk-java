@@ -28,7 +28,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
@@ -206,6 +205,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @return                  the result from the request
      * @throws ClientException an exception occurs if the request was unable to complete for any reason
      */
+    @SuppressWarnings("unchecked")
     private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
                                                                        final Class<Result> resultClass,
                                                                        final Body serializable,
@@ -452,5 +452,20 @@ public class DefaultHttpProvider implements IHttpProvider {
             }
         }
         return false;
+    }
+
+    @VisibleForTesting
+    public ILogger getLogger() {
+        return logger;
+    }
+
+    @VisibleForTesting
+    public IExecutors getExecutors() {
+        return executors;
+    }
+
+    @VisibleForTesting
+    public IAuthenticationProvider getAuthenticationProvider() {
+        return authenticationProvider;
     }
 }

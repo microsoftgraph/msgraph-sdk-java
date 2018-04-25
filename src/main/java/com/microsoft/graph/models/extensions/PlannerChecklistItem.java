@@ -23,5 +23,8 @@ import java.util.EnumSet;
  * The class for the Planner Checklist Item.
  */
 public class PlannerChecklistItem extends BasePlannerChecklistItem {
-
+	
+	public PlannerChecklistItem() {
+		oDataType = "#microsoft.graph.plannerChecklistItem";
+	}
 }

@@ -24,7 +24,6 @@ package com.microsoft.graph.http;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.options.Option;
-import com.microsoft.graph.serializer.IJsonBackedObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
