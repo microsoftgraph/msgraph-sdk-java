@@ -32,6 +32,14 @@ public interface IBaseTermsAndConditionsWithReferenceRequest extends IHttpReques
 
     TermsAndConditions get() throws ClientException;
 
+	void delete(final ICallback<TermsAndConditions> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<TermsAndConditions> callback);
+
+	TermsAndConditions patch(final TermsAndConditions sourceTermsAndConditions) throws ClientException;
+
     IBaseTermsAndConditionsWithReferenceRequest select(final String value);
 
     IBaseTermsAndConditionsWithReferenceRequest expand(final String value);

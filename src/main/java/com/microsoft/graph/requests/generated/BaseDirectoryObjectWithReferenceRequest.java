@@ -55,6 +55,23 @@ public class BaseDirectoryObjectWithReferenceRequest extends BaseRequest impleme
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<DirectoryObject> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback) {
+		send(HttpMethod.PATCH, callback, sourceDirectoryObject);
+	}
+
+	public DirectoryObject patch(final DirectoryObject sourceDirectoryObject) throws ClientException {
+		return send(HttpMethod.PATCH, sourceDirectoryObject);
+	}
+
+
     /**
      * Sets the select clause for the request
      *

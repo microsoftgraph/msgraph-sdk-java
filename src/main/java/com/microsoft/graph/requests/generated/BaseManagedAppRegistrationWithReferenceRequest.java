@@ -55,6 +55,23 @@ public class BaseManagedAppRegistrationWithReferenceRequest extends BaseRequest 
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<ManagedAppRegistration> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<ManagedAppRegistration> callback) {
+		send(HttpMethod.PATCH, callback, sourceManagedAppRegistration);
+	}
+
+	public ManagedAppRegistration patch(final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException {
+		return send(HttpMethod.PATCH, sourceManagedAppRegistration);
+	}
+
+
     /**
      * Sets the select clause for the request
      *
