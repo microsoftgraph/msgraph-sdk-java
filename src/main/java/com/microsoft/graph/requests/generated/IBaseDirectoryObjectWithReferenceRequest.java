@@ -32,6 +32,14 @@ public interface IBaseDirectoryObjectWithReferenceRequest extends IHttpRequest {
 
     DirectoryObject get() throws ClientException;
 
+	void delete(final ICallback<DirectoryObject> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final DirectoryObject sourceDirectoryObject, final ICallback<DirectoryObject> callback);
+
+	DirectoryObject patch(final DirectoryObject sourceDirectoryObject) throws ClientException;
+
     IBaseDirectoryObjectWithReferenceRequest select(final String value);
 
     IBaseDirectoryObjectWithReferenceRequest expand(final String value);

@@ -55,6 +55,23 @@ public class BaseTermsAndConditionsWithReferenceRequest extends BaseRequest impl
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<TermsAndConditions> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+		send(HttpMethod.PATCH, callback, sourceTermsAndConditions);
+	}
+
+	public TermsAndConditions patch(final TermsAndConditions sourceTermsAndConditions) throws ClientException {
+		return send(HttpMethod.PATCH, sourceTermsAndConditions);
+	}
+
+
     /**
      * Sets the select clause for the request
      *

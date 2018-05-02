@@ -32,6 +32,14 @@ public interface IBaseManagedAppRegistrationWithReferenceRequest extends IHttpRe
 
     ManagedAppRegistration get() throws ClientException;
 
+	void delete(final ICallback<ManagedAppRegistration> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<ManagedAppRegistration> callback);
+
+	ManagedAppRegistration patch(final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException;
+
     IBaseManagedAppRegistrationWithReferenceRequest select(final String value);
 
     IBaseManagedAppRegistrationWithReferenceRequest expand(final String value);
