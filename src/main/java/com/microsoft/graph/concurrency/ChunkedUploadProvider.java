@@ -193,4 +193,19 @@ public class ChunkedUploadProvider<UploadType> {
             this.readSoFar += read;
         }
     }
+    
+    /**
+     * Uploads content to remote upload session based on the input stream
+     *
+     * @param callback the progress callback invoked during uploading
+     * @param configs  the optional configurations for the upload options. [0] should be the customized chunk
+     *                 size and [1] should be the maxRetry for upload retry.
+     * @throws IOException the IO exception that occurred during upload
+     */
+    public void upload(final IProgressCallback<UploadType> callback,
+    		final int...configs)
+    				throws IOException {
+    	upload(null,  callback, configs);
+
+    }
 }
