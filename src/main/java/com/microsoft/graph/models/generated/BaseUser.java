@@ -440,6 +440,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     public ExtensionCollectionPage extensions;
 
     /**
+     * The Outlook.
+     * 
+     */
+    @SerializedName("outlook")
+    @Expose
+    public OutlookUser outlook;
+
+    /**
      * The Messages.
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
@@ -570,6 +578,12 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The list of troubleshooting events for this user.
      */
     public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
+
+    /**
+     * The Activities.
+     * 
+     */
+    public UserActivityCollectionPage activities;
 
 
     /**
@@ -961,6 +975,22 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             deviceManagementTroubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
+        }
+
+        if (json.has("activities")) {
+            final BaseUserActivityCollectionResponse response = new BaseUserActivityCollectionResponse();
+            if (json.has("activities@odata.nextLink")) {
+                response.nextLink = json.get("activities@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("activities").toString(), JsonObject[].class);
+            final UserActivity[] array = new UserActivity[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserActivity.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            activities = new UserActivityCollectionPage(response, null);
         }
     }
 }

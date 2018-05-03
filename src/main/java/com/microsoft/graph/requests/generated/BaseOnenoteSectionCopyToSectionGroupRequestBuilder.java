@@ -32,12 +32,16 @@ public class BaseOnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActi
      * @param id the id
      * @param groupId the groupId
      * @param renameAs the renameAs
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
      */
-    public BaseOnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs) {
+    public BaseOnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("id", id);
         bodyParams.put("groupId", groupId);
         bodyParams.put("renameAs", renameAs);
+        bodyParams.put("siteCollectionId", siteCollectionId);
+        bodyParams.put("siteId", siteId);
     }
 
     /**
@@ -72,6 +76,14 @@ public class BaseOnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActi
 
         if (hasParameter("renameAs")) {
             request.body.renameAs = getParameter("renameAs");
+        }
+
+        if (hasParameter("siteCollectionId")) {
+            request.body.siteCollectionId = getParameter("siteCollectionId");
+        }
+
+        if (hasParameter("siteId")) {
+            request.body.siteId = getParameter("siteId");
         }
 
         return request;

@@ -73,7 +73,7 @@ public class BaseWindows10TeamGeneralConfiguration extends DeviceConfiguration i
 
     /**
      * The Maintenance Window Duration In Hours.
-     * Maintenance window duration for device updates. Valid values 1 to 5
+     * Maintenance window duration for device updates. Valid values 0 to 5
      */
     @SerializedName("maintenanceWindowDurationInHours")
     @Expose

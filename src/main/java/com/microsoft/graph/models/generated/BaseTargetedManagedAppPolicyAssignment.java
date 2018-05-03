@@ -33,7 +33,7 @@ public class BaseTargetedManagedAppPolicyAssignment extends Entity implements IJ
 
     /**
      * The Target.
-     * Identifier for deployment of a group or app
+     * 
      */
     @SerializedName("target")
     @Expose

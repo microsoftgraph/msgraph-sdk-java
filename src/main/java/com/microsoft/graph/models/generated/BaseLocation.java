@@ -65,6 +65,46 @@ public class BaseLocation implements IJsonBackedObject {
     @Expose
     public PhysicalAddress address;
 
+    /**
+     * The Coordinates.
+     * The geographic coordinates and elevation of the location.
+     */
+    @SerializedName("coordinates")
+    @Expose
+    public OutlookGeoCoordinates coordinates;
+
+    /**
+     * The Location Uri.
+     * Optional URI representing the location.
+     */
+    @SerializedName("locationUri")
+    @Expose
+    public String locationUri;
+
+    /**
+     * The Location Type.
+     * The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     */
+    @SerializedName("locationType")
+    @Expose
+    public LocationType locationType;
+
+    /**
+     * The Unique Id.
+     * For internal use only.
+     */
+    @SerializedName("uniqueId")
+    @Expose
+    public String uniqueId;
+
+    /**
+     * The Unique Id Type.
+     * For internal use only.
+     */
+    @SerializedName("uniqueIdType")
+    @Expose
+    public LocationUniqueIdType uniqueIdType;
+
 
     /**
      * The raw representation of this class

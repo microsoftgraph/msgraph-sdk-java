@@ -30,6 +30,21 @@ public class ManagedDeviceMobileAppConfigurationRequest extends BaseManagedDevic
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public ManagedDeviceMobileAppConfigurationRequest(final String requestUrl,
+            final IBaseClient client,
+            final java.util.List<? extends Option> requestOptions,
+            final Class<? extends ManagedDeviceMobileAppConfiguration> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the ManagedDeviceMobileAppConfiguration
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public ManagedDeviceMobileAppConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfiguration.class);

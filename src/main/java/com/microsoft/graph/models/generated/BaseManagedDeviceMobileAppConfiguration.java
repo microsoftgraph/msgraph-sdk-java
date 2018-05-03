@@ -86,6 +86,12 @@ public class BaseManagedDeviceMobileAppConfiguration extends Entity implements I
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
 
     /**
+     * The Device Statuses.
+     * 
+     */
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
+
+    /**
      * The User Statuses.
      * List of ManagedDeviceMobileAppConfigurationUserStatus.
      */
@@ -161,6 +167,22 @@ public class BaseManagedDeviceMobileAppConfiguration extends Entity implements I
             }
             response.value = Arrays.asList(array);
             assignments = new ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("deviceStatuses")) {
+            final BaseManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse response = new BaseManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse();
+            if (json.has("deviceStatuses@odata.nextLink")) {
+                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
+            final ManagedDeviceMobileAppConfigurationDeviceStatus[] array = new ManagedDeviceMobileAppConfigurationDeviceStatus[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceMobileAppConfigurationDeviceStatus.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceStatuses = new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(response, null);
         }
 
         if (json.has("userStatuses")) {

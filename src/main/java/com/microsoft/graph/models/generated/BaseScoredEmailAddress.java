@@ -57,6 +57,14 @@ public class BaseScoredEmailAddress implements IJsonBackedObject {
     @Expose
     public Double relevanceScore;
 
+    /**
+     * The Selection Likelihood.
+     * 
+     */
+    @SerializedName("selectionLikelihood")
+    @Expose
+    public SelectionLikelihoodInfo selectionLikelihood;
+
 
     /**
      * The raw representation of this class

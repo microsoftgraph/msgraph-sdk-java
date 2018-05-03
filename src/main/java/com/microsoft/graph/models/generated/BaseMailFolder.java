@@ -78,6 +78,12 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
     public MessageCollectionPage messages;
 
     /**
+     * The Message Rules.
+     * The collection of rules that apply to the user's Inbox folder.
+     */
+    public MessageRuleCollectionPage messageRules;
+
+    /**
      * The Child Folders.
      * The collection of child folders in the mailFolder.
      */
@@ -149,6 +155,22 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             messages = new MessageCollectionPage(response, null);
+        }
+
+        if (json.has("messageRules")) {
+            final BaseMessageRuleCollectionResponse response = new BaseMessageRuleCollectionResponse();
+            if (json.has("messageRules@odata.nextLink")) {
+                response.nextLink = json.get("messageRules@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("messageRules").toString(), JsonObject[].class);
+            final MessageRule[] array = new MessageRule[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MessageRule.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            messageRules = new MessageRuleCollectionPage(response, null);
         }
 
         if (json.has("childFolders")) {

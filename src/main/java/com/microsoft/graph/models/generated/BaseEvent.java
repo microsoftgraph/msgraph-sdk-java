@@ -41,7 +41,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original End Time Zone.
-     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
+     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
      */
     @SerializedName("originalEndTimeZone")
     @Expose
@@ -113,7 +113,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * The importance of the event. Possible values are: Low, Normal, High.
+     * The importance of the event. Possible values are: low, normal, high.
      */
     @SerializedName("importance")
     @Expose
@@ -121,7 +121,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * Possible values are: Normal, Personal, Private, Confidential.
+     * Possible values are: normal, personal, private, confidential.
      */
     @SerializedName("sensitivity")
     @Expose
@@ -158,6 +158,14 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
     @SerializedName("location")
     @Expose
     public Location location;
+
+    /**
+     * The Locations.
+     * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
+     */
+    @SerializedName("locations")
+    @Expose
+    public java.util.List<Location> locations;
 
     /**
      * The Is All Day.
@@ -209,7 +217,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
-     * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+     * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName("showAs")
     @Expose
@@ -217,7 +225,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
+     * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
      */
     @SerializedName("type")
     @Expose

@@ -47,6 +47,10 @@ public enum PolicyPlatformType
     */
     WINDOWS10_AND_LATER,
     /**
+    * android Work Profile
+    */
+    ANDROID_WORK_PROFILE,
+    /**
     * all
     */
     ALL,

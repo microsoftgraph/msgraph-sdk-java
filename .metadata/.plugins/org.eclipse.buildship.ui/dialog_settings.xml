@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item value="true" key="apply_working_sets"/>
+		<item value="D:\repos\msgraph-sdk-java" key="project_location"/>
+		<list key="working_sets">
+		</list>
+	</section>
+</section>

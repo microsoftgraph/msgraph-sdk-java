@@ -35,7 +35,7 @@ public class BaseManagedDeviceMobileAppConfigurationRequest extends BaseRequest 
     public BaseManagedDeviceMobileAppConfigurationRequest(final String requestUrl,
             final IBaseClient client,
             final java.util.List<? extends Option> requestOptions,
-            final Class<ManagedDeviceMobileAppConfiguration> responseClass) {
+            final Class<? extends ManagedDeviceMobileAppConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 

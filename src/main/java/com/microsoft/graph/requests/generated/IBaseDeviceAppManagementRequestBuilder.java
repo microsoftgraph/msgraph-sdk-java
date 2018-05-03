@@ -50,6 +50,10 @@ public interface IBaseDeviceAppManagementRequestBuilder extends IRequestBuilder 
 
     IManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(final String id);
 
+    IVppTokenCollectionRequestBuilder vppTokens();
+
+    IVppTokenRequestBuilder vppTokens(final String id);
+
     IManagedAppPolicyCollectionRequestBuilder managedAppPolicies();
 
     IManagedAppPolicyRequestBuilder managedAppPolicies(final String id);

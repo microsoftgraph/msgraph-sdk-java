@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Code Recommenders In-IDE News</title>
+        <link>https://www.eclipse.org/recommenders/</link>
+        <description>The latest news about Code Recommenders, delivered to your Eclipse IDE</description>
+        <item>
+          <title>Insert Knowledge Here - A Guide to Intelligent Code Completion Using Eclipse Code Recommenders</title>
+          <link>https://medium.com/codetrails/insert-knowledge-here-a2f71c2862d2?utm_source=rss-eclipse&amp;utm_medium=eclipse&amp;utm_campaign=cc</link>
+          <pubDate>Tue, 10 Oct 2017 16:00:00 GMT</pubDate>
+        </item>
+  </channel>
+</rss>

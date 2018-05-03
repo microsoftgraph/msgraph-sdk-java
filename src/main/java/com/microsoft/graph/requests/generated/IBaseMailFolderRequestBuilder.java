@@ -42,6 +42,10 @@ public interface IBaseMailFolderRequestBuilder extends IRequestBuilder {
 
     IMessageRequestBuilder messages(final String id);
 
+    IMessageRuleCollectionRequestBuilder messageRules();
+
+    IMessageRuleRequestBuilder messageRules(final String id);
+
     IMailFolderCollectionRequestBuilder childFolders();
 
     IMailFolderRequestBuilder childFolders(final String id);

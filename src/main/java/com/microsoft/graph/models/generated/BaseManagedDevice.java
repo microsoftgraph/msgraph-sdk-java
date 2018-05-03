@@ -48,6 +48,14 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
     public String deviceName;
 
     /**
+     * The Managed Device Owner Type.
+     * 
+     */
+    @SerializedName("managedDeviceOwnerType")
+    @Expose
+    public ManagedDeviceOwnerType managedDeviceOwnerType;
+
+    /**
      * The Device Action Results.
      * List of ComplexType deviceActionResult objects.
      */

@@ -50,20 +50,20 @@ public class BasePersonOrGroupColumn implements IJsonBackedObject {
     public Boolean allowMultipleSelection;
 
     /**
-     * The Display As.
-     * How to display the information about the person or group chosen. See below.
-     */
-    @SerializedName("displayAs")
-    @Expose
-    public String displayAs;
-
-    /**
      * The Choose From Type.
      * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
      */
     @SerializedName("chooseFromType")
     @Expose
     public String chooseFromType;
+
+    /**
+     * The Display As.
+     * How to display the information about the person or group chosen. See below.
+     */
+    @SerializedName("displayAs")
+    @Expose
+    public String displayAs;
 
 
     /**

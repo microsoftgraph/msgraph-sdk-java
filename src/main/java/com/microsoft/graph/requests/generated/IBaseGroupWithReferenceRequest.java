@@ -32,6 +32,14 @@ public interface IBaseGroupWithReferenceRequest extends IHttpRequest {
 
     Group get() throws ClientException;
 
+	void delete(final ICallback<Group> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final Group sourceGroup, final ICallback<Group> callback);
+
+	Group patch(final Group sourceGroup) throws ClientException;
+
     IBaseGroupWithReferenceRequest select(final String value);
 
     IBaseGroupWithReferenceRequest expand(final String value);

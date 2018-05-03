@@ -72,4 +72,11 @@ public class BaseListItemRequestBuilder extends BaseRequestBuilder implements IB
     public IFieldValueSetRequestBuilder fields() {
         return new FieldValueSetRequestBuilder(getRequestUrlWithAdditionalSegment("fields"), getClient(), null);
     }
+    public IListItemVersionCollectionRequestBuilder versions() {
+        return new ListItemVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
+    }
+
+    public IListItemVersionRequestBuilder versions(final String id) {
+        return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
+    }
 }

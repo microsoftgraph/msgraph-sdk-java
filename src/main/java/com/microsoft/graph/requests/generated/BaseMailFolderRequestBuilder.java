@@ -61,6 +61,13 @@ public class BaseMailFolderRequestBuilder extends BaseRequestBuilder implements 
     public IMessageRequestBuilder messages(final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
+    public IMessageRuleCollectionRequestBuilder messageRules() {
+        return new MessageRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules"), getClient(), null);
+    }
+
+    public IMessageRuleRequestBuilder messageRules(final String id) {
+        return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules") + "/" + id, getClient(), null);
+    }
     public IMailFolderCollectionRequestBuilder childFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }

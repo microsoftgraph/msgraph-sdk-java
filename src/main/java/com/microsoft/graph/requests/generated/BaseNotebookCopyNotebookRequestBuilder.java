@@ -32,12 +32,16 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
      * @param groupId the groupId
      * @param renameAs the renameAs
      * @param notebookFolder the notebookFolder
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
      */
-    public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
+    public BaseNotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder, final String siteCollectionId, final String siteId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("groupId", groupId);
         bodyParams.put("renameAs", renameAs);
         bodyParams.put("notebookFolder", notebookFolder);
+        bodyParams.put("siteCollectionId", siteCollectionId);
+        bodyParams.put("siteId", siteId);
     }
 
     /**
@@ -72,6 +76,14 @@ public class BaseNotebookCopyNotebookRequestBuilder extends BaseActionRequestBui
 
         if (hasParameter("notebookFolder")) {
             request.body.notebookFolder = getParameter("notebookFolder");
+        }
+
+        if (hasParameter("siteCollectionId")) {
+            request.body.siteCollectionId = getParameter("siteCollectionId");
+        }
+
+        if (hasParameter("siteId")) {
+            request.body.siteId = getParameter("siteId");
         }
 
         return request;

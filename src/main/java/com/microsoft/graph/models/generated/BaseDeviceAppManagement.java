@@ -82,6 +82,12 @@ public class BaseDeviceAppManagement extends Entity implements IJsonBackedObject
     public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
     /**
+     * The Vpp Tokens.
+     * List of Vpp tokens for this organization.
+     */
+    public VppTokenCollectionPage vppTokens;
+
+    /**
      * The Managed App Policies.
      * Managed app policies.
      */
@@ -227,6 +233,22 @@ public class BaseDeviceAppManagement extends Entity implements IJsonBackedObject
             }
             response.value = Arrays.asList(array);
             mobileAppConfigurations = new ManagedDeviceMobileAppConfigurationCollectionPage(response, null);
+        }
+
+        if (json.has("vppTokens")) {
+            final BaseVppTokenCollectionResponse response = new BaseVppTokenCollectionResponse();
+            if (json.has("vppTokens@odata.nextLink")) {
+                response.nextLink = json.get("vppTokens@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("vppTokens").toString(), JsonObject[].class);
+            final VppToken[] array = new VppToken[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), VppToken.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            vppTokens = new VppTokenCollectionPage(response, null);
         }
 
         if (json.has("managedAppPolicies")) {

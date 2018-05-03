@@ -42,6 +42,10 @@ public interface IBaseManagedDeviceMobileAppConfigurationRequestBuilder extends 
 
     IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id);
 
+    IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
+
+    IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
+
     IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses();
 
     IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id);

@@ -32,8 +32,10 @@ public class OnenotePageCopyToSectionRequestBuilder extends BaseOnenotePageCopyT
      * @param requestOptions the options for this request
      * @param id the id
      * @param groupId the groupId
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
      */
-    public OnenotePageCopyToSectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId) {
-        super(requestUrl, client, requestOptions, id, groupId);
+    public OnenotePageCopyToSectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String siteCollectionId, final String siteId) {
+        super(requestUrl, client, requestOptions, id, groupId, siteCollectionId, siteId);
     }
 }

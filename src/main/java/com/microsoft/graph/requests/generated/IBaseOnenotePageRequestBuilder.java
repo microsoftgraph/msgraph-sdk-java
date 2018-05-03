@@ -54,7 +54,7 @@ public interface IBaseOnenotePageRequestBuilder extends IRequestBuilder {
 
     IOnenotePageStreamRequestBuilder content();
     IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
-    IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId);
+    IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId);
     IOnenotePagePreviewRequestBuilder preview();
 
 }

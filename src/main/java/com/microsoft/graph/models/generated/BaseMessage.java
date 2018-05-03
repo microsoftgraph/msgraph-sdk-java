@@ -64,6 +64,14 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     public String internetMessageId;
 
     /**
+     * The Internet Message Headers.
+     * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+     */
+    @SerializedName("internetMessageHeaders")
+    @Expose
+    public java.util.List<InternetMessageHeader> internetMessageHeaders;
+
+    /**
      * The Subject.
      * The subject of the message.
      */
@@ -214,6 +222,14 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     @SerializedName("inferenceClassification")
     @Expose
     public InferenceClassificationType inferenceClassification;
+
+    /**
+     * The Flag.
+     * The flag value that indicates the status, start date, due date, or completion date for the message.
+     */
+    @SerializedName("flag")
+    @Expose
+    public FollowupFlag flag;
 
     /**
      * The Attachments.

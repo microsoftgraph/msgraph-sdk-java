@@ -77,6 +77,13 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
 
     IExtensionRequestBuilder extensions(final String id);
 
+    /**
+     * Gets the request builder for OutlookUser
+     *
+     * @return the IOutlookUserRequestBuilder instance
+     */
+    IOutlookUserRequestBuilder outlook();
+
     IMessageCollectionRequestBuilder messages();
 
     IMessageRequestBuilder messages(final String id);
@@ -174,6 +181,10 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IDeviceManagementTroubleshootingEventCollectionRequestBuilder deviceManagementTroubleshootingEvents();
 
     IDeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(final String id);
+
+    IUserActivityCollectionRequestBuilder activities();
+
+    IUserActivityRequestBuilder activities(final String id);
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);

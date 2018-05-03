@@ -81,7 +81,7 @@ public class BaseManagedEBook extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The date and time when teh eBook was last modified.
+     * The date and time when the eBook was last modified.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

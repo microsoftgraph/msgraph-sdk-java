@@ -55,6 +55,23 @@ public class BaseRoleDefinitionWithReferenceRequest extends BaseRequest implemen
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<RoleDefinition> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<RoleDefinition> callback) {
+		send(HttpMethod.PATCH, callback, sourceRoleDefinition);
+	}
+
+	public RoleDefinition patch(final RoleDefinition sourceRoleDefinition) throws ClientException {
+		return send(HttpMethod.PATCH, sourceRoleDefinition);
+	}
+
+
     /**
      * Sets the select clause for the request
      *

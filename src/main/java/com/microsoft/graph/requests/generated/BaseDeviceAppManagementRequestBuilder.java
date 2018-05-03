@@ -75,6 +75,13 @@ public class BaseDeviceAppManagementRequestBuilder extends BaseRequestBuilder im
     public IManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(final String id) {
         return new ManagedDeviceMobileAppConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppConfigurations") + "/" + id, getClient(), null);
     }
+    public IVppTokenCollectionRequestBuilder vppTokens() {
+        return new VppTokenCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens"), getClient(), null);
+    }
+
+    public IVppTokenRequestBuilder vppTokens(final String id) {
+        return new VppTokenRequestBuilder(getRequestUrlWithAdditionalSegment("vppTokens") + "/" + id, getClient(), null);
+    }
     public IManagedAppPolicyCollectionRequestBuilder managedAppPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppPolicies"), getClient(), null);
     }

@@ -41,7 +41,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the group was created.
+     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -89,7 +89,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * The mail alias for the group. This property must be specified when a group is created. Supports $filter.
+     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Supports $filter.
      */
     @SerializedName("mailNickname")
     @Expose
@@ -129,7 +129,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Renewed Date Time.
-     * 
+     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("renewedDateTime")
     @Expose

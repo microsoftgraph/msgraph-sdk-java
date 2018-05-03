@@ -45,6 +45,6 @@ public interface IBaseNotebookRequestBuilder extends IRequestBuilder {
     ISectionGroupCollectionRequestBuilder sectionGroups();
 
     ISectionGroupRequestBuilder sectionGroups(final String id);
-    INotebookCopyNotebookRequestBuilder copyNotebook(final String groupId, final String renameAs, final String notebookFolder);
+    INotebookCopyNotebookRequestBuilder copyNotebook(final String groupId, final String renameAs, final String notebookFolder, final String siteCollectionId, final String siteId);
 
 }

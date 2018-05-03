@@ -31,6 +31,14 @@ import java.util.Map;
 public class BaseDirectoryObject extends Entity implements IJsonBackedObject {
 
 
+    /**
+     * The Deleted Date Time.
+     * 
+     */
+    @SerializedName("deletedDateTime")
+    @Expose
+    public java.util.Calendar deletedDateTime;
+
 
     /**
      * The raw representation of this class

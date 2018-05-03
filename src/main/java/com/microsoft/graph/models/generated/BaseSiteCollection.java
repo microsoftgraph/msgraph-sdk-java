@@ -49,6 +49,14 @@ public class BaseSiteCollection implements IJsonBackedObject {
     @Expose
     public String hostname;
 
+    /**
+     * The Root.
+     * 
+     */
+    @SerializedName("root")
+    @Expose
+    public Root root;
+
 
     /**
      * The raw representation of this class

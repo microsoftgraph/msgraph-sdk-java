@@ -51,7 +51,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Archive Folder.
-     * 
+     * Folder ID of an archive folder for the user.
      */
     @SerializedName("archiveFolder")
     @Expose
@@ -72,6 +72,14 @@ public class BaseMailboxSettings implements IJsonBackedObject {
     @SerializedName("language")
     @Expose
     public LocaleInfo language;
+
+    /**
+     * The Working Hours.
+     * The days of the week and hours in a specific time zone that the user works.
+     */
+    @SerializedName("workingHours")
+    @Expose
+    public WorkingHours workingHours;
 
 
     /**
