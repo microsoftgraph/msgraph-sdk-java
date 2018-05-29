@@ -22,9 +22,9 @@
 
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.authentication.IAuthenticationProvider;
-
 import java.util.concurrent.atomic.AtomicInteger;
+
+import com.microsoft.graph.authentication.IAuthenticationProvider;
 
 /**
  * Mock {@see IAuthenticationProvider}

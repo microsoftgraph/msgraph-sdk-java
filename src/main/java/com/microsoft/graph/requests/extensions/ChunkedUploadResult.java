@@ -5,7 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.models.extensions.UploadSession;
 

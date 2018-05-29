@@ -1,20 +1,21 @@
 package com.microsoft.graph.serializer;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
-import com.microsoft.graph.models.extensions.Drive;
-import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.extensions.FileAttachment;
-import com.microsoft.graph.models.generated.RecurrenceRangeType;
-import com.microsoft.graph.models.generated.BaseRecurrenceRange;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.DateOnly;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.FileAttachment;
+import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.generated.BaseRecurrenceRange;
+import com.microsoft.graph.models.generated.RecurrenceRangeType;
 
 public class DefaultSeralizerTests {
 

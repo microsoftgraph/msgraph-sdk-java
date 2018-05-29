@@ -1,26 +1,9 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.requests.extensions.INotebookCollectionPage;
-import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionPage;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
-import com.microsoft.graph.serializer.AdditionalDataManager;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.models.extensions.Multipart;
-import com.microsoft.graph.models.extensions.Notebook;
-import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.models.extensions.OnenotePage;
-import com.microsoft.graph.models.extensions.OnenotePagePreview;
-import com.microsoft.graph.models.generated.OnenotePatchActionType;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
-import com.microsoft.graph.models.generated.OnenotePatchInsertPosition;
-import com.microsoft.graph.models.extensions.OnenoteSection;
-import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.options.*;
-
-import org.junit.*;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -29,6 +12,30 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
+import com.microsoft.graph.models.extensions.Multipart;
+import com.microsoft.graph.models.extensions.Notebook;
+import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenotePage;
+import com.microsoft.graph.models.extensions.OnenotePagePreview;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
+import com.microsoft.graph.models.extensions.OnenoteSection;
+import com.microsoft.graph.models.extensions.SectionGroup;
+import com.microsoft.graph.models.generated.OnenotePatchActionType;
+import com.microsoft.graph.models.generated.OnenotePatchInsertPosition;
+import com.microsoft.graph.options.HeaderOption;
+import com.microsoft.graph.options.Option;
+import com.microsoft.graph.options.QueryOption;
+import com.microsoft.graph.requests.extensions.INotebookCollectionPage;
+import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionPage;
+import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
+import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
+import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
 
 /**
  * Tests for OneNote API functionality

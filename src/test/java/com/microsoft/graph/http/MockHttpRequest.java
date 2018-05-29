@@ -1,14 +1,13 @@
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
-import com.microsoft.graph.options.HeaderOption;
-import com.microsoft.graph.options.Option;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.options.HeaderOption;
+import com.microsoft.graph.options.Option;
 
 /**
  * Mock for {@see IHttpRequest}

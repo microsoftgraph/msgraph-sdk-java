@@ -1,15 +1,14 @@
 package com.microsoft.graph.extensions;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-import org.junit.After;
-import org.junit.Before;
+import java.lang.reflect.Method;
+
 import org.junit.Test;
 
 import com.microsoft.graph.requests.extensions.IThumbnailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
-
-import java.lang.reflect.Method;
 
 public class IThumbnailSetRequestBuilderTests {
 

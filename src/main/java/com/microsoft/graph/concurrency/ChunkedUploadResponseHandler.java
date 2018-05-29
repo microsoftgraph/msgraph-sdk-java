@@ -42,7 +42,7 @@ import java.io.InputStream;
  * @param <UploadType> the expected uploaded item
  */
 public class ChunkedUploadResponseHandler<UploadType>
-        implements IStatefulResponseHandler<ChunkedUploadResult, UploadType> {
+        implements IStatefulResponseHandler<ChunkedUploadResult<UploadType>, UploadType> {
     /**
      * The expected deserialized upload type
      */

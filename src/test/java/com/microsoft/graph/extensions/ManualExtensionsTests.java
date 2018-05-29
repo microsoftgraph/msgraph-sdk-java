@@ -1,12 +1,6 @@
 package com.microsoft.graph.extensions;
 
-import static org.junit.Assert.*;
-
-import java.util.logging.Logger;
-
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class ManualExtensionsTests {

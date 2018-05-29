@@ -1,15 +1,21 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Calendar;
+import java.util.UUID;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
-import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
-import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
@@ -23,18 +29,12 @@ import com.microsoft.graph.models.extensions.PlannerProgressTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
+import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
+import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-import java.util.Calendar;
-import java.util.UUID;
 
 @Ignore
 public class PlannerTests {
