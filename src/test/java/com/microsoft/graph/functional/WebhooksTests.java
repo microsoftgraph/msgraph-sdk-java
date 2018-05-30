@@ -1,12 +1,14 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.models.extensions.Subscription;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Calendar;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-import java.util.Calendar;
+import com.microsoft.graph.models.extensions.Subscription;
 
 @Ignore
 public class WebhooksTests {

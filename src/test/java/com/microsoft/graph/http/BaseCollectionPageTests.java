@@ -1,17 +1,20 @@
 package com.microsoft.graph.http;
 
-import com.google.gson.JsonObject;
-import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.core.MockBaseClient;
-import com.microsoft.graph.serializer.ISerializer;
-import com.microsoft.graph.serializer.MockSerializer;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.google.gson.JsonObject;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.core.MockBaseClient;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.MockSerializer;
 
 /**
  * Test cases for {@see BaseCollectionPage}

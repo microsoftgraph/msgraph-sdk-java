@@ -1,7 +1,6 @@
 package com.microsoft.graph.http;
 
 import java.io.IOException;
-import java.util.Map;
 
 /**
  * Mock for {@see IConnectionFactory}

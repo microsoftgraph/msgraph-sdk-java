@@ -1,5 +1,19 @@
 package com.microsoft.graph.http;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import org.junit.Before;
+import org.junit.Test;
+
 import com.google.gson.JsonObject;
 //import com.microsoft.graph.BuildConfig;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
@@ -9,21 +23,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.MockBaseClient;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.options.FunctionOption;
-import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.serializer.MockSerializer;
-
-import static org.junit.Assert.*;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicBoolean;
-
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Test cases for {@see BaseRequest}

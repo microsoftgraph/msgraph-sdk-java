@@ -2,7 +2,6 @@ package com.microsoft.graph.requests.extensions;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 
 import java.util.List;
 import java.util.Map;
