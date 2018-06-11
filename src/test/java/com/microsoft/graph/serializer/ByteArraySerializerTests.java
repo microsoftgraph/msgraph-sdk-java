@@ -1,9 +1,8 @@
 package com.microsoft.graph.serializer;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class ByteArraySerializerTests {

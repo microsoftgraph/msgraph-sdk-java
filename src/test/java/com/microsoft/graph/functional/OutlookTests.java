@@ -1,27 +1,27 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.ArrayList;
+
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.Duration;
+
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
+
+//import com.microsoft.graph.extensions.IDirectoryDeletedItemsCollectionPage;
+import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.MeetingTimeSuggestionsResult;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
-
-import org.junit.Test;
-
-//import com.microsoft.graph.extensions.IDirectoryDeletedItemsCollectionPage;
-import com.microsoft.graph.models.extensions.*;
-
-import org.junit.Assert;
-import org.junit.Ignore;
-
-import static org.junit.Assert.*;
-
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.Duration;
-
-import java.util.ArrayList;
 
 @Ignore
 public class OutlookTests {

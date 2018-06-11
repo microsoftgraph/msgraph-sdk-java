@@ -1,5 +1,8 @@
 package com.microsoft.graph.http;
 
+import java.io.BufferedInputStream;
+
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
@@ -7,14 +10,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.MockSerializer;
-import com.google.gson.JsonObject;
-
-import java.io.BufferedInputStream;
 
 /**
  * Mock for {@see IHttpProvider}

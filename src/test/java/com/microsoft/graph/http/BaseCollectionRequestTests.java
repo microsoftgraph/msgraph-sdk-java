@@ -1,5 +1,16 @@
 package com.microsoft.graph.http;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Before;
+import org.junit.Test;
+
 import com.google.gson.JsonObject;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.MockExecutors;
@@ -9,15 +20,6 @@ import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.serializer.MockSerializer;
-
-import static org.junit.Assert.*;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.junit.Before;
-import org.junit.Test;
 
 /**
  * Test cases for {@see BaseCollectionRequest}
