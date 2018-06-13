@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.http.MockConnection;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Attachment;
@@ -17,7 +19,7 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.BaseRecurrenceRange;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 
-public class DefaultSeralizerTests {
+public class DefaultSerializerTests {
 
 	/**
      * Make sure that deserializing a Drive also returns members from BaseDrive
@@ -85,7 +87,7 @@ public class DefaultSeralizerTests {
 		assertEquals("value1", responseHeader.getAsJsonArray().get(0).getAsString());
 	}
 
-  @Test
+    @Test
 	public void testDeserializeDerivedType() throws Exception {
 		final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
 		String source = "{\"@odata.context\": \"/attachments/$entity\",\"@odata.type\": \"#microsoft.graph.fileAttachment\",\"id\": \"AAMkAGQ0MjBmNWVkLTYxZjUtNDRmYi05Y2NiLTBlYjIwNzJjNmM1NgBGAAAAAAC6ff7latYeQqu_gLrhSAIhBwCF7iGjpaOmRqVwbZc-xXzwAAAAAAEMAACF7iGjpaOmRqVwbZc-xXzwAABQStA0AAABEgAQAFbGmeisbjtLnQdp7kC_9Fk=\",\"lastModifiedDateTime\": \"2018-01-23T21:50:22Z\",\"name\": \"Test Book.xlsx\",\"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\"size\": 8457,\"isInline\": false,\"contentId\": null,\"contentLocation\": null,\"contentBytes\": \"bytedata\"}";
@@ -99,4 +101,29 @@ public class DefaultSeralizerTests {
 		assertNotNull(o);
 		assertEquals("#microsoft.graph.fileAttachment", o. get("@odata.type").getAsString());
 	}
+  
+    @Test
+    public void testSerializerCanSerializeVoidWithoutEmittingWarning() {
+        // Unfortunately does not assert for existence of Java 9 illegal access warnings
+        // which seem to written to the console without use of System.err/System.out (so cannot be captured AFAIK). 
+        // @davidmoten
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        HasVoidMember t = new HasVoidMember();
+        String json = serializer.serializeObject(t);
+        // this line will emit a warning from Java 9 about illegal access to the constructor of Void 
+        // if gson TypeAdapterFactory is not handling Void properly
+        HasVoidMember t2 = serializer.deserializeObject(json, HasVoidMember.class);
+        assertEquals(t.x, t2.x);
+        assertEquals(t.y, t2.y);
+    }
+  
+  public static final class HasVoidMember {
+      @SerializedName("x")
+      @Expose
+      int x = 1;
+      
+      @SerializedName("y")
+      @Expose
+      Void y;
+  }
 }
