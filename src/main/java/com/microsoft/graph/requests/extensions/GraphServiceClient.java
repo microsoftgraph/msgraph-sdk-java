@@ -4,16 +4,17 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.authentication.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.logger.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.requests.generated.*;
-import com.microsoft.graph.serializer.*;
-
 import com.google.gson.JsonObject;
+import com.microsoft.graph.authentication.IAuthenticationProvider;
+import com.microsoft.graph.concurrency.IExecutors;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.DefaultClientConfig;
+import com.microsoft.graph.core.IClientConfig;
+import com.microsoft.graph.http.IHttpProvider;
+import com.microsoft.graph.logger.ILogger;
+import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.requests.generated.BaseGraphServiceClient;
+import com.microsoft.graph.serializer.ISerializer;
 
 // This file is available for extending, afterwards please submit a pull request.
 
