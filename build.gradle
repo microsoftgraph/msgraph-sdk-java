@@ -55,7 +55,7 @@ publishing {
 
             artifactId 'microsoft-graph'
 
-            version '${mavenMajorVersion}.${mavenMinorVersion}-SNAPSHOT'
+            version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
 
             from components.java
 
@@ -88,7 +88,7 @@ def getVersionCode() {
 }
 
 def getVersionName() {
-    return "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
+    return "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
 }
 
 uploadArchives {
