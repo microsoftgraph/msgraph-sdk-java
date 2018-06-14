@@ -4,12 +4,12 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.google.gson.JsonElement;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.serializer.*;
-
 import java.security.InvalidParameterException;
 // This file is available for extending, afterwards please submit a pull request.
+
+import com.google.gson.JsonElement;
+import com.microsoft.graph.models.generated.BasePlannerExternalReferences;
+import com.microsoft.graph.serializer.ISerializer;
 
 /**
  * The class for the Planner External References.
