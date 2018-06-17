@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.models.extensions;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import com.microsoft.graph.models.generated.BaseIdentity;
 
 // This file is available for extending, afterwards please submit a pull request.
@@ -13,4 +15,7 @@ import com.microsoft.graph.models.generated.BaseIdentity;
  */
 public class Identity extends BaseIdentity {
 
+    @SerializedName("email")
+    @Expose
+    public String email;
 }
