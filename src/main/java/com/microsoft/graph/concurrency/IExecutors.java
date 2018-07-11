@@ -67,4 +67,9 @@ public interface IExecutors {
      */
     <Result> void performOnForeground(final ClientException exception,
                                       final ICallback<Result> callback);
+    
+    /**
+     * Shuts down the background executors
+     */
+    void shutDownBackgroundExecutors();
 }

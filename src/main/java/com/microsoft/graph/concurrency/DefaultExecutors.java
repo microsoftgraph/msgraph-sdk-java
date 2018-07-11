@@ -144,5 +144,8 @@ public class DefaultExecutors implements IExecutors {
     public ILogger getLogger() {
         return logger;
     }
-
+    
+    public void shutDownBackgroundExecutors() {
+    	this.backgroundExecutor.shutdown();
+    }
 }
