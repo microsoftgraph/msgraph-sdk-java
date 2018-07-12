@@ -34,6 +34,7 @@ public class GraphErrorResponse implements IJsonBackedObject {
     private AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
 
     @SerializedName("error")
+    @Expose()
     public GraphError error;
 
     /**
