@@ -24,7 +24,10 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseDriveItemDeltaCo
      * @param token the token
      */
     public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String token) {
-        super(requestUrl, client, requestOptions, token);
+        super(requestUrl, client, requestOptions);
+        if(token != null) {
+            functionOptions.add(new FunctionOption("token", token));
+        }
     }
 
     /**
