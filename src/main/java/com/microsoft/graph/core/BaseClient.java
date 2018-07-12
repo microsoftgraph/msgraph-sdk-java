@@ -174,7 +174,7 @@ public abstract class BaseClient implements IBaseClient {
         this.serializer = serializer;
     }
     
-    public void shutDown() {
-    	this.executors.shutDownBackgroundExecutors();
+    public void shutdown() {
+    	this.executors.shutdownBackgroundExecutors();
     }
 }

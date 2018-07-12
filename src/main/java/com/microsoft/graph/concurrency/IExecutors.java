@@ -71,5 +71,5 @@ public interface IExecutors {
     /**
      * Shuts down the background executors
      */
-    void shutDownBackgroundExecutors();
+    void shutdownBackgroundExecutors();
 }

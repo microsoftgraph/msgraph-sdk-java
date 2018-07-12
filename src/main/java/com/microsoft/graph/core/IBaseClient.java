@@ -90,5 +90,5 @@ public interface IBaseClient {
     /*
      * Shuts down the executors.
      */
-    void shutDown();
+    void shutdown();
 }
