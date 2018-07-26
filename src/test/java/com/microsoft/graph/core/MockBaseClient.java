@@ -78,5 +78,9 @@ public class MockBaseClient implements IBaseClient {
     public void setSerializer(final ISerializer serializer) {
         mSerializer = serializer;
     }
+    
+    public void shutdown() {
+    	
+    }
 
 }

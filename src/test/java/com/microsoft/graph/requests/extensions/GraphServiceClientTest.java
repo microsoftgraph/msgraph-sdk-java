@@ -111,6 +111,11 @@ public class GraphServiceClientTest {
                     ICallback<Result> callback) {
                 // do nothing
             }
+            
+            @Override
+            public void shutdownBackgroundExecutors() {
+            	
+            }
 
         };
         IGraphServiceClient client = GraphServiceClient.builder() //
