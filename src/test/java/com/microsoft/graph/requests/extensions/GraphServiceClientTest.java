@@ -114,7 +114,7 @@ public class GraphServiceClientTest {
             
             @Override
             public void shutdownBackgroundExecutors() {
-            	
+            	// do nothing
             }
 
         };
