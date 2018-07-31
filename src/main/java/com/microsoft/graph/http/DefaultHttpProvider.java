@@ -414,7 +414,7 @@ public class DefaultHttpProvider implements IHttpProvider {
         	in = new ByteArrayInputStream("{}".getBytes(ENCODING_TYPE));
         }
         catch(UnsupportedEncodingException ex) {
-        	ex.printStackTrace();
+        	logger.logError(ex.getMessage(), ex);
         }
         
     	return handleJsonResponse(in, responseHeaders, clazz);
