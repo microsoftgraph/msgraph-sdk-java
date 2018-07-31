@@ -347,6 +347,11 @@ public class DefaultHttpProvider implements IHttpProvider {
             final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
             logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
+        } catch (final UnsupportedEncodingException ex) {
+        	final ClientException clientException = new ClientException("Unsupported encoding",
+                    ex);
+            logger.logError("Unsupported encoding exception " + ex.getMessage(), ex);
+            throw clientException;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
                     ex);
@@ -410,15 +415,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
     		throws UnsupportedEncodingException{
     	//Create an empty object to attach the response headers to
-    	InputStream in = null;
-    	try{
-        	in = new ByteArrayInputStream("{}".getBytes(ENCODING_TYPE));
-        }
-        catch(UnsupportedEncodingException ex) {
-        	logger.logError(ex.getMessage(), ex);
-        	throw ex;
-        }
-        
+    	InputStream in = new ByteArrayInputStream("{}".getBytes(ENCODING_TYPE));
     	return handleJsonResponse(in, responseHeaders, clazz);
     }
 
