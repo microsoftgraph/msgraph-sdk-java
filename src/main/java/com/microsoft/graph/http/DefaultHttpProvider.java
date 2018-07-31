@@ -39,6 +39,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +59,11 @@ public class DefaultHttpProvider implements IHttpProvider {
      * The content type for JSON responses
      */
     static final String JSON_CONTENT_TYPE = "application/json";
+    
+    /**
+     * The encoding type for getBytes
+     */
+    static final String ENCODING_TYPE = "UTF-8";
 
     /**
      * The serializer
@@ -254,7 +260,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else {
                     logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = serializer.serializeObject(serializable);
-                    bytesToWrite = serializeObject.getBytes("UTF-8");
+                    bytesToWrite = serializeObject.getBytes(ENCODING_TYPE);
 
                     // If the user hasn't specified a Content-Type for the request
                     if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
@@ -403,7 +409,13 @@ public class DefaultHttpProvider implements IHttpProvider {
      */
     private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
     	//Create an empty object to attach the response headers to
-        InputStream in = new ByteArrayInputStream("{}".getBytes());
+    	InputStream in = null;
+    	try{
+        	in = new ByteArrayInputStream("{}".getBytes(ENCODING_TYPE));
+        }
+        catch(UnsupportedEncodingException ex) {
+        	ex.printStackTrace();
+        }
         
     	return handleJsonResponse(in, responseHeaders, clazz);
     }
