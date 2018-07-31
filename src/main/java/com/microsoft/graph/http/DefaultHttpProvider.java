@@ -407,7 +407,8 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @param clazz           the type of the response object
      * @return                the JSON object
      */
-    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
+    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
+    		throws UnsupportedEncodingException{
     	//Create an empty object to attach the response headers to
     	InputStream in = null;
     	try{
@@ -415,6 +416,7 @@ public class DefaultHttpProvider implements IHttpProvider {
         }
         catch(UnsupportedEncodingException ex) {
         	logger.logError(ex.getMessage(), ex);
+        	throw ex;
         }
         
     	return handleJsonResponse(in, responseHeaders, clazz);
