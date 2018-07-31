@@ -254,7 +254,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else {
                     logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = serializer.serializeObject(serializable);
-                    bytesToWrite = serializeObject.getBytes();
+                    bytesToWrite = serializeObject.getBytes("UTF-8");
 
                     // If the user hasn't specified a Content-Type for the request
                     if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
