@@ -63,7 +63,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     /**
      * The encoding type for getBytes
      */
-    static final String ENCODING_TYPE = "UTF-8";
+    static final String JSON_ENCODING = "UTF-8";
 
     /**
      * The serializer
@@ -260,7 +260,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else {
                     logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = serializer.serializeObject(serializable);
-                    bytesToWrite = serializeObject.getBytes(ENCODING_TYPE);
+                    bytesToWrite = serializeObject.getBytes(JSON_ENCODING);
 
                     // If the user hasn't specified a Content-Type for the request
                     if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
@@ -348,9 +348,9 @@ public class DefaultHttpProvider implements IHttpProvider {
             logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
         } catch (final UnsupportedEncodingException ex) {
-        	final ClientException clientException = new ClientException("Unsupported encoding",
+        	final ClientException clientException = new ClientException("Unsupported encoding problem: ",
                     ex);
-            logger.logError("Unsupported encoding exception " + ex.getMessage(), ex);
+            logger.logError("Unsupported encoding problem: " + ex.getMessage(), ex);
             throw clientException;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
@@ -415,7 +415,7 @@ public class DefaultHttpProvider implements IHttpProvider {
     private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
     		throws UnsupportedEncodingException{
     	//Create an empty object to attach the response headers to
-    	InputStream in = new ByteArrayInputStream("{}".getBytes(ENCODING_TYPE));
+    	InputStream in = new ByteArrayInputStream("{}".getBytes(JSON_ENCODING));
     	return handleJsonResponse(in, responseHeaders, clazz);
     }
 
