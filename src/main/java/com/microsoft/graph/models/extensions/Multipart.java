@@ -19,6 +19,10 @@ import com.microsoft.graph.options.HeaderOption;
 public class Multipart {
 	private String boundary;
 	private static final String RETURN = "\r\n";
+	/**
+     * The encoding type for getBytes
+     */
+    static final String JSON_ENCODING = "UTF-8";
 	private ByteArrayOutputStream out;
 	
 	/**
@@ -53,7 +57,7 @@ public class Multipart {
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addPart(String name, String contentType, String content) throws IOException {
-		addPart(name, contentType, content.getBytes());
+		addPart(name, contentType, content.getBytes(JSON_ENCODING));
 	}
 	
 	/**
@@ -69,10 +73,10 @@ public class Multipart {
 				"Content-Disposition:form-data; name=\"" + name + "\"" + RETURN +
 				"Content-Type:" + contentType + RETURN +
 				RETURN;
-		out.write(partContent.getBytes());
+		out.write(partContent.getBytes(JSON_ENCODING));
 		out.write(byteArray);
 		String returnContent = RETURN + RETURN;
-		out.write(returnContent.getBytes());
+		out.write(returnContent.getBytes(JSON_ENCODING));
 	}
 	
 	/**
@@ -121,7 +125,7 @@ public class Multipart {
 	 */
 	public byte[] content() throws IOException {
 		ByteArrayOutputStream finalStream = out;
-		finalStream.write(addEnding().getBytes());
+		finalStream.write(addEnding().getBytes(JSON_ENCODING));
 		return finalStream.toByteArray();
 	}
 	

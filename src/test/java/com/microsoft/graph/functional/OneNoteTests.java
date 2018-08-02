@@ -10,6 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +50,10 @@ public class OneNoteTests {
     private OnenotePage testPage;
     private OnenoteSection testSection;
     private SectionGroup testSectionGroup2;
+    /**
+     * The encoding type for getBytes
+     */
+    static final String JSON_ENCODING = "UTF-8";
 
     @Before
     public void setUp() {
@@ -291,7 +296,7 @@ public class OneNoteTests {
      * @throws InterruptedException
      */
     @Test
-    public void testPostToNotebook() throws InterruptedException {
+    public void testPostToNotebook() throws InterruptedException, UnsupportedEncodingException {
         SectionGroup sectionGroupData = new SectionGroup();
         
         // Currently, there is no way to delete sections or section groups, so let's create a random one
@@ -319,7 +324,7 @@ public class OneNoteTests {
         // Test HTML content
         String content = "<html><head><title>Test Title</title></head><body>Test body</body></html>";
 
-        byte[] pageStream = content.getBytes();
+        byte[] pageStream = content.getBytes(JSON_ENCODING);
         List<Option> options = new ArrayList<Option>();
         options.add(new HeaderOption("Content-Type", "application/xhtml+xml"));
         OnenotePage page = orb
