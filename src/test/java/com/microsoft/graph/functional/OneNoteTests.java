@@ -294,6 +294,7 @@ public class OneNoteTests {
     /**
      * Test posting a page stream to a page
      * @throws InterruptedException
+     * @throws UnsupportedEncodingException
      */
     @Test
     public void testPostToNotebook() throws InterruptedException, UnsupportedEncodingException {
