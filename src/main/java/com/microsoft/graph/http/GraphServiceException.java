@@ -152,6 +152,15 @@ public class GraphServiceException extends ClientException {
     public String getMessage() {
         return getMessage(verbose);
     }
+    
+    /**
+     * Gets the The HTTP status code
+     *
+     * @return The HTTP status response code
+     */
+    public int getResponseCode() {
+    	return responseCode;
+    }
 
     /**
      * Gets the message for this exception
