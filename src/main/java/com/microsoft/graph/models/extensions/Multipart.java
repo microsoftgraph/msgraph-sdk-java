@@ -20,9 +20,17 @@ public class Multipart {
 	private String boundary;
 	private static final String RETURN = "\r\n";
 	/**
-     * The encoding type for getBytes
+     * The text encoding type for getBytes
      */
-    static final String JSON_ENCODING = "UTF-8";
+    static final String TEXT_ENCODING = "UTF-8";
+    /**
+     * The file encoding type in getBytes
+     * Encoding used for files{image, pdf, etc} is UTF-8 because
+     * https://developer.microsoft.com/en-us/graph/docs/concepts/onenote_images_files#add-a-file-attachment
+     * mentions "send the binary data, don't use Base64 or otherwise encode it"
+     * Also, https://en.wikipedia.org/wiki/MIME#Multipart_messages explains 7bit, 8bit or binary like UTF-8.
+     */
+    static final String FILE_ENCODING = "UTF-8";
 	private ByteArrayOutputStream out;
 	
 	/**
@@ -57,7 +65,7 @@ public class Multipart {
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addPart(String name, String contentType, String content) throws IOException {
-		addPart(name, contentType, content.getBytes(JSON_ENCODING));
+		addPart(name, contentType, content.getBytes(TEXT_ENCODING));
 	}
 	
 	/**
@@ -73,10 +81,10 @@ public class Multipart {
 				"Content-Disposition:form-data; name=\"" + name + "\"" + RETURN +
 				"Content-Type:" + contentType + RETURN +
 				RETURN;
-		out.write(partContent.getBytes(JSON_ENCODING));
+		out.write(partContent.getBytes(FILE_ENCODING));
 		out.write(byteArray);
 		String returnContent = RETURN + RETURN;
-		out.write(returnContent.getBytes(JSON_ENCODING));
+		out.write(returnContent.getBytes(FILE_ENCODING));
 	}
 	
 	/**
@@ -125,7 +133,7 @@ public class Multipart {
 	 */
 	public byte[] content() throws IOException {
 		ByteArrayOutputStream finalStream = out;
-		finalStream.write(addEnding().getBytes(JSON_ENCODING));
+		finalStream.write(addEnding().getBytes(FILE_ENCODING));
 		return finalStream.toByteArray();
 	}
 	

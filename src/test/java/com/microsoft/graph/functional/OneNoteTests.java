@@ -51,9 +51,11 @@ public class OneNoteTests {
     private OnenoteSection testSection;
     private SectionGroup testSectionGroup2;
     /**
-     * The encoding type for getBytes
+     * The html encoding type for getBytes
+     * The W3C recommends UTF-8 as the default encoding in XML and HTML.
+     * reference : https://en.wikipedia.org/wiki/UTF-8
      */
-    static final String JSON_ENCODING = "UTF-8";
+    static final String HTML_ENCODING = "UTF-8";
 
     @Before
     public void setUp() {
@@ -325,7 +327,7 @@ public class OneNoteTests {
         // Test HTML content
         String content = "<html><head><title>Test Title</title></head><body>Test body</body></html>";
 
-        byte[] pageStream = content.getBytes(JSON_ENCODING);
+        byte[] pageStream = content.getBytes(HTML_ENCODING);
         List<Option> options = new ArrayList<Option>();
         options.add(new HeaderOption("Content-Type", "application/xhtml+xml"));
         OnenotePage page = orb
@@ -406,10 +408,10 @@ public class OneNoteTests {
                     "</head>\r\n" +
                     "<body>\r\n" +
                     "<p>\r\n" +
-                    "<img src=\"name:image\" />\r\n" +
+                    "<img src=\"name:hamilton\" />\r\n" +
                     "</p>\r\n" +
                     "<p>\r\n" +
-                    "<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
+                    "<object data=\"name:metadata\" data-attachment=\"document.pdf\" /></p>\r\n" +
                     "\r\n" +
                     "</body>\r\n" +
                     "</html>";
