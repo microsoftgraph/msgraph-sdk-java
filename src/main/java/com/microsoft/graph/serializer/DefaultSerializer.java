@@ -148,7 +148,8 @@ public class DefaultSerializer implements ISerializer {
                     setChildAdditionalData((IJsonBackedObject) fieldObject,rawJson.get(field.getName()).getAsJsonObject());
                 }
             } catch (IllegalArgumentException | IllegalAccessException e) {
-                logger.logError("Unable to access child fields of " + serializedObject.getClass().getSimpleName(), e);
+                //Not throwing the IllegalArgumentException as the Serialized Object would still be usable even if the additional data is not set.
+                logger.logError("Unable to set child fields of " + serializedObject.getClass().getSimpleName(), e);
             }
         }
     }

@@ -5,8 +5,10 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.logger.DefaultLogger;
+import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
@@ -47,6 +49,15 @@ public class AdditionalDataTests {
 		String serializedObject = serializer.serializeObject(user);
 		
 		assertEquals("{\"manager\":{\"id\":\"1\",\"additionalData\":\"additionalValue\"},\"id\":\"2\"}", serializedObject);
+	}
+
+	@Test
+	public void testChildAdditionalDataDeserialization() {
+		String source = "{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#drives/$entity\",\"id\":\"8bf6ae90006c4a4c\",\"driveType\":\"personal\",\"owner\":{\"user\":{\"displayName\":\"Peter\",\"id\":\"8bf6ae90006c4a4c\",\"email\":\"petertest@onmicrosoft.com\"}},\"quota\":{\"deleted\":1485718314,\"remaining\":983887466461,\"state\":\"normal\",\"total\":1142461300736,\"used\":158573834275}}";
+		Drive result = serializer.deserializeObject(source, Drive.class);
+		JsonElement email = result.owner.user.additionalDataManager().get("email");
+
+		assertEquals("\"petertest@onmicrosoft.com\"",email.toString());
 	}
 	
 	@Test
