@@ -64,7 +64,7 @@ public class EnumSetSerializer {
     public static JsonPrimitive serialize(EnumSet<?> src) {
         String serializedString = "";
 
-        Iterator i = src.iterator();
+        Iterator<?> i = src.iterator();
         while (i.hasNext()) {
             serializedString += i.next().toString() + ",";
         }
