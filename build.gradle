@@ -19,6 +19,7 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -69,7 +70,7 @@ publishing {
 
         }
         
-      mavenJava(MavenPublication) {
+        mavenJava(MavenPublication) {
         	customizePom(pom)
         	groupId 'com.microsoft.graph'
         	artifactId 'microsoft-graph'
@@ -80,10 +81,10 @@ publishing {
         		writeTo(pomFile)
         		def pomAscFile = signing.sign(pomFile).signatureFiles[0]
         		artifact(pomAscFile) {
-        			classifier = null
-        			extension = 'pom.asc'
-        		}
-        	}//pom.withXml
+                    classifier = null
+                    extension = 'pom.asc'
+                }
+        	}
         	artifact(sourceJar) {
         		classifier = 'sources'
         	}
@@ -92,7 +93,7 @@ publishing {
         	}
         	project.tasks.signArchives.signatureFiles.each {
         		artifact(it) {
-        			def matcher = it.file =~/-(sources|javadoc)\.jar\.asc$/
+        			def matcher = it.file =~ /-(sources|javadoc)\.jar\.asc$/
         			if(matcher.find()){
         				classifier = matcher.group(1)
         			}
@@ -100,21 +101,20 @@ publishing {
         				classifier = null
         			}
         			extension = 'jar.asc'
-				}//artifact
+				}
 			}
-		}//mavenJava  
-
-    }//publications
+		}
+    }
 	repositories {
         maven {
-            url "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+            url "https://oss.sonatype.org/content/repositories/snapshots"
             credentials {
-                username sonatypeUsername
-                password sonatypePassword
+                username = project.property('sonatypeUsername')
+                password = project.property('sonatypePassword')
             }
         }
     }
-}//publishing
+}
 
 task sourceJar(type: Jar) {
   classifier = 'sources'
@@ -203,12 +203,10 @@ def customizePom(pom) {
     pom.withXml {
         def root = asNode()
 
-        // eliminate test-scoped dependencies (no need in maven central POMs)
         root.dependencies.removeAll { dep ->
             dep.scope == "test"
         }
 
-        // add all items necessary for maven central publication
         root.children().last() + {
             resolveStrategy = Closure.DELEGATE_FIRST
 
@@ -232,14 +230,26 @@ def customizePom(pom) {
             }
             scm {
                 url 'https://github.com/microsoftgraph/msgraph-sdk-java'
-            	connection 'scm:git:git@github.com:microsoftgraph/msgraph-sdk-java.git'
+            	connection 'scm:git:git://github.com/microsoftgraph/msgraph-sdk-java.git'
             	developerConnection 'scm:git:ssh://git@github.com:microsoftgraph/msgraph-sdk-java.git'
             }
             developers {
                 developer {
-                    name 'Mautini'
+                    name 'Microsoft'
                 }
             }
         }
+    }
+}
+
+model {
+    tasks.generatePomFileForMavenJavaPublication {
+        destination = file("$buildDir/generated-pom.xml")
+    }
+    tasks.publishMavenJavaPublicationToMavenLocal {
+        dependsOn project.tasks.signArchives
+    }
+    tasks.publishMavenJavaPublicationToMavenRepository {
+        dependsOn project.tasks.signArchives
     }
 }
