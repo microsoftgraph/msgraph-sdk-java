@@ -91,7 +91,6 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * Posts this request
      *
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
      * @param <BodyType>       the type of the serialized body
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
