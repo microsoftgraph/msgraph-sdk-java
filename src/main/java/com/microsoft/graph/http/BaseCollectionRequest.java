@@ -35,10 +35,9 @@ import java.util.List;
 /**
  * A request against a collection
  *
- * @param <T1> the raw response class returned by the service
- * @param <T2> the class of the collection page
+ * @param <T> the type of the object in the collection 
  */
-public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
+public abstract class BaseCollectionRequest<T> implements IHttpRequest {
 
     /**
      * The base request for this collection request
@@ -48,7 +47,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     /**
      * The class for the response
      */
-    private final Class<T1> responseClass;
+    private final Class<? extends ICollectionResponse<T>> responseClass;
 
     /**
      * The class for the collection page
@@ -68,7 +67,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     public BaseCollectionRequest(final String requestUrl,
                                  final IBaseClient client,
                                  final List<? extends Option> options,
-                                 final Class<T1> responseClass,
+                                 final Class<? extends ICollectionResponse<T>> responseClass,
                                  final Class<T2> collectionPageClass) {
         this.responseClass = responseClass;
         this.collectionPageClass = collectionPageClass;
@@ -82,7 +81,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    protected T1 send() throws ClientException {
+    protected ICollectionResponse<T> send() throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.GET);
         return baseRequest.getClient().getHttpProvider().send(this, responseClass, /* serialization object */ null);
     }
@@ -96,8 +95,7 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> T1 post(final T2 serializedObject) throws ClientException {
+    protected T1 post(final T serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
         return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
     }

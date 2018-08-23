@@ -26,7 +26,7 @@ import com.google.gson.annotations.*;
 /**
  * The class for the Base User Collection Response.
  */
-public class BaseUserCollectionResponse implements IJsonBackedObject {
+public class BaseUserCollectionResponse implements ICollectionResponse<User>, IJsonBackedObject {
 
     /**
      * The list of User within this collection page
@@ -34,6 +34,11 @@ public class BaseUserCollectionResponse implements IJsonBackedObject {
     @SerializedName("value")
     @Expose
     public java.util.List<User> value;
+    
+    @Override
+    public java.util.List<User> values() {
+        return value;
+    }
 
     /**
      * The URL to the next page of this collection, or null
