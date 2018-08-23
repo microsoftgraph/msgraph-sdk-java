@@ -23,7 +23,7 @@ import java.util.EnumSet;
 /**
  * The class for the Base User Collection Request.
  */
-public class BaseUserCollectionRequest extends BaseCollectionRequest<BaseUserCollectionResponse, IUserCollectionPage> implements IBaseUserCollectionRequest {
+public class BaseUserCollectionRequest extends BaseCollectionRequest<User> implements IBaseUserCollectionRequest {
 
     /**
      * The request builder for this collection of User
