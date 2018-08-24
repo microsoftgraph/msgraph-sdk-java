@@ -25,7 +25,40 @@ dependency {
 }
 ```
 
-### 1.2 Enable ProGuard (Android)
+### 1.2 Install via Maven
+Add the dependency in `dependencies` and profiles in `project` in pom.xml
+```dependency
+<dependency>
+	<groupId>com.microsoft.graph</groupId>
+	<artifactId>microsoft-graph</artifactId>
+	<version>0.3.0-SNAPSHOT</version>
+</dependency>
+```
+
+```profiles
+<profiles>
+	<profile>
+		<id>allow-snapshots</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<repositories>
+			<repository>
+				<id>snapshots-repo</id>
+				<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+				<releases>
+					<enabled>false</enabled>
+				</releases>
+				<snapshots>
+					<enabled>true</enabled>
+				</snapshots>
+			</repository>
+		</repositories>
+	</profile>
+</profiles>
+```	
+
+### 1.3 Enable ProGuard (Android)
 The nature of the Graph API is such that the SDK needs quite a large set of classes to describe its functionality. You need to ensure that [ProGuard](https://developer.android.com/studio/build/shrink-code.html) is enabled on your project. Otherwise, you will incur long build times for functionality that is not necessarily relevant to your particular application. If you are still hitting the 64K method limit, you can also enable [multidexing](https://developer.android.com/studio/build/multidex.html).
 
 ## 2. Getting started
