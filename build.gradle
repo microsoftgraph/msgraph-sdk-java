@@ -91,7 +91,8 @@ publishing {
         	artifact(javadocJar) {
         		classifier = 'javadoc'
         	}
-        	project.tasks.signArchives.signatureFiles.each {
+        	//Uncomment below to publish to maven central
+        	/*project.tasks.signArchives.signatureFiles.each {
         		artifact(it) {
         			def matcher = it.file =~ /-(sources|javadoc)\.jar\.asc$/
         			if(matcher.find()){
@@ -102,7 +103,7 @@ publishing {
         			}
         			extension = 'jar.asc'
 				}
-			}
+			}*/
 		}
     }
 	repositories {
@@ -196,7 +197,8 @@ artifacts {
 }
 
 signing {
-	sign configurations.archives
+	//Uncomment below to publish to maven central
+	//sign configurations.archives
 }
 
 def customizePom(pom) {
