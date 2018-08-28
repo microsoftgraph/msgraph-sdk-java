@@ -3,19 +3,36 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.WindowsInformationProtectionEnforcementLevel;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionDataRecoveryCertificate;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionProxiedDomainCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionIPRangeCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
+import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
+import com.microsoft.graph.models.extensions.ManagedAppPolicy;
+import com.microsoft.graph.requests.generated.BaseWindowsInformationProtectionAppLockerFileCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
+import com.microsoft.graph.requests.generated.BaseWindowsInformationProtectionAppLockerFileCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
+import com.microsoft.graph.requests.generated.BaseTargetedManagedAppPolicyAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -33,7 +50,7 @@ public class BaseWindowsInformationProtection extends ManagedAppPolicy implement
 
     /**
      * The Enforcement Level.
-     * WIP enforcement level.See the Enum definition for supported values Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
+     * WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
      */
     @SerializedName("enforcementLevel")
     @Expose

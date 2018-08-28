@@ -33,7 +33,9 @@ public class BaseDeviceCompliancePolicyAssignCollectionRequestBuilder extends Ba
      */
     public BaseDeviceCompliancePolicyAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DeviceCompliancePolicyAssignment> assignments) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("assignments", assignments);
+  	 if(assignments!=null){
+			bodyParams.put("assignments", assignments);
+		}
       }
 
     public IDeviceCompliancePolicyAssignCollectionRequest buildRequest() {

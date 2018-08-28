@@ -3,19 +3,67 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.GroupSetting;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.ConversationThread;
+import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Conversation;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.PlannerGroup;
+import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.generated.BaseGroupSettingCollectionResponse;
+import com.microsoft.graph.requests.extensions.GroupSettingCollectionPage;
+import com.microsoft.graph.requests.generated.BaseExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseConversationThreadCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
+import com.microsoft.graph.requests.generated.BaseEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.generated.BaseEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.generated.BaseConversationCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConversationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseProfilePhotoCollectionResponse;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDriveCollectionResponse;
+import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSiteCollectionResponse;
+import com.microsoft.graph.requests.extensions.SiteCollectionPage;
+import com.microsoft.graph.requests.generated.BaseGroupLifecyclePolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -41,7 +89,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the group was created.
+     * Timestamp of when the group was created. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -89,7 +137,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * The mail alias for the group. This property must be specified when a group is created. Supports $filter.
+     * The mail alias for the group, unique in the organization. This property must be specified when a group is created. Supports $filter.
      */
     @SerializedName("mailNickname")
     @Expose
@@ -102,6 +150,14 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
     public java.util.Calendar onPremisesLastSyncDateTime;
+
+    /**
+     * The On Premises Provisioning Errors.
+     * 
+     */
+    @SerializedName("onPremisesProvisioningErrors")
+    @Expose
+    public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
 
     /**
      * The On Premises Security Identifier.
@@ -129,7 +185,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Renewed Date Time.
-     * 
+     * Timestamp of when the group was last renewed. This cannot be modified directly and is only updated via the renew service action. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("renewedDateTime")
     @Expose

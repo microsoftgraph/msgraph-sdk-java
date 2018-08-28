@@ -3,19 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.RatingUnitedKingdomMoviesType;
+import com.microsoft.graph.models.generated.RatingUnitedKingdomTelevisionType;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -43,7 +40,7 @@ public class BaseMediaContentRatingUnitedKingdom implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for United Kingdom Possible values are: allAllowed, allBlocked, general, universalChildren, parentalGuidance, agesAbove12Video, agesAbove12Cinema, agesAbove15, adults.
+     * Movies rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, general, universalChildren, parentalGuidance, agesAbove12Video, agesAbove12Cinema, agesAbove15, adults.
      */
     @SerializedName("movieRating")
     @Expose
@@ -51,7 +48,7 @@ public class BaseMediaContentRatingUnitedKingdom implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for United Kingdom Possible values are: allAllowed, allBlocked, caution.
+     * TV rating selected for United Kingdom. Possible values are: allAllowed, allBlocked, caution.
      */
     @SerializedName("tvRating")
     @Expose

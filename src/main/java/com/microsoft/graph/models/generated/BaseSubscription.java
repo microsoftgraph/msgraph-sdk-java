@@ -3,19 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Entity;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -33,7 +29,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Specifies the resource that will be monitored for changes. Do not include the base URL ("https://graph.microsoft.com/v1.0/").
+     * Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/{version}/).
      */
     @SerializedName("resource")
     @Expose
@@ -41,7 +37,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Type.
-     * Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.
+     * Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list. Drive root Item notifications require the use of updated only.
      */
     @SerializedName("changeType")
     @Expose
@@ -49,7 +45,7 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Client State.
-     * Specifies the value of the clientState property sent by the service in each notification. The maximum length is 128 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
+     * Specifies the value of the clientState property sent by the service in each notification. The maximum length is 255 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
      */
     @SerializedName("clientState")
     @Expose
@@ -70,6 +66,22 @@ public class BaseSubscription extends Entity implements IJsonBackedObject {
     @SerializedName("expirationDateTime")
     @Expose
     public java.util.Calendar expirationDateTime;
+
+    /**
+     * The Application Id.
+     * Identifier of the application used to create the subscription.
+     */
+    @SerializedName("applicationId")
+    @Expose
+    public String applicationId;
+
+    /**
+     * The Creator Id.
+     * Identifier of the user or service principal that created the subscription.If the app used delegated permissions to create the subscription, this field contains the id of the signed-in user the app called on behalf of.If the app used application permissions, this field contains the id of the service principal corresponding to the app.
+     */
+    @SerializedName("creatorId")
+    @Expose
+    public String creatorId;
 
 
     /**

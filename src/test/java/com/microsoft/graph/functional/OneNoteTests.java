@@ -346,7 +346,7 @@ public class OneNoteTests {
     	// Test copy to notebook
         OnenoteOperation notebookCopy = orb
         		.sections(testSection.id)
-        		.copyToNotebook(testNotebook2.id, null, null)
+        		.copyToNotebook(testNotebook2.id, null, null, "TODOsiteCollectionId", "TODOsiteId")
         		.buildRequest()
         		.post();
         assertNotNull(notebookCopy);
@@ -361,7 +361,7 @@ public class OneNoteTests {
         // Test copy to section group
         OnenoteOperation copySectionGroup = orb
         		.sections(testSection.id)
-        		.copyToSectionGroup(testSectionGroup2.id, null, null)
+        		.copyToSectionGroup(testSectionGroup2.id, null, null, "TODOsiteCollectionId", "TODOsiteId")
         		.buildRequest()
         		.post();
         assertNotNull(copySectionGroup);
@@ -378,7 +378,7 @@ public class OneNoteTests {
         
         OnenoteOperation copySection = orb
         		.pages(testPage.id)
-        		.copyToSection(section.id, null)
+        		.copyToSection(section.id, null, "TODOsiteCollectionId", "TODOsiteId")
         		.buildRequest()
         		.post();
         assertNotNull(copySection);

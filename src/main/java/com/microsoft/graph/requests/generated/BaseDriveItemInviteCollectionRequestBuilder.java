@@ -37,11 +37,21 @@ public class BaseDriveItemInviteCollectionRequestBuilder extends BaseActionReque
      */
     public BaseDriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("requireSignIn", requireSignIn);
-          bodyParams.put("roles", roles);
-          bodyParams.put("sendInvitation", sendInvitation);
-          bodyParams.put("message", message);
-          bodyParams.put("recipients", recipients);
+  	 if(requireSignIn!=null){
+			bodyParams.put("requireSignIn", requireSignIn);
+		}
+    	 if(roles!=null){
+			bodyParams.put("roles", roles);
+		}
+    	 if(sendInvitation!=null){
+			bodyParams.put("sendInvitation", sendInvitation);
+		}
+    	 if(message!=null){
+			bodyParams.put("message", message);
+		}
+    	 if(recipients!=null){
+			bodyParams.put("recipients", recipients);
+		}
       }
 
     public IDriveItemInviteCollectionRequest buildRequest() {

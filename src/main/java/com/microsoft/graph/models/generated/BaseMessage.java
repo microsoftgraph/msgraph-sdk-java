@@ -3,19 +3,39 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.InternetMessageHeader;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.generated.Importance;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.generated.InferenceClassificationType;
+import com.microsoft.graph.models.extensions.FollowupFlag;
+import com.microsoft.graph.models.extensions.Attachment;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.OutlookItem;
+import com.microsoft.graph.requests.generated.BaseAttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.generated.BaseExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -62,6 +82,14 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     @SerializedName("internetMessageId")
     @Expose
     public String internetMessageId;
+
+    /**
+     * The Internet Message Headers.
+     * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+     */
+    @SerializedName("internetMessageHeaders")
+    @Expose
+    public java.util.List<InternetMessageHeader> internetMessageHeaders;
 
     /**
      * The Subject.
@@ -214,6 +242,14 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
     @SerializedName("inferenceClassification")
     @Expose
     public InferenceClassificationType inferenceClassification;
+
+    /**
+     * The Flag.
+     * The flag value that indicates the status, start date, due date, or completion date for the message.
+     */
+    @SerializedName("flag")
+    @Expose
+    public FollowupFlag flag;
 
     /**
      * The Attachments.

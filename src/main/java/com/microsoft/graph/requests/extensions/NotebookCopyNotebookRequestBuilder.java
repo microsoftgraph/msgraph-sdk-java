@@ -24,8 +24,10 @@ public class NotebookCopyNotebookRequestBuilder extends BaseNotebookCopyNotebook
      * @param groupId the groupId
      * @param renameAs the renameAs
      * @param notebookFolder the notebookFolder
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
      */
-    public NotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder) {
-        super(requestUrl, client, requestOptions, groupId, renameAs, notebookFolder);
+    public NotebookCopyNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String groupId, final String renameAs, final String notebookFolder, final String siteCollectionId, final String siteId) {
+        super(requestUrl, client, requestOptions, groupId, renameAs, notebookFolder, siteCollectionId, siteId);
     }
 }

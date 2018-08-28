@@ -33,7 +33,9 @@ public class BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder extends
      */
     public BaseDirectoryObjectGetMemberObjectsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("securityEnabledOnly", securityEnabledOnly);
+  	 if(securityEnabledOnly!=null){
+			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
+		}
       }
 
     public IDirectoryObjectGetMemberObjectsCollectionRequest buildRequest() {

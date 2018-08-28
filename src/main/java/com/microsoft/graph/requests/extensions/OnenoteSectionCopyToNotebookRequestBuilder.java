@@ -24,8 +24,10 @@ public class OnenoteSectionCopyToNotebookRequestBuilder extends BaseOnenoteSecti
      * @param id the id
      * @param groupId the groupId
      * @param renameAs the renameAs
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
      */
-    public OnenoteSectionCopyToNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs) {
-        super(requestUrl, client, requestOptions, id, groupId, renameAs);
+    public OnenoteSectionCopyToNotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
+        super(requestUrl, client, requestOptions, id, groupId, renameAs, siteCollectionId, siteId);
     }
 }

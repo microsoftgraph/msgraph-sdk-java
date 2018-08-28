@@ -3,19 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.RgbColor;
+import com.microsoft.graph.models.extensions.MimeContent;
+import com.microsoft.graph.models.extensions.MimeContent;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -83,7 +81,7 @@ public class BaseIntuneBrand implements IJsonBackedObject {
 
     /**
      * The Privacy Url.
-     * URL to the company/organization's privacy policy.
+     * URL to the company/organization’s privacy policy.
      */
     @SerializedName("privacyUrl")
     @Expose
@@ -91,7 +89,7 @@ public class BaseIntuneBrand implements IJsonBackedObject {
 
     /**
      * The Online Support Site Url.
-     * URL to the company/organization's IT helpdesk site.
+     * URL to the company/organization’s IT helpdesk site.
      */
     @SerializedName("onlineSupportSiteUrl")
     @Expose
@@ -99,7 +97,7 @@ public class BaseIntuneBrand implements IJsonBackedObject {
 
     /**
      * The Online Support Site Name.
-     * Display name of the company/organization's IT helpdesk site.
+     * Display name of the company/organization’s IT helpdesk site.
      */
     @SerializedName("onlineSupportSiteName")
     @Expose

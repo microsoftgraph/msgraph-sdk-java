@@ -3,19 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.MiracastChannel;
+import com.microsoft.graph.models.generated.WelcomeScreenMeetingInformation;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -73,7 +71,7 @@ public class BaseWindows10TeamGeneralConfiguration extends DeviceConfiguration i
 
     /**
      * The Maintenance Window Duration In Hours.
-     * Maintenance window duration for device updates. Valid values 1 to 5
+     * Maintenance window duration for device updates. Valid values 0 to 5
      */
     @SerializedName("maintenanceWindowDurationInHours")
     @Expose

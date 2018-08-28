@@ -3,19 +3,87 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.DeviceManagementSubscriptionState;
+import com.microsoft.graph.models.extensions.DeviceManagementSettings;
+import com.microsoft.graph.models.extensions.IntuneBrand;
+import com.microsoft.graph.models.extensions.TermsAndConditions;
+import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
+import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
+import com.microsoft.graph.models.extensions.DetectedApp;
+import com.microsoft.graph.models.extensions.ManagedDevice;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
+import com.microsoft.graph.models.extensions.SoftwareUpdateStatusSummary;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyDeviceStateSummary;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStateSummary;
+import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
+import com.microsoft.graph.models.extensions.DeviceCategory;
+import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.extensions.OnPremisesConditionalAccessSettings;
+import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
+import com.microsoft.graph.models.extensions.DeviceManagementPartner;
+import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
+import com.microsoft.graph.models.extensions.RoleDefinition;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
+import com.microsoft.graph.models.extensions.ResourceOperation;
+import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
+import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
+import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseTermsAndConditionsCollectionResponse;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDetectedAppCollectionResponse;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedDeviceCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceCompliancePolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceCompliancePolicySettingStateSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryCollectionPage;
+import com.microsoft.graph.requests.generated.BaseIosUpdateDeviceStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.IosUpdateDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceCategoryCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceCategoryCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceManagementExchangeConnectorCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceEnrollmentConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMobileThreatDefenseConnectorCollectionResponse;
+import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceManagementPartnerCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.generated.BaseNotificationMessageTemplateCollectionResponse;
+import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
+import com.microsoft.graph.requests.generated.BaseRoleDefinitionCollectionResponse;
+import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceAndAppManagementRoleAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.generated.BaseResourceOperationCollectionResponse;
+import com.microsoft.graph.requests.extensions.ResourceOperationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseTelecomExpenseManagementPartnerCollectionResponse;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.generated.BaseRemoteAssistancePartnerCollectionResponse;
+import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionPage;
+import com.microsoft.graph.requests.generated.BaseWindowsInformationProtectionAppLearningSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionPage;
+import com.microsoft.graph.requests.generated.BaseWindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceManagementTroubleshootingEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -41,7 +109,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Account level settings.
+     * 
      */
     @SerializedName("settings")
     @Expose
@@ -49,7 +117,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Intune Brand.
-     * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
+     * 
      */
     @SerializedName("intuneBrand")
     @Expose
@@ -57,13 +125,13 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Terms And Conditions.
-     * The terms and conditions associated with device management of the company.
+     * 
      */
     public TermsAndConditionsCollectionPage termsAndConditions;
 
     /**
      * The Apple Push Notification Certificate.
-     * Apple push notification certificate.
+     * 
      */
     @SerializedName("applePushNotificationCertificate")
     @Expose
@@ -71,7 +139,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Overview.
-     * Device overview
+     * 
      */
     @SerializedName("managedDeviceOverview")
     @Expose
@@ -79,31 +147,31 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Detected Apps.
-     * The list of detected apps associated with a device.
+     * 
      */
     public DetectedAppCollectionPage detectedApps;
 
     /**
      * The Managed Devices.
-     * The list of managed devices.
+     * 
      */
     public ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Device Configurations.
-     * The device configurations.
+     * 
      */
     public DeviceConfigurationCollectionPage deviceConfigurations;
 
     /**
      * The Device Compliance Policies.
-     * The device compliance policies.
+     * 
      */
     public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
 
     /**
      * The Software Update Status Summary.
-     * The software update status summary.
+     * 
      */
     @SerializedName("softwareUpdateStatusSummary")
     @Expose
@@ -111,7 +179,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy Device State Summary.
-     * The device compliance state summary for this account.
+     * 
      */
     @SerializedName("deviceCompliancePolicyDeviceStateSummary")
     @Expose
@@ -119,13 +187,13 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy Setting State Summaries.
-     * The summary states of compliance policy settings for this account.
+     * 
      */
     public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
     /**
      * The Device Configuration Device State Summaries.
-     * The device configuration device state summary for this account.
+     * 
      */
     @SerializedName("deviceConfigurationDeviceStateSummaries")
     @Expose
@@ -133,31 +201,31 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Ios Update Statuses.
-     * The IOS software update installation statuses for this account.
+     * 
      */
     public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
     /**
      * The Device Categories.
-     * The list of device categories with the tenant.
+     * 
      */
     public DeviceCategoryCollectionPage deviceCategories;
 
     /**
      * The Exchange Connectors.
-     * The list of Exchange Connectors configured by the tenant.
+     * 
      */
     public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
 
     /**
      * The Device Enrollment Configurations.
-     * The list of device enrollment configurations
+     * 
      */
     public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Conditional Access Settings.
-     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+     * 
      */
     @SerializedName("conditionalAccessSettings")
     @Expose
@@ -165,67 +233,67 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Mobile Threat Defense Connectors.
-     * The list of Mobile threat Defense connectors configured by the tenant.
+     * 
      */
     public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
 
     /**
      * The Device Management Partners.
-     * The list of Device Management Partners configured by the tenant.
+     * 
      */
     public DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
     /**
      * The Notification Message Templates.
-     * The Notification Message Templates.
+     * 
      */
     public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
 
     /**
      * The Role Definitions.
-     * The Role Definitions.
+     * 
      */
     public RoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Role Assignments.
-     * The Role Assignments.
+     * 
      */
     public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Resource Operations.
-     * The Resource Operations.
+     * 
      */
     public ResourceOperationCollectionPage resourceOperations;
 
     /**
      * The Telecom Expense Management Partners.
-     * The telecom expense management partners.
+     * 
      */
     public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
     /**
      * The Remote Assistance Partners.
-     * The remote assist partners.
+     * 
      */
     public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
 
     /**
      * The Windows Information Protection App Learning Summaries.
-     * The windows information protection app learning summaries.
+     * 
      */
     public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
 
     /**
      * The Windows Information Protection Network Learning Summaries.
-     * The windows information protection network learning summaries.
+     * 
      */
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
 
     /**
      * The Troubleshooting Events.
-     * The list of troubleshooting events for the tenant.
+     * 
      */
     public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 

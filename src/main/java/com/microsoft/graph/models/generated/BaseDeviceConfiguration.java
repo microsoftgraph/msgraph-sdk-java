@@ -3,19 +3,29 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceOverview;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
+import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseDeviceConfigurationAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceConfigurationDeviceStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceConfigurationUserStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSettingStateDeviceSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;

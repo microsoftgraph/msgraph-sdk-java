@@ -3,19 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.File;
+import com.microsoft.graph.models.extensions.FileSystemInfo;
+import com.microsoft.graph.models.extensions.Folder;
+import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.models.extensions.Shared;
+import com.microsoft.graph.models.extensions.SharepointIds;
+import com.microsoft.graph.models.extensions.SpecialFolder;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;

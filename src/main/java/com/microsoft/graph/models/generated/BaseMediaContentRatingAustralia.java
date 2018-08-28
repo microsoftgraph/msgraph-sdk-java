@@ -3,19 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.RatingAustraliaMoviesType;
+import com.microsoft.graph.models.generated.RatingAustraliaTelevisionType;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -43,7 +40,7 @@ public class BaseMediaContentRatingAustralia implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for Australia Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18.
+     * Movies rating selected for Australia. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove15, agesAbove18.
      */
     @SerializedName("movieRating")
     @Expose
@@ -51,7 +48,7 @@ public class BaseMediaContentRatingAustralia implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for Australia Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence.
+     * TV rating selected for Australia. Possible values are: allAllowed, allBlocked, preschoolers, children, general, parentalGuidance, mature, agesAbove15, agesAbove15AdultViolence.
      */
     @SerializedName("tvRating")
     @Expose

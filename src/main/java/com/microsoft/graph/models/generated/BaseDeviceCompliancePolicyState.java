@@ -3,19 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
+import com.microsoft.graph.models.generated.PolicyPlatformType;
+import com.microsoft.graph.models.generated.ComplianceStatus;
+import com.microsoft.graph.models.extensions.Entity;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -33,7 +32,7 @@ public class BaseDeviceCompliancePolicyState extends Entity implements IJsonBack
 
     /**
      * The Setting States.
-     * Not yet documented
+     * 
      */
     @SerializedName("settingStates")
     @Expose
@@ -41,7 +40,7 @@ public class BaseDeviceCompliancePolicyState extends Entity implements IJsonBack
 
     /**
      * The Display Name.
-     * The name of the policy for this policyBase
+     * 
      */
     @SerializedName("displayName")
     @Expose
@@ -49,7 +48,7 @@ public class BaseDeviceCompliancePolicyState extends Entity implements IJsonBack
 
     /**
      * The Version.
-     * The version of the policy
+     * 
      */
     @SerializedName("version")
     @Expose
@@ -57,7 +56,7 @@ public class BaseDeviceCompliancePolicyState extends Entity implements IJsonBack
 
     /**
      * The Platform Type.
-     * Platform type that the policy applies to Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, all.
+     * 
      */
     @SerializedName("platformType")
     @Expose
@@ -65,7 +64,7 @@ public class BaseDeviceCompliancePolicyState extends Entity implements IJsonBack
 
     /**
      * The State.
-     * The compliance state of the policy Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
+     * 
      */
     @SerializedName("state")
     @Expose
@@ -73,7 +72,7 @@ public class BaseDeviceCompliancePolicyState extends Entity implements IJsonBack
 
     /**
      * The Setting Count.
-     * Count of how many setting a policy holds
+     * 
      */
     @SerializedName("settingCount")
     @Expose

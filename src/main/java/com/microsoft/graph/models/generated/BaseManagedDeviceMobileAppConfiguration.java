@@ -3,19 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserStatus;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceSummary;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationUserSummary;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -84,6 +91,12 @@ public class BaseManagedDeviceMobileAppConfiguration extends Entity implements I
      * The list of group assignemenets for app configration.
      */
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
+
+    /**
+     * The Device Statuses.
+     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
+     */
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
      * The User Statuses.
@@ -161,6 +174,22 @@ public class BaseManagedDeviceMobileAppConfiguration extends Entity implements I
             }
             response.value = Arrays.asList(array);
             assignments = new ManagedDeviceMobileAppConfigurationAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("deviceStatuses")) {
+            final BaseManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse response = new BaseManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse();
+            if (json.has("deviceStatuses@odata.nextLink")) {
+                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
+            final ManagedDeviceMobileAppConfigurationDeviceStatus[] array = new ManagedDeviceMobileAppConfigurationDeviceStatus[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDeviceMobileAppConfigurationDeviceStatus.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceStatuses = new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage(response, null);
         }
 
         if (json.has("userStatuses")) {
