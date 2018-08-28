@@ -809,7 +809,6 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Start Menu Hide Restart Options.
-     * Enabling this policy hides “Restart/Update and Restart” from appearing in the power button in the start menu.
      */
     @SerializedName("startMenuHideRestartOptions")
     @Expose
