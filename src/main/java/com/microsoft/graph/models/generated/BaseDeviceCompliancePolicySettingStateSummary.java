@@ -3,19 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.PolicyPlatformType;
+import com.microsoft.graph.models.extensions.DeviceComplianceSettingState;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseDeviceComplianceSettingStateCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -49,7 +49,7 @@ public class BaseDeviceCompliancePolicySettingStateSummary extends Entity implem
 
     /**
      * The Platform Type.
-     * Setting platform Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, all.
+     * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
      */
     @SerializedName("platformType")
     @Expose

@@ -3,19 +3,27 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Contact;
+import com.microsoft.graph.models.extensions.ContactFolder;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseContactCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.generated.BaseContactFolderCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;

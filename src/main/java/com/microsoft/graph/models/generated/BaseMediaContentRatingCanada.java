@@ -3,19 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.RatingCanadaMoviesType;
+import com.microsoft.graph.models.generated.RatingCanadaTelevisionType;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -43,7 +40,7 @@ public class BaseMediaContentRatingCanada implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for Canada Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove14, agesAbove18, restricted.
+     * Movies rating selected for Canada. Possible values are: allAllowed, allBlocked, general, parentalGuidance, agesAbove14, agesAbove18, restricted.
      */
     @SerializedName("movieRating")
     @Expose
@@ -51,7 +48,7 @@ public class BaseMediaContentRatingCanada implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for Canada Possible values are: allAllowed, allBlocked, children, childrenAbove8, general, parentalGuidance, agesAbove14, agesAbove18.
+     * TV rating selected for Canada. Possible values are: allAllowed, allBlocked, children, childrenAbove8, general, parentalGuidance, agesAbove14, agesAbove18.
      */
     @SerializedName("tvRating")
     @Expose

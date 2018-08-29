@@ -3,19 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.WindowsDeliveryOptimizationMode;
+import com.microsoft.graph.models.generated.PrereleaseFeatures;
+import com.microsoft.graph.models.generated.AutomaticUpdateMode;
+import com.microsoft.graph.models.extensions.WindowsUpdateInstallScheduleType;
+import com.microsoft.graph.models.generated.WindowsUpdateType;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -33,7 +34,7 @@ public class BaseWindowsUpdateForBusinessConfiguration extends DeviceConfigurati
 
     /**
      * The Delivery Optimization Mode.
-     * Delivery Optimization Mode Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
      */
     @SerializedName("deliveryOptimizationMode")
     @Expose
@@ -129,7 +130,7 @@ public class BaseWindowsUpdateForBusinessConfiguration extends DeviceConfigurati
 
     /**
      * The Business Ready Updates Only.
-     * Determines which branch devices will receive their updates from Possible values are: userDefined, all, businessReadyOnly.
+     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
      */
     @SerializedName("businessReadyUpdatesOnly")
     @Expose

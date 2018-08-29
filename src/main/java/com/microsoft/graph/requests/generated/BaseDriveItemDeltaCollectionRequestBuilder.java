@@ -33,7 +33,9 @@ public class BaseDriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequ
      */
     public BaseDriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String token) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("token", token));
+     	 if(token!=null){
+			functionOptions.add(new FunctionOption("token", token));
+		}
       }
     /**
      * The request builder for this collection of DriveItem

@@ -3,19 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AssignedPlan;
+import com.microsoft.graph.models.extensions.PrivacyProfile;
+import com.microsoft.graph.models.extensions.ProvisionedPlan;
+import com.microsoft.graph.models.extensions.VerifiedDomain;
+import com.microsoft.graph.models.generated.MdmAuthority;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.requests.generated.BaseExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -118,6 +122,14 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
     @SerializedName("preferredLanguage")
     @Expose
     public String preferredLanguage;
+
+    /**
+     * The Privacy Profile.
+     * The privacy profile of an organization.
+     */
+    @SerializedName("privacyProfile")
+    @Expose
+    public PrivacyProfile privacyProfile;
 
     /**
      * The Provisioned Plans.

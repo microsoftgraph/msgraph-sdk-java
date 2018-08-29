@@ -3,19 +3,57 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.MobileApp;
+import com.microsoft.graph.models.extensions.MobileAppCategory;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
+import com.microsoft.graph.models.extensions.VppToken;
+import com.microsoft.graph.models.extensions.ManagedAppPolicy;
+import com.microsoft.graph.models.extensions.IosManagedAppProtection;
+import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
+import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
+import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
+import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.ManagedAppRegistration;
+import com.microsoft.graph.models.extensions.ManagedAppStatus;
+import com.microsoft.graph.models.extensions.ManagedEBook;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseMobileAppCollectionResponse;
+import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMobileAppCategoryCollectionResponse;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedDeviceMobileAppConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseVppTokenCollectionResponse;
+import com.microsoft.graph.requests.extensions.VppTokenCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedAppPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseIosManagedAppProtectionCollectionResponse;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseAndroidManagedAppProtectionCollectionResponse;
+import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDefaultManagedAppProtectionCollectionResponse;
+import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseTargetedManagedAppConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMdmWindowsInformationProtectionPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseWindowsInformationProtectionPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedAppRegistrationCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedAppStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedEBookCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -82,6 +120,12 @@ public class BaseDeviceAppManagement extends Entity implements IJsonBackedObject
     public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
     /**
+     * The Vpp Tokens.
+     * List of Vpp tokens for this organization.
+     */
+    public VppTokenCollectionPage vppTokens;
+
+    /**
      * The Managed App Policies.
      * Managed app policies.
      */
@@ -89,7 +133,7 @@ public class BaseDeviceAppManagement extends Entity implements IJsonBackedObject
 
     /**
      * The Ios Managed App Protections.
-     * iOS managed app policies.
+     * 
      */
     public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
@@ -227,6 +271,22 @@ public class BaseDeviceAppManagement extends Entity implements IJsonBackedObject
             }
             response.value = Arrays.asList(array);
             mobileAppConfigurations = new ManagedDeviceMobileAppConfigurationCollectionPage(response, null);
+        }
+
+        if (json.has("vppTokens")) {
+            final BaseVppTokenCollectionResponse response = new BaseVppTokenCollectionResponse();
+            if (json.has("vppTokens@odata.nextLink")) {
+                response.nextLink = json.get("vppTokens@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("vppTokens").toString(), JsonObject[].class);
+            final VppToken[] array = new VppToken[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), VppToken.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            vppTokens = new VppTokenCollectionPage(response, null);
         }
 
         if (json.has("managedAppPolicies")) {

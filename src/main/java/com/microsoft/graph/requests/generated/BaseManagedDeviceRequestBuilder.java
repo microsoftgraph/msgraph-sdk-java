@@ -3,18 +3,59 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.generated;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRequest;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRequest;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRetireRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRetireRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceWipeRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceWipeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceResetPasscodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceResetPasscodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRemoteLockRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRemoteLockRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRequestRemoteAssistanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRequestRemoteAssistanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceDisableLostModeRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceDisableLostModeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceLocateDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceLocateDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceBypassActivationLockRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceBypassActivationLockRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRebootNowRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRebootNowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceShutDownRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceShutDownRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceRecoverPasscodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceRecoverPasscodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceCleanWindowsDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCleanWindowsDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceSyncDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceSyncDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceWindowsDefenderScanRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceWindowsDefenderScanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
+import com.microsoft.graph.requests.extensions.IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
-import java.util.Arrays;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.options.Option;
 import java.util.EnumSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
@@ -150,3 +191,4 @@ public class BaseManagedDeviceRequestBuilder extends BaseRequestBuilder implemen
         return new ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateWindowsDeviceAccount"), getClient(), null, updateWindowsDeviceAccountActionParameter);
     }
 }
+

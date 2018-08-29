@@ -3,19 +3,38 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Root;
+import com.microsoft.graph.models.extensions.SharepointIds;
+import com.microsoft.graph.models.extensions.SiteCollection;
+import com.microsoft.graph.models.extensions.ColumnDefinition;
+import com.microsoft.graph.models.extensions.ContentType;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.models.extensions.List;
+import com.microsoft.graph.models.extensions.Site;
+import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.generated.BaseColumnDefinitionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseContentTypeCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDriveCollectionResponse;
+import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.generated.BaseBaseItemCollectionResponse;
+import com.microsoft.graph.requests.extensions.BaseItemCollectionPage;
+import com.microsoft.graph.requests.generated.BaseListCollectionResponse;
+import com.microsoft.graph.requests.extensions.ListCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSiteCollectionResponse;
+import com.microsoft.graph.requests.extensions.SiteCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;

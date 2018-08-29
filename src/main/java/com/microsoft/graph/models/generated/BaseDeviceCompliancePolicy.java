@@ -3,19 +3,32 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
+import com.microsoft.graph.models.extensions.DeviceComplianceDeviceStatus;
+import com.microsoft.graph.models.extensions.DeviceComplianceUserStatus;
+import com.microsoft.graph.models.extensions.DeviceComplianceDeviceOverview;
+import com.microsoft.graph.models.extensions.DeviceComplianceUserOverview;
+import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseDeviceComplianceScheduledActionForRuleCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceComplianceDeviceStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceComplianceUserStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSettingStateDeviceSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceCompliancePolicyAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;

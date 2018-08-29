@@ -3,19 +3,30 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.MessageRule;
+import com.microsoft.graph.models.extensions.MailFolder;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseMessageCollectionResponse;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMessageRuleCollectionResponse;
+import com.microsoft.graph.requests.extensions.MessageRuleCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMailFolderCollectionResponse;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -76,6 +87,12 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
      * The collection of messages in the mailFolder.
      */
     public MessageCollectionPage messages;
+
+    /**
+     * The Message Rules.
+     * The collection of rules that apply to the user's Inbox folder.
+     */
+    public MessageRuleCollectionPage messageRules;
 
     /**
      * The Child Folders.
@@ -149,6 +166,22 @@ public class BaseMailFolder extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             messages = new MessageCollectionPage(response, null);
+        }
+
+        if (json.has("messageRules")) {
+            final BaseMessageRuleCollectionResponse response = new BaseMessageRuleCollectionResponse();
+            if (json.has("messageRules@odata.nextLink")) {
+                response.nextLink = json.get("messageRules@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("messageRules").toString(), JsonObject[].class);
+            final MessageRule[] array = new MessageRule[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MessageRule.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            messageRules = new MessageRuleCollectionPage(response, null);
         }
 
         if (json.has("childFolders")) {

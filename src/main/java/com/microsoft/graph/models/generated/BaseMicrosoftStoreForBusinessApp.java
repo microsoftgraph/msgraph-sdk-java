@@ -3,19 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.MicrosoftStoreForBusinessLicenseType;
+import com.microsoft.graph.models.extensions.MobileApp;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -57,7 +54,7 @@ public class BaseMicrosoftStoreForBusinessApp extends MobileApp implements IJson
 
     /**
      * The License Type.
-     * The app license type Possible values are: offline, online.
+     * The app license type. Possible values are: offline, online.
      */
     @SerializedName("licenseType")
     @Expose

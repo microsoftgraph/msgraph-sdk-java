@@ -3,19 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AutomaticRepliesSetting;
+import com.microsoft.graph.models.extensions.LocaleInfo;
+import com.microsoft.graph.models.extensions.WorkingHours;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -51,7 +49,7 @@ public class BaseMailboxSettings implements IJsonBackedObject {
 
     /**
      * The Archive Folder.
-     * 
+     * Folder ID of an archive folder for the user.
      */
     @SerializedName("archiveFolder")
     @Expose
@@ -72,6 +70,14 @@ public class BaseMailboxSettings implements IJsonBackedObject {
     @SerializedName("language")
     @Expose
     public LocaleInfo language;
+
+    /**
+     * The Working Hours.
+     * The days of the week and hours in a specific time zone that the user works.
+     */
+    @SerializedName("workingHours")
+    @Expose
+    public WorkingHours workingHours;
 
 
     /**
