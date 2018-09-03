@@ -12,12 +12,14 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -68,7 +70,49 @@ publishing {
             }
 
         }
-
+        mavenJava(MavenPublication) {
+        	customizePom(pom)
+        	groupId 'com.microsoft.graph'
+        	artifactId 'microsoft-graph'
+        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
+        	from components.java
+        	pom.withXml {
+        		def pomFile = file("${project.buildDir}/generated-pom.xml")
+        		writeTo(pomFile)
+        		def pomAscFile = signing.sign(pomFile).signatureFiles[0]
+        		artifact(pomAscFile) {
+                    classifier = null
+                    extension = 'pom.asc'
+                }
+        	}
+        	artifact(sourceJar) {
+        		classifier = 'sources'
+        	}
+        	artifact(javadocJar) {
+        		classifier = 'javadoc'
+        	}
+        	project.tasks.signArchives.signatureFiles.each {
+        		artifact(it) {
+        			def matcher = it.file =~ /-(sources|javadoc)\.jar\.asc$/
+        			if(matcher.find()){
+        				classifier = matcher.group(1)
+        			}
+        			else{
+        				classifier = null
+        			}
+        			extension = 'jar.asc'
+				}
+			}
+		}
+    }
+	repositories {
+        maven {
+            url = project.property('mavenCentralUploadUrl')
+            credentials {
+                username = project.property('sonatypeUsername')
+                password = project.property('sonatypePassword')
+            }
+        }
     }
 
 }
@@ -147,6 +191,67 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 }
 
 artifacts {
+	archives jar
 	archives sourceJar
 	archives javadocJar
+}
+
+signing {
+	sign configurations.archives
+}
+tasks.withType(Sign)*.enabled = mavenCentralPublishingEnabled.toBoolean()
+
+def customizePom(pom) {
+    pom.withXml {
+        def root = asNode()
+
+        root.dependencies.removeAll { dep ->
+            dep.scope == "test"
+        }
+
+        root.children().last() + {
+            resolveStrategy = Closure.DELEGATE_FIRST
+
+            description 'Microsoft Graph SDK'
+            name 'Microsoft Graph Java SDK'
+            url 'https://github.com/microsoftgraph/msgraph-sdk-java'
+            organization {
+                name 'Microsoft'
+                url 'https://github.com/microsoftgraph/msgraph-sdk-java'
+            }
+            issueManagement {
+                system 'GitHub'
+                url 'https://github.com/microsoftgraph/msgraph-sdk-java/issues'
+            }
+            licenses {
+                license {
+                    name "MIT License"
+            		url "http://opensource.org/licenses/MIT"
+            		distribution "repo"
+                }
+            }
+            scm {
+                url 'https://github.com/microsoftgraph/msgraph-sdk-java'
+            	connection 'scm:git:git://github.com/microsoftgraph/msgraph-sdk-java.git'
+            	developerConnection 'scm:git:ssh://git@github.com:microsoftgraph/msgraph-sdk-java.git'
+            }
+            developers {
+                developer {
+                    name 'Microsoft'
+                }
+            }
+        }
+    }
+}
+
+model {
+    tasks.generatePomFileForMavenJavaPublication {
+        destination = file("$buildDir/generated-pom.xml")
+    }
+    tasks.publishMavenJavaPublicationToMavenLocal {
+        dependsOn project.tasks.signArchives
+    }
+    tasks.publishMavenJavaPublicationToMavenRepository {
+        dependsOn project.tasks.signArchives
+    }
 }
