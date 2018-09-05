@@ -91,13 +91,11 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * Posts this request
      *
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
-     * @param <T2>             the type of the serialized body
+     * @param <BodyType>       the type of the serialized body, some times Action use different body than collection item
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> T1 post(final T2 serializedObject) throws ClientException {
+    protected <BodyType> T1 post(final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
         return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
     }
