@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 import com.microsoft.graph.options.HeaderOption;
 
@@ -20,6 +23,8 @@ public class Multipart {
 	private String boundary;
 	private static final String RETURN = "\r\n";
 	private ByteArrayOutputStream out;
+	public static final String MULTIPART_ENCODING = "US-ASCII";
+	private String contentType = "multipart/form-data";
 	
 	/**
 	 * Create a new multipart object
@@ -33,8 +38,32 @@ public class Multipart {
 	 * Get the multipart boundary for use in the request header
 	 * @return the multipart boundary
 	 */
-	public String boundary() {
+	public String getBoundary() {
 		return boundary;
+	}
+	
+	/**
+	 * Set the multipart boundary for use in the request header
+	 * @param boundary The multipart boundary
+	 */
+	public void setBoundary(String boundary) {
+		this.boundary = boundary;
+	}
+	
+	/**
+	 * Get the contentType for use in the request header
+	 * @return the multipart Content-Type
+	 */
+	public String getContentType() {
+		return contentType;
+	}
+	
+	/**
+	 * Set the contentType for use in the request header
+	 * @param contentType The multipart Content-Type
+	 */
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
 	}
 	
 	/**
@@ -42,18 +71,7 @@ public class Multipart {
 	 * @return the multipart header option
 	 */
 	public HeaderOption header() {
-		return new HeaderOption("Content-Type", "multipart/form-data; boundary=\"" + boundary + "\"");
-	}
-	
-	/**
-	 * Add a string part to the multipart body
-	 * @param name The name of the part
-	 * @param contentType The MIME type (text/html, text/plain, etc.)
-	 * @param content The string content to include
-	 * @throws IOException Throws an exception if the output stream cannot be written to
-	 */
-	public void addPart(String name, String contentType, String content) throws IOException {
-		addPart(name, contentType, content.getBytes());
+		return new HeaderOption("Content-Type", contentType + "; boundary=\"" + boundary + "\"");
 	}
 	
 	/**
@@ -63,16 +81,35 @@ public class Multipart {
 	 * @param byteArray The byte[] contents of the resource
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
-	public void addPart(String name, String contentType, byte[] byteArray) throws IOException {
+	public void addFormData(String name, String contentType, byte[] byteArray) throws IOException {
 		String partContent = addBoundary();
 		partContent +=
 				"Content-Disposition:form-data; name=\"" + name + "\"" + RETURN +
 				"Content-Type:" + contentType + RETURN +
 				RETURN;
-		out.write(partContent.getBytes());
+		out.write(partContent.getBytes(MULTIPART_ENCODING));
 		out.write(byteArray);
 		String returnContent = RETURN + RETURN;
-		out.write(returnContent.getBytes());
+		out.write(returnContent.getBytes(MULTIPART_ENCODING));
+		System.out.println(partContent);
+	}
+	
+	/**
+	 * Add a part to the multipart body
+	 * @param contentType The MIME type (text/html, video/mp4, etc.)
+	 * @param byteArray The byte[] contents of the resource
+	 * @throws IOException Throws an exception if the output stream cannot be written to
+	 */
+	public void addPart(String contentType, byte[] byteArray) throws IOException {
+		String partContent = addBoundary();
+		partContent +=
+				"Content-Disposition:form-data;" + RETURN +
+				"Content-Type:" + contentType + RETURN +
+				RETURN;
+		out.write(partContent.getBytes(MULTIPART_ENCODING));
+		out.write(byteArray);
+		String returnContent = RETURN + RETURN;
+		out.write(returnContent.getBytes(MULTIPART_ENCODING));
 	}
 	
 	/**
@@ -82,7 +119,7 @@ public class Multipart {
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addHtmlPart(String name, String content) throws IOException {
-		addPart(name, "text/html", content);
+		addFormData(name, "text/html", content.getBytes(MULTIPART_ENCODING));
 	}
 	
 	/**
@@ -95,7 +132,63 @@ public class Multipart {
 	public void addFilePart(String name, String contentType, java.io.File file) throws IOException {
 		InputStream fileStream = new FileInputStream(file);
 		byte[] fileBytes = getByteArray(fileStream);
-		addPart(name, contentType, fileBytes);
+		String partContent = addBoundary();
+		partContent +=
+				"Content-Disposition:form-data; name=\"" + name + "\"" + "; filename=\"" + file.getName() + "\"" + RETURN +
+				"Content-Type:" + contentType + RETURN +
+				RETURN;
+		System.out.println(partContent);
+		out.write(partContent.getBytes(MULTIPART_ENCODING));
+		out.write(fileBytes);
+		String returnContent = RETURN + RETURN;
+		out.write(returnContent.getBytes(MULTIPART_ENCODING));
+	}
+	
+	/**
+	 * Add a part to the multipart body
+	 * @param headers Map containing Header's key and value pair
+	 * @param content The byte[] contents of the resource
+	 * @throws IOException Throws an exception if the output stream cannot be written to
+	 */
+	public void addPart(Map<String, String> headers, byte[] content) throws IOException{
+		String partContent = addBoundary();
+		List<String> listContentDisposition = Arrays.asList("filename","creation-date","modification-date","read-date",
+				"size","name","voice","handling","preview-type");			
+		List<String> mainHeaders = Arrays.asList("Content-Disposition","Content-Type","charset");
+		
+		if(headers.containsKey("Content-Disposition")) {			
+			partContent += "Content-Disposition:"+headers.get("Content-Disposition")+";"; 
+			for (Map.Entry<String,String> entry : headers.entrySet()) {
+				if(listContentDisposition.contains(entry.getKey())) {
+					partContent += " " + entry.getKey() + "=\"" + entry.getValue() + "\";";
+				}
+			}
+			partContent = partContent.substring(0, partContent.length()-1);
+			partContent += RETURN;
+			
+		}
+		
+		if(headers.containsKey("Content-Type")) {
+			partContent += "Content-Type:"+headers.get("Content-Type")+";"; 
+			if(headers.containsKey("charset")) {
+				partContent += "charset=\"" + headers.get("charset") + "\";"; 
+			}
+			partContent = partContent.substring(0, partContent.length()-1);
+			partContent += RETURN;
+		}
+		
+		for(Map.Entry<String,String> entry : headers.entrySet()) {
+			if(mainHeaders.contains(entry.getKey())==false && listContentDisposition.contains(entry.getKey())==false) {
+				partContent += entry.getKey() +":"+entry.getValue() + RETURN;
+			}
+		}
+		
+		System.out.println(partContent);
+		partContent += RETURN;
+		out.write(partContent.getBytes(MULTIPART_ENCODING));
+		out.write(content);
+		String returnContent = RETURN + RETURN;
+		out.write(returnContent.getBytes(MULTIPART_ENCODING));
 	}
 	
 	/**
@@ -121,7 +214,7 @@ public class Multipart {
 	 */
 	public byte[] content() throws IOException {
 		ByteArrayOutputStream finalStream = out;
-		finalStream.write(addEnding().getBytes());
+		finalStream.write(addEnding().getBytes(MULTIPART_ENCODING));
 		return finalStream.toByteArray();
 	}
 	
