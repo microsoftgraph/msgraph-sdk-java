@@ -14,14 +14,12 @@ Add the repository and a compile dependency for `microsoft-graph` to your projec
 
 ```gradle
 repository {
-    jcenter {
-        url "https://dl.bintray.com/microsoftgraph/Maven"
-    }
+    jcenter()
 }
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:microsoft-graph:0.1.+')
+    compile('com.microsoft.graph:microsoft-graph:0.3.+')
 }
 ```
 
