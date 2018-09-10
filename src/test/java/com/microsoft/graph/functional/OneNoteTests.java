@@ -10,6 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +50,12 @@ public class OneNoteTests {
     private OnenotePage testPage;
     private OnenoteSection testSection;
     private SectionGroup testSectionGroup2;
+    /**
+     * The html encoding type for getBytes
+     * The W3C recommends UTF-8 as the default encoding in XML and HTML.
+     * reference : https://en.wikipedia.org/wiki/UTF-8
+     */
+    static final String HTML_ENCODING = "UTF-8";
 
     @Before
     public void setUp() {
@@ -289,9 +296,10 @@ public class OneNoteTests {
     /**
      * Test posting a page stream to a page
      * @throws InterruptedException
+     * @throws UnsupportedEncodingException
      */
     @Test
-    public void testPostToNotebook() throws InterruptedException {
+    public void testPostToNotebook() throws InterruptedException, UnsupportedEncodingException {
         SectionGroup sectionGroupData = new SectionGroup();
         
         // Currently, there is no way to delete sections or section groups, so let's create a random one
@@ -319,7 +327,7 @@ public class OneNoteTests {
         // Test HTML content
         String content = "<html><head><title>Test Title</title></head><body>Test body</body></html>";
 
-        byte[] pageStream = content.getBytes();
+        byte[] pageStream = content.getBytes(HTML_ENCODING);
         List<Option> options = new ArrayList<Option>();
         options.add(new HeaderOption("Content-Type", "application/xhtml+xml"));
         OnenotePage page = orb
@@ -400,10 +408,10 @@ public class OneNoteTests {
                     "</head>\r\n" +
                     "<body>\r\n" +
                     "<p>\r\n" +
-                    "<img src=\"name:image\" />\r\n" +
+                    "<img src=\"name:hamilton\" />\r\n" +
                     "</p>\r\n" +
                     "<p>\r\n" +
-                    "<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
+                    "<object data=\"name:metadata\" data-attachment=\"document.pdf\" /></p>\r\n" +
                     "\r\n" +
                     "</body>\r\n" +
                     "</html>";
