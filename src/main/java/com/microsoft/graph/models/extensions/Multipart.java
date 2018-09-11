@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
 import java.security.SecureRandom;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 import com.microsoft.graph.options.HeaderOption;
@@ -81,67 +79,72 @@ public class Multipart {
 		out.write(returnContent.getBytes(MULTIPART_ENCODING));
 	}
 	
-	private String createPartHeader(Map<String, String> headers, String name, String contentType, String filename) {
-		String partContent = addBoundary();
-		if(headers != null) {
-			List<String> listContentDisposition = Arrays.asList("filename","creation-date","modification-date","read-date",
-					"size","name","voice","handling","preview-type");			
-			List<String> mainHeaders = Arrays.asList("Content-Disposition","Content-Type","charset");
-			
-			if(headers.containsKey("Content-Disposition")) {			
-				partContent += "Content-Disposition:"+headers.get("Content-Disposition")+";"; 
-				for (Map.Entry<String,String> entry : headers.entrySet()) {
-					if(listContentDisposition.contains(entry.getKey())) {
-						partContent += " " + entry.getKey() + "=\"" + entry.getValue() + "\";";
-					}
-				}
-				partContent = partContent.substring(0, partContent.length()-1);
-				partContent += RETURN;
-				
-			}
-			
-			if(headers.containsKey("Content-Type")) {
-				partContent += "Content-Type:"+headers.get("Content-Type")+";"; 
-				if(headers.containsKey("charset")) {
-					partContent += "charset=\"" + headers.get("charset") + "\";"; 
-				}
-				partContent = partContent.substring(0, partContent.length()-1);
-				partContent += RETURN;
-			}
-			
-			for(Map.Entry<String,String> entry : headers.entrySet()) {
-				if(mainHeaders.contains(entry.getKey())==false && listContentDisposition.contains(entry.getKey())==false) {
-					partContent += entry.getKey() +":"+entry.getValue() + RETURN;
-				}
-			}
-			partContent += RETURN;
-		}
-		else if(filename != null && name != null) {
-			partContent +=
-					"Content-Disposition:form-data; name=\"" + name + "\"" + "; filename=\"" + filename + "\"" + RETURN +
-					"Content-Type:" + contentType + RETURN +
-					RETURN;
-		}
-		else if(filename != null) {
-			partContent +=
-					"Content-Disposition:form-data; filename=\"" + filename + "\"" + RETURN +
-					"Content-Type:" + contentType + RETURN +
-					RETURN;
-		}
-		else if(name != null){
-			partContent +=
-					"Content-Disposition:form-data; name=\"" + name + "\"" + RETURN +
-					"Content-Type:" + contentType + RETURN +
-					RETURN;
-		}
-		else {
-			partContent +=
-					"Content-Disposition:form-data;" + RETURN +
-					"Content-Type:" + contentType + RETURN +
-					RETURN;
-		}		
-		return partContent;
+	private String createPartHeader(String name, String contentType, String filename) {
+        String partContent = addBoundary();
+        String partContentWithNameAndFilename = "Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+        String partContentWithFilename = "Content-Disposition: form-data; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+        String partContentWithNameAndContentType = "Content-Disposition: form-data; name=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+        String partContentWithContentType = "Content-Disposition: form-data" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+        
+        if(filename != null && name != null) 
+              partContent += String.format(partContentWithNameAndFilename, name, filename, contentType);
+        else if(filename != null) 
+              partContent += String.format(partContentWithFilename, filename, contentType);
+        else if(name != null)
+              partContent += String.format(partContentWithNameAndContentType, name, contentType);
+        else 
+              partContent += String.format(partContentWithContentType, contentType);
+        
+        return partContent;
 	}
+	
+	/**
+	 * Create content headers value and parameter
+	 * @param contentValue The content header value
+	 * @param contentDispParameter Map containing content paramter's key and value pair 
+	 * @return content header value and parameter string 
+	 */
+	public static String createContentHeaderValue(String contentValue, Map<String, String> contentDispParameter) {
+		String contentHeaderValue = contentValue;
+		
+		if(contentDispParameter != null) {
+			for(Map.Entry<String,String> entry : contentDispParameter.entrySet())
+	            contentHeaderValue += ";" + entry.getKey() + "=\"" + entry.getValue() + "\"";
+		}
+		return contentHeaderValue;
+	}
+	
+	/**
+	 * Create content headers header-name, value and parameter string
+	 * @param headers Map containing Header-name and header-value pair
+	 */
+	private String createPartHeader(Map<String, String> headers) {
+        String partContent = addBoundary();
+        String defaultPartContent = "Content-Disposition: form-data;" + RETURN + "Content-Type:" + contentType + RETURN + RETURN;
+        
+        if(headers != null) {         
+              for(Map.Entry<String,String> entry : headers.entrySet())
+                    partContent += entry.getKey() +": "+entry.getValue() + RETURN;
+              partContent += RETURN;
+        }
+        else 
+              partContent += defaultPartContent;  
+        return partContent;
+	}
+
+	/**
+	 * Add multipart content headers and byte content
+	 * @param name The multipart content name
+	 * @param contentType The multipart Content-Type
+	 * @param filename The multipart content file name
+	 * @param byteArray The multipart byte content
+	 * @throws IOException
+	 */
+	private void addData(String name, String contentType, String filename, byte[] byteArray) throws IOException {
+        String partContent = createPartHeader(name, contentType, filename);
+        writePartData(partContent, byteArray);
+	}
+
 	
 	/**
 	 * Add a part to the multipart body
@@ -151,8 +154,7 @@ public class Multipart {
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addFormData(String name, String contentType, byte[] byteArray) throws IOException {
-		String partContent = createPartHeader(null, name, contentType, null);
-		writePartData(partContent, byteArray);
+		addData(name, contentType, null, byteArray);
 	}
 	
 	/**
@@ -162,9 +164,19 @@ public class Multipart {
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
 	public void addPart(String contentType, byte[] byteArray) throws IOException {
-		String partContent = createPartHeader(null, null, contentType, null);
-		writePartData(partContent, byteArray);
+		addData(null, contentType, null, byteArray);
 	}
+	
+	/**
+     * Add a part to the multipart body
+     * @param headers Map containing Header's header-name(eg: Content-Disposition, Content-Type, etc..) and header's value-parameter string
+     * @param content The byte[] contents of the resource
+     * @throws IOException Throws an exception if the output stream cannot be written to
+     */
+     public void addPart(Map<String, String> headers, byte[] content) throws IOException{
+           String partContent = createPartHeader(headers);
+           writePartData(partContent, content);
+     }
 	
 	/**
 	 * Add an HTML part to the multipart body
@@ -172,8 +184,8 @@ public class Multipart {
 	 * @param content The HTML body for the part
 	 * @throws IOException Throws an exception if the output stream cannot be written to
 	 */
-	public void addHtmlPart(String name, String content) throws IOException {
-		addFormData(name, "text/html", content.getBytes(MULTIPART_ENCODING));
+	public void addHtmlPart(String name, byte[] content) throws IOException {
+		addFormData(name, "text/html", content);
 	}
 	
 	/**
@@ -186,19 +198,7 @@ public class Multipart {
 	public void addFilePart(String name, String contentType, java.io.File file) throws IOException {
 		InputStream fileStream = new FileInputStream(file);
 		byte[] fileBytes = getByteArray(fileStream);
-		String partContent = createPartHeader(null, name, contentType, file.getName());
-		writePartData(partContent, fileBytes);
-	}
-	
-	/**
-	 * Add a part to the multipart body
-	 * @param headers Map containing Header's key and value pair
-	 * @param content The byte[] contents of the resource
-	 * @throws IOException Throws an exception if the output stream cannot be written to
-	 */
-	public void addPart(Map<String, String> headers, byte[] content) throws IOException{
-		String partContent = createPartHeader(headers, null, null, null);
-		writePartData(partContent, content);
+		addData(name, contentType, file.getName(), fileBytes);
 	}
 	
 	/**
