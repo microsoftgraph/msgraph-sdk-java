@@ -439,7 +439,7 @@ public class OneNoteTests {
      * Test posting multipart content to a page
      */
     @Test
-    public void testMultipartHeadersMapPost(){
+    public void testMultipartPostWithHeadersMap(){
         try {
         	Multipart multipart = new Multipart();
         	

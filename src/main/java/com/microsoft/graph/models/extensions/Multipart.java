@@ -81,19 +81,22 @@ public class Multipart {
 	
 	private String createPartHeader(String name, String contentType, String filename) {
         String partContent = addBoundary();
-        String partContentWithNameAndFilename = "Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-        String partContentWithFilename = "Content-Disposition: form-data; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-        String partContentWithNameAndContentType = "Content-Disposition: form-data; name=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-        String partContentWithContentType = "Content-Disposition: form-data" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-        
-        if(filename != null && name != null) 
-              partContent += String.format(partContentWithNameAndFilename, name, filename, contentType);
-        else if(filename != null) 
-              partContent += String.format(partContentWithFilename, filename, contentType);
-        else if(name != null)
-              partContent += String.format(partContentWithNameAndContentType, name, contentType);
-        else 
-              partContent += String.format(partContentWithContentType, contentType);
+        if(filename != null && name != null) {
+        	String partContentWithNameAndFilename = "Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+            partContent += String.format(partContentWithNameAndFilename, name, filename, contentType);
+        }
+        else if(filename != null) {
+        	String partContentWithFilename = "Content-Disposition: form-data; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+            partContent += String.format(partContentWithFilename, filename, contentType);
+        }
+        else if(name != null) {
+        	String partContentWithNameAndContentType = "Content-Disposition: form-data; name=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+            partContent += String.format(partContentWithNameAndContentType, name, contentType);
+        }
+        else {
+        	String partContentWithContentType = "Content-Disposition: form-data" + RETURN + "Content-Type:%s" + RETURN + RETURN;
+            partContent += String.format(partContentWithContentType, contentType);
+        }
         
         return partContent;
 	}
@@ -145,7 +148,6 @@ public class Multipart {
         writePartData(partContent, byteArray);
 	}
 
-	
 	/**
 	 * Add a part to the multipart body
 	 * @param name The name of the part
