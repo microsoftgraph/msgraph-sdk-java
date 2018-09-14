@@ -439,53 +439,49 @@ public class OneNoteTests {
      * Test posting multipart content to a page
      */
     @Test
-    public void testMultipartPostWithHeadersMap(){
-        try {
-        	Multipart multipart = new Multipart();
-        	
-        	String htmlContent = "<!DOCTYPE html>\r\n" +
-                    "<html lang=\"en-US\">\r\n" +
-                    "<head>\r\n" +
-                    "<title>Test Multipart Page</title>\r\n" +
-                    "<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\r\n" +
-                    "</head>\r\n" +
-                    "<body>\r\n" +
-                    "<p>\r\n" +
-                    "<img src=\"name:image\" />\r\n" +
-                    "</p>\r\n" +
-                    "<p>\r\n" +
-                    "<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
-                    "\r\n" +
-                    "</body>\r\n" +
-                    "</html>";
-        	File imgFile = new File("src/test/resources/hamilton.jpg");
-        	File pdfFile = new File("src/test/resources/document.pdf");
-        	
-        	Map<String, String> htmlHeaderMap = new HashMap<>();
-        	Map<String, String> contentDispMap = new HashMap<>();
-        	contentDispMap.put("name","Presentation" );
-        	htmlHeaderMap.put("Content-Disposition", Multipart.createContentHeaderValue("form-data", contentDispMap));
-        	htmlHeaderMap.put("Content-Type", Multipart.createContentHeaderValue("text/html", null));
-        	multipart.addPart(htmlHeaderMap, htmlContent.getBytes(HTML_ENCODING));
-        	
-        	InputStream fileStream = new FileInputStream(imgFile);
-        	multipart.addFormData("hamilton", "image/jpg", getByteArray(fileStream));
-        	multipart.addFilePart("metadata", "application/pdf", pdfFile);
-        	
-            // Add multipart request header
-            List<Option> options = new ArrayList<Option>();
-            options.add(multipart.header());
-            
-            // Post the multipart content
-            OnenotePage page = orb
-            		.sections(testSection.id)
-            		.pages()
-            		.buildRequest(options)
-            		.post(multipart.content());
-            assertNotNull(page);
-        } catch (Exception e) {
-            fail("Unable to write to output stream");
-        }
+    public void testMultipartPostWithHeadersMap() throws Exception{
+    	Multipart multipart = new Multipart();
+
+    	String htmlContent = "<!DOCTYPE html>\r\n" +
+    			"<html lang=\"en-US\">\r\n" +
+    			"<head>\r\n" +
+    			"<title>Test Multipart Page</title>\r\n" +
+    			"<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\r\n" +
+    			"</head>\r\n" +
+    			"<body>\r\n" +
+    			"<p>\r\n" +
+    			"<img src=\"name:image\" />\r\n" +
+    			"</p>\r\n" +
+    			"<p>\r\n" +
+    			"<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
+    			"\r\n" +
+    			"</body>\r\n" +
+    			"</html>";
+    	File imgFile = new File("src/test/resources/hamilton.jpg");
+    	File pdfFile = new File("src/test/resources/document.pdf");
+
+    	Map<String, String> htmlHeaderMap = new HashMap<>();
+    	Map<String, String> contentDispMap = new HashMap<>();
+    	contentDispMap.put("name","Presentation" );
+    	htmlHeaderMap.put("Content-Disposition", Multipart.createContentHeaderValue("form-data", contentDispMap));
+    	htmlHeaderMap.put("Content-Type", Multipart.createContentHeaderValue("text/html", null));
+    	multipart.addPart(htmlHeaderMap, htmlContent.getBytes(HTML_ENCODING));
+
+    	InputStream fileStream = new FileInputStream(imgFile);
+    	multipart.addFormData("hamilton", "image/jpg", getByteArray(fileStream));
+    	multipart.addFilePart("metadata", "application/pdf", pdfFile);
+
+    	// Add multipart request header
+    	List<Option> options = new ArrayList<Option>();
+    	options.add(multipart.header());
+
+    	// Post the multipart content
+    	OnenotePage page = orb
+    			.sections(testSection.id)
+    			.pages()
+    			.buildRequest(options)
+    			.post(multipart.content());
+    	assertNotNull(page);
     }
 
     /**

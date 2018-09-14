@@ -8,6 +8,7 @@ import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.Map;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.microsoft.graph.options.HeaderOption;
 
 /**
@@ -79,26 +80,28 @@ public class Multipart {
 		out.write(returnContent.getBytes(MULTIPART_ENCODING));
 	}
 	
-	private String createPartHeader(String name, String contentType, String filename) {
-        String partContent = addBoundary();
-        if(filename != null && name != null) {
-        	String partContentWithNameAndFilename = "Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-            partContent += String.format(partContentWithNameAndFilename, name, filename, contentType);
+	/**
+	 * Create content headers value and parameter
+	 * @param name The content header name
+	 * @param contentType The content header Content-Type
+	 * @param filename The content header filename 
+	 * @return content header value and parameter string 
+	 */
+	@VisibleForTesting String createPartHeader(String name, String contentType, String filename) {
+		StringBuilder partContent = new StringBuilder(addBoundary());
+		partContent.append("Content-Disposition: form-data");
+        if(filename != null) {
+        	if(name != null) 
+        		partContent.append("; name=\"").append(name).append("\"; filename=\"").append(filename).append("\"");
+        	else 
+        		partContent.append("; filename=\"").append(filename).append("\"");
         }
-        else if(filename != null) {
-        	String partContentWithFilename = "Content-Disposition: form-data; filename=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-            partContent += String.format(partContentWithFilename, filename, contentType);
-        }
-        else if(name != null) {
-        	String partContentWithNameAndContentType = "Content-Disposition: form-data; name=\"%s\"" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-            partContent += String.format(partContentWithNameAndContentType, name, contentType);
-        }
-        else {
-        	String partContentWithContentType = "Content-Disposition: form-data" + RETURN + "Content-Type:%s" + RETURN + RETURN;
-            partContent += String.format(partContentWithContentType, contentType);
-        }
-        
-        return partContent;
+        else if(name != null) 
+        	partContent.append("; name=\"").append(name).append("\"");
+        if(contentType != null)
+        	partContent.append(RETURN).append("Content-Type: ").append(contentType);
+        partContent.append(RETURN).append(RETURN);
+        return partContent.toString();
 	}
 	
 	/**
@@ -123,7 +126,7 @@ public class Multipart {
 	 */
 	private String createPartHeader(Map<String, String> headers) {
         String partContent = addBoundary();
-        String defaultPartContent = "Content-Disposition: form-data;" + RETURN + "Content-Type:" + contentType + RETURN + RETURN;
+        String defaultPartContent = "Content-Disposition: form-data;" + RETURN + "Content-Type: " + contentType + RETURN + RETURN;
         
         if(headers != null) {         
               for(Map.Entry<String,String> entry : headers.entrySet())
