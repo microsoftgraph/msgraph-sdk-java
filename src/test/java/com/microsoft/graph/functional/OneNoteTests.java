@@ -37,9 +37,12 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.INotebookCollectionPage;
 import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
+import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequest;
+import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
 
 /**
  * Tests for OneNote API functionality
@@ -476,10 +479,20 @@ public class OneNoteTests {
     	options.add(multipart.header());
 
     	// Post the multipart content
-    	OnenotePage page = orb
+    	IOnenotePageCollectionRequestBuilder pageReq = orb
     			.sections(testSection.id)
-    			.pages()
-    			.buildRequest(options)
+    			.pages();
+    	String expectedRequestUrl = "https://graph.microsoft.com/v1.0/me/onenote/sections/"+testSection.id+"/pages";
+    	assertEquals(expectedRequestUrl, pageReq.getRequestUrl());
+    	IOnenotePageCollectionRequest request = pageReq.buildRequest(options);
+    	assertNotNull(request);
+    	OnenotePageCollectionRequest pageCollectionReq = (OnenotePageCollectionRequest)request;
+    	List<HeaderOption> headeroption = pageCollectionReq.getHeaders();
+    	assertEquals("Content-Type", headeroption.get(0).getName());
+    	String expectedHeaderValue = "multipart/form-data; boundary=\""+multipart.getBoundary()+"\"";
+    	assertEquals(expectedHeaderValue, headeroption.get(0).getValue().toString());
+    	assertNotNull(multipart.content());
+    	OnenotePage page = pageReq.buildRequest(options)
     			.post(multipart.content());
     	assertNotNull(page);
     }

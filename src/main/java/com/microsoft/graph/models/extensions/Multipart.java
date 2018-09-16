@@ -112,10 +112,10 @@ public class Multipart {
 	 */
 	public static String createContentHeaderValue(String contentValue, Map<String, String> contentDispParameter) {
 		String contentHeaderValue = contentValue;
-		
+
 		if(contentDispParameter != null) {
 			for(Map.Entry<String,String> entry : contentDispParameter.entrySet())
-	            contentHeaderValue += ";" + entry.getKey() + "=\"" + entry.getValue() + "\"";
+				contentHeaderValue += ";" + entry.getKey() + "=\"" + entry.getValue() + "\"";
 		}
 		return contentHeaderValue;
 	}
