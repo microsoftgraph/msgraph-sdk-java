@@ -12,8 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Attachment;

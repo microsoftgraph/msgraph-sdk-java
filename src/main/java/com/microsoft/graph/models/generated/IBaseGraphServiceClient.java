@@ -395,4 +395,11 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      */
     IDeviceManagementRequestBuilder deviceManagement();
 
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Security
+     */
+    ISecurityRequestBuilder Security();
+
 }

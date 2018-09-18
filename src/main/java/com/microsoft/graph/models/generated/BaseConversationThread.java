@@ -11,7 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.generated.BasePostCollectionResponse;

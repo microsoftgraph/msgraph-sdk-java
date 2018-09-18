@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MessageRulePredicates;
 import com.microsoft.graph.models.extensions.MessageRuleActions;
-import com.microsoft.graph.models.extensions.MessageRulePredicates;
 import com.microsoft.graph.models.extensions.Entity;
 
 

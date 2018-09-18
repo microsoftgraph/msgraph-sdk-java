@@ -13,7 +13,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.generated.BaseEducationClassCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;

@@ -27,6 +27,10 @@ public enum VppTokenState
     */
     INVALID,
     /**
+    * assigned To External MDM
+    */
+    ASSIGNED_TO_EXTERNAL_MDM,
+    /**
     * For VppTokenState values that were not expected from the service
     */
     UNEXPECTED_VALUE

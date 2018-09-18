@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.generated;
 import com.microsoft.graph.requests.extensions.IMobileAppRequest;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
@@ -36,9 +36,9 @@ public interface IBaseMobileAppRequestBuilder extends IRequestBuilder {
      */
     IMobileAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-    IMobileAppCategoryCollectionRequestBuilder categories();
+    IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
 
-    IMobileAppCategoryRequestBuilder categories(final String id);
+    IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
 
     IMobileAppAssignmentCollectionRequestBuilder assignments();
 

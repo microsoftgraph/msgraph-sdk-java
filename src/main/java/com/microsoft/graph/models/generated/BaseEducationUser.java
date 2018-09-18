@@ -13,7 +13,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.generated.EducationUserRole;
 import com.microsoft.graph.models.generated.EducationExternalSource;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
-import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.EducationStudent;
 import com.microsoft.graph.models.extensions.EducationTeacher;
 import com.microsoft.graph.models.extensions.IdentitySet;

@@ -14,8 +14,6 @@ import com.microsoft.graph.models.generated.FirewallPreSharedKeyEncodingMethodTy
 import com.microsoft.graph.models.generated.FirewallCertificateRevocationListCheckMethodType;
 import com.microsoft.graph.models.generated.FirewallPacketQueueingMethodType;
 import com.microsoft.graph.models.extensions.WindowsFirewallNetworkProfile;
-import com.microsoft.graph.models.extensions.WindowsFirewallNetworkProfile;
-import com.microsoft.graph.models.extensions.WindowsFirewallNetworkProfile;
 import com.microsoft.graph.models.generated.AppLockerApplicationControlType;
 import com.microsoft.graph.models.generated.ApplicationGuardBlockFileTransferType;
 import com.microsoft.graph.models.generated.ApplicationGuardBlockClipboardSharingType;

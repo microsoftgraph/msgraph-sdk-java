@@ -12,8 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
-import com.microsoft.graph.models.extensions.PhysicalAddress;
-import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
@@ -171,7 +169,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The contact’s job title.
+     * The contact's job title.
      */
     @SerializedName("jobTitle")
     @Expose

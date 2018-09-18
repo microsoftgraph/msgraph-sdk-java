@@ -43,6 +43,14 @@ public enum ManagedDevicePartnerReportedHealthState
     */
     UNRESPONSIVE,
     /**
+    * compromised
+    */
+    COMPROMISED,
+    /**
+    * misconfigured
+    */
+    MISCONFIGURED,
+    /**
     * For ManagedDevicePartnerReportedHealthState values that were not expected from the service
     */
     UNEXPECTED_VALUE

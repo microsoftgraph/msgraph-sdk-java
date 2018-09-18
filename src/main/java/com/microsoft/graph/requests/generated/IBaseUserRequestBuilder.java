@@ -58,6 +58,8 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingE
 import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder;
@@ -247,6 +249,20 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IUserActivityCollectionRequestBuilder activities();
 
     IUserActivityRequestBuilder activities(final String id);
+
+    /**
+     * Gets the request builder for OfficeGraphInsights
+     *
+     * @return the IOfficeGraphInsightsRequestBuilder instance
+     */
+    IOfficeGraphInsightsRequestBuilder insights();
+
+    /**
+     * Gets the request builder for UserSettings
+     *
+     * @return the IUserSettingsRequestBuilder instance
+     */
+    IUserSettingsRequestBuilder settings();
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);

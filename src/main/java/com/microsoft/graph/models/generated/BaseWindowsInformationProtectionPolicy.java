@@ -11,8 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.WindowsInformationProtectionPinCharacterRequirements;
-import com.microsoft.graph.models.generated.WindowsInformationProtectionPinCharacterRequirements;
-import com.microsoft.graph.models.generated.WindowsInformationProtectionPinCharacterRequirements;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 
 

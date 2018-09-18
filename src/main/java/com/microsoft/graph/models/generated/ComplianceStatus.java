@@ -39,6 +39,10 @@ public enum ComplianceStatus
     */
     CONFLICT,
     /**
+    * not Assigned
+    */
+    NOT_ASSIGNED,
+    /**
     * For ComplianceStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -11,7 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ManagedAppDataTransferLevel;
-import com.microsoft.graph.models.generated.ManagedAppDataTransferLevel;
 import com.microsoft.graph.models.generated.ManagedAppClipboardSharingLevel;
 import com.microsoft.graph.models.generated.ManagedAppPinCharacterSet;
 import com.microsoft.graph.models.generated.ManagedAppDataStorageLocation;

@@ -14,7 +14,6 @@ import com.microsoft.graph.models.generated.MessageActionFlag;
 import com.microsoft.graph.models.generated.Importance;
 import com.microsoft.graph.models.generated.Sensitivity;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.models.extensions.SizeRange;
 
 

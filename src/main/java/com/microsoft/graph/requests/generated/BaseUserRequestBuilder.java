@@ -113,6 +113,10 @@ import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBui
 import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
+import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAssignLicenseRequestBuilder;
@@ -414,6 +418,24 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
 
     public IUserActivityRequestBuilder activities(final String id) {
         return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for OfficeGraphInsights
+     *
+     * @return the IOfficeGraphInsightsRequestBuilder instance
+     */
+    public IOfficeGraphInsightsRequestBuilder insights() {
+        return new OfficeGraphInsightsRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserSettings
+     *
+     * @return the IUserSettingsRequestBuilder instance
+     */
+    public IUserSettingsRequestBuilder settings() {
+        return new UserSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
     public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {

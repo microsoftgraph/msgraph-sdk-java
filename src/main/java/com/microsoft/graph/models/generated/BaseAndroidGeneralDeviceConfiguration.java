@@ -12,12 +12,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
-import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AndroidRequiredPasswordType;
 import com.microsoft.graph.models.generated.WebBrowserCookieSettings;
-import com.microsoft.graph.models.extensions.AppListItem;
-import com.microsoft.graph.models.extensions.AppListItem;
-import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 

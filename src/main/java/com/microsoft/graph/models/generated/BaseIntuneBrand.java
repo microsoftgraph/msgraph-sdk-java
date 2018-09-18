@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RgbColor;
 import com.microsoft.graph.models.extensions.MimeContent;
-import com.microsoft.graph.models.extensions.MimeContent;
 
 
 import com.google.gson.JsonObject;
@@ -81,7 +80,7 @@ public class BaseIntuneBrand implements IJsonBackedObject {
 
     /**
      * The Privacy Url.
-     * URL to the company/organization’s privacy policy.
+     * URL to the company/organization's privacy policy.
      */
     @SerializedName("privacyUrl")
     @Expose
@@ -89,7 +88,7 @@ public class BaseIntuneBrand implements IJsonBackedObject {
 
     /**
      * The Online Support Site Url.
-     * URL to the company/organization’s IT helpdesk site.
+     * URL to the company/organization's IT helpdesk site.
      */
     @SerializedName("onlineSupportSiteUrl")
     @Expose
@@ -97,7 +96,7 @@ public class BaseIntuneBrand implements IJsonBackedObject {
 
     /**
      * The Online Support Site Name.
-     * Display name of the company/organization’s IT helpdesk site.
+     * Display name of the company/organization's IT helpdesk site.
      */
     @SerializedName("onlineSupportSiteName")
     @Expose

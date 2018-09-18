@@ -13,7 +13,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
-import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
 import com.microsoft.graph.requests.generated.BaseOnenoteSectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
