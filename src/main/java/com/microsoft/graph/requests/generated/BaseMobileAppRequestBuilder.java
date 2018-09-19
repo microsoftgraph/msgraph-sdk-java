@@ -5,10 +5,10 @@
 package com.microsoft.graph.requests.generated;
 import com.microsoft.graph.requests.extensions.IMobileAppRequest;
 import com.microsoft.graph.requests.extensions.MobileAppRequest;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
@@ -59,12 +59,12 @@ public class BaseMobileAppRequestBuilder extends BaseRequestBuilder implements I
         return new MobileAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    public IMobileAppCategoryCollectionRequestBuilder categories() {
-        return new MobileAppCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryRequestBuilder categories(final String id) {
-        return new MobileAppCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+        return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
     public IMobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);

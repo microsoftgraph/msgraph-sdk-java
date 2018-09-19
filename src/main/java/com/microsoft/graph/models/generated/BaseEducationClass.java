@@ -15,13 +15,10 @@ import com.microsoft.graph.models.generated.EducationExternalSource;
 import com.microsoft.graph.models.extensions.EducationTerm;
 import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.generated.BaseEducationSchoolCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
-import com.microsoft.graph.requests.generated.BaseEducationUserCollectionResponse;
-import com.microsoft.graph.requests.extensions.EducationUserCollectionPage;
 import com.microsoft.graph.requests.generated.BaseEducationUserCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionPage;
 

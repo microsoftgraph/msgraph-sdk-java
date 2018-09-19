@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.RecurrencePatternType;
 import com.microsoft.graph.models.generated.DayOfWeek;
-import com.microsoft.graph.models.generated.DayOfWeek;
 import com.microsoft.graph.models.generated.WeekIndex;
 
 

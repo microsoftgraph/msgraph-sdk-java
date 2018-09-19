@@ -55,6 +55,10 @@ public enum DeviceEnrollmentFailureReason
     */
     CLIENT_DISCONNECTED,
     /**
+    * user Abandonment
+    */
+    USER_ABANDONMENT,
+    /**
     * For DeviceEnrollmentFailureReason values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -517,4 +517,13 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     public IDeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", (IGraphServiceClient)this, null);
     }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Security
+     */
+    public ISecurityRequestBuilder Security() {
+        return new SecurityRequestBuilder(getServiceRoot() + "/Security", (IGraphServiceClient)this, null);
+    }
 }

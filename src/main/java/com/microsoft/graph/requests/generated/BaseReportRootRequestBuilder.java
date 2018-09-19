@@ -175,6 +175,14 @@ import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationUse
 import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationDeviceActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
+import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
+import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -557,6 +565,22 @@ public class BaseReportRootRequestBuilder extends BaseRequestBuilder implements 
 
     public IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity() {
         return new ReportRootDeviceConfigurationDeviceActivityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deviceConfigurationDeviceActivity"), getClient(), null);
+    }
+
+    public IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails() {
+        return new ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentFailureDetails"), getClient(), null);
+    }
+
+    public IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken) {
+        return new ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentFailureDetails"), getClient(), null, skip, top, filter, skipToken);
+    }
+
+    public IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures() {
+        return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null);
+    }
+
+    public IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period) {
+        return new ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.managedDeviceEnrollmentTopFailures"), getClient(), null, period);
     }
 }
 

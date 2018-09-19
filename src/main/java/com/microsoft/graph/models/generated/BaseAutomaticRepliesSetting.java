@@ -13,7 +13,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.generated.AutomaticRepliesStatus;
 import com.microsoft.graph.models.generated.ExternalAudienceScope;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 
 
 import com.google.gson.JsonObject;

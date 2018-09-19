@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 
 
 import com.google.gson.JsonObject;

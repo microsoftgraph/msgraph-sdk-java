@@ -14,7 +14,6 @@ import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.File;
 import com.microsoft.graph.models.extensions.FileSystemInfo;
 import com.microsoft.graph.models.extensions.Folder;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.Shared;
 import com.microsoft.graph.models.extensions.SharepointIds;

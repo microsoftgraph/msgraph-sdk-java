@@ -16,11 +16,7 @@ import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SystemFacet;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.List;
-import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.BaseItem;
-import com.microsoft.graph.requests.generated.BaseDriveItemCollectionResponse;
-import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 import com.microsoft.graph.requests.generated.BaseDriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 

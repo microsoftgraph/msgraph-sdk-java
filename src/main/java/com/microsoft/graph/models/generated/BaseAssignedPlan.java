@@ -46,6 +46,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
+     * For example, "Enabled".
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -53,6 +54,7 @@ public class BaseAssignedPlan implements IJsonBackedObject {
 
     /**
      * The Service.
+     * The name of the service; for example, "Exchange".
      */
     @SerializedName("service")
     @Expose

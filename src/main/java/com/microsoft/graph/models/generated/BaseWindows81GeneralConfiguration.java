@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.InternetSiteSecurityLevel;
 import com.microsoft.graph.models.generated.SiteSecurityLevel;
-import com.microsoft.graph.models.generated.SiteSecurityLevel;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.WindowsUserAccountControlSettings;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;

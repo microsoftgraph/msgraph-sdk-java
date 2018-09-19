@@ -11,9 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppListItem;
-import com.microsoft.graph.models.extensions.AppListItem;
-import com.microsoft.graph.models.generated.AppListType;
-import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
 import com.microsoft.graph.models.extensions.MediaContentRatingAustralia;
 import com.microsoft.graph.models.extensions.MediaContentRatingCanada;
@@ -652,6 +649,14 @@ public class BaseIosGeneralDeviceConfiguration extends DeviceConfiguration imple
     @SerializedName("kioskModeAppStoreUrl")
     @Expose
     public String kioskModeAppStoreUrl;
+
+    /**
+     * The Kiosk Mode Built In App Id.
+     * 
+     */
+    @SerializedName("kioskModeBuiltInAppId")
+    @Expose
+    public String kioskModeBuiltInAppId;
 
     /**
      * The Kiosk Mode Require Assistive Touch.

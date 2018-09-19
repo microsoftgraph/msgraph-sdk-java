@@ -12,8 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.Importance;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Recipient;
 
 
 import com.google.gson.JsonObject;

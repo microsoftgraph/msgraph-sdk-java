@@ -35,6 +35,10 @@ public enum DeviceComplianceActionType
     */
     REMOVE_RESOURCE_ACCESS_PROFILES,
     /**
+    * push Notification
+    */
+    PUSH_NOTIFICATION,
+    /**
     * For DeviceComplianceActionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

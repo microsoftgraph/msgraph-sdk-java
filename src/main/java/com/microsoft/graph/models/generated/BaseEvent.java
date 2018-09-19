@@ -15,8 +15,6 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.generated.Importance;
 import com.microsoft.graph.models.generated.Sensitivity;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.models.extensions.Location;
 import com.microsoft.graph.models.extensions.Location;
 import com.microsoft.graph.models.extensions.PatternedRecurrence;
 import com.microsoft.graph.models.generated.FreeBusyStatus;

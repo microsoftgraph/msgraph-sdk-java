@@ -11,9 +11,7 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Entity;
 

@@ -11,10 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestriction;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestriction;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestriction;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestriction;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestriction;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 
 

@@ -11,7 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DirectoryObject;
-import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 

@@ -23,21 +23,10 @@ import com.microsoft.graph.models.generated.StateManagementSetting;
 import com.microsoft.graph.models.generated.WindowsStartMenuAppListVisibilityType;
 import com.microsoft.graph.models.generated.WindowsStartMenuModeType;
 import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
-import com.microsoft.graph.models.generated.VisibilitySetting;
 import com.microsoft.graph.models.generated.WindowsSpotlightEnablementSettings;
 import com.microsoft.graph.models.extensions.Windows10NetworkProxyServer;
 import com.microsoft.graph.models.generated.SafeSearchFilterType;
 import com.microsoft.graph.models.extensions.EdgeSearchEngineBase;
-import com.microsoft.graph.models.generated.StateManagementSetting;
-import com.microsoft.graph.models.generated.StateManagementSetting;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -129,7 +118,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Search Enable Remote Queries.
-     * Indicates whether or not to block remote queries of this computer’s index.
+     * Indicates whether or not to block remote queries of this computer's index.
      */
     @SerializedName("searchEnableRemoteQueries")
     @Expose
@@ -401,7 +390,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Defender Detected Malware Actions.
-     * Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Gets or sets Defender's actions to take on detected Malware per threat level.
      */
     @SerializedName("defenderDetectedMalwareActions")
     @Expose
@@ -809,6 +798,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Start Menu Hide Restart Options.
+     * Enabling this policy hides "Restart/Update and Restart" from appearing in the power button in the start menu.
      */
     @SerializedName("startMenuHideRestartOptions")
     @Expose
@@ -1080,7 +1070,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Windows Spotlight Block Tailored Experiences.
-     * Block personalized content in Windows spotlight based on user’s device usage.
+     * Block personalized content in Windows spotlight based on user's device usage.
      */
     @SerializedName("windowsSpotlightBlockTailoredExperiences")
     @Expose
@@ -1120,7 +1110,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Network Proxy Apply Settings Device Wide.
-     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that's enrolled into MDM.
      */
     @SerializedName("networkProxyApplySettingsDeviceWide")
     @Expose

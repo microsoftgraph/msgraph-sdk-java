@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisFormat;
 import com.microsoft.graph.models.extensions.WorkbookChartGridlines;
-import com.microsoft.graph.models.extensions.WorkbookChartGridlines;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisTitle;
 import com.microsoft.graph.models.extensions.Entity;
 

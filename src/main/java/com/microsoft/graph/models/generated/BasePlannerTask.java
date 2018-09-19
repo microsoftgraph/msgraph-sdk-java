@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.PlannerPreviewType;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerAppliedCategories;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
