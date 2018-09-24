@@ -64,9 +64,11 @@ publishing {
             artifact sourceJar
             pom.withXml {
                 def root = asNode()
-                root.appendNode('name', 'Preview Microsoft Graph SDK for Java')
+                root.appendNode('name', 'Microsoft Graph SDK for Java')
                 root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-sdk-java')
                 root.children().last() + pomConfig
+                def pomFile = file("${project.buildDir}/libs/microsoft-graph.pom")
+                writeTo(pomFile)
             }
 
         }
