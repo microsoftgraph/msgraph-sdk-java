@@ -3,19 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.MimeContent;
+import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
+import com.microsoft.graph.models.extensions.EBookInstallSummary;
+import com.microsoft.graph.models.extensions.DeviceInstallState;
+import com.microsoft.graph.models.extensions.UserInstallStateSummary;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseManagedEBookAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceInstallStateCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionPage;
+import com.microsoft.graph.requests.generated.BaseUserInstallStateSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -81,7 +88,7 @@ public class BaseManagedEBook extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The date and time when teh eBook was last modified.
+     * The date and time when the eBook was last modified.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

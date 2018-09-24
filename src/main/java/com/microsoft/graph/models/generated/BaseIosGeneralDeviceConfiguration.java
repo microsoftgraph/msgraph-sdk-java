@@ -3,19 +3,30 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AppListItem;
+import com.microsoft.graph.models.generated.AppListType;
+import com.microsoft.graph.models.extensions.MediaContentRatingAustralia;
+import com.microsoft.graph.models.extensions.MediaContentRatingCanada;
+import com.microsoft.graph.models.extensions.MediaContentRatingFrance;
+import com.microsoft.graph.models.extensions.MediaContentRatingGermany;
+import com.microsoft.graph.models.extensions.MediaContentRatingIreland;
+import com.microsoft.graph.models.extensions.MediaContentRatingJapan;
+import com.microsoft.graph.models.extensions.MediaContentRatingNewZealand;
+import com.microsoft.graph.models.extensions.MediaContentRatingUnitedKingdom;
+import com.microsoft.graph.models.extensions.MediaContentRatingUnitedStates;
+import com.microsoft.graph.models.extensions.IosNetworkUsageRule;
+import com.microsoft.graph.models.generated.RatingAppsType;
+import com.microsoft.graph.models.generated.RequiredPasswordType;
+import com.microsoft.graph.models.generated.WebBrowserCookieSettings;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -417,7 +428,7 @@ public class BaseIosGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The ICloud Block Activity Continuation.
-     * Indicates whether or not to block  the user from continuing work they started on iOS device to another iOS or macOS device.
+     * Indicates whether or not to block  the the user from continuing work they started on iOS device to another iOS or macOS device.
      */
     @SerializedName("iCloudBlockActivityContinuation")
     @Expose
@@ -640,6 +651,14 @@ public class BaseIosGeneralDeviceConfiguration extends DeviceConfiguration imple
     public String kioskModeAppStoreUrl;
 
     /**
+     * The Kiosk Mode Built In App Id.
+     * 
+     */
+    @SerializedName("kioskModeBuiltInAppId")
+    @Expose
+    public String kioskModeBuiltInAppId;
+
+    /**
      * The Kiosk Mode Require Assistive Touch.
      * Indicates whether or not to require assistive touch while in kiosk mode.
      */
@@ -801,7 +820,7 @@ public class BaseIosGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Media Content Rating Apps.
-     * Media content rating settings for Apps Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
      */
     @SerializedName("mediaContentRatingApps")
     @Expose

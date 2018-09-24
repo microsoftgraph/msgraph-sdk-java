@@ -3,19 +3,78 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.AssignedPlan;
+import com.microsoft.graph.models.extensions.OnPremisesExtensionAttributes;
+import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
+import com.microsoft.graph.models.extensions.PasswordProfile;
+import com.microsoft.graph.models.extensions.ProvisionedPlan;
+import com.microsoft.graph.models.extensions.MailboxSettings;
+import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.LicenseDetails;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.OutlookUser;
+import com.microsoft.graph.models.extensions.Message;
+import com.microsoft.graph.models.extensions.MailFolder;
+import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.CalendarGroup;
+import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Person;
+import com.microsoft.graph.models.extensions.Contact;
+import com.microsoft.graph.models.extensions.ContactFolder;
+import com.microsoft.graph.models.extensions.InferenceClassification;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.PlannerUser;
+import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.ManagedDevice;
+import com.microsoft.graph.models.extensions.ManagedAppRegistration;
+import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
+import com.microsoft.graph.models.extensions.UserActivity;
+import com.microsoft.graph.models.extensions.OfficeGraphInsights;
+import com.microsoft.graph.models.extensions.UserSettings;
+import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.generated.BaseLicenseDetailsCollectionResponse;
+import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
+import com.microsoft.graph.requests.generated.BaseExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMessageCollectionResponse;
+import com.microsoft.graph.requests.extensions.MessageCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMailFolderCollectionResponse;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
+import com.microsoft.graph.requests.generated.BaseCalendarCollectionResponse;
+import com.microsoft.graph.requests.extensions.CalendarCollectionPage;
+import com.microsoft.graph.requests.generated.BaseCalendarGroupCollectionResponse;
+import com.microsoft.graph.requests.extensions.CalendarGroupCollectionPage;
+import com.microsoft.graph.requests.generated.BaseEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.generated.BasePersonCollectionResponse;
+import com.microsoft.graph.requests.extensions.PersonCollectionPage;
+import com.microsoft.graph.requests.generated.BaseContactCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.generated.BaseContactFolderCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
+import com.microsoft.graph.requests.generated.BaseProfilePhotoCollectionResponse;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDriveCollectionResponse;
+import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedDeviceCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
+import com.microsoft.graph.requests.generated.BaseManagedAppRegistrationCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceManagementTroubleshootingEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.generated.BaseUserActivityCollectionResponse;
+import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -38,6 +97,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("accountEnabled")
     @Expose
     public Boolean accountEnabled;
+
+    /**
+     * The Age Group.
+     * 
+     */
+    @SerializedName("ageGroup")
+    @Expose
+    public String ageGroup;
 
     /**
      * The Assigned Licenses.
@@ -78,6 +145,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("companyName")
     @Expose
     public String companyName;
+
+    /**
+     * The Consent Provided For Minor.
+     * 
+     */
+    @SerializedName("consentProvidedForMinor")
+    @Expose
+    public String consentProvidedForMinor;
 
     /**
      * The Country.
@@ -128,6 +203,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     public String jobTitle;
 
     /**
+     * The Legal Age Group Classification.
+     * 
+     */
+    @SerializedName("legalAgeGroupClassification")
+    @Expose
+    public String legalAgeGroupClassification;
+
+    /**
      * The Mail.
      * The SMTP address for the user, for example, "jeff@contoso.onmicrosoft.com". Read-Only. Supports $filter.
      */
@@ -152,6 +235,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     public String mobilePhone;
 
     /**
+     * The On Premises Extension Attributes.
+     * 
+     */
+    @SerializedName("onPremisesExtensionAttributes")
+    @Expose
+    public OnPremisesExtensionAttributes onPremisesExtensionAttributes;
+
+    /**
      * The On Premises Immutable Id.
      * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
      */
@@ -168,6 +259,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
+     * The On Premises Provisioning Errors.
+     * 
+     */
+    @SerializedName("onPremisesProvisioningErrors")
+    @Expose
+    public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
+
+    /**
      * The On Premises Security Identifier.
      * Contains the on-premises security identifier (SID) for the user that was synchronized from on-premises to the cloud. Read-only.
      */
@@ -182,6 +281,30 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("onPremisesSyncEnabled")
     @Expose
     public Boolean onPremisesSyncEnabled;
+
+    /**
+     * The On Premises Domain Name.
+     * 
+     */
+    @SerializedName("onPremisesDomainName")
+    @Expose
+    public String onPremisesDomainName;
+
+    /**
+     * The On Premises Sam Account Name.
+     * 
+     */
+    @SerializedName("onPremisesSamAccountName")
+    @Expose
+    public String onPremisesSamAccountName;
+
+    /**
+     * The On Premises User Principal Name.
+     * 
+     */
+    @SerializedName("onPremisesUserPrincipalName")
+    @Expose
+    public String onPremisesUserPrincipalName;
 
     /**
      * The Password Policies.
@@ -377,7 +500,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Enrollment Limit.
-     * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
+     * 
      */
     @SerializedName("deviceEnrollmentLimit")
     @Expose
@@ -438,6 +561,14 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The collection of open extensions defined for the user. Read-only. Nullable.
      */
     public ExtensionCollectionPage extensions;
+
+    /**
+     * The Outlook.
+     * 
+     */
+    @SerializedName("outlook")
+    @Expose
+    public OutlookUser outlook;
 
     /**
      * The Messages.
@@ -570,6 +701,28 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
      * The list of troubleshooting events for this user.
      */
     public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
+
+    /**
+     * The Activities.
+     * 
+     */
+    public UserActivityCollectionPage activities;
+
+    /**
+     * The Insights.
+     * 
+     */
+    @SerializedName("insights")
+    @Expose
+    public OfficeGraphInsights insights;
+
+    /**
+     * The Settings.
+     * 
+     */
+    @SerializedName("settings")
+    @Expose
+    public UserSettings settings;
 
 
     /**
@@ -961,6 +1114,22 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             deviceManagementTroubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
+        }
+
+        if (json.has("activities")) {
+            final BaseUserActivityCollectionResponse response = new BaseUserActivityCollectionResponse();
+            if (json.has("activities@odata.nextLink")) {
+                response.nextLink = json.get("activities@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("activities").toString(), JsonObject[].class);
+            final UserActivity[] array = new UserActivity[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), UserActivity.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            activities = new UserActivityCollectionPage(response, null);
         }
     }
 }

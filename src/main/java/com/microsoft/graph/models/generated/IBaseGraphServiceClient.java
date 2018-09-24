@@ -349,6 +349,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Directory
+     */
+    IDirectoryRequestBuilder directory();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Drive
      */
     IDriveRequestBuilder drive();
@@ -387,5 +394,12 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the DeviceManagement
      */
     IDeviceManagementRequestBuilder deviceManagement();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Security
+     */
+    ISecurityRequestBuilder Security();
 
 }

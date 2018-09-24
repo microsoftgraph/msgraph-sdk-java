@@ -33,7 +33,9 @@ public class BaseDeviceManagementGetEffectivePermissionsCollectionRequestBuilder
      */
     public BaseDeviceManagementGetEffectivePermissionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String scope) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("scope", scope));
+     	 if(scope!=null){
+			functionOptions.add(new FunctionOption("scope", scope));
+		}
       }
 
     public IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest() {

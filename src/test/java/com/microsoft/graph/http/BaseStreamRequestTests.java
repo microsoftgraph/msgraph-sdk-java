@@ -1,14 +1,9 @@
 package com.microsoft.graph.http;
 
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
-import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.concurrency.MockExecutors;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.MockBaseClient;
-import com.microsoft.graph.logger.MockLogger;
-import com.microsoft.graph.serializer.MockSerializer;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -17,6 +12,14 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.microsoft.graph.authentication.MockAuthenticationProvider;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.concurrency.MockExecutors;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.MockBaseClient;
+import com.microsoft.graph.logger.MockLogger;
+import com.microsoft.graph.serializer.MockSerializer;
 
 /**
  * Test cases for {@see BaseStreamRequest}

@@ -3,19 +3,24 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.WorkbookChartAxes;
+import com.microsoft.graph.models.extensions.WorkbookChartDataLabels;
+import com.microsoft.graph.models.extensions.WorkbookChartAreaFormat;
+import com.microsoft.graph.models.extensions.WorkbookChartLegend;
+import com.microsoft.graph.models.extensions.WorkbookChartSeries;
+import com.microsoft.graph.models.extensions.WorkbookChartTitle;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseWorkbookChartSeriesCollectionResponse;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;

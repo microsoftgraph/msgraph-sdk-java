@@ -55,6 +55,23 @@ public class BaseGroupWithReferenceRequest extends BaseRequest implements IBaseG
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<Group> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final Group sourceGroup, final ICallback<Group> callback) {
+		send(HttpMethod.PATCH, callback, sourceGroup);
+	}
+
+	public Group patch(final Group sourceGroup) throws ClientException {
+		return send(HttpMethod.PATCH, sourceGroup);
+	}
+
+
     /**
      * Sets the select clause for the request
      *

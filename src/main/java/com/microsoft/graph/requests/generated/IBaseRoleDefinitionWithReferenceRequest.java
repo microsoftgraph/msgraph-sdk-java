@@ -32,6 +32,14 @@ public interface IBaseRoleDefinitionWithReferenceRequest extends IHttpRequest {
 
     RoleDefinition get() throws ClientException;
 
+	void delete(final ICallback<RoleDefinition> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final RoleDefinition sourceRoleDefinition, final ICallback<RoleDefinition> callback);
+
+	RoleDefinition patch(final RoleDefinition sourceRoleDefinition) throws ClientException;
+
     IBaseRoleDefinitionWithReferenceRequest select(final String value);
 
     IBaseRoleDefinitionWithReferenceRequest expand(final String value);

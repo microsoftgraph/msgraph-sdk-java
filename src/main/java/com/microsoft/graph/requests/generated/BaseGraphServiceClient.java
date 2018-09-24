@@ -458,6 +458,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Directory
+     */
+    public IDirectoryRequestBuilder directory() {
+        return new DirectoryRequestBuilder(getServiceRoot() + "/directory", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Drive
      */
     public IDriveRequestBuilder drive() {
@@ -507,5 +516,14 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IDeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Security
+     */
+    public ISecurityRequestBuilder Security() {
+        return new SecurityRequestBuilder(getServiceRoot() + "/Security", (IGraphServiceClient)this, null);
     }
 }

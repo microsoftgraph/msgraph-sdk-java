@@ -3,19 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.WindowsHelloForBusinessPinUsage;
+import com.microsoft.graph.models.generated.Enablement;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -49,7 +47,7 @@ public class BaseDeviceEnrollmentWindowsHelloForBusinessConfiguration extends De
 
     /**
      * The Pin Uppercase Characters Usage.
-     * Not yet documented Possible values are: allowed, required, disallowed.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
      */
     @SerializedName("pinUppercaseCharactersUsage")
     @Expose
@@ -57,7 +55,7 @@ public class BaseDeviceEnrollmentWindowsHelloForBusinessConfiguration extends De
 
     /**
      * The Pin Lowercase Characters Usage.
-     * Not yet documented Possible values are: allowed, required, disallowed.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
      */
     @SerializedName("pinLowercaseCharactersUsage")
     @Expose
@@ -65,7 +63,7 @@ public class BaseDeviceEnrollmentWindowsHelloForBusinessConfiguration extends De
 
     /**
      * The Pin Special Characters Usage.
-     * Not yet documented Possible values are: allowed, required, disallowed.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
      */
     @SerializedName("pinSpecialCharactersUsage")
     @Expose
@@ -73,7 +71,7 @@ public class BaseDeviceEnrollmentWindowsHelloForBusinessConfiguration extends De
 
     /**
      * The State.
-     * Not yet documented Possible values are: notConfigured, enabled, disabled.
+     * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName("state")
     @Expose
@@ -121,7 +119,7 @@ public class BaseDeviceEnrollmentWindowsHelloForBusinessConfiguration extends De
 
     /**
      * The Enhanced Biometrics State.
-     * Not yet documented Possible values are: notConfigured, enabled, disabled.
+     * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName("enhancedBiometricsState")
     @Expose

@@ -33,7 +33,9 @@ public class BaseDriveItemSearchCollectionRequestBuilder extends BaseFunctionReq
      */
     public BaseDriveItemSearchCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String q) {
         super(requestUrl, client, requestOptions);
-        functionOptions.add(new FunctionOption("q", q));
+     	 if(q!=null){
+			functionOptions.add(new FunctionOption("q", q));
+		}
       }
 
     public IDriveItemSearchCollectionRequest buildRequest() {

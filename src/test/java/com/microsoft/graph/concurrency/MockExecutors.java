@@ -52,4 +52,9 @@ public class MockExecutors implements IExecutors {
                                              final ICallback<Result> callback) {
         callback.failure(exception);
     }
+    
+    @Override
+    public void shutdownBackgroundExecutors(){
+    	
+    }
 }

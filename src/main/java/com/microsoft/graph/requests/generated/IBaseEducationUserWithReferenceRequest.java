@@ -32,6 +32,14 @@ public interface IBaseEducationUserWithReferenceRequest extends IHttpRequest {
 
     EducationUser get() throws ClientException;
 
+	void delete(final ICallback<EducationUser> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final EducationUser sourceEducationUser, final ICallback<EducationUser> callback);
+
+	EducationUser patch(final EducationUser sourceEducationUser) throws ClientException;
+
     IBaseEducationUserWithReferenceRequest select(final String value);
 
     IBaseEducationUserWithReferenceRequest expand(final String value);

@@ -18,6 +18,7 @@ public class MockConnection implements IConnection {
     private final ITestConnectionData mData;
     private HashMap<String, String> mHeaders = new HashMap<>();
     private Boolean mFollowRedirects;
+    private final String JSON_ENCODING = "UTF-8";
 
     public MockConnection(ITestConnectionData data) {
         mData = data;
@@ -40,7 +41,7 @@ public class MockConnection implements IConnection {
 
     @Override
     public InputStream getInputStream() throws IOException {
-        return new ByteArrayInputStream(mData.getJsonResponse().getBytes());
+        return new ByteArrayInputStream(mData.getJsonResponse().getBytes(JSON_ENCODING));
     }
 
     @Override

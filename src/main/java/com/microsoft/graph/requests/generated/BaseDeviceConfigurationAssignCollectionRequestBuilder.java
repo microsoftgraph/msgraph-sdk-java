@@ -33,7 +33,9 @@ public class BaseDeviceConfigurationAssignCollectionRequestBuilder extends BaseA
      */
     public BaseDeviceConfigurationAssignCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<DeviceConfigurationAssignment> assignments) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("assignments", assignments);
+  	 if(assignments!=null){
+			bodyParams.put("assignments", assignments);
+		}
       }
 
     public IDeviceConfigurationAssignCollectionRequest buildRequest() {

@@ -3,19 +3,42 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ResponseStatus;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.generated.Importance;
+import com.microsoft.graph.models.generated.Sensitivity;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.Location;
+import com.microsoft.graph.models.extensions.PatternedRecurrence;
+import com.microsoft.graph.models.generated.FreeBusyStatus;
+import com.microsoft.graph.models.generated.EventType;
+import com.microsoft.graph.models.extensions.Attendee;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.Attachment;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.OutlookItem;
+import com.microsoft.graph.requests.generated.BaseEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.generated.BaseExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseAttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.generated.BaseSingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.generated.BaseMultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -41,7 +64,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original End Time Zone.
-     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Customindicates that a legacy custom time zone was set in desktop Outlook.
+     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
      */
     @SerializedName("originalEndTimeZone")
     @Expose
@@ -113,7 +136,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * The importance of the event. Possible values are: Low, Normal, High.
+     * The importance of the event. Possible values are: low, normal, high.
      */
     @SerializedName("importance")
     @Expose
@@ -121,7 +144,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * Possible values are: Normal, Personal, Private, Confidential.
+     * Possible values are: normal, personal, private, confidential.
      */
     @SerializedName("sensitivity")
     @Expose
@@ -158,6 +181,14 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
     @SerializedName("location")
     @Expose
     public Location location;
+
+    /**
+     * The Locations.
+     * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
+     */
+    @SerializedName("locations")
+    @Expose
+    public java.util.List<Location> locations;
 
     /**
      * The Is All Day.
@@ -201,7 +232,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Series Master Id.
-     * The categories assigned to the item.
+     * The ID for the recurring series master item, if this event is part of a recurring series.
      */
     @SerializedName("seriesMasterId")
     @Expose
@@ -209,7 +240,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
-     * The status to show. Possible values are: Free, Tentative, Busy, Oof, WorkingElsewhere, Unknown.
+     * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName("showAs")
     @Expose
@@ -217,7 +248,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The event type. Possible values are: SingleInstance, Occurrence, Exception, SeriesMaster. Read-only.
+     * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
      */
     @SerializedName("type")
     @Expose

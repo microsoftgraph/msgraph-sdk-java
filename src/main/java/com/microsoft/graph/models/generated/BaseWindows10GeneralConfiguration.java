@@ -3,19 +3,32 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.DiagnosticDataSubmissionMode;
+import com.microsoft.graph.models.generated.EdgeCookiePolicy;
+import com.microsoft.graph.models.extensions.DefenderDetectedMalwareActions;
+import com.microsoft.graph.models.generated.WeeklySchedule;
+import com.microsoft.graph.models.generated.DefenderMonitorFileActivity;
+import com.microsoft.graph.models.generated.DefenderPromptForSampleSubmission;
+import com.microsoft.graph.models.generated.DefenderScanType;
+import com.microsoft.graph.models.generated.DefenderCloudBlockLevelType;
+import com.microsoft.graph.models.generated.RequiredPasswordType;
+import com.microsoft.graph.models.generated.StateManagementSetting;
+import com.microsoft.graph.models.generated.WindowsStartMenuAppListVisibilityType;
+import com.microsoft.graph.models.generated.WindowsStartMenuModeType;
+import com.microsoft.graph.models.generated.VisibilitySetting;
+import com.microsoft.graph.models.generated.WindowsSpotlightEnablementSettings;
+import com.microsoft.graph.models.extensions.Windows10NetworkProxyServer;
+import com.microsoft.graph.models.generated.SafeSearchFilterType;
+import com.microsoft.graph.models.extensions.EdgeSearchEngineBase;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -217,7 +230,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Blocked.
-     * Indicates whether or not to Block the user from using the Edge browser.
+     * Indicates whether or not to Block the user from using the Microsoft Edge browser.
      */
     @SerializedName("edgeBlocked")
     @Expose
@@ -225,7 +238,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Cookie Policy.
-     * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Indicates which cookies to block in the Microsoft Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
      */
     @SerializedName("edgeCookiePolicy")
     @Expose
@@ -233,7 +246,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Developer Tools.
-     * Indicates whether or not to block developer tools in the Edge browser.
+     * Indicates whether or not to block developer tools in the Microsoft Edge browser.
      */
     @SerializedName("edgeBlockDeveloperTools")
     @Expose
@@ -249,7 +262,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Extensions.
-     * Indicates whether or not to block extensions in the Edge browser.
+     * Indicates whether or not to block extensions in the Microsoft Edge browser.
      */
     @SerializedName("edgeBlockExtensions")
     @Expose
@@ -257,7 +270,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block In Private Browsing.
-     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
+     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Microsoft Edge browser.
      */
     @SerializedName("edgeBlockInPrivateBrowsing")
     @Expose
@@ -305,7 +318,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Allow Start Pages Modification.
-     * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
+     * Allow users to change Start pages on Microsoft Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Microsoft Edge.
      */
     @SerializedName("edgeAllowStartPagesModification")
     @Expose
@@ -833,7 +846,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Start Menu Layout Edge Assets Xml.
-     * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+     * This policy setting allows you to import Microsoft Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Microsoft Edge app which looks for Microsoft Edge local asset file. Microsoft Edge local asset would not exist and cause Microsoft Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
      */
     @SerializedName("startMenuLayoutEdgeAssetsXml")
     @Expose
@@ -1089,7 +1102,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Windows Spotlight Configure On Lock Screen.
-     * Specifies the type of Spotlight Possible values are: notConfigured, disabled, enabled.
+     * Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
      */
     @SerializedName("windowsSpotlightConfigureOnLockScreen")
     @Expose
@@ -1233,7 +1246,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Sending Intranet Traffic To Internet Explorer.
-     * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
+     * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Microsoft Edge.
      */
     @SerializedName("edgeBlockSendingIntranetTrafficToInternetExplorer")
     @Expose
@@ -1257,7 +1270,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge First Run Url.
-     * The first run URL for when Edge browser is opened for the first time.
+     * The first run URL for when Microsoft Edge browser is opened for the first time.
      */
     @SerializedName("edgeFirstRunUrl")
     @Expose
@@ -1273,7 +1286,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Homepage Urls.
-     * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
+     * The list of URLs for homepages shodwn on MDM-enrolled devices on Microsoft Edge browser.
      */
     @SerializedName("edgeHomepageUrls")
     @Expose
@@ -1281,7 +1294,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Access To About Flags.
-     * Indicates whether or not to prevent access to about flags on Edge browser.
+     * Indicates whether or not to prevent access to about flags on Microsoft Edge browser.
      */
     @SerializedName("edgeBlockAccessToAboutFlags")
     @Expose

@@ -3,19 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.WindowsInformationProtectionPinCharacterRequirements;
+import com.microsoft.graph.models.extensions.WindowsInformationProtection;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -81,7 +78,7 @@ public class BaseWindowsInformationProtectionPolicy extends WindowsInformationPr
 
     /**
      * The Pin Special Characters.
-     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! " # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ \ ] ^  ` {
+     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! " # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ &#92; ] ^  ` {
      */
     @SerializedName("pinSpecialCharacters")
     @Expose

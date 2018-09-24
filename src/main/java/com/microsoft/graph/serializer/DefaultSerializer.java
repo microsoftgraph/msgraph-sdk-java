@@ -100,6 +100,7 @@ public class DefaultSerializer implements ISerializer {
             }
             
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
+            setChildAdditionalData(jsonBackedObject,rawObject);
             return jo;
         } else {
             logger.logDebug("Deserializing a non-IJsonBackedObject type " + clazz.getSimpleName());
@@ -107,6 +108,51 @@ public class DefaultSerializer implements ISerializer {
         }
     }
 
+    /**
+     * Recursively sets additional data for each child object
+     *
+     * @param serializedObject   the parent object whose children will be iterated to set additional data
+     * @param rawJson            the raw json
+     */
+    @SuppressWarnings("unchecked")
+    private void setChildAdditionalData(IJsonBackedObject serializedObject, JsonObject rawJson) {
+        // Use reflection to iterate through fields for eligible Graph children
+        for (java.lang.reflect.Field field : serializedObject.getClass().getFields()) {
+            try {
+                Object fieldObject = field.get(serializedObject);
+
+                // If the object is a HashMap, iterate through its children
+                if (fieldObject instanceof HashMap) {
+                    @SuppressWarnings("unchecked")
+                    HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
+                    Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
+
+                    while (it.hasNext()) {
+                        Map.Entry<String, Object> pair = (Map.Entry<String, Object>)it.next();
+                        Object child = pair.getValue();
+
+                        // If the item is a valid Graph object, set its additional data
+                        if (child instanceof IJsonBackedObject) {
+                            AdditionalDataManager childAdditionalDataManager = ((IJsonBackedObject) child).additionalDataManager();
+                            childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
+                            setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject());
+                        }
+                    }
+                }
+                // If the object is a valid Graph object, set its additional data
+                else if (fieldObject != null && fieldObject instanceof IJsonBackedObject) {
+                    IJsonBackedObject serializedChild = (IJsonBackedObject) fieldObject;
+                    AdditionalDataManager childAdditionalDataManager = serializedChild.additionalDataManager();
+
+                    childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
+                    setChildAdditionalData((IJsonBackedObject) fieldObject,rawJson.get(field.getName()).getAsJsonObject());
+                }
+            } catch (IllegalArgumentException | IllegalAccessException e) {
+                logger.logError("Unable to access child fields of " + serializedObject.getClass().getSimpleName(), e);
+            }
+        }
+    }
+    
     /**
      * Serializes an object into a string
      *
@@ -154,7 +200,6 @@ public class DefaultSerializer implements ISerializer {
 				
 				// If the object is a HashMap, iterate through its children
 				if (fieldObject instanceof HashMap) {
-					@SuppressWarnings("unchecked")
                     HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
 					Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 					

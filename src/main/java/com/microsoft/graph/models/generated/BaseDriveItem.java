@@ -3,19 +3,45 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Audio;
+import com.microsoft.graph.models.extensions.Deleted;
+import com.microsoft.graph.models.extensions.File;
+import com.microsoft.graph.models.extensions.FileSystemInfo;
+import com.microsoft.graph.models.extensions.Folder;
+import com.microsoft.graph.models.extensions.Image;
+import com.microsoft.graph.models.extensions.GeoCoordinates;
+import com.microsoft.graph.models.extensions.Photo;
+import com.microsoft.graph.models.extensions.PublicationFacet;
+import com.microsoft.graph.models.extensions.RemoteItem;
+import com.microsoft.graph.models.extensions.Root;
+import com.microsoft.graph.models.extensions.SearchResult;
+import com.microsoft.graph.models.extensions.Shared;
+import com.microsoft.graph.models.extensions.SharepointIds;
+import com.microsoft.graph.models.extensions.SpecialFolder;
+import com.microsoft.graph.models.extensions.Video;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.ListItem;
+import com.microsoft.graph.models.extensions.Permission;
+import com.microsoft.graph.models.extensions.ThumbnailSet;
+import com.microsoft.graph.models.extensions.DriveItemVersion;
+import com.microsoft.graph.models.extensions.Workbook;
+import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.generated.BaseDriveItemCollectionResponse;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
+import com.microsoft.graph.requests.generated.BasePermissionCollectionResponse;
+import com.microsoft.graph.requests.extensions.PermissionCollectionPage;
+import com.microsoft.graph.requests.generated.BaseThumbnailSetCollectionResponse;
+import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDriveItemVersionCollectionResponse;
+import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -110,6 +136,14 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName("photo")
     @Expose
     public Photo photo;
+
+    /**
+     * The Publication.
+     * 
+     */
+    @SerializedName("publication")
+    @Expose
+    public PublicationFacet publication;
 
     /**
      * The Remote Item.
@@ -210,6 +244,12 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
     public ThumbnailSetCollectionPage thumbnails;
 
     /**
+     * The Versions.
+     * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+     */
+    public DriveItemVersionCollectionPage versions;
+
+    /**
      * The Workbook.
      * 
      */
@@ -303,6 +343,22 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             thumbnails = new ThumbnailSetCollectionPage(response, null);
+        }
+
+        if (json.has("versions")) {
+            final BaseDriveItemVersionCollectionResponse response = new BaseDriveItemVersionCollectionResponse();
+            if (json.has("versions@odata.nextLink")) {
+                response.nextLink = json.get("versions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("versions").toString(), JsonObject[].class);
+            final DriveItemVersion[] array = new DriveItemVersion[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItemVersion.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            versions = new DriveItemVersionCollectionPage(response, null);
         }
     }
 }

@@ -32,6 +32,14 @@ public interface IBaseManagedDeviceOverviewWithReferenceRequest extends IHttpReq
 
     ManagedDeviceOverview get() throws ClientException;
 
+	void delete(final ICallback<ManagedDeviceOverview> callback);
+
+	void delete() throws ClientException;
+
+	void patch(final ManagedDeviceOverview sourceManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback);
+
+	ManagedDeviceOverview patch(final ManagedDeviceOverview sourceManagedDeviceOverview) throws ClientException;
+
     IBaseManagedDeviceOverviewWithReferenceRequest select(final String value);
 
     IBaseManagedDeviceOverviewWithReferenceRequest expand(final String value);

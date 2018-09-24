@@ -55,6 +55,23 @@ public class BaseEducationUserWithReferenceRequest extends BaseRequest implement
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<EducationUser> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final EducationUser sourceEducationUser, final ICallback<EducationUser> callback) {
+		send(HttpMethod.PATCH, callback, sourceEducationUser);
+	}
+
+	public EducationUser patch(final EducationUser sourceEducationUser) throws ClientException {
+		return send(HttpMethod.PATCH, sourceEducationUser);
+	}
+
+
     /**
      * Sets the select clause for the request
      *

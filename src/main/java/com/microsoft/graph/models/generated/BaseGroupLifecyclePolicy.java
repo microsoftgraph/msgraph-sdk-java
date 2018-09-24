@@ -3,19 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Entity;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -33,7 +29,7 @@ public class BaseGroupLifecyclePolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Group Lifetime In Days.
-     * 
+     * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
      */
     @SerializedName("groupLifetimeInDays")
     @Expose
@@ -41,7 +37,7 @@ public class BaseGroupLifecyclePolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Managed Group Types.
-     * 
+     * The group type for which the expiration policy applies. Possible values are All, Selected or None.
      */
     @SerializedName("managedGroupTypes")
     @Expose
@@ -49,7 +45,7 @@ public class BaseGroupLifecyclePolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Alternate Notification Emails.
-     * 
+     * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
      */
     @SerializedName("alternateNotificationEmails")
     @Expose

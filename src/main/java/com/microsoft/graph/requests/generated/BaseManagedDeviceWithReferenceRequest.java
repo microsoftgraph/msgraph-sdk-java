@@ -55,6 +55,23 @@ public class BaseManagedDeviceWithReferenceRequest extends BaseRequest implement
        return send(HttpMethod.GET, null);
     }
 
+	public void delete(final ICallback<ManagedDevice> callback) {
+		send(HttpMethod.DELETE, callback, null);
+	}
+
+	public void delete() throws ClientException {
+		send(HttpMethod.DELETE, null);
+	}
+
+	public void patch(final ManagedDevice sourceManagedDevice, final ICallback<ManagedDevice> callback) {
+		send(HttpMethod.PATCH, callback, sourceManagedDevice);
+	}
+
+	public ManagedDevice patch(final ManagedDevice sourceManagedDevice) throws ClientException {
+		return send(HttpMethod.PATCH, sourceManagedDevice);
+	}
+
+
     /**
      * Sets the select clause for the request
      *

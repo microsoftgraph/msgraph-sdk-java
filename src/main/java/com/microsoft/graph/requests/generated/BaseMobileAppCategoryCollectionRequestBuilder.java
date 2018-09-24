@@ -25,7 +25,7 @@ import java.util.EnumSet;
 public class BaseMobileAppCategoryCollectionRequestBuilder extends BaseRequestBuilder implements IBaseMobileAppCategoryCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of MobileApp
+     * The request builder for this collection of DeviceAppManagement
      *
      * @param requestUrl     the request URL
      * @param client         the service client

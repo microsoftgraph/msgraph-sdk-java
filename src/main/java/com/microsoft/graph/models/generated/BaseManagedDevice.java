@@ -3,19 +3,33 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ManagedDeviceOwnerType;
+import com.microsoft.graph.models.extensions.DeviceActionResult;
+import com.microsoft.graph.models.generated.ComplianceState;
+import com.microsoft.graph.models.generated.ManagementAgentType;
+import com.microsoft.graph.models.generated.DeviceEnrollmentType;
+import com.microsoft.graph.models.generated.DeviceRegistrationState;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessState;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessStateReason;
+import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFeatures;
+import com.microsoft.graph.models.extensions.DeviceHealthAttestationState;
+import com.microsoft.graph.models.generated.ManagedDevicePartnerReportedHealthState;
+import com.microsoft.graph.models.extensions.DeviceConfigurationState;
+import com.microsoft.graph.models.extensions.DeviceCategory;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
+import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.generated.BaseDeviceConfigurationStateCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
+import com.microsoft.graph.requests.generated.BaseDeviceCompliancePolicyStateCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionPage;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -46,6 +60,14 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName("deviceName")
     @Expose
     public String deviceName;
+
+    /**
+     * The Managed Device Owner Type.
+     * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     */
+    @SerializedName("managedDeviceOwnerType")
+    @Expose
+    public ManagedDeviceOwnerType managedDeviceOwnerType;
 
     /**
      * The Device Action Results.
@@ -393,7 +415,7 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Configuration States.
-     * Device configuration states for this device.
+     * 
      */
     public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
@@ -407,7 +429,7 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy States.
-     * Device compliance policy states for this device.
+     * 
      */
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 

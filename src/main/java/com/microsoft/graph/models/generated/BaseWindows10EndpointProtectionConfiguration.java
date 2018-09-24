@@ -3,19 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.FirewallPreSharedKeyEncodingMethodType;
+import com.microsoft.graph.models.generated.FirewallCertificateRevocationListCheckMethodType;
+import com.microsoft.graph.models.generated.FirewallPacketQueueingMethodType;
+import com.microsoft.graph.models.extensions.WindowsFirewallNetworkProfile;
+import com.microsoft.graph.models.generated.AppLockerApplicationControlType;
+import com.microsoft.graph.models.generated.ApplicationGuardBlockFileTransferType;
+import com.microsoft.graph.models.generated.ApplicationGuardBlockClipboardSharingType;
+import com.microsoft.graph.models.extensions.BitLockerRemovableDrivePolicy;
+import com.microsoft.graph.models.extensions.DeviceConfiguration;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -49,7 +53,7 @@ public class BaseWindows10EndpointProtectionConfiguration extends DeviceConfigur
 
     /**
      * The Firewall Pre Shared Key Encoding Method.
-     * Select the preshared key encoding to be used Possible values are: deviceDefault, none, utF8.
+     * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
      */
     @SerializedName("firewallPreSharedKeyEncodingMethod")
     @Expose
@@ -89,7 +93,7 @@ public class BaseWindows10EndpointProtectionConfiguration extends DeviceConfigur
 
     /**
      * The Firewall Certificate Revocation List Check Method.
-     * Specify how the certificate revocation list is to be enforced Possible values are: deviceDefault, none, attempt, require.
+     * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
      */
     @SerializedName("firewallCertificateRevocationListCheckMethod")
     @Expose
@@ -105,7 +109,7 @@ public class BaseWindows10EndpointProtectionConfiguration extends DeviceConfigur
 
     /**
      * The Firewall Packet Queueing Method.
-     * Configures how packet queueing should be applied in the tunnel gateway scenario Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
      */
     @SerializedName("firewallPacketQueueingMethod")
     @Expose
@@ -217,7 +221,7 @@ public class BaseWindows10EndpointProtectionConfiguration extends DeviceConfigur
 
     /**
      * The Application Guard Block File Transfer.
-     * Block clipboard to transfer image file, text file or neither of them Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
+     * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
      */
     @SerializedName("applicationGuardBlockFileTransfer")
     @Expose

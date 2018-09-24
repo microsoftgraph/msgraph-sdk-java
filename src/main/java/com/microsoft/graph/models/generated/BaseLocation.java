@@ -3,19 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.PhysicalAddress;
+import com.microsoft.graph.models.extensions.OutlookGeoCoordinates;
+import com.microsoft.graph.models.generated.LocationType;
+import com.microsoft.graph.models.generated.LocationUniqueIdType;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -64,6 +63,46 @@ public class BaseLocation implements IJsonBackedObject {
     @SerializedName("address")
     @Expose
     public PhysicalAddress address;
+
+    /**
+     * The Coordinates.
+     * The geographic coordinates and elevation of the location.
+     */
+    @SerializedName("coordinates")
+    @Expose
+    public OutlookGeoCoordinates coordinates;
+
+    /**
+     * The Location Uri.
+     * Optional URI representing the location.
+     */
+    @SerializedName("locationUri")
+    @Expose
+    public String locationUri;
+
+    /**
+     * The Location Type.
+     * The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     */
+    @SerializedName("locationType")
+    @Expose
+    public LocationType locationType;
+
+    /**
+     * The Unique Id.
+     * For internal use only.
+     */
+    @SerializedName("uniqueId")
+    @Expose
+    public String uniqueId;
+
+    /**
+     * The Unique Id Type.
+     * For internal use only.
+     */
+    @SerializedName("uniqueIdType")
+    @Expose
+    public LocationUniqueIdType uniqueIdType;
 
 
     /**

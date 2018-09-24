@@ -4,18 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
-import java.util.Arrays;
-import java.util.EnumSet;
+import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.options.Option;
+import com.microsoft.graph.requests.generated.BaseOnenoteSectionCopyToSectionGroupRequestBuilder;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -33,8 +24,10 @@ public class OnenoteSectionCopyToSectionGroupRequestBuilder extends BaseOnenoteS
      * @param id the id
      * @param groupId the groupId
      * @param renameAs the renameAs
+     * @param siteCollectionId the siteCollectionId
+     * @param siteId the siteId
      */
-    public OnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs) {
-        super(requestUrl, client, requestOptions, id, groupId, renameAs);
+    public OnenoteSectionCopyToSectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {
+        super(requestUrl, client, requestOptions, id, groupId, renameAs, siteCollectionId, siteId);
     }
 }

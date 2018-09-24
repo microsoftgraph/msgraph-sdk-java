@@ -3,19 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorStatus;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorType;
+import com.microsoft.graph.models.extensions.Entity;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -41,7 +39,7 @@ public class BaseDeviceManagementExchangeConnector extends Entity implements IJs
 
     /**
      * The Status.
-     * Exchange Connector Status Possible values are: none, connectionPending, connected, disconnected.
+     * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
      */
     @SerializedName("status")
     @Expose
@@ -62,6 +60,14 @@ public class BaseDeviceManagementExchangeConnector extends Entity implements IJs
     @SerializedName("serverName")
     @Expose
     public String serverName;
+
+    /**
+     * The Connector Server Name.
+     * 
+     */
+    @SerializedName("connectorServerName")
+    @Expose
+    public String connectorServerName;
 
     /**
      * The Exchange Connector Type.

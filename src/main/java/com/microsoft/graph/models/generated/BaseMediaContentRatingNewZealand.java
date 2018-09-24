@@ -3,19 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.generated;
-
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
 import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
-
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.RatingNewZealandMoviesType;
+import com.microsoft.graph.models.generated.RatingNewZealandTelevisionType;
+
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
@@ -43,7 +40,7 @@ public class BaseMediaContentRatingNewZealand implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for New Zealand Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
+     * Movies rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
      */
     @SerializedName("movieRating")
     @Expose
@@ -51,7 +48,7 @@ public class BaseMediaContentRatingNewZealand implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for New Zealand Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
+     * TV rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
      */
     @SerializedName("tvRating")
     @Expose
