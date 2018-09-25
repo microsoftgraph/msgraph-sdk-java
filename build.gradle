@@ -72,11 +72,29 @@ publishing {
             }
 
         }
-        mavenJava(MavenPublication) {
+        mavenCentralSnapshot(MavenPublication) {
         	customizePom(pom)
         	groupId 'com.microsoft.graph'
         	artifactId 'microsoft-graph'
-        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
+        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
+        	from components.java
+        	pom.withXml {
+        		def pomFile = file("${project.buildDir}/generated-pom.xml")
+        		writeTo(pomFile)
+        	}
+        	artifact(sourceJar) {
+        		classifier = 'sources'
+        	}
+        	artifact(javadocJar) {
+        		classifier = 'javadoc'
+        	}
+		}
+		
+		mavenCentralRelease(MavenPublication) {
+        	customizePom(pom)
+        	groupId 'com.microsoft.graph'
+        	artifactId 'microsoft-graph'
+        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
         	from components.java
         	pom.withXml {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
@@ -109,10 +127,38 @@ publishing {
     }
 	repositories {
         maven {
-            url = project.property('mavenCentralUploadUrl')
+            url = project.property('mavenCentralSnapshotUrl')
+            
             credentials {
-                username = project.property('sonatypeUsername')
-                password = project.property('sonatypePassword')
+    			if (project.rootProject.file('local.properties').exists()) {
+
+        			Properties properties = new Properties()
+
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        			username = properties.getProperty('sonatypeUsername')
+
+        			password = properties.getProperty('sonatypePassword')
+
+    			}
+            }
+        }
+        
+        maven {
+            url = project.property('mavenCentralReleaseUrl')
+            
+            credentials {
+    			if (project.rootProject.file('local.properties').exists()) {
+
+        			Properties properties = new Properties()
+
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        			username = properties.getProperty('sonatypeUsername')
+
+        			password = properties.getProperty('sonatypePassword')
+
+    			}
             }
         }
     }
@@ -170,6 +216,8 @@ uploadArchives {
         }
 
         repository (url: project.mavenRepoUrl) {
+        
+        	url = url + "/" + getVersionName()
 
             authentication(
 
@@ -246,14 +294,26 @@ def customizePom(pom) {
     }
 }
 
+gradle.taskGraph.whenReady { taskGraph ->
+    if (taskGraph.allTasks.any { it instanceof Sign }) {
+        if (project.rootProject.file('local.properties').exists()) {
+            Properties properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            allprojects { ext."signing.keyId" = properties.getProperty('signing.keyId') }
+            allprojects { ext."signing.secretKeyRingFile" = properties.getProperty('signing.secretKeyRingFile') }
+            allprojects { ext."signing.password" = properties.getProperty('signing.password') }
+        }
+    }
+}
+
 model {
-    tasks.generatePomFileForMavenJavaPublication {
+    tasks.generatePomFileForMavenReleasePublication {
         destination = file("$buildDir/generated-pom.xml")
     }
-    tasks.publishMavenJavaPublicationToMavenLocal {
+    tasks.publishMavenReleasePublicationToMavenLocal {
         dependsOn project.tasks.signArchives
     }
-    tasks.publishMavenJavaPublicationToMavenRepository {
+    tasks.publishMavenReleasePublicationToMaven2Repository {
         dependsOn project.tasks.signArchives
     }
 }
