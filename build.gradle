@@ -307,13 +307,13 @@ gradle.taskGraph.whenReady { taskGraph ->
 }
 
 model {
-    tasks.generatePomFileForMavenReleasePublication {
+    tasks.generatePomFileForMavenCentralReleasePublication {
         destination = file("$buildDir/generated-pom.xml")
     }
-    tasks.publishMavenReleasePublicationToMavenLocal {
+    tasks.publishMavenCentralReleasePublicationToMavenLocal {
         dependsOn project.tasks.signArchives
     }
-    tasks.publishMavenReleasePublicationToMaven2Repository {
+    tasks.publishMavenCentralReleasePublicationToMaven2Repository {
         dependsOn project.tasks.signArchives
     }
 }
