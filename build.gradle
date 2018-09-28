@@ -47,6 +47,12 @@ def pomConfig = {
     }
 }
 
+//Publishing tasks-
+//Maven Central Snapshot: publishSnapshotPublicationToMavenRepository
+//Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
+//Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
+//Bintray Release: uploadArchives
+
 publishing {
 
     publications {
@@ -72,7 +78,7 @@ publishing {
             }
 
         }
-        mavenCentralSnapshot(MavenPublication) {
+        Snapshot(MavenPublication) {
         	customizePom(pom)
         	groupId 'com.microsoft.graph'
         	artifactId 'microsoft-graph'
@@ -161,6 +167,24 @@ publishing {
     			}
             }
         }
+        
+        maven {
+            url = project.property('mavenBintraySnapshotUrl')
+            
+            credentials {
+    			if (project.rootProject.file('local.properties').exists()) {
+
+        			Properties properties = new Properties()
+
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        			username = properties.getProperty('bintray.user')
+
+        			password = properties.getProperty('bintray.apikey')
+
+    			}
+            }
+		}
     }
 
 }
