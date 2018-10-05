@@ -178,7 +178,7 @@ publishing {
 
         			properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-        			username = properties.getProperty('bintray.user')
+        			username = properties.getProperty('bintray.user').toLowerCase()
 
         			password = properties.getProperty('bintray.apikey')
 
