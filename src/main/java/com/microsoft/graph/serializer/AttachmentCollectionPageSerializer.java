@@ -118,18 +118,42 @@ public class AttachmentCollectionPageSerializer {
      * @param json the source AttachmentCollectionPage's Json
      * @param logger the logger
      * @throws JsonParseException the parse exception
-     * @return    the deserized AttachmentCollectionPage
+     * @return    the deserialized AttachmentCollectionPage
      */
 	public static AttachmentCollectionPage deserialize(final JsonElement json, final ILogger logger) throws JsonParseException {
 		if (json == null) {
 			return null;
 		}
+
 		final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
 		serializer = new DefaultSerializer(logger);
 		JsonObject[] sourceArray = serializer.deserializeObject(json.toString(), JsonObject[].class);
 		Attachment[] array = new Attachment[sourceArray.length];
 		for (int i = 0; i < sourceArray.length; i++) {
-			array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
+			String odatatype = sourceArray[i].get("@odata.type").getAsString();
+			if(odatatype.compareTo("#microsoft.graph.fileAttachment")==0) {
+				array[i] = serializer.deserializeObject(sourceArray[i].toString(), FileAttachment.class);
+			}
+			else if(odatatype.compareTo("#microsoft.graph.itemAttachment")==0) {
+				ItemAttachment itemAttachment = serializer.deserializeObject(sourceArray[i].toString(), ItemAttachment.class);
+				if(!sourceArray[i].has("item")) {
+					continue;
+				}
+				String itemOdatatype = sourceArray[i].get("item").getAsJsonObject().get("@odata.type").getAsString();
+				if(itemOdatatype.compareTo("microsoft.graph.event")==0) {
+					itemAttachment.item = serializer.deserializeObject(sourceArray[i].get("item").toString(), Event.class);
+				}
+				else if(itemOdatatype.compareTo("microsoft.graph.contact")==0) {
+					itemAttachment.item = serializer.deserializeObject(sourceArray[i].get("item").toString(), Contact.class);
+				}
+				else if(itemOdatatype.compareTo("microsoft.graph.message")==0) {
+					itemAttachment.item = serializer.deserializeObject(sourceArray[i].get("item").toString(), Message.class);
+				}
+				array[i] = itemAttachment;
+			}
+			else if(odatatype.compareTo("#microsoft.graph.referenceAttachment")==0) {
+				array[i] = serializer.deserializeObject(sourceArray[i].toString(), ReferenceAttachment.class);
+			}
 			array[i].setRawObject(serializer, sourceArray[i]);
 		}
 		response.value = Arrays.asList(array);
