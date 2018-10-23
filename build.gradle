@@ -178,7 +178,7 @@ publishing {
 
         			properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-        			username = properties.getProperty('bintray.user').toLowerCase()
+        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
 
         			password = properties.getProperty('bintray.apikey')
 
@@ -322,7 +322,7 @@ gradle.taskGraph.whenReady { taskGraph ->
 	if (project.rootProject.file('local.properties').exists()) {
         Properties properties = new Properties()
         properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        tasks.withType(Sign)*.enabled = properties.getProperty('enableSigning').toBoolean()
+        tasks.withType(Sign)*.enabled = (properties.containsKey('enableSigning')) ? properties.getProperty('enableSigning').toBoolean() : false
         allprojects { ext."signing.keyId" = properties.getProperty('signing.keyId') }
         allprojects { ext."signing.secretKeyRingFile" = properties.getProperty('signing.secretKeyRingFile') }
 		allprojects { ext."signing.password" = properties.getProperty('signing.password') }
