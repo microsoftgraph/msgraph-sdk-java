@@ -147,6 +147,15 @@ public class GraphServiceException extends ClientException {
         this.error = error;
         this.verbose = verbose;
     }
+    
+    /**
+     * Gets the The HTTP response message
+     *
+     * @return The HTTP response message
+     */
+    public String getResponseMessage() {
+    	return responseMessage;
+    }
 
     @Override
     public String getMessage() {
