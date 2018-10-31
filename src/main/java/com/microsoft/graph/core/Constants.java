@@ -12,5 +12,5 @@ public final class Constants {
 	public static final String APPID = "app-id";
 	public static final String USERNAME = "user@email.com";
 	public static final String PASSWORD = "password";
-	public static final String VERSION_NAME = "1.0.0";
+	public static final String VERSION_NAME = "1.0.1";
 }

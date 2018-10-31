@@ -22,6 +22,7 @@ import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequestBuilder;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
@@ -87,6 +88,7 @@ public interface IBaseDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
 
     IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients);
+    IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom);
 
     IDriveItemDeltaCollectionRequestBuilder delta(final String token);
 
