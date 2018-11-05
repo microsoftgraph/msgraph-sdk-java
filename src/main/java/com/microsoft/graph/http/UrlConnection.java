@@ -56,7 +56,18 @@ public class UrlConnection implements IConnection {
      * @throws IOException an exception occurs if there was a problem creating the connection
      */
     public UrlConnection(final IHttpRequest request) throws IOException {
-        connection = (HttpURLConnection) request.getRequestUrl().openConnection();
+        this(request, new DefaultHttpURLConnectionProvider());
+    }
+
+    /**
+     * Creates a new UrlConnection
+     *
+     * @param request                   the IHttpRequest to create the connection from
+     * @param httpURLConnectionProvider provider for a HttpURLConnection
+     * @throws IOException   an exception occurs if there was a problem creating the connection
+     */
+    public UrlConnection(final IHttpRequest request, final IHttpURLConnectionProvider httpURLConnectionProvider) throws IOException {
+        connection = httpURLConnectionProvider.createFromRequest(request);
 
         for (final HeaderOption header : request.getHeaders()) {
             connection.addRequestProperty(header.getName(), header.getValue().toString());

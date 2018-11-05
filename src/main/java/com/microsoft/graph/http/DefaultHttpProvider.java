@@ -102,11 +102,28 @@ public class DefaultHttpProvider implements IHttpProvider {
                                final IAuthenticationProvider authenticationProvider,
                                final IExecutors executors,
                                final ILogger logger) {
+        this(serializer, authenticationProvider, executors, logger, new DefaultConnectionFactory());
+    }
+
+    /**
+     * Creates the DefaultHttpProvider
+     *
+     * @param serializer             the serializer
+     * @param authenticationProvider the authentication provider
+     * @param executors              the executors
+     * @param logger                 the logger for diagnostic information
+     * @param connectionFactory      the connection factory
+     */
+    public DefaultHttpProvider(final ISerializer serializer,
+                               final IAuthenticationProvider authenticationProvider,
+                               final IExecutors executors,
+                               final ILogger logger,
+                               final IConnectionFactory connectionFactory) {
         this.serializer = serializer;
         this.authenticationProvider = authenticationProvider;
         this.executors = executors;
         this.logger = logger;
-        connectionFactory = new DefaultConnectionFactory();
+        this.connectionFactory = connectionFactory;
     }
 
     /**
