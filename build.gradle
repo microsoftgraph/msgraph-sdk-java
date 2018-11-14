@@ -47,6 +47,12 @@ def pomConfig = {
     }
 }
 
+//Publishing tasks-
+//Maven Central Snapshot: publishSnapshotPublicationToMavenRepository
+//Maven Central Release: publishMavenCentralReleasePublicationToMaven2Repository
+//Bintray Snapshot: publishSnapshotPublicationToMaven3Repository
+//Bintray Release: uploadArchives
+
 publishing {
 
     publications {
@@ -64,17 +70,37 @@ publishing {
             artifact sourceJar
             pom.withXml {
                 def root = asNode()
-                root.appendNode('name', 'Preview Microsoft Graph SDK for Java')
+                root.appendNode('name', 'Microsoft Graph SDK for Java')
                 root.appendNode('url', 'https://github.com/microsoftgraph/msgraph-sdk-java')
                 root.children().last() + pomConfig
+                def pomFile = file("${project.buildDir}/libs/microsoft-graph.pom")
+                writeTo(pomFile)
             }
 
         }
-        mavenJava(MavenPublication) {
+        Snapshot(MavenPublication) {
         	customizePom(pom)
         	groupId 'com.microsoft.graph'
         	artifactId 'microsoft-graph'
-        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
+        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
+        	from components.java
+        	pom.withXml {
+        		def pomFile = file("${project.buildDir}/generated-pom.xml")
+        		writeTo(pomFile)
+        	}
+        	artifact(sourceJar) {
+        		classifier = 'sources'
+        	}
+        	artifact(javadocJar) {
+        		classifier = 'javadoc'
+        	}
+		}
+		
+		mavenCentralRelease(MavenPublication) {
+        	customizePom(pom)
+        	groupId 'com.microsoft.graph'
+        	artifactId 'microsoft-graph'
+        	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
         	from components.java
         	pom.withXml {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
@@ -107,12 +133,58 @@ publishing {
     }
 	repositories {
         maven {
-            url = project.property('mavenCentralUploadUrl')
+            url = project.property('mavenCentralSnapshotUrl')
+            
             credentials {
-                username = project.property('sonatypeUsername')
-                password = project.property('sonatypePassword')
+    			if (project.rootProject.file('local.properties').exists()) {
+
+        			Properties properties = new Properties()
+
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        			username = properties.getProperty('sonatypeUsername')
+
+        			password = properties.getProperty('sonatypePassword')
+
+    			}
             }
         }
+        
+        maven {
+            url = project.property('mavenCentralReleaseUrl')
+            
+            credentials {
+    			if (project.rootProject.file('local.properties').exists()) {
+
+        			Properties properties = new Properties()
+
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        			username = properties.getProperty('sonatypeUsername')
+
+        			password = properties.getProperty('sonatypePassword')
+
+    			}
+            }
+        }
+        
+        maven {
+            url = project.property('mavenBintraySnapshotUrl')
+            
+            credentials {
+    			if (project.rootProject.file('local.properties').exists()) {
+
+        			Properties properties = new Properties()
+
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
+
+        			password = properties.getProperty('bintray.apikey')
+
+    			}
+            }
+		}
     }
 
 }
@@ -168,6 +240,8 @@ uploadArchives {
         }
 
         repository (url: project.mavenRepoUrl) {
+        
+        	url = url + "/" + getVersionName()
 
             authentication(
 
@@ -244,14 +318,25 @@ def customizePom(pom) {
     }
 }
 
+gradle.taskGraph.whenReady { taskGraph ->
+	if (project.rootProject.file('local.properties').exists()) {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        tasks.withType(Sign)*.enabled = (properties.containsKey('enableSigning')) ? properties.getProperty('enableSigning').toBoolean() : false
+        allprojects { ext."signing.keyId" = properties.getProperty('signing.keyId') }
+        allprojects { ext."signing.secretKeyRingFile" = properties.getProperty('signing.secretKeyRingFile') }
+		allprojects { ext."signing.password" = properties.getProperty('signing.password') }
+    }
+}
+
 model {
-    tasks.generatePomFileForMavenJavaPublication {
+    tasks.generatePomFileForMavenCentralReleasePublication {
         destination = file("$buildDir/generated-pom.xml")
     }
-    tasks.publishMavenJavaPublicationToMavenLocal {
+    tasks.publishMavenCentralReleasePublicationToMavenLocal {
         dependsOn project.tasks.signArchives
     }
-    tasks.publishMavenJavaPublicationToMavenRepository {
+    tasks.publishMavenCentralReleasePublicationToMaven2Repository {
         dependsOn project.tasks.signArchives
     }
 }
