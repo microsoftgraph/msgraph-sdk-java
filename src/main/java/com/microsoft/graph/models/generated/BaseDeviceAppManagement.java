@@ -133,7 +133,7 @@ public class BaseDeviceAppManagement extends Entity implements IJsonBackedObject
 
     /**
      * The Ios Managed App Protections.
-     * 
+     * iOS managed app policies.
      */
     public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 

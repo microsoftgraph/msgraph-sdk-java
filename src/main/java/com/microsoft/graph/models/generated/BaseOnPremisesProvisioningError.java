@@ -38,7 +38,7 @@ public class BaseOnPremisesProvisioningError implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the property causing the error.
      */
     @SerializedName("value")
     @Expose
@@ -46,7 +46,7 @@ public class BaseOnPremisesProvisioningError implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
      */
     @SerializedName("category")
     @Expose
@@ -54,7 +54,7 @@ public class BaseOnPremisesProvisioningError implements IJsonBackedObject {
 
     /**
      * The Property Causing Error.
-     * 
+     * Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress
      */
     @SerializedName("propertyCausingError")
     @Expose
@@ -62,7 +62,7 @@ public class BaseOnPremisesProvisioningError implements IJsonBackedObject {
 
     /**
      * The Occurred Date Time.
-     * 
+     * The date and time at which the error occurred.
      */
     @SerializedName("occurredDateTime")
     @Expose

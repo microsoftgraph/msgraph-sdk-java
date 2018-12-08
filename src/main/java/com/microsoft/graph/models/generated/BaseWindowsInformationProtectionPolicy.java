@@ -78,7 +78,7 @@ public class BaseWindowsInformationProtectionPolicy extends WindowsInformationPr
 
     /**
      * The Pin Special Characters.
-     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! " # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ &#92; ] ^  ` {
+     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
      */
     @SerializedName("pinSpecialCharacters")
     @Expose

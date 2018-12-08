@@ -64,7 +64,7 @@ public class BaseDeviceConfigurationSettingState implements IJsonBackedObject {
 
     /**
      * The State.
-     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
+     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName("state")
     @Expose

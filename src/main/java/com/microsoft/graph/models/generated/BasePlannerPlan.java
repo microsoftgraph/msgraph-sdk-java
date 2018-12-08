@@ -53,7 +53,7 @@ public class BasePlannerPlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * ID of the Group that owns the plan. A valid group must exist before this field can be set. Once set, this can only be updated by the owner.
+     * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
      */
     @SerializedName("owner")
     @Expose

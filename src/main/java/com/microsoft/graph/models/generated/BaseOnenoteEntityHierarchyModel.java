@@ -30,7 +30,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Display Name.
-     * 
+     * The name of the notebook.
      */
     @SerializedName("displayName")
     @Expose
@@ -38,7 +38,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Created By.
-     * 
+     * Identity of the user, device, and application which created the item. Read-only.
      */
     @SerializedName("createdBy")
     @Expose
@@ -46,7 +46,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Last Modified By.
-     * 
+     * Identity of the user, device, and application which created the item. Read-only.
      */
     @SerializedName("lastModifiedBy")
     @Expose
@@ -54,7 +54,7 @@ public class BaseOnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectMo
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose

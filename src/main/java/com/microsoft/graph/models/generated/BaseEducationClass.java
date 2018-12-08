@@ -95,7 +95,7 @@ public class BaseEducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * How this class was created. Possible values are: sis, manual, unknownFutureValue.
+     * How this class was created. The possible values are: sis, manual, unknownFutureValue.
      */
     @SerializedName("externalSource")
     @Expose
@@ -129,7 +129,7 @@ public class BaseEducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Group.
-     * 
+     * The directory group corresponding to this class.
      */
     @SerializedName("group")
     @Expose

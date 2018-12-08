@@ -43,7 +43,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Alternative Security Ids.
-     * 
+     * For internal use only. Not nullable.
      */
     @SerializedName("alternativeSecurityIds")
     @Expose
@@ -91,7 +91,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
-     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
+     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
      */
     @SerializedName("isCompliant")
     @Expose
@@ -99,7 +99,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Managed.
-     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
+     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
      */
     @SerializedName("isManaged")
     @Expose

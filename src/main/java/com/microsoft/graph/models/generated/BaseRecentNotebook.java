@@ -40,7 +40,7 @@ public class BaseRecentNotebook implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the notebook.
      */
     @SerializedName("displayName")
     @Expose

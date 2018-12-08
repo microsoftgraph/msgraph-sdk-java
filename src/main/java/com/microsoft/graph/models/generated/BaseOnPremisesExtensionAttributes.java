@@ -38,7 +38,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute1.
-     * 
+     * First customizable extension attribute.
      */
     @SerializedName("extensionAttribute1")
     @Expose
@@ -46,7 +46,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute2.
-     * 
+     * Second customizable extension attribute.
      */
     @SerializedName("extensionAttribute2")
     @Expose
@@ -54,7 +54,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute3.
-     * 
+     * Third customizable extension attribute.
      */
     @SerializedName("extensionAttribute3")
     @Expose
@@ -62,7 +62,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute4.
-     * 
+     * Fourth customizable extension attribute.
      */
     @SerializedName("extensionAttribute4")
     @Expose
@@ -70,7 +70,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute5.
-     * 
+     * Fifth customizable extension attribute.
      */
     @SerializedName("extensionAttribute5")
     @Expose
@@ -78,7 +78,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute6.
-     * 
+     * Sixth customizable extension attribute.
      */
     @SerializedName("extensionAttribute6")
     @Expose
@@ -86,7 +86,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute7.
-     * 
+     * Seventh customizable extension attribute.
      */
     @SerializedName("extensionAttribute7")
     @Expose
@@ -94,7 +94,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute8.
-     * 
+     * Eighth customizable extension attribute.
      */
     @SerializedName("extensionAttribute8")
     @Expose
@@ -102,7 +102,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute9.
-     * 
+     * Ninth customizable extension attribute.
      */
     @SerializedName("extensionAttribute9")
     @Expose
@@ -110,7 +110,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute10.
-     * 
+     * Tenth customizable extension attribute.
      */
     @SerializedName("extensionAttribute10")
     @Expose
@@ -118,7 +118,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute11.
-     * 
+     * Eleventh customizable extension attribute.
      */
     @SerializedName("extensionAttribute11")
     @Expose
@@ -126,7 +126,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute12.
-     * 
+     * Twelfth customizable extension attribute.
      */
     @SerializedName("extensionAttribute12")
     @Expose
@@ -134,7 +134,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute13.
-     * 
+     * Thirteenth customizable extension attribute.
      */
     @SerializedName("extensionAttribute13")
     @Expose
@@ -142,7 +142,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute14.
-     * 
+     * Fourteenth customizable extension attribute.
      */
     @SerializedName("extensionAttribute14")
     @Expose
@@ -150,7 +150,7 @@ public class BaseOnPremisesExtensionAttributes implements IJsonBackedObject {
 
     /**
      * The Extension Attribute15.
-     * 
+     * Fifteenth customizable extension attribute.
      */
     @SerializedName("extensionAttribute15")
     @Expose

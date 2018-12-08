@@ -40,7 +40,7 @@ public class BasePlannerTaskDetails extends Entity implements IJsonBackedObject 
 
     /**
      * The Preview Type.
-     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      */
     @SerializedName("previewType")
     @Expose

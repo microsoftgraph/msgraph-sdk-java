@@ -43,7 +43,7 @@ public class BaseDefaultManagedAppProtection extends ManagedAppProtection implem
 
     /**
      * The Screen Capture Blocked.
-     * Indicates whether screen capture is blocked.
+     * Indicates whether screen capture is blocked. (Android only)
      */
     @SerializedName("screenCaptureBlocked")
     @Expose
@@ -59,7 +59,7 @@ public class BaseDefaultManagedAppProtection extends ManagedAppProtection implem
 
     /**
      * The Disable App Encryption If Device Encryption Is Enabled.
-     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled
+     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
      */
     @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
     @Expose
@@ -67,7 +67,7 @@ public class BaseDefaultManagedAppProtection extends ManagedAppProtection implem
 
     /**
      * The Minimum Required Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
+     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
      */
     @SerializedName("minimumRequiredSdkVersion")
     @Expose
@@ -91,7 +91,7 @@ public class BaseDefaultManagedAppProtection extends ManagedAppProtection implem
 
     /**
      * The Minimum Required Patch Version.
-     * Define the oldest required Android security patch level a user can have to gain secure access to the app.
+     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      */
     @SerializedName("minimumRequiredPatchVersion")
     @Expose
@@ -99,7 +99,7 @@ public class BaseDefaultManagedAppProtection extends ManagedAppProtection implem
 
     /**
      * The Minimum Warning Patch Version.
-     * Define the oldest recommended Android security patch level a user can have for secure access to the app.
+     * Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
      */
     @SerializedName("minimumWarningPatchVersion")
     @Expose
@@ -107,7 +107,7 @@ public class BaseDefaultManagedAppProtection extends ManagedAppProtection implem
 
     /**
      * The Face Id Blocked.
-     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
+     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
      */
     @SerializedName("faceIdBlocked")
     @Expose

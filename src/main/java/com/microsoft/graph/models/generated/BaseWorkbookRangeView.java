@@ -32,7 +32,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Cell Addresses.
-     * 
+     * Represents the cell addresses
      */
     @SerializedName("cellAddresses")
     @Expose
@@ -56,7 +56,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas Local.
-     * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
+     * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      */
     @SerializedName("formulasLocal")
     @Expose
@@ -104,7 +104,7 @@ public class BaseWorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
-     * Represents the type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      */
     @SerializedName("valueTypes")
     @Expose

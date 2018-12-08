@@ -38,7 +38,7 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
 
     /**
      * The Date Time.
-     * 
+     * A single point of time in a combined date and time representation (&amp;lt;date&amp;gt;T&amp;lt;time&amp;gt;).
      */
     @SerializedName("dateTime")
     @Expose
@@ -46,7 +46,7 @@ public class BaseDateTimeTimeZone implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-     * 
+     * One of the following time zone names.
      */
     @SerializedName("timeZone")
     @Expose
