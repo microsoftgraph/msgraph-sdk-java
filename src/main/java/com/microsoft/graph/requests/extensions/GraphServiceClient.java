@@ -4,22 +4,26 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.google.gson.JsonObject;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
-import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.DefaultClientConfig;
-import com.microsoft.graph.core.IClientConfig;
-import com.microsoft.graph.http.IHttpProvider;
-import com.microsoft.graph.logger.ILogger;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
-import com.microsoft.graph.requests.generated.BaseGraphServiceClient;
-import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.concurrency.*;
+import com.microsoft.graph.core.*;
+import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.http.*;
+import com.microsoft.graph.requests.extensions.*;
+import com.microsoft.graph.requests.generated.*;
+import com.microsoft.graph.options.*;
+import com.microsoft.graph.serializer.*;
+
+import java.util.Arrays;
+import java.util.EnumSet;
+
+import com.microsoft.graph.authentication.*;
+import com.microsoft.graph.logger.*;
 
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
- * The class for the Graph Service Client
+ * The class for the Graph Service Client.
  */
 public class GraphServiceClient extends BaseGraphServiceClient implements IGraphServiceClient {
 
@@ -30,197 +34,85 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
     }
 
     /**
-     * Send a custom request to Graph
-     * 
-     * @param url
-     *            the full URL to make a request with
-     * @param responseType
-     *            the response class to deserialize the response into
-     * @return the instance of this builder
-     */
-    public <T> CustomRequestBuilder<T> customRequest(final String url, final Class<T> responseType) {
-        return new CustomRequestBuilder<T>(getServiceRoot() + url, (IGraphServiceClient) this, null, responseType);
-    }
-
-    /**
-     * Send a custom request to Graph
-     * 
-     * @param url
-     *            the full URL to make a request with
-     * @return the instance of this builder
-     */
-    public CustomRequestBuilder<JsonObject> customRequest(final String url) {
-        return new CustomRequestBuilder<JsonObject>(getServiceRoot() + url, (IGraphServiceClient) this, null,
-                JsonObject.class);
-    }
-
-    /**
-     * Returns a Graph service client using the given configuration.
-     * 
-     * @param config
-     *            the client configuration
-     * @return a Graph service client
-     */
-    public static IGraphServiceClient fromConfig(final IClientConfig config) {
-        GraphServiceClient client = new GraphServiceClient();
-        client.setAuthenticationProvider(config.getAuthenticationProvider());
-        client.setExecutors(config.getExecutors());
-        client.setHttpProvider(config.getHttpProvider());
-        client.setLogger(config.getLogger());
-        client.setSerializer(config.getSerializer());
-        client.validate();
-        return client;
-    }
-
-    public static Builder builder() {
-        return new Builder();
-    }
-    
-    public static final class Builder {
-        
-        Builder() {
-            // restrict instantiation
-        }
-
-        /**
-         * Sets the authentication provider
-         * 
-         * @param authenticationProvider
-         *            the authentication provider
-         * @return a new builder that allows specification of other aspects of the GraphServiceClient
-         */
-        public Builder2 authenticationProvider(IAuthenticationProvider authenticationProvider) {
-            checkNotNull(authenticationProvider, "authenticationProvider");
-            return new Builder2(authenticationProvider);
-        }
-    }
-    
-    /**
      * The builder for this GraphServiceClient
      */
-    public static final class Builder2 {
-        
-        private final IAuthenticationProvider authenticationProvider;
-        private ISerializer serializer;
-        private IHttpProvider httpProvider;
-        private IExecutors executors;
-        private ILogger logger;
-
-        
-        Builder2(IAuthenticationProvider authenticationProvider) {
-            this.authenticationProvider = authenticationProvider;
-        }
+    public static class Builder  {
 
         /**
-         * Sets the serializer.
-         * 
-         * @param serializer
-         *            the serializer
+         * The client under construction
+         */
+        private final GraphServiceClient client = new GraphServiceClient();
+
+        /**
+         * Sets the serializer
+         * @param serializer the serializer
          * @return the instance of this builder
          */
-        public Builder2 serializer(final ISerializer serializer) {
-            checkNotNull(serializer, "serializer");
-            this.serializer = serializer;
+        public Builder serializer(final ISerializer serializer) {
+            client.setSerializer(serializer);
             return this;
         }
 
         /**
          * Sets the httpProvider
-         * 
-         * @param httpProvider
-         *            the httpProvider
+         * @param httpProvider the httpProvider
          * @return the instance of this builder
          */
-        public Builder2 httpProvider(final IHttpProvider httpProvider) {
-            checkNotNull(httpProvider, "httpProvider");
-            this.httpProvider = httpProvider;
+        public Builder httpProvider(final IHttpProvider httpProvider) {
+            client.setHttpProvider(httpProvider);
+            return this;
+        }
+
+        /**
+         * Sets the authentication provider
+         * @param authenticationProvider the authentication provider
+         * @return the instance of this builder
+         */
+        public Builder authenticationProvider(final IAuthenticationProvider authenticationProvider) {
+            client.setAuthenticationProvider(authenticationProvider);
             return this;
         }
 
         /**
          * Sets the executors
-         * 
-         * @param executors
-         *            the executors
+         * @param executors the executors
          * @return the instance of this builder
          */
-        public Builder2 executors(final IExecutors executors) {
-            checkNotNull(executors, "executors");
-            this.executors = executors;
+        public Builder executors(final IExecutors executors) {
+            client.setExecutors(executors);
             return this;
         }
 
         /**
          * Sets the logger
-         * 
-         * @param logger
-         *            the logger
+         * @param logger the logger
          * @return the instance of this builder
          */
-        public Builder2 logger(final ILogger logger) {
-            checkNotNull(logger, "logger");
-            this.logger = logger;
+        public Builder logger(final ILogger logger) {
+            client.setLogger(logger);
             return this;
         }
 
         /**
-         * Builds and returns the Graph service client.
-         * 
-         * @return the Graph service client object
-         * @throws ClientException
-         *             if there was an exception creating the client
+         * Set this builder based on the client configuration
+         * @param clientConfig the client configuration
+         * @return the instance of this builder
          */
-        public IGraphServiceClient buildClient() throws ClientException {
-            DefaultClientConfig config = new DefaultClientConfig() {
-
-                @Override
-                public IAuthenticationProvider getAuthenticationProvider() {
-                    return authenticationProvider; 
-                }
-
-                @Override
-                public IHttpProvider getHttpProvider() {
-                    if (httpProvider != null) {
-                        return httpProvider;
-                    } else {
-                        return super.getHttpProvider();
-                    }
-                }
-
-                @Override
-                public IExecutors getExecutors() {
-                    if (executors != null) {
-                        return executors;
-                    } else {
-                        return super.getExecutors();
-                    }
-                }
-
-                @Override
-                public ILogger getLogger() {
-                    if (logger !=null) {
-                        return logger;
-                    } else {
-                        return super.getLogger();
-                    }
-                }
-
-                @Override
-                public ISerializer getSerializer() {
-                    if (serializer != null) {
-                        return serializer;
-                    } else {
-                        return super.getSerializer();
-                    }
-                }
-            };
-            return GraphServiceClient.fromConfig(config);
+        public Builder fromConfig(final IClientConfig clientConfig) {
+            return this.authenticationProvider(clientConfig.getAuthenticationProvider())
+                       .executors(clientConfig.getExecutors())
+                       .httpProvider(clientConfig.getHttpProvider())
+                       .logger(clientConfig.getLogger())
+                       .serializer(clientConfig.getSerializer());
         }
-    }
-    
-    private static void checkNotNull(Object o, String name) {
-        if (o==null) {
-            throw new NullPointerException(name + " cannot be null");
+
+        /**
+         * Builds and returns the GraphServiceClient
+         * @throws ClientException if there was an exception creating the client
+         */
+        public IGraphServiceClient buildClient() throws ClientException  {
+            client.validate();
+            return client;
         }
     }
 }

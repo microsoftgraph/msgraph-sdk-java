@@ -4,7 +4,18 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.requests.generated.IBaseThumbnailSetRequestBuilder;
+import com.microsoft.graph.concurrency.*;
+import com.microsoft.graph.core.*;
+import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.http.*;
+import com.microsoft.graph.requests.extensions.*;
+import com.microsoft.graph.requests.generated.*;
+import com.microsoft.graph.options.*;
+import com.microsoft.graph.serializer.*;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -13,11 +24,4 @@ import com.microsoft.graph.requests.generated.IBaseThumbnailSetRequestBuilder;
  */
 public interface IThumbnailSetRequestBuilder extends IBaseThumbnailSetRequestBuilder {
 
-
-    /**
-     * Gets a request for a thumbnail of a specific size
-     * @param size The size to request (typically: small, medium, large)
-     * @return The request builder for that thumbnail size
-     */
-    IThumbnailRequestBuilder getThumbnailSize(final String size);
 }

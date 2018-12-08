@@ -83,7 +83,7 @@ public class BaseDrive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * 
+     * For drives in SharePoint, the underlying document library list. Read-only. Nullable.
      */
     @SerializedName("list")
     @Expose

@@ -32,7 +32,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Major Unit.
-     * 
+     * Represents the interval between two major tick marks. Can be set to a numeric value or an empty string.  The returned value is always a number.
      */
     @SerializedName("majorUnit")
     @Expose
@@ -40,7 +40,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Maximum.
-     * 
+     * Represents the maximum value on the value axis.  Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      */
     @SerializedName("maximum")
     @Expose
@@ -48,7 +48,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Minimum.
-     * 
+     * Represents the minimum value on the value axis. Can be set to a numeric value or an empty string (for automatic axis values).  The returned value is always a number.
      */
     @SerializedName("minimum")
     @Expose
@@ -56,7 +56,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Minor Unit.
-     * 
+     * Represents the interval between two minor tick marks. 'Can be set to a numeric value or an empty string (for automatic axis values). The returned value is always a number.
      */
     @SerializedName("minorUnit")
     @Expose
@@ -64,7 +64,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
-     * 
+     * Represents the formatting of a chart object, which includes line and font formatting. Read-only.
      */
     @SerializedName("format")
     @Expose
@@ -72,7 +72,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Major Gridlines.
-     * 
+     * Returns a gridlines object that represents the major gridlines for the specified axis. Read-only.
      */
     @SerializedName("majorGridlines")
     @Expose
@@ -80,7 +80,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Minor Gridlines.
-     * 
+     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
      */
     @SerializedName("minorGridlines")
     @Expose
@@ -88,7 +88,7 @@ public class BaseWorkbookChartAxis extends Entity implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * Represents the axis title. Read-only.
      */
     @SerializedName("title")
     @Expose

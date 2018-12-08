@@ -88,7 +88,7 @@ public class BaseVppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid. Possible values are: unknown, valid, expired, invalid.
+     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
      */
     @SerializedName("state")
     @Expose

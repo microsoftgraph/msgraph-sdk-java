@@ -102,7 +102,7 @@ public class BaseDeviceComplianceSettingState extends Entity implements IJsonBac
 
     /**
      * The State.
-     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
+     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName("state")
     @Expose

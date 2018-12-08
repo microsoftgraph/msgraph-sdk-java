@@ -4,7 +4,18 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.requests.generated.IBaseDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.concurrency.*;
+import com.microsoft.graph.core.*;
+import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.http.*;
+import com.microsoft.graph.requests.extensions.*;
+import com.microsoft.graph.requests.generated.*;
+import com.microsoft.graph.options.*;
+import com.microsoft.graph.serializer.*;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -12,5 +23,5 @@ import com.microsoft.graph.requests.generated.IBaseDriveItemCollectionRequestBui
  * The interface for the Drive Item Collection Request Builder.
  */
 public interface IDriveItemCollectionRequestBuilder extends IBaseDriveItemCollectionRequestBuilder {
-	IDriveItemRequestBuilder appRoot();
+
 }

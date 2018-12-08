@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -63,5 +65,6 @@ public interface IBaseManagedDeviceMobileAppConfigurationRequestBuilder extends 
      * @return the IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
      */
     IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary();
+    IManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments);
 
 }

@@ -47,37 +47,37 @@ public class BaseOnenote extends Entity implements IJsonBackedObject {
 
     /**
      * The Notebooks.
-     * 
+     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
      */
     public NotebookCollectionPage notebooks;
 
     /**
      * The Sections.
-     * 
+     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
     public OnenoteSectionCollectionPage sections;
 
     /**
      * The Section Groups.
-     * 
+     * The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
     public SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Pages.
-     * 
+     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      */
     public OnenotePageCollectionPage pages;
 
     /**
      * The Resources.
-     * 
+     * The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.
      */
     public OnenoteResourceCollectionPage resources;
 
     /**
      * The Operations.
-     * 
+     * The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.
      */
     public OnenoteOperationCollectionPage operations;
 

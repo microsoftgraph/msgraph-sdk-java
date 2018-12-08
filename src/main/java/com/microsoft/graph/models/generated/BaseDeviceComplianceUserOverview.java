@@ -37,7 +37,7 @@ public class BaseDeviceComplianceUserOverview extends Entity implements IJsonBac
 
     /**
      * The Not Applicable Count.
-     * Number of not applicable devices
+     * Number of not applicable users
      */
     @SerializedName("notApplicableCount")
     @Expose

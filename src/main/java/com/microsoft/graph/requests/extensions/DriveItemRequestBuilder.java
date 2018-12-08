@@ -4,9 +4,18 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.requests.generated.BaseDriveItemRequestBuilder;
+import com.microsoft.graph.concurrency.*;
+import com.microsoft.graph.core.*;
+import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.http.*;
+import com.microsoft.graph.requests.extensions.*;
+import com.microsoft.graph.requests.generated.*;
+import com.microsoft.graph.options.*;
+import com.microsoft.graph.serializer.*;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -24,10 +33,5 @@ public class DriveItemRequestBuilder extends BaseDriveItemRequestBuilder impleme
      */
     public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
-    }
-
-    @Override
-    public IDriveItemRequestBuilder itemWithPath(final String path) {
-        return new DriveItemRequestBuilder(getRequestUrl() + ":/" + path + ":", getClient(), null);
     }
 }

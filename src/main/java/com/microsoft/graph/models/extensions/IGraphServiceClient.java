@@ -4,9 +4,18 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.google.gson.JsonObject;
-import com.microsoft.graph.models.generated.IBaseGraphServiceClient;
-import com.microsoft.graph.requests.extensions.CustomRequestBuilder;
+import com.microsoft.graph.concurrency.*;
+import com.microsoft.graph.core.*;
+import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.http.*;
+import com.microsoft.graph.requests.extensions.*;
+import com.microsoft.graph.requests.generated.*;
+import com.microsoft.graph.options.*;
+import com.microsoft.graph.serializer.*;
+
+import java.util.Arrays;
+import java.util.EnumSet;
 
 // This file is available for extending, afterwards please submit a pull request.
 
@@ -14,8 +23,5 @@ import com.microsoft.graph.requests.extensions.CustomRequestBuilder;
  * The interface for the Graph Service Client.
  */
 public interface IGraphServiceClient extends IBaseGraphServiceClient {
-	
-	<T> CustomRequestBuilder<T> customRequest(final String url, final Class<T> responseType);
-	
-	CustomRequestBuilder<JsonObject> customRequest(final String url);
+
 }
