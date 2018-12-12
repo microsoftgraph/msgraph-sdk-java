@@ -8,7 +8,7 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.requests.generated.BaseProfilePhotoStreamRequest;
-
+import java.io.InputStream;
 // This file is available for extending, afterwards please submit a pull request.
 
 /**
@@ -23,7 +23,8 @@ public class ProfilePhotoStreamRequest extends BaseProfilePhotoStreamRequest imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfilePhotoStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ProfilePhoto.class);
+    public ProfilePhotoStreamRequest(final String requestUrl, final IBaseClient client,
+            final java.util.List<? extends Option> requestOptions) {
+        super(requestUrl, client, requestOptions, InputStream.class);
     }
 }

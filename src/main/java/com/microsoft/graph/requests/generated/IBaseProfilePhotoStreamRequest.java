@@ -47,7 +47,7 @@ public interface IBaseProfilePhotoStreamRequest extends IHttpStreamRequest {
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    void put(final byte[] fileContents, final ICallback<ProfilePhoto> callback);
+    void put(final byte[] fileContents, final ICallback<InputStream> callback);
 
     /**
      * Uploads to the stream
@@ -56,5 +56,5 @@ public interface IBaseProfilePhotoStreamRequest extends IHttpStreamRequest {
      * @return the result of the upload
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    ProfilePhoto put(final byte[] fileContents) throws ClientException;
+    InputStream put(final byte[] fileContents) throws ClientException;
 }

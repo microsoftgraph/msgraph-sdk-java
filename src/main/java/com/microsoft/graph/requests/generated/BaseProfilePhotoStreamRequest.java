@@ -24,7 +24,7 @@ import java.io.*;
 /**
  * The class for the Base Profile Photo Stream Request.
  */
-public class BaseProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhoto> implements IBaseProfilePhotoStreamRequest {
+public class BaseProfilePhotoStreamRequest extends BaseStreamRequest<InputStream> implements IBaseProfilePhotoStreamRequest {
 
     /**
      * The request for this ProfilePhoto
@@ -38,7 +38,7 @@ public class BaseProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhot
                          final String requestUrl,
                          final IBaseClient client,
                          final java.util.List<? extends Option> requestOptions,
-                         final Class<ProfilePhoto> responseClass) {
+                         final Class<InputStream> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -67,7 +67,7 @@ public class BaseProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhot
      * @param fileContents the contents of the stream to upload
      * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<ProfilePhoto> callback) {
+    public void put(final byte[] fileContents, final ICallback<InputStream> callback) {
         send(fileContents, callback);
     }
 
@@ -78,7 +78,7 @@ public class BaseProfilePhotoStreamRequest extends BaseStreamRequest<ProfilePhot
      * @return the result of the upload
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public ProfilePhoto put(final byte[] fileContents) throws ClientException {
+    public InputStream put(final byte[] fileContents) throws ClientException {
         return send(fileContents);
     }
 }
