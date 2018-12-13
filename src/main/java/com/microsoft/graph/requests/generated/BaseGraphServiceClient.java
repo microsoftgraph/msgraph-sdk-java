@@ -447,6 +447,44 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Teams objects
+     *
+     * @return the request builder for the collection of Teams objects
+     */
+    public ITeamCollectionRequestBuilder teams() {
+        return new TeamCollectionRequestBuilder(getServiceRoot() + "/teams", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Teams
+     *
+     * @param id the id of the Teams to retrieve
+     * @return the request builder for the Teams object
+     */
+    public ITeamRequestBuilder teams(final String id) {
+        return new TeamRequestBuilder(getServiceRoot() + "/teams/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of DataPolicyOperations objects
+     *
+     * @return the request builder for the collection of DataPolicyOperations objects
+     */
+    public IDataPolicyOperationCollectionRequestBuilder dataPolicyOperations() {
+        return new DataPolicyOperationCollectionRequestBuilder(getServiceRoot() + "/dataPolicyOperations", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single DataPolicyOperations
+     *
+     * @param id the id of the DataPolicyOperations to retrieve
+     * @return the request builder for the DataPolicyOperations object
+     */
+    public IDataPolicyOperationRequestBuilder dataPolicyOperations(final String id) {
+        return new DataPolicyOperationRequestBuilder(getServiceRoot() + "/dataPolicyOperations/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
@@ -525,5 +563,14 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public ISecurityRequestBuilder Security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/Security", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AppCatalogs
+     */
+    public IAppCatalogsRequestBuilder appCatalogs() {
+        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
     }
 }
