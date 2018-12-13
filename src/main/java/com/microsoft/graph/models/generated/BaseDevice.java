@@ -43,7 +43,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Alternative Security Ids.
-     * 
+     * For internal use only. Not nullable.
      */
     @SerializedName("alternativeSecurityIds")
     @Expose
@@ -91,7 +91,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
-     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only.
+     * true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
      */
     @SerializedName("isCompliant")
     @Expose
@@ -99,7 +99,7 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Managed.
-     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false.
+     * true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices.
      */
     @SerializedName("isManaged")
     @Expose
@@ -152,6 +152,12 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("trustType")
     @Expose
     public String trustType;
+
+    /**
+     * The Member Of.
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+     */
+    public DirectoryObjectCollectionPage memberOf;
 
     /**
      * The Registered Owners.
@@ -210,6 +216,22 @@ public class BaseDevice extends DirectoryObject implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("memberOf")) {
+            final BaseDirectoryObjectCollectionResponse response = new BaseDirectoryObjectCollectionResponse();
+            if (json.has("memberOf@odata.nextLink")) {
+                response.nextLink = json.get("memberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("memberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            memberOf = new DirectoryObjectCollectionPage(response, null);
+        }
 
         if (json.has("registeredOwners")) {
             final BaseDirectoryObjectCollectionResponse response = new BaseDirectoryObjectCollectionResponse();

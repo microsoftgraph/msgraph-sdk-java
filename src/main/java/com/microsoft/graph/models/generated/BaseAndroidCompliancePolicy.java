@@ -63,7 +63,7 @@ public class BaseAndroidCompliancePolicy extends DeviceCompliancePolicy implemen
 
     /**
      * The Password Expiration Days.
-     * Number of days before the password expires. Valid values 1 to 365
+     * Number of days before the password expires. Valid values 1 to 65535
      */
     @SerializedName("passwordExpirationDays")
     @Expose

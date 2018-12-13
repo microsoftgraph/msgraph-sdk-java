@@ -30,7 +30,7 @@ public class BaseEducationOrganization extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * 
+     * Organization display name.
      */
     @SerializedName("displayName")
     @Expose
@@ -38,7 +38,7 @@ public class BaseEducationOrganization extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * 
+     * Organization description.
      */
     @SerializedName("description")
     @Expose
@@ -46,7 +46,7 @@ public class BaseEducationOrganization extends Entity implements IJsonBackedObje
 
     /**
      * The External Source.
-     * 
+     * Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
      */
     @SerializedName("externalSource")
     @Expose

@@ -38,7 +38,7 @@ public class BaseHashes implements IJsonBackedObject {
 
     /**
      * The Crc32Hash.
-     * The CRC32 value of the file (if available). Read-only.
+     * The CRC32 value of the file in little endian (if available). Read-only.
      */
     @SerializedName("crc32Hash")
     @Expose

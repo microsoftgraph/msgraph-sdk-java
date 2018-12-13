@@ -39,7 +39,7 @@ public class BaseWebsite implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Possible values are: other, home, work, blog, profile.
+     * The possible values are: other, home, work, blog, profile.
      */
     @SerializedName("type")
     @Expose

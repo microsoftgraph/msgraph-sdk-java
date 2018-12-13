@@ -95,7 +95,7 @@ public class BaseDeviceConfiguration extends Entity implements IJsonBackedObject
 
     /**
      * The User Statuses.
-     * Device configuration installation stauts by user.
+     * Device configuration installation status by user.
      */
     public DeviceConfigurationUserStatusCollectionPage userStatuses;
 

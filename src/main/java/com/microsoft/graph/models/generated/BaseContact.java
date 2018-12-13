@@ -65,7 +65,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The contact's display name.
+     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      */
     @SerializedName("displayName")
     @Expose
@@ -169,7 +169,7 @@ public class BaseContact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The contact's job title.
+     * The contact’s job title.
      */
     @SerializedName("jobTitle")
     @Expose

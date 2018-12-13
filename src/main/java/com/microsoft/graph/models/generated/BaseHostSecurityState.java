@@ -38,7 +38,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Fqdn.
-     * 
+     * Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
      */
     @SerializedName("fqdn")
     @Expose
@@ -62,7 +62,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Is Hybrid Azure Domain Joined.
-     * 
+     * True if the host is domain joined to an on-premises Active Directory domain.
      */
     @SerializedName("isHybridAzureDomainJoined")
     @Expose
@@ -70,7 +70,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Net Bios Name.
-     * 
+     * The local host name, without the DNS domain name.
      */
     @SerializedName("netBiosName")
     @Expose
@@ -78,7 +78,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Os.
-     * 
+     * Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
      */
     @SerializedName("os")
     @Expose
@@ -86,7 +86,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Private Ip Address.
-     * 
+     * Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
      */
     @SerializedName("privateIpAddress")
     @Expose
@@ -94,7 +94,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Public Ip Address.
-     * 
+     * Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
      */
     @SerializedName("publicIpAddress")
     @Expose
@@ -102,7 +102,7 @@ public class BaseHostSecurityState implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * 
+     * Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
      */
     @SerializedName("riskScore")
     @Expose

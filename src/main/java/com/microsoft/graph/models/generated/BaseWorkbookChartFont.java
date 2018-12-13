@@ -29,7 +29,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Bold.
-     * 
+     * Represents the bold status of font.
      */
     @SerializedName("bold")
     @Expose
@@ -37,7 +37,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * 
+     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
      */
     @SerializedName("color")
     @Expose
@@ -45,7 +45,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Italic.
-     * 
+     * Represents the italic status of the font.
      */
     @SerializedName("italic")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Font name (e.g. 'Calibri')
      */
     @SerializedName("name")
     @Expose
@@ -61,7 +61,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
-     * 
+     * Size of the font (e.g. 11)
      */
     @SerializedName("size")
     @Expose
@@ -69,7 +69,7 @@ public class BaseWorkbookChartFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Underline.
-     * 
+     * Type of underline applied to the font. The possible values are: None, Single.
      */
     @SerializedName("underline")
     @Expose

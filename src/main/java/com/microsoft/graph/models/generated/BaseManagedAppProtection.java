@@ -105,7 +105,7 @@ public class BaseManagedAppProtection extends ManagedAppPolicy implements IJsonB
 
     /**
      * The Save As Blocked.
-     * Indicates whether users may use the "Save As" menu item to save a copy of protected files.
+     * Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
      */
     @SerializedName("saveAsBlocked")
     @Expose
