@@ -10,6 +10,7 @@ import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequest
 import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainForceDeleteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainVerifyRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -48,6 +49,7 @@ public interface IBaseDomainRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences();
 
     IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id);
+    IDomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts);
     IDomainVerifyRequestBuilder verify();
 
 }

@@ -21,6 +21,9 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder;
+import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
+import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationAssignRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -102,6 +105,10 @@ public class BaseManagedDeviceMobileAppConfigurationRequestBuilder extends BaseR
      */
     public IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
+    }
+
+    public IManagedDeviceMobileAppConfigurationAssignRequestBuilder assign(final java.util.List<ManagedDeviceMobileAppConfigurationAssignment> assignments) {
+        return new ManagedDeviceMobileAppConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, assignments);
     }
 }
 
