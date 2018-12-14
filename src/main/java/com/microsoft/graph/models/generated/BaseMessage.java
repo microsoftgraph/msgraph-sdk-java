@@ -63,7 +63,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src="cid:image001.jpg@01D26CD8.6C05F070"&amp;gt;.
+     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
      */
     @SerializedName("hasAttachments")
     @Expose
@@ -79,7 +79,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Internet Message Headers.
-     * The collection of message headers, defined by RFC5322, that provide details of the network path taken by a message from the sender to the recipient. Read-only.
+     * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.
      */
     @SerializedName("internetMessageHeaders")
     @Expose
@@ -127,7 +127,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
-     * The account that is actually used to generate the message.
+     * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used.
      */
     @SerializedName("sender")
     @Expose
@@ -135,7 +135,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
-     * The mailbox owner and sender of the message.
+     * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used.
      */
     @SerializedName("from")
     @Expose
@@ -231,7 +231,7 @@ public class BaseMessage extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Inference Classification.
-     * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused or other.
+     * The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused or other.
      */
     @SerializedName("inferenceClassification")
     @Expose

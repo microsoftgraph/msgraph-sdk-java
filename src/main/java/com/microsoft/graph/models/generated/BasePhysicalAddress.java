@@ -62,7 +62,7 @@ public class BasePhysicalAddress implements IJsonBackedObject {
 
     /**
      * The Country Or Region.
-     * The country or region. It's a free-format string value, for example, "United States".
+     * The country or region. It's a free-format string value, for example, 'United States'.
      */
     @SerializedName("countryOrRegion")
     @Expose

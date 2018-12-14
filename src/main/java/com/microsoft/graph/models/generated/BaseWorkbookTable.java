@@ -37,7 +37,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Highlight First Column.
-     * 
+     * Indicates whether the first column contains special formatting.
      */
     @SerializedName("highlightFirstColumn")
     @Expose
@@ -45,7 +45,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Highlight Last Column.
-     * 
+     * Indicates whether the last column contains special formatting.
      */
     @SerializedName("highlightLastColumn")
     @Expose
@@ -53,7 +53,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name of the table.
      */
     @SerializedName("name")
     @Expose
@@ -61,7 +61,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Banded Columns.
-     * 
+     * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to make reading the table easier.
      */
     @SerializedName("showBandedColumns")
     @Expose
@@ -69,7 +69,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Banded Rows.
-     * 
+     * Indicates whether the rows show banded formatting in which odd rows are highlighted differently from even ones to make reading the table easier.
      */
     @SerializedName("showBandedRows")
     @Expose
@@ -77,7 +77,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Filter Button.
-     * 
+     * Indicates whether the filter buttons are visible at the top of each column header. Setting this is only allowed if the table contains a header row.
      */
     @SerializedName("showFilterButton")
     @Expose
@@ -85,7 +85,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Headers.
-     * 
+     * Indicates whether the header row is visible or not. This value can be set to show or remove the header row.
      */
     @SerializedName("showHeaders")
     @Expose
@@ -93,7 +93,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Show Totals.
-     * 
+     * Indicates whether the total row is visible or not. This value can be set to show or remove the total row.
      */
     @SerializedName("showTotals")
     @Expose
@@ -101,7 +101,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Style.
-     * 
+     * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21, TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style present in the workbook can also be specified.
      */
     @SerializedName("style")
     @Expose
@@ -109,19 +109,19 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * 
+     * Represents a collection of all the columns in the table. Read-only.
      */
     public WorkbookTableColumnCollectionPage columns;
 
     /**
      * The Rows.
-     * 
+     * Represents a collection of all the rows in the table. Read-only.
      */
     public WorkbookTableRowCollectionPage rows;
 
     /**
      * The Sort.
-     * 
+     * Represents the sorting for the table. Read-only.
      */
     @SerializedName("sort")
     @Expose
@@ -129,7 +129,7 @@ public class BaseWorkbookTable extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
-     * 
+     * The worksheet containing the current table. Read-only.
      */
     @SerializedName("worksheet")
     @Expose

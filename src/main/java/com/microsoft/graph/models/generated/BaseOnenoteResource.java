@@ -29,7 +29,7 @@ public class BaseOnenoteResource extends OnenoteEntityBaseModel implements IJson
 
     /**
      * The Content Url.
-     * 
+     * The URL for downloading the content
      */
     @SerializedName("contentUrl")
     @Expose

@@ -29,7 +29,7 @@ public class BaseDriveItemVersion extends BaseItemVersion implements IJsonBacked
 
     /**
      * The Size.
-     * 
+     * Indicates the size of the content stream for this version of the item.
      */
     @SerializedName("size")
     @Expose

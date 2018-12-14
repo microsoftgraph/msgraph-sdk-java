@@ -38,7 +38,7 @@ public class BaseCloudAppSecurityState implements IJsonBackedObject {
 
     /**
      * The Destination Service Ip.
-     * 
+     * Destination IP Address of the connection to the cloud application/service.
      */
     @SerializedName("destinationServiceIp")
     @Expose
@@ -46,7 +46,7 @@ public class BaseCloudAppSecurityState implements IJsonBackedObject {
 
     /**
      * The Destination Service Name.
-     * 
+     * Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
      */
     @SerializedName("destinationServiceName")
     @Expose
@@ -54,7 +54,7 @@ public class BaseCloudAppSecurityState implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * 
+     * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which equates to a percentage.
      */
     @SerializedName("riskScore")
     @Expose

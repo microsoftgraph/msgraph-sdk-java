@@ -40,7 +40,7 @@ public class BaseTimeConstraint implements IJsonBackedObject {
 
     /**
      * The Activity Domain.
-     * 
+     * The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      */
     @SerializedName("activityDomain")
     @Expose
@@ -48,7 +48,7 @@ public class BaseTimeConstraint implements IJsonBackedObject {
 
     /**
      * The Timeslots.
-     * 
+     * An array of time periods.
      */
     @SerializedName("timeslots")
     @Expose

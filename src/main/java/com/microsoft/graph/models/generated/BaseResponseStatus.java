@@ -39,7 +39,7 @@ public class BaseResponseStatus implements IJsonBackedObject {
 
     /**
      * The Response.
-     * The response type. Possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
+     * The response type. The possible values are: None, Organizer, TentativelyAccepted, Accepted, Declined, NotResponded.
      */
     @SerializedName("response")
     @Expose

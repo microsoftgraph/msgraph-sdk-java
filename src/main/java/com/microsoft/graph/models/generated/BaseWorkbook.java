@@ -48,19 +48,19 @@ public class BaseWorkbook extends Entity implements IJsonBackedObject {
 
     /**
      * The Names.
-     * 
+     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
      */
     public WorkbookNamedItemCollectionPage names;
 
     /**
      * The Tables.
-     * 
+     * Represents a collection of tables associated with the workbook. Read-only.
      */
     public WorkbookTableCollectionPage tables;
 
     /**
      * The Worksheets.
-     * 
+     * Represents a collection of worksheets associated with the workbook. Read-only.
      */
     public WorkbookWorksheetCollectionPage worksheets;
 

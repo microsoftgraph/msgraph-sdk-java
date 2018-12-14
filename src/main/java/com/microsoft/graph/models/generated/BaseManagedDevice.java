@@ -407,7 +407,7 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Partner Reported Threat State.
-     * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive.
+     * Indicates the threat state of a device when a Mobile Threat Defense partner is in use by the account and device. Read Only. Possible values are: unknown, activated, deactivated, secured, lowSeverity, mediumSeverity, highSeverity, unresponsive, compromised, misconfigured.
      */
     @SerializedName("partnerReportedThreatState")
     @Expose
@@ -415,7 +415,7 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Configuration States.
-     * 
+     * Device configuration states for this device.
      */
     public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
@@ -429,7 +429,7 @@ public class BaseManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy States.
-     * 
+     * Device compliance policy states for this device.
      */
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 

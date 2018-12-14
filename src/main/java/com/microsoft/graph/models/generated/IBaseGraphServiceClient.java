@@ -340,6 +340,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
 
     /**
+     * Gets the collection of Teams objects
+     *
+     * @return the request builder for the collection of Teams objects
+     */
+    ITeamCollectionRequestBuilder teams();
+
+    /**
+     * Gets a single Teams
+     *
+     * @param id the id of the Teams to retrieve
+     * @return the request builder for the Teams object
+     */
+    ITeamRequestBuilder teams(final String id);
+
+    /**
+     * Gets the collection of DataPolicyOperations objects
+     *
+     * @return the request builder for the collection of DataPolicyOperations objects
+     */
+    IDataPolicyOperationCollectionRequestBuilder dataPolicyOperations();
+
+    /**
+     * Gets a single DataPolicyOperations
+     *
+     * @param id the id of the DataPolicyOperations to retrieve
+     * @return the request builder for the DataPolicyOperations object
+     */
+    IDataPolicyOperationRequestBuilder dataPolicyOperations(final String id);
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
@@ -401,5 +431,12 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the Security
      */
     ISecurityRequestBuilder Security();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AppCatalogs
+     */
+    IAppCatalogsRequestBuilder appCatalogs();
 
 }

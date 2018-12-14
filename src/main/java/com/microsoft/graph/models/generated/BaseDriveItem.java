@@ -139,7 +139,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Publication.
-     * 
+     * Provides information about the published or checked-out state of an item, in locations that support such actions. This property is not returned by default. Read-only.
      */
     @SerializedName("publication")
     @Expose
@@ -225,7 +225,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List Item.
-     * 
+     * For drives in SharePoint, the associated document library list item. Read-only. Nullable.
      */
     @SerializedName("listItem")
     @Expose
@@ -251,7 +251,7 @@ public class BaseDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Workbook.
-     * 
+     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
      */
     @SerializedName("workbook")
     @Expose

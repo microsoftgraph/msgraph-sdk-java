@@ -117,7 +117,7 @@ public class BaseOrganization extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Language.
-     * The preferred language for the organization. Should follow ISO 639-1 Code; for example "en".
+     * The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
      */
     @SerializedName("preferredLanguage")
     @Expose

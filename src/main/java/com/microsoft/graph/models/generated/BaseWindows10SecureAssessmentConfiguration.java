@@ -37,7 +37,7 @@ public class BaseWindows10SecureAssessmentConfiguration extends DeviceConfigurat
 
     /**
      * The Configuration Account.
-     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain&#92;user), an AAD account (username@tenant.com) or a local account (username).
+     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      */
     @SerializedName("configurationAccount")
     @Expose
