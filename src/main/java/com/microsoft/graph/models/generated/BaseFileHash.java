@@ -39,7 +39,7 @@ public class BaseFileHash implements IJsonBackedObject {
 
     /**
      * The Hash Type.
-     * 
+     * File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
      */
     @SerializedName("hashType")
     @Expose
@@ -47,7 +47,7 @@ public class BaseFileHash implements IJsonBackedObject {
 
     /**
      * The Hash Value.
-     * 
+     * Value of the file hash.
      */
     @SerializedName("hashValue")
     @Expose

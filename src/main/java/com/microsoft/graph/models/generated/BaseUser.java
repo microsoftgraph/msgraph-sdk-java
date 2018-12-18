@@ -40,6 +40,7 @@ import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEven
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.UserSettings;
+import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.generated.BaseLicenseDetailsCollectionResponse;
@@ -74,6 +75,8 @@ import com.microsoft.graph.requests.generated.BaseDeviceManagementTroubleshootin
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.generated.BaseUserActivityCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
+import com.microsoft.graph.requests.generated.BaseGroupCollectionResponse;
+import com.microsoft.graph.requests.extensions.GroupCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -100,7 +103,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Age Group.
-     * 
+     * Sets the age group of the user. Allowed values: null, minor, notAdult and adult. Refer to the legal age group property definitions for further information.
      */
     @SerializedName("ageGroup")
     @Expose
@@ -148,7 +151,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Consent Provided For Minor.
-     * 
+     * Sets whether consent has been obtained for minors. Allowed values: null, granted, denied and notRequired. Refer to the legal age group property definitions for further information.
      */
     @SerializedName("consentProvidedForMinor")
     @Expose
@@ -156,7 +159,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * The country/region in which the user is located; for example, "US" or "UK". Supports $filter.
+     * The country/region in which the user is located; for example, 'US' or 'UK'. Supports $filter.
      */
     @SerializedName("country")
     @Expose
@@ -188,7 +191,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Im Addresses.
-     * 
+     * The instant message voice over IP (VOIP) session initiation protocol (SIP) addresses for the user. Read-only.
      */
     @SerializedName("imAddresses")
     @Expose
@@ -196,7 +199,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The user's job title. Supports $filter.
+     * The user’s job title. Supports $filter.
      */
     @SerializedName("jobTitle")
     @Expose
@@ -204,7 +207,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Legal Age Group Classification.
-     * 
+     * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
      */
     @SerializedName("legalAgeGroupClassification")
     @Expose
@@ -212,7 +215,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, "jeff@contoso.onmicrosoft.com". Read-Only. Supports $filter.
+     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
      */
     @SerializedName("mail")
     @Expose
@@ -236,7 +239,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * 
+     * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, this set of properties is mastered on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update.
      */
     @SerializedName("onPremisesExtensionAttributes")
     @Expose
@@ -244,7 +247,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Immutable Id.
-     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property. Important: The $ and  characters cannot be used when specifying this property. Supports $filter.
+     * This property is used to associate an on-premises Active Directory user account to their Azure AD user object. This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user’s userPrincipalName (UPN) property. Important: The $ and _ characters cannot be used when specifying this property. Supports $filter.
      */
     @SerializedName("onPremisesImmutableId")
     @Expose
@@ -252,7 +255,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Indicates the last time at which the object was synced with the on-premises directory; for example: "2013-02-16T03:04:54Z". The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("onPremisesLastSyncDateTime")
     @Expose
@@ -260,7 +263,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Provisioning Errors.
-     * 
+     * Errors when using Microsoft synchronization product during provisioning.
      */
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
@@ -284,7 +287,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Domain Name.
-     * 
+     * Contains the on-premises domainFQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
     @SerializedName("onPremisesDomainName")
     @Expose
@@ -292,7 +295,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sam Account Name.
-     * 
+     * Contains the on-premises samAccountName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
     @SerializedName("onPremisesSamAccountName")
     @Expose
@@ -300,7 +303,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises User Principal Name.
-     * 
+     * Contains the on-premises userPrincipalName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
     @SerializedName("onPremisesUserPrincipalName")
     @Expose
@@ -308,7 +311,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. This value is an enumeration with one possible value being "DisableStrongPassword", which allows weaker passwords than the default policy to be specified. "DisablePasswordExpiration" can also be specified. The two may be specified together; for example: "DisablePasswordExpiration, DisableStrongPassword".
+     * Specifies password policies for the user. This value is an enumeration with one possible value being 'DisableStrongPassword', which allows weaker passwords than the default policy to be specified. 'DisablePasswordExpiration' can also be specified. The two may be specified together; for example: 'DisablePasswordExpiration, DisableStrongPassword'.
      */
     @SerializedName("passwordPolicies")
     @Expose
@@ -316,7 +319,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
+     * Specifies the password profile for the user. The profile contains the user’s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
      */
     @SerializedName("passwordProfile")
     @Expose
@@ -340,7 +343,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for the user. Should follow ISO 639-1 Code; for example "en-US".
+     * The preferred language for the user. Should follow ISO 639-1 Code; for example 'en-US'.
      */
     @SerializedName("preferredLanguage")
     @Expose
@@ -356,7 +359,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * For example: ["SMTP: bob@contoso.com", "smtp: bob@sales.contoso.com"] The any operator is required for filter expressions on multi-valued properties. Read-only, Not nullable. Supports $filter.
+     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'] The any operator is required for filter expressions on multi-valued properties. Read-only, Not nullable. Supports $filter.
      */
     @SerializedName("proxyAddresses")
     @Expose
@@ -388,7 +391,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Usage Location.
-     * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: "US", "JP", and "GB". Not nullable. Supports $filter.
+     * A two letter country code (ISO standard 3166). Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.  Examples include: 'US', 'JP', and 'GB'. Not nullable. Supports $filter.
      */
     @SerializedName("usageLocation")
     @Expose
@@ -396,7 +399,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Supports $filter and $orderby.
      */
     @SerializedName("userPrincipalName")
     @Expose
@@ -404,7 +407,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * A string value that can be used to classify user types in your directory, such as "Member" and "Guest". Supports $filter.
+     * A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports $filter.
      */
     @SerializedName("userType")
     @Expose
@@ -500,7 +503,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Enrollment Limit.
-     * 
+     * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
      */
     @SerializedName("deviceEnrollmentLimit")
     @Expose
@@ -520,7 +523,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Manager.
-     * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
+     * The user or contact that is this user’s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.)
      */
     @SerializedName("manager")
     @Expose
@@ -552,7 +555,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The License Details.
-     * 
+     * A collection of this user's license details. Nullable.
      */
     public LicenseDetailsCollectionPage licenseDetails;
 
@@ -564,7 +567,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Outlook.
-     * 
+     * Read-only.
      */
     @SerializedName("outlook")
     @Expose
@@ -616,7 +619,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The People.
-     * 
+     * People that are relevant to the user. Read-only. Nullable.
      */
     public PersonCollectionPage people;
 
@@ -670,7 +673,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Planner.
-     * 
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      */
     @SerializedName("planner")
     @Expose
@@ -704,7 +707,7 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * 
+     * The user's activities across devices. Read-only. Nullable.
      */
     public UserActivityCollectionPage activities;
 
@@ -723,6 +726,12 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("settings")
     @Expose
     public UserSettings settings;
+
+    /**
+     * The Joined Teams.
+     * 
+     */
+    public GroupCollectionPage joinedTeams;
 
 
     /**
@@ -1130,6 +1139,22 @@ public class BaseUser extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             activities = new UserActivityCollectionPage(response, null);
+        }
+
+        if (json.has("joinedTeams")) {
+            final BaseGroupCollectionResponse response = new BaseGroupCollectionResponse();
+            if (json.has("joinedTeams@odata.nextLink")) {
+                response.nextLink = json.get("joinedTeams@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("joinedTeams").toString(), JsonObject[].class);
+            final Group[] array = new Group[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Group.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            joinedTeams = new GroupCollectionPage(response, null);
         }
     }
 }

@@ -30,7 +30,7 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Fields.
-     * 
+     * Represents the current conditions used to last sort the table. Read-only.
      */
     @SerializedName("fields")
     @Expose
@@ -38,7 +38,7 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Match Case.
-     * 
+     * Represents whether the casing impacted the last sort of the table. Read-only.
      */
     @SerializedName("matchCase")
     @Expose
@@ -46,7 +46,7 @@ public class BaseWorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Method.
-     * 
+     * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
      */
     @SerializedName("method")
     @Expose

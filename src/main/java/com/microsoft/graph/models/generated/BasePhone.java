@@ -39,7 +39,7 @@ public class BasePhone implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of phone number. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+     * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      */
     @SerializedName("type")
     @Expose

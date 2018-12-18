@@ -42,7 +42,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The display name of the worksheet.
      */
     @SerializedName("name")
     @Expose
@@ -50,7 +50,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Position.
-     * 
+     * The zero-based position of the worksheet within the workbook.
      */
     @SerializedName("position")
     @Expose
@@ -58,7 +58,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * 
+     * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      */
     @SerializedName("visibility")
     @Expose
@@ -66,25 +66,25 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Charts.
-     * 
+     * Returns collection of charts that are part of the worksheet. Read-only.
      */
     public WorkbookChartCollectionPage charts;
 
     /**
      * The Names.
-     * 
+     * Returns collection of names that are associated with the worksheet. Read-only.
      */
     public WorkbookNamedItemCollectionPage names;
 
     /**
      * The Pivot Tables.
-     * 
+     * Collection of PivotTables that are part of the worksheet.
      */
     public WorkbookPivotTableCollectionPage pivotTables;
 
     /**
      * The Protection.
-     * 
+     * Returns sheet protection object for a worksheet. Read-only.
      */
     @SerializedName("protection")
     @Expose
@@ -92,7 +92,7 @@ public class BaseWorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Tables.
-     * 
+     * Collection of tables that are part of the worksheet. Read-only.
      */
     public WorkbookTableCollectionPage tables;
 

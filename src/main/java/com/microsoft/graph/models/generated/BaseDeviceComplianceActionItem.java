@@ -38,7 +38,7 @@ public class BaseDeviceComplianceActionItem extends Entity implements IJsonBacke
 
     /**
      * The Action Type.
-     * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles.
+     * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification.
      */
     @SerializedName("actionType")
     @Expose

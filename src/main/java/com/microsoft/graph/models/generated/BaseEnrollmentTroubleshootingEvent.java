@@ -79,7 +79,7 @@ public class BaseEnrollmentTroubleshootingEvent extends DeviceManagementTroubles
 
     /**
      * The Failure Category.
-     * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected.
+     * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
      */
     @SerializedName("failureCategory")
     @Expose

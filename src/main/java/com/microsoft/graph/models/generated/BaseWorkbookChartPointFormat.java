@@ -30,7 +30,7 @@ public class BaseWorkbookChartPointFormat extends Entity implements IJsonBackedO
 
     /**
      * The Fill.
-     * 
+     * Represents the fill format of a chart, which includes background formating information. Read-only.
      */
     @SerializedName("fill")
     @Expose

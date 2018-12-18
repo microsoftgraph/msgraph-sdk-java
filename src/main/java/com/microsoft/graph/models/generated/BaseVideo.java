@@ -86,7 +86,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Four CC.
-     * "Four character code" name of the video format.
+     * 'Four character code' name of the video format.
      */
     @SerializedName("fourCC")
     @Expose
@@ -94,7 +94,7 @@ public class BaseVideo implements IJsonBackedObject {
 
     /**
      * The Frame Rate.
-     * 
+     * Frame rate of the video.
      */
     @SerializedName("frameRate")
     @Expose
