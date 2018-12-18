@@ -30,4 +30,8 @@ public interface IBaseDirectoryRoleCollectionRequestBuilder extends IRequestBuil
 
     IDirectoryRoleRequestBuilder byId(final String id);
 
+
+    IDirectoryRoleDeltaCollectionRequestBuilder delta();
+
+	IDirectoryRoleDeltaCollectionRequestBuilder delta(final String deltaLink);
 }
