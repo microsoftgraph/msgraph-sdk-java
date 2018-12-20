@@ -28,6 +28,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.DefaultConnectionConfig;
+import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
@@ -86,6 +88,11 @@ public class DefaultHttpProvider implements IHttpProvider {
     private final ILogger logger;
 
     /**
+     * The connection config
+     */
+    private final IConnectionConfig connectionConfig;
+
+    /**
      * The connection factory
      */
     private IConnectionFactory connectionFactory;
@@ -102,10 +109,30 @@ public class DefaultHttpProvider implements IHttpProvider {
                                final IAuthenticationProvider authenticationProvider,
                                final IExecutors executors,
                                final ILogger logger) {
+        this(serializer, authenticationProvider, executors, logger, new DefaultConnectionConfig());
+    }
+
+    /**
+     * Creates the DefaultHttpProvider
+     *
+     * @param serializer                    the serializer
+     * @param authenticationProvider        the authentication provider
+     * @param executors                     the executors
+     * @param logger                        the logger for diagnostic information
+     * @param connectionConfig              the connection config
+
+     */
+    public DefaultHttpProvider(final ISerializer serializer,
+                               final IAuthenticationProvider authenticationProvider,
+                               final IExecutors executors,
+                               final ILogger logger,
+                               final IConnectionConfig connectionConfig
+                               ) {
         this.serializer = serializer;
         this.authenticationProvider = authenticationProvider;
         this.executors = executors;
         this.logger = logger;
+        this.connectionConfig = connectionConfig;
         connectionFactory = new DefaultConnectionFactory();
     }
 
@@ -232,6 +259,8 @@ public class DefaultHttpProvider implements IHttpProvider {
             final URL requestUrl = request.getRequestUrl();
             logger.logDebug("Starting to send request, URL " + requestUrl.toString());
             final IConnection connection = connectionFactory.createFromRequest(request);
+            connection.setConnectTimeout(connectionConfig.getConnectTimeout());
+            connection.setReadTimeout(connectionConfig.getReadTimeout());
 
             try {
                 logger.logDebug("Request Method " + request.getHttpMethod().toString());

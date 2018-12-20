@@ -24,7 +24,7 @@ hs_err_pid*
 /build/
 /bin/
 
-#Eclipse
+# Eclipse
 .project
 .classpath
 .settings
@@ -33,3 +33,9 @@ hs_err_pid*
 /target/
 /pom.xml
 local.properties
+
+# IntelliJ
+.idea
+
+# Output
+/out
