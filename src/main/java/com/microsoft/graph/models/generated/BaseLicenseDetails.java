@@ -46,7 +46,7 @@ public class BaseLicenseDetails extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: "AAD_Premium". Read-only
+     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'. Read-only
      */
     @SerializedName("skuPartNumber")
     @Expose

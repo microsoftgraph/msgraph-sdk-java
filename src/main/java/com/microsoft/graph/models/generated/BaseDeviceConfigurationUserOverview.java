@@ -37,7 +37,7 @@ public class BaseDeviceConfigurationUserOverview extends Entity implements IJson
 
     /**
      * The Not Applicable Count.
-     * Number of not applicable devices
+     * Number of not applicable users
      */
     @SerializedName("notApplicableCount")
     @Expose

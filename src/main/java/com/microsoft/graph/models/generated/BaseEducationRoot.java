@@ -38,25 +38,25 @@ public class BaseEducationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Classes.
-     * 
+     * Read-only. Nullable.
      */
     public EducationClassCollectionPage classes;
 
     /**
      * The Schools.
-     * 
+     * Read-only. Nullable.
      */
     public EducationSchoolCollectionPage schools;
 
     /**
      * The Users.
-     * 
+     * Read-only. Nullable.
      */
     public EducationUserCollectionPage users;
 
     /**
      * The Me.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName("me")
     @Expose

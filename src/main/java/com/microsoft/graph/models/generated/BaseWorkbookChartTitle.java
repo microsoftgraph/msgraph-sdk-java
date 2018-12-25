@@ -30,7 +30,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Overlay.
-     * 
+     * Boolean value representing if the chart title will overlay the chart or not.
      */
     @SerializedName("overlay")
     @Expose
@@ -38,7 +38,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Text.
-     * 
+     * Represents the title text of a chart.
      */
     @SerializedName("text")
     @Expose
@@ -46,7 +46,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Visible.
-     * 
+     * A boolean value the represents the visibility of a chart title object.
      */
     @SerializedName("visible")
     @Expose
@@ -54,7 +54,7 @@ public class BaseWorkbookChartTitle extends Entity implements IJsonBackedObject 
 
     /**
      * The Format.
-     * 
+     * Represents the formatting of a chart title, which includes fill and font formatting. Read-only.
      */
     @SerializedName("format")
     @Expose

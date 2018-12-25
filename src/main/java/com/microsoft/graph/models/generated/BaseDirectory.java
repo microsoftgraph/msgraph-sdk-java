@@ -32,7 +32,7 @@ public class BaseDirectory extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Items.
-     * 
+     * Recently deleted items. Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage deletedItems;
 

@@ -55,7 +55,7 @@ public class BaseDeviceManagementExchangeConnector extends Entity implements IJs
 
     /**
      * The Server Name.
-     * The name of the server hosting the Exchange Connector.
+     * The name of the Exchange server.
      */
     @SerializedName("serverName")
     @Expose
@@ -63,7 +63,7 @@ public class BaseDeviceManagementExchangeConnector extends Entity implements IJs
 
     /**
      * The Connector Server Name.
-     * 
+     * The name of the server hosting the Exchange Connector.
      */
     @SerializedName("connectorServerName")
     @Expose

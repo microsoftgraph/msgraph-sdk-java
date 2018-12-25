@@ -29,7 +29,7 @@ public class BaseWorkbookChartLineFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Color.
-     * 
+     * HTML color code representing the color of lines in the chart.
      */
     @SerializedName("color")
     @Expose

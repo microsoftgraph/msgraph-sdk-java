@@ -65,7 +65,7 @@ public class BasePermission extends Entity implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * 
+     * The type of permission, e.g. read. See below for the full list of roles. Read-only.
      */
     @SerializedName("roles")
     @Expose

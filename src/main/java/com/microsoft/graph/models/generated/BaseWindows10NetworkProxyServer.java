@@ -38,7 +38,7 @@ public class BaseWindows10NetworkProxyServer implements IJsonBackedObject {
 
     /**
      * The Address.
-     * Address to the proxy server. Specify an address in the format [":"]
+     * Address to the proxy server. Specify an address in the format [':']
      */
     @SerializedName("address")
     @Expose
