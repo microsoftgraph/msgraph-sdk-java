@@ -40,6 +40,7 @@ import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupAddFavoriteRequestBuilder;
@@ -173,6 +174,13 @@ public interface IBaseGroupRequestBuilder extends IRequestBuilder {
     IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies();
 
     IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
+
+    /**
+     * Gets the request builder for Team
+     *
+     * @return the ITeamRequestBuilder instance
+     */
+    ITeamRequestBuilder team();
     IGroupSubscribeByMailRequestBuilder subscribeByMail();
     IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();
     IGroupAddFavoriteRequestBuilder addFavorite();

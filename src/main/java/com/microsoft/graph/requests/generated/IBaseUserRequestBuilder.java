@@ -60,6 +60,8 @@ import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder;
@@ -73,6 +75,7 @@ import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExportPersonalDataRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserGetManagedAppPoliciesCollectionRequestBuilder;
@@ -263,6 +266,10 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
      * @return the IUserSettingsRequestBuilder instance
      */
     IUserSettingsRequestBuilder settings();
+
+    IGroupCollectionRequestBuilder joinedTeams();
+
+    IGroupRequestBuilder joinedTeams(final String id);
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);
@@ -271,6 +278,7 @@ public interface IBaseUserRequestBuilder extends IRequestBuilder {
     IUserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions);
     IUserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement();
     IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(final String deviceTag);
+    IUserExportPersonalDataRequestBuilder exportPersonalData(final String storageLocation);
 
     IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime);
 

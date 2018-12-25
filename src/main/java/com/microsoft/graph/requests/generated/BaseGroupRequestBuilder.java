@@ -77,6 +77,8 @@ import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRe
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequestBuilder;
@@ -290,6 +292,15 @@ public class BaseGroupRequestBuilder extends BaseRequestBuilder implements IBase
 
     public IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id) {
         return new GroupLifecyclePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Team
+     *
+     * @return the ITeamRequestBuilder instance
+     */
+    public ITeamRequestBuilder team() {
+        return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
     }
 
     public IGroupSubscribeByMailRequestBuilder subscribeByMail() {
