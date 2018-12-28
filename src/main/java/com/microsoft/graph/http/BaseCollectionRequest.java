@@ -113,6 +113,16 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
     }
 
     /**
+     * Gets the request URL
+     *
+     * @return the request URL
+     */
+    @Override
+    public URL getBaseRequestUrl() {
+        return baseRequest.getBaseRequestUrl();
+    }
+
+    /**
      * Gets the HTTP method
      *
      * @return the HTTP method

@@ -34,6 +34,13 @@ import java.util.List;
 public interface IHttpRequest {
 
     /**
+     * Gets the base request URL
+     * 
+     * @return the base request URL
+     */
+    URL getBaseRequestUrl();
+    
+    /**
      * Gets the request URL
      * 
      * @return the request URL
@@ -83,4 +90,3 @@ public interface IHttpRequest {
      */
     boolean getUseCaches();
 }
-

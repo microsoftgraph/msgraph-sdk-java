@@ -30,6 +30,15 @@ public class MockHttpRequest implements IHttpRequest {
     }
 
     @Override
+    public URL getBaseRequestUrl() {
+        try {
+            return new URL("http://localhost");
+        } catch (final MalformedURLException ex) {
+            throw new ClientException("Invalid URL", ex);
+        }
+    }
+
+    @Override
     public HttpMethod getHttpMethod() {
         return mHttpMethod;
     }

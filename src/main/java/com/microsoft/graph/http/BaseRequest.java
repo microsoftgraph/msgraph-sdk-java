@@ -65,7 +65,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The URL for this request
      */
-    private final String requestUrl;
+    private final String baseRequestUrl;
 
     /**
      * The backing client for this request
@@ -100,16 +100,16 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * Creates the request
      *
-     * @param requestUrl    the URL to make the request against
-     * @param client        the client which can issue the request
-     * @param options       the options for this request
-     * @param responseClass the class for the response
+     * @param baseRequestUrl    the URL to make the request against
+     * @param client            the client which can issue the request
+     * @param options           the options for this request
+     * @param responseClass     the class for the response
      */
-    public BaseRequest(final String requestUrl,
+    public BaseRequest(final String baseRequestUrl,
                        final IBaseClient client,
                        final List<? extends Option> options,
                        final Class<?> responseClass) {
-        this.requestUrl = requestUrl;
+        this.baseRequestUrl = baseRequestUrl;
         this.client = client;
         this.responseClass = responseClass;
 
@@ -163,8 +163,27 @@ public abstract class BaseRequest implements IHttpRequest {
 		return null;
     }
 
+    /**
+     * Gets the base request URL
+     * 
+     * @return the base request URL
+     */
+    @Override
+    public URL getBaseRequestUrl() {
+        try {
+            return new URL(this.baseRequestUrl);
+        } catch (final MalformedURLException e) {
+        	if (this instanceof CustomRequest) {
+        		this.getClient().getLogger().logError("Invalid custom URL: " + this.baseRequestUrl, e);
+        	} else {
+        		throw new ClientException("Invalid URL: " + this.baseRequestUrl, e);
+        	}
+        }
+		return null;
+    }
+
     private String addFunctionParameters() {
-        final StringBuilder requestUrl = new StringBuilder(this.requestUrl);
+        final StringBuilder requestUrl = new StringBuilder(this.baseRequestUrl);
 
         if (!getFunctionOptions().isEmpty()) {
             requestUrl.append("(");

@@ -45,6 +45,15 @@ class MockRequest implements IHttpRequest {
     }
 
     @Override
+    public URL getBaseRequestUrl() {
+        try {
+            return new URL("http://localhost");
+        } catch (final MalformedURLException ignored) {
+        }
+        return null;
+    }
+
+    @Override
     public HttpMethod getHttpMethod() {
         return HttpMethod.GET;
     }

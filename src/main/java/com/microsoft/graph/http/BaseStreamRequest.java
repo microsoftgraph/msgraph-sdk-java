@@ -116,6 +116,16 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
     }
 
     /**
+     * Gets the request URL
+     *
+     * @return the request URL
+     */
+    @Override
+    public URL getBaseRequestUrl() {
+        return baseRequest.getBaseRequestUrl();
+    }
+
+    /**
      * Gets the HTTP method
      *
      * @return the HTTP method
