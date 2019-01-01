@@ -17,6 +17,8 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainForceDeleteRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainForceDeleteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDomainVerifyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainVerifyRequestBuilder;
 
@@ -82,6 +84,10 @@ public class BaseDomainRequestBuilder extends BaseRequestBuilder implements IBas
 
     public IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
+    }
+
+    public IDomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts) {
+        return new DomainForceDeleteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forceDelete"), getClient(), null, disableUserAccounts);
     }
 
     public IDomainVerifyRequestBuilder verify() {

@@ -46,4 +46,12 @@ public class BaseDirectoryRoleCollectionRequestBuilder extends BaseRequestBuilde
     public IDirectoryRoleRequestBuilder byId(final String id) {
         return new DirectoryRoleRequestBuilder(getRequestUrlWithAdditionalSegment(id), getClient(), getOptions());
     }
+
+    public IDirectoryRoleDeltaCollectionRequestBuilder delta() {
+        return new DirectoryRoleDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IDirectoryRoleDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new DirectoryRoleDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }
