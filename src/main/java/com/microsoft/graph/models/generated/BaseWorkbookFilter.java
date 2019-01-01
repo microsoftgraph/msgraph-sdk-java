@@ -30,7 +30,7 @@ public class BaseWorkbookFilter extends Entity implements IJsonBackedObject {
 
     /**
      * The Criteria.
-     * 
+     * The currently applied filter on the given column. Read-only.
      */
     @SerializedName("criteria")
     @Expose

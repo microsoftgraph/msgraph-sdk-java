@@ -118,7 +118,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Search Enable Remote Queries.
-     * Indicates whether or not to block remote queries of this computer's index.
+     * Indicates whether or not to block remote queries of this computer’s index.
      */
     @SerializedName("searchEnableRemoteQueries")
     @Expose
@@ -230,7 +230,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Blocked.
-     * Indicates whether or not to Block the user from using the Microsoft Edge browser.
+     * Indicates whether or not to Block the user from using the Edge browser.
      */
     @SerializedName("edgeBlocked")
     @Expose
@@ -238,7 +238,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Cookie Policy.
-     * Indicates which cookies to block in the Microsoft Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
      */
     @SerializedName("edgeCookiePolicy")
     @Expose
@@ -246,7 +246,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Developer Tools.
-     * Indicates whether or not to block developer tools in the Microsoft Edge browser.
+     * Indicates whether or not to block developer tools in the Edge browser.
      */
     @SerializedName("edgeBlockDeveloperTools")
     @Expose
@@ -262,7 +262,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Extensions.
-     * Indicates whether or not to block extensions in the Microsoft Edge browser.
+     * Indicates whether or not to block extensions in the Edge browser.
      */
     @SerializedName("edgeBlockExtensions")
     @Expose
@@ -270,7 +270,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block In Private Browsing.
-     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Microsoft Edge browser.
+     * Indicates whether or not to block InPrivate browsing on corporate networks, in the Edge browser.
      */
     @SerializedName("edgeBlockInPrivateBrowsing")
     @Expose
@@ -318,7 +318,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Allow Start Pages Modification.
-     * Allow users to change Start pages on Microsoft Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Microsoft Edge.
+     * Allow users to change Start pages on Edge. Use the EdgeHomepageUrls to specify the Start pages that the user would see by default when they open Edge.
      */
     @SerializedName("edgeAllowStartPagesModification")
     @Expose
@@ -390,7 +390,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Defender Detected Malware Actions.
-     * Gets or sets Defender's actions to take on detected Malware per threat level.
+     * Gets or sets Defender’s actions to take on detected Malware per threat level.
      */
     @SerializedName("defenderDetectedMalwareActions")
     @Expose
@@ -622,7 +622,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Password Block Simple.
-     * Specify whether PINs or passwords such as "1111" or "1234" are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+     * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
      */
     @SerializedName("passwordBlockSimple")
     @Expose
@@ -798,7 +798,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Start Menu Hide Restart Options.
-     * Enabling this policy hides "Restart/Update and Restart" from appearing in the power button in the start menu.
+     * Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
      */
     @SerializedName("startMenuHideRestartOptions")
     @Expose
@@ -846,7 +846,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Start Menu Layout Edge Assets Xml.
-     * This policy setting allows you to import Microsoft Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Microsoft Edge app which looks for Microsoft Edge local asset file. Microsoft Edge local asset would not exist and cause Microsoft Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
+     * This policy setting allows you to import Edge assets to be used with startMenuLayoutXml policy. Start layout can contain secondary tile from Edge app which looks for Edge local asset file. Edge local asset would not exist and cause Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is modified. The value should be a UTF-8 Base64 encoded byte array.
      */
     @SerializedName("startMenuLayoutEdgeAssetsXml")
     @Expose
@@ -1070,7 +1070,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Windows Spotlight Block Tailored Experiences.
-     * Block personalized content in Windows spotlight based on user's device usage.
+     * Block personalized content in Windows spotlight based on user’s device usage.
      */
     @SerializedName("windowsSpotlightBlockTailoredExperiences")
     @Expose
@@ -1110,7 +1110,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Network Proxy Apply Settings Device Wide.
-     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that's enrolled into MDM.
+     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
      */
     @SerializedName("networkProxyApplySettingsDeviceWide")
     @Expose
@@ -1246,7 +1246,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Sending Intranet Traffic To Internet Explorer.
-     * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Microsoft Edge.
+     * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
      */
     @SerializedName("edgeBlockSendingIntranetTrafficToInternetExplorer")
     @Expose
@@ -1270,7 +1270,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge First Run Url.
-     * The first run URL for when Microsoft Edge browser is opened for the first time.
+     * The first run URL for when Edge browser is opened for the first time.
      */
     @SerializedName("edgeFirstRunUrl")
     @Expose
@@ -1286,7 +1286,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Homepage Urls.
-     * The list of URLs for homepages shodwn on MDM-enrolled devices on Microsoft Edge browser.
+     * The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
      */
     @SerializedName("edgeHomepageUrls")
     @Expose
@@ -1294,7 +1294,7 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Edge Block Access To About Flags.
-     * Indicates whether or not to prevent access to about flags on Microsoft Edge browser.
+     * Indicates whether or not to prevent access to about flags on Edge browser.
      */
     @SerializedName("edgeBlockAccessToAboutFlags")
     @Expose
@@ -1635,6 +1635,14 @@ public class BaseWindows10GeneralConfiguration extends DeviceConfiguration imple
     @SerializedName("logonBlockFastUserSwitching")
     @Expose
     public Boolean logonBlockFastUserSwitching;
+
+    /**
+     * The Tenant Lockdown Require Network During Out Of Box Experience.
+     * Whether the device is required to connect to the network.
+     */
+    @SerializedName("tenantLockdownRequireNetworkDuringOutOfBoxExperience")
+    @Expose
+    public Boolean tenantLockdownRequireNetworkDuringOutOfBoxExperience;
 
 
     /**

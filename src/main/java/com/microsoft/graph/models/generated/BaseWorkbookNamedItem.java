@@ -30,7 +30,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Comment.
-     * 
+     * Represents the comment associated with this name.
      */
     @SerializedName("comment")
     @Expose
@@ -38,7 +38,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the object. Read-only.
      */
     @SerializedName("name")
     @Expose
@@ -46,7 +46,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * 
+     * Indicates whether the name is scoped to the workbook or to a specific worksheet. Read-only.
      */
     @SerializedName("scope")
     @Expose
@@ -54,7 +54,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Indicates what type of reference is associated with the name. The possible values are: String, Integer, Double, Boolean, Range. Read-only.
      */
     @SerializedName("type")
     @Expose
@@ -62,7 +62,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Represents the formula that the name is defined to refer to. E.g. =Sheet14!$B$2:$H$12, =4.75, etc. Read-only.
      */
     @SerializedName("value")
     @Expose
@@ -70,7 +70,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Visible.
-     * 
+     * Specifies whether the object is visible or not.
      */
     @SerializedName("visible")
     @Expose
@@ -78,7 +78,7 @@ public class BaseWorkbookNamedItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
-     * 
+     * Returns the worksheet on which the named item is scoped to. Available only if the item is scoped to the worksheet. Read-only.
      */
     @SerializedName("worksheet")
     @Expose

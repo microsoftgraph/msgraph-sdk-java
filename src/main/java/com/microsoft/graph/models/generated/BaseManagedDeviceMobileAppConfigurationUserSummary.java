@@ -37,7 +37,7 @@ public class BaseManagedDeviceMobileAppConfigurationUserSummary extends Entity i
 
     /**
      * The Not Applicable Count.
-     * Number of not applicable devices
+     * Number of not applicable users
      */
     @SerializedName("notApplicableCount")
     @Expose

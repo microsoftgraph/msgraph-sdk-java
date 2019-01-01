@@ -30,7 +30,7 @@ public class BaseAndroidWorkProfileCustomConfiguration extends DeviceConfigurati
 
     /**
      * The Oma Settings.
-     * 
+     * OMA settings. This collection can contain a maximum of 500 elements.
      */
     @SerializedName("omaSettings")
     @Expose

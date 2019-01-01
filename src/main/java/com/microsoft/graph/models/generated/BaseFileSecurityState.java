@@ -39,7 +39,7 @@ public class BaseFileSecurityState implements IJsonBackedObject {
 
     /**
      * The File Hash.
-     * 
+     * Complex type containing file hashes (cryptographic and location-sensitive).
      */
     @SerializedName("fileHash")
     @Expose
@@ -47,7 +47,7 @@ public class BaseFileSecurityState implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * File name (without path).
      */
     @SerializedName("name")
     @Expose
@@ -55,7 +55,7 @@ public class BaseFileSecurityState implements IJsonBackedObject {
 
     /**
      * The Path.
-     * 
+     * Full file path of the file/imageFile.
      */
     @SerializedName("path")
     @Expose
@@ -63,7 +63,7 @@ public class BaseFileSecurityState implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * 
+     * Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.
      */
     @SerializedName("riskScore")
     @Expose

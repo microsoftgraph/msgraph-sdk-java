@@ -652,7 +652,7 @@ public class BaseIosGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Kiosk Mode Built In App Id.
-     * 
+     * ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
      */
     @SerializedName("kioskModeBuiltInAppId")
     @Expose

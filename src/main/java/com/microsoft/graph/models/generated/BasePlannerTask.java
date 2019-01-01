@@ -53,7 +53,7 @@ public class BasePlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Bucket Id.
-     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case sensitive. Format validation is done on the service.
+     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      */
     @SerializedName("bucketId")
     @Expose
@@ -125,7 +125,7 @@ public class BasePlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview Type.
-     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      */
     @SerializedName("previewType")
     @Expose

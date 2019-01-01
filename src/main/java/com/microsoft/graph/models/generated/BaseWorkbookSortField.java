@@ -39,7 +39,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Ascending.
-     * 
+     * Represents whether the sorting is done in an ascending fashion.
      */
     @SerializedName("ascending")
     @Expose
@@ -47,7 +47,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Color.
-     * 
+     * Represents the color that is the target of the condition if the sorting is on font or cell color.
      */
     @SerializedName("color")
     @Expose
@@ -55,7 +55,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Data Option.
-     * 
+     * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      */
     @SerializedName("dataOption")
     @Expose
@@ -63,7 +63,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Icon.
-     * 
+     * Represents the icon that is the target of the condition if the sorting is on the cell's icon.
      */
     @SerializedName("icon")
     @Expose
@@ -71,7 +71,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset from the first column (or row).
      */
     @SerializedName("key")
     @Expose
@@ -79,7 +79,7 @@ public class BaseWorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Sort On.
-     * 
+     * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      */
     @SerializedName("sortOn")
     @Expose

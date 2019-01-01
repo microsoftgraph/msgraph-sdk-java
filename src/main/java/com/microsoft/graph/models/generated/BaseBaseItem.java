@@ -48,7 +48,7 @@ public class BaseBaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Provides a user-visible description of the item. Optional.
      */
     @SerializedName("description")
     @Expose
@@ -104,7 +104,7 @@ public class BaseBaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By User.
-     * 
+     * Identity of the user who created the item. Read-only.
      */
     @SerializedName("createdByUser")
     @Expose
@@ -112,7 +112,7 @@ public class BaseBaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By User.
-     * 
+     * Identity of the user who last modified the item. Read-only.
      */
     @SerializedName("lastModifiedByUser")
     @Expose

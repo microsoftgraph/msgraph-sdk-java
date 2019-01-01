@@ -32,7 +32,7 @@ public class BaseSecurity extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * 
+     * Read-only. Nullable.
      */
     public AlertCollectionPage alerts;
 

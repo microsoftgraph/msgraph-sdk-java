@@ -29,7 +29,7 @@ public class BaseWindowsDefenderAdvancedThreatProtectionConfiguration extends De
 
     /**
      * The Allow Sample Sharing.
-     * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
+     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
      */
     @SerializedName("allowSampleSharing")
     @Expose

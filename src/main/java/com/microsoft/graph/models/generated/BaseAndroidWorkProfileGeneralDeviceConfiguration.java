@@ -32,7 +32,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Block Fingerprint Unlock.
-     * 
+     * Indicates whether or not to block fingerprint unlock.
      */
     @SerializedName("passwordBlockFingerprintUnlock")
     @Expose
@@ -40,7 +40,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Block Trust Agents.
-     * 
+     * Indicates whether or not to block Smart Lock and other trust agents.
      */
     @SerializedName("passwordBlockTrustAgents")
     @Expose
@@ -48,7 +48,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Expiration Days.
-     * 
+     * Number of days before the password expires. Valid values 1 to 365
      */
     @SerializedName("passwordExpirationDays")
     @Expose
@@ -56,7 +56,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Minimum Length.
-     * 
+     * Minimum length of passwords. Valid values 4 to 16
      */
     @SerializedName("passwordMinimumLength")
     @Expose
@@ -64,7 +64,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Minutes Of Inactivity Before Screen Timeout.
-     * 
+     * Minutes of inactivity before the screen times out.
      */
     @SerializedName("passwordMinutesOfInactivityBeforeScreenTimeout")
     @Expose
@@ -72,7 +72,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Previous Password Block Count.
-     * 
+     * Number of previous passwords to block. Valid values 0 to 24
      */
     @SerializedName("passwordPreviousPasswordBlockCount")
     @Expose
@@ -80,7 +80,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Sign In Failure Count Before Factory Reset.
-     * 
+     * Number of sign in failures allowed before factory reset. Valid values 4 to 11
      */
     @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
     @Expose
@@ -88,7 +88,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Password Required Type.
-     * 
+     * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
      */
     @SerializedName("passwordRequiredType")
     @Expose
@@ -96,7 +96,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Data Sharing Type.
-     * 
+     * Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
      */
     @SerializedName("workProfileDataSharingType")
     @Expose
@@ -104,7 +104,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Notifications While Device Locked.
-     * 
+     * Indicates whether or not to block notifications while device locked.
      */
     @SerializedName("workProfileBlockNotificationsWhileDeviceLocked")
     @Expose
@@ -112,7 +112,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Adding Accounts.
-     * 
+     * Block users from adding/removing accounts in work profile.
      */
     @SerializedName("workProfileBlockAddingAccounts")
     @Expose
@@ -120,7 +120,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Bluetooth Enable Contact Sharing.
-     * 
+     * Allow bluetooth devices to access enterprise contacts.
      */
     @SerializedName("workProfileBluetoothEnableContactSharing")
     @Expose
@@ -128,7 +128,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Screen Capture.
-     * 
+     * Block screen capture in work profile.
      */
     @SerializedName("workProfileBlockScreenCapture")
     @Expose
@@ -136,7 +136,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Cross Profile Caller Id.
-     * 
+     * Block display work profile caller ID in personal profile.
      */
     @SerializedName("workProfileBlockCrossProfileCallerId")
     @Expose
@@ -144,7 +144,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Camera.
-     * 
+     * Block work profile camera.
      */
     @SerializedName("workProfileBlockCamera")
     @Expose
@@ -152,7 +152,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Cross Profile Contacts Search.
-     * 
+     * Block work profile contacts availability in personal profile.
      */
     @SerializedName("workProfileBlockCrossProfileContactsSearch")
     @Expose
@@ -160,7 +160,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Block Cross Profile Copy Paste.
-     * 
+     * Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
      */
     @SerializedName("workProfileBlockCrossProfileCopyPaste")
     @Expose
@@ -168,7 +168,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Default App Permission Policy.
-     * 
+     * Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
      */
     @SerializedName("workProfileDefaultAppPermissionPolicy")
     @Expose
@@ -176,7 +176,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Block Fingerprint Unlock.
-     * 
+     * Indicates whether or not to block fingerprint unlock for work profile.
      */
     @SerializedName("workProfilePasswordBlockFingerprintUnlock")
     @Expose
@@ -184,7 +184,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Block Trust Agents.
-     * 
+     * Indicates whether or not to block Smart Lock and other trust agents for work profile.
      */
     @SerializedName("workProfilePasswordBlockTrustAgents")
     @Expose
@@ -192,7 +192,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Expiration Days.
-     * 
+     * Number of days before the work profile password expires. Valid values 1 to 365
      */
     @SerializedName("workProfilePasswordExpirationDays")
     @Expose
@@ -200,7 +200,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Minimum Length.
-     * 
+     * Minimum length of work profile password. Valid values 4 to 16
      */
     @SerializedName("workProfilePasswordMinimumLength")
     @Expose
@@ -208,7 +208,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Min Numeric Characters.
-     * 
+     * Minimum # of numeric characters required in work profile password. Valid values 1 to 10
      */
     @SerializedName("workProfilePasswordMinNumericCharacters")
     @Expose
@@ -216,7 +216,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Min Non Letter Characters.
-     * 
+     * Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
      */
     @SerializedName("workProfilePasswordMinNonLetterCharacters")
     @Expose
@@ -224,7 +224,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Min Letter Characters.
-     * 
+     * Minimum # of letter characters required in work profile password. Valid values 1 to 10
      */
     @SerializedName("workProfilePasswordMinLetterCharacters")
     @Expose
@@ -232,7 +232,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Min Lower Case Characters.
-     * 
+     * Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
      */
     @SerializedName("workProfilePasswordMinLowerCaseCharacters")
     @Expose
@@ -240,7 +240,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Min Upper Case Characters.
-     * 
+     * Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
      */
     @SerializedName("workProfilePasswordMinUpperCaseCharacters")
     @Expose
@@ -248,7 +248,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Min Symbol Characters.
-     * 
+     * Minimum # of symbols required in work profile password. Valid values 1 to 10
      */
     @SerializedName("workProfilePasswordMinSymbolCharacters")
     @Expose
@@ -256,7 +256,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Minutes Of Inactivity Before Screen Timeout.
-     * 
+     * Minutes of inactivity before the screen times out.
      */
     @SerializedName("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout")
     @Expose
@@ -264,7 +264,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Previous Password Block Count.
-     * 
+     * Number of previous work profile passwords to block. Valid values 0 to 24
      */
     @SerializedName("workProfilePasswordPreviousPasswordBlockCount")
     @Expose
@@ -272,7 +272,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Sign In Failure Count Before Factory Reset.
-     * 
+     * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
      */
     @SerializedName("workProfilePasswordSignInFailureCountBeforeFactoryReset")
     @Expose
@@ -280,7 +280,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Password Required Type.
-     * 
+     * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
      */
     @SerializedName("workProfilePasswordRequiredType")
     @Expose
@@ -288,7 +288,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Work Profile Require Password.
-     * 
+     * Password is required or not for work profile
      */
     @SerializedName("workProfileRequirePassword")
     @Expose
@@ -296,7 +296,7 @@ public class BaseAndroidWorkProfileGeneralDeviceConfiguration extends DeviceConf
 
     /**
      * The Security Require Verify Apps.
-     * 
+     * Require the Android Verify apps feature is turned on.
      */
     @SerializedName("securityRequireVerifyApps")
     @Expose

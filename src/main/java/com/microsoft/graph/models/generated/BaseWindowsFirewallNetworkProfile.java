@@ -39,7 +39,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Firewall Enabled.
-     * Turn on the firewall and advanced security enforcement. Possible values are: notConfigured, blocked, allowed.
+     * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
      */
     @SerializedName("firewallEnabled")
     @Expose
@@ -47,7 +47,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Stealth Mode Blocked.
-     * Prevent the server from operating in stealth mode
+     * Prevent the server from operating in stealth mode. When StealthModeRequired and StealthModeBlocked are both true, StealthModeBlocked takes priority.
      */
     @SerializedName("stealthModeBlocked")
     @Expose
@@ -55,7 +55,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Incoming Traffic Blocked.
-     * Configures the firewall to block all incoming traffic regardless of other policy settings
+     * Configures the firewall to block all incoming traffic regardless of other policy settings. When IncomingTrafficRequired and IncomingTrafficBlocked are both true, IncomingTrafficBlocked takes priority.
      */
     @SerializedName("incomingTrafficBlocked")
     @Expose
@@ -63,7 +63,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Unicast Responses To Multicast Broadcasts Blocked.
-     * Configures the firewall to block unicast responses to multicast broadcast traffic
+     * Configures the firewall to block unicast responses to multicast broadcast traffic. When UnicastResponsesToMulticastBroadcastsRequired and UnicastResponsesToMulticastBroadcastsBlocked are both true, UnicastResponsesToMulticastBroadcastsBlocked takes priority.
      */
     @SerializedName("unicastResponsesToMulticastBroadcastsBlocked")
     @Expose
@@ -71,7 +71,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Inbound Notifications Blocked.
-     * Prevents the firewall from displaying notifications when an application is blocked from listening on a port
+     * Prevents the firewall from displaying notifications when an application is blocked from listening on a port. When InboundNotificationsRequired and InboundNotificationsBlocked are both true, InboundNotificationsBlocked takes priority.
      */
     @SerializedName("inboundNotificationsBlocked")
     @Expose
@@ -79,7 +79,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Authorized Application Rules From Group Policy Merged.
-     * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules
+     * Configures the firewall to merge authorized application rules from group policy with those from local store instead of ignoring the local store rules. When AuthorizedApplicationRulesFromGroupPolicyNotMerged and AuthorizedApplicationRulesFromGroupPolicyMerged are both true, AuthorizedApplicationRulesFromGroupPolicyMerged takes priority.
      */
     @SerializedName("authorizedApplicationRulesFromGroupPolicyMerged")
     @Expose
@@ -87,7 +87,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Global Port Rules From Group Policy Merged.
-     * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules
+     * Configures the firewall to merge global port rules from group policy with those from local store instead of ignoring the local store rules. When GlobalPortRulesFromGroupPolicyNotMerged and GlobalPortRulesFromGroupPolicyMerged are both true, GlobalPortRulesFromGroupPolicyMerged takes priority.
      */
     @SerializedName("globalPortRulesFromGroupPolicyMerged")
     @Expose
@@ -95,7 +95,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Connection Security Rules From Group Policy Merged.
-     * Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules
+     * Configures the firewall to merge connection security rules from group policy with those from local store instead of ignoring the local store rules. When ConnectionSecurityRulesFromGroupPolicyNotMerged and ConnectionSecurityRulesFromGroupPolicyMerged are both true, ConnectionSecurityRulesFromGroupPolicyMerged takes priority.
      */
     @SerializedName("connectionSecurityRulesFromGroupPolicyMerged")
     @Expose
@@ -103,7 +103,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Outbound Connections Blocked.
-     * Configures the firewall to block all outgoing connections by default
+     * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority.
      */
     @SerializedName("outboundConnectionsBlocked")
     @Expose
@@ -111,7 +111,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Inbound Connections Blocked.
-     * Configures the firewall to block all incoming connections by default
+     * Configures the firewall to block all incoming connections by default. When InboundConnectionsRequired and InboundConnectionsBlocked are both true, InboundConnectionsBlocked takes priority.
      */
     @SerializedName("inboundConnectionsBlocked")
     @Expose
@@ -119,7 +119,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Secured Packet Exemption Allowed.
-     * Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true
+     * Configures the firewall to allow the host computer to respond to unsolicited network traffic of that traffic is secured by IPSec even when stealthModeBlocked is set to true. When SecuredPacketExemptionBlocked and SecuredPacketExemptionAllowed are both true, SecuredPacketExemptionAllowed takes priority.
      */
     @SerializedName("securedPacketExemptionAllowed")
     @Expose
@@ -127,7 +127,7 @@ public class BaseWindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Policy Rules From Group Policy Merged.
-     * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules
+     * Configures the firewall to merge Firewall Rule policies from group policy with those from local store instead of ignoring the local store rules. When PolicyRulesFromGroupPolicyNotMerged and PolicyRulesFromGroupPolicyMerged are both true, PolicyRulesFromGroupPolicyMerged takes priority.
      */
     @SerializedName("policyRulesFromGroupPolicyMerged")
     @Expose
