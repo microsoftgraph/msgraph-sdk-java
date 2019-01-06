@@ -12,8 +12,8 @@ public class DefaultLoggerTests {
 	@Test
     public void testLoggerLevel(){
         ILogger logger = new DefaultLogger();
-        assertEquals(LoggerLevel.ERROR, logger.getLoggingLevel());
-        logger.setLoggingLevel(LoggerLevel.DEBUG);
         assertEquals(LoggerLevel.DEBUG, logger.getLoggingLevel());
+        logger.setLoggingLevel(LoggerLevel.ERROR);
+        assertEquals(LoggerLevel.ERROR, logger.getLoggingLevel());
     }
 }
