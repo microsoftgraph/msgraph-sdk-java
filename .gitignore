@@ -24,7 +24,7 @@ hs_err_pid*
 /build/
 /bin/
 
-# Eclipse
+#Eclipse
 .project
 .classpath
 .settings
