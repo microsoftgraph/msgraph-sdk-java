@@ -33,9 +33,3 @@ hs_err_pid*
 /target/
 /pom.xml
 local.properties
-
-# IntelliJ
-.idea
-
-# Output
-/out
