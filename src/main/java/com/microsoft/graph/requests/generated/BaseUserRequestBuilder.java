@@ -117,6 +117,10 @@ import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilde
 import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAssignLicenseRequestBuilder;
@@ -137,6 +141,8 @@ import com.microsoft.graph.requests.extensions.IUserRemoveAllDevicesFromManageme
 import com.microsoft.graph.requests.extensions.UserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExportPersonalDataRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExportPersonalDataRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserReminderViewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder;
@@ -437,6 +443,13 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
     public IUserSettingsRequestBuilder settings() {
         return new UserSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
+    public IGroupCollectionRequestBuilder joinedTeams() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);
+    }
+
+    public IGroupRequestBuilder joinedTeams(final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
+    }
 
     public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
         return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
@@ -464,6 +477,10 @@ public class BaseUserRequestBuilder extends BaseRequestBuilder implements IBaseU
 
     public IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(final String deviceTag) {
         return new UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByDeviceTag"), getClient(), null, deviceTag);
+    }
+
+    public IUserExportPersonalDataRequestBuilder exportPersonalData(final String storageLocation) {
+        return new UserExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, storageLocation);
     }
 
     public IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime) {
