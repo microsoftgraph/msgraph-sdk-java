@@ -30,7 +30,7 @@ public class BaseWorkbookChartAxisTitleFormat extends Entity implements IJsonBac
 
     /**
      * The Font.
-     * 
+     * Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
      */
     @SerializedName("font")
     @Expose

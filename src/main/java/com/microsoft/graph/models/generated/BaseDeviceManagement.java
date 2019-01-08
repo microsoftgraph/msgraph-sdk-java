@@ -101,7 +101,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscription State.
-     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
     @SerializedName("subscriptionState")
     @Expose
@@ -109,7 +109,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * Account level settings.
      */
     @SerializedName("settings")
     @Expose
@@ -117,7 +117,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Intune Brand.
-     * 
+     * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
      */
     @SerializedName("intuneBrand")
     @Expose
@@ -125,13 +125,13 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Terms And Conditions.
-     * 
+     * The terms and conditions associated with device management of the company.
      */
     public TermsAndConditionsCollectionPage termsAndConditions;
 
     /**
      * The Apple Push Notification Certificate.
-     * 
+     * Apple push notification certificate.
      */
     @SerializedName("applePushNotificationCertificate")
     @Expose
@@ -139,7 +139,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Overview.
-     * 
+     * Device overview
      */
     @SerializedName("managedDeviceOverview")
     @Expose
@@ -147,31 +147,31 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Detected Apps.
-     * 
+     * The list of detected apps associated with a device.
      */
     public DetectedAppCollectionPage detectedApps;
 
     /**
      * The Managed Devices.
-     * 
+     * The list of managed devices.
      */
     public ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Device Configurations.
-     * 
+     * The device configurations.
      */
     public DeviceConfigurationCollectionPage deviceConfigurations;
 
     /**
      * The Device Compliance Policies.
-     * 
+     * The device compliance policies.
      */
     public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
 
     /**
      * The Software Update Status Summary.
-     * 
+     * The software update status summary.
      */
     @SerializedName("softwareUpdateStatusSummary")
     @Expose
@@ -179,7 +179,7 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy Device State Summary.
-     * 
+     * The device compliance state summary for this account.
      */
     @SerializedName("deviceCompliancePolicyDeviceStateSummary")
     @Expose
@@ -187,13 +187,13 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy Setting State Summaries.
-     * 
+     * The summary states of compliance policy settings for this account.
      */
     public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
     /**
      * The Device Configuration Device State Summaries.
-     * 
+     * The device configuration device state summary for this account.
      */
     @SerializedName("deviceConfigurationDeviceStateSummaries")
     @Expose
@@ -201,31 +201,31 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Ios Update Statuses.
-     * 
+     * The IOS software update installation statuses for this account.
      */
     public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
     /**
      * The Device Categories.
-     * 
+     * The list of device categories with the tenant.
      */
     public DeviceCategoryCollectionPage deviceCategories;
 
     /**
      * The Exchange Connectors.
-     * 
+     * The list of Exchange Connectors configured by the tenant.
      */
     public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
 
     /**
      * The Device Enrollment Configurations.
-     * 
+     * The list of device enrollment configurations
      */
     public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Conditional Access Settings.
-     * 
+     * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      */
     @SerializedName("conditionalAccessSettings")
     @Expose
@@ -233,67 +233,67 @@ public class BaseDeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Mobile Threat Defense Connectors.
-     * 
+     * The list of Mobile threat Defense connectors configured by the tenant.
      */
     public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
 
     /**
      * The Device Management Partners.
-     * 
+     * The list of Device Management Partners configured by the tenant.
      */
     public DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
     /**
      * The Notification Message Templates.
-     * 
+     * The Notification Message Templates.
      */
     public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
 
     /**
      * The Role Definitions.
-     * 
+     * The Role Definitions.
      */
     public RoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Role Assignments.
-     * 
+     * The Role Assignments.
      */
     public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Resource Operations.
-     * 
+     * The Resource Operations.
      */
     public ResourceOperationCollectionPage resourceOperations;
 
     /**
      * The Telecom Expense Management Partners.
-     * 
+     * The telecom expense management partners.
      */
     public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
     /**
      * The Remote Assistance Partners.
-     * 
+     * The remote assist partners.
      */
     public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
 
     /**
      * The Windows Information Protection App Learning Summaries.
-     * 
+     * The windows information protection app learning summaries.
      */
     public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
 
     /**
      * The Windows Information Protection Network Learning Summaries.
-     * 
+     * The windows information protection network learning summaries.
      */
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
 
     /**
      * The Troubleshooting Events.
-     * 
+     * The list of troubleshooting events for the tenant.
      */
     public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 

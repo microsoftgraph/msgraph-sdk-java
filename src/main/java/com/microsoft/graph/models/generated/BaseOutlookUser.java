@@ -32,7 +32,7 @@ public class BaseOutlookUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Master Categories.
-     * 
+     * A list of categories defined for the user.
      */
     public OutlookCategoryCollectionPage masterCategories;
 

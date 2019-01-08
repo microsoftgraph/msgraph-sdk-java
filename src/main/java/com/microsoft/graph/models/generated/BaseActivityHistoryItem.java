@@ -31,7 +31,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * 
+     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
      */
     @SerializedName("status")
     @Expose
@@ -39,7 +39,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Active Duration Seconds.
-     * 
+     * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
      */
     @SerializedName("activeDurationSeconds")
     @Expose
@@ -47,7 +47,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Created Date Time.
-     * 
+     * Set by the server. DateTime in UTC when the object was created on the server.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -55,7 +55,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Last Active Date Time.
-     * 
+     * Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
      */
     @SerializedName("lastActiveDateTime")
     @Expose
@@ -63,7 +63,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Set by the server. DateTime in UTC when the object was modified on the server.
      */
     @SerializedName("lastModifiedDateTime")
     @Expose
@@ -71,7 +71,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Expiration Date Time.
-     * 
+     * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
      */
     @SerializedName("expirationDateTime")
     @Expose
@@ -79,7 +79,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Started Date Time.
-     * 
+     * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
      */
     @SerializedName("startedDateTime")
     @Expose
@@ -87,7 +87,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The User Timezone.
-     * 
+     * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
      */
     @SerializedName("userTimezone")
     @Expose
@@ -95,7 +95,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
 
     /**
      * The Activity.
-     * 
+     * Optional. NavigationProperty/Containment; navigation property to the associated activity.
      */
     @SerializedName("activity")
     @Expose

@@ -40,7 +40,7 @@ public class BaseDeviceConfigurationState extends Entity implements IJsonBackedO
 
     /**
      * The Display Name.
-     * 
+     * The name of the policy for this policyBase
      */
     @SerializedName("displayName")
     @Expose
@@ -48,7 +48,7 @@ public class BaseDeviceConfigurationState extends Entity implements IJsonBackedO
 
     /**
      * The Version.
-     * 
+     * The version of the policy
      */
     @SerializedName("version")
     @Expose
@@ -56,7 +56,7 @@ public class BaseDeviceConfigurationState extends Entity implements IJsonBackedO
 
     /**
      * The Platform Type.
-     * 
+     * Platform type that the policy applies to
      */
     @SerializedName("platformType")
     @Expose
@@ -64,7 +64,7 @@ public class BaseDeviceConfigurationState extends Entity implements IJsonBackedO
 
     /**
      * The State.
-     * 
+     * The compliance state of the policy
      */
     @SerializedName("state")
     @Expose
@@ -72,7 +72,7 @@ public class BaseDeviceConfigurationState extends Entity implements IJsonBackedO
 
     /**
      * The Setting Count.
-     * 
+     * Count of how many setting a policy holds
      */
     @SerializedName("settingCount")
     @Expose
