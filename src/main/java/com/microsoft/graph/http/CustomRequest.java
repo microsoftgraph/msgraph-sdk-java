@@ -105,6 +105,27 @@ public class CustomRequest<T> extends BaseRequest {
     public T post(final T newObject) throws ClientException {
         return send(HttpMethod.POST, newObject);
     }
+    
+    /**
+     * Creates a new object
+     * 
+     * @param putObject the new object to create
+     * @param callback  the callback to be called after success or failure
+     */
+    public void put(final T putObject, final ICallback<T> callback) {
+        send(HttpMethod.PUT, callback, putObject);
+    }
+    
+    /**
+     * Creates a new object
+     * 
+     * @param putObject        the new object to create
+     * @return                 the created object
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public T put(final T putObject) throws ClientException {
+        return send(HttpMethod.PUT, putObject);
+    }
 
     /**
      * Sets the select clause for the request
