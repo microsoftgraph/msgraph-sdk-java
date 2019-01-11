@@ -31,7 +31,7 @@ public class BaseWorkbookChartLegendFormat extends Entity implements IJsonBacked
 
     /**
      * The Fill.
-     * 
+     * Represents the fill format of an object, which includes background formating information. Read-only.
      */
     @SerializedName("fill")
     @Expose
@@ -39,7 +39,7 @@ public class BaseWorkbookChartLegendFormat extends Entity implements IJsonBacked
 
     /**
      * The Font.
-     * 
+     * Represents the font attributes such as font name, font size, color, etc. of a chart legend. Read-only.
      */
     @SerializedName("font")
     @Expose

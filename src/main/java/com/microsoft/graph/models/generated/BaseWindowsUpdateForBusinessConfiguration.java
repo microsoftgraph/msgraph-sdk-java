@@ -130,7 +130,7 @@ public class BaseWindowsUpdateForBusinessConfiguration extends DeviceConfigurati
 
     /**
      * The Business Ready Updates Only.
-     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly.
+     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
      */
     @SerializedName("businessReadyUpdatesOnly")
     @Expose

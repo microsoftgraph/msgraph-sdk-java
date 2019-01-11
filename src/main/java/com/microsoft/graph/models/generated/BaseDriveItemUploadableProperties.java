@@ -39,7 +39,7 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
      */
     @SerializedName("description")
     @Expose
@@ -47,7 +47,7 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The File System Info.
-     * 
+     * File system information on client. Read-write.
      */
     @SerializedName("fileSystemInfo")
     @Expose
@@ -55,7 +55,7 @@ public class BaseDriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the item (filename and extension). Read-write.
      */
     @SerializedName("name")
     @Expose

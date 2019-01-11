@@ -158,7 +158,7 @@ public class BaseRemoteItem implements IJsonBackedObject {
 
     /**
      * The Special Folder.
-     * 
+     * If the current item is also available as a special folder, this facet is returned. Read-only.
      */
     @SerializedName("specialFolder")
     @Expose

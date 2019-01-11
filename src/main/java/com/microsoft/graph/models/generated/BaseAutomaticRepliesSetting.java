@@ -41,7 +41,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+     * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      */
     @SerializedName("status")
     @Expose
@@ -49,7 +49,7 @@ public class BaseAutomaticRepliesSetting implements IJsonBackedObject {
 
     /**
      * The External Audience.
-     * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+     * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      */
     @SerializedName("externalAudience")
     @Expose

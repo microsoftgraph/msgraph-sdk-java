@@ -24,6 +24,7 @@ import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.PlannerGroup;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.requests.generated.BaseDirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.generated.BaseGroupSettingCollectionResponse;
@@ -62,7 +63,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * 
+     * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.
      */
     @SerializedName("classification")
     @Expose
@@ -102,7 +103,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the group, for example, "serviceadmins@contoso.onmicrosoft.com". Read-only. Supports $filter.
+     * The SMTP address for the group, for example, 'serviceadmins@contoso.onmicrosoft.com'. Read-only. Supports $filter.
      */
     @SerializedName("mail")
     @Expose
@@ -134,7 +135,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Provisioning Errors.
-     * 
+     * Errors when using Microsoft synchronization product during provisioning.
      */
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
@@ -182,7 +183,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or empty (which is interpreted as Public).
+     * Specifies the visibility of an Office 365 group. Possible values are: private, public, or hiddenmembership; blank values are treated as public.  See Group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups.
      */
     @SerializedName("visibility")
     @Expose
@@ -214,11 +215,19 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Unseen Count.
-     * Count of posts that the current  user has not seen since his last visit.
+     * Count of conversations that have been delivered one or more new posts since the signed-in user's last visit to the group.
      */
     @SerializedName("unseenCount")
     @Expose
     public Integer unseenCount;
+
+    /**
+     * The Is Archived.
+     * 
+     */
+    @SerializedName("isArchived")
+    @Expose
+    public Boolean isArchived;
 
     /**
      * The Members.
@@ -318,7 +327,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Drive.
-     * The group's drive. Read-only.
+     * The group's default drive. Read-only.
      */
     @SerializedName("drive")
     @Expose
@@ -326,7 +335,7 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Drives.
-     * 
+     * The group's drives. Read-only.
      */
     public DriveCollectionPage drives;
 
@@ -354,9 +363,17 @@ public class BaseGroup extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Lifecycle Policies.
-     * 
+     * The collection of lifecycle policies for this group. Read-only. Nullable.
      */
     public GroupLifecyclePolicyCollectionPage groupLifecyclePolicies;
+
+    /**
+     * The Team.
+     * 
+     */
+    @SerializedName("team")
+    @Expose
+    public Team team;
 
 
     /**

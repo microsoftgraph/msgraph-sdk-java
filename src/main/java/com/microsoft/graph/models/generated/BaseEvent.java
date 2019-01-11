@@ -80,7 +80,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The ICal UId.
-     * A unique identifier that is shared by all instances of an event across different calendars.
+     * A unique identifier that is shared by all instances of an event across different calendars. Read-only.
      */
     @SerializedName("iCalUId")
     @Expose
@@ -136,7 +136,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * The importance of the event. Possible values are: low, normal, high.
+     * The importance of the event. The possible values are: low, normal, high.
      */
     @SerializedName("importance")
     @Expose
@@ -144,7 +144,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * Possible values are: normal, personal, private, confidential.
+     * The possible values are: normal, personal, private, confidential.
      */
     @SerializedName("sensitivity")
     @Expose
@@ -240,7 +240,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
-     * The status to show. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName("showAs")
     @Expose
@@ -248,7 +248,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The event type. Possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
+     * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
      */
     @SerializedName("type")
     @Expose
@@ -280,7 +280,7 @@ public class BaseEvent extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Online Meeting Url.
-     * A URL for an online meeting.
+     * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
      */
     @SerializedName("onlineMeetingUrl")
     @Expose

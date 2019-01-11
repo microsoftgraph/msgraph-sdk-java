@@ -8,6 +8,8 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 
@@ -35,6 +37,10 @@ public interface IBaseDeviceRequestBuilder extends IRequestBuilder {
      * @return the IDeviceRequest instance
      */
     IDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
+
+    IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder registeredOwners();
 

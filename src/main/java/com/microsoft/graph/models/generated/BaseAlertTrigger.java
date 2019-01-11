@@ -38,7 +38,7 @@ public class BaseAlertTrigger implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name of the property serving as a detection trigger.
      */
     @SerializedName("name")
     @Expose
@@ -46,7 +46,7 @@ public class BaseAlertTrigger implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
      */
     @SerializedName("type")
     @Expose
@@ -54,7 +54,7 @@ public class BaseAlertTrigger implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the property serving as a detection trigger.
      */
     @SerializedName("value")
     @Expose

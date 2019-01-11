@@ -143,7 +143,7 @@ public class BaseMacOSCompliancePolicy extends DeviceCompliancePolicy implements
 
     /**
      * The Firewall Enabled.
-     * 
+     * Whether the firewall should be enabled or not.
      */
     @SerializedName("firewallEnabled")
     @Expose
@@ -151,7 +151,7 @@ public class BaseMacOSCompliancePolicy extends DeviceCompliancePolicy implements
 
     /**
      * The Firewall Block All Incoming.
-     * 
+     * Corresponds to the 'Block all incoming connections' option.
      */
     @SerializedName("firewallBlockAllIncoming")
     @Expose
@@ -159,7 +159,7 @@ public class BaseMacOSCompliancePolicy extends DeviceCompliancePolicy implements
 
     /**
      * The Firewall Enable Stealth Mode.
-     * 
+     * Corresponds to 'Enable stealth mode.'
      */
     @SerializedName("firewallEnableStealthMode")
     @Expose

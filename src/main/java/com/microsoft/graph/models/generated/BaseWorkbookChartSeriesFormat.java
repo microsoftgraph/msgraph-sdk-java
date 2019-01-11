@@ -31,7 +31,7 @@ public class BaseWorkbookChartSeriesFormat extends Entity implements IJsonBacked
 
     /**
      * The Fill.
-     * 
+     * Represents the fill format of a chart series, which includes background formating information. Read-only.
      */
     @SerializedName("fill")
     @Expose
@@ -39,7 +39,7 @@ public class BaseWorkbookChartSeriesFormat extends Entity implements IJsonBacked
 
     /**
      * The Line.
-     * 
+     * Represents line formatting. Read-only.
      */
     @SerializedName("line")
     @Expose
