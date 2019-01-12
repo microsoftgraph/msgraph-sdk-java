@@ -9,7 +9,10 @@ import org.junit.Test;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.UserActivity;
+import com.microsoft.graph.serializer.DefaultSerializer;
 
 /**
  * Tests for sending custom requests using the SDK
@@ -50,6 +53,7 @@ public class CustomRequestTests {
 	@Test
 	public void testCustomPut() {
 		JsonParser parser =  new JsonParser();
+		DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
 		String str = "{ \"appActivityId\": \"/article?12345\", \"activitySourceHost\": \"https://www.contoso.com\", \"userTimezone\": \"Africa/Casablanca\","
 				+ " \"appDisplayName\": \"Contoso, Ltd.\", \"activationUrl\": \"https://www.contoso.com/article?id=12345\", \"contentUrl\": \"https://www.contoso.com/article?id=12345\", "
 				+ "\"fallbackUrl\": \"https://www.contoso.com/article?id=12345\", \"contentInfo\": { \"@context\": \"https://schema.org\", \"@type\": \"Article\", \"author\": \"Jennifer Booth\", "
@@ -58,7 +62,18 @@ public class CustomRequestTests {
 				+ " \"displayText\": \"Contoso How-To: How to Tie a Reef Knot\", \"content\": { \"$schema\": \"https://adaptivecards.io/schemas/adaptive-card.json\", \"type\": \"AdaptiveCard\","
 				+ " \"body\": [{ \"type\": \"TextBlock\", \"text\": \"Contoso MainPage\" }] } } }";
 		
-		JsonObject response = testBase.graphClient.customRequest("/me/activities/%2Farticle%3F12346").buildRequest().put(parser.parse(str).getAsJsonObject());
+		JsonObject response = testBase.graphClient.
+				customRequest("/me/activities/%2Farticle%3F12346").
+				buildRequest().
+				put(parser.parse(str).getAsJsonObject());
+		
+		UserActivity userActivity = serializer.deserializeObject(str, UserActivity.class); 
+		UserActivity responseWithClass = testBase.graphClient.
+				customRequest("/me/activities/2", UserActivity.class).
+				buildRequest().
+				put(userActivity);
+		
 		assertNotNull(response);
+		assertNotNull(responseWithClass);
 	}
 }
