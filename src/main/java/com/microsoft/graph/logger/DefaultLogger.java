@@ -32,7 +32,7 @@ public class DefaultLogger implements ILogger {
     /**
      * The logging level
      */
-    private LoggerLevel level = LoggerLevel.ERROR;
+    private LoggerLevel level = LoggerLevel.DEBUG;
     
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
@@ -85,7 +85,7 @@ public class DefaultLogger implements ILogger {
      */
     @Override
     public void logDebug(final String message) {
-
+    	if(this.level == LoggerLevel.DEBUG)
                 for (final String line : message.split("\n")) {
                 	LOGGER.info(line);
                 }

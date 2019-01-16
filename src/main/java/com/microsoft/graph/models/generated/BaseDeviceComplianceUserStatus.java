@@ -46,7 +46,7 @@ public class BaseDeviceComplianceUserStatus extends Entity implements IJsonBacke
 
     /**
      * The Status.
-     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict.
+     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName("status")
     @Expose

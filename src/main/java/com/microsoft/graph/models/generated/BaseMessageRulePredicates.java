@@ -99,7 +99,7 @@ public class BaseMessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Message Action Flag.
-     * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. Possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+     * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
      */
     @SerializedName("messageActionFlag")
     @Expose
@@ -115,7 +115,7 @@ public class BaseMessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. Possible values are: normal, personal, private, confidential.
+     * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
      */
     @SerializedName("sensitivity")
     @Expose

@@ -31,7 +31,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * For example, "Enabled".
+     * For example, 'Enabled'.
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -71,7 +71,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * The SKU part number; for example: "AAD_PREMIUM" or "RMSBASIC".
+     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
      */
     @SerializedName("skuPartNumber")
     @Expose
@@ -79,7 +79,7 @@ public class BaseSubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * For example, "User" or "Company".
+     * For example, 'User' or 'Company'.
      */
     @SerializedName("appliesTo")
     @Expose

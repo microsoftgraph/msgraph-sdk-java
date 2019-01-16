@@ -30,7 +30,7 @@ public class BaseWorkbookChartLegend extends Entity implements IJsonBackedObject
 
     /**
      * The Overlay.
-     * 
+     * Boolean value for whether the chart legend should overlap with the main body of the chart.
      */
     @SerializedName("overlay")
     @Expose
@@ -38,7 +38,7 @@ public class BaseWorkbookChartLegend extends Entity implements IJsonBackedObject
 
     /**
      * The Position.
-     * 
+     * Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
      */
     @SerializedName("position")
     @Expose
@@ -46,7 +46,7 @@ public class BaseWorkbookChartLegend extends Entity implements IJsonBackedObject
 
     /**
      * The Visible.
-     * 
+     * A boolean value the represents the visibility of a ChartLegend object.
      */
     @SerializedName("visible")
     @Expose
@@ -54,7 +54,7 @@ public class BaseWorkbookChartLegend extends Entity implements IJsonBackedObject
 
     /**
      * The Format.
-     * 
+     * Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
      */
     @SerializedName("format")
     @Expose

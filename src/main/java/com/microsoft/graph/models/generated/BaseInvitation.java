@@ -31,7 +31,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Display Name.
-     * 
+     * The display name of the user being invited.
      */
     @SerializedName("invitedUserDisplayName")
     @Expose
@@ -39,7 +39,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Type.
-     * 
+     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
      */
     @SerializedName("invitedUserType")
     @Expose
@@ -47,7 +47,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Email Address.
-     * 
+     * The email address of the user being invited. Required.
      */
     @SerializedName("invitedUserEmailAddress")
     @Expose
@@ -55,7 +55,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Message Info.
-     * 
+     * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
      */
     @SerializedName("invitedUserMessageInfo")
     @Expose
@@ -63,7 +63,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Send Invitation Message.
-     * 
+     * Indicates whether an email should be sent to the user being invited or not. The default is false.
      */
     @SerializedName("sendInvitationMessage")
     @Expose
@@ -71,7 +71,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redirect Url.
-     * 
+     * The URL user should be redirected to once the invitation is redeemed. Required.
      */
     @SerializedName("inviteRedirectUrl")
     @Expose
@@ -79,7 +79,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redeem Url.
-     * 
+     * The URL user can use to redeem his invitation. Read-Only
      */
     @SerializedName("inviteRedeemUrl")
     @Expose
@@ -87,7 +87,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
      */
     @SerializedName("status")
     @Expose
@@ -95,7 +95,7 @@ public class BaseInvitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User.
-     * 
+     * The user created as part of the invitation creation. Read-Only
      */
     @SerializedName("invitedUser")
     @Expose

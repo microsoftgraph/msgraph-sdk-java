@@ -134,8 +134,10 @@ public class DefaultSerializer implements ISerializer {
                         // If the item is a valid Graph object, set its additional data
                         if (child instanceof IJsonBackedObject) {
                             AdditionalDataManager childAdditionalDataManager = ((IJsonBackedObject) child).additionalDataManager();
-                            childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
-                            setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject());
+                            if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject()) {
+                            	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
+                            	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject());
+                            }
                         }
                     }
                 }
@@ -143,9 +145,10 @@ public class DefaultSerializer implements ISerializer {
                 else if (fieldObject != null && fieldObject instanceof IJsonBackedObject) {
                     IJsonBackedObject serializedChild = (IJsonBackedObject) fieldObject;
                     AdditionalDataManager childAdditionalDataManager = serializedChild.additionalDataManager();
-
-                    childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
-                    setChildAdditionalData((IJsonBackedObject) fieldObject,rawJson.get(field.getName()).getAsJsonObject());
+                    if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject()) {
+                    	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
+                    	setChildAdditionalData((IJsonBackedObject) fieldObject,rawJson.get(field.getName()).getAsJsonObject());
+                    }
                 }
             } catch (IllegalArgumentException | IllegalAccessException e) {
                 logger.logError("Unable to access child fields of " + serializedObject.getClass().getSimpleName(), e);
@@ -229,8 +232,9 @@ public class DefaultSerializer implements ISerializer {
 				else if (fieldObject != null && fieldObject instanceof IJsonBackedObject) {
 					IJsonBackedObject serializableChild = (IJsonBackedObject) fieldObject;
 					AdditionalDataManager childAdditionalData = serializableChild.additionalDataManager();
-
-					addAdditionalDataToJson(childAdditionalData, outJson.get(field.getName()).getAsJsonObject());
+					if(outJson != null && field != null && outJson.get(field.getName()) != null && outJson.get(field.getName()).isJsonObject()) {
+						addAdditionalDataToJson(childAdditionalData, outJson.get(field.getName()).getAsJsonObject());
+					}
             		
             		// Serialize its children
             		outJson = getChildAdditionalData(serializableChild, outJson);

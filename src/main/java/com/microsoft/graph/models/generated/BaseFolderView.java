@@ -46,7 +46,7 @@ public class BaseFolderView implements IJsonBackedObject {
 
     /**
      * The Sort Order.
-     * 
+     * If true, indicates that items should be sorted in descending order. Otherwise, items should be sorted ascending.
      */
     @SerializedName("sortOrder")
     @Expose

@@ -38,7 +38,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Height.
-     * 
+     * Represents the height, in points, of the chart object.
      */
     @SerializedName("height")
     @Expose
@@ -46,7 +46,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Left.
-     * 
+     * The distance, in points, from the left side of the chart to the worksheet origin.
      */
     @SerializedName("left")
     @Expose
@@ -54,7 +54,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Represents the name of a chart object.
      */
     @SerializedName("name")
     @Expose
@@ -62,7 +62,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Top.
-     * 
+     * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
      */
     @SerializedName("top")
     @Expose
@@ -70,7 +70,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Width.
-     * 
+     * Represents the width, in points, of the chart object.
      */
     @SerializedName("width")
     @Expose
@@ -78,7 +78,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Axes.
-     * 
+     * Represents chart axes. Read-only.
      */
     @SerializedName("axes")
     @Expose
@@ -86,7 +86,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Data Labels.
-     * 
+     * Represents the datalabels on the chart. Read-only.
      */
     @SerializedName("dataLabels")
     @Expose
@@ -94,7 +94,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
-     * 
+     * Encapsulates the format properties for the chart area. Read-only.
      */
     @SerializedName("format")
     @Expose
@@ -102,7 +102,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Legend.
-     * 
+     * Represents the legend for the chart. Read-only.
      */
     @SerializedName("legend")
     @Expose
@@ -110,13 +110,13 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Series.
-     * 
+     * Represents either a single series or collection of series in the chart. Read-only.
      */
     public WorkbookChartSeriesCollectionPage series;
 
     /**
      * The Title.
-     * 
+     * Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
      */
     @SerializedName("title")
     @Expose
@@ -124,7 +124,7 @@ public class BaseWorkbookChart extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
-     * 
+     * The worksheet containing the current chart. Read-only.
      */
     @SerializedName("worksheet")
     @Expose

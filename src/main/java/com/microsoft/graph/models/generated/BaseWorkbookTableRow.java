@@ -29,7 +29,7 @@ public class BaseWorkbookTableRow extends Entity implements IJsonBackedObject {
 
     /**
      * The Index.
-     * 
+     * Returns the index number of the row within the rows collection of the table. Zero-indexed. Read-only.
      */
     @SerializedName("index")
     @Expose
@@ -37,7 +37,7 @@ public class BaseWorkbookTableRow extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * 
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
     @SerializedName("values")
     @Expose

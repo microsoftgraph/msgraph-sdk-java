@@ -41,7 +41,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Aad User Id.
-     * 
+     * AAD User object identifier (GUID) - represents the physical/multi-account user entity.
      */
     @SerializedName("aadUserId")
     @Expose
@@ -49,7 +49,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * 
+     * Account name of user account (without Active Directory domain or DNS domain) - (also called mailNickName).
      */
     @SerializedName("accountName")
     @Expose
@@ -57,7 +57,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Domain Name.
-     * 
+     * NetBIOS/Active Directory domain of user account (that is, domain/account format).
      */
     @SerializedName("domainName")
     @Expose
@@ -65,7 +65,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Email Role.
-     * 
+     * For email-related alerts - user account's email 'role'. Possible values are: unknown, sender, recipient.
      */
     @SerializedName("emailRole")
     @Expose
@@ -73,7 +73,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Is Vpn.
-     * 
+     * Indicates whether the user logged on through a VPN.
      */
     @SerializedName("isVpn")
     @Expose
@@ -81,7 +81,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Logon Date Time.
-     * 
+     * Time at which the sign-in occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName("logonDateTime")
     @Expose
@@ -89,7 +89,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Logon Id.
-     * 
+     * User sign-in ID.
      */
     @SerializedName("logonId")
     @Expose
@@ -97,7 +97,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Logon Ip.
-     * 
+     * IP Address the sign-in request originated from.
      */
     @SerializedName("logonIp")
     @Expose
@@ -105,7 +105,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Logon Location.
-     * 
+     * Location (by IP address mapping) associated with a user sign-in event by this user.
      */
     @SerializedName("logonLocation")
     @Expose
@@ -113,7 +113,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Logon Type.
-     * 
+     * Method of user sign in. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      */
     @SerializedName("logonType")
     @Expose
@@ -121,7 +121,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The On Premises Security Identifier.
-     * 
+     * Active Directory (on-premises) Security Identifier (SID) of the user.
      */
     @SerializedName("onPremisesSecurityIdentifier")
     @Expose
@@ -129,7 +129,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * 
+     * Provider-generated/calculated risk score of the user account. Recommended value range of 0-1, which equates to a percentage.
      */
     @SerializedName("riskScore")
     @Expose
@@ -137,7 +137,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The User Account Type.
-     * 
+     * User account type (group membership), per Windows definition. Possible values are: unknown, standard, power, administrator.
      */
     @SerializedName("userAccountType")
     @Expose
@@ -145,7 +145,7 @@ public class BaseUserSecurityState implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * User sign-in name - internet format: (user account name)@(user account DNS domain name).
      */
     @SerializedName("userPrincipalName")
     @Expose

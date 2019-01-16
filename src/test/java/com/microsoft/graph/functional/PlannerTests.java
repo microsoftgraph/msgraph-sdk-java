@@ -16,6 +16,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
+import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
@@ -35,6 +36,7 @@ import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
 import com.microsoft.graph.serializer.AdditionalDataManager;
+import com.microsoft.graph.serializer.DefaultSerializer;
 
 @Ignore
 public class PlannerTests {
@@ -401,6 +403,51 @@ public class PlannerTests {
         IPlannerBucketRequest req = testBase.graphClient.planner().buckets(createdBucket.id).buildRequest();
         req.addHeader("If-Match", createdBucket.etag);
         req.delete();
+    }
+    
+    @Test
+    public void testPlannerChecklistItemDeserialization() throws Exception{
+    	String input = "{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#planner/tasks('433tZlfn_USJwWRL9khDx8kALTM7')/details/$entity\",\"@odata.etag\":\"W/\\\"JzEtVGFza0RldGFpbHMgQEBAQEBAQEBAQEBAQEBAcCc=\\\"\",\"description\":\"This is a test description of test event two.\",\"previewType\":\"automatic\",\"id\":\"433tZlfn_USJwWRL9khDx8kALTM7\",\"references\":{},\"checklist\":{\"55554\":{\"@odata.type\":\"#microsoft.graph.plannerChecklistItem\",\"isChecked\":false,\"title\":\"Test Item 2\",\"orderHint\":\"8586580527[2\",\"lastModifiedDateTime\":\"2018-11-30T05:01:53.0387892Z\",\"lastModifiedBy\":{\"user\":{\"displayName\":null,\"id\":\"ec786dee-da15-4896-8e73-57141477bae7\"}}},\"91100\":{\"@odata.type\":\"#microsoft.graph.plannerChecklistItem\",\"isChecked\":true,\"title\":\"Test Item 1 \",\"orderHint\":\"8586580528393292964Pc\",\"lastModifiedDateTime\":\"2018-11-30T05:01:47.4138223Z\",\"lastModifiedBy\":{\"user\":{\"displayName\":null,\"id\":\"ec786dee-da15-4896-8e73-57141477bae7\"}}}}}";
+    	final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+    	PlannerTaskDetails ptd = serializer.deserializeObject(input, PlannerTaskDetails.class);
+    	assertNotNull(ptd);
+    	PlannerChecklistItem item1 = ptd.checklist.get("91100");
+    	assertEquals(item1.title,"Test Item 1 ");
+    	PlannerChecklistItem item2 = ptd.checklist.get("55554");
+    	assertEquals(item2.title,"Test Item 2");
+    }
+    
+    @Test
+    public void testPlannerTaskDetailsDeserialization() {
+    	String input = "{\r\n" + 
+    			"	\"references\": {},\r\n" + 
+    			"	\"@odata.etag\": \"W/\\\"JzEtVGFza0RldGFpbHMgQEBAQEBAQEBAQEBAQEBAUCc=\\\"\",\r\n" + 
+    			"	\"description\": null,\r\n" + 
+    			"	\"checklist\": {\r\n" + 
+    			"		\"42660\": {\r\n" + 
+    			"			\"lastModifiedDateTime\": \"2018-10-28T14:29:37.7423391Z\",\r\n" + 
+    			"			\"@odata.type\": \"#microsoft.graph.plannerChecklistItem\",\r\n" + 
+    			"			\"orderHint\": \"8586608699726429822PK\",\r\n" + 
+    			"			\"lastModifiedBy\": {\r\n" + 
+    			"				\"user\": {\r\n" + 
+    			"					\"displayName\": null,\r\n" + 
+    			"					\"id\": \"f3a1dfe8-f2ef-4870-9642-413d468c571c\"\r\n" + 
+    			"				}\r\n" + 
+    			"			},\r\n" + 
+    			"			\"title\": \"Ein Checklisteneintrag\",\r\n" + 
+    			"			\"isChecked\": false\r\n" + 
+    			"		}\r\n" + 
+    			"	},\r\n" + 
+    			"	\"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#planner/tasks('C6iIn6oJcEGcLX5XAiKeCZcAOv30')/details/$entity\",\r\n" + 
+    			"	\"previewType\": \"automatic\",\r\n" + 
+    			"	\"id\": \"C6iIn6oJcEGcLX5XAiKeCZcAOv30\"\r\n" + 
+    			"}";
+    	final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+    	PlannerTaskDetails ptd = serializer.deserializeObject(input, PlannerTaskDetails.class);
+    	assertNotNull(ptd);
+    	PlannerChecklistItem item = ptd.checklist.get("42660");
+    	assertEquals(item.title, "Ein Checklisteneintrag");
+    	assertEquals(item.isChecked, false);
     }
 
     @AfterClass

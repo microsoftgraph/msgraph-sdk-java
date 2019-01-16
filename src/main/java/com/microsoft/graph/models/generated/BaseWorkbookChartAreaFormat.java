@@ -31,7 +31,7 @@ public class BaseWorkbookChartAreaFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Fill.
-     * 
+     * Represents the fill format of an object, which includes background formatting information. Read-only.
      */
     @SerializedName("fill")
     @Expose
@@ -39,7 +39,7 @@ public class BaseWorkbookChartAreaFormat extends Entity implements IJsonBackedOb
 
     /**
      * The Font.
-     * 
+     * Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
      */
     @SerializedName("font")
     @Expose

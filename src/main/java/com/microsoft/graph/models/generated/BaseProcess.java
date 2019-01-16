@@ -40,7 +40,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * 
+     * User account identifier (user account context the process ran under) for example, AccountName, SID, and so on.
      */
     @SerializedName("accountName")
     @Expose
@@ -48,7 +48,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Command Line.
-     * 
+     * The full process invocation commandline including all parameters.
      */
     @SerializedName("commandLine")
     @Expose
@@ -56,7 +56,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Time at which the process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -64,7 +64,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The File Hash.
-     * 
+     * Complex type containing file hashes (cryptographic and location-sensitive).
      */
     @SerializedName("fileHash")
     @Expose
@@ -72,7 +72,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Integrity Level.
-     * 
+     * The integrity level of the process. Possible values are: unknown, untrusted, low, medium, high, system.
      */
     @SerializedName("integrityLevel")
     @Expose
@@ -80,7 +80,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Is Elevated.
-     * 
+     * True if the process is elevated.
      */
     @SerializedName("isElevated")
     @Expose
@@ -88,7 +88,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the process' Image file.
      */
     @SerializedName("name")
     @Expose
@@ -96,7 +96,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Parent Process Created Date Time.
-     * 
+     * DateTime at which the parent process was started. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName("parentProcessCreatedDateTime")
     @Expose
@@ -104,7 +104,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Parent Process Id.
-     * 
+     * The Process ID (PID) of the parent process.
      */
     @SerializedName("parentProcessId")
     @Expose
@@ -112,7 +112,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Parent Process Name.
-     * 
+     * The name of the image file of the parent process.
      */
     @SerializedName("parentProcessName")
     @Expose
@@ -120,7 +120,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Path.
-     * 
+     * Full path, including filename.
      */
     @SerializedName("path")
     @Expose
@@ -128,7 +128,7 @@ public class BaseProcess implements IJsonBackedObject {
 
     /**
      * The Process Id.
-     * 
+     * The Process ID (PID) of the process.
      */
     @SerializedName("processId")
     @Expose

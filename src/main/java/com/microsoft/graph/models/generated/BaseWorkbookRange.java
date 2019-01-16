@@ -32,7 +32,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Address.
-     * 
+     * Represents the range reference in A1-style. Address value will contain the Sheet reference (e.g. Sheet1!A1:B4). Read-only.
      */
     @SerializedName("address")
     @Expose
@@ -40,7 +40,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Address Local.
-     * 
+     * Represents range reference for the specified range in the language of the user. Read-only.
      */
     @SerializedName("addressLocal")
     @Expose
@@ -48,7 +48,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Cell Count.
-     * 
+     * Number of cells in the range. Read-only.
      */
     @SerializedName("cellCount")
     @Expose
@@ -56,7 +56,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Count.
-     * 
+     * Represents the total number of columns in the range. Read-only.
      */
     @SerializedName("columnCount")
     @Expose
@@ -64,7 +64,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Hidden.
-     * 
+     * Represents if all columns of the current range are hidden.
      */
     @SerializedName("columnHidden")
     @Expose
@@ -72,7 +72,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Index.
-     * 
+     * Represents the column number of the first cell in the range. Zero-indexed. Read-only.
      */
     @SerializedName("columnIndex")
     @Expose
@@ -80,7 +80,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas.
-     * 
+     * Represents the formula in A1-style notation.
      */
     @SerializedName("formulas")
     @Expose
@@ -88,7 +88,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas Local.
-     * 
+     * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English '=SUM(A1, 1.5)' formula would become '=SUMME(A1; 1,5)' in German.
      */
     @SerializedName("formulasLocal")
     @Expose
@@ -96,7 +96,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Formulas R1C1.
-     * 
+     * Represents the formula in R1C1-style notation.
      */
     @SerializedName("formulasR1C1")
     @Expose
@@ -104,7 +104,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Hidden.
-     * 
+     * Represents if all cells of the current range are hidden. Read-only.
      */
     @SerializedName("hidden")
     @Expose
@@ -112,7 +112,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Number Format.
-     * 
+     * Represents Excel's number format code for the given cell.
      */
     @SerializedName("numberFormat")
     @Expose
@@ -120,7 +120,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Count.
-     * 
+     * Returns the total number of rows in the range. Read-only.
      */
     @SerializedName("rowCount")
     @Expose
@@ -128,7 +128,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Hidden.
-     * 
+     * Represents if all rows of the current range are hidden.
      */
     @SerializedName("rowHidden")
     @Expose
@@ -136,7 +136,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Row Index.
-     * 
+     * Returns the row number of the first cell in the range. Zero-indexed. Read-only.
      */
     @SerializedName("rowIndex")
     @Expose
@@ -144,7 +144,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Text.
-     * 
+     * Text values of the specified range. The Text value will not depend on the cell width. The # sign substitution that happens in Excel UI will not affect the text value returned by the API. Read-only.
      */
     @SerializedName("text")
     @Expose
@@ -152,7 +152,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Value Types.
-     * 
+     * Represents the type of data of each cell. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error. Read-only.
      */
     @SerializedName("valueTypes")
     @Expose
@@ -160,7 +160,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * 
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
     @SerializedName("values")
     @Expose
@@ -168,7 +168,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Format.
-     * 
+     * Returns a format object, encapsulating the range's font, fill, borders, alignment, and other properties. Read-only.
      */
     @SerializedName("format")
     @Expose
@@ -176,7 +176,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Sort.
-     * 
+     * The worksheet containing the current range. Read-only.
      */
     @SerializedName("sort")
     @Expose
@@ -184,7 +184,7 @@ public class BaseWorkbookRange extends Entity implements IJsonBackedObject {
 
     /**
      * The Worksheet.
-     * 
+     * The worksheet containing the current range. Read-only.
      */
     @SerializedName("worksheet")
     @Expose
