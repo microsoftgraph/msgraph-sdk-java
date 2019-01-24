@@ -16,7 +16,7 @@ import com.microsoft.graph.models.extensions.DateOnly;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.models.generated.BaseRecurrenceRange;
+import com.microsoft.graph.models.extensions.RecurrenceRange;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
 
 public class DefaultSerializerTests {
@@ -48,7 +48,7 @@ public class DefaultSerializerTests {
                 "    \"recurrenceTimeZone\": \"China Standard Time\",\n" +
                 "    \"numberOfOccurrences\": 0\n" +
                 "}";
-        BaseRecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, BaseRecurrenceRange.class);
+        RecurrenceRange baseRecurrenceRange = serializer.deserializeObject(source, RecurrenceRange.class);
         assertNotNull(source);
         assertEquals(RecurrenceRangeType.NO_END, baseRecurrenceRange.type);
         assertEquals("2016-04-27", baseRecurrenceRange.startDate.toString());
@@ -61,7 +61,7 @@ public class DefaultSerializerTests {
     public void testRecurrenceRangeSerialization() throws Exception {
         final String expected = "{\"type\":\"endDate\",\"startDate\":\"2016-04-25\",\"endDate\":\"2016-05-25\",\"recurrenceTimeZone\":\"PST\",\"numberOfOccurrences\":4}";
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
-        BaseRecurrenceRange brr = new BaseRecurrenceRange();
+        RecurrenceRange brr = new RecurrenceRange();
         brr.type = RecurrenceRangeType.END_DATE;
         brr.startDate = new DateOnly(2016, 4, 25);
         brr.endDate = new DateOnly(2016, 5, 25);

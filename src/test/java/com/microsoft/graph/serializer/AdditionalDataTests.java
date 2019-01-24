@@ -80,7 +80,7 @@ public class AdditionalDataTests {
 		
 		String serializedObject = serializer.serializeObject(task);
 		
-		assertEquals("{\"assignments\":{\"id\":{\"@odata.type\":\"#microsoft.graph.plannerAssignment\",\"orderHint\":\"!\",\"additionalData\":\"additionalValue\"}},\"@odata.type\":\"#microsoft.graph.plannerTask\"}", serializedObject);
+		assertEquals("{\"assignments\":{\"id\":{\"orderHint\":\"!\",\"additionalData\":\"additionalValue\"}}}", serializedObject);
 	}
 	
 	@Test
