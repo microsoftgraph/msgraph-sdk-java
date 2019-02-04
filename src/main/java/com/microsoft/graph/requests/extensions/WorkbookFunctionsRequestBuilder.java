@@ -3,17 +3,752 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequest;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRequest;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAbsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAbsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAccrIntRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAccrIntRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAccrIntMRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAccrIntMRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAcosRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAcosRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAcoshRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAcoshRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAcotRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAcotRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAcothRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAcothRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAmorDegrcRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAmorDegrcRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAmorLincRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAmorLincRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAndRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAndRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsArabicRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsArabicRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAreasRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAreasRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAscRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAscRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAsinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAsinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAsinhRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAsinhRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAtanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAtanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAtan2RequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAtan2RequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAtanhRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAtanhRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAveDevRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAveDevRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAverageRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAverageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAverageARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAverageARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAverageIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAverageIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsAverageIfsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsAverageIfsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBahtTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBahtTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBaseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBesselIRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBesselIRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBesselJRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBesselJRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBesselKRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBesselKRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBesselYRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBesselYRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBeta_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBeta_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBeta_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBeta_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBin2DecRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBin2DecRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBin2HexRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBin2HexRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBin2OctRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBin2OctRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBinom_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBinom_Dist_RangeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_Dist_RangeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBinom_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBinom_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitandRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitandRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitlshiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitlshiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitorRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitrshiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitrshiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsBitxorRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsBitxorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCeiling_MathRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCeiling_MathRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCeiling_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCeiling_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCharRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCharRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_Dist_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_Dist_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_Inv_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_Inv_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChooseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsChooseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCleanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCleanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsColumnsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsColumnsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCombinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCombinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCombinaRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCombinaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsComplexRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsComplexRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConcatenateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsConcatenateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConfidence_NormRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsConfidence_NormRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConfidence_TRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsConfidence_TRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsConvertRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsConvertRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCosRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCosRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoshRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoshRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCotRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCotRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCothRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCothRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountBlankRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountBlankRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCountIfsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCountIfsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupDayBsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupDayBsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupDaysRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupDaysRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupDaysNcRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupDaysNcRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupNcdRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupNcdRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupNumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupNumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCoupPcdRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCoupPcdRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCscRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCscRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCschRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCschRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCumIPmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCumIPmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsCumPrincRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsCumPrincRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDaverageRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDaverageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDcountRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDcountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDcountARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDcountARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDgetRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDgetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDmaxRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDmaxRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDminRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDminRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDproductRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDproductRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDstDevRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDstDevRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDstDevPRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDstDevPRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDsumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDsumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDvarRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDvarRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDvarPRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDvarPRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDatevalueRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDatevalueRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDayRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDayRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDaysRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDaysRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDays360RequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDays360RequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDbcsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDbcsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDdbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDdbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDec2BinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDec2BinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDec2HexRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDec2HexRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDec2OctRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDec2OctRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDecimalRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDecimalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDegreesRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDegreesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDevSqRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDevSqRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDiscRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDiscRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDollarRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDollarRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDollarDeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDollarDeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDollarFrRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDollarFrRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsDurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsDurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEcma_CeilingRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsEcma_CeilingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEdateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsEdateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEffectRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsEffectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEoMonthRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsEoMonthRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsErfRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsErfRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsErfCRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsErfCRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsErfC_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsErfC_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsErf_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsErf_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsError_TypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsError_TypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsEvenRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsEvenRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsExactRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsExactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsExpRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsExpRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsExpon_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsExpon_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFvscheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFvscheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_Dist_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_Dist_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_Inv_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_Inv_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFactRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFactDoubleRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFactDoubleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFalseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFalseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFindRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFindRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFindBRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFindBRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFisherRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFisherRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFisherInvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFisherInvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFixedRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFixedRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFloor_MathRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFloor_MathRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFloor_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFloor_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsFvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGammaRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGammaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGammaLnRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGammaLnRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGammaLn_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGammaLn_PreciseRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGamma_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGamma_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGamma_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGamma_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGaussRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGaussRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGcdRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGcdRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGeStepRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGeStepRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsGeoMeanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsGeoMeanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHlookupRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHlookupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHarMeanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHarMeanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHex2BinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2BinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHex2DecRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2DecRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHex2OctRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHex2OctRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHourRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHourRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHypGeom_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHypGeom_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsHyperlinkRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsHyperlinkRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIso_CeilingRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIso_CeilingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImAbsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImAbsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImArgumentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImArgumentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImConjugateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImConjugateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCosRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCosRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCoshRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCoshRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCotRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCotRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCscRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCscRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImCschRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImCschRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImDivRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImDivRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImExpRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImExpRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImLnRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImLnRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImLog10RequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImLog10RequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImLog2RequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImLog2RequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImPowerRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImPowerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImProductRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImProductRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImRealRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImRealRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSecRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSecRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSechRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSechRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSinhRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSinhRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSqrtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSqrtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSubRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSubRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImSumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImSumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImTanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImTanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsImaginaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsImaginaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIntRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIntRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIntRateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIntRateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIpmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIpmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIrrRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIrrRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsErrRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsErrRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsErrorRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsErrorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsEvenRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsEvenRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsFormulaRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsFormulaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsLogicalRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsLogicalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsNARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsNARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsNonTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsNonTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsNumberRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsNumberRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsOddRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsOddRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsoWeekNumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsoWeekNumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIspmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIspmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsIsrefRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsIsrefRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsKurtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsKurtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLargeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLargeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLcmRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLcmRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLeftRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLeftRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLeftbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLeftbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLenRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLenRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLenbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLenbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLnRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLnRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLogRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLog10RequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLog10RequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLogNorm_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLogNorm_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLogNorm_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLookupRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLookupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsLowerRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsLowerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMdurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMdurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMirrRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMirrRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMroundRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMroundRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMatchRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMatchRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMaxRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMaxRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMaxARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMaxARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMedianRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMedianRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMidRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMidRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMidbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMidbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMinARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMinARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMinuteRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMinuteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsModRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsModRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMonthRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMonthRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsMultiNomialRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsMultiNomialRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNperRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNperRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNaRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNegBinom_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNegBinom_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNetworkDaysRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNetworkDaysRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNetworkDays_IntlRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNetworkDays_IntlRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNominalRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNominalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNorm_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNorm_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNorm_S_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_S_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNorm_S_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNorm_S_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNotRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNotRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNowRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNpvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNpvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsNumberValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsNumberValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOct2BinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOct2BinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOct2DecRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOct2DecRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOct2HexRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOct2HexRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddFPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddFPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddFYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddFYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddLPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddLPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOddLYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOddLYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsOrRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsOrRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPdurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPdurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentRank_ExcRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_ExcRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentRank_IncRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentRank_IncRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentile_ExcRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentile_ExcRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPercentile_IncRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPercentile_IncRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPermutRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPermutRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPermutationaRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPermutationaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPhiRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPhiRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPiRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPiRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPoisson_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPoisson_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPowerRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPowerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPpmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPpmtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPriceDiscRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPriceDiscRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPriceMatRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPriceMatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsProductRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsProductRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsProperRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsProperRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsPvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsPvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsQuartile_ExcRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuartile_ExcRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsQuartile_IncRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuartile_IncRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsQuotientRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsQuotientRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRadiansRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRadiansRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRandRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRandBetweenRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRandBetweenRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRank_AvgRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRank_AvgRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRank_EqRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRank_EqRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRateRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsReceivedRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsReceivedRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsReplaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsReplaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsReplaceBRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsReplaceBRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsReptRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsReptRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRightRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRightRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRightbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRightbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRomanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRomanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRoundRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRoundDownRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundDownRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRoundUpRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRoundUpRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRowsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRowsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRriRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsRriRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSecRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSecRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSechRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSechRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSecondRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSecondRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSeriesSumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSeriesSumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSheetsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSheetsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSignRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSignRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSinRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSinhRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSinhRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSkewRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSkewRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSkew_pRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSkew_pRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSlnRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSlnRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSmallRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSmallRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSqrtRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSqrtRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSqrtPiRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSqrtPiRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStDevARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsStDevARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStDevPARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsStDevPARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStDev_PRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsStDev_PRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStDev_SRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsStDev_SRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsStandardizeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsStandardizeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSubstituteRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSubstituteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSubtotalRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSubtotalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSumIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumIfRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSumIfsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumIfsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSumSqRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSumSqRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsSydRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsSydRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTbillEqRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTbillEqRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTbillPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTbillPriceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTbillYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTbillYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsT_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsT_Dist_2TRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Dist_2TRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsT_Dist_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Dist_RTRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsT_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_InvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsT_Inv_2TRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsT_Inv_2TRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTanhRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTanhRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTextRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTimeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTimeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTimevalueRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTimevalueRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTodayRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTodayRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTrimRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrimRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTrimMeanRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrimMeanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTrueRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTrueRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTruncRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTruncRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUsdollarRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsUsdollarRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUnicharRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsUnicharRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUnicodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsUnicodeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsUpperRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsUpperRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVlookupRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsVlookupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsValueRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVarARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsVarARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVarPARequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsVarPARequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVar_PRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsVar_PRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVar_SRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsVar_SRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsVdbRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsVdbRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWeekNumRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeekNumRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWeekdayRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeekdayRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWeibull_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsWeibull_DistRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWorkDayRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsWorkDayRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsWorkDay_IntlRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsWorkDay_IntlRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsXirrRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsXirrRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsXnpvRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsXnpvRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsXorRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsXorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYearRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsYearRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYearFracRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsYearFracRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYieldDiscRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldDiscRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsYieldMatRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsYieldMatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFunctionsZ_TestRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFunctionsZ_TestRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
-import com.microsoft.graph.requests.generated.BaseWorkbookFunctionsRequestBuilder;
+import java.util.EnumSet;
 
-// This file is available for extending, afterwards please submit a pull request.
+// **NOTE** This file was generated by a tool and any changes will be overwritten.
 
 /**
  * The class for the Workbook Functions Request Builder.
  */
-public class WorkbookFunctionsRequestBuilder extends BaseWorkbookFunctionsRequestBuilder implements IWorkbookFunctionsRequestBuilder {
+public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implements IWorkbookFunctionsRequestBuilder {
 
     /**
      * The request builder for the WorkbookFunctions
@@ -25,4 +760,1490 @@ public class WorkbookFunctionsRequestBuilder extends BaseWorkbookFunctionsReques
     public WorkbookFunctionsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
+
+    /**
+     * Creates the request
+     *
+     * @return the IWorkbookFunctionsRequest instance
+     */
+    public IWorkbookFunctionsRequest buildRequest() {
+        return buildRequest(getOptions());
+    }
+
+    /**
+     * Creates the request with specific requestOptions instead of the existing requestOptions
+     *
+     * @param requestOptions the options for this request
+     * @return the IWorkbookFunctionsRequest instance
+     */
+    public IWorkbookFunctionsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+        return new WorkbookFunctionsRequest(getRequestUrl(), getClient(), requestOptions);
+    }
+
+
+
+    public IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.abs"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAccrIntRequestBuilder accrInt(final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstInterest, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis, final com.google.gson.JsonElement calcMethod) {
+        return new WorkbookFunctionsAccrIntRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accrInt"), getClient(), null, issue, firstInterest, settlement, rate, par, frequency, basis, calcMethod);
+    }
+
+    public IWorkbookFunctionsAccrIntMRequestBuilder accrIntM(final com.google.gson.JsonElement issue, final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement par, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsAccrIntMRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accrIntM"), getClient(), null, issue, settlement, rate, par, basis);
+    }
+
+    public IWorkbookFunctionsAcosRequestBuilder acos(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAcosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acos"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAcoshRequestBuilder acosh(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAcoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acosh"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAcotRequestBuilder acot(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAcotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acot"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAcothRequestBuilder acoth(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAcothRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acoth"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAmorDegrcRequestBuilder amorDegrc(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsAmorDegrcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.amorDegrc"), getClient(), null, cost, datePurchased, firstPeriod, salvage, period, rate, basis);
+    }
+
+    public IWorkbookFunctionsAmorLincRequestBuilder amorLinc(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement datePurchased, final com.google.gson.JsonElement firstPeriod, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement period, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsAmorLincRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.amorLinc"), getClient(), null, cost, datePurchased, firstPeriod, salvage, period, rate, basis);
+    }
+
+    public IWorkbookFunctionsAndRequestBuilder and(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsAndRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.and"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsArabicRequestBuilder arabic(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsArabicRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.arabic"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsAreasRequestBuilder areas(final com.google.gson.JsonElement reference) {
+        return new WorkbookFunctionsAreasRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.areas"), getClient(), null, reference);
+    }
+
+    public IWorkbookFunctionsAscRequestBuilder asc(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsAscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asc"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsAsinRequestBuilder asin(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAsinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asin"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAsinhRequestBuilder asinh(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAsinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.asinh"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAtanRequestBuilder atan(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAtanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atan"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAtan2RequestBuilder atan2(final com.google.gson.JsonElement xNum, final com.google.gson.JsonElement yNum) {
+        return new WorkbookFunctionsAtan2RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atan2"), getClient(), null, xNum, yNum);
+    }
+
+    public IWorkbookFunctionsAtanhRequestBuilder atanh(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsAtanhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.atanh"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsAveDevRequestBuilder aveDev(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsAveDevRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.aveDev"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsAverageRequestBuilder average(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsAverageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.average"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsAverageARequestBuilder averageA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsAverageARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsAverageIfRequestBuilder averageIf(final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement averageRange) {
+        return new WorkbookFunctionsAverageIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageIf"), getClient(), null, range, criteria, averageRange);
+    }
+
+    public IWorkbookFunctionsAverageIfsRequestBuilder averageIfs(final com.google.gson.JsonElement averageRange, final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsAverageIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.averageIfs"), getClient(), null, averageRange, values);
+    }
+
+    public IWorkbookFunctionsBahtTextRequestBuilder bahtText(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsBahtTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bahtText"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsBaseRequestBuilder base(final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix, final com.google.gson.JsonElement minLength) {
+        return new WorkbookFunctionsBaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.base"), getClient(), null, number, radix, minLength);
+    }
+
+    public IWorkbookFunctionsBesselIRequestBuilder besselI(final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
+        return new WorkbookFunctionsBesselIRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselI"), getClient(), null, x, n);
+    }
+
+    public IWorkbookFunctionsBesselJRequestBuilder besselJ(final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
+        return new WorkbookFunctionsBesselJRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselJ"), getClient(), null, x, n);
+    }
+
+    public IWorkbookFunctionsBesselKRequestBuilder besselK(final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
+        return new WorkbookFunctionsBesselKRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselK"), getClient(), null, x, n);
+    }
+
+    public IWorkbookFunctionsBesselYRequestBuilder besselY(final com.google.gson.JsonElement x, final com.google.gson.JsonElement n) {
+        return new WorkbookFunctionsBesselYRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.besselY"), getClient(), null, x, n);
+    }
+
+    public IWorkbookFunctionsBeta_DistRequestBuilder beta_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
+        return new WorkbookFunctionsBeta_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beta_Dist"), getClient(), null, x, alpha, beta, cumulative, a, b);
+    }
+
+    public IWorkbookFunctionsBeta_InvRequestBuilder beta_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement a, final com.google.gson.JsonElement b) {
+        return new WorkbookFunctionsBeta_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beta_Inv"), getClient(), null, probability, alpha, beta, a, b);
+    }
+
+    public IWorkbookFunctionsBin2DecRequestBuilder bin2Dec(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsBin2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Dec"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsBin2HexRequestBuilder bin2Hex(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsBin2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Hex"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsBin2OctRequestBuilder bin2Oct(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsBin2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bin2Oct"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsBinom_DistRequestBuilder binom_Dist(final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsBinom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Dist"), getClient(), null, numberS, trials, probabilityS, cumulative);
+    }
+
+    public IWorkbookFunctionsBinom_Dist_RangeRequestBuilder binom_Dist_Range(final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement numberS2) {
+        return new WorkbookFunctionsBinom_Dist_RangeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Dist_Range"), getClient(), null, trials, probabilityS, numberS, numberS2);
+    }
+
+    public IWorkbookFunctionsBinom_InvRequestBuilder binom_Inv(final com.google.gson.JsonElement trials, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement alpha) {
+        return new WorkbookFunctionsBinom_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.binom_Inv"), getClient(), null, trials, probabilityS, alpha);
+    }
+
+    public IWorkbookFunctionsBitandRequestBuilder bitand(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+        return new WorkbookFunctionsBitandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitand"), getClient(), null, number1, number2);
+    }
+
+    public IWorkbookFunctionsBitlshiftRequestBuilder bitlshift(final com.google.gson.JsonElement number, final com.google.gson.JsonElement shiftAmount) {
+        return new WorkbookFunctionsBitlshiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitlshift"), getClient(), null, number, shiftAmount);
+    }
+
+    public IWorkbookFunctionsBitorRequestBuilder bitor(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+        return new WorkbookFunctionsBitorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitor"), getClient(), null, number1, number2);
+    }
+
+    public IWorkbookFunctionsBitrshiftRequestBuilder bitrshift(final com.google.gson.JsonElement number, final com.google.gson.JsonElement shiftAmount) {
+        return new WorkbookFunctionsBitrshiftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitrshift"), getClient(), null, number, shiftAmount);
+    }
+
+    public IWorkbookFunctionsBitxorRequestBuilder bitxor(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+        return new WorkbookFunctionsBitxorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bitxor"), getClient(), null, number1, number2);
+    }
+
+    public IWorkbookFunctionsCeiling_MathRequestBuilder ceiling_Math(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
+        return new WorkbookFunctionsCeiling_MathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ceiling_Math"), getClient(), null, number, significance, mode);
+    }
+
+    public IWorkbookFunctionsCeiling_PreciseRequestBuilder ceiling_Precise(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsCeiling_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ceiling_Precise"), getClient(), null, number, significance);
+    }
+
+    public IWorkbookFunctionsCharRequestBuilder msgraphChar(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.char"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsChiSq_DistRequestBuilder chiSq_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsChiSq_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Dist"), getClient(), null, x, degFreedom, cumulative);
+    }
+
+    public IWorkbookFunctionsChiSq_Dist_RTRequestBuilder chiSq_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsChiSq_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Dist_RT"), getClient(), null, x, degFreedom);
+    }
+
+    public IWorkbookFunctionsChiSq_InvRequestBuilder chiSq_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsChiSq_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Inv"), getClient(), null, probability, degFreedom);
+    }
+
+    public IWorkbookFunctionsChiSq_Inv_RTRequestBuilder chiSq_Inv_RT(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsChiSq_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.chiSq_Inv_RT"), getClient(), null, probability, degFreedom);
+    }
+
+    public IWorkbookFunctionsChooseRequestBuilder choose(final com.google.gson.JsonElement indexNum, final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsChooseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.choose"), getClient(), null, indexNum, values);
+    }
+
+    public IWorkbookFunctionsCleanRequestBuilder clean(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsCleanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clean"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsCodeRequestBuilder code(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsCodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.code"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsColumnsRequestBuilder columns(final com.google.gson.JsonElement array) {
+        return new WorkbookFunctionsColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.columns"), getClient(), null, array);
+    }
+
+    public IWorkbookFunctionsCombinRequestBuilder combin(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+        return new WorkbookFunctionsCombinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.combin"), getClient(), null, number, numberChosen);
+    }
+
+    public IWorkbookFunctionsCombinaRequestBuilder combina(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+        return new WorkbookFunctionsCombinaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.combina"), getClient(), null, number, numberChosen);
+    }
+
+    public IWorkbookFunctionsComplexRequestBuilder complex(final com.google.gson.JsonElement realNum, final com.google.gson.JsonElement iNum, final com.google.gson.JsonElement suffix) {
+        return new WorkbookFunctionsComplexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.complex"), getClient(), null, realNum, iNum, suffix);
+    }
+
+    public IWorkbookFunctionsConcatenateRequestBuilder concatenate(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsConcatenateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.concatenate"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsConfidence_NormRequestBuilder confidence_Norm(final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
+        return new WorkbookFunctionsConfidence_NormRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confidence_Norm"), getClient(), null, alpha, standardDev, size);
+    }
+
+    public IWorkbookFunctionsConfidence_TRequestBuilder confidence_T(final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement size) {
+        return new WorkbookFunctionsConfidence_TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.confidence_T"), getClient(), null, alpha, standardDev, size);
+    }
+
+    public IWorkbookFunctionsConvertRequestBuilder convert(final com.google.gson.JsonElement number, final com.google.gson.JsonElement fromUnit, final com.google.gson.JsonElement toUnit) {
+        return new WorkbookFunctionsConvertRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.convert"), getClient(), null, number, fromUnit, toUnit);
+    }
+
+    public IWorkbookFunctionsCosRequestBuilder cos(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cos"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsCoshRequestBuilder cosh(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cosh"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsCotRequestBuilder cot(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cot"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsCothRequestBuilder coth(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCothRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coth"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsCountRequestBuilder count(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsCountARequestBuilder countA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsCountARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsCountBlankRequestBuilder countBlank(final com.google.gson.JsonElement range) {
+        return new WorkbookFunctionsCountBlankRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countBlank"), getClient(), null, range);
+    }
+
+    public IWorkbookFunctionsCountIfRequestBuilder countIf(final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsCountIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countIf"), getClient(), null, range, criteria);
+    }
+
+    public IWorkbookFunctionsCountIfsRequestBuilder countIfs(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsCountIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.countIfs"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsCoupDayBsRequestBuilder coupDayBs(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsCoupDayBsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDayBs"), getClient(), null, settlement, maturity, frequency, basis);
+    }
+
+    public IWorkbookFunctionsCoupDaysRequestBuilder coupDays(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsCoupDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDays"), getClient(), null, settlement, maturity, frequency, basis);
+    }
+
+    public IWorkbookFunctionsCoupDaysNcRequestBuilder coupDaysNc(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsCoupDaysNcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupDaysNc"), getClient(), null, settlement, maturity, frequency, basis);
+    }
+
+    public IWorkbookFunctionsCoupNcdRequestBuilder coupNcd(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsCoupNcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupNcd"), getClient(), null, settlement, maturity, frequency, basis);
+    }
+
+    public IWorkbookFunctionsCoupNumRequestBuilder coupNum(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsCoupNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupNum"), getClient(), null, settlement, maturity, frequency, basis);
+    }
+
+    public IWorkbookFunctionsCoupPcdRequestBuilder coupPcd(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsCoupPcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.coupPcd"), getClient(), null, settlement, maturity, frequency, basis);
+    }
+
+    public IWorkbookFunctionsCscRequestBuilder csc(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.csc"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsCschRequestBuilder csch(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsCschRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.csch"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsCumIPmtRequestBuilder cumIPmt(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsCumIPmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cumIPmt"), getClient(), null, rate, nper, pv, startPeriod, endPeriod, type);
+    }
+
+    public IWorkbookFunctionsCumPrincRequestBuilder cumPrinc(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsCumPrincRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cumPrinc"), getClient(), null, rate, nper, pv, startPeriod, endPeriod, type);
+    }
+
+    public IWorkbookFunctionsDaverageRequestBuilder daverage(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDaverageRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.daverage"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDcountRequestBuilder dcount(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDcountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dcount"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDcountARequestBuilder dcountA(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDcountARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dcountA"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDgetRequestBuilder dget(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDgetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dget"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDmaxRequestBuilder dmax(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDmaxRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dmax"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDminRequestBuilder dmin(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDminRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dmin"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDproductRequestBuilder dproduct(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDproductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dproduct"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDstDevRequestBuilder dstDev(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDstDevRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dstDev"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDstDevPRequestBuilder dstDevP(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDstDevPRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dstDevP"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDsumRequestBuilder dsum(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDsumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dsum"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDvarRequestBuilder dvar(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDvarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dvar"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDvarPRequestBuilder dvarP(final com.google.gson.JsonElement database, final com.google.gson.JsonElement field, final com.google.gson.JsonElement criteria) {
+        return new WorkbookFunctionsDvarPRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dvarP"), getClient(), null, database, field, criteria);
+    }
+
+    public IWorkbookFunctionsDateRequestBuilder date(final com.google.gson.JsonElement year, final com.google.gson.JsonElement month, final com.google.gson.JsonElement day) {
+        return new WorkbookFunctionsDateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.date"), getClient(), null, year, month, day);
+    }
+
+    public IWorkbookFunctionsDatevalueRequestBuilder datevalue(final com.google.gson.JsonElement dateText) {
+        return new WorkbookFunctionsDatevalueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.datevalue"), getClient(), null, dateText);
+    }
+
+    public IWorkbookFunctionsDayRequestBuilder day(final com.google.gson.JsonElement serialNumber) {
+        return new WorkbookFunctionsDayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.day"), getClient(), null, serialNumber);
+    }
+
+    public IWorkbookFunctionsDaysRequestBuilder days(final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement startDate) {
+        return new WorkbookFunctionsDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.days"), getClient(), null, endDate, startDate);
+    }
+
+    public IWorkbookFunctionsDays360RequestBuilder days360(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement method) {
+        return new WorkbookFunctionsDays360RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.days360"), getClient(), null, startDate, endDate, method);
+    }
+
+    public IWorkbookFunctionsDbRequestBuilder db(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement period, final com.google.gson.JsonElement month) {
+        return new WorkbookFunctionsDbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.db"), getClient(), null, cost, salvage, life, period, month);
+    }
+
+    public IWorkbookFunctionsDbcsRequestBuilder dbcs(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsDbcsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dbcs"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsDdbRequestBuilder ddb(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement period, final com.google.gson.JsonElement factor) {
+        return new WorkbookFunctionsDdbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ddb"), getClient(), null, cost, salvage, life, period, factor);
+    }
+
+    public IWorkbookFunctionsDec2BinRequestBuilder dec2Bin(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsDec2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Bin"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsDec2HexRequestBuilder dec2Hex(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsDec2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Hex"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsDec2OctRequestBuilder dec2Oct(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsDec2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dec2Oct"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsDecimalRequestBuilder decimal(final com.google.gson.JsonElement number, final com.google.gson.JsonElement radix) {
+        return new WorkbookFunctionsDecimalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decimal"), getClient(), null, number, radix);
+    }
+
+    public IWorkbookFunctionsDegreesRequestBuilder degrees(final com.google.gson.JsonElement angle) {
+        return new WorkbookFunctionsDegreesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.degrees"), getClient(), null, angle);
+    }
+
+    public IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+        return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, number1, number2);
+    }
+
+    public IWorkbookFunctionsDevSqRequestBuilder devSq(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsDevSqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.devSq"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsDiscRequestBuilder disc(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disc"), getClient(), null, settlement, maturity, pr, redemption, basis);
+    }
+
+    public IWorkbookFunctionsDollarRequestBuilder dollar(final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
+        return new WorkbookFunctionsDollarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollar"), getClient(), null, number, decimals);
+    }
+
+    public IWorkbookFunctionsDollarDeRequestBuilder dollarDe(final com.google.gson.JsonElement fractionalDollar, final com.google.gson.JsonElement fraction) {
+        return new WorkbookFunctionsDollarDeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollarDe"), getClient(), null, fractionalDollar, fraction);
+    }
+
+    public IWorkbookFunctionsDollarFrRequestBuilder dollarFr(final com.google.gson.JsonElement decimalDollar, final com.google.gson.JsonElement fraction) {
+        return new WorkbookFunctionsDollarFrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.dollarFr"), getClient(), null, decimalDollar, fraction);
+    }
+
+    public IWorkbookFunctionsDurationRequestBuilder duration(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsDurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.duration"), getClient(), null, settlement, maturity, coupon, yld, frequency, basis);
+    }
+
+    public IWorkbookFunctionsEcma_CeilingRequestBuilder ecma_Ceiling(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsEcma_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ecma_Ceiling"), getClient(), null, number, significance);
+    }
+
+    public IWorkbookFunctionsEdateRequestBuilder edate(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
+        return new WorkbookFunctionsEdateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.edate"), getClient(), null, startDate, months);
+    }
+
+    public IWorkbookFunctionsEffectRequestBuilder effect(final com.google.gson.JsonElement nominalRate, final com.google.gson.JsonElement npery) {
+        return new WorkbookFunctionsEffectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.effect"), getClient(), null, nominalRate, npery);
+    }
+
+    public IWorkbookFunctionsEoMonthRequestBuilder eoMonth(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement months) {
+        return new WorkbookFunctionsEoMonthRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.eoMonth"), getClient(), null, startDate, months);
+    }
+
+    public IWorkbookFunctionsErfRequestBuilder erf(final com.google.gson.JsonElement lowerLimit, final com.google.gson.JsonElement upperLimit) {
+        return new WorkbookFunctionsErfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf"), getClient(), null, lowerLimit, upperLimit);
+    }
+
+    public IWorkbookFunctionsErfCRequestBuilder erfC(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsErfCRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsErfC_PreciseRequestBuilder erfC_Precise(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsErfC_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erfC_Precise"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsErf_PreciseRequestBuilder erf_Precise(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsErf_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.erf_Precise"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsError_TypeRequestBuilder error_Type(final com.google.gson.JsonElement errorVal) {
+        return new WorkbookFunctionsError_TypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.error_Type"), getClient(), null, errorVal);
+    }
+
+    public IWorkbookFunctionsEvenRequestBuilder even(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsEvenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.even"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsExactRequestBuilder exact(final com.google.gson.JsonElement text1, final com.google.gson.JsonElement text2) {
+        return new WorkbookFunctionsExactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exact"), getClient(), null, text1, text2);
+    }
+
+    public IWorkbookFunctionsExpRequestBuilder exp(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsExpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exp"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsExpon_DistRequestBuilder expon_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement lambda, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsExpon_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.expon_Dist"), getClient(), null, x, lambda, cumulative);
+    }
+
+    public IWorkbookFunctionsFvscheduleRequestBuilder fvschedule(final com.google.gson.JsonElement principal, final com.google.gson.JsonElement schedule) {
+        return new WorkbookFunctionsFvscheduleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fvschedule"), getClient(), null, principal, schedule);
+    }
+
+    public IWorkbookFunctionsF_DistRequestBuilder f_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsF_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist"), getClient(), null, x, degFreedom1, degFreedom2, cumulative);
+    }
+
+    public IWorkbookFunctionsF_Dist_RTRequestBuilder f_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
+        return new WorkbookFunctionsF_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Dist_RT"), getClient(), null, x, degFreedom1, degFreedom2);
+    }
+
+    public IWorkbookFunctionsF_InvRequestBuilder f_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
+        return new WorkbookFunctionsF_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv"), getClient(), null, probability, degFreedom1, degFreedom2);
+    }
+
+    public IWorkbookFunctionsF_Inv_RTRequestBuilder f_Inv_RT(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom1, final com.google.gson.JsonElement degFreedom2) {
+        return new WorkbookFunctionsF_Inv_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.f_Inv_RT"), getClient(), null, probability, degFreedom1, degFreedom2);
+    }
+
+    public IWorkbookFunctionsFactRequestBuilder fact(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsFactRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fact"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsFactDoubleRequestBuilder factDouble(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsFactDoubleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.factDouble"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsFalseRequestBuilder msgraphFalse() {
+        return new WorkbookFunctionsFalseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.false"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsFindRequestBuilder find(final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
+        return new WorkbookFunctionsFindRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.find"), getClient(), null, findText, withinText, startNum);
+    }
+
+    public IWorkbookFunctionsFindBRequestBuilder findB(final com.google.gson.JsonElement findText, final com.google.gson.JsonElement withinText, final com.google.gson.JsonElement startNum) {
+        return new WorkbookFunctionsFindBRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findB"), getClient(), null, findText, withinText, startNum);
+    }
+
+    public IWorkbookFunctionsFisherRequestBuilder fisher(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsFisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fisher"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsFisherInvRequestBuilder fisherInv(final com.google.gson.JsonElement y) {
+        return new WorkbookFunctionsFisherInvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fisherInv"), getClient(), null, y);
+    }
+
+    public IWorkbookFunctionsFixedRequestBuilder fixed(final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals, final com.google.gson.JsonElement noCommas) {
+        return new WorkbookFunctionsFixedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fixed"), getClient(), null, number, decimals, noCommas);
+    }
+
+    public IWorkbookFunctionsFloor_MathRequestBuilder floor_Math(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance, final com.google.gson.JsonElement mode) {
+        return new WorkbookFunctionsFloor_MathRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.floor_Math"), getClient(), null, number, significance, mode);
+    }
+
+    public IWorkbookFunctionsFloor_PreciseRequestBuilder floor_Precise(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsFloor_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.floor_Precise"), getClient(), null, number, significance);
+    }
+
+    public IWorkbookFunctionsFvRequestBuilder fv(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsFvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.fv"), getClient(), null, rate, nper, pmt, pv, type);
+    }
+
+    public IWorkbookFunctionsGammaRequestBuilder gamma(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsGammaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsGammaLnRequestBuilder gammaLn(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsGammaLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsGammaLn_PreciseRequestBuilder gammaLn_Precise(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsGammaLn_PreciseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gammaLn_Precise"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsGamma_DistRequestBuilder gamma_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsGamma_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Dist"), getClient(), null, x, alpha, beta, cumulative);
+    }
+
+    public IWorkbookFunctionsGamma_InvRequestBuilder gamma_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta) {
+        return new WorkbookFunctionsGamma_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gamma_Inv"), getClient(), null, probability, alpha, beta);
+    }
+
+    public IWorkbookFunctionsGaussRequestBuilder gauss(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsGaussRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gauss"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsGcdRequestBuilder gcd(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsGcdRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.gcd"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsGeStepRequestBuilder geStep(final com.google.gson.JsonElement number, final com.google.gson.JsonElement step) {
+        return new WorkbookFunctionsGeStepRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.geStep"), getClient(), null, number, step);
+    }
+
+    public IWorkbookFunctionsGeoMeanRequestBuilder geoMean(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsGeoMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.geoMean"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsHlookupRequestBuilder hlookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement rowIndexNum, final com.google.gson.JsonElement rangeLookup) {
+        return new WorkbookFunctionsHlookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hlookup"), getClient(), null, lookupValue, tableArray, rowIndexNum, rangeLookup);
+    }
+
+    public IWorkbookFunctionsHarMeanRequestBuilder harMean(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsHarMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.harMean"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsHex2BinRequestBuilder hex2Bin(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsHex2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Bin"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsHex2DecRequestBuilder hex2Dec(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsHex2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Dec"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsHex2OctRequestBuilder hex2Oct(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsHex2OctRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hex2Oct"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsHourRequestBuilder hour(final com.google.gson.JsonElement serialNumber) {
+        return new WorkbookFunctionsHourRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hour"), getClient(), null, serialNumber);
+    }
+
+    public IWorkbookFunctionsHypGeom_DistRequestBuilder hypGeom_Dist(final com.google.gson.JsonElement sampleS, final com.google.gson.JsonElement numberSample, final com.google.gson.JsonElement populationS, final com.google.gson.JsonElement numberPop, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsHypGeom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hypGeom_Dist"), getClient(), null, sampleS, numberSample, populationS, numberPop, cumulative);
+    }
+
+    public IWorkbookFunctionsHyperlinkRequestBuilder hyperlink(final com.google.gson.JsonElement linkLocation, final com.google.gson.JsonElement friendlyName) {
+        return new WorkbookFunctionsHyperlinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.hyperlink"), getClient(), null, linkLocation, friendlyName);
+    }
+
+    public IWorkbookFunctionsIso_CeilingRequestBuilder iso_Ceiling(final com.google.gson.JsonElement number, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsIso_CeilingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.iso_Ceiling"), getClient(), null, number, significance);
+    }
+
+    public IWorkbookFunctionsIfRequestBuilder msgraphIf(final com.google.gson.JsonElement logicalTest, final com.google.gson.JsonElement valueIfTrue, final com.google.gson.JsonElement valueIfFalse) {
+        return new WorkbookFunctionsIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.if"), getClient(), null, logicalTest, valueIfTrue, valueIfFalse);
+    }
+
+    public IWorkbookFunctionsImAbsRequestBuilder imAbs(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imAbs"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImArgumentRequestBuilder imArgument(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImArgumentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imArgument"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImConjugateRequestBuilder imConjugate(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImConjugateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imConjugate"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImCosRequestBuilder imCos(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImCosRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCos"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImCoshRequestBuilder imCosh(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImCoshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCosh"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImCotRequestBuilder imCot(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImCotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCot"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImCscRequestBuilder imCsc(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImCscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCsc"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImCschRequestBuilder imCsch(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImCschRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imCsch"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImDivRequestBuilder imDiv(final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
+        return new WorkbookFunctionsImDivRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imDiv"), getClient(), null, inumber1, inumber2);
+    }
+
+    public IWorkbookFunctionsImExpRequestBuilder imExp(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImExpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imExp"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImLnRequestBuilder imLn(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLn"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImLog10RequestBuilder imLog10(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImLog10RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLog10"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImLog2RequestBuilder imLog2(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImLog2RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imLog2"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImPowerRequestBuilder imPower(final com.google.gson.JsonElement inumber, final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsImPowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imPower"), getClient(), null, inumber, number);
+    }
+
+    public IWorkbookFunctionsImProductRequestBuilder imProduct(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsImProductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imProduct"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsImRealRequestBuilder imReal(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImRealRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imReal"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImSecRequestBuilder imSec(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImSecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSec"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImSechRequestBuilder imSech(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImSechRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSech"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImSinRequestBuilder imSin(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImSinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSin"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImSinhRequestBuilder imSinh(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImSinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSinh"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImSqrtRequestBuilder imSqrt(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImSqrtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSqrt"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImSubRequestBuilder imSub(final com.google.gson.JsonElement inumber1, final com.google.gson.JsonElement inumber2) {
+        return new WorkbookFunctionsImSubRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSub"), getClient(), null, inumber1, inumber2);
+    }
+
+    public IWorkbookFunctionsImSumRequestBuilder imSum(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsImSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imSum"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsImTanRequestBuilder imTan(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImTanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imTan"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsImaginaryRequestBuilder imaginary(final com.google.gson.JsonElement inumber) {
+        return new WorkbookFunctionsImaginaryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.imaginary"), getClient(), null, inumber);
+    }
+
+    public IWorkbookFunctionsIntRequestBuilder msgraphInt(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsIntRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.int"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsIntRateRequestBuilder intRate(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsIntRateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.intRate"), getClient(), null, settlement, maturity, investment, redemption, basis);
+    }
+
+    public IWorkbookFunctionsIpmtRequestBuilder ipmt(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsIpmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ipmt"), getClient(), null, rate, per, nper, pv, fv, type);
+    }
+
+    public IWorkbookFunctionsIrrRequestBuilder irr(final com.google.gson.JsonElement values, final com.google.gson.JsonElement guess) {
+        return new WorkbookFunctionsIrrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.irr"), getClient(), null, values, guess);
+    }
+
+    public IWorkbookFunctionsIsErrRequestBuilder isErr(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsErrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isErr"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsErrorRequestBuilder isError(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsErrorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isError"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsEvenRequestBuilder isEven(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsIsEvenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isEven"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsIsFormulaRequestBuilder isFormula(final com.google.gson.JsonElement reference) {
+        return new WorkbookFunctionsIsFormulaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isFormula"), getClient(), null, reference);
+    }
+
+    public IWorkbookFunctionsIsLogicalRequestBuilder isLogical(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsLogicalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isLogical"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsNARequestBuilder isNA(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsNARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNA"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsNonTextRequestBuilder isNonText(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsNonTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNonText"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsNumberRequestBuilder isNumber(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsNumberRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isNumber"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsOddRequestBuilder isOdd(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsIsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isOdd"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsIsTextRequestBuilder isText(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isText"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsIsoWeekNumRequestBuilder isoWeekNum(final com.google.gson.JsonElement date) {
+        return new WorkbookFunctionsIsoWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isoWeekNum"), getClient(), null, date);
+    }
+
+    public IWorkbookFunctionsIspmtRequestBuilder ispmt(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv) {
+        return new WorkbookFunctionsIspmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ispmt"), getClient(), null, rate, per, nper, pv);
+    }
+
+    public IWorkbookFunctionsIsrefRequestBuilder isref(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsIsrefRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isref"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsKurtRequestBuilder kurt(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsKurtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.kurt"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsLargeRequestBuilder large(final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+        return new WorkbookFunctionsLargeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.large"), getClient(), null, array, k);
+    }
+
+    public IWorkbookFunctionsLcmRequestBuilder lcm(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsLcmRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lcm"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsLeftRequestBuilder left(final com.google.gson.JsonElement text, final com.google.gson.JsonElement numChars) {
+        return new WorkbookFunctionsLeftRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.left"), getClient(), null, text, numChars);
+    }
+
+    public IWorkbookFunctionsLeftbRequestBuilder leftb(final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
+        return new WorkbookFunctionsLeftbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.leftb"), getClient(), null, text, numBytes);
+    }
+
+    public IWorkbookFunctionsLenRequestBuilder len(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsLenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.len"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsLenbRequestBuilder lenb(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsLenbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lenb"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsLnRequestBuilder ln(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsLnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ln"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsLogRequestBuilder log(final com.google.gson.JsonElement number, final com.google.gson.JsonElement base) {
+        return new WorkbookFunctionsLogRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.log"), getClient(), null, number, base);
+    }
+
+    public IWorkbookFunctionsLog10RequestBuilder log10(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsLog10RequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.log10"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsLogNorm_DistRequestBuilder logNorm_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsLogNorm_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Dist"), getClient(), null, x, mean, standardDev, cumulative);
+    }
+
+    public IWorkbookFunctionsLogNorm_InvRequestBuilder logNorm_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
+        return new WorkbookFunctionsLogNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logNorm_Inv"), getClient(), null, probability, mean, standardDev);
+    }
+
+    public IWorkbookFunctionsLookupRequestBuilder lookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupVector, final com.google.gson.JsonElement resultVector) {
+        return new WorkbookFunctionsLookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lookup"), getClient(), null, lookupValue, lookupVector, resultVector);
+    }
+
+    public IWorkbookFunctionsLowerRequestBuilder lower(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsLowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.lower"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsMdurationRequestBuilder mduration(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement coupon, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsMdurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mduration"), getClient(), null, settlement, maturity, coupon, yld, frequency, basis);
+    }
+
+    public IWorkbookFunctionsMirrRequestBuilder mirr(final com.google.gson.JsonElement values, final com.google.gson.JsonElement financeRate, final com.google.gson.JsonElement reinvestRate) {
+        return new WorkbookFunctionsMirrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mirr"), getClient(), null, values, financeRate, reinvestRate);
+    }
+
+    public IWorkbookFunctionsMroundRequestBuilder mround(final com.google.gson.JsonElement number, final com.google.gson.JsonElement multiple) {
+        return new WorkbookFunctionsMroundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mround"), getClient(), null, number, multiple);
+    }
+
+    public IWorkbookFunctionsMatchRequestBuilder match(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement lookupArray, final com.google.gson.JsonElement matchType) {
+        return new WorkbookFunctionsMatchRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.match"), getClient(), null, lookupValue, lookupArray, matchType);
+    }
+
+    public IWorkbookFunctionsMaxRequestBuilder max(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsMaxRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.max"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsMaxARequestBuilder maxA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsMaxARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.maxA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsMedianRequestBuilder median(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsMedianRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.median"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsMidRequestBuilder mid(final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numChars) {
+        return new WorkbookFunctionsMidRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mid"), getClient(), null, text, startNum, numChars);
+    }
+
+    public IWorkbookFunctionsMidbRequestBuilder midb(final com.google.gson.JsonElement text, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes) {
+        return new WorkbookFunctionsMidbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.midb"), getClient(), null, text, startNum, numBytes);
+    }
+
+    public IWorkbookFunctionsMinRequestBuilder min(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsMinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.min"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsMinARequestBuilder minA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsMinARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.minA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsMinuteRequestBuilder minute(final com.google.gson.JsonElement serialNumber) {
+        return new WorkbookFunctionsMinuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.minute"), getClient(), null, serialNumber);
+    }
+
+    public IWorkbookFunctionsModRequestBuilder mod(final com.google.gson.JsonElement number, final com.google.gson.JsonElement divisor) {
+        return new WorkbookFunctionsModRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mod"), getClient(), null, number, divisor);
+    }
+
+    public IWorkbookFunctionsMonthRequestBuilder month(final com.google.gson.JsonElement serialNumber) {
+        return new WorkbookFunctionsMonthRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.month"), getClient(), null, serialNumber);
+    }
+
+    public IWorkbookFunctionsMultiNomialRequestBuilder multiNomial(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsMultiNomialRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.multiNomial"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsNRequestBuilder n(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsNRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.n"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsNperRequestBuilder nper(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsNperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.nper"), getClient(), null, rate, pmt, pv, fv, type);
+    }
+
+    public IWorkbookFunctionsNaRequestBuilder na() {
+        return new WorkbookFunctionsNaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.na"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsNegBinom_DistRequestBuilder negBinom_Dist(final com.google.gson.JsonElement numberF, final com.google.gson.JsonElement numberS, final com.google.gson.JsonElement probabilityS, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsNegBinom_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.negBinom_Dist"), getClient(), null, numberF, numberS, probabilityS, cumulative);
+    }
+
+    public IWorkbookFunctionsNetworkDaysRequestBuilder networkDays(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement holidays) {
+        return new WorkbookFunctionsNetworkDaysRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.networkDays"), getClient(), null, startDate, endDate, holidays);
+    }
+
+    public IWorkbookFunctionsNetworkDays_IntlRequestBuilder networkDays_Intl(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
+        return new WorkbookFunctionsNetworkDays_IntlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.networkDays_Intl"), getClient(), null, startDate, endDate, weekend, holidays);
+    }
+
+    public IWorkbookFunctionsNominalRequestBuilder nominal(final com.google.gson.JsonElement effectRate, final com.google.gson.JsonElement npery) {
+        return new WorkbookFunctionsNominalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.nominal"), getClient(), null, effectRate, npery);
+    }
+
+    public IWorkbookFunctionsNorm_DistRequestBuilder norm_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsNorm_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_Dist"), getClient(), null, x, mean, standardDev, cumulative);
+    }
+
+    public IWorkbookFunctionsNorm_InvRequestBuilder norm_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
+        return new WorkbookFunctionsNorm_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_Inv"), getClient(), null, probability, mean, standardDev);
+    }
+
+    public IWorkbookFunctionsNorm_S_DistRequestBuilder norm_S_Dist(final com.google.gson.JsonElement z, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsNorm_S_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_S_Dist"), getClient(), null, z, cumulative);
+    }
+
+    public IWorkbookFunctionsNorm_S_InvRequestBuilder norm_S_Inv(final com.google.gson.JsonElement probability) {
+        return new WorkbookFunctionsNorm_S_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.norm_S_Inv"), getClient(), null, probability);
+    }
+
+    public IWorkbookFunctionsNotRequestBuilder not(final com.google.gson.JsonElement logical) {
+        return new WorkbookFunctionsNotRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.not"), getClient(), null, logical);
+    }
+
+    public IWorkbookFunctionsNowRequestBuilder now() {
+        return new WorkbookFunctionsNowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.now"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsNpvRequestBuilder npv(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsNpvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.npv"), getClient(), null, rate, values);
+    }
+
+    public IWorkbookFunctionsNumberValueRequestBuilder numberValue(final com.google.gson.JsonElement text, final com.google.gson.JsonElement decimalSeparator, final com.google.gson.JsonElement groupSeparator) {
+        return new WorkbookFunctionsNumberValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.numberValue"), getClient(), null, text, decimalSeparator, groupSeparator);
+    }
+
+    public IWorkbookFunctionsOct2BinRequestBuilder oct2Bin(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsOct2BinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Bin"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsOct2DecRequestBuilder oct2Dec(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsOct2DecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Dec"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsOct2HexRequestBuilder oct2Hex(final com.google.gson.JsonElement number, final com.google.gson.JsonElement places) {
+        return new WorkbookFunctionsOct2HexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oct2Hex"), getClient(), null, number, places);
+    }
+
+    public IWorkbookFunctionsOddRequestBuilder odd(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsOddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.odd"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsOddFPriceRequestBuilder oddFPrice(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstCoupon, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsOddFPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddFPrice"), getClient(), null, settlement, maturity, issue, firstCoupon, rate, yld, redemption, frequency, basis);
+    }
+
+    public IWorkbookFunctionsOddFYieldRequestBuilder oddFYield(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement firstCoupon, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsOddFYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddFYield"), getClient(), null, settlement, maturity, issue, firstCoupon, rate, pr, redemption, frequency, basis);
+    }
+
+    public IWorkbookFunctionsOddLPriceRequestBuilder oddLPrice(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsOddLPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddLPrice"), getClient(), null, settlement, maturity, lastInterest, rate, yld, redemption, frequency, basis);
+    }
+
+    public IWorkbookFunctionsOddLYieldRequestBuilder oddLYield(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement lastInterest, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsOddLYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.oddLYield"), getClient(), null, settlement, maturity, lastInterest, rate, pr, redemption, frequency, basis);
+    }
+
+    public IWorkbookFunctionsOrRequestBuilder or(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsOrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.or"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsPdurationRequestBuilder pduration(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
+        return new WorkbookFunctionsPdurationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pduration"), getClient(), null, rate, pv, fv);
+    }
+
+    public IWorkbookFunctionsPercentRank_ExcRequestBuilder percentRank_Exc(final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsPercentRank_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentRank_Exc"), getClient(), null, array, x, significance);
+    }
+
+    public IWorkbookFunctionsPercentRank_IncRequestBuilder percentRank_Inc(final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement significance) {
+        return new WorkbookFunctionsPercentRank_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentRank_Inc"), getClient(), null, array, x, significance);
+    }
+
+    public IWorkbookFunctionsPercentile_ExcRequestBuilder percentile_Exc(final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+        return new WorkbookFunctionsPercentile_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentile_Exc"), getClient(), null, array, k);
+    }
+
+    public IWorkbookFunctionsPercentile_IncRequestBuilder percentile_Inc(final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+        return new WorkbookFunctionsPercentile_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.percentile_Inc"), getClient(), null, array, k);
+    }
+
+    public IWorkbookFunctionsPermutRequestBuilder permut(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+        return new WorkbookFunctionsPermutRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permut"), getClient(), null, number, numberChosen);
+    }
+
+    public IWorkbookFunctionsPermutationaRequestBuilder permutationa(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numberChosen) {
+        return new WorkbookFunctionsPermutationaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.permutationa"), getClient(), null, number, numberChosen);
+    }
+
+    public IWorkbookFunctionsPhiRequestBuilder phi(final com.google.gson.JsonElement x) {
+        return new WorkbookFunctionsPhiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.phi"), getClient(), null, x);
+    }
+
+    public IWorkbookFunctionsPiRequestBuilder pi() {
+        return new WorkbookFunctionsPiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pi"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsPmtRequestBuilder pmt(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsPmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pmt"), getClient(), null, rate, nper, pv, fv, type);
+    }
+
+    public IWorkbookFunctionsPoisson_DistRequestBuilder poisson_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsPoisson_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.poisson_Dist"), getClient(), null, x, mean, cumulative);
+    }
+
+    public IWorkbookFunctionsPowerRequestBuilder power(final com.google.gson.JsonElement number, final com.google.gson.JsonElement power) {
+        return new WorkbookFunctionsPowerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.power"), getClient(), null, number, power);
+    }
+
+    public IWorkbookFunctionsPpmtRequestBuilder ppmt(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement per, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsPpmtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ppmt"), getClient(), null, rate, per, nper, pv, fv, type);
+    }
+
+    public IWorkbookFunctionsPriceRequestBuilder price(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.price"), getClient(), null, settlement, maturity, rate, yld, redemption, frequency, basis);
+    }
+
+    public IWorkbookFunctionsPriceDiscRequestBuilder priceDisc(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsPriceDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.priceDisc"), getClient(), null, settlement, maturity, discount, redemption, basis);
+    }
+
+    public IWorkbookFunctionsPriceMatRequestBuilder priceMat(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement yld, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsPriceMatRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.priceMat"), getClient(), null, settlement, maturity, issue, rate, yld, basis);
+    }
+
+    public IWorkbookFunctionsProductRequestBuilder product(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsProductRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.product"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsProperRequestBuilder proper(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsProperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.proper"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsPvRequestBuilder pv(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type) {
+        return new WorkbookFunctionsPvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pv"), getClient(), null, rate, nper, pmt, fv, type);
+    }
+
+    public IWorkbookFunctionsQuartile_ExcRequestBuilder quartile_Exc(final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
+        return new WorkbookFunctionsQuartile_ExcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quartile_Exc"), getClient(), null, array, quart);
+    }
+
+    public IWorkbookFunctionsQuartile_IncRequestBuilder quartile_Inc(final com.google.gson.JsonElement array, final com.google.gson.JsonElement quart) {
+        return new WorkbookFunctionsQuartile_IncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quartile_Inc"), getClient(), null, array, quart);
+    }
+
+    public IWorkbookFunctionsQuotientRequestBuilder quotient(final com.google.gson.JsonElement numerator, final com.google.gson.JsonElement denominator) {
+        return new WorkbookFunctionsQuotientRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.quotient"), getClient(), null, numerator, denominator);
+    }
+
+    public IWorkbookFunctionsRadiansRequestBuilder radians(final com.google.gson.JsonElement angle) {
+        return new WorkbookFunctionsRadiansRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.radians"), getClient(), null, angle);
+    }
+
+    public IWorkbookFunctionsRandRequestBuilder rand() {
+        return new WorkbookFunctionsRandRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rand"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsRandBetweenRequestBuilder randBetween(final com.google.gson.JsonElement bottom, final com.google.gson.JsonElement top) {
+        return new WorkbookFunctionsRandBetweenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.randBetween"), getClient(), null, bottom, top);
+    }
+
+    public IWorkbookFunctionsRank_AvgRequestBuilder rank_Avg(final com.google.gson.JsonElement number, final com.google.gson.JsonElement ref, final com.google.gson.JsonElement order) {
+        return new WorkbookFunctionsRank_AvgRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rank_Avg"), getClient(), null, number, ref, order);
+    }
+
+    public IWorkbookFunctionsRank_EqRequestBuilder rank_Eq(final com.google.gson.JsonElement number, final com.google.gson.JsonElement ref, final com.google.gson.JsonElement order) {
+        return new WorkbookFunctionsRank_EqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rank_Eq"), getClient(), null, number, ref, order);
+    }
+
+    public IWorkbookFunctionsRateRequestBuilder rate(final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pmt, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv, final com.google.gson.JsonElement type, final com.google.gson.JsonElement guess) {
+        return new WorkbookFunctionsRateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rate"), getClient(), null, nper, pmt, pv, fv, type, guess);
+    }
+
+    public IWorkbookFunctionsReceivedRequestBuilder received(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement investment, final com.google.gson.JsonElement discount, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsReceivedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.received"), getClient(), null, settlement, maturity, investment, discount, basis);
+    }
+
+    public IWorkbookFunctionsReplaceRequestBuilder replace(final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numChars, final com.google.gson.JsonElement newText) {
+        return new WorkbookFunctionsReplaceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replace"), getClient(), null, oldText, startNum, numChars, newText);
+    }
+
+    public IWorkbookFunctionsReplaceBRequestBuilder replaceB(final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement startNum, final com.google.gson.JsonElement numBytes, final com.google.gson.JsonElement newText) {
+        return new WorkbookFunctionsReplaceBRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replaceB"), getClient(), null, oldText, startNum, numBytes, newText);
+    }
+
+    public IWorkbookFunctionsReptRequestBuilder rept(final com.google.gson.JsonElement text, final com.google.gson.JsonElement numberTimes) {
+        return new WorkbookFunctionsReptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rept"), getClient(), null, text, numberTimes);
+    }
+
+    public IWorkbookFunctionsRightRequestBuilder right(final com.google.gson.JsonElement text, final com.google.gson.JsonElement numChars) {
+        return new WorkbookFunctionsRightRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.right"), getClient(), null, text, numChars);
+    }
+
+    public IWorkbookFunctionsRightbRequestBuilder rightb(final com.google.gson.JsonElement text, final com.google.gson.JsonElement numBytes) {
+        return new WorkbookFunctionsRightbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rightb"), getClient(), null, text, numBytes);
+    }
+
+    public IWorkbookFunctionsRomanRequestBuilder roman(final com.google.gson.JsonElement number, final com.google.gson.JsonElement form) {
+        return new WorkbookFunctionsRomanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roman"), getClient(), null, number, form);
+    }
+
+    public IWorkbookFunctionsRoundRequestBuilder round(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
+        return new WorkbookFunctionsRoundRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.round"), getClient(), null, number, numDigits);
+    }
+
+    public IWorkbookFunctionsRoundDownRequestBuilder roundDown(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
+        return new WorkbookFunctionsRoundDownRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roundDown"), getClient(), null, number, numDigits);
+    }
+
+    public IWorkbookFunctionsRoundUpRequestBuilder roundUp(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
+        return new WorkbookFunctionsRoundUpRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roundUp"), getClient(), null, number, numDigits);
+    }
+
+    public IWorkbookFunctionsRowsRequestBuilder rows(final com.google.gson.JsonElement array) {
+        return new WorkbookFunctionsRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rows"), getClient(), null, array);
+    }
+
+    public IWorkbookFunctionsRriRequestBuilder rri(final com.google.gson.JsonElement nper, final com.google.gson.JsonElement pv, final com.google.gson.JsonElement fv) {
+        return new WorkbookFunctionsRriRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rri"), getClient(), null, nper, pv, fv);
+    }
+
+    public IWorkbookFunctionsSecRequestBuilder sec(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSecRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sec"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsSechRequestBuilder sech(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSechRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sech"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsSecondRequestBuilder second(final com.google.gson.JsonElement serialNumber) {
+        return new WorkbookFunctionsSecondRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.second"), getClient(), null, serialNumber);
+    }
+
+    public IWorkbookFunctionsSeriesSumRequestBuilder seriesSum(final com.google.gson.JsonElement x, final com.google.gson.JsonElement n, final com.google.gson.JsonElement m, final com.google.gson.JsonElement coefficients) {
+        return new WorkbookFunctionsSeriesSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.seriesSum"), getClient(), null, x, n, m, coefficients);
+    }
+
+    public IWorkbookFunctionsSheetRequestBuilder sheet(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsSheetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sheet"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsSheetsRequestBuilder sheets(final com.google.gson.JsonElement reference) {
+        return new WorkbookFunctionsSheetsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sheets"), getClient(), null, reference);
+    }
+
+    public IWorkbookFunctionsSignRequestBuilder sign(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sign"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsSinRequestBuilder sin(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sin"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsSinhRequestBuilder sinh(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSinhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sinh"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsSkewRequestBuilder skew(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsSkewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.skew"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsSkew_pRequestBuilder skew_p(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsSkew_pRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.skew_p"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsSlnRequestBuilder sln(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life) {
+        return new WorkbookFunctionsSlnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sln"), getClient(), null, cost, salvage, life);
+    }
+
+    public IWorkbookFunctionsSmallRequestBuilder small(final com.google.gson.JsonElement array, final com.google.gson.JsonElement k) {
+        return new WorkbookFunctionsSmallRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.small"), getClient(), null, array, k);
+    }
+
+    public IWorkbookFunctionsSqrtRequestBuilder sqrt(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSqrtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sqrt"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsSqrtPiRequestBuilder sqrtPi(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsSqrtPiRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sqrtPi"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsStDevARequestBuilder stDevA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsStDevARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsStDevPARequestBuilder stDevPA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsStDevPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDevPA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsStDev_PRequestBuilder stDev_P(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsStDev_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_P"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsStDev_SRequestBuilder stDev_S(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsStDev_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stDev_S"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsStandardizeRequestBuilder standardize(final com.google.gson.JsonElement x, final com.google.gson.JsonElement mean, final com.google.gson.JsonElement standardDev) {
+        return new WorkbookFunctionsStandardizeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.standardize"), getClient(), null, x, mean, standardDev);
+    }
+
+    public IWorkbookFunctionsSubstituteRequestBuilder substitute(final com.google.gson.JsonElement text, final com.google.gson.JsonElement oldText, final com.google.gson.JsonElement newText, final com.google.gson.JsonElement instanceNum) {
+        return new WorkbookFunctionsSubstituteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.substitute"), getClient(), null, text, oldText, newText, instanceNum);
+    }
+
+    public IWorkbookFunctionsSubtotalRequestBuilder subtotal(final com.google.gson.JsonElement functionNum, final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsSubtotalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.subtotal"), getClient(), null, functionNum, values);
+    }
+
+    public IWorkbookFunctionsSumRequestBuilder sum(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsSumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sum"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsSumIfRequestBuilder sumIf(final com.google.gson.JsonElement range, final com.google.gson.JsonElement criteria, final com.google.gson.JsonElement sumRange) {
+        return new WorkbookFunctionsSumIfRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumIf"), getClient(), null, range, criteria, sumRange);
+    }
+
+    public IWorkbookFunctionsSumIfsRequestBuilder sumIfs(final com.google.gson.JsonElement sumRange, final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsSumIfsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumIfs"), getClient(), null, sumRange, values);
+    }
+
+    public IWorkbookFunctionsSumSqRequestBuilder sumSq(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsSumSqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sumSq"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsSydRequestBuilder syd(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement per) {
+        return new WorkbookFunctionsSydRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syd"), getClient(), null, cost, salvage, life, per);
+    }
+
+    public IWorkbookFunctionsTRequestBuilder t(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsTbillEqRequestBuilder tbillEq(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount) {
+        return new WorkbookFunctionsTbillEqRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillEq"), getClient(), null, settlement, maturity, discount);
+    }
+
+    public IWorkbookFunctionsTbillPriceRequestBuilder tbillPrice(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement discount) {
+        return new WorkbookFunctionsTbillPriceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillPrice"), getClient(), null, settlement, maturity, discount);
+    }
+
+    public IWorkbookFunctionsTbillYieldRequestBuilder tbillYield(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr) {
+        return new WorkbookFunctionsTbillYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tbillYield"), getClient(), null, settlement, maturity, pr);
+    }
+
+    public IWorkbookFunctionsT_DistRequestBuilder t_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsT_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist"), getClient(), null, x, degFreedom, cumulative);
+    }
+
+    public IWorkbookFunctionsT_Dist_2TRequestBuilder t_Dist_2T(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_Dist_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_2T"), getClient(), null, x, degFreedom);
+    }
+
+    public IWorkbookFunctionsT_Dist_RTRequestBuilder t_Dist_RT(final com.google.gson.JsonElement x, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_Dist_RTRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Dist_RT"), getClient(), null, x, degFreedom);
+    }
+
+    public IWorkbookFunctionsT_InvRequestBuilder t_Inv(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_InvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv"), getClient(), null, probability, degFreedom);
+    }
+
+    public IWorkbookFunctionsT_Inv_2TRequestBuilder t_Inv_2T(final com.google.gson.JsonElement probability, final com.google.gson.JsonElement degFreedom) {
+        return new WorkbookFunctionsT_Inv_2TRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.t_Inv_2T"), getClient(), null, probability, degFreedom);
+    }
+
+    public IWorkbookFunctionsTanRequestBuilder tan(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsTanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tan"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsTanhRequestBuilder tanh(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsTanhRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tanh"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsTextRequestBuilder text(final com.google.gson.JsonElement value, final com.google.gson.JsonElement formatText) {
+        return new WorkbookFunctionsTextRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.text"), getClient(), null, value, formatText);
+    }
+
+    public IWorkbookFunctionsTimeRequestBuilder time(final com.google.gson.JsonElement hour, final com.google.gson.JsonElement minute, final com.google.gson.JsonElement second) {
+        return new WorkbookFunctionsTimeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.time"), getClient(), null, hour, minute, second);
+    }
+
+    public IWorkbookFunctionsTimevalueRequestBuilder timevalue(final com.google.gson.JsonElement timeText) {
+        return new WorkbookFunctionsTimevalueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.timevalue"), getClient(), null, timeText);
+    }
+
+    public IWorkbookFunctionsTodayRequestBuilder today() {
+        return new WorkbookFunctionsTodayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.today"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsTrimRequestBuilder trim(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsTrimRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trim"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsTrimMeanRequestBuilder trimMean(final com.google.gson.JsonElement array, final com.google.gson.JsonElement percent) {
+        return new WorkbookFunctionsTrimMeanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trimMean"), getClient(), null, array, percent);
+    }
+
+    public IWorkbookFunctionsTrueRequestBuilder msgraphTrue() {
+        return new WorkbookFunctionsTrueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.true"), getClient(), null);
+    }
+
+    public IWorkbookFunctionsTruncRequestBuilder trunc(final com.google.gson.JsonElement number, final com.google.gson.JsonElement numDigits) {
+        return new WorkbookFunctionsTruncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.trunc"), getClient(), null, number, numDigits);
+    }
+
+    public IWorkbookFunctionsTypeRequestBuilder type(final com.google.gson.JsonElement value) {
+        return new WorkbookFunctionsTypeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.type"), getClient(), null, value);
+    }
+
+    public IWorkbookFunctionsUsdollarRequestBuilder usdollar(final com.google.gson.JsonElement number, final com.google.gson.JsonElement decimals) {
+        return new WorkbookFunctionsUsdollarRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.usdollar"), getClient(), null, number, decimals);
+    }
+
+    public IWorkbookFunctionsUnicharRequestBuilder unichar(final com.google.gson.JsonElement number) {
+        return new WorkbookFunctionsUnicharRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unichar"), getClient(), null, number);
+    }
+
+    public IWorkbookFunctionsUnicodeRequestBuilder unicode(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsUnicodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unicode"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsUpperRequestBuilder upper(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsUpperRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.upper"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsVlookupRequestBuilder vlookup(final com.google.gson.JsonElement lookupValue, final com.google.gson.JsonElement tableArray, final com.google.gson.JsonElement colIndexNum, final com.google.gson.JsonElement rangeLookup) {
+        return new WorkbookFunctionsVlookupRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.vlookup"), getClient(), null, lookupValue, tableArray, colIndexNum, rangeLookup);
+    }
+
+    public IWorkbookFunctionsValueRequestBuilder value(final com.google.gson.JsonElement text) {
+        return new WorkbookFunctionsValueRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.value"), getClient(), null, text);
+    }
+
+    public IWorkbookFunctionsVarARequestBuilder varA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsVarARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsVarPARequestBuilder varPA(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsVarPARequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.varPA"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsVar_PRequestBuilder var_P(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsVar_PRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_P"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsVar_SRequestBuilder var_S(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsVar_SRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.var_S"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsVdbRequestBuilder vdb(final com.google.gson.JsonElement cost, final com.google.gson.JsonElement salvage, final com.google.gson.JsonElement life, final com.google.gson.JsonElement startPeriod, final com.google.gson.JsonElement endPeriod, final com.google.gson.JsonElement factor, final com.google.gson.JsonElement noSwitch) {
+        return new WorkbookFunctionsVdbRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.vdb"), getClient(), null, cost, salvage, life, startPeriod, endPeriod, factor, noSwitch);
+    }
+
+    public IWorkbookFunctionsWeekNumRequestBuilder weekNum(final com.google.gson.JsonElement serialNumber, final com.google.gson.JsonElement returnType) {
+        return new WorkbookFunctionsWeekNumRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weekNum"), getClient(), null, serialNumber, returnType);
+    }
+
+    public IWorkbookFunctionsWeekdayRequestBuilder weekday(final com.google.gson.JsonElement serialNumber, final com.google.gson.JsonElement returnType) {
+        return new WorkbookFunctionsWeekdayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weekday"), getClient(), null, serialNumber, returnType);
+    }
+
+    public IWorkbookFunctionsWeibull_DistRequestBuilder weibull_Dist(final com.google.gson.JsonElement x, final com.google.gson.JsonElement alpha, final com.google.gson.JsonElement beta, final com.google.gson.JsonElement cumulative) {
+        return new WorkbookFunctionsWeibull_DistRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.weibull_Dist"), getClient(), null, x, alpha, beta, cumulative);
+    }
+
+    public IWorkbookFunctionsWorkDayRequestBuilder workDay(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement holidays) {
+        return new WorkbookFunctionsWorkDayRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workDay"), getClient(), null, startDate, days, holidays);
+    }
+
+    public IWorkbookFunctionsWorkDay_IntlRequestBuilder workDay_Intl(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement days, final com.google.gson.JsonElement weekend, final com.google.gson.JsonElement holidays) {
+        return new WorkbookFunctionsWorkDay_IntlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.workDay_Intl"), getClient(), null, startDate, days, weekend, holidays);
+    }
+
+    public IWorkbookFunctionsXirrRequestBuilder xirr(final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates, final com.google.gson.JsonElement guess) {
+        return new WorkbookFunctionsXirrRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xirr"), getClient(), null, values, dates, guess);
+    }
+
+    public IWorkbookFunctionsXnpvRequestBuilder xnpv(final com.google.gson.JsonElement rate, final com.google.gson.JsonElement values, final com.google.gson.JsonElement dates) {
+        return new WorkbookFunctionsXnpvRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xnpv"), getClient(), null, rate, values, dates);
+    }
+
+    public IWorkbookFunctionsXorRequestBuilder xor(final com.google.gson.JsonElement values) {
+        return new WorkbookFunctionsXorRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.xor"), getClient(), null, values);
+    }
+
+    public IWorkbookFunctionsYearRequestBuilder year(final com.google.gson.JsonElement serialNumber) {
+        return new WorkbookFunctionsYearRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.year"), getClient(), null, serialNumber);
+    }
+
+    public IWorkbookFunctionsYearFracRequestBuilder yearFrac(final com.google.gson.JsonElement startDate, final com.google.gson.JsonElement endDate, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsYearFracRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yearFrac"), getClient(), null, startDate, endDate, basis);
+    }
+
+    public IWorkbookFunctionsYieldRequestBuilder yield(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement frequency, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsYieldRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yield"), getClient(), null, settlement, maturity, rate, pr, redemption, frequency, basis);
+    }
+
+    public IWorkbookFunctionsYieldDiscRequestBuilder yieldDisc(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement redemption, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsYieldDiscRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yieldDisc"), getClient(), null, settlement, maturity, pr, redemption, basis);
+    }
+
+    public IWorkbookFunctionsYieldMatRequestBuilder yieldMat(final com.google.gson.JsonElement settlement, final com.google.gson.JsonElement maturity, final com.google.gson.JsonElement issue, final com.google.gson.JsonElement rate, final com.google.gson.JsonElement pr, final com.google.gson.JsonElement basis) {
+        return new WorkbookFunctionsYieldMatRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.yieldMat"), getClient(), null, settlement, maturity, issue, rate, pr, basis);
+    }
+
+    public IWorkbookFunctionsZ_TestRequestBuilder z_Test(final com.google.gson.JsonElement array, final com.google.gson.JsonElement x, final com.google.gson.JsonElement sigma) {
+        return new WorkbookFunctionsZ_TestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.z_Test"), getClient(), null, array, x, sigma);
+    }
 }
+

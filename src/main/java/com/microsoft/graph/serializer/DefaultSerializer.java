@@ -134,9 +134,10 @@ public class DefaultSerializer implements ISerializer {
                         // If the item is a valid Graph object, set its additional data
                         if (child instanceof IJsonBackedObject) {
                             AdditionalDataManager childAdditionalDataManager = ((IJsonBackedObject) child).additionalDataManager();
-                            if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject()) {
-                            	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
-                            	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject());
+                            if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject() 
+                            		&& rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).isJsonObject()) {
+                            	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                            	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
                             }
                         }
                     }
