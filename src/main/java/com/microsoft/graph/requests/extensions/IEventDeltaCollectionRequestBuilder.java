@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Event Delta Collection Request Builder.
  */
-public interface IEventDeltaCollectionRequestBuilder extends IRequestBuilder {
-
-    IEventDeltaCollectionRequest buildRequest();
-
-    IEventDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IEventDeltaCollectionRequestBuilder extends IBaseEventDeltaCollectionRequestBuilder {
 
 }

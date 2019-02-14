@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the User Get Managed App Policies Collection Request Builder.
  */
-public interface IUserGetManagedAppPoliciesCollectionRequestBuilder extends IRequestBuilder {
-
-    IUserGetManagedAppPoliciesCollectionRequest buildRequest();
-
-    IUserGetManagedAppPoliciesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IUserGetManagedAppPoliciesCollectionRequestBuilder extends IBaseUserGetManagedAppPoliciesCollectionRequestBuilder {
 
 }

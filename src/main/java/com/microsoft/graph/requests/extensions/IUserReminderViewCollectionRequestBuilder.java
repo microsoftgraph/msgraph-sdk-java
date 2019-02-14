@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the User Reminder View Collection Request Builder.
  */
-public interface IUserReminderViewCollectionRequestBuilder extends IRequestBuilder {
-
-    IUserReminderViewCollectionRequest buildRequest();
-
-    IUserReminderViewCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IUserReminderViewCollectionRequestBuilder extends IBaseUserReminderViewCollectionRequestBuilder {
 
 }

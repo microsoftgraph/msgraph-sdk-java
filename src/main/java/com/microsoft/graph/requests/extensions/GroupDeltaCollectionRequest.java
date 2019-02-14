@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Group Delta Collection Request.
  */
-public class GroupDeltaCollectionRequest extends BaseCollectionRequest<GroupDeltaCollectionResponse, IGroupDeltaCollectionPage> implements IGroupDeltaCollectionRequest {
-
+public class GroupDeltaCollectionRequest extends BaseGroupDeltaCollectionRequest implements IGroupDeltaCollectionRequest {
 
     /**
-     * The request for this GroupDelta
+     * The request for this collection of Group
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public GroupDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, GroupDeltaCollectionResponse.class, IGroupDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IGroupDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IGroupDeltaCollectionPage get() throws ClientException {
-        final GroupDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IGroupDeltaCollectionPage buildFromResponse(final GroupDeltaCollectionResponse response) {
-        final IGroupDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new GroupDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IGroupDeltaCollectionPage page = new GroupDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IGroupDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IGroupDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IGroupDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IGroupDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IGroupDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IGroupDeltaCollectionRequest)this;
-    }
-
 }

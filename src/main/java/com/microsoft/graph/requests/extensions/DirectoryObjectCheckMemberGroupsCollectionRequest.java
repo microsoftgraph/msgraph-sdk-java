@@ -21,88 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Directory Object Check Member Groups Collection Request.
  */
-public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseCollectionRequest<DirectoryObjectCheckMemberGroupsCollectionResponse, IDirectoryObjectCheckMemberGroupsCollectionPage> implements IDirectoryObjectCheckMemberGroupsCollectionRequest {
-
-
-    protected final DirectoryObjectCheckMemberGroupsBody body;
-
+public class DirectoryObjectCheckMemberGroupsCollectionRequest extends BaseDirectoryObjectCheckMemberGroupsCollectionRequest implements IDirectoryObjectCheckMemberGroupsCollectionRequest {
 
     /**
-     * The request for this DirectoryObjectCheckMemberGroups
+     * The request for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DirectoryObjectCheckMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectCheckMemberGroupsCollectionResponse.class, IDirectoryObjectCheckMemberGroupsCollectionPage.class);
-        body = new DirectoryObjectCheckMemberGroupsBody();
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void post(final ICallback<IDirectoryObjectCheckMemberGroupsCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDirectoryObjectCheckMemberGroupsCollectionPage post() throws ClientException {
-        final DirectoryObjectCheckMemberGroupsCollectionResponse response = post(body);
-        return buildFromResponse(response);
-    }
-
-
-    public IDirectoryObjectCheckMemberGroupsCollectionPage buildFromResponse(final DirectoryObjectCheckMemberGroupsCollectionResponse response) {
-        final IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* groupIds */ null);
-        } else {
-            builder = null;
-        }
-        final IDirectoryObjectCheckMemberGroupsCollectionPage page = new DirectoryObjectCheckMemberGroupsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDirectoryObjectCheckMemberGroupsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDirectoryObjectCheckMemberGroupsCollectionRequest)this;
-    }
-
 }

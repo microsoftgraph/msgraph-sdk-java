@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Device Compliance Policy Assign Collection Request Builder.
  */
-public interface IDeviceCompliancePolicyAssignCollectionRequestBuilder extends IRequestBuilder {
-
-    IDeviceCompliancePolicyAssignCollectionRequest buildRequest();
-
-    IDeviceCompliancePolicyAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDeviceCompliancePolicyAssignCollectionRequestBuilder extends IBaseDeviceCompliancePolicyAssignCollectionRequestBuilder {
 
 }

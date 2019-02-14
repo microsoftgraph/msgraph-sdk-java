@@ -29,6 +29,7 @@ public interface INotebookCollectionRequestBuilder extends IRequestBuilder {
 
     INotebookRequestBuilder byId(final String id);
 
+    INotebookGetNotebookFromWebUrlRequestBuilder getNotebookFromWebUrl(final String webUrl);
 
     INotebookGetRecentNotebooksCollectionRequestBuilder getRecentNotebooks(final Boolean includePersonalNotebooks);
 }

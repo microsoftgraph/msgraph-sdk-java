@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Drive Search Collection Request.
  */
-public class DriveSearchCollectionRequest extends BaseCollectionRequest<DriveSearchCollectionResponse, IDriveSearchCollectionPage> implements IDriveSearchCollectionRequest {
-
+public class DriveSearchCollectionRequest extends BaseDriveSearchCollectionRequest implements IDriveSearchCollectionRequest {
 
     /**
-     * The request for this DriveSearch
+     * The request for this collection of Drive
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DriveSearchCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveSearchCollectionResponse.class, IDriveSearchCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDriveSearchCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDriveSearchCollectionPage get() throws ClientException {
-        final DriveSearchCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDriveSearchCollectionPage buildFromResponse(final DriveSearchCollectionResponse response) {
-        final IDriveSearchCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveSearchCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* q */ null);
-        } else {
-            builder = null;
-        }
-        final IDriveSearchCollectionPage page = new DriveSearchCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDriveSearchCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDriveSearchCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDriveSearchCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDriveSearchCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDriveSearchCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDriveSearchCollectionRequest)this;
-    }
-
 }

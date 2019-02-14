@@ -21,88 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Directory Object Get Member Objects Collection Request.
  */
-public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetMemberObjectsCollectionResponse, IDirectoryObjectGetMemberObjectsCollectionPage> implements IDirectoryObjectGetMemberObjectsCollectionRequest {
-
-
-    protected final DirectoryObjectGetMemberObjectsBody body;
-
+public class DirectoryObjectGetMemberObjectsCollectionRequest extends BaseDirectoryObjectGetMemberObjectsCollectionRequest implements IDirectoryObjectGetMemberObjectsCollectionRequest {
 
     /**
-     * The request for this DirectoryObjectGetMemberObjects
+     * The request for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DirectoryObjectGetMemberObjectsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberObjectsCollectionResponse.class, IDirectoryObjectGetMemberObjectsCollectionPage.class);
-        body = new DirectoryObjectGetMemberObjectsBody();
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void post(final ICallback<IDirectoryObjectGetMemberObjectsCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDirectoryObjectGetMemberObjectsCollectionPage post() throws ClientException {
-        final DirectoryObjectGetMemberObjectsCollectionResponse response = post(body);
-        return buildFromResponse(response);
-    }
-
-
-    public IDirectoryObjectGetMemberObjectsCollectionPage buildFromResponse(final DirectoryObjectGetMemberObjectsCollectionResponse response) {
-        final IDirectoryObjectGetMemberObjectsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectGetMemberObjectsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* securityEnabledOnly */ null);
-        } else {
-            builder = null;
-        }
-        final IDirectoryObjectGetMemberObjectsCollectionPage page = new DirectoryObjectGetMemberObjectsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetMemberObjectsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDirectoryObjectGetMemberObjectsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDirectoryObjectGetMemberObjectsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDirectoryObjectGetMemberObjectsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetMemberObjectsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDirectoryObjectGetMemberObjectsCollectionRequest)this;
-    }
-
 }

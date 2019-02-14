@@ -21,7 +21,7 @@ import java.util.EnumSet;
 /**
  * The class for the Profile Photo Stream Request Builder.
  */
-public class ProfilePhotoStreamRequestBuilder extends BaseRequestBuilder implements IProfilePhotoStreamRequestBuilder {
+public class ProfilePhotoStreamRequestBuilder extends BaseProfilePhotoStreamRequestBuilder implements IProfilePhotoStreamRequestBuilder {
 
     /**
      * The request builder for the ProfilePhoto
@@ -33,25 +33,4 @@ public class ProfilePhotoStreamRequestBuilder extends BaseRequestBuilder impleme
     public ProfilePhotoStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
-
-    /**
-     * Creates the request
-     *
-     * @return the IProfilePhotoStreamRequest instance
-     */
-    public IProfilePhotoStreamRequest buildRequest() {
-        return buildRequest(getOptions());
-    }
-
-    /**
-     * Creates the request with specific options instead of the existing options
-	 *
-     * @param requestOptions the options for this request
-     * @return the IProfilePhotoStreamRequest instance
-     */
-    public IProfilePhotoStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ProfilePhotoStreamRequest(getRequestUrl(), getClient(), requestOptions);
-    }
-
-
 }

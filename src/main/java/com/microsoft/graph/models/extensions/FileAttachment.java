@@ -37,7 +37,7 @@ public class FileAttachment extends Attachment implements IJsonBackedObject {
 
     /**
      * The Content Location.
-     * The Uniform Resource Identifier (URI) that corresponds to the location of the content of the attachment.
+     * Do not use this property as it is not supported.
      */
     @SerializedName("contentLocation")
     @Expose

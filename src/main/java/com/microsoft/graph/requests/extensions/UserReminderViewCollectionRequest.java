@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the User Reminder View Collection Request.
  */
-public class UserReminderViewCollectionRequest extends BaseCollectionRequest<UserReminderViewCollectionResponse, IUserReminderViewCollectionPage> implements IUserReminderViewCollectionRequest {
-
+public class UserReminderViewCollectionRequest extends BaseUserReminderViewCollectionRequest implements IUserReminderViewCollectionRequest {
 
     /**
-     * The request for this UserReminderView
+     * The request for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public UserReminderViewCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserReminderViewCollectionResponse.class, IUserReminderViewCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IUserReminderViewCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IUserReminderViewCollectionPage get() throws ClientException {
-        final UserReminderViewCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IUserReminderViewCollectionPage buildFromResponse(final UserReminderViewCollectionResponse response) {
-        final IUserReminderViewCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserReminderViewCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* startDateTime */ null, /* endDateTime */ null);
-        } else {
-            builder = null;
-        }
-        final IUserReminderViewCollectionPage page = new UserReminderViewCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IUserReminderViewCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IUserReminderViewCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IUserReminderViewCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IUserReminderViewCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IUserReminderViewCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IUserReminderViewCollectionRequest)this;
-    }
-
 }

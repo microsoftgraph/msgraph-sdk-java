@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the User Delta Collection Request.
  */
-public class UserDeltaCollectionRequest extends BaseCollectionRequest<UserDeltaCollectionResponse, IUserDeltaCollectionPage> implements IUserDeltaCollectionRequest {
-
+public class UserDeltaCollectionRequest extends BaseUserDeltaCollectionRequest implements IUserDeltaCollectionRequest {
 
     /**
-     * The request for this UserDelta
+     * The request for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public UserDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserDeltaCollectionResponse.class, IUserDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IUserDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IUserDeltaCollectionPage get() throws ClientException {
-        final UserDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IUserDeltaCollectionPage buildFromResponse(final UserDeltaCollectionResponse response) {
-        final IUserDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IUserDeltaCollectionPage page = new UserDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IUserDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IUserDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IUserDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IUserDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IUserDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IUserDeltaCollectionRequest)this;
-    }
-
 }

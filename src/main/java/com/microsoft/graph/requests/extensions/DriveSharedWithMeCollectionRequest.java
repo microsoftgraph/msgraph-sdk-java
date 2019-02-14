@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Drive Shared With Me Collection Request.
  */
-public class DriveSharedWithMeCollectionRequest extends BaseCollectionRequest<DriveSharedWithMeCollectionResponse, IDriveSharedWithMeCollectionPage> implements IDriveSharedWithMeCollectionRequest {
-
+public class DriveSharedWithMeCollectionRequest extends BaseDriveSharedWithMeCollectionRequest implements IDriveSharedWithMeCollectionRequest {
 
     /**
-     * The request for this DriveSharedWithMe
+     * The request for this collection of Drive
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DriveSharedWithMeCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveSharedWithMeCollectionResponse.class, IDriveSharedWithMeCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDriveSharedWithMeCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDriveSharedWithMeCollectionPage get() throws ClientException {
-        final DriveSharedWithMeCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDriveSharedWithMeCollectionPage buildFromResponse(final DriveSharedWithMeCollectionResponse response) {
-        final IDriveSharedWithMeCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveSharedWithMeCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IDriveSharedWithMeCollectionPage page = new DriveSharedWithMeCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDriveSharedWithMeCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDriveSharedWithMeCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDriveSharedWithMeCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDriveSharedWithMeCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDriveSharedWithMeCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDriveSharedWithMeCollectionRequest)this;
-    }
-
 }

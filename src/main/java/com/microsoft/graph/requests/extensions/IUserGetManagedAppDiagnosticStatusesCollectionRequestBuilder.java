@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the User Get Managed App Diagnostic Statuses Collection Request Builder.
  */
-public interface IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends IRequestBuilder {
-
-    IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest();
-
-    IUserGetManagedAppDiagnosticStatusesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder extends IBaseUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder {
 
 }

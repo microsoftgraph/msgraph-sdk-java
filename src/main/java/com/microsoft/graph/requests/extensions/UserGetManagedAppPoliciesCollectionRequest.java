@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the User Get Managed App Policies Collection Request.
  */
-public class UserGetManagedAppPoliciesCollectionRequest extends BaseCollectionRequest<UserGetManagedAppPoliciesCollectionResponse, IUserGetManagedAppPoliciesCollectionPage> implements IUserGetManagedAppPoliciesCollectionRequest {
-
+public class UserGetManagedAppPoliciesCollectionRequest extends BaseUserGetManagedAppPoliciesCollectionRequest implements IUserGetManagedAppPoliciesCollectionRequest {
 
     /**
-     * The request for this UserGetManagedAppPolicies
+     * The request for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public UserGetManagedAppPoliciesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetManagedAppPoliciesCollectionResponse.class, IUserGetManagedAppPoliciesCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IUserGetManagedAppPoliciesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IUserGetManagedAppPoliciesCollectionPage get() throws ClientException {
-        final UserGetManagedAppPoliciesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IUserGetManagedAppPoliciesCollectionPage buildFromResponse(final UserGetManagedAppPoliciesCollectionResponse response) {
-        final IUserGetManagedAppPoliciesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserGetManagedAppPoliciesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IUserGetManagedAppPoliciesCollectionPage page = new UserGetManagedAppPoliciesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IUserGetManagedAppPoliciesCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IUserGetManagedAppPoliciesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IUserGetManagedAppPoliciesCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IUserGetManagedAppPoliciesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IUserGetManagedAppPoliciesCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IUserGetManagedAppPoliciesCollectionRequest)this;
-    }
-
 }

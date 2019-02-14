@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Notebook Get Recent Notebooks Collection Request.
  */
-public class NotebookGetRecentNotebooksCollectionRequest extends BaseCollectionRequest<NotebookGetRecentNotebooksCollectionResponse, INotebookGetRecentNotebooksCollectionPage> implements INotebookGetRecentNotebooksCollectionRequest {
-
+public class NotebookGetRecentNotebooksCollectionRequest extends BaseNotebookGetRecentNotebooksCollectionRequest implements INotebookGetRecentNotebooksCollectionRequest {
 
     /**
-     * The request for this NotebookGetRecentNotebooks
+     * The request for this collection of Notebook
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public NotebookGetRecentNotebooksCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, NotebookGetRecentNotebooksCollectionResponse.class, INotebookGetRecentNotebooksCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<INotebookGetRecentNotebooksCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public INotebookGetRecentNotebooksCollectionPage get() throws ClientException {
-        final NotebookGetRecentNotebooksCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public INotebookGetRecentNotebooksCollectionPage buildFromResponse(final NotebookGetRecentNotebooksCollectionResponse response) {
-        final INotebookGetRecentNotebooksCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new NotebookGetRecentNotebooksCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* includePersonalNotebooks */ null);
-        } else {
-            builder = null;
-        }
-        final INotebookGetRecentNotebooksCollectionPage page = new NotebookGetRecentNotebooksCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public INotebookGetRecentNotebooksCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (INotebookGetRecentNotebooksCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public INotebookGetRecentNotebooksCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (INotebookGetRecentNotebooksCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public INotebookGetRecentNotebooksCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (INotebookGetRecentNotebooksCollectionRequest)this;
-    }
-
 }

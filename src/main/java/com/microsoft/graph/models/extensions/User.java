@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
+import com.microsoft.graph.models.extensions.LicenseAssignmentState;
 import com.microsoft.graph.models.extensions.OnPremisesExtensionAttributes;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
 import com.microsoft.graph.models.extensions.PasswordProfile;
@@ -183,7 +184,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Id.
-     * 
+     * The employee identifier assigned to the user by the organization. Supports $filter.
      */
     @SerializedName("employeeId")
     @Expose
@@ -191,7 +192,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Fax Number.
-     * 
+     * The fax number of the user.
      */
     @SerializedName("faxNumber")
     @Expose
@@ -230,6 +231,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String legalAgeGroupClassification;
 
     /**
+     * The License Assignment States.
+     * State of license assignments for this user. Read-only.
+     */
+    @SerializedName("licenseAssignmentStates")
+    @Expose
+    public java.util.List<LicenseAssignmentState> licenseAssignmentStates;
+
+    /**
      * The Mail.
      * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
      */
@@ -255,7 +264,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Distinguished Name.
-     * 
+     * Contains the on-premises Active Directory distinguished name or DN. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect. Read-only.
      */
     @SerializedName("onPremisesDistinguishedName")
     @Expose
@@ -335,7 +344,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * 
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
      */
     @SerializedName("otherMails")
     @Expose
@@ -399,7 +408,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Show In Address List.
-     * 
+     * true if the Outlook global address list should contain this user, otherwise false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
      */
     @SerializedName("showInAddressList")
     @Expose

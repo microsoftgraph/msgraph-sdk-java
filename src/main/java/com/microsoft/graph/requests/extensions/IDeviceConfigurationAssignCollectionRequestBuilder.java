@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Device Configuration Assign Collection Request Builder.
  */
-public interface IDeviceConfigurationAssignCollectionRequestBuilder extends IRequestBuilder {
-
-    IDeviceConfigurationAssignCollectionRequest buildRequest();
-
-    IDeviceConfigurationAssignCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDeviceConfigurationAssignCollectionRequestBuilder extends IBaseDeviceConfigurationAssignCollectionRequestBuilder {
 
 }

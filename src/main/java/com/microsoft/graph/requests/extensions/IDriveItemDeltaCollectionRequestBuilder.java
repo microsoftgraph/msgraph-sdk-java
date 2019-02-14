@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Drive Item Delta Collection Request Builder.
  */
-public interface IDriveItemDeltaCollectionRequestBuilder extends IRequestBuilder {
-
-    IDriveItemDeltaCollectionRequest buildRequest();
-
-    IDriveItemDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDriveItemDeltaCollectionRequestBuilder extends IBaseDriveItemDeltaCollectionRequestBuilder {
 
 }

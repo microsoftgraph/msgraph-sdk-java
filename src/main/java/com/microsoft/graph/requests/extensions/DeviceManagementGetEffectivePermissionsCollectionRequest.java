@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Device Management Get Effective Permissions Collection Request.
  */
-public class DeviceManagementGetEffectivePermissionsCollectionRequest extends BaseCollectionRequest<DeviceManagementGetEffectivePermissionsCollectionResponse, IDeviceManagementGetEffectivePermissionsCollectionPage> implements IDeviceManagementGetEffectivePermissionsCollectionRequest {
-
+public class DeviceManagementGetEffectivePermissionsCollectionRequest extends BaseDeviceManagementGetEffectivePermissionsCollectionRequest implements IDeviceManagementGetEffectivePermissionsCollectionRequest {
 
     /**
-     * The request for this DeviceManagementGetEffectivePermissions
+     * The request for this collection of DeviceManagement
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DeviceManagementGetEffectivePermissionsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceManagementGetEffectivePermissionsCollectionResponse.class, IDeviceManagementGetEffectivePermissionsCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDeviceManagementGetEffectivePermissionsCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDeviceManagementGetEffectivePermissionsCollectionPage get() throws ClientException {
-        final DeviceManagementGetEffectivePermissionsCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDeviceManagementGetEffectivePermissionsCollectionPage buildFromResponse(final DeviceManagementGetEffectivePermissionsCollectionResponse response) {
-        final IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* scope */ null);
-        } else {
-            builder = null;
-        }
-        final IDeviceManagementGetEffectivePermissionsCollectionPage page = new DeviceManagementGetEffectivePermissionsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDeviceManagementGetEffectivePermissionsCollectionRequest)this;
-    }
-
 }

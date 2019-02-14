@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Mail Folder Delta Collection Request.
  */
-public class MailFolderDeltaCollectionRequest extends BaseCollectionRequest<MailFolderDeltaCollectionResponse, IMailFolderDeltaCollectionPage> implements IMailFolderDeltaCollectionRequest {
-
+public class MailFolderDeltaCollectionRequest extends BaseMailFolderDeltaCollectionRequest implements IMailFolderDeltaCollectionRequest {
 
     /**
-     * The request for this MailFolderDelta
+     * The request for this collection of MailFolder
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public MailFolderDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MailFolderDeltaCollectionResponse.class, IMailFolderDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IMailFolderDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IMailFolderDeltaCollectionPage get() throws ClientException {
-        final MailFolderDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IMailFolderDeltaCollectionPage buildFromResponse(final MailFolderDeltaCollectionResponse response) {
-        final IMailFolderDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MailFolderDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IMailFolderDeltaCollectionPage page = new MailFolderDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IMailFolderDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IMailFolderDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IMailFolderDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IMailFolderDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IMailFolderDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IMailFolderDeltaCollectionRequest)this;
-    }
-
 }

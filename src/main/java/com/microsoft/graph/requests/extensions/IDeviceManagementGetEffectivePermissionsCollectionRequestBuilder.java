@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Device Management Get Effective Permissions Collection Request Builder.
  */
-public interface IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder extends IRequestBuilder {
-
-    IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest();
-
-    IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDeviceManagementGetEffectivePermissionsCollectionRequestBuilder extends IBaseDeviceManagementGetEffectivePermissionsCollectionRequestBuilder {
 
 }

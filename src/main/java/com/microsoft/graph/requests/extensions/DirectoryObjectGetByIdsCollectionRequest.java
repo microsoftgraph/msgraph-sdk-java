@@ -21,88 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Directory Object Get By Ids Collection Request.
  */
-public class DirectoryObjectGetByIdsCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetByIdsCollectionResponse, IDirectoryObjectGetByIdsCollectionPage> implements IDirectoryObjectGetByIdsCollectionRequest {
-
-
-    protected final DirectoryObjectGetByIdsBody body;
-
+public class DirectoryObjectGetByIdsCollectionRequest extends BaseDirectoryObjectGetByIdsCollectionRequest implements IDirectoryObjectGetByIdsCollectionRequest {
 
     /**
-     * The request for this DirectoryObjectGetByIds
+     * The request for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DirectoryObjectGetByIdsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetByIdsCollectionResponse.class, IDirectoryObjectGetByIdsCollectionPage.class);
-        body = new DirectoryObjectGetByIdsBody();
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void post(final ICallback<IDirectoryObjectGetByIdsCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDirectoryObjectGetByIdsCollectionPage post() throws ClientException {
-        final DirectoryObjectGetByIdsCollectionResponse response = post(body);
-        return buildFromResponse(response);
-    }
-
-
-    public IDirectoryObjectGetByIdsCollectionPage buildFromResponse(final DirectoryObjectGetByIdsCollectionResponse response) {
-        final IDirectoryObjectGetByIdsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectGetByIdsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* ids */ null, /* types */ null);
-        } else {
-            builder = null;
-        }
-        final IDirectoryObjectGetByIdsCollectionPage page = new DirectoryObjectGetByIdsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetByIdsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDirectoryObjectGetByIdsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDirectoryObjectGetByIdsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDirectoryObjectGetByIdsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetByIdsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDirectoryObjectGetByIdsCollectionRequest)this;
-    }
-
 }

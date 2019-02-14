@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Outlook User Supported Time Zones Collection Request.
  */
-public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseCollectionRequest<OutlookUserSupportedTimeZonesCollectionResponse, IOutlookUserSupportedTimeZonesCollectionPage> implements IOutlookUserSupportedTimeZonesCollectionRequest {
-
+public class OutlookUserSupportedTimeZonesCollectionRequest extends BaseOutlookUserSupportedTimeZonesCollectionRequest implements IOutlookUserSupportedTimeZonesCollectionRequest {
 
     /**
-     * The request for this OutlookUserSupportedTimeZones
+     * The request for this collection of OutlookUser
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public OutlookUserSupportedTimeZonesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, OutlookUserSupportedTimeZonesCollectionResponse.class, IOutlookUserSupportedTimeZonesCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IOutlookUserSupportedTimeZonesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IOutlookUserSupportedTimeZonesCollectionPage get() throws ClientException {
-        final OutlookUserSupportedTimeZonesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IOutlookUserSupportedTimeZonesCollectionPage buildFromResponse(final OutlookUserSupportedTimeZonesCollectionResponse response) {
-        final IOutlookUserSupportedTimeZonesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new OutlookUserSupportedTimeZonesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IOutlookUserSupportedTimeZonesCollectionPage page = new OutlookUserSupportedTimeZonesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IOutlookUserSupportedTimeZonesCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IOutlookUserSupportedTimeZonesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IOutlookUserSupportedTimeZonesCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IOutlookUserSupportedTimeZonesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IOutlookUserSupportedTimeZonesCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IOutlookUserSupportedTimeZonesCollectionRequest)this;
-    }
-
 }
