@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Drive Item Search Collection Request.
  */
-public class DriveItemSearchCollectionRequest extends BaseCollectionRequest<DriveItemSearchCollectionResponse, IDriveItemSearchCollectionPage> implements IDriveItemSearchCollectionRequest {
-
+public class DriveItemSearchCollectionRequest extends BaseDriveItemSearchCollectionRequest implements IDriveItemSearchCollectionRequest {
 
     /**
-     * The request for this DriveItemSearch
+     * The request for this collection of DriveItem
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DriveItemSearchCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemSearchCollectionResponse.class, IDriveItemSearchCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDriveItemSearchCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDriveItemSearchCollectionPage get() throws ClientException {
-        final DriveItemSearchCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDriveItemSearchCollectionPage buildFromResponse(final DriveItemSearchCollectionResponse response) {
-        final IDriveItemSearchCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveItemSearchCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* q */ null);
-        } else {
-            builder = null;
-        }
-        final IDriveItemSearchCollectionPage page = new DriveItemSearchCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDriveItemSearchCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDriveItemSearchCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDriveItemSearchCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDriveItemSearchCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDriveItemSearchCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDriveItemSearchCollectionRequest)this;
-    }
-
 }

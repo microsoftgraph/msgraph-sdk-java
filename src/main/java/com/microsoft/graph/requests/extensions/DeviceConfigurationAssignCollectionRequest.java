@@ -21,88 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Device Configuration Assign Collection Request.
  */
-public class DeviceConfigurationAssignCollectionRequest extends BaseCollectionRequest<DeviceConfigurationAssignCollectionResponse, IDeviceConfigurationAssignCollectionPage> implements IDeviceConfigurationAssignCollectionRequest {
-
-
-    protected final DeviceConfigurationAssignBody body;
-
+public class DeviceConfigurationAssignCollectionRequest extends BaseDeviceConfigurationAssignCollectionRequest implements IDeviceConfigurationAssignCollectionRequest {
 
     /**
-     * The request for this DeviceConfigurationAssign
+     * The request for this collection of DeviceConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DeviceConfigurationAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceConfigurationAssignCollectionResponse.class, IDeviceConfigurationAssignCollectionPage.class);
-        body = new DeviceConfigurationAssignBody();
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void post(final ICallback<IDeviceConfigurationAssignCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDeviceConfigurationAssignCollectionPage post() throws ClientException {
-        final DeviceConfigurationAssignCollectionResponse response = post(body);
-        return buildFromResponse(response);
-    }
-
-
-    public IDeviceConfigurationAssignCollectionPage buildFromResponse(final DeviceConfigurationAssignCollectionResponse response) {
-        final IDeviceConfigurationAssignCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceConfigurationAssignCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* assignments */ null);
-        } else {
-            builder = null;
-        }
-        final IDeviceConfigurationAssignCollectionPage page = new DeviceConfigurationAssignCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationAssignCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDeviceConfigurationAssignCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDeviceConfigurationAssignCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDeviceConfigurationAssignCollectionRequest)this;
-    }
-
 }

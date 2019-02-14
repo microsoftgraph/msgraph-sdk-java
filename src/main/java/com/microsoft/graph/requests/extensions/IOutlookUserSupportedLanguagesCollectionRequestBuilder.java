@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Outlook User Supported Languages Collection Request Builder.
  */
-public interface IOutlookUserSupportedLanguagesCollectionRequestBuilder extends IRequestBuilder {
-
-    IOutlookUserSupportedLanguagesCollectionRequest buildRequest();
-
-    IOutlookUserSupportedLanguagesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IOutlookUserSupportedLanguagesCollectionRequestBuilder extends IBaseOutlookUserSupportedLanguagesCollectionRequestBuilder {
 
 }

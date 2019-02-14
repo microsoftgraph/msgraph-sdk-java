@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Managed App Registration Get User Ids With Flagged App Registration Collection Request Builder.
  */
-public interface IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder extends IRequestBuilder {
-
-    IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest();
-
-    IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder extends IBaseManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder {
 
 }

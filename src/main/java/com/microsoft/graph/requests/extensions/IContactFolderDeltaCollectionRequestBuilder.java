@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Contact Folder Delta Collection Request Builder.
  */
-public interface IContactFolderDeltaCollectionRequestBuilder extends IRequestBuilder {
-
-    IContactFolderDeltaCollectionRequest buildRequest();
-
-    IContactFolderDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IContactFolderDeltaCollectionRequestBuilder extends IBaseContactFolderDeltaCollectionRequestBuilder {
 
 }

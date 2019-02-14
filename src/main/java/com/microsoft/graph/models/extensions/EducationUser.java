@@ -111,7 +111,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Related Contacts.
-     * 
+     * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
      */
     @SerializedName("relatedContacts")
     @Expose

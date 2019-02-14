@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Drive Item Search Collection Request Builder.
  */
-public interface IDriveItemSearchCollectionRequestBuilder extends IRequestBuilder {
-
-    IDriveItemSearchCollectionRequest buildRequest();
-
-    IDriveItemSearchCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDriveItemSearchCollectionRequestBuilder extends IBaseDriveItemSearchCollectionRequestBuilder {
 
 }

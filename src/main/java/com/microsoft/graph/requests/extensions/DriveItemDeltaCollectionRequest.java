@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Drive Item Delta Collection Request.
  */
-public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<DriveItemDeltaCollectionResponse, IDriveItemDeltaCollectionPage> implements IDriveItemDeltaCollectionRequest {
-
+public class DriveItemDeltaCollectionRequest extends BaseDriveItemDeltaCollectionRequest implements IDriveItemDeltaCollectionRequest {
 
     /**
-     * The request for this DriveItemDelta
+     * The request for this collection of DriveItem
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DriveItemDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveItemDeltaCollectionResponse.class, IDriveItemDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDriveItemDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDriveItemDeltaCollectionPage get() throws ClientException {
-        final DriveItemDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDriveItemDeltaCollectionPage buildFromResponse(final DriveItemDeltaCollectionResponse response) {
-        final IDriveItemDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* token */ null);
-        } else {
-            builder = null;
-        }
-        final IDriveItemDeltaCollectionPage page = new DriveItemDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDriveItemDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDriveItemDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDriveItemDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDriveItemDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDriveItemDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDriveItemDeltaCollectionRequest)this;
-    }
-
 }

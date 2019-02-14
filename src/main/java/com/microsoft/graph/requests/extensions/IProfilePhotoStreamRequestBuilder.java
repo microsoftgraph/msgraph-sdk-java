@@ -21,24 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Profile Photo Stream Request Builder.
  */
-public interface IProfilePhotoStreamRequestBuilder extends IRequestBuilder {
-
-    /**
-     * Creates the request
-     *
-     * @return the IProfilePhotoStreamRequest instance
-     */
-    IProfilePhotoStreamRequest buildRequest();
-
-    /**
-     * Creates the request with specific options instead of the existing options
-     *
-     * @param requestOptions the options for this request
-     * @return the IProfilePhotoStreamRequest instance
-     */
-    IProfilePhotoStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
-
-
-
+public interface IProfilePhotoStreamRequestBuilder extends IBaseProfilePhotoStreamRequestBuilder {
 
 }

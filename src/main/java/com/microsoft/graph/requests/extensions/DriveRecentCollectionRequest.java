@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Drive Recent Collection Request.
  */
-public class DriveRecentCollectionRequest extends BaseCollectionRequest<DriveRecentCollectionResponse, IDriveRecentCollectionPage> implements IDriveRecentCollectionRequest {
-
+public class DriveRecentCollectionRequest extends BaseDriveRecentCollectionRequest implements IDriveRecentCollectionRequest {
 
     /**
-     * The request for this DriveRecent
+     * The request for this collection of Drive
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DriveRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DriveRecentCollectionResponse.class, IDriveRecentCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDriveRecentCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDriveRecentCollectionPage get() throws ClientException {
-        final DriveRecentCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDriveRecentCollectionPage buildFromResponse(final DriveRecentCollectionResponse response) {
-        final IDriveRecentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DriveRecentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IDriveRecentCollectionPage page = new DriveRecentCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDriveRecentCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDriveRecentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDriveRecentCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDriveRecentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDriveRecentCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDriveRecentCollectionRequest)this;
-    }
-
 }

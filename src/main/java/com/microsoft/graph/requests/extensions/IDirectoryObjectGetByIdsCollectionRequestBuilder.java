@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Directory Object Get By Ids Collection Request Builder.
  */
-public interface IDirectoryObjectGetByIdsCollectionRequestBuilder extends IRequestBuilder {
-
-    IDirectoryObjectGetByIdsCollectionRequest buildRequest();
-
-    IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDirectoryObjectGetByIdsCollectionRequestBuilder extends IBaseDirectoryObjectGetByIdsCollectionRequestBuilder {
 
 }

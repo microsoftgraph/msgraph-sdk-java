@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Drive Shared With Me Collection Request Builder.
  */
-public interface IDriveSharedWithMeCollectionRequestBuilder extends IRequestBuilder {
-
-    IDriveSharedWithMeCollectionRequest buildRequest();
-
-    IDriveSharedWithMeCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDriveSharedWithMeCollectionRequestBuilder extends IBaseDriveSharedWithMeCollectionRequestBuilder {
 
 }

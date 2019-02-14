@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Contact Delta Collection Request.
  */
-public class ContactDeltaCollectionRequest extends BaseCollectionRequest<ContactDeltaCollectionResponse, IContactDeltaCollectionPage> implements IContactDeltaCollectionRequest {
-
+public class ContactDeltaCollectionRequest extends BaseContactDeltaCollectionRequest implements IContactDeltaCollectionRequest {
 
     /**
-     * The request for this ContactDelta
+     * The request for this collection of Contact
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public ContactDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContactDeltaCollectionResponse.class, IContactDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IContactDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IContactDeltaCollectionPage get() throws ClientException {
-        final ContactDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IContactDeltaCollectionPage buildFromResponse(final ContactDeltaCollectionResponse response) {
-        final IContactDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new ContactDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IContactDeltaCollectionPage page = new ContactDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IContactDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IContactDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IContactDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IContactDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IContactDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IContactDeltaCollectionRequest)this;
-    }
-
 }

@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Drive Recent Collection Request Builder.
  */
-public interface IDriveRecentCollectionRequestBuilder extends IRequestBuilder {
-
-    IDriveRecentCollectionRequest buildRequest();
-
-    IDriveRecentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDriveRecentCollectionRequestBuilder extends IBaseDriveRecentCollectionRequestBuilder {
 
 }

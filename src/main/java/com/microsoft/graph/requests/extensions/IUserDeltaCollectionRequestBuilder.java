@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the User Delta Collection Request Builder.
  */
-public interface IUserDeltaCollectionRequestBuilder extends IRequestBuilder {
-
-    IUserDeltaCollectionRequest buildRequest();
-
-    IUserDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IUserDeltaCollectionRequestBuilder extends IBaseUserDeltaCollectionRequestBuilder {
 
 }

@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Directory Role Delta Collection Request Builder.
  */
-public interface IDirectoryRoleDeltaCollectionRequestBuilder extends IRequestBuilder {
-
-    IDirectoryRoleDeltaCollectionRequest buildRequest();
-
-    IDirectoryRoleDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IDirectoryRoleDeltaCollectionRequestBuilder extends IBaseDirectoryRoleDeltaCollectionRequestBuilder {
 
 }

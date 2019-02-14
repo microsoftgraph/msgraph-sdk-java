@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Directory Role Delta Collection Request.
  */
-public class DirectoryRoleDeltaCollectionRequest extends BaseCollectionRequest<DirectoryRoleDeltaCollectionResponse, IDirectoryRoleDeltaCollectionPage> implements IDirectoryRoleDeltaCollectionRequest {
-
+public class DirectoryRoleDeltaCollectionRequest extends BaseDirectoryRoleDeltaCollectionRequest implements IDirectoryRoleDeltaCollectionRequest {
 
     /**
-     * The request for this DirectoryRoleDelta
+     * The request for this collection of DirectoryRole
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DirectoryRoleDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryRoleDeltaCollectionResponse.class, IDirectoryRoleDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IDirectoryRoleDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDirectoryRoleDeltaCollectionPage get() throws ClientException {
-        final DirectoryRoleDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IDirectoryRoleDeltaCollectionPage buildFromResponse(final DirectoryRoleDeltaCollectionResponse response) {
-        final IDirectoryRoleDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryRoleDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IDirectoryRoleDeltaCollectionPage page = new DirectoryRoleDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDirectoryRoleDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDirectoryRoleDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDirectoryRoleDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDirectoryRoleDeltaCollectionRequest)this;
-    }
-
 }

@@ -21,88 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Directory Object Get Member Groups Collection Request.
  */
-public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseCollectionRequest<DirectoryObjectGetMemberGroupsCollectionResponse, IDirectoryObjectGetMemberGroupsCollectionPage> implements IDirectoryObjectGetMemberGroupsCollectionRequest {
-
-
-    protected final DirectoryObjectGetMemberGroupsBody body;
-
+public class DirectoryObjectGetMemberGroupsCollectionRequest extends BaseDirectoryObjectGetMemberGroupsCollectionRequest implements IDirectoryObjectGetMemberGroupsCollectionRequest {
 
     /**
-     * The request for this DirectoryObjectGetMemberGroups
+     * The request for this collection of DirectoryObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DirectoryObjectGetMemberGroupsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DirectoryObjectGetMemberGroupsCollectionResponse.class, IDirectoryObjectGetMemberGroupsCollectionPage.class);
-        body = new DirectoryObjectGetMemberGroupsBody();
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void post(final ICallback<IDirectoryObjectGetMemberGroupsCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDirectoryObjectGetMemberGroupsCollectionPage post() throws ClientException {
-        final DirectoryObjectGetMemberGroupsCollectionResponse response = post(body);
-        return buildFromResponse(response);
-    }
-
-
-    public IDirectoryObjectGetMemberGroupsCollectionPage buildFromResponse(final DirectoryObjectGetMemberGroupsCollectionResponse response) {
-        final IDirectoryObjectGetMemberGroupsCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DirectoryObjectGetMemberGroupsCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* securityEnabledOnly */ null);
-        } else {
-            builder = null;
-        }
-        final IDirectoryObjectGetMemberGroupsCollectionPage page = new DirectoryObjectGetMemberGroupsCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetMemberGroupsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDirectoryObjectGetMemberGroupsCollectionRequest)this;
-    }
-
 }

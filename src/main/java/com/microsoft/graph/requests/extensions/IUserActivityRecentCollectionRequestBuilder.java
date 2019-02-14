@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the User Activity Recent Collection Request Builder.
  */
-public interface IUserActivityRecentCollectionRequestBuilder extends IRequestBuilder {
-
-    IUserActivityRecentCollectionRequest buildRequest();
-
-    IUserActivityRecentCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IUserActivityRecentCollectionRequestBuilder extends IBaseUserActivityRecentCollectionRequestBuilder {
 
 }

@@ -21,88 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Device Compliance Policy Assign Collection Request.
  */
-public class DeviceCompliancePolicyAssignCollectionRequest extends BaseCollectionRequest<DeviceCompliancePolicyAssignCollectionResponse, IDeviceCompliancePolicyAssignCollectionPage> implements IDeviceCompliancePolicyAssignCollectionRequest {
-
-
-    protected final DeviceCompliancePolicyAssignBody body;
-
+public class DeviceCompliancePolicyAssignCollectionRequest extends BaseDeviceCompliancePolicyAssignCollectionRequest implements IDeviceCompliancePolicyAssignCollectionRequest {
 
     /**
-     * The request for this DeviceCompliancePolicyAssign
+     * The request for this collection of DeviceCompliancePolicy
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public DeviceCompliancePolicyAssignCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, DeviceCompliancePolicyAssignCollectionResponse.class, IDeviceCompliancePolicyAssignCollectionPage.class);
-        body = new DeviceCompliancePolicyAssignBody();
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void post(final ICallback<IDeviceCompliancePolicyAssignCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(post(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IDeviceCompliancePolicyAssignCollectionPage post() throws ClientException {
-        final DeviceCompliancePolicyAssignCollectionResponse response = post(body);
-        return buildFromResponse(response);
-    }
-
-
-    public IDeviceCompliancePolicyAssignCollectionPage buildFromResponse(final DeviceCompliancePolicyAssignCollectionResponse response) {
-        final IDeviceCompliancePolicyAssignCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new DeviceCompliancePolicyAssignCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* assignments */ null);
-        } else {
-            builder = null;
-        }
-        final IDeviceCompliancePolicyAssignCollectionPage page = new DeviceCompliancePolicyAssignCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyAssignCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IDeviceCompliancePolicyAssignCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyAssignCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IDeviceCompliancePolicyAssignCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyAssignCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IDeviceCompliancePolicyAssignCollectionRequest)this;
-    }
-
 }

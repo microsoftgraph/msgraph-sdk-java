@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Notebook Get Recent Notebooks Collection Request Builder.
  */
-public interface INotebookGetRecentNotebooksCollectionRequestBuilder extends IRequestBuilder {
-
-    INotebookGetRecentNotebooksCollectionRequest buildRequest();
-
-    INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface INotebookGetRecentNotebooksCollectionRequestBuilder extends IBaseNotebookGetRecentNotebooksCollectionRequestBuilder {
 
 }

@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Outlook User Supported Time Zones Collection Request Builder.
  */
-public interface IOutlookUserSupportedTimeZonesCollectionRequestBuilder extends IRequestBuilder {
-
-    IOutlookUserSupportedTimeZonesCollectionRequest buildRequest();
-
-    IOutlookUserSupportedTimeZonesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IOutlookUserSupportedTimeZonesCollectionRequestBuilder extends IBaseOutlookUserSupportedTimeZonesCollectionRequestBuilder {
 
 }

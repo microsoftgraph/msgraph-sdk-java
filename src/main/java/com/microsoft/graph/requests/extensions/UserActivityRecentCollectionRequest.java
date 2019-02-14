@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the User Activity Recent Collection Request.
  */
-public class UserActivityRecentCollectionRequest extends BaseCollectionRequest<UserActivityRecentCollectionResponse, IUserActivityRecentCollectionPage> implements IUserActivityRecentCollectionRequest {
-
+public class UserActivityRecentCollectionRequest extends BaseUserActivityRecentCollectionRequest implements IUserActivityRecentCollectionRequest {
 
     /**
-     * The request for this UserActivityRecent
+     * The request for this collection of UserActivity
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public UserActivityRecentCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserActivityRecentCollectionResponse.class, IUserActivityRecentCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IUserActivityRecentCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IUserActivityRecentCollectionPage get() throws ClientException {
-        final UserActivityRecentCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IUserActivityRecentCollectionPage buildFromResponse(final UserActivityRecentCollectionResponse response) {
-        final IUserActivityRecentCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserActivityRecentCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IUserActivityRecentCollectionPage page = new UserActivityRecentCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IUserActivityRecentCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IUserActivityRecentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IUserActivityRecentCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IUserActivityRecentCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IUserActivityRecentCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IUserActivityRecentCollectionRequest)this;
-    }
-
 }

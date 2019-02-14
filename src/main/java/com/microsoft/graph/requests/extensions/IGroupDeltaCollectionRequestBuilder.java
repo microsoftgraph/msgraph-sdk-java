@@ -21,10 +21,6 @@ import java.util.EnumSet;
 /**
  * The interface for the Group Delta Collection Request Builder.
  */
-public interface IGroupDeltaCollectionRequestBuilder extends IRequestBuilder {
-
-    IGroupDeltaCollectionRequest buildRequest();
-
-    IGroupDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+public interface IGroupDeltaCollectionRequestBuilder extends IBaseGroupDeltaCollectionRequestBuilder {
 
 }

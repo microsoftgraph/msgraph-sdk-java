@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the Message Delta Collection Request.
  */
-public class MessageDeltaCollectionRequest extends BaseCollectionRequest<MessageDeltaCollectionResponse, IMessageDeltaCollectionPage> implements IMessageDeltaCollectionRequest {
-
+public class MessageDeltaCollectionRequest extends BaseMessageDeltaCollectionRequest implements IMessageDeltaCollectionRequest {
 
     /**
-     * The request for this MessageDelta
+     * The request for this collection of Message
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public MessageDeltaCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, MessageDeltaCollectionResponse.class, IMessageDeltaCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IMessageDeltaCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IMessageDeltaCollectionPage get() throws ClientException {
-        final MessageDeltaCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IMessageDeltaCollectionPage buildFromResponse(final MessageDeltaCollectionResponse response) {
-        final IMessageDeltaCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new MessageDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IMessageDeltaCollectionPage page = new MessageDeltaCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IMessageDeltaCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IMessageDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IMessageDeltaCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IMessageDeltaCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IMessageDeltaCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IMessageDeltaCollectionRequest)this;
-    }
-
 }

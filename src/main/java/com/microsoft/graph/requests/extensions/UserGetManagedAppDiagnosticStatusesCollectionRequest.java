@@ -21,84 +21,16 @@ import java.util.EnumSet;
 /**
  * The class for the User Get Managed App Diagnostic Statuses Collection Request.
  */
-public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCollectionRequest<UserGetManagedAppDiagnosticStatusesCollectionResponse, IUserGetManagedAppDiagnosticStatusesCollectionPage> implements IUserGetManagedAppDiagnosticStatusesCollectionRequest {
-
+public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseUserGetManagedAppDiagnosticStatusesCollectionRequest implements IUserGetManagedAppDiagnosticStatusesCollectionRequest {
 
     /**
-     * The request for this UserGetManagedAppDiagnosticStatuses
+     * The request for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
     public UserGetManagedAppDiagnosticStatusesCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
-        super(requestUrl, client, requestOptions, UserGetManagedAppDiagnosticStatusesCollectionResponse.class, IUserGetManagedAppDiagnosticStatusesCollectionPage.class);
+        super(requestUrl, client, requestOptions);
     }
-
-
-    public void get(final ICallback<IUserGetManagedAppDiagnosticStatusesCollectionPage> callback) {
-        final IExecutors executors = getBaseRequest().getClient().getExecutors();
-        executors.performOnBackground(new Runnable() {
-           @Override
-           public void run() {
-                try {
-                    executors.performOnForeground(get(), callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-           }
-        });
-    }
-
-    public IUserGetManagedAppDiagnosticStatusesCollectionPage get() throws ClientException {
-        final UserGetManagedAppDiagnosticStatusesCollectionResponse response = send();
-        return buildFromResponse(response);
-    }
-
-
-    public IUserGetManagedAppDiagnosticStatusesCollectionPage buildFromResponse(final UserGetManagedAppDiagnosticStatusesCollectionResponse response) {
-        final IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder builder;
-        if (response.nextLink != null) {
-            builder = new UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
-        } else {
-            builder = null;
-        }
-        final IUserGetManagedAppDiagnosticStatusesCollectionPage page = new UserGetManagedAppDiagnosticStatusesCollectionPage(response, builder);
-        page.setRawObject(response.getSerializer(), response.getRawObject());
-        return page;
-    }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the top value for the request
-     *
-     * @param value the max number of items to return
-     * @return the updated request
-     */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
-        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
-    }
-
 }
