@@ -144,7 +144,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. Read-only.
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
      */
     @SerializedName("companyName")
     @Expose

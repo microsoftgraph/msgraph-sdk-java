@@ -46,7 +46,7 @@ public class ProxiedDomain implements IJsonBackedObject {
 
     /**
      * The Proxy.
-     * Proxy IP
+     * Proxy IP or FQDN
      */
     @SerializedName("proxy")
     @Expose

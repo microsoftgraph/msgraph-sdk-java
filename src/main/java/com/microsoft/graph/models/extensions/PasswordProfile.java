@@ -52,6 +52,14 @@ public class PasswordProfile implements IJsonBackedObject {
     @Expose
     public Boolean forceChangePasswordNextSignIn;
 
+    /**
+     * The Force Change Password Next Sign In With Mfa.
+     * If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
+     */
+    @SerializedName("forceChangePasswordNextSignInWithMfa")
+    @Expose
+    public Boolean forceChangePasswordNextSignInWithMfa;
+
 
     /**
      * The raw representation of this class

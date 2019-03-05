@@ -80,7 +80,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Password Sign In Failure Count Before Factory Reset.
-     * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
      */
     @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
     @Expose
@@ -272,7 +272,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Work Profile Password Sign In Failure Count Before Factory Reset.
-     * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 4 to 11
+     * Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
      */
     @SerializedName("workProfilePasswordSignInFailureCountBeforeFactoryReset")
     @Expose
