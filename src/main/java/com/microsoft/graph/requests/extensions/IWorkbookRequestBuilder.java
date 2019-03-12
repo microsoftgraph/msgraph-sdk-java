@@ -11,6 +11,8 @@ import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuilder;
@@ -61,6 +63,10 @@ public interface IWorkbookRequestBuilder extends IRequestBuilder {
     IWorkbookWorksheetCollectionRequestBuilder worksheets();
 
     IWorkbookWorksheetRequestBuilder worksheets(final String id);
+
+    IWorkbookCommentCollectionRequestBuilder comments();
+
+    IWorkbookCommentRequestBuilder comments(final String id);
 
     /**
      * Gets the request builder for WorkbookFunctions

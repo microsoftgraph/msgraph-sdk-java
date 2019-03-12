@@ -14,6 +14,7 @@ import com.microsoft.graph.models.extensions.WorkbookApplication;
 import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
+import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
@@ -22,6 +23,8 @@ import com.microsoft.graph.requests.extensions.WorkbookTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -63,6 +66,12 @@ public class Workbook extends Entity implements IJsonBackedObject {
      * Represents a collection of worksheets associated with the workbook. Read-only.
      */
     public WorkbookWorksheetCollectionPage worksheets;
+
+    /**
+     * The Comments.
+     * 
+     */
+    public WorkbookCommentCollectionPage comments;
 
     /**
      * The Functions.
@@ -158,6 +167,22 @@ public class Workbook extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             worksheets = new WorkbookWorksheetCollectionPage(response, null);
+        }
+
+        if (json.has("comments")) {
+            final WorkbookCommentCollectionResponse response = new WorkbookCommentCollectionResponse();
+            if (json.has("comments@odata.nextLink")) {
+                response.nextLink = json.get("comments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("comments").toString(), JsonObject[].class);
+            final WorkbookComment[] array = new WorkbookComment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookComment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            comments = new WorkbookCommentCollectionPage(response, null);
         }
     }
 }

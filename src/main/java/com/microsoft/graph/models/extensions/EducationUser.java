@@ -16,7 +16,6 @@ import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.EducationStudent;
 import com.microsoft.graph.models.extensions.EducationTeacher;
 import com.microsoft.graph.models.extensions.IdentitySet;
-import com.microsoft.graph.models.extensions.EducationRelatedContact;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
 import com.microsoft.graph.models.extensions.PasswordProfile;
@@ -108,14 +107,6 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     @SerializedName("createdBy")
     @Expose
     public IdentitySet createdBy;
-
-    /**
-     * The Related Contacts.
-     * Set of contacts related to the user.  This optional property must be specified in a $select clause and can only be retrieved for an individual user.
-     */
-    @SerializedName("relatedContacts")
-    @Expose
-    public java.util.List<EducationRelatedContact> relatedContacts;
 
     /**
      * The Account Enabled.

@@ -95,7 +95,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Os Minimum Version.
-     * Minimum IOS version.
+     * Minimum MacOS version.
      */
     @SerializedName("osMinimumVersion")
     @Expose
@@ -103,7 +103,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Os Maximum Version.
-     * Maximum IOS version.
+     * Maximum MacOS version.
      */
     @SerializedName("osMaximumVersion")
     @Expose
@@ -119,7 +119,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Device Threat Protection Enabled.
-     * Require that devices have enabled device threat protection .
+     * Require that devices have enabled device threat protection.
      */
     @SerializedName("deviceThreatProtectionEnabled")
     @Expose

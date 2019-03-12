@@ -38,7 +38,7 @@ public class DateTimeTimeZone implements IJsonBackedObject {
 
     /**
      * The Date Time.
-     * A single point of time in a combined date and time representation (&amp;lt;date&amp;gt;T&amp;lt;time&amp;gt;).
+     * A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000).
      */
     @SerializedName("dateTime")
     @Expose

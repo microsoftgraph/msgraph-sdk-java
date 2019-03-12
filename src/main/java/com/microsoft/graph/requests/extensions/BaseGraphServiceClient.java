@@ -484,6 +484,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of IdentityProviders objects
+     *
+     * @return the request builder for the collection of IdentityProviders objects
+     */
+    public IIdentityProviderCollectionRequestBuilder identityProviders() {
+        return new IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single IdentityProviders
+     *
+     * @param id the id of the IdentityProviders to retrieve
+     * @return the request builder for the IdentityProviders object
+     */
+    public IIdentityProviderRequestBuilder identityProviders(final String id) {
+        return new IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
