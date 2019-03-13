@@ -233,7 +233,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Password Sign In Failure Count Before Factory Reset.
-     * Number of sign in failures allowed before factory reset. Valid values 4 to 11
+     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
      */
     @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
     @Expose

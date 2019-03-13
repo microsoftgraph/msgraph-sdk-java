@@ -71,7 +71,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
     /**
      * The Password Previous Password Block Count.
-     * Number of previous passwords to block.
+     * Number of previous passwords to block. Valid values 1 to 24
      */
     @SerializedName("passwordPreviousPasswordBlockCount")
     @Expose
