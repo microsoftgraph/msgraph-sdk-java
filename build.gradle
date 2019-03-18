@@ -20,6 +20,9 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     mavenCentral()
+    jcenter{
+        url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+    }
 }
 
 dependencies {
@@ -35,6 +38,9 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.2'
     
     compile 'com.sun.jersey:jersey-server:1.19.4'
+    
+    // Core Http library 
+    compile('com.microsoft.graph:microsoft-graph-core:0.1.0-SNAPSHOT')
 }
 
 def pomConfig = {

@@ -31,11 +31,13 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
+
+import demo.OkHttpProvider;
+import okhttp3.Response;
 
 /**
  * An exception from the Graph service
@@ -315,6 +317,105 @@ public class GraphServiceException extends ClientException {
         GraphErrorResponse error;
         try {
             error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, connection.getResponseHeaders());
+        } catch (final Exception ex) {
+            error = new GraphErrorResponse();
+            error.error = new GraphError();
+            error.error.code = "Unable to parse error response message";
+            error.error.message = "Raw error: " + rawOutput;
+            error.error.innererror = new GraphInnerError();
+            error.error.innererror.code = ex.getMessage();
+        }
+
+        if (responseCode >= INTERNAL_SERVER_ERROR) {
+            return new GraphFatalServiceException(method,
+                    url,
+                    requestHeaders,
+                    requestBody,
+                    responseCode,
+                    responseMessage,
+                    responseHeaders,
+                    error,
+                    isVerbose);
+        }
+
+        return new GraphServiceException(method,
+                url,
+                requestHeaders,
+                requestBody,
+                responseCode,
+                responseMessage,
+                responseHeaders,
+                error,
+                isVerbose);
+    }
+    
+    /**
+     * Creates a Graph service exception from a given failed HTTP request
+     *
+     * @param request      the request that resulted in this failure
+     * @param serializable the serialized object that was sent with this request
+     * @param serializer   the serializer to re-create the option in its over the wire state
+     * @param connection   the connection that was used to extract the response information from
+     * @param logger       the logger to log exception information to
+     * @param <T>          the type of the serializable object
+     * @return             the new GraphServiceException instance
+     * @throws IOException an exception occurs if there were any problems processing the connection
+     */
+    public static <T> GraphServiceException createFromConnection(final IHttpRequest request,
+                                                                 final T serializable,
+                                                                 final ISerializer serializer,
+                                                                 final Response response,
+                                                                 final ILogger logger)
+            throws IOException {
+        final String method = response.request().method();
+        final String url = request.getRequestUrl().toString();
+        final List<String> requestHeaders = new LinkedList<>();
+        for (final HeaderOption option : request.getHeaders()) {
+            requestHeaders.add(option.getName() + " : " + option.getValue());
+        }
+        boolean isVerbose = logger.getLoggingLevel() == LoggerLevel.DEBUG;
+        final String requestBody;
+        if (serializable instanceof byte[]) {
+            final byte[] bytes = (byte[]) serializable;
+            StringBuilder sb = new StringBuilder();
+            sb.append("byte[").append(bytes.length).append("]");
+
+            sb.append(" {");
+            if (isVerbose) {
+            	sb.append(bytes);
+            } else {
+	            for (int i = 0; i < MAX_BYTE_COUNT_BEFORE_TRUNCATION && i < bytes.length; i++) {
+	                sb.append(bytes[i]).append(", ");
+	            }
+	            if (bytes.length > MAX_BYTE_COUNT_BEFORE_TRUNCATION) {
+	                sb.append(TRUNCATION_MARKER).append("}");
+	            }
+            }
+            requestBody = sb.toString();
+        } else if (serializable != null) {
+            requestBody = serializer.serializeObject(serializable);
+        } else {
+            requestBody = null;
+        }
+
+        final int responseCode = response.code();
+        final List<String> responseHeaders = new LinkedList<>();
+        final Map<String, String> headers = OkHttpProvider.getResponseHeadersAsMapStringString(response);
+        for (final String key : headers.keySet()) {
+            final String fieldPrefix;
+            if (key == null) {
+                fieldPrefix = "";
+            } else {
+                fieldPrefix = key + " : ";
+            }
+            responseHeaders.add(fieldPrefix + headers.get(key));
+        }
+
+        final String responseMessage = response.message();
+        final String rawOutput = DefaultHttpProvider.streamToString(response.body().byteStream());
+        GraphErrorResponse error;
+        try {
+            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, OkHttpProvider.getResponseHeadersAsMapOfStringList(response));
         } catch (final Exception ex) {
             error = new GraphErrorResponse();
             error.error = new GraphError();

@@ -25,12 +25,13 @@ package com.microsoft.graph.core;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.http.DefaultHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.serializer.DefaultSerializer;
 import com.microsoft.graph.serializer.ISerializer;
+
+import demo.OkHttpProvider;
 
 /**
  * The default configuration for a service client
@@ -45,7 +46,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     /**
      * The HTTP provider instance
      */
-    private DefaultHttpProvider httpProvider;
+    private IHttpProvider httpProvider;
 
     /**
      * The logger
@@ -98,11 +99,12 @@ public abstract class DefaultClientConfig implements IClientConfig {
     @Override
     public IHttpProvider getHttpProvider() {
         if (httpProvider == null) {
-            httpProvider = new DefaultHttpProvider(getSerializer(),
+        	System.out.println("---------------------------USING OKHTTP PROVIDER----------------------------");
+            httpProvider = new OkHttpProvider(getSerializer(),
                     getAuthenticationProvider(),
                     getExecutors(),
                     getLogger());
-            getLogger().logDebug("Created DefaultHttpProvider");
+            getLogger().logDebug("Created OkHttpProvider");
         }
         return httpProvider;
     }
