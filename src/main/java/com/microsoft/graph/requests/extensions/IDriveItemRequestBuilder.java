@@ -9,6 +9,8 @@ import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
@@ -73,6 +75,10 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IPermissionCollectionRequestBuilder permissions();
 
     IPermissionRequestBuilder permissions(final String id);
+
+    ISubscriptionCollectionRequestBuilder subscriptions();
+
+    ISubscriptionRequestBuilder subscriptions(final String id);
 
     IThumbnailSetCollectionRequestBuilder thumbnails();
 

@@ -21,6 +21,10 @@ import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -92,6 +96,10 @@ public class CalendarRequestBuilder extends BaseRequestBuilder implements ICalen
 
     public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+
+    public ICalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
+        return new CalendarGetScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSchedule"), getClient(), null, schedules, endTime, startTime, availabilityViewInterval);
     }
 }
 
