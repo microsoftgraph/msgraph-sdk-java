@@ -47,6 +47,22 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
+     * The Email.
+     * 
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
+     * The Web Url.
+     * 
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
+
+    /**
      * The Tabs.
      * A collection of all the tabs in the channel. A navigation property.
      */
