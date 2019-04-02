@@ -15,6 +15,10 @@ import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
@@ -116,6 +120,13 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IPermissionRequestBuilder permissions(final String id) {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
+    }
+    public ISubscriptionCollectionRequestBuilder subscriptions() {
+        return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
+    }
+
+    public ISubscriptionRequestBuilder subscriptions(final String id) {
+        return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
     public IThumbnailSetCollectionRequestBuilder thumbnails() {
         return new ThumbnailSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("thumbnails"), getClient(), null);

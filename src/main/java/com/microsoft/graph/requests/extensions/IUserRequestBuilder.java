@@ -69,12 +69,12 @@ import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.IUserSendMailRequestBuilder;
+import com.microsoft.graph.models.generated.MailTipsType;
+import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.requests.extensions.IUserFindMeetingTimesRequestBuilder;
-import com.microsoft.graph.models.generated.MailTipsType;
-import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExportPersonalDataRequestBuilder;
@@ -280,9 +280,9 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);
-    IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage);
 
     IUserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions);
+    IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage);
     IUserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement();
     IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(final String deviceTag);
     IUserExportPersonalDataRequestBuilder exportPersonalData(final String storageLocation);

@@ -12,6 +12,9 @@ import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropert
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -54,5 +57,7 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
     IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    ICalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval);
 
 }

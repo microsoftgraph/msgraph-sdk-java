@@ -13,6 +13,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.CloudAppSecurityState;
 import com.microsoft.graph.models.generated.AlertFeedback;
 import com.microsoft.graph.models.extensions.FileSecurityState;
+import com.microsoft.graph.models.extensions.AlertHistoryState;
 import com.microsoft.graph.models.extensions.HostSecurityState;
 import com.microsoft.graph.models.extensions.MalwareState;
 import com.microsoft.graph.models.extensions.NetworkConnection;
@@ -160,6 +161,14 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName("fileStates")
     @Expose
     public java.util.List<FileSecurityState> fileStates;
+
+    /**
+     * The History States.
+     * 
+     */
+    @SerializedName("historyStates")
+    @Expose
+    public java.util.List<AlertHistoryState> historyStates;
 
     /**
      * The Host States.
