@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 // ------------------------------------------------------------------------------
 
-package demo;
+package com.microsoft.graph.http;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -29,8 +29,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -51,18 +49,20 @@ import com.microsoft.graph.http.DefaultConnectionFactory;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.http.HttpResponseCode;
-import com.microsoft.graph.http.IConnection;
 import com.microsoft.graph.http.IConnectionFactory;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
 import com.microsoft.graph.httpcore.HttpClients;
+import com.microsoft.graph.httpcore.RedirectHandler;
+import com.microsoft.graph.httpcore.RetryHandler;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
 import okhttp3.Headers;
+import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -111,15 +111,13 @@ public class OkHttpProvider implements IHttpProvider {
     private final ILogger logger;
 
     /**
-     * The connection factory
-     */
-    private IConnectionFactory connectionFactory;
-    
-    /**
      * The connection config
      */
     private IConnectionConfig connectionConfig;
     
+    /**
+     * The OkHttpClient that handles all requests
+     */
     private OkHttpClient okhttpClient;
 
     /**
@@ -138,7 +136,6 @@ public class OkHttpProvider implements IHttpProvider {
         this.authenticationProvider = authenticationProvider;
         this.executors = executors;
         this.logger = logger;
-        connectionFactory = new DefaultConnectionFactory();
     }
 
     /**
@@ -265,7 +262,10 @@ public class OkHttpProvider implements IHttpProvider {
             logger.logDebug("Starting to send request, URL " + requestUrl.toString());
             
             if(okhttpClient == null) {
-            	OkHttpClient.Builder okBuilder = HttpClients.custom();
+            	OkHttpClient.Builder okBuilder = HttpClients
+            			.custom()
+            			.addInterceptor(new RetryHandler())
+            			.addInterceptor(new RedirectHandler());
             	if(this.connectionConfig == null) {
                     this.connectionConfig = new DefaultConnectionConfig();
                 }
@@ -273,16 +273,22 @@ public class OkHttpProvider implements IHttpProvider {
             	okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
             	okhttpClient = okBuilder.build();
             }
-            // edit the options and handlers over here
             
             Request okhttpRequest = convertIHttpRequestToOkHttpRequest(request);
             Request.Builder okhttpRequestBuilder = okhttpRequest.newBuilder();
             
-            String contenttype = "";
+            String contenttype = null;
             
             try {
                 logger.logDebug("Request Method " + request.getHttpMethod().toString());
                 List<HeaderOption> requestHeaders = request.getHeaders();
+                
+                for(HeaderOption headerOption : requestHeaders) {
+                	if(headerOption.getName().equalsIgnoreCase(CONTENT_TYPE_HEADER_NAME)) {
+                		contenttype = headerOption.getValue().toString();
+                		break;
+                	}
+                }
 
                 final byte[] bytesToWrite;
                 okhttpRequestBuilder.addHeader("Accept", "*/*");
@@ -304,8 +310,6 @@ public class OkHttpProvider implements IHttpProvider {
                     	okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
                     	contenttype = binaryContentType;
                     }
-                    // Dont know if this is useful in okhttp
-                    //connection.setContentLength(bytesToWrite.length);
                 } else {
                     logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = serializer.serializeObject(serializable);
@@ -316,8 +320,6 @@ public class OkHttpProvider implements IHttpProvider {
                     	okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
                     	contenttype = JSON_CONTENT_TYPE;
                     }
-                    //Dont know if
-                    //connection.setContentLength(bytesToWrite.length);
                 }
 
                 RequestBody requestBody = null;
@@ -329,7 +331,6 @@ public class OkHttpProvider implements IHttpProvider {
                     	public long contentLength() throws IOException {
                     	    return bytesToWrite.length;
                     	  }
-                    	
 						@Override
 						public void writeTo(BufferedSink sink) throws IOException {
 							OutputStream out = sink.outputStream();
@@ -356,15 +357,7 @@ public class OkHttpProvider implements IHttpProvider {
                     
                 }
                 
-//                try {
                 okhttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
-//                } catch (final ProtocolException ignored) {
-//                    // Some HTTP verbs are not supported by older HTTP implementations, use method override as an alternative
-//                    requestBuilder.method(HttpMethod.POST.toString(), requestBody);
-//                    requestBuilder.header("X-HTTP-Method-Override", request.getHttpMethod().toString());
-//                    requestBuilder.header("X-HTTP-Method", request.getHttpMethod().toString());
-//                }
-                
                 okhttpRequest = okhttpRequestBuilder.build();
                 
                 Response response = okhttpClient.newCall(okhttpRequest).execute();
@@ -442,18 +435,18 @@ public class OkHttpProvider implements IHttpProvider {
     }
     
     /**
-    * Gets the response headers from an HTTP URL connection
+    * Gets the response headers from OkHttp Response
     *
-    * @param connection the HTTP connection
+    * @param response the OkHttp response
     * @return           the set of headers names and value
     */
-   public static HashMap<String, String> getResponseHeadersAsMapStringString(final Response response) {
+   static HashMap<String, String> getResponseHeadersAsMapStringString(final Response response) {
    	final HashMap<String, String> headers = new HashMap<>();
        int index = 0;
-       Headers connection = response.headers();
-       while (index < connection.size()) {
-           final String headerName = connection.name(index);
-           final String headerValue = connection.value(index);
+       Headers responseHeaders = response.headers();
+       while (index < responseHeaders.size()) {
+           final String headerName = responseHeaders.name(index);
+           final String headerValue = responseHeaders.value(index);
            if (headerName == null && headerValue == null) {
                break;
            }
@@ -464,15 +457,13 @@ public class OkHttpProvider implements IHttpProvider {
    }
    
    public static Map<String, List<String>> getResponseHeadersAsMapOfStringList(Response response) {
-		// Copy unmodifiable map to hashmap
-		Map<String, List<String>> headerFields = response.headers().toMultimap();
-   	
-   	// Add the response code
-   	List<String> list = new ArrayList<>();
-   	list.add(String.format("%d", response.code()));
-   	headerFields.put("responseCode", list);
-   	return headerFields;
-	}
+	   Map<String, List<String>> headerFields = response.headers().toMultimap();
+	   // Add the response code
+	   List<String> list = new ArrayList<>();
+	   list.add(String.format("%d", response.code()));
+	   headerFields.put("responseCode", list);
+	   return headerFields;
+   }
     
     private Request convertIHttpRequestToOkHttpRequest(IHttpRequest request) {
     	if(request != null) {
@@ -543,15 +534,6 @@ public class OkHttpProvider implements IHttpProvider {
     	//Create an empty object to attach the response headers to
     	InputStream in = new ByteArrayInputStream("{}".getBytes(JSON_ENCODING));
     	return handleJsonResponse(in, responseHeaders, clazz);
-    }
-
-    /**
-     * Sets the connection factory for this provider
-     *
-     * @param factory the new factory
-     */
-    void setConnectionFactory(final IConnectionFactory factory) {
-        connectionFactory = factory;
     }
 
     /**

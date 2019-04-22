@@ -36,7 +36,6 @@ import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
-import demo.OkHttpProvider;
 import okhttp3.Response;
 
 /**
@@ -355,7 +354,7 @@ public class GraphServiceException extends ClientException {
      * @param request      the request that resulted in this failure
      * @param serializable the serialized object that was sent with this request
      * @param serializer   the serializer to re-create the option in its over the wire state
-     * @param connection   the connection that was used to extract the response information from
+     * @param response   the response being used to extract information from
      * @param logger       the logger to log exception information to
      * @param <T>          the type of the serializable object
      * @return             the new GraphServiceException instance

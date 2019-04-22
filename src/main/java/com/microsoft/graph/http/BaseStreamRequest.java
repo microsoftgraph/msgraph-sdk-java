@@ -45,12 +45,6 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
      * The base request for this collection request
      */
     private final BaseRequest baseRequest;
-    
-    private int maxRedirect;
-    private IShouldRedirect shouldRedirect;
-    private long delay;
-    private int maxRetries;
-    private IShouldRetry shouldRetry;
 
     /**
      * Creates the stream request.
@@ -184,48 +178,4 @@ public abstract class BaseStreamRequest<T> implements IHttpStreamRequest {
         return baseRequest.getOptions();
     }
     
-    /**
-	 * Sets maximum number of redirects
-	 * @param maxRedirect Maximum number of redirects <= 20
-	 */
-	public IHttpRequest setMaxRedirect(int maxRedirect) {
-		this.maxRedirect = maxRedirect;
-		return this;
-	}
-
-	/**
-	 * Sets IShouldRedirect callback
-	 * @param shouldRedirect Callbacks to IShouldRedirect to decides to redirect or not
-	 */
-	public IHttpRequest setShouldRedirect(IShouldRedirect shouldRedirect) {
-		this.shouldRedirect = shouldRedirect;
-		return this;
-	}
-
-	/**
-	 * Sets Delay in seconds between retries
-	 * @param delay Delay in seconds between retries
-	 */
-	public IHttpRequest setDelay(long delay) {
-		this.delay = delay;
-		return this;
-	}
-
-	/**
-	 * Sets maximum number of retries
-	 * @param maxRetries Maximum number of retries <= 10
-	 */
-	public IHttpRequest setMaxRetries(int maxRetries) {
-		this.maxRetries = maxRetries;
-		return this;
-	}
-
-	/**
-	 * Sets IShouldRetry callback
-	 * @param shouldRetry Callback to decide to retry or not
-	 */
-	public IHttpRequest setShouldRetry(IShouldRetry shouldRetry) {
-		this.shouldRetry = shouldRetry;
-		return this;
-	}
 }

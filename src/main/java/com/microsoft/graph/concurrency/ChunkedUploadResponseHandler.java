@@ -125,7 +125,7 @@ public class ChunkedUploadResponseHandler<UploadType>
      * Generate the chunked upload response result
      *
      * @param request    the HTTP request
-     * @param connection the HTTP connection
+     * @param response the HTTP response
      * @param serializer the serializer
      * @param logger     the system logger
      * @return the chunked upload result, which could be either an uploaded item or error
