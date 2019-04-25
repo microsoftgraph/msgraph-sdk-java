@@ -39,7 +39,7 @@ public class TimeSlot implements IJsonBackedObject {
 
     /**
      * The Start.
-     * The time the period ends.
+     * The date, time, and time zone that a period ends.
      */
     @SerializedName("start")
     @Expose
@@ -47,7 +47,7 @@ public class TimeSlot implements IJsonBackedObject {
 
     /**
      * The End.
-     * The time a period begins.
+     * The date, time, and time zone that a period begins.
      */
     @SerializedName("end")
     @Expose

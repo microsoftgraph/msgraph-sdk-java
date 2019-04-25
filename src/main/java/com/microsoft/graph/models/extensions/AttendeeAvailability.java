@@ -40,7 +40,7 @@ public class AttendeeAvailability implements IJsonBackedObject {
 
     /**
      * The Attendee.
-     * The type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
+     * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
      */
     @SerializedName("attendee")
     @Expose

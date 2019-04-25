@@ -50,7 +50,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Order.
-     * 
+     * Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
      */
     @SerializedName("order")
     @Expose

@@ -38,7 +38,7 @@ public class FreeBusyError implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * Describes the error.
      */
     @SerializedName("message")
     @Expose
@@ -46,7 +46,7 @@ public class FreeBusyError implements IJsonBackedObject {
 
     /**
      * The Response Code.
-     * 
+     * The response code from querying for the availability of the user, distribution list, or resource.
      */
     @SerializedName("responseCode")
     @Expose
