@@ -54,8 +54,11 @@ import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
 import com.microsoft.graph.httpcore.HttpClients;
+import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 import com.microsoft.graph.httpcore.RedirectHandler;
 import com.microsoft.graph.httpcore.RetryHandler;
+import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
+import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
@@ -75,538 +78,540 @@ import okio.BufferedSink;
  */
 public class OkHttpProvider implements IHttpProvider {
 
-    /**
-     * The content type header
-     */
-    static final String CONTENT_TYPE_HEADER_NAME = "Content-Type";
+	/**
+	 * The content type header
+	 */
+	static final String CONTENT_TYPE_HEADER_NAME = "Content-Type";
 
-    /**
-     * The content type for JSON responses
-     */
-    static final String JSON_CONTENT_TYPE = "application/json";
-    
-    /**
-     * The encoding type for getBytes
-     */
-    static final String JSON_ENCODING = "UTF-8";
+	/**
+	 * The content type for JSON responses
+	 */
+	static final String JSON_CONTENT_TYPE = "application/json";
 
-    /**
-     * The serializer
-     */
-    private final ISerializer serializer;
+	/**
+	 * The encoding type for getBytes
+	 */
+	static final String JSON_ENCODING = "UTF-8";
 
-    /**
-     * The authentication provider
-     */
-    private final IAuthenticationProvider authenticationProvider;
+	/**
+	 * The serializer
+	 */
+	private final ISerializer serializer;
 
-    /**
-     * The executors
-     */
-    private final IExecutors executors;
+	/**
+	 * The authentication provider
+	 */
+	private final IAuthenticationProvider authenticationProvider;
 
-    /**
-     * The logger
-     */
-    private final ILogger logger;
+	/**
+	 * The executors
+	 */
+	private final IExecutors executors;
 
-    /**
-     * The connection config
-     */
-    private IConnectionConfig connectionConfig;
-    
-    /**
-     * The OkHttpClient that handles all requests
-     */
-    private OkHttpClient okhttpClient;
+	/**
+	 * The logger
+	 */
+	private final ILogger logger;
 
-    /**
-     * Creates the DefaultHttpProvider
-     *
-     * @param serializer             the serializer
-     * @param authenticationProvider the authentication provider
-     * @param executors              the executors
-     * @param logger                 the logger for diagnostic information
-     */
-    public OkHttpProvider(final ISerializer serializer,
-                               final IAuthenticationProvider authenticationProvider,
-                               final IExecutors executors,
-                               final ILogger logger) {
-        this.serializer = serializer;
-        this.authenticationProvider = authenticationProvider;
-        this.executors = executors;
-        this.logger = logger;
-    }
+	/**
+	 * The connection config
+	 */
+	private IConnectionConfig connectionConfig;
 
-    /**
-     * Gets the serializer for this HTTP provider
-     *
-     * @return the serializer for this provider
-     */
-    @Override
-    public ISerializer getSerializer() {
-        return serializer;
-    }
+	/**
+	 * The OkHttpClient that handles all requests
+	 */
+	private OkHttpClient okhttpClient;
 
-    /**
-     * Sends the HTTP request asynchronously
-     *
-     * @param request      the request description
-     * @param callback     the callback to be called after success or failure
-     * @param resultClass  the class of the response from the service
-     * @param serializable the object to send to the service in the body of the request
-     * @param <Result>     the type of the response object
-     * @param <Body>       the type of the object to send to the service in the body of the request
-     */
-    @Override
-    public <Result, Body> void send(final IHttpRequest request,
-                                    final ICallback<Result> callback,
-                                    final Class<Result> resultClass,
-                                    final Body serializable) {
-        final IProgressCallback<Result> progressCallback;
-        if (callback instanceof IProgressCallback) {
-            progressCallback = (IProgressCallback<Result>) callback;
-        } else {
-            progressCallback = null;
-        }
+	/**
+	 * Creates the DefaultHttpProvider
+	 *
+	 * @param serializer             the serializer
+	 * @param authenticationProvider the authentication provider
+	 * @param executors              the executors
+	 * @param logger                 the logger for diagnostic information
+	 */
+	public OkHttpProvider(final ISerializer serializer,
+			final IAuthenticationProvider authenticationProvider,
+			final IExecutors executors,
+			final ILogger logger) {
+		this.serializer = serializer;
+		this.authenticationProvider = authenticationProvider;
+		this.executors = executors;
+		this.logger = logger;
+	}
 
-        executors.performOnBackground(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    executors.performOnForeground(sendRequestInternal(request,
-                            resultClass,
-                            serializable,
-                            progressCallback,
-                            null),
-                            callback);
-                } catch (final ClientException e) {
-                    executors.performOnForeground(e, callback);
-                }
-            }
-        });
-    }
+	/**
+	 * Gets the serializer for this HTTP provider
+	 *
+	 * @return the serializer for this provider
+	 */
+	@Override
+	public ISerializer getSerializer() {
+		return serializer;
+	}
 
-    /**
-     * Sends the HTTP request
-     *
-     * @param request      the request description
-     * @param resultClass  the class of the response from the service
-     * @param serializable the object to send to the service in the body of the request
-     * @param <Result>     the type of the response object
-     * @param <Body>       the type of the object to send to the service in the body of the request
-     * @return             the result from the request
-     * @throws ClientException an exception occurs if the request was unable to complete for any reason
-     */
-    @Override
-    public <Result, Body> Result send(final IHttpRequest request,
-                                      final Class<Result> resultClass,
-                                      final Body serializable)
-            throws ClientException {
-        return send(request, resultClass, serializable, null);
-    }
+	/**
+	 * Sends the HTTP request asynchronously
+	 *
+	 * @param request      the request description
+	 * @param callback     the callback to be called after success or failure
+	 * @param resultClass  the class of the response from the service
+	 * @param serializable the object to send to the service in the body of the request
+	 * @param <Result>     the type of the response object
+	 * @param <Body>       the type of the object to send to the service in the body of the request
+	 */
+	@Override
+	public <Result, Body> void send(final IHttpRequest request,
+			final ICallback<Result> callback,
+			final Class<Result> resultClass,
+			final Body serializable) {
+		final IProgressCallback<Result> progressCallback;
+		if (callback instanceof IProgressCallback) {
+			progressCallback = (IProgressCallback<Result>) callback;
+		} else {
+			progressCallback = null;
+		}
 
-    /**
-     * Sends the HTTP request
-     *
-     * @param request           the request description
-     * @param resultClass       the class of the response from the service
-     * @param serializable      the object to send to the service in the body of the request
-     * @param handler           the handler for stateful response
-     * @param <Result>          the type of the response object
-     * @param <Body>            the type of the object to send to the service in the body of the request
-     * @param <DeserializeType> the response handler for stateful response
-     * @return                  the result from the request
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public <Result, Body, DeserializeType> Result send(final IHttpRequest request,
-                                                       final Class<Result> resultClass,
-                                                       final Body serializable,
-                                                       final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
-        return sendRequestInternal(request, resultClass, serializable, null, handler);
-    }
+		executors.performOnBackground(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					executors.performOnForeground(sendRequestInternal(request,
+							resultClass,
+							serializable,
+							progressCallback,
+							null),
+							callback);
+				} catch (final ClientException e) {
+					executors.performOnForeground(e, callback);
+				}
+			}
+		});
+	}
 
-    /**
-     * Sends the HTTP request
-     *
-     * @param request           the request description
-     * @param resultClass       the class of the response from the service
-     * @param serializable      the object to send to the service in the body of the request
-     * @param progress          the progress callback for the request
-     * @param handler           the handler for stateful response
-     * @param <Result>          the type of the response object
-     * @param <Body>            the type of the object to send to the service in the body of the request
-     * @param <DeserializeType> the response handler for stateful response
-     * @return                  the result from the request
-     * @throws ClientException an exception occurs if the request was unable to complete for any reason
-     */
-    @SuppressWarnings("unchecked")
-    private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
-                                                                       final Class<Result> resultClass,
-                                                                       final Body serializable,
-                                                                       final IProgressCallback<Result> progress,
-                                                                       final IStatefulResponseHandler<Result, DeserializeType> handler)
-            throws ClientException {
-        final int defaultBufferSize = 4096;
-        final String binaryContentType = "application/octet-stream";
+	/**
+	 * Sends the HTTP request
+	 *
+	 * @param request      the request description
+	 * @param resultClass  the class of the response from the service
+	 * @param serializable the object to send to the service in the body of the request
+	 * @param <Result>     the type of the response object
+	 * @param <Body>       the type of the object to send to the service in the body of the request
+	 * @return             the result from the request
+	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
+	 */
+	@Override
+	public <Result, Body> Result send(final IHttpRequest request,
+			final Class<Result> resultClass,
+			final Body serializable)
+					throws ClientException {
+		return send(request, resultClass, serializable, null);
+	}
 
-        try {
-            if (authenticationProvider != null) {
-                authenticationProvider.authenticateRequest(request);
-            }
+	/**
+	 * Sends the HTTP request
+	 *
+	 * @param request           the request description
+	 * @param resultClass       the class of the response from the service
+	 * @param serializable      the object to send to the service in the body of the request
+	 * @param handler           the handler for stateful response
+	 * @param <Result>          the type of the response object
+	 * @param <Body>            the type of the object to send to the service in the body of the request
+	 * @param <DeserializeType> the response handler for stateful response
+	 * @return                  the result from the request
+	 * @throws ClientException this exception occurs if the request was unable to complete for any reason
+	 */
+	public <Result, Body, DeserializeType> Result send(final IHttpRequest request,
+			final Class<Result> resultClass,
+			final Body serializable,
+			final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
+		return sendRequestInternal(request, resultClass, serializable, null, handler);
+	}
 
-            OutputStream out = null;
-            InputStream in = null;
-            boolean isBinaryStreamInput = false;
-            final URL requestUrl = request.getRequestUrl();
-            logger.logDebug("Starting to send request, URL " + requestUrl.toString());
-            
-            if(okhttpClient == null) {
-            	OkHttpClient.Builder okBuilder = HttpClients
-            			.custom()
-            			.addInterceptor(new RetryHandler())
-            			.addInterceptor(new RedirectHandler());
-            	if(this.connectionConfig == null) {
-                    this.connectionConfig = new DefaultConnectionConfig();
-                }
-            	okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
-            	okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
-            	okhttpClient = okBuilder.build();
-            }
-            
-            Request okhttpRequest = convertIHttpRequestToOkHttpRequest(request);
-            Request.Builder okhttpRequestBuilder = okhttpRequest.newBuilder();
-            
-            String contenttype = null;
-            
-            try {
-                logger.logDebug("Request Method " + request.getHttpMethod().toString());
-                List<HeaderOption> requestHeaders = request.getHeaders();
-                
-                for(HeaderOption headerOption : requestHeaders) {
-                	if(headerOption.getName().equalsIgnoreCase(CONTENT_TYPE_HEADER_NAME)) {
-                		contenttype = headerOption.getValue().toString();
-                		break;
-                	}
-                }
+	/**
+	 * Sends the HTTP request
+	 *
+	 * @param request           the request description
+	 * @param resultClass       the class of the response from the service
+	 * @param serializable      the object to send to the service in the body of the request
+	 * @param progress          the progress callback for the request
+	 * @param handler           the handler for stateful response
+	 * @param <Result>          the type of the response object
+	 * @param <Body>            the type of the object to send to the service in the body of the request
+	 * @param <DeserializeType> the response handler for stateful response
+	 * @return                  the result from the request
+	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
+	 */
+	@SuppressWarnings("unchecked")
+	private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
+			final Class<Result> resultClass,
+			final Body serializable,
+			final IProgressCallback<Result> progress,
+			final IStatefulResponseHandler<Result, DeserializeType> handler)
+					throws ClientException {
+		final int defaultBufferSize = 4096;
+		final String binaryContentType = "application/octet-stream";
 
-                final byte[] bytesToWrite;
-                okhttpRequestBuilder.addHeader("Accept", "*/*");
-                if (serializable == null) {
-                	// Send an empty body through with a POST request
-                	// This ensures that the Content-Length header is properly set
-                	if (request.getHttpMethod() == HttpMethod.POST) {
-                		bytesToWrite = new byte[0];
-                	}
-                	else {
-                		bytesToWrite = null;
-                	}
-                } else if (serializable instanceof byte[]) {
-                    logger.logDebug("Sending byte[] as request body");
-                    bytesToWrite = (byte[]) serializable;
+		try {
+			if (authenticationProvider != null) {
+				authenticationProvider.authenticateRequest(request);
+			}
 
-                    // If the user hasn't specified a Content-Type for the request
-                    if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
-                    	okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
-                    	contenttype = binaryContentType;
-                    }
-                } else {
-                    logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
-                    final String serializeObject = serializer.serializeObject(serializable);
-                    bytesToWrite = serializeObject.getBytes(JSON_ENCODING);
+			OutputStream out = null;
+			InputStream in = null;
+			boolean isBinaryStreamInput = false;
+			final URL requestUrl = request.getRequestUrl();
+			logger.logDebug("Starting to send request, URL " + requestUrl.toString());
 
-                    // If the user hasn't specified a Content-Type for the request
-                    if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
-                    	okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
-                    	contenttype = JSON_CONTENT_TYPE;
-                    }
-                }
+			if(this.connectionConfig == null) {
+				this.connectionConfig = new DefaultConnectionConfig();
+			}
 
-                RequestBody requestBody = null;
-                // Handle cases where we've got a body to process.
-                if (bytesToWrite != null) {
-                	final String mediaContentType = contenttype;
-                    requestBody = new RequestBody() {
-                    	@Override
-                    	public long contentLength() throws IOException {
-                    	    return bytesToWrite.length;
-                    	  }
+			if(okhttpClient == null) {
+				OkHttpClient.Builder okBuilder = HttpClients
+						.createDefault(new ICoreAuthenticationProvider() {
+							@Override
+							public Request authenticateRequest(Request request) {
+								return request;
+							}
+						}).newBuilder();
+
+				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
+				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
+				okhttpClient = okBuilder.build();
+			}
+
+			Request okhttpRequest = convertIHttpRequestToOkHttpRequest(request);
+			Request.Builder okhttpRequestBuilder = okhttpRequest.newBuilder();
+			
+			String contenttype = null;
+
+			try {
+				logger.logDebug("Request Method " + request.getHttpMethod().toString());
+				List<HeaderOption> requestHeaders = request.getHeaders();
+
+				for(HeaderOption headerOption : requestHeaders) {
+					if(headerOption.getName().equalsIgnoreCase(CONTENT_TYPE_HEADER_NAME)) {
+						contenttype = headerOption.getValue().toString();
+						break;
+					}
+				}
+
+				final byte[] bytesToWrite;
+				okhttpRequestBuilder.addHeader("Accept", "*/*");
+				if (serializable == null) {
+					// Send an empty body through with a POST request
+					// This ensures that the Content-Length header is properly set
+					if (request.getHttpMethod() == HttpMethod.POST) {
+						bytesToWrite = new byte[0];
+					}
+					else {
+						bytesToWrite = null;
+					}
+				} else if (serializable instanceof byte[]) {
+					logger.logDebug("Sending byte[] as request body");
+					bytesToWrite = (byte[]) serializable;
+
+					// If the user hasn't specified a Content-Type for the request
+					if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
+						okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
+						contenttype = binaryContentType;
+					}
+				} else {
+					logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
+					final String serializeObject = serializer.serializeObject(serializable);
+					bytesToWrite = serializeObject.getBytes(JSON_ENCODING);
+
+					// If the user hasn't specified a Content-Type for the request
+					if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
+						okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
+						contenttype = JSON_CONTENT_TYPE;
+					}
+				}
+
+				RequestBody requestBody = null;
+				// Handle cases where we've got a body to process.
+				if (bytesToWrite != null) {
+					final String mediaContentType = contenttype;
+					requestBody = new RequestBody() {
+						@Override
+						public long contentLength() throws IOException {
+							return bytesToWrite.length;
+						}
 						@Override
 						public void writeTo(BufferedSink sink) throws IOException {
 							OutputStream out = sink.outputStream();
 							int writtenSoFar = 0;
-		                    BufferedOutputStream bos = new BufferedOutputStream(out);
-		                    int toWrite;
-		                    do {
-		                        toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
-		                        bos.write(bytesToWrite, writtenSoFar, toWrite);
-		                        writtenSoFar = writtenSoFar + toWrite;
-		                        if (progress != null) {
-		                            executors.performOnForeground(writtenSoFar, bytesToWrite.length,
-		                                    progress);
-		                        }
-		                    } while (toWrite > 0);
-		                    bos.close();
+							BufferedOutputStream bos = new BufferedOutputStream(out);
+							int toWrite;
+							do {
+								toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
+								bos.write(bytesToWrite, writtenSoFar, toWrite);
+								writtenSoFar = writtenSoFar + toWrite;
+								if (progress != null) {
+									executors.performOnForeground(writtenSoFar, bytesToWrite.length,
+											progress);
+								}
+							} while (toWrite > 0);
+							bos.close();
 						}
-						
+
 						@Override
 						public MediaType contentType() {
 							return MediaType.parse(mediaContentType);
 						}
 					};
-                    
-                }
-                
-                okhttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
-                okhttpRequest = okhttpRequestBuilder.build();
-                
-                Response response = okhttpClient.newCall(okhttpRequest).execute();
-                
-                //do it after
-                if (handler != null) {
-                    handler.configConnection(null);
-                }
+				}
 
-                logger.logDebug(String.format("Response code %d, %s",
-                        response.code(),
-                        response.message()));
+				okhttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
+				okhttpRequest = okhttpRequestBuilder.build();
 
-                if (handler != null) {
-                    logger.logDebug("StatefulResponse is handling the HTTP response.");
-                    return handler.generateResult(
-                            request, response, this.getSerializer(), this.logger);
-                }
+				Response response = okhttpClient.newCall(okhttpRequest).execute();
 
-                if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-                    logger.logDebug("Handling error response");
-                    in = response.body().byteStream();
-                    handleErrorResponse(request, serializable, response);
-                }
+				if (handler != null) {
+					handler.configConnection(response);
+				}
 
-                if (response.code() == HttpResponseCode.HTTP_NOBODY
-                        || response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
-                    logger.logDebug("Handling response with no body");                  
-                    return handleEmptyResponse(OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-                }
+				logger.logDebug(String.format("Response code %d, %s",
+						response.code(),
+						response.message()));
 
-                if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
-                    logger.logDebug("Handling accepted response");
-                    return handleEmptyResponse(OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-                }
+				if (handler != null) {
+					logger.logDebug("StatefulResponse is handling the HTTP response.");
+					return handler.generateResult(
+							request, response, this.getSerializer(), this.logger);
+				}
 
-                in = new BufferedInputStream(response.body().byteStream());
+				if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
+					logger.logDebug("Handling error response");
+					in = response.body().byteStream();
+					handleErrorResponse(request, serializable, response);
+				}
 
-                final Map<String, String> headers = OkHttpProvider.getResponseHeadersAsMapStringString(response);
+				if (response.code() == HttpResponseCode.HTTP_NOBODY
+						|| response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
+					logger.logDebug("Handling response with no body");                  
+					return handleEmptyResponse(OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+				}
 
-                final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
-                if (contentType.contains(JSON_CONTENT_TYPE)) {
-                    logger.logDebug("Response json");
-                    return handleJsonResponse(in, OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-                } else {
-                    logger.logDebug("Response binary");
-                    isBinaryStreamInput = true;
-                    //no inspection unchecked
-                    return (Result) handleBinaryStream(in);
-                }
-            } finally {
-                if (out != null) {
-                    out.close();
-                }
-                if (!isBinaryStreamInput && in != null) {
-                    in.close();
-//                    connection.close();
-                }
-            }
-        } catch (final GraphServiceException ex) {
-            final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
-            logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
-            throw ex;
-        } catch (final UnsupportedEncodingException ex) {
-        	final ClientException clientException = new ClientException("Unsupported encoding problem: ",
-                    ex);
-            logger.logError("Unsupported encoding problem: " + ex.getMessage(), ex);
-            throw clientException;
-        } catch (final Exception ex) {
-            final ClientException clientException = new ClientException("Error during http request",
-                    ex);
-            logger.logError("Error during http request", clientException);
-            throw clientException;
-        }
-    }
-    
-    /**
-    * Gets the response headers from OkHttp Response
-    *
-    * @param response the OkHttp response
-    * @return           the set of headers names and value
-    */
-   static HashMap<String, String> getResponseHeadersAsMapStringString(final Response response) {
-   	final HashMap<String, String> headers = new HashMap<>();
-       int index = 0;
-       Headers responseHeaders = response.headers();
-       while (index < responseHeaders.size()) {
-           final String headerName = responseHeaders.name(index);
-           final String headerValue = responseHeaders.value(index);
-           if (headerName == null && headerValue == null) {
-               break;
-           }
-           headers.put(headerName, headerValue);
-           index++;
-       }
-       return headers;
-   }
-   
-   public static Map<String, List<String>> getResponseHeadersAsMapOfStringList(Response response) {
-	   Map<String, List<String>> headerFields = response.headers().toMultimap();
-	   // Add the response code
-	   List<String> list = new ArrayList<>();
-	   list.add(String.format("%d", response.code()));
-	   headerFields.put("responseCode", list);
-	   return headerFields;
-   }
-    
-    private Request convertIHttpRequestToOkHttpRequest(IHttpRequest request) {
-    	if(request != null) {
-    		Request.Builder requestBuilder = new Request.Builder();
+				if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
+					logger.logDebug("Handling accepted response");
+					return handleEmptyResponse(OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+				}
+
+				in = new BufferedInputStream(response.body().byteStream());
+
+				final Map<String, String> headers = OkHttpProvider.getResponseHeadersAsMapStringString(response);
+
+				final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
+				if (contentType.contains(JSON_CONTENT_TYPE)) {
+					logger.logDebug("Response json");
+					return handleJsonResponse(in, OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+				} else {
+					logger.logDebug("Response binary");
+					isBinaryStreamInput = true;
+					//no inspection unchecked
+					return (Result) handleBinaryStream(in);
+				}
+			} finally {
+				if (out != null) {
+					out.close();
+				}
+				if (!isBinaryStreamInput && in != null) {
+					in.close();
+				}
+			}
+		} catch (final GraphServiceException ex) {
+			final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
+			logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
+			throw ex;
+		} catch (final UnsupportedEncodingException ex) {
+			final ClientException clientException = new ClientException("Unsupported encoding problem: ",
+					ex);
+			logger.logError("Unsupported encoding problem: " + ex.getMessage(), ex);
+			throw clientException;
+		} catch (final Exception ex) {
+			final ClientException clientException = new ClientException("Error during http request",
+					ex);
+			logger.logError("Error during http request", clientException);
+			throw clientException;
+		}
+	}
+
+	/**
+	 * Gets the response headers from OkHttp Response
+	 *
+	 * @param response the OkHttp response
+	 * @return           the set of headers names and value
+	 */
+	static HashMap<String, String> getResponseHeadersAsMapStringString(final Response response) {
+		final HashMap<String, String> headers = new HashMap<>();
+		int index = 0;
+		Headers responseHeaders = response.headers();
+		while (index < responseHeaders.size()) {
+			final String headerName = responseHeaders.name(index);
+			final String headerValue = responseHeaders.value(index);
+			if (headerName == null && headerValue == null) {
+				break;
+			}
+			headers.put(headerName, headerValue);
+			index++;
+		}
+		return headers;
+	}
+
+	static Map<String, List<String>> getResponseHeadersAsMapOfStringList(Response response) {
+		Map<String, List<String>> headerFields = response.headers().toMultimap();
+		// Add the response code
+		List<String> list = new ArrayList<>();
+		list.add(String.format("%d", response.code()));
+		headerFields.put("responseCode", list);
+		return headerFields;
+	}
+
+	private Request convertIHttpRequestToOkHttpRequest(IHttpRequest request) {
+		if(request != null) {
+			Request.Builder requestBuilder = new Request.Builder();
 			requestBuilder.url(request.getRequestUrl());
 			for (final HeaderOption header : request.getHeaders()) {
 				requestBuilder.addHeader(header.getName(), header.getValue().toString());
 			}
 			return requestBuilder.build();
 		}
-    	return null;
-    }
+		return null;
+	}
 
-    /**
-     * Handles the event of an error response
-     *
-     * @param request      the request that caused the failed response
-     * @param serializable the body of the request
-     * @param connection   the URL connection
-     * @param <Body>       the type of the request body
-     * @throws IOException an exception occurs if there were any problems interacting with the connection object
-     */
-    private <Body> void handleErrorResponse(final IHttpRequest request,
-                                            final Body serializable,
-                                            final Response response)
-            throws IOException {
-        throw GraphServiceException.createFromConnection(request, serializable, serializer,
-                response, logger);
-    }
+	/**
+	 * Handles the event of an error response
+	 *
+	 * @param request      the request that caused the failed response
+	 * @param serializable the body of the request
+	 * @param connection   the URL connection
+	 * @param <Body>       the type of the request body
+	 * @throws IOException an exception occurs if there were any problems interacting with the connection object
+	 */
+	private <Body> void handleErrorResponse(final IHttpRequest request,
+			final Body serializable,
+			final Response response)
+					throws IOException {
+		throw GraphServiceException.createFromConnection(request, serializable, serializer,
+				response, logger);
+	}
 
-    /**
-     * Handles the cause where the response is a binary stream
-     *
-     * @param in the input stream from the response
-     * @return   the input stream to return to the caller
-     */
-    private InputStream handleBinaryStream(final InputStream in) {
-        return in;
-    }
+	/**
+	 * Handles the cause where the response is a binary stream
+	 *
+	 * @param in the input stream from the response
+	 * @return   the input stream to return to the caller
+	 */
+	private InputStream handleBinaryStream(final InputStream in) {
+		return in;
+	}
 
-    /**
-     * Handles the cause where the response is a JSON object
-     *
-     * @param in              the input stream from the response
-     * @param responseHeaders the response header
-     * @param clazz           the class of the response object
-     * @param <Result>        the type of the response object
-     * @return                the JSON object
-     */
-    private <Result> Result handleJsonResponse(final InputStream in, Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
-        if (clazz == null) {
-            return null;
-        }
+	/**
+	 * Handles the cause where the response is a JSON object
+	 *
+	 * @param in              the input stream from the response
+	 * @param responseHeaders the response header
+	 * @param clazz           the class of the response object
+	 * @param <Result>        the type of the response object
+	 * @return                the JSON object
+	 */
+	private <Result> Result handleJsonResponse(final InputStream in, Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
+		if (clazz == null) {
+			return null;
+		}
 
-        final String rawJson = streamToString(in);
-        return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
-    }
-    
-    /**
-     * Handles the case where the response body is empty
-     * 
-     * @param responseHeaders the response headers
-     * @param clazz           the type of the response object
-     * @return                the JSON object
-     */
-    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
-    		throws UnsupportedEncodingException{
-    	//Create an empty object to attach the response headers to
-    	InputStream in = new ByteArrayInputStream("{}".getBytes(JSON_ENCODING));
-    	return handleJsonResponse(in, responseHeaders, clazz);
-    }
+		final String rawJson = streamToString(in);
+		return getSerializer().deserializeObject(rawJson, clazz, responseHeaders);
+	}
 
-    /**
-     * Reads in a stream and converts it into a string
-     *
-     * @param input the response body stream
-     * @return      the string result
-     */
-    public static String streamToString(final InputStream input) {
-        final String httpStreamEncoding = "UTF-8";
-        final String endOfFile = "\\A";
-        final Scanner scanner = new Scanner(input, httpStreamEncoding);
-        String scannerString = "";
-        try {
-        	scanner.useDelimiter(endOfFile);
-            scannerString = scanner.next();
-        } finally {
-        	scanner.close();
-        }
-        return scannerString;
-    }
+	/**
+	 * Handles the case where the response body is empty
+	 * 
+	 * @param responseHeaders the response headers
+	 * @param clazz           the type of the response object
+	 * @return                the JSON object
+	 */
+	private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
+			throws UnsupportedEncodingException{
+		//Create an empty object to attach the response headers to
+		InputStream in = new ByteArrayInputStream("{}".getBytes(JSON_ENCODING));
+		return handleJsonResponse(in, responseHeaders, clazz);
+	}
 
-    /**
-     * Searches for the given header in a list of HeaderOptions
-     *
-     * @param headers the list of headers to search through
-     * @param header  the header name to search for (case insensitive)
-     * @return        true if the header has already been set
-     */
-    @VisibleForTesting
-    static boolean hasHeader(List<HeaderOption> headers, String header) {
-        for (HeaderOption option : headers) {
-            if (option.getName().equalsIgnoreCase(header)) {
-                return true;
-            }
-        }
-        return false;
-    }
+	/**
+	 * Reads in a stream and converts it into a string
+	 *
+	 * @param input the response body stream
+	 * @return      the string result
+	 */
+	public static String streamToString(final InputStream input) {
+		final String httpStreamEncoding = "UTF-8";
+		final String endOfFile = "\\A";
+		final Scanner scanner = new Scanner(input, httpStreamEncoding);
+		String scannerString = "";
+		try {
+			scanner.useDelimiter(endOfFile);
+			scannerString = scanner.next();
+		} finally {
+			scanner.close();
+		}
+		return scannerString;
+	}
 
-    @VisibleForTesting
-    public ILogger getLogger() {
-        return logger;
-    }
+	/**
+	 * Searches for the given header in a list of HeaderOptions
+	 *
+	 * @param headers the list of headers to search through
+	 * @param header  the header name to search for (case insensitive)
+	 * @return        true if the header has already been set
+	 */
+	@VisibleForTesting
+	static boolean hasHeader(List<HeaderOption> headers, String header) {
+		for (HeaderOption option : headers) {
+			if (option.getName().equalsIgnoreCase(header)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
-    @VisibleForTesting
-    public IExecutors getExecutors() {
-        return executors;
-    }
+	@VisibleForTesting
+	public ILogger getLogger() {
+		return logger;
+	}
 
-    @VisibleForTesting
-    public IAuthenticationProvider getAuthenticationProvider() {
-        return authenticationProvider;
-    }
-    
+	@VisibleForTesting
+	public IExecutors getExecutors() {
+		return executors;
+	}
 
-    /**
-     * Get connection config for read and connect timeout in requests
-     *
-     * @return Connection configuration to be used for timeout values
-     */
-    public IConnectionConfig getConnectionConfig() {
-    	if(this.connectionConfig == null) {
-    		this.connectionConfig = new DefaultConnectionConfig();
-    	}
-        return connectionConfig;
-    }
-    
-    /**
-     * Set connection config for read and connect timeout in requests
-     *
-     * @param connectionConfig Connection configuration to be used for timeout values
-     */
-    public void setConnectionConfig(IConnectionConfig connectionConfig) {
-        this.connectionConfig = connectionConfig;
-    }
+	@VisibleForTesting
+	public IAuthenticationProvider getAuthenticationProvider() {
+		return authenticationProvider;
+	}
+
+
+	/**
+	 * Get connection config for read and connect timeout in requests
+	 *
+	 * @return Connection configuration to be used for timeout values
+	 */
+	public IConnectionConfig getConnectionConfig() {
+		if(this.connectionConfig == null) {
+			this.connectionConfig = new DefaultConnectionConfig();
+		}
+		return connectionConfig;
+	}
+
+	/**
+	 * Set connection config for read and connect timeout in requests
+	 *
+	 * @param connectionConfig Connection configuration to be used for timeout values
+	 */
+	public void setConnectionConfig(IConnectionConfig connectionConfig) {
+		this.connectionConfig = connectionConfig;
+	}
 }

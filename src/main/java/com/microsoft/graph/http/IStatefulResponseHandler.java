@@ -43,6 +43,13 @@ public interface IStatefulResponseHandler<ResultType, DeserializedType> {
      * @param connection the HTTP connection
      */
     void configConnection(final IConnection connection);
+    
+    /**
+     * Configure the response
+     *
+     * @param response the HTTP response
+     */
+    void configConnection(final Response connection);
 
     /**
      * Generate result after receiving response

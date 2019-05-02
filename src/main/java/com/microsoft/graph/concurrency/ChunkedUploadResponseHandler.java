@@ -68,6 +68,16 @@ public class ChunkedUploadResponseHandler<UploadType>
     public void configConnection(final IConnection connection) {
         return;
     }
+    
+    /**
+     * Do nothing before getting the response
+     *
+     * @param response The response
+     */
+    @Override
+    public void configConnection(final Response response) {
+        return;
+    }
 
     /**
      * Generate the chunked upload response result
