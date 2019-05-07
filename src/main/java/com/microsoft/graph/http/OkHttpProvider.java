@@ -53,6 +53,7 @@ import com.microsoft.graph.http.IConnectionFactory;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
+import com.microsoft.graph.httpcore.AuthenticationHandler;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
 import com.microsoft.graph.httpcore.RedirectHandler;
@@ -258,7 +259,6 @@ public class OkHttpProvider implements IHttpProvider {
 				authenticationProvider.authenticateRequest(request);
 			}
 
-			OutputStream out = null;
 			InputStream in = null;
 			boolean isBinaryStreamInput = false;
 			final URL requestUrl = request.getRequestUrl();
@@ -269,16 +269,24 @@ public class OkHttpProvider implements IHttpProvider {
 			}
 
 			if(okhttpClient == null) {
-				OkHttpClient.Builder okBuilder = HttpClients
-						.createDefault(new ICoreAuthenticationProvider() {
-							@Override
-							public Request authenticateRequest(Request request) {
-								return request;
-							}
-						}).newBuilder();
-
+				RedirectOptions redirectOptions = new RedirectOptions(this.connectionConfig.getMaxRedirects(), this.connectionConfig.getShouldRedirect());
+				RedirectHandler redirectHandler = new RedirectHandler(redirectOptions);
+				
+				RetryOptions retryOptions = new RetryOptions(this.connectionConfig.getShouldRetry(), this.connectionConfig.getMaxRetries(), this.connectionConfig.getDelay());
+				RetryHandler retryHandler = new RetryHandler(retryOptions);
+				
+				AuthenticationHandler authenticationHandler = new AuthenticationHandler(new ICoreAuthenticationProvider() {
+					@Override
+					public Request authenticateRequest(Request request) {
+						return request;
+					}
+				});
+				
+				Interceptor[] interceptors = {redirectHandler, retryHandler, authenticationHandler};
+				OkHttpClient.Builder okBuilder = HttpClients.createFromInterceptors(interceptors).newBuilder();
 				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
+				okBuilder.followRedirects(false);
 				okhttpClient = okBuilder.build();
 			}
 
@@ -355,6 +363,7 @@ public class OkHttpProvider implements IHttpProvider {
 								}
 							} while (toWrite > 0);
 							bos.close();
+							out.close();
 						}
 
 						@Override
@@ -415,9 +424,6 @@ public class OkHttpProvider implements IHttpProvider {
 					return (Result) handleBinaryStream(in);
 				}
 			} finally {
-				if (out != null) {
-					out.close();
-				}
 				if (!isBinaryStreamInput && in != null) {
 					in.close();
 				}
