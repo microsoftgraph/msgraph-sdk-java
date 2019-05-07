@@ -100,7 +100,7 @@ public interface IConnectionConfig {
     /**
      * Sets the max retries
      * 
-     * @param Max retries for a request
+     * @param maxRetries Max retries for a request
      */
     void setMaxRetries(int maxRetries);
     

@@ -282,7 +282,7 @@ public class OkHttpProvider implements IHttpProvider {
 					}
 				});
 				
-				Interceptor[] interceptors = {redirectHandler, retryHandler, authenticationHandler};
+				Interceptor[] interceptors = {authenticationHandler, redirectHandler, retryHandler};
 				OkHttpClient.Builder okBuilder = HttpClients.createFromInterceptors(interceptors).newBuilder();
 				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
