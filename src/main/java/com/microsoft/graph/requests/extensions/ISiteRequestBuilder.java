@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISiteRequest;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
@@ -18,6 +19,7 @@ import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetByPathRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -45,6 +47,13 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
      */
     ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    IItemAnalyticsWithReferenceRequestBuilder analytics();
 
     IColumnDefinitionCollectionRequestBuilder columns();
 
@@ -83,6 +92,8 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
      * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
+
+    ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
     ISiteGetByPathRequestBuilder getByPath(final String path);
 
 }

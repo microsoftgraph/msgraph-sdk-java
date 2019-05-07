@@ -453,4 +453,11 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      */
     IAppCatalogsRequestBuilder appCatalogs();
 
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuditLogRoot
+     */
+    IAuditLogRootRequestBuilder auditLogs();
+
 }

@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemRequest;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
@@ -27,6 +28,7 @@ import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequest
 import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -60,6 +62,13 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
      * @return The request builder for the specified item
      */
     IDriveItemRequestBuilder itemWithPath(final String path);
+
+    /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    IItemAnalyticsWithReferenceRequestBuilder analytics();
 
     IDriveItemCollectionRequestBuilder children();
 
@@ -106,6 +115,8 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemDeltaCollectionRequestBuilder delta(final String token);
 
     IDriveItemDeltaCollectionRequestBuilder delta();
+
+    IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
 
     IDriveItemSearchCollectionRequestBuilder search(final String q);
 

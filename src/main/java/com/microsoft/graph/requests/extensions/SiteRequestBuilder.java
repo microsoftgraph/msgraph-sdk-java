@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISiteRequest;
 import com.microsoft.graph.requests.extensions.SiteRequest;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
@@ -33,6 +35,8 @@ import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetByPathRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteGetByPathRequestBuilder;
 
@@ -79,6 +83,15 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
     }
 
 
+
+    /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    public IItemAnalyticsWithReferenceRequestBuilder analytics() {
+        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    }
     public IColumnDefinitionCollectionRequestBuilder columns() {
         return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
     }
@@ -138,6 +151,10 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
+    public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
+        return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
     public ISiteGetByPathRequestBuilder getByPath(final String path) {

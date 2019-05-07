@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemRequest;
 import com.microsoft.graph.requests.extensions.DriveItemRequest;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
@@ -48,6 +50,8 @@ import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestB
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemSearchCollectionRequestBuilder;
 
@@ -98,6 +102,15 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
         return new DriveItemRequestBuilder(getRequestUrl() + ":/" + path + ":", getClient(), null);
     }
 
+
+    /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    public IItemAnalyticsWithReferenceRequestBuilder analytics() {
+        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    }
     public IDriveItemCollectionRequestBuilder children() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
@@ -182,6 +195,10 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemDeltaCollectionRequestBuilder delta() {
         return new DriveItemDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+    public IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
+        return new DriveItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
     }
 
     public IDriveItemSearchCollectionRequestBuilder search(final String q) {

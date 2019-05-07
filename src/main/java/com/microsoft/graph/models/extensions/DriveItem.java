@@ -26,6 +26,7 @@ import com.microsoft.graph.models.extensions.Shared;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SpecialFolder;
 import com.microsoft.graph.models.extensions.Video;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.Permission;
@@ -219,6 +220,14 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName("webDavUrl")
     @Expose
     public String webDavUrl;
+
+    /**
+     * The Analytics.
+     * 
+     */
+    @SerializedName("analytics")
+    @Expose
+    public ItemAnalytics analytics;
 
     /**
      * The Children.
