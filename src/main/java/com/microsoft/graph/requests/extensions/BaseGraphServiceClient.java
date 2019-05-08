@@ -591,4 +591,13 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     public IAppCatalogsRequestBuilder appCatalogs() {
         return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
     }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuditLogRoot
+     */
+    public IAuditLogRootRequestBuilder auditLogs() {
+        return new AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", (IGraphServiceClient)this, null);
+    }
 }
