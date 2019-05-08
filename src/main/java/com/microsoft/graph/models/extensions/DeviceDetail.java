@@ -38,7 +38,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * 
+     * Refers to the UniqueID of the device used for signing in.
      */
     @SerializedName("deviceId")
     @Expose
@@ -46,7 +46,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Refers to the name of the device used for signing in.
      */
     @SerializedName("displayName")
     @Expose
@@ -54,7 +54,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * 
+     * Indicates the operating system name and version used for signing in.
      */
     @SerializedName("operatingSystem")
     @Expose
@@ -62,7 +62,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Browser.
-     * 
+     * Indicates the browser information of the used for signing in.
      */
     @SerializedName("browser")
     @Expose
@@ -70,7 +70,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Is Compliant.
-     * 
+     * Indicates whether the device is compliant.
      */
     @SerializedName("isCompliant")
     @Expose
@@ -78,7 +78,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Is Managed.
-     * 
+     * Indicates whether the device is managed.
      */
     @SerializedName("isManaged")
     @Expose
@@ -86,7 +86,7 @@ public class DeviceDetail implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * 
+     * Provides information about whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
      */
     @SerializedName("trustType")
     @Expose

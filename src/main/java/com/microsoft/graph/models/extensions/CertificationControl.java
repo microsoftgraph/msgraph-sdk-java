@@ -38,7 +38,7 @@ public class CertificationControl implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Certification control name
      */
     @SerializedName("name")
     @Expose
@@ -46,7 +46,7 @@ public class CertificationControl implements IJsonBackedObject {
 
     /**
      * The Url.
-     * 
+     * URL for the Microsoft Service Trust Portal
      */
     @SerializedName("url")
     @Expose

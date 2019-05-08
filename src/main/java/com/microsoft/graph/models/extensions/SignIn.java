@@ -38,7 +38,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as '2014-01-01T00:00:00Z'.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -46,7 +46,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Display name of the user that initiated the sign-in.
      */
     @SerializedName("userDisplayName")
     @Expose
@@ -54,7 +54,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * User principal name of the user that initiated the sign-in.
      */
     @SerializedName("userPrincipalName")
     @Expose
@@ -62,7 +62,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * ID of the user that initiated the sign-in.
      */
     @SerializedName("userId")
     @Expose
@@ -70,7 +70,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * 
+     * Unique GUID representing the app ID in the Azure Active Directory.
      */
     @SerializedName("appId")
     @Expose
@@ -78,7 +78,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The App Display Name.
-     * 
+     * App name displayed in the Azure Portal.
      */
     @SerializedName("appDisplayName")
     @Expose
@@ -86,7 +86,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * IP address of the client used to sign in.
      */
     @SerializedName("ipAddress")
     @Expose
@@ -94,7 +94,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Sign-in status. Possible values include Success and Failure.
      */
     @SerializedName("status")
     @Expose
@@ -102,7 +102,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Client App Used.
-     * 
+     * Identifies the legacy client used for sign-in activity.  Includes Browser, Exchange Active Sync, modern clients, IMAP, MAPI, SMTP, and POP.
      */
     @SerializedName("clientAppUsed")
     @Expose
@@ -110,7 +110,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Detail.
-     * 
+     * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
      */
     @SerializedName("deviceDetail")
     @Expose
@@ -118,7 +118,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * 
+     * Provides the city, state, and country code where the sign-in originated.
      */
     @SerializedName("location")
     @Expose
@@ -126,7 +126,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * 
+     * The request ID sent from the client when the sign-in is initiated; used to troubleshoot sign-in activity.
      */
     @SerializedName("correlationId")
     @Expose
@@ -134,7 +134,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Conditional Access Status.
-     * 
+     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
      */
     @SerializedName("conditionalAccessStatus")
     @Expose
@@ -150,7 +150,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Interactive.
-     * 
+     * Indicates if a sign-in is interactive or not.
      */
     @SerializedName("isInteractive")
     @Expose
@@ -158,7 +158,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * 
+     * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
      */
     @SerializedName("riskDetail")
     @Expose
@@ -166,7 +166,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level Aggregated.
-     * 
+     * Aggregated risk level. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
      */
     @SerializedName("riskLevelAggregated")
     @Expose
@@ -174,7 +174,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level During Sign In.
-     * 
+     * Risk level during sign-in. The possible values are: none, low, medium, high, hidden, and unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection. Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers will be returned hidden.
      */
     @SerializedName("riskLevelDuringSignIn")
     @Expose
@@ -182,7 +182,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * 
+     * Reports status of the risky user, sign-in, or a risk event. The possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      */
     @SerializedName("riskState")
     @Expose
@@ -190,7 +190,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Types.
-     * 
+     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
      */
     @SerializedName("riskEventTypes")
     @Expose
@@ -198,7 +198,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Display Name.
-     * 
+     * Name of the resource the user signed into.
      */
     @SerializedName("resourceDisplayName")
     @Expose
@@ -206,7 +206,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * 
+     * ID of the resource that the user signed into.
      */
     @SerializedName("resourceId")
     @Expose

@@ -38,13 +38,13 @@ public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Sign Ins.
-     * 
+     * Read-only. Nullable.
      */
     public SignInCollectionPage signIns;
 
     /**
      * The Directory Audits.
-     * 
+     * Read-only. Nullable.
      */
     public DirectoryAuditCollectionPage directoryAudits;
 

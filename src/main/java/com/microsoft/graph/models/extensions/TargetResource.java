@@ -40,7 +40,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Indicates the unique ID of the resource.
      */
     @SerializedName("id")
     @Expose
@@ -48,7 +48,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Indicates the visible name defined for the resource. Typically specified when the resource is created.
      */
     @SerializedName("displayName")
     @Expose
@@ -56,7 +56,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
      */
     @SerializedName("type")
     @Expose
@@ -64,7 +64,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * When type is set to User, this includes the user name that initiated the action; null for other types.
      */
     @SerializedName("userPrincipalName")
     @Expose
@@ -72,7 +72,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Group Type.
-     * 
+     * When type is set to Group, this indicates the group type.
      */
     @SerializedName("groupType")
     @Expose
@@ -80,7 +80,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Modified Properties.
-     * 
+     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
      */
     @SerializedName("modifiedProperties")
     @Expose

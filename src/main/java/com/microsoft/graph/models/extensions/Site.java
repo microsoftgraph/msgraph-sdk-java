@@ -13,6 +13,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Root;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SiteCollection;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.models.extensions.ColumnDefinition;
 import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.models.extensions.Drive;
@@ -79,6 +80,14 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @SerializedName("siteCollection")
     @Expose
     public SiteCollection siteCollection;
+
+    /**
+     * The Analytics.
+     * 
+     */
+    @SerializedName("analytics")
+    @Expose
+    public ItemAnalytics analytics;
 
     /**
      * The Columns.

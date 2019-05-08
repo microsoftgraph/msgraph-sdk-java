@@ -32,7 +32,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Active User Count.
-     * 
+     * Active user count of the given tenant.
      */
     @SerializedName("activeUserCount")
     @Expose
@@ -40,7 +40,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Average Comparative Scores.
-     * 
+     * Average score by different scopes (for example, average by industry, average by seating) and control category (Identity, Data, Device, Apps, Infrastructure) within the scope.
      */
     @SerializedName("averageComparativeScores")
     @Expose
@@ -48,7 +48,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure Tenant Id.
-     * 
+     * GUID string for tenant ID.
      */
     @SerializedName("azureTenantId")
     @Expose
@@ -56,7 +56,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Control Scores.
-     * 
+     * Contains tenant scores for a set of controls.
      */
     @SerializedName("controlScores")
     @Expose
@@ -64,7 +64,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date when the entity is created.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -72,7 +72,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Current Score.
-     * 
+     * Tenant current attained score on specified date.
      */
     @SerializedName("currentScore")
     @Expose
@@ -80,7 +80,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Enabled Services.
-     * 
+     * Microsoft-provided services for the tenant (for example, Exchange online, Skype, Sharepoint).
      */
     @SerializedName("enabledServices")
     @Expose
@@ -88,7 +88,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Licensed User Count.
-     * 
+     * Licensed user count of the given tenant.
      */
     @SerializedName("licensedUserCount")
     @Expose
@@ -96,7 +96,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Max Score.
-     * 
+     * Tenant maximum possible score on specified date.
      */
     @SerializedName("maxScore")
     @Expose
@@ -104,7 +104,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Vendor Information.
-     * 
+     * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      */
     @SerializedName("vendorInformation")
     @Expose

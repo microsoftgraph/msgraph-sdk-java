@@ -38,7 +38,7 @@ public class SecureScoreControlStateUpdate implements IJsonBackedObject {
 
     /**
      * The Assigned To.
-     * 
+     * Assigns the control to the user who will take the action.
      */
     @SerializedName("assignedTo")
     @Expose
@@ -46,7 +46,7 @@ public class SecureScoreControlStateUpdate implements IJsonBackedObject {
 
     /**
      * The Comment.
-     * 
+     * Provides optional comment about the control.
      */
     @SerializedName("comment")
     @Expose
@@ -54,7 +54,7 @@ public class SecureScoreControlStateUpdate implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * State of the control, which can be modified via a PATCH command (for example, ignored, thirdParty).
      */
     @SerializedName("state")
     @Expose
@@ -62,7 +62,7 @@ public class SecureScoreControlStateUpdate implements IJsonBackedObject {
 
     /**
      * The Updated By.
-     * 
+     * ID of the user who updated tenant state.
      */
     @SerializedName("updatedBy")
     @Expose
@@ -70,7 +70,7 @@ public class SecureScoreControlStateUpdate implements IJsonBackedObject {
 
     /**
      * The Updated Date Time.
-     * 
+     * Time at which the control state was updated.
      */
     @SerializedName("updatedDateTime")
     @Expose

@@ -38,7 +38,7 @@ public class KeyValue implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Key for the key-value pair.
      */
     @SerializedName("key")
     @Expose
@@ -46,7 +46,7 @@ public class KeyValue implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value for the key-value pair.
      */
     @SerializedName("value")
     @Expose
