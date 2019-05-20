@@ -19,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionReque
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
@@ -102,6 +106,13 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
 
     public IWorkbookWorksheetRequestBuilder worksheets(final String id) {
         return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets") + "/" + id, getClient(), null);
+    }
+    public IWorkbookCommentCollectionRequestBuilder comments() {
+        return new WorkbookCommentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("comments"), getClient(), null);
+    }
+
+    public IWorkbookCommentRequestBuilder comments(final String id) {
+        return new WorkbookCommentRequestBuilder(getRequestUrlWithAdditionalSegment("comments") + "/" + id, getClient(), null);
     }
 
     /**

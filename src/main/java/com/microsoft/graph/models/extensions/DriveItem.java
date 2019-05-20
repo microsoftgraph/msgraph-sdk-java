@@ -26,9 +26,11 @@ import com.microsoft.graph.models.extensions.Shared;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SpecialFolder;
 import com.microsoft.graph.models.extensions.Video;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.Permission;
+import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
 import com.microsoft.graph.models.extensions.Workbook;
@@ -37,6 +39,8 @@ import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 import com.microsoft.graph.requests.extensions.PermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.PermissionCollectionPage;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionResponse;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionResponse;
@@ -218,6 +222,14 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     public String webDavUrl;
 
     /**
+     * The Analytics.
+     * 
+     */
+    @SerializedName("analytics")
+    @Expose
+    public ItemAnalytics analytics;
+
+    /**
      * The Children.
      * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
      */
@@ -236,6 +248,12 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The set of permissions for the item. Read-only. Nullable.
      */
     public PermissionCollectionPage permissions;
+
+    /**
+     * The Subscriptions.
+     * The set of subscriptions on the item. Only supported on the root of a drive.
+     */
+    public SubscriptionCollectionPage subscriptions;
 
     /**
      * The Thumbnails.
@@ -327,6 +345,22 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             permissions = new PermissionCollectionPage(response, null);
+        }
+
+        if (json.has("subscriptions")) {
+            final SubscriptionCollectionResponse response = new SubscriptionCollectionResponse();
+            if (json.has("subscriptions@odata.nextLink")) {
+                response.nextLink = json.get("subscriptions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("subscriptions").toString(), JsonObject[].class);
+            final Subscription[] array = new Subscription[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Subscription.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            subscriptions = new SubscriptionCollectionPage(response, null);
         }
 
         if (json.has("thumbnails")) {

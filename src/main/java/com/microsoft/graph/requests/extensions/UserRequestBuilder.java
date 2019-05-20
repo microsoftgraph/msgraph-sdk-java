@@ -133,14 +133,14 @@ import com.microsoft.graph.requests.extensions.UserChangePasswordRequestBuilder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.IUserSendMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSendMailRequestBuilder;
+import com.microsoft.graph.models.generated.MailTipsType;
+import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.microsoft.graph.requests.extensions.IUserFindMeetingTimesRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserFindMeetingTimesRequestBuilder;
-import com.microsoft.graph.models.generated.MailTipsType;
-import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder;
@@ -475,12 +475,12 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
     }
 
-    public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
-        return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
-    }
-
     public IUserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
         return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, emailAddresses, mailTipsOptions);
+    }
+
+    public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
+        return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
     }
 
     public IUserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {

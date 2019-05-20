@@ -76,6 +76,14 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public String countryLetterCode;
 
     /**
+     * The Created Date Time.
+     * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The Display Name.
      * The display name for the tenant.
      */

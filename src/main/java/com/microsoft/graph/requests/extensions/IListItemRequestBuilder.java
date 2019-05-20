@@ -4,10 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IListItemRequest;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemGetActivitiesByIntervalCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,6 +38,13 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
 
 
     /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    IItemAnalyticsWithReferenceRequestBuilder analytics();
+
+    /**
      * Gets the request builder for DriveItem
      *
      * @return the IDriveItemRequestBuilder instance
@@ -52,5 +61,7 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
     IListItemVersionCollectionRequestBuilder versions();
 
     IListItemVersionRequestBuilder versions(final String id);
+
+    IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
 
 }

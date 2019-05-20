@@ -52,6 +52,14 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
     public Boolean highlightLastColumn;
 
     /**
+     * The Legacy Id.
+     * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed. This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
+     */
+    @SerializedName("legacyId")
+    @Expose
+    public String legacyId;
+
+    /**
      * The Name.
      * Name of the table.
      */

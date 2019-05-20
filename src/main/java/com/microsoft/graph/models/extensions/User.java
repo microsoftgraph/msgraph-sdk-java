@@ -144,7 +144,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. Read-only.
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
      */
     @SerializedName("companyName")
     @Expose
@@ -213,6 +213,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("imAddresses")
     @Expose
     public java.util.List<String> imAddresses;
+
+    /**
+     * The Is Resource Account.
+     * true if the user is a resource account; otherwise, false. Null value should be considered false.
+     */
+    @SerializedName("isResourceAccount")
+    @Expose
+    public Boolean isResourceAccount;
 
     /**
      * The Job Title.

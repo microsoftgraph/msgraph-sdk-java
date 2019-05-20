@@ -51,11 +51,19 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Read-only.
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName("approximateLastSignInDateTime")
     @Expose
     public java.util.Calendar approximateLastSignInDateTime;
+
+    /**
+     * The Compliance Expiration Date Time.
+     * The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     */
+    @SerializedName("complianceExpirationDateTime")
+    @Expose
+    public java.util.Calendar complianceExpirationDateTime;
 
     /**
      * The Device Id.
@@ -144,6 +152,22 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("physicalIds")
     @Expose
     public java.util.List<String> physicalIds;
+
+    /**
+     * The Profile Type.
+     * The profile type of the device. Possible values:RegisteredDevice (default)SecureVMPrinterSharedIoT
+     */
+    @SerializedName("profileType")
+    @Expose
+    public String profileType;
+
+    /**
+     * The System Labels.
+     * List of labels applied to the device by the system.
+     */
+    @SerializedName("systemLabels")
+    @Expose
+    public java.util.List<String> systemLabels;
 
     /**
      * The Trust Type.

@@ -47,6 +47,22 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
+     * The Email.
+     * The email address for sending messages to the channel. Read-only.
+     */
+    @SerializedName("email")
+    @Expose
+    public String email;
+
+    /**
+     * The Web Url.
+     * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
+
+    /**
      * The Tabs.
      * A collection of all the tabs in the channel. A navigation property.
      */

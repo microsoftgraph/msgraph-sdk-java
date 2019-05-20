@@ -165,7 +165,7 @@ public class PlannerTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Active Checklist Item Count.
-     * Number of checklist items with value set to 'false', representing incomplete items.
+     * Number of checklist items with value set to false, representing incomplete items.
      */
     @SerializedName("activeChecklistItemCount")
     @Expose

@@ -10,10 +10,10 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.TimeSlot;
 import com.microsoft.graph.models.generated.FreeBusyStatus;
 import com.microsoft.graph.models.extensions.AttendeeAvailability;
 import com.microsoft.graph.models.extensions.Location;
+import com.microsoft.graph.models.extensions.TimeSlot;
 
 
 import com.google.gson.JsonObject;
@@ -41,20 +41,20 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
     }
 
     /**
-     * The Meeting Time Slot.
-     * A time period suggested for the meeting.
-     */
-    @SerializedName("meetingTimeSlot")
-    @Expose
-    public TimeSlot meetingTimeSlot;
-
-    /**
      * The Confidence.
      * A percentage that represents the likelhood of all the attendees attending.
      */
     @SerializedName("confidence")
     @Expose
     public Double confidence;
+
+    /**
+     * The Order.
+     * Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
+     */
+    @SerializedName("order")
+    @Expose
+    public Integer order;
 
     /**
      * The Organizer Availability.
@@ -87,6 +87,14 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
     @SerializedName("suggestionReason")
     @Expose
     public String suggestionReason;
+
+    /**
+     * The Meeting Time Slot.
+     * A time period suggested for the meeting.
+     */
+    @SerializedName("meetingTimeSlot")
+    @Expose
+    public TimeSlot meetingTimeSlot;
 
 
     /**

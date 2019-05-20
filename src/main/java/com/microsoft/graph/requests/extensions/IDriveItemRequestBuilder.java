@@ -4,11 +4,14 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemRequest;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
@@ -25,6 +28,7 @@ import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequest
 import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -59,6 +63,13 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
      */
     IDriveItemRequestBuilder itemWithPath(final String path);
 
+    /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    IItemAnalyticsWithReferenceRequestBuilder analytics();
+
     IDriveItemCollectionRequestBuilder children();
 
     IDriveItemRequestBuilder children(final String id);
@@ -73,6 +84,10 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IPermissionCollectionRequestBuilder permissions();
 
     IPermissionRequestBuilder permissions(final String id);
+
+    ISubscriptionCollectionRequestBuilder subscriptions();
+
+    ISubscriptionRequestBuilder subscriptions(final String id);
 
     IThumbnailSetCollectionRequestBuilder thumbnails();
 
@@ -100,6 +115,8 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemDeltaCollectionRequestBuilder delta(final String token);
 
     IDriveItemDeltaCollectionRequestBuilder delta();
+
+    IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
 
     IDriveItemSearchCollectionRequestBuilder search(final String q);
 

@@ -47,12 +47,12 @@ public class TimeConstraint implements IJsonBackedObject {
     public ActivityDomain activityDomain;
 
     /**
-     * The Timeslots.
-     * An array of time periods.
+     * The Time Slots.
+     * 
      */
-    @SerializedName("timeslots")
+    @SerializedName("timeSlots")
     @Expose
-    public java.util.List<TimeSlot> timeslots;
+    public java.util.List<TimeSlot> timeSlots;
 
 
     /**
