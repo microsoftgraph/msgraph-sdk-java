@@ -29,7 +29,7 @@ public class IPv4Range extends IpRange implements IJsonBackedObject {
 
     /**
      * The Lower Address.
-     * Lower IP Address
+     * Lower address.
      */
     @SerializedName("lowerAddress")
     @Expose
@@ -37,7 +37,7 @@ public class IPv4Range extends IpRange implements IJsonBackedObject {
 
     /**
      * The Upper Address.
-     * Upper IP Address
+     * Upper address.
      */
     @SerializedName("upperAddress")
     @Expose

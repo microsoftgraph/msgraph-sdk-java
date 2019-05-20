@@ -6,6 +6,10 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ISecurityRequest;
 import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -36,5 +40,13 @@ public interface ISecurityRequestBuilder extends IRequestBuilder {
     IAlertCollectionRequestBuilder alerts();
 
     IAlertRequestBuilder alerts(final String id);
+
+    ISecureScoreControlProfileCollectionRequestBuilder secureScoreControlProfiles();
+
+    ISecureScoreControlProfileRequestBuilder secureScoreControlProfiles(final String id);
+
+    ISecureScoreCollectionRequestBuilder secureScores();
+
+    ISecureScoreRequestBuilder secureScores(final String id);
 
 }

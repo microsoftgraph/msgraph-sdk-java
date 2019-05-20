@@ -93,6 +93,14 @@ public class ItemReference implements IJsonBackedObject {
     @Expose
     public SharepointIds sharepointIds;
 
+    /**
+     * The Site Id.
+     * 
+     */
+    @SerializedName("siteId")
+    @Expose
+    public String siteId;
+
 
     /**
      * The raw representation of this class

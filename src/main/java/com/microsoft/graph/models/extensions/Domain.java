@@ -91,6 +91,22 @@ public class Domain extends Entity implements IJsonBackedObject {
     public Boolean isVerified;
 
     /**
+     * The Password Notification Window In Days.
+     * Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
+     */
+    @SerializedName("passwordNotificationWindowInDays")
+    @Expose
+    public Integer passwordNotificationWindowInDays;
+
+    /**
+     * The Password Validity Period In Days.
+     * Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
+     */
+    @SerializedName("passwordValidityPeriodInDays")
+    @Expose
+    public Integer passwordValidityPeriodInDays;
+
+    /**
      * The Supported Services.
      * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
      */

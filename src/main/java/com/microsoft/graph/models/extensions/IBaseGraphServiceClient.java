@@ -369,6 +369,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IDataPolicyOperationRequestBuilder dataPolicyOperations(final String id);
 
     /**
+     * Gets the collection of IdentityProviders objects
+     *
+     * @return the request builder for the collection of IdentityProviders objects
+     */
+    IIdentityProviderCollectionRequestBuilder identityProviders();
+
+    /**
+     * Gets a single IdentityProviders
+     *
+     * @param id the id of the IdentityProviders to retrieve
+     * @return the request builder for the IdentityProviders object
+     */
+    IIdentityProviderRequestBuilder identityProviders(final String id);
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
@@ -437,5 +452,12 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the AppCatalogs
      */
     IAppCatalogsRequestBuilder appCatalogs();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuditLogRoot
+     */
+    IAuditLogRootRequestBuilder auditLogs();
 
 }

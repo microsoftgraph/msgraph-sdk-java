@@ -10,6 +10,8 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.models.extensions.LicenseProcessingState;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.GroupSetting;
@@ -62,6 +64,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
 
     /**
+     * The Assigned Licenses.
+     * The licenses that are assigned to the group. Returned only on $select. Read-only.
+     */
+    @SerializedName("assignedLicenses")
+    @Expose
+    public java.util.List<AssignedLicense> assignedLicenses;
+
+    /**
      * The Classification.
      * Describes a classification for the group (such as low, medium or high business impact). Valid values for this property are defined by creating a ClassificationList setting value, based on the template definition.Returned by default.
      */
@@ -94,12 +104,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Has Members With License Errors.
+     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+     */
+    @SerializedName("hasMembersWithLicenseErrors")
+    @Expose
+    public Boolean hasMembersWithLicenseErrors;
+
+    /**
      * The Group Types.
      * Specifies the type of group to create. Possible values are Unified to create an Office 365 group, or DynamicMembership for dynamic groups.  For all other group types, like security-enabled groups and email-enabled security groups, do not set this property. Returned by default. Supports $filter.
      */
     @SerializedName("groupTypes")
     @Expose
     public java.util.List<String> groupTypes;
+
+    /**
+     * The License Processing State.
+     * Indicates status of the group license assignment to all members of the group. Default value is false. Read-only. Possible values: QueuedForProcessing, ProcessingInProgress, and ProcessingComplete.Returned only on $select. Read-only.
+     */
+    @SerializedName("licenseProcessingState")
+    @Expose
+    public LicenseProcessingState licenseProcessingState;
 
     /**
      * The Mail.
@@ -240,6 +266,12 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage memberOf;
+
+    /**
+     * The Members With License Errors.
+     * A list of group members with license errors from this group-based license assignment. Read-only.
+     */
+    public DirectoryObjectCollectionPage membersWithLicenseErrors;
 
     /**
      * The Transitive Members.
@@ -457,6 +489,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             memberOf = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("membersWithLicenseErrors")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("membersWithLicenseErrors@odata.nextLink")) {
+                response.nextLink = json.get("membersWithLicenseErrors@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("membersWithLicenseErrors").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            membersWithLicenseErrors = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("transitiveMembers")) {

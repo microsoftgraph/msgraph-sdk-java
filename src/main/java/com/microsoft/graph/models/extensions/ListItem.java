@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ContentTypeInfo;
 import com.microsoft.graph.models.extensions.SharepointIds;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.FieldValueSet;
 import com.microsoft.graph.models.extensions.ListItemVersion;
@@ -49,6 +50,14 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
     @SerializedName("sharepointIds")
     @Expose
     public SharepointIds sharepointIds;
+
+    /**
+     * The Analytics.
+     * 
+     */
+    @SerializedName("analytics")
+    @Expose
+    public ItemAnalytics analytics;
 
     /**
      * The Drive Item.

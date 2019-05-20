@@ -63,7 +63,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
 
     /**
      * The Password Expiration Days.
-     * Number of days before the password expires. Valid values 1 to 65535
+     * Number of days before the password expires. Valid values 1 to 365
      */
     @SerializedName("passwordExpirationDays")
     @Expose
@@ -71,7 +71,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
 
     /**
      * The Password Previous Password Block Count.
-     * Number of previous passwords to block.
+     * Number of previous passwords to block. Valid values 1 to 24
      */
     @SerializedName("passwordPreviousPasswordBlockCount")
     @Expose

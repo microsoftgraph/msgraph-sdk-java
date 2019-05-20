@@ -1238,7 +1238,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Block Search Suggestions.
-     * Indicates whether or not to Block the user from using the search suggestions in the address bar.
+     * Indicates whether or not to block the user from using the search suggestions in the address bar.
      */
     @SerializedName("edgeBlockSearchSuggestions")
     @Expose
@@ -1246,7 +1246,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Block Sending Intranet Traffic To Internet Explorer.
-     * Indicates whether or not to Block the user from sending Intranet traffic to Internet Explorer from Edge.
+     * Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer. Note: the name of this property is misleading; the property is obsolete, use EdgeSendIntranetTrafficToInternetExplorer instead.
      */
     @SerializedName("edgeBlockSendingIntranetTrafficToInternetExplorer")
     @Expose

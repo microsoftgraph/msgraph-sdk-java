@@ -12,6 +12,8 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -85,6 +87,10 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
 
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder membersWithLicenseErrors();
+
+    IDirectoryObjectWithReferenceRequestBuilder membersWithLicenseErrors(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMembers();
 
