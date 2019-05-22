@@ -45,14 +45,6 @@ import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.DefaultConnectionConfig;
 import com.microsoft.graph.core.IConnectionConfig;
-import com.microsoft.graph.http.DefaultConnectionFactory;
-import com.microsoft.graph.http.GraphServiceException;
-import com.microsoft.graph.http.HttpMethod;
-import com.microsoft.graph.http.HttpResponseCode;
-import com.microsoft.graph.http.IConnectionFactory;
-import com.microsoft.graph.http.IHttpProvider;
-import com.microsoft.graph.http.IHttpRequest;
-import com.microsoft.graph.http.IStatefulResponseHandler;
 import com.microsoft.graph.httpcore.AuthenticationHandler;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
@@ -287,6 +279,7 @@ public class OkHttpProvider implements IHttpProvider {
 				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.followRedirects(false);
+				okBuilder.retryOnConnectionFailure(false);
 				okhttpClient = okBuilder.build();
 			}
 
