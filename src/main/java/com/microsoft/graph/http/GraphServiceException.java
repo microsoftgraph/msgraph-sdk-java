@@ -415,7 +415,10 @@ public class GraphServiceException extends ClientException {
         }
 
         final String responseMessage = response.message();
-        final String rawOutput = DefaultHttpProvider.streamToString(response.body().byteStream());
+        String rawOutput = "{}";
+        if(response.body().byteStream() != null) {
+        	rawOutput = DefaultHttpProvider.streamToString(response.body().byteStream());
+        }
         GraphErrorResponse error;
         try {
             error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, OkHttpProvider.getResponseHeadersAsMapOfStringList(response));
