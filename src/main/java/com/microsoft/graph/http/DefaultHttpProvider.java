@@ -447,6 +447,9 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @return      the string result
      */
     public static String streamToString(final InputStream input) {
+        if (input == null) {
+            return null;   
+        }
         final String httpStreamEncoding = "UTF-8";
         final String endOfFile = "\\A";
         final Scanner scanner = new Scanner(input, httpStreamEncoding);
