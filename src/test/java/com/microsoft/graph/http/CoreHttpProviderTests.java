@@ -8,20 +8,16 @@ import static org.junit.Assert.fail;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Test;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
-import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.concurrency.MockExecutors;
-import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.logger.MockLogger;
-import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.MockSerializer;
@@ -30,89 +26,6 @@ public class CoreHttpProviderTests {
 	
 	private MockAuthenticationProvider mAuthenticationProvider;
     private CoreHttpProvider mProvider;
-
-    @Test
-    public void testNoContentType() throws Exception {
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                return new HashMap<>();
-            }
-        };
-        setDefaultHttpProvider(null);
-
-        try {
-            mProvider.send(new MockHttpRequest(), Drive.class, null);
-            fail("Expected exception");
-        } catch (final ClientException ce) {
-            if (!(ce.getCause() instanceof NullPointerException)) {
-                fail("Wrong inner exception!");
-            }
-        }
-        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
-    }
-
-    @Test
-    public void testPostByte() throws Exception {
-        final String itemId = "itemId";
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json");
-                return map;
-            }
-        };
-        final DriveItem expectedItem = new DriveItem();
-        expectedItem.id = itemId;
-        setDefaultHttpProvider(expectedItem);
-
-        final AtomicBoolean progress = new AtomicBoolean(false);
-        final AtomicBoolean success = new AtomicBoolean(false);
-        final AtomicBoolean failure = new AtomicBoolean(false);
-        final IProgressCallback<DriveItem> progressCallback = new IProgressCallback<DriveItem>() {
-            @Override
-            public void progress(final long current, final long max) {
-                progress.set(true);
-            }
-
-            @Override
-            public void success(final DriveItem item) {
-                success.set(true);
-            }
-
-            @Override
-            public void failure(final ClientException ex) {
-                failure.set(true);
-            }
-        };
-
-        mProvider.send(new MockHttpRequest(), progressCallback, DriveItem.class, new byte[]{1, 2, 3, 4});
-
-        assertTrue(progress.get());
-        assertTrue(success.get());
-        assertEquals(1, mAuthenticationProvider.getInterceptionCount());
-    }
 
     @Test
     public void testErrorResponse() throws Exception {
