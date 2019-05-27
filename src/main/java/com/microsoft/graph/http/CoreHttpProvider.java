@@ -69,7 +69,7 @@ import okio.BufferedSink;
 /**
  * HTTP provider based off of URLConnection
  */
-public class OkHttpProvider implements IHttpProvider {
+public class CoreHttpProvider implements IHttpProvider {
 
 	/**
 	 * The content type header
@@ -85,6 +85,11 @@ public class OkHttpProvider implements IHttpProvider {
 	 * The encoding type for getBytes
 	 */
 	static final String JSON_ENCODING = "UTF-8";
+	
+	/**
+	 * The binary content type header's value 
+	 */
+	static final String BINARY_CONTENT_TYPE = "application/octet-stream";
 
 	/**
 	 * The serializer
@@ -114,7 +119,7 @@ public class OkHttpProvider implements IHttpProvider {
 	/**
 	 * The OkHttpClient that handles all requests
 	 */
-	private OkHttpClient okhttpClient;
+	private OkHttpClient corehttpClient;
 
 	/**
 	 * Creates the DefaultHttpProvider
@@ -124,7 +129,7 @@ public class OkHttpProvider implements IHttpProvider {
 	 * @param executors              the executors
 	 * @param logger                 the logger for diagnostic information
 	 */
-	public OkHttpProvider(final ISerializer serializer,
+	public CoreHttpProvider(final ISerializer serializer,
 			final IAuthenticationProvider authenticationProvider,
 			final IExecutors executors,
 			final ILogger logger) {
@@ -244,7 +249,6 @@ public class OkHttpProvider implements IHttpProvider {
 			final IStatefulResponseHandler<Result, DeserializeType> handler)
 					throws ClientException {
 		final int defaultBufferSize = 4096;
-		final String binaryContentType = "application/octet-stream";
 
 		try {
 			if (authenticationProvider != null) {
@@ -260,31 +264,32 @@ public class OkHttpProvider implements IHttpProvider {
 				this.connectionConfig = new DefaultConnectionConfig();
 			}
 
-			if(okhttpClient == null) {
-				RedirectOptions redirectOptions = new RedirectOptions(this.connectionConfig.getMaxRedirects(), this.connectionConfig.getShouldRedirect());
-				RedirectHandler redirectHandler = new RedirectHandler(redirectOptions);
-				
-				RetryOptions retryOptions = new RetryOptions(this.connectionConfig.getShouldRetry(), this.connectionConfig.getMaxRetries(), this.connectionConfig.getDelay());
-				RetryHandler retryHandler = new RetryHandler(retryOptions);
-				
-				AuthenticationHandler authenticationHandler = new AuthenticationHandler(new ICoreAuthenticationProvider() {
+			if(this.corehttpClient == null) {
+				OkHttpClient.Builder okBuilder = HttpClients.createDefault(new ICoreAuthenticationProvider() {
 					@Override
 					public Request authenticateRequest(Request request) {
 						return request;
 					}
-				});
-				
-				Interceptor[] interceptors = {authenticationHandler, redirectHandler, retryHandler};
-				OkHttpClient.Builder okBuilder = HttpClients.createFromInterceptors(interceptors).newBuilder();
+				}).newBuilder();
 				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.followRedirects(false);
 				okBuilder.retryOnConnectionFailure(false);
-				okhttpClient = okBuilder.build();
+				this.corehttpClient = okBuilder.build();
 			}
+			
+			// Request level middleware options
+			RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
+					request.getShouldRedirect() != null? request.getShouldRedirect() : this.connectionConfig.getShouldRedirect());
+			RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
+					request.getMaxRetries() > 0? request.getMaxRetries() : this.connectionConfig.getMaxRetries(),
+					request.getDelay() > 0? request.getDelay() : this.connectionConfig.getDelay());
 
-			Request okhttpRequest = convertIHttpRequestToOkHttpRequest(request);
-			Request.Builder okhttpRequestBuilder = okhttpRequest.newBuilder();
+			Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
+			Request.Builder corehttpRequestBuilder = coreHttpRequest
+					.newBuilder()
+					.tag(RedirectOptions.class, redirectOptions)
+					.tag(RetryOptions.class, retryOptions);
 			
 			String contenttype = null;
 
@@ -300,7 +305,7 @@ public class OkHttpProvider implements IHttpProvider {
 				}
 
 				final byte[] bytesToWrite;
-				okhttpRequestBuilder.addHeader("Accept", "*/*");
+				corehttpRequestBuilder.addHeader("Accept", "*/*");
 				if (serializable == null) {
 					// Send an empty body through with a POST request
 					// This ensures that the Content-Length header is properly set
@@ -316,8 +321,8 @@ public class OkHttpProvider implements IHttpProvider {
 
 					// If the user hasn't specified a Content-Type for the request
 					if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
-						okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, binaryContentType);
-						contenttype = binaryContentType;
+						corehttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, BINARY_CONTENT_TYPE);
+						contenttype = BINARY_CONTENT_TYPE;
 					}
 				} else {
 					logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
@@ -326,7 +331,7 @@ public class OkHttpProvider implements IHttpProvider {
 
 					// If the user hasn't specified a Content-Type for the request
 					if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
-						okhttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
+						corehttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
 						contenttype = JSON_CONTENT_TYPE;
 					}
 				}
@@ -366,10 +371,11 @@ public class OkHttpProvider implements IHttpProvider {
 					};
 				}
 
-				okhttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
-				okhttpRequest = okhttpRequestBuilder.build();
+				corehttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
+				coreHttpRequest = corehttpRequestBuilder.build();
 
-				Response response = okhttpClient.newCall(okhttpRequest).execute();
+				// Call being executed
+				Response response = corehttpClient.newCall(coreHttpRequest).execute();
 
 				if (handler != null) {
 					handler.configConnection(response);
@@ -394,22 +400,22 @@ public class OkHttpProvider implements IHttpProvider {
 				if (response.code() == HttpResponseCode.HTTP_NOBODY
 						|| response.code() == HttpResponseCode.HTTP_NOT_MODIFIED) {
 					logger.logDebug("Handling response with no body");                  
-					return handleEmptyResponse(OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+					return handleEmptyResponse(CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
 				}
 
 				if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
 					logger.logDebug("Handling accepted response");
-					return handleEmptyResponse(OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+					return handleEmptyResponse(CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
 				}
 
 				in = new BufferedInputStream(response.body().byteStream());
 
-				final Map<String, String> headers = OkHttpProvider.getResponseHeadersAsMapStringString(response);
+				final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
 
 				final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
 				if (contentType.contains(JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
-					return handleJsonResponse(in, OkHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+					return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
 				} else {
 					logger.logDebug("Response binary");
 					isBinaryStreamInput = true;

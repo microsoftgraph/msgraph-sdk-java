@@ -403,7 +403,7 @@ public class GraphServiceException extends ClientException {
 
         final int responseCode = response.code();
         final List<String> responseHeaders = new LinkedList<>();
-        final Map<String, String> headers = OkHttpProvider.getResponseHeadersAsMapStringString(response);
+        final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
         for (final String key : headers.keySet()) {
             final String fieldPrefix;
             if (key == null) {
@@ -421,7 +421,7 @@ public class GraphServiceException extends ClientException {
         }
         GraphErrorResponse error;
         try {
-            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, OkHttpProvider.getResponseHeadersAsMapOfStringList(response));
+            error = serializer.deserializeObject(rawOutput, GraphErrorResponse.class, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response));
         } catch (final Exception ex) {
             error = new GraphErrorResponse();
             error.error = new GraphError();

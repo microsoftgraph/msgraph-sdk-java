@@ -18,11 +18,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.DefaultClientConfig;
 import com.microsoft.graph.core.DefaultConnectionConfig;
 import com.microsoft.graph.core.IConnectionConfig;
-import com.microsoft.graph.http.DefaultHttpProvider;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
-import com.microsoft.graph.http.OkHttpProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
@@ -62,7 +61,7 @@ public class GraphServiceClientTest {
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
-        assertEquals(logger, ((OkHttpProvider) client.getHttpProvider()).getLogger());
+        assertEquals(logger, ((CoreHttpProvider) client.getHttpProvider()).getLogger());
         assertEquals(logger, ((DefaultSerializer) client.getSerializer()).getLogger());
         assertEquals(logger, ((DefaultExecutors) client.getExecutors()).getLogger());
         assertEquals(logger, client.getLogger());
@@ -86,7 +85,7 @@ public class GraphServiceClientTest {
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
         assertEquals(ap,
-                ((OkHttpProvider) client.getHttpProvider()).getAuthenticationProvider());
+                ((CoreHttpProvider) client.getHttpProvider()).getAuthenticationProvider());
     }
 
     @Test
@@ -130,7 +129,7 @@ public class GraphServiceClientTest {
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getSerializer());
-        assertEquals(ex, ((OkHttpProvider) client.getHttpProvider()).getExecutors());
+        assertEquals(ex, ((CoreHttpProvider) client.getHttpProvider()).getExecutors());
     }
 
     @Test
@@ -162,7 +161,7 @@ public class GraphServiceClientTest {
         assertNotNull(client.getHttpProvider());
         assertNotNull(client.getLogger());
         assertNotNull(client.getExecutors());
-        assertEquals(serializer, ((OkHttpProvider) client.getHttpProvider()).getSerializer());
+        assertEquals(serializer, ((CoreHttpProvider) client.getHttpProvider()).getSerializer());
     }
 
     @Test
