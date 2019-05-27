@@ -102,7 +102,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
                     getAuthenticationProvider(),
                     getExecutors(),
                     getLogger());
-            getLogger().logDebug("Created OkHttpProvider");
+            getLogger().logDebug("Created CoreHttpProvider");
         }
         return httpProvider;
     }

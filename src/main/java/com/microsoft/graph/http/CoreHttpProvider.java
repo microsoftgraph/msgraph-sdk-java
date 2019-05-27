@@ -450,8 +450,8 @@ public class CoreHttpProvider implements IHttpProvider {
 	 * @param response the OkHttp response
 	 * @return           the set of headers names and value
 	 */
-	static HashMap<String, String> getResponseHeadersAsMapStringString(final Response response) {
-		final HashMap<String, String> headers = new HashMap<>();
+	static Map<String, String> getResponseHeadersAsMapStringString(final Response response) {
+		final Map<String, String> headers = new HashMap<>();
 		int index = 0;
 		Headers responseHeaders = response.headers();
 		while (index < responseHeaders.size()) {

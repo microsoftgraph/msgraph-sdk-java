@@ -23,6 +23,7 @@
 package com.microsoft.graph.concurrency;
 
 import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 import com.microsoft.graph.http.DefaultHttpProvider;
@@ -148,38 +149,40 @@ public class ChunkedUploadResponseHandler<UploadType>
             final ISerializer serializer,
             final ILogger logger) throws Exception {
         InputStream in = null;
-
         try {
-            if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
-                logger.logDebug("Chunk bytes has been accepted by the server.");
-                in = new BufferedInputStream(response.body().byteStream());
-                final UploadSession session = serializer.deserializeObject(
-                        DefaultHttpProvider.streamToString(in), UploadSession.class);
+        	try {
+        		if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
+        			logger.logDebug("Chunk bytes has been accepted by the server.");
+        			in = new BufferedInputStream(response.body().byteStream());
+        			final UploadSession session = serializer.deserializeObject(
+        					DefaultHttpProvider.streamToString(in), UploadSession.class);
 
-                return new ChunkedUploadResult<UploadType>(session);
+        			return new ChunkedUploadResult<UploadType>(session);
 
-            } else if (response.code() == HttpResponseCode.HTTP_CREATED
-                    || response.code() == HttpResponseCode.HTTP_OK) {
-                logger.logDebug("Upload session is completed, uploaded item returned.");
-                in = new BufferedInputStream(response.body().byteStream());
-                String rawJson = DefaultHttpProvider.streamToString(in);
-                UploadType uploadedItem = serializer.deserializeObject(rawJson,
-                        this.deserializeTypeClass);
+        		} else if (response.code() == HttpResponseCode.HTTP_CREATED
+        				|| response.code() == HttpResponseCode.HTTP_OK) {
+        			logger.logDebug("Upload session is completed, uploaded item returned.");
+        			in = new BufferedInputStream(response.body().byteStream());
+        			String rawJson = DefaultHttpProvider.streamToString(in);
+        			UploadType uploadedItem = serializer.deserializeObject(rawJson,
+        					this.deserializeTypeClass);
 
-                return new ChunkedUploadResult<UploadType>(uploadedItem);
-            } else if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-                logger.logDebug("Receiving error during upload, see detail on result error");
+        			return new ChunkedUploadResult<UploadType>(uploadedItem);
+        		} else if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
+        			logger.logDebug("Receiving error during upload, see detail on result error");
 
-                return new ChunkedUploadResult<UploadType>(
-                        GraphServiceException.createFromConnection(request, null, serializer,
-                                response, logger));
-            }
-        } finally {
-            if (in != null) {
-                in.close();
-            }
+        			return new ChunkedUploadResult<UploadType>(
+        					GraphServiceException.createFromConnection(request, null, serializer,
+        							response, logger));
+        		}
+        	} finally {
+        		if (in != null) {
+        			in.close();
+        		}
+        	}
+        } catch(IOException e) {
+        	e.printStackTrace();
         }
-
         return null;
     }
 }

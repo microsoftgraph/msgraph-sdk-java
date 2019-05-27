@@ -60,7 +60,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
     private static long delay = RetryOptions.DEFAULT_DELAY;
     
     /**
-     * 
+     * Callback called when doing a retry
      */
     private static IShouldRetry shouldRetry = RetryOptions.DEFAULT_SHOULD_RETRY;
     

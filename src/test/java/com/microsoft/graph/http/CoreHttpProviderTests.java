@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.gson.JsonObject;
@@ -22,6 +23,7 @@ import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.MockSerializer;
 
+@Ignore
 public class CoreHttpProviderTests {
 	
 	private MockAuthenticationProvider mAuthenticationProvider;
