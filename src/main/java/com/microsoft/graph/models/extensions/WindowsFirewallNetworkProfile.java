@@ -103,7 +103,7 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Outbound Connections Blocked.
-     * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority.
+     * Configures the firewall to block all outgoing connections by default. When OutboundConnectionsRequired and OutboundConnectionsBlocked are both true, OutboundConnectionsBlocked takes priority. This setting will get applied to Windows releases version 1809 and above.
      */
     @SerializedName("outboundConnectionsBlocked")
     @Expose

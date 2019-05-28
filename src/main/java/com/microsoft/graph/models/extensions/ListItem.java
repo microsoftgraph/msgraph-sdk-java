@@ -53,7 +53,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Analytics.
-     * 
+     * Analytics about the view activities that took place on this item.
      */
     @SerializedName("analytics")
     @Expose

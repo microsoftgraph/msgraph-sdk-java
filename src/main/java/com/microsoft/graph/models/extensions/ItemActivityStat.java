@@ -34,7 +34,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * When the interval starts. Read-only.
      */
     @SerializedName("startDateTime")
     @Expose
@@ -42,7 +42,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * When the interval ends. Read-only.
      */
     @SerializedName("endDateTime")
     @Expose
@@ -50,7 +50,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Access.
-     * 
+     * Statistics about the access actions in this interval. Read-only.
      */
     @SerializedName("access")
     @Expose
@@ -58,7 +58,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Create.
-     * 
+     * Statistics about the create actions in this interval. Read-only.
      */
     @SerializedName("create")
     @Expose
@@ -66,7 +66,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Delete.
-     * 
+     * Statistics about the delete actions in this interval. Read-only.
      */
     @SerializedName("delete")
     @Expose
@@ -74,7 +74,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Edit.
-     * 
+     * Statistics about the edit actions in this interval. Read-only.
      */
     @SerializedName("edit")
     @Expose
@@ -82,7 +82,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Move.
-     * 
+     * Statistics about the move actions in this interval. Read-only.
      */
     @SerializedName("move")
     @Expose
@@ -90,7 +90,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Trending.
-     * 
+     * Indicates whether the item is 'trending.' Read-only.
      */
     @SerializedName("isTrending")
     @Expose
@@ -98,7 +98,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Incomplete Data.
-     * 
+     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
      */
     @SerializedName("incompleteData")
     @Expose
@@ -106,7 +106,7 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * 
+     * Exposes the itemActivities represented in this itemActivityStat resource.
      */
     public ItemActivityCollectionPage activities;
 
