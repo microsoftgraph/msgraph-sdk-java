@@ -442,7 +442,7 @@ public abstract class BaseRequest implements IHttpRequest {
      * @param maxRetries Max retries for a request
      */
     public void setMaxRetries(int maxRetries) {
-    	this.maxRedirects = maxRedirects;
+    	this.maxRetries = maxRetries;
     }
     
     /**
