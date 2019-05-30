@@ -125,7 +125,11 @@ public class ChunkedUploadResponseHandler<UploadType>
             }
         } finally {
             if (in != null) {
-                in.close();
+                try{
+                	in.close();
+                } catch(IOException e) {
+                	logger.logError(e.getMessage(), e);
+                }
             }
         }
 

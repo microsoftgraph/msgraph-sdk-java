@@ -43,13 +43,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.core.DefaultConnectionConfig;
 import com.microsoft.graph.core.IConnectionConfig;
-import com.microsoft.graph.httpcore.AuthenticationHandler;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
-import com.microsoft.graph.httpcore.RedirectHandler;
-import com.microsoft.graph.httpcore.RetryHandler;
 import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
 import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.logger.ILogger;
@@ -58,7 +56,6 @@ import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
 import okhttp3.Headers;
-import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -67,29 +64,9 @@ import okhttp3.Response;
 import okio.BufferedSink;
 
 /**
- * HTTP provider based off of URLConnection
+ * HTTP provider based off of OkHttp and msgraph-sdk-java-core library
  */
 public class CoreHttpProvider implements IHttpProvider {
-
-	/**
-	 * The content type header
-	 */
-	static final String CONTENT_TYPE_HEADER_NAME = "Content-Type";
-
-	/**
-	 * The content type for JSON responses
-	 */
-	static final String JSON_CONTENT_TYPE = "application/json";
-
-	/**
-	 * The encoding type for getBytes
-	 */
-	static final String JSON_ENCODING = "UTF-8";
-	
-	/**
-	 * The binary content type header's value 
-	 */
-	static final String BINARY_CONTENT_TYPE = "application/octet-stream";
 
 	/**
 	 * The serializer
@@ -298,7 +275,7 @@ public class CoreHttpProvider implements IHttpProvider {
 				List<HeaderOption> requestHeaders = request.getHeaders();
 
 				for(HeaderOption headerOption : requestHeaders) {
-					if(headerOption.getName().equalsIgnoreCase(CONTENT_TYPE_HEADER_NAME)) {
+					if(headerOption.getName().equalsIgnoreCase(Constants.CONTENT_TYPE_HEADER_NAME)) {
 						contenttype = headerOption.getValue().toString();
 						break;
 					}
@@ -320,19 +297,19 @@ public class CoreHttpProvider implements IHttpProvider {
 					bytesToWrite = (byte[]) serializable;
 
 					// If the user hasn't specified a Content-Type for the request
-					if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
-						corehttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, BINARY_CONTENT_TYPE);
-						contenttype = BINARY_CONTENT_TYPE;
+					if (!hasHeader(requestHeaders, Constants.CONTENT_TYPE_HEADER_NAME)) {
+						corehttpRequestBuilder.addHeader(Constants.CONTENT_TYPE_HEADER_NAME, Constants.BINARY_CONTENT_TYPE);
+						contenttype = Constants.BINARY_CONTENT_TYPE;
 					}
 				} else {
 					logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
 					final String serializeObject = serializer.serializeObject(serializable);
-					bytesToWrite = serializeObject.getBytes(JSON_ENCODING);
+					bytesToWrite = serializeObject.getBytes(Constants.JSON_ENCODING);
 
 					// If the user hasn't specified a Content-Type for the request
-					if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
-						corehttpRequestBuilder.addHeader(CONTENT_TYPE_HEADER_NAME, JSON_CONTENT_TYPE);
-						contenttype = JSON_CONTENT_TYPE;
+					if (!hasHeader(requestHeaders, Constants.CONTENT_TYPE_HEADER_NAME)) {
+						corehttpRequestBuilder.addHeader(Constants.CONTENT_TYPE_HEADER_NAME, Constants.JSON_CONTENT_TYPE);
+						contenttype = Constants.JSON_CONTENT_TYPE;
 					}
 				}
 
@@ -412,8 +389,8 @@ public class CoreHttpProvider implements IHttpProvider {
 
 				final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
 
-				final String contentType = headers.get(CONTENT_TYPE_HEADER_NAME);
-				if (contentType.contains(JSON_CONTENT_TYPE)) {
+				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
+				if (contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
 					return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
 				} else {
@@ -542,7 +519,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
 			throws UnsupportedEncodingException{
 		//Create an empty object to attach the response headers to
-		InputStream in = new ByteArrayInputStream("{}".getBytes(JSON_ENCODING));
+		InputStream in = new ByteArrayInputStream("{}".getBytes(Constants.JSON_ENCODING));
 		return handleJsonResponse(in, responseHeaders, clazz);
 	}
 
