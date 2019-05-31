@@ -401,7 +401,11 @@ public class CoreHttpProvider implements IHttpProvider {
 				}
 			} finally {
 				if (!isBinaryStreamInput && in != null) {
-					in.close();
+					try{
+						in.close();
+					}catch(IOException e) {
+						logger.logError(e.getMessage(), e);
+					}
 				}
 			}
 		} catch (final GraphServiceException ex) {
