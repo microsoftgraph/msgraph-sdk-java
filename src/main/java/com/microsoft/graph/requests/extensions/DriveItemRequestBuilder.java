@@ -33,6 +33,10 @@ import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCheckinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCheckoutRequestBuilder;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.requests.extensions.IDriveItemCopyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCopyRequestBuilder;
@@ -167,6 +171,14 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemStreamRequestBuilder content() {
         return new DriveItemStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
+    }
+
+    public IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment) {
+        return new DriveItemCheckinRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkin"), getClient(), null, checkInAs, comment);
+    }
+
+    public IDriveItemCheckoutRequestBuilder checkout() {
+        return new DriveItemCheckoutRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkout"), getClient(), null);
     }
 
     public IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference) {

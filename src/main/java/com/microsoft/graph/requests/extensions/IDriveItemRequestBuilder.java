@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionReques
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequestBuilder;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.requests.extensions.IDriveItemCopyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateLinkRequestBuilder;
@@ -105,6 +107,8 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IWorkbookRequestBuilder workbook();
 
     IDriveItemStreamRequestBuilder content();
+    IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment);
+    IDriveItemCheckoutRequestBuilder checkout();
     IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference);
     IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope);
     IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);

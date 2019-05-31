@@ -83,7 +83,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Analytics.
-     * 
+     * Analytics about the view activities that took place in this site.
      */
     @SerializedName("analytics")
     @Expose
