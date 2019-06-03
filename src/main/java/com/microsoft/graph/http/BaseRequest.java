@@ -27,6 +27,10 @@ import javax.ws.rs.core.UriBuilder;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
+import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
+import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.ClientException;
@@ -95,6 +99,31 @@ public abstract class BaseRequest implements IHttpRequest {
      * Value to pass to setUseCaches in connection
      */
     private boolean useCaches;
+    
+    /**
+     * MaxRedirects of every request
+     */
+    private int maxRedirects = RedirectOptions.DEFAULT_MAX_REDIRECTS;
+    
+    /**
+     * ShouldRedirect callback for every request
+     */
+    private IShouldRedirect shouldRedirect = RedirectOptions.DEFAULT_SHOULD_REDIRECT;
+    
+    /**
+     * Max redirects for every request
+     */
+    private int maxRetries = RetryOptions.DEFAULT_MAX_RETRIES;
+    
+    /**
+     * Delay in seconds for every request
+     */
+    private long delay = RetryOptions.DEFAULT_DELAY;
+    
+    /**
+     * Callback before doing a retry
+     */
+    private IShouldRetry shouldRetry = RetryOptions.DEFAULT_SHOULD_RETRY;
 
     /**
      * Creates the request
@@ -351,5 +380,95 @@ public abstract class BaseRequest implements IHttpRequest {
      */
 	public Class<?> getResponseType() {
         return responseClass;
+    }
+	
+	   /**
+     * Sets the max redirects
+     * 
+     * @param maxRedirects Max redirects that a request can take
+     */
+    public void setMaxRedirects(int maxRedirects) {
+    	this.maxRedirects = maxRedirects;
+    }
+    
+    /**
+     * Gets the max redirects
+     * 
+     * @return Max redirects that a request can take
+     */
+    public int getMaxRedirects() {
+    	return maxRedirects;
+    }
+    
+    /**
+     * Sets the should redirect callback
+     * 
+     * @param shouldRedirect Callback called before doing a redirect
+     */
+    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    	this.shouldRedirect = shouldRedirect;
+    }
+    
+    /**
+     * Gets the should redirect callback
+     * 
+     * @return Callback which is called before redirect
+     */
+    public IShouldRedirect getShouldRedirect() {
+    	return shouldRedirect;
+    }
+    
+    /**
+     * Sets the should retry callback
+     * 
+     * @param shouldretry The callback called before retry
+     */
+    public void setShouldRetry(IShouldRetry shouldretry) {
+    	this.shouldRetry = shouldretry;
+    }
+    
+    /**
+     * Gets the should retry callback
+     * 
+     * @return Callback called before retry
+     */
+    public IShouldRetry getShouldRetry() {
+    	return shouldRetry;
+    }
+    
+    /**
+     * Sets the max retries
+     * 
+     * @param maxRetries Max retries for a request
+     */
+    public void setMaxRetries(int maxRetries) {
+    	this.maxRetries = maxRetries;
+    }
+    
+    /**
+     * Gets max retries 
+     * 
+     * @return Max retries for a request
+     */
+    public int getMaxRetries() {
+    	return maxRetries;
+    }
+    
+    /**
+     * Sets the delay in seconds between retires
+     * 
+     * @param delay Delay in seconds between retries
+     */
+    public void setDelay(long delay) {
+    	this.delay = delay;
+    }
+    
+    /**
+     * Gets delay between retries
+     * 
+     * @return Delay between retries in seconds
+     */
+    public long getDelay() {
+    	return delay;
     }
 }
