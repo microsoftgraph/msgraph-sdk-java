@@ -82,7 +82,7 @@ public class ChunkedUploadProvider<UploadType> {
     /**
      * The stream size
      */
-    private final Long streamSize;
+    private final long streamSize;
 
     /**
      * The upload response handler
@@ -106,7 +106,7 @@ public class ChunkedUploadProvider<UploadType> {
     public ChunkedUploadProvider(final UploadSession uploadSession,
                                  final IGraphServiceClient client,
                                  final InputStream inputStream,
-                                 final Long streamSize,
+                                 final long streamSize,
                                  final Class<UploadType> uploadTypeClass) {
         if (uploadSession == null) {
             throw new InvalidParameterException("Upload session is null.");
