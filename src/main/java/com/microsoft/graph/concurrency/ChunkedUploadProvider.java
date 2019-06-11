@@ -92,7 +92,7 @@ public class ChunkedUploadProvider<UploadType> {
     /**
      * The counter for how many bytes have been read from input stream
      */
-    private int readSoFar;
+    private long readSoFar;
 
     /**
      * Creates the ChunkedUploadProvider
