@@ -67,6 +67,7 @@ import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRevokeSignInSessionsRequestBuilder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.IUserSendMailRequestBuilder;
 import com.microsoft.graph.models.generated.MailTipsType;
@@ -279,6 +280,7 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IGroupRequestBuilder joinedTeams(final String id);
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
+    IUserRevokeSignInSessionsRequestBuilder revokeSignInSessions();
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);
 
     IUserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions);
