@@ -117,6 +117,7 @@ public class BaseActivityHistoryItem extends Entity implements IJsonBackedObject
      *
      * @return the raw representation of this class
      */
+    @Override
     public JsonObject getRawObject() {
         return rawObject;
     }
