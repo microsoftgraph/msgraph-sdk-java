@@ -22,8 +22,10 @@
 
 package com.microsoft.graph.concurrency;
 
-import com.microsoft.graph.requests.extensions.ChunkedUploadResult;
-import com.microsoft.graph.models.extensions.UploadSession;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import com.microsoft.graph.http.DefaultHttpProvider;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.http.HttpResponseCode;
@@ -31,10 +33,11 @@ import com.microsoft.graph.http.IConnection;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
 import com.microsoft.graph.logger.ILogger;
+import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.requests.extensions.ChunkedUploadResult;
 import com.microsoft.graph.serializer.ISerializer;
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
+import okhttp3.Response;
 
 /**
  * Handles the stateful response from the OneDrive upload session
@@ -64,6 +67,16 @@ public class ChunkedUploadResponseHandler<UploadType>
      */
     @Override
     public void configConnection(final IConnection connection) {
+        return;
+    }
+    
+    /**
+     * Do nothing before getting the response
+     *
+     * @param response The response
+     */
+    @Override
+    public void configConnection(final Response response) {
         return;
     }
 
@@ -112,10 +125,68 @@ public class ChunkedUploadResponseHandler<UploadType>
             }
         } finally {
             if (in != null) {
-                in.close();
+                try{
+                	in.close();
+                } catch(IOException e) {
+                	logger.logError(e.getMessage(), e);
+                }
             }
         }
 
+        return null;
+    }
+    
+    /**
+     * Generate the chunked upload response result
+     *
+     * @param request    the HTTP request
+     * @param response the HTTP response
+     * @param serializer the serializer
+     * @param logger     the system logger
+     * @return the chunked upload result, which could be either an uploaded item or error
+     * @throws Exception an exception occurs if the request was unable to complete for any reason
+     */
+    @Override
+    public ChunkedUploadResult<UploadType> generateResult(
+            final IHttpRequest request,
+            final Response response,
+            final ISerializer serializer,
+            final ILogger logger) throws Exception {
+        InputStream in = null;
+        try {
+        	if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
+        		logger.logDebug("Chunk bytes has been accepted by the server.");
+        		in = new BufferedInputStream(response.body().byteStream());
+        		final UploadSession session = serializer.deserializeObject(
+        				DefaultHttpProvider.streamToString(in), UploadSession.class);
+
+        		return new ChunkedUploadResult<UploadType>(session);
+
+        	} else if (response.code() == HttpResponseCode.HTTP_CREATED
+        			|| response.code() == HttpResponseCode.HTTP_OK) {
+        		logger.logDebug("Upload session is completed, uploaded item returned.");
+        		in = new BufferedInputStream(response.body().byteStream());
+        		String rawJson = DefaultHttpProvider.streamToString(in);
+        		UploadType uploadedItem = serializer.deserializeObject(rawJson,
+        				this.deserializeTypeClass);
+
+        		return new ChunkedUploadResult<UploadType>(uploadedItem);
+        	} else if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
+        		logger.logDebug("Receiving error during upload, see detail on result error");
+
+        		return new ChunkedUploadResult<UploadType>(
+        				GraphServiceException.createFromConnection(request, null, serializer,
+        						response, logger));
+        	}
+        } finally {
+        	if (in != null) {
+        		try{
+        			in.close();
+        		} catch(IOException e) {
+        			logger.logError(e.getMessage(), e);
+        		}
+        	}
+        }
         return null;
     }
 }

@@ -22,6 +22,9 @@
 
 package com.microsoft.graph.core;
 
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
+
 public interface IConnectionConfig {
 
 	/**
@@ -51,4 +54,75 @@ public interface IConnectionConfig {
      * @param readTimeoutValue Read timeout in milliseconds to be set to.
      */
     void setReadTimeout(int readTimeoutValue);
+    
+    /**
+     * Sets the max redirects
+     * 
+     * @param maxRedirects Max redirects that a request can take
+     */
+    void setMaxRedirects(int maxRedirects);
+    
+    /**
+     * Gets the max redirects
+     * 
+     * @return Max redirects that a request can take
+     */
+    int getMaxRedirects();
+    
+    /**
+     * Sets the should redirect callback
+     * 
+     * @param shouldRedirect Callback called before doing a redirect
+     */
+    void setShouldRedirect(IShouldRedirect shouldRedirect);
+    
+    /**
+     * Gets the should redirect callback
+     * 
+     * @return Callback which is called before redirect
+     */
+    IShouldRedirect getShouldRedirect();
+    
+    /**
+     * Sets the should retry callback
+     * 
+     * @param shouldretry The callback called before retry
+     */
+    void setShouldRetry(IShouldRetry shouldretry);
+    
+    /**
+     * Gets the should retry callback
+     * 
+     * @return Callback called before retry
+     */
+    IShouldRetry getShouldRetry();
+    
+    /**
+     * Sets the max retries
+     * 
+     * @param maxRetries Max retries for a request
+     */
+    void setMaxRetries(int maxRetries);
+    
+    /**
+     * Gets max retries 
+     * 
+     * @return Max retries for a request
+     */
+    int getMaxRetries();
+    
+    /**
+     * Sets the delay in seconds between retires
+     * 
+     * @param delay Delay in seconds between retries
+     */
+    void setDelay(long delay);
+    
+    /**
+     * Gets delay between retries
+     * 
+     * @return Delay between retries in seconds
+     */
+    long getDelay();
+    
 }

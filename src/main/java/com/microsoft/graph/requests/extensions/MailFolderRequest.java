@@ -28,6 +28,21 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public MailFolderRequest(final String requestUrl,
+            final IBaseClient client,
+            final java.util.List<? extends Option> requestOptions,
+            final Class<? extends MailFolder> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the MailFolder
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public MailFolderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailFolder.class);

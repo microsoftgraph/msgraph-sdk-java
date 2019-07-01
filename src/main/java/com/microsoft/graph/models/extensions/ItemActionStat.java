@@ -38,7 +38,7 @@ public class ItemActionStat implements IJsonBackedObject {
 
     /**
      * The Action Count.
-     * 
+     * The number of times the action took place. Read-only.
      */
     @SerializedName("actionCount")
     @Expose
@@ -46,7 +46,7 @@ public class ItemActionStat implements IJsonBackedObject {
 
     /**
      * The Actor Count.
-     * 
+     * The number of distinct actors that performed the action. Read-only.
      */
     @SerializedName("actorCount")
     @Expose

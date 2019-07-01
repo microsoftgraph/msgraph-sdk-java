@@ -113,7 +113,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Types.
-     * Specifies the type of group to create. Possible values are Unified to create an Office 365 group, or DynamicMembership for dynamic groups.  For all other group types, like security-enabled groups and email-enabled security groups, do not set this property. Returned by default. Supports $filter.
+     * Specifies the group type and its membership.  If the collection contains Unified then the group is an Office 365 group; otherwise it's a security group.  If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
      */
     @SerializedName("groupTypes")
     @Expose
@@ -137,7 +137,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail Enabled.
-     * Specifies whether the group is mail-enabled. If the securityEnabled property is also true, the group is a mail-enabled security group; otherwise, the group is a Microsoft Exchange distribution group. Returned by default.
+     * Specifies whether the group is mail-enabled. Returned by default.
      */
     @SerializedName("mailEnabled")
     @Expose
@@ -184,6 +184,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean onPremisesSyncEnabled;
 
     /**
+     * The Preferred Data Location.
+     * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
+     */
+    @SerializedName("preferredDataLocation")
+    @Expose
+    public String preferredDataLocation;
+
+    /**
      * The Proxy Addresses.
      * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
      */
@@ -201,7 +209,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Security Enabled.
-     * Specifies whether the group is a security group. If the mailEnabled property is also true, the group is a mail-enabled security group; otherwise it is a security group. Must be false for Office 365 groups. Returned by default. Supports $filter.
+     * Specifies whether the group is a security group. Returned by default. Supports $filter.
      */
     @SerializedName("securityEnabled")
     @Expose
