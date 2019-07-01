@@ -58,7 +58,7 @@ public abstract class BaseRequest implements IHttpRequest {
     /**
      * The request stats header value format string
      */
-    public static final String REQUEST_STATS_HEADER_VALUE_FORMAT_STRING = "graph-java-v%s";
+    public static final String REQUEST_STATS_HEADER_VALUE_FORMAT_STRING = "graph-java/v%s";
 
     /**
      * The HTTP method for this request
