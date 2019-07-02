@@ -47,7 +47,7 @@ public class PageLinks implements IJsonBackedObject {
 
     /**
      * The One Note Web Url.
-     * Opens the page in OneNote Online.
+     * Opens the page in OneNote on the web.
      */
     @SerializedName("oneNoteWebUrl")
     @Expose
