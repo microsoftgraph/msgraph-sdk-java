@@ -130,6 +130,8 @@ import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserChangePasswordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRevokeSignInSessionsRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserRevokeSignInSessionsRequestBuilder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.IUserSendMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSendMailRequestBuilder;
@@ -469,6 +471,10 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword) {
         return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, currentPassword, newPassword);
+    }
+
+    public IUserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
+        return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }
 
     public IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {

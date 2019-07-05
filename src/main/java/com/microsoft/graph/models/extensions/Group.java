@@ -184,6 +184,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean onPremisesSyncEnabled;
 
     /**
+     * The Preferred Data Location.
+     * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
+     */
+    @SerializedName("preferredDataLocation")
+    @Expose
+    public String preferredDataLocation;
+
+    /**
      * The Proxy Addresses.
      * Email addresses for the group that direct to the same group mailbox. For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. The any operator is required to filter expressions on multi-valued properties. Returned by default. Read-only. Not nullable. Supports $filter.
      */

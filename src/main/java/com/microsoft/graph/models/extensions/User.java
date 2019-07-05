@@ -423,6 +423,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public Boolean showInAddressList;
 
     /**
+     * The Sign In Sessions Valid From Date Time.
+     * Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset.
+     */
+    @SerializedName("signInSessionsValidFromDateTime")
+    @Expose
+    public java.util.Calendar signInSessionsValidFromDateTime;
+
+    /**
      * The State.
      * The state or province in the user's address. Supports $filter.
      */
@@ -612,7 +620,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The License Details.
-     * A collection of this user's license details. Nullable.
+     * A collection of this user's license details. Read-only.
      */
     public LicenseDetailsCollectionPage licenseDetails;
 
