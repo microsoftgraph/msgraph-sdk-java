@@ -268,7 +268,7 @@ public class CoreHttpProvider implements IHttpProvider {
 					.tag(RedirectOptions.class, redirectOptions)
 					.tag(RetryOptions.class, retryOptions);
 			
-			String contenttype = null;
+			String contenttype = "";
 
 			try {
 				logger.logDebug("Request Method " + request.getHttpMethod().toString());
