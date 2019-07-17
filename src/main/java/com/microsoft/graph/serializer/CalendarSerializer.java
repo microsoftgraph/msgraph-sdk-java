@@ -55,7 +55,8 @@ public final class CalendarSerializer {
         // that can be parsed in Java
         final boolean hasZ = strVal.indexOf('Z') != -1;
         final boolean hasDot = strVal.indexOf('.') != -1;
-        
+		
+
         String modifiedStrVal;
         final String zSuffix;
         if (hasZ && hasDot) {
@@ -69,12 +70,16 @@ public final class CalendarSerializer {
             modifiedStrVal = strVal;
         }
         
+        final boolean hasOffset = modifiedStrVal.contains("T")
+				? (modifiedStrVal.substring(modifiedStrVal.indexOf('T') + 1).contains("+"))
+						|| (modifiedStrVal.substring(modifiedStrVal.indexOf('T') + 1).contains("-"))
+				: false;
+						
         // Parse the well-formatted date string with and without offsets (eg: 2019-06-21T17:12:35.138, 2019-06-21T17:12:35.138+0000, 2019-06-21T17:12:35.138-07:00)
         final String datePattern;
         if (modifiedStrVal.contains(".")) {
         	
 			String offsetSuffix = modifiedStrVal.substring(modifiedStrVal.indexOf(".") + 1);
-			final boolean hasOffset = offsetSuffix.contains("+") || offsetSuffix.contains("-");
 			
 			// Find index of offset
 			int offsetIndex = -1;
@@ -104,8 +109,12 @@ public final class CalendarSerializer {
 				datePattern = "yyyy-MM-dd'T'HH:mm:ss.SSS" + zSuffix;
 			}
 			
+        } else if (zSuffix != "") {
+        	datePattern = "yyyy-MM-dd'T'HH:mm:ss" + zSuffix;
+        } else if (hasOffset){
+        	datePattern = "yyyy-MM-dd'T'HH:mm:ssX";
         } else {
-            datePattern = "yyyy-MM-dd'T'HH:mm:ss" + zSuffix;
+        	datePattern = "yyyy-MM-dd'T'HH:mm:ss";
         }
 
         
