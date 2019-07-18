@@ -77,7 +77,7 @@ public final class CalendarSerializer {
 						
         // Parse the well-formatted date string with and without offsets (eg: 2019-06-21T17:12:35.138, 2019-06-21T17:12:35.138+0000, 2019-06-21T17:12:35.138-07:00)
         final String datePattern;
-        if (modifiedStrVal.contains(".")) {
+        if (hasDot) {
         	
 			String offsetSuffix = modifiedStrVal.substring(modifiedStrVal.indexOf(".") + 1);
 			
@@ -85,7 +85,7 @@ public final class CalendarSerializer {
 			int offsetIndex = -1;
 			if (hasOffset) {
 				offsetIndex = (offsetSuffix.indexOf('+') != -1) ? offsetSuffix.indexOf('+') : offsetSuffix.indexOf('-');
-				offsetIndex = modifiedStrVal.indexOf(".") + 1 + offsetIndex; //find offset index in original string
+				offsetIndex = modifiedStrVal.indexOf('.') + 1 + offsetIndex; //find offset index in original string
 			}
 			
 			
