@@ -56,7 +56,7 @@ public class RecentNotebook implements IJsonBackedObject {
 
     /**
      * The Links.
-     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote Online.
+     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote client, if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      */
     @SerializedName("links")
     @Expose

@@ -94,7 +94,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Teacher.
-     * If the primary role is teacher, this block will conatin teacher specific data.
+     * If the primary role is teacher, this block will contain teacher specific data.
      */
     @SerializedName("teacher")
     @Expose
