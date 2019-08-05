@@ -48,7 +48,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements IJson
 
     /**
      * The Links.
-     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote Online. Read-only.
+     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
      */
     @SerializedName("links")
     @Expose

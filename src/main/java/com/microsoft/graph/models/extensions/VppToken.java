@@ -64,7 +64,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Sync Date Time.
-     * The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
+     * The last time when an application sync was done with the Apple volume purchase program service using the Apple Volume Purchase Program Token.
      */
     @SerializedName("lastSyncDateTime")
     @Expose

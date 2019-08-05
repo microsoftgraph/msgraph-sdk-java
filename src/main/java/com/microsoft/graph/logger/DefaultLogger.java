@@ -32,7 +32,7 @@ public class DefaultLogger implements ILogger {
     /**
      * The logging level
      */
-    private LoggerLevel level = LoggerLevel.DEBUG;
+    private LoggerLevel level = LoggerLevel.ERROR;
     
     private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
