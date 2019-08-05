@@ -53,7 +53,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The City.
-     * City name of the address for the organization
+     * City name of the address for the organization.
      */
     @SerializedName("city")
     @Expose
@@ -61,7 +61,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * Country/region name of the address for the organization
+     * Country/region name of the address for the organization.
      */
     @SerializedName("country")
     @Expose
@@ -69,7 +69,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country Letter Code.
-     * Country/region abbreviation for the organization
+     * Country/region abbreviation for the organization.
      */
     @SerializedName("countryLetterCode")
     @Expose
@@ -117,7 +117,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Postal Code.
-     * Postal code of the address for the organization
+     * Postal code of the address for the organization.
      */
     @SerializedName("postalCode")
     @Expose
@@ -165,7 +165,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The State.
-     * State name of the address for the organization
+     * State name of the address for the organization.
      */
     @SerializedName("state")
     @Expose
@@ -173,7 +173,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Street.
-     * Street name of the address for organization
+     * Street name of the address for organization.
      */
     @SerializedName("street")
     @Expose

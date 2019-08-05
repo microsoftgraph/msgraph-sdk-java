@@ -47,7 +47,7 @@ public class SectionLinks implements IJsonBackedObject {
 
     /**
      * The One Note Web Url.
-     * Opens the section in OneNote Online.
+     * Opens the section in OneNote on the web.
      */
     @SerializedName("oneNoteWebUrl")
     @Expose

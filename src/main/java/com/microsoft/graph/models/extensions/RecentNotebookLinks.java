@@ -47,7 +47,7 @@ public class RecentNotebookLinks implements IJsonBackedObject {
 
     /**
      * The One Note Web Url.
-     * Opens the notebook in OneNote Online.
+     * Opens the notebook in OneNote on the web.
      */
     @SerializedName("oneNoteWebUrl")
     @Expose

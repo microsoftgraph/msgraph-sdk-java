@@ -205,7 +205,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Smart Screen Block Override For Files.
-     * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
+     * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
      */
     @SerializedName("smartScreenBlockOverrideForFiles")
     @Expose

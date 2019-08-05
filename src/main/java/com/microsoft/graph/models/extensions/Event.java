@@ -152,7 +152,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Start.
-     * The date, time, and time zone that the event starts.
+     * The date, time, and time zone that the event starts. By default, the start time is in UTC.
      */
     @SerializedName("start")
     @Expose
@@ -168,7 +168,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The End.
-     * The date, time, and time zone that the event ends.
+     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
      */
     @SerializedName("end")
     @Expose

@@ -43,7 +43,7 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
 
     /**
      * The Links.
-     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote Online.
+     * Links for opening the section. The oneNoteClientURL link opens the section in the OneNote native client if it's installed. The oneNoteWebURL link opens the section in OneNote on the web.
      */
     @SerializedName("links")
     @Expose
