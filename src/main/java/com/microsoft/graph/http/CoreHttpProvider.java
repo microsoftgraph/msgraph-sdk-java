@@ -288,6 +288,7 @@ public class CoreHttpProvider implements IHttpProvider {
 					// This ensures that the Content-Length header is properly set
 					if (request.getHttpMethod() == HttpMethod.POST) {
 						bytesToWrite = new byte[0];
+						contenttype = Constants.BINARY_CONTENT_TYPE;
 					}
 					else {
 						bytesToWrite = null;
@@ -390,7 +391,7 @@ public class CoreHttpProvider implements IHttpProvider {
 				final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
 
 				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				if (contentType.contains(Constants.JSON_CONTENT_TYPE)) {
+				if (contentType != null && contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
 					return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
 				} else {

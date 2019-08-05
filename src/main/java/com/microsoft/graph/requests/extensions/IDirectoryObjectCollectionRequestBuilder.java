@@ -31,4 +31,5 @@ public interface IDirectoryObjectCollectionRequestBuilder extends IRequestBuilde
 
 
     IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types);
+    IDirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
 }

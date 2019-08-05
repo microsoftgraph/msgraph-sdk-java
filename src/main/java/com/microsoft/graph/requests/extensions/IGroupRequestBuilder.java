@@ -47,6 +47,7 @@ import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupAddFavoriteRequestBuilder;
@@ -200,6 +201,7 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      * @return the ITeamRequestBuilder instance
      */
     ITeamRequestBuilder team();
+    IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
     IGroupSubscribeByMailRequestBuilder subscribeByMail();
     IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();
     IGroupAddFavoriteRequestBuilder addFavorite();

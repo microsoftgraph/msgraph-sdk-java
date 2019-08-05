@@ -95,6 +95,7 @@ public class ChunkedUploadRequest {
      * @param <UploadType>    The upload item type.
      * @return The upload result.
      */
+    @SuppressWarnings("unchecked")
     public <UploadType> ChunkedUploadResult<UploadType> upload(
             final ChunkedUploadResponseHandler<UploadType> responseHandler) {
         while (this.retryCount < this.maxRetry) {
@@ -110,7 +111,7 @@ public class ChunkedUploadRequest {
                 result = this.baseRequest
                         .getClient()
                         .getHttpProvider()
-                        .send(baseRequest, ChunkedUploadResult.class, this.data, responseHandler);
+                        .send(baseRequest, (Class<ChunkedUploadResult<UploadType>>)(Class<?>) ChunkedUploadResult.class, this.data, responseHandler);
             } catch (final ClientException e) {
                 throw new ClientException("Request failed with error, retry if necessary.", e);
             }

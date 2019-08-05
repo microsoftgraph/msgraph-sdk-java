@@ -70,7 +70,7 @@ public class FileEncryptionInfo implements IJsonBackedObject {
 
     /**
      * The Profile Identifier.
-     * The the profile identifier.
+     * The profile identifier.
      */
     @SerializedName("profileIdentifier")
     @Expose

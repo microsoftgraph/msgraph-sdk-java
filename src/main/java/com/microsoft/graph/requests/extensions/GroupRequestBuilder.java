@@ -91,6 +91,8 @@ import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuild
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequestBuilder;
@@ -335,6 +337,10 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public ITeamRequestBuilder team() {
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    }
+
+    public IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
+        return new GroupValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, displayName, mailNickname, onBehalfOfUserId);
     }
 
     public IGroupSubscribeByMailRequestBuilder subscribeByMail() {

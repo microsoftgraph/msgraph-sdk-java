@@ -428,7 +428,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The ICloud Block Activity Continuation.
-     * Indicates whether or not to block  the the user from continuing work they started on iOS device to another iOS or macOS device.
+     * Indicates whether or not to block the user from continuing work they started on iOS device to another iOS or macOS device.
      */
     @SerializedName("iCloudBlockActivityContinuation")
     @Expose
