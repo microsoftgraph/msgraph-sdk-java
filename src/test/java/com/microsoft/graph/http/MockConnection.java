@@ -78,6 +78,16 @@ public class MockConnection implements IConnection {
     public void setContentLength(int length) {
         // noop
     }
+    
+    @Override
+    public void setConnectTimeout(int connectionTimeoutMilliseconds) {
+        // noop
+    }
+
+    @Override
+    public void setReadTimeout(int readTimeoutMilliseconds) {
+        // noop
+    }
 
 	@Override
 	public Map<String, List<String>> getResponseHeaders() {

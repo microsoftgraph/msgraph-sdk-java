@@ -25,7 +25,7 @@ package com.microsoft.graph.core;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.http.DefaultHttpProvider;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.logger.ILogger;
@@ -45,7 +45,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     /**
      * The HTTP provider instance
      */
-    private DefaultHttpProvider httpProvider;
+    private IHttpProvider httpProvider;
 
     /**
      * The logger
@@ -98,11 +98,11 @@ public abstract class DefaultClientConfig implements IClientConfig {
     @Override
     public IHttpProvider getHttpProvider() {
         if (httpProvider == null) {
-            httpProvider = new DefaultHttpProvider(getSerializer(),
+            httpProvider = new CoreHttpProvider(getSerializer(),
                     getAuthenticationProvider(),
                     getExecutors(),
                     getLogger());
-            getLogger().logDebug("Created DefaultHttpProvider");
+            getLogger().logDebug("Created CoreHttpProvider");
         }
         return httpProvider;
     }
