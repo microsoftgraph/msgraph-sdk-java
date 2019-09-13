@@ -25,12 +25,13 @@ package com.microsoft.graph.serializer;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.logger.ILogger;
-
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -138,6 +139,21 @@ public class DefaultSerializer implements ISerializer {
                             		&& rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).isJsonObject()) {
                             	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
                             	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                            }
+                        }
+                    }
+                }
+                // If the object is a list of Graph objects, iterate through elements
+                else if (fieldObject instanceof List && rawJson != null) {
+                    final JsonElement collectionJson = rawJson.get(field.getName());
+                    final List fieldObjectList = (List) fieldObject;
+                    if (collectionJson.isJsonArray() && ((JsonArray)collectionJson).size() == fieldObjectList.size()) {
+                        final JsonArray rawJsonArray = (JsonArray) collectionJson;
+                        for (int i = 0; i < fieldObjectList.size(); i++) {
+                            final Object element = fieldObjectList.get(i);
+                            if (element instanceof IJsonBackedObject) {
+                                final JsonElement elementRawJson = rawJsonArray.get(i);
+                                setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
                             }
                         }
                     }
