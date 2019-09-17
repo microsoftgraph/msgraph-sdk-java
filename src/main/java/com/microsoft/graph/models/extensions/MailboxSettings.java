@@ -79,6 +79,22 @@ public class MailboxSettings implements IJsonBackedObject {
     @Expose
     public WorkingHours workingHours;
 
+    /**
+     * The Date Format.
+     * 
+     */
+    @SerializedName("dateFormat")
+    @Expose
+    public String dateFormat;
+
+    /**
+     * The Time Format.
+     * 
+     */
+    @SerializedName("timeFormat")
+    @Expose
+    public String timeFormat;
+
 
     /**
      * The raw representation of this class

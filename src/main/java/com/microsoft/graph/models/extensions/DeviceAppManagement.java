@@ -10,6 +10,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
@@ -23,8 +24,9 @@ import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPoli
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.models.extensions.ManagedAppStatus;
-import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
@@ -51,8 +53,6 @@ import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionR
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -100,6 +100,12 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @SerializedName("microsoftStoreForBusinessLastCompletedApplicationSyncTime")
     @Expose
     public java.util.Calendar microsoftStoreForBusinessLastCompletedApplicationSyncTime;
+
+    /**
+     * The Managed EBooks.
+     * The Managed eBook.
+     */
+    public ManagedEBookCollectionPage managedEBooks;
 
     /**
      * The Mobile Apps.
@@ -179,12 +185,6 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      */
     public ManagedAppStatusCollectionPage managedAppStatuses;
 
-    /**
-     * The Managed EBooks.
-     * The Managed eBook.
-     */
-    public ManagedEBookCollectionPage managedEBooks;
-
 
     /**
      * The raw representation of this class
@@ -224,6 +224,22 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("managedEBooks")) {
+            final ManagedEBookCollectionResponse response = new ManagedEBookCollectionResponse();
+            if (json.has("managedEBooks@odata.nextLink")) {
+                response.nextLink = json.get("managedEBooks@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedEBooks").toString(), JsonObject[].class);
+            final ManagedEBook[] array = new ManagedEBook[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBook.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedEBooks = new ManagedEBookCollectionPage(response, null);
+        }
 
         if (json.has("mobileApps")) {
             final MobileAppCollectionResponse response = new MobileAppCollectionResponse();
@@ -431,22 +447,6 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             managedAppStatuses = new ManagedAppStatusCollectionPage(response, null);
-        }
-
-        if (json.has("managedEBooks")) {
-            final ManagedEBookCollectionResponse response = new ManagedEBookCollectionResponse();
-            if (json.has("managedEBooks@odata.nextLink")) {
-                response.nextLink = json.get("managedEBooks@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedEBooks").toString(), JsonObject[].class);
-            final ManagedEBook[] array = new ManagedEBook[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedEBook.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedEBooks = new ManagedEBookCollectionPage(response, null);
         }
     }
 }

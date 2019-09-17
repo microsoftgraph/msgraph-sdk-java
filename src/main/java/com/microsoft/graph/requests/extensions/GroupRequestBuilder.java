@@ -35,10 +35,22 @@ import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBui
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
@@ -53,24 +65,8 @@ import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
@@ -81,14 +77,18 @@ import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
@@ -207,12 +207,33 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IGroupSettingRequestBuilder settings(final String id) {
         return new GroupSettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public IConversationCollectionRequestBuilder conversations() {
+        return new ConversationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conversations"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    public IConversationRequestBuilder conversations(final String id) {
+        return new ConversationRequestBuilder(getRequestUrlWithAdditionalSegment("conversations") + "/" + id, getClient(), null);
+    }
+    public IProfilePhotoCollectionRequestBuilder photos() {
+        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
+    }
+
+    public IProfilePhotoRequestBuilder photos(final String id) {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionRequestBuilder acceptedSenders() {
+        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
+    }
+
+    public IDirectoryObjectRequestBuilder acceptedSenders(final String id) {
+        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
+    }
+    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
+        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
+    }
+
+    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
+        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
     }
     public IConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);
@@ -244,13 +265,6 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IEventRequestBuilder events(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
-    public IConversationCollectionRequestBuilder conversations() {
-        return new ConversationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conversations"), getClient(), null);
-    }
-
-    public IConversationRequestBuilder conversations(final String id) {
-        return new ConversationRequestBuilder(getRequestUrlWithAdditionalSegment("conversations") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for ProfilePhoto
@@ -259,27 +273,6 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public IProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
-    }
-    public IProfilePhotoCollectionRequestBuilder photos() {
-        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
-    }
-
-    public IProfilePhotoRequestBuilder photos(final String id) {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionRequestBuilder acceptedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
-    }
-
-    public IDirectoryObjectRequestBuilder acceptedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
-    }
-
-    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
     }
 
     /**
@@ -304,6 +297,20 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public ISiteRequestBuilder sites(final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
     }
+    public IExtensionCollectionRequestBuilder extensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder extensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
+    public IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
+        return new GroupLifecyclePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies"), getClient(), null);
+    }
+
+    public IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id) {
+        return new GroupLifecyclePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for PlannerGroup
@@ -321,13 +328,6 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
-    }
-    public IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
-        return new GroupLifecyclePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies"), getClient(), null);
-    }
-
-    public IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id) {
-        return new GroupLifecyclePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("groupLifecyclePolicies") + "/" + id, getClient(), null);
     }
 
     /**

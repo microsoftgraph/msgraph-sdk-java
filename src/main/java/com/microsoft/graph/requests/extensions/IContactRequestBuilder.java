@@ -4,13 +4,13 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContactRequest;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -38,10 +38,6 @@ public interface IContactRequestBuilder extends IRequestBuilder {
     IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IExtensionCollectionRequestBuilder extensions();
-
-    IExtensionRequestBuilder extensions(final String id);
-
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
@@ -56,5 +52,9 @@ public interface IContactRequestBuilder extends IRequestBuilder {
      * @return the IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
+
+    IExtensionCollectionRequestBuilder extensions();
+
+    IExtensionRequestBuilder extensions(final String id);
 
 }

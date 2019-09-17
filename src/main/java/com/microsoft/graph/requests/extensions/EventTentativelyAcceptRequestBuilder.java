@@ -26,13 +26,13 @@ public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuild
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param comment the comment
      * @param sendResponse the sendResponse
+     * @param comment the comment
      */
-    public EventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final Boolean sendResponse) {
+    public EventTentativelyAcceptRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean sendResponse, final String comment) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("comment", comment);
         bodyParams.put("sendResponse", sendResponse);
+        bodyParams.put("comment", comment);
     }
 
     /**
@@ -57,12 +57,12 @@ public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuild
                 requestOptions
         );
 
-        if (hasParameter("comment")) {
-            request.body.comment = getParameter("comment");
-        }
-
         if (hasParameter("sendResponse")) {
             request.body.sendResponse = getParameter("sendResponse");
+        }
+
+        if (hasParameter("comment")) {
+            request.body.comment = getParameter("comment");
         }
 
         return request;

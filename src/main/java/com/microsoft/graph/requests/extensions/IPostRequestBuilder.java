@@ -4,19 +4,19 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPostRequest;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.IPostForwardRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.requests.extensions.IPostReplyRequestBuilder;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.requests.extensions.IPostForwardRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -44,20 +44,12 @@ public interface IPostRequestBuilder extends IRequestBuilder {
     IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IExtensionCollectionRequestBuilder extensions();
-
-    IExtensionRequestBuilder extensions(final String id);
-
     /**
      * Gets the request builder for Post
      *
      * @return the IPostRequestBuilder instance
      */
     IPostRequestBuilder inReplyTo();
-
-    IAttachmentCollectionRequestBuilder attachments();
-
-    IAttachmentRequestBuilder attachments(final String id);
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
@@ -66,7 +58,15 @@ public interface IPostRequestBuilder extends IRequestBuilder {
     IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-    IPostForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients);
+
+    IExtensionCollectionRequestBuilder extensions();
+
+    IExtensionRequestBuilder extensions(final String id);
+
+    IAttachmentCollectionRequestBuilder attachments();
+
+    IAttachmentRequestBuilder attachments(final String id);
     IPostReplyRequestBuilder reply(final Post post);
+    IPostForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients);
 
 }

@@ -4,24 +4,24 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageRequest;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCopyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageMoveRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCreateReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCreateReplyAllRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCreateForwardRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageSendRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCopyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageMoveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageReplyAllRequestBuilder;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.requests.extensions.IMessageForwardRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageSendRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -49,14 +49,6 @@ public interface IMessageRequestBuilder extends IRequestBuilder {
     IMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IAttachmentCollectionRequestBuilder attachments();
-
-    IAttachmentRequestBuilder attachments(final String id);
-
-    IExtensionCollectionRequestBuilder extensions();
-
-    IExtensionRequestBuilder extensions(final String id);
-
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
@@ -64,14 +56,22 @@ public interface IMessageRequestBuilder extends IRequestBuilder {
     IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-    IMessageCopyRequestBuilder copy(final String destinationId);
-    IMessageMoveRequestBuilder move(final String destinationId);
+
+    IAttachmentCollectionRequestBuilder attachments();
+
+    IAttachmentRequestBuilder attachments(final String id);
+
+    IExtensionCollectionRequestBuilder extensions();
+
+    IExtensionRequestBuilder extensions(final String id);
     IMessageCreateReplyRequestBuilder createReply();
     IMessageCreateReplyAllRequestBuilder createReplyAll();
     IMessageCreateForwardRequestBuilder createForward();
+    IMessageSendRequestBuilder send();
+    IMessageCopyRequestBuilder copy(final String destinationId);
+    IMessageMoveRequestBuilder move(final String destinationId);
     IMessageReplyRequestBuilder reply(final String comment);
     IMessageReplyAllRequestBuilder replyAll(final String comment);
-    IMessageForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients);
-    IMessageSendRequestBuilder send();
+    IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final String comment);
 
 }
