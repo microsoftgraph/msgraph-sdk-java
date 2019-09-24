@@ -24,7 +24,7 @@ import java.util.EnumSet;
 public class EventCollectionRequestBuilder extends BaseRequestBuilder implements IEventCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of User
+     * The request builder for this collection of Group
      *
      * @param requestUrl     the request URL
      * @param client         the service client

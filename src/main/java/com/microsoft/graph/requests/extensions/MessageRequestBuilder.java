@@ -5,14 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageRequest;
 import com.microsoft.graph.requests.extensions.MessageRequest;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -21,16 +13,26 @@ import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCopyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageCopyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageMoveRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageMoveRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCreateReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageCreateReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCreateReplyAllRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageCreateReplyAllRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCreateForwardRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageCreateForwardRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageSendRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageSendRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCopyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCopyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageMoveRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageMoveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageReplyAllRequestBuilder;
@@ -38,8 +40,6 @@ import com.microsoft.graph.requests.extensions.MessageReplyAllRequestBuilder;
 import com.microsoft.graph.models.extensions.Recipient;
 import com.microsoft.graph.requests.extensions.IMessageForwardRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageForwardRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageSendRequestBuilder;
-import com.microsoft.graph.requests.extensions.MessageSendRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -84,20 +84,6 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
     }
 
 
-    public IAttachmentCollectionRequestBuilder attachments() {
-        return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
-    }
-
-    public IAttachmentRequestBuilder attachments(final String id) {
-        return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
-    }
-    public IExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
-    }
-
-    public IExtensionRequestBuilder extensions(final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
-    }
     public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
@@ -112,13 +98,19 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
     public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
-
-    public IMessageCopyRequestBuilder copy(final String destinationId) {
-        return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
+    public IAttachmentCollectionRequestBuilder attachments() {
+        return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
     }
 
-    public IMessageMoveRequestBuilder move(final String destinationId) {
-        return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
+    public IAttachmentRequestBuilder attachments(final String id) {
+        return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    }
+    public IExtensionCollectionRequestBuilder extensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder extensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 
     public IMessageCreateReplyRequestBuilder createReply() {
@@ -133,6 +125,18 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new MessageCreateForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createForward"), getClient(), null);
     }
 
+    public IMessageSendRequestBuilder send() {
+        return new MessageSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
+    }
+
+    public IMessageCopyRequestBuilder copy(final String destinationId) {
+        return new MessageCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, destinationId);
+    }
+
+    public IMessageMoveRequestBuilder move(final String destinationId) {
+        return new MessageMoveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.move"), getClient(), null, destinationId);
+    }
+
     public IMessageReplyRequestBuilder reply(final String comment) {
         return new MessageReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, comment);
     }
@@ -141,12 +145,8 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
         return new MessageReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.replyAll"), getClient(), null, comment);
     }
 
-    public IMessageForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients) {
-        return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
-    }
-
-    public IMessageSendRequestBuilder send() {
-        return new MessageSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
+    public IMessageForwardRequestBuilder forward(final java.util.List<Recipient> toRecipients, final String comment) {
+        return new MessageForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, toRecipients, comment);
     }
 }
 

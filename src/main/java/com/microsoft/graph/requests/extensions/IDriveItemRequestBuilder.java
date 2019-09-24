@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemRequest;
+import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
@@ -16,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckoutRequestBuilder;
@@ -66,6 +66,13 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemRequestBuilder itemWithPath(final String path);
 
     /**
+     * Gets the request builder for Workbook
+     *
+     * @return the IWorkbookRequestBuilder instance
+     */
+    IWorkbookRequestBuilder workbook();
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the IItemAnalyticsWithReferenceRequestBuilder instance
@@ -98,13 +105,6 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemVersionCollectionRequestBuilder versions();
 
     IDriveItemVersionRequestBuilder versions(final String id);
-
-    /**
-     * Gets the request builder for Workbook
-     *
-     * @return the IWorkbookRequestBuilder instance
-     */
-    IWorkbookRequestBuilder workbook();
 
     IDriveItemStreamRequestBuilder content();
     IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment);
