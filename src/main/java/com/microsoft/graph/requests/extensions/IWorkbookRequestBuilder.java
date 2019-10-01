@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookProcessQueryRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -77,6 +76,5 @@ public interface IWorkbookRequestBuilder extends IRequestBuilder {
     IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);
     IWorkbookCloseSessionRequestBuilder closeSession();
     IWorkbookRefreshSessionRequestBuilder refreshSession();
-    IWorkbookProcessQueryRequestBuilder processQuery(final byte[] input);
 
 }

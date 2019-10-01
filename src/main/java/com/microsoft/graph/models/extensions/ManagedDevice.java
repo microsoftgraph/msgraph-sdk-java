@@ -22,8 +22,8 @@ import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFe
 import com.microsoft.graph.models.extensions.DeviceHealthAttestationState;
 import com.microsoft.graph.models.generated.ManagedDevicePartnerReportedHealthState;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
-import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
+import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
@@ -420,18 +420,18 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**
+     * The Device Compliance Policy States.
+     * Device compliance policy states for this device.
+     */
+    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
+
+    /**
      * The Device Category.
      * Device category
      */
     @SerializedName("deviceCategory")
     @Expose
     public DeviceCategory deviceCategory;
-
-    /**
-     * The Device Compliance Policy States.
-     * Device compliance policy states for this device.
-     */
-    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
 
     /**

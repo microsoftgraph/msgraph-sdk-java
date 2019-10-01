@@ -65,20 +65,20 @@ public class Location implements IJsonBackedObject {
     public PhysicalAddress address;
 
     /**
-     * The Coordinates.
-     * The geographic coordinates and elevation of the location.
-     */
-    @SerializedName("coordinates")
-    @Expose
-    public OutlookGeoCoordinates coordinates;
-
-    /**
      * The Location Uri.
      * Optional URI representing the location.
      */
     @SerializedName("locationUri")
     @Expose
     public String locationUri;
+
+    /**
+     * The Coordinates.
+     * The geographic coordinates and elevation of the location.
+     */
+    @SerializedName("coordinates")
+    @Expose
+    public OutlookGeoCoordinates coordinates;
 
     /**
      * The Location Type.

@@ -12,16 +12,16 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.CalendarColor;
 import com.microsoft.graph.models.extensions.EmailAddress;
-import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EventCollectionResponse;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -95,18 +95,6 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public EmailAddress owner;
 
     /**
-     * The Events.
-     * The events in the calendar. Navigation property. Read-only.
-     */
-    public EventCollectionPage events;
-
-    /**
-     * The Calendar View.
-     * The calendar view for the calendar. Navigation property. Read-only.
-     */
-    public EventCollectionPage calendarView;
-
-    /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      */
@@ -117,6 +105,18 @@ public class Calendar extends Entity implements IJsonBackedObject {
      * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      */
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+
+    /**
+     * The Events.
+     * The events in the calendar. Navigation property. Read-only.
+     */
+    public EventCollectionPage events;
+
+    /**
+     * The Calendar View.
+     * The calendar view for the calendar. Navigation property. Read-only.
+     */
+    public EventCollectionPage calendarView;
 
 
     /**
@@ -158,38 +158,6 @@ public class Calendar extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("events")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("events@odata.nextLink")) {
-                response.nextLink = json.get("events@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            events = new EventCollectionPage(response, null);
-        }
-
-        if (json.has("calendarView")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("calendarView@odata.nextLink")) {
-                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calendarView = new EventCollectionPage(response, null);
-        }
-
         if (json.has("singleValueExtendedProperties")) {
             final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
             if (json.has("singleValueExtendedProperties@odata.nextLink")) {
@@ -220,6 +188,38 @@ public class Calendar extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("events")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("events@odata.nextLink")) {
+                response.nextLink = json.get("events@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            events = new EventCollectionPage(response, null);
+        }
+
+        if (json.has("calendarView")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("calendarView@odata.nextLink")) {
+                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendarView = new EventCollectionPage(response, null);
         }
     }
 }

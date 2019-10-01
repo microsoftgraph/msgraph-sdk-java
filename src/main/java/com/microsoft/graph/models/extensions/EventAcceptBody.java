@@ -19,20 +19,20 @@ import java.util.EnumSet;
 public class EventAcceptBody {
 
     /**
-     * The comment.
-     * 
-     */
-    @SerializedName("comment")
-    @Expose
-    public String comment;
-
-    /**
      * The send Response.
      * 
      */
     @SerializedName("sendResponse")
     @Expose
     public Boolean sendResponse;
+
+    /**
+     * The comment.
+     * 
+     */
+    @SerializedName("comment")
+    @Expose
+    public String comment;
 
 
     /**

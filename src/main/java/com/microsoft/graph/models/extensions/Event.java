@@ -21,23 +21,23 @@ import com.microsoft.graph.models.generated.FreeBusyStatus;
 import com.microsoft.graph.models.generated.EventType;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.OutlookItem;
-import com.microsoft.graph.requests.extensions.EventCollectionResponse;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -272,7 +272,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
-     * The URL to open the event in Outlook Web App.The event will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL can be accessed from within an iFrame.
      */
     @SerializedName("webLink")
     @Expose
@@ -285,6 +285,24 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName("onlineMeetingUrl")
     @Expose
     public String onlineMeetingUrl;
+
+    /**
+     * The Attachments.
+     * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
+     */
+    public AttachmentCollectionPage attachments;
+
+    /**
+     * The Single Value Extended Properties.
+     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+     */
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+
+    /**
+     * The Multi Value Extended Properties.
+     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+     */
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Calendar.
@@ -305,24 +323,6 @@ public class Event extends OutlookItem implements IJsonBackedObject {
      * The collection of open extensions defined for the event. Read-only. Nullable.
      */
     public ExtensionCollectionPage extensions;
-
-    /**
-     * The Attachments.
-     * The collection of fileAttachment and itemAttachment attachments for the event. Navigation property. Read-only. Nullable.
-     */
-    public AttachmentCollectionPage attachments;
-
-    /**
-     * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
-     */
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
-
-    /**
-     * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
-     */
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
 
     /**
@@ -363,38 +363,6 @@ public class Event extends OutlookItem implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
-
-        if (json.has("instances")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("instances@odata.nextLink")) {
-                response.nextLink = json.get("instances@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("instances").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            instances = new EventCollectionPage(response, null);
-        }
-
-        if (json.has("extensions")) {
-            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
-            if (json.has("extensions@odata.nextLink")) {
-                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
-            final Extension[] array = new Extension[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            extensions = new ExtensionCollectionPage(response, null);
-        }
 
         if (json.has("attachments")) {
             final AttachmentCollectionResponse response = new AttachmentCollectionResponse();
@@ -442,6 +410,38 @@ public class Event extends OutlookItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("instances")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("instances@odata.nextLink")) {
+                response.nextLink = json.get("instances@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("instances").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            instances = new EventCollectionPage(response, null);
+        }
+
+        if (json.has("extensions")) {
+            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
     }
 }

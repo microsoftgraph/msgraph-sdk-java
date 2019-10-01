@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileAttachmentRequest;
 import com.microsoft.graph.requests.extensions.FileAttachmentRequest;
+import com.microsoft.graph.requests.extensions.IFileAttachmentStreamRequestBuilder;
+import com.microsoft.graph.requests.extensions.FileAttachmentStreamRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -49,5 +51,9 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+
+    public IFileAttachmentStreamRequestBuilder content() {
+        return new FileAttachmentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+    }
 }
 

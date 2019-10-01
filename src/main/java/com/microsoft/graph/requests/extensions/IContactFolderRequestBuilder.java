@@ -4,14 +4,14 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContactFolderRequest;
-import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -39,14 +39,6 @@ public interface IContactFolderRequestBuilder extends IRequestBuilder {
     IContactFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IContactCollectionRequestBuilder contacts();
-
-    IContactRequestBuilder contacts(final String id);
-
-    IContactFolderCollectionRequestBuilder childFolders();
-
-    IContactFolderRequestBuilder childFolders(final String id);
-
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
@@ -54,5 +46,13 @@ public interface IContactFolderRequestBuilder extends IRequestBuilder {
     IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    IContactCollectionRequestBuilder contacts();
+
+    IContactRequestBuilder contacts(final String id);
+
+    IContactFolderCollectionRequestBuilder childFolders();
+
+    IContactFolderRequestBuilder childFolders(final String id);
 
 }

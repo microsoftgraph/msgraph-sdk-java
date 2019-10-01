@@ -20,7 +20,6 @@ import com.microsoft.graph.models.extensions.ProvisionedPlan;
 import com.microsoft.graph.models.extensions.MailboxSettings;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.LicenseDetails;
-import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.MailFolder;
@@ -33,21 +32,20 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.models.extensions.InferenceClassification;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.Drive;
-import com.microsoft.graph.models.extensions.PlannerUser;
-import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
-import com.microsoft.graph.models.extensions.UserActivity;
+import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 import com.microsoft.graph.models.extensions.UserSettings;
+import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionResponse;
@@ -68,6 +66,8 @@ import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
@@ -487,6 +487,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public MailboxSettings mailboxSettings;
 
     /**
+     * The Device Enrollment Limit.
+     * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
+     */
+    @SerializedName("deviceEnrollmentLimit")
+    @Expose
+    public Integer deviceEnrollmentLimit;
+
+    /**
      * The About Me.
      * A freeform text entry field for the user to describe themselves.
      */
@@ -567,14 +575,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> skills;
 
     /**
-     * The Device Enrollment Limit.
-     * The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
-     */
-    @SerializedName("deviceEnrollmentLimit")
-    @Expose
-    public Integer deviceEnrollmentLimit;
-
-    /**
      * The Owned Devices.
      * Devices that are owned by the user. Read-only. Nullable.
      */
@@ -629,12 +629,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * 
      */
     public DirectoryObjectCollectionPage transitiveMemberOf;
-
-    /**
-     * The Extensions.
-     * The collection of open extensions defined for the user. Read-only. Nullable.
-     */
-    public ExtensionCollectionPage extensions;
 
     /**
      * The Outlook.
@@ -743,20 +737,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public DriveCollectionPage drives;
 
     /**
-     * The Planner.
-     * Entry-point to the Planner resource that might exist for a user. Read-only.
+     * The Extensions.
+     * The collection of open extensions defined for the user. Read-only. Nullable.
      */
-    @SerializedName("planner")
-    @Expose
-    public PlannerUser planner;
-
-    /**
-     * The Onenote.
-     * Read-only.
-     */
-    @SerializedName("onenote")
-    @Expose
-    public Onenote onenote;
+    public ExtensionCollectionPage extensions;
 
     /**
      * The Managed Devices.
@@ -777,10 +761,12 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
 
     /**
-     * The Activities.
-     * The user's activities across devices. Read-only. Nullable.
+     * The Planner.
+     * Entry-point to the Planner resource that might exist for a user. Read-only.
      */
-    public UserActivityCollectionPage activities;
+    @SerializedName("planner")
+    @Expose
+    public PlannerUser planner;
 
     /**
      * The Insights.
@@ -797,6 +783,20 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("settings")
     @Expose
     public UserSettings settings;
+
+    /**
+     * The Onenote.
+     * Read-only.
+     */
+    @SerializedName("onenote")
+    @Expose
+    public Onenote onenote;
+
+    /**
+     * The Activities.
+     * The user's activities across devices. Read-only. Nullable.
+     */
+    public UserActivityCollectionPage activities;
 
     /**
      * The Joined Teams.
@@ -970,22 +970,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
-        }
-
-        if (json.has("extensions")) {
-            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
-            if (json.has("extensions@odata.nextLink")) {
-                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
-            final Extension[] array = new Extension[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            extensions = new ExtensionCollectionPage(response, null);
         }
 
         if (json.has("messages")) {
@@ -1162,6 +1146,22 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             drives = new DriveCollectionPage(response, null);
+        }
+
+        if (json.has("extensions")) {
+            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
 
         if (json.has("managedDevices")) {
