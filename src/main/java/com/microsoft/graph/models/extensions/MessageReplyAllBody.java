@@ -19,6 +19,14 @@ import java.util.EnumSet;
 public class MessageReplyAllBody {
 
     /**
+     * The message.
+     * 
+     */
+    @SerializedName("message")
+    @Expose
+    public Message message;
+
+    /**
      * The comment.
      * 
      */
