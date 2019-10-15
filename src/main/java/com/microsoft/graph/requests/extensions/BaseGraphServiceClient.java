@@ -47,6 +47,82 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Invitations objects
+     *
+     * @return the request builder for the collection of Invitations objects
+     */
+    public IInvitationCollectionRequestBuilder invitations() {
+        return new InvitationCollectionRequestBuilder(getServiceRoot() + "/invitations", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Invitations
+     *
+     * @param id the id of the Invitations to retrieve
+     * @return the request builder for the Invitations object
+     */
+    public IInvitationRequestBuilder invitations(final String id) {
+        return new InvitationRequestBuilder(getServiceRoot() + "/invitations/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of Users objects
+     *
+     * @return the request builder for the collection of Users objects
+     */
+    public IUserCollectionRequestBuilder users() {
+        return new UserCollectionRequestBuilder(getServiceRoot() + "/users", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Users
+     *
+     * @param id the id of the Users to retrieve
+     * @return the request builder for the Users object
+     */
+    public IUserRequestBuilder users(final String id) {
+        return new UserRequestBuilder(getServiceRoot() + "/users/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of IdentityProviders objects
+     *
+     * @return the request builder for the collection of IdentityProviders objects
+     */
+    public IIdentityProviderCollectionRequestBuilder identityProviders() {
+        return new IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single IdentityProviders
+     *
+     * @param id the id of the IdentityProviders to retrieve
+     * @return the request builder for the IdentityProviders object
+     */
+    public IIdentityProviderRequestBuilder identityProviders(final String id) {
+        return new IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of CertificateBasedAuthConfiguration objects
+     *
+     * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
+     */
+    public ICertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration() {
+        return new CertificateBasedAuthConfigurationCollectionRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single CertificateBasedAuthConfiguration
+     *
+     * @param id the id of the CertificateBasedAuthConfiguration to retrieve
+     * @return the request builder for the CertificateBasedAuthConfiguration object
+     */
+    public ICertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(final String id) {
+        return new CertificateBasedAuthConfigurationRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of DirectoryObjects objects
      *
      * @return the request builder for the collection of DirectoryObjects objects
@@ -256,25 +332,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of Users objects
-     *
-     * @return the request builder for the collection of Users objects
-     */
-    public IUserCollectionRequestBuilder users() {
-        return new UserCollectionRequestBuilder(getServiceRoot() + "/users", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets a single Users
-     *
-     * @param id the id of the Users to retrieve
-     * @return the request builder for the Users object
-     */
-    public IUserRequestBuilder users(final String id) {
-        return new UserRequestBuilder(getServiceRoot() + "/users/" + id, (IGraphServiceClient)this, null);
-    }
-
-    /**
      * Gets the collection of Contracts objects
      *
      * @return the request builder for the collection of Contracts objects
@@ -294,22 +351,22 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of SchemaExtensions objects
+     * Gets the collection of Workbooks objects
      *
-     * @return the request builder for the collection of SchemaExtensions objects
+     * @return the request builder for the collection of Workbooks objects
      */
-    public ISchemaExtensionCollectionRequestBuilder schemaExtensions() {
-        return new SchemaExtensionCollectionRequestBuilder(getServiceRoot() + "/schemaExtensions", (IGraphServiceClient)this, null);
+    public IDriveItemCollectionRequestBuilder workbooks() {
+        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", (IGraphServiceClient)this, null);
     }
 
     /**
-     * Gets a single SchemaExtensions
+     * Gets a single Workbooks
      *
-     * @param id the id of the SchemaExtensions to retrieve
-     * @return the request builder for the SchemaExtensions object
+     * @param id the id of the Workbooks to retrieve
+     * @return the request builder for the Workbooks object
      */
-    public ISchemaExtensionRequestBuilder schemaExtensions(final String id) {
-        return new SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, (IGraphServiceClient)this, null);
+    public IDriveItemRequestBuilder workbooks(final String id) {
+        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, (IGraphServiceClient)this, null);
     }
 
     /**
@@ -370,60 +427,22 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of Workbooks objects
+     * Gets the collection of SchemaExtensions objects
      *
-     * @return the request builder for the collection of Workbooks objects
+     * @return the request builder for the collection of SchemaExtensions objects
      */
-    public IDriveItemCollectionRequestBuilder workbooks() {
-        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", (IGraphServiceClient)this, null);
+    public ISchemaExtensionCollectionRequestBuilder schemaExtensions() {
+        return new SchemaExtensionCollectionRequestBuilder(getServiceRoot() + "/schemaExtensions", (IGraphServiceClient)this, null);
     }
 
     /**
-     * Gets a single Workbooks
+     * Gets a single SchemaExtensions
      *
-     * @param id the id of the Workbooks to retrieve
-     * @return the request builder for the Workbooks object
+     * @param id the id of the SchemaExtensions to retrieve
+     * @return the request builder for the SchemaExtensions object
      */
-    public IDriveItemRequestBuilder workbooks(final String id) {
-        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets the collection of Subscriptions objects
-     *
-     * @return the request builder for the collection of Subscriptions objects
-     */
-    public ISubscriptionCollectionRequestBuilder subscriptions() {
-        return new SubscriptionCollectionRequestBuilder(getServiceRoot() + "/subscriptions", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets a single Subscriptions
-     *
-     * @param id the id of the Subscriptions to retrieve
-     * @return the request builder for the Subscriptions object
-     */
-    public ISubscriptionRequestBuilder subscriptions(final String id) {
-        return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets the collection of Invitations objects
-     *
-     * @return the request builder for the collection of Invitations objects
-     */
-    public IInvitationCollectionRequestBuilder invitations() {
-        return new InvitationCollectionRequestBuilder(getServiceRoot() + "/invitations", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets a single Invitations
-     *
-     * @param id the id of the Invitations to retrieve
-     * @return the request builder for the Invitations object
-     */
-    public IInvitationRequestBuilder invitations(final String id) {
-        return new InvitationRequestBuilder(getServiceRoot() + "/invitations/" + id, (IGraphServiceClient)this, null);
+    public ISchemaExtensionRequestBuilder schemaExtensions(final String id) {
+        return new SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, (IGraphServiceClient)this, null);
     }
 
     /**
@@ -446,25 +465,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of Teams objects
-     *
-     * @return the request builder for the collection of Teams objects
-     */
-    public ITeamCollectionRequestBuilder teams() {
-        return new TeamCollectionRequestBuilder(getServiceRoot() + "/teams", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets a single Teams
-     *
-     * @param id the id of the Teams to retrieve
-     * @return the request builder for the Teams object
-     */
-    public ITeamRequestBuilder teams(final String id) {
-        return new TeamRequestBuilder(getServiceRoot() + "/teams/" + id, (IGraphServiceClient)this, null);
-    }
-
-    /**
      * Gets the collection of DataPolicyOperations objects
      *
      * @return the request builder for the collection of DataPolicyOperations objects
@@ -484,22 +484,50 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of IdentityProviders objects
+     * Gets the collection of Subscriptions objects
      *
-     * @return the request builder for the collection of IdentityProviders objects
+     * @return the request builder for the collection of Subscriptions objects
      */
-    public IIdentityProviderCollectionRequestBuilder identityProviders() {
-        return new IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", (IGraphServiceClient)this, null);
+    public ISubscriptionCollectionRequestBuilder subscriptions() {
+        return new SubscriptionCollectionRequestBuilder(getServiceRoot() + "/subscriptions", (IGraphServiceClient)this, null);
     }
 
     /**
-     * Gets a single IdentityProviders
+     * Gets a single Subscriptions
      *
-     * @param id the id of the IdentityProviders to retrieve
-     * @return the request builder for the IdentityProviders object
+     * @param id the id of the Subscriptions to retrieve
+     * @return the request builder for the Subscriptions object
      */
-    public IIdentityProviderRequestBuilder identityProviders(final String id) {
-        return new IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, (IGraphServiceClient)this, null);
+    public ISubscriptionRequestBuilder subscriptions(final String id) {
+        return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of Teams objects
+     *
+     * @return the request builder for the collection of Teams objects
+     */
+    public ITeamCollectionRequestBuilder teams() {
+        return new TeamCollectionRequestBuilder(getServiceRoot() + "/teams", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Teams
+     *
+     * @param id the id of the Teams to retrieve
+     * @return the request builder for the Teams object
+     */
+    public ITeamRequestBuilder teams(final String id) {
+        return new TeamRequestBuilder(getServiceRoot() + "/teams/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuditLogRoot
+     */
+    public IAuditLogRootRequestBuilder auditLogs() {
+        return new AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", (IGraphServiceClient)this, null);
     }
 
     /**
@@ -523,37 +551,19 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Drive
-     */
-    public IDriveRequestBuilder drive() {
-        return new DriveRequestBuilder(getServiceRoot() + "/drive", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Planner
-     */
-    public IPlannerRequestBuilder planner() {
-        return new PlannerRequestBuilder(getServiceRoot() + "/planner", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the ReportRoot
-     */
-    public IReportRootRequestBuilder reports() {
-        return new ReportRootRequestBuilder(getServiceRoot() + "/reports", (IGraphServiceClient)this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the EducationRoot
      */
     public IEducationRootRequestBuilder education() {
         return new EducationRootRequestBuilder(getServiceRoot() + "/education", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Drive
+     */
+    public IDriveRequestBuilder drive() {
+        return new DriveRequestBuilder(getServiceRoot() + "/drive", (IGraphServiceClient)this, null);
     }
 
     /**
@@ -577,6 +587,24 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the ReportRoot
+     */
+    public IReportRootRequestBuilder reports() {
+        return new ReportRootRequestBuilder(getServiceRoot() + "/reports", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Planner
+     */
+    public IPlannerRequestBuilder planner() {
+        return new PlannerRequestBuilder(getServiceRoot() + "/planner", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Security
      */
     public ISecurityRequestBuilder Security() {
@@ -586,18 +614,18 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the CloudCommunications
      */
-    public IAppCatalogsRequestBuilder appCatalogs() {
-        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
+    public ICloudCommunicationsRequestBuilder communications() {
+        return new CloudCommunicationsRequestBuilder(getServiceRoot() + "/communications", (IGraphServiceClient)this, null);
     }
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AuditLogRoot
+     * @return the AppCatalogs
      */
-    public IAuditLogRootRequestBuilder auditLogs() {
-        return new AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", (IGraphServiceClient)this, null);
+    public IAppCatalogsRequestBuilder appCatalogs() {
+        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
     }
 }

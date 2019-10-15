@@ -5,6 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageReplyRequest;
 import com.microsoft.graph.requests.extensions.MessageReplyRequest;
+import com.microsoft.graph.models.extensions.Message;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
@@ -26,10 +27,12 @@ public class MessageReplyRequestBuilder extends BaseActionRequestBuilder impleme
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param message the message
      * @param comment the comment
      */
-    public MessageReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment) {
+    public MessageReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Message message, final String comment) {
         super(requestUrl, client, requestOptions);
+        bodyParams.put("message", message);
         bodyParams.put("comment", comment);
     }
 
@@ -54,6 +57,10 @@ public class MessageReplyRequestBuilder extends BaseActionRequestBuilder impleme
                 getClient(),
                 requestOptions
         );
+
+        if (hasParameter("message")) {
+            request.body.message = getParameter("message");
+        }
 
         if (hasParameter("comment")) {
             request.body.comment = getParameter("comment");

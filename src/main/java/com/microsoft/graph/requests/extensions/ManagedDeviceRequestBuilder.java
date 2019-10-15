@@ -9,12 +9,12 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollecti
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRetireRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRetireRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceWipeRequestBuilder;
@@ -103,6 +103,13 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
     public IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id) {
         return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
     }
+    public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
+        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
+    }
+
+    public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
+        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceCategory
@@ -111,13 +118,6 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
      */
     public IDeviceCategoryRequestBuilder deviceCategory() {
         return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
-    }
-    public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
-        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
-    }
-
-    public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
-        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
     }
 
     public IManagedDeviceRetireRequestBuilder retire() {

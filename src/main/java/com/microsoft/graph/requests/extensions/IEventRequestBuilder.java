@@ -4,23 +4,23 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IEventRequest;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEventDismissReminderRequestBuilder;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.requests.extensions.IEventSnoozeReminderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventAcceptRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventDeclineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventTentativelyAcceptRequestBuilder;
-import com.microsoft.graph.models.extensions.DateTimeTimeZone;
-import com.microsoft.graph.requests.extensions.IEventSnoozeReminderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventDismissReminderRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -48,6 +48,18 @@ public interface IEventRequestBuilder extends IRequestBuilder {
     IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
+    IAttachmentCollectionRequestBuilder attachments();
+
+    IAttachmentRequestBuilder attachments(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
     /**
      * Gets the request builder for Calendar
      *
@@ -62,22 +74,10 @@ public interface IEventRequestBuilder extends IRequestBuilder {
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
-
-    IAttachmentCollectionRequestBuilder attachments();
-
-    IAttachmentRequestBuilder attachments(final String id);
-
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
-
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+    IEventDismissReminderRequestBuilder dismissReminder();
+    IEventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime);
     IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse);
     IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse);
     IEventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse);
-    IEventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime);
-    IEventDismissReminderRequestBuilder dismissReminder();
 
 }
