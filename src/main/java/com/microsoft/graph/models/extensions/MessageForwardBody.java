@@ -19,20 +19,28 @@ import java.util.EnumSet;
 public class MessageForwardBody {
 
     /**
-     * The comment.
-     * 
-     */
-    @SerializedName("comment")
-    @Expose
-    public String comment;
-
-    /**
      * The to Recipients.
      * 
      */
     @SerializedName("toRecipients")
     @Expose
     public java.util.List<Recipient> toRecipients;
+
+    /**
+     * The message.
+     * 
+     */
+    @SerializedName("message")
+    @Expose
+    public Message message;
+
+    /**
+     * The comment.
+     * 
+     */
+    @SerializedName("comment")
+    @Expose
+    public String comment;
 
 
     /**

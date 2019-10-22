@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemRequest;
 import com.microsoft.graph.requests.extensions.DriveItemRequest;
+import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
@@ -29,8 +31,6 @@ import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionReques
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemStreamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCheckinRequestBuilder;
@@ -108,6 +108,15 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
 
     /**
+     * Gets the request builder for Workbook
+     *
+     * @return the IWorkbookRequestBuilder instance
+     */
+    public IWorkbookRequestBuilder workbook() {
+        return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the IItemAnalyticsWithReferenceRequestBuilder instance
@@ -158,15 +167,6 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemVersionRequestBuilder versions(final String id) {
         return new DriveItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for Workbook
-     *
-     * @return the IWorkbookRequestBuilder instance
-     */
-    public IWorkbookRequestBuilder workbook() {
-        return new WorkbookRequestBuilder(getRequestUrlWithAdditionalSegment("workbook"), getClient(), null);
     }
 
     public IDriveItemStreamRequestBuilder content() {

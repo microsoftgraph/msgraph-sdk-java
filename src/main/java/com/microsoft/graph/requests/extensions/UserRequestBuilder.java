@@ -39,10 +39,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
@@ -97,10 +93,10 @@ import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
@@ -113,14 +109,22 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingE
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
@@ -132,17 +136,21 @@ import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder
 import com.microsoft.graph.requests.extensions.UserChangePasswordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRevokeSignInSessionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRevokeSignInSessionsRequestBuilder;
+import com.microsoft.graph.models.extensions.AttendeeBase;
+import com.microsoft.graph.models.extensions.LocationConstraint;
+import com.microsoft.graph.models.extensions.TimeConstraint;
+import com.microsoft.graph.requests.extensions.IUserFindMeetingTimesRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserFindMeetingTimesRequestBuilder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.requests.extensions.IUserSendMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSendMailRequestBuilder;
 import com.microsoft.graph.models.generated.MailTipsType;
 import com.microsoft.graph.requests.extensions.IUserGetMailTipsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionRequestBuilder;
-import com.microsoft.graph.models.extensions.AttendeeBase;
-import com.microsoft.graph.models.extensions.LocationConstraint;
-import com.microsoft.graph.models.extensions.TimeConstraint;
-import com.microsoft.graph.requests.extensions.IUserFindMeetingTimesRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserFindMeetingTimesRequestBuilder;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
+import com.microsoft.graph.requests.extensions.IUserTranslateExchangeIdsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserTranslateExchangeIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRemoveAllDevicesFromManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder;
@@ -263,13 +271,6 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
-    }
-    public IExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
-    }
-
-    public IExtensionRequestBuilder extensions(final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
 
     /**
@@ -393,23 +394,12 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     public IDriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
-
-    /**
-     * Gets the request builder for PlannerUser
-     *
-     * @return the IPlannerUserRequestBuilder instance
-     */
-    public IPlannerUserRequestBuilder planner() {
-        return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
+    public IExtensionCollectionRequestBuilder extensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    /**
-     * Gets the request builder for Onenote
-     *
-     * @return the IOnenoteRequestBuilder instance
-     */
-    public IOnenoteRequestBuilder onenote() {
-        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    public IExtensionRequestBuilder extensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
     public IManagedDeviceCollectionRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
@@ -432,12 +422,14 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     public IDeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(final String id) {
         return new DeviceManagementTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementTroubleshootingEvents") + "/" + id, getClient(), null);
     }
-    public IUserActivityCollectionRequestBuilder activities() {
-        return new UserActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
-    }
 
-    public IUserActivityRequestBuilder activities(final String id) {
-        return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for PlannerUser
+     *
+     * @return the IPlannerUserRequestBuilder instance
+     */
+    public IPlannerUserRequestBuilder planner() {
+        return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
 
     /**
@@ -456,6 +448,29 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      */
     public IUserSettingsRequestBuilder settings() {
         return new UserSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
+     */
+    public IOnenoteRequestBuilder onenote() {
+        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+    public IUserActivityCollectionRequestBuilder activities() {
+        return new UserActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
+    }
+
+    public IUserActivityRequestBuilder activities(final String id) {
+        return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
+    }
+    public IOnlineMeetingCollectionRequestBuilder onlineMeetings() {
+        return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
+    }
+
+    public IOnlineMeetingRequestBuilder onlineMeetings(final String id) {
+        return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
     public IGroupCollectionRequestBuilder joinedTeams() {
         return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);
@@ -477,6 +492,10 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }
 
+    public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
+        return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
+    }
+
     public IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {
         return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
     }
@@ -485,8 +504,8 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
         return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, emailAddresses, mailTipsOptions);
     }
 
-    public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
-        return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
+    public IUserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
+        return new UserTranslateExchangeIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.translateExchangeIds"), getClient(), null, inputIds, targetIdType, sourceIdType);
     }
 
     public IUserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {

@@ -24,6 +24,66 @@ import java.util.EnumSet;
 public interface IBaseGraphServiceClient extends IBaseClient {
 
     /**
+     * Gets the collection of Invitations objects
+     *
+     * @return the request builder for the collection of Invitations objects
+     */
+    IInvitationCollectionRequestBuilder invitations();
+
+    /**
+     * Gets a single Invitations
+     *
+     * @param id the id of the Invitations to retrieve
+     * @return the request builder for the Invitations object
+     */
+    IInvitationRequestBuilder invitations(final String id);
+
+    /**
+     * Gets the collection of Users objects
+     *
+     * @return the request builder for the collection of Users objects
+     */
+    IUserCollectionRequestBuilder users();
+
+    /**
+     * Gets a single Users
+     *
+     * @param id the id of the Users to retrieve
+     * @return the request builder for the Users object
+     */
+    IUserRequestBuilder users(final String id);
+
+    /**
+     * Gets the collection of IdentityProviders objects
+     *
+     * @return the request builder for the collection of IdentityProviders objects
+     */
+    IIdentityProviderCollectionRequestBuilder identityProviders();
+
+    /**
+     * Gets a single IdentityProviders
+     *
+     * @param id the id of the IdentityProviders to retrieve
+     * @return the request builder for the IdentityProviders object
+     */
+    IIdentityProviderRequestBuilder identityProviders(final String id);
+
+    /**
+     * Gets the collection of CertificateBasedAuthConfiguration objects
+     *
+     * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
+     */
+    ICertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration();
+
+    /**
+     * Gets a single CertificateBasedAuthConfiguration
+     *
+     * @param id the id of the CertificateBasedAuthConfiguration to retrieve
+     * @return the request builder for the CertificateBasedAuthConfiguration object
+     */
+    ICertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(final String id);
+
+    /**
      * Gets the collection of DirectoryObjects objects
      *
      * @return the request builder for the collection of DirectoryObjects objects
@@ -37,6 +97,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the DirectoryObjects object
      */
     IDirectoryObjectRequestBuilder directoryObjects(final String id);
+
+    /**
+     * Gets the collection of Contacts objects
+     *
+     * @return the request builder for the collection of Contacts objects
+     */
+    IOrgContactCollectionRequestBuilder contacts();
+
+    /**
+     * Gets a single Contacts
+     *
+     * @param id the id of the Contacts to retrieve
+     * @return the request builder for the Contacts object
+     */
+    IOrgContactRequestBuilder contacts(final String id);
 
     /**
      * Gets the collection of Devices objects
@@ -189,21 +264,6 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     ISubscribedSkuRequestBuilder subscribedSkus(final String id);
 
     /**
-     * Gets the collection of Users objects
-     *
-     * @return the request builder for the collection of Users objects
-     */
-    IUserCollectionRequestBuilder users();
-
-    /**
-     * Gets a single Users
-     *
-     * @param id the id of the Users to retrieve
-     * @return the request builder for the Users object
-     */
-    IUserRequestBuilder users(final String id);
-
-    /**
      * Gets the collection of Contracts objects
      *
      * @return the request builder for the collection of Contracts objects
@@ -219,19 +279,19 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IContractRequestBuilder contracts(final String id);
 
     /**
-     * Gets the collection of SchemaExtensions objects
+     * Gets the collection of Workbooks objects
      *
-     * @return the request builder for the collection of SchemaExtensions objects
+     * @return the request builder for the collection of Workbooks objects
      */
-    ISchemaExtensionCollectionRequestBuilder schemaExtensions();
+    IDriveItemCollectionRequestBuilder workbooks();
 
     /**
-     * Gets a single SchemaExtensions
+     * Gets a single Workbooks
      *
-     * @param id the id of the SchemaExtensions to retrieve
-     * @return the request builder for the SchemaExtensions object
+     * @param id the id of the Workbooks to retrieve
+     * @return the request builder for the Workbooks object
      */
-    ISchemaExtensionRequestBuilder schemaExtensions(final String id);
+    IDriveItemRequestBuilder workbooks(final String id);
 
     /**
      * Gets the collection of Drives objects
@@ -279,49 +339,19 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     ISiteRequestBuilder sites(final String id);
 
     /**
-     * Gets the collection of Workbooks objects
+     * Gets the collection of SchemaExtensions objects
      *
-     * @return the request builder for the collection of Workbooks objects
+     * @return the request builder for the collection of SchemaExtensions objects
      */
-    IDriveItemCollectionRequestBuilder workbooks();
+    ISchemaExtensionCollectionRequestBuilder schemaExtensions();
 
     /**
-     * Gets a single Workbooks
+     * Gets a single SchemaExtensions
      *
-     * @param id the id of the Workbooks to retrieve
-     * @return the request builder for the Workbooks object
+     * @param id the id of the SchemaExtensions to retrieve
+     * @return the request builder for the SchemaExtensions object
      */
-    IDriveItemRequestBuilder workbooks(final String id);
-
-    /**
-     * Gets the collection of Subscriptions objects
-     *
-     * @return the request builder for the collection of Subscriptions objects
-     */
-    ISubscriptionCollectionRequestBuilder subscriptions();
-
-    /**
-     * Gets a single Subscriptions
-     *
-     * @param id the id of the Subscriptions to retrieve
-     * @return the request builder for the Subscriptions object
-     */
-    ISubscriptionRequestBuilder subscriptions(final String id);
-
-    /**
-     * Gets the collection of Invitations objects
-     *
-     * @return the request builder for the collection of Invitations objects
-     */
-    IInvitationCollectionRequestBuilder invitations();
-
-    /**
-     * Gets a single Invitations
-     *
-     * @param id the id of the Invitations to retrieve
-     * @return the request builder for the Invitations object
-     */
-    IInvitationRequestBuilder invitations(final String id);
+    ISchemaExtensionRequestBuilder schemaExtensions(final String id);
 
     /**
      * Gets the collection of GroupLifecyclePolicies objects
@@ -339,21 +369,6 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
 
     /**
-     * Gets the collection of Teams objects
-     *
-     * @return the request builder for the collection of Teams objects
-     */
-    ITeamCollectionRequestBuilder teams();
-
-    /**
-     * Gets a single Teams
-     *
-     * @param id the id of the Teams to retrieve
-     * @return the request builder for the Teams object
-     */
-    ITeamRequestBuilder teams(final String id);
-
-    /**
      * Gets the collection of DataPolicyOperations objects
      *
      * @return the request builder for the collection of DataPolicyOperations objects
@@ -369,19 +384,41 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IDataPolicyOperationRequestBuilder dataPolicyOperations(final String id);
 
     /**
-     * Gets the collection of IdentityProviders objects
+     * Gets the collection of Subscriptions objects
      *
-     * @return the request builder for the collection of IdentityProviders objects
+     * @return the request builder for the collection of Subscriptions objects
      */
-    IIdentityProviderCollectionRequestBuilder identityProviders();
+    ISubscriptionCollectionRequestBuilder subscriptions();
 
     /**
-     * Gets a single IdentityProviders
+     * Gets a single Subscriptions
      *
-     * @param id the id of the IdentityProviders to retrieve
-     * @return the request builder for the IdentityProviders object
+     * @param id the id of the Subscriptions to retrieve
+     * @return the request builder for the Subscriptions object
      */
-    IIdentityProviderRequestBuilder identityProviders(final String id);
+    ISubscriptionRequestBuilder subscriptions(final String id);
+
+    /**
+     * Gets the collection of Teams objects
+     *
+     * @return the request builder for the collection of Teams objects
+     */
+    ITeamCollectionRequestBuilder teams();
+
+    /**
+     * Gets a single Teams
+     *
+     * @param id the id of the Teams to retrieve
+     * @return the request builder for the Teams object
+     */
+    ITeamRequestBuilder teams(final String id);
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the AuditLogRoot
+     */
+    IAuditLogRootRequestBuilder auditLogs();
 
     /**
      * Gets the GraphServiceRequestBuilder
@@ -400,30 +437,16 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Drive
-     */
-    IDriveRequestBuilder drive();
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Planner
-     */
-    IPlannerRequestBuilder planner();
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the ReportRoot
-     */
-    IReportRootRequestBuilder reports();
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the EducationRoot
      */
     IEducationRootRequestBuilder education();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Drive
+     */
+    IDriveRequestBuilder drive();
 
     /**
      * Gets the GraphServiceRequestBuilder
@@ -442,6 +465,20 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the ReportRoot
+     */
+    IReportRootRequestBuilder reports();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Planner
+     */
+    IPlannerRequestBuilder planner();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Security
      */
     ISecurityRequestBuilder Security();
@@ -449,15 +486,15 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the CloudCommunications
      */
-    IAppCatalogsRequestBuilder appCatalogs();
+    ICloudCommunicationsRequestBuilder communications();
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AuditLogRoot
+     * @return the AppCatalogs
      */
-    IAuditLogRootRequestBuilder auditLogs();
+    IAppCatalogsRequestBuilder appCatalogs();
 
 }

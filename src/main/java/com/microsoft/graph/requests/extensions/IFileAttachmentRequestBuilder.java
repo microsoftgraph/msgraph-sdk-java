@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IFileAttachmentRequest;
+import com.microsoft.graph.requests.extensions.IFileAttachmentStreamRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +31,7 @@ public interface IFileAttachmentRequestBuilder extends IRequestBuilder {
      */
     IFileAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IFileAttachmentStreamRequestBuilder content();
 
 }

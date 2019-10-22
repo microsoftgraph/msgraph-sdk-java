@@ -4,16 +4,16 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailFolderRequest;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderCopyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderMoveRequestBuilder;
 
@@ -43,6 +43,14 @@ public interface IMailFolderRequestBuilder extends IRequestBuilder {
     IMailFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
     IMessageCollectionRequestBuilder messages();
 
     IMessageRequestBuilder messages(final String id);
@@ -54,14 +62,6 @@ public interface IMailFolderRequestBuilder extends IRequestBuilder {
     IMailFolderCollectionRequestBuilder childFolders();
 
     IMailFolderRequestBuilder childFolders(final String id);
-
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
-
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
     IMailFolderCopyRequestBuilder copy(final String destinationId);
     IMailFolderMoveRequestBuilder move(final String destinationId);
 

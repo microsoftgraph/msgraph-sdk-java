@@ -38,7 +38,7 @@ public class WorkbookTableColumn extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Returns the name of the table column. Read-only.
+     * Returns the name of the table column.
      */
     @SerializedName("name")
     @Expose
