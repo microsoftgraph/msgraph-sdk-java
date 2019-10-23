@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageCreateForwardRequest;
 import com.microsoft.graph.requests.extensions.MessageCreateForwardRequest;
+import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Message;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
@@ -26,9 +28,15 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param toRecipients the toRecipients
+     * @param message the message
+     * @param comment the comment
      */
-    public MessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MessageCreateForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         super(requestUrl, client, requestOptions);
+        bodyParams.put("toRecipients", toRecipients);
+        bodyParams.put("message", message);
+        bodyParams.put("comment", comment);
     }
 
     /**
@@ -52,6 +60,18 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
                 getClient(),
                 requestOptions
         );
+
+        if (hasParameter("toRecipients")) {
+            request.body.toRecipients = getParameter("toRecipients");
+        }
+
+        if (hasParameter("message")) {
+            request.body.message = getParameter("message");
+        }
+
+        if (hasParameter("comment")) {
+            request.body.comment = getParameter("comment");
+        }
 
         return request;
     }

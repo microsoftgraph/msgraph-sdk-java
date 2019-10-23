@@ -5,6 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationRequest;
 import com.microsoft.graph.requests.extensions.OrganizationRequest;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
@@ -55,6 +59,13 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder implements IO
     }
 
 
+    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration() {
+        return new CertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration"), getClient(), null);
+    }
+
+    public ICertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(final String id) {
+        return new CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
+    }
     public IExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }

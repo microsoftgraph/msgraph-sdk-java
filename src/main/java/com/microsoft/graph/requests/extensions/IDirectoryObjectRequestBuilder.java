@@ -5,6 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRestoreRequestBuilder;
@@ -36,6 +37,8 @@ public interface IDirectoryObjectRequestBuilder extends IRequestBuilder {
 
 
     IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds);
+
+    IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder checkMemberObjects(final java.util.List<String> ids);
 
     IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getMemberGroups(final Boolean securityEnabledOnly);
 

@@ -31,8 +31,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuild
 import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRefreshSessionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookProcessQueryRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookProcessQueryRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -134,10 +132,6 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
 
     public IWorkbookRefreshSessionRequestBuilder refreshSession() {
         return new WorkbookRefreshSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshSession"), getClient(), null);
-    }
-
-    public IWorkbookProcessQueryRequestBuilder processQuery(final byte[] input) {
-        return new WorkbookProcessQueryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.processQuery"), getClient(), null, input);
     }
 }
 

@@ -65,9 +65,9 @@ public class ScoredEmailAddress implements IJsonBackedObject {
      * The Item Id.
      * 
      */
-    @SerializedName("ItemId")
+    @SerializedName("itemId")
     @Expose
-    public String string;
+    public String itemId;
 
 
     /**

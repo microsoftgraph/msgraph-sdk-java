@@ -101,7 +101,7 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
     /**
      * The Fax.
-     * Fax number of school.
+     * 
      */
     @SerializedName("fax")
     @Expose
