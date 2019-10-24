@@ -15,8 +15,11 @@ import com.microsoft.graph.models.extensions.PrivacyProfile;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
 import com.microsoft.graph.models.extensions.VerifiedDomain;
 import com.microsoft.graph.models.generated.MdmAuthority;
+import com.microsoft.graph.models.extensions.CertificateBasedAuthConfiguration;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
@@ -204,6 +207,12 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public MdmAuthority mobileDeviceManagementAuthority;
 
     /**
+     * The Certificate Based Auth Configuration.
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     */
+    public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
+
+    /**
      * The Extensions.
      * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
@@ -248,6 +257,22 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("certificateBasedAuthConfiguration")) {
+            final CertificateBasedAuthConfigurationCollectionResponse response = new CertificateBasedAuthConfigurationCollectionResponse();
+            if (json.has("certificateBasedAuthConfiguration@odata.nextLink")) {
+                response.nextLink = json.get("certificateBasedAuthConfiguration@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("certificateBasedAuthConfiguration").toString(), JsonObject[].class);
+            final CertificateBasedAuthConfiguration[] array = new CertificateBasedAuthConfiguration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CertificateBasedAuthConfiguration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            certificateBasedAuthConfiguration = new CertificateBasedAuthConfigurationCollectionPage(response, null);
+        }
 
         if (json.has("extensions")) {
             final ExtensionCollectionResponse response = new ExtensionCollectionResponse();

@@ -6,6 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMessageForwardRequest;
 import com.microsoft.graph.requests.extensions.MessageForwardRequest;
 import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.extensions.Message;
 
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
@@ -27,13 +28,15 @@ public class MessageForwardRequestBuilder extends BaseActionRequestBuilder imple
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
-     * @param comment the comment
      * @param toRecipients the toRecipients
+     * @param message the message
+     * @param comment the comment
      */
-    public MessageForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String comment, final java.util.List<Recipient> toRecipients) {
+    public MessageForwardRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<Recipient> toRecipients, final Message message, final String comment) {
         super(requestUrl, client, requestOptions);
-        bodyParams.put("comment", comment);
         bodyParams.put("toRecipients", toRecipients);
+        bodyParams.put("message", message);
+        bodyParams.put("comment", comment);
     }
 
     /**
@@ -58,12 +61,16 @@ public class MessageForwardRequestBuilder extends BaseActionRequestBuilder imple
                 requestOptions
         );
 
-        if (hasParameter("comment")) {
-            request.body.comment = getParameter("comment");
-        }
-
         if (hasParameter("toRecipients")) {
             request.body.toRecipients = getParameter("toRecipients");
+        }
+
+        if (hasParameter("message")) {
+            request.body.message = getParameter("message");
+        }
+
+        if (hasParameter("comment")) {
+            request.body.comment = getParameter("comment");
         }
 
         return request;

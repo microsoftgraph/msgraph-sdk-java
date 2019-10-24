@@ -6,9 +6,9 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequest;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRetireRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceWipeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceResetPasscodeRequestBuilder;
@@ -59,16 +59,16 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
 
     IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
 
+    IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
+
+    IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
+
     /**
      * Gets the request builder for DeviceCategory
      *
      * @return the IDeviceCategoryRequestBuilder instance
      */
     IDeviceCategoryRequestBuilder deviceCategory();
-
-    IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
-
-    IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
     IManagedDeviceRetireRequestBuilder retire();
     IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode);
     IManagedDeviceResetPasscodeRequestBuilder resetPasscode();

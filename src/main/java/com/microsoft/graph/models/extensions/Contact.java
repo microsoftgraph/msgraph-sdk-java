@@ -12,17 +12,17 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
-import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
+import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.OutlookItem;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -304,12 +304,6 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     public java.util.List<String> children;
 
     /**
-     * The Extensions.
-     * The collection of open extensions defined for the contact. Read-only. Nullable.
-     */
-    public ExtensionCollectionPage extensions;
-
-    /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
      */
@@ -328,6 +322,12 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
     @SerializedName("photo")
     @Expose
     public ProfilePhoto photo;
+
+    /**
+     * The Extensions.
+     * The collection of open extensions defined for the contact. Read-only. Nullable.
+     */
+    public ExtensionCollectionPage extensions;
 
 
     /**
@@ -369,22 +369,6 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("extensions")) {
-            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
-            if (json.has("extensions@odata.nextLink")) {
-                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
-            final Extension[] array = new Extension[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            extensions = new ExtensionCollectionPage(response, null);
-        }
-
         if (json.has("singleValueExtendedProperties")) {
             final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
             if (json.has("singleValueExtendedProperties@odata.nextLink")) {
@@ -415,6 +399,22 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("extensions")) {
+            final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
+            if (json.has("extensions@odata.nextLink")) {
+                response.nextLink = json.get("extensions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("extensions").toString(), JsonObject[].class);
+            final Extension[] array = new Extension[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Extension.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            extensions = new ExtensionCollectionPage(response, null);
         }
     }
 }
