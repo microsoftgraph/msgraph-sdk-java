@@ -5,14 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IContactFolderRequest;
 import com.microsoft.graph.requests.extensions.ContactFolderRequest;
-import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
@@ -21,6 +13,14 @@ import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedProperty
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -65,20 +65,6 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public IContactCollectionRequestBuilder contacts() {
-        return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
-    }
-
-    public IContactRequestBuilder contacts(final String id) {
-        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
-    }
-    public IContactFolderCollectionRequestBuilder childFolders() {
-        return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
-    }
-
-    public IContactFolderRequestBuilder childFolders(final String id) {
-        return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
-    }
     public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
@@ -92,6 +78,20 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder implements I
 
     public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
+    }
+    public IContactCollectionRequestBuilder contacts() {
+        return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
+    }
+
+    public IContactRequestBuilder contacts(final String id) {
+        return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
+    }
+    public IContactFolderCollectionRequestBuilder childFolders() {
+        return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
+    }
+
+    public IContactFolderRequestBuilder childFolders(final String id) {
+        return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
 }
 

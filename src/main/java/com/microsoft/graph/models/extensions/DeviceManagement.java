@@ -10,14 +10,10 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.extensions.DeviceManagementSettings;
 import com.microsoft.graph.models.extensions.IntuneBrand;
+import com.microsoft.graph.models.generated.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
-import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
-import com.microsoft.graph.models.extensions.DetectedApp;
-import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.SoftwareUpdateStatusSummary;
@@ -31,22 +27,22 @@ import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
 import com.microsoft.graph.models.extensions.DeviceManagementPartner;
+import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
+import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
+import com.microsoft.graph.models.extensions.DetectedApp;
+import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.models.extensions.RoleDefinition;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.extensions.ResourceOperation;
-import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
+import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
+import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
-import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsCollectionPage;
-import com.microsoft.graph.requests.extensions.DetectedAppCollectionResponse;
-import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
-import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyCollectionResponse;
@@ -65,6 +61,10 @@ import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorColle
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionResponse;
+import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionResponse;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.RoleDefinitionCollectionResponse;
@@ -73,16 +73,16 @@ import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignm
 import com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ResourceOperationCollectionPage;
-import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
-import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.RemoteAssistancePartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionResponse;
+import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionResponse;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -98,14 +98,6 @@ import java.util.Map;
  */
 public class DeviceManagement extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Subscription State.
-     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
-     */
-    @SerializedName("subscriptionState")
-    @Expose
-    public DeviceManagementSubscriptionState subscriptionState;
 
     /**
      * The Settings.
@@ -124,38 +116,18 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public IntuneBrand intuneBrand;
 
     /**
+     * The Subscription State.
+     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     */
+    @SerializedName("subscriptionState")
+    @Expose
+    public DeviceManagementSubscriptionState subscriptionState;
+
+    /**
      * The Terms And Conditions.
      * The terms and conditions associated with device management of the company.
      */
     public TermsAndConditionsCollectionPage termsAndConditions;
-
-    /**
-     * The Apple Push Notification Certificate.
-     * Apple push notification certificate.
-     */
-    @SerializedName("applePushNotificationCertificate")
-    @Expose
-    public ApplePushNotificationCertificate applePushNotificationCertificate;
-
-    /**
-     * The Managed Device Overview.
-     * Device overview
-     */
-    @SerializedName("managedDeviceOverview")
-    @Expose
-    public ManagedDeviceOverview managedDeviceOverview;
-
-    /**
-     * The Detected Apps.
-     * The list of detected apps associated with a device.
-     */
-    public DetectedAppCollectionPage detectedApps;
-
-    /**
-     * The Managed Devices.
-     * The list of managed devices.
-     */
-    public ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Device Configurations.
@@ -244,6 +216,34 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
     /**
+     * The Apple Push Notification Certificate.
+     * Apple push notification certificate.
+     */
+    @SerializedName("applePushNotificationCertificate")
+    @Expose
+    public ApplePushNotificationCertificate applePushNotificationCertificate;
+
+    /**
+     * The Managed Device Overview.
+     * Device overview
+     */
+    @SerializedName("managedDeviceOverview")
+    @Expose
+    public ManagedDeviceOverview managedDeviceOverview;
+
+    /**
+     * The Detected Apps.
+     * The list of detected apps associated with a device.
+     */
+    public DetectedAppCollectionPage detectedApps;
+
+    /**
+     * The Managed Devices.
+     * The list of managed devices.
+     */
+    public ManagedDeviceCollectionPage managedDevices;
+
+    /**
      * The Notification Message Templates.
      * The Notification Message Templates.
      */
@@ -268,16 +268,22 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public ResourceOperationCollectionPage resourceOperations;
 
     /**
+     * The Remote Assistance Partners.
+     * The remote assist partners.
+     */
+    public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
+
+    /**
      * The Telecom Expense Management Partners.
      * The telecom expense management partners.
      */
     public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
     /**
-     * The Remote Assistance Partners.
-     * The remote assist partners.
+     * The Troubleshooting Events.
+     * The list of troubleshooting events for the tenant.
      */
-    public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
+    public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 
     /**
      * The Windows Information Protection App Learning Summaries.
@@ -290,12 +296,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The windows information protection network learning summaries.
      */
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
-
-    /**
-     * The Troubleshooting Events.
-     * The list of troubleshooting events for the tenant.
-     */
-    public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 
 
     /**
@@ -351,38 +351,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             termsAndConditions = new TermsAndConditionsCollectionPage(response, null);
-        }
-
-        if (json.has("detectedApps")) {
-            final DetectedAppCollectionResponse response = new DetectedAppCollectionResponse();
-            if (json.has("detectedApps@odata.nextLink")) {
-                response.nextLink = json.get("detectedApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("detectedApps").toString(), JsonObject[].class);
-            final DetectedApp[] array = new DetectedApp[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DetectedApp.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            detectedApps = new DetectedAppCollectionPage(response, null);
-        }
-
-        if (json.has("managedDevices")) {
-            final ManagedDeviceCollectionResponse response = new ManagedDeviceCollectionResponse();
-            if (json.has("managedDevices@odata.nextLink")) {
-                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
-            final ManagedDevice[] array = new ManagedDevice[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDevice.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedDevices = new ManagedDeviceCollectionPage(response, null);
         }
 
         if (json.has("deviceConfigurations")) {
@@ -529,6 +497,38 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             deviceManagementPartners = new DeviceManagementPartnerCollectionPage(response, null);
         }
 
+        if (json.has("detectedApps")) {
+            final DetectedAppCollectionResponse response = new DetectedAppCollectionResponse();
+            if (json.has("detectedApps@odata.nextLink")) {
+                response.nextLink = json.get("detectedApps@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("detectedApps").toString(), JsonObject[].class);
+            final DetectedApp[] array = new DetectedApp[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DetectedApp.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            detectedApps = new DetectedAppCollectionPage(response, null);
+        }
+
+        if (json.has("managedDevices")) {
+            final ManagedDeviceCollectionResponse response = new ManagedDeviceCollectionResponse();
+            if (json.has("managedDevices@odata.nextLink")) {
+                response.nextLink = json.get("managedDevices@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedDevices").toString(), JsonObject[].class);
+            final ManagedDevice[] array = new ManagedDevice[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedDevice.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            managedDevices = new ManagedDeviceCollectionPage(response, null);
+        }
+
         if (json.has("notificationMessageTemplates")) {
             final NotificationMessageTemplateCollectionResponse response = new NotificationMessageTemplateCollectionResponse();
             if (json.has("notificationMessageTemplates@odata.nextLink")) {
@@ -593,6 +593,22 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             resourceOperations = new ResourceOperationCollectionPage(response, null);
         }
 
+        if (json.has("remoteAssistancePartners")) {
+            final RemoteAssistancePartnerCollectionResponse response = new RemoteAssistancePartnerCollectionResponse();
+            if (json.has("remoteAssistancePartners@odata.nextLink")) {
+                response.nextLink = json.get("remoteAssistancePartners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), JsonObject[].class);
+            final RemoteAssistancePartner[] array = new RemoteAssistancePartner[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RemoteAssistancePartner.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            remoteAssistancePartners = new RemoteAssistancePartnerCollectionPage(response, null);
+        }
+
         if (json.has("telecomExpenseManagementPartners")) {
             final TelecomExpenseManagementPartnerCollectionResponse response = new TelecomExpenseManagementPartnerCollectionResponse();
             if (json.has("telecomExpenseManagementPartners@odata.nextLink")) {
@@ -609,20 +625,20 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             telecomExpenseManagementPartners = new TelecomExpenseManagementPartnerCollectionPage(response, null);
         }
 
-        if (json.has("remoteAssistancePartners")) {
-            final RemoteAssistancePartnerCollectionResponse response = new RemoteAssistancePartnerCollectionResponse();
-            if (json.has("remoteAssistancePartners@odata.nextLink")) {
-                response.nextLink = json.get("remoteAssistancePartners@odata.nextLink").getAsString();
+        if (json.has("troubleshootingEvents")) {
+            final DeviceManagementTroubleshootingEventCollectionResponse response = new DeviceManagementTroubleshootingEventCollectionResponse();
+            if (json.has("troubleshootingEvents@odata.nextLink")) {
+                response.nextLink = json.get("troubleshootingEvents@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("remoteAssistancePartners").toString(), JsonObject[].class);
-            final RemoteAssistancePartner[] array = new RemoteAssistancePartner[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), JsonObject[].class);
+            final DeviceManagementTroubleshootingEvent[] array = new DeviceManagementTroubleshootingEvent[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), RemoteAssistancePartner.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTroubleshootingEvent.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            remoteAssistancePartners = new RemoteAssistancePartnerCollectionPage(response, null);
+            troubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
         }
 
         if (json.has("windowsInformationProtectionAppLearningSummaries")) {
@@ -655,22 +671,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             windowsInformationProtectionNetworkLearningSummaries = new WindowsInformationProtectionNetworkLearningSummaryCollectionPage(response, null);
-        }
-
-        if (json.has("troubleshootingEvents")) {
-            final DeviceManagementTroubleshootingEventCollectionResponse response = new DeviceManagementTroubleshootingEventCollectionResponse();
-            if (json.has("troubleshootingEvents@odata.nextLink")) {
-                response.nextLink = json.get("troubleshootingEvents@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("troubleshootingEvents").toString(), JsonObject[].class);
-            final DeviceManagementTroubleshootingEvent[] array = new DeviceManagementTroubleshootingEvent[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceManagementTroubleshootingEvent.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            troubleshootingEvents = new DeviceManagementTroubleshootingEventCollectionPage(response, null);
         }
     }
 }

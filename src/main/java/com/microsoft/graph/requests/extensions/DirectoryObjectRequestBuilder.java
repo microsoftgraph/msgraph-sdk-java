@@ -7,6 +7,8 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberGroupsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCheckMemberObjectsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetMemberGroupsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetMemberObjectsCollectionRequestBuilder;
@@ -60,6 +62,10 @@ public class DirectoryObjectRequestBuilder extends BaseRequestBuilder implements
 
     public IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds) {
         return new DirectoryObjectCheckMemberGroupsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberGroups"), getClient(), null, groupIds);
+    }
+
+    public IDirectoryObjectCheckMemberObjectsCollectionRequestBuilder checkMemberObjects(final java.util.List<String> ids) {
+        return new DirectoryObjectCheckMemberObjectsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.checkMemberObjects"), getClient(), null, ids);
     }
 
     public IDirectoryObjectGetMemberGroupsCollectionRequestBuilder getMemberGroups(final Boolean securityEnabledOnly) {

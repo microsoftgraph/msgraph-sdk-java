@@ -19,8 +19,14 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
@@ -28,24 +34,18 @@ import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
@@ -116,9 +116,21 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IGroupSettingRequestBuilder settings(final String id);
 
-    IExtensionCollectionRequestBuilder extensions();
+    IConversationCollectionRequestBuilder conversations();
 
-    IExtensionRequestBuilder extensions(final String id);
+    IConversationRequestBuilder conversations(final String id);
+
+    IProfilePhotoCollectionRequestBuilder photos();
+
+    IProfilePhotoRequestBuilder photos(final String id);
+
+    IDirectoryObjectCollectionRequestBuilder acceptedSenders();
+
+    IDirectoryObjectRequestBuilder acceptedSenders(final String id);
+
+    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
+
+    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
 
     IConversationThreadCollectionRequestBuilder threads();
 
@@ -139,28 +151,12 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IEventRequestBuilder events(final String id);
 
-    IConversationCollectionRequestBuilder conversations();
-
-    IConversationRequestBuilder conversations(final String id);
-
     /**
      * Gets the request builder for ProfilePhoto
      *
      * @return the IProfilePhotoRequestBuilder instance
      */
     IProfilePhotoRequestBuilder photo();
-
-    IProfilePhotoCollectionRequestBuilder photos();
-
-    IProfilePhotoRequestBuilder photos(final String id);
-
-    IDirectoryObjectCollectionRequestBuilder acceptedSenders();
-
-    IDirectoryObjectRequestBuilder acceptedSenders(final String id);
-
-    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
-
-    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
 
     /**
      * Gets the request builder for Drive
@@ -177,6 +173,14 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     ISiteRequestBuilder sites(final String id);
 
+    IExtensionCollectionRequestBuilder extensions();
+
+    IExtensionRequestBuilder extensions(final String id);
+
+    IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies();
+
+    IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
+
     /**
      * Gets the request builder for PlannerGroup
      *
@@ -190,10 +194,6 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
-
-    IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies();
-
-    IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
 
     /**
      * Gets the request builder for Team

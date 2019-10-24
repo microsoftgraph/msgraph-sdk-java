@@ -4,6 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IReportRootRequest;
+import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationUserActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserDetailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationCountsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserCountsRequestBuilder;
@@ -87,12 +93,6 @@ import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUse
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserCountsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationUserActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -119,6 +119,12 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
      */
     IReportRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+    IReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity();
+    IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity();
+    IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails();
+    IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken);
+    IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures();
+    IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period);
     IReportRootGetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail();
     IReportRootGetOffice365ActivationCountsRequestBuilder getOffice365ActivationCounts();
     IReportRootGetOffice365ActivationsUserCountsRequestBuilder getOffice365ActivationsUserCounts();
@@ -202,11 +208,5 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
     IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder getTeamsDeviceUsageUserDetail(final String period);
     IReportRootGetTeamsDeviceUsageUserCountsRequestBuilder getTeamsDeviceUsageUserCounts(final String period);
     IReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder getTeamsDeviceUsageDistributionUserCounts(final String period);
-    IReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity();
-    IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity();
-    IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails();
-    IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder managedDeviceEnrollmentFailureDetails(final Integer skip, final Integer top, final String filter, final String skipToken);
-    IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures();
-    IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder managedDeviceEnrollmentTopFailures(final String period);
 
 }

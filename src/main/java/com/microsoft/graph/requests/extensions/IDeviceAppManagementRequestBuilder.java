@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequest;
+import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
@@ -30,8 +32,6 @@ import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollection
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -59,6 +59,10 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
      */
     IDeviceAppManagementRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IManagedEBookCollectionRequestBuilder managedEBooks();
+
+    IManagedEBookRequestBuilder managedEBooks(final String id);
 
     IMobileAppCollectionRequestBuilder mobileApps();
 
@@ -111,10 +115,6 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
     IManagedAppStatusCollectionRequestBuilder managedAppStatuses();
 
     IManagedAppStatusRequestBuilder managedAppStatuses(final String id);
-
-    IManagedEBookCollectionRequestBuilder managedEBooks();
-
-    IManagedEBookRequestBuilder managedEBooks(final String id);
     IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder syncMicrosoftStoreForBusinessApps();
 
 }
