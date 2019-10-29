@@ -234,6 +234,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String jobTitle;
 
     /**
+     * The Last Password Change Date Time.
+     * The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     */
+    @SerializedName("lastPasswordChangeDateTime")
+    @Expose
+    public java.util.Calendar lastPasswordChangeDateTime;
+
+    /**
      * The Legal Age Group Classification.
      * Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, minorWithOutParentalConsent, minorWithParentalConsent, minorNoParentalConsentRequired, notAdult and adult. Refer to the legal age group property definitions for further information.)
      */

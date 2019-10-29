@@ -216,6 +216,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean securityEnabled;
 
     /**
+     * The Security Identifier.
+     * Security identifier of the group, used in Windows scenarios. Returned by default.
+     */
+    @SerializedName("securityIdentifier")
+    @Expose
+    public String securityIdentifier;
+
+    /**
      * The Visibility.
      * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
      */
