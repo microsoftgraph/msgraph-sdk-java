@@ -252,6 +252,18 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     public ListItem listItem;
 
     /**
+     *  For Create Folder request - on conflict
+     *  Since Java does not support annotation as a Field
+     *  e.g. https://docs.microsoft.com/en-us/graph/api/driveitem-post-children?view=graph-rest-1.0&tabs=java does not compile!
+     *
+     *  Can be used on Create Folder with the following values: 'rename','replace','fail'
+     *  default is 'fail'
+     */
+    @SerializedName("@microsoft.graph.conflictBehavior")
+    @Expose
+    public String conflictBehavior;
+
+    /**
      * The Permissions.
      * The set of permissions for the item. Read-only. Nullable.
      */
