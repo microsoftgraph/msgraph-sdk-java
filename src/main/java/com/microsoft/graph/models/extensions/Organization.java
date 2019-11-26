@@ -87,6 +87,14 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
+     * The Creation Type.
+     * 
+     */
+    @SerializedName("creationType")
+    @Expose
+    public String creationType;
+
+    /**
      * The Display Name.
      * The display name for the tenant.
      */
