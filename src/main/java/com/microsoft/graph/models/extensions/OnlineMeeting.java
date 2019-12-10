@@ -55,12 +55,12 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public java.util.Calendar endDateTime;
 
     /**
-     * The Join Url.
+     * The Join Web Url.
      * 
      */
-    @SerializedName("joinUrl")
+    @SerializedName("joinWebUrl")
     @Expose
-    public String joinUrl;
+    public String joinWebUrl;
 
     /**
      * The Subject.

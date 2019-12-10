@@ -170,6 +170,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String country;
 
     /**
+     * The Creation Type.
+     * 
+     */
+    @SerializedName("creationType")
+    @Expose
+    public String creationType;
+
+    /**
      * The Department.
      * The name for the department in which the user works. Supports $filter.
      */
@@ -781,7 +789,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Insights.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName("insights")
     @Expose

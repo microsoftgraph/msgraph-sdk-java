@@ -15,9 +15,11 @@ import com.microsoft.graph.models.extensions.CallMediaState;
 import com.microsoft.graph.models.extensions.ResultInfo;
 import com.microsoft.graph.models.generated.CallDirection;
 import com.microsoft.graph.models.extensions.ParticipantInfo;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.extensions.ChatInfo;
+import com.microsoft.graph.models.extensions.CallOptions;
 import com.microsoft.graph.models.extensions.MeetingInfo;
 import com.microsoft.graph.models.extensions.ToneInfo;
 import com.microsoft.graph.models.extensions.Participant;
@@ -105,7 +107,7 @@ public class Call extends Entity implements IJsonBackedObject {
      */
     @SerializedName("targets")
     @Expose
-    public java.util.List<ParticipantInfo> targets;
+    public java.util.List<InvitationParticipantInfo> targets;
 
     /**
      * The Requested Modalities.
@@ -130,6 +132,14 @@ public class Call extends Entity implements IJsonBackedObject {
     @SerializedName("chatInfo")
     @Expose
     public ChatInfo chatInfo;
+
+    /**
+     * The Call Options.
+     * 
+     */
+    @SerializedName("callOptions")
+    @Expose
+    public CallOptions callOptions;
 
     /**
      * The Meeting Info.

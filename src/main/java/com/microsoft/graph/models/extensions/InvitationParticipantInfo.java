@@ -10,7 +10,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ParticipantInfo;
+import com.microsoft.graph.models.extensions.IdentitySet;
 
 
 import com.google.gson.JsonObject;
@@ -24,8 +24,26 @@ import java.util.Map;
 /**
  * The class for the Invitation Participant Info.
  */
-public class InvitationParticipantInfo extends ParticipantInfo implements IJsonBackedObject {
+public class InvitationParticipantInfo implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
+
+    /**
+     * The Identity.
+     * 
+     */
+    @SerializedName("identity")
+    @Expose
+    public IdentitySet identity;
 
     /**
      * The Replaces Call Id.
