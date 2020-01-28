@@ -47,7 +47,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Email Address.
-     * The email address of the user being invited. Required.
+     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      */
     @SerializedName("invitedUserEmailAddress")
     @Expose

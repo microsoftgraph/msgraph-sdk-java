@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerGroupRequest;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -33,8 +33,8 @@ public interface IPlannerGroupRequestBuilder extends IRequestBuilder {
     IPlannerGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IPlannerPlanCollectionRequestBuilder plans();
+    IPlannerPlanCollectionWithReferencesRequestBuilder plans();
 
-    IPlannerPlanRequestBuilder plans(final String id);
+    IPlannerPlanWithReferenceRequestBuilder plans(final String id);
 
 }

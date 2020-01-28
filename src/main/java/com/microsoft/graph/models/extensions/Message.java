@@ -182,6 +182,14 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     public String conversationId;
 
     /**
+     * The Conversation Index.
+     * Indicates the position of the message within the conversation.
+     */
+    @SerializedName("conversationIndex")
+    @Expose
+    public byte[] conversationIndex;
+
+    /**
      * The Unique Body.
      * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
      */

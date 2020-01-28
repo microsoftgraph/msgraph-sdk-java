@@ -15,9 +15,11 @@ import com.microsoft.graph.models.extensions.CallMediaState;
 import com.microsoft.graph.models.extensions.ResultInfo;
 import com.microsoft.graph.models.generated.CallDirection;
 import com.microsoft.graph.models.extensions.ParticipantInfo;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.extensions.ChatInfo;
+import com.microsoft.graph.models.extensions.CallOptions;
 import com.microsoft.graph.models.extensions.MeetingInfo;
 import com.microsoft.graph.models.extensions.ToneInfo;
 import com.microsoft.graph.models.extensions.Participant;
@@ -45,7 +47,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      */
     @SerializedName("state")
     @Expose
@@ -53,7 +55,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media State.
-     * 
+     * Read-only. The call media state.
      */
     @SerializedName("mediaState")
     @Expose
@@ -61,7 +63,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Info.
-     * 
+     * The result information. For example can hold termination reason. Read-only.
      */
     @SerializedName("resultInfo")
     @Expose
@@ -69,7 +71,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * 
+     * The direction of the call. The possible value are incoming or outgoing. Read-only.
      */
     @SerializedName("direction")
     @Expose
@@ -77,7 +79,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the conversation.
      */
     @SerializedName("subject")
     @Expose
@@ -85,7 +87,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Callback Uri.
-     * 
+     * The callback URL on which callbacks will be delivered. Must be https.
      */
     @SerializedName("callbackUri")
     @Expose
@@ -93,7 +95,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * The originator of the call.
      */
     @SerializedName("source")
     @Expose
@@ -101,15 +103,15 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Targets.
-     * 
+     * The targets of the call. Required information for creating peer to peer call.
      */
     @SerializedName("targets")
     @Expose
-    public java.util.List<ParticipantInfo> targets;
+    public java.util.List<InvitationParticipantInfo> targets;
 
     /**
      * The Requested Modalities.
-     * 
+     * The list of requested modalities.
      */
     @SerializedName("requestedModalities")
     @Expose
@@ -117,7 +119,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Config.
-     * 
+     * The media configuration. Required.
      */
     @SerializedName("mediaConfig")
     @Expose
@@ -125,15 +127,23 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * 
+     * The chat information. Required information for joining a meeting.
      */
     @SerializedName("chatInfo")
     @Expose
     public ChatInfo chatInfo;
 
     /**
-     * The Meeting Info.
+     * The Call Options.
      * 
+     */
+    @SerializedName("callOptions")
+    @Expose
+    public CallOptions callOptions;
+
+    /**
+     * The Meeting Info.
+     * The meeting information that's required for joining a meeting.
      */
     @SerializedName("meetingInfo")
     @Expose
@@ -149,7 +159,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The My Participant Id.
-     * 
+     * Read-only.
      */
     @SerializedName("myParticipantId")
     @Expose
@@ -165,13 +175,13 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * 
+     * Read-only. Nullable.
      */
     public ParticipantCollectionPage participants;
 
     /**
      * The Operations.
-     * 
+     * Read-only. Nullable.
      */
     public CommsOperationCollectionPage operations;
 

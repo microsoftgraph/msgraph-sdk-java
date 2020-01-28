@@ -31,7 +31,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Info.
-     * 
+     * The participant of the participant.
      */
     @SerializedName("info")
     @Expose
@@ -39,7 +39,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Streams.
-     * 
+     * The list of media streams.
      */
     @SerializedName("mediaStreams")
     @Expose
@@ -47,7 +47,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Muted.
-     * 
+     * true if the participant is muted (client or server muted).
      */
     @SerializedName("isMuted")
     @Expose
@@ -55,7 +55,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Is In Lobby.
-     * 
+     * true if the participant is in lobby.
      */
     @SerializedName("isInLobby")
     @Expose

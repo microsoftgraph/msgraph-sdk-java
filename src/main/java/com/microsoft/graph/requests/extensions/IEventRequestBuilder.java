@@ -76,8 +76,8 @@ public interface IEventRequestBuilder extends IRequestBuilder {
     IExtensionRequestBuilder extensions(final String id);
     IEventDismissReminderRequestBuilder dismissReminder();
     IEventSnoozeReminderRequestBuilder snoozeReminder(final DateTimeTimeZone newReminderTime);
-    IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse);
-    IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse);
-    IEventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse);
+    IEventAcceptRequestBuilder accept(final Boolean sendResponse, final String comment);
+    IEventDeclineRequestBuilder decline(final Boolean sendResponse, final String comment);
+    IEventTentativelyAcceptRequestBuilder tentativelyAccept(final Boolean sendResponse, final String comment);
 
 }

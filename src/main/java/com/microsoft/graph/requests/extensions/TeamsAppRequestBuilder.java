@@ -5,10 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsAppRequest;
 import com.microsoft.graph.requests.extensions.TeamsAppRequest;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppDefinitionWithReferenceRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -53,12 +53,12 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
     }
 
 
-    public ITeamsAppDefinitionCollectionRequestBuilder appDefinitions() {
-        return new TeamsAppDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
+    public ITeamsAppDefinitionCollectionWithReferencesRequestBuilder appDefinitions() {
+        return new TeamsAppDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions"), getClient(), null);
     }
 
-    public ITeamsAppDefinitionRequestBuilder appDefinitions(final String id) {
-        return new TeamsAppDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
+    public ITeamsAppDefinitionWithReferenceRequestBuilder appDefinitions(final String id) {
+        return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appDefinitions") + "/" + id, getClient(), null);
     }
 }
 

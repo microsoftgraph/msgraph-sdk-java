@@ -39,7 +39,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * 
+     * The identitySet associated with this participant. Read-only.
      */
     @SerializedName("identity")
     @Expose
@@ -47,7 +47,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Region.
-     * 
+     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      */
     @SerializedName("region")
     @Expose
@@ -55,7 +55,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Language Id.
-     * 
+     * The language culture string. Read-only.
      */
     @SerializedName("languageId")
     @Expose

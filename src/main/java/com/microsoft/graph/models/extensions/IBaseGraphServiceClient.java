@@ -69,6 +69,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IIdentityProviderRequestBuilder identityProviders(final String id);
 
     /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    IApplicationCollectionRequestBuilder applications();
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    IApplicationRequestBuilder applications(final String id);
+
+    /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects

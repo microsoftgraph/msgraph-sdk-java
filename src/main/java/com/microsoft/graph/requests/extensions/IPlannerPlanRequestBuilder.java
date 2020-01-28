@@ -4,10 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerBucketWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -36,13 +36,13 @@ public interface IPlannerPlanRequestBuilder extends IRequestBuilder {
     IPlannerPlanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IPlannerTaskCollectionRequestBuilder tasks();
+    IPlannerTaskCollectionWithReferencesRequestBuilder tasks();
 
-    IPlannerTaskRequestBuilder tasks(final String id);
+    IPlannerTaskWithReferenceRequestBuilder tasks(final String id);
 
-    IPlannerBucketCollectionRequestBuilder buckets();
+    IPlannerBucketCollectionWithReferencesRequestBuilder buckets();
 
-    IPlannerBucketRequestBuilder buckets(final String id);
+    IPlannerBucketWithReferenceRequestBuilder buckets(final String id);
 
     /**
      * Gets the request builder for PlannerPlanDetails

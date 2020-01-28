@@ -20,14 +20,16 @@ import com.microsoft.graph.requests.extensions.CallAnswerRequestBuilder;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.requests.extensions.ICallChangeScreenSharingRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallChangeScreenSharingRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallKeepAliveRequestBuilder;
+import com.microsoft.graph.requests.extensions.CallKeepAliveRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallMuteRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallMuteRequestBuilder;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.requests.extensions.ICallPlayPromptRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallPlayPromptRequestBuilder;
 import com.microsoft.graph.models.extensions.Prompt;
-import com.microsoft.graph.requests.extensions.ICallRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallRecordResponseRequestBuilder;
+import com.microsoft.graph.requests.extensions.CallRecordResponseRequestBuilder;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.requests.extensions.ICallRedirectRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRedirectRequestBuilder;
@@ -108,6 +110,10 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
         return new CallChangeScreenSharingRoleRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changeScreenSharingRole"), getClient(), null, role);
     }
 
+    public ICallKeepAliveRequestBuilder keepAlive() {
+        return new CallKeepAliveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.keepAlive"), getClient(), null);
+    }
+
     public ICallMuteRequestBuilder mute(final String clientContext) {
         return new CallMuteRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.mute"), getClient(), null, clientContext);
     }
@@ -116,8 +122,8 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
         return new CallPlayPromptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.playPrompt"), getClient(), null, prompts, clientContext);
     }
 
-    public ICallRecordRequestBuilder record(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final java.util.List<String> stopTones, final String clientContext) {
-        return new CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.record"), getClient(), null, prompts, bargeInAllowed, initialSilenceTimeoutInSeconds, maxSilenceTimeoutInSeconds, maxRecordDurationInSeconds, playBeep, stopTones, clientContext);
+    public ICallRecordResponseRequestBuilder recordResponse(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final java.util.List<String> stopTones, final String clientContext) {
+        return new CallRecordResponseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recordResponse"), getClient(), null, prompts, bargeInAllowed, initialSilenceTimeoutInSeconds, maxSilenceTimeoutInSeconds, maxRecordDurationInSeconds, playBeep, stopTones, clientContext);
     }
 
     public ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final Integer timeout, final String callbackUri) {

@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemActivityStatRequest;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -33,8 +33,8 @@ public interface IItemActivityStatRequestBuilder extends IRequestBuilder {
     IItemActivityStatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IItemActivityCollectionRequestBuilder activities();
+    IItemActivityCollectionWithReferencesRequestBuilder activities();
 
-    IItemActivityRequestBuilder activities(final String id);
+    IItemActivityWithReferenceRequestBuilder activities(final String id);
 
 }
