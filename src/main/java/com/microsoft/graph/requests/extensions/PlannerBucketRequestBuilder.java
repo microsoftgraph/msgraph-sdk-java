@@ -5,10 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
 import com.microsoft.graph.requests.extensions.PlannerBucketRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerTaskWithReferenceRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -53,12 +53,12 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public IPlannerTaskCollectionRequestBuilder tasks() {
-        return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
+    public IPlannerTaskCollectionWithReferencesRequestBuilder tasks() {
+        return new PlannerTaskCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder tasks(final String id) {
-        return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
+    public IPlannerTaskWithReferenceRequestBuilder tasks(final String id) {
+        return new PlannerTaskWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }
 

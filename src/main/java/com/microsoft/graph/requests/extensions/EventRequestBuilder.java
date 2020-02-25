@@ -135,16 +135,16 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
         return new EventSnoozeReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.snoozeReminder"), getClient(), null, newReminderTime);
     }
 
-    public IEventAcceptRequestBuilder accept(final String comment, final Boolean sendResponse) {
-        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, comment, sendResponse);
+    public IEventAcceptRequestBuilder accept(final Boolean sendResponse, final String comment) {
+        return new EventAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.accept"), getClient(), null, sendResponse, comment);
     }
 
-    public IEventDeclineRequestBuilder decline(final String comment, final Boolean sendResponse) {
-        return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, comment, sendResponse);
+    public IEventDeclineRequestBuilder decline(final Boolean sendResponse, final String comment) {
+        return new EventDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, sendResponse, comment);
     }
 
-    public IEventTentativelyAcceptRequestBuilder tentativelyAccept(final String comment, final Boolean sendResponse) {
-        return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, comment, sendResponse);
+    public IEventTentativelyAcceptRequestBuilder tentativelyAccept(final Boolean sendResponse, final String comment) {
+        return new EventTentativelyAcceptRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tentativelyAccept"), getClient(), null, sendResponse, comment);
     }
 }
 

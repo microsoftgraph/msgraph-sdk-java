@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamsAppRequest;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -33,8 +33,8 @@ public interface ITeamsAppRequestBuilder extends IRequestBuilder {
     ITeamsAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    ITeamsAppDefinitionCollectionRequestBuilder appDefinitions();
+    ITeamsAppDefinitionCollectionWithReferencesRequestBuilder appDefinitions();
 
-    ITeamsAppDefinitionRequestBuilder appDefinitions(final String id);
+    ITeamsAppDefinitionWithReferenceRequestBuilder appDefinitions(final String id);
 
 }

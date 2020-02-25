@@ -32,7 +32,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Shared.
-     * 
+     * Details about the shared item. Read only.
      */
     @SerializedName("lastShared")
     @Expose
@@ -48,7 +48,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Visualization.
-     * 
+     * Properties that you can use to visualize the document in your experience. Read-only
      */
     @SerializedName("resourceVisualization")
     @Expose
@@ -56,7 +56,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Reference.
-     * 
+     * Reference properties of the shared document, such as the url and type of the document. Read-only
      */
     @SerializedName("resourceReference")
     @Expose
@@ -72,7 +72,7 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * 
+     * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
      */
     @SerializedName("resource")
     @Expose

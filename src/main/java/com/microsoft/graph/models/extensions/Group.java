@@ -152,6 +152,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String mailNickname;
 
     /**
+     * The On Premises Domain Name.
+     * 
+     */
+    @SerializedName("onPremisesDomainName")
+    @Expose
+    public String onPremisesDomainName;
+
+    /**
      * The On Premises Last Sync Date Time.
      * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
      */
@@ -160,12 +168,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
+     * The On Premises Net Bios Name.
+     * 
+     */
+    @SerializedName("onPremisesNetBiosName")
+    @Expose
+    public String onPremisesNetBiosName;
+
+    /**
      * The On Premises Provisioning Errors.
      * Errors when using Microsoft synchronization product during provisioning. Returned by default.
      */
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
+
+    /**
+     * The On Premises Sam Account Name.
+     * 
+     */
+    @SerializedName("onPremisesSamAccountName")
+    @Expose
+    public String onPremisesSamAccountName;
 
     /**
      * The On Premises Security Identifier.
@@ -262,6 +286,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("unseenCount")
     @Expose
     public Integer unseenCount;
+
+    /**
+     * The Hide From Outlook Clients.
+     * 
+     */
+    @SerializedName("hideFromOutlookClients")
+    @Expose
+    public Boolean hideFromOutlookClients;
+
+    /**
+     * The Hide From Address Lists.
+     * 
+     */
+    @SerializedName("hideFromAddressLists")
+    @Expose
+    public Boolean hideFromAddressLists;
 
     /**
      * The Is Archived.

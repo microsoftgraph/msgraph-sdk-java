@@ -4,8 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -33,8 +33,8 @@ public interface IPlannerBucketRequestBuilder extends IRequestBuilder {
     IPlannerBucketRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IPlannerTaskCollectionRequestBuilder tasks();
+    IPlannerTaskCollectionWithReferencesRequestBuilder tasks();
 
-    IPlannerTaskRequestBuilder tasks(final String id);
+    IPlannerTaskWithReferenceRequestBuilder tasks(final String id);
 
 }

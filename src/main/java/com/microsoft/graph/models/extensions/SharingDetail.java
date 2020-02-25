@@ -40,7 +40,7 @@ public class SharingDetail implements IJsonBackedObject {
 
     /**
      * The Shared By.
-     * 
+     * The user who shared the document.
      */
     @SerializedName("sharedBy")
     @Expose
@@ -48,7 +48,7 @@ public class SharingDetail implements IJsonBackedObject {
 
     /**
      * The Shared Date Time.
-     * 
+     * The date and time the file was last shared. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName("sharedDateTime")
     @Expose
@@ -56,7 +56,7 @@ public class SharingDetail implements IJsonBackedObject {
 
     /**
      * The Sharing Subject.
-     * 
+     * The subject with which the document was shared.
      */
     @SerializedName("sharingSubject")
     @Expose
@@ -64,7 +64,7 @@ public class SharingDetail implements IJsonBackedObject {
 
     /**
      * The Sharing Type.
-     * 
+     * Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
      */
     @SerializedName("sharingType")
     @Expose

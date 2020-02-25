@@ -9,6 +9,8 @@ import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
@@ -75,6 +77,15 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
 
     public IChannelRequestBuilder channels(final String id) {
         return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Channel
+     *
+     * @return the IChannelRequestBuilder instance
+     */
+    public IChannelRequestBuilder primaryChannel() {
+        return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("primaryChannel"), getClient(), null);
     }
     public ITeamsAppInstallationCollectionRequestBuilder installedApps() {
         return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
