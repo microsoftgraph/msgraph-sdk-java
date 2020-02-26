@@ -29,7 +29,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/).
+     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      */
     @SerializedName("resource")
     @Expose
