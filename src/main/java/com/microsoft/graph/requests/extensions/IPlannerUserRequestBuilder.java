@@ -4,10 +4,10 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerUserRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -35,12 +35,12 @@ public interface IPlannerUserRequestBuilder extends IRequestBuilder {
     IPlannerUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
-    IPlannerTaskCollectionRequestBuilder tasks();
+    IPlannerTaskCollectionWithReferencesRequestBuilder tasks();
 
-    IPlannerTaskRequestBuilder tasks(final String id);
+    IPlannerTaskWithReferenceRequestBuilder tasks(final String id);
 
-    IPlannerPlanCollectionRequestBuilder plans();
+    IPlannerPlanCollectionWithReferencesRequestBuilder plans();
 
-    IPlannerPlanRequestBuilder plans(final String id);
+    IPlannerPlanWithReferenceRequestBuilder plans(final String id);
 
 }

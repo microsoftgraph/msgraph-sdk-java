@@ -5,10 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPlannerGroupRequest;
 import com.microsoft.graph.requests.extensions.PlannerGroupRequest;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanWithReferenceRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -53,12 +53,12 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
     }
 
 
-    public IPlannerPlanCollectionRequestBuilder plans() {
-        return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
+    public IPlannerPlanCollectionWithReferencesRequestBuilder plans() {
+        return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public IPlannerPlanRequestBuilder plans(final String id) {
-        return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    public IPlannerPlanWithReferenceRequestBuilder plans(final String id) {
+        return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
 }
 

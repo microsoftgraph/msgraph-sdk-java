@@ -5,10 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IItemActivityStatRequest;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequest;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityWithReferenceRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -53,12 +53,12 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder implement
     }
 
 
-    public IItemActivityCollectionRequestBuilder activities() {
-        return new ItemActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
+    public IItemActivityCollectionWithReferencesRequestBuilder activities() {
+        return new ItemActivityCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
     }
 
-    public IItemActivityRequestBuilder activities(final String id) {
-        return new ItemActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
+    public IItemActivityWithReferenceRequestBuilder activities(final String id) {
+        return new ItemActivityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
 }
 

@@ -91,6 +91,9 @@ import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.requests.extensions.IGroupAssignLicenseRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
@@ -337,6 +340,10 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public ITeamRequestBuilder team() {
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    }
+
+    public IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
+        return new GroupAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
 
     public IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {
