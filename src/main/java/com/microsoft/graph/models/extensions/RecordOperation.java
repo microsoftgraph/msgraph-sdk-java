@@ -29,7 +29,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
     /**
      * The Recording Location.
-     * 
+     * The location where the recording is located.
      */
     @SerializedName("recordingLocation")
     @Expose
@@ -37,7 +37,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
     /**
      * The Recording Access Token.
-     * 
+     * The access token required to retrieve the recording.
      */
     @SerializedName("recordingAccessToken")
     @Expose

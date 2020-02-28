@@ -39,7 +39,7 @@ public class ItemBody implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The type of the content. Possible values are text and HTML.
+     * The type of the content. Possible values are text and html.
      */
     @SerializedName("contentType")
     @Expose
