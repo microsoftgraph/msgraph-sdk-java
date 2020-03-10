@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserRequest;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -15,6 +17,8 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
@@ -64,12 +68,13 @@ import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.requests.extensions.IUserAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserChangePasswordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRevokeSignInSessionsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserReprocessLicenseAssignmentRequestBuilder;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.LocationConstraint;
 import com.microsoft.graph.models.extensions.TimeConstraint;
@@ -114,6 +119,10 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
+    IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments();
+
+    IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id);
+
     IDirectoryObjectCollectionWithReferencesRequestBuilder ownedDevices();
 
     IDirectoryObjectWithReferenceRequestBuilder ownedDevices(final String id);
@@ -140,6 +149,10 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects();
 
     IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id);
+
+    IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants();
+
+    IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects();
 
@@ -284,12 +297,13 @@ public interface IUserRequestBuilder extends IRequestBuilder {
 
     IOnlineMeetingRequestBuilder onlineMeetings(final String id);
 
-    IGroupCollectionRequestBuilder joinedTeams();
+    ITeamCollectionRequestBuilder joinedTeams();
 
-    IGroupRequestBuilder joinedTeams(final String id);
+    ITeamRequestBuilder joinedTeams(final String id);
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserRevokeSignInSessionsRequestBuilder revokeSignInSessions();
+    IUserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment();
     IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage);
     IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems);
 

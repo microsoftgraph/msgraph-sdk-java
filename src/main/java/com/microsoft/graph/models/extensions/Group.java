@@ -13,6 +13,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.LicenseProcessingState;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
+import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.GroupSetting;
 import com.microsoft.graph.models.extensions.Conversation;
@@ -27,6 +28,8 @@ import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import com.microsoft.graph.models.extensions.PlannerGroup;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionResponse;
@@ -152,6 +155,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String mailNickname;
 
     /**
+     * The On Premises Domain Name.
+     * 
+     */
+    @SerializedName("onPremisesDomainName")
+    @Expose
+    public String onPremisesDomainName;
+
+    /**
      * The On Premises Last Sync Date Time.
      * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
      */
@@ -160,12 +171,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
+     * The On Premises Net Bios Name.
+     * 
+     */
+    @SerializedName("onPremisesNetBiosName")
+    @Expose
+    public String onPremisesNetBiosName;
+
+    /**
      * The On Premises Provisioning Errors.
      * Errors when using Microsoft synchronization product during provisioning. Returned by default.
      */
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
+
+    /**
+     * The On Premises Sam Account Name.
+     * 
+     */
+    @SerializedName("onPremisesSamAccountName")
+    @Expose
+    public String onPremisesSamAccountName;
 
     /**
      * The On Premises Security Identifier.
@@ -264,12 +291,34 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Integer unseenCount;
 
     /**
+     * The Hide From Outlook Clients.
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromOutlookClients")
+    @Expose
+    public Boolean hideFromOutlookClients;
+
+    /**
+     * The Hide From Address Lists.
+     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromAddressLists")
+    @Expose
+    public Boolean hideFromAddressLists;
+
+    /**
      * The Is Archived.
      * 
      */
     @SerializedName("isArchived")
     @Expose
     public Boolean isArchived;
+
+    /**
+     * The App Role Assignments.
+     * 
+     */
+    public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
      * The Members.
@@ -474,6 +523,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("appRoleAssignments")) {
+            final AppRoleAssignmentCollectionResponse response = new AppRoleAssignmentCollectionResponse();
+            if (json.has("appRoleAssignments@odata.nextLink")) {
+                response.nextLink = json.get("appRoleAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appRoleAssignments").toString(), JsonObject[].class);
+            final AppRoleAssignment[] array = new AppRoleAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppRoleAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            appRoleAssignments = new AppRoleAssignmentCollectionPage(response, null);
+        }
 
         if (json.has("members")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();

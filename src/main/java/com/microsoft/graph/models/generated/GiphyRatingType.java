@@ -11,13 +11,13 @@ package com.microsoft.graph.models.generated;
 public enum GiphyRatingType
 {
     /**
-    * moderate
-    */
-    MODERATE,
-    /**
     * strict
     */
     STRICT,
+    /**
+    * moderate
+    */
+    MODERATE,
     /**
     * unknown Future Value
     */

@@ -37,6 +37,14 @@ public class UploadSession implements IJsonBackedObject {
     }
 
     /**
+     * The Upload Url.
+     * The URL endpoint that accepts PUT requests for byte ranges of the file.
+     */
+    @SerializedName("uploadUrl")
+    @Expose
+    public String uploadUrl;
+
+    /**
      * The Expiration Date Time.
      * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      */
@@ -51,14 +59,6 @@ public class UploadSession implements IJsonBackedObject {
     @SerializedName("nextExpectedRanges")
     @Expose
     public java.util.List<String> nextExpectedRanges;
-
-    /**
-     * The Upload Url.
-     * The URL endpoint that accepts PUT requests for byte ranges of the file.
-     */
-    @SerializedName("uploadUrl")
-    @Expose
-    public String uploadUrl;
 
 
     /**

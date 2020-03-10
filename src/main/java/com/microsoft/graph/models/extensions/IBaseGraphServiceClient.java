@@ -69,6 +69,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IIdentityProviderRequestBuilder identityProviders(final String id);
 
     /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    IApplicationCollectionRequestBuilder applications();
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    IApplicationRequestBuilder applications(final String id);
+
+    /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
@@ -277,6 +292,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Contracts object
      */
     IContractRequestBuilder contracts(final String id);
+
+    /**
+     * Gets the collection of ServicePrincipals objects
+     *
+     * @return the request builder for the collection of ServicePrincipals objects
+     */
+    IServicePrincipalCollectionRequestBuilder servicePrincipals();
+
+    /**
+     * Gets a single ServicePrincipals
+     *
+     * @param id the id of the ServicePrincipals to retrieve
+     * @return the request builder for the ServicePrincipals object
+     */
+    IServicePrincipalRequestBuilder servicePrincipals(final String id);
+
+    /**
+     * Gets the collection of Oauth2PermissionGrants objects
+     *
+     * @return the request builder for the collection of Oauth2PermissionGrants objects
+     */
+    IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants();
+
+    /**
+     * Gets a single Oauth2PermissionGrants
+     *
+     * @param id the id of the Oauth2PermissionGrants to retrieve
+     * @return the request builder for the Oauth2PermissionGrants object
+     */
+    IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id);
 
     /**
      * Gets the collection of Workbooks objects
@@ -496,5 +541,12 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the AppCatalogs
      */
     IAppCatalogsRequestBuilder appCatalogs();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the InformationProtection
+     */
+    IInformationProtectionRequestBuilder informationProtection();
 
 }

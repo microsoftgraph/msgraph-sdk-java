@@ -95,6 +95,14 @@ public class Team extends Entity implements IJsonBackedObject {
     public ChannelCollectionPage channels;
 
     /**
+     * The Primary Channel.
+     * The general channel for the team.
+     */
+    @SerializedName("primaryChannel")
+    @Expose
+    public Channel primaryChannel;
+
+    /**
      * The Installed Apps.
      * The apps installed in this team.
      */
