@@ -4,6 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequest;
+import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +31,12 @@ public interface IUserSettingsRequestBuilder extends IRequestBuilder {
      */
     IUserSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for ShiftPreferences
+     *
+     * @return the IShiftPreferencesRequestBuilder instance
+     */
+    IShiftPreferencesRequestBuilder shiftPreferences();
 
 }

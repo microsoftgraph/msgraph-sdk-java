@@ -4,7 +4,9 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamRequest;
+import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
@@ -42,9 +44,23 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
     ITeamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for Schedule
+     *
+     * @return the IScheduleRequestBuilder instance
+     */
+    IScheduleRequestBuilder schedule();
+
     IChannelCollectionRequestBuilder channels();
 
     IChannelRequestBuilder channels(final String id);
+
+    /**
+     * Gets the request builder for Channel
+     *
+     * @return the IChannelRequestBuilder instance
+     */
+    IChannelRequestBuilder primaryChannel();
 
     ITeamsAppInstallationCollectionRequestBuilder installedApps();
 

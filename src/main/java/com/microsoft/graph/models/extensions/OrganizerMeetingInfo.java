@@ -30,7 +30,7 @@ public class OrganizerMeetingInfo extends MeetingInfo implements IJsonBackedObje
 
     /**
      * The Organizer.
-     * 
+     * The organizer Azure Active Directory identity.
      */
     @SerializedName("organizer")
     @Expose
