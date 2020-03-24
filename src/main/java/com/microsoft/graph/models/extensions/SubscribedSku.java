@@ -31,7 +31,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * For example, 'Enabled'.
+     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -71,7 +71,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
+     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      */
     @SerializedName("skuPartNumber")
     @Expose

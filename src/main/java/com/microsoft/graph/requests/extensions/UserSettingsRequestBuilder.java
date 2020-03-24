@@ -5,6 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequest;
 import com.microsoft.graph.requests.extensions.UserSettingsRequest;
+import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ShiftPreferencesRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -49,5 +51,14 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
     }
 
 
+
+    /**
+     * Gets the request builder for ShiftPreferences
+     *
+     * @return the IShiftPreferencesRequestBuilder instance
+     */
+    public IShiftPreferencesRequestBuilder shiftPreferences() {
+        return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
+    }
 }
 
