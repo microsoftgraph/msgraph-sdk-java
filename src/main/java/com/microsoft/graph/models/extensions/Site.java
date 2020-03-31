@@ -10,6 +10,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.PublicError;
 import com.microsoft.graph.models.extensions.Root;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SiteCollection;
@@ -48,6 +49,14 @@ import java.util.Map;
  */
 public class Site extends BaseItem implements IJsonBackedObject {
 
+
+    /**
+     * The Error.
+     * 
+     */
+    @SerializedName("error")
+    @Expose
+    public PublicError error;
 
     /**
      * The Display Name.

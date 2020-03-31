@@ -48,7 +48,7 @@ public class FollowupFlag implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * The date and time that the follow-up is to be finished.
+     * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
      */
     @SerializedName("dueDateTime")
     @Expose

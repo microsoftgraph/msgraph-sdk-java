@@ -19,6 +19,10 @@ import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -92,6 +96,13 @@ public class ListRequestBuilder extends BaseRequestBuilder implements IListReque
 
     public IListItemRequestBuilder items(final String id) {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    }
+    public ISubscriptionCollectionRequestBuilder subscriptions() {
+        return new SubscriptionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions"), getClient(), null);
+    }
+
+    public ISubscriptionRequestBuilder subscriptions(final String id) {
+        return new SubscriptionRequestBuilder(getRequestUrlWithAdditionalSegment("subscriptions") + "/" + id, getClient(), null);
     }
 }
 
