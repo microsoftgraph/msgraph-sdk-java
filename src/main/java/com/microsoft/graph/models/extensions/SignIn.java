@@ -197,6 +197,14 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public java.util.List<RiskEventType> riskEventTypes;
 
     /**
+     * The Risk Event Types_v2.
+     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+     */
+    @SerializedName("riskEventTypes_v2")
+    @Expose
+    public java.util.List<String> riskEventTypes_v2;
+
+    /**
      * The Resource Display Name.
      * Name of the resource the user signed into.
      */

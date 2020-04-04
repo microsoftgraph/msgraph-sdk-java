@@ -208,7 +208,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Organizer.
-     * Set to true if the message sender is also the organizer.
+     * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
      */
     @SerializedName("isOrganizer")
     @Expose

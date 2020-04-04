@@ -17,6 +17,7 @@ import com.microsoft.graph.models.extensions.ColumnDefinition;
 import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.ListItem;
+import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.BaseItem;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
@@ -24,6 +25,8 @@ import com.microsoft.graph.requests.extensions.ContentTypeCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.extensions.ListItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.ListItemCollectionPage;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionResponse;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -97,6 +100,12 @@ public class List extends BaseItem implements IJsonBackedObject {
      * All items contained in the list.
      */
     public ListItemCollectionPage items;
+
+    /**
+     * The Subscriptions.
+     * 
+     */
+    public SubscriptionCollectionPage subscriptions;
 
 
     /**
@@ -184,6 +193,22 @@ public class List extends BaseItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             items = new ListItemCollectionPage(response, null);
+        }
+
+        if (json.has("subscriptions")) {
+            final SubscriptionCollectionResponse response = new SubscriptionCollectionResponse();
+            if (json.has("subscriptions@odata.nextLink")) {
+                response.nextLink = json.get("subscriptions@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("subscriptions").toString(), JsonObject[].class);
+            final Subscription[] array = new Subscription[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Subscription.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            subscriptions = new SubscriptionCollectionPage(response, null);
         }
     }
 }

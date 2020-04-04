@@ -108,6 +108,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public DeviceManagementSettings settings;
 
     /**
+     * The Intune Account Id.
+     * Intune Account Id for given tenant
+     */
+    @SerializedName("intuneAccountId")
+    @Expose
+    public java.util.UUID intuneAccountId;
+
+    /**
      * The Intune Brand.
      * intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
      */
