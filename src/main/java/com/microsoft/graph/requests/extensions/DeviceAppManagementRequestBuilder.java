@@ -5,6 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequest;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementRequest;
+import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
@@ -57,10 +61,6 @@ import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionReques
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.extensions.ManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder;
 
@@ -107,6 +107,13 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
     }
 
 
+    public IManagedEBookCollectionRequestBuilder managedEBooks() {
+        return new ManagedEBookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks"), getClient(), null);
+    }
+
+    public IManagedEBookRequestBuilder managedEBooks(final String id) {
+        return new ManagedEBookRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks") + "/" + id, getClient(), null);
+    }
     public IMobileAppCollectionRequestBuilder mobileApps() {
         return new MobileAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps"), getClient(), null);
     }
@@ -197,13 +204,6 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder implem
 
     public IManagedAppStatusRequestBuilder managedAppStatuses(final String id) {
         return new ManagedAppStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppStatuses") + "/" + id, getClient(), null);
-    }
-    public IManagedEBookCollectionRequestBuilder managedEBooks() {
-        return new ManagedEBookCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks"), getClient(), null);
-    }
-
-    public IManagedEBookRequestBuilder managedEBooks(final String id) {
-        return new ManagedEBookRequestBuilder(getRequestUrlWithAdditionalSegment("managedEBooks") + "/" + id, getClient(), null);
     }
 
     public IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder syncMicrosoftStoreForBusinessApps() {

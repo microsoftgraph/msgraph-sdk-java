@@ -26,6 +26,7 @@ import com.microsoft.graph.models.extensions.Shared;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SpecialFolder;
 import com.microsoft.graph.models.extensions.Video;
+import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ListItem;
@@ -33,7 +34,6 @@ import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.Subscription;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import com.microsoft.graph.models.extensions.DriveItemVersion;
-import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.BaseItem;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
@@ -222,6 +222,14 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     public String webDavUrl;
 
     /**
+     * The Workbook.
+     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
+     */
+    @SerializedName("workbook")
+    @Expose
+    public Workbook workbook;
+
+    /**
      * The Analytics.
      * Analytics about the view activities that took place on this item.
      */
@@ -266,14 +274,6 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
      */
     public DriveItemVersionCollectionPage versions;
-
-    /**
-     * The Workbook.
-     * For files that are Excel spreadsheets, accesses the workbook API to work with the spreadsheet's contents. Nullable.
-     */
-    @SerializedName("workbook")
-    @Expose
-    public Workbook workbook;
 
 
     /**
