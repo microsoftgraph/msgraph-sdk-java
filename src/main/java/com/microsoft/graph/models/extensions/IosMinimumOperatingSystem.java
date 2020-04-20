@@ -76,6 +76,14 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
     @Expose
     public Boolean v12_0;
 
+    /**
+     * The V13_0.
+     * Version 13.0 or later.
+     */
+    @SerializedName("v13_0")
+    @Expose
+    public Boolean v13_0;
+
 
     /**
      * The raw representation of this class

@@ -32,7 +32,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * 
+     * The content of comment.
      */
     @SerializedName("content")
     @Expose
@@ -40,7 +40,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * Indicates the type for the comment.
      */
     @SerializedName("contentType")
     @Expose
@@ -48,7 +48,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
     /**
      * The Replies.
-     * 
+     * Read-only. Nullable.
      */
     public WorkbookCommentReplyCollectionPage replies;
 

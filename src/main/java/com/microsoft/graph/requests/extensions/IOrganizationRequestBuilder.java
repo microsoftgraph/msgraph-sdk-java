@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IOrganizationRequest;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder;
@@ -33,6 +35,10 @@ public interface IOrganizationRequestBuilder extends IRequestBuilder {
      */
     IOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration();
+
+    ICertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(final String id);
 
     IExtensionCollectionRequestBuilder extensions();
 

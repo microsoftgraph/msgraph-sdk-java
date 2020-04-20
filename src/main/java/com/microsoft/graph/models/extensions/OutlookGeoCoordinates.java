@@ -37,14 +37,6 @@ public class OutlookGeoCoordinates implements IJsonBackedObject {
     }
 
     /**
-     * The Altitude.
-     * The altitude of the location.
-     */
-    @SerializedName("altitude")
-    @Expose
-    public Double altitude;
-
-    /**
      * The Latitude.
      * The latitude of the location.
      */
@@ -67,6 +59,14 @@ public class OutlookGeoCoordinates implements IJsonBackedObject {
     @SerializedName("accuracy")
     @Expose
     public Double accuracy;
+
+    /**
+     * The Altitude.
+     * The altitude of the location.
+     */
+    @SerializedName("altitude")
+    @Expose
+    public Double altitude;
 
     /**
      * The Altitude Accuracy.
