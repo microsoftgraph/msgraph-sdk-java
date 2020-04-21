@@ -33,8 +33,10 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param sendInvitation the sendInvitation
      * @param message the message
      * @param recipients the recipients
+     * @param expirationDateTime the expirationDateTime
+     * @param password the password
      */
-    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
+    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password) {
         super(requestUrl, client, requestOptions);
   	 if(requireSignIn!=null){
 			bodyParams.put("requireSignIn", requireSignIn);
@@ -50,6 +52,12 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
 		}
     	 if(recipients!=null){
 			bodyParams.put("recipients", recipients);
+		}
+    	 if(expirationDateTime!=null){
+			bodyParams.put("expirationDateTime", expirationDateTime);
+		}
+    	 if(password!=null){
+			bodyParams.put("password", password);
 		}
       }
 
@@ -78,6 +86,12 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
         }
         if (hasParameter("recipients")) {
             request.body.recipients = getParameter("recipients");
+        }
+        if (hasParameter("expirationDateTime")) {
+            request.body.expirationDateTime = getParameter("expirationDateTime");
+        }
+        if (hasParameter("password")) {
+            request.body.password = getParameter("password");
         }
   
         return request;

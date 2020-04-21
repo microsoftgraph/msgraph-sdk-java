@@ -32,12 +32,36 @@ public class Permission extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Granted To.
      * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
      */
     @SerializedName("grantedTo")
     @Expose
     public IdentitySet grantedTo;
+
+    /**
+     * The Granted To Identities.
+     * 
+     */
+    @SerializedName("grantedToIdentities")
+    @Expose
+    public java.util.List<IdentitySet> grantedToIdentities;
+
+    /**
+     * The Has Password.
+     * 
+     */
+    @SerializedName("hasPassword")
+    @Expose
+    public Boolean hasPassword;
 
     /**
      * The Inherited From.

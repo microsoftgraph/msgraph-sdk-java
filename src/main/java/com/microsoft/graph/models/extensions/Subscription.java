@@ -29,7 +29,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/).
+     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      */
     @SerializedName("resource")
     @Expose
@@ -37,7 +37,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Type.
-     * Required. Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item notifications support only the updated changeType. User and group notifications support updated and deleted changeType.
+     * Required. Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list notifications support only the updated changeType. User and group notifications support updated and deleted changeType.
      */
     @SerializedName("changeType")
     @Expose
@@ -82,6 +82,14 @@ public class Subscription extends Entity implements IJsonBackedObject {
     @SerializedName("creatorId")
     @Expose
     public String creatorId;
+
+    /**
+     * The Latest Supported Tls Version.
+     * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
+     */
+    @SerializedName("latestSupportedTlsVersion")
+    @Expose
+    public String latestSupportedTlsVersion;
 
 
     /**

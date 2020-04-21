@@ -39,7 +39,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * 
+     * Identity information of the participant.
      */
     @SerializedName("identity")
     @Expose
@@ -47,7 +47,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Upn.
-     * 
+     * User principal name of the participant.
      */
     @SerializedName("upn")
     @Expose

@@ -32,6 +32,28 @@ public class SiteGetActivitiesByIntervalCollectionRequestBuilder extends BaseFun
     public SiteGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
+    /**
+     * The request builder for this collection of Site
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
+     * @param interval the interval
+     */
+    public SiteGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String startDateTime, final String endDateTime, final String interval) {
+        super(requestUrl, client, requestOptions);
+     	 if(startDateTime!=null){
+			functionOptions.add(new FunctionOption("startDateTime", startDateTime));
+		}
+       	 if(endDateTime!=null){
+			functionOptions.add(new FunctionOption("endDateTime", endDateTime));
+		}
+       	 if(interval!=null){
+			functionOptions.add(new FunctionOption("interval", interval));
+		}
+      }
 
     public ISiteGetActivitiesByIntervalCollectionRequest buildRequest() {
         return buildRequest(getOptions());

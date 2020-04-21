@@ -91,6 +91,22 @@ public class Domain extends Entity implements IJsonBackedObject {
     public Boolean isVerified;
 
     /**
+     * The Manufacturer.
+     * 
+     */
+    @SerializedName("manufacturer")
+    @Expose
+    public String manufacturer;
+
+    /**
+     * The Model.
+     * 
+     */
+    @SerializedName("model")
+    @Expose
+    public String model;
+
+    /**
      * The Password Notification Window In Days.
      * Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
      */

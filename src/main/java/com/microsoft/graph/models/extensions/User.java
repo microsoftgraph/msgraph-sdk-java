@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
+import com.microsoft.graph.models.extensions.ObjectIdentity;
 import com.microsoft.graph.models.extensions.LicenseAssignmentState;
 import com.microsoft.graph.models.extensions.OnPremisesExtensionAttributes;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
@@ -32,6 +33,7 @@ import com.microsoft.graph.models.extensions.ContactFolder;
 import com.microsoft.graph.models.extensions.InferenceClassification;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
@@ -42,7 +44,7 @@ import com.microsoft.graph.models.extensions.UserSettings;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
-import com.microsoft.graph.models.extensions.Group;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionResponse;
@@ -67,6 +69,8 @@ import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
+import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
+import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
@@ -79,8 +83,8 @@ import com.microsoft.graph.requests.extensions.UserActivityCollectionResponse;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
-import com.microsoft.graph.requests.extensions.GroupCollectionResponse;
-import com.microsoft.graph.requests.extensions.GroupCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
+import com.microsoft.graph.requests.extensions.TeamCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -170,6 +174,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public String country;
 
     /**
+     * The Creation Type.
+     * Indicates whether the user account was created as a regular school or work account (null), an external account (Invitation), a local account for an Azure Active Directory B2C tenant (LocalAccount) or self-service sign-up using email verification (EmailVerified). Read-only.
+     */
+    @SerializedName("creationType")
+    @Expose
+    public String creationType;
+
+    /**
      * The Department.
      * The name for the department in which the user works. Supports $filter.
      */
@@ -208,6 +220,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("givenName")
     @Expose
     public String givenName;
+
+    /**
+     * The Identities.
+     * Represents the identities that can be used to sign in to this user account. An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account. May contain multiple items with the same signInType value. Supports $filter.
+     */
+    @SerializedName("identities")
+    @Expose
+    public java.util.List<ObjectIdentity> identities;
 
     /**
      * The Im Addresses.
@@ -748,6 +768,12 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public DriveCollectionPage drives;
 
     /**
+     * The Followed Sites.
+     * 
+     */
+    public SiteCollectionPage followedSites;
+
+    /**
      * The Extensions.
      * The collection of open extensions defined for the user. Read-only. Nullable.
      */
@@ -781,7 +807,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Insights.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName("insights")
     @Expose
@@ -819,7 +845,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Joined Teams.
      * 
      */
-    public GroupCollectionPage joinedTeams;
+    public TeamCollectionPage joinedTeams;
 
 
     /**
@@ -1165,6 +1191,22 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             drives = new DriveCollectionPage(response, null);
         }
 
+        if (json.has("followedSites")) {
+            final SiteCollectionResponse response = new SiteCollectionResponse();
+            if (json.has("followedSites@odata.nextLink")) {
+                response.nextLink = json.get("followedSites@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("followedSites").toString(), JsonObject[].class);
+            final Site[] array = new Site[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Site.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            followedSites = new SiteCollectionPage(response, null);
+        }
+
         if (json.has("extensions")) {
             final ExtensionCollectionResponse response = new ExtensionCollectionResponse();
             if (json.has("extensions@odata.nextLink")) {
@@ -1262,19 +1304,19 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("joinedTeams")) {
-            final GroupCollectionResponse response = new GroupCollectionResponse();
+            final TeamCollectionResponse response = new TeamCollectionResponse();
             if (json.has("joinedTeams@odata.nextLink")) {
                 response.nextLink = json.get("joinedTeams@odata.nextLink").getAsString();
             }
 
             final JsonObject[] sourceArray = serializer.deserializeObject(json.get("joinedTeams").toString(), JsonObject[].class);
-            final Group[] array = new Group[sourceArray.length];
+            final Team[] array = new Team[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Group.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Team.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            joinedTeams = new GroupCollectionPage(response, null);
+            joinedTeams = new TeamCollectionPage(response, null);
         }
     }
 }

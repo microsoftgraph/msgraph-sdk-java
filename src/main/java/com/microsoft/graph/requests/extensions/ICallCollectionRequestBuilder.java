@@ -29,4 +29,5 @@ public interface ICallCollectionRequestBuilder extends IRequestBuilder {
 
     ICallRequestBuilder byId(final String id);
 
+    ICallLogTeleconferenceDeviceQualityRequestBuilder logTeleconferenceDeviceQuality(final TeleconferenceDeviceQuality quality);
 }

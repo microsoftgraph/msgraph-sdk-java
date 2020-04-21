@@ -152,6 +152,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String mailNickname;
 
     /**
+     * The On Premises Domain Name.
+     * 
+     */
+    @SerializedName("onPremisesDomainName")
+    @Expose
+    public String onPremisesDomainName;
+
+    /**
      * The On Premises Last Sync Date Time.
      * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
      */
@@ -160,12 +168,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
+     * The On Premises Net Bios Name.
+     * 
+     */
+    @SerializedName("onPremisesNetBiosName")
+    @Expose
+    public String onPremisesNetBiosName;
+
+    /**
      * The On Premises Provisioning Errors.
      * Errors when using Microsoft synchronization product during provisioning. Returned by default.
      */
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
+
+    /**
+     * The On Premises Sam Account Name.
+     * 
+     */
+    @SerializedName("onPremisesSamAccountName")
+    @Expose
+    public String onPremisesSamAccountName;
 
     /**
      * The On Premises Security Identifier.
@@ -264,6 +288,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Integer unseenCount;
 
     /**
+     * The Hide From Outlook Clients.
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromOutlookClients")
+    @Expose
+    public Boolean hideFromOutlookClients;
+
+    /**
+     * The Hide From Address Lists.
+     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromAddressLists")
+    @Expose
+    public Boolean hideFromAddressLists;
+
+    /**
      * The Is Archived.
      * 
      */
@@ -311,7 +351,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
+     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
      */
     public DirectoryObjectCollectionPage owners;
 
