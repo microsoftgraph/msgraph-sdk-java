@@ -69,6 +69,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IIdentityProviderRequestBuilder identityProviders(final String id);
 
     /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    IApplicationCollectionRequestBuilder applications();
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    IApplicationRequestBuilder applications(final String id);
+
+    /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
@@ -423,6 +438,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the PolicyRoot
+     */
+    IPolicyRootRequestBuilder policies();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the User
      */
     IUserRequestBuilder me();
@@ -496,5 +518,19 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the AppCatalogs
      */
     IAppCatalogsRequestBuilder appCatalogs();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Teamwork
+     */
+    ITeamworkRequestBuilder teamwork();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the InformationProtection
+     */
+    IInformationProtectionRequestBuilder informationProtection();
 
 }

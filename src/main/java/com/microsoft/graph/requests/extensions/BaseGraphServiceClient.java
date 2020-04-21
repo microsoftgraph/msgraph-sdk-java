@@ -104,6 +104,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    public IApplicationCollectionRequestBuilder applications() {
+        return new ApplicationCollectionRequestBuilder(getServiceRoot() + "/applications", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    public IApplicationRequestBuilder applications(final String id) {
+        return new ApplicationRequestBuilder(getServiceRoot() + "/applications/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
@@ -552,6 +571,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the PolicyRoot
+     */
+    public IPolicyRootRequestBuilder policies() {
+        return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the User
      */
     public IUserRequestBuilder me() {
@@ -646,5 +674,23 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IAppCatalogsRequestBuilder appCatalogs() {
         return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Teamwork
+     */
+    public ITeamworkRequestBuilder teamwork() {
+        return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the InformationProtection
+     */
+    public IInformationProtectionRequestBuilder informationProtection() {
+        return new InformationProtectionRequestBuilder(getServiceRoot() + "/informationProtection", (IGraphServiceClient)this, null);
     }
 }

@@ -30,7 +30,7 @@ public class InviteParticipantsOperation extends CommsOperation implements IJson
 
     /**
      * The Participants.
-     * 
+     * The participants to invite.
      */
     @SerializedName("participants")
     @Expose

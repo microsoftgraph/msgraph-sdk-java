@@ -47,4 +47,8 @@ public class CallCollectionRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+
+    public ICallLogTeleconferenceDeviceQualityRequestBuilder logTeleconferenceDeviceQuality(final TeleconferenceDeviceQuality quality) {
+        return new CallLogTeleconferenceDeviceQualityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logTeleconferenceDeviceQuality"), getClient(), null, quality);
+    }
 }

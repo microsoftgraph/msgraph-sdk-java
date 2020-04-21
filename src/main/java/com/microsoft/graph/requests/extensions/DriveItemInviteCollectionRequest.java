@@ -63,7 +63,7 @@ public class DriveItemInviteCollectionRequest extends BaseCollectionRequest<Driv
     public IDriveItemInviteCollectionPage buildFromResponse(final DriveItemInviteCollectionResponse response) {
         final IDriveItemInviteCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveItemInviteCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* requireSignIn */ null, /* roles */ null, /* sendInvitation */ null, /* message */ null, /* recipients */ null);
+            builder = new DriveItemInviteCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, /* requireSignIn */ null, /* roles */ null, /* sendInvitation */ null, /* message */ null, /* recipients */ null, /* expirationDateTime */ null, /* password */ null);
         } else {
             builder = null;
         }

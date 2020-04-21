@@ -13,11 +13,12 @@ import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.requests.extensions.ICallAnswerRequestBuilder;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.requests.extensions.ICallChangeScreenSharingRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallKeepAliveRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallMuteRequestBuilder;
 import com.microsoft.graph.models.extensions.Prompt;
 import com.microsoft.graph.requests.extensions.ICallPlayPromptRequestBuilder;
 import com.microsoft.graph.models.extensions.Prompt;
-import com.microsoft.graph.requests.extensions.ICallRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallRecordResponseRequestBuilder;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.requests.extensions.ICallRedirectRequestBuilder;
 import com.microsoft.graph.models.generated.RejectReason;
@@ -26,6 +27,8 @@ import com.microsoft.graph.requests.extensions.ICallSubscribeToToneRequestBuilde
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.requests.extensions.ICallTransferRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallUnmuteRequestBuilder;
+import com.microsoft.graph.models.generated.RecordingStatus;
+import com.microsoft.graph.requests.extensions.ICallUpdateRecordingStatusRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -62,13 +65,15 @@ public interface ICallRequestBuilder extends IRequestBuilder {
     ICommsOperationRequestBuilder operations(final String id);
     ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities);
     ICallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role);
+    ICallKeepAliveRequestBuilder keepAlive();
     ICallMuteRequestBuilder mute(final String clientContext);
     ICallPlayPromptRequestBuilder playPrompt(final java.util.List<Prompt> prompts, final String clientContext);
-    ICallRecordRequestBuilder record(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final java.util.List<String> stopTones, final String clientContext);
+    ICallRecordResponseRequestBuilder recordResponse(final java.util.List<Prompt> prompts, final Boolean bargeInAllowed, final Integer initialSilenceTimeoutInSeconds, final Integer maxSilenceTimeoutInSeconds, final Integer maxRecordDurationInSeconds, final Boolean playBeep, final java.util.List<String> stopTones, final String clientContext);
     ICallRedirectRequestBuilder redirect(final java.util.List<InvitationParticipantInfo> targets, final Integer timeout, final String callbackUri);
     ICallRejectRequestBuilder reject(final RejectReason reason, final String callbackUri);
     ICallSubscribeToToneRequestBuilder subscribeToTone(final String clientContext);
     ICallTransferRequestBuilder transfer(final InvitationParticipantInfo transferTarget);
     ICallUnmuteRequestBuilder unmute(final String clientContext);
+    ICallUpdateRecordingStatusRequestBuilder updateRecordingStatus(final RecordingStatus status, final String clientContext);
 
 }

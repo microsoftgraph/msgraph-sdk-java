@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AutomaticRepliesSetting;
 import com.microsoft.graph.models.extensions.LocaleInfo;
+import com.microsoft.graph.models.generated.DelegateMeetingMessageDeliveryOptions;
 import com.microsoft.graph.models.extensions.WorkingHours;
 
 
@@ -70,6 +71,14 @@ public class MailboxSettings implements IJsonBackedObject {
     @SerializedName("language")
     @Expose
     public LocaleInfo language;
+
+    /**
+     * The Delegate Meeting Message Delivery Options.
+     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     */
+    @SerializedName("delegateMeetingMessageDeliveryOptions")
+    @Expose
+    public DelegateMeetingMessageDeliveryOptions delegateMeetingMessageDeliveryOptions;
 
     /**
      * The Working Hours.

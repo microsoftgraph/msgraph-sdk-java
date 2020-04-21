@@ -8,6 +8,8 @@ import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropert
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarPermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
@@ -15,6 +17,7 @@ import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.requests.extensions.ICalendarGetScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -50,6 +53,10 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
 
     IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
 
+    ICalendarPermissionCollectionRequestBuilder calendarPermissions();
+
+    ICalendarPermissionRequestBuilder calendarPermissions(final String id);
+
     IEventCollectionRequestBuilder events();
 
     IEventRequestBuilder events(final String id);
@@ -59,5 +66,7 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
     IEventRequestBuilder calendarView(final String id);
 
     ICalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval);
+
+    ICalendarAllowedCalendarSharingRolesCollectionRequestBuilder allowedCalendarSharingRoles(final String user);
 
 }

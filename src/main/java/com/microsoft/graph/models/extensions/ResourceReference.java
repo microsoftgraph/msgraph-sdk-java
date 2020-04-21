@@ -38,7 +38,7 @@ public class ResourceReference implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * A URL leading to the referenced item.
      */
     @SerializedName("webUrl")
     @Expose
@@ -46,7 +46,7 @@ public class ResourceReference implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The item's unique identifier.
      */
     @SerializedName("id")
     @Expose
@@ -54,7 +54,7 @@ public class ResourceReference implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
      */
     @SerializedName("type")
     @Expose
