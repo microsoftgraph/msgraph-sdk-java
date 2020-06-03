@@ -266,7 +266,7 @@ public class DefaultSerializer implements ISerializer {
     }
 
     private boolean fieldIsOdataTransient(Map.Entry<String, JsonElement> entry) {
-        return (entry.getKey().startsWith("@") && entry.getKey() != "@odata.type");
+        return (entry.getKey().startsWith("@") && !entry.getKey().equals("@odata.type") && !entry.getKey().equals("@microsoft.graph.conflictBehavior"));
     }
     
     /**
