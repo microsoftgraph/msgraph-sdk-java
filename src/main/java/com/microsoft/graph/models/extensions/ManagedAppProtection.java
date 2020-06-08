@@ -14,6 +14,7 @@ import com.microsoft.graph.models.generated.ManagedAppDataTransferLevel;
 import com.microsoft.graph.models.generated.ManagedAppClipboardSharingLevel;
 import com.microsoft.graph.models.generated.ManagedAppPinCharacterSet;
 import com.microsoft.graph.models.generated.ManagedAppDataStorageLocation;
+import com.microsoft.graph.models.generated.ManagedBrowserType;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 
 
@@ -97,7 +98,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Managed Browser To Open Links Required.
-     * Indicates whether internet links should be opened in the managed browser app.
+     * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
      */
     @SerializedName("managedBrowserToOpenLinksRequired")
     @Expose
@@ -238,6 +239,14 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     @SerializedName("minimumWarningAppVersion")
     @Expose
     public String minimumWarningAppVersion;
+
+    /**
+     * The Managed Browser.
+     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     */
+    @SerializedName("managedBrowser")
+    @Expose
+    public EnumSet<ManagedBrowserType> managedBrowser;
 
 
     /**

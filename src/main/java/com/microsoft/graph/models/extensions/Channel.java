@@ -10,8 +10,12 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.TeamsTab;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionPage;
 
@@ -63,10 +67,24 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String webUrl;
 
     /**
+     * The Messages.
+     * A collection of all the messages in the channel. A navigation property. Nullable.
+     */
+    public ChatMessageCollectionPage messages;
+
+    /**
      * The Tabs.
      * A collection of all the tabs in the channel. A navigation property.
      */
     public TeamsTabCollectionPage tabs;
+
+    /**
+     * The Files Folder.
+     * Metadata for the location where the channel's files are stored.
+     */
+    @SerializedName("filesFolder")
+    @Expose
+    public DriveItem filesFolder;
 
 
     /**
@@ -107,6 +125,22 @@ public class Channel extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("messages")) {
+            final ChatMessageCollectionResponse response = new ChatMessageCollectionResponse();
+            if (json.has("messages@odata.nextLink")) {
+                response.nextLink = json.get("messages@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("messages").toString(), JsonObject[].class);
+            final ChatMessage[] array = new ChatMessage[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ChatMessage.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            messages = new ChatMessageCollectionPage(response, null);
+        }
 
         if (json.has("tabs")) {
             final TeamsTabCollectionResponse response = new TeamsTabCollectionResponse();

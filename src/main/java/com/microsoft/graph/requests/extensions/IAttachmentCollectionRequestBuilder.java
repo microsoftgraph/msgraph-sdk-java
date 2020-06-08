@@ -29,4 +29,5 @@ public interface IAttachmentCollectionRequestBuilder extends IRequestBuilder {
 
     IAttachmentRequestBuilder byId(final String id);
 
+    IAttachmentCreateUploadSessionRequestBuilder createUploadSession(final AttachmentItem attachmentItem);
 }

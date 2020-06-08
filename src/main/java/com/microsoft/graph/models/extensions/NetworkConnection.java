@@ -64,6 +64,14 @@ public class NetworkConnection implements IJsonBackedObject {
     public String destinationDomain;
 
     /**
+     * The Destination Location.
+     * 
+     */
+    @SerializedName("destinationLocation")
+    @Expose
+    public String destinationLocation;
+
+    /**
      * The Destination Port.
      * Destination port (of the network connection).
      */
@@ -158,6 +166,14 @@ public class NetworkConnection implements IJsonBackedObject {
     @SerializedName("sourceAddress")
     @Expose
     public String sourceAddress;
+
+    /**
+     * The Source Location.
+     * 
+     */
+    @SerializedName("sourceLocation")
+    @Expose
+    public String sourceLocation;
 
     /**
      * The Source Port.

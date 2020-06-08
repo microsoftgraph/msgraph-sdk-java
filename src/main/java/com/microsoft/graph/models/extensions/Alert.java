@@ -19,6 +19,7 @@ import com.microsoft.graph.models.extensions.MalwareState;
 import com.microsoft.graph.models.extensions.NetworkConnection;
 import com.microsoft.graph.models.extensions.Process;
 import com.microsoft.graph.models.extensions.RegistryKeyState;
+import com.microsoft.graph.models.extensions.SecurityResource;
 import com.microsoft.graph.models.generated.AlertSeverity;
 import com.microsoft.graph.models.generated.AlertStatus;
 import com.microsoft.graph.models.extensions.AlertTrigger;
@@ -179,6 +180,14 @@ public class Alert extends Entity implements IJsonBackedObject {
     public java.util.List<HostSecurityState> hostStates;
 
     /**
+     * The Incident Ids.
+     * 
+     */
+    @SerializedName("incidentIds")
+    @Expose
+    public java.util.List<String> incidentIds;
+
+    /**
      * The Last Modified Date Time.
      * Time at which the alert entity was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
@@ -225,6 +234,14 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName("registryKeyStates")
     @Expose
     public java.util.List<RegistryKeyState> registryKeyStates;
+
+    /**
+     * The Security Resources.
+     * 
+     */
+    @SerializedName("securityResources")
+    @Expose
+    public java.util.List<SecurityResource> securityResources;
 
     /**
      * The Severity.

@@ -25,11 +25,14 @@ import com.microsoft.graph.requests.extensions.IDriveItemCopyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateLinkRequestBuilder;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemFollowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemUnfollowRequestBuilder;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
 
@@ -110,10 +113,12 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment);
     IDriveItemCheckoutRequestBuilder checkout();
     IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference);
-    IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope);
+    IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message);
     IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
+    IDriveItemFollowRequestBuilder follow();
+    IDriveItemUnfollowRequestBuilder unfollow();
 
-    IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients);
+    IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password);
     IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom);
 
     IDriveItemDeltaCollectionRequestBuilder delta(final String token);
@@ -121,6 +126,8 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemDeltaCollectionRequestBuilder delta();
 
     IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
+
+    IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval);
 
     IDriveItemSearchCollectionRequestBuilder search(final String q);
 

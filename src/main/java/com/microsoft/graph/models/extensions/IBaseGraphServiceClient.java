@@ -69,6 +69,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IIdentityProviderRequestBuilder identityProviders(final String id);
 
     /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    IApplicationCollectionRequestBuilder applications();
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    IApplicationRequestBuilder applications(final String id);
+
+    /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
@@ -279,6 +294,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IContractRequestBuilder contracts(final String id);
 
     /**
+     * Gets the collection of ServicePrincipals objects
+     *
+     * @return the request builder for the collection of ServicePrincipals objects
+     */
+    IServicePrincipalCollectionRequestBuilder servicePrincipals();
+
+    /**
+     * Gets a single ServicePrincipals
+     *
+     * @param id the id of the ServicePrincipals to retrieve
+     * @return the request builder for the ServicePrincipals object
+     */
+    IServicePrincipalRequestBuilder servicePrincipals(final String id);
+
+    /**
+     * Gets the collection of Oauth2PermissionGrants objects
+     *
+     * @return the request builder for the collection of Oauth2PermissionGrants objects
+     */
+    IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants();
+
+    /**
+     * Gets a single Oauth2PermissionGrants
+     *
+     * @param id the id of the Oauth2PermissionGrants to retrieve
+     * @return the request builder for the Oauth2PermissionGrants object
+     */
+    IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id);
+
+    /**
      * Gets the collection of Workbooks objects
      *
      * @return the request builder for the collection of Workbooks objects
@@ -292,6 +337,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Workbooks object
      */
     IDriveItemRequestBuilder workbooks(final String id);
+
+    /**
+     * Gets the collection of Places objects
+     *
+     * @return the request builder for the collection of Places objects
+     */
+    IPlaceCollectionRequestBuilder places();
+
+    /**
+     * Gets a single Places
+     *
+     * @param id the id of the Places to retrieve
+     * @return the request builder for the Places object
+     */
+    IPlaceRequestBuilder places(final String id);
 
     /**
      * Gets the collection of Drives objects
@@ -369,6 +429,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id);
 
     /**
+     * Gets the collection of RiskDetections objects
+     *
+     * @return the request builder for the collection of RiskDetections objects
+     */
+    IRiskDetectionCollectionRequestBuilder riskDetections();
+
+    /**
+     * Gets a single RiskDetections
+     *
+     * @param id the id of the RiskDetections to retrieve
+     * @return the request builder for the RiskDetections object
+     */
+    IRiskDetectionRequestBuilder riskDetections(final String id);
+
+    /**
+     * Gets the collection of RiskyUsers objects
+     *
+     * @return the request builder for the collection of RiskyUsers objects
+     */
+    IRiskyUserCollectionRequestBuilder riskyUsers();
+
+    /**
+     * Gets a single RiskyUsers
+     *
+     * @param id the id of the RiskyUsers to retrieve
+     * @return the request builder for the RiskyUsers object
+     */
+    IRiskyUserRequestBuilder riskyUsers(final String id);
+
+    /**
      * Gets the collection of DataPolicyOperations objects
      *
      * @return the request builder for the collection of DataPolicyOperations objects
@@ -423,6 +513,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the PolicyRoot
+     */
+    IPolicyRootRequestBuilder policies();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the User
      */
     IUserRequestBuilder me();
@@ -447,6 +544,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the Drive
      */
     IDriveRequestBuilder drive();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the CloudCommunications
+     */
+    ICloudCommunicationsRequestBuilder communications();
 
     /**
      * Gets the GraphServiceRequestBuilder
@@ -486,15 +590,22 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the CloudCommunications
+     * @return the AppCatalogs
      */
-    ICloudCommunicationsRequestBuilder communications();
+    IAppCatalogsRequestBuilder appCatalogs();
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the Teamwork
      */
-    IAppCatalogsRequestBuilder appCatalogs();
+    ITeamworkRequestBuilder teamwork();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the InformationProtection
+     */
+    IInformationProtectionRequestBuilder informationProtection();
 
 }

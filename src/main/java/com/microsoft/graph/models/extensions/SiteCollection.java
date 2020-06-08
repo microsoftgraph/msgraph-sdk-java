@@ -38,6 +38,14 @@ public class SiteCollection implements IJsonBackedObject {
     }
 
     /**
+     * The Data Location Code.
+     * The geographic region code for where this site collection resides. Read-only.
+     */
+    @SerializedName("dataLocationCode")
+    @Expose
+    public String dataLocationCode;
+
+    /**
      * The Hostname.
      * The hostname for the site collection. Read-only.
      */

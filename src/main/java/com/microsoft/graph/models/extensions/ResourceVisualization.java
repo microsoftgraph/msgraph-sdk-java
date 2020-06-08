@@ -38,7 +38,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * The item's title text.
      */
     @SerializedName("title")
     @Expose
@@ -46,7 +46,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      */
     @SerializedName("type")
     @Expose
@@ -54,7 +54,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * 
+     * The item's media type. Can be used for filtering for a specific type of file based on supported IANA Media Mime Types. Note that not all Media Mime Types are supported.
      */
     @SerializedName("mediaType")
     @Expose
@@ -62,7 +62,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Preview Image Url.
-     * 
+     * A URL leading to the preview image for the item.
      */
     @SerializedName("previewImageUrl")
     @Expose
@@ -70,7 +70,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Preview Text.
-     * 
+     * A preview text for the item.
      */
     @SerializedName("previewText")
     @Expose
@@ -78,7 +78,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Container Web Url.
-     * 
+     * A path leading to the folder in which the item is stored.
      */
     @SerializedName("containerWebUrl")
     @Expose
@@ -86,7 +86,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Container Display Name.
-     * 
+     * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      */
     @SerializedName("containerDisplayName")
     @Expose
@@ -94,7 +94,7 @@ public class ResourceVisualization implements IJsonBackedObject {
 
     /**
      * The Container Type.
-     * 
+     * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      */
     @SerializedName("containerType")
     @Expose
