@@ -11,6 +11,7 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ResponseStatus;
+import com.microsoft.graph.models.extensions.TimeSlot;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 
 
@@ -35,6 +36,14 @@ public class Attendee extends AttendeeBase implements IJsonBackedObject {
     @SerializedName("status")
     @Expose
     public ResponseStatus status;
+
+    /**
+     * The Proposed New Time.
+     * 
+     */
+    @SerializedName("proposedNewTime")
+    @Expose
+    public TimeSlot proposedNewTime;
 
 
     /**

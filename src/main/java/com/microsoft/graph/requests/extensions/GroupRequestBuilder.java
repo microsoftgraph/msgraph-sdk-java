@@ -5,6 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupRequest;
 import com.microsoft.graph.requests.extensions.GroupRequest;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
@@ -91,6 +95,9 @@ import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.requests.extensions.IGroupAssignLicenseRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
@@ -149,6 +156,13 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     }
 
 
+    public IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
+        return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments"), getClient(), null);
+    }
+
+    public IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id) {
+        return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments") + "/" + id, getClient(), null);
+    }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder members() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
@@ -337,6 +351,10 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public ITeamRequestBuilder team() {
         return new TeamRequestBuilder(getRequestUrlWithAdditionalSegment("team"), getClient(), null);
+    }
+
+    public IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
+        return new GroupAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
     }
 
     public IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId) {

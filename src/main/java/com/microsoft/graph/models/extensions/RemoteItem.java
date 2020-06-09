@@ -14,10 +14,12 @@ import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.File;
 import com.microsoft.graph.models.extensions.FileSystemInfo;
 import com.microsoft.graph.models.extensions.Folder;
+import com.microsoft.graph.models.extensions.Image;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.Shared;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SpecialFolder;
+import com.microsoft.graph.models.extensions.Video;
 
 
 import com.google.gson.JsonObject;
@@ -83,6 +85,14 @@ public class RemoteItem implements IJsonBackedObject {
     @SerializedName("folder")
     @Expose
     public Folder folder;
+
+    /**
+     * The Image.
+     * Image metadata, if the item is an image. Read-only.
+     */
+    @SerializedName("image")
+    @Expose
+    public Image image;
 
     /**
      * The Id.
@@ -163,6 +173,14 @@ public class RemoteItem implements IJsonBackedObject {
     @SerializedName("specialFolder")
     @Expose
     public SpecialFolder specialFolder;
+
+    /**
+     * The Video.
+     * Video metadata, if the item is a video. Read-only.
+     */
+    @SerializedName("video")
+    @Expose
+    public Video video;
 
     /**
      * The Web Dav Url.

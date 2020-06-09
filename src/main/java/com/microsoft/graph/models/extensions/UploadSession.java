@@ -37,6 +37,14 @@ public class UploadSession implements IJsonBackedObject {
     }
 
     /**
+     * The Upload Url.
+     * The URL endpoint that accepts PUT requests for byte ranges of the file.
+     */
+    @SerializedName("uploadUrl")
+    @Expose
+    public String uploadUrl;
+
+    /**
      * The Expiration Date Time.
      * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      */
@@ -46,19 +54,11 @@ public class UploadSession implements IJsonBackedObject {
 
     /**
      * The Next Expected Ranges.
-     * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file).
+     * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format 'start-end' (e.g. '0-26' to indicate the first 27 bytes of the file). When uploading files as Outlook attachments, instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file where the next upload should begin.
      */
     @SerializedName("nextExpectedRanges")
     @Expose
     public java.util.List<String> nextExpectedRanges;
-
-    /**
-     * The Upload Url.
-     * The URL endpoint that accepts PUT requests for byte ranges of the file.
-     */
-    @SerializedName("uploadUrl")
-    @Expose
-    public String uploadUrl;
 
 
     /**

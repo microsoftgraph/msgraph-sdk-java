@@ -5,10 +5,16 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChannelRequest;
 import com.microsoft.graph.requests.extensions.ChannelRequest;
+import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -53,12 +59,28 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
     }
 
 
+    public IChatMessageCollectionRequestBuilder messages() {
+        return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
+    }
+
+    public IChatMessageRequestBuilder messages(final String id) {
+        return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    }
     public ITeamsTabCollectionRequestBuilder tabs() {
         return new TeamsTabCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tabs"), getClient(), null);
     }
 
     public ITeamsTabRequestBuilder tabs(final String id) {
         return new TeamsTabRequestBuilder(getRequestUrlWithAdditionalSegment("tabs") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
+     */
+    public IDriveItemRequestBuilder filesFolder() {
+        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("filesFolder"), getClient(), null);
     }
 }
 

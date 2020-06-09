@@ -37,6 +37,8 @@ import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetByPathRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteGetByPathRequestBuilder;
 
@@ -155,6 +157,10 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
 
     public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
+    }
+
+    public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
+        return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 
     public ISiteGetByPathRequestBuilder getByPath(final String path) {

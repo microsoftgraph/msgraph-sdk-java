@@ -9,6 +9,10 @@ import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
@@ -67,6 +71,13 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
     }
 
 
+    public IDriveItemCollectionRequestBuilder following() {
+        return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("following"), getClient(), null);
+    }
+
+    public IDriveItemRequestBuilder following(final String id) {
+        return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("following") + "/" + id, getClient(), null);
+    }
     public IDriveItemCollectionRequestBuilder items() {
         return new DriveItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }

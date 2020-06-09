@@ -80,6 +80,22 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public String minimumWarningPatchVersion;
 
     /**
+     * The Custom Browser Package Id.
+     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
+    @SerializedName("customBrowserPackageId")
+    @Expose
+    public String customBrowserPackageId;
+
+    /**
+     * The Custom Browser Display Name.
+     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
+    @SerializedName("customBrowserDisplayName")
+    @Expose
+    public String customBrowserDisplayName;
+
+    /**
      * The Apps.
      * List of apps to which the policy is deployed.
      */

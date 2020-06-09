@@ -104,6 +104,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    public IApplicationCollectionRequestBuilder applications() {
+        return new ApplicationCollectionRequestBuilder(getServiceRoot() + "/applications", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    public IApplicationRequestBuilder applications(final String id) {
+        return new ApplicationRequestBuilder(getServiceRoot() + "/applications/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
@@ -370,6 +389,44 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of ServicePrincipals objects
+     *
+     * @return the request builder for the collection of ServicePrincipals objects
+     */
+    public IServicePrincipalCollectionRequestBuilder servicePrincipals() {
+        return new ServicePrincipalCollectionRequestBuilder(getServiceRoot() + "/servicePrincipals", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single ServicePrincipals
+     *
+     * @param id the id of the ServicePrincipals to retrieve
+     * @return the request builder for the ServicePrincipals object
+     */
+    public IServicePrincipalRequestBuilder servicePrincipals(final String id) {
+        return new ServicePrincipalRequestBuilder(getServiceRoot() + "/servicePrincipals/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of Oauth2PermissionGrants objects
+     *
+     * @return the request builder for the collection of Oauth2PermissionGrants objects
+     */
+    public IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
+        return new OAuth2PermissionGrantCollectionRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Oauth2PermissionGrants
+     *
+     * @param id the id of the Oauth2PermissionGrants to retrieve
+     * @return the request builder for the Oauth2PermissionGrants object
+     */
+    public IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id) {
+        return new OAuth2PermissionGrantRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the collection of Workbooks objects
      *
      * @return the request builder for the collection of Workbooks objects
@@ -386,6 +443,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IDriveItemRequestBuilder workbooks(final String id) {
         return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the collection of Places objects
+     *
+     * @return the request builder for the collection of Places objects
+     */
+    public IPlaceCollectionRequestBuilder places() {
+        return new PlaceCollectionRequestBuilder(getServiceRoot() + "/places", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single Places
+     *
+     * @param id the id of the Places to retrieve
+     * @return the request builder for the Places object
+     */
+    public IPlaceRequestBuilder places(final String id) {
+        return new PlaceRequestBuilder(getServiceRoot() + "/places/" + id, (IGraphServiceClient)this, null);
     }
 
     /**
@@ -552,6 +628,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the PolicyRoot
+     */
+    public IPolicyRootRequestBuilder policies() {
+        return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the User
      */
     public IUserRequestBuilder me() {
@@ -583,6 +668,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IDriveRequestBuilder drive() {
         return new DriveRequestBuilder(getServiceRoot() + "/drive", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the CloudCommunications
+     */
+    public ICloudCommunicationsRequestBuilder communications() {
+        return new CloudCommunicationsRequestBuilder(getServiceRoot() + "/communications", (IGraphServiceClient)this, null);
     }
 
     /**
@@ -633,18 +727,27 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the CloudCommunications
+     * @return the AppCatalogs
      */
-    public ICloudCommunicationsRequestBuilder communications() {
-        return new CloudCommunicationsRequestBuilder(getServiceRoot() + "/communications", (IGraphServiceClient)this, null);
+    public IAppCatalogsRequestBuilder appCatalogs() {
+        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
     }
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the Teamwork
      */
-    public IAppCatalogsRequestBuilder appCatalogs() {
-        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
+    public ITeamworkRequestBuilder teamwork() {
+        return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the InformationProtection
+     */
+    public IInformationProtectionRequestBuilder informationProtection() {
+        return new InformationProtectionRequestBuilder(getServiceRoot() + "/informationProtection", (IGraphServiceClient)this, null);
     }
 }

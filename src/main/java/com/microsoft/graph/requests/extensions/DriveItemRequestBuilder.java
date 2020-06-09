@@ -45,6 +45,10 @@ import com.microsoft.graph.requests.extensions.DriveItemCreateLinkRequestBuilder
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCreateUploadSessionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemFollowRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemFollowRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemUnfollowRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemUnfollowRequestBuilder;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
@@ -54,6 +58,8 @@ import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestB
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemSearchCollectionRequestBuilder;
@@ -185,16 +191,24 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
         return new DriveItemCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copy"), getClient(), null, name, parentReference);
     }
 
-    public IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope) {
-        return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope);
+    public IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message) {
+        return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope, expirationDateTime, password, message);
     }
 
     public IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item) {
         return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
     }
 
-    public IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients) {
-        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients);
+    public IDriveItemFollowRequestBuilder follow() {
+        return new DriveItemFollowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.follow"), getClient(), null);
+    }
+
+    public IDriveItemUnfollowRequestBuilder unfollow() {
+        return new DriveItemUnfollowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unfollow"), getClient(), null);
+    }
+
+    public IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password) {
+        return new DriveItemInviteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invite"), getClient(), null, requireSignIn, roles, sendInvitation, message, recipients, expirationDateTime, password);
     }
 
     public IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom) {
@@ -211,6 +225,10 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {
         return new DriveItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null);
+    }
+
+    public IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
+        return new DriveItemGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
     }
 
     public IDriveItemSearchCollectionRequestBuilder search(final String q) {

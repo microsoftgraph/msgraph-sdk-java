@@ -29,4 +29,5 @@ public interface IOnlineMeetingCollectionRequestBuilder extends IRequestBuilder 
 
     IOnlineMeetingRequestBuilder byId(final String id);
 
+    IOnlineMeetingCreateOrGetRequestBuilder createOrGet(final ChatInfo chatInfo, final java.util.Calendar endDateTime, final String externalId, final MeetingParticipants participants, final java.util.Calendar startDateTime, final String subject);
 }

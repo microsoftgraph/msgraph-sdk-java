@@ -47,4 +47,8 @@ public class OnlineMeetingCollectionRequestBuilder extends BaseRequestBuilder im
     }
 
 
+
+    public IOnlineMeetingCreateOrGetRequestBuilder createOrGet(final ChatInfo chatInfo, final java.util.Calendar endDateTime, final String externalId, final MeetingParticipants participants, final java.util.Calendar startDateTime, final String subject) {
+        return new OnlineMeetingCreateOrGetRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createOrGet"), getClient(), null, chatInfo, endDateTime, externalId, participants, startDateTime, subject);
+    }
 }

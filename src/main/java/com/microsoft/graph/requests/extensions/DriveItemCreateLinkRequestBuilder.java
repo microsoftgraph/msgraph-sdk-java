@@ -28,11 +28,17 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder 
      * @param requestOptions the options for this request
      * @param type the type
      * @param scope the scope
+     * @param expirationDateTime the expirationDateTime
+     * @param password the password
+     * @param message the message
      */
-    public DriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final String scope) {
+    public DriveItemCreateLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("type", type);
         bodyParams.put("scope", scope);
+        bodyParams.put("expirationDateTime", expirationDateTime);
+        bodyParams.put("password", password);
+        bodyParams.put("message", message);
     }
 
     /**
@@ -63,6 +69,18 @@ public class DriveItemCreateLinkRequestBuilder extends BaseActionRequestBuilder 
 
         if (hasParameter("scope")) {
             request.body.scope = getParameter("scope");
+        }
+
+        if (hasParameter("expirationDateTime")) {
+            request.body.expirationDateTime = getParameter("expirationDateTime");
+        }
+
+        if (hasParameter("password")) {
+            request.body.password = getParameter("password");
+        }
+
+        if (hasParameter("message")) {
+            request.body.message = getParameter("message");
         }
 
         return request;

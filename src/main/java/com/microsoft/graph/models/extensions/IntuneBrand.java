@@ -47,62 +47,6 @@ public class IntuneBrand implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Contact ITName.
-     * Name of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITName")
-    @Expose
-    public String contactITName;
-
-    /**
-     * The Contact ITPhone Number.
-     * Phone number of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITPhoneNumber")
-    @Expose
-    public String contactITPhoneNumber;
-
-    /**
-     * The Contact ITEmail Address.
-     * Email address of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITEmailAddress")
-    @Expose
-    public String contactITEmailAddress;
-
-    /**
-     * The Contact ITNotes.
-     * Text comments regarding the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITNotes")
-    @Expose
-    public String contactITNotes;
-
-    /**
-     * The Privacy Url.
-     * URL to the company/organization’s privacy policy.
-     */
-    @SerializedName("privacyUrl")
-    @Expose
-    public String privacyUrl;
-
-    /**
-     * The Online Support Site Url.
-     * URL to the company/organization’s IT helpdesk site.
-     */
-    @SerializedName("onlineSupportSiteUrl")
-    @Expose
-    public String onlineSupportSiteUrl;
-
-    /**
-     * The Online Support Site Name.
-     * Display name of the company/organization’s IT helpdesk site.
-     */
-    @SerializedName("onlineSupportSiteName")
-    @Expose
-    public String onlineSupportSiteName;
-
-    /**
      * The Theme Color.
      * Primary theme color used in the Company Portal applications and web portal.
      */
@@ -149,6 +93,62 @@ public class IntuneBrand implements IJsonBackedObject {
     @SerializedName("showDisplayNameNextToLogo")
     @Expose
     public Boolean showDisplayNameNextToLogo;
+
+    /**
+     * The Contact ITName.
+     * Name of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITName")
+    @Expose
+    public String contactITName;
+
+    /**
+     * The Contact ITPhone Number.
+     * Phone number of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITPhoneNumber")
+    @Expose
+    public String contactITPhoneNumber;
+
+    /**
+     * The Contact ITEmail Address.
+     * Email address of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITEmailAddress")
+    @Expose
+    public String contactITEmailAddress;
+
+    /**
+     * The Contact ITNotes.
+     * Text comments regarding the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITNotes")
+    @Expose
+    public String contactITNotes;
+
+    /**
+     * The Online Support Site Url.
+     * URL to the company/organization’s IT helpdesk site.
+     */
+    @SerializedName("onlineSupportSiteUrl")
+    @Expose
+    public String onlineSupportSiteUrl;
+
+    /**
+     * The Online Support Site Name.
+     * Display name of the company/organization’s IT helpdesk site.
+     */
+    @SerializedName("onlineSupportSiteName")
+    @Expose
+    public String onlineSupportSiteName;
+
+    /**
+     * The Privacy Url.
+     * URL to the company/organization’s privacy policy.
+     */
+    @SerializedName("privacyUrl")
+    @Expose
+    public String privacyUrl;
 
 
     /**
