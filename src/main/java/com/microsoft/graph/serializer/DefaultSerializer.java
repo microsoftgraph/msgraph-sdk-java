@@ -256,17 +256,8 @@ public class DefaultSerializer implements ISerializer {
      */
     private void addAdditionalDataToJson(AdditionalDataManager additionalDataManager, JsonObject jsonNode) {
     	for (Map.Entry<String, JsonElement> entry : additionalDataManager.entrySet()) {
-            if (!fieldIsOdataTransient(entry)) {
-                jsonNode.add(
-                        entry.getKey(),
-                        entry.getValue()
-                );
-            }
+                jsonNode.add(entry.getKey(), entry.getValue());
         }
-    }
-
-    private boolean fieldIsOdataTransient(Map.Entry<String, JsonElement> entry) {
-        return (entry.getKey().startsWith("@") && entry.getKey() != "@odata.type");
     }
     
     /**

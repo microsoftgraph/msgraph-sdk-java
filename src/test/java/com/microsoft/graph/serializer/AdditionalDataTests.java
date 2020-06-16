@@ -57,19 +57,6 @@ public class AdditionalDataTests {
 	}
 	
 	@Test
-	public void testSkipTransientData() {
-		Entity entity = new Entity();
-		entity.id = "1";
-		
-		entity.additionalDataManager().put("@odata.type", new JsonPrimitive("entity"));
-		entity.additionalDataManager().put("@odata.nextLink", new JsonPrimitive("1"));
-		
-		String serializedObject = serializer.serializeObject(entity);
-		
-		assertEquals("{\"id\":\"1\",\"@odata.type\":\"entity\"}", serializedObject);
-	}
-	
-	@Test
 	public void testHashMapChildAnnotationData() {
 		PlannerTask task = new PlannerTask();
 		task.assignments = new PlannerAssignments();
