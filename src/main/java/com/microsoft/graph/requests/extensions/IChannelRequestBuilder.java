@@ -4,8 +4,11 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IChannelRequest;
+import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -33,8 +36,19 @@ public interface IChannelRequestBuilder extends IRequestBuilder {
     IChannelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
 
+    IChatMessageCollectionRequestBuilder messages();
+
+    IChatMessageRequestBuilder messages(final String id);
+
     ITeamsTabCollectionRequestBuilder tabs();
 
     ITeamsTabRequestBuilder tabs(final String id);
+
+    /**
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
+     */
+    IDriveItemRequestBuilder filesFolder();
 
 }

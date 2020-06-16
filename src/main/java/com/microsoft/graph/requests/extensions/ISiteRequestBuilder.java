@@ -20,6 +20,7 @@ import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteGetActivitiesByIntervalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteGetByPathRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
@@ -94,6 +95,8 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
     IOnenoteRequestBuilder onenote();
 
     ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
+
+    ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval);
     ISiteGetByPathRequestBuilder getByPath(final String path);
 
 }

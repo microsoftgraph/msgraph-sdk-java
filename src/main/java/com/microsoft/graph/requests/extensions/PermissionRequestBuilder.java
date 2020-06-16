@@ -5,6 +5,9 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPermissionRequest;
 import com.microsoft.graph.requests.extensions.PermissionRequest;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantCollectionRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -49,5 +52,9 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
     }
 
 
+
+    public IPermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients) {
+        return new PermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.grant"), getClient(), null, roles, recipients);
+    }
 }
 

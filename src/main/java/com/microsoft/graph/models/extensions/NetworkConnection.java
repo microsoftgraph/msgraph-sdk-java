@@ -41,7 +41,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Application Name.
-     * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Name of the application managing the network connection (for example, Facebook or SMTP).
      */
     @SerializedName("applicationName")
     @Expose
@@ -62,6 +62,14 @@ public class NetworkConnection implements IJsonBackedObject {
     @SerializedName("destinationDomain")
     @Expose
     public String destinationDomain;
+
+    /**
+     * The Destination Location.
+     * Location (by IP address mapping) associated with the destination of a network connection.
+     */
+    @SerializedName("destinationLocation")
+    @Expose
+    public String destinationLocation;
 
     /**
      * The Destination Port.
@@ -158,6 +166,14 @@ public class NetworkConnection implements IJsonBackedObject {
     @SerializedName("sourceAddress")
     @Expose
     public String sourceAddress;
+
+    /**
+     * The Source Location.
+     * Location (by IP address mapping) associated with the source of a network connection.
+     */
+    @SerializedName("sourceLocation")
+    @Expose
+    public String sourceLocation;
 
     /**
      * The Source Port.

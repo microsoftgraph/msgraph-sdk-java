@@ -14,6 +14,7 @@ import com.microsoft.graph.models.extensions.TeamMemberSettings;
 import com.microsoft.graph.models.extensions.TeamGuestSettings;
 import com.microsoft.graph.models.extensions.TeamMessagingSettings;
 import com.microsoft.graph.models.extensions.TeamFunSettings;
+import com.microsoft.graph.models.extensions.Schedule;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
@@ -89,10 +90,26 @@ public class Team extends Entity implements IJsonBackedObject {
     public Boolean isArchived;
 
     /**
+     * The Schedule.
+     * 
+     */
+    @SerializedName("schedule")
+    @Expose
+    public Schedule schedule;
+
+    /**
      * The Channels.
      * The collection of channels &amp; messages associated with the team.
      */
     public ChannelCollectionPage channels;
+
+    /**
+     * The Primary Channel.
+     * The general channel for the team.
+     */
+    @SerializedName("primaryChannel")
+    @Expose
+    public Channel primaryChannel;
 
     /**
      * The Installed Apps.

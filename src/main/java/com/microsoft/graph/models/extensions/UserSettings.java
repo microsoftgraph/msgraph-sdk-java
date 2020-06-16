@@ -10,6 +10,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.ShiftPreferences;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -42,6 +43,14 @@ public class UserSettings extends Entity implements IJsonBackedObject {
     @SerializedName("contributionToContentDiscoveryAsOrganizationDisabled")
     @Expose
     public Boolean contributionToContentDiscoveryAsOrganizationDisabled;
+
+    /**
+     * The Shift Preferences.
+     * 
+     */
+    @SerializedName("shiftPreferences")
+    @Expose
+    public ShiftPreferences shiftPreferences;
 
 
     /**

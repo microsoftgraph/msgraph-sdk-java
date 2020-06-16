@@ -10,6 +10,7 @@ import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemGetActivitiesByIntervalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemGetActivitiesByIntervalCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -63,5 +64,7 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
     IListItemVersionRequestBuilder versions(final String id);
 
     IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
+
+    IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval);
 
 }

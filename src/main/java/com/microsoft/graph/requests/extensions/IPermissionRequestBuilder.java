@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IPermissionRequest;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.requests.extensions.IPermissionGrantCollectionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -30,5 +32,7 @@ public interface IPermissionRequestBuilder extends IRequestBuilder {
      */
     IPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IPermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients);
 
 }

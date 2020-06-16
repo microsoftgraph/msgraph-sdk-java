@@ -65,6 +65,14 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public Boolean faceIdBlocked;
 
     /**
+     * The Custom Browser Protocol.
+     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
+    @SerializedName("customBrowserProtocol")
+    @Expose
+    public String customBrowserProtocol;
+
+    /**
      * The Apps.
      * List of apps to which the policy is deployed.
      */

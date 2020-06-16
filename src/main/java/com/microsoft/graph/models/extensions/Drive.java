@@ -76,6 +76,12 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     public SystemFacet system;
 
     /**
+     * The Following.
+     * The list of items the user is following. Only in OneDrive for Business.
+     */
+    public DriveItemCollectionPage following;
+
+    /**
      * The Items.
      * All items contained in the drive. Read-only. Nullable.
      */
@@ -142,6 +148,22 @@ public class Drive extends BaseItem implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("following")) {
+            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
+            if (json.has("following@odata.nextLink")) {
+                response.nextLink = json.get("following@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("following").toString(), JsonObject[].class);
+            final DriveItem[] array = new DriveItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            following = new DriveItemCollectionPage(response, null);
+        }
 
         if (json.has("items")) {
             final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
