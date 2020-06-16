@@ -9,6 +9,7 @@ import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 
@@ -62,6 +63,13 @@ public interface ISharedDriveItemRequestBuilder extends IRequestBuilder {
      * @return the IListItemRequestBuilder instance
      */
     IListItemRequestBuilder listItem();
+
+    /**
+     * Gets the request builder for Permission
+     *
+     * @return the IPermissionRequestBuilder instance
+     */
+    IPermissionRequestBuilder permission();
 
     /**
      * Gets the request builder for DriveItem

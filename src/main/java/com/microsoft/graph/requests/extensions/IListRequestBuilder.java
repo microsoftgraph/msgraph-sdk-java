@@ -11,6 +11,8 @@ import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -56,5 +58,9 @@ public interface IListRequestBuilder extends IRequestBuilder {
     IListItemCollectionRequestBuilder items();
 
     IListItemRequestBuilder items(final String id);
+
+    ISubscriptionCollectionRequestBuilder subscriptions();
+
+    ISubscriptionRequestBuilder subscriptions(final String id);
 
 }

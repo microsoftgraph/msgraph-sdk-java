@@ -77,6 +77,14 @@ public class SharepointIds implements IJsonBackedObject {
     public String siteUrl;
 
     /**
+     * The Tenant Id.
+     * The unique identifier (guid) for the tenancy.
+     */
+    @SerializedName("tenantId")
+    @Expose
+    public String tenantId;
+
+    /**
      * The Web Id.
      * The unique identifier (guid) for the item's site (SPWeb).
      */

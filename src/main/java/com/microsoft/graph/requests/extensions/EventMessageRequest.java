@@ -28,6 +28,21 @@ public class EventMessageRequest extends BaseRequest implements IEventMessageReq
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public EventMessageRequest(final String requestUrl,
+            final IBaseClient client,
+            final java.util.List<? extends Option> requestOptions,
+            final Class<? extends EventMessage> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
+    /**
+     * The request for the EventMessage
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      */
     public EventMessageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, EventMessage.class);

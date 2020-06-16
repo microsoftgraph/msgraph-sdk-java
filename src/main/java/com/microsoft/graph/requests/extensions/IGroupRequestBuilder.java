@@ -4,6 +4,8 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IGroupRequest;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -47,6 +49,8 @@ import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuild
 import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
+import com.microsoft.graph.models.extensions.AssignedLicense;
+import com.microsoft.graph.requests.extensions.IGroupAssignLicenseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSubscribeByMailRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupUnsubscribeByMailRequestBuilder;
@@ -80,6 +84,10 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      */
     IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments();
+
+    IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
@@ -201,6 +209,7 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      * @return the ITeamRequestBuilder instance
      */
     ITeamRequestBuilder team();
+    IGroupAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IGroupValidatePropertiesRequestBuilder validateProperties(final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
     IGroupSubscribeByMailRequestBuilder subscribeByMail();
     IGroupUnsubscribeByMailRequestBuilder unsubscribeByMail();

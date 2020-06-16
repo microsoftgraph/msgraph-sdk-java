@@ -29,4 +29,8 @@ public interface IOrgContactCollectionRequestBuilder extends IRequestBuilder {
 
     IOrgContactRequestBuilder byId(final String id);
 
+
+    IOrgContactDeltaCollectionRequestBuilder delta();
+
+	IOrgContactDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

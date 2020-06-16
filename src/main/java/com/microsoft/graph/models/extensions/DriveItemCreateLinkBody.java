@@ -34,6 +34,30 @@ public class DriveItemCreateLinkBody {
     @Expose
     public String scope;
 
+    /**
+     * The expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The password.
+     * 
+     */
+    @SerializedName("password")
+    @Expose
+    public String password;
+
+    /**
+     * The message.
+     * 
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
+
 
     /**
      * The raw representation of this class

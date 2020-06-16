@@ -47,4 +47,8 @@ public class AttachmentCollectionRequestBuilder extends BaseRequestBuilder imple
     }
 
 
+
+    public IAttachmentCreateUploadSessionRequestBuilder createUploadSession(final AttachmentItem attachmentItem) {
+        return new AttachmentCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, attachmentItem);
+    }
 }

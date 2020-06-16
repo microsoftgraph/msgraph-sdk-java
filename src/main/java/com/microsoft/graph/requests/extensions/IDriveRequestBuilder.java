@@ -6,6 +6,8 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveRequest;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
@@ -39,6 +41,10 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
      */
     IDriveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
+
+    IDriveItemCollectionRequestBuilder following();
+
+    IDriveItemRequestBuilder following(final String id);
 
     IDriveItemCollectionRequestBuilder items();
 

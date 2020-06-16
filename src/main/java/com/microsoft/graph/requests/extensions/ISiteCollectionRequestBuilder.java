@@ -29,4 +29,8 @@ public interface ISiteCollectionRequestBuilder extends IRequestBuilder {
 
     ISiteRequestBuilder byId(final String id);
 
+
+    ISiteAddCollectionRequestBuilder add(final java.util.List<Site> value);
+
+    ISiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value);
 }

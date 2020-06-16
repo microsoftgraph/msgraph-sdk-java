@@ -14,6 +14,7 @@ import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.ListItem;
+import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.BaseItem;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionResponse;
@@ -71,6 +72,14 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName("listItem")
     @Expose
     public ListItem listItem;
+
+    /**
+     * The Permission.
+     * Used to access the permission representing the underlying sharing link
+     */
+    @SerializedName("permission")
+    @Expose
+    public Permission permission;
 
     /**
      * The Root.
