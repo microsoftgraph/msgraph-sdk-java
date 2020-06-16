@@ -32,12 +32,36 @@ public class Permission extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Expiration Date Time.
+     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Granted To.
      * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
      */
     @SerializedName("grantedTo")
     @Expose
     public IdentitySet grantedTo;
+
+    /**
+     * The Granted To Identities.
+     * For link type permissions, the details of the users to whom permission was granted. Read-only.
+     */
+    @SerializedName("grantedToIdentities")
+    @Expose
+    public java.util.List<IdentitySet> grantedToIdentities;
+
+    /**
+     * The Has Password.
+     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
+     */
+    @SerializedName("hasPassword")
+    @Expose
+    public Boolean hasPassword;
 
     /**
      * The Inherited From.

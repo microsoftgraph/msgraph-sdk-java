@@ -5,8 +5,12 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamRequest;
 import com.microsoft.graph.requests.extensions.TeamRequest;
+import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
@@ -69,12 +73,30 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
     }
 
 
+
+    /**
+     * Gets the request builder for Schedule
+     *
+     * @return the IScheduleRequestBuilder instance
+     */
+    public IScheduleRequestBuilder schedule() {
+        return new ScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("schedule"), getClient(), null);
+    }
     public IChannelCollectionRequestBuilder channels() {
         return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
     }
 
     public IChannelRequestBuilder channels(final String id) {
         return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Channel
+     *
+     * @return the IChannelRequestBuilder instance
+     */
+    public IChannelRequestBuilder primaryChannel() {
+        return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("primaryChannel"), getClient(), null);
     }
     public ITeamsAppInstallationCollectionRequestBuilder installedApps() {
         return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);

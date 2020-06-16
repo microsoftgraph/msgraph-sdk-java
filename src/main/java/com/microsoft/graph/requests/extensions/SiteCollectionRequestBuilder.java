@@ -47,4 +47,12 @@ public class SiteCollectionRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+
+    public ISiteAddCollectionRequestBuilder add(final java.util.List<Site> value) {
+        return new SiteAddCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, value);
+    }
+
+    public ISiteRemoveCollectionRequestBuilder remove(final java.util.List<Site> value) {
+        return new SiteRemoveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remove"), getClient(), null, value);
+    }
 }

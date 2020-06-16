@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
@@ -96,6 +98,15 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
      */
     public IListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Permission
+     *
+     * @return the IPermissionRequestBuilder instance
+     */
+    public IPermissionRequestBuilder permission() {
+        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permission"), getClient(), null);
     }
 
     /**

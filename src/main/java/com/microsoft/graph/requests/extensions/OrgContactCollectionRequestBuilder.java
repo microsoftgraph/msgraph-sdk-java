@@ -47,4 +47,12 @@ public class OrgContactCollectionRequestBuilder extends BaseRequestBuilder imple
     }
 
 
+
+    public IOrgContactDeltaCollectionRequestBuilder delta() {
+        return new OrgContactDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IOrgContactDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new OrgContactDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

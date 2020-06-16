@@ -24,7 +24,7 @@ import java.util.EnumSet;
 public class DirectoryObjectCollectionWithReferencesRequestBuilder extends BaseRequestBuilder implements IDirectoryObjectCollectionWithReferencesRequestBuilder {
 
     /**
-     * The request builder for this collection of Domain
+     * The request builder for this collection of ServicePrincipal
      *
      * @param requestUrl     the request URL
      * @param client         the service client

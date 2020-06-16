@@ -58,6 +58,22 @@ public class DriveItemInviteBody {
     @Expose
     public java.util.List<DriveRecipient> recipients;
 
+    /**
+     * The expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public String expirationDateTime;
+
+    /**
+     * The password.
+     * 
+     */
+    @SerializedName("password")
+    @Expose
+    public String password;
+
 
     /**
      * The raw representation of this class

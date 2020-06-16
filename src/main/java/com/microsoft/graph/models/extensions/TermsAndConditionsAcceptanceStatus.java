@@ -53,6 +53,14 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
     public java.util.Calendar acceptedDateTime;
 
     /**
+     * The User Principal Name.
+     * The userPrincipalName of the User that accepted the term.
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
+
+    /**
      * The Terms And Conditions.
      * Navigation link to the terms and conditions that are assigned.
      */
