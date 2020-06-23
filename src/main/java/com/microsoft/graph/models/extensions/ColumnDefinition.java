@@ -16,6 +16,7 @@ import com.microsoft.graph.models.extensions.ChoiceColumn;
 import com.microsoft.graph.models.extensions.CurrencyColumn;
 import com.microsoft.graph.models.extensions.DateTimeColumn;
 import com.microsoft.graph.models.extensions.DefaultColumnValue;
+import com.microsoft.graph.models.extensions.GeolocationColumn;
 import com.microsoft.graph.models.extensions.LookupColumn;
 import com.microsoft.graph.models.extensions.NumberColumn;
 import com.microsoft.graph.models.extensions.PersonOrGroupColumn;
@@ -116,6 +117,14 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     @SerializedName("enforceUniqueValues")
     @Expose
     public Boolean enforceUniqueValues;
+
+    /**
+     * The Geolocation.
+     * 
+     */
+    @SerializedName("geolocation")
+    @Expose
+    public GeolocationColumn geolocation;
 
     /**
      * The Hidden.

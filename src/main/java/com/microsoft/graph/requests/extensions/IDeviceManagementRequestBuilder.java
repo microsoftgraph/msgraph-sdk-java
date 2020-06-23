@@ -28,6 +28,8 @@ import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorColl
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceOverviewWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
@@ -148,6 +150,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IDeviceManagementPartnerCollectionRequestBuilder deviceManagementPartners();
 
     IDeviceManagementPartnerRequestBuilder deviceManagementPartners(final String id);
+
+    IComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners();
+
+    IComplianceManagementPartnerRequestBuilder complianceManagementPartners(final String id);
 
     /**
      * Gets the request builder for ApplePushNotificationCertificate

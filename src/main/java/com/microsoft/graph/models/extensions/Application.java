@@ -23,10 +23,13 @@ import com.microsoft.graph.models.extensions.RequiredResourceAccess;
 import com.microsoft.graph.models.extensions.WebApplication;
 import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
@@ -256,6 +259,12 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public DirectoryObject createdOnBehalfOf;
 
     /**
+     * The Home Realm Discovery Policies.
+     * 
+     */
+    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+
+    /**
      * The Owners.
      * Directory objects that are owners of the application. The owners are a set of non-admin users who are allowed to modify this object. Requires version 2013-11-08 or newer. Read-only. Nullable.
      */
@@ -327,6 +336,22 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             extensionProperties = new ExtensionPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("homeRealmDiscoveryPolicies")) {
+            final HomeRealmDiscoveryPolicyCollectionResponse response = new HomeRealmDiscoveryPolicyCollectionResponse();
+            if (json.has("homeRealmDiscoveryPolicies@odata.nextLink")) {
+                response.nextLink = json.get("homeRealmDiscoveryPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), JsonObject[].class);
+            final HomeRealmDiscoveryPolicy[] array = new HomeRealmDiscoveryPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), HomeRealmDiscoveryPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
         }
 
         if (json.has("owners")) {

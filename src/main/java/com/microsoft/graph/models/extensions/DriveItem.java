@@ -17,6 +17,7 @@ import com.microsoft.graph.models.extensions.FileSystemInfo;
 import com.microsoft.graph.models.extensions.Folder;
 import com.microsoft.graph.models.extensions.Image;
 import com.microsoft.graph.models.extensions.GeoCoordinates;
+import com.microsoft.graph.models.extensions.PendingOperations;
 import com.microsoft.graph.models.extensions.Photo;
 import com.microsoft.graph.models.extensions.PublicationFacet;
 import com.microsoft.graph.models.extensions.RemoteItem;
@@ -132,6 +133,14 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @SerializedName("package")
     @Expose
     public com.microsoft.graph.models.extensions.Package msgraphpackage;
+
+    /**
+     * The Pending Operations.
+     * 
+     */
+    @SerializedName("pendingOperations")
+    @Expose
+    public PendingOperations pendingOperations;
 
     /**
      * The Photo.

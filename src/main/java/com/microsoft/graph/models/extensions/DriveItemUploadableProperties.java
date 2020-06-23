@@ -61,6 +61,14 @@ public class DriveItemUploadableProperties implements IJsonBackedObject {
     @Expose
     public String name;
 
+    /**
+     * The File Size.
+     * 
+     */
+    @SerializedName("fileSize")
+    @Expose
+    public Long fileSize;
+
 
     /**
      * The raw representation of this class

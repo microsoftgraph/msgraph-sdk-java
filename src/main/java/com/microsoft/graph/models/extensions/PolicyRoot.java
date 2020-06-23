@@ -15,8 +15,6 @@ import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
-import com.microsoft.graph.models.extensions.IdentitySecurityDefaultsEnforcementPolicy;
-import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionPage;
@@ -28,8 +26,6 @@ import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResp
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionResponse;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -75,20 +71,6 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
      * 
      */
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
-
-    /**
-     * The Identity Security Defaults Enforcement Policy.
-     * 
-     */
-    @SerializedName("identitySecurityDefaultsEnforcementPolicy")
-    @Expose
-    public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
-
-    /**
-     * The Conditional Access Policies.
-     * 
-     */
-    public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
 
 
     /**
@@ -208,22 +190,6 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
-        }
-
-        if (json.has("conditionalAccessPolicies")) {
-            final ConditionalAccessPolicyCollectionResponse response = new ConditionalAccessPolicyCollectionResponse();
-            if (json.has("conditionalAccessPolicies@odata.nextLink")) {
-                response.nextLink = json.get("conditionalAccessPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("conditionalAccessPolicies").toString(), JsonObject[].class);
-            final ConditionalAccessPolicy[] array = new ConditionalAccessPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConditionalAccessPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            conditionalAccessPolicies = new ConditionalAccessPolicyCollectionPage(response, null);
         }
     }
 }

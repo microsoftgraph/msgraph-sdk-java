@@ -93,6 +93,14 @@ public class Photo implements IJsonBackedObject {
     public Integer iso;
 
     /**
+     * The Orientation.
+     * 
+     */
+    @SerializedName("orientation")
+    @Expose
+    public Integer orientation;
+
+    /**
      * The Taken Date Time.
      * Represents the date and time the photo was taken. Read-only.
      */

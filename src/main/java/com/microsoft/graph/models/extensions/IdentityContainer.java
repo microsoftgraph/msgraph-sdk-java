@@ -10,7 +10,6 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -27,14 +26,6 @@ import java.util.Map;
  */
 public class IdentityContainer extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Conditional Access.
-     * 
-     */
-    @SerializedName("conditionalAccess")
-    @Expose
-    public ConditionalAccessRoot conditionalAccess;
 
 
     /**

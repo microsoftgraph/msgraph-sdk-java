@@ -18,17 +18,29 @@ import com.microsoft.graph.models.extensions.PermissionScope;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.models.extensions.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
+import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.Endpoint;
+import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
+import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionResponse;
 import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -258,10 +270,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
+     * The Claims Mapping Policies.
+     * 
+     */
+    public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+
+    /**
      * The Endpoints.
      * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      */
     public EndpointCollectionPage endpoints;
+
+    /**
+     * The Home Realm Discovery Policies.
+     * 
+     */
+    public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
      * The Oauth2Permission Grants.
@@ -298,6 +322,18 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * Directory objects that are owned by this service principal. Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage ownedObjects;
+
+    /**
+     * The Token Issuance Policies.
+     * 
+     */
+    public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+
+    /**
+     * The Token Lifetime Policies.
+     * 
+     */
+    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
 
     /**
@@ -371,6 +407,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             appRoleAssignments = new AppRoleAssignmentCollectionPage(response, null);
         }
 
+        if (json.has("claimsMappingPolicies")) {
+            final ClaimsMappingPolicyCollectionResponse response = new ClaimsMappingPolicyCollectionResponse();
+            if (json.has("claimsMappingPolicies@odata.nextLink")) {
+                response.nextLink = json.get("claimsMappingPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("claimsMappingPolicies").toString(), JsonObject[].class);
+            final ClaimsMappingPolicy[] array = new ClaimsMappingPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ClaimsMappingPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            claimsMappingPolicies = new ClaimsMappingPolicyCollectionPage(response, null);
+        }
+
         if (json.has("endpoints")) {
             final EndpointCollectionResponse response = new EndpointCollectionResponse();
             if (json.has("endpoints@odata.nextLink")) {
@@ -385,6 +437,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             }
             response.value = Arrays.asList(array);
             endpoints = new EndpointCollectionPage(response, null);
+        }
+
+        if (json.has("homeRealmDiscoveryPolicies")) {
+            final HomeRealmDiscoveryPolicyCollectionResponse response = new HomeRealmDiscoveryPolicyCollectionResponse();
+            if (json.has("homeRealmDiscoveryPolicies@odata.nextLink")) {
+                response.nextLink = json.get("homeRealmDiscoveryPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies").toString(), JsonObject[].class);
+            final HomeRealmDiscoveryPolicy[] array = new HomeRealmDiscoveryPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), HomeRealmDiscoveryPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
         }
 
         if (json.has("oauth2PermissionGrants")) {
@@ -481,6 +549,38 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             }
             response.value = Arrays.asList(array);
             ownedObjects = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("tokenIssuancePolicies")) {
+            final TokenIssuancePolicyCollectionResponse response = new TokenIssuancePolicyCollectionResponse();
+            if (json.has("tokenIssuancePolicies@odata.nextLink")) {
+                response.nextLink = json.get("tokenIssuancePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenIssuancePolicies").toString(), JsonObject[].class);
+            final TokenIssuancePolicy[] array = new TokenIssuancePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenIssuancePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            tokenIssuancePolicies = new TokenIssuancePolicyCollectionPage(response, null);
+        }
+
+        if (json.has("tokenLifetimePolicies")) {
+            final TokenLifetimePolicyCollectionResponse response = new TokenLifetimePolicyCollectionResponse();
+            if (json.has("tokenLifetimePolicies@odata.nextLink")) {
+                response.nextLink = json.get("tokenLifetimePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), JsonObject[].class);
+            final TokenLifetimePolicy[] array = new TokenLifetimePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenLifetimePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
         }
     }
 }

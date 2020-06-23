@@ -5,8 +5,6 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequest;
 import com.microsoft.graph.requests.extensions.IdentityContainerRequest;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -51,14 +49,5 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
     }
 
 
-
-    /**
-     * Gets the request builder for ConditionalAccessRoot
-     *
-     * @return the IConditionalAccessRootRequestBuilder instance
-     */
-    public IConditionalAccessRootRequestBuilder conditionalAccess() {
-        return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
-    }
 }
 

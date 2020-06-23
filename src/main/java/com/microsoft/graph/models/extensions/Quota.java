@@ -10,6 +10,7 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.StoragePlanInformation;
 
 
 import com.google.gson.JsonObject;
@@ -75,6 +76,14 @@ public class Quota implements IJsonBackedObject {
     @SerializedName("used")
     @Expose
     public Long used;
+
+    /**
+     * The Storage Plan Information.
+     * 
+     */
+    @SerializedName("storagePlanInformation")
+    @Expose
+    public StoragePlanInformation storagePlanInformation;
 
 
     /**

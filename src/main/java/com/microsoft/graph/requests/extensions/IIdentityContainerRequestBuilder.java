@@ -4,7 +4,6 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequest;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -31,12 +30,5 @@ public interface IIdentityContainerRequestBuilder extends IRequestBuilder {
      */
     IIdentityContainerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
 
-
-    /**
-     * Gets the request builder for ConditionalAccessRoot
-     *
-     * @return the IConditionalAccessRootRequestBuilder instance
-     */
-    IConditionalAccessRootRequestBuilder conditionalAccess();
 
 }
