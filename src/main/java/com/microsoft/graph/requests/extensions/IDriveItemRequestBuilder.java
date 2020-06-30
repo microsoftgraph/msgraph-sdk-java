@@ -30,6 +30,9 @@ import com.microsoft.graph.requests.extensions.IDriveItemUnfollowRequestBuilder;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.requests.extensions.IDriveItemRestoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemValidatePermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemGetActivitiesByIntervalCollectionRequestBuilder;
@@ -114,12 +117,14 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemCheckoutRequestBuilder checkout();
     IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference);
     IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message);
-    IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
+    IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item, final Boolean deferCommit);
     IDriveItemFollowRequestBuilder follow();
     IDriveItemUnfollowRequestBuilder unfollow();
 
     IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password);
     IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom);
+    IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name);
+    IDriveItemValidatePermissionRequestBuilder validatePermission(final String challengeToken, final String password);
 
     IDriveItemDeltaCollectionRequestBuilder delta(final String token);
 

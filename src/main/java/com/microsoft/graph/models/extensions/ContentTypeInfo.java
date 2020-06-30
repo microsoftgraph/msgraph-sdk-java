@@ -44,6 +44,14 @@ public class ContentTypeInfo implements IJsonBackedObject {
     @Expose
     public String id;
 
+    /**
+     * The Name.
+     * The name of the content type.
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
 
     /**
      * The raw representation of this class

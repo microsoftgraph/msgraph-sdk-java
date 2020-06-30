@@ -14,9 +14,6 @@ import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionReq
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -63,16 +60,5 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
     ITokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies();
 
     ITokenLifetimePolicyRequestBuilder tokenLifetimePolicies(final String id);
-
-    /**
-     * Gets the request builder for IdentitySecurityDefaultsEnforcementPolicy
-     *
-     * @return the IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
-     */
-    IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy();
-
-    IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies();
-
-    IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id);
 
 }

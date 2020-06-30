@@ -24,7 +24,7 @@ import java.util.EnumSet;
 public class TokenIssuancePolicyCollectionReferenceRequestBuilder extends BaseRequestBuilder implements ITokenIssuancePolicyCollectionReferenceRequestBuilder {
 
     /**
-     * The request builder for this collection of Application
+     * The request builder for this collection of ServicePrincipal
      *
      * @param requestUrl     the request URL
      * @param client         the service client

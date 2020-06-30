@@ -28,10 +28,12 @@ public class DriveItemCreateUploadSessionRequestBuilder extends BaseActionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param item the item
+     * @param deferCommit the deferCommit
      */
-    public DriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DriveItemUploadableProperties item) {
+    public DriveItemCreateUploadSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final DriveItemUploadableProperties item, final Boolean deferCommit) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("item", item);
+        bodyParams.put("deferCommit", deferCommit);
     }
 
     /**
@@ -58,6 +60,10 @@ public class DriveItemCreateUploadSessionRequestBuilder extends BaseActionReques
 
         if (hasParameter("item")) {
             request.body.item = getParameter("item");
+        }
+
+        if (hasParameter("deferCommit")) {
+            request.body.deferCommit = getParameter("deferCommit");
         }
 
         return request;

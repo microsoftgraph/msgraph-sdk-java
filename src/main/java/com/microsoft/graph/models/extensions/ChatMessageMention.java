@@ -11,7 +11,6 @@ import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
-import com.microsoft.graph.models.extensions.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -25,12 +24,22 @@ import java.util.Map;
 /**
  * The class for the Chat Message Mention.
  */
-public class ChatMessageMention extends Entity implements IJsonBackedObject {
+public class ChatMessageMention implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Id.
-     * 
+     * Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding &amp;lt;at id='{index}'&amp;gt; tag in the message body.
      */
     @SerializedName("id")
     @Expose
