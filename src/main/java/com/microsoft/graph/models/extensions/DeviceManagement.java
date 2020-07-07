@@ -27,6 +27,7 @@ import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.extensions.MobileThreatDefenseConnector;
 import com.microsoft.graph.models.extensions.DeviceManagementPartner;
+import com.microsoft.graph.models.extensions.ComplianceManagementPartner;
 import com.microsoft.graph.models.extensions.ApplePushNotificationCertificate;
 import com.microsoft.graph.models.extensions.ManagedDeviceOverview;
 import com.microsoft.graph.models.extensions.DetectedApp;
@@ -61,6 +62,8 @@ import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorColle
 import com.microsoft.graph.requests.extensions.MobileThreatDefenseConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionPage;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionResponse;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
@@ -222,6 +225,12 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The list of Device Management Partners configured by the tenant.
      */
     public DeviceManagementPartnerCollectionPage deviceManagementPartners;
+
+    /**
+     * The Compliance Management Partners.
+     * The list of Compliance Management Partners configured by the tenant.
+     */
+    public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
 
     /**
      * The Apple Push Notification Certificate.
@@ -503,6 +512,22 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             deviceManagementPartners = new DeviceManagementPartnerCollectionPage(response, null);
+        }
+
+        if (json.has("complianceManagementPartners")) {
+            final ComplianceManagementPartnerCollectionResponse response = new ComplianceManagementPartnerCollectionResponse();
+            if (json.has("complianceManagementPartners@odata.nextLink")) {
+                response.nextLink = json.get("complianceManagementPartners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("complianceManagementPartners").toString(), JsonObject[].class);
+            final ComplianceManagementPartner[] array = new ComplianceManagementPartner[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ComplianceManagementPartner.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            complianceManagementPartners = new ComplianceManagementPartnerCollectionPage(response, null);
         }
 
         if (json.has("detectedApps")) {

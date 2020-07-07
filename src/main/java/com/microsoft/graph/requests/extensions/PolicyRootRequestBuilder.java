@@ -25,12 +25,6 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionReq
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -109,22 +103,6 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
 
     public ITokenLifetimePolicyRequestBuilder tokenLifetimePolicies(final String id) {
         return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for IdentitySecurityDefaultsEnforcementPolicy
-     *
-     * @return the IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
-     */
-    public IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
-        return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
-    }
-    public IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
-        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
-    }
-
-    public IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id) {
-        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
     }
 }
 

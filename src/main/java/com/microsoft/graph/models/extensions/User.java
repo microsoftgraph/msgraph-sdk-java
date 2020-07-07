@@ -261,7 +261,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Resource Account.
-     * true if the user is a resource account; otherwise, false. Null value should be considered false.
+     * Do not use – reserved for future use.
      */
     @SerializedName("isResourceAccount")
     @Expose
@@ -333,7 +333,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Extension Attributes.
-     * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, this set of properties is mastered on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update.
+     * Contains extensionAttributes 1-15 for the user. Note that the individual extension attributes are neither selectable nor filterable. For an onPremisesSyncEnabled user, the source of authority for this set of properties is the on-premises and is read-only. For a cloud-only user (where onPremisesSyncEnabled is false), these properties may be set during creation or update. These extension attributes are also known as Exchange custom attributes 1-15.
      */
     @SerializedName("onPremisesExtensionAttributes")
     @Expose

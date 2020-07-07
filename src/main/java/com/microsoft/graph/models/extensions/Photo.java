@@ -93,6 +93,14 @@ public class Photo implements IJsonBackedObject {
     public Integer iso;
 
     /**
+     * The Orientation.
+     * The orientation value from the camera. Writable on OneDrive Personal.
+     */
+    @SerializedName("orientation")
+    @Expose
+    public Integer orientation;
+
+    /**
      * The Taken Date Time.
      * Represents the date and time the photo was taken. Read-only.
      */

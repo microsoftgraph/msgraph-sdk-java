@@ -39,7 +39,7 @@ public class DriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
+     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
      */
     @SerializedName("description")
     @Expose
@@ -60,6 +60,14 @@ public class DriveItemUploadableProperties implements IJsonBackedObject {
     @SerializedName("name")
     @Expose
     public String name;
+
+    /**
+     * The File Size.
+     * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+     */
+    @SerializedName("fileSize")
+    @Expose
+    public Long fileSize;
 
 
     /**
