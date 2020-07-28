@@ -52,7 +52,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Admin Managed.
-     * The value of the property is false if the DNS record management of the domain has been delegated to Office 365. Otherwise, the value is true. Not nullable
+     * The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
      */
     @SerializedName("isAdminManaged")
     @Expose

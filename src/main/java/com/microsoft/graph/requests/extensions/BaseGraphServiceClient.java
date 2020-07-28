@@ -617,6 +617,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of TeamsTemplates objects
+     *
+     * @return the request builder for the collection of TeamsTemplates objects
+     */
+    public ITeamsTemplateCollectionRequestBuilder teamsTemplates() {
+        return new TeamsTemplateCollectionRequestBuilder(getServiceRoot() + "/teamsTemplates", (IGraphServiceClient)this, null);
+    }
+
+    /**
+     * Gets a single TeamsTemplates
+     *
+     * @param id the id of the TeamsTemplates to retrieve
+     * @return the request builder for the TeamsTemplates object
+     */
+    public ITeamsTemplateRequestBuilder teamsTemplates(final String id) {
+        return new TeamsTemplateRequestBuilder(getServiceRoot() + "/teamsTemplates/" + id, (IGraphServiceClient)this, null);
+    }
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the AuditLogRoot
@@ -736,19 +755,19 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the Teamwork
      */
-    public IAppCatalogsRequestBuilder appCatalogs() {
-        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
+    public ITeamworkRequestBuilder teamwork() {
+        return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", (IGraphServiceClient)this, null);
     }
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Teamwork
+     * @return the AppCatalogs
      */
-    public ITeamworkRequestBuilder teamwork() {
-        return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", (IGraphServiceClient)this, null);
+    public IAppCatalogsRequestBuilder appCatalogs() {
+        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", (IGraphServiceClient)this, null);
     }
 
     /**

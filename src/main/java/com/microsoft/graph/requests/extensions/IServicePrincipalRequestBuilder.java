@@ -8,8 +8,12 @@ import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionReque
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
@@ -22,6 +26,10 @@ import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithRef
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.requests.extensions.IServicePrincipalAddKeyRequestBuilder;
@@ -64,9 +72,17 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
 
     IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id);
 
+    IClaimsMappingPolicyCollectionWithReferencesRequestBuilder claimsMappingPolicies();
+
+    IClaimsMappingPolicyWithReferenceRequestBuilder claimsMappingPolicies(final String id);
+
     IEndpointCollectionRequestBuilder endpoints();
 
     IEndpointRequestBuilder endpoints(final String id);
+
+    IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies();
+
+    IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id);
 
     IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants();
 
@@ -91,6 +107,14 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects();
 
     IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id);
+
+    ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies();
+
+    ITokenIssuancePolicyWithReferenceRequestBuilder tokenIssuancePolicies(final String id);
+
+    ITokenLifetimePolicyCollectionWithReferencesRequestBuilder tokenLifetimePolicies();
+
+    ITokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id);
     IServicePrincipalAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof);
     IServicePrincipalAddPasswordRequestBuilder addPassword(final PasswordCredential passwordCredential);
     IServicePrincipalRemoveKeyRequestBuilder removeKey(final java.util.UUID keyId, final String proof);

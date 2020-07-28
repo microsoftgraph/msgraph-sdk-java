@@ -39,7 +39,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * Deep link url of the tab instance. Read only.
+     * Deep link URL of the tab instance. Read only.
      */
     @SerializedName("webUrl")
     @Expose

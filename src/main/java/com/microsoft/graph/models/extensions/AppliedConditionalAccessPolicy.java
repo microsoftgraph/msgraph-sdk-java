@@ -39,7 +39,7 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique GUID of the conditional access polic.y
+     * Unique GUID of the conditional access policy.
      */
     @SerializedName("id")
     @Expose

@@ -38,7 +38,7 @@ public class ConditionalAccessSessionControl implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Specifies whether the session control is enabled.
      */
     @SerializedName("isEnabled")
     @Expose

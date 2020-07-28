@@ -81,7 +81,7 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
     /**
      * The Preview.
-     * A short summary from the body of the latest post in this converstaion.
+     * A short summary from the body of the latest post in this conversation.
      */
     @SerializedName("preview")
     @Expose

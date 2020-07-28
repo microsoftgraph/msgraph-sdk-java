@@ -7,6 +7,14 @@ import com.microsoft.graph.requests.extensions.ITeamRequest;
 import com.microsoft.graph.requests.extensions.TeamRequest;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
@@ -81,6 +89,31 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
      */
     public IScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("schedule"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Group
+     *
+     * @return the IGroupWithReferenceRequestBuilder instance
+     */
+    public IGroupWithReferenceRequestBuilder group() {
+        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TeamsTemplate
+     *
+     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
+     */
+    public ITeamsTemplateWithReferenceRequestBuilder template() {
+        return new TeamsTemplateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("template"), getClient(), null);
+    }
+    public IConversationMemberCollectionRequestBuilder members() {
+        return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    }
+
+    public IConversationMemberRequestBuilder members(final String id) {
+        return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
     public IChannelCollectionRequestBuilder channels() {
         return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);

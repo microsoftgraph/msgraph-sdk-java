@@ -32,7 +32,7 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
 
     /**
      * The Previous Location.
-     * 
+     * If the meeting update changes the meeting location, this property specifies the previous meeting location.
      */
     @SerializedName("previousLocation")
     @Expose
@@ -40,7 +40,7 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
 
     /**
      * The Previous Start Date Time.
-     * 
+     * If the meeting update changes the meeting start time, this property specifies the previous meeting start time.
      */
     @SerializedName("previousStartDateTime")
     @Expose
@@ -48,7 +48,7 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
 
     /**
      * The Previous End Date Time.
-     * 
+     * If the meeting update changes the meeting end time, this property specifies the previous meeting end time.
      */
     @SerializedName("previousEndDateTime")
     @Expose
@@ -56,7 +56,7 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
 
     /**
      * The Response Requested.
-     * 
+     * Set to true if the sender would like the invitee to send a response to the requested meeting.
      */
     @SerializedName("responseRequested")
     @Expose
@@ -64,7 +64,7 @@ public class EventMessageRequest extends EventMessage implements IJsonBackedObje
 
     /**
      * The Allow New Time Proposals.
-     * 
+     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
      */
     @SerializedName("allowNewTimeProposals")
     @Expose

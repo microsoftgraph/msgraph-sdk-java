@@ -7,6 +7,8 @@ import com.microsoft.graph.requests.extensions.IApplicationRequest;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionWithReferencesRequestBuilder;
@@ -58,6 +60,10 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
      * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
+
+    IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies();
+
+    IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
 

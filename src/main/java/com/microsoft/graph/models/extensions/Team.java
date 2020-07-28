@@ -10,15 +10,22 @@ import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.TeamSpecialization;
+import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.extensions.TeamMemberSettings;
 import com.microsoft.graph.models.extensions.TeamGuestSettings;
 import com.microsoft.graph.models.extensions.TeamMessagingSettings;
 import com.microsoft.graph.models.extensions.TeamFunSettings;
 import com.microsoft.graph.models.extensions.Schedule;
+import com.microsoft.graph.models.extensions.Group;
+import com.microsoft.graph.models.extensions.TeamsTemplate;
+import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.TeamsAppInstallation;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.ChannelCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionResponse;
@@ -40,6 +47,54 @@ import java.util.Map;
  */
 public class Team extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Internal Id.
+     * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     */
+    @SerializedName("internalId")
+    @Expose
+    public String internalId;
+
+    /**
+     * The Classification.
+     * 
+     */
+    @SerializedName("classification")
+    @Expose
+    public String classification;
+
+    /**
+     * The Specialization.
+     * 
+     */
+    @SerializedName("specialization")
+    @Expose
+    public TeamSpecialization specialization;
+
+    /**
+     * The Visibility.
+     * 
+     */
+    @SerializedName("visibility")
+    @Expose
+    public TeamVisibilityType visibility;
 
     /**
      * The Web Url.
@@ -96,6 +151,28 @@ public class Team extends Entity implements IJsonBackedObject {
     @SerializedName("schedule")
     @Expose
     public Schedule schedule;
+
+    /**
+     * The Group.
+     * 
+     */
+    @SerializedName("group")
+    @Expose
+    public Group group;
+
+    /**
+     * The Template.
+     * 
+     */
+    @SerializedName("template")
+    @Expose
+    public TeamsTemplate template;
+
+    /**
+     * The Members.
+     * 
+     */
+    public ConversationMemberCollectionPage members;
 
     /**
      * The Channels.
@@ -162,6 +239,22 @@ public class Team extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("members")) {
+            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
+            if (json.has("members@odata.nextLink")) {
+                response.nextLink = json.get("members@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
+            final ConversationMember[] array = new ConversationMember[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            members = new ConversationMemberCollectionPage(response, null);
+        }
 
         if (json.has("channels")) {
             final ChannelCollectionResponse response = new ChannelCollectionResponse();

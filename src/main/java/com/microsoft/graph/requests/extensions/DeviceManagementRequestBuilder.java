@@ -53,6 +53,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectio
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.ComplianceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceOverviewWithReferenceRequestBuilder;
@@ -254,6 +258,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
 
     public IDeviceManagementPartnerRequestBuilder deviceManagementPartners(final String id) {
         return new DeviceManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementPartners") + "/" + id, getClient(), null);
+    }
+    public IComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners() {
+        return new ComplianceManagementPartnerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("complianceManagementPartners"), getClient(), null);
+    }
+
+    public IComplianceManagementPartnerRequestBuilder complianceManagementPartners(final String id) {
+        return new ComplianceManagementPartnerRequestBuilder(getRequestUrlWithAdditionalSegment("complianceManagementPartners") + "/" + id, getClient(), null);
     }
 
     /**
