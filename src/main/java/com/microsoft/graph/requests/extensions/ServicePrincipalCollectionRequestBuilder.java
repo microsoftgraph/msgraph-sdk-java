@@ -47,4 +47,12 @@ public class ServicePrincipalCollectionRequestBuilder extends BaseRequestBuilder
     }
 
 
+
+    public IServicePrincipalDeltaCollectionRequestBuilder delta() {
+        return new ServicePrincipalDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IServicePrincipalDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new ServicePrincipalDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

@@ -29,4 +29,8 @@ public interface IOAuth2PermissionGrantCollectionRequestBuilder extends IRequest
 
     IOAuth2PermissionGrantRequestBuilder byId(final String id);
 
+
+    IOAuth2PermissionGrantDeltaCollectionRequestBuilder delta();
+
+	IOAuth2PermissionGrantDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

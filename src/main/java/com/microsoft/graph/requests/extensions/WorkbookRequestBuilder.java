@@ -25,12 +25,18 @@ import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCreateSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookCloseSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRefreshSessionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookSessionInfoResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequestBuilder;
 
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
@@ -121,6 +127,13 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
     public IWorkbookFunctionsRequestBuilder functions() {
         return new WorkbookFunctionsRequestBuilder(getRequestUrlWithAdditionalSegment("functions"), getClient(), null);
     }
+    public IWorkbookOperationCollectionRequestBuilder operations() {
+        return new WorkbookOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    public IWorkbookOperationRequestBuilder operations(final String id) {
+        return new WorkbookOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
 
     public IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges) {
         return new WorkbookCreateSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createSession"), getClient(), null, persistChanges);
@@ -132,6 +145,10 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
 
     public IWorkbookRefreshSessionRequestBuilder refreshSession() {
         return new WorkbookRefreshSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refreshSession"), getClient(), null);
+    }
+
+    public IWorkbookSessionInfoResourceRequestBuilder sessionInfoResource(final String key) {
+        return new WorkbookSessionInfoResourceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sessionInfoResource"), getClient(), null, key);
     }
 }
 

@@ -24,7 +24,7 @@ import java.util.EnumSet;
 public class TokenLifetimePolicyCollectionReferenceRequestBuilder extends BaseRequestBuilder implements ITokenLifetimePolicyCollectionReferenceRequestBuilder {
 
     /**
-     * The request builder for this collection of Application
+     * The request builder for this collection of ServicePrincipal
      *
      * @param requestUrl     the request URL
      * @param client         the service client

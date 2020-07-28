@@ -14,9 +14,12 @@ import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCreateSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCloseSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRefreshSessionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookSessionInfoResourceRequestBuilder;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.options.Option;
@@ -73,8 +76,13 @@ public interface IWorkbookRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsRequestBuilder instance
      */
     IWorkbookFunctionsRequestBuilder functions();
+
+    IWorkbookOperationCollectionRequestBuilder operations();
+
+    IWorkbookOperationRequestBuilder operations(final String id);
     IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);
     IWorkbookCloseSessionRequestBuilder closeSession();
     IWorkbookRefreshSessionRequestBuilder refreshSession();
+    IWorkbookSessionInfoResourceRequestBuilder sessionInfoResource(final String key);
 
 }

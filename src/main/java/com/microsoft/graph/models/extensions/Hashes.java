@@ -60,6 +60,14 @@ public class Hashes implements IJsonBackedObject {
     @Expose
     public String sha1Hash;
 
+    /**
+     * The Sha256Hash.
+     * SHA256 hash for the contents of the file (if available). Read-only.
+     */
+    @SerializedName("sha256Hash")
+    @Expose
+    public String sha256Hash;
+
 
     /**
      * The raw representation of this class

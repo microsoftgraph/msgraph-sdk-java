@@ -474,6 +474,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     ITeamRequestBuilder teams(final String id);
 
     /**
+     * Gets the collection of TeamsTemplates objects
+     *
+     * @return the request builder for the collection of TeamsTemplates objects
+     */
+    ITeamsTemplateCollectionRequestBuilder teamsTemplates();
+
+    /**
+     * Gets a single TeamsTemplates
+     *
+     * @param id the id of the TeamsTemplates to retrieve
+     * @return the request builder for the TeamsTemplates object
+     */
+    ITeamsTemplateRequestBuilder teamsTemplates(final String id);
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the AuditLogRoot
@@ -567,16 +582,16 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the Teamwork
      */
-    IAppCatalogsRequestBuilder appCatalogs();
+    ITeamworkRequestBuilder teamwork();
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Teamwork
+     * @return the AppCatalogs
      */
-    ITeamworkRequestBuilder teamwork();
+    IAppCatalogsRequestBuilder appCatalogs();
 
     /**
      * Gets the GraphServiceRequestBuilder

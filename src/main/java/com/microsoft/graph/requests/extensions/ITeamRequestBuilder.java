@@ -5,6 +5,10 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITeamRequest;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
@@ -50,6 +54,24 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      * @return the IScheduleRequestBuilder instance
      */
     IScheduleRequestBuilder schedule();
+
+    /**
+     * Gets the request builder for Group
+     *
+     * @return the IGroupWithReferenceRequestBuilder instance
+     */
+    IGroupWithReferenceRequestBuilder group();
+
+    /**
+     * Gets the request builder for TeamsTemplate
+     *
+     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
+     */
+    ITeamsTemplateWithReferenceRequestBuilder template();
+
+    IConversationMemberCollectionRequestBuilder members();
+
+    IConversationMemberRequestBuilder members(final String id);
 
     IChannelCollectionRequestBuilder channels();
 

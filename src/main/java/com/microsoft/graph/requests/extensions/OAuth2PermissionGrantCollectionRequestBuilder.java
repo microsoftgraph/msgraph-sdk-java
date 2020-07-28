@@ -47,4 +47,12 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBu
     }
 
 
+
+    public IOAuth2PermissionGrantDeltaCollectionRequestBuilder delta() {
+        return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+	public IOAuth2PermissionGrantDeltaCollectionRequestBuilder delta(final String deltaLink) {
+        return new OAuth2PermissionGrantDeltaCollectionRequestBuilder(deltaLink, getClient(), null);
+    }
 }

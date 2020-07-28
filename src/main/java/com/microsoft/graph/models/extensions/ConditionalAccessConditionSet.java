@@ -16,7 +16,6 @@ import com.microsoft.graph.models.generated.RiskLevel;
 import com.microsoft.graph.models.extensions.ConditionalAccessPlatforms;
 import com.microsoft.graph.models.extensions.ConditionalAccessLocations;
 import com.microsoft.graph.models.generated.ConditionalAccessClientApp;
-import com.microsoft.graph.models.extensions.ConditionalAccessDevices;
 
 
 import com.google.gson.JsonObject;
@@ -45,7 +44,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * 
+     * Applications and user actions included in and excluded from the policy. Required.
      */
     @SerializedName("applications")
     @Expose
@@ -53,7 +52,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Users.
-     * 
+     * Users, groups, and roles included in and excluded from the policy. Required.
      */
     @SerializedName("users")
     @Expose
@@ -61,7 +60,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Sign In Risk Levels.
-     * 
+     * Risk levels included in the policy. Possible values are: low, medium, high, none.
      */
     @SerializedName("signInRiskLevels")
     @Expose
@@ -69,7 +68,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Platforms.
-     * 
+     * Platforms included in and excluded from the policy.
      */
     @SerializedName("platforms")
     @Expose
@@ -77,7 +76,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Locations.
-     * 
+     * Locations included in and excluded from the policy.
      */
     @SerializedName("locations")
     @Expose
@@ -85,19 +84,11 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Client App Types.
-     * 
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
      */
     @SerializedName("clientAppTypes")
     @Expose
     public java.util.List<ConditionalAccessClientApp> clientAppTypes;
-
-    /**
-     * The Devices.
-     * 
-     */
-    @SerializedName("devices")
-    @Expose
-    public ConditionalAccessDevices devices;
 
 
     /**
