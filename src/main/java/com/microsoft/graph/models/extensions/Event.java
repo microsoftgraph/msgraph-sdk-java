@@ -226,7 +226,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Requested.
-     * Set to true if the sender would like a response when the event is accepted or declined.
+     * Default is true, which represents the organizer would like an invitee to send a response to the event.
      */
     @SerializedName("responseRequested")
     @Expose
@@ -314,7 +314,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Allow New Time Proposals.
-     * 
+     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
      */
     @SerializedName("allowNewTimeProposals")
     @Expose

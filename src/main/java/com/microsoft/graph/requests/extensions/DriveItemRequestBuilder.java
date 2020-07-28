@@ -54,6 +54,11 @@ import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequest
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemPreviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemPreviewRequestBuilder;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.requests.extensions.IDriveItemRestoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRestoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemValidatePermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemValidatePermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemDeltaCollectionRequestBuilder;
@@ -195,8 +200,8 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
         return new DriveItemCreateLinkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createLink"), getClient(), null, type, scope, expirationDateTime, password, message);
     }
 
-    public IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item) {
-        return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item);
+    public IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item, final Boolean deferCommit) {
+        return new DriveItemCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, item, deferCommit);
     }
 
     public IDriveItemFollowRequestBuilder follow() {
@@ -213,6 +218,14 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
 
     public IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom) {
         return new DriveItemPreviewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.preview"), getClient(), null, page, zoom);
+    }
+
+    public IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name) {
+        return new DriveItemRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null, parentReference, name);
+    }
+
+    public IDriveItemValidatePermissionRequestBuilder validatePermission(final String challengeToken, final String password) {
+        return new DriveItemValidatePermissionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validatePermission"), getClient(), null, challengeToken, password);
     }
 
     public IDriveItemDeltaCollectionRequestBuilder delta(final String token) {

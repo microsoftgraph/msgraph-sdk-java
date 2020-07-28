@@ -26,6 +26,14 @@ public class DriveItemCreateUploadSessionBody {
     @Expose
     public DriveItemUploadableProperties item;
 
+    /**
+     * The defer Commit.
+     * 
+     */
+    @SerializedName("deferCommit")
+    @Expose
+    public Boolean deferCommit;
+
 
     /**
      * The raw representation of this class

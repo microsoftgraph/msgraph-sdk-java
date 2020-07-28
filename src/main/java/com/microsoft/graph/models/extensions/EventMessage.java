@@ -99,7 +99,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Is Delegated.
-     * 
+     * True if this meeting request is accessible to a delegate, false otherwise. Default is false.
      */
     @SerializedName("isDelegated")
     @Expose

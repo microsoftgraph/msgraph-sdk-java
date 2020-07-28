@@ -29,4 +29,8 @@ public interface IServicePrincipalCollectionRequestBuilder extends IRequestBuild
 
     IServicePrincipalRequestBuilder byId(final String id);
 
+
+    IServicePrincipalDeltaCollectionRequestBuilder delta();
+
+	IServicePrincipalDeltaCollectionRequestBuilder delta(final String deltaLink);
 }

@@ -30,7 +30,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
 
     /**
      * The Mode.
-     * 
+     * Possible values are: always, never.
      */
     @SerializedName("mode")
     @Expose
