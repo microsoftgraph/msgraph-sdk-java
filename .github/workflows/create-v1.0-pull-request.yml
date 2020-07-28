@@ -37,7 +37,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MESSAGE_TITLE: Generated v1.0 models and request builders using Typewriter
-        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. \n\n cc: @darrelmiller"
+        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. \n\n - [ ] update version in gradle.properties and Constants.java. \n\n cc: @darrelmiller"
         REVIEWERS: peombwa,ddyett,zengin,nikithauc,ramsessanchez
         ASSIGNEDTO: MIchaelMainer
         LABELS: generated
