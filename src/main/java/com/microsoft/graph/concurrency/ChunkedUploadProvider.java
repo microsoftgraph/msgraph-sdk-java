@@ -168,10 +168,10 @@ public class ChunkedUploadProvider<UploadType> {
         byte[] buffer = new byte[chunkSize];
 
         while (this.readSoFar < this.streamSize) {
-            int read = 0;
             int buffRead = 0;
 
             while (buffRead < chunkSize) {
+                int read = 0;
                 read = this.inputStream.read(buffer, buffRead, chunkSize - buffRead);
                 if (read == -1) {
                     break;
