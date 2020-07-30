@@ -170,6 +170,7 @@ public class ChunkedUploadProvider<UploadType> {
         while (this.readSoFar < this.streamSize) {
             int buffRead = 0;
 
+            // inner loop is to work-around the case where read buffer size is limited to less than chunk size by a global setting
             while (buffRead < chunkSize) {
                 int read = 0;
                 read = this.inputStream.read(buffer, buffRead, chunkSize - buffRead);
