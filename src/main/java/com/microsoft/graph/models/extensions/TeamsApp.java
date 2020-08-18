@@ -49,7 +49,7 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
 
     /**
      * The Distribution Method.
-     * The method of distribution for the app.
+     * The method of distribution for the app. Read-only.
      */
     @SerializedName("distributionMethod")
     @Expose
