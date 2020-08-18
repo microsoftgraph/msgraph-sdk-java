@@ -32,7 +32,7 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'
     
-    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.code.gson:gson:2.8.6'
     
     compile 'com.sun.jersey:jersey-server:1.19.4'
     
