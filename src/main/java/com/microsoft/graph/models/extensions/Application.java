@@ -117,6 +117,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
      * The Public Client.
      * Specifies settings for installed clients such as desktop or mobile devices.
      */
@@ -163,6 +171,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("keyCredentials")
     @Expose
     public java.util.List<KeyCredential> keyCredentials;
+
+    /**
+     * The Notes.
+     * 
+     */
+    @SerializedName("notes")
+    @Expose
+    public String notes;
 
     /**
      * The Oauth2Require Post Response.

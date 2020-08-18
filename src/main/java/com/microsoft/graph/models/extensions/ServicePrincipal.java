@@ -90,6 +90,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public String appDisplayName;
 
     /**
+     * The App Description.
+     * 
+     */
+    @SerializedName("appDescription")
+    @Expose
+    public String appDescription;
+
+    /**
      * The App Id.
      * The unique identifier for the associated application (its appId property).
      */
@@ -128,6 +136,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @SerializedName("appRoles")
     @Expose
     public java.util.List<AppRole> appRoles;
+
+    /**
+     * The Description.
+     * 
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
 
     /**
      * The Display Name.
@@ -176,6 +192,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     @SerializedName("logoutUrl")
     @Expose
     public String logoutUrl;
+
+    /**
+     * The Notes.
+     * 
+     */
+    @SerializedName("notes")
+    @Expose
+    public String notes;
 
     /**
      * The Notification Email Addresses.
