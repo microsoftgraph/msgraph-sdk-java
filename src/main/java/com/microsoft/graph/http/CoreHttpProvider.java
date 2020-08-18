@@ -269,6 +269,7 @@ public class CoreHttpProvider implements IHttpProvider {
 					.tag(RetryOptions.class, retryOptions);
 			
 			String contenttype = null;
+			Response response = null;
 
 			try {
 				logger.logDebug("Request Method " + request.getHttpMethod().toString());
@@ -353,7 +354,7 @@ public class CoreHttpProvider implements IHttpProvider {
 				coreHttpRequest = corehttpRequestBuilder.build();
 
 				// Call being executed
-				Response response = corehttpClient.newCall(coreHttpRequest).execute();
+				response = corehttpClient.newCall(coreHttpRequest).execute();
 
 				if (handler != null) {
 					handler.configConnection(response);
@@ -401,12 +402,13 @@ public class CoreHttpProvider implements IHttpProvider {
 					return (Result) handleBinaryStream(in);
 				}
 			} finally {
-				if (!isBinaryStreamInput && in != null) {
+				if (!isBinaryStreamInput) {
 					try{
-						in.close();
+						if (in != null) in.close();
 					}catch(IOException e) {
 						logger.logError(e.getMessage(), e);
 					}
+					if (response != null) response.close();
 				}
 			}
 		} catch (final GraphServiceException ex) {

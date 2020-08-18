@@ -23,6 +23,7 @@
 package com.microsoft.graph.http;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
@@ -38,6 +39,7 @@ import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
 import okhttp3.Response;
+import static okhttp3.internal.Util.closeQuietly;
 
 /**
  * An exception from the Graph service
@@ -416,8 +418,12 @@ public class GraphServiceException extends ClientException {
 
         final String responseMessage = response.message();
         String rawOutput = "{}";
-        if(response.body().byteStream() != null) {
-        	rawOutput = DefaultHttpProvider.streamToString(response.body().byteStream());
+
+        InputStream is = response.body().byteStream();
+        try {
+            rawOutput = DefaultHttpProvider.streamToString(is);
+        } finally {
+            closeQuietly(is);
         }
         GraphErrorResponse error;
         try {
