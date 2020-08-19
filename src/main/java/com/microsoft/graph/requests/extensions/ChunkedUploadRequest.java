@@ -31,7 +31,7 @@ public class ChunkedUploadRequest {
     /**
      * The seconds for retry delay.
      */
-    private static final long RETRY_DELAY = 2 * 1000;
+    private static final long RETRY_DELAY = 2000L; // 2 seconds
 
     /**
      * The chunk data sent to the server.
