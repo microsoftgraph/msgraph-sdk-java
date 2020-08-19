@@ -31,7 +31,7 @@ public class ChunkedUploadRequest {
     /**
      * The seconds for retry delay.
      */
-    private static final int RETRY_DELAY = 2 * 1000;
+    private static final long RETRY_DELAY = 2000L; // 2 seconds
 
     /**
      * The chunk data sent to the server.
@@ -46,12 +46,12 @@ public class ChunkedUploadRequest {
     /**
      * The max retry for a single request.
      */
-    private final int maxRetry;
+    private final long maxRetry;
 
     /**
      * The retry counter.
      */
-    private int retryCount;
+    private long retryCount;
 
     /**
      * Construct the ChunkedUploadRequest
@@ -75,8 +75,8 @@ public class ChunkedUploadRequest {
                                 final long totalLength) {
         this.data = new byte[chunkSize];
         System.arraycopy(chunk, 0, this.data, 0, chunkSize);
-        this.retryCount = 0;
-        this.maxRetry = maxRetry;
+        this.retryCount = 0L;
+        this.maxRetry = (long)maxRetry;
         this.baseRequest = new BaseRequest(requestUrl, client, options, ChunkedUploadResult.class) {
         };
         this.baseRequest.setHttpMethod(HttpMethod.PUT);
