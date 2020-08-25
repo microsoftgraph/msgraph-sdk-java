@@ -17,6 +17,8 @@ import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.requests.extensions.ICallAnswerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallAnswerRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallCancelMediaProcessingRequestBuilder;
+import com.microsoft.graph.requests.extensions.CallCancelMediaProcessingRequestBuilder;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.requests.extensions.ICallChangeScreenSharingRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallChangeScreenSharingRoleRequestBuilder;
@@ -107,6 +109,10 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
 
     public ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities) {
         return new CallAnswerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.answer"), getClient(), null, callbackUri, mediaConfig, acceptedModalities);
+    }
+
+    public ICallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext) {
+        return new CallCancelMediaProcessingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelMediaProcessing"), getClient(), null, clientContext);
     }
 
     public ICallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role) {

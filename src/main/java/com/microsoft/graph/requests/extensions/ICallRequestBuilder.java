@@ -11,6 +11,7 @@ import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.requests.extensions.ICallAnswerRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallCancelMediaProcessingRequestBuilder;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
 import com.microsoft.graph.requests.extensions.ICallChangeScreenSharingRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallKeepAliveRequestBuilder;
@@ -64,6 +65,7 @@ public interface ICallRequestBuilder extends IRequestBuilder {
 
     ICommsOperationRequestBuilder operations(final String id);
     ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities);
+    ICallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext);
     ICallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role);
     ICallKeepAliveRequestBuilder keepAlive();
     ICallMuteRequestBuilder mute(final String clientContext);
