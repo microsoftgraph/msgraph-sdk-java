@@ -50,7 +50,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the team.
      */
     @SerializedName("displayName")
     @Expose
@@ -58,7 +58,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * An optional description for the team.
      */
     @SerializedName("description")
     @Expose
@@ -74,7 +74,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * 
+     * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
      */
     @SerializedName("classification")
     @Expose
@@ -82,7 +82,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Specialization.
-     * 
+     * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
      */
     @SerializedName("specialization")
     @Expose
@@ -90,7 +90,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * 
+     * The visibility of a the group and team. Defaults to Public.
      */
     @SerializedName("visibility")
     @Expose
@@ -146,7 +146,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Schedule.
-     * 
+     * The schedule of shifts for this team.
      */
     @SerializedName("schedule")
     @Expose
@@ -162,7 +162,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Template.
-     * 
+     * The template this team was created from. See available templates.
      */
     @SerializedName("template")
     @Expose
@@ -170,7 +170,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * Members and owners of the team.
      */
     public ConversationMemberCollectionPage members;
 
@@ -196,7 +196,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * The async operations that ran or are running on this team.
      */
     public TeamsAsyncOperationCollectionPage operations;
 

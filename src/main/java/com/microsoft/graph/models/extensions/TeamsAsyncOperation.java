@@ -32,7 +32,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Operation Type.
-     * 
+     * Denotes which type of operation is being described.
      */
     @SerializedName("operationType")
     @Expose
@@ -40,7 +40,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Time when the operation was created.
      */
     @SerializedName("createdDateTime")
     @Expose
@@ -48,7 +48,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Operation status.
      */
     @SerializedName("status")
     @Expose
@@ -56,7 +56,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-     * 
+     * Time when the async operation was last updated.
      */
     @SerializedName("lastActionDateTime")
     @Expose
@@ -64,7 +64,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Attempts Count.
-     * 
+     * Number of times the operation was attempted before being marked successful or failed.
      */
     @SerializedName("attemptsCount")
     @Expose
@@ -72,7 +72,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Resource Id.
-     * 
+     * The ID of the object that's created or modified as result of this async operation, typically a team.
      */
     @SerializedName("targetResourceId")
     @Expose
@@ -80,7 +80,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Resource Location.
-     * 
+     * The location of the object that's created or modified as result of this async operation. This URL should be treated as an opaque value and not parsed into its component paths.
      */
     @SerializedName("targetResourceLocation")
     @Expose
@@ -88,7 +88,7 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * Any error that causes the async operation to fail.
      */
     @SerializedName("error")
     @Expose

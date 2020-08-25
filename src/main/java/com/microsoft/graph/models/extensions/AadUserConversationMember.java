@@ -30,7 +30,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The User Id.
-     * 
+     * The guid of the user.
      */
     @SerializedName("userId")
     @Expose
@@ -38,7 +38,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The Email.
-     * 
+     * The email address of the user.
      */
     @SerializedName("email")
     @Expose

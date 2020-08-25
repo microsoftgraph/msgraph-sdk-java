@@ -22,6 +22,7 @@ import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.CallOptions;
 import com.microsoft.graph.models.extensions.MeetingInfo;
+import com.microsoft.graph.models.extensions.CallTranscriptionInfo;
 import com.microsoft.graph.models.extensions.ToneInfo;
 import com.microsoft.graph.models.extensions.IncomingContext;
 import com.microsoft.graph.models.extensions.Participant;
@@ -158,6 +159,14 @@ public class Call extends Entity implements IJsonBackedObject {
     @SerializedName("meetingInfo")
     @Expose
     public MeetingInfo meetingInfo;
+
+    /**
+     * The Transcription.
+     * 
+     */
+    @SerializedName("transcription")
+    @Expose
+    public CallTranscriptionInfo transcription;
 
     /**
      * The Tenant Id.
