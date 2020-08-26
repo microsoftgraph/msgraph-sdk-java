@@ -17,5 +17,5 @@ Fixes #
 <!-- Optional. Provide related links. This might be other pull requests, code files, StackOverflow posts. Delete this section if it is not used. -->
 ### Other links
 
-<!-- Is this PR adding a new hand crafted extension class? If so, please update $fileNamesThatShouldNotBeDeleted variable in .azure-pipelines/generate-v1.0-models.yml file, so that it doesn't get deleted by auto generation pipeline.-->
+<!-- Is this PR adding a new hand crafted extension class? If so, please update $filesThatShouldNotBeDeleted variable in .azure-pipelines/generate-v1.0-models.yml file, so that it doesn't get deleted by auto generation pipeline.-->
 -
