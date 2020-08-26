@@ -12,7 +12,7 @@ resources:
     type: github
     endpoint: microsoftgraph
     name: microsoftgraph/msgraph-sdk-java
-    ref: zengin/namespacesRelease # checkout the dev branch
+    ref: dev # checkout the dev branch
   - repository: msgraph-metadata
     type: github
     endpoint: microsoftgraph
@@ -57,7 +57,7 @@ steps:
       Write-Host "Path to clean metadata $cleanMetadata"
       Write-Host "##vso[task.setvariable variable=cleanMetadata]$cleanMetadata"
 
-      $branchName = "zengin/namespacesJava2" # Match the spec in the GH Action
+      $branchName = "v1.0/pipelinebuild/$env:Build_BuildId" # Match the spec in the GH Action
       Write-Host "Branch path spec for the pull request will be $branchName"
       Write-Host "##vso[task.setvariable variable=branchName]$branchName"
 
