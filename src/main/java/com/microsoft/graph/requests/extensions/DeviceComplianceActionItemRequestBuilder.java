@@ -25,7 +25,7 @@ public class DeviceComplianceActionItemRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceActionItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceComplianceActionItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceComplianceActionItemRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IDeviceComplianceActionItemRequest instance
      */
-    public IDeviceComplianceActionItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceComplianceActionItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceComplianceActionItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

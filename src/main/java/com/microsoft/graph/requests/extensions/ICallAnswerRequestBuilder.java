@@ -28,5 +28,5 @@ public interface ICallAnswerRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ICallAnswerRequest instance
      */
-    ICallAnswerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICallAnswerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

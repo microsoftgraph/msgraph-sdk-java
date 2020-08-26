@@ -29,7 +29,7 @@ public interface IWorkbookTableRowRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookTableRowRequest instance
      */
-    IWorkbookTableRowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookTableRowRangeRequestBuilder range();
 

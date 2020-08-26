@@ -28,5 +28,5 @@ public interface IReportRootGetYammerDeviceUsageUserDetailRequestBuilder extends
      * @param requestOptions the options for the request
      * @return the IReportRootGetYammerDeviceUsageUserDetailRequest instance
      */
-    IReportRootGetYammerDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetYammerDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBui
      * @param requestOptions the options for the request
      * @return the IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest instance
      */
-    IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

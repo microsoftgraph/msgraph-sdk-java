@@ -30,7 +30,7 @@ public interface IUserInstallStateSummaryRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IUserInstallStateSummaryRequest instance
      */
-    IUserInstallStateSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserInstallStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceInstallStateCollectionRequestBuilder deviceStates();

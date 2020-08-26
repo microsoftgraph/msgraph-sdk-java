@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsRightbRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRightbRequest instance
      */
-    IWorkbookFunctionsRightbRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsRightbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

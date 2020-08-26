@@ -28,7 +28,7 @@ public interface IWindowsUpdateForBusinessConfigurationRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IWindowsUpdateForBusinessConfigurationRequest instance
      */
-    IWindowsUpdateForBusinessConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsUpdateForBusinessConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IConditionalAccessPolicyRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IConditionalAccessPolicyRequest instance
      */
-    IConditionalAccessPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConditionalAccessPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

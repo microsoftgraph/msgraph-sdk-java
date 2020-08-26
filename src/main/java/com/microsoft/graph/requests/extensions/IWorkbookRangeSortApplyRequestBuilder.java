@@ -28,5 +28,5 @@ public interface IWorkbookRangeSortApplyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeSortApplyRequest instance
      */
-    IWorkbookRangeSortApplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeSortApplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

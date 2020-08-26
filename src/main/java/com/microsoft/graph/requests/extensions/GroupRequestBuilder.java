@@ -132,7 +132,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -151,7 +151,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      * @param requestOptions the options for this request
      * @return the IGroupRequest instance
      */
-    public IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

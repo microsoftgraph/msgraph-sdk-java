@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsIsFormulaRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsFormulaRequest instance
      */
-    IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsIsFormulaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

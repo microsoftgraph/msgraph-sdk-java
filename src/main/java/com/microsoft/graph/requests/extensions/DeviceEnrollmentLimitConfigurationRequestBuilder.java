@@ -25,7 +25,7 @@ public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentLimitConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceEnrollmentLimitConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceEnrollmentLimitConfigurationRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentLimitConfigurationRequest instance
      */
-    public IDeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceEnrollmentLimitConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

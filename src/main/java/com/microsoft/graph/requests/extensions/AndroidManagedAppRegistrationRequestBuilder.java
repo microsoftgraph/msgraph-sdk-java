@@ -25,7 +25,7 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedAppRegistrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidManagedAppRegistrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IAndroidManagedAppRegistrationRequest instance
      */
-    public IAndroidManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

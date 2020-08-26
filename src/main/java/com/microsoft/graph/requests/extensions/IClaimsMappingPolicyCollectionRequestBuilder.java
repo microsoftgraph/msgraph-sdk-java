@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -25,7 +24,7 @@ public interface IClaimsMappingPolicyCollectionRequestBuilder extends IRequestBu
 
     IClaimsMappingPolicyCollectionRequest buildRequest();
 
-    IClaimsMappingPolicyCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IClaimsMappingPolicyCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IClaimsMappingPolicyRequestBuilder byId(final String id);
 

@@ -28,7 +28,7 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementExchangeConnectorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementExchangeConnectorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +47,7 @@ public class DeviceManagementExchangeConnectorRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IDeviceManagementExchangeConnectorRequest instance
      */
-    public IDeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementExchangeConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

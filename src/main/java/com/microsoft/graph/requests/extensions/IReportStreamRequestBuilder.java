@@ -28,7 +28,7 @@ public interface IReportStreamRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IReportStreamRequest instance
      */
-    IReportStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

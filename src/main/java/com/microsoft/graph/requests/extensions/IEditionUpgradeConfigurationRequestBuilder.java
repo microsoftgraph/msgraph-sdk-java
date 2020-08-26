@@ -28,7 +28,7 @@ public interface IEditionUpgradeConfigurationRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IEditionUpgradeConfigurationRequest instance
      */
-    IEditionUpgradeConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEditionUpgradeConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -25,7 +25,7 @@ public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationDeviceOverviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceConfigurationDeviceOverviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceConfigurationDeviceOverviewRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationDeviceOverviewRequest instance
      */
-    public IDeviceConfigurationDeviceOverviewRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceConfigurationDeviceOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationDeviceOverviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

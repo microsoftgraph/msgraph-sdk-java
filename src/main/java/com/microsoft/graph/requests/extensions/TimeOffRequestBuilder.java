@@ -25,7 +25,7 @@ public class TimeOffRequestBuilder extends BaseRequestBuilder implements ITimeOf
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TimeOffRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class TimeOffRequestBuilder extends BaseRequestBuilder implements ITimeOf
      * @param requestOptions the options for this request
      * @return the ITimeOffRequest instance
      */
-    public ITimeOffRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITimeOffRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TimeOffRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

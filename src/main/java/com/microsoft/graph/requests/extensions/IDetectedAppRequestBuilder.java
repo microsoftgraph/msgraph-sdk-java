@@ -30,7 +30,7 @@ public interface IDetectedAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDetectedAppRequest instance
      */
-    IDetectedAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDetectedAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedDeviceCollectionWithReferencesRequestBuilder managedDevices();

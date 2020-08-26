@@ -28,7 +28,7 @@ public interface ITeamsAsyncOperationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamsAsyncOperationRequest instance
      */
-    ITeamsAsyncOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamsAsyncOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IPlannerAssignedToTaskBoardTaskFormatRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IPlannerAssignedToTaskBoardTaskFormatRequest instance
      */
-    IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -29,7 +29,7 @@ public interface IFileAttachmentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IFileAttachmentRequest instance
      */
-    IFileAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IFileAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IFileAttachmentStreamRequestBuilder content();

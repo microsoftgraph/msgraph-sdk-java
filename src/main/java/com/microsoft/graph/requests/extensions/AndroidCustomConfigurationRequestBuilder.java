@@ -25,7 +25,7 @@ public class AndroidCustomConfigurationRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidCustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidCustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AndroidCustomConfigurationRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IAndroidCustomConfigurationRequest instance
      */
-    public IAndroidCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidCustomConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

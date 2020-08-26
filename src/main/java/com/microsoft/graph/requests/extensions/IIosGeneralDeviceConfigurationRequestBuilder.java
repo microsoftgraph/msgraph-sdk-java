@@ -28,7 +28,7 @@ public interface IIosGeneralDeviceConfigurationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IIosGeneralDeviceConfigurationRequest instance
      */
-    IIosGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

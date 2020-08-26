@@ -25,7 +25,7 @@ public class AndroidWorkProfileCustomConfigurationRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileCustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidWorkProfileCustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AndroidWorkProfileCustomConfigurationRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCustomConfigurationRequest instance
      */
-    public IAndroidWorkProfileCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidWorkProfileCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidWorkProfileCustomConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

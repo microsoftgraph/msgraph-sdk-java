@@ -30,7 +30,7 @@ public interface IWorkbookChartSeriesFormatRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IWorkbookChartSeriesFormatRequest instance
      */
-    IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

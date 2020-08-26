@@ -25,7 +25,7 @@ public class WorkbookFunctionResultRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionResultRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionResultRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WorkbookFunctionResultRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IWorkbookFunctionResultRequest instance
      */
-    public IWorkbookFunctionResultRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFunctionResultRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookFunctionResultRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

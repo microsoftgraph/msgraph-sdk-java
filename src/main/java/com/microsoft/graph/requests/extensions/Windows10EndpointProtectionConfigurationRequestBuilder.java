@@ -25,7 +25,7 @@ public class Windows10EndpointProtectionConfigurationRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EndpointProtectionConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public Windows10EndpointProtectionConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class Windows10EndpointProtectionConfigurationRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @return the IWindows10EndpointProtectionConfigurationRequest instance
      */
-    public IWindows10EndpointProtectionConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindows10EndpointProtectionConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Windows10EndpointProtectionConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

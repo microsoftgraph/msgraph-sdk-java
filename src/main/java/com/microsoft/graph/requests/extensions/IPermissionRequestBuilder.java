@@ -30,7 +30,7 @@ public interface IPermissionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPermissionRequest instance
      */
-    IPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPermissionGrantCollectionRequestBuilder grant(final java.util.List<String> roles, final java.util.List<DriveRecipient> recipients);

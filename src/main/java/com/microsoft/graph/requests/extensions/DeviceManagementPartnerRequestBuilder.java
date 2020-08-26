@@ -25,7 +25,7 @@ public class DeviceManagementPartnerRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementPartnerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementPartnerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceManagementPartnerRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IDeviceManagementPartnerRequest instance
      */
-    public IDeviceManagementPartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementPartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

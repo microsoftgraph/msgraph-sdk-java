@@ -27,7 +27,7 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ParticipantRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ParticipantRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class ParticipantRequestBuilder extends BaseRequestBuilder implements IPa
      * @param requestOptions the options for this request
      * @return the IParticipantRequest instance
      */
-    public IParticipantRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IParticipantRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ParticipantRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

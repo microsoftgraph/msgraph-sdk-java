@@ -29,7 +29,7 @@ public interface IIdentityContainerRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIdentityContainerRequest instance
      */
-    IIdentityContainerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIdentityContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

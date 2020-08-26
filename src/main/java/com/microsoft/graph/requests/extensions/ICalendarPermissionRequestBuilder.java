@@ -28,7 +28,7 @@ public interface ICalendarPermissionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICalendarPermissionRequest instance
      */
-    ICalendarPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICalendarPermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

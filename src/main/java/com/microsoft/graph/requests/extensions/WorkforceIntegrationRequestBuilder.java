@@ -25,7 +25,7 @@ public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkforceIntegrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkforceIntegrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IWorkforceIntegrationRequest instance
      */
-    public IWorkforceIntegrationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkforceIntegrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkforceIntegrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

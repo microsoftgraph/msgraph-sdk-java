@@ -34,7 +34,7 @@ public interface IOfficeGraphInsightsRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOfficeGraphInsightsRequest instance
      */
-    IOfficeGraphInsightsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOfficeGraphInsightsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ITrendingCollectionRequestBuilder trending();

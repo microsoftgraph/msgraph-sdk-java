@@ -31,7 +31,7 @@ public interface IWorkbookChartAxesRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookChartAxesRequest instance
      */
-    IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartAxesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

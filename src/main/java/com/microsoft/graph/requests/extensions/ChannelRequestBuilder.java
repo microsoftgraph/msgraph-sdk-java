@@ -35,7 +35,7 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChannelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ChannelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -54,7 +54,7 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
      * @param requestOptions the options for this request
      * @return the IChannelRequest instance
      */
-    public IChannelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChannelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

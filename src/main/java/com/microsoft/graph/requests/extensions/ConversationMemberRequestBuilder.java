@@ -25,7 +25,7 @@ public class ConversationMemberRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConversationMemberRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConversationMemberRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ConversationMemberRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IConversationMemberRequest instance
      */
-    public IConversationMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IConversationMemberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -4,7 +4,8 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.ChatInfo;
+import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

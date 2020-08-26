@@ -68,7 +68,7 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CallRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -87,7 +87,7 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
      * @param requestOptions the options for this request
      * @return the ICallRequest instance
      */
-    public ICallRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICallRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CallRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

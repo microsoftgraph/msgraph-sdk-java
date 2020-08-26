@@ -28,5 +28,5 @@ public interface IWorkbookTableSortReapplyRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookTableSortReapplyRequest instance
      */
-    IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableSortReapplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,7 +28,7 @@ public interface IMacOSCustomConfigurationRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IMacOSCustomConfigurationRequest instance
      */
-    IMacOSCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOSCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

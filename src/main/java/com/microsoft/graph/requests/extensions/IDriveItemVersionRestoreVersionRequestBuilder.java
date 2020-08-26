@@ -28,5 +28,5 @@ public interface IDriveItemVersionRestoreVersionRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IDriveItemVersionRestoreVersionRequest instance
      */
-    IDriveItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDriveItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,7 +28,7 @@ public interface IOAuth2PermissionGrantRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOAuth2PermissionGrantRequest instance
      */
-    IOAuth2PermissionGrantRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOAuth2PermissionGrantRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

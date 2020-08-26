@@ -28,5 +28,5 @@ public interface IMailFolderMoveRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IMailFolderMoveRequest instance
      */
-    IMailFolderMoveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMailFolderMoveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

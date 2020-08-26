@@ -30,7 +30,7 @@ public interface IStsPolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IStsPolicyRequest instance
      */
-    IStsPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IStsPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder appliesTo();

@@ -29,7 +29,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DirectoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * @param requestOptions the options for this request
      * @return the IDirectoryRequest instance
      */
-    public IDirectoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsYieldDiscRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldDiscRequest instance
      */
-    IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsYieldDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

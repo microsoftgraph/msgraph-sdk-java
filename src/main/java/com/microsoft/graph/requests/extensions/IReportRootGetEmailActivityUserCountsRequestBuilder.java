@@ -28,5 +28,5 @@ public interface IReportRootGetEmailActivityUserCountsRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IReportRootGetEmailActivityUserCountsRequest instance
      */
-    IReportRootGetEmailActivityUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetEmailActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

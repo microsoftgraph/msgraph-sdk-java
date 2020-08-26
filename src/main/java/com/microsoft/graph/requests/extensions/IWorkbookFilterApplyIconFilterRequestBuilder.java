@@ -28,5 +28,5 @@ public interface IWorkbookFilterApplyIconFilterRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyIconFilterRequest instance
      */
-    IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFilterApplyIconFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -58,7 +58,7 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -77,7 +77,7 @@ public class EventRequestBuilder extends BaseRequestBuilder implements IEventReq
      * @param requestOptions the options for this request
      * @return the IEventRequest instance
      */
-    public IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

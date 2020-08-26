@@ -28,5 +28,5 @@ public interface IWorkbookRangeUnmergeRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeUnmergeRequest instance
      */
-    IWorkbookRangeUnmergeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeUnmergeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -39,7 +39,7 @@ public class ContactRequestBuilder extends BaseRequestBuilder implements IContac
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ContactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -58,7 +58,7 @@ public class ContactRequestBuilder extends BaseRequestBuilder implements IContac
      * @param requestOptions the options for this request
      * @return the IContactRequest instance
      */
-    public IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IContactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContactRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -25,7 +24,7 @@ public interface IWorkbookNamedItemCollectionRequestBuilder extends IRequestBuil
 
     IWorkbookNamedItemCollectionRequest buildRequest();
 
-    IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookNamedItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookNamedItemRequestBuilder byId(final String id);
 

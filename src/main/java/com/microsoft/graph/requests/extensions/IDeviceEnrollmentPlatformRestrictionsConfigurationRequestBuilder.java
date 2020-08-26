@@ -28,7 +28,7 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilde
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentPlatformRestrictionsConfigurationRequest instance
      */
-    IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

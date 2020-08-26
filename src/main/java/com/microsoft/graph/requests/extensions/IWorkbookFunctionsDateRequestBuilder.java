@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDateRequest instance
      */
-    IWorkbookFunctionsDateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

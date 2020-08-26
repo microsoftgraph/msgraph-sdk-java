@@ -61,7 +61,7 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IServicePrincipalRequest instance
      */
-    IServicePrincipalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IServicePrincipalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAppRoleAssignmentCollectionRequestBuilder appRoleAssignedTo();

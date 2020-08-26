@@ -29,7 +29,7 @@ public interface IWorkbookChartLegendRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookChartLegendRequest instance
      */
-    IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

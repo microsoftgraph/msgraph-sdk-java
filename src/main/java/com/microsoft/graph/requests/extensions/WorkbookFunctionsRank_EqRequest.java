@@ -11,8 +11,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsRank_EqRequest;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest implements IWor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsRank_EqRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsRank_EqRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsRank_EqBody();
     }
@@ -51,7 +49,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest implements IWor
      * @return the updated request
      */
     public IWorkbookFunctionsRank_EqRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsRank_EqRequest)this;
     }
 
@@ -62,7 +60,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest implements IWor
      * @return the updated request
      */
     public IWorkbookFunctionsRank_EqRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsRank_EqRequest)this;
     }
 
@@ -73,7 +71,7 @@ public class WorkbookFunctionsRank_EqRequest extends BaseRequest implements IWor
      * @return the updated request
      */
     public IWorkbookFunctionsRank_EqRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsRank_EqRequest)this;
     }
 

@@ -29,7 +29,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InferenceClassificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public InferenceClassificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class InferenceClassificationRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IInferenceClassificationRequest instance
      */
-    public IInferenceClassificationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IInferenceClassificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new InferenceClassificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

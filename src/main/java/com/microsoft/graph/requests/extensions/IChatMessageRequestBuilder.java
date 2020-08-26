@@ -32,7 +32,7 @@ public interface IChatMessageRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IChatMessageRequest instance
      */
-    IChatMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IChatMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IChatMessageCollectionRequestBuilder replies();

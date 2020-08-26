@@ -29,7 +29,7 @@ public class WorkbookChartLegendFormatRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartLegendFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartLegendFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class WorkbookChartLegendFormatRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IWorkbookChartLegendFormatRequest instance
      */
-    public IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartLegendFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

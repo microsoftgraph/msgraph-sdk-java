@@ -28,7 +28,7 @@ public interface IDeviceConfigurationUserOverviewRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationUserOverviewRequest instance
      */
-    IDeviceConfigurationUserOverviewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationUserOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

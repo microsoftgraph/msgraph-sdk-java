@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsTrimRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTrimRequest instance
      */
-    IWorkbookFunctionsTrimRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsTrimRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

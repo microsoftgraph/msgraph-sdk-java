@@ -25,7 +25,7 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DirectoryRoleTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DirectoryRoleTemplateRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IDirectoryRoleTemplateRequest instance
      */
-    public IDirectoryRoleTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryRoleTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryRoleTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

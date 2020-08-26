@@ -25,7 +25,7 @@ public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreControlProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SecureScoreControlProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class SecureScoreControlProfileRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the ISecureScoreControlProfileRequest instance
      */
-    public ISecureScoreControlProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISecureScoreControlProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SecureScoreControlProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

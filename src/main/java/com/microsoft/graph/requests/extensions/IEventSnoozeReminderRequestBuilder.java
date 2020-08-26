@@ -28,5 +28,5 @@ public interface IEventSnoozeReminderRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IEventSnoozeReminderRequest instance
      */
-    IEventSnoozeReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEventSnoozeReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

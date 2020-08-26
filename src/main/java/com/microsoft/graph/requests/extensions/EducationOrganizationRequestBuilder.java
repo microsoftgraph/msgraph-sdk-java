@@ -25,7 +25,7 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationOrganizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationOrganizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class EducationOrganizationRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IEducationOrganizationRequest instance
      */
-    public IEducationOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEducationOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

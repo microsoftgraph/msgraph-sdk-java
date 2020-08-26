@@ -4,7 +4,9 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.AttendeeBase;
+import com.microsoft.graph.models.extensions.LocationConstraint;
+import com.microsoft.graph.models.extensions.TimeConstraint;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

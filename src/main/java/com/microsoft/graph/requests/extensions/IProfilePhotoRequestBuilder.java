@@ -29,7 +29,7 @@ public interface IProfilePhotoRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IProfilePhotoRequest instance
      */
-    IProfilePhotoRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IProfilePhotoRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IProfilePhotoStreamRequestBuilder content();

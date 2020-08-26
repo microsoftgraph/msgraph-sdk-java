@@ -25,7 +25,7 @@ public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookCommentReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookCommentReplyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WorkbookCommentReplyRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IWorkbookCommentReplyRequest instance
      */
-    public IWorkbookCommentReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookCommentReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookCommentReplyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

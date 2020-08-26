@@ -25,7 +25,7 @@ public class WindowsInformationProtectionPolicyRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsInformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsInformationProtectionPolicyRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionPolicyRequest instance
      */
-    public IWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

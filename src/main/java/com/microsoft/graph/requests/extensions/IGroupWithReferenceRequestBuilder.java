@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -36,7 +35,7 @@ public interface IGroupWithReferenceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGroupWithReferenceRequest instance
      */
-    IGroupWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IGroupReferenceRequestBuilder reference();
 

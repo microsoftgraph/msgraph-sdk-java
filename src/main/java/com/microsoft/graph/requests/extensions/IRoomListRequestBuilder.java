@@ -30,7 +30,7 @@ public interface IRoomListRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IRoomListRequest instance
      */
-    IRoomListRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRoomListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IRoomCollectionRequestBuilder rooms();

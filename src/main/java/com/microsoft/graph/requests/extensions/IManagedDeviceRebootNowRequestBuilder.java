@@ -28,5 +28,5 @@ public interface IManagedDeviceRebootNowRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IManagedDeviceRebootNowRequest instance
      */
-    IManagedDeviceRebootNowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceRebootNowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

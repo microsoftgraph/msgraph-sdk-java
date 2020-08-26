@@ -28,5 +28,5 @@ public interface IWorkbookCloseSessionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookCloseSessionRequest instance
      */
-    IWorkbookCloseSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookCloseSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

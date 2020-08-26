@@ -29,7 +29,7 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerBucketRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PlannerBucketRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder implements I
      * @param requestOptions the options for this request
      * @return the IPlannerBucketRequest instance
      */
-    public IPlannerBucketRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPlannerBucketRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerBucketRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -29,7 +29,7 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupLifecyclePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupLifecyclePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class GroupLifecyclePolicyRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IGroupLifecyclePolicyRequest instance
      */
-    public IGroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupLifecyclePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -25,7 +25,7 @@ public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerProgressTaskBoardTaskFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PlannerProgressTaskBoardTaskFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class PlannerProgressTaskBoardTaskFormatRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IPlannerProgressTaskBoardTaskFormatRequest instance
      */
-    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPlannerProgressTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerProgressTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

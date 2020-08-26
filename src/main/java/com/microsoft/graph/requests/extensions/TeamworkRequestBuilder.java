@@ -29,7 +29,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder implements ITeamw
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TeamworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder implements ITeamw
      * @param requestOptions the options for this request
      * @return the ITeamworkRequest instance
      */
-    public ITeamworkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITeamworkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamworkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

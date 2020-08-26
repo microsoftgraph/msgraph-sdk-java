@@ -28,7 +28,7 @@ public interface IWindows10EnterpriseModernAppManagementConfigurationRequestBuil
      * @param requestOptions the options for this request
      * @return the IWindows10EnterpriseModernAppManagementConfigurationRequest instance
      */
-    IWindows10EnterpriseModernAppManagementConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows10EnterpriseModernAppManagementConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IEmailFileAssessmentRequestRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IEmailFileAssessmentRequestRequest instance
      */
-    IEmailFileAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEmailFileAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

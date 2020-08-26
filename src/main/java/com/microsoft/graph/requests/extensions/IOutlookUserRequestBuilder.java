@@ -34,7 +34,7 @@ public interface IOutlookUserRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOutlookUserRequest instance
      */
-    IOutlookUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOutlookUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOutlookCategoryCollectionRequestBuilder masterCategories();

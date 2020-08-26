@@ -29,7 +29,7 @@ public interface IVppTokenRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IVppTokenRequest instance
      */
-    IVppTokenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IVppTokenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IVppTokenSyncLicensesRequestBuilder syncLicenses();
 

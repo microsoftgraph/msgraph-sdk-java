@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +29,7 @@ public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OAuth2PermissionGrantWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OAuth2PermissionGrantWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +48,7 @@ public class OAuth2PermissionGrantWithReferenceRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IOAuth2PermissionGrantWithReferenceRequest instance
      */
-    public IOAuth2PermissionGrantWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOAuth2PermissionGrantWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

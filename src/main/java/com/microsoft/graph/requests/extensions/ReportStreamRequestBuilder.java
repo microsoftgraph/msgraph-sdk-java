@@ -25,7 +25,7 @@ public class ReportStreamRequestBuilder extends BaseRequestBuilder implements IR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReportStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ReportStreamRequestBuilder extends BaseRequestBuilder implements IR
      * @param requestOptions the options for this request
      * @return the IReportStreamRequest instance
      */
-    public IReportStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReportStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ReportStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

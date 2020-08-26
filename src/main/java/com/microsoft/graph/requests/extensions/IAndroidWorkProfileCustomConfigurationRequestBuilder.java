@@ -28,7 +28,7 @@ public interface IAndroidWorkProfileCustomConfigurationRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCustomConfigurationRequest instance
      */
-    IAndroidWorkProfileCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidWorkProfileCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

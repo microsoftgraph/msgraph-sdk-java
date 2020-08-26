@@ -28,7 +28,7 @@ public interface IWebAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWebAppRequest instance
      */
-    IWebAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWebAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

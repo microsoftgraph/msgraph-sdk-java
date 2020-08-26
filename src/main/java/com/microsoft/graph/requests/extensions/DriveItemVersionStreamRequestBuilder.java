@@ -25,7 +25,7 @@ public class DriveItemVersionStreamRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemVersionStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemVersionStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DriveItemVersionStreamRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IDriveItemVersionStreamRequest instance
      */
-    public IDriveItemVersionStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemVersionStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemVersionStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

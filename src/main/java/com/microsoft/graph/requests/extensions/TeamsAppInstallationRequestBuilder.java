@@ -31,7 +31,7 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppInstallationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TeamsAppInstallationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,7 +50,7 @@ public class TeamsAppInstallationRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the ITeamsAppInstallationRequest instance
      */
-    public ITeamsAppInstallationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITeamsAppInstallationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppInstallationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

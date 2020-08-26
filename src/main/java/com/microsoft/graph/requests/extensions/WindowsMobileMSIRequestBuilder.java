@@ -25,7 +25,7 @@ public class WindowsMobileMSIRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsMobileMSIRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsMobileMSIRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsMobileMSIRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IWindowsMobileMSIRequest instance
      */
-    public IWindowsMobileMSIRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsMobileMSIRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsMobileMSIRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

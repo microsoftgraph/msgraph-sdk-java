@@ -28,7 +28,7 @@ public interface IMdmWindowsInformationProtectionPolicyRequestBuilder extends IR
      * @param requestOptions the options for this request
      * @return the IMdmWindowsInformationProtectionPolicyRequest instance
      */
-    IMdmWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMdmWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

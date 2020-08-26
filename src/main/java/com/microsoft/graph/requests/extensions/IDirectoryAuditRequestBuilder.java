@@ -28,7 +28,7 @@ public interface IDirectoryAuditRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryAuditRequest instance
      */
-    IDirectoryAuditRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryAuditRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

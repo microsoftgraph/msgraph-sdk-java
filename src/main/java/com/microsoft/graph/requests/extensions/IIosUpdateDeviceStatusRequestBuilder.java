@@ -28,7 +28,7 @@ public interface IIosUpdateDeviceStatusRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosUpdateDeviceStatusRequest instance
      */
-    IIosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

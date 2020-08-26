@@ -28,7 +28,7 @@ public interface ISharedPCConfigurationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISharedPCConfigurationRequest instance
      */
-    ISharedPCConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISharedPCConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

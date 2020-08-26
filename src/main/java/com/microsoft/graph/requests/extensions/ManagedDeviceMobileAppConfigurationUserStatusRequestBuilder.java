@@ -25,7 +25,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationUserStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationUserStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceMobileAppConfigurationUserStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceMobileAppConfigurationUserStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IWorkbookChartLineFormatClearRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IWorkbookChartLineFormatClearRequest instance
      */
-    IWorkbookChartLineFormatClearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartLineFormatClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

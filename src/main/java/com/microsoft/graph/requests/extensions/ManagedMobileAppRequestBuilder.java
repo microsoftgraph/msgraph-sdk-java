@@ -25,7 +25,7 @@ public class ManagedMobileAppRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedMobileAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedMobileAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ManagedMobileAppRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IManagedMobileAppRequest instance
      */
-    public IManagedMobileAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedMobileAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedMobileAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

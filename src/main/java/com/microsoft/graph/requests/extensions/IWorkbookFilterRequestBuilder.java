@@ -42,7 +42,7 @@ public interface IWorkbookFilterRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookFilterRequest instance
      */
-    IWorkbookFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookFilterApplyRequestBuilder apply(final WorkbookFilterCriteria criteria);
     IWorkbookFilterApplyBottomItemsFilterRequestBuilder applyBottomItemsFilter(final Integer count);

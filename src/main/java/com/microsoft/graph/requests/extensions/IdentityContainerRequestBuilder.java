@@ -27,7 +27,7 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityContainerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IdentityContainerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IIdentityContainerRequest instance
      */
-    public IIdentityContainerRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIdentityContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IdentityContainerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

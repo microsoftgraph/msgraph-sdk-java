@@ -28,7 +28,7 @@ public interface IIpNamedLocationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIpNamedLocationRequest instance
      */
-    IIpNamedLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIpNamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

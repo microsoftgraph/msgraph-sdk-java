@@ -25,7 +25,7 @@ public class AndroidStoreAppRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidStoreAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidStoreAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AndroidStoreAppRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IAndroidStoreAppRequest instance
      */
-    public IAndroidStoreAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidStoreAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidStoreAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

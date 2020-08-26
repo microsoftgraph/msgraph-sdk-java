@@ -25,7 +25,7 @@ public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OutlookItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOu
      * @param requestOptions the options for this request
      * @return the IOutlookItemRequest instance
      */
-    public IOutlookItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOutlookItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OutlookItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

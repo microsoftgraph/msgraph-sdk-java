@@ -28,7 +28,7 @@ public interface IDirectoryRoleTemplateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryRoleTemplateRequest instance
      */
-    IDirectoryRoleTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryRoleTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

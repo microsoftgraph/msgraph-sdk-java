@@ -28,7 +28,7 @@ public interface IWindowsInformationProtectionAppLockerFileRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionAppLockerFileRequest instance
      */
-    IWindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

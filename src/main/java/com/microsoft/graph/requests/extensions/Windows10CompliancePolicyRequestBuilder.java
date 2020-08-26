@@ -25,7 +25,7 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10CompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public Windows10CompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IWindows10CompliancePolicyRequest instance
      */
-    public IWindows10CompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindows10CompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Windows10CompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -32,7 +32,7 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TargetedManagedAppProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -51,7 +51,7 @@ public class TargetedManagedAppProtectionRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the ITargetedManagedAppProtectionRequest instance
      */
-    public ITargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TargetedManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

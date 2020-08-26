@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +29,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OpenShiftCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OpenShiftCollectionResponse.class, IOpenShiftCollectionPage.class);
     }
 
@@ -74,7 +73,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
      * @return the updated request
      */
     public IOpenShiftCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (OpenShiftCollectionRequest)this;
     }
 
@@ -85,7 +84,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
      * @return the updated request
      */
     public IOpenShiftCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OpenShiftCollectionRequest)this;
     }
 
@@ -96,7 +95,7 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
      * @return the updated request
      */
     public IOpenShiftCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (OpenShiftCollectionRequest)this;
     }
 

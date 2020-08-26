@@ -28,7 +28,7 @@ public interface IDeviceManagementTroubleshootingEventRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IDeviceManagementTroubleshootingEventRequest instance
      */
-    IDeviceManagementTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

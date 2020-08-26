@@ -34,7 +34,7 @@ public interface IOnenoteSectionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenoteSectionRequest instance
      */
-    IOnenoteSectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteSectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

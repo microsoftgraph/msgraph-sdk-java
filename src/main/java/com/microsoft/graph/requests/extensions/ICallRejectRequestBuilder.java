@@ -28,5 +28,5 @@ public interface ICallRejectRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ICallRejectRequest instance
      */
-    ICallRejectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICallRejectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

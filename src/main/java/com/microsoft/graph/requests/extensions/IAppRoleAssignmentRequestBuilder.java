@@ -28,7 +28,7 @@ public interface IAppRoleAssignmentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAppRoleAssignmentRequest instance
      */
-    IAppRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAppRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

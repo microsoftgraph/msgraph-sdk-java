@@ -28,5 +28,5 @@ public interface IRemoteAssistancePartnerDisconnectRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IRemoteAssistancePartnerDisconnectRequest instance
      */
-    IRemoteAssistancePartnerDisconnectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRemoteAssistancePartnerDisconnectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

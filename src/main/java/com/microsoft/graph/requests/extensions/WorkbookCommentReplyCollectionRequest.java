@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +29,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookCommentReplyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookCommentReplyCollectionRequest(final String requestUrl, IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookCommentReplyCollectionResponse.class, IWorkbookCommentReplyCollectionPage.class);
     }
 
@@ -74,7 +73,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public IWorkbookCommentReplyCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookCommentReplyCollectionRequest)this;
     }
 
@@ -85,7 +84,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public IWorkbookCommentReplyCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookCommentReplyCollectionRequest)this;
     }
 
@@ -96,7 +95,7 @@ public class WorkbookCommentReplyCollectionRequest extends BaseCollectionRequest
      * @return the updated request
      */
     public IWorkbookCommentReplyCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value + ""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value + ""));
         return (WorkbookCommentReplyCollectionRequest)this;
     }
 

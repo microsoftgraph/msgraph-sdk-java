@@ -28,7 +28,7 @@ public interface IMuteParticipantOperationRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IMuteParticipantOperationRequest instance
      */
-    IMuteParticipantOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

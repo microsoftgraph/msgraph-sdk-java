@@ -28,5 +28,5 @@ public interface IReportRootGetYammerGroupsActivityDetailRequestBuilder extends 
      * @param requestOptions the options for the request
      * @return the IReportRootGetYammerGroupsActivityDetailRequest instance
      */
-    IReportRootGetYammerGroupsActivityDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetYammerGroupsActivityDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

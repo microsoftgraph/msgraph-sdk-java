@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +30,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
      * @param requestOptions the options for this request
      * @param securityEnabledOnly the securityEnabledOnly
      */
-    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean securityEnabledOnly) {
+    public DirectoryObjectGetMemberGroupsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean securityEnabledOnly) {
         super(requestUrl, client, requestOptions);
   	 if(securityEnabledOnly!=null){
 			bodyParams.put("securityEnabledOnly", securityEnabledOnly);
@@ -41,7 +41,7 @@ public class DirectoryObjectGetMemberGroupsCollectionRequestBuilder extends Base
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryObjectGetMemberGroupsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetMemberGroupsCollectionRequest request = new DirectoryObjectGetMemberGroupsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

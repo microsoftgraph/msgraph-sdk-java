@@ -28,5 +28,5 @@ public interface IMessageMoveRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IMessageMoveRequest instance
      */
-    IMessageMoveRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMessageMoveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

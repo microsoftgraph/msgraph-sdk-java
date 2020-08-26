@@ -28,5 +28,5 @@ public interface IManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder ext
      * @param requestOptions the options for the request
      * @return the IManagedDeviceWindowsDefenderUpdateSignaturesRequest instance
      */
-    IManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceWindowsDefenderUpdateSignaturesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

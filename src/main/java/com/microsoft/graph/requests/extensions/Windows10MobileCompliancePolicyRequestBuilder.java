@@ -25,7 +25,7 @@ public class Windows10MobileCompliancePolicyRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10MobileCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public Windows10MobileCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class Windows10MobileCompliancePolicyRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the IWindows10MobileCompliancePolicyRequest instance
      */
-    public IWindows10MobileCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindows10MobileCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Windows10MobileCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -40,7 +40,7 @@ public interface IDeviceConfigurationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationRequest instance
      */
-    IDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();

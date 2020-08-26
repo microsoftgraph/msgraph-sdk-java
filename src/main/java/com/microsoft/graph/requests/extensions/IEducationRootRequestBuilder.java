@@ -35,7 +35,7 @@ public interface IEducationRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationRootRequest instance
      */
-    IEducationRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationClassCollectionRequestBuilder classes();

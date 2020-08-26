@@ -27,7 +27,7 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ItemActivityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class ItemActivityRequestBuilder extends BaseRequestBuilder implements II
      * @param requestOptions the options for this request
      * @return the IItemActivityRequest instance
      */
-    public IItemActivityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IItemActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

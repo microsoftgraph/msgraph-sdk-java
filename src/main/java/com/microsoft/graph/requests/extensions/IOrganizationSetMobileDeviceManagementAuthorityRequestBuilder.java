@@ -28,5 +28,5 @@ public interface IOrganizationSetMobileDeviceManagementAuthorityRequestBuilder e
      * @param requestOptions the options for the request
      * @return the IOrganizationSetMobileDeviceManagementAuthorityRequest instance
      */
-    IOrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,7 +28,7 @@ public interface IPlannerBucketTaskBoardTaskFormatRequestBuilder extends IReques
      * @param requestOptions the options for this request
      * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
      */
-    IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

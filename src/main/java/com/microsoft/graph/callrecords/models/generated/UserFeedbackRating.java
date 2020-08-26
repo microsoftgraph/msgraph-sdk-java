@@ -2,48 +2,44 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.models.generated;
+package com.microsoft.graph.callrecords.models.generated;
 
 
 /**
- * The Enum Education Contact Relationship.
+ * The Enum User Feedback Rating.
 */
-public enum EducationContactRelationship
+public enum UserFeedbackRating
 {
     /**
-    * parent
+    * not Rated
     */
-    PARENT,
+    NOT_RATED,
     /**
-    * relative
+    * bad
     */
-    RELATIVE,
+    BAD,
     /**
-    * aide
+    * poor
     */
-    AIDE,
+    POOR,
     /**
-    * doctor
+    * fair
     */
-    DOCTOR,
+    FAIR,
     /**
-    * guardian
+    * good
     */
-    GUARDIAN,
+    GOOD,
     /**
-    * child
+    * excellent
     */
-    CHILD,
-    /**
-    * other
-    */
-    OTHER,
+    EXCELLENT,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For EducationContactRelationship values that were not expected from the service
+    * For UserFeedbackRating values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

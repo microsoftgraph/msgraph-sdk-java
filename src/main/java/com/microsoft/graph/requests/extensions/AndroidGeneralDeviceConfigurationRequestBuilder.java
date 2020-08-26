@@ -25,7 +25,7 @@ public class AndroidGeneralDeviceConfigurationRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidGeneralDeviceConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidGeneralDeviceConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AndroidGeneralDeviceConfigurationRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IAndroidGeneralDeviceConfigurationRequest instance
      */
-    public IAndroidGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidGeneralDeviceConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

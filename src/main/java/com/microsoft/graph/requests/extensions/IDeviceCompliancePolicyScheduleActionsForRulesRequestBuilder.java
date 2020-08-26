@@ -28,5 +28,5 @@ public interface IDeviceCompliancePolicyScheduleActionsForRulesRequestBuilder ex
      * @param requestOptions the options for the request
      * @return the IDeviceCompliancePolicyScheduleActionsForRulesRequest instance
      */
-    IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

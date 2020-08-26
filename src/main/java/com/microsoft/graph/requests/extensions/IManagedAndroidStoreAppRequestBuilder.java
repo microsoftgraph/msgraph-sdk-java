@@ -28,7 +28,7 @@ public interface IManagedAndroidStoreAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedAndroidStoreAppRequest instance
      */
-    IManagedAndroidStoreAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAndroidStoreAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

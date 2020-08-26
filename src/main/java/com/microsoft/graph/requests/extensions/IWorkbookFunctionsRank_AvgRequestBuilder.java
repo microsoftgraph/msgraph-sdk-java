@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsRank_AvgRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_AvgRequest instance
      */
-    IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsRank_AvgRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

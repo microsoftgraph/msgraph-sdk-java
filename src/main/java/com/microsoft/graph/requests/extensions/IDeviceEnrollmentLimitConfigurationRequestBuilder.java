@@ -28,7 +28,7 @@ public interface IDeviceEnrollmentLimitConfigurationRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentLimitConfigurationRequest instance
      */
-    IDeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceEnrollmentLimitConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

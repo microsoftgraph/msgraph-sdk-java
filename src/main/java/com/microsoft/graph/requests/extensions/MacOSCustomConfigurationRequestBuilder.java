@@ -25,7 +25,7 @@ public class MacOSCustomConfigurationRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSCustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MacOSCustomConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MacOSCustomConfigurationRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IMacOSCustomConfigurationRequest instance
      */
-    public IMacOSCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMacOSCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MacOSCustomConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

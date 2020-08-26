@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsGaussRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGaussRequest instance
      */
-    IWorkbookFunctionsGaussRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsGaussRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

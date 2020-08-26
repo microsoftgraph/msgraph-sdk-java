@@ -25,7 +25,7 @@ public class DomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsCnameRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DomainDnsCnameRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DomainDnsCnameRecordRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IDomainDnsCnameRecordRequest instance
      */
-    public IDomainDnsCnameRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDomainDnsCnameRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DomainDnsCnameRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

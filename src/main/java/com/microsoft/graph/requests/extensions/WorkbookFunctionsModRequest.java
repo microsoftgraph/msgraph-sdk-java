@@ -11,8 +11,6 @@ import com.microsoft.graph.requests.extensions.WorkbookFunctionsModRequest;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +29,7 @@ public class WorkbookFunctionsModRequest extends BaseRequest implements IWorkboo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsModRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsModRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsModBody();
     }
@@ -51,7 +49,7 @@ public class WorkbookFunctionsModRequest extends BaseRequest implements IWorkboo
      * @return the updated request
      */
     public IWorkbookFunctionsModRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsModRequest)this;
     }
 
@@ -62,7 +60,7 @@ public class WorkbookFunctionsModRequest extends BaseRequest implements IWorkboo
      * @return the updated request
      */
     public IWorkbookFunctionsModRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsModRequest)this;
     }
 
@@ -73,7 +71,7 @@ public class WorkbookFunctionsModRequest extends BaseRequest implements IWorkboo
      * @return the updated request
      */
     public IWorkbookFunctionsModRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsModRequest)this;
     }
 

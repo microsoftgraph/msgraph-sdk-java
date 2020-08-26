@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsBinom_DistRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBinom_DistRequest instance
      */
-    IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsBinom_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

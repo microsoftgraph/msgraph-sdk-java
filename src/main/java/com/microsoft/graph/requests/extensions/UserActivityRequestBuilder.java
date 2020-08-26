@@ -29,7 +29,7 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserActivityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserActivityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class UserActivityRequestBuilder extends BaseRequestBuilder implements IU
      * @param requestOptions the options for this request
      * @return the IUserActivityRequest instance
      */
-    public IUserActivityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserActivityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

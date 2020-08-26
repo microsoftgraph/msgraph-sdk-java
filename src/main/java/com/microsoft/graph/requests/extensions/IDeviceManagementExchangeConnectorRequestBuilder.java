@@ -30,7 +30,7 @@ public interface IDeviceManagementExchangeConnectorRequestBuilder extends IReque
      * @param requestOptions the options for this request
      * @return the IDeviceManagementExchangeConnectorRequest instance
      */
-    IDeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementExchangeConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDeviceManagementExchangeConnectorSyncRequestBuilder sync(final DeviceManagementExchangeConnectorSyncType syncType);
 

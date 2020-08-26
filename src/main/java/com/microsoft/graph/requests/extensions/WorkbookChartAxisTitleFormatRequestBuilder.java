@@ -27,7 +27,7 @@ public class WorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisTitleFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartAxisTitleFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class WorkbookChartAxisTitleFormatRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IWorkbookChartAxisTitleFormatRequest instance
      */
-    public IWorkbookChartAxisTitleFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartAxisTitleFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartAxisTitleFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

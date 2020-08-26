@@ -27,7 +27,7 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableRowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookTableRowRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class WorkbookTableRowRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IWorkbookTableRowRequest instance
      */
-    public IWorkbookTableRowRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookTableRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookTableRowRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

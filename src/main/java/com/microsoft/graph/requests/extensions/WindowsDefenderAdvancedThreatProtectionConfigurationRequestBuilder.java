@@ -25,7 +25,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IWindowsDefenderAdvancedThreatProtectionConfigurationRequest instance
      */
-    public IWindowsDefenderAdvancedThreatProtectionConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsDefenderAdvancedThreatProtectionConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsDefenderAdvancedThreatProtectionConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

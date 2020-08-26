@@ -28,7 +28,7 @@ public interface ISettingStateDeviceSummaryRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the ISettingStateDeviceSummaryRequest instance
      */
-    ISettingStateDeviceSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISettingStateDeviceSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

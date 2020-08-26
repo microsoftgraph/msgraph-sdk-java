@@ -25,7 +25,7 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContractRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ContractRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * @param requestOptions the options for this request
      * @return the IContractRequest instance
      */
-    public IContractRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IContractRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContractRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

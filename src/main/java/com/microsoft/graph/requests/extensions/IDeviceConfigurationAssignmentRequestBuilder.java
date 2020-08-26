@@ -28,7 +28,7 @@ public interface IDeviceConfigurationAssignmentRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationAssignmentRequest instance
      */
-    IDeviceConfigurationAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

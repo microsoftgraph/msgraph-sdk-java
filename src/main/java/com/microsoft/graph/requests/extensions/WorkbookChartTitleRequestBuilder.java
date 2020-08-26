@@ -27,7 +27,7 @@ public class WorkbookChartTitleRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartTitleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartTitleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class WorkbookChartTitleRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IWorkbookChartTitleRequest instance
      */
-    public IWorkbookChartTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartTitleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartTitleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

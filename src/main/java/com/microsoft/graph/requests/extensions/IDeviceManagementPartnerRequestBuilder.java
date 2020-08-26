@@ -28,7 +28,7 @@ public interface IDeviceManagementPartnerRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IDeviceManagementPartnerRequest instance
      */
-    IDeviceManagementPartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

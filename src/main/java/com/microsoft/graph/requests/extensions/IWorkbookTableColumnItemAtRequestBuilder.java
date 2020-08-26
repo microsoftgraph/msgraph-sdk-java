@@ -28,5 +28,5 @@ public interface IWorkbookTableColumnItemAtRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnItemAtRequest instance
      */
-    IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

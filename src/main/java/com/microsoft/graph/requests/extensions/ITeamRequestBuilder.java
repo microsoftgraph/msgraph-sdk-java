@@ -45,7 +45,7 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamRequest instance
      */
-    ITeamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

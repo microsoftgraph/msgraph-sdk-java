@@ -30,7 +30,7 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookWorksheetProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class WorkbookWorksheetProtectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetProtectionRequest instance
      */
-    public IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookWorksheetProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookWorksheetProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

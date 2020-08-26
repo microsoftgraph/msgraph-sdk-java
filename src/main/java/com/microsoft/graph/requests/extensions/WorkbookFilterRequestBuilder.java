@@ -51,7 +51,7 @@ public class WorkbookFilterRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFilterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -70,7 +70,7 @@ public class WorkbookFilterRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IWorkbookFilterRequest instance
      */
-    public IWorkbookFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookFilterRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

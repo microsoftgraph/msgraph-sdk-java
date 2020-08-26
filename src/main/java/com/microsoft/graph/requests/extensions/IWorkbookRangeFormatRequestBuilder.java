@@ -35,7 +35,7 @@ public interface IWorkbookRangeFormatRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeFormatRequest instance
      */
-    IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWorkbookRangeBorderCollectionRequestBuilder borders();

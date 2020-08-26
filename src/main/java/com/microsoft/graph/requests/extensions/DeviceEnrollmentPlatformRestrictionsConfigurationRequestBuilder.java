@@ -25,7 +25,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder ext
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequestBuilder ext
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentPlatformRestrictionsConfigurationRequest instance
      */
-    public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceEnrollmentPlatformRestrictionsConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

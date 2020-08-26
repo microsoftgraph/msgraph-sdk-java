@@ -42,7 +42,7 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICalendarRequest instance
      */
-    ICalendarRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICalendarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

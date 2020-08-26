@@ -25,7 +25,7 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThreatAssessmentResultRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ThreatAssessmentResultRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IThreatAssessmentResultRequest instance
      */
-    public IThreatAssessmentResultRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IThreatAssessmentResultRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ThreatAssessmentResultRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

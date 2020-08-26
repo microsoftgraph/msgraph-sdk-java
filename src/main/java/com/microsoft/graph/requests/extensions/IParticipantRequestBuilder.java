@@ -29,7 +29,7 @@ public interface IParticipantRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IParticipantRequest instance
      */
-    IParticipantRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IParticipantRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IParticipantMuteRequestBuilder mute(final String clientContext);
 

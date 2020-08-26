@@ -36,7 +36,7 @@ public interface IContactFolderRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IContactFolderRequest instance
      */
-    IContactFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IContactFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

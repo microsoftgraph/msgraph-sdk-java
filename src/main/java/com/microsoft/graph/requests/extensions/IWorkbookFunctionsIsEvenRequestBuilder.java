@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsIsEvenRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsEvenRequest instance
      */
-    IWorkbookFunctionsIsEvenRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsIsEvenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsImDivRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImDivRequest instance
      */
-    IWorkbookFunctionsImDivRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsImDivRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

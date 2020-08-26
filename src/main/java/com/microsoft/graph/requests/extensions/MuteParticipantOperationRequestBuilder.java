@@ -25,7 +25,7 @@ public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MuteParticipantOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MuteParticipantOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MuteParticipantOperationRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IMuteParticipantOperationRequest instance
      */
-    public IMuteParticipantOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MuteParticipantOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

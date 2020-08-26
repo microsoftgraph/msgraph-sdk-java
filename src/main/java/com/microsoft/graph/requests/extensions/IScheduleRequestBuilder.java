@@ -47,7 +47,7 @@ public interface IScheduleRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IScheduleRequest instance
      */
-    IScheduleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IScheduleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IShiftCollectionRequestBuilder shifts();

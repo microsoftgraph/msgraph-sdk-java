@@ -29,7 +29,7 @@ public interface IItemActivityRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IItemActivityRequest instance
      */
-    IItemActivityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IItemActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

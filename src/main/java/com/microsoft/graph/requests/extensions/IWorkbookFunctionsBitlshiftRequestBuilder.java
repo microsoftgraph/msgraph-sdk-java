@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsBitlshiftRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitlshiftRequest instance
      */
-    IWorkbookFunctionsBitlshiftRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsBitlshiftRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

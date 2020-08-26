@@ -29,7 +29,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TeamsAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class TeamsAppRequestBuilder extends BaseRequestBuilder implements ITeams
      * @param requestOptions the options for this request
      * @return the ITeamsAppRequest instance
      */
-    public ITeamsAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITeamsAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

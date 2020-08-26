@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsFactDoubleRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFactDoubleRequest instance
      */
-    IWorkbookFunctionsFactDoubleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsFactDoubleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

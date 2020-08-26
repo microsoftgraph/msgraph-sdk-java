@@ -28,7 +28,7 @@ public interface ITokenIssuancePolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITokenIssuancePolicyRequest instance
      */
-    ITokenIssuancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITokenIssuancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

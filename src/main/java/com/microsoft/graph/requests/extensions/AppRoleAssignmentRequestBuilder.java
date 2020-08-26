@@ -25,7 +25,7 @@ public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AppRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AppRoleAssignmentRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IAppRoleAssignmentRequest instance
      */
-    public IAppRoleAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAppRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

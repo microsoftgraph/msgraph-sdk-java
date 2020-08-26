@@ -29,7 +29,7 @@ public interface ITermsAndConditionsAcceptanceStatusRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the ITermsAndConditionsAcceptanceStatusRequest instance
      */
-    ITermsAndConditionsAcceptanceStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITermsAndConditionsAcceptanceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

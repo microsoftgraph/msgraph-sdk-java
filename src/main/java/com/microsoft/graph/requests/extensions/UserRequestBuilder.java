@@ -197,7 +197,7 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -216,7 +216,7 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

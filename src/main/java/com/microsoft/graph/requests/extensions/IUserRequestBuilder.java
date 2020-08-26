@@ -118,7 +118,7 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    IUserRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments();

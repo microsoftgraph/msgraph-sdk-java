@@ -28,7 +28,7 @@ public interface IReferenceAttachmentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IReferenceAttachmentRequest instance
      */
-    IReferenceAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReferenceAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

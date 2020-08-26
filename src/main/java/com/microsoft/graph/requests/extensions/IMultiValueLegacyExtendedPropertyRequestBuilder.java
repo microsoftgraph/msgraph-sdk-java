@@ -28,7 +28,7 @@ public interface IMultiValueLegacyExtendedPropertyRequestBuilder extends IReques
      * @param requestOptions the options for this request
      * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
-    IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

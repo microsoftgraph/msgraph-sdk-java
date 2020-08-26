@@ -28,7 +28,7 @@ public interface IHomeRealmDiscoveryPolicyRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IHomeRealmDiscoveryPolicyRequest instance
      */
-    IHomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IHomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

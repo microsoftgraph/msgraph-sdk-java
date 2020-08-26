@@ -28,7 +28,7 @@ public interface IWindows10EndpointProtectionConfigurationRequestBuilder extends
      * @param requestOptions the options for this request
      * @return the IWindows10EndpointProtectionConfigurationRequest instance
      */
-    IWindows10EndpointProtectionConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows10EndpointProtectionConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,5 +28,5 @@ public interface IReportRootGetOffice365ActiveUserCountsRequestBuilder extends I
      * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActiveUserCountsRequest instance
      */
-    IReportRootGetOffice365ActiveUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetOffice365ActiveUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

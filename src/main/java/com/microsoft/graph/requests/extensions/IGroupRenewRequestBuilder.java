@@ -28,5 +28,5 @@ public interface IGroupRenewRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IGroupRenewRequest instance
      */
-    IGroupRenewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupRenewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

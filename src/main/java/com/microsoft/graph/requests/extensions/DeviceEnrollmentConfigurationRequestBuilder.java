@@ -34,7 +34,7 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceEnrollmentConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -53,7 +53,7 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentConfigurationRequest instance
      */
-    public IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceEnrollmentConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

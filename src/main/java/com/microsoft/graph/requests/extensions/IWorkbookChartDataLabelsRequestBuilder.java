@@ -29,7 +29,7 @@ public interface IWorkbookChartDataLabelsRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IWorkbookChartDataLabelsRequest instance
      */
-    IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

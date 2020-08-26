@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsWorkDay_IntlRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWorkDay_IntlRequest instance
      */
-    IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsWorkDay_IntlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

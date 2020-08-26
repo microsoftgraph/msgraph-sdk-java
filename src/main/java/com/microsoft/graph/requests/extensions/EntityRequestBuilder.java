@@ -25,7 +25,7 @@ public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EntityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class EntityRequestBuilder extends BaseRequestBuilder implements IEntityR
      * @param requestOptions the options for this request
      * @return the IEntityRequest instance
      */
-    public IEntityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEntityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EntityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

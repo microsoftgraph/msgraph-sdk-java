@@ -28,7 +28,7 @@ public interface INamedLocationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the INamedLocationRequest instance
      */
-    INamedLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -25,7 +25,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequestBuilder e
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EnterpriseModernAppManagementConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public Windows10EnterpriseModernAppManagementConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequestBuilder e
      * @param requestOptions the options for this request
      * @return the IWindows10EnterpriseModernAppManagementConfigurationRequest instance
      */
-    public IWindows10EnterpriseModernAppManagementConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindows10EnterpriseModernAppManagementConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Windows10EnterpriseModernAppManagementConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,7 +28,7 @@ public interface IOnenoteOperationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenoteOperationRequest instance
      */
-    IOnenoteOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

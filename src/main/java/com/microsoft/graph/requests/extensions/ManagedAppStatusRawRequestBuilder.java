@@ -25,7 +25,7 @@ public class ManagedAppStatusRawRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppStatusRawRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedAppStatusRawRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ManagedAppStatusRawRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IManagedAppStatusRawRequest instance
      */
-    public IManagedAppStatusRawRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedAppStatusRawRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppStatusRawRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

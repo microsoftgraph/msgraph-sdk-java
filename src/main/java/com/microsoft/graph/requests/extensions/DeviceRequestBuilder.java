@@ -45,7 +45,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -64,7 +64,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
      * @param requestOptions the options for this request
      * @return the IDeviceRequest instance
      */
-    public IDeviceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

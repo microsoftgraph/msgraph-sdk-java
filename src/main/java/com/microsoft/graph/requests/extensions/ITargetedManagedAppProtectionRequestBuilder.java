@@ -32,7 +32,7 @@ public interface ITargetedManagedAppProtectionRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the ITargetedManagedAppProtectionRequest instance
      */
-    ITargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITargetedManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();

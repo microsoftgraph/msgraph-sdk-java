@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -31,7 +31,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionR
      * @param ids the ids
      * @param types the types
      */
-    public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
+    public DirectoryObjectGetByIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> ids, final java.util.List<String> types) {
         super(requestUrl, client, requestOptions);
   	 if(ids!=null){
 			bodyParams.put("ids", ids);
@@ -45,7 +45,7 @@ public class DirectoryObjectGetByIdsCollectionRequestBuilder extends BaseActionR
         return buildRequest(getOptions());
     }
 
-    public IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryObjectGetByIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DirectoryObjectGetByIdsCollectionRequest request = new DirectoryObjectGetByIdsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

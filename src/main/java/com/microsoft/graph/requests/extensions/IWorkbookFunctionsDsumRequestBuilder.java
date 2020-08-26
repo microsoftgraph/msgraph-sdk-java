@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDsumRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDsumRequest instance
      */
-    IWorkbookFunctionsDsumRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDsumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

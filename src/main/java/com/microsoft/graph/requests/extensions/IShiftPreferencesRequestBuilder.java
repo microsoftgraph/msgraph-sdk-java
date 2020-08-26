@@ -28,7 +28,7 @@ public interface IShiftPreferencesRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IShiftPreferencesRequest instance
      */
-    IShiftPreferencesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IShiftPreferencesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

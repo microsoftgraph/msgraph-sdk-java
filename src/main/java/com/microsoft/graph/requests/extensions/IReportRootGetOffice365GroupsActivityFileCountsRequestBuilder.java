@@ -28,5 +28,5 @@ public interface IReportRootGetOffice365GroupsActivityFileCountsRequestBuilder e
      * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365GroupsActivityFileCountsRequest instance
      */
-    IReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetOffice365GroupsActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

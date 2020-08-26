@@ -28,7 +28,7 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedAppPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +47,7 @@ public class ManagedAppPolicyRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IManagedAppPolicyRequest instance
      */
-    public IManagedAppPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedAppPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

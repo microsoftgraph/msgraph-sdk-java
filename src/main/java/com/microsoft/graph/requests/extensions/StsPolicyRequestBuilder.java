@@ -29,7 +29,7 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public StsPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public StsPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
      * @param requestOptions the options for this request
      * @return the IStsPolicyRequest instance
      */
-    public IStsPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IStsPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new StsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -62,7 +62,7 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDriveItemRequest instance
      */
-    IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDriveItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     /**
      * Gets the item request builder for the specified item path

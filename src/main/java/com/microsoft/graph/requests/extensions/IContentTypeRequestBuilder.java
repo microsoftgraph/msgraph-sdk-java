@@ -30,7 +30,7 @@ public interface IContentTypeRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IContentTypeRequest instance
      */
-    IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IContentTypeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IColumnLinkCollectionRequestBuilder columnLinks();

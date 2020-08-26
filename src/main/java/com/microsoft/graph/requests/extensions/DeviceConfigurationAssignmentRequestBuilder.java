@@ -25,7 +25,7 @@ public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceConfigurationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceConfigurationAssignmentRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationAssignmentRequest instance
      */
-    public IDeviceConfigurationAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IReportRootGetOffice365ActivationCountsRequestBuilder extends I
      * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActivationCountsRequest instance
      */
-    IReportRootGetOffice365ActivationCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetOffice365ActivationCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

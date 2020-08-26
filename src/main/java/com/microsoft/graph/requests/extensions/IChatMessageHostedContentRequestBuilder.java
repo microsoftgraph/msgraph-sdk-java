@@ -29,7 +29,7 @@ public interface IChatMessageHostedContentRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IChatMessageHostedContentRequest instance
      */
-    IChatMessageHostedContentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IChatMessageHostedContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IChatMessageHostedContentStreamRequestBuilder content();

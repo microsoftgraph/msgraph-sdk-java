@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsNorm_DistRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNorm_DistRequest instance
      */
-    IWorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsNorm_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

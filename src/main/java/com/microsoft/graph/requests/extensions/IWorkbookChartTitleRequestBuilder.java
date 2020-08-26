@@ -29,7 +29,7 @@ public interface IWorkbookChartTitleRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookChartTitleRequest instance
      */
-    IWorkbookChartTitleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartTitleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

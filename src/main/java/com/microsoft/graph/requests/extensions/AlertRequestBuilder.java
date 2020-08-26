@@ -25,7 +25,7 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AlertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AlertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * @param requestOptions the options for this request
      * @return the IAlertRequest instance
      */
-    public IAlertRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAlertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AlertRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

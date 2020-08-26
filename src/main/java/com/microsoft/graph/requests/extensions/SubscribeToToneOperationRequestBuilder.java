@@ -25,7 +25,7 @@ public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscribeToToneOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SubscribeToToneOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class SubscribeToToneOperationRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the ISubscribeToToneOperationRequest instance
      */
-    public ISubscribeToToneOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISubscribeToToneOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SubscribeToToneOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

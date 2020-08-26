@@ -25,7 +25,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdministrativeUnitRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AdministrativeUnitRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IAdministrativeUnitRequest instance
      */
-    public IAdministrativeUnitRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAdministrativeUnitRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AdministrativeUnitRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

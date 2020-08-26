@@ -30,7 +30,7 @@ public interface ISharedInsightRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISharedInsightRequest instance
      */
-    ISharedInsightRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISharedInsightRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

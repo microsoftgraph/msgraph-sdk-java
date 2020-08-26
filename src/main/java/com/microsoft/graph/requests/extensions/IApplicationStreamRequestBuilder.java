@@ -28,7 +28,7 @@ public interface IApplicationStreamRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IApplicationStreamRequest instance
      */
-    IApplicationStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApplicationStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -49,7 +49,7 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PostRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PostRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -68,7 +68,7 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
      * @param requestOptions the options for this request
      * @return the IPostRequest instance
      */
-    public IPostRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPostRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PostRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

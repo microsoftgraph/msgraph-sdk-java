@@ -28,5 +28,5 @@ public interface IGroupLifecyclePolicyRemoveGroupRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return the IGroupLifecyclePolicyRemoveGroupRequest instance
      */
-    IGroupLifecyclePolicyRemoveGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupLifecyclePolicyRemoveGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

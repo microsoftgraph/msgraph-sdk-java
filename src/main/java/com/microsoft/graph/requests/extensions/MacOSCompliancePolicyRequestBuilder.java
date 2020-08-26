@@ -25,7 +25,7 @@ public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MacOSCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MacOSCompliancePolicyRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IMacOSCompliancePolicyRequest instance
      */
-    public IMacOSCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMacOSCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MacOSCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

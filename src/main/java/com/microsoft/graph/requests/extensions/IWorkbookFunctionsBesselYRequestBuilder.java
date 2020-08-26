@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsBesselYRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBesselYRequest instance
      */
-    IWorkbookFunctionsBesselYRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsBesselYRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

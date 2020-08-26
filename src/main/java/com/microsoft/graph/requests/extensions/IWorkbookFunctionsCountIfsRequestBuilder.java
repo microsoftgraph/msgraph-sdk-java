@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsCountIfsRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCountIfsRequest instance
      */
-    IWorkbookFunctionsCountIfsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsCountIfsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -25,7 +25,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SoftwareUpdateStatusSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SoftwareUpdateStatusSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the ISoftwareUpdateStatusSummaryRequest instance
      */
-    public ISoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SoftwareUpdateStatusSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

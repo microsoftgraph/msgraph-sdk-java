@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +29,7 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemAnalyticsWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ItemAnalyticsWithReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +48,7 @@ public class ItemAnalyticsWithReferenceRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IItemAnalyticsWithReferenceRequest instance
      */
-    public IItemAnalyticsWithReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IItemAnalyticsWithReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemAnalyticsWithReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

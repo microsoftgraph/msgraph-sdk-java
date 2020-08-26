@@ -28,7 +28,7 @@ public interface IMacOSCompliancePolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMacOSCompliancePolicyRequest instance
      */
-    IMacOSCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOSCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

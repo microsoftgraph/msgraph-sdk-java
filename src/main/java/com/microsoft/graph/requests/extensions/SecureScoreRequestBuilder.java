@@ -25,7 +25,7 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecureScoreRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SecureScoreRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class SecureScoreRequestBuilder extends BaseRequestBuilder implements ISe
      * @param requestOptions the options for this request
      * @return the ISecureScoreRequest instance
      */
-    public ISecureScoreRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISecureScoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SecureScoreRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

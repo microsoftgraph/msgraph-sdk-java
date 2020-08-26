@@ -28,5 +28,5 @@ public interface IWorkbookRangeViewItemAtRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeViewItemAtRequest instance
      */
-    IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

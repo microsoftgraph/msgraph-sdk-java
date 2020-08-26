@@ -37,7 +37,7 @@ public interface ITargetedManagedAppConfigurationRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the ITargetedManagedAppConfigurationRequest instance
      */
-    ITargetedManagedAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITargetedManagedAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedMobileAppCollectionRequestBuilder apps();

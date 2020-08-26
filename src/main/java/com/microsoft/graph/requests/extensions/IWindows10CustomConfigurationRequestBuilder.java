@@ -28,7 +28,7 @@ public interface IWindows10CustomConfigurationRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IWindows10CustomConfigurationRequest instance
      */
-    IWindows10CustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows10CustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IAndroidGeneralDeviceConfigurationRequestBuilder extends IReque
      * @param requestOptions the options for this request
      * @return the IAndroidGeneralDeviceConfigurationRequest instance
      */
-    IAndroidGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

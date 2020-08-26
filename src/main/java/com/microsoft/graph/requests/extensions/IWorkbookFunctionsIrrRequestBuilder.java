@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsIrrRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIrrRequest instance
      */
-    IWorkbookFunctionsIrrRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsIrrRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

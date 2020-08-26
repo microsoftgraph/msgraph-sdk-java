@@ -30,7 +30,7 @@ public interface IWorkbookPivotTableRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookPivotTableRequest instance
      */
-    IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

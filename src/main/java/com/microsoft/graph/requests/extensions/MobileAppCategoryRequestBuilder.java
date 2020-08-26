@@ -25,7 +25,7 @@ public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppCategoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MobileAppCategoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MobileAppCategoryRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IMobileAppCategoryRequest instance
      */
-    public IMobileAppCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMobileAppCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

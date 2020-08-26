@@ -28,7 +28,7 @@ public interface ITelecomExpenseManagementPartnerRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the ITelecomExpenseManagementPartnerRequest instance
      */
-    ITelecomExpenseManagementPartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITelecomExpenseManagementPartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

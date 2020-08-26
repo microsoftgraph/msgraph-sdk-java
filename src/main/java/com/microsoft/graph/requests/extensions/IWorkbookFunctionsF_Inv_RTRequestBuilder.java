@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsF_Inv_RTRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsF_Inv_RTRequest instance
      */
-    IWorkbookFunctionsF_Inv_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsF_Inv_RTRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -44,7 +44,7 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -63,7 +63,7 @@ public class ManagedDeviceMobileAppConfigurationRequestBuilder extends BaseReque
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceMobileAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,7 +28,7 @@ public interface IAndroidCustomConfigurationRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IAndroidCustomConfigurationRequest instance
      */
-    IAndroidCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

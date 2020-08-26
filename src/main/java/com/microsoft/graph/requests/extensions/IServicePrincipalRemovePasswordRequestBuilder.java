@@ -28,5 +28,5 @@ public interface IServicePrincipalRemovePasswordRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IServicePrincipalRemovePasswordRequest instance
      */
-    IServicePrincipalRemovePasswordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IServicePrincipalRemovePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

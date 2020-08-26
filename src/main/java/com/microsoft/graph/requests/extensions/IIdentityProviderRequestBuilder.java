@@ -28,7 +28,7 @@ public interface IIdentityProviderRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIdentityProviderRequest instance
      */
-    IIdentityProviderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIdentityProviderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

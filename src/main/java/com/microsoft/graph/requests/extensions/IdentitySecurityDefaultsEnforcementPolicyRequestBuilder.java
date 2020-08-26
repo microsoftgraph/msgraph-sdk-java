@@ -25,7 +25,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IIdentitySecurityDefaultsEnforcementPolicyRequest instance
      */
-    public IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IdentitySecurityDefaultsEnforcementPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -27,7 +27,7 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public FileAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class FileAttachmentRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IFileAttachmentRequest instance
      */
-    public IFileAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IFileAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new FileAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

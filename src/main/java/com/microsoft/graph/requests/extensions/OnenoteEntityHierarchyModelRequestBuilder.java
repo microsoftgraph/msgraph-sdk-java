@@ -25,7 +25,7 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteEntityHierarchyModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnenoteEntityHierarchyModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class OnenoteEntityHierarchyModelRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IOnenoteEntityHierarchyModelRequest instance
      */
-    public IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOnenoteEntityHierarchyModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenoteEntityHierarchyModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

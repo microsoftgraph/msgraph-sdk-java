@@ -25,7 +25,7 @@ public class MacOSDeviceFeaturesConfigurationRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSDeviceFeaturesConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MacOSDeviceFeaturesConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MacOSDeviceFeaturesConfigurationRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IMacOSDeviceFeaturesConfigurationRequest instance
      */
-    public IMacOSDeviceFeaturesConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMacOSDeviceFeaturesConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MacOSDeviceFeaturesConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

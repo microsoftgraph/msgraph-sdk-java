@@ -28,7 +28,7 @@ public interface ICertificateBasedAuthConfigurationRequestBuilder extends IReque
      * @param requestOptions the options for this request
      * @return the ICertificateBasedAuthConfigurationRequest instance
      */
-    ICertificateBasedAuthConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICertificateBasedAuthConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

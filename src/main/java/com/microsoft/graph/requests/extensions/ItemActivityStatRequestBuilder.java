@@ -29,7 +29,7 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityStatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ItemActivityStatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class ItemActivityStatRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IItemActivityStatRequest instance
      */
-    public IItemActivityStatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IItemActivityStatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemActivityStatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

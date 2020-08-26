@@ -28,7 +28,7 @@ public interface IOutlookItemRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOutlookItemRequest instance
      */
-    IOutlookItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOutlookItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

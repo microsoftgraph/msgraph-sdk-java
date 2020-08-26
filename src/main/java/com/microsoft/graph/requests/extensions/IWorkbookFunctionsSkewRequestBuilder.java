@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsSkewRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSkewRequest instance
      */
-    IWorkbookFunctionsSkewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsSkewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -29,7 +29,7 @@ public interface IWorkbookApplicationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookApplicationRequest instance
      */
-    IWorkbookApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookApplicationCalculateRequestBuilder calculate(final String calculationType);
 

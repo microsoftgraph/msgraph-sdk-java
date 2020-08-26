@@ -30,7 +30,7 @@ public interface IThreatAssessmentRequestRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IThreatAssessmentRequestRequest instance
      */
-    IThreatAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IThreatAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IThreatAssessmentResultCollectionRequestBuilder results();

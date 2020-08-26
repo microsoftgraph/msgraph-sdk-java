@@ -30,7 +30,7 @@ public interface IUserActivityRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IUserActivityRequest instance
      */
-    IUserActivityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IActivityHistoryItemCollectionRequestBuilder historyItems();

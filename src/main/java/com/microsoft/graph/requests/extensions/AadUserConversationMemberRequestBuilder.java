@@ -27,7 +27,7 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AadUserConversationMemberRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AadUserConversationMemberRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class AadUserConversationMemberRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IAadUserConversationMemberRequest instance
      */
-    public IAadUserConversationMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAadUserConversationMemberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AadUserConversationMemberRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

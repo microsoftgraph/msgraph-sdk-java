@@ -28,7 +28,7 @@ public interface ISubscribedSkuRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISubscribedSkuRequest instance
      */
-    ISubscribedSkuRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISubscribedSkuRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

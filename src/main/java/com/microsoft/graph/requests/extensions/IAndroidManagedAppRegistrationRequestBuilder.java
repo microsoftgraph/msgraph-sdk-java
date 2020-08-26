@@ -28,7 +28,7 @@ public interface IAndroidManagedAppRegistrationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IAndroidManagedAppRegistrationRequest instance
      */
-    IAndroidManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

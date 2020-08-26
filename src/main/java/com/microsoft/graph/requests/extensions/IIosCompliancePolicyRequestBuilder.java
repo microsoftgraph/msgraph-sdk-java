@@ -28,7 +28,7 @@ public interface IIosCompliancePolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosCompliancePolicyRequest instance
      */
-    IIosCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

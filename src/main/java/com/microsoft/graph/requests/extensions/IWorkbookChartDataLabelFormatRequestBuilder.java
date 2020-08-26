@@ -30,7 +30,7 @@ public interface IWorkbookChartDataLabelFormatRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IWorkbookChartDataLabelFormatRequest instance
      */
-    IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

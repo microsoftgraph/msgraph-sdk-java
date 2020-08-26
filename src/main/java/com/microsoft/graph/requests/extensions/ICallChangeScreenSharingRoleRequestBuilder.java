@@ -28,5 +28,5 @@ public interface ICallChangeScreenSharingRoleRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the ICallChangeScreenSharingRoleRequest instance
      */
-    ICallChangeScreenSharingRoleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICallChangeScreenSharingRoleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

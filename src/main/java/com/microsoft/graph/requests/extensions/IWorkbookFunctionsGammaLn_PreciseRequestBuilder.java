@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsGammaLn_PreciseRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGammaLn_PreciseRequest instance
      */
-    IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsGammaLn_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

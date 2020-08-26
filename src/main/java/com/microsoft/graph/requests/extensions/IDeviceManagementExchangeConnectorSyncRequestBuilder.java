@@ -28,5 +28,5 @@ public interface IDeviceManagementExchangeConnectorSyncRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the IDeviceManagementExchangeConnectorSyncRequest instance
      */
-    IDeviceManagementExchangeConnectorSyncRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceManagementExchangeConnectorSyncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

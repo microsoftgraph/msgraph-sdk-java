@@ -30,7 +30,7 @@ public interface IAppCatalogsRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAppCatalogsRequest instance
      */
-    IAppCatalogsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAppCatalogsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ITeamsAppCollectionRequestBuilder teamsApps();

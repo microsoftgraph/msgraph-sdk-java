@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDeltaRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDeltaRequest instance
      */
-    IWorkbookFunctionsDeltaRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDeltaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IReportRootGetSharePointActivityFileCountsRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityFileCountsRequest instance
      */
-    IReportRootGetSharePointActivityFileCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetSharePointActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

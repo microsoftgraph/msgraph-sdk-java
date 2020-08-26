@@ -30,7 +30,7 @@ public interface IDeviceComplianceScheduledActionForRuleRequestBuilder extends I
      * @param requestOptions the options for this request
      * @return the IDeviceComplianceScheduledActionForRuleRequest instance
      */
-    IDeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceComplianceActionItemCollectionRequestBuilder scheduledActionConfigurations();

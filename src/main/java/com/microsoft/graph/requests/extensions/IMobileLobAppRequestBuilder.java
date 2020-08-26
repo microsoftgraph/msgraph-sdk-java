@@ -30,7 +30,7 @@ public interface IMobileLobAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMobileLobAppRequest instance
      */
-    IMobileLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileLobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IMobileAppContentCollectionRequestBuilder contentVersions();

@@ -29,7 +29,7 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoomListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public RoomListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * @param requestOptions the options for this request
      * @return the IRoomListRequest instance
      */
-    public IRoomListRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRoomListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RoomListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

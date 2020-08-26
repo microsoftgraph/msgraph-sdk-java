@@ -25,7 +25,7 @@ public class EventMessageResponseRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventMessageResponseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EventMessageResponseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class EventMessageResponseRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IEventMessageResponseRequest instance
      */
-    public IEventMessageResponseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEventMessageResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EventMessageResponseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

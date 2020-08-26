@@ -28,7 +28,7 @@ public interface IManagedAppConfigurationRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IManagedAppConfigurationRequest instance
      */
-    IManagedAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

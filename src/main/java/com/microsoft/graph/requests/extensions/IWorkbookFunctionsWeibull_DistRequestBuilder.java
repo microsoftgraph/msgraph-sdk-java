@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsWeibull_DistRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWeibull_DistRequest instance
      */
-    IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsWeibull_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

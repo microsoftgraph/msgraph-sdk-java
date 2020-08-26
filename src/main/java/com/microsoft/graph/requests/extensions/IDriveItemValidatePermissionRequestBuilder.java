@@ -28,5 +28,5 @@ public interface IDriveItemValidatePermissionRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IDriveItemValidatePermissionRequest instance
      */
-    IDriveItemValidatePermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDriveItemValidatePermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

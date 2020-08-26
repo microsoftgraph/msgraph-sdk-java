@@ -28,7 +28,7 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequestBui
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest instance
      */
-    IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,5 +28,5 @@ public interface IOnenoteSectionCopyToNotebookRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IOnenoteSectionCopyToNotebookRequest instance
      */
-    IOnenoteSectionCopyToNotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteSectionCopyToNotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

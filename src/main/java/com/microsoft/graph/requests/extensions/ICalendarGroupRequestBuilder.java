@@ -30,7 +30,7 @@ public interface ICalendarGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICalendarGroupRequest instance
      */
-    ICalendarGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICalendarGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ICalendarCollectionRequestBuilder calendars();

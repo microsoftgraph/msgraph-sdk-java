@@ -28,5 +28,5 @@ public interface IWorkbookRangeLastCellRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeLastCellRequest instance
      */
-    IWorkbookRangeLastCellRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeLastCellRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

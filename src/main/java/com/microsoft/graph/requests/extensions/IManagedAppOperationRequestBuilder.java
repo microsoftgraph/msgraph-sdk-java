@@ -28,7 +28,7 @@ public interface IManagedAppOperationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedAppOperationRequest instance
      */
-    IManagedAppOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

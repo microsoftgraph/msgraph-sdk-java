@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +29,7 @@ public class EntityReferenceRequest extends BaseRequest implements IEntityRefere
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntityReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public EntityReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
@@ -49,7 +48,7 @@ public class EntityReferenceRequest extends BaseRequest implements IEntityRefere
      * @return the updated request
      */
     public IEntityReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EntityReferenceRequest)this;
     }
 
@@ -60,7 +59,7 @@ public class EntityReferenceRequest extends BaseRequest implements IEntityRefere
      * @return the updated request
      */
     public IEntityReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EntityReferenceRequest)this;
     }
     /**

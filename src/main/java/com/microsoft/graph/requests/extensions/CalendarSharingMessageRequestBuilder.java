@@ -27,7 +27,7 @@ public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarSharingMessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CalendarSharingMessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class CalendarSharingMessageRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the ICalendarSharingMessageRequest instance
      */
-    public ICalendarSharingMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICalendarSharingMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CalendarSharingMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,7 +28,7 @@ public interface IManagedAppPolicyDeploymentSummaryRequestBuilder extends IReque
      * @param requestOptions the options for this request
      * @return the IManagedAppPolicyDeploymentSummaryRequest instance
      */
-    IManagedAppPolicyDeploymentSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppPolicyDeploymentSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

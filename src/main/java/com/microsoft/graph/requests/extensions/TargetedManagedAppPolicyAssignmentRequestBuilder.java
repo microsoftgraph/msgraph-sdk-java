@@ -25,7 +25,7 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppPolicyAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TargetedManagedAppPolicyAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class TargetedManagedAppPolicyAssignmentRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the ITargetedManagedAppPolicyAssignmentRequest instance
      */
-    public ITargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TargetedManagedAppPolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
