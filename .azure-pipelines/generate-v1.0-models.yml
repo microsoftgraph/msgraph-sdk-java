@@ -84,7 +84,7 @@ steps:
   inputs:
     targetType: inline
     script: |
-      $mainDir = Join-Path $repoDir "\src\main\"
+      $mainDir = Join-Path $env:repoDir "\src\main\"
       $extensionsAndGeneratedDirectories = Get-ChildItem $mainDir -Include extensions,generated -Recurse -Directory
 
       # this list should be updated if a new hand-crafted extension is added to one of the extensions/ directories
