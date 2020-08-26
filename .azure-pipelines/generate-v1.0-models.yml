@@ -124,7 +124,7 @@ steps:
       $comDirectory = Join-Path $env:outputPath "\com\"
 
       # Path to the destination directory
-      $comDestinationDirectory Join-Path $env:repoModelsDir "\src\main\java\"
+      $comDestinationDirectory = Join-Path $env:repoModelsDir "\src\main\java\"
 
       # copies com/ directory to java SDK repo, by following all the recursive paths
       Copy-Item $comDirectory -Destination $comTargetDirectory -Recurse -Force
