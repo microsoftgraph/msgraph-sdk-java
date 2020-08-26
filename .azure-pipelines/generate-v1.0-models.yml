@@ -57,7 +57,7 @@ steps:
       Write-Host "Path to clean metadata $cleanMetadata"
       Write-Host "##vso[task.setvariable variable=cleanMetadata]$cleanMetadata"
 
-      $branchName = "zengin/namespacesJava" # Match the spec in the GH Action
+      $branchName = "zengin/namespacesJava2" # Match the spec in the GH Action
       Write-Host "Branch path spec for the pull request will be $branchName"
       Write-Host "##vso[task.setvariable variable=branchName]$branchName"
 
@@ -84,7 +84,8 @@ steps:
   inputs:
     targetType: inline
     script: |
-      $extensionsAndGeneratedDirectories = Get-ChildItem $repoDir -Include extensions,generated -Recurse -Directory
+      $mainDir = Join-Path $repoDir "\src\main\"
+      $extensionsAndGeneratedDirectories = Get-ChildItem $mainDir -Include extensions,generated -Recurse -Directory
 
       # this list should be updated if a new hand-crafted extension is added to one of the extensions/ directories
       $filesThatShouldNotBeDeleted = "UploadSession.java","DateOnly.java","TimeOfDay.java","Multipart.java","ChunkedUploadRequest.java","ChunkedUploadResult.java","CustomRequestBuilder.java"
@@ -92,7 +93,7 @@ steps:
       {
           Remove-Item $directory.FullName -Recurse -Force -Exclude $filesThatShouldNotBeDeleted
       }
-      Write-Host "Removed the existing generated files in the repo: $repoDir" -ForegroundColor Green
+      Write-Host "Removed the existing generated files in the repo's main directory: $mainDir" -ForegroundColor Green
   enabled: true # The old GUI pipeline wasn't doing this. I recall that there was a reason
   # for this but I can't recall the reason but I think it was related to reducing number of
   # generated files.
