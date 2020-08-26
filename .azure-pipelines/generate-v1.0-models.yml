@@ -12,7 +12,7 @@ resources:
     type: github
     endpoint: microsoftgraph
     name: microsoftgraph/msgraph-sdk-java
-    ref: dev # checkout the dev branch
+    ref: zengin/namespacesRelease # checkout the dev branch
   - repository: msgraph-metadata
     type: github
     endpoint: microsoftgraph
@@ -45,16 +45,9 @@ steps:
   inputs:
     targetType: inline
     script: |
-      
-      $repoModelsDir = "$env:Build_SourcesDirectory\msgraph-sdk-java\src\main\java\com\microsoft\graph\models\generated\"
-      $repoModelsExtensionDir = "$env:Build_SourcesDirectory\msgraph-sdk-java\src\main\java\com\microsoft\graph\models\extensions\"
-      $repoRequestExtensionDir = "$env:Build_SourcesDirectory\msgraph-sdk-java\src\main\java\com\microsoft\graph\requests\extensions\"
-      Write-Host "Path to repo model directory: $repoModelsDir"
-      Write-Host "Path to repo model extension directory: $repoModelsExtensionDir"
-      Write-Host "Path to repo request directory: $repoRequestExtensionDir"
-      Write-Host "##vso[task.setvariable variable=repoModelsDir]$repoModelsDir"
-      Write-Host "##vso[task.setvariable variable=repoModelsExtensionDir]$repoModelsExtensionDir"
-      Write-Host "##vso[task.setvariable variable=repoRequestExtensionDir]$repoRequestExtensionDir"
+      $repoDir = "$env:Build_SourcesDirectory\msgraph-sdk-java\"
+      Write-Host "Path to java repository: $repoDir"
+      Write-Host "##vso[task.setvariable variable=repoDir]$repoDir"
 
       $outputPath = Join-Path $env:Build_SourcesDirectory "output"
       Write-Host "Path to typewriter.exe output $outputPath"
@@ -64,7 +57,7 @@ steps:
       Write-Host "Path to clean metadata $cleanMetadata"
       Write-Host "##vso[task.setvariable variable=cleanMetadata]$cleanMetadata"
 
-      $branchName = "v1.0/pipelinebuild/$env:Build_BuildId" # Match the spec in the GH Action
+      $branchName = "zengin/namespacesJava" # Match the spec in the GH Action
       Write-Host "Branch path spec for the pull request will be $branchName"
       Write-Host "##vso[task.setvariable variable=branchName]$branchName"
 
@@ -100,11 +93,16 @@ steps:
   inputs:
     targetType: inline
     script: |
-      Remove-Item -Recurse $env:repoModelsDir | Write-Host
-      Remove-Item -Recurse $env:repoModelsExtensionDir | Write-Host
-      Remove-Item -Recurse $env:repoRequestExtensionDir | Write-Host
-      Write-Host "Removed the existing generated files in the repo." -ForegroundColor Green
-  enabled: false # The old GUI pipeline wasn't doing this. I recall that there was a reason
+      $extensionsAndGeneratedDirectories = Get-ChildItem $repoDir -Include extensions,generated -Recurse -Directory
+
+      # this list should be updated if a new hand crafted extension which is added to one of the extensions/ directories
+      $fileNamesThatShouldNotBeDeleted = "UploadSession.java","DateOnly.java","TimeOfDay.java","Multipart.java","ChunkedUploadRequest.java","ChunkedUploadResult.java","CustomRequestBuilder.java"
+      foreach ($directory in $extensionsAndGeneratedDirectories)
+      {
+          Remove-Item $directory.FullName -Recurse -Force -Exclude $fileNamesThatShouldNotBeDeleted
+      }
+      Write-Host "Removed the existing generated files in the repo: $repoDir" -ForegroundColor Green
+  enabled: true # The old GUI pipeline wasn't doing this. I recall that there was a reason
   # for this but I can't recall the reason but I think it was related to reducing number of
   # generated files.
 
@@ -123,21 +121,14 @@ steps:
     targetType: inline
     script: |
       # Path to typewriter output
-      $modelsDirectory = Join-Path $env:outputPath "\com\microsoft\graph\models\generated\*"
-      $modelsExtensionsDirectory = Join-Path $env:outputPath "\com\microsoft\graph\models\extensions\*"
-      $requestsExtensionsDirectory = Join-Path $env:outputPath "\com\microsoft\graph\requests\extensions\*"
+      $comDirectory = Join-Path $env:outputPath "\com\"
 
-      # models\generated - excluding Base* should not be necessary as those files shouldn't be generated. 
-      Copy-Item $modelsDirectory -Destination $env:repoModelsDir -Exclude Base*
-      Write-Host "Copied the generated models\generated files into the repo. Excluded Base* files." -ForegroundColor Green
+      # Path to the destination directory
+      $comDestinationDirectory Join-Path $env:repoModelsDir "\src\main\java\"
 
-      # models\extensions
-      Copy-Item $modelsExtensionsDirectory -Destination $env:repoModelsExtensionDir
-      Write-Host "Copied the generated models\extensions files into the repo." -ForegroundColor Green
-      
-      # requests\extensions
-      Copy-Item $requestsExtensionsDirectory -Destination $env:repoRequestExtensionDir
-      Write-Host "Copied the generated requests\extensions files into the repo." -ForegroundColor Green
+      # copies com/ directory to java SDK repo, by following all the recursive paths
+      Copy-Item $comDirectory -Destination $comTargetDirectory -Recurse -Force
+      Write-Host "Copied the generated com\ files into the repo." -ForegroundColor Green
 
 - task: PowerShell@2
   displayName: 'Git: stage and commit generated files'
