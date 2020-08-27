@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequest;
-import com.microsoft.graph.requests.extensions.ItemAnalyticsRequest;
-import com.microsoft.graph.models.extensions.ItemAnalytics;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ItemAnalytics;
+import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

@@ -3,12 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IEducationUserRequest;
-import com.microsoft.graph.requests.extensions.EducationUserRequest;
-import com.microsoft.graph.models.extensions.EducationUser;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.EducationUser;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

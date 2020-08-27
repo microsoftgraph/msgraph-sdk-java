@@ -3,12 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISecurityRequest;
-import com.microsoft.graph.requests.extensions.SecurityRequest;
-import com.microsoft.graph.models.extensions.Security;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Security;
+import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
+import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AlertRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

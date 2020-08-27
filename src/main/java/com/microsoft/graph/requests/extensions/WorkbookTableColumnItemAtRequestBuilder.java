@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookTableColumnItemAtRequest;
-
+import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

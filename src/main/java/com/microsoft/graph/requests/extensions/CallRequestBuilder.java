@@ -3,56 +3,39 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICallRequest;
-import com.microsoft.graph.requests.extensions.CallRequest;
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
-import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.CommsOperationRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Call;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
-import com.microsoft.graph.requests.extensions.ICallAnswerRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallAnswerRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallCancelMediaProcessingRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallCancelMediaProcessingRequestBuilder;
+import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
 import com.microsoft.graph.models.generated.ScreenSharingRole;
-import com.microsoft.graph.requests.extensions.ICallChangeScreenSharingRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallChangeScreenSharingRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallKeepAliveRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallKeepAliveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallMuteRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallMuteRequestBuilder;
+import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.models.extensions.Prompt;
-import com.microsoft.graph.requests.extensions.ICallPlayPromptRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallPlayPromptRequestBuilder;
-import com.microsoft.graph.models.extensions.Prompt;
-import com.microsoft.graph.requests.extensions.ICallRecordResponseRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallRecordResponseRequestBuilder;
+import com.microsoft.graph.models.extensions.PlayPromptOperation;
+import com.microsoft.graph.models.extensions.RecordOperation;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
-import com.microsoft.graph.requests.extensions.ICallRedirectRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallRedirectRequestBuilder;
 import com.microsoft.graph.models.generated.RejectReason;
-import com.microsoft.graph.requests.extensions.ICallRejectRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallRejectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallSubscribeToToneRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallSubscribeToToneRequestBuilder;
-import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
-import com.microsoft.graph.requests.extensions.ICallTransferRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallTransferRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallUnmuteRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallUnmuteRequestBuilder;
+import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
+import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.models.generated.RecordingStatus;
-import com.microsoft.graph.requests.extensions.ICallUpdateRecordingStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.CallUpdateRecordingStatusRequestBuilder;
-
+import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
+import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CommsOperationRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.options.Option;
-import java.util.EnumSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -87,8 +70,8 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
      * @param requestOptions the options for this request
      * @return the ICallRequest instance
      */
-    public ICallRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        return new CallRequest(getRequestUrl(), getClient(), requestOptions);
+    public ICallRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+        return new com.microsoft.graph.requests.extensions.CallRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -159,4 +142,3 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
         return new CallUpdateRecordingStatusRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateRecordingStatus"), getClient(), null, status, clientContext);
     }
 }
-

@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.INotebookGetNotebookFromWebUrlRequest;
 import com.microsoft.graph.requests.extensions.NotebookGetNotebookFromWebUrlRequest;
-
+import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

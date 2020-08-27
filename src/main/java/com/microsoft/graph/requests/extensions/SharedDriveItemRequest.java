@@ -3,12 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ISharedDriveItemRequest;
-import com.microsoft.graph.requests.extensions.SharedDriveItemRequest;
-import com.microsoft.graph.models.extensions.SharedDriveItem;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.SharedDriveItem;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

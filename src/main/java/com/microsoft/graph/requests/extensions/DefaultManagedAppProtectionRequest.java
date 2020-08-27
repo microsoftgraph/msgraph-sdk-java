@@ -3,12 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionRequest;
-import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionRequest;
-import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
+import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

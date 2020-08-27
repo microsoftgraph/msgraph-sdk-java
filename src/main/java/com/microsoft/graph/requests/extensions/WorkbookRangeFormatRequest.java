@@ -3,12 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequest;
-import com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequest;
-import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeFillRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeFontRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookFormatProtectionRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

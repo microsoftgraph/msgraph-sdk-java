@@ -3,12 +3,32 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequest;
-import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequest;
-import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
+import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookNamedItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookPivotTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookTableRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookWorksheetProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetProtectionRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

@@ -6,6 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IParticipantInviteRequest;
 import com.microsoft.graph.requests.extensions.ParticipantInviteRequest;
 import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
+import com.microsoft.graph.models.extensions.InviteParticipantsOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

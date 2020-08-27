@@ -3,12 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOutlookUserRequest;
-import com.microsoft.graph.requests.extensions.OutlookUserRequest;
-import com.microsoft.graph.models.extensions.OutlookUser;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OutlookUser;
+import com.microsoft.graph.models.extensions.LocaleInfo;
+import com.microsoft.graph.models.extensions.TimeZoneInformation;
+import com.microsoft.graph.models.generated.TimeZoneStandard;
+import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

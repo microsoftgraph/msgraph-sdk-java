@@ -3,12 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IUsedInsightRequest;
-import com.microsoft.graph.requests.extensions.UsedInsightRequest;
-import com.microsoft.graph.models.extensions.UsedInsight;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.UsedInsight;
+import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
+import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

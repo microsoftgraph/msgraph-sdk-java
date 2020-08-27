@@ -3,12 +3,29 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartRequest;
-import com.microsoft.graph.models.extensions.WorkbookChart;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookChart;
+import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartSeriesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartAxesRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartAxesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartDataLabelsRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartDataLabelsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartAreaFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartAreaFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartLegendRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartLegendRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartTitleRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartTitleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

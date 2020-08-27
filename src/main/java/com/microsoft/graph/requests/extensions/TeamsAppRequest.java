@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamsAppRequest;
-import com.microsoft.graph.requests.extensions.TeamsAppRequest;
-import com.microsoft.graph.models.extensions.TeamsApp;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.TeamsApp;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

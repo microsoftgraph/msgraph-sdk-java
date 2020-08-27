@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryRequest;
-import com.microsoft.graph.requests.extensions.DeviceCompliancePolicySettingStateSummaryRequest;
-import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingStateSummary;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceSettingStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceSettingStateRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

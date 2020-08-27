@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionRequest;
-import com.microsoft.graph.requests.extensions.RoleDefinitionRequest;
-import com.microsoft.graph.models.extensions.RoleDefinition;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.RoleDefinition;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

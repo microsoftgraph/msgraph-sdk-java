@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentRequest;
-import com.microsoft.graph.requests.extensions.WorkbookCommentRequest;
-import com.microsoft.graph.models.extensions.WorkbookComment;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookComment;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentReplyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentReplyRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentReplyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentReplyRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
