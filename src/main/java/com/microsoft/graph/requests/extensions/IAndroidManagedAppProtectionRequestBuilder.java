@@ -36,6 +36,10 @@ public interface IAndroidManagedAppProtectionRequestBuilder extends IRequestBuil
     IAndroidManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
+
+    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
+
     IManagedMobileAppCollectionRequestBuilder apps();
 
     IManagedMobileAppRequestBuilder apps(final String id);
@@ -46,9 +50,5 @@ public interface IAndroidManagedAppProtectionRequestBuilder extends IRequestBuil
      * @return the IManagedAppPolicyDeploymentSummaryRequestBuilder instance
      */
     IManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary();
-
-    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
-
-    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
 
 }

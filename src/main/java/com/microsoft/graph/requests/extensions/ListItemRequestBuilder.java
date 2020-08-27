@@ -64,6 +64,24 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
 
 
     /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the IItemAnalyticsWithReferenceRequestBuilder instance
@@ -95,24 +113,6 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
 
     public IListItemVersionRequestBuilder versions(final String id) {
         return new ListItemVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    public IUserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     public IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {

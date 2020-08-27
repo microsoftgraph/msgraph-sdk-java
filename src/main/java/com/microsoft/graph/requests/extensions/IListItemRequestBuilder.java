@@ -40,6 +40,20 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
 
 
     /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the IItemAnalyticsWithReferenceRequestBuilder instance
@@ -63,20 +77,6 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
     IListItemVersionCollectionRequestBuilder versions();
 
     IListItemVersionRequestBuilder versions(final String id);
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder createdByUser();
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     IListItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
 

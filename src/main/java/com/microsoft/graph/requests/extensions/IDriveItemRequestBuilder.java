@@ -60,6 +60,20 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemRequestBuilder itemWithPath(final String path);
 
     /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
+
+    /**
      * Gets the request builder for Workbook
      *
      * @return the IWorkbookRequestBuilder instance
@@ -99,20 +113,6 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemVersionCollectionRequestBuilder versions();
 
     IDriveItemVersionRequestBuilder versions(final String id);
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder createdByUser();
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     IDriveItemContentStreamRequestBuilder content();
     IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment);

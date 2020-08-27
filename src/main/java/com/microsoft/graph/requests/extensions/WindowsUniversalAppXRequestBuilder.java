@@ -51,6 +51,20 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
     }
 
 
+    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+        return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
+    }
+
+    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+        return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
+    }
+    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+        return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+        return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
     public IMobileAppContentCollectionRequestBuilder contentVersions() {
         return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
     }

@@ -35,10 +35,6 @@ public interface IMobileLobAppRequestBuilder extends IRequestBuilder {
     IMobileLobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IMobileAppContentCollectionRequestBuilder contentVersions();
-
-    IMobileAppContentRequestBuilder contentVersions(final String id);
-
     IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
 
     IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
@@ -46,5 +42,9 @@ public interface IMobileLobAppRequestBuilder extends IRequestBuilder {
     IMobileAppAssignmentCollectionRequestBuilder assignments();
 
     IMobileAppAssignmentRequestBuilder assignments(final String id);
+
+    IMobileAppContentCollectionRequestBuilder contentVersions();
+
+    IMobileAppContentRequestBuilder contentVersions(final String id);
 
 }

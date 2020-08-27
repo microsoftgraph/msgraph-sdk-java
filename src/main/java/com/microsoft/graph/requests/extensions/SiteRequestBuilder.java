@@ -82,6 +82,24 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
 
 
     /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the IItemAnalyticsWithReferenceRequestBuilder instance
@@ -148,24 +166,6 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    public IUserWithReferenceRequestBuilder createdByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
     public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval() {

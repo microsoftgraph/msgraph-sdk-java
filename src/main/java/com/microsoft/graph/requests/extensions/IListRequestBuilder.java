@@ -42,6 +42,20 @@ public interface IListRequestBuilder extends IRequestBuilder {
     IListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
+
     IColumnDefinitionCollectionRequestBuilder columns();
 
     IColumnDefinitionRequestBuilder columns(final String id);
@@ -64,19 +78,5 @@ public interface IListRequestBuilder extends IRequestBuilder {
     ISubscriptionCollectionRequestBuilder subscriptions();
 
     ISubscriptionRequestBuilder subscriptions(final String id);
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder createdByUser();
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
 }

@@ -33,4 +33,34 @@ public interface IIosDeviceFeaturesConfigurationRequestBuilder extends IRequestB
     IIosDeviceFeaturesConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IDeviceConfigurationAssignmentCollectionRequestBuilder assignments();
+
+    IDeviceConfigurationAssignmentRequestBuilder assignments(final String id);
+
+    IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses();
+
+    IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
+
+    IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id);
+
+    /**
+     * Gets the request builder for DeviceConfigurationDeviceOverview
+     *
+     * @return the IDeviceConfigurationDeviceOverviewRequestBuilder instance
+     */
+    IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview();
+
+    /**
+     * Gets the request builder for DeviceConfigurationUserOverview
+     *
+     * @return the IDeviceConfigurationUserOverviewRequestBuilder instance
+     */
+    IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview();
+
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
+
 }

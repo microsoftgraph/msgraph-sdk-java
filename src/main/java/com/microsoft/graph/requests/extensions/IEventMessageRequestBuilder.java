@@ -34,13 +34,6 @@ public interface IEventMessageRequestBuilder extends IRequestBuilder {
     IEventMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    /**
-     * Gets the request builder for Event
-     *
-     * @return the IEventRequestBuilder instance
-     */
-    IEventRequestBuilder event();
-
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
     ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
@@ -56,5 +49,12 @@ public interface IEventMessageRequestBuilder extends IRequestBuilder {
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
+
+    /**
+     * Gets the request builder for Event
+     *
+     * @return the IEventRequestBuilder instance
+     */
+    IEventRequestBuilder event();
 
 }

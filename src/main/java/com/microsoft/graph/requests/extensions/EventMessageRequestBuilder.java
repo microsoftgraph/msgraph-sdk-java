@@ -53,15 +53,6 @@ public class EventMessageRequestBuilder extends BaseRequestBuilder implements IE
     }
 
 
-
-    /**
-     * Gets the request builder for Event
-     *
-     * @return the IEventRequestBuilder instance
-     */
-    public IEventRequestBuilder event() {
-        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
-    }
     public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
@@ -89,5 +80,14 @@ public class EventMessageRequestBuilder extends BaseRequestBuilder implements IE
 
     public IExtensionRequestBuilder extensions(final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Event
+     *
+     * @return the IEventRequestBuilder instance
+     */
+    public IEventRequestBuilder event() {
+        return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("event"), getClient(), null);
     }
 }

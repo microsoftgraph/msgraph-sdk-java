@@ -40,6 +40,20 @@ public interface ISharedDriveItemRequestBuilder extends IRequestBuilder {
 
 
     /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
+
+    /**
      * Gets the request builder for DriveItem
      *
      * @return the IDriveItemRequestBuilder instance
@@ -84,19 +98,5 @@ public interface ISharedDriveItemRequestBuilder extends IRequestBuilder {
      * @return the ISiteRequestBuilder instance
      */
     ISiteRequestBuilder site();
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder createdByUser();
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
 }

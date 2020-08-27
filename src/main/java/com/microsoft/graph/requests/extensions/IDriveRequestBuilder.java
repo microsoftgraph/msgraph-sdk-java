@@ -37,6 +37,20 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
     IDriveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
+
     IDriveItemCollectionRequestBuilder following();
 
     IDriveItemRequestBuilder following(final String id);
@@ -62,20 +76,6 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
     IDriveItemCollectionRequestBuilder special();
 
     IDriveItemRequestBuilder special(final String id);
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder createdByUser();
-
-    /**
-     * Gets the request builder for User
-     *
-     * @return the IUserWithReferenceRequestBuilder instance
-     */
-    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
     IDriveRecentCollectionRequestBuilder recent();
 
