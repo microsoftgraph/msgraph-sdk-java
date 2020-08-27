@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IServicePrincipalDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

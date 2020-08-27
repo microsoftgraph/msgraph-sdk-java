@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequest;
 import com.microsoft.graph.requests.extensions.ISiteAddCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRemoveCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

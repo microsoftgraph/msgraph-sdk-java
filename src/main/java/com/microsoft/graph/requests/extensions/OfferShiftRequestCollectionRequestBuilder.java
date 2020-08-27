@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

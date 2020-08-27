@@ -19,7 +19,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCollectionReq
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnAddRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableColumnCountRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

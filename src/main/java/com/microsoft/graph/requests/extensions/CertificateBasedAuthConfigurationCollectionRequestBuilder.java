@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

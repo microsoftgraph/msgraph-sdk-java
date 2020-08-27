@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IDriveSearchCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveSearchCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

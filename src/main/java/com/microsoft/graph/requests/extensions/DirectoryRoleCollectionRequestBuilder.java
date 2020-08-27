@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IDirectoryRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequest;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

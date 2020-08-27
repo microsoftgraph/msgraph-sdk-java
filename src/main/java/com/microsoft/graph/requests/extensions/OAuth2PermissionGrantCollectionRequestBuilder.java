@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionR
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequest;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

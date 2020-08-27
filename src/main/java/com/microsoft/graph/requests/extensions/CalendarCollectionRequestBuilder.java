@@ -18,7 +18,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

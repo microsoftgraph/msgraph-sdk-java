@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserGetMailTipsCollectionResponse;
 import com.microsoft.graph.models.extensions.UserGetMailTipsBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

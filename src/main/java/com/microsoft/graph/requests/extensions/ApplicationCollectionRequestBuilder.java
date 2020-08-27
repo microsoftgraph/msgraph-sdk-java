@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IApplicationDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

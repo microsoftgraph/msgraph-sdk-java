@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

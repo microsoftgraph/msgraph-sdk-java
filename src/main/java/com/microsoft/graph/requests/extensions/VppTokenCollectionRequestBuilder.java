@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

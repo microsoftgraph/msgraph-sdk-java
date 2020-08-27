@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.MailFolderDeltaCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

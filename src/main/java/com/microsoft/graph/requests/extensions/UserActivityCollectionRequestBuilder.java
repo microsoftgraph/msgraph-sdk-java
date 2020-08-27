@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequest;
 import com.microsoft.graph.requests.extensions.IUserActivityRecentCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

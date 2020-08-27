@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequ
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableCollectionRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookPivotTableRefreshAllRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

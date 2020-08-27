@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
 import com.microsoft.graph.requests.extensions.DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

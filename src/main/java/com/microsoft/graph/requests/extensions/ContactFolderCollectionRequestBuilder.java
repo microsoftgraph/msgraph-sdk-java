@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequest;
 import com.microsoft.graph.requests.extensions.IContactFolderDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

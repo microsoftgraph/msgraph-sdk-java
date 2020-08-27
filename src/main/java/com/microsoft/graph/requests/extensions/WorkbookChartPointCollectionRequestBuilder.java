@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookChartPointRequestBuilder
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointCollectionRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointCountRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCollectionRequest;
 import com.microsoft.graph.requests.extensions.IMessageDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

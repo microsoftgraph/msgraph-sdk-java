@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.ICallRecordRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

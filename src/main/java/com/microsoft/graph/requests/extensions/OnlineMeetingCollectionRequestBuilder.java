@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequest;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCreateOrGetRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookUserSupportedTimeZonesCollectionRequest;
 import com.microsoft.graph.requests.extensions.OutlookUserSupportedTimeZonesCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

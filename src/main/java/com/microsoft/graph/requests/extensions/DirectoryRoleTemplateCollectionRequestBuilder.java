@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

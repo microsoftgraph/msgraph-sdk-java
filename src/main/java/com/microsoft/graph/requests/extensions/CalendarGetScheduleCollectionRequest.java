@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionPage
 import com.microsoft.graph.requests.extensions.CalendarGetScheduleCollectionResponse;
 import com.microsoft.graph.models.extensions.CalendarGetScheduleBody;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

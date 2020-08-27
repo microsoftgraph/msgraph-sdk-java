@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

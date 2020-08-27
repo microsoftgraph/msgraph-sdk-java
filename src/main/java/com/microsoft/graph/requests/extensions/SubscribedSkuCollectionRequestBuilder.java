@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscribedSkuRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

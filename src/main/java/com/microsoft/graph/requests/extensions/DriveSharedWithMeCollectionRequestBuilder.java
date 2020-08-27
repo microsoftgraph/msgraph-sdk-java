@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveSharedWithMeCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveSharedWithMeCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

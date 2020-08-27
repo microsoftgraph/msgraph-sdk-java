@@ -14,7 +14,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantDeltaCollectionRequest;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantDeltaCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;

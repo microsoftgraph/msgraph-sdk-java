@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.SchemaExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
 
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;

@@ -18,7 +18,6 @@ import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequest;
 import com.microsoft.graph.requests.extensions.IAttachmentCreateUploadSessionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

@@ -16,7 +16,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

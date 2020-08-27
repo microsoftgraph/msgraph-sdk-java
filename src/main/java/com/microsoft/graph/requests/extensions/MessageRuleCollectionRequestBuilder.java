@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

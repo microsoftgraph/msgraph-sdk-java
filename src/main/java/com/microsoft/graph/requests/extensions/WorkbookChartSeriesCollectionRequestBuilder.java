@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesRequestBuilde
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCountRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

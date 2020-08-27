@@ -16,7 +16,6 @@ import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollection
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequest;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

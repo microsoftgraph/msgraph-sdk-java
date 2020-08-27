@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

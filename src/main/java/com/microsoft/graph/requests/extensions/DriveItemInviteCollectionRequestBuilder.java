@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemInviteCollectionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemInviteCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.core.BaseActionRequestBuilder;

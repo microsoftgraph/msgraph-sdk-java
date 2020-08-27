@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequest;
 import com.microsoft.graph.requests.extensions.IMailFolderDeltaCollectionRequestBuilder;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

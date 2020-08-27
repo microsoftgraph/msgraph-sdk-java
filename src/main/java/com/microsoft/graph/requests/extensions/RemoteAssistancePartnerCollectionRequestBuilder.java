@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 

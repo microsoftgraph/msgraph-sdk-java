@@ -15,7 +15,6 @@ import com.microsoft.graph.requests.extensions.IServicePrincipalDeltaCollectionR
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionPage;
 import com.microsoft.graph.requests.extensions.ServicePrincipalDeltaCollectionResponse;
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseCollectionRequest;
 import com.microsoft.graph.concurrency.IExecutors;

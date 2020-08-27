@@ -15,7 +15,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequest;
-import com.microsoft.graph.options.Option;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
