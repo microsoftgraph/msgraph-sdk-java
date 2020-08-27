@@ -34,7 +34,7 @@ public interface IAuditLogRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAuditLogRootRequest instance
      */
-    IAuditLogRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAuditLogRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISignInCollectionRequestBuilder signIns();

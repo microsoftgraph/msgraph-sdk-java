@@ -28,5 +28,5 @@ public interface INotebookGetNotebookFromWebUrlRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return the INotebookGetNotebookFromWebUrlRequest instance
      */
-    INotebookGetNotebookFromWebUrlRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INotebookGetNotebookFromWebUrlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

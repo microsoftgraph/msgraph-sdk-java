@@ -6,7 +6,6 @@ package com.microsoft.graph.models.extensions;
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -42,7 +41,7 @@ public class WorkbookWorksheetProtection extends Entity implements IJsonBackedOb
      */
     @SerializedName("protected")
     @Expose
-    public Boolean msgraphprotected;
+    public Boolean msgraphProtected;
 
 
     /**

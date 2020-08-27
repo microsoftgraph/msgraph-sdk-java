@@ -33,7 +33,7 @@ public interface IDeviceEnrollmentConfigurationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentConfigurationRequest instance
      */
-    IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceEnrollmentConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments();

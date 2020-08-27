@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +30,7 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder
      * @param requestOptions the options for this request
      * @param value the value
      */
-    public SiteRemoveCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<Site> value) {
+    public SiteRemoveCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<Site> value) {
         super(requestUrl, client, requestOptions);
   	 if(value!=null){
 			bodyParams.put("value", value);
@@ -41,7 +41,7 @@ public class SiteRemoveCollectionRequestBuilder extends BaseActionRequestBuilder
         return buildRequest(getOptions());
     }
 
-    public ISiteRemoveCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISiteRemoveCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         SiteRemoveCollectionRequest request = new SiteRemoveCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -25,7 +25,7 @@ public class WindowsPhone81GeneralConfigurationRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81GeneralConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsPhone81GeneralConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsPhone81GeneralConfigurationRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IWindowsPhone81GeneralConfigurationRequest instance
      */
-    public IWindowsPhone81GeneralConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsPhone81GeneralConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsPhone81GeneralConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

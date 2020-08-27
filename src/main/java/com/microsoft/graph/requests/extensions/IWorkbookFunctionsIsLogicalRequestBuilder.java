@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsIsLogicalRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsLogicalRequest instance
      */
-    IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsIsLogicalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

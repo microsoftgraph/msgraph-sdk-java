@@ -31,7 +31,7 @@ public interface INotificationMessageTemplateRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the INotificationMessageTemplateRequest instance
      */
-    INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ILocalizedNotificationMessageCollectionRequestBuilder localizedNotificationMessages();

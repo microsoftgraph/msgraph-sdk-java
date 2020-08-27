@@ -61,7 +61,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SiteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -80,7 +80,7 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
      * @param requestOptions the options for this request
      * @return the ISiteRequest instance
      */
-    public ISiteRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISiteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SiteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

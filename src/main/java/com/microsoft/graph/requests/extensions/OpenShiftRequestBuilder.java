@@ -25,7 +25,7 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OpenShiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
      * @param requestOptions the options for this request
      * @return the IOpenShiftRequest instance
      */
-    public IOpenShiftRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOpenShiftRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OpenShiftRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

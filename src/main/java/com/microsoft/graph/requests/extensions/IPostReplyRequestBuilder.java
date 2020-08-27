@@ -28,5 +28,5 @@ public interface IPostReplyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IPostReplyRequest instance
      */
-    IPostReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPostReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

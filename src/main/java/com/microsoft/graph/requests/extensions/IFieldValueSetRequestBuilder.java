@@ -28,7 +28,7 @@ public interface IFieldValueSetRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IFieldValueSetRequest instance
      */
-    IFieldValueSetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IFieldValueSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -38,7 +38,7 @@ public interface IManagedDeviceMobileAppConfigurationRequestBuilder extends IReq
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationRequest instance
      */
-    IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments();

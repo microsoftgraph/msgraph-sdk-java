@@ -25,7 +25,7 @@ public class DeviceManagementTroubleshootingEventRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementTroubleshootingEventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceManagementTroubleshootingEventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceManagementTroubleshootingEventRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IDeviceManagementTroubleshootingEventRequest instance
      */
-    public IDeviceManagementTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceManagementTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

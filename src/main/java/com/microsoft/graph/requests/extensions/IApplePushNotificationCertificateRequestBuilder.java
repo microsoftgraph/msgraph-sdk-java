@@ -29,7 +29,7 @@ public interface IApplePushNotificationCertificateRequestBuilder extends IReques
      * @param requestOptions the options for this request
      * @return the IApplePushNotificationCertificateRequest instance
      */
-    IApplePushNotificationCertificateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApplePushNotificationCertificateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest();
 

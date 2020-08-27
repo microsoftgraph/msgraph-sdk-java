@@ -28,7 +28,7 @@ public interface ITargetedManagedAppPolicyAssignmentRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the ITargetedManagedAppPolicyAssignmentRequest instance
      */
-    ITargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITargetedManagedAppPolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

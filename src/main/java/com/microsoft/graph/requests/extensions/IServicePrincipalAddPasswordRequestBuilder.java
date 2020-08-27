@@ -28,5 +28,5 @@ public interface IServicePrincipalAddPasswordRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IServicePrincipalAddPasswordRequest instance
      */
-    IServicePrincipalAddPasswordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IServicePrincipalAddPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

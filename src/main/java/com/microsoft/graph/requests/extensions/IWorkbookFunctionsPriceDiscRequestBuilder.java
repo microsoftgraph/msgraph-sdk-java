@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsPriceDiscRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPriceDiscRequest instance
      */
-    IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsPriceDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

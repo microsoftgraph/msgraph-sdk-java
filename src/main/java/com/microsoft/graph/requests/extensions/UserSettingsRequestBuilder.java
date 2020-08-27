@@ -27,7 +27,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
      * @param requestOptions the options for this request
      * @return the IUserSettingsRequest instance
      */
-    public IUserSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UserSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

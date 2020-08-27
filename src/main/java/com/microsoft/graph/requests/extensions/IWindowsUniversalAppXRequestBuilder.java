@@ -28,7 +28,7 @@ public interface IWindowsUniversalAppXRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWindowsUniversalAppXRequest instance
      */
-    IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

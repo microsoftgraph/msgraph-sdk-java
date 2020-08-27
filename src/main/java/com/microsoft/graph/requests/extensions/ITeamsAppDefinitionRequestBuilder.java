@@ -28,7 +28,7 @@ public interface ITeamsAppDefinitionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamsAppDefinitionRequest instance
      */
-    ITeamsAppDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamsAppDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

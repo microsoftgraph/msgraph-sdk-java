@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDaverageRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDaverageRequest instance
      */
-    IWorkbookFunctionsDaverageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDaverageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

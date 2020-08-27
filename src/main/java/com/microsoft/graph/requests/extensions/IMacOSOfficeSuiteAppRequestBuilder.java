@@ -28,7 +28,7 @@ public interface IMacOSOfficeSuiteAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMacOSOfficeSuiteAppRequest instance
      */
-    IMacOSOfficeSuiteAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOSOfficeSuiteAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

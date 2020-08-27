@@ -31,7 +31,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationMessageTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public NotificationMessageTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,7 +50,7 @@ public class NotificationMessageTemplateRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the INotificationMessageTemplateRequest instance
      */
-    public INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public INotificationMessageTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotificationMessageTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

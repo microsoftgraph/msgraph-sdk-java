@@ -28,7 +28,7 @@ public interface IDeviceComplianceActionItemRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IDeviceComplianceActionItemRequest instance
      */
-    IDeviceComplianceActionItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceComplianceActionItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

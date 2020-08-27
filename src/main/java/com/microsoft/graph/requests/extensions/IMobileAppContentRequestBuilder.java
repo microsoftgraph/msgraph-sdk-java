@@ -30,7 +30,7 @@ public interface IMobileAppContentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMobileAppContentRequest instance
      */
-    IMobileAppContentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileAppContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IMobileAppContentFileCollectionRequestBuilder files();

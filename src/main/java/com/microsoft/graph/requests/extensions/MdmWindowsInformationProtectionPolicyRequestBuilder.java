@@ -25,7 +25,7 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MdmWindowsInformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MdmWindowsInformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MdmWindowsInformationProtectionPolicyRequestBuilder extends BaseReq
      * @param requestOptions the options for this request
      * @return the IMdmWindowsInformationProtectionPolicyRequest instance
      */
-    public IMdmWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMdmWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MdmWindowsInformationProtectionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

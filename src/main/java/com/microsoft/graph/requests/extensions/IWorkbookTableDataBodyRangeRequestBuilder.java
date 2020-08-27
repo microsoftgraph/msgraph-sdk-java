@@ -28,5 +28,5 @@ public interface IWorkbookTableDataBodyRangeRequestBuilder extends IRequestBuild
      * @param requestOptions the options for the request
      * @return the IWorkbookTableDataBodyRangeRequest instance
      */
-    IWorkbookTableDataBodyRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableDataBodyRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

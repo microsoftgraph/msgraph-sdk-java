@@ -25,7 +25,7 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionAppLockerFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsInformationProtectionAppLockerFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsInformationProtectionAppLockerFileRequestBuilder extends Bas
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionAppLockerFileRequest instance
      */
-    public IWindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsInformationProtectionAppLockerFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionAppLockerFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

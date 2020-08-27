@@ -29,7 +29,7 @@ public interface IInvitationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IInvitationRequest instance
      */
-    IInvitationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInvitationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

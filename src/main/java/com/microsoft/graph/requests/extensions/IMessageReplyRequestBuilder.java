@@ -28,5 +28,5 @@ public interface IMessageReplyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IMessageReplyRequest instance
      */
-    IMessageReplyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMessageReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

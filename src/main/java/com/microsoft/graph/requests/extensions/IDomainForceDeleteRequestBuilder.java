@@ -28,5 +28,5 @@ public interface IDomainForceDeleteRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IDomainForceDeleteRequest instance
      */
-    IDomainForceDeleteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDomainForceDeleteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

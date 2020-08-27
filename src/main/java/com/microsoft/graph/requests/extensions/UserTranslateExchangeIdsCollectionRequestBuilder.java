@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.generated.ExchangeIdFormat;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -32,7 +32,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
      * @param targetIdType the targetIdType
      * @param sourceIdType the sourceIdType
      */
-    public UserTranslateExchangeIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
+    public UserTranslateExchangeIdsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
         super(requestUrl, client, requestOptions);
   	 if(inputIds!=null){
 			bodyParams.put("inputIds", inputIds);
@@ -49,7 +49,7 @@ public class UserTranslateExchangeIdsCollectionRequestBuilder extends BaseAction
         return buildRequest(getOptions());
     }
 
-    public IUserTranslateExchangeIdsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUserTranslateExchangeIdsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         UserTranslateExchangeIdsCollectionRequest request = new UserTranslateExchangeIdsCollectionRequest(
                 getRequestUrl(),
                 getClient(),

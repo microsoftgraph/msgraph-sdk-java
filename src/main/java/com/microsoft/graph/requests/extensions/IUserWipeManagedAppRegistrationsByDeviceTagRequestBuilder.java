@@ -28,5 +28,5 @@ public interface IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder exten
      * @param requestOptions the options for the request
      * @return the IUserWipeManagedAppRegistrationsByDeviceTagRequest instance
      */
-    IUserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserWipeManagedAppRegistrationsByDeviceTagRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -57,7 +57,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TeamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -76,7 +76,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
      * @param requestOptions the options for this request
      * @return the ITeamRequest instance
      */
-    public ITeamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITeamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

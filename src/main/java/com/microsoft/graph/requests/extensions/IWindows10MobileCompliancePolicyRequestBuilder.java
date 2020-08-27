@@ -28,7 +28,7 @@ public interface IWindows10MobileCompliancePolicyRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IWindows10MobileCompliancePolicyRequest instance
      */
-    IWindows10MobileCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows10MobileCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

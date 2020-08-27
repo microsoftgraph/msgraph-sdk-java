@@ -25,7 +25,7 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosUpdateDeviceStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosUpdateDeviceStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class IosUpdateDeviceStatusRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IIosUpdateDeviceStatusRequest instance
      */
-    public IIosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIosUpdateDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosUpdateDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

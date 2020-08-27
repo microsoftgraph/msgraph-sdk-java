@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -29,7 +29,7 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
     /**
@@ -42,16 +42,16 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
      * @param endDateTime the endDateTime
      * @param interval the interval
      */
-    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String startDateTime, final String endDateTime, final String interval) {
+    public DriveItemGetActivitiesByIntervalCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String startDateTime, final String endDateTime, final String interval) {
         super(requestUrl, client, requestOptions);
      	 if(startDateTime!=null){
-			functionOptions.add(new FunctionOption("startDateTime", startDateTime));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
 		}
        	 if(endDateTime!=null){
-			functionOptions.add(new FunctionOption("endDateTime", endDateTime));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
 		}
        	 if(interval!=null){
-			functionOptions.add(new FunctionOption("interval", interval));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("interval", interval));
 		}
       }
 
@@ -59,14 +59,14 @@ public class DriveItemGetActivitiesByIntervalCollectionRequestBuilder extends Ba
         return buildRequest(getOptions());
     }
 
-    public IDriveItemGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemGetActivitiesByIntervalCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemGetActivitiesByIntervalCollectionRequest request = new DriveItemGetActivitiesByIntervalCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

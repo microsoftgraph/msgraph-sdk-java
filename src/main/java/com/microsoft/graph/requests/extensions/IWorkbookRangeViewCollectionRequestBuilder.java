@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -25,7 +24,7 @@ public interface IWorkbookRangeViewCollectionRequestBuilder extends IRequestBuil
 
     IWorkbookRangeViewCollectionRequest buildRequest();
 
-    IWorkbookRangeViewCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeViewCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookRangeViewRequestBuilder byId(final String id);
 

@@ -28,7 +28,7 @@ public interface IMacOSGeneralDeviceConfigurationRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IMacOSGeneralDeviceConfigurationRequest instance
      */
-    IMacOSGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMacOSGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

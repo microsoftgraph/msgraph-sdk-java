@@ -28,7 +28,7 @@ public interface IUpdateRecordingStatusOperationRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IUpdateRecordingStatusOperationRequest instance
      */
-    IUpdateRecordingStatusOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUpdateRecordingStatusOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IManagedEBookAssignmentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedEBookAssignmentRequest instance
      */
-    IManagedEBookAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedEBookAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

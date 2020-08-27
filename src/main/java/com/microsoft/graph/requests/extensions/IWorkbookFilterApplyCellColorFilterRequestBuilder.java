@@ -28,5 +28,5 @@ public interface IWorkbookFilterApplyCellColorFilterRequestBuilder extends IRequ
      * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyCellColorFilterRequest instance
      */
-    IWorkbookFilterApplyCellColorFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFilterApplyCellColorFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -36,7 +36,7 @@ public interface IWindowsInformationProtectionRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionRequest instance
      */
-    IWindowsInformationProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsInformationProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles();

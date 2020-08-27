@@ -25,7 +25,7 @@ public class AndroidWorkProfileCompliancePolicyRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidWorkProfileCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AndroidWorkProfileCompliancePolicyRequestBuilder extends BaseReques
      * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCompliancePolicyRequest instance
      */
-    public IAndroidWorkProfileCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidWorkProfileCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidWorkProfileCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

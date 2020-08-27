@@ -25,7 +25,7 @@ public class SignInRequestBuilder extends BaseRequestBuilder implements ISignInR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SignInRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SignInRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class SignInRequestBuilder extends BaseRequestBuilder implements ISignInR
      * @param requestOptions the options for this request
      * @return the ISignInRequest instance
      */
-    public ISignInRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SignInRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

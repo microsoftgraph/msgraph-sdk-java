@@ -28,5 +28,5 @@ public interface IReportRootGetOffice365GroupsActivityStorageRequestBuilder exte
      * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365GroupsActivityStorageRequest instance
      */
-    IReportRootGetOffice365GroupsActivityStorageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetOffice365GroupsActivityStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

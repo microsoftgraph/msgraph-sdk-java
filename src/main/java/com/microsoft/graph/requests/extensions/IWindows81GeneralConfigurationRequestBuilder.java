@@ -28,7 +28,7 @@ public interface IWindows81GeneralConfigurationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IWindows81GeneralConfigurationRequest instance
      */
-    IWindows81GeneralConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows81GeneralConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

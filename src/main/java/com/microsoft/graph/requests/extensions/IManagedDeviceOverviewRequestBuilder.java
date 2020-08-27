@@ -28,7 +28,7 @@ public interface IManagedDeviceOverviewRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedDeviceOverviewRequest instance
      */
-    IManagedDeviceOverviewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

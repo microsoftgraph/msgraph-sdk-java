@@ -28,7 +28,7 @@ public interface IManagedIOSLobAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedIOSLobAppRequest instance
      */
-    IManagedIOSLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedIOSLobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

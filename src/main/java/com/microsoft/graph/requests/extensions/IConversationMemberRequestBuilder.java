@@ -28,7 +28,7 @@ public interface IConversationMemberRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IConversationMemberRequest instance
      */
-    IConversationMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConversationMemberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

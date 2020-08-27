@@ -28,7 +28,7 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PermissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PermissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +47,7 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
      * @param requestOptions the options for this request
      * @return the IPermissionRequest instance
      */
-    public IPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PermissionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

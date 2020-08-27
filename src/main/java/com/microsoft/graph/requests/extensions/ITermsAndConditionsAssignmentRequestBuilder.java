@@ -28,7 +28,7 @@ public interface ITermsAndConditionsAssignmentRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the ITermsAndConditionsAssignmentRequest instance
      */
-    ITermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -35,7 +35,7 @@ public interface IOrgContactRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOrgContactRequest instance
      */
-    IOrgContactRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOrgContactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

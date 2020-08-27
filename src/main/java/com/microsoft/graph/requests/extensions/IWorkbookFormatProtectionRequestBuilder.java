@@ -28,7 +28,7 @@ public interface IWorkbookFormatProtectionRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IWorkbookFormatProtectionRequest instance
      */
-    IWorkbookFormatProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFormatProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

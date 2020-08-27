@@ -35,7 +35,7 @@ public interface IListItemRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IListItemRequest instance
      */
-    IListItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IListItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

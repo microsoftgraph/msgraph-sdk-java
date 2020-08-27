@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDecimalRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDecimalRequest instance
      */
-    IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDecimalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

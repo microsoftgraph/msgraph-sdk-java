@@ -28,7 +28,7 @@ public interface ISignInRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISignInRequest instance
      */
-    ISignInRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

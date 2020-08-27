@@ -25,7 +25,7 @@ public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MultiValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MultiValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestB
      * @param requestOptions the options for this request
      * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
-    public IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMultiValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MultiValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

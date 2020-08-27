@@ -33,7 +33,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartAxisRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +52,7 @@ public class WorkbookChartAxisRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IWorkbookChartAxisRequest instance
      */
-    public IWorkbookChartAxisRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartAxisRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartAxisRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

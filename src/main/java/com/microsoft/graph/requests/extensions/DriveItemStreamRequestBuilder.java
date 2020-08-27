@@ -25,7 +25,7 @@ public class DriveItemStreamRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemStreamRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DriveItemStreamRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IDriveItemStreamRequest instance
      */
-    public IDriveItemStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemStreamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

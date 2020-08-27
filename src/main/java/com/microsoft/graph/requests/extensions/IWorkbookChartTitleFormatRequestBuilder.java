@@ -30,7 +30,7 @@ public interface IWorkbookChartTitleFormatRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IWorkbookChartTitleFormatRequest instance
      */
-    IWorkbookChartTitleFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartTitleFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

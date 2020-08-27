@@ -28,5 +28,5 @@ public interface IWorkbookTableColumnHeaderRowRangeRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnHeaderRowRangeRequest instance
      */
-    IWorkbookTableColumnHeaderRowRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableColumnHeaderRowRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

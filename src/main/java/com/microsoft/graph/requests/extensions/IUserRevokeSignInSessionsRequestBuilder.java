@@ -28,5 +28,5 @@ public interface IUserRevokeSignInSessionsRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IUserRevokeSignInSessionsRequest instance
      */
-    IUserRevokeSignInSessionsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserRevokeSignInSessionsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

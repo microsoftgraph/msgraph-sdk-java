@@ -28,7 +28,7 @@ public interface IMicrosoftStoreForBusinessAppRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IMicrosoftStoreForBusinessAppRequest instance
      */
-    IMicrosoftStoreForBusinessAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMicrosoftStoreForBusinessAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

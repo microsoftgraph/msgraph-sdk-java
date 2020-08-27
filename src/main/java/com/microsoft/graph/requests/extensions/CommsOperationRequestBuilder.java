@@ -25,7 +25,7 @@ public class CommsOperationRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CommsOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class CommsOperationRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the ICommsOperationRequest instance
      */
-    public ICommsOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICommsOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CommsOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

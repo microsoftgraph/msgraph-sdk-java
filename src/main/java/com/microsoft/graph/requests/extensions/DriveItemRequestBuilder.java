@@ -89,7 +89,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -108,7 +108,7 @@ public class DriveItemRequestBuilder extends BaseRequestBuilder implements IDriv
      * @param requestOptions the options for this request
      * @return the IDriveItemRequest instance
      */
-    public IDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

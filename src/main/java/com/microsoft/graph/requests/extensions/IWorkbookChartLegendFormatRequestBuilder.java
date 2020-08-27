@@ -30,7 +30,7 @@ public interface IWorkbookChartLegendFormatRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IWorkbookChartLegendFormatRequest instance
      */
-    IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartLegendFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

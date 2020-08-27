@@ -28,7 +28,7 @@ public interface IIosVppEBookAssignmentRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosVppEBookAssignmentRequest instance
      */
-    IIosVppEBookAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosVppEBookAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

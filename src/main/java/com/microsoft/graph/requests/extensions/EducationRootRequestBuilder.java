@@ -39,7 +39,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EducationRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -58,7 +58,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
      * @param requestOptions the options for this request
      * @return the IEducationRootRequest instance
      */
-    public IEducationRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEducationRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

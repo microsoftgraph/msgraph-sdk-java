@@ -28,7 +28,7 @@ public interface IDeviceAndAppManagementRoleDefinitionRequestBuilder extends IRe
      * @param requestOptions the options for this request
      * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
      */
-    IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

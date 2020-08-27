@@ -29,7 +29,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartSeriesFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class WorkbookChartSeriesFormatRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IWorkbookChartSeriesFormatRequest instance
      */
-    public IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartSeriesFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartSeriesFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

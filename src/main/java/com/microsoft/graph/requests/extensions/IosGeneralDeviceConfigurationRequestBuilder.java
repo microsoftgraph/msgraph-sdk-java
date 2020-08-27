@@ -25,7 +25,7 @@ public class IosGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosGeneralDeviceConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IosGeneralDeviceConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class IosGeneralDeviceConfigurationRequestBuilder extends BaseRequestBuil
      * @param requestOptions the options for this request
      * @return the IIosGeneralDeviceConfigurationRequest instance
      */
-    public IIosGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIosGeneralDeviceConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IosGeneralDeviceConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

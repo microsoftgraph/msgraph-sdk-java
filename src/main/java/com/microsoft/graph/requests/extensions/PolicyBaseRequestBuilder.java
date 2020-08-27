@@ -25,7 +25,7 @@ public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicyBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PolicyBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class PolicyBaseRequestBuilder extends BaseRequestBuilder implements IPol
      * @param requestOptions the options for this request
      * @return the IPolicyBaseRequest instance
      */
-    public IPolicyBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPolicyBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PolicyBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

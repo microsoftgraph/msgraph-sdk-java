@@ -53,7 +53,7 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookWorksheetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookWorksheetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -72,7 +72,7 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetRequest instance
      */
-    public IWorkbookWorksheetRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookWorksheetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookWorksheetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,7 +28,7 @@ public interface IGroupSettingTemplateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGroupSettingTemplateRequest instance
      */
-    IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

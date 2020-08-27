@@ -25,7 +25,7 @@ public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DomainDnsRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DomainDnsRecordRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IDomainDnsRecordRequest instance
      */
-    public IDomainDnsRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDomainDnsRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DomainDnsRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

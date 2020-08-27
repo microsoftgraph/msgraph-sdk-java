@@ -25,7 +25,7 @@ public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteEntityBaseModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnenoteEntityBaseModelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class OnenoteEntityBaseModelRequestBuilder extends BaseRequestBuilder imp
      * @param requestOptions the options for this request
      * @return the IOnenoteEntityBaseModelRequest instance
      */
-    public IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOnenoteEntityBaseModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenoteEntityBaseModelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -25,7 +25,7 @@ public class RecordOperationRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RecordOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public RecordOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class RecordOperationRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IRecordOperationRequest instance
      */
-    public IRecordOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IRecordOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new RecordOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

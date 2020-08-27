@@ -29,7 +29,7 @@ public interface IWorkbookChartGridlinesFormatRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IWorkbookChartGridlinesFormatRequest instance
      */
-    IWorkbookChartGridlinesFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartGridlinesFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

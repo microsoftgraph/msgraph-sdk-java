@@ -45,7 +45,7 @@ public interface IEventRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEventRequest instance
      */
-    IEventRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAttachmentCollectionRequestBuilder attachments();

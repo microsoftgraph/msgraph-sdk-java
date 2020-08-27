@@ -28,7 +28,7 @@ public interface ITimeOffRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITimeOffRequest instance
      */
-    ITimeOffRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITimeOffRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -25,7 +25,7 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedIOSStoreAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedIOSStoreAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ManagedIOSStoreAppRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IManagedIOSStoreAppRequest instance
      */
-    public IManagedIOSStoreAppRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedIOSStoreAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedIOSStoreAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

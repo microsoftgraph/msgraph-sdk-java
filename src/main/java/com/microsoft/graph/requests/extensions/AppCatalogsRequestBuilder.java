@@ -29,7 +29,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppCatalogsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AppCatalogsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
      * @param requestOptions the options for this request
      * @return the IAppCatalogsRequest instance
      */
-    public IAppCatalogsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAppCatalogsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppCatalogsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

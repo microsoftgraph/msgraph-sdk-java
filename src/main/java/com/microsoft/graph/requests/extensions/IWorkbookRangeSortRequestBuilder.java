@@ -30,7 +30,7 @@ public interface IWorkbookRangeSortRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeSortRequest instance
      */
-    IWorkbookRangeSortRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeSortRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookRangeSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final Boolean hasHeaders, final String orientation, final String method);
 

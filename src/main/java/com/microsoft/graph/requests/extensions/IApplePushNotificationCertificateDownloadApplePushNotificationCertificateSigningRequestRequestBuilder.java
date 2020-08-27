@@ -28,5 +28,5 @@ public interface IApplePushNotificationCertificateDownloadApplePushNotificationC
      * @param requestOptions the options for the request
      * @return the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
      */
-    IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

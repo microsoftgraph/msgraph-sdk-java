@@ -25,7 +25,7 @@ public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryAuditRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DirectoryAuditRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DirectoryAuditRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IDirectoryAuditRequest instance
      */
-    public IDirectoryAuditRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDirectoryAuditRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DirectoryAuditRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

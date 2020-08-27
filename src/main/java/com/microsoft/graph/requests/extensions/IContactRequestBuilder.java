@@ -35,7 +35,7 @@ public interface IContactRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IContactRequest instance
      */
-    IContactRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IContactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

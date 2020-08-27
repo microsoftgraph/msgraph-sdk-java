@@ -28,7 +28,7 @@ public interface IDomainDnsUnavailableRecordRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IDomainDnsUnavailableRecordRequest instance
      */
-    IDomainDnsUnavailableRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDomainDnsUnavailableRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

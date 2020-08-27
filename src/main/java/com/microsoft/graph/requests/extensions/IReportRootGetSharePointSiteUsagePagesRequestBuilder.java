@@ -28,5 +28,5 @@ public interface IReportRootGetSharePointSiteUsagePagesRequestBuilder extends IR
      * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsagePagesRequest instance
      */
-    IReportRootGetSharePointSiteUsagePagesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetSharePointSiteUsagePagesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

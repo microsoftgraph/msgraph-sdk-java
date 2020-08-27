@@ -28,7 +28,7 @@ public interface ITeamsTemplateRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamsTemplateRequest instance
      */
-    ITeamsTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamsTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

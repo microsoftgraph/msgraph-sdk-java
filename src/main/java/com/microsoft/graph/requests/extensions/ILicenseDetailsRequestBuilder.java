@@ -28,7 +28,7 @@ public interface ILicenseDetailsRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ILicenseDetailsRequest instance
      */
-    ILicenseDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ILicenseDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

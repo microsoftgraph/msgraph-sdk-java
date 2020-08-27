@@ -28,7 +28,7 @@ public interface IOnenotePageStreamRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenotePageStreamRequest instance
      */
-    IOnenotePageStreamRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenotePageStreamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface ISoftwareUpdateStatusSummaryRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the ISoftwareUpdateStatusSummaryRequest instance
      */
-    ISoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISoftwareUpdateStatusSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

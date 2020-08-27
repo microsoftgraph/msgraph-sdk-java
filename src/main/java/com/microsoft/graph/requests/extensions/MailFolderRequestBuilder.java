@@ -49,7 +49,7 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder implements IMai
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MailFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -68,7 +68,7 @@ public class MailFolderRequestBuilder extends BaseRequestBuilder implements IMai
      * @param requestOptions the options for this request
      * @return the IMailFolderRequest instance
      */
-    public IMailFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMailFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MailFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

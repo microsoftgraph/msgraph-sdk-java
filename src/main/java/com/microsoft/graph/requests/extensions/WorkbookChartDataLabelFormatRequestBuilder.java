@@ -29,7 +29,7 @@ public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartDataLabelFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartDataLabelFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IWorkbookChartDataLabelFormatRequest instance
      */
-    public IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartDataLabelFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartDataLabelFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

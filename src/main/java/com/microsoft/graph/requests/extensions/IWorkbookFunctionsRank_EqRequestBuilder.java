@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsRank_EqRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_EqRequest instance
      */
-    IWorkbookFunctionsRank_EqRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsRank_EqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

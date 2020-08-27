@@ -28,5 +28,5 @@ public interface IServicePrincipalRemoveKeyRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IServicePrincipalRemoveKeyRequest instance
      */
-    IServicePrincipalRemoveKeyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IServicePrincipalRemoveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

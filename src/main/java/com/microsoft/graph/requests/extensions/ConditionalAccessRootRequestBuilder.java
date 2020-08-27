@@ -33,7 +33,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ConditionalAccessRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +52,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IConditionalAccessRootRequest instance
      */
-    public IConditionalAccessRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ConditionalAccessRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

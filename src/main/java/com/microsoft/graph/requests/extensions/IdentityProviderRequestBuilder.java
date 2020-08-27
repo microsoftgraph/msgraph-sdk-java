@@ -25,7 +25,7 @@ public class IdentityProviderRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProviderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public IdentityProviderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class IdentityProviderRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IIdentityProviderRequest instance
      */
-    public IIdentityProviderRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IIdentityProviderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new IdentityProviderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

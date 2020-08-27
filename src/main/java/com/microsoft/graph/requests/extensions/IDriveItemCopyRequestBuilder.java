@@ -28,5 +28,5 @@ public interface IDriveItemCopyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IDriveItemCopyRequest instance
      */
-    IDriveItemCopyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDriveItemCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

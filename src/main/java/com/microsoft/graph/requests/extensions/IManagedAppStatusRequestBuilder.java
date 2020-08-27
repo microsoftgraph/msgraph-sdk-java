@@ -28,7 +28,7 @@ public interface IManagedAppStatusRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedAppStatusRequest instance
      */
-    IManagedAppStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

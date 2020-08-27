@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsCeiling_PreciseRequestBuilder extends IReques
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCeiling_PreciseRequest instance
      */
-    IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsCeiling_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface ISiteGetByPathRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ISiteGetByPathRequest instance
      */
-    ISiteGetByPathRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISiteGetByPathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

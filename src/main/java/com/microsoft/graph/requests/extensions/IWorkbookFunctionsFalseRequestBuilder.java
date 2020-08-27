@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsFalseRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFalseRequest instance
      */
-    IWorkbookFunctionsFalseRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsFalseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

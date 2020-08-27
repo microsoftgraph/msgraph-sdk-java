@@ -28,7 +28,7 @@ public interface IClaimsMappingPolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IClaimsMappingPolicyRequest instance
      */
-    IClaimsMappingPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IClaimsMappingPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

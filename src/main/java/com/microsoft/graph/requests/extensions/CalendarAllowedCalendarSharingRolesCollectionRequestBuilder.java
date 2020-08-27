@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,10 +30,10 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
      * @param requestOptions the options for this request
      * @param user the user
      */
-    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String user) {
+    public CalendarAllowedCalendarSharingRolesCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String user) {
         super(requestUrl, client, requestOptions);
      	 if(user!=null){
-			functionOptions.add(new FunctionOption("user", user));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("user", user));
 		}
       }
 
@@ -41,14 +41,14 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
         return buildRequest(getOptions());
     }
 
-    public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarAllowedCalendarSharingRolesCollectionRequest request = new CalendarAllowedCalendarSharingRolesCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

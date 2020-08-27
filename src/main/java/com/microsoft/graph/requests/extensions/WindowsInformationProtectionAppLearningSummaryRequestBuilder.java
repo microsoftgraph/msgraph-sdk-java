@@ -25,7 +25,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionAppLearningSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsInformationProtectionAppLearningSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsInformationProtectionAppLearningSummaryRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionAppLearningSummaryRequest instance
      */
-    public IWindowsInformationProtectionAppLearningSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsInformationProtectionAppLearningSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsInformationProtectionAppLearningSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,7 +11,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -31,7 +30,7 @@ public class ManagedDeviceOverviewReferenceRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceOverviewReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceOverviewReferenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,7 +49,7 @@ public class ManagedDeviceOverviewReferenceRequestBuilder extends BaseRequestBui
      * @param requestOptions the options for this request
      * @return the IManagedDeviceOverviewReferenceRequest instance
      */
-    public IManagedDeviceOverviewReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceOverviewReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceOverviewReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 }

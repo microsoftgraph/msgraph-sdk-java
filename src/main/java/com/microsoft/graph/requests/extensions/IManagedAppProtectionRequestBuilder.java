@@ -30,7 +30,7 @@ public interface IManagedAppProtectionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedAppProtectionRequest instance
      */
-    IManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IManagedAppProtectionTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps);
 

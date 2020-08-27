@@ -28,5 +28,5 @@ public interface IWorkbookTableRangeRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookTableRangeRequest instance
      */
-    IWorkbookTableRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

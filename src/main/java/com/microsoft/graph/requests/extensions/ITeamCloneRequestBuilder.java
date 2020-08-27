@@ -28,5 +28,5 @@ public interface ITeamCloneRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ITeamCloneRequest instance
      */
-    ITeamCloneRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamCloneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

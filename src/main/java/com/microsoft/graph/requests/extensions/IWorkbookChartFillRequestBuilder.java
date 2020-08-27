@@ -30,7 +30,7 @@ public interface IWorkbookChartFillRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookChartFillRequest instance
      */
-    IWorkbookChartFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookChartFillClearRequestBuilder clear();
     IWorkbookChartFillSetSolidColorRequestBuilder setSolidColor(final String color);

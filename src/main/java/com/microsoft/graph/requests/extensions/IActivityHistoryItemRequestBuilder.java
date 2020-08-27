@@ -29,7 +29,7 @@ public interface IActivityHistoryItemRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IActivityHistoryItemRequest instance
      */
-    IActivityHistoryItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IActivityHistoryItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

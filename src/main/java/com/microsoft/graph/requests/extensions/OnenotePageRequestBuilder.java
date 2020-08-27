@@ -38,7 +38,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenotePageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OnenotePageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -57,7 +57,7 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
      * @param requestOptions the options for this request
      * @return the IOnenotePageRequest instance
      */
-    public IOnenotePageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOnenotePageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OnenotePageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -31,7 +31,7 @@ public interface IAndroidManagedAppProtectionRequestBuilder extends IRequestBuil
      * @param requestOptions the options for this request
      * @return the IAndroidManagedAppProtectionRequest instance
      */
-    IAndroidManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedMobileAppCollectionRequestBuilder apps();

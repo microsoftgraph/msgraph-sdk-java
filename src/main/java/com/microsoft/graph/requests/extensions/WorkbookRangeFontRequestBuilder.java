@@ -25,7 +25,7 @@ public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeFontRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookRangeFontRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WorkbookRangeFontRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeFontRequest instance
      */
-    public IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookRangeFontRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

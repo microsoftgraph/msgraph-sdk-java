@@ -28,5 +28,5 @@ public interface IWorkbookRangeEntireRowRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeEntireRowRequest instance
      */
-    IWorkbookRangeEntireRowRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeEntireRowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

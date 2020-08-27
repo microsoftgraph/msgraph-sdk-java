@@ -32,7 +32,7 @@ public interface IWorkbookTableSortRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookTableSortRequest instance
      */
-    IWorkbookTableSortRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableSortRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookTableSortApplyRequestBuilder apply(final java.util.List<WorkbookSortField> fields, final Boolean matchCase, final String method);
     IWorkbookTableSortClearRequestBuilder clear();

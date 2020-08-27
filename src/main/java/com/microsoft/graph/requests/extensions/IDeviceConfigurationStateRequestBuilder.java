@@ -28,7 +28,7 @@ public interface IDeviceConfigurationStateRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IDeviceConfigurationStateRequest instance
      */
-    IDeviceConfigurationStateRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceConfigurationStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsChiSq_Inv_RTRequestBuilder extends IRequestBu
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_Inv_RTRequest instance
      */
-    IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

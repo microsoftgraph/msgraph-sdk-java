@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsHarMeanRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHarMeanRequest instance
      */
-    IWorkbookFunctionsHarMeanRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsHarMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -25,7 +25,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationUserSummaryRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationUserSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedDeviceMobileAppConfigurationUserSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedDeviceMobileAppConfigurationUserSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -30,7 +30,7 @@ public interface IDeviceCompliancePolicySettingStateSummaryRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicySettingStateSummaryRequest instance
      */
-    IDeviceCompliancePolicySettingStateSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicySettingStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceComplianceSettingStateCollectionRequestBuilder deviceComplianceSettingStates();

@@ -29,7 +29,7 @@ public interface IOnenoteResourceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenoteResourceRequest instance
      */
-    IOnenoteResourceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IOnenoteResourceStreamRequestBuilder content();

@@ -25,7 +25,7 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ResourceOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ResourceOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IResourceOperationRequest instance
      */
-    public IResourceOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IResourceOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ResourceOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

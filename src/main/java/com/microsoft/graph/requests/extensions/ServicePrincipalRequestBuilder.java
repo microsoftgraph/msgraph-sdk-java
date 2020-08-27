@@ -88,7 +88,7 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ServicePrincipalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -107,7 +107,7 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
      * @param requestOptions the options for this request
      * @return the IServicePrincipalRequest instance
      */
-    public IServicePrincipalRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IServicePrincipalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ServicePrincipalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

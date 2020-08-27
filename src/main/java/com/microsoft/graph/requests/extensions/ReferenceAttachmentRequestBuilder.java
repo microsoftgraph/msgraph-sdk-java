@@ -25,7 +25,7 @@ public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReferenceAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReferenceAttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ReferenceAttachmentRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IReferenceAttachmentRequest instance
      */
-    public IReferenceAttachmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IReferenceAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ReferenceAttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

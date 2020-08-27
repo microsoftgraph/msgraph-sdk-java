@@ -29,7 +29,7 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookPivotTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookPivotTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class WorkbookPivotTableRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IWorkbookPivotTableRequest instance
      */
-    public IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookPivotTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookPivotTableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

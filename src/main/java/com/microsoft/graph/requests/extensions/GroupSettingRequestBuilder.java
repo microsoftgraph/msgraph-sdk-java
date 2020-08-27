@@ -25,7 +25,7 @@ public class GroupSettingRequestBuilder extends BaseRequestBuilder implements IG
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupSettingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class GroupSettingRequestBuilder extends BaseRequestBuilder implements IG
      * @param requestOptions the options for this request
      * @return the IGroupSettingRequest instance
      */
-    public IGroupSettingRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupSettingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupSettingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

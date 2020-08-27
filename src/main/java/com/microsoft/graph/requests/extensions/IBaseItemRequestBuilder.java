@@ -30,7 +30,7 @@ public interface IBaseItemRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IBaseItemRequest instance
      */
-    IBaseItemRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IBaseItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

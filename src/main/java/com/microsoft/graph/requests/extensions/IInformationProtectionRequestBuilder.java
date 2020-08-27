@@ -30,7 +30,7 @@ public interface IInformationProtectionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IInformationProtectionRequest instance
      */
-    IInformationProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInformationProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IThreatAssessmentRequestCollectionRequestBuilder threatAssessmentRequests();

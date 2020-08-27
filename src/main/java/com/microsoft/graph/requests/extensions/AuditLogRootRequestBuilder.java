@@ -37,7 +37,7 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuditLogRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AuditLogRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,7 +56,7 @@ public class AuditLogRootRequestBuilder extends BaseRequestBuilder implements IA
      * @param requestOptions the options for this request
      * @return the IAuditLogRootRequest instance
      */
-    public IAuditLogRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAuditLogRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AuditLogRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

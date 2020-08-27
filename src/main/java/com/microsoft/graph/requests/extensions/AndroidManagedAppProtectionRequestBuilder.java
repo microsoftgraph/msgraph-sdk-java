@@ -31,7 +31,7 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedAppProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AndroidManagedAppProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,7 +50,7 @@ public class AndroidManagedAppProtectionRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IAndroidManagedAppProtectionRequest instance
      */
-    public IAndroidManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAndroidManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AndroidManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

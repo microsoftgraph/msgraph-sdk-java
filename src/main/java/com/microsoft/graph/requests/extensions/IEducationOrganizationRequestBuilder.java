@@ -28,7 +28,7 @@ public interface IEducationOrganizationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationOrganizationRequest instance
      */
-    IEducationOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

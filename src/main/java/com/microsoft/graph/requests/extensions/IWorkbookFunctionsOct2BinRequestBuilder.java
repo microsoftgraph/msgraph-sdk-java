@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsOct2BinRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOct2BinRequest instance
      */
-    IWorkbookFunctionsOct2BinRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsOct2BinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

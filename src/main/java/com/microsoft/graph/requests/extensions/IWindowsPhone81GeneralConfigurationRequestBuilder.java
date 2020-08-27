@@ -28,7 +28,7 @@ public interface IWindowsPhone81GeneralConfigurationRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IWindowsPhone81GeneralConfigurationRequest instance
      */
-    IWindowsPhone81GeneralConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsPhone81GeneralConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

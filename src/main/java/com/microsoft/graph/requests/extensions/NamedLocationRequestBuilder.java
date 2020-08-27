@@ -25,7 +25,7 @@ public class NamedLocationRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NamedLocationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public NamedLocationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class NamedLocationRequestBuilder extends BaseRequestBuilder implements I
      * @param requestOptions the options for this request
      * @return the INamedLocationRequest instance
      */
-    public INamedLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public INamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NamedLocationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

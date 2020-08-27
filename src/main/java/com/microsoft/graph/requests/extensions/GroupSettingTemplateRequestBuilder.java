@@ -25,7 +25,7 @@ public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupSettingTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public GroupSettingTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class GroupSettingTemplateRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IGroupSettingTemplateRequest instance
      */
-    public IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IGroupSettingTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new GroupSettingTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

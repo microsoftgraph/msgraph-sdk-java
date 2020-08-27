@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsCumPrincRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCumPrincRequest instance
      */
-    IWorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsCumPrincRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

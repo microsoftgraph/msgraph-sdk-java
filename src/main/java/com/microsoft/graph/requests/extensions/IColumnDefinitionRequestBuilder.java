@@ -28,7 +28,7 @@ public interface IColumnDefinitionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IColumnDefinitionRequest instance
      */
-    IColumnDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IColumnDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

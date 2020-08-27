@@ -25,7 +25,7 @@ public class BaseItemVersionRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BaseItemVersionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public BaseItemVersionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class BaseItemVersionRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the IBaseItemVersionRequest instance
      */
-    public IBaseItemVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IBaseItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new BaseItemVersionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

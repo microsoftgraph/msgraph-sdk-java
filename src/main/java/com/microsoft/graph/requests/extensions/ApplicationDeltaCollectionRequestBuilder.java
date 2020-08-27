@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -29,7 +29,7 @@ public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ApplicationDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,14 +37,14 @@ public class ApplicationDeltaCollectionRequestBuilder extends BaseFunctionReques
         return buildRequest(getOptions());
     }
 
-    public IApplicationDeltaCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IApplicationDeltaCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         ApplicationDeltaCollectionRequest request = new ApplicationDeltaCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

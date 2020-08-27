@@ -25,7 +25,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppleDeviceFeaturesConfigurationBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public AppleDeviceFeaturesConfigurationBaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class AppleDeviceFeaturesConfigurationBaseRequestBuilder extends BaseRequ
      * @param requestOptions the options for this request
      * @return the IAppleDeviceFeaturesConfigurationBaseRequest instance
      */
-    public IAppleDeviceFeaturesConfigurationBaseRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IAppleDeviceFeaturesConfigurationBaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new AppleDeviceFeaturesConfigurationBaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsIsNumberRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsNumberRequest instance
      */
-    IWorkbookFunctionsIsNumberRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsIsNumberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

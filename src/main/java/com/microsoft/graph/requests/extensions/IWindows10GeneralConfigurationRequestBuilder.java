@@ -28,7 +28,7 @@ public interface IWindows10GeneralConfigurationRequestBuilder extends IRequestBu
      * @param requestOptions the options for this request
      * @return the IWindows10GeneralConfigurationRequest instance
      */
-    IWindows10GeneralConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows10GeneralConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

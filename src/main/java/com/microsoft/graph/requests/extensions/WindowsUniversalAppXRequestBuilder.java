@@ -25,7 +25,7 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsUniversalAppXRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WindowsUniversalAppXRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IWindowsUniversalAppXRequest instance
      */
-    public IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WindowsUniversalAppXRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

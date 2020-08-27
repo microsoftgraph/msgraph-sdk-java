@@ -25,7 +25,7 @@ public class Windows10TeamGeneralConfigurationRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10TeamGeneralConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public Windows10TeamGeneralConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class Windows10TeamGeneralConfigurationRequestBuilder extends BaseRequest
      * @param requestOptions the options for this request
      * @return the IWindows10TeamGeneralConfigurationRequest instance
      */
-    public IWindows10TeamGeneralConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWindows10TeamGeneralConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new Windows10TeamGeneralConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

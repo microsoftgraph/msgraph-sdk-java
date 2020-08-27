@@ -28,7 +28,7 @@ public interface IEBookInstallSummaryRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEBookInstallSummaryRequest instance
      */
-    IEBookInstallSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEBookInstallSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

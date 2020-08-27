@@ -27,7 +27,7 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartLineFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartLineFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class WorkbookChartLineFormatRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IWorkbookChartLineFormatRequest instance
      */
-    public IWorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartLineFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartLineFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

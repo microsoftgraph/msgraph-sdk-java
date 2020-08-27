@@ -30,7 +30,7 @@ public interface IListItemVersionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IListItemVersionRequest instance
      */
-    IListItemVersionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IListItemVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

@@ -9,6 +9,10 @@ import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ICallRecordRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
@@ -33,7 +37,7 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudCommunicationsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CloudCommunicationsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +56,7 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the ICloudCommunicationsRequest instance
      */
-    public ICloudCommunicationsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICloudCommunicationsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CloudCommunicationsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,6 +67,13 @@ public class CloudCommunicationsRequestBuilder extends BaseRequestBuilder implem
 
     public ICallRequestBuilder calls(final String id) {
         return new CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
+    }
+    public ICallRecordCollectionRequestBuilder callRecords() {
+        return new CallRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords"), getClient(), null);
+    }
+
+    public ICallRecordRequestBuilder callRecords(final String id) {
+        return new CallRecordRequestBuilder(getRequestUrlWithAdditionalSegment("callRecords") + "/" + id, getClient(), null);
     }
     public IOnlineMeetingCollectionRequestBuilder onlineMeetings() {
         return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);

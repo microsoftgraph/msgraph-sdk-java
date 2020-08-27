@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsTbillEqRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillEqRequest instance
      */
-    IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsTbillEqRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

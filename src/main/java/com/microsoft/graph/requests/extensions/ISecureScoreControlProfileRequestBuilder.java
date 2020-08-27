@@ -28,7 +28,7 @@ public interface ISecureScoreControlProfileRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the ISecureScoreControlProfileRequest instance
      */
-    ISecureScoreControlProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecureScoreControlProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

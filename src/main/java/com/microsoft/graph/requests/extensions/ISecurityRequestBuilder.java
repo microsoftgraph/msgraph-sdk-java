@@ -34,7 +34,7 @@ public interface ISecurityRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISecurityRequest instance
      */
-    ISecurityRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISecurityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAlertCollectionRequestBuilder alerts();

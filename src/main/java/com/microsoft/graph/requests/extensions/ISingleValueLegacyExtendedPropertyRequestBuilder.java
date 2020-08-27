@@ -28,7 +28,7 @@ public interface ISingleValueLegacyExtendedPropertyRequestBuilder extends IReque
      * @param requestOptions the options for this request
      * @return the ISingleValueLegacyExtendedPropertyRequest instance
      */
-    ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

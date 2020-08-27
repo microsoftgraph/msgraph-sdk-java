@@ -25,7 +25,7 @@ public class WorkbookOperationRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class WorkbookOperationRequestBuilder extends BaseRequestBuilder implemen
      * @param requestOptions the options for this request
      * @return the IWorkbookOperationRequest instance
      */
-    public IWorkbookOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

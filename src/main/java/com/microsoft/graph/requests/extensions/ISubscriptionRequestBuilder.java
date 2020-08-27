@@ -28,7 +28,7 @@ public interface ISubscriptionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISubscriptionRequest instance
      */
-    ISubscriptionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISubscriptionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

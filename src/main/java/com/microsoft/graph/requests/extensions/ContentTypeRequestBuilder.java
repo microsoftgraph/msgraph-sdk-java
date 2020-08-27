@@ -29,7 +29,7 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder implements ICo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContentTypeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ContentTypeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder implements ICo
      * @param requestOptions the options for this request
      * @return the IContentTypeRequest instance
      */
-    public IContentTypeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IContentTypeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ContentTypeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

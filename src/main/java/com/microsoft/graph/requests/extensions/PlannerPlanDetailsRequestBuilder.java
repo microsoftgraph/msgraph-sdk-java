@@ -25,7 +25,7 @@ public class PlannerPlanDetailsRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanDetailsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PlannerPlanDetailsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class PlannerPlanDetailsRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the IPlannerPlanDetailsRequest instance
      */
-    public IPlannerPlanDetailsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPlannerPlanDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerPlanDetailsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

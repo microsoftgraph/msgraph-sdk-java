@@ -28,5 +28,5 @@ public interface IWorkbookWorksheetCellRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetCellRequest instance
      */
-    IWorkbookWorksheetCellRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookWorksheetCellRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsCoupDaysRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupDaysRequest instance
      */
-    IWorkbookFunctionsCoupDaysRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsCoupDaysRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

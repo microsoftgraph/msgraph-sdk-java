@@ -30,7 +30,7 @@ public interface IDirectoryRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryRequest instance
      */
-    IDirectoryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryObjectCollectionRequestBuilder deletedItems();

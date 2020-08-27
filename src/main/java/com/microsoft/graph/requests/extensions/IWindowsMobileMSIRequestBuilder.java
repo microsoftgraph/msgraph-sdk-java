@@ -28,7 +28,7 @@ public interface IWindowsMobileMSIRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWindowsMobileMSIRequest instance
      */
-    IWindowsMobileMSIRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsMobileMSIRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

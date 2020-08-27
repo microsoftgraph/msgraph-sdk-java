@@ -28,5 +28,5 @@ public interface IWorkbookRangeVisibleViewRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeVisibleViewRequest instance
      */
-    IWorkbookRangeVisibleViewRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeVisibleViewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -117,7 +117,7 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IReportRootRequest instance
      */
-    IReportRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IReportRootDeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity();
     IReportRootDeviceConfigurationDeviceActivityRequestBuilder deviceConfigurationDeviceActivity();

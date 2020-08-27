@@ -31,7 +31,7 @@ public interface IIosManagedAppProtectionRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IIosManagedAppProtectionRequest instance
      */
-    IIosManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IManagedMobileAppCollectionRequestBuilder apps();

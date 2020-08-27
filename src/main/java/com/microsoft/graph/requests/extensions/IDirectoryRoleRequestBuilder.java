@@ -30,7 +30,7 @@ public interface IDirectoryRoleRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryRoleRequest instance
      */
-    IDirectoryRoleRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryRoleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();

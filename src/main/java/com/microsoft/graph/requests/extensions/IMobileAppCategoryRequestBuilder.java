@@ -28,7 +28,7 @@ public interface IMobileAppCategoryRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMobileAppCategoryRequest instance
      */
-    IMobileAppCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileAppCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
      * @param expirationDateTime the expirationDateTime
      * @param password the password
      */
-    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password) {
+    public DriveItemInviteCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password) {
         super(requestUrl, client, requestOptions);
   	 if(requireSignIn!=null){
 			bodyParams.put("requireSignIn", requireSignIn);
@@ -65,7 +65,7 @@ public class DriveItemInviteCollectionRequestBuilder extends BaseActionRequestBu
         return buildRequest(getOptions());
     }
 
-    public IDriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDriveItemInviteCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DriveItemInviteCollectionRequest request = new DriveItemInviteCollectionRequest(
                 getRequestUrl(),
                 getClient(),

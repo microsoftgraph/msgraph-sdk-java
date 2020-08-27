@@ -32,7 +32,7 @@ public interface IConversationThreadRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IConversationThreadRequest instance
      */
-    IConversationThreadRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConversationThreadRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPostCollectionRequestBuilder posts();

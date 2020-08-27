@@ -28,5 +28,5 @@ public interface IWorkbookChartFillClearRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookChartFillClearRequest instance
      */
-    IWorkbookChartFillClearRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartFillClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

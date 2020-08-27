@@ -28,7 +28,7 @@ public interface IEndpointRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEndpointRequest instance
      */
-    IEndpointRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEndpointRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

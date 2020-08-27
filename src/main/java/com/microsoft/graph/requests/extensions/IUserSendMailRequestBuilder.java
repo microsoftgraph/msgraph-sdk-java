@@ -28,5 +28,5 @@ public interface IUserSendMailRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IUserSendMailRequest instance
      */
-    IUserSendMailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUserSendMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

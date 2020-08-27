@@ -28,7 +28,7 @@ public interface IOpenShiftChangeRequestRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOpenShiftChangeRequestRequest instance
      */
-    IOpenShiftChangeRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOpenShiftChangeRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

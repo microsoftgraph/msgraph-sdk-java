@@ -28,7 +28,7 @@ public interface ISchedulingGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISchedulingGroupRequest instance
      */
-    ISchedulingGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISchedulingGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -29,7 +29,7 @@ public interface IEventMessageRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEventMessageRequest instance
      */
-    IEventMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEventMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

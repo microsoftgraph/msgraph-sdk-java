@@ -28,5 +28,5 @@ public interface ITargetedManagedAppConfigurationTargetAppsRequestBuilder extend
      * @param requestOptions the options for the request
      * @return the ITargetedManagedAppConfigurationTargetAppsRequest instance
      */
-    ITargetedManagedAppConfigurationTargetAppsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITargetedManagedAppConfigurationTargetAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

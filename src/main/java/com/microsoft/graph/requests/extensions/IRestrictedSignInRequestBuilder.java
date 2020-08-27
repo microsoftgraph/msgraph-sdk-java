@@ -28,7 +28,7 @@ public interface IRestrictedSignInRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IRestrictedSignInRequest instance
      */
-    IRestrictedSignInRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRestrictedSignInRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

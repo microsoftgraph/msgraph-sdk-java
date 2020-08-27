@@ -25,7 +25,7 @@ public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlayPromptOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PlayPromptOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class PlayPromptOperationRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IPlayPromptOperationRequest instance
      */
-    public IPlayPromptOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPlayPromptOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlayPromptOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

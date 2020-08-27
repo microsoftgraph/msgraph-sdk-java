@@ -27,7 +27,7 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartDataLabelsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookChartDataLabelsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class WorkbookChartDataLabelsRequestBuilder extends BaseRequestBuilder im
      * @param requestOptions the options for this request
      * @return the IWorkbookChartDataLabelsRequest instance
      */
-    public IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookChartDataLabelsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookChartDataLabelsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

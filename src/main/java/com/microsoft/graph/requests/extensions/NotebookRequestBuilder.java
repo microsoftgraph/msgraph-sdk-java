@@ -35,7 +35,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder implements INoteb
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public NotebookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -54,7 +54,7 @@ public class NotebookRequestBuilder extends BaseRequestBuilder implements INoteb
      * @param requestOptions the options for this request
      * @return the INotebookRequest instance
      */
-    public INotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public INotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new NotebookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -25,7 +25,7 @@ public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TokenIssuancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TokenIssuancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the ITokenIssuancePolicyRequest instance
      */
-    public ITokenIssuancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITokenIssuancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TokenIssuancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

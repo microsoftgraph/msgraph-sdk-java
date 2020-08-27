@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsAmorLincRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAmorLincRequest instance
      */
-    IWorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsAmorLincRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

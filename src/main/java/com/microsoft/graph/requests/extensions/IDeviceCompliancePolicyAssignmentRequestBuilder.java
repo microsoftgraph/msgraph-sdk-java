@@ -28,7 +28,7 @@ public interface IDeviceCompliancePolicyAssignmentRequestBuilder extends IReques
      * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyAssignmentRequest instance
      */
-    IDeviceCompliancePolicyAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

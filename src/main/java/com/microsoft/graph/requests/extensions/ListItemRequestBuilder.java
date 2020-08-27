@@ -39,7 +39,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ListItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -58,7 +58,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder implements IListI
      * @param requestOptions the options for this request
      * @return the IListItemRequest instance
      */
-    public IListItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IListItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ListItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

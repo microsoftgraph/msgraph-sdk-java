@@ -28,5 +28,5 @@ public interface IWorkbookRangeBoundingRectRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookRangeBoundingRectRequest instance
      */
-    IWorkbookRangeBoundingRectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeBoundingRectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

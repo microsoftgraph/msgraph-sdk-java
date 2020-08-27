@@ -28,7 +28,7 @@ public interface IActivityBasedTimeoutPolicyRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IActivityBasedTimeoutPolicyRequest instance
      */
-    IActivityBasedTimeoutPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IActivityBasedTimeoutPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

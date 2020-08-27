@@ -25,7 +25,7 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SettingStateDeviceSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SettingStateDeviceSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
      * @param requestOptions the options for this request
      * @return the ISettingStateDeviceSummaryRequest instance
      */
-    public ISettingStateDeviceSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISettingStateDeviceSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SettingStateDeviceSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

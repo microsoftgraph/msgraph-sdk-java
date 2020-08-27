@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsBin2HexRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBin2HexRequest instance
      */
-    IWorkbookFunctionsBin2HexRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsBin2HexRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

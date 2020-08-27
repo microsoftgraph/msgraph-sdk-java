@@ -28,7 +28,7 @@ public interface ICountryNamedLocationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ICountryNamedLocationRequest instance
      */
-    ICountryNamedLocationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICountryNamedLocationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

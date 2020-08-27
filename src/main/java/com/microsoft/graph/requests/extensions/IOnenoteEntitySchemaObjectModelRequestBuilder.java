@@ -28,7 +28,7 @@ public interface IOnenoteEntitySchemaObjectModelRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IOnenoteEntitySchemaObjectModelRequest instance
      */
-    IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteEntitySchemaObjectModelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

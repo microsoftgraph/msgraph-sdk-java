@@ -28,7 +28,7 @@ public interface IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder ex
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationAssignmentRequest instance
      */
-    IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

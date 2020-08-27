@@ -33,7 +33,7 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ChatMessageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +52,7 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
      * @param requestOptions the options for this request
      * @return the IChatMessageRequest instance
      */
-    public IChatMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IChatMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChatMessageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

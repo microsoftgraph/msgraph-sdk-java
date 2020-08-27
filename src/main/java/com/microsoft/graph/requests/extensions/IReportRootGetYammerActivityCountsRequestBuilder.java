@@ -28,5 +28,5 @@ public interface IReportRootGetYammerActivityCountsRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IReportRootGetYammerActivityCountsRequest instance
      */
-    IReportRootGetYammerActivityCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetYammerActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

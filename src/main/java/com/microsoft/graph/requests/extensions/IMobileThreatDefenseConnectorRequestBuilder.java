@@ -28,7 +28,7 @@ public interface IMobileThreatDefenseConnectorRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the IMobileThreatDefenseConnectorRequest instance
      */
-    IMobileThreatDefenseConnectorRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileThreatDefenseConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

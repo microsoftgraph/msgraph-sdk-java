@@ -32,7 +32,7 @@ public interface IConditionalAccessRootRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IConditionalAccessRootRequest instance
      */
-    IConditionalAccessRootRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IConditionalAccessPolicyCollectionRequestBuilder policies();

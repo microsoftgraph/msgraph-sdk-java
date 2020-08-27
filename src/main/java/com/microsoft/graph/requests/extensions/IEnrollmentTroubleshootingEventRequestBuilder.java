@@ -28,7 +28,7 @@ public interface IEnrollmentTroubleshootingEventRequestBuilder extends IRequestB
      * @param requestOptions the options for this request
      * @return the IEnrollmentTroubleshootingEventRequest instance
      */
-    IEnrollmentTroubleshootingEventRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEnrollmentTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

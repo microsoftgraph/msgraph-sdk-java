@@ -28,7 +28,7 @@ public interface IAndroidWorkProfileCompliancePolicyRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCompliancePolicyRequest instance
      */
-    IAndroidWorkProfileCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidWorkProfileCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IAndroidCompliancePolicyRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IAndroidCompliancePolicyRequest instance
      */
-    IAndroidCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAndroidCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

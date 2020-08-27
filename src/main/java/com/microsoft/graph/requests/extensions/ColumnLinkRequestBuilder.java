@@ -25,7 +25,7 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ColumnLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ColumnLinkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class ColumnLinkRequestBuilder extends BaseRequestBuilder implements ICol
      * @param requestOptions the options for this request
      * @return the IColumnLinkRequest instance
      */
-    public IColumnLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IColumnLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ColumnLinkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

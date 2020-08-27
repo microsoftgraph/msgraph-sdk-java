@@ -32,7 +32,7 @@ public interface IEducationSchoolRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IEducationSchoolRequest instance
      */
-    IEducationSchoolRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEducationSchoolRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IEducationClassCollectionWithReferencesRequestBuilder classes();

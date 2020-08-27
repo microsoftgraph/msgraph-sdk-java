@@ -42,7 +42,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedEBookRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -61,7 +61,7 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
      * @param requestOptions the options for this request
      * @return the IManagedEBookRequest instance
      */
-    public IManagedEBookRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedEBookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedEBookRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

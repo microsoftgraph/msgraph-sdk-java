@@ -29,7 +29,7 @@ public interface IAadUserConversationMemberRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IAadUserConversationMemberRequest instance
      */
-    IAadUserConversationMemberRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAadUserConversationMemberRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

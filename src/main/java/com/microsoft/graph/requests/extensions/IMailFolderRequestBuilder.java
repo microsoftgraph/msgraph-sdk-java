@@ -40,7 +40,7 @@ public interface IMailFolderRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMailFolderRequest instance
      */
-    IMailFolderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMailFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();

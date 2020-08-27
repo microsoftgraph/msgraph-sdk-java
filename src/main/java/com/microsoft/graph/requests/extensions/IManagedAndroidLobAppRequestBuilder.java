@@ -28,7 +28,7 @@ public interface IManagedAndroidLobAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IManagedAndroidLobAppRequest instance
      */
-    IManagedAndroidLobAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedAndroidLobAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

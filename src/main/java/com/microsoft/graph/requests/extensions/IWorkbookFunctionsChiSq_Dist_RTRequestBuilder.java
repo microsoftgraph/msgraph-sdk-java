@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsChiSq_Dist_RTRequestBuilder extends IRequestB
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_Dist_RTRequest instance
      */
-    IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsChiSq_Dist_RTRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

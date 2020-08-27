@@ -30,7 +30,7 @@ public interface IRemoteAssistancePartnerRequestBuilder extends IRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IRemoteAssistancePartnerRequest instance
      */
-    IRemoteAssistancePartnerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRemoteAssistancePartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IRemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding();
     IRemoteAssistancePartnerDisconnectRequestBuilder disconnect();

@@ -33,7 +33,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemAnalyticsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ItemAnalyticsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,7 +52,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * @param requestOptions the options for this request
      * @return the IItemAnalyticsRequest instance
      */
-    public IItemAnalyticsRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ItemAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

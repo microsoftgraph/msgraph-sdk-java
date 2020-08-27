@@ -25,7 +25,7 @@ public class EditionUpgradeConfigurationRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EditionUpgradeConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EditionUpgradeConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class EditionUpgradeConfigurationRequestBuilder extends BaseRequestBuilde
      * @param requestOptions the options for this request
      * @return the IEditionUpgradeConfigurationRequest instance
      */
-    public IEditionUpgradeConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEditionUpgradeConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EditionUpgradeConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

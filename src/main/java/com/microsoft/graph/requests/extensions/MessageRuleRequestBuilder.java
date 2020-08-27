@@ -25,7 +25,7 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageRuleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MessageRuleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MessageRuleRequestBuilder extends BaseRequestBuilder implements IMe
      * @param requestOptions the options for this request
      * @return the IMessageRuleRequest instance
      */
-    public IMessageRuleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMessageRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MessageRuleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

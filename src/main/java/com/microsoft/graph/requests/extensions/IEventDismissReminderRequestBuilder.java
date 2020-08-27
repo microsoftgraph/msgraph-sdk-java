@@ -28,5 +28,5 @@ public interface IEventDismissReminderRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IEventDismissReminderRequest instance
      */
-    IEventDismissReminderRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IEventDismissReminderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

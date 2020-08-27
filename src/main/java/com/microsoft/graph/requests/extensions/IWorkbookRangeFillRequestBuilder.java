@@ -29,7 +29,7 @@ public interface IWorkbookRangeFillRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeFillRequest instance
      */
-    IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeFillRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookRangeFillClearRequestBuilder clear();
 

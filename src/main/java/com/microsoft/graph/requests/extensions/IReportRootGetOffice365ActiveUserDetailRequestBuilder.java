@@ -28,5 +28,5 @@ public interface IReportRootGetOffice365ActiveUserDetailRequestBuilder extends I
      * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActiveUserDetailRequest instance
      */
-    IReportRootGetOffice365ActiveUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetOffice365ActiveUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

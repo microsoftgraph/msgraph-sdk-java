@@ -29,7 +29,7 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PlannerGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class PlannerGroupRequestBuilder extends BaseRequestBuilder implements IP
      * @param requestOptions the options for this request
      * @return the IPlannerGroupRequest instance
      */
-    public IPlannerGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPlannerGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

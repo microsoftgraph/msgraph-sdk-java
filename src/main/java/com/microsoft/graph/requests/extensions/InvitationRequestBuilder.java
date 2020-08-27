@@ -27,7 +27,7 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InvitationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public InvitationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
      * @param requestOptions the options for this request
      * @return the IInvitationRequest instance
      */
-    public IInvitationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IInvitationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new InvitationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

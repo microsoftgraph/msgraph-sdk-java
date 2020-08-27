@@ -28,7 +28,7 @@ public interface IUnmuteParticipantOperationRequestBuilder extends IRequestBuild
      * @param requestOptions the options for this request
      * @return the IUnmuteParticipantOperationRequest instance
      */
-    IUnmuteParticipantOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IUnmuteParticipantOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

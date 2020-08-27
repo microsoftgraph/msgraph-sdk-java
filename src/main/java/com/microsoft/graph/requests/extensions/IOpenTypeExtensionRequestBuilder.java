@@ -28,7 +28,7 @@ public interface IOpenTypeExtensionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOpenTypeExtensionRequest instance
      */
-    IOpenTypeExtensionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOpenTypeExtensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

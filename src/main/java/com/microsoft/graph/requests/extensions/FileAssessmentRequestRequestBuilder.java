@@ -25,7 +25,7 @@ public class FileAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileAssessmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public FileAssessmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class FileAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IFileAssessmentRequestRequest instance
      */
-    public IFileAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IFileAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new FileAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -51,7 +51,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicyRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PolicyRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -70,7 +70,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      * @param requestOptions the options for this request
      * @return the IPolicyRootRequest instance
      */
-    public IPolicyRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPolicyRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PolicyRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

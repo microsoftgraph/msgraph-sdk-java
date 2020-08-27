@@ -28,5 +28,5 @@ public interface IWorkbookFilterApplyCustomFilterRequestBuilder extends IRequest
      * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyCustomFilterRequest instance
      */
-    IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFilterApplyCustomFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

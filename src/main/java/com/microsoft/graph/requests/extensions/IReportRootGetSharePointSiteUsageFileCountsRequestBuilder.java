@@ -28,5 +28,5 @@ public interface IReportRootGetSharePointSiteUsageFileCountsRequestBuilder exten
      * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsageFileCountsRequest instance
      */
-    IReportRootGetSharePointSiteUsageFileCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetSharePointSiteUsageFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

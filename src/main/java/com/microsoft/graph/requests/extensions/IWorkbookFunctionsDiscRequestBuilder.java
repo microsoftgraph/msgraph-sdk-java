@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDiscRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDiscRequest instance
      */
-    IWorkbookFunctionsDiscRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDiscRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsDstDevPRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDstDevPRequest instance
      */
-    IWorkbookFunctionsDstDevPRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsDstDevPRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

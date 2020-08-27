@@ -25,7 +25,7 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HomeRealmDiscoveryPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public HomeRealmDiscoveryPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class HomeRealmDiscoveryPolicyRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IHomeRealmDiscoveryPolicyRequest instance
      */
-    public IHomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IHomeRealmDiscoveryPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new HomeRealmDiscoveryPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

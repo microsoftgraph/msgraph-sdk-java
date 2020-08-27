@@ -35,7 +35,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public PlannerPlanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -54,7 +54,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
      * @param requestOptions the options for this request
      * @return the IPlannerPlanRequest instance
      */
-    public IPlannerPlanRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IPlannerPlanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new PlannerPlanRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

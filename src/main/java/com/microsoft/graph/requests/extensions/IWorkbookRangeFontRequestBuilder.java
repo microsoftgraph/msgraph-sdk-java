@@ -28,7 +28,7 @@ public interface IWorkbookRangeFontRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeFontRequest instance
      */
-    IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookRangeFontRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -41,7 +41,7 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TargetedManagedAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -60,7 +60,7 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @param requestOptions the options for this request
      * @return the ITargetedManagedAppConfigurationRequest instance
      */
-    public ITargetedManagedAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITargetedManagedAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TargetedManagedAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -41,7 +41,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SharedDriveItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -60,7 +60,7 @@ public class SharedDriveItemRequestBuilder extends BaseRequestBuilder implements
      * @param requestOptions the options for this request
      * @return the ISharedDriveItemRequest instance
      */
-    public ISharedDriveItemRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISharedDriveItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SharedDriveItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

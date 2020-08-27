@@ -28,7 +28,7 @@ public interface ILocalizedNotificationMessageRequestBuilder extends IRequestBui
      * @param requestOptions the options for this request
      * @return the ILocalizedNotificationMessageRequest instance
      */
-    ILocalizedNotificationMessageRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ILocalizedNotificationMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

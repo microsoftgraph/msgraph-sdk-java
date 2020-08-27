@@ -41,7 +41,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DomainRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -60,7 +60,7 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
      * @param requestOptions the options for this request
      * @return the IDomainRequest instance
      */
-    public IDomainRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDomainRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DomainRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsQuotientRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsQuotientRequest instance
      */
-    IWorkbookFunctionsQuotientRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsQuotientRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

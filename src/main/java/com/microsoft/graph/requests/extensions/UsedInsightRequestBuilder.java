@@ -27,7 +27,7 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UsedInsightRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UsedInsightRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class UsedInsightRequestBuilder extends BaseRequestBuilder implements IUs
      * @param requestOptions the options for this request
      * @return the IUsedInsightRequest instance
      */
-    public IUsedInsightRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IUsedInsightRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new UsedInsightRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

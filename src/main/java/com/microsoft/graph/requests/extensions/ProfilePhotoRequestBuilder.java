@@ -27,7 +27,7 @@ public class ProfilePhotoRequestBuilder extends BaseRequestBuilder implements IP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfilePhotoRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ProfilePhotoRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class ProfilePhotoRequestBuilder extends BaseRequestBuilder implements IP
      * @param requestOptions the options for this request
      * @return the IProfilePhotoRequest instance
      */
-    public IProfilePhotoRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IProfilePhotoRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ProfilePhotoRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

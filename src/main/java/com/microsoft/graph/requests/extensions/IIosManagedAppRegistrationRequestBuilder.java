@@ -28,7 +28,7 @@ public interface IIosManagedAppRegistrationRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IIosManagedAppRegistrationRequest instance
      */
-    IIosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

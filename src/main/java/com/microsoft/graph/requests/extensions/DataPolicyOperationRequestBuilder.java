@@ -25,7 +25,7 @@ public class DataPolicyOperationRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataPolicyOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DataPolicyOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DataPolicyOperationRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IDataPolicyOperationRequest instance
      */
-    public IDataPolicyOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDataPolicyOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DataPolicyOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

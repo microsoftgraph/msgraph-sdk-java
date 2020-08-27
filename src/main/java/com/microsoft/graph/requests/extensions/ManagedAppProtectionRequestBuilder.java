@@ -28,7 +28,7 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ManagedAppProtectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -47,7 +47,7 @@ public class ManagedAppProtectionRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IManagedAppProtectionRequest instance
      */
-    public IManagedAppProtectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IManagedAppProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppProtectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

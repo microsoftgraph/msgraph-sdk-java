@@ -28,7 +28,7 @@ public interface IWindowsInformationProtectionPolicyRequestBuilder extends IRequ
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionPolicyRequest instance
      */
-    IWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

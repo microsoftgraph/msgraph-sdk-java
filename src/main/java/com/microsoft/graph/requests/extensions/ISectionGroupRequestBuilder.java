@@ -34,7 +34,7 @@ public interface ISectionGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ISectionGroupRequest instance
      */
-    ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ISectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

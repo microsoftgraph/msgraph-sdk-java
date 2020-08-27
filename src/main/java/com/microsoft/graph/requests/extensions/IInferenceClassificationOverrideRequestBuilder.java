@@ -28,7 +28,7 @@ public interface IInferenceClassificationOverrideRequestBuilder extends IRequest
      * @param requestOptions the options for this request
      * @return the IInferenceClassificationOverrideRequest instance
      */
-    IInferenceClassificationOverrideRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IInferenceClassificationOverrideRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

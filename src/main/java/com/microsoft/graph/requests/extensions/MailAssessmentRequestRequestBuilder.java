@@ -25,7 +25,7 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailAssessmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MailAssessmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MailAssessmentRequestRequestBuilder extends BaseRequestBuilder impl
      * @param requestOptions the options for this request
      * @return the IMailAssessmentRequestRequest instance
      */
-    public IMailAssessmentRequestRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMailAssessmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MailAssessmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

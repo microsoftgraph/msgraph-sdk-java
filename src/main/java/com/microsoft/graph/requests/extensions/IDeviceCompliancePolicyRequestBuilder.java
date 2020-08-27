@@ -44,7 +44,7 @@ public interface IDeviceCompliancePolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyRequest instance
      */
-    IDeviceCompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDeviceCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule();

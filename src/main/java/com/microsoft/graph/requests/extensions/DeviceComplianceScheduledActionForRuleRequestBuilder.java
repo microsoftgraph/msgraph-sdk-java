@@ -29,7 +29,7 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceScheduledActionForRuleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceComplianceScheduledActionForRuleRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,7 +48,7 @@ public class DeviceComplianceScheduledActionForRuleRequestBuilder extends BaseRe
      * @param requestOptions the options for this request
      * @return the IDeviceComplianceScheduledActionForRuleRequest instance
      */
-    public IDeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceComplianceScheduledActionForRuleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceComplianceScheduledActionForRuleRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

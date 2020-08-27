@@ -28,5 +28,5 @@ public interface INotebookCopyNotebookRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the INotebookCopyNotebookRequest instance
      */
-    INotebookCopyNotebookRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    INotebookCopyNotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

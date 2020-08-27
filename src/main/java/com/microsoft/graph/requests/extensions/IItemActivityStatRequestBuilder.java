@@ -30,7 +30,7 @@ public interface IItemActivityStatRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IItemActivityStatRequest instance
      */
-    IItemActivityStatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IItemActivityStatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IItemActivityCollectionRequestBuilder activities();

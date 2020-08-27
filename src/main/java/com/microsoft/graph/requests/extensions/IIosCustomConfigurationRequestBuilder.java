@@ -28,7 +28,7 @@ public interface IIosCustomConfigurationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosCustomConfigurationRequest instance
      */
-    IIosCustomConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosCustomConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

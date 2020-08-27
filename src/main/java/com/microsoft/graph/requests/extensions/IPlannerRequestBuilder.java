@@ -34,7 +34,7 @@ public interface IPlannerRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPlannerRequest instance
      */
-    IPlannerRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPlannerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IPlannerTaskCollectionRequestBuilder tasks();

@@ -28,7 +28,7 @@ public interface IWindows81CompliancePolicyRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IWindows81CompliancePolicyRequest instance
      */
-    IWindows81CompliancePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindows81CompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

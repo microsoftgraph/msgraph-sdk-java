@@ -28,7 +28,7 @@ public interface IAdministrativeUnitRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAdministrativeUnitRequest instance
      */
-    IAdministrativeUnitRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAdministrativeUnitRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

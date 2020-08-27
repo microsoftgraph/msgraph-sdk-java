@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -33,7 +33,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionReque
      * @param startTime the startTime
      * @param availabilityViewInterval the availabilityViewInterval
      */
-    public CalendarGetScheduleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
+    public CalendarGetScheduleCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval) {
         super(requestUrl, client, requestOptions);
   	 if(schedules!=null){
 			bodyParams.put("schedules", schedules);
@@ -53,7 +53,7 @@ public class CalendarGetScheduleCollectionRequestBuilder extends BaseActionReque
         return buildRequest(getOptions());
     }
 
-    public ICalendarGetScheduleCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICalendarGetScheduleCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarGetScheduleCollectionRequest request = new CalendarGetScheduleCollectionRequest(
                 getRequestUrl(),
                 getClient(),

@@ -25,7 +25,7 @@ public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EndpointRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EndpointRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class EndpointRequestBuilder extends BaseRequestBuilder implements IEndpo
      * @param requestOptions the options for this request
      * @return the IEndpointRequest instance
      */
-    public IEndpointRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IEndpointRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EndpointRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -25,7 +25,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCategoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceCategoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder implements 
      * @param requestOptions the options for this request
      * @return the IDeviceCategoryRequest instance
      */
-    public IDeviceCategoryRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

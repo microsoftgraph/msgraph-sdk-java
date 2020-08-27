@@ -27,7 +27,7 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatMessageHostedContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ChatMessageHostedContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class ChatMessageHostedContentRequestBuilder extends BaseRequestBuilder i
      * @param requestOptions the options for this request
      * @return the IChatMessageHostedContentRequest instance
      */
-    public IChatMessageHostedContentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IChatMessageHostedContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ChatMessageHostedContentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

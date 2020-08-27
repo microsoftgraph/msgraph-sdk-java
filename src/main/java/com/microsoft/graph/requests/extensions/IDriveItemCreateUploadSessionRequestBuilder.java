@@ -28,5 +28,5 @@ public interface IDriveItemCreateUploadSessionRequestBuilder extends IRequestBui
      * @param requestOptions the options for the request
      * @return the IDriveItemCreateUploadSessionRequest instance
      */
-    IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDriveItemCreateUploadSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

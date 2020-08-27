@@ -31,7 +31,7 @@ public interface IMobileAppContentFileRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IMobileAppContentFileRequest instance
      */
-    IMobileAppContentFileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IMobileAppContentFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IMobileAppContentFileCommitRequestBuilder commit(final FileEncryptionInfo fileEncryptionInfo);
     IMobileAppContentFileRenewUploadRequestBuilder renewUpload();

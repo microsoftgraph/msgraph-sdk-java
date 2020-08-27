@@ -8,9 +8,9 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,10 +30,10 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
      * @param requestOptions the options for this request
      * @param scope the scope
      */
-    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions, final String scope) {
+    public DeviceManagementGetEffectivePermissionsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String scope) {
         super(requestUrl, client, requestOptions);
      	 if(scope!=null){
-			functionOptions.add(new FunctionOption("scope", scope));
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("scope", scope));
 		}
       }
 
@@ -41,14 +41,14 @@ public class DeviceManagementGetEffectivePermissionsCollectionRequestBuilder ext
         return buildRequest(getOptions());
     }
 
-    public IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceManagementGetEffectivePermissionsCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         DeviceManagementGetEffectivePermissionsCollectionRequest request = new DeviceManagementGetEffectivePermissionsCollectionRequest(
                 getRequestUrl(),
                 getClient(),
                 requestOptions
         );
 
-      for (FunctionOption option : functionOptions) {
+      for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
             request.addFunctionOption(option);
       }
 

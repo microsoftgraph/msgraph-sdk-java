@@ -39,7 +39,7 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public OrgContactRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -58,7 +58,7 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
      * @param requestOptions the options for this request
      * @return the IOrgContactRequest instance
      */
-    public IOrgContactRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IOrgContactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OrgContactRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

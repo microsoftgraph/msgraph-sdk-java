@@ -51,7 +51,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookTableRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -70,7 +70,7 @@ public class WorkbookTableRequestBuilder extends BaseRequestBuilder implements I
      * @param requestOptions the options for this request
      * @return the IWorkbookTableRequest instance
      */
-    public IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IWorkbookTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new WorkbookTableRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -29,7 +29,7 @@ public interface IWorkbookChartPointFormatRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for this request
      * @return the IWorkbookChartPointFormatRequest instance
      */
-    IWorkbookChartPointFormatRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookChartPointFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     /**

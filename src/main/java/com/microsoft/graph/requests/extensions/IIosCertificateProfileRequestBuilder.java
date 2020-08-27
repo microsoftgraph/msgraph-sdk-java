@@ -28,7 +28,7 @@ public interface IIosCertificateProfileRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosCertificateProfileRequest instance
      */
-    IIosCertificateProfileRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

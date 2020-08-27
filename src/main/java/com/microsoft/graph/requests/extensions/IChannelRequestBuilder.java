@@ -33,7 +33,7 @@ public interface IChannelRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IChannelRequest instance
      */
-    IChannelRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IChatMessageCollectionRequestBuilder messages();

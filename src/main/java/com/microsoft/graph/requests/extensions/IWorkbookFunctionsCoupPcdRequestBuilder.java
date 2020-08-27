@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsCoupPcdRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupPcdRequest instance
      */
-    IWorkbookFunctionsCoupPcdRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsCoupPcdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

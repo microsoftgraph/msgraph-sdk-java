@@ -28,7 +28,7 @@ public interface IIosMobileAppConfigurationRequestBuilder extends IRequestBuilde
      * @param requestOptions the options for this request
      * @return the IIosMobileAppConfigurationRequest instance
      */
-    IIosMobileAppConfigurationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosMobileAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

@@ -28,7 +28,7 @@ public interface IOperationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOperationRequest instance
      */
-    IOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

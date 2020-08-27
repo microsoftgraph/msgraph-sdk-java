@@ -40,7 +40,7 @@ public interface IOnenoteRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOnenoteRequest instance
      */
-    IOnenoteRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnenoteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     INotebookCollectionRequestBuilder notebooks();

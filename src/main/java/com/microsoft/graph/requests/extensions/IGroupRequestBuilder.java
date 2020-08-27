@@ -82,7 +82,7 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGroupRequest instance
      */
-    IGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments();

@@ -28,7 +28,7 @@ public interface IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder 
      * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

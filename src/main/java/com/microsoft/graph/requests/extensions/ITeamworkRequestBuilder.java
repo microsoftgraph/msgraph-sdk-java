@@ -30,7 +30,7 @@ public interface ITeamworkRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the ITeamworkRequest instance
      */
-    ITeamworkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ITeamworkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWorkforceIntegrationCollectionRequestBuilder workforceIntegrations();

@@ -10,7 +10,6 @@ import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -30,7 +29,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends Option> requestOptions) {
+    public ManagedDeviceWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDevice.class);
     }
 
@@ -78,7 +77,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
      * @return the updated request
      */
     public IManagedDeviceWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IManagedDeviceWithReferenceRequest)this;
     }
 
@@ -89,7 +88,7 @@ public class ManagedDeviceWithReferenceRequest extends BaseRequest implements IM
      * @return the updated request
      */
     public IManagedDeviceWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (ManagedDeviceWithReferenceRequest)this;
     }
 }

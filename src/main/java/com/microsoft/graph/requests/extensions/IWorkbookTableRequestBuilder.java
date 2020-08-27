@@ -41,7 +41,7 @@ public interface IWorkbookTableRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookTableRequest instance
      */
-    IWorkbookTableRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookTableRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWorkbookTableColumnCollectionRequestBuilder columns();

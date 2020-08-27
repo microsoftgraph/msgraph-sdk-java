@@ -28,7 +28,7 @@ public interface IColumnLinkRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IColumnLinkRequest instance
      */
-    IColumnLinkRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IColumnLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

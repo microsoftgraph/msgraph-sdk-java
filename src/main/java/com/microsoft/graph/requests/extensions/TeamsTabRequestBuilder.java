@@ -27,7 +27,7 @@ public class TeamsTabRequestBuilder extends BaseRequestBuilder implements ITeams
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTabRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TeamsTabRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,7 +46,7 @@ public class TeamsTabRequestBuilder extends BaseRequestBuilder implements ITeams
      * @param requestOptions the options for this request
      * @return the ITeamsTabRequest instance
      */
-    public ITeamsTabRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITeamsTabRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TeamsTabRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

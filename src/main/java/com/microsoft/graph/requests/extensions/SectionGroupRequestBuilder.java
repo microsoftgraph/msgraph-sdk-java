@@ -37,7 +37,7 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SectionGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,7 +56,7 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
      * @param requestOptions the options for this request
      * @return the ISectionGroupRequest instance
      */
-    public ISectionGroupRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SectionGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

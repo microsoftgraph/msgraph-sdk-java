@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsTbillYieldRequestBuilder extends IRequestBuil
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillYieldRequest instance
      */
-    IWorkbookFunctionsTbillYieldRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsTbillYieldRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

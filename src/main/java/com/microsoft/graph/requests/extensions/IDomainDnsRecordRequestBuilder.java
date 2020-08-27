@@ -28,7 +28,7 @@ public interface IDomainDnsRecordRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDomainDnsRecordRequest instance
      */
-    IDomainDnsRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDomainDnsRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

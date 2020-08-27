@@ -25,7 +25,7 @@ public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TermsAndConditionsAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class TermsAndConditionsAssignmentRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the ITermsAndConditionsAssignmentRequest instance
      */
-    public ITermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ITermsAndConditionsAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new TermsAndConditionsAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

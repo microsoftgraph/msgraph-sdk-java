@@ -42,7 +42,7 @@ public interface IWorkbookWorksheetRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetRequest instance
      */
-    IWorkbookWorksheetRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookWorksheetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IWorkbookChartCollectionRequestBuilder charts();

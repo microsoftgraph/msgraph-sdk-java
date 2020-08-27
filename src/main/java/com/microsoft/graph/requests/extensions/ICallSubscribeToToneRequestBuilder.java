@@ -28,5 +28,5 @@ public interface ICallSubscribeToToneRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for the request
      * @return the ICallSubscribeToToneRequest instance
      */
-    ICallSubscribeToToneRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    ICallSubscribeToToneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

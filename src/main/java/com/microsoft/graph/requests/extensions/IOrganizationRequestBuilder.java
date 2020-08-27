@@ -33,7 +33,7 @@ public interface IOrganizationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IOrganizationRequest instance
      */
-    IOrganizationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     ICertificateBasedAuthConfigurationCollectionWithReferencesRequestBuilder certificateBasedAuthConfiguration();

@@ -28,7 +28,7 @@ public interface IAlertRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IAlertRequest instance
      */
-    IAlertRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IAlertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

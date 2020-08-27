@@ -25,7 +25,7 @@ public class DomainDnsUnavailableRecordRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsUnavailableRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DomainDnsUnavailableRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DomainDnsUnavailableRecordRequestBuilder extends BaseRequestBuilder
      * @param requestOptions the options for this request
      * @return the IDomainDnsUnavailableRecordRequest instance
      */
-    public IDomainDnsUnavailableRecordRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDomainDnsUnavailableRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DomainDnsUnavailableRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

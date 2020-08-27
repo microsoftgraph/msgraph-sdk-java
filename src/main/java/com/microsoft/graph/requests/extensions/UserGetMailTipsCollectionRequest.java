@@ -8,9 +8,11 @@ import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
 import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.generated.MailTipsType;
+import java.util.EnumSet;
+
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
 import com.microsoft.graph.serializer.*;
 
 import java.util.Arrays;
@@ -34,7 +36,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserGetMailTipsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public UserGetMailTipsCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserGetMailTipsCollectionResponse.class, IUserGetMailTipsCollectionPage.class);
         body = new UserGetMailTipsBody();
     }
@@ -79,7 +81,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @return the updated request
      */
     public IUserGetMailTipsCollectionRequest select(final String value) {
-        addQueryOption(new QueryOption("$select", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (IUserGetMailTipsCollectionRequest)this;
     }
 
@@ -90,7 +92,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @return the updated request
      */
     public IUserGetMailTipsCollectionRequest top(final int value) {
-        addQueryOption(new QueryOption("$top", value+""));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (IUserGetMailTipsCollectionRequest)this;
     }
 
@@ -101,7 +103,7 @@ public class UserGetMailTipsCollectionRequest extends BaseCollectionRequest<User
      * @return the updated request
      */
     public IUserGetMailTipsCollectionRequest expand(final String value) {
-        addQueryOption(new QueryOption("$expand", value));
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (IUserGetMailTipsCollectionRequest)this;
     }
 

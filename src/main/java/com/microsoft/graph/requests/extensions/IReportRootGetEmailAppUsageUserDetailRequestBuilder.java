@@ -28,5 +28,5 @@ public interface IReportRootGetEmailAppUsageUserDetailRequestBuilder extends IRe
      * @param requestOptions the options for the request
      * @return the IReportRootGetEmailAppUsageUserDetailRequest instance
      */
-    IReportRootGetEmailAppUsageUserDetailRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetEmailAppUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

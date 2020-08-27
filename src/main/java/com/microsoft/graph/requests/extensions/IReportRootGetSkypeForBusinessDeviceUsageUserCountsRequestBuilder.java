@@ -28,5 +28,5 @@ public interface IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuild
      * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest instance
      */
-    IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

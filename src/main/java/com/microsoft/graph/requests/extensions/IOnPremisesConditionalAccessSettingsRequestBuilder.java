@@ -28,7 +28,7 @@ public interface IOnPremisesConditionalAccessSettingsRequestBuilder extends IReq
      * @param requestOptions the options for this request
      * @return the IOnPremisesConditionalAccessSettingsRequest instance
      */
-    IOnPremisesConditionalAccessSettingsRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IOnPremisesConditionalAccessSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

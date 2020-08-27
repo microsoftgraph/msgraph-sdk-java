@@ -30,7 +30,7 @@ public interface IGroupLifecyclePolicyRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IGroupLifecyclePolicyRequest instance
      */
-    IGroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IGroupLifecyclePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IGroupLifecyclePolicyAddGroupRequestBuilder addGroup(final String groupId);
     IGroupLifecyclePolicyRemoveGroupRequestBuilder removeGroup(final String groupId);

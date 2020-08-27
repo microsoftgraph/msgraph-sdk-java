@@ -30,7 +30,7 @@ public interface IRoleDefinitionRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IRoleDefinitionRequest instance
      */
-    IRoleDefinitionRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IRoleAssignmentCollectionRequestBuilder roleAssignments();

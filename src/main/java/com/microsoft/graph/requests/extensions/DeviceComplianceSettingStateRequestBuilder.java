@@ -25,7 +25,7 @@ public class DeviceComplianceSettingStateRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceSettingStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceComplianceSettingStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class DeviceComplianceSettingStateRequestBuilder extends BaseRequestBuild
      * @param requestOptions the options for this request
      * @return the IDeviceComplianceSettingStateRequest instance
      */
-    public IDeviceComplianceSettingStateRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IDeviceComplianceSettingStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DeviceComplianceSettingStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

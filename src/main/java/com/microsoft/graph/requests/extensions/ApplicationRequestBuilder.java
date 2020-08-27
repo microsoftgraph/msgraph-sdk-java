@@ -60,7 +60,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ApplicationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -79,7 +79,7 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder implements IAp
      * @param requestOptions the options for this request
      * @return the IApplicationRequest instance
      */
-    public IApplicationRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

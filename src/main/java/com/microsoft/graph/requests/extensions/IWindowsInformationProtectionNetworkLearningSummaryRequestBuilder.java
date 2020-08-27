@@ -28,7 +28,7 @@ public interface IWindowsInformationProtectionNetworkLearningSummaryRequestBuild
      * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionNetworkLearningSummaryRequest instance
      */
-    IWindowsInformationProtectionNetworkLearningSummaryRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWindowsInformationProtectionNetworkLearningSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

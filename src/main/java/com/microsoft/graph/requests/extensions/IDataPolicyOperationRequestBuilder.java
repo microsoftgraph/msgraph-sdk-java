@@ -28,7 +28,7 @@ public interface IDataPolicyOperationRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDataPolicyOperationRequest instance
      */
-    IDataPolicyOperationRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDataPolicyOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

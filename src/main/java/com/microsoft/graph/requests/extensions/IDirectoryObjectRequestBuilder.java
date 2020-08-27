@@ -33,7 +33,7 @@ public interface IDirectoryObjectRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IDirectoryObjectRequest instance
      */
-    IDirectoryObjectRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryObjectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IDirectoryObjectCheckMemberGroupsCollectionRequestBuilder checkMemberGroups(final java.util.List<String> groupIds);

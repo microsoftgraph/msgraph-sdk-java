@@ -37,7 +37,7 @@ public interface IListRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IListRequest instance
      */
-    IListRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
     IColumnDefinitionCollectionRequestBuilder columns();

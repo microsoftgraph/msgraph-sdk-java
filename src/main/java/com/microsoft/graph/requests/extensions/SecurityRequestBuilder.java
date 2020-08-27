@@ -37,7 +37,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public SecurityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,7 +56,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
      * @param requestOptions the options for this request
      * @return the ISecurityRequest instance
      */
-    public ISecurityRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ISecurityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new SecurityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

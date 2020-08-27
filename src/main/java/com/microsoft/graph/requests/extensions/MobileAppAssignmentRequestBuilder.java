@@ -25,7 +25,7 @@ public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MobileAppAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class MobileAppAssignmentRequestBuilder extends BaseRequestBuilder implem
      * @param requestOptions the options for this request
      * @return the IMobileAppAssignmentRequest instance
      */
-    public IMobileAppAssignmentRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMobileAppAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

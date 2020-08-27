@@ -28,7 +28,7 @@ public interface IPlaceRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IPlaceRequest instance
      */
-    IPlaceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IPlaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

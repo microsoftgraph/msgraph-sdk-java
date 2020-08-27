@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsRadiansRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRadiansRequest instance
      */
-    IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsRadiansRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

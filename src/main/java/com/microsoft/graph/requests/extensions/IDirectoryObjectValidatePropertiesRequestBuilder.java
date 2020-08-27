@@ -28,5 +28,5 @@ public interface IDirectoryObjectValidatePropertiesRequestBuilder extends IReque
      * @param requestOptions the options for the request
      * @return the IDirectoryObjectValidatePropertiesRequest instance
      */
-    IDirectoryObjectValidatePropertiesRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IDirectoryObjectValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

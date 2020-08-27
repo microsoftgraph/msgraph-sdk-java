@@ -30,7 +30,7 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppContentFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public MobileAppContentFileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -49,7 +49,7 @@ public class MobileAppContentFileRequestBuilder extends BaseRequestBuilder imple
      * @param requestOptions the options for this request
      * @return the IMobileAppContentFileRequest instance
      */
-    public IMobileAppContentFileRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public IMobileAppContentFileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new MobileAppContentFileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

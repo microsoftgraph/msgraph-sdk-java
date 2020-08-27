@@ -25,7 +25,7 @@ public class CalendarPermissionRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarPermissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public CalendarPermissionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,7 +44,7 @@ public class CalendarPermissionRequestBuilder extends BaseRequestBuilder impleme
      * @param requestOptions the options for this request
      * @return the ICalendarPermissionRequest instance
      */
-    public ICalendarPermissionRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
+    public ICalendarPermissionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new CalendarPermissionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

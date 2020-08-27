@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsUnicodeRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsUnicodeRequest instance
      */
-    IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsUnicodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

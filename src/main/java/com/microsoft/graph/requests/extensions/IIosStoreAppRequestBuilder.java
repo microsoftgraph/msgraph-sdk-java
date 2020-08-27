@@ -28,7 +28,7 @@ public interface IIosStoreAppRequestBuilder extends IRequestBuilder {
      * @param requestOptions the options for this request
      * @return the IIosStoreAppRequest instance
      */
-    IIosStoreAppRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIosStoreAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

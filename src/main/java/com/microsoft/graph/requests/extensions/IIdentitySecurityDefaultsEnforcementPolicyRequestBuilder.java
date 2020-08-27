@@ -28,7 +28,7 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder extend
      * @param requestOptions the options for this request
      * @return the IIdentitySecurityDefaultsEnforcementPolicyRequest instance
      */
-    IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IIdentitySecurityDefaultsEnforcementPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
 }

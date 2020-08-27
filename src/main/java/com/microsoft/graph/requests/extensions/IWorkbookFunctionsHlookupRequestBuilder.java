@@ -28,5 +28,5 @@ public interface IWorkbookFunctionsHlookupRequestBuilder extends IRequestBuilder
      * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHlookupRequest instance
      */
-    IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }
