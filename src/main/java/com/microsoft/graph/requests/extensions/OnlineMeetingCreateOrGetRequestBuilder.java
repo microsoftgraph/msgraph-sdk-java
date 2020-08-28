@@ -7,6 +7,7 @@ import com.microsoft.graph.requests.extensions.IOnlineMeetingCreateOrGetRequest;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCreateOrGetRequest;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
+import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -3,12 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequest;
-import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequest;
-import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
+import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
+import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

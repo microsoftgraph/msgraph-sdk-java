@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.callrecords.requests.extensions;
-import com.microsoft.graph.callrecords.requests.extensions.ISessionRequest;
-import com.microsoft.graph.callrecords.requests.extensions.SessionRequest;
-import com.microsoft.graph.callrecords.models.extensions.Session;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.callrecords.models.extensions.Session;
+import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ISegmentRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

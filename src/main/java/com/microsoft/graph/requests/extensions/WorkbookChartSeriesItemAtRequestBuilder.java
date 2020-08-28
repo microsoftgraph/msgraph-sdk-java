@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesItemAtRequest;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesItemAtRequest;
-
+import com.microsoft.graph.models.extensions.WorkbookChartSeries;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICalendarGroupRequest;
-import com.microsoft.graph.requests.extensions.CalendarGroupRequest;
-import com.microsoft.graph.models.extensions.CalendarGroup;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CalendarGroup;
+import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

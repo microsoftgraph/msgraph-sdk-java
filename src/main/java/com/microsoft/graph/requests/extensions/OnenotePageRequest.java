@@ -3,12 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequest;
-import com.microsoft.graph.requests.extensions.OnenotePageRequest;
-import com.microsoft.graph.models.extensions.OnenotePage;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OnenotePage;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
+import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenotePagePreview;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
+import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

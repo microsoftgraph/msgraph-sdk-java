@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICallMuteRequest;
 import com.microsoft.graph.requests.extensions.CallMuteRequest;
-
+import com.microsoft.graph.models.extensions.MuteParticipantOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

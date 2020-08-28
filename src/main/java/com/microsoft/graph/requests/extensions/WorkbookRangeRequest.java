@@ -3,12 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRequest;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRequest;
-import com.microsoft.graph.models.extensions.WorkbookRange;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookRangeView;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeSortRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

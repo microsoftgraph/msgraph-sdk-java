@@ -3,12 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IChannelRequest;
-import com.microsoft.graph.requests.extensions.ChannelRequest;
-import com.microsoft.graph.models.extensions.Channel;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Channel;
+import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

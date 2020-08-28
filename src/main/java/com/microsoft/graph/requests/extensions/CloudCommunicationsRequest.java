@@ -3,12 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequest;
-import com.microsoft.graph.requests.extensions.CloudCommunicationsRequest;
-import com.microsoft.graph.models.extensions.CloudCommunications;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.CloudCommunications;
+import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
+import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CallRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ICallRecordCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.ICallRecordRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionRequestBuilder;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

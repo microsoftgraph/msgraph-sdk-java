@@ -3,45 +3,40 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.ITeamRequest;
-import com.microsoft.graph.requests.extensions.TeamRequest;
-import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
-import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsTemplateWithReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequestBuilder;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
-import com.microsoft.graph.requests.extensions.ITeamCloneRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamCloneRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamArchiveRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamArchiveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamUnarchiveRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamUnarchiveRequestBuilder;
-
+import java.util.EnumSet;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.options.Option;
-import java.util.EnumSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -77,7 +72,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
      * @return the ITeamRequest instance
      */
     public ITeamRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        return new TeamRequest(getRequestUrl(), getClient(), requestOptions);
+        return new com.microsoft.graph.requests.extensions.TeamRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -158,4 +153,3 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
         return new TeamUnarchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unarchive"), getClient(), null);
     }
 }
-

@@ -6,6 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCreateUploadSessionRequest;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
+import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

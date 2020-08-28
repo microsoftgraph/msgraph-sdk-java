@@ -3,12 +3,33 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IMailFolderRequest;
-import com.microsoft.graph.requests.extensions.MailFolderRequest;
-import com.microsoft.graph.models.extensions.MailFolder;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.MailFolder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

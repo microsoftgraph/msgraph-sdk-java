@@ -3,12 +3,31 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IListRequest;
-import com.microsoft.graph.requests.extensions.ListRequest;
-import com.microsoft.graph.models.extensions.List;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.List;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

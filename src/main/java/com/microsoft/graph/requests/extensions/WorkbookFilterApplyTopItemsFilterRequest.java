@@ -7,6 +7,9 @@ import com.microsoft.graph.models.extensions.WorkbookFilterApplyTopItemsFilterBo
 import com.microsoft.graph.requests.extensions.IWorkbookFilterApplyTopItemsFilterRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFilterApplyTopItemsFilterRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
