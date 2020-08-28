@@ -5,7 +5,8 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailRequest;
 import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserDetailRequest;
-
+import com.microsoft.graph.models.extensions.Report;
+import com.microsoft.graph.models.extensions.Report;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

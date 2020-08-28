@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IMailFolderMoveRequest;
 import com.microsoft.graph.requests.extensions.MailFolderMoveRequest;
-
+import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeVisibleViewRequest;
 import com.microsoft.graph.requests.extensions.WorkbookRangeVisibleViewRequest;
-
+import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

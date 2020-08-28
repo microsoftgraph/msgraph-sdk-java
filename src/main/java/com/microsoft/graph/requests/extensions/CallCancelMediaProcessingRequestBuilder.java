@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICallCancelMediaProcessingRequest;
 import com.microsoft.graph.requests.extensions.CallCancelMediaProcessingRequest;
-
+import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

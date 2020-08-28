@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookSessionInfoResourceRequest;
 import com.microsoft.graph.requests.extensions.WorkbookSessionInfoResourceRequest;
-
+import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

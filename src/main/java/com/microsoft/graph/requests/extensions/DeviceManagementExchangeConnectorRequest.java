@@ -3,12 +3,14 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorRequest;
-import com.microsoft.graph.requests.extensions.DeviceManagementExchangeConnectorRequest;
-import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DeviceManagementExchangeConnector;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorSyncType;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

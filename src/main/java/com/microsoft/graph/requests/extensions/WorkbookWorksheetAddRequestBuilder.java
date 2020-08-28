@@ -5,7 +5,7 @@
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetAddRequest;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetAddRequest;
-
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

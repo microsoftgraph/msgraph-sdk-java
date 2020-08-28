@@ -3,12 +3,24 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IListItemRequest;
-import com.microsoft.graph.requests.extensions.ListItemRequest;
-import com.microsoft.graph.models.extensions.ListItem;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ListItem;
+import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ListItemVersionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

@@ -3,12 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxisRequest;
-import com.microsoft.graph.requests.extensions.WorkbookChartAxisRequest;
-import com.microsoft.graph.models.extensions.WorkbookChartAxis;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookChartAxis;
+import com.microsoft.graph.requests.extensions.IWorkbookChartAxisFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartAxisFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartGridlinesRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartGridlinesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartAxisTitleRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookChartAxisTitleRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

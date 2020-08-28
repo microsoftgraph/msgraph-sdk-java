@@ -3,12 +3,15 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterRequest;
-import com.microsoft.graph.requests.extensions.WorkbookFilterRequest;
-import com.microsoft.graph.models.extensions.WorkbookFilter;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookFilter;
+import com.microsoft.graph.models.extensions.WorkbookFilterCriteria;
+import com.microsoft.graph.models.extensions.WorkbookIcon;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

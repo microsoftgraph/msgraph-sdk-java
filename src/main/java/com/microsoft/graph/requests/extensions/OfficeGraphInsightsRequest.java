@@ -3,12 +3,25 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IOfficeGraphInsightsRequest;
-import com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequest;
-import com.microsoft.graph.models.extensions.OfficeGraphInsights;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.OfficeGraphInsights;
+import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsedInsightRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;

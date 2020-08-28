@@ -5,6 +5,7 @@
 package com.microsoft.graph.models.extensions;
 
 import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.models.extensions.DriveItem;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;

@@ -6,6 +6,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ICallRecordResponseRequest;
 import com.microsoft.graph.requests.extensions.CallRecordResponseRequest;
 import com.microsoft.graph.models.extensions.Prompt;
+import com.microsoft.graph.models.extensions.RecordOperation;
 import com.microsoft.graph.core.BaseActionRequestBuilder;
 import com.microsoft.graph.core.BaseFunctionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;

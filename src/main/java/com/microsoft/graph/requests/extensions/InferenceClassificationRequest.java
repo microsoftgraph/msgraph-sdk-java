@@ -3,12 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationRequest;
-import com.microsoft.graph.requests.extensions.InferenceClassificationRequest;
-import com.microsoft.graph.models.extensions.InferenceClassification;
 
-import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.InferenceClassification;
+import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInferenceClassificationOverrideRequestBuilder;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InferenceClassificationOverrideRequestBuilder;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
