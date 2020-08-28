@@ -18,17 +18,18 @@ repository {
 
 dependency {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:microsoft-graph:1.9.+')
+    compile('com.microsoft.graph:microsoft-graph:2.0.+')
 }
 ```
 
 ### 1.2 Install via Maven
 Add the dependency in `dependencies` in pom.xml
-```dependency
+
+```xml
 <dependency>
 	<groupId>com.microsoft.graph</groupId>
 	<artifactId>microsoft-graph</artifactId>
-	<version>1.9.0</version>
+	<version>2.0.0</version>
 </dependency>
 ```
 
