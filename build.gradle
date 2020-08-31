@@ -190,6 +190,20 @@ publishing {
     			}
             }
 		}
+
+        maven {
+            url = 'https://api.bintray.com/content/microsoftgraph/Maven/microsoft-graph'
+            name = 'bintray'
+            
+            credentials {
+    			if (project.rootProject.file('local.properties').exists()) {
+        			Properties properties = new Properties()
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
+        			password = properties.getProperty('bintray.apikey')
+    			}
+            }
+		}
     }
 
 }
