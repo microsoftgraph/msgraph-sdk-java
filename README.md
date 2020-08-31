@@ -12,13 +12,13 @@ Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft 
 Add the repository and a compile dependency for `microsoft-graph` to your project's `build.gradle`:
 
 ```gradle
-repository {
+repositories {
     jcenter()
 }
 
-dependency {
+dependencies {
     // Include the sdk as a dependency
-    compile('com.microsoft.graph:microsoft-graph:2.0.+')
+    implementation 'com.microsoft.graph:microsoft-graph:2.0.+'
 }
 ```
 
