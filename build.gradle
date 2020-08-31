@@ -73,15 +73,10 @@ publishing {
     publications {
 
         maven(MavenPublication) {
-
             groupId 'com.microsoft.graph'
-
             artifactId 'microsoft-graph'
-
             version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
-
             from components.java
-
             artifact sourceJar
         	artifact javadocJar
             pom.withXml {
@@ -141,55 +136,57 @@ publishing {
     }
 	repositories {
         maven {
-            url = project.property('mavenCentralSnapshotUrl')
+            url = 'https://oss.sonatype.org/content/repositories/snapshots'
+            name = 'sonatypeSnapshot'
             
             credentials {
     			if (project.rootProject.file('local.properties').exists()) {
-
         			Properties properties = new Properties()
-
         			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
         			username = properties.getProperty('sonatypeUsername')
-
         			password = properties.getProperty('sonatypePassword')
-
     			}
             }
         }
         
         maven {
-            url = project.property('mavenCentralReleaseUrl')
+            url = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+            name = 'sonatype'
             
             credentials {
     			if (project.rootProject.file('local.properties').exists()) {
-
         			Properties properties = new Properties()
-
         			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
         			username = properties.getProperty('sonatypeUsername')
-
         			password = properties.getProperty('sonatypePassword')
-
     			}
             }
         }
         
         maven {
-            url = project.property('mavenBintraySnapshotUrl')
+            url = 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+            name = 'jfrogSnapshot'
             
             credentials {
     			if (project.rootProject.file('local.properties').exists()) {
-
         			Properties properties = new Properties()
-
         			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
         			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
-
         			password = properties.getProperty('bintray.apikey')
+    			}
+            }
+		}
 
+        maven {
+            url = 'https://oss.jfrog.org/artifactory/libs-release'
+            name = 'jfrog'
+            
+            credentials {
+    			if (project.rootProject.file('local.properties').exists()) {
+        			Properties properties = new Properties()
+        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
+        			password = properties.getProperty('bintray.apikey')
     			}
             }
 		}
@@ -277,7 +274,7 @@ model {
     tasks.publishMavenCentralReleasePublicationToMavenLocal {
         dependsOn project.tasks.signArchives
     }
-    tasks.publishMavenCentralReleasePublicationToMaven2Repository {
+    tasks.publishMavenCentralReleasePublicationToSonatypeRepository {
         dependsOn project.tasks.signArchives
     }
 }
