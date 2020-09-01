@@ -73,8 +73,8 @@ publishing {
     publications {
 
         maven(MavenPublication) {
-            groupId 'com.microsoft.graph'
-            artifactId 'microsoft-graph'
+            groupId project.property('mavenGroupId')
+            artifactId project.property('mavenArtifactId')
             version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenArtifactSuffix}"
             from components.java
             artifact sourceJar
@@ -91,8 +91,8 @@ publishing {
         }
         Snapshot(MavenPublication) {
         	customizePom(pom)
-        	groupId 'com.microsoft.graph'
-        	artifactId 'microsoft-graph'
+        	groupId project.property('mavenGroupId')
+        	artifactId project.property('mavenArtifactId')
         	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}${mavenCentralSnapshotArtifactSuffix}"
         	from components.java
         	pom.withXml {
@@ -105,8 +105,8 @@ publishing {
 		
 		mavenCentralRelease(MavenPublication) {
         	customizePom(pom)
-        	groupId 'com.microsoft.graph'
-        	artifactId 'microsoft-graph'
+        	groupId project.property('mavenGroupId')
+        	artifactId project.property('mavenArtifactId')
         	version "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
         	from components.java
         	pom.withXml {
