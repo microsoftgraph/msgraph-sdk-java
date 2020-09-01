@@ -116,7 +116,7 @@ Thanks to everyone who has already devoted time to improving the library:
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind are welcome!
 
 ## 7. Supported Java versions
-The Microsoft Graph SDK for Java library is supported at runtime for Java 8+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater through [desugaring](https://developer.android.com/studio/write/java8-support.html#library-desugaring).
+The Microsoft Graph SDK for Java library is supported at runtime for Java 7+ and [Android API revision 15](http://source.android.com/source/build-numbers.html) and greater.
 
 ## 8. License
 
