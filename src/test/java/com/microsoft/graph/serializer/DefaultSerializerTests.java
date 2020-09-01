@@ -59,7 +59,7 @@ public class DefaultSerializerTests {
 
 	@Test
     public void testRecurrenceRangeSerialization() throws Exception {
-        final String expected = "{\"type\":\"endDate\",\"startDate\":\"2016-04-25\",\"endDate\":\"2016-05-25\",\"recurrenceTimeZone\":\"PST\",\"numberOfOccurrences\":4}";
+        final String expected = "{\"endDate\":\"2016-05-25\",\"numberOfOccurrences\":4,\"recurrenceTimeZone\":\"PST\",\"startDate\":\"2016-04-25\",\"type\":\"endDate\"}";
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         RecurrenceRange brr = new RecurrenceRange();
         brr.type = RecurrenceRangeType.END_DATE;
