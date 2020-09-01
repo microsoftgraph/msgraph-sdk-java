@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.PreAuthorizedApplication;
 import com.microsoft.graph.models.extensions.PermissionScope;
+import com.microsoft.graph.models.extensions.PreAuthorizedApplication;
 
 
 import com.google.gson.JsonObject;
@@ -54,6 +54,14 @@ public class ApiApplication implements IJsonBackedObject {
     public java.util.List<java.util.UUID> knownClientApplications;
 
     /**
+     * The Oauth2Permission Scopes.
+     * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
+     */
+    @SerializedName("oauth2PermissionScopes")
+    @Expose
+    public java.util.List<PermissionScope> oauth2PermissionScopes;
+
+    /**
      * The Pre Authorized Applications.
      * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
      */
@@ -68,14 +76,6 @@ public class ApiApplication implements IJsonBackedObject {
     @SerializedName("requestedAccessTokenVersion")
     @Expose
     public Integer requestedAccessTokenVersion;
-
-    /**
-     * The Oauth2Permission Scopes.
-     * The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.
-     */
-    @SerializedName("oauth2PermissionScopes")
-    @Expose
-    public java.util.List<PermissionScope> oauth2PermissionScopes;
 
 
     /**

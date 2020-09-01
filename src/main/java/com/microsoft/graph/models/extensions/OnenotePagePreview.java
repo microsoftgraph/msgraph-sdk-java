@@ -37,20 +37,20 @@ public class OnenotePagePreview implements IJsonBackedObject {
     }
 
     /**
-     * The Preview Text.
-     * 
-     */
-    @SerializedName("previewText")
-    @Expose
-    public String previewText;
-
-    /**
      * The Links.
      * 
      */
     @SerializedName("links")
     @Expose
     public OnenotePagePreviewLinks links;
+
+    /**
+     * The Preview Text.
+     * 
+     */
+    @SerializedName("previewText")
+    @Expose
+    public String previewText;
 
 
     /**

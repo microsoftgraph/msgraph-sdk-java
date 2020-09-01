@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceOperatingSystemSummary;
 import com.microsoft.graph.models.extensions.DeviceExchangeAccessStateSummary;
+import com.microsoft.graph.models.extensions.DeviceOperatingSystemSummary;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,6 +29,30 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Device Exchange Access State Summary.
+     * Distribution of Exchange Access State in Intune
+     */
+    @SerializedName("deviceExchangeAccessStateSummary")
+    @Expose
+    public DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
+
+    /**
+     * The Device Operating System Summary.
+     * Device operating system summary.
+     */
+    @SerializedName("deviceOperatingSystemSummary")
+    @Expose
+    public DeviceOperatingSystemSummary deviceOperatingSystemSummary;
+
+    /**
+     * The Dual Enrolled Device Count.
+     * The number of devices enrolled in both MDM and EAS
+     */
+    @SerializedName("dualEnrolledDeviceCount")
+    @Expose
+    public Integer dualEnrolledDeviceCount;
+
+    /**
      * The Enrolled Device Count.
      * Total enrolled device count. Does not include PC devices managed via Intune PC Agent
      */
@@ -43,30 +67,6 @@ public class ManagedDeviceOverview extends Entity implements IJsonBackedObject {
     @SerializedName("mdmEnrolledCount")
     @Expose
     public Integer mdmEnrolledCount;
-
-    /**
-     * The Dual Enrolled Device Count.
-     * The number of devices enrolled in both MDM and EAS
-     */
-    @SerializedName("dualEnrolledDeviceCount")
-    @Expose
-    public Integer dualEnrolledDeviceCount;
-
-    /**
-     * The Device Operating System Summary.
-     * Device operating system summary.
-     */
-    @SerializedName("deviceOperatingSystemSummary")
-    @Expose
-    public DeviceOperatingSystemSummary deviceOperatingSystemSummary;
-
-    /**
-     * The Device Exchange Access State Summary.
-     * Distribution of Exchange Access State in Intune
-     */
-    @SerializedName("deviceExchangeAccessStateSummary")
-    @Expose
-    public DeviceExchangeAccessStateSummary deviceExchangeAccessStateSummary;
 
 
     /**

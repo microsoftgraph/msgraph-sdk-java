@@ -11,10 +11,10 @@ import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
 import com.microsoft.graph.models.extensions.CopyNotebookModel;
 import com.microsoft.graph.models.extensions.RecentNotebook;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -40,13 +40,13 @@ public interface INotebookRequestBuilder extends IRequestBuilder {
     INotebookRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IOnenoteSectionCollectionRequestBuilder sections();
-
-    IOnenoteSectionRequestBuilder sections(final String id);
-
     ISectionGroupCollectionRequestBuilder sectionGroups();
 
     ISectionGroupRequestBuilder sectionGroups(final String id);
+
+    IOnenoteSectionCollectionRequestBuilder sections();
+
+    IOnenoteSectionRequestBuilder sections(final String id);
     INotebookCopyNotebookRequestBuilder copyNotebook(final String groupId, final String renameAs, final String notebookFolder, final String siteCollectionId, final String siteId);
 
 }

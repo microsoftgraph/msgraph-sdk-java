@@ -28,14 +28,6 @@ public class Shift extends ChangeTrackedEntity implements IJsonBackedObject {
 
 
     /**
-     * The Shared Shift.
-     * The shared version of this shift that is viewable by both employees and managers. Required.
-     */
-    @SerializedName("sharedShift")
-    @Expose
-    public ShiftItem sharedShift;
-
-    /**
      * The Draft Shift.
      * The draft version of this shift that is viewable by managers. Required.
      */
@@ -44,20 +36,28 @@ public class Shift extends ChangeTrackedEntity implements IJsonBackedObject {
     public ShiftItem draftShift;
 
     /**
-     * The User Id.
-     * ID of the user assigned to the shift. Required.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Scheduling Group Id.
      * ID of the scheduling group the shift is part of. Required.
      */
     @SerializedName("schedulingGroupId")
     @Expose
     public String schedulingGroupId;
+
+    /**
+     * The Shared Shift.
+     * The shared version of this shift that is viewable by both employees and managers. Required.
+     */
+    @SerializedName("sharedShift")
+    @Expose
+    public ShiftItem sharedShift;
+
+    /**
+     * The User Id.
+     * ID of the user assigned to the shift. Required.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

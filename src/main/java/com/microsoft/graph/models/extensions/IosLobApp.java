@@ -29,14 +29,6 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
 
 
     /**
-     * The Bundle Id.
-     * The Identity Name.
-     */
-    @SerializedName("bundleId")
-    @Expose
-    public String bundleId;
-
-    /**
      * The Applicable Device Type.
      * The iOS architecture for which this app can run on.
      */
@@ -45,12 +37,20 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
     public IosDeviceType applicableDeviceType;
 
     /**
-     * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
+     * The Build Number.
+     * The build number of iOS Line of Business (LoB) app.
      */
-    @SerializedName("minimumSupportedOperatingSystem")
+    @SerializedName("buildNumber")
     @Expose
-    public IosMinimumOperatingSystem minimumSupportedOperatingSystem;
+    public String buildNumber;
+
+    /**
+     * The Bundle Id.
+     * The Identity Name.
+     */
+    @SerializedName("bundleId")
+    @Expose
+    public String bundleId;
 
     /**
      * The Expiration Date Time.
@@ -61,20 +61,20 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
     public java.util.Calendar expirationDateTime;
 
     /**
+     * The Minimum Supported Operating System.
+     * The value for the minimum applicable operating system.
+     */
+    @SerializedName("minimumSupportedOperatingSystem")
+    @Expose
+    public IosMinimumOperatingSystem minimumSupportedOperatingSystem;
+
+    /**
      * The Version Number.
      * The version number of iOS Line of Business (LoB) app.
      */
     @SerializedName("versionNumber")
     @Expose
     public String versionNumber;
-
-    /**
-     * The Build Number.
-     * The build number of iOS Line of Business (LoB) app.
-     */
-    @SerializedName("buildNumber")
-    @Expose
-    public String buildNumber;
 
 
     /**

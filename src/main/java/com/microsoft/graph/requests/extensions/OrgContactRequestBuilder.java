@@ -55,6 +55,13 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
     }
 
 
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder directReports(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DirectoryObject
@@ -63,13 +70,6 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder implements IOrg
      */
     public IDirectoryObjectWithReferenceRequestBuilder manager() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("manager"), getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder directReports(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id, getClient(), null);
     }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);

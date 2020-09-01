@@ -60,20 +60,20 @@ public class DeviceExchangeAccessStateSummary implements IJsonBackedObject {
     public Integer quarantinedDeviceCount;
 
     /**
-     * The Unknown Device Count.
-     * Total count of devices with Exchange Access State: Unknown.
-     */
-    @SerializedName("unknownDeviceCount")
-    @Expose
-    public Integer unknownDeviceCount;
-
-    /**
      * The Unavailable Device Count.
      * Total count of devices for which no Exchange Access State could be found.
      */
     @SerializedName("unavailableDeviceCount")
     @Expose
     public Integer unavailableDeviceCount;
+
+    /**
+     * The Unknown Device Count.
+     * Total count of devices with Exchange Access State: Unknown.
+     */
+    @SerializedName("unknownDeviceCount")
+    @Expose
+    public Integer unknownDeviceCount;
 
 
     /**

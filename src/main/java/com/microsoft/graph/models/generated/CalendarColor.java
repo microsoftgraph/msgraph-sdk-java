@@ -19,6 +19,10 @@ public enum CalendarColor
     */
     LIGHT_GREEN,
     /**
+    * auto
+    */
+    AUTO,
+    /**
     * light Orange
     */
     LIGHT_ORANGE,
@@ -50,10 +54,6 @@ public enum CalendarColor
     * max Color
     */
     MAX_COLOR,
-    /**
-    * auto
-    */
-    AUTO,
     /**
     * For CalendarColor values that were not expected from the service
     */

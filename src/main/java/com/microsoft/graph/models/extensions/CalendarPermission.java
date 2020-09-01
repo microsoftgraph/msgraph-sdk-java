@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.generated.CalendarRoleType;
+import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,20 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Allowed Roles.
+     * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
+     */
+    @SerializedName("allowedRoles")
+    @Expose
+    public java.util.List<CalendarRoleType> allowedRoles;
+
+    /**
      * The Email Address.
      * Represents a sharee or delegate who has access to the calendar. For the 'My Organization' sharee, the address property is null. Read-only.
      */
     @SerializedName("emailAddress")
     @Expose
     public EmailAddress emailAddress;
-
-    /**
-     * The Is Removable.
-     * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
-     */
-    @SerializedName("isRemovable")
-    @Expose
-    public Boolean isRemovable;
 
     /**
      * The Is Inside Organization.
@@ -53,20 +53,20 @@ public class CalendarPermission extends Entity implements IJsonBackedObject {
     public Boolean isInsideOrganization;
 
     /**
+     * The Is Removable.
+     * True if the user can be removed from the list of sharees or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You cannot remove 'My organization' as a sharee to a calendar.
+     */
+    @SerializedName("isRemovable")
+    @Expose
+    public Boolean isRemovable;
+
+    /**
      * The Role.
      * Current permission level of the calendar sharee or delegate.
      */
     @SerializedName("role")
     @Expose
     public CalendarRoleType role;
-
-    /**
-     * The Allowed Roles.
-     * List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     */
-    @SerializedName("allowedRoles")
-    @Expose
-    public java.util.List<CalendarRoleType> allowedRoles;
 
 
     /**

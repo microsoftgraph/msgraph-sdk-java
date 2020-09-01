@@ -96,14 +96,6 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
     public String mailNickname;
 
     /**
-     * The On Premises Sync Enabled.
-     * 
-     */
-    @SerializedName("onPremisesSyncEnabled")
-    @Expose
-    public Boolean onPremisesSyncEnabled;
-
-    /**
      * The On Premises Last Sync Date Time.
      * 
      */
@@ -118,6 +110,14 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
+
+    /**
+     * The On Premises Sync Enabled.
+     * 
+     */
+    @SerializedName("onPremisesSyncEnabled")
+    @Expose
+    public Boolean onPremisesSyncEnabled;
 
     /**
      * The Phones.
@@ -144,18 +144,18 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
     public String surname;
 
     /**
+     * The Direct Reports.
+     * 
+     */
+    public DirectoryObjectCollectionPage directReports;
+
+    /**
      * The Manager.
      * 
      */
     @SerializedName("manager")
     @Expose
     public DirectoryObject manager;
-
-    /**
-     * The Direct Reports.
-     * 
-     */
-    public DirectoryObjectCollectionPage directReports;
 
     /**
      * The Member Of.

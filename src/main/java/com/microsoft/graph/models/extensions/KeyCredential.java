@@ -60,6 +60,14 @@ public class KeyCredential implements IJsonBackedObject {
     public java.util.Calendar endDateTime;
 
     /**
+     * The Key.
+     * Value for the key credential. Should be a base 64 encoded value.
+     */
+    @SerializedName("key")
+    @Expose
+    public byte[] key;
+
+    /**
      * The Key Id.
      * The unique identifier (GUID) for the key.
      */
@@ -90,14 +98,6 @@ public class KeyCredential implements IJsonBackedObject {
     @SerializedName("usage")
     @Expose
     public String usage;
-
-    /**
-     * The Key.
-     * Value for the key credential. Should be a base 64 encoded value.
-     */
-    @SerializedName("key")
-    @Expose
-    public byte[] key;
 
 
     /**

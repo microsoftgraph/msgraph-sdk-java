@@ -27,6 +27,14 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
 
 
     /**
+     * The Is Default.
+     * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
+     */
+    @SerializedName("isDefault")
+    @Expose
+    public Boolean isDefault;
+
+    /**
      * The Last Modified Date Time.
      * DateTime the object was last modified.
      */
@@ -43,14 +51,6 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
     public String locale;
 
     /**
-     * The Subject.
-     * The Message Template Subject.
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
-
-    /**
      * The Message Template.
      * The Message Template content.
      */
@@ -59,12 +59,12 @@ public class LocalizedNotificationMessage extends Entity implements IJsonBackedO
     public String messageTemplate;
 
     /**
-     * The Is Default.
-     * Flag to indicate whether or not this is the default locale for language fallback. This flag can only be set. To unset, set this property to true on another Localized Notification Message.
+     * The Subject.
+     * The Message Template Subject.
      */
-    @SerializedName("isDefault")
+    @SerializedName("subject")
     @Expose
-    public Boolean isDefault;
+    public String subject;
 
 
     /**

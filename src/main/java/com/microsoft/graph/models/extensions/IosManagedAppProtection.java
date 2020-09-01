@@ -40,12 +40,12 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
     /**
-     * The Minimum Required Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data.
+     * The Custom Browser Protocol.
+     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
-    @SerializedName("minimumRequiredSdkVersion")
+    @SerializedName("customBrowserProtocol")
     @Expose
-    public String minimumRequiredSdkVersion;
+    public String customBrowserProtocol;
 
     /**
      * The Deployed App Count.
@@ -64,12 +64,12 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public Boolean faceIdBlocked;
 
     /**
-     * The Custom Browser Protocol.
-     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * The Minimum Required Sdk Version.
+     * Versions less than the specified version will block the managed app from accessing company data.
      */
-    @SerializedName("customBrowserProtocol")
+    @SerializedName("minimumRequiredSdkVersion")
     @Expose
-    public String customBrowserProtocol;
+    public String minimumRequiredSdkVersion;
 
     /**
      * The Apps.

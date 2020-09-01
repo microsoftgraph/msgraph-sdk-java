@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
-import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
+import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import com.microsoft.graph.models.extensions.ManagedAppConfiguration;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionPage;
@@ -56,18 +56,18 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     public ManagedMobileAppCollectionPage apps;
 
     /**
+     * The Assignments.
+     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
+     */
+    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+
+    /**
      * The Deployment Summary.
      * Navigation property to deployment summary of the configuration.
      */
     @SerializedName("deploymentSummary")
     @Expose
     public ManagedAppPolicyDeploymentSummary deploymentSummary;
-
-    /**
-     * The Assignments.
-     * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     */
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
 
     /**

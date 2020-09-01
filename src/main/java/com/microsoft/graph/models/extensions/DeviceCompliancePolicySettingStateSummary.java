@@ -31,6 +31,62 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
 
     /**
+     * The Compliant Device Count.
+     * Number of compliant devices
+     */
+    @SerializedName("compliantDeviceCount")
+    @Expose
+    public Integer compliantDeviceCount;
+
+    /**
+     * The Conflict Device Count.
+     * Number of conflict devices
+     */
+    @SerializedName("conflictDeviceCount")
+    @Expose
+    public Integer conflictDeviceCount;
+
+    /**
+     * The Error Device Count.
+     * Number of error devices
+     */
+    @SerializedName("errorDeviceCount")
+    @Expose
+    public Integer errorDeviceCount;
+
+    /**
+     * The Non Compliant Device Count.
+     * Number of NonCompliant devices
+     */
+    @SerializedName("nonCompliantDeviceCount")
+    @Expose
+    public Integer nonCompliantDeviceCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Number of not applicable devices
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
+     * The Platform Type.
+     * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
+     */
+    @SerializedName("platformType")
+    @Expose
+    public PolicyPlatformType platformType;
+
+    /**
+     * The Remediated Device Count.
+     * Number of remediated devices
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
+
+    /**
      * The Setting.
      * The setting class name and property name.
      */
@@ -47,68 +103,12 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     public String settingName;
 
     /**
-     * The Platform Type.
-     * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
-     */
-    @SerializedName("platformType")
-    @Expose
-    public PolicyPlatformType platformType;
-
-    /**
      * The Unknown Device Count.
      * Number of unknown devices
      */
     @SerializedName("unknownDeviceCount")
     @Expose
     public Integer unknownDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Number of not applicable devices
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
-
-    /**
-     * The Compliant Device Count.
-     * Number of compliant devices
-     */
-    @SerializedName("compliantDeviceCount")
-    @Expose
-    public Integer compliantDeviceCount;
-
-    /**
-     * The Remediated Device Count.
-     * Number of remediated devices
-     */
-    @SerializedName("remediatedDeviceCount")
-    @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
-     * The Non Compliant Device Count.
-     * Number of NonCompliant devices
-     */
-    @SerializedName("nonCompliantDeviceCount")
-    @Expose
-    public Integer nonCompliantDeviceCount;
-
-    /**
-     * The Error Device Count.
-     * Number of error devices
-     */
-    @SerializedName("errorDeviceCount")
-    @Expose
-    public Integer errorDeviceCount;
-
-    /**
-     * The Conflict Device Count.
-     * Number of conflict devices
-     */
-    @SerializedName("conflictDeviceCount")
-    @Expose
-    public Integer conflictDeviceCount;
 
     /**
      * The Device Compliance Setting States.

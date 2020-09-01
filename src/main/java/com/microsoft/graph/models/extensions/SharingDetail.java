@@ -54,6 +54,14 @@ public class SharingDetail implements IJsonBackedObject {
     public java.util.Calendar sharedDateTime;
 
     /**
+     * The Sharing Reference.
+     * 
+     */
+    @SerializedName("sharingReference")
+    @Expose
+    public ResourceReference sharingReference;
+
+    /**
      * The Sharing Subject.
      * The subject with which the document was shared.
      */
@@ -68,14 +76,6 @@ public class SharingDetail implements IJsonBackedObject {
     @SerializedName("sharingType")
     @Expose
     public String sharingType;
-
-    /**
-     * The Sharing Reference.
-     * 
-     */
-    @SerializedName("sharingReference")
-    @Expose
-    public ResourceReference sharingReference;
 
 
     /**

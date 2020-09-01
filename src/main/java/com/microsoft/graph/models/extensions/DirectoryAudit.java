@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.OperationResult;
-import com.microsoft.graph.models.extensions.AuditActivityInitiator;
-import com.microsoft.graph.models.extensions.TargetResource;
 import com.microsoft.graph.models.extensions.KeyValue;
+import com.microsoft.graph.models.extensions.AuditActivityInitiator;
+import com.microsoft.graph.models.generated.OperationResult;
+import com.microsoft.graph.models.extensions.TargetResource;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -31,6 +31,30 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Activity Date Time.
+     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     */
+    @SerializedName("activityDateTime")
+    @Expose
+    public java.util.Calendar activityDateTime;
+
+    /**
+     * The Activity Display Name.
+     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
+     */
+    @SerializedName("activityDisplayName")
+    @Expose
+    public String activityDisplayName;
+
+    /**
+     * The Additional Details.
+     * Indicates additional details on the activity.
+     */
+    @SerializedName("additionalDetails")
+    @Expose
+    public java.util.List<KeyValue> additionalDetails;
+
+    /**
      * The Category.
      * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
      */
@@ -47,36 +71,12 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
     public String correlationId;
 
     /**
-     * The Result.
-     * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
+     * The Initiated By.
+     * Indicates information about the user or app initiated the activity.
      */
-    @SerializedName("result")
+    @SerializedName("initiatedBy")
     @Expose
-    public OperationResult result;
-
-    /**
-     * The Result Reason.
-     * Describes cause of 'failure' or 'timeout' results.
-     */
-    @SerializedName("resultReason")
-    @Expose
-    public String resultReason;
-
-    /**
-     * The Activity Display Name.
-     * Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
-     */
-    @SerializedName("activityDisplayName")
-    @Expose
-    public String activityDisplayName;
-
-    /**
-     * The Activity Date Time.
-     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-     */
-    @SerializedName("activityDateTime")
-    @Expose
-    public java.util.Calendar activityDateTime;
+    public AuditActivityInitiator initiatedBy;
 
     /**
      * The Logged By Service.
@@ -95,12 +95,20 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
     public String operationType;
 
     /**
-     * The Initiated By.
-     * Indicates information about the user or app initiated the activity.
+     * The Result.
+     * Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
      */
-    @SerializedName("initiatedBy")
+    @SerializedName("result")
     @Expose
-    public AuditActivityInitiator initiatedBy;
+    public OperationResult result;
+
+    /**
+     * The Result Reason.
+     * Describes cause of 'failure' or 'timeout' results.
+     */
+    @SerializedName("resultReason")
+    @Expose
+    public String resultReason;
 
     /**
      * The Target Resources.
@@ -109,14 +117,6 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
     @SerializedName("targetResources")
     @Expose
     public java.util.List<TargetResource> targetResources;
-
-    /**
-     * The Additional Details.
-     * Indicates additional details on the activity.
-     */
-    @SerializedName("additionalDetails")
-    @Expose
-    public java.util.List<KeyValue> additionalDetails;
 
 
     /**

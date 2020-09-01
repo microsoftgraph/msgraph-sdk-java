@@ -35,20 +35,20 @@ public class OnPremisesConditionalAccessSettings extends Entity implements IJson
     public Boolean enabled;
 
     /**
-     * The Included Groups.
-     * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
-     */
-    @SerializedName("includedGroups")
-    @Expose
-    public java.util.List<java.util.UUID> includedGroups;
-
-    /**
      * The Excluded Groups.
      * User groups that will be exempt by on premises conditional access. All users in these groups will be exempt from the conditional access policy.
      */
     @SerializedName("excludedGroups")
     @Expose
     public java.util.List<java.util.UUID> excludedGroups;
+
+    /**
+     * The Included Groups.
+     * User groups that will be targeted by on premises conditional access. All users in these groups will be required to have mobile device managed and compliant for mail access.
+     */
+    @SerializedName("includedGroups")
+    @Expose
+    public java.util.List<java.util.UUID> includedGroups;
 
     /**
      * The Override Default Rule.

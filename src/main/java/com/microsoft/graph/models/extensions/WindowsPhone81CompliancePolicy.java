@@ -28,6 +28,22 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
 
 
     /**
+     * The Os Maximum Version.
+     * Maximum Windows Phone version.
+     */
+    @SerializedName("osMaximumVersion")
+    @Expose
+    public String osMaximumVersion;
+
+    /**
+     * The Os Minimum Version.
+     * Minimum Windows Phone version.
+     */
+    @SerializedName("osMinimumVersion")
+    @Expose
+    public String osMinimumVersion;
+
+    /**
      * The Password Block Simple.
      * Whether or not to block syncing the calendar.
      */
@@ -42,6 +58,14 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     @SerializedName("passwordExpirationDays")
     @Expose
     public Integer passwordExpirationDays;
+
+    /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
 
     /**
      * The Password Minimum Length.
@@ -60,22 +84,6 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     public Integer passwordMinutesOfInactivityBeforeLock;
 
     /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
-
-    /**
-     * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public RequiredPasswordType passwordRequiredType;
-
-    /**
      * The Password Previous Password Block Count.
      * Number of previous passwords to block. Valid values 0 to 24
      */
@@ -92,20 +100,12 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
     public Boolean passwordRequired;
 
     /**
-     * The Os Minimum Version.
-     * Minimum Windows Phone version.
+     * The Password Required Type.
+     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName("passwordRequiredType")
     @Expose
-    public String osMinimumVersion;
-
-    /**
-     * The Os Maximum Version.
-     * Maximum Windows Phone version.
-     */
-    @SerializedName("osMaximumVersion")
-    @Expose
-    public String osMaximumVersion;
+    public RequiredPasswordType passwordRequiredType;
 
     /**
      * The Storage Require Encryption.

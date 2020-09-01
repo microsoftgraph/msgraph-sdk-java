@@ -31,20 +31,12 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
+     * The Branding Options.
+     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("brandingOptions")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Display Name.
-     * Display name for the Notification Message Template.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
+    public EnumSet<NotificationTemplateBrandingOptions> brandingOptions;
 
     /**
      * The Default Locale.
@@ -55,12 +47,20 @@ public class NotificationMessageTemplate extends Entity implements IJsonBackedOb
     public String defaultLocale;
 
     /**
-     * The Branding Options.
-     * The Message Template Branding Options. Branding is defined in the Intune Admin Console. Possible values are: none, includeCompanyLogo, includeCompanyName, includeContactInformation.
+     * The Display Name.
+     * Display name for the Notification Message Template.
      */
-    @SerializedName("brandingOptions")
+    @SerializedName("displayName")
     @Expose
-    public EnumSet<NotificationTemplateBrandingOptions> brandingOptions;
+    public String displayName;
+
+    /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Localized Notification Messages.

@@ -33,14 +33,6 @@ public interface IEventMessageResponseRequestBuilder extends IRequestBuilder {
     IEventMessageResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
-
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-
     IAttachmentCollectionRequestBuilder attachments();
 
     IAttachmentRequestBuilder attachments(final String id);
@@ -48,6 +40,14 @@ public interface IEventMessageResponseRequestBuilder extends IRequestBuilder {
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
     /**
      * Gets the request builder for Event

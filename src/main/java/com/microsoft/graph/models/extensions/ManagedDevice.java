@@ -8,25 +8,25 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ManagedDeviceOwnerType;
-import com.microsoft.graph.models.extensions.DeviceActionResult;
 import com.microsoft.graph.models.generated.ComplianceState;
-import com.microsoft.graph.models.generated.ManagementAgentType;
+import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFeatures;
+import com.microsoft.graph.models.extensions.DeviceActionResult;
 import com.microsoft.graph.models.generated.DeviceEnrollmentType;
+import com.microsoft.graph.models.extensions.DeviceHealthAttestationState;
 import com.microsoft.graph.models.generated.DeviceRegistrationState;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessState;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeAccessStateReason;
-import com.microsoft.graph.models.extensions.ConfigurationManagerClientEnabledFeatures;
-import com.microsoft.graph.models.extensions.DeviceHealthAttestationState;
+import com.microsoft.graph.models.generated.ManagedDeviceOwnerType;
+import com.microsoft.graph.models.generated.ManagementAgentType;
 import com.microsoft.graph.models.generated.ManagedDevicePartnerReportedHealthState;
-import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
+import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -45,134 +45,6 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The User Id.
-     * Unique Identifier for the user associated with the device
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
-     * The Device Name.
-     * Name of the device
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
-     * The Managed Device Owner Type.
-     * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
-     */
-    @SerializedName("managedDeviceOwnerType")
-    @Expose
-    public ManagedDeviceOwnerType managedDeviceOwnerType;
-
-    /**
-     * The Device Action Results.
-     * List of ComplexType deviceActionResult objects.
-     */
-    @SerializedName("deviceActionResults")
-    @Expose
-    public java.util.List<DeviceActionResult> deviceActionResults;
-
-    /**
-     * The Enrolled Date Time.
-     * Enrollment time of the device.
-     */
-    @SerializedName("enrolledDateTime")
-    @Expose
-    public java.util.Calendar enrolledDateTime;
-
-    /**
-     * The Last Sync Date Time.
-     * The date and time that the device last completed a successful sync with Intune.
-     */
-    @SerializedName("lastSyncDateTime")
-    @Expose
-    public java.util.Calendar lastSyncDateTime;
-
-    /**
-     * The Operating System.
-     * Operating system of the device. Windows, iOS, etc.
-     */
-    @SerializedName("operatingSystem")
-    @Expose
-    public String operatingSystem;
-
-    /**
-     * The Compliance State.
-     * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
-     */
-    @SerializedName("complianceState")
-    @Expose
-    public ComplianceState complianceState;
-
-    /**
-     * The Jail Broken.
-     * whether the device is jail broken or rooted.
-     */
-    @SerializedName("jailBroken")
-    @Expose
-    public String jailBroken;
-
-    /**
-     * The Management Agent.
-     * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
-     */
-    @SerializedName("managementAgent")
-    @Expose
-    public ManagementAgentType managementAgent;
-
-    /**
-     * The Os Version.
-     * Operating system version of the device.
-     */
-    @SerializedName("osVersion")
-    @Expose
-    public String osVersion;
-
-    /**
-     * The Eas Activated.
-     * Whether the device is Exchange ActiveSync activated.
-     */
-    @SerializedName("easActivated")
-    @Expose
-    public Boolean easActivated;
-
-    /**
-     * The Eas Device Id.
-     * Exchange ActiveSync Id of the device.
-     */
-    @SerializedName("easDeviceId")
-    @Expose
-    public String easDeviceId;
-
-    /**
-     * The Eas Activation Date Time.
-     * Exchange ActivationSync activation time of the device.
-     */
-    @SerializedName("easActivationDateTime")
-    @Expose
-    public java.util.Calendar easActivationDateTime;
-
-    /**
-     * The Azure ADRegistered.
-     * Whether the device is Azure Active Directory registered.
-     */
-    @SerializedName("azureADRegistered")
-    @Expose
-    public Boolean azureADRegistered;
-
-    /**
-     * The Device Enrollment Type.
-     * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
-     */
-    @SerializedName("deviceEnrollmentType")
-    @Expose
-    public DeviceEnrollmentType deviceEnrollmentType;
-
-    /**
      * The Activation Lock Bypass Code.
      * Code that allows the Activation Lock on a device to be bypassed.
      */
@@ -181,12 +53,12 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public String activationLockBypassCode;
 
     /**
-     * The Email Address.
-     * Email(s) for the user associated with the device
+     * The Android Security Patch Level.
+     * Android security patch level
      */
-    @SerializedName("emailAddress")
+    @SerializedName("androidSecurityPatchLevel")
     @Expose
-    public String emailAddress;
+    public String androidSecurityPatchLevel;
 
     /**
      * The Azure ADDevice Id.
@@ -197,12 +69,44 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public String azureADDeviceId;
 
     /**
-     * The Device Registration State.
-     * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     * The Azure ADRegistered.
+     * Whether the device is Azure Active Directory registered.
      */
-    @SerializedName("deviceRegistrationState")
+    @SerializedName("azureADRegistered")
     @Expose
-    public DeviceRegistrationState deviceRegistrationState;
+    public Boolean azureADRegistered;
+
+    /**
+     * The Compliance Grace Period Expiration Date Time.
+     * The DateTime when device compliance grace period expires
+     */
+    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @Expose
+    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+
+    /**
+     * The Compliance State.
+     * Compliance state of the device. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+     */
+    @SerializedName("complianceState")
+    @Expose
+    public ComplianceState complianceState;
+
+    /**
+     * The Configuration Manager Client Enabled Features.
+     * ConfigrMgr client enabled features
+     */
+    @SerializedName("configurationManagerClientEnabledFeatures")
+    @Expose
+    public ConfigurationManagerClientEnabledFeatures configurationManagerClientEnabledFeatures;
+
+    /**
+     * The Device Action Results.
+     * List of ComplexType deviceActionResult objects.
+     */
+    @SerializedName("deviceActionResults")
+    @Expose
+    public java.util.List<DeviceActionResult> deviceActionResults;
 
     /**
      * The Device Category Display Name.
@@ -213,20 +117,76 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public String deviceCategoryDisplayName;
 
     /**
-     * The Is Supervised.
-     * Device supervised status
+     * The Device Enrollment Type.
+     * Enrollment type of the device. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      */
-    @SerializedName("isSupervised")
+    @SerializedName("deviceEnrollmentType")
     @Expose
-    public Boolean isSupervised;
+    public DeviceEnrollmentType deviceEnrollmentType;
 
     /**
-     * The Exchange Last Successful Sync Date Time.
-     * Last time the device contacted Exchange.
+     * The Device Health Attestation State.
+     * The device health attestation state.
      */
-    @SerializedName("exchangeLastSuccessfulSyncDateTime")
+    @SerializedName("deviceHealthAttestationState")
     @Expose
-    public java.util.Calendar exchangeLastSuccessfulSyncDateTime;
+    public DeviceHealthAttestationState deviceHealthAttestationState;
+
+    /**
+     * The Device Name.
+     * Name of the device
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
+     * The Device Registration State.
+     * Device registration state. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     */
+    @SerializedName("deviceRegistrationState")
+    @Expose
+    public DeviceRegistrationState deviceRegistrationState;
+
+    /**
+     * The Eas Activated.
+     * Whether the device is Exchange ActiveSync activated.
+     */
+    @SerializedName("easActivated")
+    @Expose
+    public Boolean easActivated;
+
+    /**
+     * The Eas Activation Date Time.
+     * Exchange ActivationSync activation time of the device.
+     */
+    @SerializedName("easActivationDateTime")
+    @Expose
+    public java.util.Calendar easActivationDateTime;
+
+    /**
+     * The Eas Device Id.
+     * Exchange ActiveSync Id of the device.
+     */
+    @SerializedName("easDeviceId")
+    @Expose
+    public String easDeviceId;
+
+    /**
+     * The Email Address.
+     * Email(s) for the user associated with the device
+     */
+    @SerializedName("emailAddress")
+    @Expose
+    public String emailAddress;
+
+    /**
+     * The Enrolled Date Time.
+     * Enrollment time of the device.
+     */
+    @SerializedName("enrolledDateTime")
+    @Expose
+    public java.util.Calendar enrolledDateTime;
 
     /**
      * The Exchange Access State.
@@ -245,148 +205,12 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public DeviceManagementExchangeAccessStateReason exchangeAccessStateReason;
 
     /**
-     * The Remote Assistance Session Url.
-     * Url that allows a Remote Assistance session to be established with the device.
+     * The Exchange Last Successful Sync Date Time.
+     * Last time the device contacted Exchange.
      */
-    @SerializedName("remoteAssistanceSessionUrl")
+    @SerializedName("exchangeLastSuccessfulSyncDateTime")
     @Expose
-    public String remoteAssistanceSessionUrl;
-
-    /**
-     * The Remote Assistance Session Error Details.
-     * An error string that identifies issues when creating Remote Assistance session objects.
-     */
-    @SerializedName("remoteAssistanceSessionErrorDetails")
-    @Expose
-    public String remoteAssistanceSessionErrorDetails;
-
-    /**
-     * The Is Encrypted.
-     * Device encryption status
-     */
-    @SerializedName("isEncrypted")
-    @Expose
-    public Boolean isEncrypted;
-
-    /**
-     * The User Principal Name.
-     * Device user principal name
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The Model.
-     * Model of the device
-     */
-    @SerializedName("model")
-    @Expose
-    public String model;
-
-    /**
-     * The Manufacturer.
-     * Manufacturer of the device
-     */
-    @SerializedName("manufacturer")
-    @Expose
-    public String manufacturer;
-
-    /**
-     * The Imei.
-     * IMEI
-     */
-    @SerializedName("imei")
-    @Expose
-    public String imei;
-
-    /**
-     * The Compliance Grace Period Expiration Date Time.
-     * The DateTime when device compliance grace period expires
-     */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
-    @Expose
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
-
-    /**
-     * The Serial Number.
-     * SerialNumber
-     */
-    @SerializedName("serialNumber")
-    @Expose
-    public String serialNumber;
-
-    /**
-     * The Phone Number.
-     * Phone number of the device
-     */
-    @SerializedName("phoneNumber")
-    @Expose
-    public String phoneNumber;
-
-    /**
-     * The Android Security Patch Level.
-     * Android security patch level
-     */
-    @SerializedName("androidSecurityPatchLevel")
-    @Expose
-    public String androidSecurityPatchLevel;
-
-    /**
-     * The User Display Name.
-     * User display name
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The Configuration Manager Client Enabled Features.
-     * ConfigrMgr client enabled features
-     */
-    @SerializedName("configurationManagerClientEnabledFeatures")
-    @Expose
-    public ConfigurationManagerClientEnabledFeatures configurationManagerClientEnabledFeatures;
-
-    /**
-     * The Wi Fi Mac Address.
-     * Wi-Fi MAC
-     */
-    @SerializedName("wiFiMacAddress")
-    @Expose
-    public String wiFiMacAddress;
-
-    /**
-     * The Device Health Attestation State.
-     * The device health attestation state.
-     */
-    @SerializedName("deviceHealthAttestationState")
-    @Expose
-    public DeviceHealthAttestationState deviceHealthAttestationState;
-
-    /**
-     * The Subscriber Carrier.
-     * Subscriber Carrier
-     */
-    @SerializedName("subscriberCarrier")
-    @Expose
-    public String subscriberCarrier;
-
-    /**
-     * The Meid.
-     * MEID
-     */
-    @SerializedName("meid")
-    @Expose
-    public String meid;
-
-    /**
-     * The Total Storage Space In Bytes.
-     * Total Storage in Bytes
-     */
-    @SerializedName("totalStorageSpaceInBytes")
-    @Expose
-    public Long totalStorageSpaceInBytes;
+    public java.util.Calendar exchangeLastSuccessfulSyncDateTime;
 
     /**
      * The Free Storage Space In Bytes.
@@ -397,12 +221,108 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public Long freeStorageSpaceInBytes;
 
     /**
+     * The Imei.
+     * IMEI
+     */
+    @SerializedName("imei")
+    @Expose
+    public String imei;
+
+    /**
+     * The Is Encrypted.
+     * Device encryption status
+     */
+    @SerializedName("isEncrypted")
+    @Expose
+    public Boolean isEncrypted;
+
+    /**
+     * The Is Supervised.
+     * Device supervised status
+     */
+    @SerializedName("isSupervised")
+    @Expose
+    public Boolean isSupervised;
+
+    /**
+     * The Jail Broken.
+     * whether the device is jail broken or rooted.
+     */
+    @SerializedName("jailBroken")
+    @Expose
+    public String jailBroken;
+
+    /**
+     * The Last Sync Date Time.
+     * The date and time that the device last completed a successful sync with Intune.
+     */
+    @SerializedName("lastSyncDateTime")
+    @Expose
+    public java.util.Calendar lastSyncDateTime;
+
+    /**
      * The Managed Device Name.
      * Automatically generated name to identify a device. Can be overwritten to a user friendly name.
      */
     @SerializedName("managedDeviceName")
     @Expose
     public String managedDeviceName;
+
+    /**
+     * The Managed Device Owner Type.
+     * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     */
+    @SerializedName("managedDeviceOwnerType")
+    @Expose
+    public ManagedDeviceOwnerType managedDeviceOwnerType;
+
+    /**
+     * The Management Agent.
+     * Management channel of the device. Intune, EAS, etc. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+     */
+    @SerializedName("managementAgent")
+    @Expose
+    public ManagementAgentType managementAgent;
+
+    /**
+     * The Manufacturer.
+     * Manufacturer of the device
+     */
+    @SerializedName("manufacturer")
+    @Expose
+    public String manufacturer;
+
+    /**
+     * The Meid.
+     * MEID
+     */
+    @SerializedName("meid")
+    @Expose
+    public String meid;
+
+    /**
+     * The Model.
+     * Model of the device
+     */
+    @SerializedName("model")
+    @Expose
+    public String model;
+
+    /**
+     * The Operating System.
+     * Operating system of the device. Windows, iOS, etc.
+     */
+    @SerializedName("operatingSystem")
+    @Expose
+    public String operatingSystem;
+
+    /**
+     * The Os Version.
+     * Operating system version of the device.
+     */
+    @SerializedName("osVersion")
+    @Expose
+    public String osVersion;
 
     /**
      * The Partner Reported Threat State.
@@ -413,16 +333,96 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public ManagedDevicePartnerReportedHealthState partnerReportedThreatState;
 
     /**
-     * The Device Configuration States.
-     * Device configuration states for this device.
+     * The Phone Number.
+     * Phone number of the device
      */
-    public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
+    @SerializedName("phoneNumber")
+    @Expose
+    public String phoneNumber;
+
+    /**
+     * The Remote Assistance Session Error Details.
+     * An error string that identifies issues when creating Remote Assistance session objects.
+     */
+    @SerializedName("remoteAssistanceSessionErrorDetails")
+    @Expose
+    public String remoteAssistanceSessionErrorDetails;
+
+    /**
+     * The Remote Assistance Session Url.
+     * Url that allows a Remote Assistance session to be established with the device.
+     */
+    @SerializedName("remoteAssistanceSessionUrl")
+    @Expose
+    public String remoteAssistanceSessionUrl;
+
+    /**
+     * The Serial Number.
+     * SerialNumber
+     */
+    @SerializedName("serialNumber")
+    @Expose
+    public String serialNumber;
+
+    /**
+     * The Subscriber Carrier.
+     * Subscriber Carrier
+     */
+    @SerializedName("subscriberCarrier")
+    @Expose
+    public String subscriberCarrier;
+
+    /**
+     * The Total Storage Space In Bytes.
+     * Total Storage in Bytes
+     */
+    @SerializedName("totalStorageSpaceInBytes")
+    @Expose
+    public Long totalStorageSpaceInBytes;
+
+    /**
+     * The User Display Name.
+     * User display name
+     */
+    @SerializedName("userDisplayName")
+    @Expose
+    public String userDisplayName;
+
+    /**
+     * The User Id.
+     * Unique Identifier for the user associated with the device
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
+
+    /**
+     * The User Principal Name.
+     * Device user principal name
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
+
+    /**
+     * The Wi Fi Mac Address.
+     * Wi-Fi MAC
+     */
+    @SerializedName("wiFiMacAddress")
+    @Expose
+    public String wiFiMacAddress;
 
     /**
      * The Device Compliance Policy States.
      * Device compliance policy states for this device.
      */
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
+
+    /**
+     * The Device Configuration States.
+     * Device configuration states for this device.
+     */
+    public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**
      * The Device Category.
@@ -472,22 +472,6 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("deviceConfigurationStates")) {
-            final DeviceConfigurationStateCollectionResponse response = new DeviceConfigurationStateCollectionResponse();
-            if (json.has("deviceConfigurationStates@odata.nextLink")) {
-                response.nextLink = json.get("deviceConfigurationStates@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), JsonObject[].class);
-            final DeviceConfigurationState[] array = new DeviceConfigurationState[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationState.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceConfigurationStates = new DeviceConfigurationStateCollectionPage(response, null);
-        }
-
         if (json.has("deviceCompliancePolicyStates")) {
             final DeviceCompliancePolicyStateCollectionResponse response = new DeviceCompliancePolicyStateCollectionResponse();
             if (json.has("deviceCompliancePolicyStates@odata.nextLink")) {
@@ -502,6 +486,22 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             deviceCompliancePolicyStates = new DeviceCompliancePolicyStateCollectionPage(response, null);
+        }
+
+        if (json.has("deviceConfigurationStates")) {
+            final DeviceConfigurationStateCollectionResponse response = new DeviceConfigurationStateCollectionResponse();
+            if (json.has("deviceConfigurationStates@odata.nextLink")) {
+                response.nextLink = json.get("deviceConfigurationStates@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceConfigurationStates").toString(), JsonObject[].class);
+            final DeviceConfigurationState[] array = new DeviceConfigurationState[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceConfigurationState.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceConfigurationStates = new DeviceConfigurationStateCollectionPage(response, null);
         }
     }
 }

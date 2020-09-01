@@ -70,6 +70,15 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
     public IEducationClassRequestBuilder classes(final String id) {
         return new EducationClassRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for EducationUser
+     *
+     * @return the IEducationUserRequestBuilder instance
+     */
+    public IEducationUserRequestBuilder me() {
+        return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
+    }
     public IEducationSchoolCollectionRequestBuilder schools() {
         return new EducationSchoolCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
@@ -83,14 +92,5 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
 
     public IEducationUserRequestBuilder users(final String id) {
         return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for EducationUser
-     *
-     * @return the IEducationUserRequestBuilder instance
-     */
-    public IEducationUserRequestBuilder me() {
-        return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
     }
 }

@@ -27,28 +27,20 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
 
 
     /**
-     * The Display Name.
-     * Display name of the TEM partner.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Url.
-     * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
-     */
-    @SerializedName("url")
-    @Expose
-    public String url;
-
-    /**
      * The App Authorized.
      * Whether the partner's AAD app has been authorized to access Intune.
      */
     @SerializedName("appAuthorized")
     @Expose
     public Boolean appAuthorized;
+
+    /**
+     * The Display Name.
+     * Display name of the TEM partner.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Enabled.
@@ -65,6 +57,14 @@ public class TelecomExpenseManagementPartner extends Entity implements IJsonBack
     @SerializedName("lastConnectionDateTime")
     @Expose
     public java.util.Calendar lastConnectionDateTime;
+
+    /**
+     * The Url.
+     * URL of the TEM partner's administrative control panel, where an administrator can configure their TEM service.
+     */
+    @SerializedName("url")
+    @Expose
+    public String url;
 
 
     /**

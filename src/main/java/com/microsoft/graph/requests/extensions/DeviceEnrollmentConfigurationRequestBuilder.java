@@ -64,11 +64,11 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
-    public IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
-        return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
-    }
-
     public IDeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments) {
         return new DeviceEnrollmentConfigurationAssignRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assign"), getClient(), null, enrollmentConfigurationAssignments);
+    }
+
+    public IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority) {
+        return new DeviceEnrollmentConfigurationSetPriorityRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setPriority"), getClient(), null, priority);
     }
 }

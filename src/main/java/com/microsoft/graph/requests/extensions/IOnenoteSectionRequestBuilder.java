@@ -38,6 +38,10 @@ public interface IOnenoteSectionRequestBuilder extends IRequestBuilder {
     IOnenoteSectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IOnenotePageCollectionRequestBuilder pages();
+
+    IOnenotePageRequestBuilder pages(final String id);
+
     /**
      * Gets the request builder for Notebook
      *
@@ -51,10 +55,6 @@ public interface IOnenoteSectionRequestBuilder extends IRequestBuilder {
      * @return the ISectionGroupRequestBuilder instance
      */
     ISectionGroupRequestBuilder parentSectionGroup();
-
-    IOnenotePageCollectionRequestBuilder pages();
-
-    IOnenotePageRequestBuilder pages(final String id);
     IOnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId);
     IOnenoteSectionCopyToSectionGroupRequestBuilder copyToSectionGroup(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId);
 

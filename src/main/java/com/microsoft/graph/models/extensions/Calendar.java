@@ -8,22 +8,22 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.OnlineMeetingProviderType;
 import com.microsoft.graph.models.generated.CalendarColor;
 import com.microsoft.graph.models.extensions.EmailAddress;
-import com.microsoft.graph.models.generated.OnlineMeetingProviderType;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.CalendarPermission;
 import com.microsoft.graph.models.extensions.Event;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionResponse;
 import com.microsoft.graph.requests.extensions.CalendarPermissionCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionResponse;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,28 +42,20 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Name.
-     * The calendar name.
+     * The Allowed Online Meeting Providers.
+     * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
      */
-    @SerializedName("name")
+    @SerializedName("allowedOnlineMeetingProviders")
     @Expose
-    public String name;
+    public java.util.List<OnlineMeetingProviderType> allowedOnlineMeetingProviders;
 
     /**
-     * The Color.
-     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
+     * The Can Edit.
+     * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
      */
-    @SerializedName("color")
+    @SerializedName("canEdit")
     @Expose
-    public CalendarColor color;
-
-    /**
-     * The Change Key.
-     * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-     */
-    @SerializedName("changeKey")
-    @Expose
-    public String changeKey;
+    public Boolean canEdit;
 
     /**
      * The Can Share.
@@ -82,28 +74,20 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public Boolean canViewPrivateItems;
 
     /**
-     * The Can Edit.
-     * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * The Change Key.
+     * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      */
-    @SerializedName("canEdit")
+    @SerializedName("changeKey")
     @Expose
-    public Boolean canEdit;
+    public String changeKey;
 
     /**
-     * The Owner.
-     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * The Color.
+     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
      */
-    @SerializedName("owner")
+    @SerializedName("color")
     @Expose
-    public EmailAddress owner;
-
-    /**
-     * The Allowed Online Meeting Providers.
-     * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     */
-    @SerializedName("allowedOnlineMeetingProviders")
-    @Expose
-    public java.util.List<OnlineMeetingProviderType> allowedOnlineMeetingProviders;
+    public CalendarColor color;
 
     /**
      * The Default Online Meeting Provider.
@@ -114,14 +98,6 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public OnlineMeetingProviderType defaultOnlineMeetingProvider;
 
     /**
-     * The Is Tallying Responses.
-     * Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
-     */
-    @SerializedName("isTallyingResponses")
-    @Expose
-    public Boolean isTallyingResponses;
-
-    /**
      * The Is Removable.
      * Indicates whether this user calendar can be deleted from the user mailbox.
      */
@@ -130,16 +106,28 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public Boolean isRemovable;
 
     /**
-     * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
+     * The Is Tallying Responses.
+     * Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    @SerializedName("isTallyingResponses")
+    @Expose
+    public Boolean isTallyingResponses;
 
     /**
-     * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+     * The Name.
+     * The calendar name.
      */
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Owner.
+     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     */
+    @SerializedName("owner")
+    @Expose
+    public EmailAddress owner;
 
     /**
      * The Calendar Permissions.
@@ -148,16 +136,28 @@ public class Calendar extends Entity implements IJsonBackedObject {
     public CalendarPermissionCollectionPage calendarPermissions;
 
     /**
+     * The Calendar View.
+     * The calendar view for the calendar. Navigation property. Read-only.
+     */
+    public EventCollectionPage calendarView;
+
+    /**
      * The Events.
      * The events in the calendar. Navigation property. Read-only.
      */
     public EventCollectionPage events;
 
     /**
-     * The Calendar View.
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * The Multi Value Extended Properties.
+     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      */
-    public EventCollectionPage calendarView;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+
+    /**
+     * The Single Value Extended Properties.
+     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
+     */
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -199,38 +199,6 @@ public class Calendar extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("singleValueExtendedProperties")) {
-            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
-            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
-        }
-
-        if (json.has("multiValueExtendedProperties")) {
-            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
-            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
-        }
-
         if (json.has("calendarPermissions")) {
             final CalendarPermissionCollectionResponse response = new CalendarPermissionCollectionResponse();
             if (json.has("calendarPermissions@odata.nextLink")) {
@@ -245,6 +213,22 @@ public class Calendar extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             calendarPermissions = new CalendarPermissionCollectionPage(response, null);
+        }
+
+        if (json.has("calendarView")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("calendarView@odata.nextLink")) {
+                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendarView = new EventCollectionPage(response, null);
         }
 
         if (json.has("events")) {
@@ -263,20 +247,36 @@ public class Calendar extends Entity implements IJsonBackedObject {
             events = new EventCollectionPage(response, null);
         }
 
-        if (json.has("calendarView")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("calendarView@odata.nextLink")) {
-                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
+        if (json.has("multiValueExtendedProperties")) {
+            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            calendarView = new EventCollectionPage(response, null);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("singleValueExtendedProperties")) {
+            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

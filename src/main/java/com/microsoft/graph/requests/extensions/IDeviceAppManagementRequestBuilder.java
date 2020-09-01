@@ -10,32 +10,32 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAppManagement;
 import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDefaultManagedAppProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosManagedAppProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedAppStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMdmWindowsInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITargetedManagedAppConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -65,10 +65,6 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
 
     IManagedEBookRequestBuilder managedEBooks(final String id);
 
-    IMobileAppCollectionRequestBuilder mobileApps();
-
-    IMobileAppRequestBuilder mobileApps(final String id);
-
     IMobileAppCategoryCollectionRequestBuilder mobileAppCategories();
 
     IMobileAppCategoryRequestBuilder mobileAppCategories(final String id);
@@ -77,17 +73,13 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
 
     IManagedDeviceMobileAppConfigurationRequestBuilder mobileAppConfigurations(final String id);
 
+    IMobileAppCollectionRequestBuilder mobileApps();
+
+    IMobileAppRequestBuilder mobileApps(final String id);
+
     IVppTokenCollectionRequestBuilder vppTokens();
 
     IVppTokenRequestBuilder vppTokens(final String id);
-
-    IManagedAppPolicyCollectionRequestBuilder managedAppPolicies();
-
-    IManagedAppPolicyRequestBuilder managedAppPolicies(final String id);
-
-    IIosManagedAppProtectionCollectionRequestBuilder iosManagedAppProtections();
-
-    IIosManagedAppProtectionRequestBuilder iosManagedAppProtections(final String id);
 
     IAndroidManagedAppProtectionCollectionRequestBuilder androidManagedAppProtections();
 
@@ -97,17 +89,13 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
 
     IDefaultManagedAppProtectionRequestBuilder defaultManagedAppProtections(final String id);
 
-    ITargetedManagedAppConfigurationCollectionRequestBuilder targetedManagedAppConfigurations();
+    IIosManagedAppProtectionCollectionRequestBuilder iosManagedAppProtections();
 
-    ITargetedManagedAppConfigurationRequestBuilder targetedManagedAppConfigurations(final String id);
+    IIosManagedAppProtectionRequestBuilder iosManagedAppProtections(final String id);
 
-    IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder mdmWindowsInformationProtectionPolicies();
+    IManagedAppPolicyCollectionRequestBuilder managedAppPolicies();
 
-    IMdmWindowsInformationProtectionPolicyRequestBuilder mdmWindowsInformationProtectionPolicies(final String id);
-
-    IWindowsInformationProtectionPolicyCollectionRequestBuilder windowsInformationProtectionPolicies();
-
-    IWindowsInformationProtectionPolicyRequestBuilder windowsInformationProtectionPolicies(final String id);
+    IManagedAppPolicyRequestBuilder managedAppPolicies(final String id);
 
     IManagedAppRegistrationCollectionRequestBuilder managedAppRegistrations();
 
@@ -116,6 +104,18 @@ public interface IDeviceAppManagementRequestBuilder extends IRequestBuilder {
     IManagedAppStatusCollectionRequestBuilder managedAppStatuses();
 
     IManagedAppStatusRequestBuilder managedAppStatuses(final String id);
+
+    IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder mdmWindowsInformationProtectionPolicies();
+
+    IMdmWindowsInformationProtectionPolicyRequestBuilder mdmWindowsInformationProtectionPolicies(final String id);
+
+    ITargetedManagedAppConfigurationCollectionRequestBuilder targetedManagedAppConfigurations();
+
+    ITargetedManagedAppConfigurationRequestBuilder targetedManagedAppConfigurations(final String id);
+
+    IWindowsInformationProtectionPolicyCollectionRequestBuilder windowsInformationProtectionPolicies();
+
+    IWindowsInformationProtectionPolicyRequestBuilder windowsInformationProtectionPolicies(final String id);
     IDeviceAppManagementSyncMicrosoftStoreForBusinessAppsRequestBuilder syncMicrosoftStoreForBusinessApps();
 
 }

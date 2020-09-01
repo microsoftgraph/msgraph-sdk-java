@@ -36,6 +36,54 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
     }
 
     /**
+     * The Average Inbound Jitter.
+     * The average inbound stream network jitter.
+     */
+    @SerializedName("averageInboundJitter")
+    @Expose
+    public javax.xml.datatype.Duration averageInboundJitter;
+
+    /**
+     * The Average Inbound Packet Loss Rate In Percentage.
+     * The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
+    @SerializedName("averageInboundPacketLossRateInPercentage")
+    @Expose
+    public Double averageInboundPacketLossRateInPercentage;
+
+    /**
+     * The Average Inbound Round Trip Delay.
+     * The average inbound stream network round trip delay.
+     */
+    @SerializedName("averageInboundRoundTripDelay")
+    @Expose
+    public javax.xml.datatype.Duration averageInboundRoundTripDelay;
+
+    /**
+     * The Average Outbound Jitter.
+     * The average outbound stream network jitter.
+     */
+    @SerializedName("averageOutboundJitter")
+    @Expose
+    public javax.xml.datatype.Duration averageOutboundJitter;
+
+    /**
+     * The Average Outbound Packet Loss Rate In Percentage.
+     * The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
+    @SerializedName("averageOutboundPacketLossRateInPercentage")
+    @Expose
+    public Double averageOutboundPacketLossRateInPercentage;
+
+    /**
+     * The Average Outbound Round Trip Delay.
+     * The average outbound stream network round trip delay.
+     */
+    @SerializedName("averageOutboundRoundTripDelay")
+    @Expose
+    public javax.xml.datatype.Duration averageOutboundRoundTripDelay;
+
+    /**
      * The Channel Index.
      * The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
      */
@@ -44,20 +92,12 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
     public Integer channelIndex;
 
     /**
-     * The Media Duration.
-     * The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
+     * The Inbound Packets.
+     * The total number of the inbound packets.
      */
-    @SerializedName("mediaDuration")
+    @SerializedName("inboundPackets")
     @Expose
-    public javax.xml.datatype.Duration mediaDuration;
-
-    /**
-     * The Network Link Speed In Bytes.
-     * The network link speed in bytes
-     */
-    @SerializedName("networkLinkSpeedInBytes")
-    @Expose
-    public Long networkLinkSpeedInBytes;
+    public Long inboundPackets;
 
     /**
      * The Local IPAddress.
@@ -76,6 +116,78 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
     public Integer localPort;
 
     /**
+     * The Maximum Inbound Jitter.
+     * The maximum inbound stream network jitter.
+     */
+    @SerializedName("maximumInboundJitter")
+    @Expose
+    public javax.xml.datatype.Duration maximumInboundJitter;
+
+    /**
+     * The Maximum Inbound Packet Loss Rate In Percentage.
+     * The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
+    @SerializedName("maximumInboundPacketLossRateInPercentage")
+    @Expose
+    public Double maximumInboundPacketLossRateInPercentage;
+
+    /**
+     * The Maximum Inbound Round Trip Delay.
+     * The maximum inbound stream network round trip delay.
+     */
+    @SerializedName("maximumInboundRoundTripDelay")
+    @Expose
+    public javax.xml.datatype.Duration maximumInboundRoundTripDelay;
+
+    /**
+     * The Maximum Outbound Jitter.
+     * The maximum outbound stream network jitter.
+     */
+    @SerializedName("maximumOutboundJitter")
+    @Expose
+    public javax.xml.datatype.Duration maximumOutboundJitter;
+
+    /**
+     * The Maximum Outbound Packet Loss Rate In Percentage.
+     * The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     */
+    @SerializedName("maximumOutboundPacketLossRateInPercentage")
+    @Expose
+    public Double maximumOutboundPacketLossRateInPercentage;
+
+    /**
+     * The Maximum Outbound Round Trip Delay.
+     * The maximum outbound stream network round trip delay.
+     */
+    @SerializedName("maximumOutboundRoundTripDelay")
+    @Expose
+    public javax.xml.datatype.Duration maximumOutboundRoundTripDelay;
+
+    /**
+     * The Media Duration.
+     * The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
+     */
+    @SerializedName("mediaDuration")
+    @Expose
+    public javax.xml.datatype.Duration mediaDuration;
+
+    /**
+     * The Network Link Speed In Bytes.
+     * The network link speed in bytes
+     */
+    @SerializedName("networkLinkSpeedInBytes")
+    @Expose
+    public Long networkLinkSpeedInBytes;
+
+    /**
+     * The Outbound Packets.
+     * The total number of the outbound packets.
+     */
+    @SerializedName("outboundPackets")
+    @Expose
+    public Long outboundPackets;
+
+    /**
      * The Remote IPAddress.
      * The remote IP address for the media session.
      */
@@ -90,118 +202,6 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
     @SerializedName("remotePort")
     @Expose
     public Integer remotePort;
-
-    /**
-     * The Inbound Packets.
-     * The total number of the inbound packets.
-     */
-    @SerializedName("inboundPackets")
-    @Expose
-    public Long inboundPackets;
-
-    /**
-     * The Outbound Packets.
-     * The total number of the outbound packets.
-     */
-    @SerializedName("outboundPackets")
-    @Expose
-    public Long outboundPackets;
-
-    /**
-     * The Average Inbound Packet Loss Rate In Percentage.
-     * The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     */
-    @SerializedName("averageInboundPacketLossRateInPercentage")
-    @Expose
-    public Double averageInboundPacketLossRateInPercentage;
-
-    /**
-     * The Average Outbound Packet Loss Rate In Percentage.
-     * The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     */
-    @SerializedName("averageOutboundPacketLossRateInPercentage")
-    @Expose
-    public Double averageOutboundPacketLossRateInPercentage;
-
-    /**
-     * The Maximum Inbound Packet Loss Rate In Percentage.
-     * The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     */
-    @SerializedName("maximumInboundPacketLossRateInPercentage")
-    @Expose
-    public Double maximumInboundPacketLossRateInPercentage;
-
-    /**
-     * The Maximum Outbound Packet Loss Rate In Percentage.
-     * The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     */
-    @SerializedName("maximumOutboundPacketLossRateInPercentage")
-    @Expose
-    public Double maximumOutboundPacketLossRateInPercentage;
-
-    /**
-     * The Average Inbound Round Trip Delay.
-     * The average inbound stream network round trip delay.
-     */
-    @SerializedName("averageInboundRoundTripDelay")
-    @Expose
-    public javax.xml.datatype.Duration averageInboundRoundTripDelay;
-
-    /**
-     * The Average Outbound Round Trip Delay.
-     * The average outbound stream network round trip delay.
-     */
-    @SerializedName("averageOutboundRoundTripDelay")
-    @Expose
-    public javax.xml.datatype.Duration averageOutboundRoundTripDelay;
-
-    /**
-     * The Maximum Inbound Round Trip Delay.
-     * The maximum inbound stream network round trip delay.
-     */
-    @SerializedName("maximumInboundRoundTripDelay")
-    @Expose
-    public javax.xml.datatype.Duration maximumInboundRoundTripDelay;
-
-    /**
-     * The Maximum Outbound Round Trip Delay.
-     * The maximum outbound stream network round trip delay.
-     */
-    @SerializedName("maximumOutboundRoundTripDelay")
-    @Expose
-    public javax.xml.datatype.Duration maximumOutboundRoundTripDelay;
-
-    /**
-     * The Average Inbound Jitter.
-     * The average inbound stream network jitter.
-     */
-    @SerializedName("averageInboundJitter")
-    @Expose
-    public javax.xml.datatype.Duration averageInboundJitter;
-
-    /**
-     * The Average Outbound Jitter.
-     * The average outbound stream network jitter.
-     */
-    @SerializedName("averageOutboundJitter")
-    @Expose
-    public javax.xml.datatype.Duration averageOutboundJitter;
-
-    /**
-     * The Maximum Inbound Jitter.
-     * The maximum inbound stream network jitter.
-     */
-    @SerializedName("maximumInboundJitter")
-    @Expose
-    public javax.xml.datatype.Duration maximumInboundJitter;
-
-    /**
-     * The Maximum Outbound Jitter.
-     * The maximum outbound stream network jitter.
-     */
-    @SerializedName("maximumOutboundJitter")
-    @Expose
-    public javax.xml.datatype.Duration maximumOutboundJitter;
 
 
     /**

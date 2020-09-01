@@ -29,12 +29,12 @@ public class ManagedIOSStoreApp extends ManagedApp implements IJsonBackedObject 
 
 
     /**
-     * The Bundle Id.
-     * The app's Bundle ID.
+     * The Applicable Device Type.
+     * The iOS architecture for which this app can run on.
      */
-    @SerializedName("bundleId")
+    @SerializedName("applicableDeviceType")
     @Expose
-    public String bundleId;
+    public IosDeviceType applicableDeviceType;
 
     /**
      * The App Store Url.
@@ -45,12 +45,12 @@ public class ManagedIOSStoreApp extends ManagedApp implements IJsonBackedObject 
     public String appStoreUrl;
 
     /**
-     * The Applicable Device Type.
-     * The iOS architecture for which this app can run on.
+     * The Bundle Id.
+     * The app's Bundle ID.
      */
-    @SerializedName("applicableDeviceType")
+    @SerializedName("bundleId")
     @Expose
-    public IosDeviceType applicableDeviceType;
+    public String bundleId;
 
     /**
      * The Minimum Supported Operating System.

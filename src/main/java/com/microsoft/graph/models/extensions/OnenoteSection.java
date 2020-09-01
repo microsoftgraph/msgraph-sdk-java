@@ -9,9 +9,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SectionLinks;
+import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.models.extensions.OnenotePage;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionPage;
@@ -57,6 +57,12 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
     public String pagesUrl;
 
     /**
+     * The Pages.
+     * The collection of pages in the section.  Read-only. Nullable.
+     */
+    public OnenotePageCollectionPage pages;
+
+    /**
      * The Parent Notebook.
      * The notebook that contains the section.  Read-only.
      */
@@ -71,12 +77,6 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
     @SerializedName("parentSectionGroup")
     @Expose
     public SectionGroup parentSectionGroup;
-
-    /**
-     * The Pages.
-     * The collection of pages in the section.  Read-only. Nullable.
-     */
-    public OnenotePageCollectionPage pages;
 
 
     /**

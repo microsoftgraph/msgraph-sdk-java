@@ -70,6 +70,13 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
     public IManagedMobileAppRequestBuilder apps(final String id) {
         return new ManagedMobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("apps") + "/" + id, getClient(), null);
     }
+    public ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
+        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
+        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for ManagedAppPolicyDeploymentSummary
@@ -78,13 +85,6 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      */
     public IManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary() {
         return new ManagedAppPolicyDeploymentSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deploymentSummary"), getClient(), null);
-    }
-    public ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments() {
-        return new TargetedManagedAppPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
-    }
-
-    public ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id) {
-        return new TargetedManagedAppPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     public ITargetedManagedAppConfigurationAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments) {

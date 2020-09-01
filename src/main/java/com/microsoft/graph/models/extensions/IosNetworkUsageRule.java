@@ -37,12 +37,12 @@ public class IosNetworkUsageRule implements IJsonBackedObject {
     }
 
     /**
-     * The Managed Apps.
-     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
+     * The Cellular Data Blocked.
+     * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
      */
-    @SerializedName("managedApps")
+    @SerializedName("cellularDataBlocked")
     @Expose
-    public java.util.List<AppListItem> managedApps;
+    public Boolean cellularDataBlocked;
 
     /**
      * The Cellular Data Block When Roaming.
@@ -53,12 +53,12 @@ public class IosNetworkUsageRule implements IJsonBackedObject {
     public Boolean cellularDataBlockWhenRoaming;
 
     /**
-     * The Cellular Data Blocked.
-     * If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
+     * The Managed Apps.
+     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
      */
-    @SerializedName("cellularDataBlocked")
+    @SerializedName("managedApps")
     @Expose
-    public Boolean cellularDataBlocked;
+    public java.util.List<AppListItem> managedApps;
 
 
     /**

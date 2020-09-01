@@ -37,20 +37,20 @@ public class ManagedAppPolicyDeploymentSummaryPerApp implements IJsonBackedObjec
     }
 
     /**
-     * The Mobile App Identifier.
-     * Deployment of an app.
-     */
-    @SerializedName("mobileAppIdentifier")
-    @Expose
-    public MobileAppIdentifier mobileAppIdentifier;
-
-    /**
      * The Configuration Applied User Count.
      * Number of users the policy is applied.
      */
     @SerializedName("configurationAppliedUserCount")
     @Expose
     public Integer configurationAppliedUserCount;
+
+    /**
+     * The Mobile App Identifier.
+     * Deployment of an app.
+     */
+    @SerializedName("mobileAppIdentifier")
+    @Expose
+    public MobileAppIdentifier mobileAppIdentifier;
 
 
     /**

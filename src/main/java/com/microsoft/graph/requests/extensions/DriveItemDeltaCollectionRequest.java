@@ -62,7 +62,7 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
     public IDriveItemDeltaCollectionPage buildFromResponse(final DriveItemDeltaCollectionResponse response) {
         final IDriveItemDeltaCollectionRequestBuilder builder;
         if (response.nextLink != null) {
-            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null, (String) null);
+            builder = new DriveItemDeltaCollectionRequestBuilder(response.nextLink, getBaseRequest().getClient(), /* options */ null);
         } else {
             builder = null;
         }

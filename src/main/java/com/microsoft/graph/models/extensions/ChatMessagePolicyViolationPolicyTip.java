@@ -36,20 +36,20 @@ public class ChatMessagePolicyViolationPolicyTip implements IJsonBackedObject {
     }
 
     /**
-     * The General Text.
-     * 
-     */
-    @SerializedName("generalText")
-    @Expose
-    public String generalText;
-
-    /**
      * The Compliance Url.
      * 
      */
     @SerializedName("complianceUrl")
     @Expose
     public String complianceUrl;
+
+    /**
+     * The General Text.
+     * 
+     */
+    @SerializedName("generalText")
+    @Expose
+    public String generalText;
 
     /**
      * The Matched Condition Descriptions.

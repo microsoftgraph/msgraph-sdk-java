@@ -8,19 +8,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.ContactFolder;
+import com.microsoft.graph.models.extensions.Contact;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
-import com.microsoft.graph.requests.extensions.ContactCollectionPage;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionResponse;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionPage;
+import com.microsoft.graph.requests.extensions.ContactCollectionResponse;
+import com.microsoft.graph.requests.extensions.ContactCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,14 +39,6 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Parent Folder Id.
-     * The ID of the folder's parent folder.
-     */
-    @SerializedName("parentFolderId")
-    @Expose
-    public String parentFolderId;
-
-    /**
      * The Display Name.
      * The folder's display name.
      */
@@ -55,16 +47,18 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+     * The Parent Folder Id.
+     * The ID of the folder's parent folder.
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    @SerializedName("parentFolderId")
+    @Expose
+    public String parentFolderId;
 
     /**
-     * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
+     * The Child Folders.
+     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      */
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    public ContactFolderCollectionPage childFolders;
 
     /**
      * The Contacts.
@@ -73,10 +67,16 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
     public ContactCollectionPage contacts;
 
     /**
-     * The Child Folders.
-     * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
+     * The Multi Value Extended Properties.
+     * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
-    public ContactFolderCollectionPage childFolders;
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+
+    /**
+     * The Single Value Extended Properties.
+     * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
+     */
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -118,36 +118,20 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("singleValueExtendedProperties")) {
-            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+        if (json.has("childFolders")) {
+            final ContactFolderCollectionResponse response = new ContactFolderCollectionResponse();
+            if (json.has("childFolders@odata.nextLink")) {
+                response.nextLink = json.get("childFolders@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
-            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("childFolders").toString(), JsonObject[].class);
+            final ContactFolder[] array = new ContactFolder[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContactFolder.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
-        }
-
-        if (json.has("multiValueExtendedProperties")) {
-            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
-            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+            childFolders = new ContactFolderCollectionPage(response, null);
         }
 
         if (json.has("contacts")) {
@@ -166,20 +150,36 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
             contacts = new ContactCollectionPage(response, null);
         }
 
-        if (json.has("childFolders")) {
-            final ContactFolderCollectionResponse response = new ContactFolderCollectionResponse();
-            if (json.has("childFolders@odata.nextLink")) {
-                response.nextLink = json.get("childFolders@odata.nextLink").getAsString();
+        if (json.has("multiValueExtendedProperties")) {
+            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("childFolders").toString(), JsonObject[].class);
-            final ContactFolder[] array = new ContactFolder[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ContactFolder.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            childFolders = new ContactFolderCollectionPage(response, null);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("singleValueExtendedProperties")) {
+            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

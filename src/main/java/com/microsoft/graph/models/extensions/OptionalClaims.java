@@ -37,20 +37,20 @@ public class OptionalClaims implements IJsonBackedObject {
     }
 
     /**
-     * The Id Token.
-     * The optional claims returned in the JWT ID token.
-     */
-    @SerializedName("idToken")
-    @Expose
-    public java.util.List<OptionalClaim> idToken;
-
-    /**
      * The Access Token.
      * The optional claims returned in the JWT access token.
      */
     @SerializedName("accessToken")
     @Expose
     public java.util.List<OptionalClaim> accessToken;
+
+    /**
+     * The Id Token.
+     * The optional claims returned in the JWT ID token.
+     */
+    @SerializedName("idToken")
+    @Expose
+    public java.util.List<OptionalClaim> idToken;
 
     /**
      * The Saml2Token.

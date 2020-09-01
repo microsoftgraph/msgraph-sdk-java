@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ResourceVisualization;
 import com.microsoft.graph.models.extensions.ResourceReference;
+import com.microsoft.graph.models.extensions.ResourceVisualization;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,12 @@ public class Trending extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Weight.
-     * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
+     * The Last Modified Date Time.
+     * 
      */
-    @SerializedName("weight")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public Double weight;
-
-    /**
-     * The Resource Visualization.
-     * Properties that you can use to visualize the document in your experience.
-     */
-    @SerializedName("resourceVisualization")
-    @Expose
-    public ResourceVisualization resourceVisualization;
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Resource Reference.
@@ -53,12 +45,20 @@ public class Trending extends Entity implements IJsonBackedObject {
     public ResourceReference resourceReference;
 
     /**
-     * The Last Modified Date Time.
-     * 
+     * The Resource Visualization.
+     * Properties that you can use to visualize the document in your experience.
      */
-    @SerializedName("lastModifiedDateTime")
+    @SerializedName("resourceVisualization")
     @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public ResourceVisualization resourceVisualization;
+
+    /**
+     * The Weight.
+     * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
+     */
+    @SerializedName("weight")
+    @Expose
+    public Double weight;
 
     /**
      * The Resource.

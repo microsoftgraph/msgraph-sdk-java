@@ -38,20 +38,20 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
     public String name;
 
     /**
-     * The Plan Id.
-     * Plan ID to which the bucket belongs.
-     */
-    @SerializedName("planId")
-    @Expose
-    public String planId;
-
-    /**
      * The Order Hint.
      * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
     @SerializedName("orderHint")
     @Expose
     public String orderHint;
+
+    /**
+     * The Plan Id.
+     * Plan ID to which the bucket belongs.
+     */
+    @SerializedName("planId")
+    @Expose
+    public String planId;
 
     /**
      * The Tasks.

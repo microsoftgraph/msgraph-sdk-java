@@ -8,16 +8,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailFolder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -43,25 +43,25 @@ public interface IMailFolderRequestBuilder extends IRequestBuilder {
     IMailFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+    IMailFolderCollectionRequestBuilder childFolders();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-
-    IMessageCollectionRequestBuilder messages();
-
-    IMessageRequestBuilder messages(final String id);
+    IMailFolderRequestBuilder childFolders(final String id);
 
     IMessageRuleCollectionRequestBuilder messageRules();
 
     IMessageRuleRequestBuilder messageRules(final String id);
 
-    IMailFolderCollectionRequestBuilder childFolders();
+    IMessageCollectionRequestBuilder messages();
 
-    IMailFolderRequestBuilder childFolders(final String id);
+    IMessageRequestBuilder messages(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
     IMailFolderCopyRequestBuilder copy(final String destinationId);
     IMailFolderMoveRequestBuilder move(final String destinationId);
 

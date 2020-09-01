@@ -27,20 +27,20 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
 
 
     /**
-     * The Url.
-     * Website url
-     */
-    @SerializedName("url")
-    @Expose
-    public String url;
-
-    /**
      * The Device Count.
      * Device Count
      */
     @SerializedName("deviceCount")
     @Expose
     public Integer deviceCount;
+
+    /**
+     * The Url.
+     * Website url
+     */
+    @SerializedName("url")
+    @Expose
+    public String url;
 
 
     /**

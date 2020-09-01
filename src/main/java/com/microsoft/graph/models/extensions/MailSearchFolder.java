@@ -27,12 +27,12 @@ public class MailSearchFolder extends MailFolder implements IJsonBackedObject {
 
 
     /**
-     * The Is Supported.
-     * Indicates whether a search folder is editable using REST APIs.
+     * The Filter Query.
+     * The OData query to filter the messages.
      */
-    @SerializedName("isSupported")
+    @SerializedName("filterQuery")
     @Expose
-    public Boolean isSupported;
+    public String filterQuery;
 
     /**
      * The Include Nested Folders.
@@ -43,20 +43,20 @@ public class MailSearchFolder extends MailFolder implements IJsonBackedObject {
     public Boolean includeNestedFolders;
 
     /**
+     * The Is Supported.
+     * Indicates whether a search folder is editable using REST APIs.
+     */
+    @SerializedName("isSupported")
+    @Expose
+    public Boolean isSupported;
+
+    /**
      * The Source Folder Ids.
      * The mailbox folders that should be mined.
      */
     @SerializedName("sourceFolderIds")
     @Expose
     public java.util.List<String> sourceFolderIds;
-
-    /**
-     * The Filter Query.
-     * The OData query to filter the messages.
-     */
-    @SerializedName("filterQuery")
-    @Expose
-    public String filterQuery;
 
 
     /**

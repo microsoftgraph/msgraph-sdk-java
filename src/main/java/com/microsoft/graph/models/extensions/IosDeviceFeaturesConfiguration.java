@@ -38,14 +38,6 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     public String assetTagTemplate;
 
     /**
-     * The Lock Screen Footnote.
-     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
-     */
-    @SerializedName("lockScreenFootnote")
-    @Expose
-    public String lockScreenFootnote;
-
-    /**
      * The Home Screen Dock Icons.
      * A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      */
@@ -60,6 +52,14 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     @SerializedName("homeScreenPages")
     @Expose
     public java.util.List<IosHomeScreenPage> homeScreenPages;
+
+    /**
+     * The Lock Screen Footnote.
+     * A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
+     */
+    @SerializedName("lockScreenFootnote")
+    @Expose
+    public String lockScreenFootnote;
 
     /**
      * The Notification Settings.

@@ -29,6 +29,14 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Configuration.
+     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+     */
+    @SerializedName("configuration")
+    @Expose
+    public TeamsTabConfiguration configuration;
+
+    /**
      * The Display Name.
      * Name of the tab.
      */
@@ -43,14 +51,6 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
     @SerializedName("webUrl")
     @Expose
     public String webUrl;
-
-    /**
-     * The Configuration.
-     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-     */
-    @SerializedName("configuration")
-    @Expose
-    public TeamsTabConfiguration configuration;
 
     /**
      * The Teams App.

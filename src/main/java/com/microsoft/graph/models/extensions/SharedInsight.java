@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.SharingDetail;
-import com.microsoft.graph.models.extensions.ResourceVisualization;
 import com.microsoft.graph.models.extensions.ResourceReference;
+import com.microsoft.graph.models.extensions.ResourceVisualization;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -38,12 +38,12 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
     public SharingDetail lastShared;
 
     /**
-     * The Sharing History.
-     * 
+     * The Resource Reference.
+     * Reference properties of the shared document, such as the url and type of the document. Read-only
      */
-    @SerializedName("sharingHistory")
+    @SerializedName("resourceReference")
     @Expose
-    public java.util.List<SharingDetail> sharingHistory;
+    public ResourceReference resourceReference;
 
     /**
      * The Resource Visualization.
@@ -54,12 +54,12 @@ public class SharedInsight extends Entity implements IJsonBackedObject {
     public ResourceVisualization resourceVisualization;
 
     /**
-     * The Resource Reference.
-     * Reference properties of the shared document, such as the url and type of the document. Read-only
+     * The Sharing History.
+     * 
      */
-    @SerializedName("resourceReference")
+    @SerializedName("sharingHistory")
     @Expose
-    public ResourceReference resourceReference;
+    public java.util.List<SharingDetail> sharingHistory;
 
     /**
      * The Last Shared Method.

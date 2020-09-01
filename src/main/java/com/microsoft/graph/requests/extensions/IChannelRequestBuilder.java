@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
@@ -38,6 +40,17 @@ public interface IChannelRequestBuilder extends IRequestBuilder {
     IChannelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for DriveItem
+     *
+     * @return the IDriveItemRequestBuilder instance
+     */
+    IDriveItemRequestBuilder filesFolder();
+
+    IConversationMemberCollectionRequestBuilder members();
+
+    IConversationMemberRequestBuilder members(final String id);
+
     IChatMessageCollectionRequestBuilder messages();
 
     IChatMessageRequestBuilder messages(final String id);
@@ -45,12 +58,5 @@ public interface IChannelRequestBuilder extends IRequestBuilder {
     ITeamsTabCollectionRequestBuilder tabs();
 
     ITeamsTabRequestBuilder tabs(final String id);
-
-    /**
-     * Gets the request builder for DriveItem
-     *
-     * @return the IDriveItemRequestBuilder instance
-     */
-    IDriveItemRequestBuilder filesFolder();
 
 }

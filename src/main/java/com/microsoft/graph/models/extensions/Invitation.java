@@ -37,14 +37,6 @@ public class Invitation extends Entity implements IJsonBackedObject {
     public String invitedUserDisplayName;
 
     /**
-     * The Invited User Type.
-     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
-     */
-    @SerializedName("invitedUserType")
-    @Expose
-    public String invitedUserType;
-
-    /**
      * The Invited User Email Address.
      * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (&amp;lt; &amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
      */
@@ -61,28 +53,36 @@ public class Invitation extends Entity implements IJsonBackedObject {
     public InvitedUserMessageInfo invitedUserMessageInfo;
 
     /**
-     * The Send Invitation Message.
-     * Indicates whether an email should be sent to the user being invited or not. The default is false.
+     * The Invited User Type.
+     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
      */
-    @SerializedName("sendInvitationMessage")
+    @SerializedName("invitedUserType")
     @Expose
-    public Boolean sendInvitationMessage;
+    public String invitedUserType;
+
+    /**
+     * The Invite Redeem Url.
+     * The URL the user can use to redeem their invitation. Read-only
+     */
+    @SerializedName("inviteRedeemUrl")
+    @Expose
+    public String inviteRedeemUrl;
 
     /**
      * The Invite Redirect Url.
-     * The URL user should be redirected to once the invitation is redeemed. Required.
+     * The URL the user should be redirected to once the invitation is redeemed. Required.
      */
     @SerializedName("inviteRedirectUrl")
     @Expose
     public String inviteRedirectUrl;
 
     /**
-     * The Invite Redeem Url.
-     * The URL user can use to redeem his invitation. Read-Only
+     * The Send Invitation Message.
+     * Indicates whether an email should be sent to the user being invited or not. The default is false.
      */
-    @SerializedName("inviteRedeemUrl")
+    @SerializedName("sendInvitationMessage")
     @Expose
-    public String inviteRedeemUrl;
+    public Boolean sendInvitationMessage;
 
     /**
      * The Status.
