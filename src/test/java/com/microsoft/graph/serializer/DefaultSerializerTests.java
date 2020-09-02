@@ -3,8 +3,6 @@ package com.microsoft.graph.serializer;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import org.junit.Test;
-
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
@@ -15,9 +13,11 @@ import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.DateOnly;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.FileAttachment;
-import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.RecurrenceRange;
+import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.generated.RecurrenceRangeType;
+import com.microsoft.graph.requests.extensions.DriveItemDeltaCollectionResponse;
+import org.junit.Test;
 
 public class DefaultSerializerTests {
 
@@ -26,7 +26,7 @@ public class DefaultSerializerTests {
      *
      * @throws Exception If there is an exception during the test
      */
-	@Test
+    @Test
     public void testDriveDeserialization() throws Exception {
         final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
         String source = "{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#drives/$entity\",\"id\":\"8bf6ae90006c4a4c\",\"driveType\":\"personal\",\"owner\":{\"user\":{\"displayName\":\"Peter\",\"id\":\"8bf6ae90006c4a4c\"}},\"quota\":{\"deleted\":1485718314,\"remaining\":983887466461,\"state\":\"normal\",\"total\":1142461300736,\"used\":158573834275}}";
@@ -36,6 +36,43 @@ public class DefaultSerializerTests {
         assertEquals(Long.valueOf(983887466461L), result.quota.remaining);
         assertEquals("8bf6ae90006c4a4c", result.id);
 
+    }
+
+    /**
+     * Make sure that deserializing a DriveItems also deserializes child additionalData
+     *
+     * @throws Exception If there is an exception during the test
+     */
+    @Test
+    public void testDriveItemChildAdditionalDataDeserialization() throws Exception {
+        final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+        String source = "{\n"
+                + "    \"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#users('02008492-3fec-4ce4-bb54-980ad856856f')/drive/root/children\",\n"
+                + "    \"value\": [\n"
+                + "        {\n"
+                + "            \"createdBy\": {\n"
+                + "                \"user\": {\n"
+                + "                    \"email\": \"the@email.com\",\n"
+                + "                    \"id\": \"02008492-3fec-4ce4-bb54-980ad856856f\",\n"
+                + "                    \"displayName\": \"John Doe\"\n"
+                + "                }\n"
+                + "            }\n"
+                + "        }\n"
+                + "    ]\n"
+                + "}";
+
+        DriveItemDeltaCollectionResponse result = serializer
+                .deserializeObject(source, DriveItemDeltaCollectionResponse.class);
+        assertNotNull(result);
+        assertNotNull(result.value);
+        assertEquals(1, result.value.size());
+        assertNotNull(result.value.get(0));
+        assertNotNull(result.value.get(0).createdBy);
+        assertNotNull(result.value.get(0).createdBy.user);
+        assertNotNull(result.value.get(0).createdBy.user.additionalDataManager());
+        assertNotNull(result.value.get(0).createdBy.user.additionalDataManager().get("email"));
+        assertEquals("the@email.com",
+                result.value.get(0).createdBy.user.additionalDataManager().get("email").getAsString());
     }
 
 	@Test
