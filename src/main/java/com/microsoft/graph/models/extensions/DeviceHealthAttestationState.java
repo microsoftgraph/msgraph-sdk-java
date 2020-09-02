@@ -36,12 +36,84 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     }
 
     /**
-     * The Last Update Date Time.
-     * The Timestamp of the last update.
+     * The Attestation Identity Key.
+     * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
      */
-    @SerializedName("lastUpdateDateTime")
+    @SerializedName("attestationIdentityKey")
     @Expose
-    public String lastUpdateDateTime;
+    public String attestationIdentityKey;
+
+    /**
+     * The Bit Locker Status.
+     * On or Off of BitLocker Drive Encryption
+     */
+    @SerializedName("bitLockerStatus")
+    @Expose
+    public String bitLockerStatus;
+
+    /**
+     * The Boot App Security Version.
+     * The security version number of the Boot Application
+     */
+    @SerializedName("bootAppSecurityVersion")
+    @Expose
+    public String bootAppSecurityVersion;
+
+    /**
+     * The Boot Debugging.
+     * When bootDebugging is enabled, the device is used in development and testing
+     */
+    @SerializedName("bootDebugging")
+    @Expose
+    public String bootDebugging;
+
+    /**
+     * The Boot Manager Security Version.
+     * The security version number of the Boot Application
+     */
+    @SerializedName("bootManagerSecurityVersion")
+    @Expose
+    public String bootManagerSecurityVersion;
+
+    /**
+     * The Boot Manager Version.
+     * The version of the Boot Manager
+     */
+    @SerializedName("bootManagerVersion")
+    @Expose
+    public String bootManagerVersion;
+
+    /**
+     * The Boot Revision List Info.
+     * The Boot Revision List that was loaded during initial boot on the attested device
+     */
+    @SerializedName("bootRevisionListInfo")
+    @Expose
+    public String bootRevisionListInfo;
+
+    /**
+     * The Code Integrity.
+     * When code integrity is enabled, code execution is restricted to integrity verified code
+     */
+    @SerializedName("codeIntegrity")
+    @Expose
+    public String codeIntegrity;
+
+    /**
+     * The Code Integrity Check Version.
+     * The version of the Boot Manager
+     */
+    @SerializedName("codeIntegrityCheckVersion")
+    @Expose
+    public String codeIntegrityCheckVersion;
+
+    /**
+     * The Code Integrity Policy.
+     * The Code Integrity policy that is controlling the security of the boot environment
+     */
+    @SerializedName("codeIntegrityPolicy")
+    @Expose
+    public String codeIntegrityPolicy;
 
     /**
      * The Content Namespace Url.
@@ -52,6 +124,22 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public String contentNamespaceUrl;
 
     /**
+     * The Content Version.
+     * The HealthAttestation state schema version
+     */
+    @SerializedName("contentVersion")
+    @Expose
+    public String contentVersion;
+
+    /**
+     * The Data Excution Policy.
+     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
+     */
+    @SerializedName("dataExcutionPolicy")
+    @Expose
+    public String dataExcutionPolicy;
+
+    /**
      * The Device Health Attestation Status.
      * The DHA report version. (Namespace version)
      */
@@ -60,12 +148,28 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public String deviceHealthAttestationStatus;
 
     /**
-     * The Content Version.
-     * The HealthAttestation state schema version
+     * The Early Launch Anti Malware Driver Protection.
+     * ELAM provides protection for the computers in your network when they start up
      */
-    @SerializedName("contentVersion")
+    @SerializedName("earlyLaunchAntiMalwareDriverProtection")
     @Expose
-    public String contentVersion;
+    public String earlyLaunchAntiMalwareDriverProtection;
+
+    /**
+     * The Health Attestation Supported Status.
+     * This attribute indicates if DHA is supported for the device
+     */
+    @SerializedName("healthAttestationSupportedStatus")
+    @Expose
+    public String healthAttestationSupportedStatus;
+
+    /**
+     * The Health Status Mismatch Info.
+     * This attribute appears if DHA-Service detects an integrity issue
+     */
+    @SerializedName("healthStatusMismatchInfo")
+    @Expose
+    public String healthStatusMismatchInfo;
 
     /**
      * The Issued Date Time.
@@ -76,12 +180,44 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public java.util.Calendar issuedDateTime;
 
     /**
-     * The Attestation Identity Key.
-     * TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
+     * The Last Update Date Time.
+     * The Timestamp of the last update.
      */
-    @SerializedName("attestationIdentityKey")
+    @SerializedName("lastUpdateDateTime")
     @Expose
-    public String attestationIdentityKey;
+    public String lastUpdateDateTime;
+
+    /**
+     * The Operating System Kernel Debugging.
+     * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
+     */
+    @SerializedName("operatingSystemKernelDebugging")
+    @Expose
+    public String operatingSystemKernelDebugging;
+
+    /**
+     * The Operating System Rev List Info.
+     * The Operating System Revision List that was loaded during initial boot on the attested device
+     */
+    @SerializedName("operatingSystemRevListInfo")
+    @Expose
+    public String operatingSystemRevListInfo;
+
+    /**
+     * The Pcr0.
+     * The measurement that is captured in PCR[0]
+     */
+    @SerializedName("pcr0")
+    @Expose
+    public String pcr0;
+
+    /**
+     * The Pcr Hash Algorithm.
+     * Informational attribute that identifies the HASH algorithm that was used by TPM
+     */
+    @SerializedName("pcrHashAlgorithm")
+    @Expose
+    public String pcrHashAlgorithm;
 
     /**
      * The Reset Count.
@@ -100,36 +236,12 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public Long restartCount;
 
     /**
-     * The Data Excution Policy.
-     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
+     * The Safe Mode.
+     * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
      */
-    @SerializedName("dataExcutionPolicy")
+    @SerializedName("safeMode")
     @Expose
-    public String dataExcutionPolicy;
-
-    /**
-     * The Bit Locker Status.
-     * On or Off of BitLocker Drive Encryption
-     */
-    @SerializedName("bitLockerStatus")
-    @Expose
-    public String bitLockerStatus;
-
-    /**
-     * The Boot Manager Version.
-     * The version of the Boot Manager
-     */
-    @SerializedName("bootManagerVersion")
-    @Expose
-    public String bootManagerVersion;
-
-    /**
-     * The Code Integrity Check Version.
-     * The version of the Boot Manager
-     */
-    @SerializedName("codeIntegrityCheckVersion")
-    @Expose
-    public String codeIntegrityCheckVersion;
+    public String safeMode;
 
     /**
      * The Secure Boot.
@@ -140,28 +252,12 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public String secureBoot;
 
     /**
-     * The Boot Debugging.
-     * When bootDebugging is enabled, the device is used in development and testing
+     * The Secure Boot Configuration Policy Finger Print.
+     * Fingerprint of the Custom Secure Boot Configuration Policy
      */
-    @SerializedName("bootDebugging")
+    @SerializedName("secureBootConfigurationPolicyFingerPrint")
     @Expose
-    public String bootDebugging;
-
-    /**
-     * The Operating System Kernel Debugging.
-     * When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-     */
-    @SerializedName("operatingSystemKernelDebugging")
-    @Expose
-    public String operatingSystemKernelDebugging;
-
-    /**
-     * The Code Integrity.
-     * When code integrity is enabled, code execution is restricted to integrity verified code
-     */
-    @SerializedName("codeIntegrity")
-    @Expose
-    public String codeIntegrity;
+    public String secureBootConfigurationPolicyFingerPrint;
 
     /**
      * The Test Signing.
@@ -172,28 +268,12 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public String testSigning;
 
     /**
-     * The Safe Mode.
-     * Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
+     * The Tpm Version.
+     * The security version number of the Boot Application
      */
-    @SerializedName("safeMode")
+    @SerializedName("tpmVersion")
     @Expose
-    public String safeMode;
-
-    /**
-     * The Windows PE.
-     * Operating system running with limited services that is used to prepare a computer for Windows
-     */
-    @SerializedName("windowsPE")
-    @Expose
-    public String windowsPE;
-
-    /**
-     * The Early Launch Anti Malware Driver Protection.
-     * ELAM provides protection for the computers in your network when they start up
-     */
-    @SerializedName("earlyLaunchAntiMalwareDriverProtection")
-    @Expose
-    public String earlyLaunchAntiMalwareDriverProtection;
+    public String tpmVersion;
 
     /**
      * The Virtual Secure Mode.
@@ -204,92 +284,12 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
     public String virtualSecureMode;
 
     /**
-     * The Pcr Hash Algorithm.
-     * Informational attribute that identifies the HASH algorithm that was used by TPM
+     * The Windows PE.
+     * Operating system running with limited services that is used to prepare a computer for Windows
      */
-    @SerializedName("pcrHashAlgorithm")
+    @SerializedName("windowsPE")
     @Expose
-    public String pcrHashAlgorithm;
-
-    /**
-     * The Boot App Security Version.
-     * The security version number of the Boot Application
-     */
-    @SerializedName("bootAppSecurityVersion")
-    @Expose
-    public String bootAppSecurityVersion;
-
-    /**
-     * The Boot Manager Security Version.
-     * The security version number of the Boot Application
-     */
-    @SerializedName("bootManagerSecurityVersion")
-    @Expose
-    public String bootManagerSecurityVersion;
-
-    /**
-     * The Tpm Version.
-     * The security version number of the Boot Application
-     */
-    @SerializedName("tpmVersion")
-    @Expose
-    public String tpmVersion;
-
-    /**
-     * The Pcr0.
-     * The measurement that is captured in PCR[0]
-     */
-    @SerializedName("pcr0")
-    @Expose
-    public String pcr0;
-
-    /**
-     * The Secure Boot Configuration Policy Finger Print.
-     * Fingerprint of the Custom Secure Boot Configuration Policy
-     */
-    @SerializedName("secureBootConfigurationPolicyFingerPrint")
-    @Expose
-    public String secureBootConfigurationPolicyFingerPrint;
-
-    /**
-     * The Code Integrity Policy.
-     * The Code Integrity policy that is controlling the security of the boot environment
-     */
-    @SerializedName("codeIntegrityPolicy")
-    @Expose
-    public String codeIntegrityPolicy;
-
-    /**
-     * The Boot Revision List Info.
-     * The Boot Revision List that was loaded during initial boot on the attested device
-     */
-    @SerializedName("bootRevisionListInfo")
-    @Expose
-    public String bootRevisionListInfo;
-
-    /**
-     * The Operating System Rev List Info.
-     * The Operating System Revision List that was loaded during initial boot on the attested device
-     */
-    @SerializedName("operatingSystemRevListInfo")
-    @Expose
-    public String operatingSystemRevListInfo;
-
-    /**
-     * The Health Status Mismatch Info.
-     * This attribute appears if DHA-Service detects an integrity issue
-     */
-    @SerializedName("healthStatusMismatchInfo")
-    @Expose
-    public String healthStatusMismatchInfo;
-
-    /**
-     * The Health Attestation Supported Status.
-     * This attribute indicates if DHA is supported for the device
-     */
-    @SerializedName("healthAttestationSupportedStatus")
-    @Expose
-    public String healthAttestationSupportedStatus;
+    public String windowsPE;
 
 
     /**

@@ -36,20 +36,20 @@ public class SettingSource implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Not yet documented
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Display Name.
      * Not yet documented
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Id.
+     * Not yet documented
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
 
     /**

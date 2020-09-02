@@ -37,6 +37,14 @@ public class BitLockerRemovableDrivePolicy implements IJsonBackedObject {
     }
 
     /**
+     * The Block Cross Organization Write Access.
+     * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
+     */
+    @SerializedName("blockCrossOrganizationWriteAccess")
+    @Expose
+    public Boolean blockCrossOrganizationWriteAccess;
+
+    /**
      * The Encryption Method.
      * Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      */
@@ -51,14 +59,6 @@ public class BitLockerRemovableDrivePolicy implements IJsonBackedObject {
     @SerializedName("requireEncryptionForWriteAccess")
     @Expose
     public Boolean requireEncryptionForWriteAccess;
-
-    /**
-     * The Block Cross Organization Write Access.
-     * This policy setting determines whether BitLocker protection is required for removable data drives to be writable on a computer.
-     */
-    @SerializedName("blockCrossOrganizationWriteAccess")
-    @Expose
-    public Boolean blockCrossOrganizationWriteAccess;
 
 
     /**

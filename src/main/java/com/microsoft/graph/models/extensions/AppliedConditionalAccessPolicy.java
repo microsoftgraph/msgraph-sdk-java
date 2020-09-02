@@ -37,14 +37,6 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Unique GUID of the conditional access policy.
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Display Name.
      * Refers to the Name of the conditional access policy (example: 'Require MFA for Salesforce').
      */
@@ -67,6 +59,14 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     @SerializedName("enforcedSessionControls")
     @Expose
     public java.util.List<String> enforcedSessionControls;
+
+    /**
+     * The Id.
+     * Unique GUID of the conditional access policy.
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
     /**
      * The Result.

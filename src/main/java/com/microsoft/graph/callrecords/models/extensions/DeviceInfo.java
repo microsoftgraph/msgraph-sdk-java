@@ -36,14 +36,6 @@ public class DeviceInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Capture Device Name.
-     * Name of the capture device used by the media endpoint.
-     */
-    @SerializedName("captureDeviceName")
-    @Expose
-    public String captureDeviceName;
-
-    /**
      * The Capture Device Driver.
      * Name of the capture device driver used by the media endpoint.
      */
@@ -52,76 +44,12 @@ public class DeviceInfo implements IJsonBackedObject {
     public String captureDeviceDriver;
 
     /**
-     * The Render Device Name.
-     * Name of the render device used by the media endpoint.
+     * The Capture Device Name.
+     * Name of the capture device used by the media endpoint.
      */
-    @SerializedName("renderDeviceName")
+    @SerializedName("captureDeviceName")
     @Expose
-    public String renderDeviceName;
-
-    /**
-     * The Render Device Driver.
-     * Name of the render device driver used by the media endpoint.
-     */
-    @SerializedName("renderDeviceDriver")
-    @Expose
-    public String renderDeviceDriver;
-
-    /**
-     * The Sent Signal Level.
-     * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-     */
-    @SerializedName("sentSignalLevel")
-    @Expose
-    public Integer sentSignalLevel;
-
-    /**
-     * The Received Signal Level.
-     * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
-     */
-    @SerializedName("receivedSignalLevel")
-    @Expose
-    public Integer receivedSignalLevel;
-
-    /**
-     * The Sent Noise Level.
-     * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-     */
-    @SerializedName("sentNoiseLevel")
-    @Expose
-    public Integer sentNoiseLevel;
-
-    /**
-     * The Received Noise Level.
-     * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
-     */
-    @SerializedName("receivedNoiseLevel")
-    @Expose
-    public Integer receivedNoiseLevel;
-
-    /**
-     * The Initial Signal Level Root Mean Square.
-     * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
-     */
-    @SerializedName("initialSignalLevelRootMeanSquare")
-    @Expose
-    public float initialSignalLevelRootMeanSquare;
-
-    /**
-     * The Cpu Insufficent Event Ratio.
-     * Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
-     */
-    @SerializedName("cpuInsufficentEventRatio")
-    @Expose
-    public float cpuInsufficentEventRatio;
-
-    /**
-     * The Render Not Functioning Event Ratio.
-     * Fraction of the call that the media endpoint detected the render device was not working properly.
-     */
-    @SerializedName("renderNotFunctioningEventRatio")
-    @Expose
-    public float renderNotFunctioningEventRatio;
+    public String captureDeviceName;
 
     /**
      * The Capture Not Functioning Event Ratio.
@@ -132,28 +60,12 @@ public class DeviceInfo implements IJsonBackedObject {
     public float captureNotFunctioningEventRatio;
 
     /**
-     * The Device Glitch Event Ratio.
-     * Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
+     * The Cpu Insufficent Event Ratio.
+     * Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
      */
-    @SerializedName("deviceGlitchEventRatio")
+    @SerializedName("cpuInsufficentEventRatio")
     @Expose
-    public float deviceGlitchEventRatio;
-
-    /**
-     * The Low Speech To Noise Event Ratio.
-     * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
-     */
-    @SerializedName("lowSpeechToNoiseEventRatio")
-    @Expose
-    public float lowSpeechToNoiseEventRatio;
-
-    /**
-     * The Low Speech Level Event Ratio.
-     * Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
-     */
-    @SerializedName("lowSpeechLevelEventRatio")
-    @Expose
-    public float lowSpeechLevelEventRatio;
+    public float cpuInsufficentEventRatio;
 
     /**
      * The Device Clipping Event Ratio.
@@ -164,6 +76,14 @@ public class DeviceInfo implements IJsonBackedObject {
     public float deviceClippingEventRatio;
 
     /**
+     * The Device Glitch Event Ratio.
+     * Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
+     */
+    @SerializedName("deviceGlitchEventRatio")
+    @Expose
+    public float deviceGlitchEventRatio;
+
+    /**
      * The Howling Event Count.
      * Number of times during the call that the media endpoint detected howling or screeching audio.
      */
@@ -172,12 +92,68 @@ public class DeviceInfo implements IJsonBackedObject {
     public Integer howlingEventCount;
 
     /**
-     * The Render Zero Volume Event Ratio.
-     * Fraction of the call that media endpoint detected device render volume is set to 0.
+     * The Initial Signal Level Root Mean Square.
+     * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
      */
-    @SerializedName("renderZeroVolumeEventRatio")
+    @SerializedName("initialSignalLevelRootMeanSquare")
     @Expose
-    public float renderZeroVolumeEventRatio;
+    public float initialSignalLevelRootMeanSquare;
+
+    /**
+     * The Low Speech Level Event Ratio.
+     * Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
+     */
+    @SerializedName("lowSpeechLevelEventRatio")
+    @Expose
+    public float lowSpeechLevelEventRatio;
+
+    /**
+     * The Low Speech To Noise Event Ratio.
+     * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
+     */
+    @SerializedName("lowSpeechToNoiseEventRatio")
+    @Expose
+    public float lowSpeechToNoiseEventRatio;
+
+    /**
+     * The Mic Glitch Rate.
+     * Glitches per 5 minute interval for the media endpoint's microphone.
+     */
+    @SerializedName("micGlitchRate")
+    @Expose
+    public float micGlitchRate;
+
+    /**
+     * The Received Noise Level.
+     * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+     */
+    @SerializedName("receivedNoiseLevel")
+    @Expose
+    public Integer receivedNoiseLevel;
+
+    /**
+     * The Received Signal Level.
+     * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+     */
+    @SerializedName("receivedSignalLevel")
+    @Expose
+    public Integer receivedSignalLevel;
+
+    /**
+     * The Render Device Driver.
+     * Name of the render device driver used by the media endpoint.
+     */
+    @SerializedName("renderDeviceDriver")
+    @Expose
+    public String renderDeviceDriver;
+
+    /**
+     * The Render Device Name.
+     * Name of the render device used by the media endpoint.
+     */
+    @SerializedName("renderDeviceName")
+    @Expose
+    public String renderDeviceName;
 
     /**
      * The Render Mute Event Ratio.
@@ -188,12 +164,36 @@ public class DeviceInfo implements IJsonBackedObject {
     public float renderMuteEventRatio;
 
     /**
-     * The Mic Glitch Rate.
-     * Glitches per 5 minute interval for the media endpoint's microphone.
+     * The Render Not Functioning Event Ratio.
+     * Fraction of the call that the media endpoint detected the render device was not working properly.
      */
-    @SerializedName("micGlitchRate")
+    @SerializedName("renderNotFunctioningEventRatio")
     @Expose
-    public float micGlitchRate;
+    public float renderNotFunctioningEventRatio;
+
+    /**
+     * The Render Zero Volume Event Ratio.
+     * Fraction of the call that media endpoint detected device render volume is set to 0.
+     */
+    @SerializedName("renderZeroVolumeEventRatio")
+    @Expose
+    public float renderZeroVolumeEventRatio;
+
+    /**
+     * The Sent Noise Level.
+     * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
+     */
+    @SerializedName("sentNoiseLevel")
+    @Expose
+    public Integer sentNoiseLevel;
+
+    /**
+     * The Sent Signal Level.
+     * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
+     */
+    @SerializedName("sentSignalLevel")
+    @Expose
+    public Integer sentSignalLevel;
 
     /**
      * The Speaker Glitch Rate.

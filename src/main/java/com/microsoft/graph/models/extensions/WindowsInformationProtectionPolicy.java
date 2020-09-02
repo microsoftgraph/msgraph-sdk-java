@@ -28,12 +28,12 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
 
 
     /**
-     * The Revoke On Mdm Handoff Disabled.
-     * New property in RS2, pending documentation
+     * The Days Without Contact Before Unenroll.
+     * Offline interval before app data is wiped (days)
      */
-    @SerializedName("revokeOnMdmHandoffDisabled")
+    @SerializedName("daysWithoutContactBeforeUnenroll")
     @Expose
-    public Boolean revokeOnMdmHandoffDisabled;
+    public Integer daysWithoutContactBeforeUnenroll;
 
     /**
      * The Mdm Enrollment Url.
@@ -44,52 +44,12 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     public String mdmEnrollmentUrl;
 
     /**
-     * The Windows Hello For Business Blocked.
-     * Boolean value that sets Windows Hello for Business as a method for signing into Windows.
+     * The Minutes Of Inactivity Before Device Lock.
+     * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &amp;lt;= X &amp;lt;= 999.
      */
-    @SerializedName("windowsHelloForBusinessBlocked")
+    @SerializedName("minutesOfInactivityBeforeDeviceLock")
     @Expose
-    public Boolean windowsHelloForBusinessBlocked;
-
-    /**
-     * The Pin Minimum Length.
-     * Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
-     */
-    @SerializedName("pinMinimumLength")
-    @Expose
-    public Integer pinMinimumLength;
-
-    /**
-     * The Pin Uppercase Letters.
-     * Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
-     */
-    @SerializedName("pinUppercaseLetters")
-    @Expose
-    public WindowsInformationProtectionPinCharacterRequirements pinUppercaseLetters;
-
-    /**
-     * The Pin Lowercase Letters.
-     * Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
-     */
-    @SerializedName("pinLowercaseLetters")
-    @Expose
-    public WindowsInformationProtectionPinCharacterRequirements pinLowercaseLetters;
-
-    /**
-     * The Pin Special Characters.
-     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
-     */
-    @SerializedName("pinSpecialCharacters")
-    @Expose
-    public WindowsInformationProtectionPinCharacterRequirements pinSpecialCharacters;
-
-    /**
-     * The Pin Expiration Days.
-     * Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
-     */
-    @SerializedName("pinExpirationDays")
-    @Expose
-    public Integer pinExpirationDays;
+    public Integer minutesOfInactivityBeforeDeviceLock;
 
     /**
      * The Number Of Past Pins Remembered.
@@ -108,20 +68,60 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
     public Integer passwordMaximumAttemptCount;
 
     /**
-     * The Minutes Of Inactivity Before Device Lock.
-     * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 &amp;lt;= X &amp;lt;= 999.
+     * The Pin Expiration Days.
+     * Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
      */
-    @SerializedName("minutesOfInactivityBeforeDeviceLock")
+    @SerializedName("pinExpirationDays")
     @Expose
-    public Integer minutesOfInactivityBeforeDeviceLock;
+    public Integer pinExpirationDays;
 
     /**
-     * The Days Without Contact Before Unenroll.
-     * Offline interval before app data is wiped (days)
+     * The Pin Lowercase Letters.
+     * Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
      */
-    @SerializedName("daysWithoutContactBeforeUnenroll")
+    @SerializedName("pinLowercaseLetters")
     @Expose
-    public Integer daysWithoutContactBeforeUnenroll;
+    public WindowsInformationProtectionPinCharacterRequirements pinLowercaseLetters;
+
+    /**
+     * The Pin Minimum Length.
+     * Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
+     */
+    @SerializedName("pinMinimumLength")
+    @Expose
+    public Integer pinMinimumLength;
+
+    /**
+     * The Pin Special Characters.
+     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
+     */
+    @SerializedName("pinSpecialCharacters")
+    @Expose
+    public WindowsInformationProtectionPinCharacterRequirements pinSpecialCharacters;
+
+    /**
+     * The Pin Uppercase Letters.
+     * Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     */
+    @SerializedName("pinUppercaseLetters")
+    @Expose
+    public WindowsInformationProtectionPinCharacterRequirements pinUppercaseLetters;
+
+    /**
+     * The Revoke On Mdm Handoff Disabled.
+     * New property in RS2, pending documentation
+     */
+    @SerializedName("revokeOnMdmHandoffDisabled")
+    @Expose
+    public Boolean revokeOnMdmHandoffDisabled;
+
+    /**
+     * The Windows Hello For Business Blocked.
+     * Boolean value that sets Windows Hello for Business as a method for signing into Windows.
+     */
+    @SerializedName("windowsHelloForBusinessBlocked")
+    @Expose
+    public Boolean windowsHelloForBusinessBlocked;
 
 
     /**

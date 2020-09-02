@@ -36,6 +36,22 @@ public class TeamMemberSettings implements IJsonBackedObject {
     }
 
     /**
+     * The Allow Add Remove Apps.
+     * If set to true, members can add and remove apps.
+     */
+    @SerializedName("allowAddRemoveApps")
+    @Expose
+    public Boolean allowAddRemoveApps;
+
+    /**
+     * The Allow Create Private Channels.
+     * If set to true, members can add and update private channels.
+     */
+    @SerializedName("allowCreatePrivateChannels")
+    @Expose
+    public Boolean allowCreatePrivateChannels;
+
+    /**
      * The Allow Create Update Channels.
      * If set to true, members can add and update channels.
      */
@@ -44,20 +60,12 @@ public class TeamMemberSettings implements IJsonBackedObject {
     public Boolean allowCreateUpdateChannels;
 
     /**
-     * The Allow Delete Channels.
-     * If set to true, members can delete channels.
+     * The Allow Create Update Remove Connectors.
+     * If set to true, members can add, update, and remove connectors.
      */
-    @SerializedName("allowDeleteChannels")
+    @SerializedName("allowCreateUpdateRemoveConnectors")
     @Expose
-    public Boolean allowDeleteChannels;
-
-    /**
-     * The Allow Add Remove Apps.
-     * If set to true, members can add and remove apps.
-     */
-    @SerializedName("allowAddRemoveApps")
-    @Expose
-    public Boolean allowAddRemoveApps;
+    public Boolean allowCreateUpdateRemoveConnectors;
 
     /**
      * The Allow Create Update Remove Tabs.
@@ -68,12 +76,12 @@ public class TeamMemberSettings implements IJsonBackedObject {
     public Boolean allowCreateUpdateRemoveTabs;
 
     /**
-     * The Allow Create Update Remove Connectors.
-     * If set to true, members can add, update, and remove connectors.
+     * The Allow Delete Channels.
+     * If set to true, members can delete channels.
      */
-    @SerializedName("allowCreateUpdateRemoveConnectors")
+    @SerializedName("allowDeleteChannels")
     @Expose
-    public Boolean allowCreateUpdateRemoveConnectors;
+    public Boolean allowDeleteChannels;
 
 
     /**

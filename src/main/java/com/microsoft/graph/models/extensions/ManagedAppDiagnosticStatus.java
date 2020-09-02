@@ -36,12 +36,12 @@ public class ManagedAppDiagnosticStatus implements IJsonBackedObject {
     }
 
     /**
-     * The Validation Name.
-     * The validation friendly name
+     * The Mitigation Instruction.
+     * Instruction on how to mitigate a failed validation
      */
-    @SerializedName("validationName")
+    @SerializedName("mitigationInstruction")
     @Expose
-    public String validationName;
+    public String mitigationInstruction;
 
     /**
      * The State.
@@ -52,12 +52,12 @@ public class ManagedAppDiagnosticStatus implements IJsonBackedObject {
     public String state;
 
     /**
-     * The Mitigation Instruction.
-     * Instruction on how to mitigate a failed validation
+     * The Validation Name.
+     * The validation friendly name
      */
-    @SerializedName("mitigationInstruction")
+    @SerializedName("validationName")
     @Expose
-    public String mitigationInstruction;
+    public String validationName;
 
 
     /**

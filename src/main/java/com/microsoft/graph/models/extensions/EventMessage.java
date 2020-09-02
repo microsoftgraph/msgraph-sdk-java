@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.MeetingMessageType;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.Location;
-import com.microsoft.graph.models.generated.EventType;
+import com.microsoft.graph.models.generated.MeetingMessageType;
 import com.microsoft.graph.models.extensions.PatternedRecurrence;
+import com.microsoft.graph.models.generated.EventType;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.Message;
 
@@ -33,60 +33,12 @@ public class EventMessage extends Message implements IJsonBackedObject {
 
 
     /**
-     * The Meeting Message Type.
-     * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
-     */
-    @SerializedName("meetingMessageType")
-    @Expose
-    public MeetingMessageType meetingMessageType;
-
-    /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public DateTimeTimeZone startDateTime;
-
-    /**
      * The End Date Time.
      * 
      */
     @SerializedName("endDateTime")
     @Expose
     public DateTimeTimeZone endDateTime;
-
-    /**
-     * The Location.
-     * 
-     */
-    @SerializedName("location")
-    @Expose
-    public Location location;
-
-    /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public EventType type;
-
-    /**
-     * The Recurrence.
-     * 
-     */
-    @SerializedName("recurrence")
-    @Expose
-    public PatternedRecurrence recurrence;
-
-    /**
-     * The Is Out Of Date.
-     * 
-     */
-    @SerializedName("isOutOfDate")
-    @Expose
-    public Boolean isOutOfDate;
 
     /**
      * The Is All Day.
@@ -103,6 +55,54 @@ public class EventMessage extends Message implements IJsonBackedObject {
     @SerializedName("isDelegated")
     @Expose
     public Boolean isDelegated;
+
+    /**
+     * The Is Out Of Date.
+     * 
+     */
+    @SerializedName("isOutOfDate")
+    @Expose
+    public Boolean isOutOfDate;
+
+    /**
+     * The Location.
+     * 
+     */
+    @SerializedName("location")
+    @Expose
+    public Location location;
+
+    /**
+     * The Meeting Message Type.
+     * The type of event message: none, meetingRequest, meetingCancelled, meetingAccepted, meetingTenativelyAccepted, meetingDeclined.
+     */
+    @SerializedName("meetingMessageType")
+    @Expose
+    public MeetingMessageType meetingMessageType;
+
+    /**
+     * The Recurrence.
+     * 
+     */
+    @SerializedName("recurrence")
+    @Expose
+    public PatternedRecurrence recurrence;
+
+    /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public DateTimeTimeZone startDateTime;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public EventType type;
 
     /**
      * The Event.

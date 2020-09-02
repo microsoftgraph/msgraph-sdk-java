@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AndroidRequiredPasswordType;
 import com.microsoft.graph.models.generated.DeviceThreatProtectionLevel;
+import com.microsoft.graph.models.generated.AndroidRequiredPasswordType;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 
 
@@ -29,78 +29,6 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
 
     /**
-     * The Password Required.
-     * Require a password to unlock device.
-     */
-    @SerializedName("passwordRequired")
-    @Expose
-    public Boolean passwordRequired;
-
-    /**
-     * The Password Minimum Length.
-     * Minimum password length. Valid values 4 to 16
-     */
-    @SerializedName("passwordMinimumLength")
-    @Expose
-    public Integer passwordMinimumLength;
-
-    /**
-     * The Password Required Type.
-     * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public AndroidRequiredPasswordType passwordRequiredType;
-
-    /**
-     * The Password Minutes Of Inactivity Before Lock.
-     * Minutes of inactivity before a password is required.
-     */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
-    @Expose
-    public Integer passwordMinutesOfInactivityBeforeLock;
-
-    /**
-     * The Password Expiration Days.
-     * Number of days before the password expires. Valid values 1 to 365
-     */
-    @SerializedName("passwordExpirationDays")
-    @Expose
-    public Integer passwordExpirationDays;
-
-    /**
-     * The Password Previous Password Block Count.
-     * Number of previous passwords to block. Valid values 1 to 24
-     */
-    @SerializedName("passwordPreviousPasswordBlockCount")
-    @Expose
-    public Integer passwordPreviousPasswordBlockCount;
-
-    /**
-     * The Security Prevent Install Apps From Unknown Sources.
-     * Require that devices disallow installation of apps from unknown sources.
-     */
-    @SerializedName("securityPreventInstallAppsFromUnknownSources")
-    @Expose
-    public Boolean securityPreventInstallAppsFromUnknownSources;
-
-    /**
-     * The Security Disable Usb Debugging.
-     * Disable USB debugging on Android devices.
-     */
-    @SerializedName("securityDisableUsbDebugging")
-    @Expose
-    public Boolean securityDisableUsbDebugging;
-
-    /**
-     * The Security Require Verify Apps.
-     * Require the Android Verify apps feature is turned on.
-     */
-    @SerializedName("securityRequireVerifyApps")
-    @Expose
-    public Boolean securityRequireVerifyApps;
-
-    /**
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */
@@ -117,20 +45,12 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     public DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
 
     /**
-     * The Security Block Jailbroken Devices.
-     * Devices must not be jailbroken or rooted.
+     * The Min Android Security Patch Level.
+     * Minimum Android security patch level.
      */
-    @SerializedName("securityBlockJailbrokenDevices")
+    @SerializedName("minAndroidSecurityPatchLevel")
     @Expose
-    public Boolean securityBlockJailbrokenDevices;
-
-    /**
-     * The Os Minimum Version.
-     * Minimum Android version.
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
+    public String minAndroidSecurityPatchLevel;
 
     /**
      * The Os Maximum Version.
@@ -141,20 +61,100 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     public String osMaximumVersion;
 
     /**
-     * The Min Android Security Patch Level.
-     * Minimum Android security patch level.
+     * The Os Minimum Version.
+     * Minimum Android version.
      */
-    @SerializedName("minAndroidSecurityPatchLevel")
+    @SerializedName("osMinimumVersion")
     @Expose
-    public String minAndroidSecurityPatchLevel;
+    public String osMinimumVersion;
 
     /**
-     * The Storage Require Encryption.
-     * Require encryption on Android devices.
+     * The Password Expiration Days.
+     * Number of days before the password expires. Valid values 1 to 365
      */
-    @SerializedName("storageRequireEncryption")
+    @SerializedName("passwordExpirationDays")
     @Expose
-    public Boolean storageRequireEncryption;
+    public Integer passwordExpirationDays;
+
+    /**
+     * The Password Minimum Length.
+     * Minimum password length. Valid values 4 to 16
+     */
+    @SerializedName("passwordMinimumLength")
+    @Expose
+    public Integer passwordMinimumLength;
+
+    /**
+     * The Password Minutes Of Inactivity Before Lock.
+     * Minutes of inactivity before a password is required.
+     */
+    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @Expose
+    public Integer passwordMinutesOfInactivityBeforeLock;
+
+    /**
+     * The Password Previous Password Block Count.
+     * Number of previous passwords to block. Valid values 1 to 24
+     */
+    @SerializedName("passwordPreviousPasswordBlockCount")
+    @Expose
+    public Integer passwordPreviousPasswordBlockCount;
+
+    /**
+     * The Password Required.
+     * Require a password to unlock device.
+     */
+    @SerializedName("passwordRequired")
+    @Expose
+    public Boolean passwordRequired;
+
+    /**
+     * The Password Required Type.
+     * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     */
+    @SerializedName("passwordRequiredType")
+    @Expose
+    public AndroidRequiredPasswordType passwordRequiredType;
+
+    /**
+     * The Security Block Jailbroken Devices.
+     * Devices must not be jailbroken or rooted.
+     */
+    @SerializedName("securityBlockJailbrokenDevices")
+    @Expose
+    public Boolean securityBlockJailbrokenDevices;
+
+    /**
+     * The Security Disable Usb Debugging.
+     * Disable USB debugging on Android devices.
+     */
+    @SerializedName("securityDisableUsbDebugging")
+    @Expose
+    public Boolean securityDisableUsbDebugging;
+
+    /**
+     * The Security Prevent Install Apps From Unknown Sources.
+     * Require that devices disallow installation of apps from unknown sources.
+     */
+    @SerializedName("securityPreventInstallAppsFromUnknownSources")
+    @Expose
+    public Boolean securityPreventInstallAppsFromUnknownSources;
+
+    /**
+     * The Security Require Company Portal App Integrity.
+     * Require the device to pass the Company Portal client app runtime integrity check.
+     */
+    @SerializedName("securityRequireCompanyPortalAppIntegrity")
+    @Expose
+    public Boolean securityRequireCompanyPortalAppIntegrity;
+
+    /**
+     * The Security Require Google Play Services.
+     * Require Google Play Services to be installed and enabled on the device.
+     */
+    @SerializedName("securityRequireGooglePlayServices")
+    @Expose
+    public Boolean securityRequireGooglePlayServices;
 
     /**
      * The Security Require Safety Net Attestation Basic Integrity.
@@ -173,14 +173,6 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     public Boolean securityRequireSafetyNetAttestationCertifiedDevice;
 
     /**
-     * The Security Require Google Play Services.
-     * Require Google Play Services to be installed and enabled on the device.
-     */
-    @SerializedName("securityRequireGooglePlayServices")
-    @Expose
-    public Boolean securityRequireGooglePlayServices;
-
-    /**
      * The Security Require Up To Date Security Providers.
      * Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
      */
@@ -189,12 +181,20 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     public Boolean securityRequireUpToDateSecurityProviders;
 
     /**
-     * The Security Require Company Portal App Integrity.
-     * Require the device to pass the Company Portal client app runtime integrity check.
+     * The Security Require Verify Apps.
+     * Require the Android Verify apps feature is turned on.
      */
-    @SerializedName("securityRequireCompanyPortalAppIntegrity")
+    @SerializedName("securityRequireVerifyApps")
     @Expose
-    public Boolean securityRequireCompanyPortalAppIntegrity;
+    public Boolean securityRequireVerifyApps;
+
+    /**
+     * The Storage Require Encryption.
+     * Require encryption on Android devices.
+     */
+    @SerializedName("storageRequireEncryption")
+    @Expose
+    public Boolean storageRequireEncryption;
 
 
     /**

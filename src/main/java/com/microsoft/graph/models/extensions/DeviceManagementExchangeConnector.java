@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorStatus;
 import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorType;
+import com.microsoft.graph.models.generated.DeviceManagementExchangeConnectorStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,44 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
 
 
     /**
+     * The Connector Server Name.
+     * The name of the server hosting the Exchange Connector.
+     */
+    @SerializedName("connectorServerName")
+    @Expose
+    public String connectorServerName;
+
+    /**
+     * The Exchange Alias.
+     * An alias assigned to the Exchange server
+     */
+    @SerializedName("exchangeAlias")
+    @Expose
+    public String exchangeAlias;
+
+    /**
+     * The Exchange Connector Type.
+     * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
+     */
+    @SerializedName("exchangeConnectorType")
+    @Expose
+    public DeviceManagementExchangeConnectorType exchangeConnectorType;
+
+    /**
+     * The Exchange Organization.
+     * Exchange Organization to the Exchange server
+     */
+    @SerializedName("exchangeOrganization")
+    @Expose
+    public String exchangeOrganization;
+
+    /**
      * The Last Sync Date Time.
      * Last sync time for the Exchange Connector
      */
     @SerializedName("lastSyncDateTime")
     @Expose
     public java.util.Calendar lastSyncDateTime;
-
-    /**
-     * The Status.
-     * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
-     */
-    @SerializedName("status")
-    @Expose
-    public DeviceManagementExchangeConnectorStatus status;
 
     /**
      * The Primary Smtp Address.
@@ -61,20 +85,12 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
     public String serverName;
 
     /**
-     * The Connector Server Name.
-     * The name of the server hosting the Exchange Connector.
+     * The Status.
+     * Exchange Connector Status. Possible values are: none, connectionPending, connected, disconnected.
      */
-    @SerializedName("connectorServerName")
+    @SerializedName("status")
     @Expose
-    public String connectorServerName;
-
-    /**
-     * The Exchange Connector Type.
-     * The type of Exchange Connector Configured. Possible values are: onPremises, hosted, serviceToService, dedicated.
-     */
-    @SerializedName("exchangeConnectorType")
-    @Expose
-    public DeviceManagementExchangeConnectorType exchangeConnectorType;
+    public DeviceManagementExchangeConnectorStatus status;
 
     /**
      * The Version.
@@ -83,22 +99,6 @@ public class DeviceManagementExchangeConnector extends Entity implements IJsonBa
     @SerializedName("version")
     @Expose
     public String version;
-
-    /**
-     * The Exchange Alias.
-     * An alias assigned to the Exchange server
-     */
-    @SerializedName("exchangeAlias")
-    @Expose
-    public String exchangeAlias;
-
-    /**
-     * The Exchange Organization.
-     * Exchange Organization to the Exchange server
-     */
-    @SerializedName("exchangeOrganization")
-    @Expose
-    public String exchangeOrganization;
 
 
     /**

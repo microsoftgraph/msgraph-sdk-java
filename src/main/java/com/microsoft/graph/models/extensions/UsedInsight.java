@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UsageDetails;
-import com.microsoft.graph.models.extensions.ResourceVisualization;
 import com.microsoft.graph.models.extensions.ResourceReference;
+import com.microsoft.graph.models.extensions.ResourceVisualization;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -38,20 +38,20 @@ public class UsedInsight extends Entity implements IJsonBackedObject {
     public UsageDetails lastUsed;
 
     /**
-     * The Resource Visualization.
-     * Properties that you can use to visualize the document in your experience. Read-only
-     */
-    @SerializedName("resourceVisualization")
-    @Expose
-    public ResourceVisualization resourceVisualization;
-
-    /**
      * The Resource Reference.
      * Reference properties of the used document, such as the url and type of the document. Read-only
      */
     @SerializedName("resourceReference")
     @Expose
     public ResourceReference resourceReference;
+
+    /**
+     * The Resource Visualization.
+     * Properties that you can use to visualize the document in your experience. Read-only
+     */
+    @SerializedName("resourceVisualization")
+    @Expose
+    public ResourceVisualization resourceVisualization;
 
     /**
      * The Resource.

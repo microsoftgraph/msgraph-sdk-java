@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.EndpointType;
+import com.microsoft.graph.models.extensions.IdentitySet;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,12 @@ public class ParticipantInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Identity.
-     * The identitySet associated with this participant. Read-only.
+     * The Country Code.
+     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
      */
-    @SerializedName("identity")
+    @SerializedName("countryCode")
     @Expose
-    public IdentitySet identity;
+    public String countryCode;
 
     /**
      * The Endpoint Type.
@@ -54,12 +54,12 @@ public class ParticipantInfo implements IJsonBackedObject {
     public EndpointType endpointType;
 
     /**
-     * The Region.
-     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     * The Identity.
+     * The identitySet associated with this participant. Read-only.
      */
-    @SerializedName("region")
+    @SerializedName("identity")
     @Expose
-    public String region;
+    public IdentitySet identity;
 
     /**
      * The Language Id.
@@ -70,12 +70,12 @@ public class ParticipantInfo implements IJsonBackedObject {
     public String languageId;
 
     /**
-     * The Country Code.
-     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+     * The Region.
+     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      */
-    @SerializedName("countryCode")
+    @SerializedName("region")
     @Expose
-    public String countryCode;
+    public String region;
 
 
     /**

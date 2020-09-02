@@ -37,28 +37,12 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
     public ScheduleChangeRequestActor assignedTo;
 
     /**
-     * The State.
+     * The Manager Action Date Time.
      * 
      */
-    @SerializedName("state")
+    @SerializedName("managerActionDateTime")
     @Expose
-    public ScheduleChangeState state;
-
-    /**
-     * The Sender Message.
-     * 
-     */
-    @SerializedName("senderMessage")
-    @Expose
-    public String senderMessage;
-
-    /**
-     * The Sender Date Time.
-     * 
-     */
-    @SerializedName("senderDateTime")
-    @Expose
-    public java.util.Calendar senderDateTime;
+    public java.util.Calendar managerActionDateTime;
 
     /**
      * The Manager Action Message.
@@ -69,12 +53,28 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
     public String managerActionMessage;
 
     /**
-     * The Manager Action Date Time.
+     * The Manager User Id.
      * 
      */
-    @SerializedName("managerActionDateTime")
+    @SerializedName("managerUserId")
     @Expose
-    public java.util.Calendar managerActionDateTime;
+    public String managerUserId;
+
+    /**
+     * The Sender Date Time.
+     * 
+     */
+    @SerializedName("senderDateTime")
+    @Expose
+    public java.util.Calendar senderDateTime;
+
+    /**
+     * The Sender Message.
+     * 
+     */
+    @SerializedName("senderMessage")
+    @Expose
+    public String senderMessage;
 
     /**
      * The Sender User Id.
@@ -85,12 +85,12 @@ public class ScheduleChangeRequest extends ChangeTrackedEntity implements IJsonB
     public String senderUserId;
 
     /**
-     * The Manager User Id.
+     * The State.
      * 
      */
-    @SerializedName("managerUserId")
+    @SerializedName("state")
     @Expose
-    public String managerUserId;
+    public ScheduleChangeState state;
 
 
     /**

@@ -35,20 +35,12 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     public String appleIdentifier;
 
     /**
-     * The Topic Identifier.
-     * Topic Id.
+     * The Certificate.
+     * Not yet documented
      */
-    @SerializedName("topicIdentifier")
+    @SerializedName("certificate")
     @Expose
-    public String topicIdentifier;
-
-    /**
-     * The Last Modified Date Time.
-     * Last modified date and time for Apple push notification certificate.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String certificate;
 
     /**
      * The Expiration Date Time.
@@ -59,12 +51,20 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
     public java.util.Calendar expirationDateTime;
 
     /**
-     * The Certificate.
-     * Not yet documented
+     * The Last Modified Date Time.
+     * Last modified date and time for Apple push notification certificate.
      */
-    @SerializedName("certificate")
+    @SerializedName("lastModifiedDateTime")
     @Expose
-    public String certificate;
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Topic Identifier.
+     * Topic Id.
+     */
+    @SerializedName("topicIdentifier")
+    @Expose
+    public String topicIdentifier;
 
 
     /**

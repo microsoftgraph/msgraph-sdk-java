@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.OperationError;
 import com.microsoft.graph.models.generated.TeamsAsyncOperationType;
 import com.microsoft.graph.models.generated.TeamsAsyncOperationStatus;
-import com.microsoft.graph.models.extensions.OperationError;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -30,12 +30,12 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Operation Type.
-     * Denotes which type of operation is being described.
+     * The Attempts Count.
+     * Number of times the operation was attempted before being marked successful or failed.
      */
-    @SerializedName("operationType")
+    @SerializedName("attemptsCount")
     @Expose
-    public TeamsAsyncOperationType operationType;
+    public Integer attemptsCount;
 
     /**
      * The Created Date Time.
@@ -46,12 +46,12 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Status.
-     * Operation status.
+     * The Error.
+     * Any error that causes the async operation to fail.
      */
-    @SerializedName("status")
+    @SerializedName("error")
     @Expose
-    public TeamsAsyncOperationStatus status;
+    public OperationError error;
 
     /**
      * The Last Action Date Time.
@@ -62,12 +62,20 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastActionDateTime;
 
     /**
-     * The Attempts Count.
-     * Number of times the operation was attempted before being marked successful or failed.
+     * The Operation Type.
+     * Denotes which type of operation is being described.
      */
-    @SerializedName("attemptsCount")
+    @SerializedName("operationType")
     @Expose
-    public Integer attemptsCount;
+    public TeamsAsyncOperationType operationType;
+
+    /**
+     * The Status.
+     * Operation status.
+     */
+    @SerializedName("status")
+    @Expose
+    public TeamsAsyncOperationStatus status;
 
     /**
      * The Target Resource Id.
@@ -84,14 +92,6 @@ public class TeamsAsyncOperation extends Entity implements IJsonBackedObject {
     @SerializedName("targetResourceLocation")
     @Expose
     public String targetResourceLocation;
-
-    /**
-     * The Error.
-     * Any error that causes the async operation to fail.
-     */
-    @SerializedName("error")
-    @Expose
-    public OperationError error;
 
 
     /**

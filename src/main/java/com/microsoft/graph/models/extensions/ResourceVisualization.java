@@ -36,20 +36,28 @@ public class ResourceVisualization implements IJsonBackedObject {
     }
 
     /**
-     * The Title.
-     * The item's title text.
+     * The Container Display Name.
+     * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
      */
-    @SerializedName("title")
+    @SerializedName("containerDisplayName")
     @Expose
-    public String title;
+    public String containerDisplayName;
 
     /**
-     * The Type.
-     * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
+     * The Container Type.
+     * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
      */
-    @SerializedName("type")
+    @SerializedName("containerType")
     @Expose
-    public String type;
+    public String containerType;
+
+    /**
+     * The Container Web Url.
+     * A path leading to the folder in which the item is stored.
+     */
+    @SerializedName("containerWebUrl")
+    @Expose
+    public String containerWebUrl;
 
     /**
      * The Media Type.
@@ -76,28 +84,20 @@ public class ResourceVisualization implements IJsonBackedObject {
     public String previewText;
 
     /**
-     * The Container Web Url.
-     * A path leading to the folder in which the item is stored.
+     * The Title.
+     * The item's title text.
      */
-    @SerializedName("containerWebUrl")
+    @SerializedName("title")
     @Expose
-    public String containerWebUrl;
+    public String title;
 
     /**
-     * The Container Display Name.
-     * A string describing where the item is stored. For example, the name of a SharePoint site or the user name identifying the owner of the OneDrive storing the item.
+     * The Type.
+     * The item's media type. Can be used for filtering for a specific file based on a specific type. See below for supported types.
      */
-    @SerializedName("containerDisplayName")
+    @SerializedName("type")
     @Expose
-    public String containerDisplayName;
-
-    /**
-     * The Container Type.
-     * Can be used for filtering by the type of container in which the file is stored. Such as Site or OneDriveBusiness.
-     */
-    @SerializedName("containerType")
-    @Expose
-    public String containerType;
+    public String type;
 
 
     /**

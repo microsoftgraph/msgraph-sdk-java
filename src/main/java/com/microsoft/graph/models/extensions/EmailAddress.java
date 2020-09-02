@@ -36,20 +36,20 @@ public class EmailAddress implements IJsonBackedObject {
     }
 
     /**
-     * The Name.
-     * The display name of the person or entity.
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Address.
      * The email address of the person or entity.
      */
     @SerializedName("address")
     @Expose
     public String address;
+
+    /**
+     * The Name.
+     * The display name of the person or entity.
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
 
 
     /**

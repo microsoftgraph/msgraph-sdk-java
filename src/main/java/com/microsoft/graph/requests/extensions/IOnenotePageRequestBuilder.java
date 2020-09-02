@@ -8,11 +8,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenotePage;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,22 +39,22 @@ public interface IOnenotePageRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for OnenoteSection
-     *
-     * @return the IOnenoteSectionRequestBuilder instance
-     */
-    IOnenoteSectionRequestBuilder parentSection();
-
-    /**
      * Gets the request builder for Notebook
      *
      * @return the INotebookRequestBuilder instance
      */
     INotebookRequestBuilder parentNotebook();
 
+    /**
+     * Gets the request builder for OnenoteSection
+     *
+     * @return the IOnenoteSectionRequestBuilder instance
+     */
+    IOnenoteSectionRequestBuilder parentSection();
+
     IOnenotePageContentStreamRequestBuilder content();
-    IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
     IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId);
+    IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands);
     IOnenotePagePreviewRequestBuilder preview();
 
 }

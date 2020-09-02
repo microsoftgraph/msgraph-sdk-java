@@ -36,20 +36,20 @@ public class MailTipsError implements IJsonBackedObject {
     }
 
     /**
-     * The Message.
-     * The error message.
-     */
-    @SerializedName("message")
-    @Expose
-    public String message;
-
-    /**
      * The Code.
      * The error code.
      */
     @SerializedName("code")
     @Expose
     public String code;
+
+    /**
+     * The Message.
+     * The error message.
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
 
 
     /**

@@ -28,12 +28,12 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
 
 
     /**
-     * The Recipient Email.
-     * The mail recipient whose policies are used to assess the mail.
+     * The Content Data.
+     * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
      */
-    @SerializedName("recipientEmail")
+    @SerializedName("contentData")
     @Expose
-    public String recipientEmail;
+    public String contentData;
 
     /**
      * The Destination Routing Reason.
@@ -44,12 +44,12 @@ public class EmailFileAssessmentRequest extends ThreatAssessmentRequest implemen
     public MailDestinationRoutingReason destinationRoutingReason;
 
     /**
-     * The Content Data.
-     * Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
+     * The Recipient Email.
+     * The mail recipient whose policies are used to assess the mail.
      */
-    @SerializedName("contentData")
+    @SerializedName("recipientEmail")
     @Expose
-    public String contentData;
+    public String recipientEmail;
 
 
     /**

@@ -33,13 +33,13 @@ public interface IWindowsUniversalAppXRequestBuilder extends IRequestBuilder {
     IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
-
-    IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
-
     IMobileAppAssignmentCollectionRequestBuilder assignments();
 
     IMobileAppAssignmentRequestBuilder assignments(final String id);
+
+    IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
+
+    IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
 
     IMobileAppContentCollectionRequestBuilder contentVersions();
 

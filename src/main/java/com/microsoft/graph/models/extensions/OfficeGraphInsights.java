@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.models.extensions.SharedInsight;
+import com.microsoft.graph.models.extensions.Trending;
 import com.microsoft.graph.models.extensions.UsedInsight;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
-import com.microsoft.graph.requests.extensions.TrendingCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionPage;
+import com.microsoft.graph.requests.extensions.TrendingCollectionResponse;
+import com.microsoft.graph.requests.extensions.TrendingCollectionPage;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionResponse;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionPage;
 
@@ -36,16 +36,16 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Trending.
-     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
-     */
-    public TrendingCollectionPage trending;
-
-    /**
      * The Shared.
      * Calculated relationship identifying documents shared with or by the user. This includes URLs, file attachments, and reference attachments to OneDrive for Business and SharePoint files found in Outlook messages and meetings. This also includes URLs and reference attachments to Teams conversations. Ordered by recency of share.
      */
     public SharedInsightCollectionPage shared;
+
+    /**
+     * The Trending.
+     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     */
+    public TrendingCollectionPage trending;
 
     /**
      * The Used.
@@ -93,22 +93,6 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("trending")) {
-            final TrendingCollectionResponse response = new TrendingCollectionResponse();
-            if (json.has("trending@odata.nextLink")) {
-                response.nextLink = json.get("trending@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("trending").toString(), JsonObject[].class);
-            final Trending[] array = new Trending[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Trending.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            trending = new TrendingCollectionPage(response, null);
-        }
-
         if (json.has("shared")) {
             final SharedInsightCollectionResponse response = new SharedInsightCollectionResponse();
             if (json.has("shared@odata.nextLink")) {
@@ -123,6 +107,22 @@ public class OfficeGraphInsights extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             shared = new SharedInsightCollectionPage(response, null);
+        }
+
+        if (json.has("trending")) {
+            final TrendingCollectionResponse response = new TrendingCollectionResponse();
+            if (json.has("trending@odata.nextLink")) {
+                response.nextLink = json.get("trending@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("trending").toString(), JsonObject[].class);
+            final Trending[] array = new Trending[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Trending.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            trending = new TrendingCollectionPage(response, null);
         }
 
         if (json.has("used")) {

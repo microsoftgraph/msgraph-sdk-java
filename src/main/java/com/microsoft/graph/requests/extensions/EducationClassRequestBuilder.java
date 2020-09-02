@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
@@ -61,27 +61,6 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
-    public IEducationSchoolCollectionWithReferencesRequestBuilder schools() {
-        return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
-    }
-
-    public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
-        return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
-    }
-    public IEducationUserCollectionWithReferencesRequestBuilder members() {
-        return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
-    }
-
-    public IEducationUserWithReferenceRequestBuilder members(final String id) {
-        return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
-    }
-    public IEducationUserCollectionWithReferencesRequestBuilder teachers() {
-        return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("teachers"), getClient(), null);
-    }
-
-    public IEducationUserWithReferenceRequestBuilder teachers(final String id) {
-        return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teachers") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for Group
@@ -90,5 +69,26 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
      */
     public IGroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
+    }
+    public IEducationUserCollectionWithReferencesRequestBuilder members() {
+        return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
+    }
+
+    public IEducationUserWithReferenceRequestBuilder members(final String id) {
+        return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
+    }
+    public IEducationSchoolCollectionWithReferencesRequestBuilder schools() {
+        return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
+    }
+
+    public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
+        return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
+    }
+    public IEducationUserCollectionWithReferencesRequestBuilder teachers() {
+        return new EducationUserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("teachers"), getClient(), null);
+    }
+
+    public IEducationUserWithReferenceRequestBuilder teachers(final String id) {
+        return new EducationUserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teachers") + "/" + id, getClient(), null);
     }
 }

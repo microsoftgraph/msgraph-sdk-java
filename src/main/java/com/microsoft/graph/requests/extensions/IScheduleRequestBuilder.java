@@ -8,24 +8,24 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
-import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchedulingGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -51,41 +51,41 @@ public interface IScheduleRequestBuilder extends IRequestBuilder {
     IScheduleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IShiftCollectionRequestBuilder shifts();
+    IOfferShiftRequestCollectionRequestBuilder offerShiftRequests();
 
-    IShiftRequestBuilder shifts(final String id);
-
-    IOpenShiftCollectionRequestBuilder openShifts();
-
-    IOpenShiftRequestBuilder openShifts(final String id);
-
-    ITimeOffCollectionRequestBuilder timesOff();
-
-    ITimeOffRequestBuilder timesOff(final String id);
-
-    ITimeOffReasonCollectionRequestBuilder timeOffReasons();
-
-    ITimeOffReasonRequestBuilder timeOffReasons(final String id);
-
-    ISchedulingGroupCollectionRequestBuilder schedulingGroups();
-
-    ISchedulingGroupRequestBuilder schedulingGroups(final String id);
-
-    ISwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests();
-
-    ISwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id);
+    IOfferShiftRequestRequestBuilder offerShiftRequests(final String id);
 
     IOpenShiftChangeRequestCollectionRequestBuilder openShiftChangeRequests();
 
     IOpenShiftChangeRequestRequestBuilder openShiftChangeRequests(final String id);
 
-    IOfferShiftRequestCollectionRequestBuilder offerShiftRequests();
+    IOpenShiftCollectionRequestBuilder openShifts();
 
-    IOfferShiftRequestRequestBuilder offerShiftRequests(final String id);
+    IOpenShiftRequestBuilder openShifts(final String id);
+
+    ISchedulingGroupCollectionRequestBuilder schedulingGroups();
+
+    ISchedulingGroupRequestBuilder schedulingGroups(final String id);
+
+    IShiftCollectionRequestBuilder shifts();
+
+    IShiftRequestBuilder shifts(final String id);
+
+    ISwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests();
+
+    ISwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id);
+
+    ITimeOffReasonCollectionRequestBuilder timeOffReasons();
+
+    ITimeOffReasonRequestBuilder timeOffReasons(final String id);
 
     ITimeOffRequestCollectionRequestBuilder timeOffRequests();
 
     ITimeOffRequestRequestBuilder timeOffRequests(final String id);
+
+    ITimeOffCollectionRequestBuilder timesOff();
+
+    ITimeOffRequestBuilder timesOff(final String id);
     IScheduleShareRequestBuilder share(final Boolean notifyTeam, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
 
 }

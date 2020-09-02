@@ -44,16 +44,16 @@ public interface ITargetedManagedAppConfigurationRequestBuilder extends IRequest
 
     IManagedMobileAppRequestBuilder apps(final String id);
 
+    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
+
+    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
+
     /**
      * Gets the request builder for ManagedAppPolicyDeploymentSummary
      *
      * @return the IManagedAppPolicyDeploymentSummaryRequestBuilder instance
      */
     IManagedAppPolicyDeploymentSummaryRequestBuilder deploymentSummary();
-
-    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
-
-    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
     ITargetedManagedAppConfigurationAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments);
     ITargetedManagedAppConfigurationTargetAppsRequestBuilder targetApps(final java.util.List<ManagedMobileApp> apps);
 

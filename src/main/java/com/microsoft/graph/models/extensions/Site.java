@@ -50,20 +50,20 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
 
     /**
-     * The Error.
-     * 
-     */
-    @SerializedName("error")
-    @Expose
-    public PublicError error;
-
-    /**
      * The Display Name.
      * The full title for the site. Read-only.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Error.
+     * 
+     */
+    @SerializedName("error")
+    @Expose
+    public PublicError error;
 
     /**
      * The Root.

@@ -36,20 +36,20 @@ public class TeamsTabConfiguration implements IJsonBackedObject {
     }
 
     /**
-     * The Entity Id.
-     * Identifier for the entity hosted by the tab provider.
-     */
-    @SerializedName("entityId")
-    @Expose
-    public String entityId;
-
-    /**
      * The Content Url.
      * Url used for rendering tab contents in Teams. Required.
      */
     @SerializedName("contentUrl")
     @Expose
     public String contentUrl;
+
+    /**
+     * The Entity Id.
+     * Identifier for the entity hosted by the tab provider.
+     */
+    @SerializedName("entityId")
+    @Expose
+    public String entityId;
 
     /**
      * The Remove Url.

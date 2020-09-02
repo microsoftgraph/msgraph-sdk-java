@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.AutomaticRepliesStatus;
 import com.microsoft.graph.models.generated.ExternalAudienceScope;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
+import com.microsoft.graph.models.generated.AutomaticRepliesStatus;
 
 
 import com.google.gson.JsonObject;
@@ -39,14 +39,6 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
     }
 
     /**
-     * The Status.
-     * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     */
-    @SerializedName("status")
-    @Expose
-    public AutomaticRepliesStatus status;
-
-    /**
      * The External Audience.
      * The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      */
@@ -55,20 +47,12 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
     public ExternalAudienceScope externalAudience;
 
     /**
-     * The Scheduled Start Date Time.
-     * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
+     * The External Reply Message.
+     * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
      */
-    @SerializedName("scheduledStartDateTime")
+    @SerializedName("externalReplyMessage")
     @Expose
-    public DateTimeTimeZone scheduledStartDateTime;
-
-    /**
-     * The Scheduled End Date Time.
-     * The date and time that automatic replies are set to end, if Status is set to Scheduled.
-     */
-    @SerializedName("scheduledEndDateTime")
-    @Expose
-    public DateTimeTimeZone scheduledEndDateTime;
+    public String externalReplyMessage;
 
     /**
      * The Internal Reply Message.
@@ -79,12 +63,28 @@ public class AutomaticRepliesSetting implements IJsonBackedObject {
     public String internalReplyMessage;
 
     /**
-     * The External Reply Message.
-     * The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
+     * The Scheduled End Date Time.
+     * The date and time that automatic replies are set to end, if Status is set to Scheduled.
      */
-    @SerializedName("externalReplyMessage")
+    @SerializedName("scheduledEndDateTime")
     @Expose
-    public String externalReplyMessage;
+    public DateTimeTimeZone scheduledEndDateTime;
+
+    /**
+     * The Scheduled Start Date Time.
+     * The date and time that automatic replies are set to begin, if Status is set to Scheduled.
+     */
+    @SerializedName("scheduledStartDateTime")
+    @Expose
+    public DateTimeTimeZone scheduledStartDateTime;
+
+    /**
+     * The Status.
+     * Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
+     */
+    @SerializedName("status")
+    @Expose
+    public AutomaticRepliesStatus status;
 
 
     /**

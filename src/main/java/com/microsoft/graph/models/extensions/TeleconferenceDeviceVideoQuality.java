@@ -27,22 +27,6 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
 
 
     /**
-     * The Average Inbound Frame Rate.
-     * The average inbound stream video frame rate per second.
-     */
-    @SerializedName("averageInboundFrameRate")
-    @Expose
-    public Double averageInboundFrameRate;
-
-    /**
-     * The Average Outbound Frame Rate.
-     * The average outbound stream video frame rate per second.
-     */
-    @SerializedName("averageOutboundFrameRate")
-    @Expose
-    public Double averageOutboundFrameRate;
-
-    /**
      * The Average Inbound Bit Rate.
      * The average inbound stream video bit rate per second.
      */
@@ -51,12 +35,28 @@ public class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQ
     public Double averageInboundBitRate;
 
     /**
+     * The Average Inbound Frame Rate.
+     * The average inbound stream video frame rate per second.
+     */
+    @SerializedName("averageInboundFrameRate")
+    @Expose
+    public Double averageInboundFrameRate;
+
+    /**
      * The Average Outbound Bit Rate.
      * The average outbound stream video bit rate per second.
      */
     @SerializedName("averageOutboundBitRate")
     @Expose
     public Double averageOutboundBitRate;
+
+    /**
+     * The Average Outbound Frame Rate.
+     * The average outbound stream video frame rate per second.
+     */
+    @SerializedName("averageOutboundFrameRate")
+    @Expose
+    public Double averageOutboundFrameRate;
 
 
     /**

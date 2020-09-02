@@ -37,20 +37,20 @@ public class ConditionalAccessPlatforms implements IJsonBackedObject {
     }
 
     /**
-     * The Include Platforms.
-     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
-     */
-    @SerializedName("includePlatforms")
-    @Expose
-    public java.util.List<ConditionalAccessDevicePlatform> includePlatforms;
-
-    /**
      * The Exclude Platforms.
      * Possible values are: android, iOS, windows, windowsPhone, macOS, unknownFutureValue.
      */
     @SerializedName("excludePlatforms")
     @Expose
     public java.util.List<ConditionalAccessDevicePlatform> excludePlatforms;
+
+    /**
+     * The Include Platforms.
+     * Possible values are: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue.
+     */
+    @SerializedName("includePlatforms")
+    @Expose
+    public java.util.List<ConditionalAccessDevicePlatform> includePlatforms;
 
 
     /**

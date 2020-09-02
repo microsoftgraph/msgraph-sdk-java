@@ -28,14 +28,6 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Device Name.
-     * Device name.
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
      * The Device Id.
      * Device Id.
      */
@@ -44,20 +36,12 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
     public String deviceId;
 
     /**
-     * The Last Sync Date Time.
-     * Last sync date and time.
+     * The Device Name.
+     * Device name.
      */
-    @SerializedName("lastSyncDateTime")
+    @SerializedName("deviceName")
     @Expose
-    public java.util.Calendar lastSyncDateTime;
-
-    /**
-     * The Install State.
-     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
-     */
-    @SerializedName("installState")
-    @Expose
-    public InstallState installState;
+    public String deviceName;
 
     /**
      * The Error Code.
@@ -68,12 +52,20 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
     public String errorCode;
 
     /**
-     * The Os Version.
-     * OS Version.
+     * The Install State.
+     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
      */
-    @SerializedName("osVersion")
+    @SerializedName("installState")
     @Expose
-    public String osVersion;
+    public InstallState installState;
+
+    /**
+     * The Last Sync Date Time.
+     * Last sync date and time.
+     */
+    @SerializedName("lastSyncDateTime")
+    @Expose
+    public java.util.Calendar lastSyncDateTime;
 
     /**
      * The Os Description.
@@ -82,6 +74,14 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
     @SerializedName("osDescription")
     @Expose
     public String osDescription;
+
+    /**
+     * The Os Version.
+     * OS Version.
+     */
+    @SerializedName("osVersion")
+    @Expose
+    public String osVersion;
 
     /**
      * The User Name.

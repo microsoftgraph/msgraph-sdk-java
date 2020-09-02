@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceConfigurationSettingState;
 import com.microsoft.graph.models.generated.PolicyPlatformType;
+import com.microsoft.graph.models.extensions.DeviceConfigurationSettingState;
 import com.microsoft.graph.models.generated.ComplianceStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -30,28 +30,12 @@ public class DeviceConfigurationState extends Entity implements IJsonBackedObjec
 
 
     /**
-     * The Setting States.
-     * 
-     */
-    @SerializedName("settingStates")
-    @Expose
-    public java.util.List<DeviceConfigurationSettingState> settingStates;
-
-    /**
      * The Display Name.
      * The name of the policy for this policyBase
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Version.
-     * The version of the policy
-     */
-    @SerializedName("version")
-    @Expose
-    public Integer version;
 
     /**
      * The Platform Type.
@@ -62,6 +46,22 @@ public class DeviceConfigurationState extends Entity implements IJsonBackedObjec
     public PolicyPlatformType platformType;
 
     /**
+     * The Setting Count.
+     * Count of how many setting a policy holds
+     */
+    @SerializedName("settingCount")
+    @Expose
+    public Integer settingCount;
+
+    /**
+     * The Setting States.
+     * 
+     */
+    @SerializedName("settingStates")
+    @Expose
+    public java.util.List<DeviceConfigurationSettingState> settingStates;
+
+    /**
      * The State.
      * The compliance state of the policy
      */
@@ -70,12 +70,12 @@ public class DeviceConfigurationState extends Entity implements IJsonBackedObjec
     public ComplianceStatus state;
 
     /**
-     * The Setting Count.
-     * Count of how many setting a policy holds
+     * The Version.
+     * The version of the policy
      */
-    @SerializedName("settingCount")
+    @SerializedName("version")
     @Expose
-    public Integer settingCount;
+    public Integer version;
 
 
     /**

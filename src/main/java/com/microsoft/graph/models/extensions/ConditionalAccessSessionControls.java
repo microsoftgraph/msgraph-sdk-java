@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ApplicationEnforcedRestrictionsSessionControl;
 import com.microsoft.graph.models.extensions.CloudAppSecuritySessionControl;
-import com.microsoft.graph.models.extensions.SignInFrequencySessionControl;
 import com.microsoft.graph.models.extensions.PersistentBrowserSessionControl;
+import com.microsoft.graph.models.extensions.SignInFrequencySessionControl;
 
 
 import com.google.gson.JsonObject;
@@ -56,20 +56,20 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
     public CloudAppSecuritySessionControl cloudAppSecurity;
 
     /**
-     * The Sign In Frequency.
-     * Session control to enforce signin frequency.
-     */
-    @SerializedName("signInFrequency")
-    @Expose
-    public SignInFrequencySessionControl signInFrequency;
-
-    /**
      * The Persistent Browser.
      * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      */
     @SerializedName("persistentBrowser")
     @Expose
     public PersistentBrowserSessionControl persistentBrowser;
+
+    /**
+     * The Sign In Frequency.
+     * Session control to enforce signin frequency.
+     */
+    @SerializedName("signInFrequency")
+    @Expose
+    public SignInFrequencySessionControl signInFrequency;
 
 
     /**

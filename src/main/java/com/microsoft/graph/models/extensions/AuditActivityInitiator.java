@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.UserIdentity;
 import com.microsoft.graph.models.extensions.AppIdentity;
+import com.microsoft.graph.models.extensions.UserIdentity;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class AuditActivityInitiator implements IJsonBackedObject {
     }
 
     /**
-     * The User.
-     * If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
-     */
-    @SerializedName("user")
-    @Expose
-    public UserIdentity user;
-
-    /**
      * The App.
      * If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
      */
     @SerializedName("app")
     @Expose
     public AppIdentity app;
+
+    /**
+     * The User.
+     * If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
+     */
+    @SerializedName("user")
+    @Expose
+    public UserIdentity user;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
+import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
@@ -70,20 +70,20 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public Boolean cellularBlockWifiTethering;
 
     /**
-     * The Compliant Apps List.
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("compliantAppsList")
-    @Expose
-    public java.util.List<AppListItem> compliantAppsList;
-
-    /**
      * The Compliant App List Type.
      * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
     @SerializedName("compliantAppListType")
     @Expose
     public AppListType compliantAppListType;
+
+    /**
+     * The Compliant Apps List.
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("compliantAppsList")
+    @Expose
+    public java.util.List<AppListItem> compliantAppsList;
 
     /**
      * The Diagnostic Data Block Submission.
@@ -142,6 +142,14 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public Integer passwordExpirationDays;
 
     /**
+     * The Password Minimum Character Set Count.
+     * Number of character sets a password must contain.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
+
+    /**
      * The Password Minimum Length.
      * Minimum length of passwords.
      */
@@ -158,14 +166,6 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public Integer passwordMinutesOfInactivityBeforeScreenTimeout;
 
     /**
-     * The Password Minimum Character Set Count.
-     * Number of character sets a password must contain.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
-
-    /**
      * The Password Previous Password Block Count.
      * Number of previous passwords to block. Valid values 0 to 24
      */
@@ -174,12 +174,12 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public Integer passwordPreviousPasswordBlockCount;
 
     /**
-     * The Password Sign In Failure Count Before Factory Reset.
-     * Number of sign in failures allowed before factory reset.
+     * The Password Required.
+     * Indicates whether or not to require a password.
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName("passwordRequired")
     @Expose
-    public Integer passwordSignInFailureCountBeforeFactoryReset;
+    public Boolean passwordRequired;
 
     /**
      * The Password Required Type.
@@ -190,12 +190,12 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public RequiredPasswordType passwordRequiredType;
 
     /**
-     * The Password Required.
-     * Indicates whether or not to require a password.
+     * The Password Sign In Failure Count Before Factory Reset.
+     * Number of sign in failures allowed before factory reset.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
     @Expose
-    public Boolean passwordRequired;
+    public Integer passwordSignInFailureCountBeforeFactoryReset;
 
     /**
      * The Screen Capture Blocked.
@@ -230,20 +230,20 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
     public Boolean webBrowserBlocked;
 
     /**
-     * The Wifi Blocked.
-     * Indicates whether or not to block Wi-Fi.
-     */
-    @SerializedName("wifiBlocked")
-    @Expose
-    public Boolean wifiBlocked;
-
-    /**
      * The Wifi Block Automatic Connect Hotspots.
      * Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
      */
     @SerializedName("wifiBlockAutomaticConnectHotspots")
     @Expose
     public Boolean wifiBlockAutomaticConnectHotspots;
+
+    /**
+     * The Wifi Blocked.
+     * Indicates whether or not to block Wi-Fi.
+     */
+    @SerializedName("wifiBlocked")
+    @Expose
+    public Boolean wifiBlocked;
 
     /**
      * The Wifi Block Hotspot Reporting.

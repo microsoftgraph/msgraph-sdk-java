@@ -55,13 +55,6 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public IItemActivityStatCollectionRequestBuilder itemActivityStats() {
-        return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
-    }
-
-    public IItemActivityStatRequestBuilder itemActivityStats(final String id) {
-        return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
-    }
 
     /**
      * Gets the request builder for ItemActivityStat
@@ -70,6 +63,13 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      */
     public IItemActivityStatWithReferenceRequestBuilder allTime() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
+    }
+    public IItemActivityStatCollectionRequestBuilder itemActivityStats() {
+        return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
+    }
+
+    public IItemActivityStatRequestBuilder itemActivityStats(final String id) {
+        return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
     }
 
     /**

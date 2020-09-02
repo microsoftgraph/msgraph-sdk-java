@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RoutingType;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.RoutingType;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,12 @@ public class CallRoute implements IJsonBackedObject {
     }
 
     /**
-     * The Routing Type.
-     * Possible values are: forwarded, lookup, selfFork.
+     * The Final.
+     * The identity that was resolved to in the call.
      */
-    @SerializedName("routingType")
+    @SerializedName("final")
     @Expose
-    public RoutingType routingType;
+    public IdentitySet msgraphFinal;
 
     /**
      * The Original.
@@ -54,12 +54,12 @@ public class CallRoute implements IJsonBackedObject {
     public IdentitySet original;
 
     /**
-     * The Final.
-     * The identity that was resolved to in the call.
+     * The Routing Type.
+     * Possible values are: forwarded, lookup, selfFork.
      */
-    @SerializedName("final")
+    @SerializedName("routingType")
     @Expose
-    public IdentitySet msgraphFinal;
+    public RoutingType routingType;
 
 
     /**

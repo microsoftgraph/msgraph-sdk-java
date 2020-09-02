@@ -38,14 +38,6 @@ public class ScheduleItem implements IJsonBackedObject {
     }
 
     /**
-     * The Start.
-     * The date, time, and time zone that the corresponding event starts.
-     */
-    @SerializedName("start")
-    @Expose
-    public DateTimeTimeZone start;
-
-    /**
      * The End.
      * The date, time, and time zone that the corresponding event ends.
      */
@@ -62,6 +54,22 @@ public class ScheduleItem implements IJsonBackedObject {
     public Boolean isPrivate;
 
     /**
+     * The Location.
+     * The location where the corresponding event is held or attended from. Optional.
+     */
+    @SerializedName("location")
+    @Expose
+    public String location;
+
+    /**
+     * The Start.
+     * The date, time, and time zone that the corresponding event starts.
+     */
+    @SerializedName("start")
+    @Expose
+    public DateTimeTimeZone start;
+
+    /**
      * The Status.
      * The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
@@ -76,14 +84,6 @@ public class ScheduleItem implements IJsonBackedObject {
     @SerializedName("subject")
     @Expose
     public String subject;
-
-    /**
-     * The Location.
-     * The location where the corresponding event is held or attended from. Optional.
-     */
-    @SerializedName("location")
-    @Expose
-    public String location;
 
 
     /**

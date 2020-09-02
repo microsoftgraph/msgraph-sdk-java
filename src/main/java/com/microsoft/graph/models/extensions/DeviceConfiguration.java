@@ -9,20 +9,20 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DeviceConfigurationAssignment;
-import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
-import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
-import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceOverview;
-import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
+import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceOverview;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserStatus;
+import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,14 +39,6 @@ import java.util.Map;
  */
 public class DeviceConfiguration extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Created Date Time.
@@ -73,6 +65,14 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
      * The Version.
      * Version of the device configuration.
      */
@@ -87,16 +87,16 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     public DeviceConfigurationAssignmentCollectionPage assignments;
 
     /**
+     * The Device Setting State Summaries.
+     * Device Configuration Setting State Device Summary
+     */
+    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
+
+    /**
      * The Device Statuses.
      * Device configuration installation status by device.
      */
     public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
-
-    /**
-     * The User Statuses.
-     * Device configuration installation status by user.
-     */
-    public DeviceConfigurationUserStatusCollectionPage userStatuses;
 
     /**
      * The Device Status Overview.
@@ -107,18 +107,18 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
     public DeviceConfigurationDeviceOverview deviceStatusOverview;
 
     /**
+     * The User Statuses.
+     * Device configuration installation status by user.
+     */
+    public DeviceConfigurationUserStatusCollectionPage userStatuses;
+
+    /**
      * The User Status Overview.
      * Device Configuration users status overview
      */
     @SerializedName("userStatusOverview")
     @Expose
     public DeviceConfigurationUserOverview userStatusOverview;
-
-    /**
-     * The Device Setting State Summaries.
-     * Device Configuration Setting State Device Summary
-     */
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
 
     /**
@@ -176,6 +176,22 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
             assignments = new DeviceConfigurationAssignmentCollectionPage(response, null);
         }
 
+        if (json.has("deviceSettingStateSummaries")) {
+            final SettingStateDeviceSummaryCollectionResponse response = new SettingStateDeviceSummaryCollectionResponse();
+            if (json.has("deviceSettingStateSummaries@odata.nextLink")) {
+                response.nextLink = json.get("deviceSettingStateSummaries@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), JsonObject[].class);
+            final SettingStateDeviceSummary[] array = new SettingStateDeviceSummary[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SettingStateDeviceSummary.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            deviceSettingStateSummaries = new SettingStateDeviceSummaryCollectionPage(response, null);
+        }
+
         if (json.has("deviceStatuses")) {
             final DeviceConfigurationDeviceStatusCollectionResponse response = new DeviceConfigurationDeviceStatusCollectionResponse();
             if (json.has("deviceStatuses@odata.nextLink")) {
@@ -206,22 +222,6 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             userStatuses = new DeviceConfigurationUserStatusCollectionPage(response, null);
-        }
-
-        if (json.has("deviceSettingStateSummaries")) {
-            final SettingStateDeviceSummaryCollectionResponse response = new SettingStateDeviceSummaryCollectionResponse();
-            if (json.has("deviceSettingStateSummaries@odata.nextLink")) {
-                response.nextLink = json.get("deviceSettingStateSummaries@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceSettingStateSummaries").toString(), JsonObject[].class);
-            final SettingStateDeviceSummary[] array = new SettingStateDeviceSummary[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SettingStateDeviceSummary.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceSettingStateSummaries = new SettingStateDeviceSummaryCollectionPage(response, null);
         }
     }
 }

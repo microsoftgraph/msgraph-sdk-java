@@ -27,38 +27,6 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
 
 
     /**
-     * The Setting Name.
-     * Name of the setting
-     */
-    @SerializedName("settingName")
-    @Expose
-    public String settingName;
-
-    /**
-     * The Instance Path.
-     * Name of the InstancePath for the setting
-     */
-    @SerializedName("instancePath")
-    @Expose
-    public String instancePath;
-
-    /**
-     * The Unknown Device Count.
-     * Device Unkown count for the setting
-     */
-    @SerializedName("unknownDeviceCount")
-    @Expose
-    public Integer unknownDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Device Not Applicable count for the setting
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
-
-    /**
      * The Compliant Device Count.
      * Device Compliant count for the setting
      */
@@ -67,20 +35,12 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
     public Integer compliantDeviceCount;
 
     /**
-     * The Remediated Device Count.
-     * Device Compliant count for the setting
+     * The Conflict Device Count.
+     * Device conflict error count for the setting
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName("conflictDeviceCount")
     @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
-     * The Non Compliant Device Count.
-     * Device NonCompliant count for the setting
-     */
-    @SerializedName("nonCompliantDeviceCount")
-    @Expose
-    public Integer nonCompliantDeviceCount;
+    public Integer conflictDeviceCount;
 
     /**
      * The Error Device Count.
@@ -91,12 +51,52 @@ public class SettingStateDeviceSummary extends Entity implements IJsonBackedObje
     public Integer errorDeviceCount;
 
     /**
-     * The Conflict Device Count.
-     * Device conflict error count for the setting
+     * The Instance Path.
+     * Name of the InstancePath for the setting
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName("instancePath")
     @Expose
-    public Integer conflictDeviceCount;
+    public String instancePath;
+
+    /**
+     * The Non Compliant Device Count.
+     * Device NonCompliant count for the setting
+     */
+    @SerializedName("nonCompliantDeviceCount")
+    @Expose
+    public Integer nonCompliantDeviceCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Device Not Applicable count for the setting
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
+     * The Remediated Device Count.
+     * Device Compliant count for the setting
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
+
+    /**
+     * The Setting Name.
+     * Name of the setting
+     */
+    @SerializedName("settingName")
+    @Expose
+    public String settingName;
+
+    /**
+     * The Unknown Device Count.
+     * Device Unkown count for the setting
+     */
+    @SerializedName("unknownDeviceCount")
+    @Expose
+    public Integer unknownDeviceCount;
 
 
     /**

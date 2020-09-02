@@ -29,22 +29,6 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
 
 
     /**
-     * The License Type.
-     * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
-     */
-    @SerializedName("licenseType")
-    @Expose
-    public EditionUpgradeLicenseType licenseType;
-
-    /**
-     * The Target Edition.
-     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
-     */
-    @SerializedName("targetEdition")
-    @Expose
-    public Windows10EditionType targetEdition;
-
-    /**
      * The License.
      * Edition Upgrade License File Content.
      */
@@ -53,12 +37,28 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
     public String license;
 
     /**
+     * The License Type.
+     * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
+     */
+    @SerializedName("licenseType")
+    @Expose
+    public EditionUpgradeLicenseType licenseType;
+
+    /**
      * The Product Key.
      * Edition Upgrade Product Key.
      */
     @SerializedName("productKey")
     @Expose
     public String productKey;
+
+    /**
+     * The Target Edition.
+     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
+     */
+    @SerializedName("targetEdition")
+    @Expose
+    public Windows10EditionType targetEdition;
 
 
     /**

@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,12 +37,12 @@ public interface IChatMessageRequestBuilder extends IRequestBuilder {
     IChatMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IChatMessageCollectionRequestBuilder replies();
-
-    IChatMessageRequestBuilder replies(final String id);
-
     IChatMessageHostedContentCollectionRequestBuilder hostedContents();
 
     IChatMessageHostedContentRequestBuilder hostedContents(final String id);
+
+    IChatMessageCollectionRequestBuilder replies();
+
+    IChatMessageRequestBuilder replies(final String id);
 
 }

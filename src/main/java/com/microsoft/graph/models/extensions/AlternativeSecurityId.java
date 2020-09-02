@@ -36,14 +36,6 @@ public class AlternativeSecurityId implements IJsonBackedObject {
     }
 
     /**
-     * The Type.
-     * For internal use only
-     */
-    @SerializedName("type")
-    @Expose
-    public Integer type;
-
-    /**
      * The Identity Provider.
      * For internal use only
      */
@@ -58,6 +50,14 @@ public class AlternativeSecurityId implements IJsonBackedObject {
     @SerializedName("key")
     @Expose
     public byte[] key;
+
+    /**
+     * The Type.
+     * For internal use only
+     */
+    @SerializedName("type")
+    @Expose
+    public Integer type;
 
 
     /**

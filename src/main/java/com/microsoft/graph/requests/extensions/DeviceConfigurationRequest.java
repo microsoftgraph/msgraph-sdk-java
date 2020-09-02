@@ -13,6 +13,10 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentCol
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
@@ -21,10 +25,6 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCol
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;

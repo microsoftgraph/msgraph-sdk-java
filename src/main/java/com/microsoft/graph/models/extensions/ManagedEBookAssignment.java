@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.generated.InstallIntent;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,20 @@ public class ManagedEBookAssignment extends Entity implements IJsonBackedObject 
 
 
     /**
-     * The Target.
-     * The assignment target for eBook.
-     */
-    @SerializedName("target")
-    @Expose
-    public DeviceAndAppManagementAssignmentTarget target;
-
-    /**
      * The Install Intent.
      * The install intent for eBook. Possible values are: available, required, uninstall, availableWithoutEnrollment.
      */
     @SerializedName("installIntent")
     @Expose
     public InstallIntent installIntent;
+
+    /**
+     * The Target.
+     * The assignment target for eBook.
+     */
+    @SerializedName("target")
+    @Expose
+    public DeviceAndAppManagementAssignmentTarget target;
 
 
     /**

@@ -8,15 +8,15 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.OnenoteUserRole;
 import com.microsoft.graph.models.extensions.NotebookLinks;
-import com.microsoft.graph.models.extensions.OnenoteSection;
+import com.microsoft.graph.models.generated.OnenoteUserRole;
 import com.microsoft.graph.models.extensions.SectionGroup;
+import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -43,36 +43,12 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
     public Boolean isDefault;
 
     /**
-     * The User Role.
-     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     */
-    @SerializedName("userRole")
-    @Expose
-    public OnenoteUserRole userRole;
-
-    /**
      * The Is Shared.
      * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
      */
     @SerializedName("isShared")
     @Expose
     public Boolean isShared;
-
-    /**
-     * The Sections Url.
-     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
-     */
-    @SerializedName("sectionsUrl")
-    @Expose
-    public String sectionsUrl;
-
-    /**
-     * The Section Groups Url.
-     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
-     */
-    @SerializedName("sectionGroupsUrl")
-    @Expose
-    public String sectionGroupsUrl;
 
     /**
      * The Links.
@@ -83,16 +59,40 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
     public NotebookLinks links;
 
     /**
-     * The Sections.
-     * The sections in the notebook. Read-only. Nullable.
+     * The Section Groups Url.
+     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
      */
-    public OnenoteSectionCollectionPage sections;
+    @SerializedName("sectionGroupsUrl")
+    @Expose
+    public String sectionGroupsUrl;
+
+    /**
+     * The Sections Url.
+     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
+     */
+    @SerializedName("sectionsUrl")
+    @Expose
+    public String sectionsUrl;
+
+    /**
+     * The User Role.
+     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
+     */
+    @SerializedName("userRole")
+    @Expose
+    public OnenoteUserRole userRole;
 
     /**
      * The Section Groups.
      * The section groups in the notebook. Read-only. Nullable.
      */
     public SectionGroupCollectionPage sectionGroups;
+
+    /**
+     * The Sections.
+     * The sections in the notebook. Read-only. Nullable.
+     */
+    public OnenoteSectionCollectionPage sections;
 
 
     /**
@@ -134,22 +134,6 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
         rawObject = json;
 
 
-        if (json.has("sections")) {
-            final OnenoteSectionCollectionResponse response = new OnenoteSectionCollectionResponse();
-            if (json.has("sections@odata.nextLink")) {
-                response.nextLink = json.get("sections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sections").toString(), JsonObject[].class);
-            final OnenoteSection[] array = new OnenoteSection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnenoteSection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sections = new OnenoteSectionCollectionPage(response, null);
-        }
-
         if (json.has("sectionGroups")) {
             final SectionGroupCollectionResponse response = new SectionGroupCollectionResponse();
             if (json.has("sectionGroups@odata.nextLink")) {
@@ -164,6 +148,22 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
             }
             response.value = Arrays.asList(array);
             sectionGroups = new SectionGroupCollectionPage(response, null);
+        }
+
+        if (json.has("sections")) {
+            final OnenoteSectionCollectionResponse response = new OnenoteSectionCollectionResponse();
+            if (json.has("sections@odata.nextLink")) {
+                response.nextLink = json.get("sections@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sections").toString(), JsonObject[].class);
+            final OnenoteSection[] array = new OnenoteSection[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnenoteSection.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            sections = new OnenoteSectionCollectionPage(response, null);
         }
     }
 }

@@ -44,6 +44,22 @@ public class FileEncryptionInfo implements IJsonBackedObject {
     public byte[] encryptionKey;
 
     /**
+     * The File Digest.
+     * The file digest prior to encryption.
+     */
+    @SerializedName("fileDigest")
+    @Expose
+    public byte[] fileDigest;
+
+    /**
+     * The File Digest Algorithm.
+     * The file digest algorithm.
+     */
+    @SerializedName("fileDigestAlgorithm")
+    @Expose
+    public String fileDigestAlgorithm;
+
+    /**
      * The Initialization Vector.
      * The initialization vector used for the encryption algorithm.
      */
@@ -74,22 +90,6 @@ public class FileEncryptionInfo implements IJsonBackedObject {
     @SerializedName("profileIdentifier")
     @Expose
     public String profileIdentifier;
-
-    /**
-     * The File Digest.
-     * The file digest prior to encryption.
-     */
-    @SerializedName("fileDigest")
-    @Expose
-    public byte[] fileDigest;
-
-    /**
-     * The File Digest Algorithm.
-     * The file digest algorithm.
-     */
-    @SerializedName("fileDigestAlgorithm")
-    @Expose
-    public String fileDigestAlgorithm;
 
 
     /**

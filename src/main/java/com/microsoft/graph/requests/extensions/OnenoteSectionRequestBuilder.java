@@ -60,6 +60,13 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements 
     }
 
 
+    public IOnenotePageCollectionRequestBuilder pages() {
+        return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
+    }
+
+    public IOnenotePageRequestBuilder pages(final String id) {
+        return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Notebook
@@ -77,13 +84,6 @@ public class OnenoteSectionRequestBuilder extends BaseRequestBuilder implements 
      */
     public ISectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
-    }
-    public IOnenotePageCollectionRequestBuilder pages() {
-        return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
-    }
-
-    public IOnenotePageRequestBuilder pages(final String id) {
-        return new OnenotePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
 
     public IOnenoteSectionCopyToNotebookRequestBuilder copyToNotebook(final String id, final String groupId, final String renameAs, final String siteCollectionId, final String siteId) {

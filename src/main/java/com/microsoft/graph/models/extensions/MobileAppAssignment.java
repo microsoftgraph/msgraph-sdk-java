@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.InstallIntent;
-import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.MobileAppAssignmentSettings;
+import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -38,20 +38,20 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
     public InstallIntent intent;
 
     /**
-     * The Target.
-     * The target group assignment defined by the admin.
-     */
-    @SerializedName("target")
-    @Expose
-    public DeviceAndAppManagementAssignmentTarget target;
-
-    /**
      * The Settings.
      * The settings for target assignment defined by the admin.
      */
     @SerializedName("settings")
     @Expose
     public MobileAppAssignmentSettings settings;
+
+    /**
+     * The Target.
+     * The target group assignment defined by the admin.
+     */
+    @SerializedName("target")
+    @Expose
+    public DeviceAndAppManagementAssignmentTarget target;
 
 
     /**

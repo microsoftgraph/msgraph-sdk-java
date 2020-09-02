@@ -31,6 +31,16 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
      * @param requestUrl     the request URL
      * @param client         the service client
      * @param requestOptions the options for this request
+     */
+    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        super(requestUrl, client, requestOptions);
+    }
+    /**
+     * The request builder for this collection of DriveItem
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
      * @param token the token
      */
     public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String token) {
@@ -39,16 +49,6 @@ public class DriveItemDeltaCollectionRequestBuilder extends BaseFunctionRequestB
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("token", token));
 		}
       }
-    /**
-     * The request builder for this collection of DriveItem
-     *
-     * @param requestUrl     the request URL
-     * @param client         the service client
-     * @param requestOptions the options for this request
-     */
-    public DriveItemDeltaCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions);
-    }
 
     public IDriveItemDeltaCollectionRequest buildRequest() {
         return buildRequest(getOptions());

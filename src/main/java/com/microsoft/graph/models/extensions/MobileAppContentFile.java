@@ -36,12 +36,12 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     public String azureStorageUri;
 
     /**
-     * The Is Committed.
-     * A value indicating whether the file is committed.
+     * The Azure Storage Uri Expiration Date Time.
+     * The time the Azure storage Uri expires.
      */
-    @SerializedName("isCommitted")
+    @SerializedName("azureStorageUriExpirationDateTime")
     @Expose
-    public Boolean isCommitted;
+    public java.util.Calendar azureStorageUriExpirationDateTime;
 
     /**
      * The Created Date Time.
@@ -50,6 +50,22 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Is Committed.
+     * A value indicating whether the file is committed.
+     */
+    @SerializedName("isCommitted")
+    @Expose
+    public Boolean isCommitted;
+
+    /**
+     * The Manifest.
+     * The manifest information.
+     */
+    @SerializedName("manifest")
+    @Expose
+    public byte[] manifest;
 
     /**
      * The Name.
@@ -74,22 +90,6 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     @SerializedName("sizeEncrypted")
     @Expose
     public Long sizeEncrypted;
-
-    /**
-     * The Azure Storage Uri Expiration Date Time.
-     * The time the Azure storage Uri expires.
-     */
-    @SerializedName("azureStorageUriExpirationDateTime")
-    @Expose
-    public java.util.Calendar azureStorageUriExpirationDateTime;
-
-    /**
-     * The Manifest.
-     * The manifest information.
-     */
-    @SerializedName("manifest")
-    @Expose
-    public byte[] manifest;
 
     /**
      * The Upload State.

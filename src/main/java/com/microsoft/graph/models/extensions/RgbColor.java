@@ -36,12 +36,12 @@ public class RgbColor implements IJsonBackedObject {
     }
 
     /**
-     * The R.
-     * Red value
+     * The B.
+     * Blue value
      */
-    @SerializedName("r")
+    @SerializedName("b")
     @Expose
-    public Byte r;
+    public Byte b;
 
     /**
      * The G.
@@ -52,12 +52,12 @@ public class RgbColor implements IJsonBackedObject {
     public Byte g;
 
     /**
-     * The B.
-     * Blue value
+     * The R.
+     * Red value
      */
-    @SerializedName("b")
+    @SerializedName("r")
     @Expose
-    public Byte b;
+    public Byte r;
 
 
     /**

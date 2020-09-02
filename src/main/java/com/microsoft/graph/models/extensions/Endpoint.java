@@ -51,20 +51,20 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
     public String providerName;
 
     /**
-     * The Uri.
-     * URL of the published resource. Not nullable. Read-only.
-     */
-    @SerializedName("uri")
-    @Expose
-    public String uri;
-
-    /**
      * The Provider Resource Id.
      * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
      */
     @SerializedName("providerResourceId")
     @Expose
     public String providerResourceId;
+
+    /**
+     * The Uri.
+     * URL of the published resource. Not nullable. Read-only.
+     */
+    @SerializedName("uri")
+    @Expose
+    public String uri;
 
 
     /**

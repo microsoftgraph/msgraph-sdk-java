@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.OutlookGeoCoordinates;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
+import com.microsoft.graph.models.extensions.OutlookGeoCoordinates;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -27,6 +27,14 @@ import java.util.Map;
  */
 public class Place extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Address.
+     * The street address of the place.
+     */
+    @SerializedName("address")
+    @Expose
+    public PhysicalAddress address;
 
     /**
      * The Display Name.
@@ -51,14 +59,6 @@ public class Place extends Entity implements IJsonBackedObject {
     @SerializedName("phone")
     @Expose
     public String phone;
-
-    /**
-     * The Address.
-     * The street address of the place.
-     */
-    @SerializedName("address")
-    @Expose
-    public PhysicalAddress address;
 
 
     /**

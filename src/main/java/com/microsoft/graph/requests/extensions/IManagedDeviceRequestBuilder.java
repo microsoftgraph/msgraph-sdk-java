@@ -9,10 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -39,13 +39,13 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
     IManagedDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
-
-    IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
-
     IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
 
     IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
+
+    IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
+
+    IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id);
 
     /**
      * Gets the request builder for DeviceCategory
@@ -53,23 +53,23 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
      * @return the IDeviceCategoryRequestBuilder instance
      */
     IDeviceCategoryRequestBuilder deviceCategory();
-    IManagedDeviceRetireRequestBuilder retire();
-    IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode);
-    IManagedDeviceResetPasscodeRequestBuilder resetPasscode();
-    IManagedDeviceRemoteLockRequestBuilder remoteLock();
-    IManagedDeviceRequestRemoteAssistanceRequestBuilder requestRemoteAssistance();
+    IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock();
+    IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData);
+    IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice(final String userPrincipalName);
     IManagedDeviceDisableLostModeRequestBuilder disableLostMode();
     IManagedDeviceLocateDeviceRequestBuilder locateDevice();
-    IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock();
-    IManagedDeviceRebootNowRequestBuilder rebootNow();
-    IManagedDeviceShutDownRequestBuilder shutDown();
-    IManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode();
-    IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData);
     IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser();
-    IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice(final String userPrincipalName);
+    IManagedDeviceRebootNowRequestBuilder rebootNow();
+    IManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode();
+    IManagedDeviceRemoteLockRequestBuilder remoteLock();
+    IManagedDeviceRequestRemoteAssistanceRequestBuilder requestRemoteAssistance();
+    IManagedDeviceResetPasscodeRequestBuilder resetPasscode();
+    IManagedDeviceRetireRequestBuilder retire();
+    IManagedDeviceShutDownRequestBuilder shutDown();
     IManagedDeviceSyncDeviceRequestBuilder syncDevice();
+    IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount(final UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter);
     IManagedDeviceWindowsDefenderScanRequestBuilder windowsDefenderScan(final Boolean quickScan);
     IManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures();
-    IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount(final UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter);
+    IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode);
 
 }

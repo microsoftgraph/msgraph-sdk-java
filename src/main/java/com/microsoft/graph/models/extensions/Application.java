@@ -11,29 +11,29 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AddIn;
 import com.microsoft.graph.models.extensions.ApiApplication;
 import com.microsoft.graph.models.extensions.AppRole;
-import com.microsoft.graph.models.extensions.PublicClientApplication;
 import com.microsoft.graph.models.extensions.InformationalUrl;
 import com.microsoft.graph.models.extensions.KeyCredential;
 import com.microsoft.graph.models.extensions.OptionalClaims;
 import com.microsoft.graph.models.extensions.ParentalControlSettings;
 import com.microsoft.graph.models.extensions.PasswordCredential;
+import com.microsoft.graph.models.extensions.PublicClientApplication;
 import com.microsoft.graph.models.extensions.RequiredResourceAccess;
 import com.microsoft.graph.models.extensions.WebApplication;
-import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.ExtensionProperty;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
-import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
+import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
-import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -92,22 +92,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<AppRole> appRoles;
 
     /**
-     * The Is Fallback Public Client.
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
-     */
-    @SerializedName("isFallbackPublicClient")
-    @Expose
-    public Boolean isFallbackPublicClient;
-
-    /**
-     * The Identifier Uris.
-     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
-     */
-    @SerializedName("identifierUris")
-    @Expose
-    public java.util.List<String> identifierUris;
-
-    /**
      * The Created Date Time.
      * The date and time the application was registered. Read-only.
      */
@@ -122,14 +106,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("description")
     @Expose
     public String description;
-
-    /**
-     * The Public Client.
-     * Specifies settings for installed clients such as desktop or mobile devices.
-     */
-    @SerializedName("publicClient")
-    @Expose
-    public PublicClientApplication publicClient;
 
     /**
      * The Display Name.
@@ -148,6 +124,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public String groupMembershipClaims;
 
     /**
+     * The Identifier Uris.
+     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable.
+     */
+    @SerializedName("identifierUris")
+    @Expose
+    public java.util.List<String> identifierUris;
+
+    /**
      * The Info.
      * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
      */
@@ -162,6 +146,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("isDeviceOnlyAuthSupported")
     @Expose
     public Boolean isDeviceOnlyAuthSupported;
+
+    /**
+     * The Is Fallback Public Client.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as web app. There are certain scenarios where Azure AD cannot determine the client application type (e.g. ROPC flow where it is configured without specifying a redirect URI). In those cases Azure AD will interpret the application type based on the value of this property.
+     */
+    @SerializedName("isFallbackPublicClient")
+    @Expose
+    public Boolean isFallbackPublicClient;
 
     /**
      * The Key Credentials.
@@ -212,6 +204,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<PasswordCredential> passwordCredentials;
 
     /**
+     * The Public Client.
+     * Specifies settings for installed clients such as desktop or mobile devices.
+     */
+    @SerializedName("publicClient")
+    @Expose
+    public PublicClientApplication publicClient;
+
+    /**
      * The Publisher Domain.
      * The verified publisher domain for the application. Read-only.
      */
@@ -260,18 +260,18 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public WebApplication web;
 
     /**
-     * The Extension Properties.
-     * Read-only. Nullable.
-     */
-    public ExtensionPropertyCollectionPage extensionProperties;
-
-    /**
      * The Created On Behalf Of.
      * Read-only.
      */
     @SerializedName("createdOnBehalfOf")
     @Expose
     public DirectoryObject createdOnBehalfOf;
+
+    /**
+     * The Extension Properties.
+     * Read-only. Nullable.
+     */
+    public ExtensionPropertyCollectionPage extensionProperties;
 
     /**
      * The Home Realm Discovery Policies.
@@ -286,16 +286,16 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public DirectoryObjectCollectionPage owners;
 
     /**
-     * The Token Lifetime Policies.
-     * 
-     */
-    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
-
-    /**
      * The Token Issuance Policies.
      * 
      */
     public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+
+    /**
+     * The Token Lifetime Policies.
+     * 
+     */
+    public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
 
     /**
@@ -385,22 +385,6 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
             owners = new DirectoryObjectCollectionPage(response, null);
         }
 
-        if (json.has("tokenLifetimePolicies")) {
-            final TokenLifetimePolicyCollectionResponse response = new TokenLifetimePolicyCollectionResponse();
-            if (json.has("tokenLifetimePolicies@odata.nextLink")) {
-                response.nextLink = json.get("tokenLifetimePolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), JsonObject[].class);
-            final TokenLifetimePolicy[] array = new TokenLifetimePolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenLifetimePolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
-        }
-
         if (json.has("tokenIssuancePolicies")) {
             final TokenIssuancePolicyCollectionResponse response = new TokenIssuancePolicyCollectionResponse();
             if (json.has("tokenIssuancePolicies@odata.nextLink")) {
@@ -415,6 +399,22 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             tokenIssuancePolicies = new TokenIssuancePolicyCollectionPage(response, null);
+        }
+
+        if (json.has("tokenLifetimePolicies")) {
+            final TokenLifetimePolicyCollectionResponse response = new TokenLifetimePolicyCollectionResponse();
+            if (json.has("tokenLifetimePolicies@odata.nextLink")) {
+                response.nextLink = json.get("tokenLifetimePolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("tokenLifetimePolicies").toString(), JsonObject[].class);
+            final TokenLifetimePolicy[] array = new TokenLifetimePolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TokenLifetimePolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
         }
     }
 }

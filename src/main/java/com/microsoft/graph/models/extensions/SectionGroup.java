@@ -12,10 +12,10 @@ import com.microsoft.graph.models.extensions.Notebook;
 import com.microsoft.graph.models.extensions.SectionGroup;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionResponse;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionResponse;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -34,20 +34,20 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
 
     /**
-     * The Sections Url.
-     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-     */
-    @SerializedName("sectionsUrl")
-    @Expose
-    public String sectionsUrl;
-
-    /**
      * The Section Groups Url.
      * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
      */
     @SerializedName("sectionGroupsUrl")
     @Expose
     public String sectionGroupsUrl;
+
+    /**
+     * The Sections Url.
+     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
+     */
+    @SerializedName("sectionsUrl")
+    @Expose
+    public String sectionsUrl;
 
     /**
      * The Parent Notebook.
@@ -66,16 +66,16 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
     public SectionGroup parentSectionGroup;
 
     /**
-     * The Sections.
-     * The sections in the section group. Read-only. Nullable.
-     */
-    public OnenoteSectionCollectionPage sections;
-
-    /**
      * The Section Groups.
      * The section groups in the section. Read-only. Nullable.
      */
     public SectionGroupCollectionPage sectionGroups;
+
+    /**
+     * The Sections.
+     * The sections in the section group. Read-only. Nullable.
+     */
+    public OnenoteSectionCollectionPage sections;
 
 
     /**
@@ -117,22 +117,6 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
         rawObject = json;
 
 
-        if (json.has("sections")) {
-            final OnenoteSectionCollectionResponse response = new OnenoteSectionCollectionResponse();
-            if (json.has("sections@odata.nextLink")) {
-                response.nextLink = json.get("sections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sections").toString(), JsonObject[].class);
-            final OnenoteSection[] array = new OnenoteSection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnenoteSection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            sections = new OnenoteSectionCollectionPage(response, null);
-        }
-
         if (json.has("sectionGroups")) {
             final SectionGroupCollectionResponse response = new SectionGroupCollectionResponse();
             if (json.has("sectionGroups@odata.nextLink")) {
@@ -147,6 +131,22 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
             }
             response.value = Arrays.asList(array);
             sectionGroups = new SectionGroupCollectionPage(response, null);
+        }
+
+        if (json.has("sections")) {
+            final OnenoteSectionCollectionResponse response = new OnenoteSectionCollectionResponse();
+            if (json.has("sections@odata.nextLink")) {
+                response.nextLink = json.get("sections@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("sections").toString(), JsonObject[].class);
+            final OnenoteSection[] array = new OnenoteSection[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OnenoteSection.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            sections = new OnenoteSectionCollectionPage(response, null);
         }
     }
 }

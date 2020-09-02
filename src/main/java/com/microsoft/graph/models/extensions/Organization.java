@@ -190,6 +190,14 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     public java.util.List<String> technicalNotificationMails;
 
     /**
+     * The Tenant Type.
+     * 
+     */
+    @SerializedName("tenantType")
+    @Expose
+    public String tenantType;
+
+    /**
      * The Verified Domains.
      * The collection of domains associated with this tenant. Not nullable.
      */

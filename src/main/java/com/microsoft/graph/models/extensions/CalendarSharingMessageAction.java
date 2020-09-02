@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.CalendarSharingActionImportance;
-import com.microsoft.graph.models.generated.CalendarSharingActionType;
 import com.microsoft.graph.models.generated.CalendarSharingAction;
+import com.microsoft.graph.models.generated.CalendarSharingActionType;
+import com.microsoft.graph.models.generated.CalendarSharingActionImportance;
 
 
 import com.google.gson.JsonObject;
@@ -39,12 +39,12 @@ public class CalendarSharingMessageAction implements IJsonBackedObject {
     }
 
     /**
-     * The Importance.
+     * The Action.
      * 
      */
-    @SerializedName("importance")
+    @SerializedName("action")
     @Expose
-    public CalendarSharingActionImportance importance;
+    public CalendarSharingAction action;
 
     /**
      * The Action Type.
@@ -55,12 +55,12 @@ public class CalendarSharingMessageAction implements IJsonBackedObject {
     public CalendarSharingActionType actionType;
 
     /**
-     * The Action.
+     * The Importance.
      * 
      */
-    @SerializedName("action")
+    @SerializedName("importance")
     @Expose
-    public CalendarSharingAction action;
+    public CalendarSharingActionImportance importance;
 
 
     /**

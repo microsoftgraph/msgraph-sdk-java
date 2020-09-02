@@ -27,30 +27,22 @@ import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfiguratio
 import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOrgContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
@@ -59,10 +51,18 @@ import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionR
 import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
@@ -71,22 +71,22 @@ import com.microsoft.graph.requests.extensions.IGroupSettingTemplateCollectionRe
 import com.microsoft.graph.requests.extensions.IGroupSettingTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupSettingTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscribedSkuRequestBuilder;
-import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SubscribedSkuRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
-import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscribedSkuRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscribedSkuRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
@@ -135,10 +135,10 @@ import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityContainerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.PolicyRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.PolicyRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
@@ -153,10 +153,10 @@ import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
-import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
 import java.util.Arrays;
@@ -290,25 +290,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of DirectoryObjects objects
-     *
-     * @return the request builder for the collection of DirectoryObjects objects
-     */
-    public IDirectoryObjectCollectionRequestBuilder directoryObjects() {
-        return new DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
-    }
-
-    /**
-     * Gets a single DirectoryObjects
-     *
-     * @param id the id of the DirectoryObjects to retrieve
-     * @return the request builder for the DirectoryObjects object
-     */
-    public IDirectoryObjectRequestBuilder directoryObjects(final String id) {
-        return new DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
-    }
-
-    /**
      * Gets the collection of Contacts objects
      *
      * @return the request builder for the collection of Contacts objects
@@ -325,6 +306,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IOrgContactRequestBuilder contacts(final String id) {
         return new OrgContactRequestBuilder(getServiceRoot() + "/contacts/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Contracts objects
+     *
+     * @return the request builder for the collection of Contracts objects
+     */
+    public IContractCollectionRequestBuilder contracts() {
+        return new ContractCollectionRequestBuilder(getServiceRoot() + "/contracts", this, null);
+    }
+
+    /**
+     * Gets a single Contracts
+     *
+     * @param id the id of the Contracts to retrieve
+     * @return the request builder for the Contracts object
+     */
+    public IContractRequestBuilder contracts(final String id) {
+        return new ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
     }
 
     /**
@@ -347,60 +347,22 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of Domains objects
+     * Gets the collection of DirectoryObjects objects
      *
-     * @return the request builder for the collection of Domains objects
+     * @return the request builder for the collection of DirectoryObjects objects
      */
-    public IDomainCollectionRequestBuilder domains() {
-        return new DomainCollectionRequestBuilder(getServiceRoot() + "/domains", this, null);
+    public IDirectoryObjectCollectionRequestBuilder directoryObjects() {
+        return new DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
     }
 
     /**
-     * Gets a single Domains
+     * Gets a single DirectoryObjects
      *
-     * @param id the id of the Domains to retrieve
-     * @return the request builder for the Domains object
+     * @param id the id of the DirectoryObjects to retrieve
+     * @return the request builder for the DirectoryObjects object
      */
-    public IDomainRequestBuilder domains(final String id) {
-        return new DomainRequestBuilder(getServiceRoot() + "/domains/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of DomainDnsRecords objects
-     *
-     * @return the request builder for the collection of DomainDnsRecords objects
-     */
-    public IDomainDnsRecordCollectionRequestBuilder domainDnsRecords() {
-        return new DomainDnsRecordCollectionRequestBuilder(getServiceRoot() + "/domainDnsRecords", this, null);
-    }
-
-    /**
-     * Gets a single DomainDnsRecords
-     *
-     * @param id the id of the DomainDnsRecords to retrieve
-     * @return the request builder for the DomainDnsRecords object
-     */
-    public IDomainDnsRecordRequestBuilder domainDnsRecords(final String id) {
-        return new DomainDnsRecordRequestBuilder(getServiceRoot() + "/domainDnsRecords/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Groups objects
-     *
-     * @return the request builder for the collection of Groups objects
-     */
-    public IGroupCollectionRequestBuilder groups() {
-        return new GroupCollectionRequestBuilder(getServiceRoot() + "/groups", this, null);
-    }
-
-    /**
-     * Gets a single Groups
-     *
-     * @param id the id of the Groups to retrieve
-     * @return the request builder for the Groups object
-     */
-    public IGroupRequestBuilder groups(final String id) {
-        return new GroupRequestBuilder(getServiceRoot() + "/groups/" + id, this, null);
+    public IDirectoryObjectRequestBuilder directoryObjects(final String id) {
+        return new DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
     }
 
     /**
@@ -442,22 +404,60 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of Organization objects
+     * Gets the collection of DomainDnsRecords objects
      *
-     * @return the request builder for the collection of Organization objects
+     * @return the request builder for the collection of DomainDnsRecords objects
      */
-    public IOrganizationCollectionRequestBuilder organization() {
-        return new OrganizationCollectionRequestBuilder(getServiceRoot() + "/organization", this, null);
+    public IDomainDnsRecordCollectionRequestBuilder domainDnsRecords() {
+        return new DomainDnsRecordCollectionRequestBuilder(getServiceRoot() + "/domainDnsRecords", this, null);
     }
 
     /**
-     * Gets a single Organization
+     * Gets a single DomainDnsRecords
      *
-     * @param id the id of the Organization to retrieve
-     * @return the request builder for the Organization object
+     * @param id the id of the DomainDnsRecords to retrieve
+     * @return the request builder for the DomainDnsRecords object
      */
-    public IOrganizationRequestBuilder organization(final String id) {
-        return new OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
+    public IDomainDnsRecordRequestBuilder domainDnsRecords(final String id) {
+        return new DomainDnsRecordRequestBuilder(getServiceRoot() + "/domainDnsRecords/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Domains objects
+     *
+     * @return the request builder for the collection of Domains objects
+     */
+    public IDomainCollectionRequestBuilder domains() {
+        return new DomainCollectionRequestBuilder(getServiceRoot() + "/domains", this, null);
+    }
+
+    /**
+     * Gets a single Domains
+     *
+     * @param id the id of the Domains to retrieve
+     * @return the request builder for the Domains object
+     */
+    public IDomainRequestBuilder domains(final String id) {
+        return new DomainRequestBuilder(getServiceRoot() + "/domains/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of Groups objects
+     *
+     * @return the request builder for the collection of Groups objects
+     */
+    public IGroupCollectionRequestBuilder groups() {
+        return new GroupCollectionRequestBuilder(getServiceRoot() + "/groups", this, null);
+    }
+
+    /**
+     * Gets a single Groups
+     *
+     * @param id the id of the Groups to retrieve
+     * @return the request builder for the Groups object
+     */
+    public IGroupRequestBuilder groups(final String id) {
+        return new GroupRequestBuilder(getServiceRoot() + "/groups/" + id, this, null);
     }
 
     /**
@@ -499,41 +499,41 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of SubscribedSkus objects
+     * Gets the collection of Oauth2PermissionGrants objects
      *
-     * @return the request builder for the collection of SubscribedSkus objects
+     * @return the request builder for the collection of Oauth2PermissionGrants objects
      */
-    public ISubscribedSkuCollectionRequestBuilder subscribedSkus() {
-        return new SubscribedSkuCollectionRequestBuilder(getServiceRoot() + "/subscribedSkus", this, null);
+    public IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
+        return new OAuth2PermissionGrantCollectionRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants", this, null);
     }
 
     /**
-     * Gets a single SubscribedSkus
+     * Gets a single Oauth2PermissionGrants
      *
-     * @param id the id of the SubscribedSkus to retrieve
-     * @return the request builder for the SubscribedSkus object
+     * @param id the id of the Oauth2PermissionGrants to retrieve
+     * @return the request builder for the Oauth2PermissionGrants object
      */
-    public ISubscribedSkuRequestBuilder subscribedSkus(final String id) {
-        return new SubscribedSkuRequestBuilder(getServiceRoot() + "/subscribedSkus/" + id, this, null);
+    public IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id) {
+        return new OAuth2PermissionGrantRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants/" + id, this, null);
     }
 
     /**
-     * Gets the collection of Contracts objects
+     * Gets the collection of Organization objects
      *
-     * @return the request builder for the collection of Contracts objects
+     * @return the request builder for the collection of Organization objects
      */
-    public IContractCollectionRequestBuilder contracts() {
-        return new ContractCollectionRequestBuilder(getServiceRoot() + "/contracts", this, null);
+    public IOrganizationCollectionRequestBuilder organization() {
+        return new OrganizationCollectionRequestBuilder(getServiceRoot() + "/organization", this, null);
     }
 
     /**
-     * Gets a single Contracts
+     * Gets a single Organization
      *
-     * @param id the id of the Contracts to retrieve
-     * @return the request builder for the Contracts object
+     * @param id the id of the Organization to retrieve
+     * @return the request builder for the Organization object
      */
-    public IContractRequestBuilder contracts(final String id) {
-        return new ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
+    public IOrganizationRequestBuilder organization(final String id) {
+        return new OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
     }
 
     /**
@@ -556,22 +556,22 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
-     * Gets the collection of Oauth2PermissionGrants objects
+     * Gets the collection of SubscribedSkus objects
      *
-     * @return the request builder for the collection of Oauth2PermissionGrants objects
+     * @return the request builder for the collection of SubscribedSkus objects
      */
-    public IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
-        return new OAuth2PermissionGrantCollectionRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants", this, null);
+    public ISubscribedSkuCollectionRequestBuilder subscribedSkus() {
+        return new SubscribedSkuCollectionRequestBuilder(getServiceRoot() + "/subscribedSkus", this, null);
     }
 
     /**
-     * Gets a single Oauth2PermissionGrants
+     * Gets a single SubscribedSkus
      *
-     * @param id the id of the Oauth2PermissionGrants to retrieve
-     * @return the request builder for the Oauth2PermissionGrants object
+     * @param id the id of the SubscribedSkus to retrieve
+     * @return the request builder for the SubscribedSkus object
      */
-    public IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id) {
-        return new OAuth2PermissionGrantRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants/" + id, this, null);
+    public ISubscribedSkuRequestBuilder subscribedSkus(final String id) {
+        return new SubscribedSkuRequestBuilder(getServiceRoot() + "/subscribedSkus/" + id, this, null);
     }
 
     /**
@@ -804,10 +804,10 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the PolicyRoot
+     * @return the Directory
      */
-    public IPolicyRootRequestBuilder policies() {
-        return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", this, null);
+    public IDirectoryRequestBuilder directory() {
+        return new DirectoryRequestBuilder(getServiceRoot() + "/directory", this, null);
     }
 
     /**
@@ -822,10 +822,10 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Directory
+     * @return the PolicyRoot
      */
-    public IDirectoryRequestBuilder directory() {
-        return new DirectoryRequestBuilder(getServiceRoot() + "/directory", this, null);
+    public IPolicyRootRequestBuilder policies() {
+        return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", this, null);
     }
 
     /**
@@ -903,19 +903,19 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Teamwork
+     * @return the AppCatalogs
      */
-    public ITeamworkRequestBuilder teamwork() {
-        return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
+    public IAppCatalogsRequestBuilder appCatalogs() {
+        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", this, null);
     }
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the AppCatalogs
+     * @return the Teamwork
      */
-    public IAppCatalogsRequestBuilder appCatalogs() {
-        return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", this, null);
+    public ITeamworkRequestBuilder teamwork() {
+        return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
     }
 
     /**

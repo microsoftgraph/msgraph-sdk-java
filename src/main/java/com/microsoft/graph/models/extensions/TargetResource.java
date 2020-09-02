@@ -38,6 +38,22 @@ public class TargetResource implements IJsonBackedObject {
     }
 
     /**
+     * The Display Name.
+     * Indicates the visible name defined for the resource. Typically specified when the resource is created.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Group Type.
+     * When type is set to Group, this indicates the group type.
+     */
+    @SerializedName("groupType")
+    @Expose
+    public GroupType groupType;
+
+    /**
      * The Id.
      * Indicates the unique ID of the resource.
      */
@@ -46,12 +62,12 @@ public class TargetResource implements IJsonBackedObject {
     public String id;
 
     /**
-     * The Display Name.
-     * Indicates the visible name defined for the resource. Typically specified when the resource is created.
+     * The Modified Properties.
+     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
      */
-    @SerializedName("displayName")
+    @SerializedName("modifiedProperties")
     @Expose
-    public String displayName;
+    public java.util.List<ModifiedProperty> modifiedProperties;
 
     /**
      * The Type.
@@ -68,22 +84,6 @@ public class TargetResource implements IJsonBackedObject {
     @SerializedName("userPrincipalName")
     @Expose
     public String userPrincipalName;
-
-    /**
-     * The Group Type.
-     * When type is set to Group, this indicates the group type.
-     */
-    @SerializedName("groupType")
-    @Expose
-    public GroupType groupType;
-
-    /**
-     * The Modified Properties.
-     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
-     */
-    @SerializedName("modifiedProperties")
-    @Expose
-    public java.util.List<ModifiedProperty> modifiedProperties;
 
 
     /**

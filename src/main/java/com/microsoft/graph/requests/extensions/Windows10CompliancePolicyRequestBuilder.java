@@ -51,12 +51,19 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
     }
 
 
-    public IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
-        return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
+    public IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
+        return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
-        return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
+    public IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
+        return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
     public IDeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
@@ -64,13 +71,6 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
 
     public IDeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
-    }
-    public IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
-        return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -81,6 +81,20 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
     public IDeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    public IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
+        return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
+    }
+
+    public IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
+        return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
+    }
+    public IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceComplianceUserOverview
@@ -89,19 +103,5 @@ public class Windows10CompliancePolicyRequestBuilder extends BaseRequestBuilder 
      */
     public IDeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
-    }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
-    }
-
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
-    }
-    public IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
-    }
-
-    public IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
-        return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

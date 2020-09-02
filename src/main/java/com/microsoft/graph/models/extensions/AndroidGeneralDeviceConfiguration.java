@@ -55,6 +55,30 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean appsBlockYouTube;
 
     /**
+     * The Apps Hide List.
+     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("appsHideList")
+    @Expose
+    public java.util.List<AppListItem> appsHideList;
+
+    /**
+     * The Apps Install Allow List.
+     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("appsInstallAllowList")
+    @Expose
+    public java.util.List<AppListItem> appsInstallAllowList;
+
+    /**
+     * The Apps Launch Block List.
+     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("appsLaunchBlockList")
+    @Expose
+    public java.util.List<AppListItem> appsLaunchBlockList;
+
+    /**
      * The Bluetooth Blocked.
      * Indicates whether or not to block Bluetooth.
      */
@@ -103,6 +127,14 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean cellularBlockWiFiTethering;
 
     /**
+     * The Compliant App List Type.
+     * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     */
+    @SerializedName("compliantAppListType")
+    @Expose
+    public AppListType compliantAppListType;
+
+    /**
      * The Compliant Apps List.
      * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
      */
@@ -111,12 +143,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public java.util.List<AppListItem> compliantAppsList;
 
     /**
-     * The Compliant App List Type.
-     * Type of list that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * The Device Sharing Allowed.
+     * Indicates whether or not to allow device sharing mode.
      */
-    @SerializedName("compliantAppListType")
+    @SerializedName("deviceSharingAllowed")
     @Expose
-    public AppListType compliantAppListType;
+    public Boolean deviceSharingAllowed;
 
     /**
      * The Diagnostic Data Block Submission.
@@ -127,12 +159,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean diagnosticDataBlockSubmission;
 
     /**
-     * The Location Services Blocked.
-     * Indicates whether or not to block location services.
+     * The Factory Reset Blocked.
+     * Indicates whether or not to block user performing a factory reset.
      */
-    @SerializedName("locationServicesBlocked")
+    @SerializedName("factoryResetBlocked")
     @Expose
-    public Boolean locationServicesBlocked;
+    public Boolean factoryResetBlocked;
 
     /**
      * The Google Account Block Auto Sync.
@@ -151,6 +183,14 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean googlePlayStoreBlocked;
 
     /**
+     * The Kiosk Mode Apps.
+     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName("kioskModeApps")
+    @Expose
+    public java.util.List<AppListItem> kioskModeApps;
+
+    /**
      * The Kiosk Mode Block Sleep Button.
      * Indicates whether or not to block the screen sleep button while in Kiosk Mode.
      */
@@ -167,12 +207,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean kioskModeBlockVolumeButtons;
 
     /**
-     * The Kiosk Mode Apps.
-     * A list of apps that will be allowed to run when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     * The Location Services Blocked.
+     * Indicates whether or not to block location services.
      */
-    @SerializedName("kioskModeApps")
+    @SerializedName("locationServicesBlocked")
     @Expose
-    public java.util.List<AppListItem> kioskModeApps;
+    public Boolean locationServicesBlocked;
 
     /**
      * The Nfc Blocked.
@@ -231,12 +271,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Integer passwordPreviousPasswordBlockCount;
 
     /**
-     * The Password Sign In Failure Count Before Factory Reset.
-     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
+     * The Password Required.
+     * Indicates whether or not to require a password.
      */
-    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
+    @SerializedName("passwordRequired")
     @Expose
-    public Integer passwordSignInFailureCountBeforeFactoryReset;
+    public Boolean passwordRequired;
 
     /**
      * The Password Required Type.
@@ -247,12 +287,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public AndroidRequiredPasswordType passwordRequiredType;
 
     /**
-     * The Password Required.
-     * Indicates whether or not to require a password.
+     * The Password Sign In Failure Count Before Factory Reset.
+     * Number of sign in failures allowed before factory reset. Valid values 1 to 16
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("passwordSignInFailureCountBeforeFactoryReset")
     @Expose
-    public Boolean passwordRequired;
+    public Integer passwordSignInFailureCountBeforeFactoryReset;
 
     /**
      * The Power Off Blocked.
@@ -263,14 +303,6 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean powerOffBlocked;
 
     /**
-     * The Factory Reset Blocked.
-     * Indicates whether or not to block user performing a factory reset.
-     */
-    @SerializedName("factoryResetBlocked")
-    @Expose
-    public Boolean factoryResetBlocked;
-
-    /**
      * The Screen Capture Blocked.
      * Indicates whether or not to block screenshots.
      */
@@ -279,12 +311,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean screenCaptureBlocked;
 
     /**
-     * The Device Sharing Allowed.
-     * Indicates whether or not to allow device sharing mode.
+     * The Security Require Verify Apps.
+     * Require the Android Verify apps feature is turned on.
      */
-    @SerializedName("deviceSharingAllowed")
+    @SerializedName("securityRequireVerifyApps")
     @Expose
-    public Boolean deviceSharingAllowed;
+    public Boolean securityRequireVerifyApps;
 
     /**
      * The Storage Block Google Backup.
@@ -335,20 +367,20 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean voiceDialingBlocked;
 
     /**
-     * The Web Browser Block Popups.
-     * Indicates whether or not to block popups within the web browser.
-     */
-    @SerializedName("webBrowserBlockPopups")
-    @Expose
-    public Boolean webBrowserBlockPopups;
-
-    /**
      * The Web Browser Block Autofill.
      * Indicates whether or not to block the web browser's auto fill feature.
      */
     @SerializedName("webBrowserBlockAutofill")
     @Expose
     public Boolean webBrowserBlockAutofill;
+
+    /**
+     * The Web Browser Blocked.
+     * Indicates whether or not to block the web browser.
+     */
+    @SerializedName("webBrowserBlocked")
+    @Expose
+    public Boolean webBrowserBlocked;
 
     /**
      * The Web Browser Block Java Script.
@@ -359,12 +391,12 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     public Boolean webBrowserBlockJavaScript;
 
     /**
-     * The Web Browser Blocked.
-     * Indicates whether or not to block the web browser.
+     * The Web Browser Block Popups.
+     * Indicates whether or not to block popups within the web browser.
      */
-    @SerializedName("webBrowserBlocked")
+    @SerializedName("webBrowserBlockPopups")
     @Expose
-    public Boolean webBrowserBlocked;
+    public Boolean webBrowserBlockPopups;
 
     /**
      * The Web Browser Cookie Settings.
@@ -381,38 +413,6 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     @SerializedName("wiFiBlocked")
     @Expose
     public Boolean wiFiBlocked;
-
-    /**
-     * The Apps Install Allow List.
-     * List of apps which can be installed on the KNOX device. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("appsInstallAllowList")
-    @Expose
-    public java.util.List<AppListItem> appsInstallAllowList;
-
-    /**
-     * The Apps Launch Block List.
-     * List of apps which are blocked from being launched on the KNOX device. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("appsLaunchBlockList")
-    @Expose
-    public java.util.List<AppListItem> appsLaunchBlockList;
-
-    /**
-     * The Apps Hide List.
-     * List of apps to be hidden on the KNOX device. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName("appsHideList")
-    @Expose
-    public java.util.List<AppListItem> appsHideList;
-
-    /**
-     * The Security Require Verify Apps.
-     * Require the Android Verify apps feature is turned on.
-     */
-    @SerializedName("securityRequireVerifyApps")
-    @Expose
-    public Boolean securityRequireVerifyApps;
 
 
     /**

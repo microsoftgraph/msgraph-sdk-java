@@ -15,8 +15,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -52,11 +52,11 @@ public class WorkbookChartSeriesCollectionRequestBuilder extends BaseRequestBuil
 
 
 
-    public IWorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index) {
-        return new WorkbookChartSeriesItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
-    }
-
     public IWorkbookChartSeriesCountRequestBuilder count() {
         return new WorkbookChartSeriesCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
+    }
+
+    public IWorkbookChartSeriesItemAtRequestBuilder itemAt(final Integer index) {
+        return new WorkbookChartSeriesItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

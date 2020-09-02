@@ -28,12 +28,20 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
 
 
     /**
-     * The Password Required.
-     * Require a password to unlock Windows device.
+     * The Os Maximum Version.
+     * Maximum Windows 8.1 version.
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("osMaximumVersion")
     @Expose
-    public Boolean passwordRequired;
+    public String osMaximumVersion;
+
+    /**
+     * The Os Minimum Version.
+     * Minimum Windows 8.1 version.
+     */
+    @SerializedName("osMinimumVersion")
+    @Expose
+    public String osMinimumVersion;
 
     /**
      * The Password Block Simple.
@@ -52,6 +60,14 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
     public Integer passwordExpirationDays;
 
     /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
+
+    /**
      * The Password Minimum Length.
      * The minimum password length.
      */
@@ -68,22 +84,6 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
     public Integer passwordMinutesOfInactivityBeforeLock;
 
     /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
-
-    /**
-     * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public RequiredPasswordType passwordRequiredType;
-
-    /**
      * The Password Previous Password Block Count.
      * The number of previous passwords to prevent re-use of. Valid values 0 to 24
      */
@@ -92,20 +92,20 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
     public Integer passwordPreviousPasswordBlockCount;
 
     /**
-     * The Os Minimum Version.
-     * Minimum Windows 8.1 version.
+     * The Password Required.
+     * Require a password to unlock Windows device.
      */
-    @SerializedName("osMinimumVersion")
+    @SerializedName("passwordRequired")
     @Expose
-    public String osMinimumVersion;
+    public Boolean passwordRequired;
 
     /**
-     * The Os Maximum Version.
-     * Maximum Windows 8.1 version.
+     * The Password Required Type.
+     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
-    @SerializedName("osMaximumVersion")
+    @SerializedName("passwordRequiredType")
     @Expose
-    public String osMaximumVersion;
+    public RequiredPasswordType passwordRequiredType;
 
     /**
      * The Storage Require Encryption.
