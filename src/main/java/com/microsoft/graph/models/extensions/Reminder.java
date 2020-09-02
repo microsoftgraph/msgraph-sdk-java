@@ -38,20 +38,12 @@ public class Reminder implements IJsonBackedObject {
     }
 
     /**
-     * The Event Id.
-     * The unique ID of the event. Read only.
+     * The Change Key.
+     * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
      */
-    @SerializedName("eventId")
+    @SerializedName("changeKey")
     @Expose
-    public String eventId;
-
-    /**
-     * The Event Start Time.
-     * The date, time, and time zone that the event starts.
-     */
-    @SerializedName("eventStartTime")
-    @Expose
-    public DateTimeTimeZone eventStartTime;
+    public String changeKey;
 
     /**
      * The Event End Time.
@@ -62,20 +54,12 @@ public class Reminder implements IJsonBackedObject {
     public DateTimeTimeZone eventEndTime;
 
     /**
-     * The Change Key.
-     * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
+     * The Event Id.
+     * The unique ID of the event. Read only.
      */
-    @SerializedName("changeKey")
+    @SerializedName("eventId")
     @Expose
-    public String changeKey;
-
-    /**
-     * The Event Subject.
-     * The text of the event's subject line.
-     */
-    @SerializedName("eventSubject")
-    @Expose
-    public String eventSubject;
+    public String eventId;
 
     /**
      * The Event Location.
@@ -84,6 +68,22 @@ public class Reminder implements IJsonBackedObject {
     @SerializedName("eventLocation")
     @Expose
     public Location eventLocation;
+
+    /**
+     * The Event Start Time.
+     * The date, time, and time zone that the event starts.
+     */
+    @SerializedName("eventStartTime")
+    @Expose
+    public DateTimeTimeZone eventStartTime;
+
+    /**
+     * The Event Subject.
+     * The text of the event's subject line.
+     */
+    @SerializedName("eventSubject")
+    @Expose
+    public String eventSubject;
 
     /**
      * The Event Web Link.

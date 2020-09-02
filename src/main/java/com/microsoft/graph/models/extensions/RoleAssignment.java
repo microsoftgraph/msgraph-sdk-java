@@ -28,20 +28,20 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * The display or friendly name of the role Assignment.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Description of the Role Assignment.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * The display or friendly name of the role Assignment.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Resource Scopes.

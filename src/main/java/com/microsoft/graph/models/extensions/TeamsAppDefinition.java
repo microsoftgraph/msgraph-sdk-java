@@ -27,20 +27,20 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Teams App Id.
-     * The ID from the Teams app manifest.
-     */
-    @SerializedName("teamsAppId")
-    @Expose
-    public String teamsAppId;
-
-    /**
      * The Display Name.
      * The name of the app provided by the app developer.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Teams App Id.
+     * The ID from the Teams app manifest.
+     */
+    @SerializedName("teamsAppId")
+    @Expose
+    public String teamsAppId;
 
     /**
      * The Version.

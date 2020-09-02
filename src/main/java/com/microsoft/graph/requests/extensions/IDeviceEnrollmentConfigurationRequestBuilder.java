@@ -39,7 +39,7 @@ public interface IDeviceEnrollmentConfigurationRequestBuilder extends IRequestBu
     IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments();
 
     IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id);
-    IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority);
     IDeviceEnrollmentConfigurationAssignRequestBuilder assign(final java.util.List<EnrollmentConfigurationAssignment> enrollmentConfigurationAssignments);
+    IDeviceEnrollmentConfigurationSetPriorityRequestBuilder setPriority(final Integer priority);
 
 }

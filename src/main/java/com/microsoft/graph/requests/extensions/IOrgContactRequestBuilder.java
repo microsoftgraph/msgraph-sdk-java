@@ -35,16 +35,16 @@ public interface IOrgContactRequestBuilder extends IRequestBuilder {
     IOrgContactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IDirectoryObjectCollectionWithReferencesRequestBuilder directReports();
+
+    IDirectoryObjectWithReferenceRequestBuilder directReports(final String id);
+
     /**
      * Gets the request builder for DirectoryObject
      *
      * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder manager();
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder directReports();
-
-    IDirectoryObjectWithReferenceRequestBuilder directReports(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
 

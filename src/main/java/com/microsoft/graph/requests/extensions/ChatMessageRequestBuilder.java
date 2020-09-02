@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChatMessageHostedContentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
     }
 
 
-    public IChatMessageCollectionRequestBuilder replies() {
-        return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
-    }
-
-    public IChatMessageRequestBuilder replies(final String id) {
-        return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
-    }
     public IChatMessageHostedContentCollectionRequestBuilder hostedContents() {
         return new ChatMessageHostedContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents"), getClient(), null);
     }
 
     public IChatMessageHostedContentRequestBuilder hostedContents(final String id) {
         return new ChatMessageHostedContentRequestBuilder(getRequestUrlWithAdditionalSegment("hostedContents") + "/" + id, getClient(), null);
+    }
+    public IChatMessageCollectionRequestBuilder replies() {
+        return new ChatMessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
+    }
+
+    public IChatMessageRequestBuilder replies(final String id) {
+        return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

@@ -33,17 +33,17 @@ public interface IAndroidCompliancePolicyRequestBuilder extends IRequestBuilder 
     IAndroidCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule();
+    IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments();
 
-    IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id);
+    IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id);
+
+    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
+
+    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
 
     IDeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses();
 
     IDeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id);
-
-    IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses();
-
-    IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for DeviceComplianceDeviceOverview
@@ -52,19 +52,19 @@ public interface IAndroidCompliancePolicyRequestBuilder extends IRequestBuilder 
      */
     IDeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview();
 
+    IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule();
+
+    IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id);
+
+    IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses();
+
+    IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id);
+
     /**
      * Gets the request builder for DeviceComplianceUserOverview
      *
      * @return the IDeviceComplianceUserOverviewRequestBuilder instance
      */
     IDeviceComplianceUserOverviewRequestBuilder userStatusOverview();
-
-    ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries();
-
-    ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id);
-
-    IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments();
-
-    IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id);
 
 }

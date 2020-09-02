@@ -30,20 +30,20 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Device Count.
+     * The number of devices that have installed this application
+     */
+    @SerializedName("deviceCount")
+    @Expose
+    public Integer deviceCount;
+
+    /**
      * The Display Name.
      * Name of the discovered application. Read-only
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Version.
-     * Version of the discovered application. Read-only
-     */
-    @SerializedName("version")
-    @Expose
-    public String version;
 
     /**
      * The Size In Byte.
@@ -54,12 +54,12 @@ public class DetectedApp extends Entity implements IJsonBackedObject {
     public Long sizeInByte;
 
     /**
-     * The Device Count.
-     * The number of devices that have installed this application
+     * The Version.
+     * Version of the discovered application. Read-only
      */
-    @SerializedName("deviceCount")
+    @SerializedName("version")
     @Expose
-    public Integer deviceCount;
+    public String version;
 
     /**
      * The Managed Devices.

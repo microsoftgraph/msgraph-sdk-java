@@ -36,20 +36,20 @@ public class ThreatAssessmentResult extends Entity implements IJsonBackedObject 
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Result Type.
-     * The threat assessment result type. Possible values are: checkPolicy, rescan.
-     */
-    @SerializedName("resultType")
-    @Expose
-    public ThreatAssessmentResultType resultType;
-
-    /**
      * The Message.
      * The result message for each threat assessment.
      */
     @SerializedName("message")
     @Expose
     public String message;
+
+    /**
+     * The Result Type.
+     * The threat assessment result type. Possible values are: checkPolicy, rescan.
+     */
+    @SerializedName("resultType")
+    @Expose
+    public ThreatAssessmentResultType resultType;
 
 
     /**

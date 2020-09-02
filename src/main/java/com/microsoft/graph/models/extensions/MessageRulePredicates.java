@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.MessageActionFlag;
-import com.microsoft.graph.models.generated.Importance;
-import com.microsoft.graph.models.generated.Sensitivity;
 import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.generated.Importance;
+import com.microsoft.graph.models.generated.MessageActionFlag;
+import com.microsoft.graph.models.generated.Sensitivity;
 import com.microsoft.graph.models.extensions.SizeRange;
 
 
@@ -41,22 +41,6 @@ public class MessageRulePredicates implements IJsonBackedObject {
     }
 
     /**
-     * The Categories.
-     * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
-     */
-    @SerializedName("categories")
-    @Expose
-    public java.util.List<String> categories;
-
-    /**
-     * The Subject Contains.
-     * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("subjectContains")
-    @Expose
-    public java.util.List<String> subjectContains;
-
-    /**
      * The Body Contains.
      * Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
      */
@@ -73,52 +57,12 @@ public class MessageRulePredicates implements IJsonBackedObject {
     public java.util.List<String> bodyOrSubjectContains;
 
     /**
-     * The Sender Contains.
-     * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
+     * The Categories.
+     * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
      */
-    @SerializedName("senderContains")
+    @SerializedName("categories")
     @Expose
-    public java.util.List<String> senderContains;
-
-    /**
-     * The Recipient Contains.
-     * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("recipientContains")
-    @Expose
-    public java.util.List<String> recipientContains;
-
-    /**
-     * The Header Contains.
-     * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("headerContains")
-    @Expose
-    public java.util.List<String> headerContains;
-
-    /**
-     * The Message Action Flag.
-     * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
-     */
-    @SerializedName("messageActionFlag")
-    @Expose
-    public MessageActionFlag messageActionFlag;
-
-    /**
-     * The Importance.
-     * The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
-     */
-    @SerializedName("importance")
-    @Expose
-    public Importance importance;
-
-    /**
-     * The Sensitivity.
-     * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
-     */
-    @SerializedName("sensitivity")
-    @Expose
-    public Sensitivity sensitivity;
+    public java.util.List<String> categories;
 
     /**
      * The From Addresses.
@@ -129,60 +73,28 @@ public class MessageRulePredicates implements IJsonBackedObject {
     public java.util.List<Recipient> fromAddresses;
 
     /**
-     * The Sent To Addresses.
-     * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
-     */
-    @SerializedName("sentToAddresses")
-    @Expose
-    public java.util.List<Recipient> sentToAddresses;
-
-    /**
-     * The Sent To Me.
-     * Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("sentToMe")
-    @Expose
-    public Boolean sentToMe;
-
-    /**
-     * The Sent Only To Me.
-     * Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("sentOnlyToMe")
-    @Expose
-    public Boolean sentOnlyToMe;
-
-    /**
-     * The Sent Cc Me.
-     * Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("sentCcMe")
-    @Expose
-    public Boolean sentCcMe;
-
-    /**
-     * The Sent To Or Cc Me.
-     * Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("sentToOrCcMe")
-    @Expose
-    public Boolean sentToOrCcMe;
-
-    /**
-     * The Not Sent To Me.
-     * Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
-     */
-    @SerializedName("notSentToMe")
-    @Expose
-    public Boolean notSentToMe;
-
-    /**
      * The Has Attachments.
      * Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
      */
     @SerializedName("hasAttachments")
     @Expose
     public Boolean hasAttachments;
+
+    /**
+     * The Header Contains.
+     * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("headerContains")
+    @Expose
+    public java.util.List<String> headerContains;
+
+    /**
+     * The Importance.
+     * The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
+     */
+    @SerializedName("importance")
+    @Expose
+    public Importance importance;
 
     /**
      * The Is Approval Request.
@@ -271,6 +183,94 @@ public class MessageRulePredicates implements IJsonBackedObject {
     @SerializedName("isVoicemail")
     @Expose
     public Boolean isVoicemail;
+
+    /**
+     * The Message Action Flag.
+     * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
+     */
+    @SerializedName("messageActionFlag")
+    @Expose
+    public MessageActionFlag messageActionFlag;
+
+    /**
+     * The Not Sent To Me.
+     * Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("notSentToMe")
+    @Expose
+    public Boolean notSentToMe;
+
+    /**
+     * The Recipient Contains.
+     * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("recipientContains")
+    @Expose
+    public java.util.List<String> recipientContains;
+
+    /**
+     * The Sender Contains.
+     * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("senderContains")
+    @Expose
+    public java.util.List<String> senderContains;
+
+    /**
+     * The Sensitivity.
+     * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
+     */
+    @SerializedName("sensitivity")
+    @Expose
+    public Sensitivity sensitivity;
+
+    /**
+     * The Sent Cc Me.
+     * Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("sentCcMe")
+    @Expose
+    public Boolean sentCcMe;
+
+    /**
+     * The Sent Only To Me.
+     * Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("sentOnlyToMe")
+    @Expose
+    public Boolean sentOnlyToMe;
+
+    /**
+     * The Sent To Addresses.
+     * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
+     */
+    @SerializedName("sentToAddresses")
+    @Expose
+    public java.util.List<Recipient> sentToAddresses;
+
+    /**
+     * The Sent To Me.
+     * Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("sentToMe")
+    @Expose
+    public Boolean sentToMe;
+
+    /**
+     * The Sent To Or Cc Me.
+     * Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("sentToOrCcMe")
+    @Expose
+    public Boolean sentToOrCcMe;
+
+    /**
+     * The Subject Contains.
+     * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
+     */
+    @SerializedName("subjectContains")
+    @Expose
+    public java.util.List<String> subjectContains;
 
     /**
      * The Within Size Range.

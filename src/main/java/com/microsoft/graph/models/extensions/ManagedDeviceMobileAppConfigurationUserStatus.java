@@ -28,20 +28,20 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
 
 
     /**
-     * The User Display Name.
-     * User name of the DevicePolicyStatus.
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
      * The Devices Count.
      * Devices count for that user.
      */
     @SerializedName("devicesCount")
     @Expose
     public Integer devicesCount;
+
+    /**
+     * The Last Reported Date Time.
+     * Last modified date time of the policy report.
+     */
+    @SerializedName("lastReportedDateTime")
+    @Expose
+    public java.util.Calendar lastReportedDateTime;
 
     /**
      * The Status.
@@ -52,12 +52,12 @@ public class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implem
     public ComplianceStatus status;
 
     /**
-     * The Last Reported Date Time.
-     * Last modified date time of the policy report.
+     * The User Display Name.
+     * User name of the DevicePolicyStatus.
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName("userDisplayName")
     @Expose
-    public java.util.Calendar lastReportedDateTime;
+    public String userDisplayName;
 
     /**
      * The User Principal Name.

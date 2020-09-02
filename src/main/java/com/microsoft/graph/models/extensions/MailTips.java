@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.EmailAddress;
 import com.microsoft.graph.models.extensions.AutomaticRepliesMailTips;
+import com.microsoft.graph.models.extensions.EmailAddress;
+import com.microsoft.graph.models.extensions.MailTipsError;
 import com.microsoft.graph.models.generated.RecipientScopeType;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.MailTipsError;
 
 
 import com.google.gson.JsonObject;
@@ -41,28 +41,12 @@ public class MailTips implements IJsonBackedObject {
     }
 
     /**
-     * The Email Address.
-     * The email address of the recipient to get mailtips for.
-     */
-    @SerializedName("emailAddress")
-    @Expose
-    public EmailAddress emailAddress;
-
-    /**
      * The Automatic Replies.
      * Mail tips for automatic reply if it has been set up by the recipient.
      */
     @SerializedName("automaticReplies")
     @Expose
     public AutomaticRepliesMailTips automaticReplies;
-
-    /**
-     * The Mailbox Full.
-     * The mailbox full status of the recipient.
-     */
-    @SerializedName("mailboxFull")
-    @Expose
-    public Boolean mailboxFull;
 
     /**
      * The Custom Mail Tip.
@@ -73,22 +57,6 @@ public class MailTips implements IJsonBackedObject {
     public String customMailTip;
 
     /**
-     * The External Member Count.
-     * The number of external members if the recipient is a distribution list.
-     */
-    @SerializedName("externalMemberCount")
-    @Expose
-    public Integer externalMemberCount;
-
-    /**
-     * The Total Member Count.
-     * The number of members if the recipient is a distribution list.
-     */
-    @SerializedName("totalMemberCount")
-    @Expose
-    public Integer totalMemberCount;
-
-    /**
      * The Delivery Restricted.
      * Whether the recipient's mailbox is restricted, for example, accepting messages from only a predefined list of senders, rejecting messages from a predefined list of senders, or accepting messages from only authenticated senders.
      */
@@ -97,12 +65,52 @@ public class MailTips implements IJsonBackedObject {
     public Boolean deliveryRestricted;
 
     /**
+     * The Email Address.
+     * The email address of the recipient to get mailtips for.
+     */
+    @SerializedName("emailAddress")
+    @Expose
+    public EmailAddress emailAddress;
+
+    /**
+     * The Error.
+     * Errors that occur during the getMailTips action.
+     */
+    @SerializedName("error")
+    @Expose
+    public MailTipsError error;
+
+    /**
+     * The External Member Count.
+     * The number of external members if the recipient is a distribution list.
+     */
+    @SerializedName("externalMemberCount")
+    @Expose
+    public Integer externalMemberCount;
+
+    /**
      * The Is Moderated.
      * Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
      */
     @SerializedName("isModerated")
     @Expose
     public Boolean isModerated;
+
+    /**
+     * The Mailbox Full.
+     * The mailbox full status of the recipient.
+     */
+    @SerializedName("mailboxFull")
+    @Expose
+    public Boolean mailboxFull;
+
+    /**
+     * The Max Message Size.
+     * The maximum message size that has been configured for the recipient's organization or mailbox.
+     */
+    @SerializedName("maxMessageSize")
+    @Expose
+    public Integer maxMessageSize;
 
     /**
      * The Recipient Scope.
@@ -121,20 +129,12 @@ public class MailTips implements IJsonBackedObject {
     public java.util.List<Recipient> recipientSuggestions;
 
     /**
-     * The Max Message Size.
-     * The maximum message size that has been configured for the recipient's organization or mailbox.
+     * The Total Member Count.
+     * The number of members if the recipient is a distribution list.
      */
-    @SerializedName("maxMessageSize")
+    @SerializedName("totalMemberCount")
     @Expose
-    public Integer maxMessageSize;
-
-    /**
-     * The Error.
-     * Errors that occur during the getMailTips action.
-     */
-    @SerializedName("error")
-    @Expose
-    public MailTipsError error;
+    public Integer totalMemberCount;
 
 
     /**

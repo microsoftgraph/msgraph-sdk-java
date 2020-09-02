@@ -38,20 +38,20 @@ public class UserFeedback implements IJsonBackedObject {
     }
 
     /**
-     * The Text.
-     * The feedback text provided by the user of this endpoint for the session.
-     */
-    @SerializedName("text")
-    @Expose
-    public String text;
-
-    /**
      * The Rating.
      * The rating provided by the user of this endpoint about the quality of this Session. Possible values are: notRated, bad, poor, fair, good, excellent, unknownFutureValue.
      */
     @SerializedName("rating")
     @Expose
     public UserFeedbackRating rating;
+
+    /**
+     * The Text.
+     * The feedback text provided by the user of this endpoint for the session.
+     */
+    @SerializedName("text")
+    @Expose
+    public String text;
 
     /**
      * The Tokens.

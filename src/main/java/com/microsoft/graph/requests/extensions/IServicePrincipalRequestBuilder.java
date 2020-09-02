@@ -14,14 +14,14 @@ import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionReque
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
@@ -63,6 +63,10 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
 
     IClaimsMappingPolicyWithReferenceRequestBuilder claimsMappingPolicies(final String id);
 
+    IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects();
+
+    IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id);
+
     IEndpointCollectionRequestBuilder endpoints();
 
     IEndpointRequestBuilder endpoints(final String id);
@@ -71,29 +75,21 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
 
     IHomeRealmDiscoveryPolicyWithReferenceRequestBuilder homeRealmDiscoveryPolicies(final String id);
 
-    IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants();
-
-    IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id);
-
     IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf();
 
     IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id);
 
-    IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
+    IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants();
 
-    IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects();
-
-    IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id);
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
-
-    IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
+    IOAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(final String id);
 
     IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects();
 
     IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder owners();
+
+    IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
 
     ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies();
 
@@ -102,6 +98,10 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
     ITokenLifetimePolicyCollectionWithReferencesRequestBuilder tokenLifetimePolicies();
 
     ITokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id);
+
+    IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf();
+
+    IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id);
     IServicePrincipalAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof);
     IServicePrincipalAddPasswordRequestBuilder addPassword(final PasswordCredential passwordCredential);
     IServicePrincipalRemoveKeyRequestBuilder removeKey(final java.util.UUID keyId, final String proof);

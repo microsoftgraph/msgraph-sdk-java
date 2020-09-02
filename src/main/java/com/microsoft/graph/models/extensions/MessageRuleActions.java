@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.Importance;
 import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.generated.Importance;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,12 @@ public class MessageRuleActions implements IJsonBackedObject {
     }
 
     /**
-     * The Move To Folder.
-     * The ID of the folder that a message will be moved to.
+     * The Assign Categories.
+     * A list of categories to be assigned to a message.
      */
-    @SerializedName("moveToFolder")
+    @SerializedName("assignCategories")
     @Expose
-    public String moveToFolder;
+    public java.util.List<String> assignCategories;
 
     /**
      * The Copy To Folder.
@@ -62,12 +62,20 @@ public class MessageRuleActions implements IJsonBackedObject {
     public Boolean delete;
 
     /**
-     * The Permanent Delete.
-     * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
+     * The Forward As Attachment To.
+     * The email addresses of the recipients to which a message should be forwarded as an attachment.
      */
-    @SerializedName("permanentDelete")
+    @SerializedName("forwardAsAttachmentTo")
     @Expose
-    public Boolean permanentDelete;
+    public java.util.List<Recipient> forwardAsAttachmentTo;
+
+    /**
+     * The Forward To.
+     * The email addresses of the recipients to which a message should be forwarded.
+     */
+    @SerializedName("forwardTo")
+    @Expose
+    public java.util.List<Recipient> forwardTo;
 
     /**
      * The Mark As Read.
@@ -86,20 +94,20 @@ public class MessageRuleActions implements IJsonBackedObject {
     public Importance markImportance;
 
     /**
-     * The Forward To.
-     * The email addresses of the recipients to which a message should be forwarded.
+     * The Move To Folder.
+     * The ID of the folder that a message will be moved to.
      */
-    @SerializedName("forwardTo")
+    @SerializedName("moveToFolder")
     @Expose
-    public java.util.List<Recipient> forwardTo;
+    public String moveToFolder;
 
     /**
-     * The Forward As Attachment To.
-     * The email addresses of the recipients to which a message should be forwarded as an attachment.
+     * The Permanent Delete.
+     * Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder.
      */
-    @SerializedName("forwardAsAttachmentTo")
+    @SerializedName("permanentDelete")
     @Expose
-    public java.util.List<Recipient> forwardAsAttachmentTo;
+    public Boolean permanentDelete;
 
     /**
      * The Redirect To.
@@ -108,14 +116,6 @@ public class MessageRuleActions implements IJsonBackedObject {
     @SerializedName("redirectTo")
     @Expose
     public java.util.List<Recipient> redirectTo;
-
-    /**
-     * The Assign Categories.
-     * A list of categories to be assigned to a message.
-     */
-    @SerializedName("assignCategories")
-    @Expose
-    public java.util.List<String> assignCategories;
 
     /**
      * The Stop Processing Rules.

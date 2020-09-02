@@ -44,12 +44,12 @@ public class AudioConferencing implements IJsonBackedObject {
     public String conferenceId;
 
     /**
-     * The Toll Number.
-     * The toll number that connects to the Audio Conference Provider.
+     * The Dialin Url.
+     * A URL to the externally-accessible web page that contains dial-in information.
      */
-    @SerializedName("tollNumber")
+    @SerializedName("dialinUrl")
     @Expose
-    public String tollNumber;
+    public String dialinUrl;
 
     /**
      * The Toll Free Number.
@@ -60,12 +60,12 @@ public class AudioConferencing implements IJsonBackedObject {
     public String tollFreeNumber;
 
     /**
-     * The Dialin Url.
-     * A URL to the externally-accessible web page that contains dial-in information.
+     * The Toll Number.
+     * The toll number that connects to the Audio Conference Provider.
      */
-    @SerializedName("dialinUrl")
+    @SerializedName("tollNumber")
     @Expose
-    public String dialinUrl;
+    public String tollNumber;
 
 
     /**

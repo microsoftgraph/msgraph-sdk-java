@@ -37,20 +37,20 @@ public class FailureInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Stage.
-     * The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue.
-     */
-    @SerializedName("stage")
-    @Expose
-    public FailureStage stage;
-
-    /**
      * The Reason.
      * Classification of why a call or portion of a call failed.
      */
     @SerializedName("reason")
     @Expose
     public String reason;
+
+    /**
+     * The Stage.
+     * The stage when the failure occurred. Possible values are: unknown, callSetup, midcall, unknownFutureValue.
+     */
+    @SerializedName("stage")
+    @Expose
+    public FailureStage stage;
 
 
     /**

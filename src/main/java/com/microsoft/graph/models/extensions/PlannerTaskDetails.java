@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.PlannerChecklistItems;
 import com.microsoft.graph.models.generated.PlannerPreviewType;
 import com.microsoft.graph.models.extensions.PlannerExternalReferences;
-import com.microsoft.graph.models.extensions.PlannerChecklistItems;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -28,6 +28,14 @@ import java.util.Map;
  */
 public class PlannerTaskDetails extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Checklist.
+     * The collection of checklist items on the task.
+     */
+    @SerializedName("checklist")
+    @Expose
+    public PlannerChecklistItems checklist;
 
     /**
      * The Description.
@@ -52,14 +60,6 @@ public class PlannerTaskDetails extends Entity implements IJsonBackedObject {
     @SerializedName("references")
     @Expose
     public PlannerExternalReferences references;
-
-    /**
-     * The Checklist.
-     * The collection of checklist items on the task.
-     */
-    @SerializedName("checklist")
-    @Expose
-    public PlannerChecklistItems checklist;
 
 
     /**

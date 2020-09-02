@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.sun.jersey:jersey-server:1.19.4'
     
     // Core Http library 
-    implementation 'com.microsoft.graph:microsoft-graph-core:1.0.1'
+    implementation 'com.microsoft.graph:microsoft-graph-core:1.0.2'
 }
 
 def pomConfig = {

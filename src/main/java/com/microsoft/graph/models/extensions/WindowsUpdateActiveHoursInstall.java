@@ -27,20 +27,20 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
 
 
     /**
-     * The Active Hours Start.
-     * Active Hours Start
-     */
-    @SerializedName("activeHoursStart")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
-
-    /**
      * The Active Hours End.
      * Active Hours End
      */
     @SerializedName("activeHoursEnd")
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
+
+    /**
+     * The Active Hours Start.
+     * Active Hours Start
+     */
+    @SerializedName("activeHoursStart")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
 
 
     /**

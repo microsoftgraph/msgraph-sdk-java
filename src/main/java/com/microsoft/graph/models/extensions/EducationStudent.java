@@ -37,28 +37,20 @@ public class EducationStudent implements IJsonBackedObject {
     }
 
     /**
-     * The Graduation Year.
-     * Year the student is graduating from the school.
-     */
-    @SerializedName("graduationYear")
-    @Expose
-    public String graduationYear;
-
-    /**
-     * The Grade.
-     * Current grade level of the student.
-     */
-    @SerializedName("grade")
-    @Expose
-    public String grade;
-
-    /**
      * The Birth Date.
      * Birth date of the student.
      */
     @SerializedName("birthDate")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly birthDate;
+
+    /**
+     * The External Id.
+     * ID of the student in the source system.
+     */
+    @SerializedName("externalId")
+    @Expose
+    public String externalId;
 
     /**
      * The Gender.
@@ -69,20 +61,28 @@ public class EducationStudent implements IJsonBackedObject {
     public EducationGender gender;
 
     /**
+     * The Grade.
+     * Current grade level of the student.
+     */
+    @SerializedName("grade")
+    @Expose
+    public String grade;
+
+    /**
+     * The Graduation Year.
+     * Year the student is graduating from the school.
+     */
+    @SerializedName("graduationYear")
+    @Expose
+    public String graduationYear;
+
+    /**
      * The Student Number.
      * Student Number.
      */
     @SerializedName("studentNumber")
     @Expose
     public String studentNumber;
-
-    /**
-     * The External Id.
-     * ID of the student in the source system.
-     */
-    @SerializedName("externalId")
-    @Expose
-    public String externalId;
 
 
     /**

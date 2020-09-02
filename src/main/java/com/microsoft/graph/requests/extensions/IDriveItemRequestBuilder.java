@@ -121,16 +121,16 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message);
     IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
     IDriveItemFollowRequestBuilder follow();
-    IDriveItemUnfollowRequestBuilder unfollow();
 
     IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password);
     IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom);
     IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name);
+    IDriveItemUnfollowRequestBuilder unfollow();
     IDriveItemValidatePermissionRequestBuilder validatePermission(final String challengeToken, final String password);
 
-    IDriveItemDeltaCollectionRequestBuilder delta(final String token);
-
     IDriveItemDeltaCollectionRequestBuilder delta();
+
+    IDriveItemDeltaCollectionRequestBuilder delta(final String token);
 
     IDriveItemGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval();
 

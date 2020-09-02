@@ -37,20 +37,20 @@ public class ScheduleEntity implements IJsonBackedObject {
     }
 
     /**
-     * The Start Date Time.
-     * 
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
      * The End Date Time.
      * 
      */
     @SerializedName("endDateTime")
     @Expose
     public java.util.Calendar endDateTime;
+
+    /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
     /**
      * The Theme.

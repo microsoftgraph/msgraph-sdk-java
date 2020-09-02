@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.callrecords.models.generated.CallType;
 import com.microsoft.graph.callrecords.models.generated.Modality;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.callrecords.models.generated.CallType;
 import com.microsoft.graph.callrecords.models.extensions.Session;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.callrecords.requests.extensions.SessionCollectionResponse;
@@ -33,28 +33,20 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Version.
-     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
+     * The End Date Time.
+     * UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("version")
+    @SerializedName("endDateTime")
     @Expose
-    public Long version;
+    public java.util.Calendar endDateTime;
 
     /**
-     * The Type.
-     * Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
+     * The Join Web Url.
+     * Meeting URL associated to the call. May not be available for a peerToPeer call record type.
      */
-    @SerializedName("type")
+    @SerializedName("joinWebUrl")
     @Expose
-    public CallType type;
-
-    /**
-     * The Modalities.
-     * List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     */
-    @SerializedName("modalities")
-    @Expose
-    public java.util.List<Modality> modalities;
+    public String joinWebUrl;
 
     /**
      * The Last Modified Date Time.
@@ -65,20 +57,12 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Start Date Time.
-     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Modalities.
+     * List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
      */
-    @SerializedName("startDateTime")
+    @SerializedName("modalities")
     @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
+    public java.util.List<Modality> modalities;
 
     /**
      * The Organizer.
@@ -97,12 +81,28 @@ public class CallRecord extends Entity implements IJsonBackedObject {
     public java.util.List<IdentitySet> participants;
 
     /**
-     * The Join Web Url.
-     * Meeting URL associated to the call. May not be available for a peerToPeer call record type.
+     * The Start Date Time.
+     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("joinWebUrl")
+    @SerializedName("startDateTime")
     @Expose
-    public String joinWebUrl;
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Type.
+     * Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
+     */
+    @SerializedName("type")
+    @Expose
+    public CallType type;
+
+    /**
+     * The Version.
+     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
+     */
+    @SerializedName("version")
+    @Expose
+    public Long version;
 
     /**
      * The Sessions.

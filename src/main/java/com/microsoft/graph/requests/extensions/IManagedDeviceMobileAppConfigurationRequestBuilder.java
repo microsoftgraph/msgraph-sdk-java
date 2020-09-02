@@ -50,16 +50,16 @@ public interface IManagedDeviceMobileAppConfigurationRequestBuilder extends IReq
 
     IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id);
 
-    IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses();
-
-    IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id);
-
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationDeviceSummary
      *
      * @return the IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
      */
     IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary();
+
+    IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses();
+
+    IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id);
 
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationUserSummary

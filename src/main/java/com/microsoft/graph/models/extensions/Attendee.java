@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ResponseStatus;
 import com.microsoft.graph.models.extensions.TimeSlot;
+import com.microsoft.graph.models.extensions.ResponseStatus;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 
 
@@ -29,20 +29,20 @@ public class Attendee extends AttendeeBase implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
-     */
-    @SerializedName("status")
-    @Expose
-    public ResponseStatus status;
-
-    /**
      * The Proposed New Time.
      * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
      */
     @SerializedName("proposedNewTime")
     @Expose
     public TimeSlot proposedNewTime;
+
+    /**
+     * The Status.
+     * The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
+     */
+    @SerializedName("status")
+    @Expose
+    public ResponseStatus status;
 
 
     /**

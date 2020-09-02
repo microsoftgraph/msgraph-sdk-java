@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PhysicalAddress;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationOrganization;
@@ -35,6 +35,70 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
 
 
     /**
+     * The Address.
+     * Address of the school.
+     */
+    @SerializedName("address")
+    @Expose
+    public PhysicalAddress address;
+
+    /**
+     * The Created By.
+     * Entity who created the school.
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The External Id.
+     * ID of school in syncing system.
+     */
+    @SerializedName("externalId")
+    @Expose
+    public String externalId;
+
+    /**
+     * The External Principal Id.
+     * ID of principal in syncing system.
+     */
+    @SerializedName("externalPrincipalId")
+    @Expose
+    public String externalPrincipalId;
+
+    /**
+     * The Fax.
+     * 
+     */
+    @SerializedName("fax")
+    @Expose
+    public String fax;
+
+    /**
+     * The Highest Grade.
+     * Highest grade taught.
+     */
+    @SerializedName("highestGrade")
+    @Expose
+    public String highestGrade;
+
+    /**
+     * The Lowest Grade.
+     * Lowest grade taught.
+     */
+    @SerializedName("lowestGrade")
+    @Expose
+    public String lowestGrade;
+
+    /**
+     * The Phone.
+     * Phone number of school.
+     */
+    @SerializedName("phone")
+    @Expose
+    public String phone;
+
+    /**
      * The Principal Email.
      * Email address of the principal.
      */
@@ -51,76 +115,12 @@ public class EducationSchool extends EducationOrganization implements IJsonBacke
     public String principalName;
 
     /**
-     * The External Principal Id.
-     * ID of principal in syncing system.
-     */
-    @SerializedName("externalPrincipalId")
-    @Expose
-    public String externalPrincipalId;
-
-    /**
-     * The Lowest Grade.
-     * Lowest grade taught.
-     */
-    @SerializedName("lowestGrade")
-    @Expose
-    public String lowestGrade;
-
-    /**
-     * The Highest Grade.
-     * Highest grade taught.
-     */
-    @SerializedName("highestGrade")
-    @Expose
-    public String highestGrade;
-
-    /**
      * The School Number.
      * School Number.
      */
     @SerializedName("schoolNumber")
     @Expose
     public String schoolNumber;
-
-    /**
-     * The External Id.
-     * ID of school in syncing system.
-     */
-    @SerializedName("externalId")
-    @Expose
-    public String externalId;
-
-    /**
-     * The Phone.
-     * Phone number of school.
-     */
-    @SerializedName("phone")
-    @Expose
-    public String phone;
-
-    /**
-     * The Fax.
-     * 
-     */
-    @SerializedName("fax")
-    @Expose
-    public String fax;
-
-    /**
-     * The Created By.
-     * Entity who created the school.
-     */
-    @SerializedName("createdBy")
-    @Expose
-    public IdentitySet createdBy;
-
-    /**
-     * The Address.
-     * Address of the school.
-     */
-    @SerializedName("address")
-    @Expose
-    public PhysicalAddress address;
 
     /**
      * The Classes.

@@ -36,12 +36,12 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
-     * App display name.
+     * The Denied.
+     * If true, app is denied protection or exemption.
      */
-    @SerializedName("displayName")
+    @SerializedName("denied")
     @Expose
-    public String displayName;
+    public Boolean denied;
 
     /**
      * The Description.
@@ -52,12 +52,12 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Publisher Name.
-     * The publisher name
+     * The Display Name.
+     * App display name.
      */
-    @SerializedName("publisherName")
+    @SerializedName("displayName")
     @Expose
-    public String publisherName;
+    public String displayName;
 
     /**
      * The Product Name.
@@ -68,12 +68,12 @@ public class WindowsInformationProtectionApp implements IJsonBackedObject {
     public String productName;
 
     /**
-     * The Denied.
-     * If true, app is denied protection or exemption.
+     * The Publisher Name.
+     * The publisher name
      */
-    @SerializedName("denied")
+    @SerializedName("publisherName")
     @Expose
-    public Boolean denied;
+    public String publisherName;
 
 
     /**

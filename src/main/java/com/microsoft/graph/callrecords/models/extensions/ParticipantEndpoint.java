@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.callrecords.models.extensions.UserFeedback;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.callrecords.models.extensions.Endpoint;
 
 
@@ -29,20 +29,20 @@ public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
 
 
     /**
-     * The Identity.
-     * Identity associated with the endpoint.
-     */
-    @SerializedName("identity")
-    @Expose
-    public IdentitySet identity;
-
-    /**
      * The Feedback.
      * The feedback provided by the user of this endpoint about the quality of the session.
      */
     @SerializedName("feedback")
     @Expose
     public UserFeedback feedback;
+
+    /**
+     * The Identity.
+     * Identity associated with the endpoint.
+     */
+    @SerializedName("identity")
+    @Expose
+    public IdentitySet identity;
 
 
     /**

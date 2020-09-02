@@ -27,12 +27,12 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements IJs
 
 
     /**
-     * The Payload Name.
-     * Name that is displayed to the user.
+     * The Payload.
+     * Payload. (UTF8 encoded byte array)
      */
-    @SerializedName("payloadName")
+    @SerializedName("payload")
     @Expose
-    public String payloadName;
+    public byte[] payload;
 
     /**
      * The Payload File Name.
@@ -43,12 +43,12 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements IJs
     public String payloadFileName;
 
     /**
-     * The Payload.
-     * Payload. (UTF8 encoded byte array)
+     * The Payload Name.
+     * Name that is displayed to the user.
      */
-    @SerializedName("payload")
+    @SerializedName("payloadName")
     @Expose
-    public byte[] payload;
+    public String payloadName;
 
 
     /**

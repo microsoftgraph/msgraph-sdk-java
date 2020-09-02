@@ -8,14 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.FirewallPreSharedKeyEncodingMethodType;
+import com.microsoft.graph.models.generated.ApplicationGuardBlockClipboardSharingType;
+import com.microsoft.graph.models.generated.ApplicationGuardBlockFileTransferType;
+import com.microsoft.graph.models.generated.AppLockerApplicationControlType;
+import com.microsoft.graph.models.extensions.BitLockerRemovableDrivePolicy;
 import com.microsoft.graph.models.generated.FirewallCertificateRevocationListCheckMethodType;
 import com.microsoft.graph.models.generated.FirewallPacketQueueingMethodType;
+import com.microsoft.graph.models.generated.FirewallPreSharedKeyEncodingMethodType;
 import com.microsoft.graph.models.extensions.WindowsFirewallNetworkProfile;
-import com.microsoft.graph.models.generated.AppLockerApplicationControlType;
-import com.microsoft.graph.models.generated.ApplicationGuardBlockFileTransferType;
-import com.microsoft.graph.models.generated.ApplicationGuardBlockClipboardSharingType;
-import com.microsoft.graph.models.extensions.BitLockerRemovableDrivePolicy;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -35,206 +35,6 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
 
     /**
-     * The Firewall Block Stateful FTP.
-     * Blocks stateful FTP connections to the device
-     */
-    @SerializedName("firewallBlockStatefulFTP")
-    @Expose
-    public Boolean firewallBlockStatefulFTP;
-
-    /**
-     * The Firewall Idle Timeout For Security Association In Seconds.
-     * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
-     */
-    @SerializedName("firewallIdleTimeoutForSecurityAssociationInSeconds")
-    @Expose
-    public Integer firewallIdleTimeoutForSecurityAssociationInSeconds;
-
-    /**
-     * The Firewall Pre Shared Key Encoding Method.
-     * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
-     */
-    @SerializedName("firewallPreSharedKeyEncodingMethod")
-    @Expose
-    public FirewallPreSharedKeyEncodingMethodType firewallPreSharedKeyEncodingMethod;
-
-    /**
-     * The Firewall IPSec Exemptions Allow Neighbor Discovery.
-     * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
-     */
-    @SerializedName("firewallIPSecExemptionsAllowNeighborDiscovery")
-    @Expose
-    public Boolean firewallIPSecExemptionsAllowNeighborDiscovery;
-
-    /**
-     * The Firewall IPSec Exemptions Allow ICMP.
-     * Configures IPSec exemptions to allow ICMP
-     */
-    @SerializedName("firewallIPSecExemptionsAllowICMP")
-    @Expose
-    public Boolean firewallIPSecExemptionsAllowICMP;
-
-    /**
-     * The Firewall IPSec Exemptions Allow Router Discovery.
-     * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
-     */
-    @SerializedName("firewallIPSecExemptionsAllowRouterDiscovery")
-    @Expose
-    public Boolean firewallIPSecExemptionsAllowRouterDiscovery;
-
-    /**
-     * The Firewall IPSec Exemptions Allow DHCP.
-     * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
-     */
-    @SerializedName("firewallIPSecExemptionsAllowDHCP")
-    @Expose
-    public Boolean firewallIPSecExemptionsAllowDHCP;
-
-    /**
-     * The Firewall Certificate Revocation List Check Method.
-     * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
-     */
-    @SerializedName("firewallCertificateRevocationListCheckMethod")
-    @Expose
-    public FirewallCertificateRevocationListCheckMethodType firewallCertificateRevocationListCheckMethod;
-
-    /**
-     * The Firewall Merge Keying Module Settings.
-     * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
-     */
-    @SerializedName("firewallMergeKeyingModuleSettings")
-    @Expose
-    public Boolean firewallMergeKeyingModuleSettings;
-
-    /**
-     * The Firewall Packet Queueing Method.
-     * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
-     */
-    @SerializedName("firewallPacketQueueingMethod")
-    @Expose
-    public FirewallPacketQueueingMethodType firewallPacketQueueingMethod;
-
-    /**
-     * The Firewall Profile Domain.
-     * Configures the firewall profile settings for domain networks
-     */
-    @SerializedName("firewallProfileDomain")
-    @Expose
-    public WindowsFirewallNetworkProfile firewallProfileDomain;
-
-    /**
-     * The Firewall Profile Public.
-     * Configures the firewall profile settings for public networks
-     */
-    @SerializedName("firewallProfilePublic")
-    @Expose
-    public WindowsFirewallNetworkProfile firewallProfilePublic;
-
-    /**
-     * The Firewall Profile Private.
-     * Configures the firewall profile settings for private networks
-     */
-    @SerializedName("firewallProfilePrivate")
-    @Expose
-    public WindowsFirewallNetworkProfile firewallProfilePrivate;
-
-    /**
-     * The Defender Attack Surface Reduction Excluded Paths.
-     * List of exe files and folders to be excluded from attack surface reduction rules
-     */
-    @SerializedName("defenderAttackSurfaceReductionExcludedPaths")
-    @Expose
-    public java.util.List<String> defenderAttackSurfaceReductionExcludedPaths;
-
-    /**
-     * The Defender Guarded Folders Allowed App Paths.
-     * List of paths to exe that are allowed to access protected folders
-     */
-    @SerializedName("defenderGuardedFoldersAllowedAppPaths")
-    @Expose
-    public java.util.List<String> defenderGuardedFoldersAllowedAppPaths;
-
-    /**
-     * The Defender Additional Guarded Folders.
-     * List of folder paths to be added to the list of protected folders
-     */
-    @SerializedName("defenderAdditionalGuardedFolders")
-    @Expose
-    public java.util.List<String> defenderAdditionalGuardedFolders;
-
-    /**
-     * The Defender Exploit Protection Xml.
-     * Xml content containing information regarding exploit protection details.
-     */
-    @SerializedName("defenderExploitProtectionXml")
-    @Expose
-    public byte[] defenderExploitProtectionXml;
-
-    /**
-     * The Defender Exploit Protection Xml File Name.
-     * Name of the file from which DefenderExploitProtectionXml was obtained.
-     */
-    @SerializedName("defenderExploitProtectionXmlFileName")
-    @Expose
-    public String defenderExploitProtectionXmlFileName;
-
-    /**
-     * The Defender Security Center Block Exploit Protection Override.
-     * Indicates whether or not to block user from overriding Exploit Protection settings.
-     */
-    @SerializedName("defenderSecurityCenterBlockExploitProtectionOverride")
-    @Expose
-    public Boolean defenderSecurityCenterBlockExploitProtectionOverride;
-
-    /**
-     * The App Locker Application Control.
-     * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
-     */
-    @SerializedName("appLockerApplicationControl")
-    @Expose
-    public AppLockerApplicationControlType appLockerApplicationControl;
-
-    /**
-     * The Smart Screen Enable In Shell.
-     * Allows IT Admins to configure SmartScreen for Windows.
-     */
-    @SerializedName("smartScreenEnableInShell")
-    @Expose
-    public Boolean smartScreenEnableInShell;
-
-    /**
-     * The Smart Screen Block Override For Files.
-     * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
-     */
-    @SerializedName("smartScreenBlockOverrideForFiles")
-    @Expose
-    public Boolean smartScreenBlockOverrideForFiles;
-
-    /**
-     * The Application Guard Enabled.
-     * Enable Windows Defender Application Guard
-     */
-    @SerializedName("applicationGuardEnabled")
-    @Expose
-    public Boolean applicationGuardEnabled;
-
-    /**
-     * The Application Guard Block File Transfer.
-     * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
-     */
-    @SerializedName("applicationGuardBlockFileTransfer")
-    @Expose
-    public ApplicationGuardBlockFileTransferType applicationGuardBlockFileTransfer;
-
-    /**
-     * The Application Guard Block Non Enterprise Content.
-     * Block enterprise sites to load non-enterprise content, such as third party plug-ins
-     */
-    @SerializedName("applicationGuardBlockNonEnterpriseContent")
-    @Expose
-    public Boolean applicationGuardBlockNonEnterpriseContent;
-
-    /**
      * The Application Guard Allow Persistence.
      * Allow persisting user generated data inside the App Guard Containter (favorites, cookies, web passwords, etc.)
      */
@@ -243,20 +43,20 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     public Boolean applicationGuardAllowPersistence;
 
     /**
-     * The Application Guard Force Auditing.
-     * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
+     * The Application Guard Allow Print To Local Printers.
+     * Allow printing to Local Printers from Container
      */
-    @SerializedName("applicationGuardForceAuditing")
+    @SerializedName("applicationGuardAllowPrintToLocalPrinters")
     @Expose
-    public Boolean applicationGuardForceAuditing;
+    public Boolean applicationGuardAllowPrintToLocalPrinters;
 
     /**
-     * The Application Guard Block Clipboard Sharing.
-     * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
+     * The Application Guard Allow Print To Network Printers.
+     * Allow printing to Network Printers from Container
      */
-    @SerializedName("applicationGuardBlockClipboardSharing")
+    @SerializedName("applicationGuardAllowPrintToNetworkPrinters")
     @Expose
-    public ApplicationGuardBlockClipboardSharingType applicationGuardBlockClipboardSharing;
+    public Boolean applicationGuardAllowPrintToNetworkPrinters;
 
     /**
      * The Application Guard Allow Print To PDF.
@@ -275,20 +75,52 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     public Boolean applicationGuardAllowPrintToXPS;
 
     /**
-     * The Application Guard Allow Print To Local Printers.
-     * Allow printing to Local Printers from Container
+     * The Application Guard Block Clipboard Sharing.
+     * Block clipboard to share data from Host to Container, or from Container to Host, or both ways, or neither ways. Possible values are: notConfigured, blockBoth, blockHostToContainer, blockContainerToHost, blockNone.
      */
-    @SerializedName("applicationGuardAllowPrintToLocalPrinters")
+    @SerializedName("applicationGuardBlockClipboardSharing")
     @Expose
-    public Boolean applicationGuardAllowPrintToLocalPrinters;
+    public ApplicationGuardBlockClipboardSharingType applicationGuardBlockClipboardSharing;
 
     /**
-     * The Application Guard Allow Print To Network Printers.
-     * Allow printing to Network Printers from Container
+     * The Application Guard Block File Transfer.
+     * Block clipboard to transfer image file, text file or neither of them. Possible values are: notConfigured, blockImageAndTextFile, blockImageFile, blockNone, blockTextFile.
      */
-    @SerializedName("applicationGuardAllowPrintToNetworkPrinters")
+    @SerializedName("applicationGuardBlockFileTransfer")
     @Expose
-    public Boolean applicationGuardAllowPrintToNetworkPrinters;
+    public ApplicationGuardBlockFileTransferType applicationGuardBlockFileTransfer;
+
+    /**
+     * The Application Guard Block Non Enterprise Content.
+     * Block enterprise sites to load non-enterprise content, such as third party plug-ins
+     */
+    @SerializedName("applicationGuardBlockNonEnterpriseContent")
+    @Expose
+    public Boolean applicationGuardBlockNonEnterpriseContent;
+
+    /**
+     * The Application Guard Enabled.
+     * Enable Windows Defender Application Guard
+     */
+    @SerializedName("applicationGuardEnabled")
+    @Expose
+    public Boolean applicationGuardEnabled;
+
+    /**
+     * The Application Guard Force Auditing.
+     * Force auditing will persist Windows logs and events to meet security/compliance criteria (sample events are user login-logoff, use of privilege rights, software installation, system changes, etc.)
+     */
+    @SerializedName("applicationGuardForceAuditing")
+    @Expose
+    public Boolean applicationGuardForceAuditing;
+
+    /**
+     * The App Locker Application Control.
+     * Enables the Admin to choose what types of app to allow on devices. Possible values are: notConfigured, enforceComponentsAndStoreApps, auditComponentsAndStoreApps, enforceComponentsStoreAppsAndSmartlocker, auditComponentsStoreAppsAndSmartlocker.
+     */
+    @SerializedName("appLockerApplicationControl")
+    @Expose
+    public AppLockerApplicationControlType appLockerApplicationControl;
 
     /**
      * The Bit Locker Disable Warning For Other Disk Encryption.
@@ -321,6 +153,174 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @SerializedName("bitLockerRemovableDrivePolicy")
     @Expose
     public BitLockerRemovableDrivePolicy bitLockerRemovableDrivePolicy;
+
+    /**
+     * The Defender Additional Guarded Folders.
+     * List of folder paths to be added to the list of protected folders
+     */
+    @SerializedName("defenderAdditionalGuardedFolders")
+    @Expose
+    public java.util.List<String> defenderAdditionalGuardedFolders;
+
+    /**
+     * The Defender Attack Surface Reduction Excluded Paths.
+     * List of exe files and folders to be excluded from attack surface reduction rules
+     */
+    @SerializedName("defenderAttackSurfaceReductionExcludedPaths")
+    @Expose
+    public java.util.List<String> defenderAttackSurfaceReductionExcludedPaths;
+
+    /**
+     * The Defender Exploit Protection Xml.
+     * Xml content containing information regarding exploit protection details.
+     */
+    @SerializedName("defenderExploitProtectionXml")
+    @Expose
+    public byte[] defenderExploitProtectionXml;
+
+    /**
+     * The Defender Exploit Protection Xml File Name.
+     * Name of the file from which DefenderExploitProtectionXml was obtained.
+     */
+    @SerializedName("defenderExploitProtectionXmlFileName")
+    @Expose
+    public String defenderExploitProtectionXmlFileName;
+
+    /**
+     * The Defender Guarded Folders Allowed App Paths.
+     * List of paths to exe that are allowed to access protected folders
+     */
+    @SerializedName("defenderGuardedFoldersAllowedAppPaths")
+    @Expose
+    public java.util.List<String> defenderGuardedFoldersAllowedAppPaths;
+
+    /**
+     * The Defender Security Center Block Exploit Protection Override.
+     * Indicates whether or not to block user from overriding Exploit Protection settings.
+     */
+    @SerializedName("defenderSecurityCenterBlockExploitProtectionOverride")
+    @Expose
+    public Boolean defenderSecurityCenterBlockExploitProtectionOverride;
+
+    /**
+     * The Firewall Block Stateful FTP.
+     * Blocks stateful FTP connections to the device
+     */
+    @SerializedName("firewallBlockStatefulFTP")
+    @Expose
+    public Boolean firewallBlockStatefulFTP;
+
+    /**
+     * The Firewall Certificate Revocation List Check Method.
+     * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt, require.
+     */
+    @SerializedName("firewallCertificateRevocationListCheckMethod")
+    @Expose
+    public FirewallCertificateRevocationListCheckMethodType firewallCertificateRevocationListCheckMethod;
+
+    /**
+     * The Firewall Idle Timeout For Security Association In Seconds.
+     * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after which security associations will expire and be deleted. Valid values 300 to 3600
+     */
+    @SerializedName("firewallIdleTimeoutForSecurityAssociationInSeconds")
+    @Expose
+    public Integer firewallIdleTimeoutForSecurityAssociationInSeconds;
+
+    /**
+     * The Firewall IPSec Exemptions Allow DHCP.
+     * Configures IPSec exemptions to allow both IPv4 and IPv6 DHCP traffic
+     */
+    @SerializedName("firewallIPSecExemptionsAllowDHCP")
+    @Expose
+    public Boolean firewallIPSecExemptionsAllowDHCP;
+
+    /**
+     * The Firewall IPSec Exemptions Allow ICMP.
+     * Configures IPSec exemptions to allow ICMP
+     */
+    @SerializedName("firewallIPSecExemptionsAllowICMP")
+    @Expose
+    public Boolean firewallIPSecExemptionsAllowICMP;
+
+    /**
+     * The Firewall IPSec Exemptions Allow Neighbor Discovery.
+     * Configures IPSec exemptions to allow neighbor discovery IPv6 ICMP type-codes
+     */
+    @SerializedName("firewallIPSecExemptionsAllowNeighborDiscovery")
+    @Expose
+    public Boolean firewallIPSecExemptionsAllowNeighborDiscovery;
+
+    /**
+     * The Firewall IPSec Exemptions Allow Router Discovery.
+     * Configures IPSec exemptions to allow router discovery IPv6 ICMP type-codes
+     */
+    @SerializedName("firewallIPSecExemptionsAllowRouterDiscovery")
+    @Expose
+    public Boolean firewallIPSecExemptionsAllowRouterDiscovery;
+
+    /**
+     * The Firewall Merge Keying Module Settings.
+     * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported authentication suites rather than the entire set
+     */
+    @SerializedName("firewallMergeKeyingModuleSettings")
+    @Expose
+    public Boolean firewallMergeKeyingModuleSettings;
+
+    /**
+     * The Firewall Packet Queueing Method.
+     * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault, disabled, queueInbound, queueOutbound, queueBoth.
+     */
+    @SerializedName("firewallPacketQueueingMethod")
+    @Expose
+    public FirewallPacketQueueingMethodType firewallPacketQueueingMethod;
+
+    /**
+     * The Firewall Pre Shared Key Encoding Method.
+     * Select the preshared key encoding to be used. Possible values are: deviceDefault, none, utF8.
+     */
+    @SerializedName("firewallPreSharedKeyEncodingMethod")
+    @Expose
+    public FirewallPreSharedKeyEncodingMethodType firewallPreSharedKeyEncodingMethod;
+
+    /**
+     * The Firewall Profile Domain.
+     * Configures the firewall profile settings for domain networks
+     */
+    @SerializedName("firewallProfileDomain")
+    @Expose
+    public WindowsFirewallNetworkProfile firewallProfileDomain;
+
+    /**
+     * The Firewall Profile Private.
+     * Configures the firewall profile settings for private networks
+     */
+    @SerializedName("firewallProfilePrivate")
+    @Expose
+    public WindowsFirewallNetworkProfile firewallProfilePrivate;
+
+    /**
+     * The Firewall Profile Public.
+     * Configures the firewall profile settings for public networks
+     */
+    @SerializedName("firewallProfilePublic")
+    @Expose
+    public WindowsFirewallNetworkProfile firewallProfilePublic;
+
+    /**
+     * The Smart Screen Block Override For Files.
+     * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
+     */
+    @SerializedName("smartScreenBlockOverrideForFiles")
+    @Expose
+    public Boolean smartScreenBlockOverrideForFiles;
+
+    /**
+     * The Smart Screen Enable In Shell.
+     * Allows IT Admins to configure SmartScreen for Windows.
+     */
+    @SerializedName("smartScreenEnableInShell")
+    @Expose
+    public Boolean smartScreenEnableInShell;
 
 
     /**

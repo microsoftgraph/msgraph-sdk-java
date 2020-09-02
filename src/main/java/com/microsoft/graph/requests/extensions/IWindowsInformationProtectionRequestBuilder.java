@@ -9,10 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,17 +38,17 @@ public interface IWindowsInformationProtectionRequestBuilder extends IRequestBui
     IWindowsInformationProtectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles();
+    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
 
-    IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id);
+    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
 
     IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles();
 
     IWindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(final String id);
 
-    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
+    IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles();
 
-    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
+    IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id);
     IWindowsInformationProtectionAssignRequestBuilder assign(final java.util.List<TargetedManagedAppPolicyAssignment> assignments);
 
 }

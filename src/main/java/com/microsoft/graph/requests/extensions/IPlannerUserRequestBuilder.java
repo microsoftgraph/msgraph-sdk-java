@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,12 +37,12 @@ public interface IPlannerUserRequestBuilder extends IRequestBuilder {
     IPlannerUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPlannerTaskCollectionRequestBuilder tasks();
-
-    IPlannerTaskRequestBuilder tasks(final String id);
-
     IPlannerPlanCollectionRequestBuilder plans();
 
     IPlannerPlanRequestBuilder plans(final String id);
+
+    IPlannerTaskCollectionRequestBuilder tasks();
+
+    IPlannerTaskRequestBuilder tasks(final String id);
 
 }

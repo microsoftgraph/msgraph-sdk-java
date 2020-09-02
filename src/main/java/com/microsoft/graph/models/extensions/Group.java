@@ -15,11 +15,11 @@ import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.GroupSetting;
+import com.microsoft.graph.models.extensions.Calendar;
+import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.Conversation;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.ConversationThread;
-import com.microsoft.graph.models.extensions.Calendar;
-import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Extension;
@@ -33,14 +33,14 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionResponse;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionPage;
+import com.microsoft.graph.requests.extensions.EventCollectionResponse;
+import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationCollectionPage;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionResponse;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionResponse;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
-import com.microsoft.graph.requests.extensions.EventCollectionResponse;
-import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionResponse;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteCollectionResponse;
@@ -123,20 +123,20 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar expirationDateTime;
 
     /**
-     * The Has Members With License Errors.
-     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
-     */
-    @SerializedName("hasMembersWithLicenseErrors")
-    @Expose
-    public Boolean hasMembersWithLicenseErrors;
-
-    /**
      * The Group Types.
      * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
      */
     @SerializedName("groupTypes")
     @Expose
     public java.util.List<String> groupTypes;
+
+    /**
+     * The Has Members With License Errors.
+     * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
+     */
+    @SerializedName("hasMembersWithLicenseErrors")
+    @Expose
+    public Boolean hasMembersWithLicenseErrors;
 
     /**
      * The License Processing State.
@@ -323,6 +323,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean autoSubscribeNewMembers;
 
     /**
+     * The Hide From Address Lists.
+     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromAddressLists")
+    @Expose
+    public Boolean hideFromAddressLists;
+
+    /**
+     * The Hide From Outlook Clients.
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromOutlookClients")
+    @Expose
+    public Boolean hideFromOutlookClients;
+
+    /**
      * The Is Subscribed By Mail.
      * Indicates whether the signed-in user is subscribed to receive email conversations. Default value is true. Returned only on $select.
      */
@@ -339,22 +355,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Integer unseenCount;
 
     /**
-     * The Hide From Outlook Clients.
-     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
-     */
-    @SerializedName("hideFromOutlookClients")
-    @Expose
-    public Boolean hideFromOutlookClients;
-
-    /**
-     * The Hide From Address Lists.
-     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
-     */
-    @SerializedName("hideFromAddressLists")
-    @Expose
-    public Boolean hideFromAddressLists;
-
-    /**
      * The Is Archived.
      * 
      */
@@ -369,10 +369,12 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
-     * The Members.
-     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+     * The Created On Behalf Of.
+     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
      */
-    public DirectoryObjectCollectionPage members;
+    @SerializedName("createdOnBehalfOf")
+    @Expose
+    public DirectoryObject createdOnBehalfOf;
 
     /**
      * The Member Of.
@@ -381,30 +383,16 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public DirectoryObjectCollectionPage memberOf;
 
     /**
+     * The Members.
+     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
+     */
+    public DirectoryObjectCollectionPage members;
+
+    /**
      * The Members With License Errors.
      * A list of group members with license errors from this group-based license assignment. Read-only.
      */
     public DirectoryObjectCollectionPage membersWithLicenseErrors;
-
-    /**
-     * The Transitive Members.
-     * 
-     */
-    public DirectoryObjectCollectionPage transitiveMembers;
-
-    /**
-     * The Transitive Member Of.
-     * 
-     */
-    public DirectoryObjectCollectionPage transitiveMemberOf;
-
-    /**
-     * The Created On Behalf Of.
-     * The user (or application) that created the group. NOTE: This is not set if the user is an administrator. Read-only.
-     */
-    @SerializedName("createdOnBehalfOf")
-    @Expose
-    public DirectoryObject createdOnBehalfOf;
 
     /**
      * The Owners.
@@ -419,34 +407,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public GroupSettingCollectionPage settings;
 
     /**
-     * The Conversations.
-     * The group's conversations.
+     * The Transitive Member Of.
+     * 
      */
-    public ConversationCollectionPage conversations;
+    public DirectoryObjectCollectionPage transitiveMemberOf;
 
     /**
-     * The Photos.
-     * The profile photos owned by the group. Read-only. Nullable.
+     * The Transitive Members.
+     * 
      */
-    public ProfilePhotoCollectionPage photos;
+    public DirectoryObjectCollectionPage transitiveMembers;
 
     /**
      * The Accepted Senders.
      * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      */
     public DirectoryObjectCollectionPage acceptedSenders;
-
-    /**
-     * The Rejected Senders.
-     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
-     */
-    public DirectoryObjectCollectionPage rejectedSenders;
-
-    /**
-     * The Threads.
-     * The group's conversation threads. Nullable.
-     */
-    public ConversationThreadCollectionPage threads;
 
     /**
      * The Calendar.
@@ -463,6 +439,12 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public EventCollectionPage calendarView;
 
     /**
+     * The Conversations.
+     * The group's conversations.
+     */
+    public ConversationCollectionPage conversations;
+
+    /**
      * The Events.
      * The group's calendar events.
      */
@@ -475,6 +457,24 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("photo")
     @Expose
     public ProfilePhoto photo;
+
+    /**
+     * The Photos.
+     * The profile photos owned by the group. Read-only. Nullable.
+     */
+    public ProfilePhotoCollectionPage photos;
+
+    /**
+     * The Rejected Senders.
+     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+     */
+    public DirectoryObjectCollectionPage rejectedSenders;
+
+    /**
+     * The Threads.
+     * The group's conversation threads. Nullable.
+     */
+    public ConversationThreadCollectionPage threads;
 
     /**
      * The Drive.
@@ -588,22 +588,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             appRoleAssignments = new AppRoleAssignmentCollectionPage(response, null);
         }
 
-        if (json.has("members")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("members@odata.nextLink")) {
-                response.nextLink = json.get("members@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            members = new DirectoryObjectCollectionPage(response, null);
-        }
-
         if (json.has("memberOf")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
             if (json.has("memberOf@odata.nextLink")) {
@@ -620,6 +604,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             memberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
+        if (json.has("members")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("members@odata.nextLink")) {
+                response.nextLink = json.get("members@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            members = new DirectoryObjectCollectionPage(response, null);
+        }
+
         if (json.has("membersWithLicenseErrors")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
             if (json.has("membersWithLicenseErrors@odata.nextLink")) {
@@ -634,38 +634,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             membersWithLicenseErrors = new DirectoryObjectCollectionPage(response, null);
-        }
-
-        if (json.has("transitiveMembers")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("transitiveMembers@odata.nextLink")) {
-                response.nextLink = json.get("transitiveMembers@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMembers").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            transitiveMembers = new DirectoryObjectCollectionPage(response, null);
-        }
-
-        if (json.has("transitiveMemberOf")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("transitiveMemberOf@odata.nextLink")) {
-                response.nextLink = json.get("transitiveMemberOf@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("owners")) {
@@ -700,36 +668,36 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             settings = new GroupSettingCollectionPage(response, null);
         }
 
-        if (json.has("conversations")) {
-            final ConversationCollectionResponse response = new ConversationCollectionResponse();
-            if (json.has("conversations@odata.nextLink")) {
-                response.nextLink = json.get("conversations@odata.nextLink").getAsString();
+        if (json.has("transitiveMemberOf")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("transitiveMemberOf@odata.nextLink")) {
+                response.nextLink = json.get("transitiveMemberOf@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("conversations").toString(), JsonObject[].class);
-            final Conversation[] array = new Conversation[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Conversation.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            conversations = new ConversationCollectionPage(response, null);
+            transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
-        if (json.has("photos")) {
-            final ProfilePhotoCollectionResponse response = new ProfilePhotoCollectionResponse();
-            if (json.has("photos@odata.nextLink")) {
-                response.nextLink = json.get("photos@odata.nextLink").getAsString();
+        if (json.has("transitiveMembers")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("transitiveMembers@odata.nextLink")) {
+                response.nextLink = json.get("transitiveMembers@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("photos").toString(), JsonObject[].class);
-            final ProfilePhoto[] array = new ProfilePhoto[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMembers").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProfilePhoto.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            photos = new ProfilePhotoCollectionPage(response, null);
+            transitiveMembers = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("acceptedSenders")) {
@@ -746,6 +714,70 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             acceptedSenders = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("calendarView")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("calendarView@odata.nextLink")) {
+                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            calendarView = new EventCollectionPage(response, null);
+        }
+
+        if (json.has("conversations")) {
+            final ConversationCollectionResponse response = new ConversationCollectionResponse();
+            if (json.has("conversations@odata.nextLink")) {
+                response.nextLink = json.get("conversations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("conversations").toString(), JsonObject[].class);
+            final Conversation[] array = new Conversation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Conversation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            conversations = new ConversationCollectionPage(response, null);
+        }
+
+        if (json.has("events")) {
+            final EventCollectionResponse response = new EventCollectionResponse();
+            if (json.has("events@odata.nextLink")) {
+                response.nextLink = json.get("events@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
+            final Event[] array = new Event[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            events = new EventCollectionPage(response, null);
+        }
+
+        if (json.has("photos")) {
+            final ProfilePhotoCollectionResponse response = new ProfilePhotoCollectionResponse();
+            if (json.has("photos@odata.nextLink")) {
+                response.nextLink = json.get("photos@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("photos").toString(), JsonObject[].class);
+            final ProfilePhoto[] array = new ProfilePhoto[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ProfilePhoto.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            photos = new ProfilePhotoCollectionPage(response, null);
         }
 
         if (json.has("rejectedSenders")) {
@@ -778,38 +810,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             threads = new ConversationThreadCollectionPage(response, null);
-        }
-
-        if (json.has("calendarView")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("calendarView@odata.nextLink")) {
-                response.nextLink = json.get("calendarView@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("calendarView").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            calendarView = new EventCollectionPage(response, null);
-        }
-
-        if (json.has("events")) {
-            final EventCollectionResponse response = new EventCollectionResponse();
-            if (json.has("events@odata.nextLink")) {
-                response.nextLink = json.get("events@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("events").toString(), JsonObject[].class);
-            final Event[] array = new Event[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Event.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            events = new EventCollectionPage(response, null);
         }
 
         if (json.has("drives")) {

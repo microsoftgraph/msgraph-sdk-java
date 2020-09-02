@@ -36,20 +36,20 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
     }
 
     /**
-     * The Include Applications.
-     * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
-     */
-    @SerializedName("includeApplications")
-    @Expose
-    public java.util.List<String> includeApplications;
-
-    /**
      * The Exclude Applications.
      * The list of application IDs explicitly excluded from the policy.
      */
     @SerializedName("excludeApplications")
     @Expose
     public java.util.List<String> excludeApplications;
+
+    /**
+     * The Include Applications.
+     * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
+     */
+    @SerializedName("includeApplications")
+    @Expose
+    public java.util.List<String> includeApplications;
 
     /**
      * The Include User Actions.

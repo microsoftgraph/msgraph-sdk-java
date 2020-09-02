@@ -28,52 +28,12 @@ public class Room extends Place implements IJsonBackedObject {
 
 
     /**
-     * The Email Address.
-     * Email address of the room.
+     * The Audio Device Name.
+     * Specifies the name of the audio device in the room.
      */
-    @SerializedName("emailAddress")
+    @SerializedName("audioDeviceName")
     @Expose
-    public String emailAddress;
-
-    /**
-     * The Nickname.
-     * Specifies a nickname for the room, for example, 'conf room'.
-     */
-    @SerializedName("nickname")
-    @Expose
-    public String nickname;
-
-    /**
-     * The Building.
-     * Specifies the building name or building number that the room is in.
-     */
-    @SerializedName("building")
-    @Expose
-    public String building;
-
-    /**
-     * The Floor Number.
-     * Specifies the floor number that the room is on.
-     */
-    @SerializedName("floorNumber")
-    @Expose
-    public Integer floorNumber;
-
-    /**
-     * The Label.
-     * Specifies a descriptive label for the room, for example, a number or name.
-     */
-    @SerializedName("label")
-    @Expose
-    public String label;
-
-    /**
-     * The Capacity.
-     * Specifies the capacity of the room.
-     */
-    @SerializedName("capacity")
-    @Expose
-    public Integer capacity;
+    public String audioDeviceName;
 
     /**
      * The Booking Type.
@@ -84,20 +44,20 @@ public class Room extends Place implements IJsonBackedObject {
     public BookingType bookingType;
 
     /**
-     * The Audio Device Name.
-     * Specifies the name of the audio device in the room.
+     * The Building.
+     * Specifies the building name or building number that the room is in.
      */
-    @SerializedName("audioDeviceName")
+    @SerializedName("building")
     @Expose
-    public String audioDeviceName;
+    public String building;
 
     /**
-     * The Video Device Name.
-     * Specifies the name of the video device in the room.
+     * The Capacity.
+     * Specifies the capacity of the room.
      */
-    @SerializedName("videoDeviceName")
+    @SerializedName("capacity")
     @Expose
-    public String videoDeviceName;
+    public Integer capacity;
 
     /**
      * The Display Device Name.
@@ -108,12 +68,52 @@ public class Room extends Place implements IJsonBackedObject {
     public String displayDeviceName;
 
     /**
+     * The Email Address.
+     * Email address of the room.
+     */
+    @SerializedName("emailAddress")
+    @Expose
+    public String emailAddress;
+
+    /**
+     * The Floor Label.
+     * Specifies a descriptive label for the floor, for example, P.
+     */
+    @SerializedName("floorLabel")
+    @Expose
+    public String floorLabel;
+
+    /**
+     * The Floor Number.
+     * Specifies the floor number that the room is on.
+     */
+    @SerializedName("floorNumber")
+    @Expose
+    public Integer floorNumber;
+
+    /**
      * The Is Wheel Chair Accessible.
      * 
      */
     @SerializedName("isWheelChairAccessible")
     @Expose
     public Boolean isWheelChairAccessible;
+
+    /**
+     * The Label.
+     * Specifies a descriptive label for the room, for example, a number or name.
+     */
+    @SerializedName("label")
+    @Expose
+    public String label;
+
+    /**
+     * The Nickname.
+     * Specifies a nickname for the room, for example, 'conf room'.
+     */
+    @SerializedName("nickname")
+    @Expose
+    public String nickname;
 
     /**
      * The Tags.
@@ -124,12 +124,12 @@ public class Room extends Place implements IJsonBackedObject {
     public java.util.List<String> tags;
 
     /**
-     * The Floor Label.
-     * Specifies a descriptive label for the floor, for example, P.
+     * The Video Device Name.
+     * Specifies the name of the video device in the room.
      */
-    @SerializedName("floorLabel")
+    @SerializedName("videoDeviceName")
     @Expose
-    public String floorLabel;
+    public String videoDeviceName;
 
 
     /**

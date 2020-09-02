@@ -31,20 +31,12 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The To Recipients.
-     * The To: recipients for the thread.
+     * The Cc Recipients.
+     * The Cc: recipients for the thread.
      */
-    @SerializedName("toRecipients")
+    @SerializedName("ccRecipients")
     @Expose
-    public java.util.List<Recipient> toRecipients;
-
-    /**
-     * The Topic.
-     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-     */
-    @SerializedName("topic")
-    @Expose
-    public String topic;
+    public java.util.List<Recipient> ccRecipients;
 
     /**
      * The Has Attachments.
@@ -55,28 +47,20 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
     public Boolean hasAttachments;
 
     /**
+     * The Is Locked.
+     * Indicates if the thread is locked.
+     */
+    @SerializedName("isLocked")
+    @Expose
+    public Boolean isLocked;
+
+    /**
      * The Last Delivered Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName("lastDeliveredDateTime")
     @Expose
     public java.util.Calendar lastDeliveredDateTime;
-
-    /**
-     * The Unique Senders.
-     * All the users that sent a message to this thread.
-     */
-    @SerializedName("uniqueSenders")
-    @Expose
-    public java.util.List<String> uniqueSenders;
-
-    /**
-     * The Cc Recipients.
-     * The Cc: recipients for the thread.
-     */
-    @SerializedName("ccRecipients")
-    @Expose
-    public java.util.List<Recipient> ccRecipients;
 
     /**
      * The Preview.
@@ -87,12 +71,28 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
     public String preview;
 
     /**
-     * The Is Locked.
-     * Indicates if the thread is locked.
+     * The Topic.
+     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
      */
-    @SerializedName("isLocked")
+    @SerializedName("topic")
     @Expose
-    public Boolean isLocked;
+    public String topic;
+
+    /**
+     * The To Recipients.
+     * The To: recipients for the thread.
+     */
+    @SerializedName("toRecipients")
+    @Expose
+    public java.util.List<Recipient> toRecipients;
+
+    /**
+     * The Unique Senders.
+     * All the users that sent a message to this thread.
+     */
+    @SerializedName("uniqueSenders")
+    @Expose
+    public java.util.List<String> uniqueSenders;
 
     /**
      * The Posts.

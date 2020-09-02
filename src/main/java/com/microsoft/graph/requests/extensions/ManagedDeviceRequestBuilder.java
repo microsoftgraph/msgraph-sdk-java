@@ -9,14 +9,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCategoryRequestBuilder;
 import java.util.Arrays;
@@ -62,19 +62,19 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
-        return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
-    }
-
-    public IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id) {
-        return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
-    }
     public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
     }
 
     public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
         return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    }
+    public IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
+        return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
+    }
+
+    public IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id) {
+        return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
     }
 
     /**
@@ -86,24 +86,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
         return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
     }
 
-    public IManagedDeviceRetireRequestBuilder retire() {
-        return new ManagedDeviceRetireRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retire"), getClient(), null);
+    public IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock() {
+        return new ManagedDeviceBypassActivationLockRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bypassActivationLock"), getClient(), null);
     }
 
-    public IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode) {
-        return new ManagedDeviceWipeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipe"), getClient(), null, keepEnrollmentData, keepUserData, macOsUnlockCode);
+    public IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData) {
+        return new ManagedDeviceCleanWindowsDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cleanWindowsDevice"), getClient(), null, keepUserData);
     }
 
-    public IManagedDeviceResetPasscodeRequestBuilder resetPasscode() {
-        return new ManagedDeviceResetPasscodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetPasscode"), getClient(), null);
-    }
-
-    public IManagedDeviceRemoteLockRequestBuilder remoteLock() {
-        return new ManagedDeviceRemoteLockRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remoteLock"), getClient(), null);
-    }
-
-    public IManagedDeviceRequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
-        return new ManagedDeviceRequestRemoteAssistanceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.requestRemoteAssistance"), getClient(), null);
+    public IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice(final String userPrincipalName) {
+        return new ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deleteUserFromSharedAppleDevice"), getClient(), null, userPrincipalName);
     }
 
     public IManagedDeviceDisableLostModeRequestBuilder disableLostMode() {
@@ -114,36 +106,44 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
         return new ManagedDeviceLocateDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.locateDevice"), getClient(), null);
     }
 
-    public IManagedDeviceBypassActivationLockRequestBuilder bypassActivationLock() {
-        return new ManagedDeviceBypassActivationLockRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bypassActivationLock"), getClient(), null);
+    public IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
+        return new ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logoutSharedAppleDeviceActiveUser"), getClient(), null);
     }
 
     public IManagedDeviceRebootNowRequestBuilder rebootNow() {
         return new ManagedDeviceRebootNowRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.rebootNow"), getClient(), null);
     }
 
-    public IManagedDeviceShutDownRequestBuilder shutDown() {
-        return new ManagedDeviceShutDownRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.shutDown"), getClient(), null);
-    }
-
     public IManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode() {
         return new ManagedDeviceRecoverPasscodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recoverPasscode"), getClient(), null);
     }
 
-    public IManagedDeviceCleanWindowsDeviceRequestBuilder cleanWindowsDevice(final Boolean keepUserData) {
-        return new ManagedDeviceCleanWindowsDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cleanWindowsDevice"), getClient(), null, keepUserData);
+    public IManagedDeviceRemoteLockRequestBuilder remoteLock() {
+        return new ManagedDeviceRemoteLockRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.remoteLock"), getClient(), null);
     }
 
-    public IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
-        return new ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logoutSharedAppleDeviceActiveUser"), getClient(), null);
+    public IManagedDeviceRequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
+        return new ManagedDeviceRequestRemoteAssistanceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.requestRemoteAssistance"), getClient(), null);
     }
 
-    public IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice(final String userPrincipalName) {
-        return new ManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deleteUserFromSharedAppleDevice"), getClient(), null, userPrincipalName);
+    public IManagedDeviceResetPasscodeRequestBuilder resetPasscode() {
+        return new ManagedDeviceResetPasscodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetPasscode"), getClient(), null);
+    }
+
+    public IManagedDeviceRetireRequestBuilder retire() {
+        return new ManagedDeviceRetireRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retire"), getClient(), null);
+    }
+
+    public IManagedDeviceShutDownRequestBuilder shutDown() {
+        return new ManagedDeviceShutDownRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.shutDown"), getClient(), null);
     }
 
     public IManagedDeviceSyncDeviceRequestBuilder syncDevice() {
         return new ManagedDeviceSyncDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.syncDevice"), getClient(), null);
+    }
+
+    public IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount(final UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter) {
+        return new ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateWindowsDeviceAccount"), getClient(), null, updateWindowsDeviceAccountActionParameter);
     }
 
     public IManagedDeviceWindowsDefenderScanRequestBuilder windowsDefenderScan(final Boolean quickScan) {
@@ -154,7 +154,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
         return new ManagedDeviceWindowsDefenderUpdateSignaturesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.windowsDefenderUpdateSignatures"), getClient(), null);
     }
 
-    public IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount(final UpdateWindowsDeviceAccountActionParameter updateWindowsDeviceAccountActionParameter) {
-        return new ManagedDeviceUpdateWindowsDeviceAccountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateWindowsDeviceAccount"), getClient(), null, updateWindowsDeviceAccountActionParameter);
+    public IManagedDeviceWipeRequestBuilder wipe(final Boolean keepEnrollmentData, final Boolean keepUserData, final String macOsUnlockCode) {
+        return new ManagedDeviceWipeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipe"), getClient(), null, keepEnrollmentData, keepUserData, macOsUnlockCode);
     }
 }

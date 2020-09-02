@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WorkbookOperationStatus;
 import com.microsoft.graph.models.extensions.WorkbookOperationError;
+import com.microsoft.graph.models.generated.WorkbookOperationStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,12 +29,12 @@ public class WorkbookOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
+     * The Error.
+     * The error returned by the operation.
      */
-    @SerializedName("status")
+    @SerializedName("error")
     @Expose
-    public WorkbookOperationStatus status;
+    public WorkbookOperationError error;
 
     /**
      * The Resource Location.
@@ -45,12 +45,12 @@ public class WorkbookOperation extends Entity implements IJsonBackedObject {
     public String resourceLocation;
 
     /**
-     * The Error.
-     * The error returned by the operation.
+     * The Status.
+     * The current status of the operation. Possible values are: NotStarted, Running, Completed, Failed.
      */
-    @SerializedName("error")
+    @SerializedName("status")
     @Expose
-    public WorkbookOperationError error;
+    public WorkbookOperationStatus status;
 
 
     /**

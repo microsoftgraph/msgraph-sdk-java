@@ -8,19 +8,19 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionDataRecoveryCertificate;
 import com.microsoft.graph.models.generated.WindowsInformationProtectionEnforcementLevel;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionResourceCollection;
-import com.microsoft.graph.models.extensions.WindowsInformationProtectionDataRecoveryCertificate;
-import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
-import com.microsoft.graph.models.extensions.WindowsInformationProtectionProxiedDomainCollection;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionIPRangeCollection;
-import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionProxiedDomainCollection;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionApp;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLockerFile;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -39,6 +39,22 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
 
 
     /**
+     * The Azure Rights Management Services Allowed.
+     * Specifies whether to allow Azure RMS encryption for WIP
+     */
+    @SerializedName("azureRightsManagementServicesAllowed")
+    @Expose
+    public Boolean azureRightsManagementServicesAllowed;
+
+    /**
+     * The Data Recovery Certificate.
+     * Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
+     */
+    @SerializedName("dataRecoveryCertificate")
+    @Expose
+    public WindowsInformationProtectionDataRecoveryCertificate dataRecoveryCertificate;
+
+    /**
      * The Enforcement Level.
      * WIP enforcement level.See the Enum definition for supported values. Possible values are: noProtection, encryptAndAuditOnly, encryptAuditAndPrompt, encryptAuditAndBlock.
      */
@@ -55,92 +71,12 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     public String enterpriseDomain;
 
     /**
-     * The Enterprise Protected Domain Names.
-     * List of enterprise domains to be protected
+     * The Enterprise Internal Proxy Servers.
+     * This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
      */
-    @SerializedName("enterpriseProtectedDomainNames")
+    @SerializedName("enterpriseInternalProxyServers")
     @Expose
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseProtectedDomainNames;
-
-    /**
-     * The Protection Under Lock Config Required.
-     * Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
-     */
-    @SerializedName("protectionUnderLockConfigRequired")
-    @Expose
-    public Boolean protectionUnderLockConfigRequired;
-
-    /**
-     * The Data Recovery Certificate.
-     * Specifies a recovery certificate that can be used for data recovery of encrypted files. This is the same as the data recovery agent(DRA) certificate for encrypting file system(EFS)
-     */
-    @SerializedName("dataRecoveryCertificate")
-    @Expose
-    public WindowsInformationProtectionDataRecoveryCertificate dataRecoveryCertificate;
-
-    /**
-     * The Revoke On Unenroll Disabled.
-     * This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
-     */
-    @SerializedName("revokeOnUnenrollDisabled")
-    @Expose
-    public Boolean revokeOnUnenrollDisabled;
-
-    /**
-     * The Rights Management Services Template Id.
-     * TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
-     */
-    @SerializedName("rightsManagementServicesTemplateId")
-    @Expose
-    public java.util.UUID rightsManagementServicesTemplateId;
-
-    /**
-     * The Azure Rights Management Services Allowed.
-     * Specifies whether to allow Azure RMS encryption for WIP
-     */
-    @SerializedName("azureRightsManagementServicesAllowed")
-    @Expose
-    public Boolean azureRightsManagementServicesAllowed;
-
-    /**
-     * The Icons Visible.
-     * Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
-     */
-    @SerializedName("iconsVisible")
-    @Expose
-    public Boolean iconsVisible;
-
-    /**
-     * The Protected Apps.
-     * Protected applications can access enterprise data and the data handled by those applications are protected with encryption
-     */
-    @SerializedName("protectedApps")
-    @Expose
-    public java.util.List<WindowsInformationProtectionApp> protectedApps;
-
-    /**
-     * The Exempt Apps.
-     * Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
-     */
-    @SerializedName("exemptApps")
-    @Expose
-    public java.util.List<WindowsInformationProtectionApp> exemptApps;
-
-    /**
-     * The Enterprise Network Domain Names.
-     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
-     */
-    @SerializedName("enterpriseNetworkDomainNames")
-    @Expose
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseNetworkDomainNames;
-
-    /**
-     * The Enterprise Proxied Domains.
-     * Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
-     */
-    @SerializedName("enterpriseProxiedDomains")
-    @Expose
-    public java.util.List<WindowsInformationProtectionProxiedDomainCollection> enterpriseProxiedDomains;
+    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseInternalProxyServers;
 
     /**
      * The Enterprise IPRanges.
@@ -159,20 +95,36 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     public Boolean enterpriseIPRangesAreAuthoritative;
 
     /**
+     * The Enterprise Network Domain Names.
+     * This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected These locations will be considered a safe destination for enterprise data to be shared to
+     */
+    @SerializedName("enterpriseNetworkDomainNames")
+    @Expose
+    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseNetworkDomainNames;
+
+    /**
+     * The Enterprise Protected Domain Names.
+     * List of enterprise domains to be protected
+     */
+    @SerializedName("enterpriseProtectedDomainNames")
+    @Expose
+    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseProtectedDomainNames;
+
+    /**
+     * The Enterprise Proxied Domains.
+     * Contains a list of Enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy
+     */
+    @SerializedName("enterpriseProxiedDomains")
+    @Expose
+    public java.util.List<WindowsInformationProtectionProxiedDomainCollection> enterpriseProxiedDomains;
+
+    /**
      * The Enterprise Proxy Servers.
      * This is a list of proxy servers. Any server not on this list is considered non-enterprise
      */
     @SerializedName("enterpriseProxyServers")
     @Expose
     public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseProxyServers;
-
-    /**
-     * The Enterprise Internal Proxy Servers.
-     * This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseProxiedDomains policy to force traffic to the matched domains through these proxies
-     */
-    @SerializedName("enterpriseInternalProxyServers")
-    @Expose
-    public java.util.List<WindowsInformationProtectionResourceCollection> enterpriseInternalProxyServers;
 
     /**
      * The Enterprise Proxy Servers Are Authoritative.
@@ -183,12 +135,20 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     public Boolean enterpriseProxyServersAreAuthoritative;
 
     /**
-     * The Neutral Domain Resources.
-     * List of domain names that can used for work or personal resource
+     * The Exempt Apps.
+     * Exempt applications can also access enterprise data, but the data handled by those applications are not protected. This is because some critical enterprise applications may have compatibility problems with encrypted data.
      */
-    @SerializedName("neutralDomainResources")
+    @SerializedName("exemptApps")
     @Expose
-    public java.util.List<WindowsInformationProtectionResourceCollection> neutralDomainResources;
+    public java.util.List<WindowsInformationProtectionApp> exemptApps;
+
+    /**
+     * The Icons Visible.
+     * Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
+     */
+    @SerializedName("iconsVisible")
+    @Expose
+    public Boolean iconsVisible;
 
     /**
      * The Indexing Encrypted Stores Or Items Blocked.
@@ -199,14 +159,6 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     public Boolean indexingEncryptedStoresOrItemsBlocked;
 
     /**
-     * The Smb Auto Encrypted File Extensions.
-     * Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
-     */
-    @SerializedName("smbAutoEncryptedFileExtensions")
-    @Expose
-    public java.util.List<WindowsInformationProtectionResourceCollection> smbAutoEncryptedFileExtensions;
-
-    /**
      * The Is Assigned.
      * Indicates if the policy is deployed to any inclusion groups or not.
      */
@@ -215,10 +167,58 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     public Boolean isAssigned;
 
     /**
-     * The Protected App Locker Files.
-     * Another way to input protected apps through xml files
+     * The Neutral Domain Resources.
+     * List of domain names that can used for work or personal resource
      */
-    public WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
+    @SerializedName("neutralDomainResources")
+    @Expose
+    public java.util.List<WindowsInformationProtectionResourceCollection> neutralDomainResources;
+
+    /**
+     * The Protected Apps.
+     * Protected applications can access enterprise data and the data handled by those applications are protected with encryption
+     */
+    @SerializedName("protectedApps")
+    @Expose
+    public java.util.List<WindowsInformationProtectionApp> protectedApps;
+
+    /**
+     * The Protection Under Lock Config Required.
+     * Specifies whether the protection under lock feature (also known as encrypt under pin) should be configured
+     */
+    @SerializedName("protectionUnderLockConfigRequired")
+    @Expose
+    public Boolean protectionUnderLockConfigRequired;
+
+    /**
+     * The Revoke On Unenroll Disabled.
+     * This policy controls whether to revoke the WIP keys when a device unenrolls from the management service. If set to 1 (Don't revoke keys), the keys will not be revoked and the user will continue to have access to protected files after unenrollment. If the keys are not revoked, there will be no revoked file cleanup subsequently.
+     */
+    @SerializedName("revokeOnUnenrollDisabled")
+    @Expose
+    public Boolean revokeOnUnenrollDisabled;
+
+    /**
+     * The Rights Management Services Template Id.
+     * TemplateID GUID to use for RMS encryption. The RMS template allows the IT admin to configure the details about who has access to RMS-protected file and how long they have access
+     */
+    @SerializedName("rightsManagementServicesTemplateId")
+    @Expose
+    public java.util.UUID rightsManagementServicesTemplateId;
+
+    /**
+     * The Smb Auto Encrypted File Extensions.
+     * Specifies a list of file extensions, so that files with these extensions are encrypted when copying from an SMB share within the corporate boundary
+     */
+    @SerializedName("smbAutoEncryptedFileExtensions")
+    @Expose
+    public java.util.List<WindowsInformationProtectionResourceCollection> smbAutoEncryptedFileExtensions;
+
+    /**
+     * The Assignments.
+     * Navigation property to list of security groups targeted for policy.
+     */
+    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Exempt App Locker Files.
@@ -227,10 +227,10 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
     public WindowsInformationProtectionAppLockerFileCollectionPage exemptAppLockerFiles;
 
     /**
-     * The Assignments.
-     * Navigation property to list of security groups targeted for policy.
+     * The Protected App Locker Files.
+     * Another way to input protected apps through xml files
      */
-    public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
+    public WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
 
 
     /**
@@ -272,20 +272,20 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
         rawObject = json;
 
 
-        if (json.has("protectedAppLockerFiles")) {
-            final WindowsInformationProtectionAppLockerFileCollectionResponse response = new WindowsInformationProtectionAppLockerFileCollectionResponse();
-            if (json.has("protectedAppLockerFiles@odata.nextLink")) {
-                response.nextLink = json.get("protectedAppLockerFiles@odata.nextLink").getAsString();
+        if (json.has("assignments")) {
+            final TargetedManagedAppPolicyAssignmentCollectionResponse response = new TargetedManagedAppPolicyAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), JsonObject[].class);
-            final WindowsInformationProtectionAppLockerFile[] array = new WindowsInformationProtectionAppLockerFile[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final TargetedManagedAppPolicyAssignment[] array = new TargetedManagedAppPolicyAssignment[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionAppLockerFile.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TargetedManagedAppPolicyAssignment.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            protectedAppLockerFiles = new WindowsInformationProtectionAppLockerFileCollectionPage(response, null);
+            assignments = new TargetedManagedAppPolicyAssignmentCollectionPage(response, null);
         }
 
         if (json.has("exemptAppLockerFiles")) {
@@ -304,20 +304,20 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
             exemptAppLockerFiles = new WindowsInformationProtectionAppLockerFileCollectionPage(response, null);
         }
 
-        if (json.has("assignments")) {
-            final TargetedManagedAppPolicyAssignmentCollectionResponse response = new TargetedManagedAppPolicyAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
+        if (json.has("protectedAppLockerFiles")) {
+            final WindowsInformationProtectionAppLockerFileCollectionResponse response = new WindowsInformationProtectionAppLockerFileCollectionResponse();
+            if (json.has("protectedAppLockerFiles@odata.nextLink")) {
+                response.nextLink = json.get("protectedAppLockerFiles@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final TargetedManagedAppPolicyAssignment[] array = new TargetedManagedAppPolicyAssignment[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("protectedAppLockerFiles").toString(), JsonObject[].class);
+            final WindowsInformationProtectionAppLockerFile[] array = new WindowsInformationProtectionAppLockerFile[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TargetedManagedAppPolicyAssignment.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionAppLockerFile.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            assignments = new TargetedManagedAppPolicyAssignmentCollectionPage(response, null);
+            protectedAppLockerFiles = new WindowsInformationProtectionAppLockerFileCollectionPage(response, null);
         }
     }
 }

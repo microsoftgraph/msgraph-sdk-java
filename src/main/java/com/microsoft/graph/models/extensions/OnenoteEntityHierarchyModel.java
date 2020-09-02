@@ -28,20 +28,20 @@ public class OnenoteEntityHierarchyModel extends OnenoteEntitySchemaObjectModel 
 
 
     /**
-     * The Display Name.
-     * The name of the notebook.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Created By.
      * Identity of the user, device, and application which created the item. Read-only.
      */
     @SerializedName("createdBy")
     @Expose
     public IdentitySet createdBy;
+
+    /**
+     * The Display Name.
+     * The name of the notebook.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Last Modified By.

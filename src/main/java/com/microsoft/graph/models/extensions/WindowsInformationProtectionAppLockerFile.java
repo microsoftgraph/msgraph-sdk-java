@@ -35,20 +35,20 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
     public String displayName;
 
     /**
-     * The File Hash.
-     * SHA256 hash of the file
-     */
-    @SerializedName("fileHash")
-    @Expose
-    public String fileHash;
-
-    /**
      * The File.
      * File as a byte array
      */
     @SerializedName("file")
     @Expose
     public byte[] file;
+
+    /**
+     * The File Hash.
+     * SHA256 hash of the file
+     */
+    @SerializedName("fileHash")
+    @Expose
+    public String fileHash;
 
     /**
      * The Version.

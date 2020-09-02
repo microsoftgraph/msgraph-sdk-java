@@ -27,22 +27,6 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
 
 
     /**
-     * The Unknown Device Count.
-     * Number of unknown devices
-     */
-    @SerializedName("unknownDeviceCount")
-    @Expose
-    public Integer unknownDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Number of not applicable devices
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
-
-    /**
      * The Compliant Device Count.
      * Number of compliant devices
      */
@@ -51,20 +35,12 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
     public Integer compliantDeviceCount;
 
     /**
-     * The Remediated Device Count.
-     * Number of remediated devices
+     * The Conflict Device Count.
+     * Number of conflict devices
      */
-    @SerializedName("remediatedDeviceCount")
+    @SerializedName("conflictDeviceCount")
     @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
-     * The Non Compliant Device Count.
-     * Number of NonCompliant devices
-     */
-    @SerializedName("nonCompliantDeviceCount")
-    @Expose
-    public Integer nonCompliantDeviceCount;
+    public Integer conflictDeviceCount;
 
     /**
      * The Error Device Count.
@@ -75,12 +51,36 @@ public class DeviceConfigurationDeviceStateSummary extends Entity implements IJs
     public Integer errorDeviceCount;
 
     /**
-     * The Conflict Device Count.
-     * Number of conflict devices
+     * The Non Compliant Device Count.
+     * Number of NonCompliant devices
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName("nonCompliantDeviceCount")
     @Expose
-    public Integer conflictDeviceCount;
+    public Integer nonCompliantDeviceCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Number of not applicable devices
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
+     * The Remediated Device Count.
+     * Number of remediated devices
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
+
+    /**
+     * The Unknown Device Count.
+     * Number of unknown devices
+     */
+    @SerializedName("unknownDeviceCount")
+    @Expose
+    public Integer unknownDeviceCount;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.VisualInfo;
 import com.microsoft.graph.models.generated.Status;
+import com.microsoft.graph.models.extensions.VisualInfo;
 import com.microsoft.graph.models.extensions.ActivityHistoryItem;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ActivityHistoryItemCollectionResponse;
@@ -32,12 +32,12 @@ public class UserActivity extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Visual Elements.
-     * Required. The object containing information to render the activity in the UX.
+     * The Activation Url.
+     * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
      */
-    @SerializedName("visualElements")
+    @SerializedName("activationUrl")
     @Expose
-    public VisualInfo visualElements;
+    public String activationUrl;
 
     /**
      * The Activity Source Host.
@@ -46,14 +46,6 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     @SerializedName("activitySourceHost")
     @Expose
     public String activitySourceHost;
-
-    /**
-     * The Activation Url.
-     * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
-     */
-    @SerializedName("activationUrl")
-    @Expose
-    public String activationUrl;
 
     /**
      * The App Activity Id.
@@ -70,6 +62,14 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     @SerializedName("appDisplayName")
     @Expose
     public String appDisplayName;
+
+    /**
+     * The Content Info.
+     * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
+     */
+    @SerializedName("contentInfo")
+    @Expose
+    public com.google.gson.JsonElement contentInfo;
 
     /**
      * The Content Url.
@@ -112,6 +112,14 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
+     * The Status.
+     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+     */
+    @SerializedName("status")
+    @Expose
+    public Status status;
+
+    /**
      * The User Timezone.
      * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
      */
@@ -120,20 +128,12 @@ public class UserActivity extends Entity implements IJsonBackedObject {
     public String userTimezone;
 
     /**
-     * The Content Info.
-     * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
+     * The Visual Elements.
+     * Required. The object containing information to render the activity in the UX.
      */
-    @SerializedName("contentInfo")
+    @SerializedName("visualElements")
     @Expose
-    public com.google.gson.JsonElement contentInfo;
-
-    /**
-     * The Status.
-     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     */
-    @SerializedName("status")
-    @Expose
-    public Status status;
+    public VisualInfo visualElements;
 
     /**
      * The History Items.

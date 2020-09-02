@@ -30,14 +30,6 @@ public class Conversation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Topic.
-     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-     */
-    @SerializedName("topic")
-    @Expose
-    public String topic;
-
-    /**
      * The Has Attachments.
      * Indicates whether any of the posts within this Conversation has at least one attachment.
      */
@@ -54,20 +46,28 @@ public class Conversation extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastDeliveredDateTime;
 
     /**
-     * The Unique Senders.
-     * All the users that sent a message to this Conversation.
-     */
-    @SerializedName("uniqueSenders")
-    @Expose
-    public java.util.List<String> uniqueSenders;
-
-    /**
      * The Preview.
      * A short summary from the body of the latest post in this converstaion.
      */
     @SerializedName("preview")
     @Expose
     public String preview;
+
+    /**
+     * The Topic.
+     * The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+     */
+    @SerializedName("topic")
+    @Expose
+    public String topic;
+
+    /**
+     * The Unique Senders.
+     * All the users that sent a message to this Conversation.
+     */
+    @SerializedName("uniqueSenders")
+    @Expose
+    public java.util.List<String> uniqueSenders;
 
     /**
      * The Threads.

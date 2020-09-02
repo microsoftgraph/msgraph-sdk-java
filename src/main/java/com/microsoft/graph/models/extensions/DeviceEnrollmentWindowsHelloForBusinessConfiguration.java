@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WindowsHelloForBusinessPinUsage;
 import com.microsoft.graph.models.generated.Enablement;
+import com.microsoft.graph.models.generated.WindowsHelloForBusinessPinUsage;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 
 
@@ -29,84 +29,12 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
 
     /**
-     * The Pin Minimum Length.
-     * Not yet documented
-     */
-    @SerializedName("pinMinimumLength")
-    @Expose
-    public Integer pinMinimumLength;
-
-    /**
-     * The Pin Maximum Length.
-     * Not yet documented
-     */
-    @SerializedName("pinMaximumLength")
-    @Expose
-    public Integer pinMaximumLength;
-
-    /**
-     * The Pin Uppercase Characters Usage.
-     * Not yet documented. Possible values are: allowed, required, disallowed.
-     */
-    @SerializedName("pinUppercaseCharactersUsage")
-    @Expose
-    public WindowsHelloForBusinessPinUsage pinUppercaseCharactersUsage;
-
-    /**
-     * The Pin Lowercase Characters Usage.
-     * Not yet documented. Possible values are: allowed, required, disallowed.
-     */
-    @SerializedName("pinLowercaseCharactersUsage")
-    @Expose
-    public WindowsHelloForBusinessPinUsage pinLowercaseCharactersUsage;
-
-    /**
-     * The Pin Special Characters Usage.
-     * Not yet documented. Possible values are: allowed, required, disallowed.
-     */
-    @SerializedName("pinSpecialCharactersUsage")
-    @Expose
-    public WindowsHelloForBusinessPinUsage pinSpecialCharactersUsage;
-
-    /**
-     * The State.
+     * The Enhanced Biometrics State.
      * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
-    @SerializedName("state")
+    @SerializedName("enhancedBiometricsState")
     @Expose
-    public Enablement state;
-
-    /**
-     * The Security Device Required.
-     * Not yet documented
-     */
-    @SerializedName("securityDeviceRequired")
-    @Expose
-    public Boolean securityDeviceRequired;
-
-    /**
-     * The Unlock With Biometrics Enabled.
-     * Not yet documented
-     */
-    @SerializedName("unlockWithBiometricsEnabled")
-    @Expose
-    public Boolean unlockWithBiometricsEnabled;
-
-    /**
-     * The Remote Passport Enabled.
-     * Not yet documented
-     */
-    @SerializedName("remotePassportEnabled")
-    @Expose
-    public Boolean remotePassportEnabled;
-
-    /**
-     * The Pin Previous Block Count.
-     * Not yet documented
-     */
-    @SerializedName("pinPreviousBlockCount")
-    @Expose
-    public Integer pinPreviousBlockCount;
+    public Enablement enhancedBiometricsState;
 
     /**
      * The Pin Expiration In Days.
@@ -117,12 +45,84 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     public Integer pinExpirationInDays;
 
     /**
-     * The Enhanced Biometrics State.
+     * The Pin Lowercase Characters Usage.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
+     */
+    @SerializedName("pinLowercaseCharactersUsage")
+    @Expose
+    public WindowsHelloForBusinessPinUsage pinLowercaseCharactersUsage;
+
+    /**
+     * The Pin Maximum Length.
+     * Not yet documented
+     */
+    @SerializedName("pinMaximumLength")
+    @Expose
+    public Integer pinMaximumLength;
+
+    /**
+     * The Pin Minimum Length.
+     * Not yet documented
+     */
+    @SerializedName("pinMinimumLength")
+    @Expose
+    public Integer pinMinimumLength;
+
+    /**
+     * The Pin Previous Block Count.
+     * Not yet documented
+     */
+    @SerializedName("pinPreviousBlockCount")
+    @Expose
+    public Integer pinPreviousBlockCount;
+
+    /**
+     * The Pin Special Characters Usage.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
+     */
+    @SerializedName("pinSpecialCharactersUsage")
+    @Expose
+    public WindowsHelloForBusinessPinUsage pinSpecialCharactersUsage;
+
+    /**
+     * The Pin Uppercase Characters Usage.
+     * Not yet documented. Possible values are: allowed, required, disallowed.
+     */
+    @SerializedName("pinUppercaseCharactersUsage")
+    @Expose
+    public WindowsHelloForBusinessPinUsage pinUppercaseCharactersUsage;
+
+    /**
+     * The Remote Passport Enabled.
+     * Not yet documented
+     */
+    @SerializedName("remotePassportEnabled")
+    @Expose
+    public Boolean remotePassportEnabled;
+
+    /**
+     * The Security Device Required.
+     * Not yet documented
+     */
+    @SerializedName("securityDeviceRequired")
+    @Expose
+    public Boolean securityDeviceRequired;
+
+    /**
+     * The State.
      * Not yet documented. Possible values are: notConfigured, enabled, disabled.
      */
-    @SerializedName("enhancedBiometricsState")
+    @SerializedName("state")
     @Expose
-    public Enablement enhancedBiometricsState;
+    public Enablement state;
+
+    /**
+     * The Unlock With Biometrics Enabled.
+     * Not yet documented
+     */
+    @SerializedName("unlockWithBiometricsEnabled")
+    @Expose
+    public Boolean unlockWithBiometricsEnabled;
 
 
     /**

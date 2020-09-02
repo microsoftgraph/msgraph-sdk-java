@@ -30,20 +30,12 @@ public class Segment extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Start Date Time.
-     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Callee.
+     * Endpoint that answered this segment.
      */
-    @SerializedName("startDateTime")
+    @SerializedName("callee")
     @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
+    public Endpoint callee;
 
     /**
      * The Caller.
@@ -54,12 +46,12 @@ public class Segment extends Entity implements IJsonBackedObject {
     public Endpoint caller;
 
     /**
-     * The Callee.
-     * Endpoint that answered this segment.
+     * The End Date Time.
+     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("callee")
+    @SerializedName("endDateTime")
     @Expose
-    public Endpoint callee;
+    public java.util.Calendar endDateTime;
 
     /**
      * The Failure Info.
@@ -76,6 +68,14 @@ public class Segment extends Entity implements IJsonBackedObject {
     @SerializedName("media")
     @Expose
     public java.util.List<Media> media;
+
+    /**
+     * The Start Date Time.
+     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
 
     /**

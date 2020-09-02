@@ -9,16 +9,16 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
 import java.util.Arrays;
@@ -53,18 +53,6 @@ public interface IWorkbookRequestBuilder extends IRequestBuilder {
      */
     IWorkbookApplicationRequestBuilder application();
 
-    IWorkbookNamedItemCollectionRequestBuilder names();
-
-    IWorkbookNamedItemRequestBuilder names(final String id);
-
-    IWorkbookTableCollectionRequestBuilder tables();
-
-    IWorkbookTableRequestBuilder tables(final String id);
-
-    IWorkbookWorksheetCollectionRequestBuilder worksheets();
-
-    IWorkbookWorksheetRequestBuilder worksheets(final String id);
-
     IWorkbookCommentCollectionRequestBuilder comments();
 
     IWorkbookCommentRequestBuilder comments(final String id);
@@ -76,11 +64,23 @@ public interface IWorkbookRequestBuilder extends IRequestBuilder {
      */
     IWorkbookFunctionsRequestBuilder functions();
 
+    IWorkbookNamedItemCollectionRequestBuilder names();
+
+    IWorkbookNamedItemRequestBuilder names(final String id);
+
     IWorkbookOperationCollectionRequestBuilder operations();
 
     IWorkbookOperationRequestBuilder operations(final String id);
-    IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);
+
+    IWorkbookTableCollectionRequestBuilder tables();
+
+    IWorkbookTableRequestBuilder tables(final String id);
+
+    IWorkbookWorksheetCollectionRequestBuilder worksheets();
+
+    IWorkbookWorksheetRequestBuilder worksheets(final String id);
     IWorkbookCloseSessionRequestBuilder closeSession();
+    IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges);
     IWorkbookRefreshSessionRequestBuilder refreshSession();
     IWorkbookSessionInfoResourceRequestBuilder sessionInfoResource(final String key);
 

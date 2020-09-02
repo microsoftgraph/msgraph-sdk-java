@@ -36,20 +36,20 @@ public class VppLicensingType implements IJsonBackedObject {
     }
 
     /**
-     * The Supports User Licensing.
-     * Whether the program supports the user licensing type.
-     */
-    @SerializedName("supportsUserLicensing")
-    @Expose
-    public Boolean supportsUserLicensing;
-
-    /**
      * The Supports Device Licensing.
      * Whether the program supports the device licensing type.
      */
     @SerializedName("supportsDeviceLicensing")
     @Expose
     public Boolean supportsDeviceLicensing;
+
+    /**
+     * The Supports User Licensing.
+     * Whether the program supports the user licensing type.
+     */
+    @SerializedName("supportsUserLicensing")
+    @Expose
+    public Boolean supportsUserLicensing;
 
 
     /**

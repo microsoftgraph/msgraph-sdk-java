@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
+import com.microsoft.graph.models.generated.RatingAppsType;
 import com.microsoft.graph.models.extensions.MediaContentRatingAustralia;
 import com.microsoft.graph.models.extensions.MediaContentRatingCanada;
 import com.microsoft.graph.models.extensions.MediaContentRatingFrance;
@@ -20,7 +21,6 @@ import com.microsoft.graph.models.extensions.MediaContentRatingNewZealand;
 import com.microsoft.graph.models.extensions.MediaContentRatingUnitedKingdom;
 import com.microsoft.graph.models.extensions.MediaContentRatingUnitedStates;
 import com.microsoft.graph.models.extensions.IosNetworkUsageRule;
-import com.microsoft.graph.models.generated.RatingAppsType;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.generated.WebBrowserCookieSettings;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
@@ -82,6 +82,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean airPlayForcePairingPasswordForOutgoingRequests;
 
     /**
+     * The Apple News Blocked.
+     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
+     */
+    @SerializedName("appleNewsBlocked")
+    @Expose
+    public Boolean appleNewsBlocked;
+
+    /**
      * The Apple Watch Block Pairing.
      * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      */
@@ -98,36 +106,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean appleWatchForceWristDetection;
 
     /**
-     * The Apple News Blocked.
-     * Indicates whether or not to block the user from using News when the device is in supervised mode (iOS 9.0 and later).
-     */
-    @SerializedName("appleNewsBlocked")
-    @Expose
-    public Boolean appleNewsBlocked;
-
-    /**
      * The Apps Single App Mode List.
      * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later. This collection can contain a maximum of 500 elements.
      */
     @SerializedName("appsSingleAppModeList")
     @Expose
     public java.util.List<AppListItem> appsSingleAppModeList;
-
-    /**
-     * The Apps Visibility List.
-     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("appsVisibilityList")
-    @Expose
-    public java.util.List<AppListItem> appsVisibilityList;
-
-    /**
-     * The Apps Visibility List Type.
-     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
-     */
-    @SerializedName("appsVisibilityListType")
-    @Expose
-    public AppListType appsVisibilityListType;
 
     /**
      * The App Store Block Automatic Downloads.
@@ -168,6 +152,22 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("appStoreRequirePassword")
     @Expose
     public Boolean appStoreRequirePassword;
+
+    /**
+     * The Apps Visibility List.
+     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("appsVisibilityList")
+    @Expose
+    public java.util.List<AppListItem> appsVisibilityList;
+
+    /**
+     * The Apps Visibility List Type.
+     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     */
+    @SerializedName("appsVisibilityListType")
+    @Expose
+    public AppListType appsVisibilityListType;
 
     /**
      * The Bluetooth Block Modification.
@@ -250,20 +250,20 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean classroomAppForceUnpromptedScreenObservation;
 
     /**
-     * The Compliant Apps List.
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("compliantAppsList")
-    @Expose
-    public java.util.List<AppListItem> compliantAppsList;
-
-    /**
      * The Compliant App List Type.
      * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
     @SerializedName("compliantAppListType")
     @Expose
     public AppListType compliantAppListType;
+
+    /**
+     * The Compliant Apps List.
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("compliantAppsList")
+    @Expose
+    public java.util.List<AppListItem> compliantAppsList;
 
     /**
      * The Configuration Profile Block Changes.
@@ -378,6 +378,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean findMyFriendsBlocked;
 
     /**
+     * The Game Center Blocked.
+     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
+     */
+    @SerializedName("gameCenterBlocked")
+    @Expose
+    public Boolean gameCenterBlocked;
+
+    /**
      * The Gaming Block Game Center Friends.
      * Indicates whether or not to block the user from having friends in Game Center.
      */
@@ -392,14 +400,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("gamingBlockMultiplayer")
     @Expose
     public Boolean gamingBlockMultiplayer;
-
-    /**
-     * The Game Center Blocked.
-     * Indicates whether or not to block the user from using Game Center when the device is in supervised mode.
-     */
-    @SerializedName("gameCenterBlocked")
-    @Expose
-    public Boolean gameCenterBlocked;
 
     /**
      * The Host Pairing Blocked.
@@ -658,6 +658,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public String kioskModeBuiltInAppId;
 
     /**
+     * The Kiosk Mode Managed App Id.
+     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
+     */
+    @SerializedName("kioskModeManagedAppId")
+    @Expose
+    public String kioskModeManagedAppId;
+
+    /**
      * The Kiosk Mode Require Assistive Touch.
      * Indicates whether or not to require assistive touch while in kiosk mode.
      */
@@ -698,14 +706,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean kioskModeRequireZoom;
 
     /**
-     * The Kiosk Mode Managed App Id.
-     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will be ignored.
-     */
-    @SerializedName("kioskModeManagedAppId")
-    @Expose
-    public String kioskModeManagedAppId;
-
-    /**
      * The Lock Screen Block Control Center.
      * Indicates whether or not to block the user from using control center on the lock screen.
      */
@@ -736,6 +736,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("lockScreenBlockTodayView")
     @Expose
     public Boolean lockScreenBlockTodayView;
+
+    /**
+     * The Media Content Rating Apps.
+     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     */
+    @SerializedName("mediaContentRatingApps")
+    @Expose
+    public RatingAppsType mediaContentRatingApps;
 
     /**
      * The Media Content Rating Australia.
@@ -810,28 +818,20 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public MediaContentRatingUnitedStates mediaContentRatingUnitedStates;
 
     /**
-     * The Network Usage Rules.
-     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
-     */
-    @SerializedName("networkUsageRules")
-    @Expose
-    public java.util.List<IosNetworkUsageRule> networkUsageRules;
-
-    /**
-     * The Media Content Rating Apps.
-     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
-     */
-    @SerializedName("mediaContentRatingApps")
-    @Expose
-    public RatingAppsType mediaContentRatingApps;
-
-    /**
      * The Messages Blocked.
      * Indicates whether or not to block the user from using the Messages app on the supervised device.
      */
     @SerializedName("messagesBlocked")
     @Expose
     public Boolean messagesBlocked;
+
+    /**
+     * The Network Usage Rules.
+     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000 elements.
+     */
+    @SerializedName("networkUsageRules")
+    @Expose
+    public java.util.List<IosNetworkUsageRule> networkUsageRules;
 
     /**
      * The Notifications Block Settings Modification.
@@ -842,20 +842,20 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean notificationsBlockSettingsModification;
 
     /**
-     * The Passcode Block Fingerprint Unlock.
-     * Indicates whether or not to block fingerprint unlock.
-     */
-    @SerializedName("passcodeBlockFingerprintUnlock")
-    @Expose
-    public Boolean passcodeBlockFingerprintUnlock;
-
-    /**
      * The Passcode Block Fingerprint Modification.
      * Block modification of registered Touch ID fingerprints when in supervised mode.
      */
     @SerializedName("passcodeBlockFingerprintModification")
     @Expose
     public Boolean passcodeBlockFingerprintModification;
+
+    /**
+     * The Passcode Block Fingerprint Unlock.
+     * Indicates whether or not to block fingerprint unlock.
+     */
+    @SerializedName("passcodeBlockFingerprintUnlock")
+    @Expose
+    public Boolean passcodeBlockFingerprintUnlock;
 
     /**
      * The Passcode Block Modification.
@@ -882,6 +882,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Integer passcodeExpirationDays;
 
     /**
+     * The Passcode Minimum Character Set Count.
+     * Number of character sets a passcode must contain. Valid values 0 to 4
+     */
+    @SerializedName("passcodeMinimumCharacterSetCount")
+    @Expose
+    public Integer passcodeMinimumCharacterSetCount;
+
+    /**
      * The Passcode Minimum Length.
      * Minimum length of passcode. Valid values 4 to 14
      */
@@ -906,14 +914,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
 
     /**
-     * The Passcode Minimum Character Set Count.
-     * Number of character sets a passcode must contain. Valid values 0 to 4
-     */
-    @SerializedName("passcodeMinimumCharacterSetCount")
-    @Expose
-    public Integer passcodeMinimumCharacterSetCount;
-
-    /**
      * The Passcode Previous Passcode Block Count.
      * Number of previous passcodes to block. Valid values 1 to 24
      */
@@ -922,12 +922,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Integer passcodePreviousPasscodeBlockCount;
 
     /**
-     * The Passcode Sign In Failure Count Before Wipe.
-     * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
+     * The Passcode Required.
+     * Indicates whether or not to require a passcode.
      */
-    @SerializedName("passcodeSignInFailureCountBeforeWipe")
+    @SerializedName("passcodeRequired")
     @Expose
-    public Integer passcodeSignInFailureCountBeforeWipe;
+    public Boolean passcodeRequired;
 
     /**
      * The Passcode Required Type.
@@ -938,12 +938,12 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public RequiredPasswordType passcodeRequiredType;
 
     /**
-     * The Passcode Required.
-     * Indicates whether or not to require a passcode.
+     * The Passcode Sign In Failure Count Before Wipe.
+     * Number of sign in failures allowed before wiping the device. Valid values 4 to 11
      */
-    @SerializedName("passcodeRequired")
+    @SerializedName("passcodeSignInFailureCountBeforeWipe")
     @Expose
-    public Boolean passcodeRequired;
+    public Integer passcodeSignInFailureCountBeforeWipe;
 
     /**
      * The Podcasts Blocked.
@@ -962,6 +962,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean safariBlockAutofill;
 
     /**
+     * The Safari Blocked.
+     * Indicates whether or not to block the user from using Safari.
+     */
+    @SerializedName("safariBlocked")
+    @Expose
+    public Boolean safariBlocked;
+
+    /**
      * The Safari Block Java Script.
      * Indicates whether or not to block JavaScript in Safari.
      */
@@ -976,14 +984,6 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @SerializedName("safariBlockPopups")
     @Expose
     public Boolean safariBlockPopups;
-
-    /**
-     * The Safari Blocked.
-     * Indicates whether or not to block the user from using Safari.
-     */
-    @SerializedName("safariBlocked")
-    @Expose
-    public Boolean safariBlocked;
 
     /**
      * The Safari Cookie Settings.

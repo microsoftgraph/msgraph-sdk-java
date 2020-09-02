@@ -37,28 +37,20 @@ public class RecurrenceRange implements IJsonBackedObject {
     }
 
     /**
-     * The Type.
-     * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
-     */
-    @SerializedName("type")
-    @Expose
-    public RecurrenceRangeType type;
-
-    /**
-     * The Start Date.
-     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
-     */
-    @SerializedName("startDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly startDate;
-
-    /**
      * The End Date.
      * The date to stop applying the recurrence pattern. Depending on the recurrence pattern of the event, the last occurrence of the meeting may not be this date. Required if type is endDate.
      */
     @SerializedName("endDate")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly endDate;
+
+    /**
+     * The Number Of Occurrences.
+     * The number of times to repeat the event. Required and must be positive if type is numbered.
+     */
+    @SerializedName("numberOfOccurrences")
+    @Expose
+    public Integer numberOfOccurrences;
 
     /**
      * The Recurrence Time Zone.
@@ -69,12 +61,20 @@ public class RecurrenceRange implements IJsonBackedObject {
     public String recurrenceTimeZone;
 
     /**
-     * The Number Of Occurrences.
-     * The number of times to repeat the event. Required and must be positive if type is numbered.
+     * The Start Date.
+     * The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the start property of the recurring event. Required.
      */
-    @SerializedName("numberOfOccurrences")
+    @SerializedName("startDate")
     @Expose
-    public Integer numberOfOccurrences;
+    public com.microsoft.graph.models.extensions.DateOnly startDate;
+
+    /**
+     * The Type.
+     * The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
+     */
+    @SerializedName("type")
+    @Expose
+    public RecurrenceRangeType type;
 
 
     /**

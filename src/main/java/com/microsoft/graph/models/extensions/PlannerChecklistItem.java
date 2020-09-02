@@ -45,22 +45,6 @@ public class PlannerChecklistItem implements IJsonBackedObject {
     public Boolean isChecked;
 
     /**
-     * The Title.
-     * Title of the checklist item
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
-
-    /**
-     * The Order Hint.
-     * Used to set the relative order of items in the checklist. The format is defined as outlined here.
-     */
-    @SerializedName("orderHint")
-    @Expose
-    public String orderHint;
-
-    /**
      * The Last Modified By.
      * Read-only. User ID by which this is last modified.
      */
@@ -75,6 +59,22 @@ public class PlannerChecklistItem implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Order Hint.
+     * Used to set the relative order of items in the checklist. The format is defined as outlined here.
+     */
+    @SerializedName("orderHint")
+    @Expose
+    public String orderHint;
+
+    /**
+     * The Title.
+     * Title of the checklist item
+     */
+    @SerializedName("title")
+    @Expose
+    public String title;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.OperationStatus;
 import com.microsoft.graph.models.extensions.ResultInfo;
+import com.microsoft.graph.models.generated.OperationStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,14 +29,6 @@ public class CommsOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * Possible values are: notStarted, running, completed, failed. Read-only.
-     */
-    @SerializedName("status")
-    @Expose
-    public OperationStatus status;
-
-    /**
      * The Client Context.
      * Unique Client Context string. Max limit is 256 chars.
      */
@@ -51,6 +43,14 @@ public class CommsOperation extends Entity implements IJsonBackedObject {
     @SerializedName("resultInfo")
     @Expose
     public ResultInfo resultInfo;
+
+    /**
+     * The Status.
+     * Possible values are: notStarted, running, completed, failed. Read-only.
+     */
+    @SerializedName("status")
+    @Expose
+    public OperationStatus status;
 
 
     /**

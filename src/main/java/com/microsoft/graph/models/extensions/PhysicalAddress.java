@@ -36,28 +36,12 @@ public class PhysicalAddress implements IJsonBackedObject {
     }
 
     /**
-     * The Street.
-     * The street.
-     */
-    @SerializedName("street")
-    @Expose
-    public String street;
-
-    /**
      * The City.
      * The city.
      */
     @SerializedName("city")
     @Expose
     public String city;
-
-    /**
-     * The State.
-     * The state.
-     */
-    @SerializedName("state")
-    @Expose
-    public String state;
 
     /**
      * The Country Or Region.
@@ -74,6 +58,22 @@ public class PhysicalAddress implements IJsonBackedObject {
     @SerializedName("postalCode")
     @Expose
     public String postalCode;
+
+    /**
+     * The State.
+     * The state.
+     */
+    @SerializedName("state")
+    @Expose
+    public String state;
+
+    /**
+     * The Street.
+     * The street.
+     */
+    @SerializedName("street")
+    @Expose
+    public String street;
 
 
     /**

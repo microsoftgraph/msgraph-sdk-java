@@ -46,20 +46,20 @@ public class ShiftAvailability implements IJsonBackedObject {
     public PatternedRecurrence recurrence;
 
     /**
-     * The Time Zone.
-     * Specifies the time zone for the indicated time.
-     */
-    @SerializedName("timeZone")
-    @Expose
-    public String timeZone;
-
-    /**
      * The Time Slots.
      * The time slot(s) preferred by the user.
      */
     @SerializedName("timeSlots")
     @Expose
     public java.util.List<TimeRange> timeSlots;
+
+    /**
+     * The Time Zone.
+     * Specifies the time zone for the indicated time.
+     */
+    @SerializedName("timeZone")
+    @Expose
+    public String timeZone;
 
 
     /**

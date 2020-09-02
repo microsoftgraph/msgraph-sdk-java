@@ -29,38 +29,6 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
 
 
     /**
-     * The Managed Device Identifier.
-     * Device identifier created or collected by Intune.
-     */
-    @SerializedName("managedDeviceIdentifier")
-    @Expose
-    public String managedDeviceIdentifier;
-
-    /**
-     * The Operating System.
-     * Operating System.
-     */
-    @SerializedName("operatingSystem")
-    @Expose
-    public String operatingSystem;
-
-    /**
-     * The Os Version.
-     * OS Version.
-     */
-    @SerializedName("osVersion")
-    @Expose
-    public String osVersion;
-
-    /**
-     * The User Id.
-     * Identifier for the user that tried to enroll the device.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Device Id.
      * Azure AD device identifier.
      */
@@ -91,6 +59,38 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
     @SerializedName("failureReason")
     @Expose
     public String failureReason;
+
+    /**
+     * The Managed Device Identifier.
+     * Device identifier created or collected by Intune.
+     */
+    @SerializedName("managedDeviceIdentifier")
+    @Expose
+    public String managedDeviceIdentifier;
+
+    /**
+     * The Operating System.
+     * Operating System.
+     */
+    @SerializedName("operatingSystem")
+    @Expose
+    public String operatingSystem;
+
+    /**
+     * The Os Version.
+     * OS Version.
+     */
+    @SerializedName("osVersion")
+    @Expose
+    public String osVersion;
+
+    /**
+     * The User Id.
+     * Identifier for the user that tried to enroll the device.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
 
     /**

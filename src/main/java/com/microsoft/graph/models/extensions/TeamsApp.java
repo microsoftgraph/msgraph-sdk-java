@@ -31,14 +31,6 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The External Id.
-     * The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
-     */
-    @SerializedName("externalId")
-    @Expose
-    public String externalId;
-
-    /**
      * The Display Name.
      * The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
      */
@@ -53,6 +45,14 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
     @SerializedName("distributionMethod")
     @Expose
     public TeamsAppDistributionMethod distributionMethod;
+
+    /**
+     * The External Id.
+     * The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
+     */
+    @SerializedName("externalId")
+    @Expose
+    public String externalId;
 
     /**
      * The App Definitions.

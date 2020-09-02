@@ -45,20 +45,20 @@ public class WorkbookOperationError implements IJsonBackedObject {
     public String code;
 
     /**
-     * The Message.
-     * The error message.
-     */
-    @SerializedName("message")
-    @Expose
-    public String message;
-
-    /**
      * The Inner Error.
      * 
      */
     @SerializedName("innerError")
     @Expose
     public WorkbookOperationError innerError;
+
+    /**
+     * The Message.
+     * The error message.
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
 
 
     /**

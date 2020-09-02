@@ -9,22 +9,22 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
@@ -70,6 +70,20 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
     }
 
 
+    public IAttachmentCollectionRequestBuilder attachments() {
+        return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
+    }
+
+    public IAttachmentRequestBuilder attachments(final String id) {
+        return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
+    }
+    public IExtensionCollectionRequestBuilder extensions() {
+        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    }
+
+    public IExtensionRequestBuilder extensions(final String id) {
+        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Post
@@ -79,13 +93,6 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
     public IPostRequestBuilder inReplyTo() {
         return new PostRequestBuilder(getRequestUrlWithAdditionalSegment("inReplyTo"), getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
-        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
-    }
-
-    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
-        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
-    }
     public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
@@ -93,26 +100,19 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
     public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder extensions() {
-        return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
+    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+        return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
-        return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
-    }
-    public IAttachmentCollectionRequestBuilder attachments() {
-        return new AttachmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attachments"), getClient(), null);
-    }
-
-    public IAttachmentRequestBuilder attachments(final String id) {
-        return new AttachmentRequestBuilder(getRequestUrlWithAdditionalSegment("attachments") + "/" + id, getClient(), null);
-    }
-
-    public IPostReplyRequestBuilder reply(final Post post) {
-        return new PostReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
+    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+        return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
 
     public IPostForwardRequestBuilder forward(final String comment, final java.util.List<Recipient> toRecipients) {
         return new PostForwardRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.forward"), getClient(), null, comment, toRecipients);
+    }
+
+    public IPostReplyRequestBuilder reply(final Post post) {
+        return new PostReplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reply"), getClient(), null, post);
     }
 }

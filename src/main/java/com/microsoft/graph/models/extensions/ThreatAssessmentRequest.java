@@ -8,12 +8,12 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ThreatAssessmentContentType;
-import com.microsoft.graph.models.generated.ThreatExpectedAssessment;
 import com.microsoft.graph.models.generated.ThreatCategory;
-import com.microsoft.graph.models.generated.ThreatAssessmentStatus;
-import com.microsoft.graph.models.generated.ThreatAssessmentRequestSource;
+import com.microsoft.graph.models.generated.ThreatAssessmentContentType;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.ThreatExpectedAssessment;
+import com.microsoft.graph.models.generated.ThreatAssessmentRequestSource;
+import com.microsoft.graph.models.generated.ThreatAssessmentStatus;
 import com.microsoft.graph.models.extensions.ThreatAssessmentResult;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ThreatAssessmentResultCollectionResponse;
@@ -36,12 +36,12 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * The Category.
+     * The threat category. Possible values are: spam, phishing, malware.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("category")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public ThreatCategory category;
 
     /**
      * The Content Type.
@@ -52,28 +52,28 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
     public ThreatAssessmentContentType contentType;
 
     /**
+     * The Created By.
+     * The threat assessment request creator.
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The Created Date Time.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
      * The Expected Assessment.
      * The expected assessment from submitter. Possible values are: block, unblock.
      */
     @SerializedName("expectedAssessment")
     @Expose
     public ThreatExpectedAssessment expectedAssessment;
-
-    /**
-     * The Category.
-     * The threat category. Possible values are: spam, phishing, malware.
-     */
-    @SerializedName("category")
-    @Expose
-    public ThreatCategory category;
-
-    /**
-     * The Status.
-     * The assessment process status. Possible values are: pending, completed.
-     */
-    @SerializedName("status")
-    @Expose
-    public ThreatAssessmentStatus status;
 
     /**
      * The Request Source.
@@ -84,12 +84,12 @@ public class ThreatAssessmentRequest extends Entity implements IJsonBackedObject
     public ThreatAssessmentRequestSource requestSource;
 
     /**
-     * The Created By.
-     * The threat assessment request creator.
+     * The Status.
+     * The assessment process status. Possible values are: pending, completed.
      */
-    @SerializedName("createdBy")
+    @SerializedName("status")
     @Expose
-    public IdentitySet createdBy;
+    public ThreatAssessmentStatus status;
 
     /**
      * The Results.

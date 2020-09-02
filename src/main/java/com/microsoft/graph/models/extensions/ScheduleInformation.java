@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ScheduleItem;
 import com.microsoft.graph.models.extensions.FreeBusyError;
+import com.microsoft.graph.models.extensions.ScheduleItem;
 import com.microsoft.graph.models.extensions.WorkingHours;
 
 
@@ -39,22 +39,6 @@ public class ScheduleInformation implements IJsonBackedObject {
     }
 
     /**
-     * The Schedule Id.
-     * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-     */
-    @SerializedName("scheduleId")
-    @Expose
-    public String scheduleId;
-
-    /**
-     * The Schedule Items.
-     * Contains the items that describe the availability of the user or resource.
-     */
-    @SerializedName("scheduleItems")
-    @Expose
-    public java.util.List<ScheduleItem> scheduleItems;
-
-    /**
      * The Availability View.
      * Represents a merged view of availability of all the items in scheduleItems. The view consists of time slots. Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working elsewhere.
      */
@@ -69,6 +53,22 @@ public class ScheduleInformation implements IJsonBackedObject {
     @SerializedName("error")
     @Expose
     public FreeBusyError error;
+
+    /**
+     * The Schedule Id.
+     * An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
+     */
+    @SerializedName("scheduleId")
+    @Expose
+    public String scheduleId;
+
+    /**
+     * The Schedule Items.
+     * Contains the items that describe the availability of the user or resource.
+     */
+    @SerializedName("scheduleItems")
+    @Expose
+    public java.util.List<ScheduleItem> scheduleItems;
 
     /**
      * The Working Hours.

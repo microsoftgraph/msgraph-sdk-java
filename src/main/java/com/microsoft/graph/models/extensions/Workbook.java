@@ -9,23 +9,23 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookApplication;
-import com.microsoft.graph.models.extensions.WorkbookNamedItem;
-import com.microsoft.graph.models.extensions.WorkbookTable;
-import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
+import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.models.extensions.WorkbookOperation;
+import com.microsoft.graph.models.extensions.WorkbookTable;
+import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
-import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
-import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
-import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -52,24 +52,6 @@ public class Workbook extends Entity implements IJsonBackedObject {
     public WorkbookApplication application;
 
     /**
-     * The Names.
-     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
-     */
-    public WorkbookNamedItemCollectionPage names;
-
-    /**
-     * The Tables.
-     * Represents a collection of tables associated with the workbook. Read-only.
-     */
-    public WorkbookTableCollectionPage tables;
-
-    /**
-     * The Worksheets.
-     * Represents a collection of worksheets associated with the workbook. Read-only.
-     */
-    public WorkbookWorksheetCollectionPage worksheets;
-
-    /**
      * The Comments.
      * 
      */
@@ -84,10 +66,28 @@ public class Workbook extends Entity implements IJsonBackedObject {
     public WorkbookFunctions functions;
 
     /**
+     * The Names.
+     * Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
+     */
+    public WorkbookNamedItemCollectionPage names;
+
+    /**
      * The Operations.
      * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
      */
     public WorkbookOperationCollectionPage operations;
+
+    /**
+     * The Tables.
+     * Represents a collection of tables associated with the workbook. Read-only.
+     */
+    public WorkbookTableCollectionPage tables;
+
+    /**
+     * The Worksheets.
+     * Represents a collection of worksheets associated with the workbook. Read-only.
+     */
+    public WorkbookWorksheetCollectionPage worksheets;
 
 
     /**
@@ -129,6 +129,22 @@ public class Workbook extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("comments")) {
+            final WorkbookCommentCollectionResponse response = new WorkbookCommentCollectionResponse();
+            if (json.has("comments@odata.nextLink")) {
+                response.nextLink = json.get("comments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("comments").toString(), JsonObject[].class);
+            final WorkbookComment[] array = new WorkbookComment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookComment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            comments = new WorkbookCommentCollectionPage(response, null);
+        }
+
         if (json.has("names")) {
             final WorkbookNamedItemCollectionResponse response = new WorkbookNamedItemCollectionResponse();
             if (json.has("names@odata.nextLink")) {
@@ -143,6 +159,22 @@ public class Workbook extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             names = new WorkbookNamedItemCollectionPage(response, null);
+        }
+
+        if (json.has("operations")) {
+            final WorkbookOperationCollectionResponse response = new WorkbookOperationCollectionResponse();
+            if (json.has("operations@odata.nextLink")) {
+                response.nextLink = json.get("operations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
+            final WorkbookOperation[] array = new WorkbookOperation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookOperation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            operations = new WorkbookOperationCollectionPage(response, null);
         }
 
         if (json.has("tables")) {
@@ -175,38 +207,6 @@ public class Workbook extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             worksheets = new WorkbookWorksheetCollectionPage(response, null);
-        }
-
-        if (json.has("comments")) {
-            final WorkbookCommentCollectionResponse response = new WorkbookCommentCollectionResponse();
-            if (json.has("comments@odata.nextLink")) {
-                response.nextLink = json.get("comments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("comments").toString(), JsonObject[].class);
-            final WorkbookComment[] array = new WorkbookComment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookComment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            comments = new WorkbookCommentCollectionPage(response, null);
-        }
-
-        if (json.has("operations")) {
-            final WorkbookOperationCollectionResponse response = new WorkbookOperationCollectionResponse();
-            if (json.has("operations@odata.nextLink")) {
-                response.nextLink = json.get("operations@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
-            final WorkbookOperation[] array = new WorkbookOperation[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookOperation.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            operations = new WorkbookOperationCollectionPage(response, null);
         }
     }
 }

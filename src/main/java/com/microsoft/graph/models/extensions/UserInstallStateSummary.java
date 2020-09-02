@@ -30,12 +30,12 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
 
 
     /**
-     * The User Name.
-     * User name.
+     * The Failed Device Count.
+     * Failed Device Count.
      */
-    @SerializedName("userName")
+    @SerializedName("failedDeviceCount")
     @Expose
-    public String userName;
+    public Integer failedDeviceCount;
 
     /**
      * The Installed Device Count.
@@ -46,20 +46,20 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
     public Integer installedDeviceCount;
 
     /**
-     * The Failed Device Count.
-     * Failed Device Count.
-     */
-    @SerializedName("failedDeviceCount")
-    @Expose
-    public Integer failedDeviceCount;
-
-    /**
      * The Not Installed Device Count.
      * Not installed device count.
      */
     @SerializedName("notInstalledDeviceCount")
     @Expose
     public Integer notInstalledDeviceCount;
+
+    /**
+     * The User Name.
+     * User name.
+     */
+    @SerializedName("userName")
+    @Expose
+    public String userName;
 
     /**
      * The Device States.

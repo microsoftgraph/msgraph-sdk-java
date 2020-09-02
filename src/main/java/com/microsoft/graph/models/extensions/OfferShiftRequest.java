@@ -27,14 +27,6 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
 
 
     /**
-     * The Recipient Action Message.
-     * Custom message sent by recipient of the offer shift request.
-     */
-    @SerializedName("recipientActionMessage")
-    @Expose
-    public String recipientActionMessage;
-
-    /**
      * The Recipient Action Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
@@ -43,12 +35,12 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
     public java.util.Calendar recipientActionDateTime;
 
     /**
-     * The Sender Shift Id.
-     * User ID of the sender of the offer shift request.
+     * The Recipient Action Message.
+     * Custom message sent by recipient of the offer shift request.
      */
-    @SerializedName("senderShiftId")
+    @SerializedName("recipientActionMessage")
     @Expose
-    public String senderShiftId;
+    public String recipientActionMessage;
 
     /**
      * The Recipient User Id.
@@ -57,6 +49,14 @@ public class OfferShiftRequest extends ScheduleChangeRequest implements IJsonBac
     @SerializedName("recipientUserId")
     @Expose
     public String recipientUserId;
+
+    /**
+     * The Sender Shift Id.
+     * User ID of the sender of the offer shift request.
+     */
+    @SerializedName("senderShiftId")
+    @Expose
+    public String senderShiftId;
 
 
     /**

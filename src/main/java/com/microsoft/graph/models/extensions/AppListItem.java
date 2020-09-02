@@ -36,6 +36,22 @@ public class AppListItem implements IJsonBackedObject {
     }
 
     /**
+     * The App Id.
+     * The application or bundle identifier of the application
+     */
+    @SerializedName("appId")
+    @Expose
+    public String appId;
+
+    /**
+     * The App Store Url.
+     * The Store URL of the application
+     */
+    @SerializedName("appStoreUrl")
+    @Expose
+    public String appStoreUrl;
+
+    /**
      * The Name.
      * The application name
      */
@@ -50,22 +66,6 @@ public class AppListItem implements IJsonBackedObject {
     @SerializedName("publisher")
     @Expose
     public String publisher;
-
-    /**
-     * The App Store Url.
-     * The Store URL of the application
-     */
-    @SerializedName("appStoreUrl")
-    @Expose
-    public String appStoreUrl;
-
-    /**
-     * The App Id.
-     * The application or bundle identifier of the application
-     */
-    @SerializedName("appId")
-    @Expose
-    public String appId;
 
 
     /**

@@ -37,12 +37,12 @@ public class Phone implements IJsonBackedObject {
     }
 
     /**
-     * The Type.
-     * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
+     * The Language.
+     * 
      */
-    @SerializedName("type")
+    @SerializedName("language")
     @Expose
-    public PhoneType type;
+    public String language;
 
     /**
      * The Number.
@@ -61,12 +61,12 @@ public class Phone implements IJsonBackedObject {
     public String region;
 
     /**
-     * The Language.
-     * 
+     * The Type.
+     * The type of phone number. The possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      */
-    @SerializedName("language")
+    @SerializedName("type")
     @Expose
-    public String language;
+    public PhoneType type;
 
 
     /**

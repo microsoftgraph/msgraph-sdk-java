@@ -28,20 +28,20 @@ public class GroupSettingTemplate extends DirectoryObject implements IJsonBacked
 
 
     /**
-     * The Display Name.
-     * Display name of the template.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Description of the template.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * Display name of the template.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Values.

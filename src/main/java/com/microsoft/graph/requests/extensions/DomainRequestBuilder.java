@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,6 +59,13 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
     }
 
 
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
+    }
+
+    public IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
+    }
     public IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceConfigurationRecords"), getClient(), null);
     }
@@ -72,13 +79,6 @@ public class DomainRequestBuilder extends BaseRequestBuilder implements IDomainR
 
     public IDomainDnsRecordRequestBuilder verificationDnsRecords(final String id) {
         return new DomainDnsRecordRequestBuilder(getRequestUrlWithAdditionalSegment("verificationDnsRecords") + "/" + id, getClient(), null);
-    }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences() {
-        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences"), getClient(), null);
-    }
-
-    public IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id) {
-        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("domainNameReferences") + "/" + id, getClient(), null);
     }
 
     public IDomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts) {

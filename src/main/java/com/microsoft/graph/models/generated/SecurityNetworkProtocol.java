@@ -19,6 +19,10 @@ public enum SecurityNetworkProtocol
     */
     ICMP,
     /**
+    * unknown
+    */
+    UNKNOWN,
+    /**
     * igmp
     */
     IGMP,
@@ -102,10 +106,6 @@ public enum SecurityNetworkProtocol
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
     /**
     * For SecurityNetworkProtocol values that were not expected from the service
     */

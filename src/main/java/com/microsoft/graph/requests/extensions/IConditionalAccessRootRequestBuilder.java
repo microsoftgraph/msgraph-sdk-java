@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,12 +37,12 @@ public interface IConditionalAccessRootRequestBuilder extends IRequestBuilder {
     IConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IConditionalAccessPolicyCollectionRequestBuilder policies();
-
-    IConditionalAccessPolicyRequestBuilder policies(final String id);
-
     INamedLocationCollectionRequestBuilder namedLocations();
 
     INamedLocationRequestBuilder namedLocations(final String id);
+
+    IConditionalAccessPolicyCollectionRequestBuilder policies();
+
+    IConditionalAccessPolicyRequestBuilder policies(final String id);
 
 }

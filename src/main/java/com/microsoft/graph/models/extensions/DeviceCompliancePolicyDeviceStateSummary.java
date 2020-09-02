@@ -27,12 +27,12 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
 
 
     /**
-     * The In Grace Period Count.
-     * Number of devices that are in grace period
+     * The Compliant Device Count.
+     * Number of compliant devices
      */
-    @SerializedName("inGracePeriodCount")
+    @SerializedName("compliantDeviceCount")
     @Expose
-    public Integer inGracePeriodCount;
+    public Integer compliantDeviceCount;
 
     /**
      * The Config Manager Count.
@@ -43,44 +43,12 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     public Integer configManagerCount;
 
     /**
-     * The Unknown Device Count.
-     * Number of unknown devices
+     * The Conflict Device Count.
+     * Number of conflict devices
      */
-    @SerializedName("unknownDeviceCount")
+    @SerializedName("conflictDeviceCount")
     @Expose
-    public Integer unknownDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Number of not applicable devices
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
-
-    /**
-     * The Compliant Device Count.
-     * Number of compliant devices
-     */
-    @SerializedName("compliantDeviceCount")
-    @Expose
-    public Integer compliantDeviceCount;
-
-    /**
-     * The Remediated Device Count.
-     * Number of remediated devices
-     */
-    @SerializedName("remediatedDeviceCount")
-    @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
-     * The Non Compliant Device Count.
-     * Number of NonCompliant devices
-     */
-    @SerializedName("nonCompliantDeviceCount")
-    @Expose
-    public Integer nonCompliantDeviceCount;
+    public Integer conflictDeviceCount;
 
     /**
      * The Error Device Count.
@@ -91,12 +59,44 @@ public class DeviceCompliancePolicyDeviceStateSummary extends Entity implements 
     public Integer errorDeviceCount;
 
     /**
-     * The Conflict Device Count.
-     * Number of conflict devices
+     * The In Grace Period Count.
+     * Number of devices that are in grace period
      */
-    @SerializedName("conflictDeviceCount")
+    @SerializedName("inGracePeriodCount")
     @Expose
-    public Integer conflictDeviceCount;
+    public Integer inGracePeriodCount;
+
+    /**
+     * The Non Compliant Device Count.
+     * Number of NonCompliant devices
+     */
+    @SerializedName("nonCompliantDeviceCount")
+    @Expose
+    public Integer nonCompliantDeviceCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Number of not applicable devices
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
+     * The Remediated Device Count.
+     * Number of remediated devices
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
+
+    /**
+     * The Unknown Device Count.
+     * Number of unknown devices
+     */
+    @SerializedName("unknownDeviceCount")
+    @Expose
+    public Integer unknownDeviceCount;
 
 
     /**

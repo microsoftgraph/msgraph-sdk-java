@@ -28,20 +28,20 @@ public class DeviceConfigurationDeviceStatus extends Entity implements IJsonBack
 
 
     /**
+     * The Compliance Grace Period Expiration Date Time.
+     * The DateTime when device compliance grace period expires
+     */
+    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @Expose
+    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+
+    /**
      * The Device Display Name.
      * Device name of the DevicePolicyStatus.
      */
     @SerializedName("deviceDisplayName")
     @Expose
     public String deviceDisplayName;
-
-    /**
-     * The User Name.
-     * The User Name that is being reported
-     */
-    @SerializedName("userName")
-    @Expose
-    public String userName;
 
     /**
      * The Device Model.
@@ -52,12 +52,12 @@ public class DeviceConfigurationDeviceStatus extends Entity implements IJsonBack
     public String deviceModel;
 
     /**
-     * The Compliance Grace Period Expiration Date Time.
-     * The DateTime when device compliance grace period expires
+     * The Last Reported Date Time.
+     * Last modified date time of the policy report.
      */
-    @SerializedName("complianceGracePeriodExpirationDateTime")
+    @SerializedName("lastReportedDateTime")
     @Expose
-    public java.util.Calendar complianceGracePeriodExpirationDateTime;
+    public java.util.Calendar lastReportedDateTime;
 
     /**
      * The Status.
@@ -68,12 +68,12 @@ public class DeviceConfigurationDeviceStatus extends Entity implements IJsonBack
     public ComplianceStatus status;
 
     /**
-     * The Last Reported Date Time.
-     * Last modified date time of the policy report.
+     * The User Name.
+     * The User Name that is being reported
      */
-    @SerializedName("lastReportedDateTime")
+    @SerializedName("userName")
     @Expose
-    public java.util.Calendar lastReportedDateTime;
+    public String userName;
 
     /**
      * The User Principal Name.

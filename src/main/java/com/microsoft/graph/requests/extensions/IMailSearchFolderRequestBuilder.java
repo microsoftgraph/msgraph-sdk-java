@@ -33,24 +33,24 @@ public interface IMailSearchFolderRequestBuilder extends IRequestBuilder {
     IMailSearchFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+    IMailFolderCollectionRequestBuilder childFolders();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-
-    IMessageCollectionRequestBuilder messages();
-
-    IMessageRequestBuilder messages(final String id);
+    IMailFolderRequestBuilder childFolders(final String id);
 
     IMessageRuleCollectionRequestBuilder messageRules();
 
     IMessageRuleRequestBuilder messageRules(final String id);
 
-    IMailFolderCollectionRequestBuilder childFolders();
+    IMessageCollectionRequestBuilder messages();
 
-    IMailFolderRequestBuilder childFolders(final String id);
+    IMessageRequestBuilder messages(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
 }

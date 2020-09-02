@@ -32,22 +32,6 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Start Date Time.
-     * When the interval starts. Read-only.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * When the interval ends. Read-only.
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
      * The Access.
      * Statistics about the access actions in this interval. Read-only.
      */
@@ -80,12 +64,20 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
     public ItemActionStat edit;
 
     /**
-     * The Move.
-     * Statistics about the move actions in this interval. Read-only.
+     * The End Date Time.
+     * When the interval ends. Read-only.
      */
-    @SerializedName("move")
+    @SerializedName("endDateTime")
     @Expose
-    public ItemActionStat move;
+    public java.util.Calendar endDateTime;
+
+    /**
+     * The Incomplete Data.
+     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
+     */
+    @SerializedName("incompleteData")
+    @Expose
+    public IncompleteData incompleteData;
 
     /**
      * The Is Trending.
@@ -96,12 +88,20 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
     public Boolean isTrending;
 
     /**
-     * The Incomplete Data.
-     * Indicates that the statistics in this interval are based on incomplete data. Read-only.
+     * The Move.
+     * Statistics about the move actions in this interval. Read-only.
      */
-    @SerializedName("incompleteData")
+    @SerializedName("move")
     @Expose
-    public IncompleteData incompleteData;
+    public ItemActionStat move;
+
+    /**
+     * The Start Date Time.
+     * When the interval starts. Read-only.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
     /**
      * The Activities.

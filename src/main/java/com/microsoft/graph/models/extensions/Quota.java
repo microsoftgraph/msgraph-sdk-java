@@ -61,6 +61,14 @@ public class Quota implements IJsonBackedObject {
     public String state;
 
     /**
+     * The Storage Plan Information.
+     * Information about the drive's storage quota plans. Only in Personal OneDrive.
+     */
+    @SerializedName("storagePlanInformation")
+    @Expose
+    public StoragePlanInformation storagePlanInformation;
+
+    /**
      * The Total.
      * Total allowed storage space, in bytes. Read-only.
      */
@@ -75,14 +83,6 @@ public class Quota implements IJsonBackedObject {
     @SerializedName("used")
     @Expose
     public Long used;
-
-    /**
-     * The Storage Plan Information.
-     * Information about the drive's storage quota plans. Only in Personal OneDrive.
-     */
-    @SerializedName("storagePlanInformation")
-    @Expose
-    public StoragePlanInformation storagePlanInformation;
 
 
     /**

@@ -41,38 +41,6 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public ManagedAppDataEncryptionType appDataEncryptionType;
 
     /**
-     * The Screen Capture Blocked.
-     * Indicates whether screen capture is blocked. (Android only)
-     */
-    @SerializedName("screenCaptureBlocked")
-    @Expose
-    public Boolean screenCaptureBlocked;
-
-    /**
-     * The Encrypt App Data.
-     * Indicates whether managed-app data should be encrypted. (Android only)
-     */
-    @SerializedName("encryptAppData")
-    @Expose
-    public Boolean encryptAppData;
-
-    /**
-     * The Disable App Encryption If Device Encryption Is Enabled.
-     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
-     */
-    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
-    @Expose
-    public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
-
-    /**
-     * The Minimum Required Sdk Version.
-     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-     */
-    @SerializedName("minimumRequiredSdkVersion")
-    @Expose
-    public String minimumRequiredSdkVersion;
-
-    /**
      * The Custom Settings.
      * A set of string key and string value pairs to be sent to the affected users, unalterned by this service
      */
@@ -89,12 +57,44 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public Integer deployedAppCount;
 
     /**
+     * The Disable App Encryption If Device Encryption Is Enabled.
+     * When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
+     */
+    @SerializedName("disableAppEncryptionIfDeviceEncryptionIsEnabled")
+    @Expose
+    public Boolean disableAppEncryptionIfDeviceEncryptionIsEnabled;
+
+    /**
+     * The Encrypt App Data.
+     * Indicates whether managed-app data should be encrypted. (Android only)
+     */
+    @SerializedName("encryptAppData")
+    @Expose
+    public Boolean encryptAppData;
+
+    /**
+     * The Face Id Blocked.
+     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
+     */
+    @SerializedName("faceIdBlocked")
+    @Expose
+    public Boolean faceIdBlocked;
+
+    /**
      * The Minimum Required Patch Version.
      * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android only)
      */
     @SerializedName("minimumRequiredPatchVersion")
     @Expose
     public String minimumRequiredPatchVersion;
+
+    /**
+     * The Minimum Required Sdk Version.
+     * Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
+     */
+    @SerializedName("minimumRequiredSdkVersion")
+    @Expose
+    public String minimumRequiredSdkVersion;
 
     /**
      * The Minimum Warning Patch Version.
@@ -105,12 +105,12 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public String minimumWarningPatchVersion;
 
     /**
-     * The Face Id Blocked.
-     * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True. (iOS Only)
+     * The Screen Capture Blocked.
+     * Indicates whether screen capture is blocked. (Android only)
      */
-    @SerializedName("faceIdBlocked")
+    @SerializedName("screenCaptureBlocked")
     @Expose
-    public Boolean faceIdBlocked;
+    public Boolean screenCaptureBlocked;
 
     /**
      * The Apps.
