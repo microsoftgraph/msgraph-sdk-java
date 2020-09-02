@@ -13,6 +13,7 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'signing'
+    id 'com.jfrog.bintray' version '1.8.5'
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -63,11 +64,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier = 'javadoc'
 }
 
-signing {
-	sign configurations.archives
-}
-tasks.withType(Sign)*.enabled = mavenCentralPublishingEnabled.toBoolean()
-
 publishing {
 
     publications {
@@ -112,26 +108,9 @@ publishing {
         	pom.withXml {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
         		writeTo(pomFile)
-        		def pomAscFile = signing.sign(pomFile).signatureFiles[0]
-        		artifact(pomAscFile) {
-                    classifier = null
-                    extension = 'pom.asc'
-                }
         	}
         	artifact sourceJar
         	artifact javadocJar
-        	project.tasks.signArchives.signatureFiles.each {
-        		artifact(it) {
-        			def matcher = it.file =~ /-(sources|javadoc)\.jar\.asc$/
-        			if(matcher.find()){
-        				classifier = matcher.group(1)
-        			}
-        			else{
-        				classifier = null
-        			}
-        			extension = 'jar.asc'
-				}
-			}
 		}
     }
 	repositories {
@@ -190,22 +169,52 @@ publishing {
     			}
             }
 		}
-
-        maven {
-            url = 'https://api.bintray.com/content/microsoftgraph/Maven/microsoft-graph'
-            name = 'bintray'
-            
-            credentials {
-    			if (project.rootProject.file('local.properties').exists()) {
-        			Properties properties = new Properties()
-        			properties.load(project.rootProject.file('local.properties').newDataInputStream())
-        			username = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
-        			password = properties.getProperty('bintray.apikey')
-    			}
-            }
-		}
     }
+}
 
+signing {
+    sign publishing.publications.mavenCentralRelease
+}
+tasks.withType(Sign)*.enabled = mavenCentralPublishingEnabled.toBoolean()
+
+def fixAscNames = { name -> 
+    if(name.contains('pom')) {
+        "${project.property('mavenArtifactId')}-${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}.pom.asc"
+    } else {
+        name.replace('msgraph-sdk-java', "${project.property('mavenArtifactId')}-${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}")
+    }
+}
+bintray {
+    if (project.rootProject.file('local.properties').exists()) {
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        user = (properties.containsKey('bintray.user')) ? properties.getProperty('bintray.user').toLowerCase() : "BINTRAY_USERNAME"
+        key = properties.getProperty('bintray.apikey')
+    }
+	publications = ['mavenCentralRelease']
+    filesSpec {
+        from ('build/libs') {
+            include 'msgraph-sdk-java*.jar.asc'
+            rename fixAscNames
+        }
+        from ('build') {
+            include 'generated-pom.xml.asc'
+            rename fixAscNames
+        }
+        into "com/microsoft/graph/${project.property('mavenArtifactId')}/${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}/"
+    }
+	pkg {
+		repo = 'Maven'
+		name = project.property('mavenArtifactId')
+		userOrg = 'microsoftgraph'
+		licenses = ['MIT']
+		vcsUrl = 'https://github.com/microsoftgraph/msgraph-sdk-java.git'
+		publicDownloadNumbers = true
+		version {
+			name = "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
+			vcsTag = "${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}"
+		}
+	}
 }
 
 compileJava {
@@ -283,12 +292,6 @@ gradle.taskGraph.whenReady { taskGraph ->
 
 model {
     tasks.generatePomFileForMavenCentralReleasePublication {
-        destination = file("$buildDir/generated-pom.xml")
-    }
-    tasks.publishMavenCentralReleasePublicationToMavenLocal {
-        dependsOn project.tasks.signArchives
-    }
-    tasks.publishMavenCentralReleasePublicationToSonatypeRepository {
-        dependsOn project.tasks.signArchives
+        destination = file("${project.buildDir}/generated-pom.xml")
     }
 }
