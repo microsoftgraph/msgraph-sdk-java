@@ -294,10 +294,4 @@ model {
     tasks.generatePomFileForMavenCentralReleasePublication {
         destination = file("${project.buildDir}/generated-pom.xml")
     }
-    tasks.publishMavenCentralReleasePublicationToMavenLocal {
-        dependsOn project.tasks.signArchives
-    }
-    tasks.publishMavenCentralReleasePublicationToSonatypeRepository {
-        dependsOn project.tasks.signArchives
-    }
 }
