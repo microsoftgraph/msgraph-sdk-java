@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RecurrencePatternType;
 import com.microsoft.graph.models.generated.DayOfWeek;
 import com.microsoft.graph.models.generated.WeekIndex;
+import com.microsoft.graph.models.generated.RecurrencePatternType;
 
 
 import com.google.gson.JsonObject;
@@ -37,30 +37,6 @@ public class RecurrencePattern implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
-
-    /**
-     * The Type.
-     * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
-     */
-    @SerializedName("type")
-    @Expose
-    public RecurrencePatternType type;
-
-    /**
-     * The Interval.
-     * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
-     */
-    @SerializedName("interval")
-    @Expose
-    public Integer interval;
-
-    /**
-     * The Month.
-     * The month in which the event occurs.  This is a number from 1 to 12.
-     */
-    @SerializedName("month")
-    @Expose
-    public Integer month;
 
     /**
      * The Day Of Month.
@@ -93,6 +69,30 @@ public class RecurrencePattern implements IJsonBackedObject {
     @SerializedName("index")
     @Expose
     public WeekIndex index;
+
+    /**
+     * The Interval.
+     * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type. Required.
+     */
+    @SerializedName("interval")
+    @Expose
+    public Integer interval;
+
+    /**
+     * The Month.
+     * The month in which the event occurs.  This is a number from 1 to 12.
+     */
+    @SerializedName("month")
+    @Expose
+    public Integer month;
+
+    /**
+     * The Type.
+     * The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
+     */
+    @SerializedName("type")
+    @Expose
+    public RecurrencePatternType type;
 
 
     /**

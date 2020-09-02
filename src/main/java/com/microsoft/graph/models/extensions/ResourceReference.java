@@ -36,14 +36,6 @@ public class ResourceReference implements IJsonBackedObject {
     }
 
     /**
-     * The Web Url.
-     * A URL leading to the referenced item.
-     */
-    @SerializedName("webUrl")
-    @Expose
-    public String webUrl;
-
-    /**
      * The Id.
      * The item's unique identifier.
      */
@@ -58,6 +50,14 @@ public class ResourceReference implements IJsonBackedObject {
     @SerializedName("type")
     @Expose
     public String type;
+
+    /**
+     * The Web Url.
+     * A URL leading to the referenced item.
+     */
+    @SerializedName("webUrl")
+    @Expose
+    public String webUrl;
 
 
     /**

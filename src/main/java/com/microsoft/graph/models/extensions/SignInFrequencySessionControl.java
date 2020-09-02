@@ -28,20 +28,20 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
 
 
     /**
-     * The Value.
-     * The number of days or hours.
-     */
-    @SerializedName("value")
-    @Expose
-    public Integer value;
-
-    /**
      * The Type.
      * Possible values are: days, hours.
      */
     @SerializedName("type")
     @Expose
     public SigninFrequencyType type;
+
+    /**
+     * The Value.
+     * The number of days or hours.
+     */
+    @SerializedName("value")
+    @Expose
+    public Integer value;
 
 
     /**

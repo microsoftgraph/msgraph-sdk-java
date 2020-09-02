@@ -33,16 +33,16 @@ public interface IWindowsInformationProtectionPolicyRequestBuilder extends IRequ
     IWindowsInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles();
+    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
 
-    IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id);
+    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
 
     IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder exemptAppLockerFiles();
 
     IWindowsInformationProtectionAppLockerFileRequestBuilder exemptAppLockerFiles(final String id);
 
-    ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder assignments();
+    IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder protectedAppLockerFiles();
 
-    ITargetedManagedAppPolicyAssignmentRequestBuilder assignments(final String id);
+    IWindowsInformationProtectionAppLockerFileRequestBuilder protectedAppLockerFiles(final String id);
 
 }

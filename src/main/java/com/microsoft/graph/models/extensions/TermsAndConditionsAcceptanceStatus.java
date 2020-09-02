@@ -28,12 +28,12 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
 
 
     /**
-     * The User Display Name.
-     * Display name of the user whose acceptance the entity represents.
+     * The Accepted Date Time.
+     * DateTime when the terms were last accepted by the user.
      */
-    @SerializedName("userDisplayName")
+    @SerializedName("acceptedDateTime")
     @Expose
-    public String userDisplayName;
+    public java.util.Calendar acceptedDateTime;
 
     /**
      * The Accepted Version.
@@ -44,12 +44,12 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
     public Integer acceptedVersion;
 
     /**
-     * The Accepted Date Time.
-     * DateTime when the terms were last accepted by the user.
+     * The User Display Name.
+     * Display name of the user whose acceptance the entity represents.
      */
-    @SerializedName("acceptedDateTime")
+    @SerializedName("userDisplayName")
     @Expose
-    public java.util.Calendar acceptedDateTime;
+    public String userDisplayName;
 
     /**
      * The User Principal Name.

@@ -36,20 +36,20 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
     }
 
     /**
-     * The Value.
-     * Value of the property causing the error.
-     */
-    @SerializedName("value")
-    @Expose
-    public String value;
-
-    /**
      * The Category.
      * Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.
      */
     @SerializedName("category")
     @Expose
     public String category;
+
+    /**
+     * The Occurred Date Time.
+     * The date and time at which the error occurred.
+     */
+    @SerializedName("occurredDateTime")
+    @Expose
+    public java.util.Calendar occurredDateTime;
 
     /**
      * The Property Causing Error.
@@ -60,12 +60,12 @@ public class OnPremisesProvisioningError implements IJsonBackedObject {
     public String propertyCausingError;
 
     /**
-     * The Occurred Date Time.
-     * The date and time at which the error occurred.
+     * The Value.
+     * Value of the property causing the error.
      */
-    @SerializedName("occurredDateTime")
+    @SerializedName("value")
     @Expose
-    public java.util.Calendar occurredDateTime;
+    public String value;
 
 
     /**

@@ -45,22 +45,6 @@ public class PlannerExternalReference implements IJsonBackedObject {
     public String alias;
 
     /**
-     * The Type.
-     * Used to describe the type of the reference. Types include: PowerPoint, Word, Excel, Other.
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
-     * The Preview Priority.
-     * Used to set the relative priority order in which the reference will be shown as a preview on the task.
-     */
-    @SerializedName("previewPriority")
-    @Expose
-    public String previewPriority;
-
-    /**
      * The Last Modified By.
      * Read-only. User ID by which this is last modified.
      */
@@ -75,6 +59,22 @@ public class PlannerExternalReference implements IJsonBackedObject {
     @SerializedName("lastModifiedDateTime")
     @Expose
     public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Preview Priority.
+     * Used to set the relative priority order in which the reference will be shown as a preview on the task.
+     */
+    @SerializedName("previewPriority")
+    @Expose
+    public String previewPriority;
+
+    /**
+     * The Type.
+     * Used to describe the type of the reference. Types include: PowerPoint, Word, Excel, Other.
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

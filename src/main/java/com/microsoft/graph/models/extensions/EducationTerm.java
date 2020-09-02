@@ -36,6 +36,22 @@ public class EducationTerm implements IJsonBackedObject {
     }
 
     /**
+     * The Display Name.
+     * Display name of the term.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The End Date.
+     * End of the term.
+     */
+    @SerializedName("endDate")
+    @Expose
+    public com.microsoft.graph.models.extensions.DateOnly endDate;
+
+    /**
      * The External Id.
      * ID of term in the syncing system.
      */
@@ -50,22 +66,6 @@ public class EducationTerm implements IJsonBackedObject {
     @SerializedName("startDate")
     @Expose
     public com.microsoft.graph.models.extensions.DateOnly startDate;
-
-    /**
-     * The End Date.
-     * End of the term.
-     */
-    @SerializedName("endDate")
-    @Expose
-    public com.microsoft.graph.models.extensions.DateOnly endDate;
-
-    /**
-     * The Display Name.
-     * Display name of the term.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
 
 
     /**

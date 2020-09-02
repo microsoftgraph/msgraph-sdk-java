@@ -44,20 +44,20 @@ public class ModifiedProperty implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Old Value.
-     * Indicates the previous value (before the update) for the property.
-     */
-    @SerializedName("oldValue")
-    @Expose
-    public String oldValue;
-
-    /**
      * The New Value.
      * Indicates the updated value for the propery.
      */
     @SerializedName("newValue")
     @Expose
     public String newValue;
+
+    /**
+     * The Old Value.
+     * Indicates the previous value (before the update) for the property.
+     */
+    @SerializedName("oldValue")
+    @Expose
+    public String oldValue;
 
 
     /**

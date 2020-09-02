@@ -27,22 +27,6 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
 
 
     /**
-     * The Launch Uri.
-     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
-     */
-    @SerializedName("launchUri")
-    @Expose
-    public String launchUri;
-
-    /**
-     * The Configuration Account.
-     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
-     */
-    @SerializedName("configurationAccount")
-    @Expose
-    public String configurationAccount;
-
-    /**
      * The Allow Printing.
      * Indicates whether or not to allow the app from printing during the test.
      */
@@ -65,6 +49,22 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     @SerializedName("allowTextSuggestion")
     @Expose
     public Boolean allowTextSuggestion;
+
+    /**
+     * The Configuration Account.
+     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
+     */
+    @SerializedName("configurationAccount")
+    @Expose
+    public String configurationAccount;
+
+    /**
+     * The Launch Uri.
+     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
+     */
+    @SerializedName("launchUri")
+    @Expose
+    public String launchUri;
 
 
     /**

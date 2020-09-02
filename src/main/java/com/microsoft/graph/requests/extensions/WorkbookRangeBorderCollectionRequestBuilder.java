@@ -15,8 +15,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -52,11 +52,11 @@ public class WorkbookRangeBorderCollectionRequestBuilder extends BaseRequestBuil
 
 
 
-    public IWorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index) {
-        return new WorkbookRangeBorderItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
-    }
-
     public IWorkbookRangeBorderCountRequestBuilder count() {
         return new WorkbookRangeBorderCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
+    }
+
+    public IWorkbookRangeBorderItemAtRequestBuilder itemAt(final Integer index) {
+        return new WorkbookRangeBorderItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

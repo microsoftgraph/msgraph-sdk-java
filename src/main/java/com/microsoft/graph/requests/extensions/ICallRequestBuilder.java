@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Call;
-import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
@@ -23,10 +22,11 @@ import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -52,13 +52,13 @@ public interface ICallRequestBuilder extends IRequestBuilder {
     ICallRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IParticipantCollectionRequestBuilder participants();
-
-    IParticipantRequestBuilder participants(final String id);
-
     ICommsOperationCollectionRequestBuilder operations();
 
     ICommsOperationRequestBuilder operations(final String id);
+
+    IParticipantCollectionRequestBuilder participants();
+
+    IParticipantRequestBuilder participants(final String id);
     ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities);
     ICallCancelMediaProcessingRequestBuilder cancelMediaProcessing(final String clientContext);
     ICallChangeScreenSharingRoleRequestBuilder changeScreenSharingRole(final ScreenSharingRole role);

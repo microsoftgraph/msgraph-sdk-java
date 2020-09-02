@@ -85,20 +85,20 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     public com.microsoft.graph.models.extensions.TimeOfDay maintenanceWindowStartTime;
 
     /**
-     * The Miracast Channel.
-     * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
-     */
-    @SerializedName("miracastChannel")
-    @Expose
-    public MiracastChannel miracastChannel;
-
-    /**
      * The Miracast Blocked.
      * Indicates whether or not to Block wireless projection.
      */
     @SerializedName("miracastBlocked")
     @Expose
     public Boolean miracastBlocked;
+
+    /**
+     * The Miracast Channel.
+     * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
+     */
+    @SerializedName("miracastChannel")
+    @Expose
+    public MiracastChannel miracastChannel;
 
     /**
      * The Miracast Require Pin.
@@ -165,20 +165,20 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
     public Integer settingsSleepTimeoutInMinutes;
 
     /**
-     * The Welcome Screen Block Automatic Wake Up.
-     * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
-     */
-    @SerializedName("welcomeScreenBlockAutomaticWakeUp")
-    @Expose
-    public Boolean welcomeScreenBlockAutomaticWakeUp;
-
-    /**
      * The Welcome Screen Background Image Url.
      * The welcome screen background image URL. The URL must use the HTTPS protocol and return a PNG image.
      */
     @SerializedName("welcomeScreenBackgroundImageUrl")
     @Expose
     public String welcomeScreenBackgroundImageUrl;
+
+    /**
+     * The Welcome Screen Block Automatic Wake Up.
+     * Indicates whether or not to Block the welcome screen from waking up automatically when someone enters the room.
+     */
+    @SerializedName("welcomeScreenBlockAutomaticWakeUp")
+    @Expose
+    public Boolean welcomeScreenBlockAutomaticWakeUp;
 
     /**
      * The Welcome Screen Meeting Information.

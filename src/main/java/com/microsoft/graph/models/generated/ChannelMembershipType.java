@@ -6,28 +6,24 @@ package com.microsoft.graph.models.generated;
 
 
 /**
- * The Enum Onenote User Role.
+ * The Enum Channel Membership Type.
 */
-public enum OnenoteUserRole
+public enum ChannelMembershipType
 {
     /**
-    * Owner
+    * standard
     */
-    OWNER,
+    STANDARD,
     /**
-    * Contributor
+    * private
     */
-    CONTRIBUTOR,
+    PRIVATE,
     /**
-    * None
+    * unknown Future Value
     */
-    NONE,
+    UNKNOWN_FUTURE_VALUE,
     /**
-    * Reader
-    */
-    READER,
-    /**
-    * For OnenoteUserRole values that were not expected from the service
+    * For ChannelMembershipType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

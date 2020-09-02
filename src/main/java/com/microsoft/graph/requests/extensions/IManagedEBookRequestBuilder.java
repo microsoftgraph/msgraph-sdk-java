@@ -45,16 +45,16 @@ public interface IManagedEBookRequestBuilder extends IRequestBuilder {
 
     IManagedEBookAssignmentRequestBuilder assignments(final String id);
 
+    IDeviceInstallStateCollectionRequestBuilder deviceStates();
+
+    IDeviceInstallStateRequestBuilder deviceStates(final String id);
+
     /**
      * Gets the request builder for EBookInstallSummary
      *
      * @return the IEBookInstallSummaryRequestBuilder instance
      */
     IEBookInstallSummaryRequestBuilder installSummary();
-
-    IDeviceInstallStateCollectionRequestBuilder deviceStates();
-
-    IDeviceInstallStateRequestBuilder deviceStates(final String id);
 
     IUserInstallStateSummaryCollectionRequestBuilder userStateSummary();
 

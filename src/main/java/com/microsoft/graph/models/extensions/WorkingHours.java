@@ -46,20 +46,20 @@ public class WorkingHours implements IJsonBackedObject {
     public java.util.List<DayOfWeek> daysOfWeek;
 
     /**
-     * The Start Time.
-     * The time of the day that the user starts working.
-     */
-    @SerializedName("startTime")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay startTime;
-
-    /**
      * The End Time.
      * The time of the day that the user stops working.
      */
     @SerializedName("endTime")
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay endTime;
+
+    /**
+     * The Start Time.
+     * The time of the day that the user starts working.
+     */
+    @SerializedName("startTime")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay startTime;
 
     /**
      * The Time Zone.

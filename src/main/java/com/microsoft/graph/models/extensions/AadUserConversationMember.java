@@ -28,20 +28,20 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
 
     /**
-     * The User Id.
-     * The guid of the user.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Email.
      * The email address of the user.
      */
     @SerializedName("email")
     @Expose
     public String email;
+
+    /**
+     * The User Id.
+     * The guid of the user.
+     */
+    @SerializedName("userId")
+    @Expose
+    public String userId;
 
     /**
      * The User.

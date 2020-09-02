@@ -8,42 +8,42 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
-import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OpenShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffRequestBuilder;
-import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TimeOffRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
-import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TimeOffReasonRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SchedulingGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOpenShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OpenShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchedulingGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchedulingGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ShiftRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITimeOffRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TimeOffRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -87,47 +87,12 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
     }
 
 
-    public IShiftCollectionRequestBuilder shifts() {
-        return new ShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shifts"), getClient(), null);
+    public IOfferShiftRequestCollectionRequestBuilder offerShiftRequests() {
+        return new OfferShiftRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests"), getClient(), null);
     }
 
-    public IShiftRequestBuilder shifts(final String id) {
-        return new ShiftRequestBuilder(getRequestUrlWithAdditionalSegment("shifts") + "/" + id, getClient(), null);
-    }
-    public IOpenShiftCollectionRequestBuilder openShifts() {
-        return new OpenShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts"), getClient(), null);
-    }
-
-    public IOpenShiftRequestBuilder openShifts(final String id) {
-        return new OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts") + "/" + id, getClient(), null);
-    }
-    public ITimeOffCollectionRequestBuilder timesOff() {
-        return new TimeOffCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff"), getClient(), null);
-    }
-
-    public ITimeOffRequestBuilder timesOff(final String id) {
-        return new TimeOffRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff") + "/" + id, getClient(), null);
-    }
-    public ITimeOffReasonCollectionRequestBuilder timeOffReasons() {
-        return new TimeOffReasonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons"), getClient(), null);
-    }
-
-    public ITimeOffReasonRequestBuilder timeOffReasons(final String id) {
-        return new TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons") + "/" + id, getClient(), null);
-    }
-    public ISchedulingGroupCollectionRequestBuilder schedulingGroups() {
-        return new SchedulingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups"), getClient(), null);
-    }
-
-    public ISchedulingGroupRequestBuilder schedulingGroups(final String id) {
-        return new SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups") + "/" + id, getClient(), null);
-    }
-    public ISwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests() {
-        return new SwapShiftsChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests"), getClient(), null);
-    }
-
-    public ISwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id) {
-        return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests") + "/" + id, getClient(), null);
+    public IOfferShiftRequestRequestBuilder offerShiftRequests(final String id) {
+        return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests") + "/" + id, getClient(), null);
     }
     public IOpenShiftChangeRequestCollectionRequestBuilder openShiftChangeRequests() {
         return new OpenShiftChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests"), getClient(), null);
@@ -136,12 +101,40 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
     public IOpenShiftChangeRequestRequestBuilder openShiftChangeRequests(final String id) {
         return new OpenShiftChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("openShiftChangeRequests") + "/" + id, getClient(), null);
     }
-    public IOfferShiftRequestCollectionRequestBuilder offerShiftRequests() {
-        return new OfferShiftRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests"), getClient(), null);
+    public IOpenShiftCollectionRequestBuilder openShifts() {
+        return new OpenShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts"), getClient(), null);
     }
 
-    public IOfferShiftRequestRequestBuilder offerShiftRequests(final String id) {
-        return new OfferShiftRequestRequestBuilder(getRequestUrlWithAdditionalSegment("offerShiftRequests") + "/" + id, getClient(), null);
+    public IOpenShiftRequestBuilder openShifts(final String id) {
+        return new OpenShiftRequestBuilder(getRequestUrlWithAdditionalSegment("openShifts") + "/" + id, getClient(), null);
+    }
+    public ISchedulingGroupCollectionRequestBuilder schedulingGroups() {
+        return new SchedulingGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups"), getClient(), null);
+    }
+
+    public ISchedulingGroupRequestBuilder schedulingGroups(final String id) {
+        return new SchedulingGroupRequestBuilder(getRequestUrlWithAdditionalSegment("schedulingGroups") + "/" + id, getClient(), null);
+    }
+    public IShiftCollectionRequestBuilder shifts() {
+        return new ShiftCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shifts"), getClient(), null);
+    }
+
+    public IShiftRequestBuilder shifts(final String id) {
+        return new ShiftRequestBuilder(getRequestUrlWithAdditionalSegment("shifts") + "/" + id, getClient(), null);
+    }
+    public ISwapShiftsChangeRequestCollectionRequestBuilder swapShiftsChangeRequests() {
+        return new SwapShiftsChangeRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests"), getClient(), null);
+    }
+
+    public ISwapShiftsChangeRequestRequestBuilder swapShiftsChangeRequests(final String id) {
+        return new SwapShiftsChangeRequestRequestBuilder(getRequestUrlWithAdditionalSegment("swapShiftsChangeRequests") + "/" + id, getClient(), null);
+    }
+    public ITimeOffReasonCollectionRequestBuilder timeOffReasons() {
+        return new TimeOffReasonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons"), getClient(), null);
+    }
+
+    public ITimeOffReasonRequestBuilder timeOffReasons(final String id) {
+        return new TimeOffReasonRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffReasons") + "/" + id, getClient(), null);
     }
     public ITimeOffRequestCollectionRequestBuilder timeOffRequests() {
         return new TimeOffRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests"), getClient(), null);
@@ -149,6 +142,13 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder implements ISched
 
     public ITimeOffRequestRequestBuilder timeOffRequests(final String id) {
         return new TimeOffRequestRequestBuilder(getRequestUrlWithAdditionalSegment("timeOffRequests") + "/" + id, getClient(), null);
+    }
+    public ITimeOffCollectionRequestBuilder timesOff() {
+        return new TimeOffCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff"), getClient(), null);
+    }
+
+    public ITimeOffRequestBuilder timesOff(final String id) {
+        return new TimeOffRequestBuilder(getRequestUrlWithAdditionalSegment("timesOff") + "/" + id, getClient(), null);
     }
 
     public IScheduleShareRequestBuilder share(final Boolean notifyTeam, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {

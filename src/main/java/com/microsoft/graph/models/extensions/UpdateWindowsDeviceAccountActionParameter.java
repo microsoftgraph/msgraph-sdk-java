@@ -37,28 +37,20 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
     }
 
     /**
-     * The Device Account.
-     * Not yet documented
-     */
-    @SerializedName("deviceAccount")
-    @Expose
-    public WindowsDeviceAccount deviceAccount;
-
-    /**
-     * The Password Rotation Enabled.
-     * Not yet documented
-     */
-    @SerializedName("passwordRotationEnabled")
-    @Expose
-    public Boolean passwordRotationEnabled;
-
-    /**
      * The Calendar Sync Enabled.
      * Not yet documented
      */
     @SerializedName("calendarSyncEnabled")
     @Expose
     public Boolean calendarSyncEnabled;
+
+    /**
+     * The Device Account.
+     * Not yet documented
+     */
+    @SerializedName("deviceAccount")
+    @Expose
+    public WindowsDeviceAccount deviceAccount;
 
     /**
      * The Device Account Email.
@@ -75,6 +67,14 @@ public class UpdateWindowsDeviceAccountActionParameter implements IJsonBackedObj
     @SerializedName("exchangeServer")
     @Expose
     public String exchangeServer;
+
+    /**
+     * The Password Rotation Enabled.
+     * Not yet documented
+     */
+    @SerializedName("passwordRotationEnabled")
+    @Expose
+    public Boolean passwordRotationEnabled;
 
     /**
      * The Session Initiation Protocal Address.

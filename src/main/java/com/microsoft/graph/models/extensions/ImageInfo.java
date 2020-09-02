@@ -36,20 +36,12 @@ public class ImageInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Icon Url.
-     * Optional; URI that points to an icon which represents the application used to generate the activity
+     * The Add Image Query.
+     * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
      */
-    @SerializedName("iconUrl")
+    @SerializedName("addImageQuery")
     @Expose
-    public String iconUrl;
-
-    /**
-     * The Alternative Text.
-     * 
-     */
-    @SerializedName("alternativeText")
-    @Expose
-    public String alternativeText;
+    public Boolean addImageQuery;
 
     /**
      * The Alternate Text.
@@ -60,12 +52,20 @@ public class ImageInfo implements IJsonBackedObject {
     public String alternateText;
 
     /**
-     * The Add Image Query.
-     * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+     * The Alternative Text.
+     * 
      */
-    @SerializedName("addImageQuery")
+    @SerializedName("alternativeText")
     @Expose
-    public Boolean addImageQuery;
+    public String alternativeText;
+
+    /**
+     * The Icon Url.
+     * Optional; URI that points to an icon which represents the application used to generate the activity
+     */
+    @SerializedName("iconUrl")
+    @Expose
+    public String iconUrl;
 
 
     /**

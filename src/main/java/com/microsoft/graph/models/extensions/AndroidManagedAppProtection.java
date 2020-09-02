@@ -31,12 +31,28 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
 
     /**
-     * The Screen Capture Blocked.
-     * Indicates whether a managed user can take screen captures of managed apps
+     * The Custom Browser Display Name.
+     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
-    @SerializedName("screenCaptureBlocked")
+    @SerializedName("customBrowserDisplayName")
     @Expose
-    public Boolean screenCaptureBlocked;
+    public String customBrowserDisplayName;
+
+    /**
+     * The Custom Browser Package Id.
+     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     */
+    @SerializedName("customBrowserPackageId")
+    @Expose
+    public String customBrowserPackageId;
+
+    /**
+     * The Deployed App Count.
+     * Count of apps to which the current policy is deployed.
+     */
+    @SerializedName("deployedAppCount")
+    @Expose
+    public Integer deployedAppCount;
 
     /**
      * The Disable App Encryption If Device Encryption Is Enabled.
@@ -55,14 +71,6 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public Boolean encryptAppData;
 
     /**
-     * The Deployed App Count.
-     * Count of apps to which the current policy is deployed.
-     */
-    @SerializedName("deployedAppCount")
-    @Expose
-    public Integer deployedAppCount;
-
-    /**
      * The Minimum Required Patch Version.
      * Define the oldest required Android security patch level a user can have to gain secure access to the app.
      */
@@ -79,20 +87,12 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public String minimumWarningPatchVersion;
 
     /**
-     * The Custom Browser Package Id.
-     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * The Screen Capture Blocked.
+     * Indicates whether a managed user can take screen captures of managed apps
      */
-    @SerializedName("customBrowserPackageId")
+    @SerializedName("screenCaptureBlocked")
     @Expose
-    public String customBrowserPackageId;
-
-    /**
-     * The Custom Browser Display Name.
-     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
-     */
-    @SerializedName("customBrowserDisplayName")
-    @Expose
-    public String customBrowserDisplayName;
+    public Boolean screenCaptureBlocked;
 
     /**
      * The Apps.

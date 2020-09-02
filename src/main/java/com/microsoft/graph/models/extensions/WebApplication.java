@@ -45,12 +45,12 @@ public class WebApplication implements IJsonBackedObject {
     public String homePageUrl;
 
     /**
-     * The Redirect Uris.
-     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
+     * The Implicit Grant Settings.
+     * Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
      */
-    @SerializedName("redirectUris")
+    @SerializedName("implicitGrantSettings")
     @Expose
-    public java.util.List<String> redirectUris;
+    public ImplicitGrantSettings implicitGrantSettings;
 
     /**
      * The Logout Url.
@@ -61,12 +61,12 @@ public class WebApplication implements IJsonBackedObject {
     public String logoutUrl;
 
     /**
-     * The Implicit Grant Settings.
-     * Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
+     * The Redirect Uris.
+     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.
      */
-    @SerializedName("implicitGrantSettings")
+    @SerializedName("redirectUris")
     @Expose
-    public ImplicitGrantSettings implicitGrantSettings;
+    public java.util.List<String> redirectUris;
 
 
     /**

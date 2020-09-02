@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -38,13 +38,13 @@ public interface IEducationUserRequestBuilder extends IRequestBuilder {
     IEducationUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IEducationSchoolCollectionWithReferencesRequestBuilder schools();
-
-    IEducationSchoolWithReferenceRequestBuilder schools(final String id);
-
     IEducationClassCollectionWithReferencesRequestBuilder classes();
 
     IEducationClassWithReferenceRequestBuilder classes(final String id);
+
+    IEducationSchoolCollectionWithReferencesRequestBuilder schools();
+
+    IEducationSchoolWithReferenceRequestBuilder schools(final String id);
 
     /**
      * Gets the request builder for User

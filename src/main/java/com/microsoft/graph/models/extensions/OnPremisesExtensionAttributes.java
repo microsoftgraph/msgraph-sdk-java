@@ -44,6 +44,54 @@ public class OnPremisesExtensionAttributes implements IJsonBackedObject {
     public String extensionAttribute1;
 
     /**
+     * The Extension Attribute10.
+     * Tenth customizable extension attribute.
+     */
+    @SerializedName("extensionAttribute10")
+    @Expose
+    public String extensionAttribute10;
+
+    /**
+     * The Extension Attribute11.
+     * Eleventh customizable extension attribute.
+     */
+    @SerializedName("extensionAttribute11")
+    @Expose
+    public String extensionAttribute11;
+
+    /**
+     * The Extension Attribute12.
+     * Twelfth customizable extension attribute.
+     */
+    @SerializedName("extensionAttribute12")
+    @Expose
+    public String extensionAttribute12;
+
+    /**
+     * The Extension Attribute13.
+     * Thirteenth customizable extension attribute.
+     */
+    @SerializedName("extensionAttribute13")
+    @Expose
+    public String extensionAttribute13;
+
+    /**
+     * The Extension Attribute14.
+     * Fourteenth customizable extension attribute.
+     */
+    @SerializedName("extensionAttribute14")
+    @Expose
+    public String extensionAttribute14;
+
+    /**
+     * The Extension Attribute15.
+     * Fifteenth customizable extension attribute.
+     */
+    @SerializedName("extensionAttribute15")
+    @Expose
+    public String extensionAttribute15;
+
+    /**
      * The Extension Attribute2.
      * Second customizable extension attribute.
      */
@@ -106,54 +154,6 @@ public class OnPremisesExtensionAttributes implements IJsonBackedObject {
     @SerializedName("extensionAttribute9")
     @Expose
     public String extensionAttribute9;
-
-    /**
-     * The Extension Attribute10.
-     * Tenth customizable extension attribute.
-     */
-    @SerializedName("extensionAttribute10")
-    @Expose
-    public String extensionAttribute10;
-
-    /**
-     * The Extension Attribute11.
-     * Eleventh customizable extension attribute.
-     */
-    @SerializedName("extensionAttribute11")
-    @Expose
-    public String extensionAttribute11;
-
-    /**
-     * The Extension Attribute12.
-     * Twelfth customizable extension attribute.
-     */
-    @SerializedName("extensionAttribute12")
-    @Expose
-    public String extensionAttribute12;
-
-    /**
-     * The Extension Attribute13.
-     * Thirteenth customizable extension attribute.
-     */
-    @SerializedName("extensionAttribute13")
-    @Expose
-    public String extensionAttribute13;
-
-    /**
-     * The Extension Attribute14.
-     * Fourteenth customizable extension attribute.
-     */
-    @SerializedName("extensionAttribute14")
-    @Expose
-    public String extensionAttribute14;
-
-    /**
-     * The Extension Attribute15.
-     * Fifteenth customizable extension attribute.
-     */
-    @SerializedName("extensionAttribute15")
-    @Expose
-    public String extensionAttribute15;
 
 
     /**

@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.NamedLocation;
+import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionResponse;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionResponse;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionPage;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -33,16 +33,16 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Policies.
-     * 
-     */
-    public ConditionalAccessPolicyCollectionPage policies;
-
-    /**
      * The Named Locations.
      * 
      */
     public NamedLocationCollectionPage namedLocations;
+
+    /**
+     * The Policies.
+     * 
+     */
+    public ConditionalAccessPolicyCollectionPage policies;
 
 
     /**
@@ -84,22 +84,6 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("policies")) {
-            final ConditionalAccessPolicyCollectionResponse response = new ConditionalAccessPolicyCollectionResponse();
-            if (json.has("policies@odata.nextLink")) {
-                response.nextLink = json.get("policies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policies").toString(), JsonObject[].class);
-            final ConditionalAccessPolicy[] array = new ConditionalAccessPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConditionalAccessPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            policies = new ConditionalAccessPolicyCollectionPage(response, null);
-        }
-
         if (json.has("namedLocations")) {
             final NamedLocationCollectionResponse response = new NamedLocationCollectionResponse();
             if (json.has("namedLocations@odata.nextLink")) {
@@ -114,6 +98,22 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             namedLocations = new NamedLocationCollectionPage(response, null);
+        }
+
+        if (json.has("policies")) {
+            final ConditionalAccessPolicyCollectionResponse response = new ConditionalAccessPolicyCollectionResponse();
+            if (json.has("policies@odata.nextLink")) {
+                response.nextLink = json.get("policies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("policies").toString(), JsonObject[].class);
+            final ConditionalAccessPolicy[] array = new ConditionalAccessPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConditionalAccessPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            policies = new ConditionalAccessPolicyCollectionPage(response, null);
         }
     }
 }

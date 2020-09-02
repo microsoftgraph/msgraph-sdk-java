@@ -8,13 +8,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenotePage;
-import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
+import com.microsoft.graph.models.extensions.OnenotePatchContentCommand;
 import com.microsoft.graph.models.extensions.OnenotePagePreview;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -60,15 +60,6 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
 
 
     /**
-     * Gets the request builder for OnenoteSection
-     *
-     * @return the IOnenoteSectionRequestBuilder instance
-     */
-    public IOnenoteSectionRequestBuilder parentSection() {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
-    }
-
-    /**
      * Gets the request builder for Notebook
      *
      * @return the INotebookRequestBuilder instance
@@ -77,16 +68,25 @@ public class OnenotePageRequestBuilder extends BaseRequestBuilder implements IOn
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("parentNotebook"), getClient(), null);
     }
 
+    /**
+     * Gets the request builder for OnenoteSection
+     *
+     * @return the IOnenoteSectionRequestBuilder instance
+     */
+    public IOnenoteSectionRequestBuilder parentSection() {
+        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("parentSection"), getClient(), null);
+    }
+
     public IOnenotePageContentStreamRequestBuilder content() {
         return new OnenotePageContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 
-    public IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
-        return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
-    }
-
     public IOnenotePageCopyToSectionRequestBuilder copyToSection(final String id, final String groupId, final String siteCollectionId, final String siteId) {
         return new OnenotePageCopyToSectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToSection"), getClient(), null, id, groupId, siteCollectionId, siteId);
+    }
+
+    public IOnenotePageOnenotePatchContentRequestBuilder onenotePatchContent(final java.util.List<OnenotePatchContentCommand> commands) {
+        return new OnenotePageOnenotePatchContentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.onenotePatchContent"), getClient(), null, commands);
     }
 
     public IOnenotePagePreviewRequestBuilder preview() {

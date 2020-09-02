@@ -54,20 +54,20 @@ public class AutomaticRepliesMailTips implements IJsonBackedObject {
     public LocaleInfo messageLanguage;
 
     /**
-     * The Scheduled Start Time.
-     * The date and time that automatic replies are set to begin.
-     */
-    @SerializedName("scheduledStartTime")
-    @Expose
-    public DateTimeTimeZone scheduledStartTime;
-
-    /**
      * The Scheduled End Time.
      * The date and time that automatic replies are set to end.
      */
     @SerializedName("scheduledEndTime")
     @Expose
     public DateTimeTimeZone scheduledEndTime;
+
+    /**
+     * The Scheduled Start Time.
+     * The date and time that automatic replies are set to begin.
+     */
+    @SerializedName("scheduledStartTime")
+    @Expose
+    public DateTimeTimeZone scheduledStartTime;
 
 
     /**

@@ -11,38 +11,38 @@ import com.microsoft.graph.models.extensions.DeviceManagement;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicySettingStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosUpdateDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementPartnerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementExchangeConnectorRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileThreatDefenseConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceAndAppManagementRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRemoteAssistancePartnerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITelecomExpenseManagementPartnerCollectionRequestBuilder;
@@ -53,9 +53,9 @@ import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppL
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLearningSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISoftwareUpdateStatusSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISoftwareUpdateStatusSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplePushNotificationCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceOverviewRequestBuilder;
@@ -88,20 +88,9 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     ITermsAndConditionsRequestBuilder termsAndConditions(final String id);
 
-    IDeviceConfigurationCollectionRequestBuilder deviceConfigurations();
-
-    IDeviceConfigurationRequestBuilder deviceConfigurations(final String id);
-
     IDeviceCompliancePolicyCollectionRequestBuilder deviceCompliancePolicies();
 
     IDeviceCompliancePolicyRequestBuilder deviceCompliancePolicies(final String id);
-
-    /**
-     * Gets the request builder for SoftwareUpdateStatusSummary
-     *
-     * @return the ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder instance
-     */
-    ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder softwareUpdateStatusSummary();
 
     /**
      * Gets the request builder for DeviceCompliancePolicyDeviceStateSummary
@@ -121,21 +110,24 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
      */
     IDeviceConfigurationDeviceStateSummaryRequestBuilder deviceConfigurationDeviceStateSummaries();
 
+    IDeviceConfigurationCollectionRequestBuilder deviceConfigurations();
+
+    IDeviceConfigurationRequestBuilder deviceConfigurations(final String id);
+
     IIosUpdateDeviceStatusCollectionRequestBuilder iosUpdateStatuses();
 
     IIosUpdateDeviceStatusRequestBuilder iosUpdateStatuses(final String id);
 
-    IDeviceCategoryCollectionRequestBuilder deviceCategories();
+    /**
+     * Gets the request builder for SoftwareUpdateStatusSummary
+     *
+     * @return the ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder instance
+     */
+    ISoftwareUpdateStatusSummaryWithReferenceRequestBuilder softwareUpdateStatusSummary();
 
-    IDeviceCategoryRequestBuilder deviceCategories(final String id);
+    IComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners();
 
-    IDeviceManagementExchangeConnectorCollectionRequestBuilder exchangeConnectors();
-
-    IDeviceManagementExchangeConnectorRequestBuilder exchangeConnectors(final String id);
-
-    IDeviceEnrollmentConfigurationCollectionRequestBuilder deviceEnrollmentConfigurations();
-
-    IDeviceEnrollmentConfigurationRequestBuilder deviceEnrollmentConfigurations(final String id);
+    IComplianceManagementPartnerRequestBuilder complianceManagementPartners(final String id);
 
     /**
      * Gets the request builder for OnPremisesConditionalAccessSettings
@@ -144,17 +136,25 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
      */
     IOnPremisesConditionalAccessSettingsRequestBuilder conditionalAccessSettings();
 
-    IMobileThreatDefenseConnectorCollectionRequestBuilder mobileThreatDefenseConnectors();
+    IDeviceCategoryCollectionRequestBuilder deviceCategories();
 
-    IMobileThreatDefenseConnectorRequestBuilder mobileThreatDefenseConnectors(final String id);
+    IDeviceCategoryRequestBuilder deviceCategories(final String id);
+
+    IDeviceEnrollmentConfigurationCollectionRequestBuilder deviceEnrollmentConfigurations();
+
+    IDeviceEnrollmentConfigurationRequestBuilder deviceEnrollmentConfigurations(final String id);
 
     IDeviceManagementPartnerCollectionRequestBuilder deviceManagementPartners();
 
     IDeviceManagementPartnerRequestBuilder deviceManagementPartners(final String id);
 
-    IComplianceManagementPartnerCollectionRequestBuilder complianceManagementPartners();
+    IDeviceManagementExchangeConnectorCollectionRequestBuilder exchangeConnectors();
 
-    IComplianceManagementPartnerRequestBuilder complianceManagementPartners(final String id);
+    IDeviceManagementExchangeConnectorRequestBuilder exchangeConnectors(final String id);
+
+    IMobileThreatDefenseConnectorCollectionRequestBuilder mobileThreatDefenseConnectors();
+
+    IMobileThreatDefenseConnectorRequestBuilder mobileThreatDefenseConnectors(final String id);
 
     /**
      * Gets the request builder for ApplePushNotificationCertificate
@@ -163,16 +163,16 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
      */
     IApplePushNotificationCertificateRequestBuilder applePushNotificationCertificate();
 
+    IDetectedAppCollectionRequestBuilder detectedApps();
+
+    IDetectedAppRequestBuilder detectedApps(final String id);
+
     /**
      * Gets the request builder for ManagedDeviceOverview
      *
      * @return the IManagedDeviceOverviewWithReferenceRequestBuilder instance
      */
     IManagedDeviceOverviewWithReferenceRequestBuilder managedDeviceOverview();
-
-    IDetectedAppCollectionRequestBuilder detectedApps();
-
-    IDetectedAppRequestBuilder detectedApps(final String id);
 
     IManagedDeviceCollectionRequestBuilder managedDevices();
 
@@ -182,17 +182,17 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     INotificationMessageTemplateRequestBuilder notificationMessageTemplates(final String id);
 
-    IRoleDefinitionCollectionRequestBuilder roleDefinitions();
+    IResourceOperationCollectionRequestBuilder resourceOperations();
 
-    IRoleDefinitionRequestBuilder roleDefinitions(final String id);
+    IResourceOperationRequestBuilder resourceOperations(final String id);
 
     IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder roleAssignments();
 
     IDeviceAndAppManagementRoleAssignmentRequestBuilder roleAssignments(final String id);
 
-    IResourceOperationCollectionRequestBuilder resourceOperations();
+    IRoleDefinitionCollectionRequestBuilder roleDefinitions();
 
-    IResourceOperationRequestBuilder resourceOperations(final String id);
+    IRoleDefinitionRequestBuilder roleDefinitions(final String id);
 
     IRemoteAssistancePartnerCollectionRequestBuilder remoteAssistancePartners();
 

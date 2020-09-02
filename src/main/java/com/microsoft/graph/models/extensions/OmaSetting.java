@@ -36,20 +36,20 @@ public class OmaSetting implements IJsonBackedObject {
     }
 
     /**
-     * The Display Name.
-     * Display Name.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Description.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * Display Name.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Oma Uri.

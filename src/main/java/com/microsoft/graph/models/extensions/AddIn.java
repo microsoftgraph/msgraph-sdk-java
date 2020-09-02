@@ -45,20 +45,20 @@ public class AddIn implements IJsonBackedObject {
     public java.util.UUID id;
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
      * The Properties.
      * 
      */
     @SerializedName("properties")
     @Expose
     public java.util.List<KeyValue> properties;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

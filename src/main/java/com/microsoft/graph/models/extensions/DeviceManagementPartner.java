@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementPartnerTenantState;
 import com.microsoft.graph.models.generated.DeviceManagementPartnerAppType;
+import com.microsoft.graph.models.generated.DeviceManagementPartnerTenantState;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,38 +29,6 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Last Heartbeat Date Time.
-     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
-     */
-    @SerializedName("lastHeartbeatDateTime")
-    @Expose
-    public java.util.Calendar lastHeartbeatDateTime;
-
-    /**
-     * The Partner State.
-     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
-     */
-    @SerializedName("partnerState")
-    @Expose
-    public DeviceManagementPartnerTenantState partnerState;
-
-    /**
-     * The Partner App Type.
-     * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
-     */
-    @SerializedName("partnerAppType")
-    @Expose
-    public DeviceManagementPartnerAppType partnerAppType;
-
-    /**
-     * The Single Tenant App Id.
-     * Partner Single tenant App id
-     */
-    @SerializedName("singleTenantAppId")
-    @Expose
-    public String singleTenantAppId;
-
-    /**
      * The Display Name.
      * Partner display name
      */
@@ -77,12 +45,36 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     public Boolean isConfigured;
 
     /**
-     * The When Partner Devices Will Be Removed Date Time.
-     * DateTime in UTC when PartnerDevices will be removed
+     * The Last Heartbeat Date Time.
+     * Timestamp of last heartbeat after admin enabled option Connect to Device management Partner
      */
-    @SerializedName("whenPartnerDevicesWillBeRemovedDateTime")
+    @SerializedName("lastHeartbeatDateTime")
     @Expose
-    public java.util.Calendar whenPartnerDevicesWillBeRemovedDateTime;
+    public java.util.Calendar lastHeartbeatDateTime;
+
+    /**
+     * The Partner App Type.
+     * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
+     */
+    @SerializedName("partnerAppType")
+    @Expose
+    public DeviceManagementPartnerAppType partnerAppType;
+
+    /**
+     * The Partner State.
+     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     */
+    @SerializedName("partnerState")
+    @Expose
+    public DeviceManagementPartnerTenantState partnerState;
+
+    /**
+     * The Single Tenant App Id.
+     * Partner Single tenant App id
+     */
+    @SerializedName("singleTenantAppId")
+    @Expose
+    public String singleTenantAppId;
 
     /**
      * The When Partner Devices Will Be Marked As Non Compliant Date Time.
@@ -91,6 +83,14 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     @SerializedName("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime")
     @Expose
     public java.util.Calendar whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
+
+    /**
+     * The When Partner Devices Will Be Removed Date Time.
+     * DateTime in UTC when PartnerDevices will be removed
+     */
+    @SerializedName("whenPartnerDevicesWillBeRemovedDateTime")
+    @Expose
+    public java.util.Calendar whenPartnerDevicesWillBeRemovedDateTime;
 
 
     /**

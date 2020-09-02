@@ -8,24 +8,24 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.models.extensions.DeviceComplianceDeviceStatus;
-import com.microsoft.graph.models.extensions.DeviceComplianceUserStatus;
-import com.microsoft.graph.models.extensions.DeviceComplianceDeviceOverview;
-import com.microsoft.graph.models.extensions.DeviceComplianceUserOverview;
-import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
+import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
+import com.microsoft.graph.models.extensions.DeviceComplianceDeviceStatus;
+import com.microsoft.graph.models.extensions.DeviceComplianceDeviceOverview;
+import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
+import com.microsoft.graph.models.extensions.DeviceComplianceUserStatus;
+import com.microsoft.graph.models.extensions.DeviceComplianceUserOverview;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionResponse;
-import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionPage;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionResponse;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionPage;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionResponse;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -60,20 +60,20 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     public String description;
 
     /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Display Name.
      * Admin provided name of the device configuration.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Version.
@@ -84,22 +84,22 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     public Integer version;
 
     /**
-     * The Scheduled Actions For Rule.
-     * The list of scheduled action for this rule
+     * The Assignments.
+     * The collection of assignments for this compliance policy.
      */
-    public DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
+    public DeviceCompliancePolicyAssignmentCollectionPage assignments;
+
+    /**
+     * The Device Setting State Summaries.
+     * Compliance Setting State Device Summary
+     */
+    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
      * List of DeviceComplianceDeviceStatus.
      */
     public DeviceComplianceDeviceStatusCollectionPage deviceStatuses;
-
-    /**
-     * The User Statuses.
-     * List of DeviceComplianceUserStatus.
-     */
-    public DeviceComplianceUserStatusCollectionPage userStatuses;
 
     /**
      * The Device Status Overview.
@@ -110,24 +110,24 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
     public DeviceComplianceDeviceOverview deviceStatusOverview;
 
     /**
+     * The Scheduled Actions For Rule.
+     * The list of scheduled action for this rule
+     */
+    public DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
+
+    /**
+     * The User Statuses.
+     * List of DeviceComplianceUserStatus.
+     */
+    public DeviceComplianceUserStatusCollectionPage userStatuses;
+
+    /**
      * The User Status Overview.
      * Device compliance users status overview
      */
     @SerializedName("userStatusOverview")
     @Expose
     public DeviceComplianceUserOverview userStatusOverview;
-
-    /**
-     * The Device Setting State Summaries.
-     * Compliance Setting State Device Summary
-     */
-    public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
-
-    /**
-     * The Assignments.
-     * The collection of assignments for this compliance policy.
-     */
-    public DeviceCompliancePolicyAssignmentCollectionPage assignments;
 
 
     /**
@@ -169,52 +169,20 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
         rawObject = json;
 
 
-        if (json.has("scheduledActionsForRule")) {
-            final DeviceComplianceScheduledActionForRuleCollectionResponse response = new DeviceComplianceScheduledActionForRuleCollectionResponse();
-            if (json.has("scheduledActionsForRule@odata.nextLink")) {
-                response.nextLink = json.get("scheduledActionsForRule@odata.nextLink").getAsString();
+        if (json.has("assignments")) {
+            final DeviceCompliancePolicyAssignmentCollectionResponse response = new DeviceCompliancePolicyAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("scheduledActionsForRule").toString(), JsonObject[].class);
-            final DeviceComplianceScheduledActionForRule[] array = new DeviceComplianceScheduledActionForRule[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final DeviceCompliancePolicyAssignment[] array = new DeviceCompliancePolicyAssignment[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceScheduledActionForRule.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceCompliancePolicyAssignment.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            scheduledActionsForRule = new DeviceComplianceScheduledActionForRuleCollectionPage(response, null);
-        }
-
-        if (json.has("deviceStatuses")) {
-            final DeviceComplianceDeviceStatusCollectionResponse response = new DeviceComplianceDeviceStatusCollectionResponse();
-            if (json.has("deviceStatuses@odata.nextLink")) {
-                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
-            final DeviceComplianceDeviceStatus[] array = new DeviceComplianceDeviceStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceDeviceStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            deviceStatuses = new DeviceComplianceDeviceStatusCollectionPage(response, null);
-        }
-
-        if (json.has("userStatuses")) {
-            final DeviceComplianceUserStatusCollectionResponse response = new DeviceComplianceUserStatusCollectionResponse();
-            if (json.has("userStatuses@odata.nextLink")) {
-                response.nextLink = json.get("userStatuses@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userStatuses").toString(), JsonObject[].class);
-            final DeviceComplianceUserStatus[] array = new DeviceComplianceUserStatus[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceUserStatus.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            userStatuses = new DeviceComplianceUserStatusCollectionPage(response, null);
+            assignments = new DeviceCompliancePolicyAssignmentCollectionPage(response, null);
         }
 
         if (json.has("deviceSettingStateSummaries")) {
@@ -233,20 +201,52 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
             deviceSettingStateSummaries = new SettingStateDeviceSummaryCollectionPage(response, null);
         }
 
-        if (json.has("assignments")) {
-            final DeviceCompliancePolicyAssignmentCollectionResponse response = new DeviceCompliancePolicyAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
+        if (json.has("deviceStatuses")) {
+            final DeviceComplianceDeviceStatusCollectionResponse response = new DeviceComplianceDeviceStatusCollectionResponse();
+            if (json.has("deviceStatuses@odata.nextLink")) {
+                response.nextLink = json.get("deviceStatuses@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final DeviceCompliancePolicyAssignment[] array = new DeviceCompliancePolicyAssignment[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("deviceStatuses").toString(), JsonObject[].class);
+            final DeviceComplianceDeviceStatus[] array = new DeviceComplianceDeviceStatus[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceCompliancePolicyAssignment.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceDeviceStatus.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            assignments = new DeviceCompliancePolicyAssignmentCollectionPage(response, null);
+            deviceStatuses = new DeviceComplianceDeviceStatusCollectionPage(response, null);
+        }
+
+        if (json.has("scheduledActionsForRule")) {
+            final DeviceComplianceScheduledActionForRuleCollectionResponse response = new DeviceComplianceScheduledActionForRuleCollectionResponse();
+            if (json.has("scheduledActionsForRule@odata.nextLink")) {
+                response.nextLink = json.get("scheduledActionsForRule@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("scheduledActionsForRule").toString(), JsonObject[].class);
+            final DeviceComplianceScheduledActionForRule[] array = new DeviceComplianceScheduledActionForRule[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceScheduledActionForRule.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            scheduledActionsForRule = new DeviceComplianceScheduledActionForRuleCollectionPage(response, null);
+        }
+
+        if (json.has("userStatuses")) {
+            final DeviceComplianceUserStatusCollectionResponse response = new DeviceComplianceUserStatusCollectionResponse();
+            if (json.has("userStatuses@odata.nextLink")) {
+                response.nextLink = json.get("userStatuses@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("userStatuses").toString(), JsonObject[].class);
+            final DeviceComplianceUserStatus[] array = new DeviceComplianceUserStatus[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DeviceComplianceUserStatus.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            userStatuses = new DeviceComplianceUserStatusCollectionPage(response, null);
         }
     }
 }

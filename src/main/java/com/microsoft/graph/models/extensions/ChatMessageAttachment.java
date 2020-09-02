@@ -36,12 +36,12 @@ public class ChatMessageAttachment implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Read-only. Unique id of the attachment.
+     * The Content.
+     * The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
      */
-    @SerializedName("id")
+    @SerializedName("content")
     @Expose
-    public String id;
+    public String content;
 
     /**
      * The Content Type.
@@ -60,12 +60,12 @@ public class ChatMessageAttachment implements IJsonBackedObject {
     public String contentUrl;
 
     /**
-     * The Content.
-     * The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This property and contentUrl are mutually exclusive.
+     * The Id.
+     * Read-only. Unique id of the attachment.
      */
-    @SerializedName("content")
+    @SerializedName("id")
     @Expose
-    public String content;
+    public String id;
 
     /**
      * The Name.

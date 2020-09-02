@@ -36,20 +36,20 @@ public class ChangeTrackedEntity extends Entity implements IJsonBackedObject {
     public java.util.Calendar createdDateTime;
 
     /**
-     * The Last Modified Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
      * The Last Modified By.
      * Identity of the person who last modified the entity.
      */
     @SerializedName("lastModifiedBy")
     @Expose
     public IdentitySet lastModifiedBy;
+
+    /**
+     * The Last Modified Date Time.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
 
     /**

@@ -36,12 +36,12 @@ public class DomainState implements IJsonBackedObject {
     }
 
     /**
-     * The Status.
-     * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
+     * The Last Action Date Time.
+     * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
      */
-    @SerializedName("status")
+    @SerializedName("lastActionDateTime")
     @Expose
-    public String status;
+    public java.util.Calendar lastActionDateTime;
 
     /**
      * The Operation.
@@ -52,12 +52,12 @@ public class DomainState implements IJsonBackedObject {
     public String operation;
 
     /**
-     * The Last Action Date Time.
-     * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
+     * The Status.
+     * Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
      */
-    @SerializedName("lastActionDateTime")
+    @SerializedName("status")
     @Expose
-    public java.util.Calendar lastActionDateTime;
+    public String status;
 
 
     /**

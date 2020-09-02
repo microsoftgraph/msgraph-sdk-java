@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketTaskBoardTaskFormatRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,13 +38,6 @@ public interface IPlannerTaskRequestBuilder extends IRequestBuilder {
 
 
     /**
-     * Gets the request builder for PlannerTaskDetails
-     *
-     * @return the IPlannerTaskDetailsRequestBuilder instance
-     */
-    IPlannerTaskDetailsRequestBuilder details();
-
-    /**
      * Gets the request builder for PlannerAssignedToTaskBoardTaskFormat
      *
      * @return the IPlannerAssignedToTaskBoardTaskFormatRequestBuilder instance
@@ -52,17 +45,24 @@ public interface IPlannerTaskRequestBuilder extends IRequestBuilder {
     IPlannerAssignedToTaskBoardTaskFormatRequestBuilder assignedToTaskBoardFormat();
 
     /**
-     * Gets the request builder for PlannerProgressTaskBoardTaskFormat
-     *
-     * @return the IPlannerProgressTaskBoardTaskFormatRequestBuilder instance
-     */
-    IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat();
-
-    /**
      * Gets the request builder for PlannerBucketTaskBoardTaskFormat
      *
      * @return the IPlannerBucketTaskBoardTaskFormatRequestBuilder instance
      */
     IPlannerBucketTaskBoardTaskFormatRequestBuilder bucketTaskBoardFormat();
+
+    /**
+     * Gets the request builder for PlannerTaskDetails
+     *
+     * @return the IPlannerTaskDetailsRequestBuilder instance
+     */
+    IPlannerTaskDetailsRequestBuilder details();
+
+    /**
+     * Gets the request builder for PlannerProgressTaskBoardTaskFormat
+     *
+     * @return the IPlannerProgressTaskBoardTaskFormatRequestBuilder instance
+     */
+    IPlannerProgressTaskBoardTaskFormatRequestBuilder progressTaskBoardFormat();
 
 }

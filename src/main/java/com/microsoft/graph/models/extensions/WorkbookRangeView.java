@@ -102,20 +102,20 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
     public com.google.gson.JsonElement text;
 
     /**
-     * The Value Types.
-     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
-     */
-    @SerializedName("valueTypes")
-    @Expose
-    public com.google.gson.JsonElement valueTypes;
-
-    /**
      * The Values.
      * Represents the raw values of the specified range view. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
      */
     @SerializedName("values")
     @Expose
     public com.google.gson.JsonElement values;
+
+    /**
+     * The Value Types.
+     * Represents the type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     */
+    @SerializedName("valueTypes")
+    @Expose
+    public com.google.gson.JsonElement valueTypes;
 
     /**
      * The Rows.

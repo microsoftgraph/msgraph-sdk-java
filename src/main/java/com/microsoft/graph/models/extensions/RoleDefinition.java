@@ -31,14 +31,6 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Display Name of the Role definition.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Description of the Role definition.
      */
@@ -47,12 +39,12 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Role Permissions.
-     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
+     * The Display Name.
+     * Display Name of the Role definition.
      */
-    @SerializedName("rolePermissions")
+    @SerializedName("displayName")
     @Expose
-    public java.util.List<RolePermission> rolePermissions;
+    public String displayName;
 
     /**
      * The Is Built In.
@@ -61,6 +53,14 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
     @SerializedName("isBuiltIn")
     @Expose
     public Boolean isBuiltIn;
+
+    /**
+     * The Role Permissions.
+     * List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
+     */
+    @SerializedName("rolePermissions")
+    @Expose
+    public java.util.List<RolePermission> rolePermissions;
 
     /**
      * The Role Assignments.

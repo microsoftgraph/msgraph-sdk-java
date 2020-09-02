@@ -28,20 +28,20 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Contribution To Content Discovery Disabled.
-     * 
-     */
-    @SerializedName("contributionToContentDiscoveryDisabled")
-    @Expose
-    public Boolean contributionToContentDiscoveryDisabled;
-
-    /**
      * The Contribution To Content Discovery As Organization Disabled.
      * 
      */
     @SerializedName("contributionToContentDiscoveryAsOrganizationDisabled")
     @Expose
     public Boolean contributionToContentDiscoveryAsOrganizationDisabled;
+
+    /**
+     * The Contribution To Content Discovery Disabled.
+     * 
+     */
+    @SerializedName("contributionToContentDiscoveryDisabled")
+    @Expose
+    public Boolean contributionToContentDiscoveryDisabled;
 
     /**
      * The Shift Preferences.

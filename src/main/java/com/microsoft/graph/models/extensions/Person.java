@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ScoredEmailAddress;
+import com.microsoft.graph.models.extensions.PersonType;
 import com.microsoft.graph.models.extensions.Phone;
 import com.microsoft.graph.models.extensions.Location;
+import com.microsoft.graph.models.extensions.ScoredEmailAddress;
 import com.microsoft.graph.models.extensions.Website;
-import com.microsoft.graph.models.extensions.PersonType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -32,6 +32,30 @@ public class Person extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Birthday.
+     * The person's birthday.
+     */
+    @SerializedName("birthday")
+    @Expose
+    public String birthday;
+
+    /**
+     * The Company Name.
+     * The name of the person's company.
+     */
+    @SerializedName("companyName")
+    @Expose
+    public String companyName;
+
+    /**
+     * The Department.
+     * The person's department.
+     */
+    @SerializedName("department")
+    @Expose
+    public String department;
+
+    /**
      * The Display Name.
      * The person's display name.
      */
@@ -48,28 +72,12 @@ public class Person extends Entity implements IJsonBackedObject {
     public String givenName;
 
     /**
-     * The Surname.
-     * The person's surname.
+     * The Im Address.
+     * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
      */
-    @SerializedName("surname")
+    @SerializedName("imAddress")
     @Expose
-    public String surname;
-
-    /**
-     * The Birthday.
-     * The person's birthday.
-     */
-    @SerializedName("birthday")
-    @Expose
-    public String birthday;
-
-    /**
-     * The Person Notes.
-     * Free-form notes that the user has taken about this person.
-     */
-    @SerializedName("personNotes")
-    @Expose
-    public String personNotes;
+    public String imAddress;
 
     /**
      * The Is Favorite.
@@ -80,12 +88,36 @@ public class Person extends Entity implements IJsonBackedObject {
     public Boolean isFavorite;
 
     /**
-     * The Scored Email Addresses.
-     * The person's email addresses.
+     * The Job Title.
+     * The person's job title.
      */
-    @SerializedName("scoredEmailAddresses")
+    @SerializedName("jobTitle")
     @Expose
-    public java.util.List<ScoredEmailAddress> scoredEmailAddresses;
+    public String jobTitle;
+
+    /**
+     * The Office Location.
+     * The location of the person's office.
+     */
+    @SerializedName("officeLocation")
+    @Expose
+    public String officeLocation;
+
+    /**
+     * The Person Notes.
+     * Free-form notes that the user has taken about this person.
+     */
+    @SerializedName("personNotes")
+    @Expose
+    public String personNotes;
+
+    /**
+     * The Person Type.
+     * The type of person.
+     */
+    @SerializedName("personType")
+    @Expose
+    public PersonType personType;
 
     /**
      * The Phones.
@@ -104,54 +136,6 @@ public class Person extends Entity implements IJsonBackedObject {
     public java.util.List<Location> postalAddresses;
 
     /**
-     * The Websites.
-     * The person's websites.
-     */
-    @SerializedName("websites")
-    @Expose
-    public java.util.List<Website> websites;
-
-    /**
-     * The Job Title.
-     * The person's job title.
-     */
-    @SerializedName("jobTitle")
-    @Expose
-    public String jobTitle;
-
-    /**
-     * The Company Name.
-     * The name of the person's company.
-     */
-    @SerializedName("companyName")
-    @Expose
-    public String companyName;
-
-    /**
-     * The Yomi Company.
-     * The phonetic Japanese name of the person's company.
-     */
-    @SerializedName("yomiCompany")
-    @Expose
-    public String yomiCompany;
-
-    /**
-     * The Department.
-     * The person's department.
-     */
-    @SerializedName("department")
-    @Expose
-    public String department;
-
-    /**
-     * The Office Location.
-     * The location of the person's office.
-     */
-    @SerializedName("officeLocation")
-    @Expose
-    public String officeLocation;
-
-    /**
      * The Profession.
      * The person's profession.
      */
@@ -160,12 +144,20 @@ public class Person extends Entity implements IJsonBackedObject {
     public String profession;
 
     /**
-     * The Person Type.
-     * The type of person.
+     * The Scored Email Addresses.
+     * The person's email addresses.
      */
-    @SerializedName("personType")
+    @SerializedName("scoredEmailAddresses")
     @Expose
-    public PersonType personType;
+    public java.util.List<ScoredEmailAddress> scoredEmailAddresses;
+
+    /**
+     * The Surname.
+     * The person's surname.
+     */
+    @SerializedName("surname")
+    @Expose
+    public String surname;
 
     /**
      * The User Principal Name.
@@ -176,12 +168,20 @@ public class Person extends Entity implements IJsonBackedObject {
     public String userPrincipalName;
 
     /**
-     * The Im Address.
-     * The instant message voice over IP (VOIP) session initiation protocol (SIP) address for the user. Read-only.
+     * The Websites.
+     * The person's websites.
      */
-    @SerializedName("imAddress")
+    @SerializedName("websites")
     @Expose
-    public String imAddress;
+    public java.util.List<Website> websites;
+
+    /**
+     * The Yomi Company.
+     * The phonetic Japanese name of the person's company.
+     */
+    @SerializedName("yomiCompany")
+    @Expose
+    public String yomiCompany;
 
 
     /**

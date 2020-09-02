@@ -30,18 +30,18 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Item Activity Stats.
-     * 
-     */
-    public ItemActivityStatCollectionPage itemActivityStats;
-
-    /**
      * The All Time.
      * 
      */
     @SerializedName("allTime")
     @Expose
     public ItemActivityStat allTime;
+
+    /**
+     * The Item Activity Stats.
+     * 
+     */
+    public ItemActivityStatCollectionPage itemActivityStats;
 
     /**
      * The Last Seven Days.

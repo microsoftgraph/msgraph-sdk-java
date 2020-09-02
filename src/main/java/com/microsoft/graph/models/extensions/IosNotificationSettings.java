@@ -37,12 +37,12 @@ public class IosNotificationSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Bundle ID.
-     * Bundle id of app to which to apply these notification settings.
+     * The Alert Type.
+     * Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
      */
-    @SerializedName("bundleID")
+    @SerializedName("alertType")
     @Expose
-    public String bundleID;
+    public IosNotificationAlertType alertType;
 
     /**
      * The App Name.
@@ -53,12 +53,20 @@ public class IosNotificationSettings implements IJsonBackedObject {
     public String appName;
 
     /**
-     * The Publisher.
-     * Publisher to be associated with the bundleID.
+     * The Badges Enabled.
+     * Indicates whether badges are allowed for this app.
      */
-    @SerializedName("publisher")
+    @SerializedName("badgesEnabled")
     @Expose
-    public String publisher;
+    public Boolean badgesEnabled;
+
+    /**
+     * The Bundle ID.
+     * Bundle id of app to which to apply these notification settings.
+     */
+    @SerializedName("bundleID")
+    @Expose
+    public String bundleID;
 
     /**
      * The Enabled.
@@ -67,6 +75,14 @@ public class IosNotificationSettings implements IJsonBackedObject {
     @SerializedName("enabled")
     @Expose
     public Boolean enabled;
+
+    /**
+     * The Publisher.
+     * Publisher to be associated with the bundleID.
+     */
+    @SerializedName("publisher")
+    @Expose
+    public String publisher;
 
     /**
      * The Show In Notification Center.
@@ -83,22 +99,6 @@ public class IosNotificationSettings implements IJsonBackedObject {
     @SerializedName("showOnLockScreen")
     @Expose
     public Boolean showOnLockScreen;
-
-    /**
-     * The Alert Type.
-     * Indicates the type of alert for notifications for this app. Possible values are: deviceDefault, banner, modal, none.
-     */
-    @SerializedName("alertType")
-    @Expose
-    public IosNotificationAlertType alertType;
-
-    /**
-     * The Badges Enabled.
-     * Indicates whether badges are allowed for this app.
-     */
-    @SerializedName("badgesEnabled")
-    @Expose
-    public Boolean badgesEnabled;
 
     /**
      * The Sounds Enabled.

@@ -53,20 +53,20 @@ public class DeviceActionResult implements IJsonBackedObject {
     public ActionState actionState;
 
     /**
-     * The Start Date Time.
-     * Time the action was initiated
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
      * The Last Updated Date Time.
      * Time the action state was last updated
      */
     @SerializedName("lastUpdatedDateTime")
     @Expose
     public java.util.Calendar lastUpdatedDateTime;
+
+    /**
+     * The Start Date Time.
+     * Time the action was initiated
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
 
 
     /**

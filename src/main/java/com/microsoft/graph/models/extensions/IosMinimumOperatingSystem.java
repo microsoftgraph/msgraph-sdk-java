@@ -36,22 +36,6 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
     }
 
     /**
-     * The V8_0.
-     * Version 8.0 or later.
-     */
-    @SerializedName("v8_0")
-    @Expose
-    public Boolean v8_0;
-
-    /**
-     * The V9_0.
-     * Version 9.0 or later.
-     */
-    @SerializedName("v9_0")
-    @Expose
-    public Boolean v9_0;
-
-    /**
      * The V10_0.
      * Version 10.0 or later.
      */
@@ -82,6 +66,22 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
     @SerializedName("v13_0")
     @Expose
     public Boolean v13_0;
+
+    /**
+     * The V8_0.
+     * Version 8.0 or later.
+     */
+    @SerializedName("v8_0")
+    @Expose
+    public Boolean v8_0;
+
+    /**
+     * The V9_0.
+     * Version 9.0 or later.
+     */
+    @SerializedName("v9_0")
+    @Expose
+    public Boolean v9_0;
 
 
     /**

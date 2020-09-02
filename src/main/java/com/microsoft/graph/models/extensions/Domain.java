@@ -9,13 +9,13 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DomainState;
-import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import com.microsoft.graph.models.extensions.DirectoryObject;
+import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse;
-import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionResponse;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -122,6 +122,14 @@ public class Domain extends Entity implements IJsonBackedObject {
     public Integer passwordValidityPeriodInDays;
 
     /**
+     * The State.
+     * Status of asynchronous operations scheduled for the domain.
+     */
+    @SerializedName("state")
+    @Expose
+    public DomainState state;
+
+    /**
      * The Supported Services.
      * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, YammerNot nullable
      */
@@ -130,12 +138,10 @@ public class Domain extends Entity implements IJsonBackedObject {
     public java.util.List<String> supportedServices;
 
     /**
-     * The State.
-     * Status of asynchronous operations scheduled for the domain.
+     * The Domain Name References.
+     * Read-only, Nullable
      */
-    @SerializedName("state")
-    @Expose
-    public DomainState state;
+    public DirectoryObjectCollectionPage domainNameReferences;
 
     /**
      * The Service Configuration Records.
@@ -148,12 +154,6 @@ public class Domain extends Entity implements IJsonBackedObject {
      * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD.Read-only, Nullable
      */
     public DomainDnsRecordCollectionPage verificationDnsRecords;
-
-    /**
-     * The Domain Name References.
-     * Read-only, Nullable
-     */
-    public DirectoryObjectCollectionPage domainNameReferences;
 
 
     /**
@@ -195,6 +195,22 @@ public class Domain extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("domainNameReferences")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("domainNameReferences@odata.nextLink")) {
+                response.nextLink = json.get("domainNameReferences@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("domainNameReferences").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            domainNameReferences = new DirectoryObjectCollectionPage(response, null);
+        }
+
         if (json.has("serviceConfigurationRecords")) {
             final DomainDnsRecordCollectionResponse response = new DomainDnsRecordCollectionResponse();
             if (json.has("serviceConfigurationRecords@odata.nextLink")) {
@@ -225,22 +241,6 @@ public class Domain extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             verificationDnsRecords = new DomainDnsRecordCollectionPage(response, null);
-        }
-
-        if (json.has("domainNameReferences")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("domainNameReferences@odata.nextLink")) {
-                response.nextLink = json.get("domainNameReferences@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("domainNameReferences").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            domainNameReferences = new DirectoryObjectCollectionPage(response, null);
         }
     }
 }

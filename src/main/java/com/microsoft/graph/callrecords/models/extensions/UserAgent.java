@@ -36,20 +36,20 @@ public class UserAgent implements IJsonBackedObject {
     }
 
     /**
-     * The Header Value.
-     * User-agent header value reported by this endpoint.
-     */
-    @SerializedName("headerValue")
-    @Expose
-    public String headerValue;
-
-    /**
      * The Application Version.
      * Identifies the version of application software used by this endpoint.
      */
     @SerializedName("applicationVersion")
     @Expose
     public String applicationVersion;
+
+    /**
+     * The Header Value.
+     * User-agent header value reported by this endpoint.
+     */
+    @SerializedName("headerValue")
+    @Expose
+    public String headerValue;
 
 
     /**

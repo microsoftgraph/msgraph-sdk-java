@@ -10,26 +10,26 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicy;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyAssignment;
 import com.microsoft.graph.models.extensions.DeviceComplianceScheduledActionForRule;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceScheduledActionForRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceScheduledActionForRuleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceComplianceUserStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceComplianceUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceComplianceUserOverviewRequestBuilder;
@@ -77,12 +77,19 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
     }
 
 
-    public IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
-        return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
+    public IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
+        return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
-        return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
+    public IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
+        return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
+    }
+
+    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
     public IDeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
@@ -90,13 +97,6 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
 
     public IDeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
-    }
-    public IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
-        return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
-    }
-
-    public IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
-        return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
@@ -107,6 +107,20 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
     public IDeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
+    public IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
+        return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
+    }
+
+    public IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
+        return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
+    }
+    public IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
+        return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
+    }
+
+    public IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
+        return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DeviceComplianceUserOverview
@@ -115,20 +129,6 @@ public class DeviceCompliancePolicyRequestBuilder extends BaseRequestBuilder imp
      */
     public IDeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
-    }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
-        return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
-    }
-
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
-        return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
-    }
-    public IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
-        return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
-    }
-
-    public IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
-        return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     public IDeviceCompliancePolicyAssignCollectionRequestBuilder assign(final java.util.List<DeviceCompliancePolicyAssignment> assignments) {

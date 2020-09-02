@@ -9,7 +9,6 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudCommunications;
 import com.microsoft.graph.models.extensions.Call;
-import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
@@ -24,6 +23,7 @@ import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import java.util.Arrays;
 import java.util.EnumSet;
 

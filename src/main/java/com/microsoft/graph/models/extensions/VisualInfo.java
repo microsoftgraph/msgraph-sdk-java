@@ -53,6 +53,14 @@ public class VisualInfo implements IJsonBackedObject {
     public String backgroundColor;
 
     /**
+     * The Content.
+     * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+     */
+    @SerializedName("content")
+    @Expose
+    public com.google.gson.JsonElement content;
+
+    /**
      * The Description.
      * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
      */
@@ -67,14 +75,6 @@ public class VisualInfo implements IJsonBackedObject {
     @SerializedName("displayText")
     @Expose
     public String displayText;
-
-    /**
-     * The Content.
-     * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
-     */
-    @SerializedName("content")
-    @Expose
-    public com.google.gson.JsonElement content;
 
 
     /**

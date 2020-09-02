@@ -8,7 +8,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Call;
-import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.CancelMediaProcessingOperation;
@@ -23,14 +22,15 @@ import com.microsoft.graph.models.extensions.SubscribeToToneOperation;
 import com.microsoft.graph.models.extensions.UnmuteParticipantOperation;
 import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
-import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
-import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
+import com.microsoft.graph.models.extensions.TeleconferenceDeviceQuality;
 import com.microsoft.graph.requests.extensions.ICommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICommsOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IParticipantRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ParticipantRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -74,19 +74,19 @@ public class CallRequestBuilder extends BaseRequestBuilder implements ICallReque
     }
 
 
-    public IParticipantCollectionRequestBuilder participants() {
-        return new ParticipantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("participants"), getClient(), null);
-    }
-
-    public IParticipantRequestBuilder participants(final String id) {
-        return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants") + "/" + id, getClient(), null);
-    }
     public ICommsOperationCollectionRequestBuilder operations() {
         return new CommsOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
     public ICommsOperationRequestBuilder operations(final String id) {
         return new CommsOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+    public IParticipantCollectionRequestBuilder participants() {
+        return new ParticipantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("participants"), getClient(), null);
+    }
+
+    public IParticipantRequestBuilder participants(final String id) {
+        return new ParticipantRequestBuilder(getRequestUrlWithAdditionalSegment("participants") + "/" + id, getClient(), null);
     }
 
     public ICallAnswerRequestBuilder answer(final String callbackUri, final MediaConfig mediaConfig, final java.util.List<Modality> acceptedModalities) {

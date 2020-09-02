@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EducationClass;
-import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
+import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
@@ -42,6 +42,14 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
     public EducationClassCollectionPage classes;
 
     /**
+     * The Me.
+     * Read-only. Nullable.
+     */
+    @SerializedName("me")
+    @Expose
+    public EducationUser me;
+
+    /**
      * The Schools.
      * Read-only. Nullable.
      */
@@ -52,14 +60,6 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * Read-only. Nullable.
      */
     public EducationUserCollectionPage users;
-
-    /**
-     * The Me.
-     * Read-only. Nullable.
-     */
-    @SerializedName("me")
-    @Expose
-    public EducationUser me;
 
 
     /**

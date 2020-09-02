@@ -27,28 +27,12 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
 
 
     /**
-     * The Pending Count.
-     * Number of pending Users
+     * The Configuration Version.
+     * Version of the policy for that overview
      */
-    @SerializedName("pendingCount")
+    @SerializedName("configurationVersion")
     @Expose
-    public Integer pendingCount;
-
-    /**
-     * The Not Applicable Count.
-     * Number of not applicable users
-     */
-    @SerializedName("notApplicableCount")
-    @Expose
-    public Integer notApplicableCount;
-
-    /**
-     * The Success Count.
-     * Number of succeeded Users
-     */
-    @SerializedName("successCount")
-    @Expose
-    public Integer successCount;
+    public Integer configurationVersion;
 
     /**
      * The Error Count.
@@ -75,12 +59,28 @@ public class ManagedDeviceMobileAppConfigurationUserSummary extends Entity imple
     public java.util.Calendar lastUpdateDateTime;
 
     /**
-     * The Configuration Version.
-     * Version of the policy for that overview
+     * The Not Applicable Count.
+     * Number of not applicable users
      */
-    @SerializedName("configurationVersion")
+    @SerializedName("notApplicableCount")
     @Expose
-    public Integer configurationVersion;
+    public Integer notApplicableCount;
+
+    /**
+     * The Pending Count.
+     * Number of pending Users
+     */
+    @SerializedName("pendingCount")
+    @Expose
+    public Integer pendingCount;
+
+    /**
+     * The Success Count.
+     * Number of succeeded Users
+     */
+    @SerializedName("successCount")
+    @Expose
+    public Integer successCount;
 
 
     /**

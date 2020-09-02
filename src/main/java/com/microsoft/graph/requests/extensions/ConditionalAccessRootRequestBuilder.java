@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
     }
 
 
-    public IConditionalAccessPolicyCollectionRequestBuilder policies() {
-        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
-    }
-
-    public IConditionalAccessPolicyRequestBuilder policies(final String id) {
-        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
-    }
     public INamedLocationCollectionRequestBuilder namedLocations() {
         return new NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
     }
 
     public INamedLocationRequestBuilder namedLocations(final String id) {
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
+    }
+    public IConditionalAccessPolicyCollectionRequestBuilder policies() {
+        return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
+    }
+
+    public IConditionalAccessPolicyRequestBuilder policies(final String id) {
+        return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

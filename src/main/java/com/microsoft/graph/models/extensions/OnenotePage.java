@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PageLinks;
-import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.Notebook;
+import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteEntitySchemaObjectModel;
 
 
@@ -30,12 +30,12 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements IJson
 
 
     /**
-     * The Title.
-     * The title of the page.
+     * The Content Url.
+     * The URL for the page's HTML content.  Read-only.
      */
-    @SerializedName("title")
+    @SerializedName("contentUrl")
     @Expose
-    public String title;
+    public String contentUrl;
 
     /**
      * The Created By App Id.
@@ -44,22 +44,6 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements IJson
     @SerializedName("createdByAppId")
     @Expose
     public String createdByAppId;
-
-    /**
-     * The Links.
-     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
-     */
-    @SerializedName("links")
-    @Expose
-    public PageLinks links;
-
-    /**
-     * The Content Url.
-     * The URL for the page's HTML content.  Read-only.
-     */
-    @SerializedName("contentUrl")
-    @Expose
-    public String contentUrl;
 
     /**
      * The Last Modified Date Time.
@@ -78,12 +62,28 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements IJson
     public Integer level;
 
     /**
+     * The Links.
+     * Links for opening the page. The oneNoteClientURL link opens the page in the OneNote native client if it 's installed. The oneNoteWebUrl link opens the page in OneNote on the web. Read-only.
+     */
+    @SerializedName("links")
+    @Expose
+    public PageLinks links;
+
+    /**
      * The Order.
      * The order of the page within its parent section. Read-only.
      */
     @SerializedName("order")
     @Expose
     public Integer order;
+
+    /**
+     * The Title.
+     * The title of the page.
+     */
+    @SerializedName("title")
+    @Expose
+    public String title;
 
     /**
      * The User Tags.
@@ -94,20 +94,20 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements IJson
     public java.util.List<String> userTags;
 
     /**
-     * The Parent Section.
-     * The section that contains the page. Read-only.
-     */
-    @SerializedName("parentSection")
-    @Expose
-    public OnenoteSection parentSection;
-
-    /**
      * The Parent Notebook.
      * The notebook that contains the page.  Read-only.
      */
     @SerializedName("parentNotebook")
     @Expose
     public Notebook parentNotebook;
+
+    /**
+     * The Parent Section.
+     * The section that contains the page. Read-only.
+     */
+    @SerializedName("parentSection")
+    @Expose
+    public OnenoteSection parentSection;
 
 
     /**

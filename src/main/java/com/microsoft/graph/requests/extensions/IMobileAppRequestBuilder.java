@@ -9,10 +9,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,13 +38,13 @@ public interface IMobileAppRequestBuilder extends IRequestBuilder {
     IMobileAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
-
-    IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
-
     IMobileAppAssignmentCollectionRequestBuilder assignments();
 
     IMobileAppAssignmentRequestBuilder assignments(final String id);
+
+    IMobileAppCategoryCollectionWithReferencesRequestBuilder categories();
+
+    IMobileAppCategoryWithReferenceRequestBuilder categories(final String id);
     IMobileAppAssignRequestBuilder assign(final java.util.List<MobileAppAssignment> mobileAppAssignments);
 
 }

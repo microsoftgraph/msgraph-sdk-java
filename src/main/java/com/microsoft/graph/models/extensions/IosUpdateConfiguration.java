@@ -28,20 +28,20 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
 
 
     /**
-     * The Active Hours Start.
-     * Active Hours Start (active hours mean the time window when updates install should not happen)
-     */
-    @SerializedName("activeHoursStart")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
-
-    /**
      * The Active Hours End.
      * Active Hours End (active hours mean the time window when updates install should not happen)
      */
     @SerializedName("activeHoursEnd")
     @Expose
     public com.microsoft.graph.models.extensions.TimeOfDay activeHoursEnd;
+
+    /**
+     * The Active Hours Start.
+     * Active Hours Start (active hours mean the time window when updates install should not happen)
+     */
+    @SerializedName("activeHoursStart")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay activeHoursStart;
 
     /**
      * The Scheduled Install Days.

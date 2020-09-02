@@ -28,22 +28,6 @@ public class OnenoteOperation extends Operation implements IJsonBackedObject {
 
 
     /**
-     * The Resource Location.
-     * The resource URI for the object. For example, the resource URI for a copied page or section.
-     */
-    @SerializedName("resourceLocation")
-    @Expose
-    public String resourceLocation;
-
-    /**
-     * The Resource Id.
-     * The resource id.
-     */
-    @SerializedName("resourceId")
-    @Expose
-    public String resourceId;
-
-    /**
      * The Error.
      * The error returned by the operation.
      */
@@ -58,6 +42,22 @@ public class OnenoteOperation extends Operation implements IJsonBackedObject {
     @SerializedName("percentComplete")
     @Expose
     public String percentComplete;
+
+    /**
+     * The Resource Id.
+     * The resource id.
+     */
+    @SerializedName("resourceId")
+    @Expose
+    public String resourceId;
+
+    /**
+     * The Resource Location.
+     * The resource URI for the object. For example, the resource URI for a copied page or section.
+     */
+    @SerializedName("resourceLocation")
+    @Expose
+    public String resourceLocation;
 
 
     /**

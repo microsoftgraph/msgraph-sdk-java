@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AutomaticRepliesSetting;
-import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.generated.DelegateMeetingMessageDeliveryOptions;
+import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.WorkingHours;
 
 
@@ -40,14 +40,6 @@ public class MailboxSettings implements IJsonBackedObject {
     }
 
     /**
-     * The Automatic Replies Setting.
-     * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
-     */
-    @SerializedName("automaticRepliesSetting")
-    @Expose
-    public AutomaticRepliesSetting automaticRepliesSetting;
-
-    /**
      * The Archive Folder.
      * Folder ID of an archive folder for the user.
      */
@@ -56,36 +48,12 @@ public class MailboxSettings implements IJsonBackedObject {
     public String archiveFolder;
 
     /**
-     * The Time Zone.
-     * The default time zone for the user's mailbox.
+     * The Automatic Replies Setting.
+     * Configuration settings to automatically notify the sender of an incoming email with a message from the signed-in user.
      */
-    @SerializedName("timeZone")
+    @SerializedName("automaticRepliesSetting")
     @Expose
-    public String timeZone;
-
-    /**
-     * The Language.
-     * The locale information for the user, including the preferred language and country/region.
-     */
-    @SerializedName("language")
-    @Expose
-    public LocaleInfo language;
-
-    /**
-     * The Delegate Meeting Message Delivery Options.
-     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
-     */
-    @SerializedName("delegateMeetingMessageDeliveryOptions")
-    @Expose
-    public DelegateMeetingMessageDeliveryOptions delegateMeetingMessageDeliveryOptions;
-
-    /**
-     * The Working Hours.
-     * The days of the week and hours in a specific time zone that the user works.
-     */
-    @SerializedName("workingHours")
-    @Expose
-    public WorkingHours workingHours;
+    public AutomaticRepliesSetting automaticRepliesSetting;
 
     /**
      * The Date Format.
@@ -96,12 +64,44 @@ public class MailboxSettings implements IJsonBackedObject {
     public String dateFormat;
 
     /**
+     * The Delegate Meeting Message Delivery Options.
+     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     */
+    @SerializedName("delegateMeetingMessageDeliveryOptions")
+    @Expose
+    public DelegateMeetingMessageDeliveryOptions delegateMeetingMessageDeliveryOptions;
+
+    /**
+     * The Language.
+     * The locale information for the user, including the preferred language and country/region.
+     */
+    @SerializedName("language")
+    @Expose
+    public LocaleInfo language;
+
+    /**
      * The Time Format.
      * The time format for the user's mailbox.
      */
     @SerializedName("timeFormat")
     @Expose
     public String timeFormat;
+
+    /**
+     * The Time Zone.
+     * The default time zone for the user's mailbox.
+     */
+    @SerializedName("timeZone")
+    @Expose
+    public String timeZone;
+
+    /**
+     * The Working Hours.
+     * The days of the week and hours in a specific time zone that the user works.
+     */
+    @SerializedName("workingHours")
+    @Expose
+    public WorkingHours workingHours;
 
 
     /**

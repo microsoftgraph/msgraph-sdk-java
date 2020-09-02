@@ -8,10 +8,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.ChannelMembershipType;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.TeamsTab;
-import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionResponse;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionResponse;
@@ -34,20 +38,20 @@ public class Channel extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Channel name as it will appear to the user in Microsoft Teams.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Optional textual description for the channel.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * Channel name as it will appear to the user in Microsoft Teams.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The Email.
@@ -58,12 +62,34 @@ public class Channel extends Entity implements IJsonBackedObject {
     public String email;
 
     /**
+     * The Membership Type.
+     * 
+     */
+    @SerializedName("membershipType")
+    @Expose
+    public ChannelMembershipType membershipType;
+
+    /**
      * The Web Url.
      * A hyperlink that will navigate to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
      */
     @SerializedName("webUrl")
     @Expose
     public String webUrl;
+
+    /**
+     * The Files Folder.
+     * Metadata for the location where the channel's files are stored.
+     */
+    @SerializedName("filesFolder")
+    @Expose
+    public DriveItem filesFolder;
+
+    /**
+     * The Members.
+     * 
+     */
+    public ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
@@ -76,14 +102,6 @@ public class Channel extends Entity implements IJsonBackedObject {
      * A collection of all the tabs in the channel. A navigation property.
      */
     public TeamsTabCollectionPage tabs;
-
-    /**
-     * The Files Folder.
-     * Metadata for the location where the channel's files are stored.
-     */
-    @SerializedName("filesFolder")
-    @Expose
-    public DriveItem filesFolder;
 
 
     /**
@@ -124,6 +142,22 @@ public class Channel extends Entity implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("members")) {
+            final ConversationMemberCollectionResponse response = new ConversationMemberCollectionResponse();
+            if (json.has("members@odata.nextLink")) {
+                response.nextLink = json.get("members@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("members").toString(), JsonObject[].class);
+            final ConversationMember[] array = new ConversationMember[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ConversationMember.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            members = new ConversationMemberCollectionPage(response, null);
+        }
 
         if (json.has("messages")) {
             final ChatMessageCollectionResponse response = new ChatMessageCollectionResponse();

@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import com.microsoft.graph.models.extensions.DeviceInstallState;
+import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import com.microsoft.graph.models.extensions.UserInstallStateSummary;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionResponse;
@@ -38,12 +38,12 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Name of the eBook.
+     * The Created Date Time.
+     * The date and time when the eBook file was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -54,44 +54,12 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Publisher.
-     * Publisher.
+     * The Display Name.
+     * Name of the eBook.
      */
-    @SerializedName("publisher")
+    @SerializedName("displayName")
     @Expose
-    public String publisher;
-
-    /**
-     * The Published Date Time.
-     * The date and time when the eBook was published.
-     */
-    @SerializedName("publishedDateTime")
-    @Expose
-    public java.util.Calendar publishedDateTime;
-
-    /**
-     * The Large Cover.
-     * Book cover.
-     */
-    @SerializedName("largeCover")
-    @Expose
-    public MimeContent largeCover;
-
-    /**
-     * The Created Date Time.
-     * The date and time when the eBook file was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * The date and time when the eBook was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
+    public String displayName;
 
     /**
      * The Information Url.
@@ -102,6 +70,22 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public String informationUrl;
 
     /**
+     * The Large Cover.
+     * Book cover.
+     */
+    @SerializedName("largeCover")
+    @Expose
+    public MimeContent largeCover;
+
+    /**
+     * The Last Modified Date Time.
+     * The date and time when the eBook was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
      * The Privacy Information Url.
      * The privacy statement Url.
      */
@@ -110,10 +94,32 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     public String privacyInformationUrl;
 
     /**
+     * The Published Date Time.
+     * The date and time when the eBook was published.
+     */
+    @SerializedName("publishedDateTime")
+    @Expose
+    public java.util.Calendar publishedDateTime;
+
+    /**
+     * The Publisher.
+     * Publisher.
+     */
+    @SerializedName("publisher")
+    @Expose
+    public String publisher;
+
+    /**
      * The Assignments.
      * The list of assignments for this eBook.
      */
     public ManagedEBookAssignmentCollectionPage assignments;
+
+    /**
+     * The Device States.
+     * The list of installation states for this eBook.
+     */
+    public DeviceInstallStateCollectionPage deviceStates;
 
     /**
      * The Install Summary.
@@ -122,12 +128,6 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
     @SerializedName("installSummary")
     @Expose
     public EBookInstallSummary installSummary;
-
-    /**
-     * The Device States.
-     * The list of installation states for this eBook.
-     */
-    public DeviceInstallStateCollectionPage deviceStates;
 
     /**
      * The User State Summary.

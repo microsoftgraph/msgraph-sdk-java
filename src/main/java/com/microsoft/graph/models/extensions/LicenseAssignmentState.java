@@ -36,12 +36,12 @@ public class LicenseAssignmentState implements IJsonBackedObject {
     }
 
     /**
-     * The Sku Id.
+     * The Assigned By Group.
      * 
      */
-    @SerializedName("skuId")
+    @SerializedName("assignedByGroup")
     @Expose
-    public java.util.UUID skuId;
+    public String assignedByGroup;
 
     /**
      * The Disabled Plans.
@@ -52,12 +52,20 @@ public class LicenseAssignmentState implements IJsonBackedObject {
     public java.util.List<java.util.UUID> disabledPlans;
 
     /**
-     * The Assigned By Group.
+     * The Error.
      * 
      */
-    @SerializedName("assignedByGroup")
+    @SerializedName("error")
     @Expose
-    public String assignedByGroup;
+    public String error;
+
+    /**
+     * The Sku Id.
+     * 
+     */
+    @SerializedName("skuId")
+    @Expose
+    public java.util.UUID skuId;
 
     /**
      * The State.
@@ -66,14 +74,6 @@ public class LicenseAssignmentState implements IJsonBackedObject {
     @SerializedName("state")
     @Expose
     public String state;
-
-    /**
-     * The Error.
-     * 
-     */
-    @SerializedName("error")
-    @Expose
-    public String error;
 
 
     /**

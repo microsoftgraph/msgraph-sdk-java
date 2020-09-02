@@ -8,10 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Domain;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,6 +37,10 @@ public interface IDomainRequestBuilder extends IRequestBuilder {
     IDomainRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences();
+
+    IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id);
+
     IDomainDnsRecordCollectionRequestBuilder serviceConfigurationRecords();
 
     IDomainDnsRecordRequestBuilder serviceConfigurationRecords(final String id);
@@ -44,10 +48,6 @@ public interface IDomainRequestBuilder extends IRequestBuilder {
     IDomainDnsRecordCollectionRequestBuilder verificationDnsRecords();
 
     IDomainDnsRecordRequestBuilder verificationDnsRecords(final String id);
-
-    IDirectoryObjectCollectionWithReferencesRequestBuilder domainNameReferences();
-
-    IDirectoryObjectWithReferenceRequestBuilder domainNameReferences(final String id);
     IDomainForceDeleteRequestBuilder forceDelete(final Boolean disableUserAccounts);
     IDomainVerifyRequestBuilder verify();
 

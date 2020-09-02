@@ -35,20 +35,20 @@ public class WindowsInformationProtectionDesktopApp extends WindowsInformationPr
     public String binaryName;
 
     /**
-     * The Binary Version Low.
-     * The lower binary version.
-     */
-    @SerializedName("binaryVersionLow")
-    @Expose
-    public String binaryVersionLow;
-
-    /**
      * The Binary Version High.
      * The high binary version.
      */
     @SerializedName("binaryVersionHigh")
     @Expose
     public String binaryVersionHigh;
+
+    /**
+     * The Binary Version Low.
+     * The lower binary version.
+     */
+    @SerializedName("binaryVersionLow")
+    @Expose
+    public String binaryVersionLow;
 
 
     /**

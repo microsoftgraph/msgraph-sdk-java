@@ -27,20 +27,20 @@ public class FileAssessmentRequest extends ThreatAssessmentRequest implements IJ
 
 
     /**
-     * The File Name.
-     * The file name.
-     */
-    @SerializedName("fileName")
-    @Expose
-    public String fileName;
-
-    /**
      * The Content Data.
      * Base64 encoded file content. The file content cannot fetch back because it isn't stored.
      */
     @SerializedName("contentData")
     @Expose
     public String contentData;
+
+    /**
+     * The File Name.
+     * The file name.
+     */
+    @SerializedName("fileName")
+    @Expose
+    public String fileName;
 
 
     /**

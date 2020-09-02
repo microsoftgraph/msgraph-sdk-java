@@ -35,6 +35,14 @@ public class WindowsMobileMSI extends MobileLobApp implements IJsonBackedObject 
     public String commandLine;
 
     /**
+     * The Ignore Version Detection.
+     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+     */
+    @SerializedName("ignoreVersionDetection")
+    @Expose
+    public Boolean ignoreVersionDetection;
+
+    /**
      * The Product Code.
      * The product code.
      */
@@ -49,14 +57,6 @@ public class WindowsMobileMSI extends MobileLobApp implements IJsonBackedObject 
     @SerializedName("productVersion")
     @Expose
     public String productVersion;
-
-    /**
-     * The Ignore Version Detection.
-     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
-     */
-    @SerializedName("ignoreVersionDetection")
-    @Expose
-    public Boolean ignoreVersionDetection;
 
 
     /**

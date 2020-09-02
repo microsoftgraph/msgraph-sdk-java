@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.callrecords.models.extensions.NetworkInfo;
 import com.microsoft.graph.callrecords.models.extensions.DeviceInfo;
+import com.microsoft.graph.callrecords.models.extensions.NetworkInfo;
 import com.microsoft.graph.callrecords.models.extensions.MediaStream;
 
 
@@ -39,20 +39,12 @@ public class Media implements IJsonBackedObject {
     }
 
     /**
-     * The Label.
-     * How the media was identified during media negotiation stage.
+     * The Callee Device.
+     * Device information associated with the callee endpoint of this media.
      */
-    @SerializedName("label")
+    @SerializedName("calleeDevice")
     @Expose
-    public String label;
-
-    /**
-     * The Caller Network.
-     * Network information associated with the caller endpoint of this media.
-     */
-    @SerializedName("callerNetwork")
-    @Expose
-    public NetworkInfo callerNetwork;
+    public DeviceInfo calleeDevice;
 
     /**
      * The Callee Network.
@@ -71,12 +63,20 @@ public class Media implements IJsonBackedObject {
     public DeviceInfo callerDevice;
 
     /**
-     * The Callee Device.
-     * Device information associated with the callee endpoint of this media.
+     * The Caller Network.
+     * Network information associated with the caller endpoint of this media.
      */
-    @SerializedName("calleeDevice")
+    @SerializedName("callerNetwork")
     @Expose
-    public DeviceInfo calleeDevice;
+    public NetworkInfo callerNetwork;
+
+    /**
+     * The Label.
+     * How the media was identified during media negotiation stage.
+     */
+    @SerializedName("label")
+    @Expose
+    public String label;
 
     /**
      * The Streams.

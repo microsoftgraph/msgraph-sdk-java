@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Planner;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -39,16 +39,16 @@ public interface IPlannerRequestBuilder extends IRequestBuilder {
     IPlannerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IPlannerTaskCollectionRequestBuilder tasks();
+    IPlannerBucketCollectionRequestBuilder buckets();
 
-    IPlannerTaskRequestBuilder tasks(final String id);
+    IPlannerBucketRequestBuilder buckets(final String id);
 
     IPlannerPlanCollectionRequestBuilder plans();
 
     IPlannerPlanRequestBuilder plans(final String id);
 
-    IPlannerBucketCollectionRequestBuilder buckets();
+    IPlannerTaskCollectionRequestBuilder tasks();
 
-    IPlannerBucketRequestBuilder buckets(final String id);
+    IPlannerTaskRequestBuilder tasks(final String id);
 
 }

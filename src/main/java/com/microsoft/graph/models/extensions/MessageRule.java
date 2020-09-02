@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.MessageRulePredicates;
 import com.microsoft.graph.models.extensions.MessageRuleActions;
+import com.microsoft.graph.models.extensions.MessageRulePredicates;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,20 +29,12 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * The display name of the rule.
+     * The Actions.
+     * Actions to be taken on a message when the corresponding conditions are fulfilled.
      */
-    @SerializedName("displayName")
+    @SerializedName("actions")
     @Expose
-    public String displayName;
-
-    /**
-     * The Sequence.
-     * Indicates the order in which the rule is executed, among other rules.
-     */
-    @SerializedName("sequence")
-    @Expose
-    public Integer sequence;
+    public MessageRuleActions actions;
 
     /**
      * The Conditions.
@@ -53,12 +45,12 @@ public class MessageRule extends Entity implements IJsonBackedObject {
     public MessageRulePredicates conditions;
 
     /**
-     * The Actions.
-     * Actions to be taken on a message when the corresponding conditions are fulfilled.
+     * The Display Name.
+     * The display name of the rule.
      */
-    @SerializedName("actions")
+    @SerializedName("displayName")
     @Expose
-    public MessageRuleActions actions;
+    public String displayName;
 
     /**
      * The Exceptions.
@@ -69,14 +61,6 @@ public class MessageRule extends Entity implements IJsonBackedObject {
     public MessageRulePredicates exceptions;
 
     /**
-     * The Is Enabled.
-     * Indicates whether the rule is enabled to be applied to messages.
-     */
-    @SerializedName("isEnabled")
-    @Expose
-    public Boolean isEnabled;
-
-    /**
      * The Has Error.
      * Indicates whether the rule is in an error condition. Read-only.
      */
@@ -85,12 +69,28 @@ public class MessageRule extends Entity implements IJsonBackedObject {
     public Boolean hasError;
 
     /**
+     * The Is Enabled.
+     * Indicates whether the rule is enabled to be applied to messages.
+     */
+    @SerializedName("isEnabled")
+    @Expose
+    public Boolean isEnabled;
+
+    /**
      * The Is Read Only.
      * Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
      */
     @SerializedName("isReadOnly")
     @Expose
     public Boolean isReadOnly;
+
+    /**
+     * The Sequence.
+     * Indicates the order in which the rule is executed, among other rules.
+     */
+    @SerializedName("sequence")
+    @Expose
+    public Integer sequence;
 
 
     /**

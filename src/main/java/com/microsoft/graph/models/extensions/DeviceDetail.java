@@ -36,6 +36,14 @@ public class DeviceDetail implements IJsonBackedObject {
     }
 
     /**
+     * The Browser.
+     * Indicates the browser information of the used for signing in.
+     */
+    @SerializedName("browser")
+    @Expose
+    public String browser;
+
+    /**
      * The Device Id.
      * Refers to the UniqueID of the device used for signing in.
      */
@@ -52,22 +60,6 @@ public class DeviceDetail implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Operating System.
-     * Indicates the operating system name and version used for signing in.
-     */
-    @SerializedName("operatingSystem")
-    @Expose
-    public String operatingSystem;
-
-    /**
-     * The Browser.
-     * Indicates the browser information of the used for signing in.
-     */
-    @SerializedName("browser")
-    @Expose
-    public String browser;
-
-    /**
      * The Is Compliant.
      * Indicates whether the device is compliant.
      */
@@ -82,6 +74,14 @@ public class DeviceDetail implements IJsonBackedObject {
     @SerializedName("isManaged")
     @Expose
     public Boolean isManaged;
+
+    /**
+     * The Operating System.
+     * Indicates the operating system name and version used for signing in.
+     */
+    @SerializedName("operatingSystem")
+    @Expose
+    public String operatingSystem;
 
     /**
      * The Trust Type.

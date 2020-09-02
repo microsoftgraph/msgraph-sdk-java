@@ -27,20 +27,20 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Roles.
-     * The roles for that user.
-     */
-    @SerializedName("roles")
-    @Expose
-    public java.util.List<String> roles;
-
-    /**
      * The Display Name.
      * The display name of the user.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Roles.
+     * The roles for that user.
+     */
+    @SerializedName("roles")
+    @Expose
+    public java.util.List<String> roles;
 
 
     /**
