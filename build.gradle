@@ -64,11 +64,6 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier = 'javadoc'
 }
 
-signing {
-	sign configurations.archives
-}
-tasks.withType(Sign)*.enabled = mavenCentralPublishingEnabled.toBoolean()
-
 publishing {
 
     publications {
@@ -113,26 +108,9 @@ publishing {
         	pom.withXml {
         		def pomFile = file("${project.buildDir}/generated-pom.xml")
         		writeTo(pomFile)
-        		def pomAscFile = signing.sign(pomFile).signatureFiles[0]
-        		artifact(pomAscFile) {
-                    classifier = null
-                    extension = 'pom.asc'
-                }
         	}
         	artifact sourceJar
         	artifact javadocJar
-        	project.tasks.signArchives.signatureFiles.each {
-        		artifact(it) {
-        			def matcher = it.file =~ /-(sources|javadoc)\.jar\.asc$/
-        			if(matcher.find()){
-        				classifier = matcher.group(1)
-        			}
-        			else{
-        				classifier = null
-        			}
-        			extension = 'jar.asc'
-				}
-			}
 		}
     }
 	repositories {
@@ -194,6 +172,18 @@ publishing {
     }
 }
 
+signing {
+    sign publishing.publications.mavenCentralRelease
+}
+tasks.withType(Sign)*.enabled = mavenCentralPublishingEnabled.toBoolean()
+
+def fixAscNames = { name -> 
+    if(name.contains('pom')) {
+        "${project.property('mavenArtifactId')}-${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}.pom.asc"
+    } else {
+        name.replace('msgraph-sdk-java', "${project.property('mavenArtifactId')}-${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}")
+    }
+}
 bintray {
     if (project.rootProject.file('local.properties').exists()) {
         Properties properties = new Properties()
@@ -202,6 +192,17 @@ bintray {
         key = properties.getProperty('bintray.apikey')
     }
 	publications = ['mavenCentralRelease']
+    filesSpec {
+        from ('build/libs') {
+            include 'msgraph-sdk-java*.jar.asc'
+            rename fixAscNames
+        }
+        from ('build') {
+            include 'generated-pom.xml.asc'
+            rename fixAscNames
+        }
+        into "com/microsoft/graph/${project.property('mavenArtifactId')}/${mavenMajorVersion}.${mavenMinorVersion}.${mavenPatchVersion}/"
+    }
 	pkg {
 		repo = 'Maven'
 		name = project.property('mavenArtifactId')
