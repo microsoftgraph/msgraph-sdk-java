@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AppListType;
+import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.RequiredPasswordType;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
@@ -30,20 +30,20 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
 
     /**
-     * The Compliant Apps List.
-     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     */
-    @SerializedName("compliantAppsList")
-    @Expose
-    public java.util.List<AppListItem> compliantAppsList;
-
-    /**
      * The Compliant App List Type.
      * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
     @SerializedName("compliantAppListType")
     @Expose
     public AppListType compliantAppListType;
+
+    /**
+     * The Compliant Apps List.
+     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
+     */
+    @SerializedName("compliantAppsList")
+    @Expose
+    public java.util.List<AppListItem> compliantAppsList;
 
     /**
      * The Email In Domain Suffixes.
@@ -110,20 +110,20 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Integer passwordPreviousPasswordBlockCount;
 
     /**
-     * The Password Required Type.
-     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public RequiredPasswordType passwordRequiredType;
-
-    /**
      * The Password Required.
      * Whether or not to require a password.
      */
     @SerializedName("passwordRequired")
     @Expose
     public Boolean passwordRequired;
+
+    /**
+     * The Password Required Type.
+     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     */
+    @SerializedName("passwordRequiredType")
+    @Expose
+    public RequiredPasswordType passwordRequiredType;
 
 
     /**

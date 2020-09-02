@@ -27,68 +27,12 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Display Name.
-     * The name of the policy.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Compliant Device Count.
      * Number of compliant devices.
      */
     @SerializedName("compliantDeviceCount")
     @Expose
     public Integer compliantDeviceCount;
-
-    /**
-     * The Non Compliant Device Count.
-     * Number of non compliant devices.
-     */
-    @SerializedName("nonCompliantDeviceCount")
-    @Expose
-    public Integer nonCompliantDeviceCount;
-
-    /**
-     * The Remediated Device Count.
-     * Number of remediated devices.
-     */
-    @SerializedName("remediatedDeviceCount")
-    @Expose
-    public Integer remediatedDeviceCount;
-
-    /**
-     * The Error Device Count.
-     * Number of devices had error.
-     */
-    @SerializedName("errorDeviceCount")
-    @Expose
-    public Integer errorDeviceCount;
-
-    /**
-     * The Unknown Device Count.
-     * Number of unknown devices.
-     */
-    @SerializedName("unknownDeviceCount")
-    @Expose
-    public Integer unknownDeviceCount;
-
-    /**
-     * The Conflict Device Count.
-     * Number of conflict devices.
-     */
-    @SerializedName("conflictDeviceCount")
-    @Expose
-    public Integer conflictDeviceCount;
-
-    /**
-     * The Not Applicable Device Count.
-     * Number of not applicable devices.
-     */
-    @SerializedName("notApplicableDeviceCount")
-    @Expose
-    public Integer notApplicableDeviceCount;
 
     /**
      * The Compliant User Count.
@@ -99,36 +43,12 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
     public Integer compliantUserCount;
 
     /**
-     * The Non Compliant User Count.
-     * Number of non compliant users.
+     * The Conflict Device Count.
+     * Number of conflict devices.
      */
-    @SerializedName("nonCompliantUserCount")
+    @SerializedName("conflictDeviceCount")
     @Expose
-    public Integer nonCompliantUserCount;
-
-    /**
-     * The Remediated User Count.
-     * Number of remediated users.
-     */
-    @SerializedName("remediatedUserCount")
-    @Expose
-    public Integer remediatedUserCount;
-
-    /**
-     * The Error User Count.
-     * Number of users had error.
-     */
-    @SerializedName("errorUserCount")
-    @Expose
-    public Integer errorUserCount;
-
-    /**
-     * The Unknown User Count.
-     * Number of unknown users.
-     */
-    @SerializedName("unknownUserCount")
-    @Expose
-    public Integer unknownUserCount;
+    public Integer conflictDeviceCount;
 
     /**
      * The Conflict User Count.
@@ -139,12 +59,92 @@ public class SoftwareUpdateStatusSummary extends Entity implements IJsonBackedOb
     public Integer conflictUserCount;
 
     /**
+     * The Display Name.
+     * The name of the policy.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Error Device Count.
+     * Number of devices had error.
+     */
+    @SerializedName("errorDeviceCount")
+    @Expose
+    public Integer errorDeviceCount;
+
+    /**
+     * The Error User Count.
+     * Number of users had error.
+     */
+    @SerializedName("errorUserCount")
+    @Expose
+    public Integer errorUserCount;
+
+    /**
+     * The Non Compliant Device Count.
+     * Number of non compliant devices.
+     */
+    @SerializedName("nonCompliantDeviceCount")
+    @Expose
+    public Integer nonCompliantDeviceCount;
+
+    /**
+     * The Non Compliant User Count.
+     * Number of non compliant users.
+     */
+    @SerializedName("nonCompliantUserCount")
+    @Expose
+    public Integer nonCompliantUserCount;
+
+    /**
+     * The Not Applicable Device Count.
+     * Number of not applicable devices.
+     */
+    @SerializedName("notApplicableDeviceCount")
+    @Expose
+    public Integer notApplicableDeviceCount;
+
+    /**
      * The Not Applicable User Count.
      * Number of not applicable users.
      */
     @SerializedName("notApplicableUserCount")
     @Expose
     public Integer notApplicableUserCount;
+
+    /**
+     * The Remediated Device Count.
+     * Number of remediated devices.
+     */
+    @SerializedName("remediatedDeviceCount")
+    @Expose
+    public Integer remediatedDeviceCount;
+
+    /**
+     * The Remediated User Count.
+     * Number of remediated users.
+     */
+    @SerializedName("remediatedUserCount")
+    @Expose
+    public Integer remediatedUserCount;
+
+    /**
+     * The Unknown Device Count.
+     * Number of unknown devices.
+     */
+    @SerializedName("unknownDeviceCount")
+    @Expose
+    public Integer unknownDeviceCount;
+
+    /**
+     * The Unknown User Count.
+     * Number of unknown users.
+     */
+    @SerializedName("unknownUserCount")
+    @Expose
+    public Integer unknownUserCount;
 
 
     /**

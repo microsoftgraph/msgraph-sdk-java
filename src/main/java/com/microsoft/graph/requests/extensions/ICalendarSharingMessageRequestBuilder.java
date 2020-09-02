@@ -34,14 +34,6 @@ public interface ICalendarSharingMessageRequestBuilder extends IRequestBuilder {
     ICalendarSharingMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
-
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-
     IAttachmentCollectionRequestBuilder attachments();
 
     IAttachmentRequestBuilder attachments(final String id);
@@ -49,6 +41,14 @@ public interface ICalendarSharingMessageRequestBuilder extends IRequestBuilder {
     IExtensionCollectionRequestBuilder extensions();
 
     IExtensionRequestBuilder extensions(final String id);
+
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
+
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
     ICalendarSharingMessageAcceptRequestBuilder accept();
 
 }

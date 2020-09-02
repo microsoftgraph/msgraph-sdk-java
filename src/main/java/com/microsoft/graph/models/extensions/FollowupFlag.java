@@ -54,20 +54,20 @@ public class FollowupFlag implements IJsonBackedObject {
     public DateTimeTimeZone dueDateTime;
 
     /**
-     * The Start Date Time.
-     * The date and time that the follow-up is to begin.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public DateTimeTimeZone startDateTime;
-
-    /**
      * The Flag Status.
      * The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
      */
     @SerializedName("flagStatus")
     @Expose
     public FollowupFlagStatus flagStatus;
+
+    /**
+     * The Start Date Time.
+     * The date and time that the follow-up is to begin.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public DateTimeTimeZone startDateTime;
 
 
     /**

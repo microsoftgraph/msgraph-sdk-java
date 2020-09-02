@@ -36,6 +36,14 @@ public class InsightIdentity implements IJsonBackedObject {
     }
 
     /**
+     * The Address.
+     * The email address of the user who shared the item.
+     */
+    @SerializedName("address")
+    @Expose
+    public String address;
+
+    /**
      * The Display Name.
      * The display name of the user who shared the item.
      */
@@ -50,14 +58,6 @@ public class InsightIdentity implements IJsonBackedObject {
     @SerializedName("id")
     @Expose
     public String id;
-
-    /**
-     * The Address.
-     * The email address of the user who shared the item.
-     */
-    @SerializedName("address")
-    @Expose
-    public String address;
 
 
     /**

@@ -27,14 +27,6 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Resource Name.
-     * Name of the Resource this operation is performed on.
-     */
-    @SerializedName("resourceName")
-    @Expose
-    public String resourceName;
-
-    /**
      * The Action Name.
      * Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible.
      */
@@ -49,6 +41,14 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Resource Name.
+     * Name of the Resource this operation is performed on.
+     */
+    @SerializedName("resourceName")
+    @Expose
+    public String resourceName;
 
 
     /**

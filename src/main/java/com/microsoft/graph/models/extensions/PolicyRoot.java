@@ -13,8 +13,8 @@ import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
-import com.microsoft.graph.models.extensions.IdentitySecurityDefaultsEnforcementPolicy;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
+import com.microsoft.graph.models.extensions.IdentitySecurityDefaultsEnforcementPolicy;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionPage;
@@ -76,18 +76,18 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
+     * The Conditional Access Policies.
+     * 
+     */
+    public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
+
+    /**
      * The Identity Security Defaults Enforcement Policy.
      * 
      */
     @SerializedName("identitySecurityDefaultsEnforcementPolicy")
     @Expose
     public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
-
-    /**
-     * The Conditional Access Policies.
-     * 
-     */
-    public ConditionalAccessPolicyCollectionPage conditionalAccessPolicies;
 
 
     /**

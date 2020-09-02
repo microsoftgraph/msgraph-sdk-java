@@ -45,52 +45,12 @@ public class TeleconferenceDeviceQuality implements IJsonBackedObject {
     public java.util.UUID callChainId;
 
     /**
-     * The Participant Id.
-     * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+     * The Cloud Service Deployment Environment.
+     * A geo-region where the service is deployed, such as ProdNoam.
      */
-    @SerializedName("participantId")
+    @SerializedName("cloudServiceDeploymentEnvironment")
     @Expose
-    public java.util.UUID participantId;
-
-    /**
-     * The Media Leg Id.
-     * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
-     */
-    @SerializedName("mediaLegId")
-    @Expose
-    public java.util.UUID mediaLegId;
-
-    /**
-     * The Device Name.
-     * The user media agent name, such as Cisco SX80.
-     */
-    @SerializedName("deviceName")
-    @Expose
-    public String deviceName;
-
-    /**
-     * The Device Description.
-     * Any additional description, such as VTC Bldg 30/21.
-     */
-    @SerializedName("deviceDescription")
-    @Expose
-    public String deviceDescription;
-
-    /**
-     * The Cloud Service Name.
-     * The Azure deployed cloud service name, such as contoso.cloudapp.net.
-     */
-    @SerializedName("cloudServiceName")
-    @Expose
-    public String cloudServiceName;
-
-    /**
-     * The Cloud Service Instance Name.
-     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
-     */
-    @SerializedName("cloudServiceInstanceName")
-    @Expose
-    public String cloudServiceInstanceName;
+    public String cloudServiceDeploymentEnvironment;
 
     /**
      * The Cloud Service Deployment Id.
@@ -101,12 +61,44 @@ public class TeleconferenceDeviceQuality implements IJsonBackedObject {
     public String cloudServiceDeploymentId;
 
     /**
-     * The Cloud Service Deployment Environment.
-     * A geo-region where the service is deployed, such as ProdNoam.
+     * The Cloud Service Instance Name.
+     * The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
      */
-    @SerializedName("cloudServiceDeploymentEnvironment")
+    @SerializedName("cloudServiceInstanceName")
     @Expose
-    public String cloudServiceDeploymentEnvironment;
+    public String cloudServiceInstanceName;
+
+    /**
+     * The Cloud Service Name.
+     * The Azure deployed cloud service name, such as contoso.cloudapp.net.
+     */
+    @SerializedName("cloudServiceName")
+    @Expose
+    public String cloudServiceName;
+
+    /**
+     * The Device Description.
+     * Any additional description, such as VTC Bldg 30/21.
+     */
+    @SerializedName("deviceDescription")
+    @Expose
+    public String deviceDescription;
+
+    /**
+     * The Device Name.
+     * The user media agent name, such as Cisco SX80.
+     */
+    @SerializedName("deviceName")
+    @Expose
+    public String deviceName;
+
+    /**
+     * The Media Leg Id.
+     * A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
+     */
+    @SerializedName("mediaLegId")
+    @Expose
+    public java.util.UUID mediaLegId;
 
     /**
      * The Media Quality List.
@@ -115,6 +107,14 @@ public class TeleconferenceDeviceQuality implements IJsonBackedObject {
     @SerializedName("mediaQualityList")
     @Expose
     public java.util.List<TeleconferenceDeviceMediaQuality> mediaQualityList;
+
+    /**
+     * The Participant Id.
+     * A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
+     */
+    @SerializedName("participantId")
+    @Expose
+    public java.util.UUID participantId;
 
 
     /**

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.generated.MediaDirection;
+import com.microsoft.graph.models.generated.Modality;
 
 
 import com.google.gson.JsonObject;
@@ -38,12 +38,12 @@ public class MediaStream implements IJsonBackedObject {
     }
 
     /**
-     * The Media Type.
-     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * The Direction.
+     * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
      */
-    @SerializedName("mediaType")
+    @SerializedName("direction")
     @Expose
-    public Modality mediaType;
+    public MediaDirection direction;
 
     /**
      * The Label.
@@ -54,20 +54,12 @@ public class MediaStream implements IJsonBackedObject {
     public String label;
 
     /**
-     * The Source Id.
-     * The source ID.
+     * The Media Type.
+     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
      */
-    @SerializedName("sourceId")
+    @SerializedName("mediaType")
     @Expose
-    public String sourceId;
-
-    /**
-     * The Direction.
-     * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
-     */
-    @SerializedName("direction")
-    @Expose
-    public MediaDirection direction;
+    public Modality mediaType;
 
     /**
      * The Server Muted.
@@ -76,6 +68,14 @@ public class MediaStream implements IJsonBackedObject {
     @SerializedName("serverMuted")
     @Expose
     public Boolean serverMuted;
+
+    /**
+     * The Source Id.
+     * The source ID.
+     */
+    @SerializedName("sourceId")
+    @Expose
+    public String sourceId;
 
 
     /**

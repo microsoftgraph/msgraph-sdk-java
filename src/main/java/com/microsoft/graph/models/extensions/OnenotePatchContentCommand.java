@@ -46,14 +46,6 @@ public class OnenotePatchContentCommand implements IJsonBackedObject {
     public OnenotePatchActionType action;
 
     /**
-     * The Target.
-     * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
-     */
-    @SerializedName("target")
-    @Expose
-    public String target;
-
-    /**
      * The Content.
      * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
      */
@@ -68,6 +60,14 @@ public class OnenotePatchContentCommand implements IJsonBackedObject {
     @SerializedName("position")
     @Expose
     public OnenotePatchInsertPosition position;
+
+    /**
+     * The Target.
+     * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
+     */
+    @SerializedName("target")
+    @Expose
+    public String target;
 
 
     /**

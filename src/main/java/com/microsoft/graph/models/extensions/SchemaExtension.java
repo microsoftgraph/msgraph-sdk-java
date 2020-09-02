@@ -36,12 +36,12 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Target Types.
-     * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
+     * The Owner.
+     * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
      */
-    @SerializedName("targetTypes")
+    @SerializedName("owner")
     @Expose
-    public java.util.List<String> targetTypes;
+    public String owner;
 
     /**
      * The Properties.
@@ -60,12 +60,12 @@ public class SchemaExtension extends Entity implements IJsonBackedObject {
     public String status;
 
     /**
-     * The Owner.
-     * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. Once set, this property is read-only and cannot be changed.
+     * The Target Types.
+     * Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from contact, device, event, group, message, organization, post, or user.
      */
-    @SerializedName("owner")
+    @SerializedName("targetTypes")
     @Expose
-    public String owner;
+    public java.util.List<String> targetTypes;
 
 
     /**

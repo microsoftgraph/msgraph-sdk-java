@@ -36,6 +36,22 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
     }
 
     /**
+     * The Compliance Policy.
+     * Whether compliance policy is managed by Intune
+     */
+    @SerializedName("compliancePolicy")
+    @Expose
+    public Boolean compliancePolicy;
+
+    /**
+     * The Device Configuration.
+     * Whether device configuration is managed by Intune
+     */
+    @SerializedName("deviceConfiguration")
+    @Expose
+    public Boolean deviceConfiguration;
+
+    /**
      * The Inventory.
      * Whether inventory is managed by Intune
      */
@@ -58,22 +74,6 @@ public class ConfigurationManagerClientEnabledFeatures implements IJsonBackedObj
     @SerializedName("resourceAccess")
     @Expose
     public Boolean resourceAccess;
-
-    /**
-     * The Device Configuration.
-     * Whether device configuration is managed by Intune
-     */
-    @SerializedName("deviceConfiguration")
-    @Expose
-    public Boolean deviceConfiguration;
-
-    /**
-     * The Compliance Policy.
-     * Whether compliance policy is managed by Intune
-     */
-    @SerializedName("compliancePolicy")
-    @Expose
-    public Boolean compliancePolicy;
 
     /**
      * The Windows Update For Business.

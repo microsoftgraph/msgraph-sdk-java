@@ -9,10 +9,18 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Workbook;
 import com.microsoft.graph.models.extensions.WorkbookSessionInfo;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookCommentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WorkbookOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookTableCollectionRequestBuilder;
@@ -21,14 +29,6 @@ import com.microsoft.graph.requests.extensions.IWorkbookWorksheetCollectionReque
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookCommentRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookCommentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsRequestBuilder;
@@ -85,27 +85,6 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
     public IWorkbookApplicationRequestBuilder application() {
         return new WorkbookApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("application"), getClient(), null);
     }
-    public IWorkbookNamedItemCollectionRequestBuilder names() {
-        return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
-    }
-
-    public IWorkbookNamedItemRequestBuilder names(final String id) {
-        return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
-    }
-    public IWorkbookTableCollectionRequestBuilder tables() {
-        return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
-    }
-
-    public IWorkbookTableRequestBuilder tables(final String id) {
-        return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
-    }
-    public IWorkbookWorksheetCollectionRequestBuilder worksheets() {
-        return new WorkbookWorksheetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets"), getClient(), null);
-    }
-
-    public IWorkbookWorksheetRequestBuilder worksheets(final String id) {
-        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets") + "/" + id, getClient(), null);
-    }
     public IWorkbookCommentCollectionRequestBuilder comments() {
         return new WorkbookCommentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("comments"), getClient(), null);
     }
@@ -122,6 +101,13 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
     public IWorkbookFunctionsRequestBuilder functions() {
         return new WorkbookFunctionsRequestBuilder(getRequestUrlWithAdditionalSegment("functions"), getClient(), null);
     }
+    public IWorkbookNamedItemCollectionRequestBuilder names() {
+        return new WorkbookNamedItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("names"), getClient(), null);
+    }
+
+    public IWorkbookNamedItemRequestBuilder names(final String id) {
+        return new WorkbookNamedItemRequestBuilder(getRequestUrlWithAdditionalSegment("names") + "/" + id, getClient(), null);
+    }
     public IWorkbookOperationCollectionRequestBuilder operations() {
         return new WorkbookOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
@@ -129,13 +115,27 @@ public class WorkbookRequestBuilder extends BaseRequestBuilder implements IWorkb
     public IWorkbookOperationRequestBuilder operations(final String id) {
         return new WorkbookOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
+    public IWorkbookTableCollectionRequestBuilder tables() {
+        return new WorkbookTableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tables"), getClient(), null);
+    }
 
-    public IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges) {
-        return new WorkbookCreateSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createSession"), getClient(), null, persistChanges);
+    public IWorkbookTableRequestBuilder tables(final String id) {
+        return new WorkbookTableRequestBuilder(getRequestUrlWithAdditionalSegment("tables") + "/" + id, getClient(), null);
+    }
+    public IWorkbookWorksheetCollectionRequestBuilder worksheets() {
+        return new WorkbookWorksheetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets"), getClient(), null);
+    }
+
+    public IWorkbookWorksheetRequestBuilder worksheets(final String id) {
+        return new WorkbookWorksheetRequestBuilder(getRequestUrlWithAdditionalSegment("worksheets") + "/" + id, getClient(), null);
     }
 
     public IWorkbookCloseSessionRequestBuilder closeSession() {
         return new WorkbookCloseSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.closeSession"), getClient(), null);
+    }
+
+    public IWorkbookCreateSessionRequestBuilder createSession(final Boolean persistChanges) {
+        return new WorkbookCreateSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createSession"), getClient(), null, persistChanges);
     }
 
     public IWorkbookRefreshSessionRequestBuilder refreshSession() {

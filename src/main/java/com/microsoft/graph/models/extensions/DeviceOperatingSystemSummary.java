@@ -60,12 +60,12 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     public Integer macOSCount;
 
     /**
-     * The Windows Mobile Count.
-     * Number of Windows mobile device count.
+     * The Unknown Count.
+     * Number of unknown device count.
      */
-    @SerializedName("windowsMobileCount")
+    @SerializedName("unknownCount")
     @Expose
-    public Integer windowsMobileCount;
+    public Integer unknownCount;
 
     /**
      * The Windows Count.
@@ -76,12 +76,12 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     public Integer windowsCount;
 
     /**
-     * The Unknown Count.
-     * Number of unknown device count.
+     * The Windows Mobile Count.
+     * Number of Windows mobile device count.
      */
-    @SerializedName("unknownCount")
+    @SerializedName("windowsMobileCount")
     @Expose
-    public Integer unknownCount;
+    public Integer windowsMobileCount;
 
 
     /**

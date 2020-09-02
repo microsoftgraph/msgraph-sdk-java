@@ -8,24 +8,24 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.EducationUserRole;
-import com.microsoft.graph.models.generated.EducationExternalSource;
-import com.microsoft.graph.models.extensions.PhysicalAddress;
-import com.microsoft.graph.models.extensions.EducationStudent;
-import com.microsoft.graph.models.extensions.EducationTeacher;
-import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.AssignedPlan;
+import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.EducationExternalSource;
+import com.microsoft.graph.models.extensions.PhysicalAddress;
 import com.microsoft.graph.models.extensions.PasswordProfile;
+import com.microsoft.graph.models.generated.EducationUserRole;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
-import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.models.extensions.EducationStudent;
+import com.microsoft.graph.models.extensions.EducationTeacher;
 import com.microsoft.graph.models.extensions.EducationClass;
+import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse;
-import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionResponse;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionResponse;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,70 +42,6 @@ import java.util.Map;
  */
 public class EducationUser extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Primary Role.
-     * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
-     */
-    @SerializedName("primaryRole")
-    @Expose
-    public EducationUserRole primaryRole;
-
-    /**
-     * The Middle Name.
-     * The middle name of user.
-     */
-    @SerializedName("middleName")
-    @Expose
-    public String middleName;
-
-    /**
-     * The External Source.
-     * Where this user was created from. The possible values are: sis, manual.
-     */
-    @SerializedName("externalSource")
-    @Expose
-    public EducationExternalSource externalSource;
-
-    /**
-     * The Residence Address.
-     * Address where user lives.
-     */
-    @SerializedName("residenceAddress")
-    @Expose
-    public PhysicalAddress residenceAddress;
-
-    /**
-     * The Mailing Address.
-     * Mail address of user.
-     */
-    @SerializedName("mailingAddress")
-    @Expose
-    public PhysicalAddress mailingAddress;
-
-    /**
-     * The Student.
-     * If the primary role is student, this block will contain student specific data.
-     */
-    @SerializedName("student")
-    @Expose
-    public EducationStudent student;
-
-    /**
-     * The Teacher.
-     * If the primary role is teacher, this block will contain teacher specific data.
-     */
-    @SerializedName("teacher")
-    @Expose
-    public EducationTeacher teacher;
-
-    /**
-     * The Created By.
-     * Entity who created the user.
-     */
-    @SerializedName("createdBy")
-    @Expose
-    public IdentitySet createdBy;
 
     /**
      * The Account Enabled.
@@ -140,6 +76,14 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public java.util.List<String> businessPhones;
 
     /**
+     * The Created By.
+     * Entity who created the user.
+     */
+    @SerializedName("createdBy")
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
      * The Department.
      * The name for the department in which the user works. Supports $filter.
      */
@@ -154,6 +98,14 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The External Source.
+     * Where this user was created from. The possible values are: sis, manual.
+     */
+    @SerializedName("externalSource")
+    @Expose
+    public EducationExternalSource externalSource;
 
     /**
      * The Given Name.
@@ -172,6 +124,14 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public String mail;
 
     /**
+     * The Mailing Address.
+     * Mail address of user.
+     */
+    @SerializedName("mailingAddress")
+    @Expose
+    public PhysicalAddress mailingAddress;
+
+    /**
      * The Mail Nickname.
      * The mail alias for the user. This property must be specified when a user is created. Supports $filter.
      */
@@ -180,12 +140,28 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public String mailNickname;
 
     /**
+     * The Middle Name.
+     * The middle name of user.
+     */
+    @SerializedName("middleName")
+    @Expose
+    public String middleName;
+
+    /**
      * The Mobile Phone.
      * The primary cellular telephone number for the user.
      */
     @SerializedName("mobilePhone")
     @Expose
     public String mobilePhone;
+
+    /**
+     * The Office Location.
+     * 
+     */
+    @SerializedName("officeLocation")
+    @Expose
+    public String officeLocation;
 
     /**
      * The Password Policies.
@@ -204,20 +180,20 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public PasswordProfile passwordProfile;
 
     /**
-     * The Office Location.
-     * 
-     */
-    @SerializedName("officeLocation")
-    @Expose
-    public String officeLocation;
-
-    /**
      * The Preferred Language.
      * The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
      */
     @SerializedName("preferredLanguage")
     @Expose
     public String preferredLanguage;
+
+    /**
+     * The Primary Role.
+     * Default role for a user. The user's role might be different in an individual class. The possible values are: student, teacher. Supports $filter.
+     */
+    @SerializedName("primaryRole")
+    @Expose
+    public EducationUserRole primaryRole;
 
     /**
      * The Provisioned Plans.
@@ -236,6 +212,14 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public java.util.Calendar refreshTokensValidFromDateTime;
 
     /**
+     * The Residence Address.
+     * Address where user lives.
+     */
+    @SerializedName("residenceAddress")
+    @Expose
+    public PhysicalAddress residenceAddress;
+
+    /**
      * The Show In Address List.
      * 
      */
@@ -244,12 +228,28 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public Boolean showInAddressList;
 
     /**
+     * The Student.
+     * If the primary role is student, this block will contain student specific data.
+     */
+    @SerializedName("student")
+    @Expose
+    public EducationStudent student;
+
+    /**
      * The Surname.
      * The user's surname (family name or last name). Supports $filter.
      */
     @SerializedName("surname")
     @Expose
     public String surname;
+
+    /**
+     * The Teacher.
+     * If the primary role is teacher, this block will contain teacher specific data.
+     */
+    @SerializedName("teacher")
+    @Expose
+    public EducationTeacher teacher;
 
     /**
      * The Usage Location.
@@ -276,16 +276,16 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     public String userType;
 
     /**
-     * The Schools.
-     * Schools to which the user belongs. Nullable.
-     */
-    public EducationSchoolCollectionPage schools;
-
-    /**
      * The Classes.
      * Classes to which the user belongs. Nullable.
      */
     public EducationClassCollectionPage classes;
+
+    /**
+     * The Schools.
+     * Schools to which the user belongs. Nullable.
+     */
+    public EducationSchoolCollectionPage schools;
 
     /**
      * The User.
@@ -335,22 +335,6 @@ public class EducationUser extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("schools")) {
-            final EducationSchoolCollectionResponse response = new EducationSchoolCollectionResponse();
-            if (json.has("schools@odata.nextLink")) {
-                response.nextLink = json.get("schools@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("schools").toString(), JsonObject[].class);
-            final EducationSchool[] array = new EducationSchool[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationSchool.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            schools = new EducationSchoolCollectionPage(response, null);
-        }
-
         if (json.has("classes")) {
             final EducationClassCollectionResponse response = new EducationClassCollectionResponse();
             if (json.has("classes@odata.nextLink")) {
@@ -365,6 +349,22 @@ public class EducationUser extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             classes = new EducationClassCollectionPage(response, null);
+        }
+
+        if (json.has("schools")) {
+            final EducationSchoolCollectionResponse response = new EducationSchoolCollectionResponse();
+            if (json.has("schools@odata.nextLink")) {
+                response.nextLink = json.get("schools@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("schools").toString(), JsonObject[].class);
+            final EducationSchool[] array = new EducationSchool[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), EducationSchool.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            schools = new EducationSchoolCollectionPage(response, null);
         }
     }
 }

@@ -11,10 +11,6 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
@@ -23,6 +19,10 @@ import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRe
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
@@ -85,6 +85,13 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
     public IScheduleRequestBuilder schedule() {
         return new ScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("schedule"), getClient(), null);
     }
+    public IChannelCollectionRequestBuilder channels() {
+        return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
+    }
+
+    public IChannelRequestBuilder channels(final String id) {
+        return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Group
@@ -94,14 +101,12 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
     public IGroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
+    public ITeamsAppInstallationCollectionRequestBuilder installedApps() {
+        return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
+    }
 
-    /**
-     * Gets the request builder for TeamsTemplate
-     *
-     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
-     */
-    public ITeamsTemplateWithReferenceRequestBuilder template() {
-        return new TeamsTemplateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("template"), getClient(), null);
+    public ITeamsAppInstallationRequestBuilder installedApps(final String id) {
+        return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
     }
     public IConversationMemberCollectionRequestBuilder members() {
         return new ConversationMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
@@ -110,12 +115,12 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
     public IConversationMemberRequestBuilder members(final String id) {
         return new ConversationMemberRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
-    public IChannelCollectionRequestBuilder channels() {
-        return new ChannelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("channels"), getClient(), null);
+    public ITeamsAsyncOperationCollectionRequestBuilder operations() {
+        return new TeamsAsyncOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IChannelRequestBuilder channels(final String id) {
-        return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("channels") + "/" + id, getClient(), null);
+    public ITeamsAsyncOperationRequestBuilder operations(final String id) {
+        return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 
     /**
@@ -126,27 +131,22 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
     public IChannelRequestBuilder primaryChannel() {
         return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("primaryChannel"), getClient(), null);
     }
-    public ITeamsAppInstallationCollectionRequestBuilder installedApps() {
-        return new TeamsAppInstallationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps"), getClient(), null);
-    }
 
-    public ITeamsAppInstallationRequestBuilder installedApps(final String id) {
-        return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
-    }
-    public ITeamsAsyncOperationCollectionRequestBuilder operations() {
-        return new TeamsAsyncOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
-    }
-
-    public ITeamsAsyncOperationRequestBuilder operations(final String id) {
-        return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
-    }
-
-    public ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone) {
-        return new TeamCloneRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clone"), getClient(), null, displayName, description, mailNickname, classification, visibility, partsToClone);
+    /**
+     * Gets the request builder for TeamsTemplate
+     *
+     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
+     */
+    public ITeamsTemplateWithReferenceRequestBuilder template() {
+        return new TeamsTemplateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("template"), getClient(), null);
     }
 
     public ITeamArchiveRequestBuilder archive(final Boolean shouldSetSpoSiteReadOnlyForMembers) {
         return new TeamArchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.archive"), getClient(), null, shouldSetSpoSiteReadOnlyForMembers);
+    }
+
+    public ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone) {
+        return new TeamCloneRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.clone"), getClient(), null, displayName, description, mailNickname, classification, visibility, partsToClone);
     }
 
     public ITeamUnarchiveRequestBuilder unarchive() {

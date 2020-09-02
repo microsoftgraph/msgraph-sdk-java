@@ -36,6 +36,14 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
     public java.util.Calendar completedDateTime;
 
     /**
+     * The Progress.
+     * Specifies the progress of an operation.
+     */
+    @SerializedName("progress")
+    @Expose
+    public Double progress;
+
+    /**
      * The Status.
      * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
      */
@@ -52,14 +60,6 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
     public String storageLocation;
 
     /**
-     * The User Id.
-     * The id for the user on whom the operation is performed.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
-
-    /**
      * The Submitted Date Time.
      * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
@@ -68,12 +68,12 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
     public java.util.Calendar submittedDateTime;
 
     /**
-     * The Progress.
-     * Specifies the progress of an operation.
+     * The User Id.
+     * The id for the user on whom the operation is performed.
      */
-    @SerializedName("progress")
+    @SerializedName("userId")
     @Expose
-    public Double progress;
+    public String userId;
 
 
     /**

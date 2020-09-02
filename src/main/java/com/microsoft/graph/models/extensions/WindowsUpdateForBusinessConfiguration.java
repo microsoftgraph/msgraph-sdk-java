@@ -8,11 +8,11 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.WindowsDeliveryOptimizationMode;
-import com.microsoft.graph.models.generated.PrereleaseFeatures;
 import com.microsoft.graph.models.generated.AutomaticUpdateMode;
-import com.microsoft.graph.models.extensions.WindowsUpdateInstallScheduleType;
 import com.microsoft.graph.models.generated.WindowsUpdateType;
+import com.microsoft.graph.models.generated.WindowsDeliveryOptimizationMode;
+import com.microsoft.graph.models.extensions.WindowsUpdateInstallScheduleType;
+import com.microsoft.graph.models.generated.PrereleaseFeatures;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 
 
@@ -32,22 +32,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
     /**
-     * The Delivery Optimization Mode.
-     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
-     */
-    @SerializedName("deliveryOptimizationMode")
-    @Expose
-    public WindowsDeliveryOptimizationMode deliveryOptimizationMode;
-
-    /**
-     * The Prerelease Features.
-     * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
-     */
-    @SerializedName("prereleaseFeatures")
-    @Expose
-    public PrereleaseFeatures prereleaseFeatures;
-
-    /**
      * The Automatic Update Mode.
      * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
      */
@@ -56,12 +40,20 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public AutomaticUpdateMode automaticUpdateMode;
 
     /**
-     * The Microsoft Update Service Allowed.
-     * Allow Microsoft Update Service
+     * The Business Ready Updates Only.
+     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
      */
-    @SerializedName("microsoftUpdateServiceAllowed")
+    @SerializedName("businessReadyUpdatesOnly")
     @Expose
-    public Boolean microsoftUpdateServiceAllowed;
+    public WindowsUpdateType businessReadyUpdatesOnly;
+
+    /**
+     * The Delivery Optimization Mode.
+     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     */
+    @SerializedName("deliveryOptimizationMode")
+    @Expose
+    public WindowsDeliveryOptimizationMode deliveryOptimizationMode;
 
     /**
      * The Drivers Excluded.
@@ -72,36 +64,12 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public Boolean driversExcluded;
 
     /**
-     * The Installation Schedule.
-     * Installation schedule
-     */
-    @SerializedName("installationSchedule")
-    @Expose
-    public WindowsUpdateInstallScheduleType installationSchedule;
-
-    /**
-     * The Quality Updates Deferral Period In Days.
-     * Defer Quality Updates by these many days
-     */
-    @SerializedName("qualityUpdatesDeferralPeriodInDays")
-    @Expose
-    public Integer qualityUpdatesDeferralPeriodInDays;
-
-    /**
      * The Feature Updates Deferral Period In Days.
      * Defer Feature Updates by these many days
      */
     @SerializedName("featureUpdatesDeferralPeriodInDays")
     @Expose
     public Integer featureUpdatesDeferralPeriodInDays;
-
-    /**
-     * The Quality Updates Paused.
-     * Pause Quality Updates
-     */
-    @SerializedName("qualityUpdatesPaused")
-    @Expose
-    public Boolean qualityUpdatesPaused;
 
     /**
      * The Feature Updates Paused.
@@ -112,14 +80,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public Boolean featureUpdatesPaused;
 
     /**
-     * The Quality Updates Pause Expiry Date Time.
-     * Quality Updates Pause Expiry datetime
-     */
-    @SerializedName("qualityUpdatesPauseExpiryDateTime")
-    @Expose
-    public java.util.Calendar qualityUpdatesPauseExpiryDateTime;
-
-    /**
      * The Feature Updates Pause Expiry Date Time.
      * Feature Updates Pause Expiry datetime
      */
@@ -128,12 +88,52 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
     public java.util.Calendar featureUpdatesPauseExpiryDateTime;
 
     /**
-     * The Business Ready Updates Only.
-     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * The Installation Schedule.
+     * Installation schedule
      */
-    @SerializedName("businessReadyUpdatesOnly")
+    @SerializedName("installationSchedule")
     @Expose
-    public WindowsUpdateType businessReadyUpdatesOnly;
+    public WindowsUpdateInstallScheduleType installationSchedule;
+
+    /**
+     * The Microsoft Update Service Allowed.
+     * Allow Microsoft Update Service
+     */
+    @SerializedName("microsoftUpdateServiceAllowed")
+    @Expose
+    public Boolean microsoftUpdateServiceAllowed;
+
+    /**
+     * The Prerelease Features.
+     * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     */
+    @SerializedName("prereleaseFeatures")
+    @Expose
+    public PrereleaseFeatures prereleaseFeatures;
+
+    /**
+     * The Quality Updates Deferral Period In Days.
+     * Defer Quality Updates by these many days
+     */
+    @SerializedName("qualityUpdatesDeferralPeriodInDays")
+    @Expose
+    public Integer qualityUpdatesDeferralPeriodInDays;
+
+    /**
+     * The Quality Updates Paused.
+     * Pause Quality Updates
+     */
+    @SerializedName("qualityUpdatesPaused")
+    @Expose
+    public Boolean qualityUpdatesPaused;
+
+    /**
+     * The Quality Updates Pause Expiry Date Time.
+     * Quality Updates Pause Expiry datetime
+     */
+    @SerializedName("qualityUpdatesPauseExpiryDateTime")
+    @Expose
+    public java.util.Calendar qualityUpdatesPauseExpiryDateTime;
 
 
     /**

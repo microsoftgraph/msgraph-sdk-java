@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -59,18 +59,18 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder impleme
     }
 
 
-    public ITermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
-        return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
-    }
-
-    public ITermsAndConditionsAssignmentRequestBuilder assignments(final String id) {
-        return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
-    }
     public ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder acceptanceStatuses() {
         return new TermsAndConditionsAcceptanceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses"), getClient(), null);
     }
 
     public ITermsAndConditionsAcceptanceStatusRequestBuilder acceptanceStatuses(final String id) {
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("acceptanceStatuses") + "/" + id, getClient(), null);
+    }
+    public ITermsAndConditionsAssignmentCollectionRequestBuilder assignments() {
+        return new TermsAndConditionsAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
+    }
+
+    public ITermsAndConditionsAssignmentRequestBuilder assignments(final String id) {
+        return new TermsAndConditionsAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

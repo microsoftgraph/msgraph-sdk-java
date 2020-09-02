@@ -27,22 +27,6 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Type.
-     * 
-     */
-    @SerializedName("type")
-    @Expose
-    public String type;
-
-    /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Client Id.
      * 
      */
@@ -57,6 +41,22 @@ public class IdentityProvider extends Entity implements IJsonBackedObject {
     @SerializedName("clientSecret")
     @Expose
     public String clientSecret;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName("type")
+    @Expose
+    public String type;
 
 
     /**

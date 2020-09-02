@@ -11,14 +11,14 @@ import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
 import com.microsoft.graph.models.generated.CalendarRoleType;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarPermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -44,25 +44,25 @@ public interface ICalendarRequestBuilder extends IRequestBuilder {
     ICalendarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
-
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
-
-    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
-
-    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
-
     ICalendarPermissionCollectionRequestBuilder calendarPermissions();
 
     ICalendarPermissionRequestBuilder calendarPermissions(final String id);
+
+    IEventCollectionRequestBuilder calendarView();
+
+    IEventRequestBuilder calendarView(final String id);
 
     IEventCollectionRequestBuilder events();
 
     IEventRequestBuilder events(final String id);
 
-    IEventCollectionRequestBuilder calendarView();
+    IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
-    IEventRequestBuilder calendarView(final String id);
+    IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id);
+
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
     ICalendarGetScheduleCollectionRequestBuilder getSchedule(final java.util.List<String> schedules, final DateTimeTimeZone endTime, final DateTimeTimeZone startTime, final Integer availabilityViewInterval);
 

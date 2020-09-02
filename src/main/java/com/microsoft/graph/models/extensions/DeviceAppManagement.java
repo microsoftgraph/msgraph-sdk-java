@@ -9,48 +9,48 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ManagedEBook;
-import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfiguration;
+import com.microsoft.graph.models.extensions.MobileApp;
 import com.microsoft.graph.models.extensions.VppToken;
-import com.microsoft.graph.models.extensions.ManagedAppPolicy;
-import com.microsoft.graph.models.extensions.IosManagedAppProtection;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import com.microsoft.graph.models.extensions.DefaultManagedAppProtection;
-import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
-import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
-import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.IosManagedAppProtection;
+import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.microsoft.graph.models.extensions.ManagedAppStatus;
+import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPolicy;
+import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
+import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionPage;
-import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
-import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.MobileAppCollectionResponse;
+import com.microsoft.graph.requests.extensions.MobileAppCollectionPage;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionResponse;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionPage;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
-import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionResponse;
-import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionResponse;
 import com.microsoft.graph.requests.extensions.DefaultManagedAppProtectionCollectionPage;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
-import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
-import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
-import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionResponse;
+import com.microsoft.graph.requests.extensions.IosManagedAppProtectionCollectionPage;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.ManagedAppStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MdmWindowsInformationProtectionPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionResponse;
+import com.microsoft.graph.requests.extensions.TargetedManagedAppConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionPolicyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -67,14 +67,6 @@ import java.util.Map;
  */
 public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Microsoft Store For Business Last Successful Sync Date Time.
-     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
-     */
-    @SerializedName("microsoftStoreForBusinessLastSuccessfulSyncDateTime")
-    @Expose
-    public java.util.Calendar microsoftStoreForBusinessLastSuccessfulSyncDateTime;
 
     /**
      * The Is Enabled For Microsoft Store For Business.
@@ -101,16 +93,18 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     public java.util.Calendar microsoftStoreForBusinessLastCompletedApplicationSyncTime;
 
     /**
+     * The Microsoft Store For Business Last Successful Sync Date Time.
+     * The last time the apps from the Microsoft Store for Business were synced successfully for the account.
+     */
+    @SerializedName("microsoftStoreForBusinessLastSuccessfulSyncDateTime")
+    @Expose
+    public java.util.Calendar microsoftStoreForBusinessLastSuccessfulSyncDateTime;
+
+    /**
      * The Managed EBooks.
      * The Managed eBook.
      */
     public ManagedEBookCollectionPage managedEBooks;
-
-    /**
-     * The Mobile Apps.
-     * The mobile apps.
-     */
-    public MobileAppCollectionPage mobileApps;
 
     /**
      * The Mobile App Categories.
@@ -125,22 +119,16 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
     /**
+     * The Mobile Apps.
+     * The mobile apps.
+     */
+    public MobileAppCollectionPage mobileApps;
+
+    /**
      * The Vpp Tokens.
      * List of Vpp tokens for this organization.
      */
     public VppTokenCollectionPage vppTokens;
-
-    /**
-     * The Managed App Policies.
-     * Managed app policies.
-     */
-    public ManagedAppPolicyCollectionPage managedAppPolicies;
-
-    /**
-     * The Ios Managed App Protections.
-     * iOS managed app policies.
-     */
-    public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
     /**
      * The Android Managed App Protections.
@@ -155,22 +143,16 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     public DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
 
     /**
-     * The Targeted Managed App Configurations.
-     * Targeted managed app configurations.
+     * The Ios Managed App Protections.
+     * iOS managed app policies.
      */
-    public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
+    public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
     /**
-     * The Mdm Windows Information Protection Policies.
-     * Windows information protection for apps running on devices which are MDM enrolled.
+     * The Managed App Policies.
+     * Managed app policies.
      */
-    public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
-
-    /**
-     * The Windows Information Protection Policies.
-     * Windows information protection for apps running on devices which are not MDM enrolled.
-     */
-    public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
+    public ManagedAppPolicyCollectionPage managedAppPolicies;
 
     /**
      * The Managed App Registrations.
@@ -183,6 +165,24 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The managed app statuses.
      */
     public ManagedAppStatusCollectionPage managedAppStatuses;
+
+    /**
+     * The Mdm Windows Information Protection Policies.
+     * Windows information protection for apps running on devices which are MDM enrolled.
+     */
+    public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
+
+    /**
+     * The Targeted Managed App Configurations.
+     * Targeted managed app configurations.
+     */
+    public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
+
+    /**
+     * The Windows Information Protection Policies.
+     * Windows information protection for apps running on devices which are not MDM enrolled.
+     */
+    public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
 
 
     /**
@@ -240,22 +240,6 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
             managedEBooks = new ManagedEBookCollectionPage(response, null);
         }
 
-        if (json.has("mobileApps")) {
-            final MobileAppCollectionResponse response = new MobileAppCollectionResponse();
-            if (json.has("mobileApps@odata.nextLink")) {
-                response.nextLink = json.get("mobileApps@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mobileApps").toString(), JsonObject[].class);
-            final MobileApp[] array = new MobileApp[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileApp.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            mobileApps = new MobileAppCollectionPage(response, null);
-        }
-
         if (json.has("mobileAppCategories")) {
             final MobileAppCategoryCollectionResponse response = new MobileAppCategoryCollectionResponse();
             if (json.has("mobileAppCategories@odata.nextLink")) {
@@ -288,6 +272,22 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
             mobileAppConfigurations = new ManagedDeviceMobileAppConfigurationCollectionPage(response, null);
         }
 
+        if (json.has("mobileApps")) {
+            final MobileAppCollectionResponse response = new MobileAppCollectionResponse();
+            if (json.has("mobileApps@odata.nextLink")) {
+                response.nextLink = json.get("mobileApps@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mobileApps").toString(), JsonObject[].class);
+            final MobileApp[] array = new MobileApp[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileApp.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            mobileApps = new MobileAppCollectionPage(response, null);
+        }
+
         if (json.has("vppTokens")) {
             final VppTokenCollectionResponse response = new VppTokenCollectionResponse();
             if (json.has("vppTokens@odata.nextLink")) {
@@ -302,38 +302,6 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             vppTokens = new VppTokenCollectionPage(response, null);
-        }
-
-        if (json.has("managedAppPolicies")) {
-            final ManagedAppPolicyCollectionResponse response = new ManagedAppPolicyCollectionResponse();
-            if (json.has("managedAppPolicies@odata.nextLink")) {
-                response.nextLink = json.get("managedAppPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppPolicies").toString(), JsonObject[].class);
-            final ManagedAppPolicy[] array = new ManagedAppPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            managedAppPolicies = new ManagedAppPolicyCollectionPage(response, null);
-        }
-
-        if (json.has("iosManagedAppProtections")) {
-            final IosManagedAppProtectionCollectionResponse response = new IosManagedAppProtectionCollectionResponse();
-            if (json.has("iosManagedAppProtections@odata.nextLink")) {
-                response.nextLink = json.get("iosManagedAppProtections@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), JsonObject[].class);
-            final IosManagedAppProtection[] array = new IosManagedAppProtection[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosManagedAppProtection.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            iosManagedAppProtections = new IosManagedAppProtectionCollectionPage(response, null);
         }
 
         if (json.has("androidManagedAppProtections")) {
@@ -368,52 +336,36 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
             defaultManagedAppProtections = new DefaultManagedAppProtectionCollectionPage(response, null);
         }
 
-        if (json.has("targetedManagedAppConfigurations")) {
-            final TargetedManagedAppConfigurationCollectionResponse response = new TargetedManagedAppConfigurationCollectionResponse();
-            if (json.has("targetedManagedAppConfigurations@odata.nextLink")) {
-                response.nextLink = json.get("targetedManagedAppConfigurations@odata.nextLink").getAsString();
+        if (json.has("iosManagedAppProtections")) {
+            final IosManagedAppProtectionCollectionResponse response = new IosManagedAppProtectionCollectionResponse();
+            if (json.has("iosManagedAppProtections@odata.nextLink")) {
+                response.nextLink = json.get("iosManagedAppProtections@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), JsonObject[].class);
-            final TargetedManagedAppConfiguration[] array = new TargetedManagedAppConfiguration[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("iosManagedAppProtections").toString(), JsonObject[].class);
+            final IosManagedAppProtection[] array = new IosManagedAppProtection[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TargetedManagedAppConfiguration.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), IosManagedAppProtection.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            targetedManagedAppConfigurations = new TargetedManagedAppConfigurationCollectionPage(response, null);
+            iosManagedAppProtections = new IosManagedAppProtectionCollectionPage(response, null);
         }
 
-        if (json.has("mdmWindowsInformationProtectionPolicies")) {
-            final MdmWindowsInformationProtectionPolicyCollectionResponse response = new MdmWindowsInformationProtectionPolicyCollectionResponse();
-            if (json.has("mdmWindowsInformationProtectionPolicies@odata.nextLink")) {
-                response.nextLink = json.get("mdmWindowsInformationProtectionPolicies@odata.nextLink").getAsString();
+        if (json.has("managedAppPolicies")) {
+            final ManagedAppPolicyCollectionResponse response = new ManagedAppPolicyCollectionResponse();
+            if (json.has("managedAppPolicies@odata.nextLink")) {
+                response.nextLink = json.get("managedAppPolicies@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), JsonObject[].class);
-            final MdmWindowsInformationProtectionPolicy[] array = new MdmWindowsInformationProtectionPolicy[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("managedAppPolicies").toString(), JsonObject[].class);
+            final ManagedAppPolicy[] array = new ManagedAppPolicy[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MdmWindowsInformationProtectionPolicy.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ManagedAppPolicy.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            mdmWindowsInformationProtectionPolicies = new MdmWindowsInformationProtectionPolicyCollectionPage(response, null);
-        }
-
-        if (json.has("windowsInformationProtectionPolicies")) {
-            final WindowsInformationProtectionPolicyCollectionResponse response = new WindowsInformationProtectionPolicyCollectionResponse();
-            if (json.has("windowsInformationProtectionPolicies@odata.nextLink")) {
-                response.nextLink = json.get("windowsInformationProtectionPolicies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), JsonObject[].class);
-            final WindowsInformationProtectionPolicy[] array = new WindowsInformationProtectionPolicy[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionPolicy.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            windowsInformationProtectionPolicies = new WindowsInformationProtectionPolicyCollectionPage(response, null);
+            managedAppPolicies = new ManagedAppPolicyCollectionPage(response, null);
         }
 
         if (json.has("managedAppRegistrations")) {
@@ -446,6 +398,54 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             managedAppStatuses = new ManagedAppStatusCollectionPage(response, null);
+        }
+
+        if (json.has("mdmWindowsInformationProtectionPolicies")) {
+            final MdmWindowsInformationProtectionPolicyCollectionResponse response = new MdmWindowsInformationProtectionPolicyCollectionResponse();
+            if (json.has("mdmWindowsInformationProtectionPolicies@odata.nextLink")) {
+                response.nextLink = json.get("mdmWindowsInformationProtectionPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("mdmWindowsInformationProtectionPolicies").toString(), JsonObject[].class);
+            final MdmWindowsInformationProtectionPolicy[] array = new MdmWindowsInformationProtectionPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MdmWindowsInformationProtectionPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            mdmWindowsInformationProtectionPolicies = new MdmWindowsInformationProtectionPolicyCollectionPage(response, null);
+        }
+
+        if (json.has("targetedManagedAppConfigurations")) {
+            final TargetedManagedAppConfigurationCollectionResponse response = new TargetedManagedAppConfigurationCollectionResponse();
+            if (json.has("targetedManagedAppConfigurations@odata.nextLink")) {
+                response.nextLink = json.get("targetedManagedAppConfigurations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("targetedManagedAppConfigurations").toString(), JsonObject[].class);
+            final TargetedManagedAppConfiguration[] array = new TargetedManagedAppConfiguration[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TargetedManagedAppConfiguration.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            targetedManagedAppConfigurations = new TargetedManagedAppConfigurationCollectionPage(response, null);
+        }
+
+        if (json.has("windowsInformationProtectionPolicies")) {
+            final WindowsInformationProtectionPolicyCollectionResponse response = new WindowsInformationProtectionPolicyCollectionResponse();
+            if (json.has("windowsInformationProtectionPolicies@odata.nextLink")) {
+                response.nextLink = json.get("windowsInformationProtectionPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("windowsInformationProtectionPolicies").toString(), JsonObject[].class);
+            final WindowsInformationProtectionPolicy[] array = new WindowsInformationProtectionPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WindowsInformationProtectionPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            windowsInformationProtectionPolicies = new WindowsInformationProtectionPolicyCollectionPage(response, null);
         }
     }
 }

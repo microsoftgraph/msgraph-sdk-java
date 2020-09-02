@@ -8,15 +8,15 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.SignInStatus;
+import com.microsoft.graph.models.extensions.AppliedConditionalAccessPolicy;
+import com.microsoft.graph.models.generated.ConditionalAccessStatus;
 import com.microsoft.graph.models.extensions.DeviceDetail;
 import com.microsoft.graph.models.extensions.SignInLocation;
-import com.microsoft.graph.models.generated.ConditionalAccessStatus;
-import com.microsoft.graph.models.extensions.AppliedConditionalAccessPolicy;
 import com.microsoft.graph.models.generated.RiskDetail;
+import com.microsoft.graph.models.generated.RiskEventType;
 import com.microsoft.graph.models.generated.RiskLevel;
 import com.microsoft.graph.models.generated.RiskState;
-import com.microsoft.graph.models.generated.RiskEventType;
+import com.microsoft.graph.models.extensions.SignInStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -36,36 +36,12 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Created Date Time.
-     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as '2014-01-01T00:00:00Z'.
+     * The App Display Name.
+     * App name displayed in the Azure Portal.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("appDisplayName")
     @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The User Display Name.
-     * Display name of the user that initiated the sign-in.
-     */
-    @SerializedName("userDisplayName")
-    @Expose
-    public String userDisplayName;
-
-    /**
-     * The User Principal Name.
-     * User principal name of the user that initiated the sign-in.
-     */
-    @SerializedName("userPrincipalName")
-    @Expose
-    public String userPrincipalName;
-
-    /**
-     * The User Id.
-     * ID of the user that initiated the sign-in.
-     */
-    @SerializedName("userId")
-    @Expose
-    public String userId;
+    public String appDisplayName;
 
     /**
      * The App Id.
@@ -76,28 +52,12 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public String appId;
 
     /**
-     * The App Display Name.
-     * App name displayed in the Azure Portal.
+     * The Applied Conditional Access Policies.
+     * 
      */
-    @SerializedName("appDisplayName")
+    @SerializedName("appliedConditionalAccessPolicies")
     @Expose
-    public String appDisplayName;
-
-    /**
-     * The Ip Address.
-     * IP address of the client used to sign in.
-     */
-    @SerializedName("ipAddress")
-    @Expose
-    public String ipAddress;
-
-    /**
-     * The Status.
-     * Sign-in status. Possible values include Success and Failure.
-     */
-    @SerializedName("status")
-    @Expose
-    public SignInStatus status;
+    public java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
 
     /**
      * The Client App Used.
@@ -108,20 +68,12 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public String clientAppUsed;
 
     /**
-     * The Device Detail.
-     * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
+     * The Conditional Access Status.
+     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
      */
-    @SerializedName("deviceDetail")
+    @SerializedName("conditionalAccessStatus")
     @Expose
-    public DeviceDetail deviceDetail;
-
-    /**
-     * The Location.
-     * Provides the city, state, and country code where the sign-in originated.
-     */
-    @SerializedName("location")
-    @Expose
-    public SignInLocation location;
+    public ConditionalAccessStatus conditionalAccessStatus;
 
     /**
      * The Correlation Id.
@@ -132,20 +84,28 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public String correlationId;
 
     /**
-     * The Conditional Access Status.
-     * Reports status of an activated conditional access policy. Possible values are: success, failure, notApplied, and unknownFutureValue.
+     * The Created Date Time.
+     * Date and time (UTC) the sign-in was initiated. Example: midnight on Jan 1, 2014 is reported as '2014-01-01T00:00:00Z'.
      */
-    @SerializedName("conditionalAccessStatus")
+    @SerializedName("createdDateTime")
     @Expose
-    public ConditionalAccessStatus conditionalAccessStatus;
+    public java.util.Calendar createdDateTime;
 
     /**
-     * The Applied Conditional Access Policies.
-     * 
+     * The Device Detail.
+     * Device information from where the sign-in occurred; includes device ID, operating system, and browser.
      */
-    @SerializedName("appliedConditionalAccessPolicies")
+    @SerializedName("deviceDetail")
     @Expose
-    public java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
+    public DeviceDetail deviceDetail;
+
+    /**
+     * The Ip Address.
+     * IP address of the client used to sign in.
+     */
+    @SerializedName("ipAddress")
+    @Expose
+    public String ipAddress;
 
     /**
      * The Is Interactive.
@@ -156,12 +116,52 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public Boolean isInteractive;
 
     /**
+     * The Location.
+     * Provides the city, state, and country code where the sign-in originated.
+     */
+    @SerializedName("location")
+    @Expose
+    public SignInLocation location;
+
+    /**
+     * The Resource Display Name.
+     * Name of the resource the user signed into.
+     */
+    @SerializedName("resourceDisplayName")
+    @Expose
+    public String resourceDisplayName;
+
+    /**
+     * The Resource Id.
+     * ID of the resource that the user signed into.
+     */
+    @SerializedName("resourceId")
+    @Expose
+    public String resourceId;
+
+    /**
      * The Risk Detail.
      * Provides the 'reason' behind a specific state of a risky user, sign-in or a risk event. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far. Note: Details for this property require an Azure AD Premium P2 license. Other licenses return the value hidden.
      */
     @SerializedName("riskDetail")
     @Expose
     public RiskDetail riskDetail;
+
+    /**
+     * The Risk Event Types.
+     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
+     */
+    @SerializedName("riskEventTypes")
+    @Expose
+    public java.util.List<RiskEventType> riskEventTypes;
+
+    /**
+     * The Risk Event Types_v2.
+     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+     */
+    @SerializedName("riskEventTypes_v2")
+    @Expose
+    public java.util.List<String> riskEventTypes_v2;
 
     /**
      * The Risk Level Aggregated.
@@ -188,36 +188,36 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public RiskState riskState;
 
     /**
-     * The Risk Event Types.
-     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue.
+     * The Status.
+     * Sign-in status. Possible values include Success and Failure.
      */
-    @SerializedName("riskEventTypes")
+    @SerializedName("status")
     @Expose
-    public java.util.List<RiskEventType> riskEventTypes;
+    public SignInStatus status;
 
     /**
-     * The Risk Event Types_v2.
-     * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.
+     * The User Display Name.
+     * Display name of the user that initiated the sign-in.
      */
-    @SerializedName("riskEventTypes_v2")
+    @SerializedName("userDisplayName")
     @Expose
-    public java.util.List<String> riskEventTypes_v2;
+    public String userDisplayName;
 
     /**
-     * The Resource Display Name.
-     * Name of the resource the user signed into.
+     * The User Id.
+     * ID of the user that initiated the sign-in.
      */
-    @SerializedName("resourceDisplayName")
+    @SerializedName("userId")
     @Expose
-    public String resourceDisplayName;
+    public String userId;
 
     /**
-     * The Resource Id.
-     * ID of the resource that the user signed into.
+     * The User Principal Name.
+     * User principal name of the user that initiated the sign-in.
      */
-    @SerializedName("resourceId")
+    @SerializedName("userPrincipalName")
     @Expose
-    public String resourceId;
+    public String userPrincipalName;
 
 
     /**

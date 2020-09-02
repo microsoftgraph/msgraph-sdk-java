@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
@@ -63,19 +63,19 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
     }
 
 
-    public ITrendingCollectionRequestBuilder trending() {
-        return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
-    }
-
-    public ITrendingRequestBuilder trending(final String id) {
-        return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
-    }
     public ISharedInsightCollectionRequestBuilder shared() {
         return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
     }
 
     public ISharedInsightRequestBuilder shared(final String id) {
         return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
+    }
+    public ITrendingCollectionRequestBuilder trending() {
+        return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
+    }
+
+    public ITrendingRequestBuilder trending(final String id) {
+        return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
     }
     public IUsedInsightCollectionRequestBuilder used() {
         return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);

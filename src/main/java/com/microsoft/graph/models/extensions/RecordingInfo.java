@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.RecordingStatus;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.RecordingStatus;
 
 
 import com.google.gson.JsonObject;
@@ -38,20 +38,20 @@ public class RecordingInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Recording Status.
-     * Possible values are: unknown, notRecording, recording, or failed.
-     */
-    @SerializedName("recordingStatus")
-    @Expose
-    public RecordingStatus recordingStatus;
-
-    /**
      * The Initiator.
      * The identities of the recording initiator.
      */
     @SerializedName("initiator")
     @Expose
     public IdentitySet initiator;
+
+    /**
+     * The Recording Status.
+     * Possible values are: unknown, notRecording, recording, or failed.
+     */
+    @SerializedName("recordingStatus")
+    @Expose
+    public RecordingStatus recordingStatus;
 
 
     /**

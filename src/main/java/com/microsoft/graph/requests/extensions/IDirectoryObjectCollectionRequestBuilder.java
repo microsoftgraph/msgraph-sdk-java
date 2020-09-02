@@ -14,8 +14,8 @@ import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequest;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.http.IBaseCollectionPage;
 
@@ -33,8 +33,8 @@ public interface IDirectoryObjectCollectionRequestBuilder extends IRequestBuilde
     IDirectoryObjectRequestBuilder byId(final String id);
 
 
-    IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types);
-
     IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequestBuilder getAvailableExtensionProperties(final Boolean isSyncedFromOnPremises);
+
+    IDirectoryObjectGetByIdsCollectionRequestBuilder getByIds(final java.util.List<String> ids, final java.util.List<String> types);
     IDirectoryObjectValidatePropertiesRequestBuilder validateProperties(final String entityType, final String displayName, final String mailNickname, final java.util.UUID onBehalfOfUserId);
 }

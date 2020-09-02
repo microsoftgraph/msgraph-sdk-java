@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.AudioConferencing;
 import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.MeetingParticipants;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -31,54 +31,6 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Creation Date Time.
-     * The meeting creation time in UTC. Read-only.
-     */
-    @SerializedName("creationDateTime")
-    @Expose
-    public java.util.Calendar creationDateTime;
-
-    /**
-     * The Start Date Time.
-     * The meeting start time in UTC.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
-
-    /**
-     * The End Date Time.
-     * The meeting end time in UTC.
-     */
-    @SerializedName("endDateTime")
-    @Expose
-    public java.util.Calendar endDateTime;
-
-    /**
-     * The Join Web Url.
-     * The join URL of the online meeting. Read-only.
-     */
-    @SerializedName("joinWebUrl")
-    @Expose
-    public String joinWebUrl;
-
-    /**
-     * The Subject.
-     * The subject of the online meeting.
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
-
-    /**
-     * The Participants.
-     * The participants associated with the online meeting.  This includes the organizer and the attendees.
-     */
-    @SerializedName("participants")
-    @Expose
-    public MeetingParticipants participants;
-
-    /**
      * The Audio Conferencing.
      * The phone access (dial-in) information for an online meeting. Read-only.
      */
@@ -95,12 +47,20 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public ChatInfo chatInfo;
 
     /**
-     * The Video Teleconference Id.
-     * The video teleconferencing ID. Read-only.
+     * The Creation Date Time.
+     * The meeting creation time in UTC. Read-only.
      */
-    @SerializedName("videoTeleconferenceId")
+    @SerializedName("creationDateTime")
     @Expose
-    public String videoTeleconferenceId;
+    public java.util.Calendar creationDateTime;
+
+    /**
+     * The End Date Time.
+     * The meeting end time in UTC.
+     */
+    @SerializedName("endDateTime")
+    @Expose
+    public java.util.Calendar endDateTime;
 
     /**
      * The External Id.
@@ -117,6 +77,46 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @SerializedName("joinInformation")
     @Expose
     public ItemBody joinInformation;
+
+    /**
+     * The Join Web Url.
+     * The join URL of the online meeting. Read-only.
+     */
+    @SerializedName("joinWebUrl")
+    @Expose
+    public String joinWebUrl;
+
+    /**
+     * The Participants.
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
+     */
+    @SerializedName("participants")
+    @Expose
+    public MeetingParticipants participants;
+
+    /**
+     * The Start Date Time.
+     * The meeting start time in UTC.
+     */
+    @SerializedName("startDateTime")
+    @Expose
+    public java.util.Calendar startDateTime;
+
+    /**
+     * The Subject.
+     * The subject of the online meeting.
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
+
+    /**
+     * The Video Teleconference Id.
+     * The video teleconferencing ID. Read-only.
+     */
+    @SerializedName("videoTeleconferenceId")
+    @Expose
+    public String videoTeleconferenceId;
 
 
     /**

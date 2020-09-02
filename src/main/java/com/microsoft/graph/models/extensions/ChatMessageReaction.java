@@ -37,20 +37,20 @@ public class ChatMessageReaction implements IJsonBackedObject {
     }
 
     /**
-     * The Reaction Type.
-     * 
-     */
-    @SerializedName("reactionType")
-    @Expose
-    public String reactionType;
-
-    /**
      * The Created Date Time.
      * 
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Reaction Type.
+     * 
+     */
+    @SerializedName("reactionType")
+    @Expose
+    public String reactionType;
 
     /**
      * The User.

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.StandardTimeZoneOffset;
 import com.microsoft.graph.models.extensions.DaylightTimeZoneOffset;
+import com.microsoft.graph.models.extensions.StandardTimeZoneOffset;
 import com.microsoft.graph.models.extensions.TimeZoneBase;
 
 
@@ -37,20 +37,20 @@ public class CustomTimeZone extends TimeZoneBase implements IJsonBackedObject {
     public Integer bias;
 
     /**
-     * The Standard Offset.
-     * Specifies when the time zone switches from daylight saving time to standard time.
-     */
-    @SerializedName("standardOffset")
-    @Expose
-    public StandardTimeZoneOffset standardOffset;
-
-    /**
      * The Daylight Offset.
      * Specifies when the time zone switches from standard time to daylight saving time.
      */
     @SerializedName("daylightOffset")
     @Expose
     public DaylightTimeZoneOffset daylightOffset;
+
+    /**
+     * The Standard Offset.
+     * Specifies when the time zone switches from daylight saving time to standard time.
+     */
+    @SerializedName("standardOffset")
+    @Expose
+    public StandardTimeZoneOffset standardOffset;
 
 
     /**

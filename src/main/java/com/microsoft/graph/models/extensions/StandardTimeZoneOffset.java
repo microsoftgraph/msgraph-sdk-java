@@ -37,14 +37,6 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
     }
 
     /**
-     * The Time.
-     * Represents the time of day when the transition from daylight saving time to standard time occurs.
-     */
-    @SerializedName("time")
-    @Expose
-    public com.microsoft.graph.models.extensions.TimeOfDay time;
-
-    /**
      * The Day Occurrence.
      * Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
      */
@@ -67,6 +59,14 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
     @SerializedName("month")
     @Expose
     public Integer month;
+
+    /**
+     * The Time.
+     * Represents the time of day when the transition from daylight saving time to standard time occurs.
+     */
+    @SerializedName("time")
+    @Expose
+    public com.microsoft.graph.models.extensions.TimeOfDay time;
 
     /**
      * The Year.

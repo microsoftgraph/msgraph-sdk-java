@@ -10,13 +10,13 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.MimeContent;
 import com.microsoft.graph.models.generated.MobileAppPublishingState;
-import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.MobileAppAssignment;
+import com.microsoft.graph.models.extensions.MobileAppCategory;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionPage;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionResponse;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,12 +35,12 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * The admin provided or imported title of the app.
+     * The Created Date Time.
+     * The date and time the app was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -51,52 +51,20 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Publisher.
-     * The publisher of the app.
+     * The Developer.
+     * The developer of the app.
      */
-    @SerializedName("publisher")
+    @SerializedName("developer")
     @Expose
-    public String publisher;
+    public String developer;
 
     /**
-     * The Large Icon.
-     * The large icon, to be displayed in the app details and used for upload of the icon.
+     * The Display Name.
+     * The admin provided or imported title of the app.
      */
-    @SerializedName("largeIcon")
+    @SerializedName("displayName")
     @Expose
-    public MimeContent largeIcon;
-
-    /**
-     * The Created Date Time.
-     * The date and time the app was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * The date and time the app was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Is Featured.
-     * The value indicating whether the app is marked as featured by the admin.
-     */
-    @SerializedName("isFeatured")
-    @Expose
-    public Boolean isFeatured;
-
-    /**
-     * The Privacy Information Url.
-     * The privacy statement Url.
-     */
-    @SerializedName("privacyInformationUrl")
-    @Expose
-    public String privacyInformationUrl;
+    public String displayName;
 
     /**
      * The Information Url.
@@ -107,20 +75,28 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     public String informationUrl;
 
     /**
-     * The Owner.
-     * The owner of the app.
+     * The Is Featured.
+     * The value indicating whether the app is marked as featured by the admin.
      */
-    @SerializedName("owner")
+    @SerializedName("isFeatured")
     @Expose
-    public String owner;
+    public Boolean isFeatured;
 
     /**
-     * The Developer.
-     * The developer of the app.
+     * The Large Icon.
+     * The large icon, to be displayed in the app details and used for upload of the icon.
      */
-    @SerializedName("developer")
+    @SerializedName("largeIcon")
     @Expose
-    public String developer;
+    public MimeContent largeIcon;
+
+    /**
+     * The Last Modified Date Time.
+     * The date and time the app was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
 
     /**
      * The Notes.
@@ -131,6 +107,30 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     public String notes;
 
     /**
+     * The Owner.
+     * The owner of the app.
+     */
+    @SerializedName("owner")
+    @Expose
+    public String owner;
+
+    /**
+     * The Privacy Information Url.
+     * The privacy statement Url.
+     */
+    @SerializedName("privacyInformationUrl")
+    @Expose
+    public String privacyInformationUrl;
+
+    /**
+     * The Publisher.
+     * The publisher of the app.
+     */
+    @SerializedName("publisher")
+    @Expose
+    public String publisher;
+
+    /**
      * The Publishing State.
      * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
      */
@@ -139,16 +139,16 @@ public class MobileApp extends Entity implements IJsonBackedObject {
     public MobileAppPublishingState publishingState;
 
     /**
-     * The Categories.
-     * The list of categories for this app.
-     */
-    public MobileAppCategoryCollectionPage categories;
-
-    /**
      * The Assignments.
      * The list of group assignments for this mobile app.
      */
     public MobileAppAssignmentCollectionPage assignments;
+
+    /**
+     * The Categories.
+     * The list of categories for this app.
+     */
+    public MobileAppCategoryCollectionPage categories;
 
 
     /**
@@ -190,22 +190,6 @@ public class MobileApp extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("categories")) {
-            final MobileAppCategoryCollectionResponse response = new MobileAppCategoryCollectionResponse();
-            if (json.has("categories@odata.nextLink")) {
-                response.nextLink = json.get("categories@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
-            final MobileAppCategory[] array = new MobileAppCategory[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppCategory.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            categories = new MobileAppCategoryCollectionPage(response, null);
-        }
-
         if (json.has("assignments")) {
             final MobileAppAssignmentCollectionResponse response = new MobileAppAssignmentCollectionResponse();
             if (json.has("assignments@odata.nextLink")) {
@@ -220,6 +204,22 @@ public class MobileApp extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             assignments = new MobileAppAssignmentCollectionPage(response, null);
+        }
+
+        if (json.has("categories")) {
+            final MobileAppCategoryCollectionResponse response = new MobileAppCategoryCollectionResponse();
+            if (json.has("categories@odata.nextLink")) {
+                response.nextLink = json.get("categories@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("categories").toString(), JsonObject[].class);
+            final MobileAppCategory[] array = new MobileAppCategory[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MobileAppCategory.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            categories = new MobileAppCategoryCollectionPage(response, null);
         }
     }
 }

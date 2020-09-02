@@ -37,14 +37,6 @@ public class IncomingContext implements IJsonBackedObject {
     }
 
     /**
-     * The Source Participant Id.
-     * The ID of the participant that triggered the incoming call. Read-only.
-     */
-    @SerializedName("sourceParticipantId")
-    @Expose
-    public String sourceParticipantId;
-
-    /**
      * The Observed Participant Id.
      * The ID of the participant that is under observation. Read-only.
      */
@@ -59,6 +51,14 @@ public class IncomingContext implements IJsonBackedObject {
     @SerializedName("onBehalfOf")
     @Expose
     public IdentitySet onBehalfOf;
+
+    /**
+     * The Source Participant Id.
+     * The ID of the participant that triggered the incoming call. Read-only.
+     */
+    @SerializedName("sourceParticipantId")
+    @Expose
+    public String sourceParticipantId;
 
     /**
      * The Transferor.

@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.FreeBusyStatus;
 import com.microsoft.graph.models.extensions.AttendeeAvailability;
 import com.microsoft.graph.models.extensions.Location;
 import com.microsoft.graph.models.extensions.TimeSlot;
+import com.microsoft.graph.models.generated.FreeBusyStatus;
 
 
 import com.google.gson.JsonObject;
@@ -40,12 +40,36 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
     }
 
     /**
+     * The Attendee Availability.
+     * An array that shows the availability status of each attendee for this meeting suggestion.
+     */
+    @SerializedName("attendeeAvailability")
+    @Expose
+    public java.util.List<AttendeeAvailability> attendeeAvailability;
+
+    /**
      * The Confidence.
      * A percentage that represents the likelhood of all the attendees attending.
      */
     @SerializedName("confidence")
     @Expose
     public Double confidence;
+
+    /**
+     * The Locations.
+     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
+     */
+    @SerializedName("locations")
+    @Expose
+    public java.util.List<Location> locations;
+
+    /**
+     * The Meeting Time Slot.
+     * A time period suggested for the meeting.
+     */
+    @SerializedName("meetingTimeSlot")
+    @Expose
+    public TimeSlot meetingTimeSlot;
 
     /**
      * The Order.
@@ -64,36 +88,12 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
     public FreeBusyStatus organizerAvailability;
 
     /**
-     * The Attendee Availability.
-     * An array that shows the availability status of each attendee for this meeting suggestion.
-     */
-    @SerializedName("attendeeAvailability")
-    @Expose
-    public java.util.List<AttendeeAvailability> attendeeAvailability;
-
-    /**
-     * The Locations.
-     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
-     */
-    @SerializedName("locations")
-    @Expose
-    public java.util.List<Location> locations;
-
-    /**
      * The Suggestion Reason.
      * Reason for suggesting the meeting time.
      */
     @SerializedName("suggestionReason")
     @Expose
     public String suggestionReason;
-
-    /**
-     * The Meeting Time Slot.
-     * A time period suggested for the meeting.
-     */
-    @SerializedName("meetingTimeSlot")
-    @Expose
-    public TimeSlot meetingTimeSlot;
 
 
     /**

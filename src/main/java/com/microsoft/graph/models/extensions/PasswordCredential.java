@@ -60,20 +60,20 @@ public class PasswordCredential implements IJsonBackedObject {
     public java.util.Calendar endDateTime;
 
     /**
+     * The Hint.
+     * Contains the first three characters of the password. Read-only.
+     */
+    @SerializedName("hint")
+    @Expose
+    public String hint;
+
+    /**
      * The Key Id.
      * The unique identifier for the password.
      */
     @SerializedName("keyId")
     @Expose
     public java.util.UUID keyId;
-
-    /**
-     * The Start Date Time.
-     * The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Optional.
-     */
-    @SerializedName("startDateTime")
-    @Expose
-    public java.util.Calendar startDateTime;
 
     /**
      * The Secret Text.
@@ -84,12 +84,12 @@ public class PasswordCredential implements IJsonBackedObject {
     public String secretText;
 
     /**
-     * The Hint.
-     * Contains the first three characters of the password. Read-only.
+     * The Start Date Time.
+     * The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Optional.
      */
-    @SerializedName("hint")
+    @SerializedName("startDateTime")
     @Expose
-    public String hint;
+    public java.util.Calendar startDateTime;
 
 
     /**

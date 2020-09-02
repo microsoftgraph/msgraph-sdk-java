@@ -29,14 +29,6 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Status.
-     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     */
-    @SerializedName("status")
-    @Expose
-    public Status status;
-
-    /**
      * The Active Duration Seconds.
      * Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
      */
@@ -51,6 +43,14 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Expiration Date Time.
+     * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
 
     /**
      * The Last Active Date Time.
@@ -69,20 +69,20 @@ public class ActivityHistoryItem extends Entity implements IJsonBackedObject {
     public java.util.Calendar lastModifiedDateTime;
 
     /**
-     * The Expiration Date Time.
-     * Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
-     */
-    @SerializedName("expirationDateTime")
-    @Expose
-    public java.util.Calendar expirationDateTime;
-
-    /**
      * The Started Date Time.
      * Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
      */
     @SerializedName("startedDateTime")
     @Expose
     public java.util.Calendar startedDateTime;
+
+    /**
+     * The Status.
+     * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
+     */
+    @SerializedName("status")
+    @Expose
+    public Status status;
 
     /**
      * The User Timezone.

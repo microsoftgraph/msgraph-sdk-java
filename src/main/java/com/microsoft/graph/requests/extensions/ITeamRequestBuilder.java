@@ -11,12 +11,12 @@ import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.generated.TeamVisibilityType;
 import com.microsoft.graph.models.generated.ClonableTeamParts;
 import java.util.EnumSet;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
@@ -54,6 +54,10 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IScheduleRequestBuilder schedule();
 
+    IChannelCollectionRequestBuilder channels();
+
+    IChannelRequestBuilder channels(final String id);
+
     /**
      * Gets the request builder for Group
      *
@@ -61,20 +65,17 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IGroupWithReferenceRequestBuilder group();
 
-    /**
-     * Gets the request builder for TeamsTemplate
-     *
-     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
-     */
-    ITeamsTemplateWithReferenceRequestBuilder template();
+    ITeamsAppInstallationCollectionRequestBuilder installedApps();
+
+    ITeamsAppInstallationRequestBuilder installedApps(final String id);
 
     IConversationMemberCollectionRequestBuilder members();
 
     IConversationMemberRequestBuilder members(final String id);
 
-    IChannelCollectionRequestBuilder channels();
+    ITeamsAsyncOperationCollectionRequestBuilder operations();
 
-    IChannelRequestBuilder channels(final String id);
+    ITeamsAsyncOperationRequestBuilder operations(final String id);
 
     /**
      * Gets the request builder for Channel
@@ -83,15 +84,14 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
      */
     IChannelRequestBuilder primaryChannel();
 
-    ITeamsAppInstallationCollectionRequestBuilder installedApps();
-
-    ITeamsAppInstallationRequestBuilder installedApps(final String id);
-
-    ITeamsAsyncOperationCollectionRequestBuilder operations();
-
-    ITeamsAsyncOperationRequestBuilder operations(final String id);
-    ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone);
+    /**
+     * Gets the request builder for TeamsTemplate
+     *
+     * @return the ITeamsTemplateWithReferenceRequestBuilder instance
+     */
+    ITeamsTemplateWithReferenceRequestBuilder template();
     ITeamArchiveRequestBuilder archive(final Boolean shouldSetSpoSiteReadOnlyForMembers);
+    ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone);
     ITeamUnarchiveRequestBuilder unarchive();
 
 }

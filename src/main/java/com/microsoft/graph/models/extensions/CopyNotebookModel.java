@@ -8,9 +8,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.OnenoteUserRole;
-import com.microsoft.graph.models.extensions.NotebookLinks;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.NotebookLinks;
+import com.microsoft.graph.models.generated.OnenoteUserRole;
 
 
 import com.google.gson.JsonObject;
@@ -39,62 +39,6 @@ public class CopyNotebookModel implements IJsonBackedObject {
     }
 
     /**
-     * The Is Default.
-     * 
-     */
-    @SerializedName("isDefault")
-    @Expose
-    public Boolean isDefault;
-
-    /**
-     * The User Role.
-     * 
-     */
-    @SerializedName("userRole")
-    @Expose
-    public OnenoteUserRole userRole;
-
-    /**
-     * The Is Shared.
-     * 
-     */
-    @SerializedName("isShared")
-    @Expose
-    public Boolean isShared;
-
-    /**
-     * The Sections Url.
-     * 
-     */
-    @SerializedName("sectionsUrl")
-    @Expose
-    public String sectionsUrl;
-
-    /**
-     * The Section Groups Url.
-     * 
-     */
-    @SerializedName("sectionGroupsUrl")
-    @Expose
-    public String sectionGroupsUrl;
-
-    /**
-     * The Links.
-     * 
-     */
-    @SerializedName("links")
-    @Expose
-    public NotebookLinks links;
-
-    /**
-     * The Name.
-     * 
-     */
-    @SerializedName("name")
-    @Expose
-    public String name;
-
-    /**
      * The Created By.
      * 
      */
@@ -109,6 +53,38 @@ public class CopyNotebookModel implements IJsonBackedObject {
     @SerializedName("createdByIdentity")
     @Expose
     public IdentitySet createdByIdentity;
+
+    /**
+     * The Created Time.
+     * 
+     */
+    @SerializedName("createdTime")
+    @Expose
+    public java.util.Calendar createdTime;
+
+    /**
+     * The Id.
+     * 
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
+
+    /**
+     * The Is Default.
+     * 
+     */
+    @SerializedName("isDefault")
+    @Expose
+    public Boolean isDefault;
+
+    /**
+     * The Is Shared.
+     * 
+     */
+    @SerializedName("isShared")
+    @Expose
+    public Boolean isShared;
 
     /**
      * The Last Modified By.
@@ -135,12 +111,36 @@ public class CopyNotebookModel implements IJsonBackedObject {
     public java.util.Calendar lastModifiedTime;
 
     /**
-     * The Id.
+     * The Links.
      * 
      */
-    @SerializedName("id")
+    @SerializedName("links")
     @Expose
-    public String id;
+    public NotebookLinks links;
+
+    /**
+     * The Name.
+     * 
+     */
+    @SerializedName("name")
+    @Expose
+    public String name;
+
+    /**
+     * The Section Groups Url.
+     * 
+     */
+    @SerializedName("sectionGroupsUrl")
+    @Expose
+    public String sectionGroupsUrl;
+
+    /**
+     * The Sections Url.
+     * 
+     */
+    @SerializedName("sectionsUrl")
+    @Expose
+    public String sectionsUrl;
 
     /**
      * The Self.
@@ -151,12 +151,12 @@ public class CopyNotebookModel implements IJsonBackedObject {
     public String self;
 
     /**
-     * The Created Time.
+     * The User Role.
      * 
      */
-    @SerializedName("createdTime")
+    @SerializedName("userRole")
     @Expose
-    public java.util.Calendar createdTime;
+    public OnenoteUserRole userRole;
 
 
     /**

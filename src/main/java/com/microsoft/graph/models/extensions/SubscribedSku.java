@@ -29,6 +29,14 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Applies To.
+     * For example, 'User' or 'Company'.
+     */
+    @SerializedName("appliesTo")
+    @Expose
+    public String appliesTo;
+
+    /**
      * The Capability Status.
      * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
@@ -75,14 +83,6 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
     @SerializedName("skuPartNumber")
     @Expose
     public String skuPartNumber;
-
-    /**
-     * The Applies To.
-     * For example, 'User' or 'Company'.
-     */
-    @SerializedName("appliesTo")
-    @Expose
-    public String appliesTo;
 
 
     /**

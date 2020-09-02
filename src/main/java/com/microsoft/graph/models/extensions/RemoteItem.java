@@ -86,20 +86,20 @@ public class RemoteItem implements IJsonBackedObject {
     public Folder folder;
 
     /**
-     * The Image.
-     * Image metadata, if the item is an image. Read-only.
-     */
-    @SerializedName("image")
-    @Expose
-    public Image image;
-
-    /**
      * The Id.
      * Unique identifier for the remote item in its drive. Read-only.
      */
     @SerializedName("id")
     @Expose
     public String id;
+
+    /**
+     * The Image.
+     * Image metadata, if the item is an image. Read-only.
+     */
+    @SerializedName("image")
+    @Expose
+    public Image image;
 
     /**
      * The Last Modified By.

@@ -12,14 +12,10 @@ import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
@@ -28,10 +24,14 @@ import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequest
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -82,19 +82,12 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder implements IOnenot
     public INotebookRequestBuilder notebooks(final String id) {
         return new NotebookRequestBuilder(getRequestUrlWithAdditionalSegment("notebooks") + "/" + id, getClient(), null);
     }
-    public IOnenoteSectionCollectionRequestBuilder sections() {
-        return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
+    public IOnenoteOperationCollectionRequestBuilder operations() {
+        return new OnenoteOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IOnenoteSectionRequestBuilder sections(final String id) {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
-    }
-    public ISectionGroupCollectionRequestBuilder sectionGroups() {
-        return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
-    }
-
-    public ISectionGroupRequestBuilder sectionGroups(final String id) {
-        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
+    public IOnenoteOperationRequestBuilder operations(final String id) {
+        return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     public IOnenotePageCollectionRequestBuilder pages() {
         return new OnenotePageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pages"), getClient(), null);
@@ -110,11 +103,18 @@ public class OnenoteRequestBuilder extends BaseRequestBuilder implements IOnenot
     public IOnenoteResourceRequestBuilder resources(final String id) {
         return new OnenoteResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resources") + "/" + id, getClient(), null);
     }
-    public IOnenoteOperationCollectionRequestBuilder operations() {
-        return new OnenoteOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    public ISectionGroupCollectionRequestBuilder sectionGroups() {
+        return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
-    public IOnenoteOperationRequestBuilder operations(final String id) {
-        return new OnenoteOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    public ISectionGroupRequestBuilder sectionGroups(final String id) {
+        return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
+    }
+    public IOnenoteSectionCollectionRequestBuilder sections() {
+        return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
+    }
+
+    public IOnenoteSectionRequestBuilder sections(final String id) {
+        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 }

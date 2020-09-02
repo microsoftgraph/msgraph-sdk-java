@@ -10,16 +10,16 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -49,13 +49,9 @@ public interface IOnenoteRequestBuilder extends IRequestBuilder {
 
     INotebookRequestBuilder notebooks(final String id);
 
-    IOnenoteSectionCollectionRequestBuilder sections();
+    IOnenoteOperationCollectionRequestBuilder operations();
 
-    IOnenoteSectionRequestBuilder sections(final String id);
-
-    ISectionGroupCollectionRequestBuilder sectionGroups();
-
-    ISectionGroupRequestBuilder sectionGroups(final String id);
+    IOnenoteOperationRequestBuilder operations(final String id);
 
     IOnenotePageCollectionRequestBuilder pages();
 
@@ -65,8 +61,12 @@ public interface IOnenoteRequestBuilder extends IRequestBuilder {
 
     IOnenoteResourceRequestBuilder resources(final String id);
 
-    IOnenoteOperationCollectionRequestBuilder operations();
+    ISectionGroupCollectionRequestBuilder sectionGroups();
 
-    IOnenoteOperationRequestBuilder operations(final String id);
+    ISectionGroupRequestBuilder sectionGroups(final String id);
+
+    IOnenoteSectionCollectionRequestBuilder sections();
+
+    IOnenoteSectionRequestBuilder sections(final String id);
 
 }

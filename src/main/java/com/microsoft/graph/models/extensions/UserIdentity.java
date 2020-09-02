@@ -36,20 +36,20 @@ public class UserIdentity implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Unique identifier for the identity.
-     */
-    @SerializedName("id")
-    @Expose
-    public String id;
-
-    /**
      * The Display Name.
      * The identity's display name. Note that this may not always be available or up-to-date.
      */
     @SerializedName("displayName")
     @Expose
     public String displayName;
+
+    /**
+     * The Id.
+     * Unique identifier for the identity.
+     */
+    @SerializedName("id")
+    @Expose
+    public String id;
 
     /**
      * The Ip Address.

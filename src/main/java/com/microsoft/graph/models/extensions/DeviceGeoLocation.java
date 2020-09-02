@@ -36,52 +36,12 @@ public class DeviceGeoLocation implements IJsonBackedObject {
     }
 
     /**
-     * The Last Collected Date Time.
-     * Time at which location was recorded, relative to UTC
-     */
-    @SerializedName("lastCollectedDateTime")
-    @Expose
-    public java.util.Calendar lastCollectedDateTime;
-
-    /**
-     * The Longitude.
-     * Longitude coordinate of the device's location
-     */
-    @SerializedName("longitude")
-    @Expose
-    public Double longitude;
-
-    /**
-     * The Latitude.
-     * Latitude coordinate of the device's location
-     */
-    @SerializedName("latitude")
-    @Expose
-    public Double latitude;
-
-    /**
      * The Altitude.
      * Altitude, given in meters above sea level
      */
     @SerializedName("altitude")
     @Expose
     public Double altitude;
-
-    /**
-     * The Horizontal Accuracy.
-     * Accuracy of longitude and latitude in meters
-     */
-    @SerializedName("horizontalAccuracy")
-    @Expose
-    public Double horizontalAccuracy;
-
-    /**
-     * The Vertical Accuracy.
-     * Accuracy of altitude in meters
-     */
-    @SerializedName("verticalAccuracy")
-    @Expose
-    public Double verticalAccuracy;
 
     /**
      * The Heading.
@@ -92,12 +52,52 @@ public class DeviceGeoLocation implements IJsonBackedObject {
     public Double heading;
 
     /**
+     * The Horizontal Accuracy.
+     * Accuracy of longitude and latitude in meters
+     */
+    @SerializedName("horizontalAccuracy")
+    @Expose
+    public Double horizontalAccuracy;
+
+    /**
+     * The Last Collected Date Time.
+     * Time at which location was recorded, relative to UTC
+     */
+    @SerializedName("lastCollectedDateTime")
+    @Expose
+    public java.util.Calendar lastCollectedDateTime;
+
+    /**
+     * The Latitude.
+     * Latitude coordinate of the device's location
+     */
+    @SerializedName("latitude")
+    @Expose
+    public Double latitude;
+
+    /**
+     * The Longitude.
+     * Longitude coordinate of the device's location
+     */
+    @SerializedName("longitude")
+    @Expose
+    public Double longitude;
+
+    /**
      * The Speed.
      * Speed the device is traveling in meters per second
      */
     @SerializedName("speed")
     @Expose
     public Double speed;
+
+    /**
+     * The Vertical Accuracy.
+     * Accuracy of altitude in meters
+     */
+    @SerializedName("verticalAccuracy")
+    @Expose
+    public Double verticalAccuracy;
 
 
     /**

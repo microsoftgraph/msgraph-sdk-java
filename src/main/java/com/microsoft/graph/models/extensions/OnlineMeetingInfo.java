@@ -37,14 +37,6 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Join Url.
-     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
-     */
-    @SerializedName("joinUrl")
-    @Expose
-    public String joinUrl;
-
-    /**
      * The Conference Id.
      * The ID of the conference.
      */
@@ -53,20 +45,20 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
     public String conferenceId;
 
     /**
-     * The Toll Number.
-     * The toll number that can be used to join the conference.
+     * The Join Url.
+     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
      */
-    @SerializedName("tollNumber")
+    @SerializedName("joinUrl")
     @Expose
-    public String tollNumber;
+    public String joinUrl;
 
     /**
-     * The Toll Free Numbers.
-     * The toll free numbers that can be used to join the conference.
+     * The Phones.
+     * All of the phone numbers associated with this conference.
      */
-    @SerializedName("tollFreeNumbers")
+    @SerializedName("phones")
     @Expose
-    public java.util.List<String> tollFreeNumbers;
+    public java.util.List<Phone> phones;
 
     /**
      * The Quick Dial.
@@ -77,12 +69,20 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
     public String quickDial;
 
     /**
-     * The Phones.
-     * All of the phone numbers associated with this conference.
+     * The Toll Free Numbers.
+     * The toll free numbers that can be used to join the conference.
      */
-    @SerializedName("phones")
+    @SerializedName("tollFreeNumbers")
     @Expose
-    public java.util.List<Phone> phones;
+    public java.util.List<String> tollFreeNumbers;
+
+    /**
+     * The Toll Number.
+     * The toll number that can be used to join the conference.
+     */
+    @SerializedName("tollNumber")
+    @Expose
+    public String tollNumber;
 
 
     /**

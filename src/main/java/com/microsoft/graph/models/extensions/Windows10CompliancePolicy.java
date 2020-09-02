@@ -28,116 +28,20 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
 
 
     /**
-     * The Password Required.
-     * Require a password to unlock Windows device.
+     * The Bit Locker Enabled.
+     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
      */
-    @SerializedName("passwordRequired")
+    @SerializedName("bitLockerEnabled")
     @Expose
-    public Boolean passwordRequired;
+    public Boolean bitLockerEnabled;
 
     /**
-     * The Password Block Simple.
-     * Indicates whether or not to block simple password.
-     */
-    @SerializedName("passwordBlockSimple")
-    @Expose
-    public Boolean passwordBlockSimple;
-
-    /**
-     * The Password Required To Unlock From Idle.
-     * Require a password to unlock an idle device.
-     */
-    @SerializedName("passwordRequiredToUnlockFromIdle")
-    @Expose
-    public Boolean passwordRequiredToUnlockFromIdle;
-
-    /**
-     * The Password Minutes Of Inactivity Before Lock.
-     * Minutes of inactivity before a password is required.
-     */
-    @SerializedName("passwordMinutesOfInactivityBeforeLock")
-    @Expose
-    public Integer passwordMinutesOfInactivityBeforeLock;
-
-    /**
-     * The Password Expiration Days.
-     * The password expiration in days.
-     */
-    @SerializedName("passwordExpirationDays")
-    @Expose
-    public Integer passwordExpirationDays;
-
-    /**
-     * The Password Minimum Length.
-     * The minimum password length.
-     */
-    @SerializedName("passwordMinimumLength")
-    @Expose
-    public Integer passwordMinimumLength;
-
-    /**
-     * The Password Minimum Character Set Count.
-     * The number of character sets required in the password.
-     */
-    @SerializedName("passwordMinimumCharacterSetCount")
-    @Expose
-    public Integer passwordMinimumCharacterSetCount;
-
-    /**
-     * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
-     */
-    @SerializedName("passwordRequiredType")
-    @Expose
-    public RequiredPasswordType passwordRequiredType;
-
-    /**
-     * The Password Previous Password Block Count.
-     * The number of previous passwords to prevent re-use of.
-     */
-    @SerializedName("passwordPreviousPasswordBlockCount")
-    @Expose
-    public Integer passwordPreviousPasswordBlockCount;
-
-    /**
-     * The Require Healthy Device Report.
+     * The Code Integrity Enabled.
      * Require devices to be reported as healthy by Windows Device Health Attestation.
      */
-    @SerializedName("requireHealthyDeviceReport")
+    @SerializedName("codeIntegrityEnabled")
     @Expose
-    public Boolean requireHealthyDeviceReport;
-
-    /**
-     * The Os Minimum Version.
-     * Minimum Windows 10 version.
-     */
-    @SerializedName("osMinimumVersion")
-    @Expose
-    public String osMinimumVersion;
-
-    /**
-     * The Os Maximum Version.
-     * Maximum Windows 10 version.
-     */
-    @SerializedName("osMaximumVersion")
-    @Expose
-    public String osMaximumVersion;
-
-    /**
-     * The Mobile Os Minimum Version.
-     * Minimum Windows Phone version.
-     */
-    @SerializedName("mobileOsMinimumVersion")
-    @Expose
-    public String mobileOsMinimumVersion;
-
-    /**
-     * The Mobile Os Maximum Version.
-     * Maximum Windows Phone version.
-     */
-    @SerializedName("mobileOsMaximumVersion")
-    @Expose
-    public String mobileOsMaximumVersion;
+    public Boolean codeIntegrityEnabled;
 
     /**
      * The Early Launch Anti Malware Driver Enabled.
@@ -148,12 +52,116 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public Boolean earlyLaunchAntiMalwareDriverEnabled;
 
     /**
-     * The Bit Locker Enabled.
-     * Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
+     * The Mobile Os Maximum Version.
+     * Maximum Windows Phone version.
      */
-    @SerializedName("bitLockerEnabled")
+    @SerializedName("mobileOsMaximumVersion")
     @Expose
-    public Boolean bitLockerEnabled;
+    public String mobileOsMaximumVersion;
+
+    /**
+     * The Mobile Os Minimum Version.
+     * Minimum Windows Phone version.
+     */
+    @SerializedName("mobileOsMinimumVersion")
+    @Expose
+    public String mobileOsMinimumVersion;
+
+    /**
+     * The Os Maximum Version.
+     * Maximum Windows 10 version.
+     */
+    @SerializedName("osMaximumVersion")
+    @Expose
+    public String osMaximumVersion;
+
+    /**
+     * The Os Minimum Version.
+     * Minimum Windows 10 version.
+     */
+    @SerializedName("osMinimumVersion")
+    @Expose
+    public String osMinimumVersion;
+
+    /**
+     * The Password Block Simple.
+     * Indicates whether or not to block simple password.
+     */
+    @SerializedName("passwordBlockSimple")
+    @Expose
+    public Boolean passwordBlockSimple;
+
+    /**
+     * The Password Expiration Days.
+     * The password expiration in days.
+     */
+    @SerializedName("passwordExpirationDays")
+    @Expose
+    public Integer passwordExpirationDays;
+
+    /**
+     * The Password Minimum Character Set Count.
+     * The number of character sets required in the password.
+     */
+    @SerializedName("passwordMinimumCharacterSetCount")
+    @Expose
+    public Integer passwordMinimumCharacterSetCount;
+
+    /**
+     * The Password Minimum Length.
+     * The minimum password length.
+     */
+    @SerializedName("passwordMinimumLength")
+    @Expose
+    public Integer passwordMinimumLength;
+
+    /**
+     * The Password Minutes Of Inactivity Before Lock.
+     * Minutes of inactivity before a password is required.
+     */
+    @SerializedName("passwordMinutesOfInactivityBeforeLock")
+    @Expose
+    public Integer passwordMinutesOfInactivityBeforeLock;
+
+    /**
+     * The Password Previous Password Block Count.
+     * The number of previous passwords to prevent re-use of.
+     */
+    @SerializedName("passwordPreviousPasswordBlockCount")
+    @Expose
+    public Integer passwordPreviousPasswordBlockCount;
+
+    /**
+     * The Password Required.
+     * Require a password to unlock Windows device.
+     */
+    @SerializedName("passwordRequired")
+    @Expose
+    public Boolean passwordRequired;
+
+    /**
+     * The Password Required To Unlock From Idle.
+     * Require a password to unlock an idle device.
+     */
+    @SerializedName("passwordRequiredToUnlockFromIdle")
+    @Expose
+    public Boolean passwordRequiredToUnlockFromIdle;
+
+    /**
+     * The Password Required Type.
+     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     */
+    @SerializedName("passwordRequiredType")
+    @Expose
+    public RequiredPasswordType passwordRequiredType;
+
+    /**
+     * The Require Healthy Device Report.
+     * Require devices to be reported as healthy by Windows Device Health Attestation.
+     */
+    @SerializedName("requireHealthyDeviceReport")
+    @Expose
+    public Boolean requireHealthyDeviceReport;
 
     /**
      * The Secure Boot Enabled.
@@ -162,14 +170,6 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     @SerializedName("secureBootEnabled")
     @Expose
     public Boolean secureBootEnabled;
-
-    /**
-     * The Code Integrity Enabled.
-     * Require devices to be reported as healthy by Windows Device Health Attestation.
-     */
-    @SerializedName("codeIntegrityEnabled")
-    @Expose
-    public Boolean codeIntegrityEnabled;
 
     /**
      * The Storage Require Encryption.

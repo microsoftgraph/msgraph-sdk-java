@@ -10,20 +10,20 @@ import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.extensions.Post;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.Attachment;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.Post;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.OutlookItem;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
-import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
+import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -50,36 +50,12 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     public ItemBody body;
 
     /**
-     * The Received Date Time.
-     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * The Conversation Id.
+     * Unique ID of the conversation. Read-only.
      */
-    @SerializedName("receivedDateTime")
+    @SerializedName("conversationId")
     @Expose
-    public java.util.Calendar receivedDateTime;
-
-    /**
-     * The Has Attachments.
-     * Indicates whether the post has at least one attachment. This is a default property.
-     */
-    @SerializedName("hasAttachments")
-    @Expose
-    public Boolean hasAttachments;
-
-    /**
-     * The From.
-     * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
-     */
-    @SerializedName("from")
-    @Expose
-    public Recipient from;
-
-    /**
-     * The Sender.
-     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
-     */
-    @SerializedName("sender")
-    @Expose
-    public Recipient sender;
+    public String conversationId;
 
     /**
      * The Conversation Thread Id.
@@ -90,6 +66,22 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     public String conversationThreadId;
 
     /**
+     * The From.
+     * Used in delegate access scenarios. Indicates who posted the message on behalf of another user. This is a default property.
+     */
+    @SerializedName("from")
+    @Expose
+    public Recipient from;
+
+    /**
+     * The Has Attachments.
+     * Indicates whether the post has at least one attachment. This is a default property.
+     */
+    @SerializedName("hasAttachments")
+    @Expose
+    public Boolean hasAttachments;
+
+    /**
      * The New Participants.
      * Conversation participants that were added to the thread as part of this post.
      */
@@ -98,12 +90,32 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     public java.util.List<Recipient> newParticipants;
 
     /**
-     * The Conversation Id.
-     * Unique ID of the conversation. Read-only.
+     * The Received Date Time.
+     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
-    @SerializedName("conversationId")
+    @SerializedName("receivedDateTime")
     @Expose
-    public String conversationId;
+    public java.util.Calendar receivedDateTime;
+
+    /**
+     * The Sender.
+     * Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
+     */
+    @SerializedName("sender")
+    @Expose
+    public Recipient sender;
+
+    /**
+     * The Attachments.
+     * Read-only. Nullable.
+     */
+    public AttachmentCollectionPage attachments;
+
+    /**
+     * The Extensions.
+     * The collection of open extensions defined for the post. Read-only. Nullable.
+     */
+    public ExtensionCollectionPage extensions;
 
     /**
      * The In Reply To.
@@ -114,28 +126,16 @@ public class Post extends OutlookItem implements IJsonBackedObject {
     public Post inReplyTo;
 
     /**
-     * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
-     */
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
-
-    /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
      */
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
-     * The Extensions.
-     * The collection of open extensions defined for the post. Read-only. Nullable.
+     * The Single Value Extended Properties.
+     * The collection of single-value extended properties defined for the post. Read-only. Nullable.
      */
-    public ExtensionCollectionPage extensions;
-
-    /**
-     * The Attachments.
-     * Read-only. Nullable.
-     */
-    public AttachmentCollectionPage attachments;
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -177,36 +177,20 @@ public class Post extends OutlookItem implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("singleValueExtendedProperties")) {
-            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+        if (json.has("attachments")) {
+            final AttachmentCollectionResponse response = new AttachmentCollectionResponse();
+            if (json.has("attachments@odata.nextLink")) {
+                response.nextLink = json.get("attachments@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
-            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("attachments").toString(), JsonObject[].class);
+            final Attachment[] array = new Attachment[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
-        }
-
-        if (json.has("multiValueExtendedProperties")) {
-            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
-            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+            attachments = new AttachmentCollectionPage(response, null);
         }
 
         if (json.has("extensions")) {
@@ -225,20 +209,36 @@ public class Post extends OutlookItem implements IJsonBackedObject {
             extensions = new ExtensionCollectionPage(response, null);
         }
 
-        if (json.has("attachments")) {
-            final AttachmentCollectionResponse response = new AttachmentCollectionResponse();
-            if (json.has("attachments@odata.nextLink")) {
-                response.nextLink = json.get("attachments@odata.nextLink").getAsString();
+        if (json.has("multiValueExtendedProperties")) {
+            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("attachments").toString(), JsonObject[].class);
-            final Attachment[] array = new Attachment[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), Attachment.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            attachments = new AttachmentCollectionPage(response, null);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("singleValueExtendedProperties")) {
+            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

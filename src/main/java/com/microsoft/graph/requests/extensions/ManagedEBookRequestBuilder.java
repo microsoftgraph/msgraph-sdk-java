@@ -73,6 +73,13 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
     public IManagedEBookAssignmentRequestBuilder assignments(final String id) {
         return new ManagedEBookAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
+    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
+        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
+    }
+
+    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
+        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for EBookInstallSummary
@@ -81,13 +88,6 @@ public class ManagedEBookRequestBuilder extends BaseRequestBuilder implements IM
      */
     public IEBookInstallSummaryRequestBuilder installSummary() {
         return new EBookInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
-    }
-    public IDeviceInstallStateCollectionRequestBuilder deviceStates() {
-        return new DeviceInstallStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
-    }
-
-    public IDeviceInstallStateRequestBuilder deviceStates(final String id) {
-        return new DeviceInstallStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
     public IUserInstallStateSummaryCollectionRequestBuilder userStateSummary() {
         return new UserInstallStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStateSummary"), getClient(), null);

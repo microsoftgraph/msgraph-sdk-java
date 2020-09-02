@@ -27,12 +27,12 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Policy display name.
+     * The Created Date Time.
+     * The date and time the policy was created.
      */
-    @SerializedName("displayName")
+    @SerializedName("createdDateTime")
     @Expose
-    public String displayName;
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Description.
@@ -43,12 +43,12 @@ public class ManagedAppPolicy extends Entity implements IJsonBackedObject {
     public String description;
 
     /**
-     * The Created Date Time.
-     * The date and time the policy was created.
+     * The Display Name.
+     * Policy display name.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("displayName")
     @Expose
-    public java.util.Calendar createdDateTime;
+    public String displayName;
 
     /**
      * The Last Modified Date Time.

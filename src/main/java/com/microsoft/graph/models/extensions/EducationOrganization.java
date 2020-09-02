@@ -28,20 +28,20 @@ public class EducationOrganization extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Display Name.
-     * Organization display name.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
      * The Description.
      * Organization description.
      */
     @SerializedName("description")
     @Expose
     public String description;
+
+    /**
+     * The Display Name.
+     * Organization display name.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
 
     /**
      * The External Source.

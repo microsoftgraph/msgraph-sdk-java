@@ -38,28 +38,12 @@ public class ChangeNotification implements IJsonBackedObject {
     }
 
     /**
-     * The Id.
-     * Unique ID for the notification. Optional.
+     * The Change Type.
+     * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
      */
-    @SerializedName("id")
+    @SerializedName("changeType")
     @Expose
-    public String id;
-
-    /**
-     * The Subscription Id.
-     * The unique identifier of the subscription that generated the notification.
-     */
-    @SerializedName("subscriptionId")
-    @Expose
-    public java.util.UUID subscriptionId;
-
-    /**
-     * The Subscription Expiration Date Time.
-     * The expiration time for the subscription. Required.
-     */
-    @SerializedName("subscriptionExpirationDateTime")
-    @Expose
-    public java.util.Calendar subscriptionExpirationDateTime;
+    public ChangeType changeType;
 
     /**
      * The Client State.
@@ -70,12 +54,12 @@ public class ChangeNotification implements IJsonBackedObject {
     public String clientState;
 
     /**
-     * The Change Type.
-     * Indicates the type of change that will raise the change notification. The supported values are: created, updated, deleted. Required.
+     * The Id.
+     * Unique ID for the notification. Optional.
      */
-    @SerializedName("changeType")
+    @SerializedName("id")
     @Expose
-    public ChangeType changeType;
+    public String id;
 
     /**
      * The Resource.
@@ -86,20 +70,36 @@ public class ChangeNotification implements IJsonBackedObject {
     public String resource;
 
     /**
-     * The Tenant Id.
-     * The unique identifier of the tenant from which the change notification originated.
-     */
-    @SerializedName("tenantId")
-    @Expose
-    public java.util.UUID tenantId;
-
-    /**
      * The Resource Data.
      * The content of this property depends on the type of resource being subscribed to. Required.
      */
     @SerializedName("resourceData")
     @Expose
     public ResourceData resourceData;
+
+    /**
+     * The Subscription Expiration Date Time.
+     * The expiration time for the subscription. Required.
+     */
+    @SerializedName("subscriptionExpirationDateTime")
+    @Expose
+    public java.util.Calendar subscriptionExpirationDateTime;
+
+    /**
+     * The Subscription Id.
+     * The unique identifier of the subscription that generated the notification.
+     */
+    @SerializedName("subscriptionId")
+    @Expose
+    public java.util.UUID subscriptionId;
+
+    /**
+     * The Tenant Id.
+     * The unique identifier of the tenant from which the change notification originated.
+     */
+    @SerializedName("tenantId")
+    @Expose
+    public java.util.UUID tenantId;
 
 
     /**

@@ -66,15 +66,15 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
 
     ITokenLifetimePolicyRequestBuilder tokenLifetimePolicies(final String id);
 
+    IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies();
+
+    IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id);
+
     /**
      * Gets the request builder for IdentitySecurityDefaultsEnforcementPolicy
      *
      * @return the IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
      */
     IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy();
-
-    IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies();
-
-    IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id);
 
 }

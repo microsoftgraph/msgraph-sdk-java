@@ -46,22 +46,6 @@ public class PublicError implements IJsonBackedObject {
     public String code;
 
     /**
-     * The Message.
-     * 
-     */
-    @SerializedName("message")
-    @Expose
-    public String message;
-
-    /**
-     * The Target.
-     * 
-     */
-    @SerializedName("target")
-    @Expose
-    public String target;
-
-    /**
      * The Details.
      * 
      */
@@ -76,6 +60,22 @@ public class PublicError implements IJsonBackedObject {
     @SerializedName("innerError")
     @Expose
     public PublicInnerError innerError;
+
+    /**
+     * The Message.
+     * 
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
+
+    /**
+     * The Target.
+     * 
+     */
+    @SerializedName("target")
+    @Expose
+    public String target;
 
 
     /**

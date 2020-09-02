@@ -36,12 +36,12 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements IJso
     }
 
     /**
-     * The Subject Name.
-     * Data recovery Certificate subject name
+     * The Certificate.
+     * Data recovery Certificate
      */
-    @SerializedName("subjectName")
+    @SerializedName("certificate")
     @Expose
-    public String subjectName;
+    public byte[] certificate;
 
     /**
      * The Description.
@@ -60,12 +60,12 @@ public class WindowsInformationProtectionDataRecoveryCertificate implements IJso
     public java.util.Calendar expirationDateTime;
 
     /**
-     * The Certificate.
-     * Data recovery Certificate
+     * The Subject Name.
+     * Data recovery Certificate subject name
      */
-    @SerializedName("certificate")
+    @SerializedName("subjectName")
     @Expose
-    public byte[] certificate;
+    public String subjectName;
 
 
     /**

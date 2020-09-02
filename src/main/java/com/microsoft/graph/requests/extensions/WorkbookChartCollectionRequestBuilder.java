@@ -16,9 +16,9 @@ import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IWorkbookChartRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartCollectionRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookChartAddRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartCountRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartItemAtRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartCountRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -58,15 +58,15 @@ public class WorkbookChartCollectionRequestBuilder extends BaseRequestBuilder im
         return new WorkbookChartAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, type, sourceData, seriesBy);
     }
 
+    public IWorkbookChartCountRequestBuilder count() {
+        return new WorkbookChartCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
+    }
+
     public IWorkbookChartItemRequestBuilder item(final String name) {
         return new WorkbookChartItemRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.item"), getClient(), null, name);
     }
 
     public IWorkbookChartItemAtRequestBuilder itemAt(final Integer index) {
         return new WorkbookChartItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
-    }
-
-    public IWorkbookChartCountRequestBuilder count() {
-        return new WorkbookChartCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
     }
 }

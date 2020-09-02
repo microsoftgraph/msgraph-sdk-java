@@ -36,12 +36,12 @@ public class CertificateAuthority implements IJsonBackedObject {
     }
 
     /**
-     * The Is Root Authority.
-     * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
+     * The Certificate.
+     * Required. The base64 encoded string representing the public certificate.
      */
-    @SerializedName("isRootAuthority")
+    @SerializedName("certificate")
     @Expose
-    public Boolean isRootAuthority;
+    public byte[] certificate;
 
     /**
      * The Certificate Revocation List Url.
@@ -60,12 +60,12 @@ public class CertificateAuthority implements IJsonBackedObject {
     public String deltaCertificateRevocationListUrl;
 
     /**
-     * The Certificate.
-     * Required. The base64 encoded string representing the public certificate.
+     * The Is Root Authority.
+     * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.
      */
-    @SerializedName("certificate")
+    @SerializedName("isRootAuthority")
     @Expose
-    public byte[] certificate;
+    public Boolean isRootAuthority;
 
     /**
      * The Issuer.

@@ -8,8 +8,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.DeviceManagementPartnerTenantState;
 import com.microsoft.graph.models.extensions.ComplianceManagementPartnerAssignment;
+import com.microsoft.graph.models.generated.DeviceManagementPartnerTenantState;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -29,36 +29,12 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
 
 
     /**
-     * The Last Heartbeat Date Time.
-     * Timestamp of last heartbeat after admin onboarded to the compliance management partner
+     * The Android Enrollment Assignments.
+     * User groups which enroll Android devices through partner.
      */
-    @SerializedName("lastHeartbeatDateTime")
+    @SerializedName("androidEnrollmentAssignments")
     @Expose
-    public java.util.Calendar lastHeartbeatDateTime;
-
-    /**
-     * The Partner State.
-     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
-     */
-    @SerializedName("partnerState")
-    @Expose
-    public DeviceManagementPartnerTenantState partnerState;
-
-    /**
-     * The Display Name.
-     * Partner display name
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Mac Os Onboarded.
-     * Partner onboarded for Mac devices.
-     */
-    @SerializedName("macOsOnboarded")
-    @Expose
-    public Boolean macOsOnboarded;
+    public java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
 
     /**
      * The Android Onboarded.
@@ -69,12 +45,36 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
     public Boolean androidOnboarded;
 
     /**
+     * The Display Name.
+     * Partner display name
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Ios Enrollment Assignments.
+     * User groups which enroll ios devices through partner.
+     */
+    @SerializedName("iosEnrollmentAssignments")
+    @Expose
+    public java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
+
+    /**
      * The Ios Onboarded.
      * Partner onboarded for ios devices.
      */
     @SerializedName("iosOnboarded")
     @Expose
     public Boolean iosOnboarded;
+
+    /**
+     * The Last Heartbeat Date Time.
+     * Timestamp of last heartbeat after admin onboarded to the compliance management partner
+     */
+    @SerializedName("lastHeartbeatDateTime")
+    @Expose
+    public java.util.Calendar lastHeartbeatDateTime;
 
     /**
      * The Mac Os Enrollment Assignments.
@@ -85,20 +85,20 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
     public java.util.List<ComplianceManagementPartnerAssignment> macOsEnrollmentAssignments;
 
     /**
-     * The Android Enrollment Assignments.
-     * User groups which enroll Android devices through partner.
+     * The Mac Os Onboarded.
+     * Partner onboarded for Mac devices.
      */
-    @SerializedName("androidEnrollmentAssignments")
+    @SerializedName("macOsOnboarded")
     @Expose
-    public java.util.List<ComplianceManagementPartnerAssignment> androidEnrollmentAssignments;
+    public Boolean macOsOnboarded;
 
     /**
-     * The Ios Enrollment Assignments.
-     * User groups which enroll ios devices through partner.
+     * The Partner State.
+     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
      */
-    @SerializedName("iosEnrollmentAssignments")
+    @SerializedName("partnerState")
     @Expose
-    public java.util.List<ComplianceManagementPartnerAssignment> iosEnrollmentAssignments;
+    public DeviceManagementPartnerTenantState partnerState;
 
 
     /**

@@ -36,12 +36,20 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
     }
 
     /**
-     * The Include Users.
-     * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+     * The Exclude Groups.
+     * Group IDs excluded from scope of policy.
      */
-    @SerializedName("includeUsers")
+    @SerializedName("excludeGroups")
     @Expose
-    public java.util.List<String> includeUsers;
+    public java.util.List<String> excludeGroups;
+
+    /**
+     * The Exclude Roles.
+     * Role IDs excluded from scope of policy.
+     */
+    @SerializedName("excludeRoles")
+    @Expose
+    public java.util.List<String> excludeRoles;
 
     /**
      * The Exclude Users.
@@ -60,14 +68,6 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
     public java.util.List<String> includeGroups;
 
     /**
-     * The Exclude Groups.
-     * Group IDs excluded from scope of policy.
-     */
-    @SerializedName("excludeGroups")
-    @Expose
-    public java.util.List<String> excludeGroups;
-
-    /**
      * The Include Roles.
      * Role IDs in scope of policy unless explicitly excluded, or All.
      */
@@ -76,12 +76,12 @@ public class ConditionalAccessUsers implements IJsonBackedObject {
     public java.util.List<String> includeRoles;
 
     /**
-     * The Exclude Roles.
-     * Role IDs excluded from scope of policy.
+     * The Include Users.
+     * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
      */
-    @SerializedName("excludeRoles")
+    @SerializedName("includeUsers")
     @Expose
-    public java.util.List<String> excludeRoles;
+    public java.util.List<String> includeUsers;
 
 
     /**

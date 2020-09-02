@@ -8,12 +8,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contact;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -40,9 +40,9 @@ public interface IContactRequestBuilder extends IRequestBuilder {
     IContactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
+    IExtensionCollectionRequestBuilder extensions();
 
-    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
+    IExtensionRequestBuilder extensions(final String id);
 
     IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties();
 
@@ -55,8 +55,8 @@ public interface IContactRequestBuilder extends IRequestBuilder {
      */
     IProfilePhotoRequestBuilder photo();
 
-    IExtensionCollectionRequestBuilder extensions();
+    ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties();
 
-    IExtensionRequestBuilder extensions(final String id);
+    ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id);
 
 }

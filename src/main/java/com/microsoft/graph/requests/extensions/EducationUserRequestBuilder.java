@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
@@ -61,19 +61,19 @@ public class EducationUserRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public IEducationSchoolCollectionWithReferencesRequestBuilder schools() {
-        return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
-    }
-
-    public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
-        return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
-    }
     public IEducationClassCollectionWithReferencesRequestBuilder classes() {
         return new EducationClassCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
     public IEducationClassWithReferenceRequestBuilder classes(final String id) {
         return new EducationClassWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
+    }
+    public IEducationSchoolCollectionWithReferencesRequestBuilder schools() {
+        return new EducationSchoolCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
+    }
+
+    public IEducationSchoolWithReferenceRequestBuilder schools(final String id) {
+        return new EducationSchoolWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
 
     /**

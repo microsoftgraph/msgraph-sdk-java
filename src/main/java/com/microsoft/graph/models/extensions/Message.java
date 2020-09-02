@@ -8,25 +8,25 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.InternetMessageHeader;
-import com.microsoft.graph.models.extensions.ItemBody;
-import com.microsoft.graph.models.generated.Importance;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.models.generated.InferenceClassificationType;
+import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.FollowupFlag;
-import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
-import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.generated.Importance;
+import com.microsoft.graph.models.generated.InferenceClassificationType;
+import com.microsoft.graph.models.extensions.InternetMessageHeader;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
+import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.OutlookItem;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
-import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionResponse;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionPage;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionResponse;
+import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -45,52 +45,12 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
 
     /**
-     * The Received Date Time.
-     * The date and time the message was received.
+     * The Bcc Recipients.
+     * The Bcc: recipients for the message.
      */
-    @SerializedName("receivedDateTime")
+    @SerializedName("bccRecipients")
     @Expose
-    public java.util.Calendar receivedDateTime;
-
-    /**
-     * The Sent Date Time.
-     * The date and time the message was sent.
-     */
-    @SerializedName("sentDateTime")
-    @Expose
-    public java.util.Calendar sentDateTime;
-
-    /**
-     * The Has Attachments.
-     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
-     */
-    @SerializedName("hasAttachments")
-    @Expose
-    public Boolean hasAttachments;
-
-    /**
-     * The Internet Message Id.
-     * The message ID in the format specified by RFC2822.
-     */
-    @SerializedName("internetMessageId")
-    @Expose
-    public String internetMessageId;
-
-    /**
-     * The Internet Message Headers.
-     * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
-     */
-    @SerializedName("internetMessageHeaders")
-    @Expose
-    public java.util.List<InternetMessageHeader> internetMessageHeaders;
-
-    /**
-     * The Subject.
-     * The subject of the message.
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
+    public java.util.List<Recipient> bccRecipients;
 
     /**
      * The Body.
@@ -109,68 +69,12 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     public String bodyPreview;
 
     /**
-     * The Importance.
-     * The importance of the message: Low, Normal, High.
-     */
-    @SerializedName("importance")
-    @Expose
-    public Importance importance;
-
-    /**
-     * The Parent Folder Id.
-     * The unique identifier for the message's parent mailFolder.
-     */
-    @SerializedName("parentFolderId")
-    @Expose
-    public String parentFolderId;
-
-    /**
-     * The Sender.
-     * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
-     */
-    @SerializedName("sender")
-    @Expose
-    public Recipient sender;
-
-    /**
-     * The From.
-     * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
-     */
-    @SerializedName("from")
-    @Expose
-    public Recipient from;
-
-    /**
-     * The To Recipients.
-     * The To: recipients for the message.
-     */
-    @SerializedName("toRecipients")
-    @Expose
-    public java.util.List<Recipient> toRecipients;
-
-    /**
      * The Cc Recipients.
      * The Cc: recipients for the message.
      */
     @SerializedName("ccRecipients")
     @Expose
     public java.util.List<Recipient> ccRecipients;
-
-    /**
-     * The Bcc Recipients.
-     * The Bcc: recipients for the message.
-     */
-    @SerializedName("bccRecipients")
-    @Expose
-    public java.util.List<Recipient> bccRecipients;
-
-    /**
-     * The Reply To.
-     * The email addresses to use when replying.
-     */
-    @SerializedName("replyTo")
-    @Expose
-    public java.util.List<Recipient> replyTo;
 
     /**
      * The Conversation Id.
@@ -189,52 +93,36 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     public byte[] conversationIndex;
 
     /**
-     * The Unique Body.
-     * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
+     * The Flag.
+     * The flag value that indicates the status, start date, due date, or completion date for the message.
      */
-    @SerializedName("uniqueBody")
+    @SerializedName("flag")
     @Expose
-    public ItemBody uniqueBody;
+    public FollowupFlag flag;
 
     /**
-     * The Is Delivery Receipt Requested.
-     * Indicates whether a read receipt is requested for the message.
+     * The From.
+     * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      */
-    @SerializedName("isDeliveryReceiptRequested")
+    @SerializedName("from")
     @Expose
-    public Boolean isDeliveryReceiptRequested;
+    public Recipient from;
 
     /**
-     * The Is Read Receipt Requested.
-     * Indicates whether a read receipt is requested for the message.
+     * The Has Attachments.
+     * Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as &amp;lt;IMG src='cid:image001.jpg@01D26CD8.6C05F070'&amp;gt;.
      */
-    @SerializedName("isReadReceiptRequested")
+    @SerializedName("hasAttachments")
     @Expose
-    public Boolean isReadReceiptRequested;
+    public Boolean hasAttachments;
 
     /**
-     * The Is Read.
-     * Indicates whether the message has been read.
+     * The Importance.
+     * The importance of the message: Low, Normal, High.
      */
-    @SerializedName("isRead")
+    @SerializedName("importance")
     @Expose
-    public Boolean isRead;
-
-    /**
-     * The Is Draft.
-     * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
-     */
-    @SerializedName("isDraft")
-    @Expose
-    public Boolean isDraft;
-
-    /**
-     * The Web Link.
-     * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
-     */
-    @SerializedName("webLink")
-    @Expose
-    public String webLink;
+    public Importance importance;
 
     /**
      * The Inference Classification.
@@ -245,24 +133,124 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     public InferenceClassificationType inferenceClassification;
 
     /**
-     * The Flag.
-     * The flag value that indicates the status, start date, due date, or completion date for the message.
+     * The Internet Message Headers.
+     * A collection of message headers defined by RFC5322. The set includes message headers indicating the network path taken by a message from the sender to the recipient. It can also contain custom message headers that hold app data for the message.  Returned only on applying a $select query option. Read-only.
      */
-    @SerializedName("flag")
+    @SerializedName("internetMessageHeaders")
     @Expose
-    public FollowupFlag flag;
+    public java.util.List<InternetMessageHeader> internetMessageHeaders;
 
     /**
-     * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the message. Nullable.
+     * The Internet Message Id.
+     * The message ID in the format specified by RFC2822.
      */
-    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
+    @SerializedName("internetMessageId")
+    @Expose
+    public String internetMessageId;
 
     /**
-     * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the message. Nullable.
+     * The Is Delivery Receipt Requested.
+     * Indicates whether a read receipt is requested for the message.
      */
-    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+    @SerializedName("isDeliveryReceiptRequested")
+    @Expose
+    public Boolean isDeliveryReceiptRequested;
+
+    /**
+     * The Is Draft.
+     * Indicates whether the message is a draft. A message is a draft if it hasn't been sent yet.
+     */
+    @SerializedName("isDraft")
+    @Expose
+    public Boolean isDraft;
+
+    /**
+     * The Is Read.
+     * Indicates whether the message has been read.
+     */
+    @SerializedName("isRead")
+    @Expose
+    public Boolean isRead;
+
+    /**
+     * The Is Read Receipt Requested.
+     * Indicates whether a read receipt is requested for the message.
+     */
+    @SerializedName("isReadReceiptRequested")
+    @Expose
+    public Boolean isReadReceiptRequested;
+
+    /**
+     * The Parent Folder Id.
+     * The unique identifier for the message's parent mailFolder.
+     */
+    @SerializedName("parentFolderId")
+    @Expose
+    public String parentFolderId;
+
+    /**
+     * The Received Date Time.
+     * The date and time the message was received.
+     */
+    @SerializedName("receivedDateTime")
+    @Expose
+    public java.util.Calendar receivedDateTime;
+
+    /**
+     * The Reply To.
+     * The email addresses to use when replying.
+     */
+    @SerializedName("replyTo")
+    @Expose
+    public java.util.List<Recipient> replyTo;
+
+    /**
+     * The Sender.
+     * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     */
+    @SerializedName("sender")
+    @Expose
+    public Recipient sender;
+
+    /**
+     * The Sent Date Time.
+     * The date and time the message was sent.
+     */
+    @SerializedName("sentDateTime")
+    @Expose
+    public java.util.Calendar sentDateTime;
+
+    /**
+     * The Subject.
+     * The subject of the message.
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
+
+    /**
+     * The To Recipients.
+     * The To: recipients for the message.
+     */
+    @SerializedName("toRecipients")
+    @Expose
+    public java.util.List<Recipient> toRecipients;
+
+    /**
+     * The Unique Body.
+     * The part of the body of the message that is unique to the current message. uniqueBody is not returned by default but can be retrieved for a given message by use of the ?$select=uniqueBody query. It can be in HTML or text format.
+     */
+    @SerializedName("uniqueBody")
+    @Expose
+    public ItemBody uniqueBody;
+
+    /**
+     * The Web Link.
+     * The URL to open the message in Outlook Web App.You can append an ispopout argument to the end of the URL to change how the message is displayed. If ispopout is not present or if it is set to 1, then the message is shown in a popout window. If ispopout is set to 0, then the browser will show the message in the Outlook Web App review pane.The message will open in the browser if you are logged in to your mailbox via Outlook Web App. You will be prompted to login if you are not already logged in with the browser.This URL can be accessed from within an iFrame.
+     */
+    @SerializedName("webLink")
+    @Expose
+    public String webLink;
 
     /**
      * The Attachments.
@@ -275,6 +263,18 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The collection of open extensions defined for the message. Nullable.
      */
     public ExtensionCollectionPage extensions;
+
+    /**
+     * The Multi Value Extended Properties.
+     * The collection of multi-value extended properties defined for the message. Nullable.
+     */
+    public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
+
+    /**
+     * The Single Value Extended Properties.
+     * The collection of single-value extended properties defined for the message. Nullable.
+     */
+    public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 
     /**
@@ -316,38 +316,6 @@ public class Message extends OutlookItem implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("singleValueExtendedProperties")) {
-            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
-            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
-        }
-
-        if (json.has("multiValueExtendedProperties")) {
-            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
-            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
-                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
-            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
-        }
-
         if (json.has("attachments")) {
             final AttachmentCollectionResponse response = new AttachmentCollectionResponse();
             if (json.has("attachments@odata.nextLink")) {
@@ -378,6 +346,38 @@ public class Message extends OutlookItem implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             extensions = new ExtensionCollectionPage(response, null);
+        }
+
+        if (json.has("multiValueExtendedProperties")) {
+            final MultiValueLegacyExtendedPropertyCollectionResponse response = new MultiValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("multiValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("multiValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("multiValueExtendedProperties").toString(), JsonObject[].class);
+            final MultiValueLegacyExtendedProperty[] array = new MultiValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), MultiValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            multiValueExtendedProperties = new MultiValueLegacyExtendedPropertyCollectionPage(response, null);
+        }
+
+        if (json.has("singleValueExtendedProperties")) {
+            final SingleValueLegacyExtendedPropertyCollectionResponse response = new SingleValueLegacyExtendedPropertyCollectionResponse();
+            if (json.has("singleValueExtendedProperties@odata.nextLink")) {
+                response.nextLink = json.get("singleValueExtendedProperties@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("singleValueExtendedProperties").toString(), JsonObject[].class);
+            final SingleValueLegacyExtendedProperty[] array = new SingleValueLegacyExtendedProperty[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), SingleValueLegacyExtendedProperty.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            singleValueExtendedProperties = new SingleValueLegacyExtendedPropertyCollectionPage(response, null);
         }
     }
 }

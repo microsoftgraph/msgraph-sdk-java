@@ -8,14 +8,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SectionGroup;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
 import java.util.Arrays;
@@ -79,18 +79,18 @@ public class SectionGroupRequestBuilder extends BaseRequestBuilder implements IS
     public ISectionGroupRequestBuilder parentSectionGroup() {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("parentSectionGroup"), getClient(), null);
     }
-    public IOnenoteSectionCollectionRequestBuilder sections() {
-        return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
-    }
-
-    public IOnenoteSectionRequestBuilder sections(final String id) {
-        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
-    }
     public ISectionGroupCollectionRequestBuilder sectionGroups() {
         return new SectionGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups"), getClient(), null);
     }
 
     public ISectionGroupRequestBuilder sectionGroups(final String id) {
         return new SectionGroupRequestBuilder(getRequestUrlWithAdditionalSegment("sectionGroups") + "/" + id, getClient(), null);
+    }
+    public IOnenoteSectionCollectionRequestBuilder sections() {
+        return new OnenoteSectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections"), getClient(), null);
+    }
+
+    public IOnenoteSectionRequestBuilder sections(final String id) {
+        return new OnenoteSectionRequestBuilder(getRequestUrlWithAdditionalSegment("sections") + "/" + id, getClient(), null);
     }
 }

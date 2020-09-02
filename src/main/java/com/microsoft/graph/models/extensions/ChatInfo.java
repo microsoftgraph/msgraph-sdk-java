@@ -36,14 +36,6 @@ public class ChatInfo implements IJsonBackedObject {
     }
 
     /**
-     * The Thread Id.
-     * The unique identifier for a thread in Microsoft Teams.
-     */
-    @SerializedName("threadId")
-    @Expose
-    public String threadId;
-
-    /**
      * The Message Id.
      * The unique identifier of a message in a Microsoft Teams channel.
      */
@@ -58,6 +50,14 @@ public class ChatInfo implements IJsonBackedObject {
     @SerializedName("replyChainMessageId")
     @Expose
     public String replyChainMessageId;
+
+    /**
+     * The Thread Id.
+     * The unique identifier for a thread in Microsoft Teams.
+     */
+    @SerializedName("threadId")
+    @Expose
+    public String threadId;
 
 
     /**

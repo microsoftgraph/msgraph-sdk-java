@@ -28,6 +28,14 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
 
 
     /**
+     * The Android Restriction.
+     * Not yet documented
+     */
+    @SerializedName("androidRestriction")
+    @Expose
+    public DeviceEnrollmentPlatformRestriction androidRestriction;
+
+    /**
      * The Ios Restriction.
      * Not yet documented
      */
@@ -36,12 +44,12 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     public DeviceEnrollmentPlatformRestriction iosRestriction;
 
     /**
-     * The Windows Restriction.
+     * The Mac OSRestriction.
      * Not yet documented
      */
-    @SerializedName("windowsRestriction")
+    @SerializedName("macOSRestriction")
     @Expose
-    public DeviceEnrollmentPlatformRestriction windowsRestriction;
+    public DeviceEnrollmentPlatformRestriction macOSRestriction;
 
     /**
      * The Windows Mobile Restriction.
@@ -52,20 +60,12 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     public DeviceEnrollmentPlatformRestriction windowsMobileRestriction;
 
     /**
-     * The Android Restriction.
+     * The Windows Restriction.
      * Not yet documented
      */
-    @SerializedName("androidRestriction")
+    @SerializedName("windowsRestriction")
     @Expose
-    public DeviceEnrollmentPlatformRestriction androidRestriction;
-
-    /**
-     * The Mac OSRestriction.
-     * Not yet documented
-     */
-    @SerializedName("macOSRestriction")
-    @Expose
-    public DeviceEnrollmentPlatformRestriction macOSRestriction;
+    public DeviceEnrollmentPlatformRestriction windowsRestriction;
 
 
     /**

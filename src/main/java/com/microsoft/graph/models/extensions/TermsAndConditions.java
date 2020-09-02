@@ -8,13 +8,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.extensions.TermsAndConditionsAcceptanceStatus;
+import com.microsoft.graph.models.extensions.TermsAndConditionsAssignment;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionResponse;
-import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionResponse;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionPage;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -33,44 +33,12 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Created Date Time.
-     * DateTime the object was created.
+     * The Acceptance Statement.
+     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
      */
-    @SerializedName("createdDateTime")
+    @SerializedName("acceptanceStatement")
     @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * DateTime the object was last modified.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Display Name.
-     * Administrator-supplied name for the T&amp;C policy.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
-
-    /**
-     * The Description.
-     * Administrator-supplied description of the T&amp;C policy.
-     */
-    @SerializedName("description")
-    @Expose
-    public String description;
-
-    /**
-     * The Title.
-     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
-     */
-    @SerializedName("title")
-    @Expose
-    public String title;
+    public String acceptanceStatement;
 
     /**
      * The Body Text.
@@ -81,12 +49,44 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
     public String bodyText;
 
     /**
-     * The Acceptance Statement.
-     * Administrator-supplied explanation of the terms and conditions, typically describing what it means to accept the terms and conditions set out in the T&amp;C policy. This is shown to the user on prompts to accept the T&amp;C policy.
+     * The Created Date Time.
+     * DateTime the object was created.
      */
-    @SerializedName("acceptanceStatement")
+    @SerializedName("createdDateTime")
     @Expose
-    public String acceptanceStatement;
+    public java.util.Calendar createdDateTime;
+
+    /**
+     * The Description.
+     * Administrator-supplied description of the T&amp;C policy.
+     */
+    @SerializedName("description")
+    @Expose
+    public String description;
+
+    /**
+     * The Display Name.
+     * Administrator-supplied name for the T&amp;C policy.
+     */
+    @SerializedName("displayName")
+    @Expose
+    public String displayName;
+
+    /**
+     * The Last Modified Date Time.
+     * DateTime the object was last modified.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Title.
+     * Administrator-supplied title of the terms and conditions. This is shown to the user on prompts to accept the T&amp;C policy.
+     */
+    @SerializedName("title")
+    @Expose
+    public String title;
 
     /**
      * The Version.
@@ -97,16 +97,16 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
     public Integer version;
 
     /**
-     * The Assignments.
-     * The list of assignments for this T&amp;C policy.
-     */
-    public TermsAndConditionsAssignmentCollectionPage assignments;
-
-    /**
      * The Acceptance Statuses.
      * The list of acceptance statuses for this T&amp;C policy.
      */
     public TermsAndConditionsAcceptanceStatusCollectionPage acceptanceStatuses;
+
+    /**
+     * The Assignments.
+     * The list of assignments for this T&amp;C policy.
+     */
+    public TermsAndConditionsAssignmentCollectionPage assignments;
 
 
     /**
@@ -148,22 +148,6 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("assignments")) {
-            final TermsAndConditionsAssignmentCollectionResponse response = new TermsAndConditionsAssignmentCollectionResponse();
-            if (json.has("assignments@odata.nextLink")) {
-                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
-            final TermsAndConditionsAssignment[] array = new TermsAndConditionsAssignment[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TermsAndConditionsAssignment.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            assignments = new TermsAndConditionsAssignmentCollectionPage(response, null);
-        }
-
         if (json.has("acceptanceStatuses")) {
             final TermsAndConditionsAcceptanceStatusCollectionResponse response = new TermsAndConditionsAcceptanceStatusCollectionResponse();
             if (json.has("acceptanceStatuses@odata.nextLink")) {
@@ -178,6 +162,22 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             acceptanceStatuses = new TermsAndConditionsAcceptanceStatusCollectionPage(response, null);
+        }
+
+        if (json.has("assignments")) {
+            final TermsAndConditionsAssignmentCollectionResponse response = new TermsAndConditionsAssignmentCollectionResponse();
+            if (json.has("assignments@odata.nextLink")) {
+                response.nextLink = json.get("assignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("assignments").toString(), JsonObject[].class);
+            final TermsAndConditionsAssignment[] array = new TermsAndConditionsAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), TermsAndConditionsAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            assignments = new TermsAndConditionsAssignmentCollectionPage(response, null);
         }
     }
 }

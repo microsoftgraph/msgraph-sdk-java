@@ -36,20 +36,20 @@ public class EducationTeacher implements IJsonBackedObject {
     }
 
     /**
-     * The Teacher Number.
-     * Teacher number.
-     */
-    @SerializedName("teacherNumber")
-    @Expose
-    public String teacherNumber;
-
-    /**
      * The External Id.
      * ID of the teacher in the source system.
      */
     @SerializedName("externalId")
     @Expose
     public String externalId;
+
+    /**
+     * The Teacher Number.
+     * Teacher number.
+     */
+    @SerializedName("teacherNumber")
+    @Expose
+    public String teacherNumber;
 
 
     /**

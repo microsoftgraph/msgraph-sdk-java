@@ -27,6 +27,14 @@ public class FileAttachment extends Attachment implements IJsonBackedObject {
 
 
     /**
+     * The Content Bytes.
+     * The base64-encoded contents of the file.
+     */
+    @SerializedName("contentBytes")
+    @Expose
+    public byte[] contentBytes;
+
+    /**
      * The Content Id.
      * The ID of the attachment in the Exchange store.
      */
@@ -41,14 +49,6 @@ public class FileAttachment extends Attachment implements IJsonBackedObject {
     @SerializedName("contentLocation")
     @Expose
     public String contentLocation;
-
-    /**
-     * The Content Bytes.
-     * The base64-encoded contents of the file.
-     */
-    @SerializedName("contentBytes")
-    @Expose
-    public byte[] contentBytes;
 
 
     /**

@@ -27,14 +27,6 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Installed Device Count.
-     * Number of Devices that have successfully installed this book.
-     */
-    @SerializedName("installedDeviceCount")
-    @Expose
-    public Integer installedDeviceCount;
-
-    /**
      * The Failed Device Count.
      * Number of Devices that have failed to install this book.
      */
@@ -43,12 +35,20 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
     public Integer failedDeviceCount;
 
     /**
-     * The Not Installed Device Count.
-     * Number of Devices that does not have this book installed.
+     * The Failed User Count.
+     * Number of Users that have 1 or more device that failed to install this book.
      */
-    @SerializedName("notInstalledDeviceCount")
+    @SerializedName("failedUserCount")
     @Expose
-    public Integer notInstalledDeviceCount;
+    public Integer failedUserCount;
+
+    /**
+     * The Installed Device Count.
+     * Number of Devices that have successfully installed this book.
+     */
+    @SerializedName("installedDeviceCount")
+    @Expose
+    public Integer installedDeviceCount;
 
     /**
      * The Installed User Count.
@@ -59,12 +59,12 @@ public class EBookInstallSummary extends Entity implements IJsonBackedObject {
     public Integer installedUserCount;
 
     /**
-     * The Failed User Count.
-     * Number of Users that have 1 or more device that failed to install this book.
+     * The Not Installed Device Count.
+     * Number of Devices that does not have this book installed.
      */
-    @SerializedName("failedUserCount")
+    @SerializedName("notInstalledDeviceCount")
     @Expose
-    public Integer failedUserCount;
+    public Integer notInstalledDeviceCount;
 
     /**
      * The Not Installed User Count.

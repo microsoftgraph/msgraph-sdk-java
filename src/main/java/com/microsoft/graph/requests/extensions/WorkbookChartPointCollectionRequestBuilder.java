@@ -15,8 +15,8 @@ import java.util.EnumSet;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointCollectionRequest;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookChartPointCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookChartPointItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -52,11 +52,11 @@ public class WorkbookChartPointCollectionRequestBuilder extends BaseRequestBuild
 
 
 
-    public IWorkbookChartPointItemAtRequestBuilder itemAt(final Integer index) {
-        return new WorkbookChartPointItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
-    }
-
     public IWorkbookChartPointCountRequestBuilder count() {
         return new WorkbookChartPointCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
+    }
+
+    public IWorkbookChartPointItemAtRequestBuilder itemAt(final Integer index) {
+        return new WorkbookChartPointItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

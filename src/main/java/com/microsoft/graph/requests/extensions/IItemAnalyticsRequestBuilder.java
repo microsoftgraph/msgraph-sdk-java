@@ -35,16 +35,16 @@ public interface IItemAnalyticsRequestBuilder extends IRequestBuilder {
     IItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IItemActivityStatCollectionRequestBuilder itemActivityStats();
-
-    IItemActivityStatRequestBuilder itemActivityStats(final String id);
-
     /**
      * Gets the request builder for ItemActivityStat
      *
      * @return the IItemActivityStatWithReferenceRequestBuilder instance
      */
     IItemActivityStatWithReferenceRequestBuilder allTime();
+
+    IItemActivityStatCollectionRequestBuilder itemActivityStats();
+
+    IItemActivityStatRequestBuilder itemActivityStats(final String id);
 
     /**
      * Gets the request builder for ItemActivityStat

@@ -17,8 +17,8 @@ import com.microsoft.graph.requests.extensions.IWorkbookTableRowCollectionReques
 import com.microsoft.graph.requests.extensions.IWorkbookTableRowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRowCollectionRequest;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRowAddRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookTableRowItemAtRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookTableRowCountRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWorkbookTableRowItemAtRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -58,11 +58,11 @@ public class WorkbookTableRowCollectionRequestBuilder extends BaseRequestBuilder
         return new WorkbookTableRowAddRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.add"), getClient(), null, index, values);
     }
 
-    public IWorkbookTableRowItemAtRequestBuilder itemAt(final Integer index) {
-        return new WorkbookTableRowItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
-    }
-
     public IWorkbookTableRowCountRequestBuilder count() {
         return new WorkbookTableRowCountRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.count"), getClient(), null);
+    }
+
+    public IWorkbookTableRowItemAtRequestBuilder itemAt(final Integer index) {
+        return new WorkbookTableRowItemAtRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.itemAt"), getClient(), null, index);
     }
 }

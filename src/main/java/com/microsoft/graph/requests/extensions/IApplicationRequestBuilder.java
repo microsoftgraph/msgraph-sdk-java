@@ -16,10 +16,10 @@ import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollecti
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -45,16 +45,16 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
     IApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IExtensionPropertyCollectionRequestBuilder extensionProperties();
-
-    IExtensionPropertyRequestBuilder extensionProperties(final String id);
-
     /**
      * Gets the request builder for DirectoryObject
      *
      * @return the IDirectoryObjectWithReferenceRequestBuilder instance
      */
     IDirectoryObjectWithReferenceRequestBuilder createdOnBehalfOf();
+
+    IExtensionPropertyCollectionRequestBuilder extensionProperties();
+
+    IExtensionPropertyRequestBuilder extensionProperties(final String id);
 
     IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder homeRealmDiscoveryPolicies();
 
@@ -64,13 +64,13 @@ public interface IApplicationRequestBuilder extends IRequestBuilder {
 
     IDirectoryObjectWithReferenceRequestBuilder owners(final String id);
 
-    ITokenLifetimePolicyCollectionWithReferencesRequestBuilder tokenLifetimePolicies();
-
-    ITokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id);
-
     ITokenIssuancePolicyCollectionWithReferencesRequestBuilder tokenIssuancePolicies();
 
     ITokenIssuancePolicyWithReferenceRequestBuilder tokenIssuancePolicies(final String id);
+
+    ITokenLifetimePolicyCollectionWithReferencesRequestBuilder tokenLifetimePolicies();
+
+    ITokenLifetimePolicyWithReferenceRequestBuilder tokenLifetimePolicies(final String id);
 
     IApplicationLogoStreamRequestBuilder logo();
     IApplicationAddKeyRequestBuilder addKey(final KeyCredential keyCredential, final PasswordCredential passwordCredential, final String proof);

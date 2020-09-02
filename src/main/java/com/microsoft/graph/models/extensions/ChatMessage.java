@@ -8,21 +8,21 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.IdentitySet;
-import com.microsoft.graph.models.generated.ChatMessageType;
-import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.ChatMessageAttachment;
-import com.microsoft.graph.models.extensions.ChatMessageMention;
+import com.microsoft.graph.models.extensions.ItemBody;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.ChatMessageImportance;
+import com.microsoft.graph.models.extensions.ChatMessageMention;
+import com.microsoft.graph.models.generated.ChatMessageType;
 import com.microsoft.graph.models.extensions.ChatMessagePolicyViolation;
 import com.microsoft.graph.models.extensions.ChatMessageReaction;
-import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.ChatMessageHostedContent;
+import com.microsoft.graph.models.extensions.ChatMessage;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
-import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionResponse;
 import com.microsoft.graph.requests.extensions.ChatMessageHostedContentCollectionPage;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionResponse;
+import com.microsoft.graph.requests.extensions.ChatMessageCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -41,68 +41,12 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Reply To Id.
-     * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels not chats)
+     * The Attachments.
+     * Attached files. Attachments are currently read-only – sending attachments is not supported.
      */
-    @SerializedName("replyToId")
+    @SerializedName("attachments")
     @Expose
-    public String replyToId;
-
-    /**
-     * The From.
-     * Read only. Details of the sender of the chat message.
-     */
-    @SerializedName("from")
-    @Expose
-    public IdentitySet from;
-
-    /**
-     * The Etag.
-     * Read-only. Version number of the chat message.
-     */
-    @SerializedName("etag")
-    @Expose
-    public String etag;
-
-    /**
-     * The Message Type.
-     * The type of chat message. The possible values are: message.
-     */
-    @SerializedName("messageType")
-    @Expose
-    public ChatMessageType messageType;
-
-    /**
-     * The Created Date Time.
-     * Read only. Timestamp of when the chat message was created.
-     */
-    @SerializedName("createdDateTime")
-    @Expose
-    public java.util.Calendar createdDateTime;
-
-    /**
-     * The Last Modified Date Time.
-     * Read only. Timestamp of when the chat message is created or edited, including when a reply is made (if it's a root chat message in a channel) or a reaction is added or removed.
-     */
-    @SerializedName("lastModifiedDateTime")
-    @Expose
-    public java.util.Calendar lastModifiedDateTime;
-
-    /**
-     * The Deleted Date Time.
-     * Read only. Timestamp at which the chat message was deleted, or null if not deleted.
-     */
-    @SerializedName("deletedDateTime")
-    @Expose
-    public java.util.Calendar deletedDateTime;
-
-    /**
-     * The Subject.
-     * The subject of the chat message, in plaintext.
-     */
-    @SerializedName("subject")
-    @Expose
-    public String subject;
+    public java.util.List<ChatMessageAttachment> attachments;
 
     /**
      * The Body.
@@ -113,20 +57,60 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     public ItemBody body;
 
     /**
-     * The Summary.
-     * Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
+     * The Created Date Time.
+     * Read only. Timestamp of when the chat message was created.
      */
-    @SerializedName("summary")
+    @SerializedName("createdDateTime")
     @Expose
-    public String summary;
+    public java.util.Calendar createdDateTime;
 
     /**
-     * The Attachments.
-     * Attached files. Attachments are currently read-only – sending attachments is not supported.
+     * The Deleted Date Time.
+     * Read only. Timestamp at which the chat message was deleted, or null if not deleted.
      */
-    @SerializedName("attachments")
+    @SerializedName("deletedDateTime")
     @Expose
-    public java.util.List<ChatMessageAttachment> attachments;
+    public java.util.Calendar deletedDateTime;
+
+    /**
+     * The Etag.
+     * Read-only. Version number of the chat message.
+     */
+    @SerializedName("etag")
+    @Expose
+    public String etag;
+
+    /**
+     * The From.
+     * Read only. Details of the sender of the chat message.
+     */
+    @SerializedName("from")
+    @Expose
+    public IdentitySet from;
+
+    /**
+     * The Importance.
+     * The importance of the chat message. The possible values are: normal, high, urgent.
+     */
+    @SerializedName("importance")
+    @Expose
+    public ChatMessageImportance importance;
+
+    /**
+     * The Last Modified Date Time.
+     * Read only. Timestamp of when the chat message is created or edited, including when a reply is made (if it's a root chat message in a channel) or a reaction is added or removed.
+     */
+    @SerializedName("lastModifiedDateTime")
+    @Expose
+    public java.util.Calendar lastModifiedDateTime;
+
+    /**
+     * The Locale.
+     * Locale of the chat message set by the client.
+     */
+    @SerializedName("locale")
+    @Expose
+    public String locale;
 
     /**
      * The Mentions.
@@ -137,12 +121,12 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     public java.util.List<ChatMessageMention> mentions;
 
     /**
-     * The Importance.
-     * The importance of the chat message. The possible values are: normal, high, urgent.
+     * The Message Type.
+     * The type of chat message. The possible values are: message.
      */
-    @SerializedName("importance")
+    @SerializedName("messageType")
     @Expose
-    public ChatMessageImportance importance;
+    public ChatMessageType messageType;
 
     /**
      * The Policy Violation.
@@ -161,12 +145,28 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     public java.util.List<ChatMessageReaction> reactions;
 
     /**
-     * The Locale.
-     * Locale of the chat message set by the client.
+     * The Reply To Id.
+     * Read-only. Id of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels not chats)
      */
-    @SerializedName("locale")
+    @SerializedName("replyToId")
     @Expose
-    public String locale;
+    public String replyToId;
+
+    /**
+     * The Subject.
+     * The subject of the chat message, in plaintext.
+     */
+    @SerializedName("subject")
+    @Expose
+    public String subject;
+
+    /**
+     * The Summary.
+     * Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
+     */
+    @SerializedName("summary")
+    @Expose
+    public String summary;
 
     /**
      * The Web Url.
@@ -177,16 +177,16 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     public String webUrl;
 
     /**
-     * The Replies.
-     * 
-     */
-    public ChatMessageCollectionPage replies;
-
-    /**
      * The Hosted Contents.
      * 
      */
     public ChatMessageHostedContentCollectionPage hostedContents;
+
+    /**
+     * The Replies.
+     * 
+     */
+    public ChatMessageCollectionPage replies;
 
 
     /**
@@ -228,22 +228,6 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("replies")) {
-            final ChatMessageCollectionResponse response = new ChatMessageCollectionResponse();
-            if (json.has("replies@odata.nextLink")) {
-                response.nextLink = json.get("replies@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("replies").toString(), JsonObject[].class);
-            final ChatMessage[] array = new ChatMessage[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ChatMessage.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            replies = new ChatMessageCollectionPage(response, null);
-        }
-
         if (json.has("hostedContents")) {
             final ChatMessageHostedContentCollectionResponse response = new ChatMessageHostedContentCollectionResponse();
             if (json.has("hostedContents@odata.nextLink")) {
@@ -258,6 +242,22 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             hostedContents = new ChatMessageHostedContentCollectionPage(response, null);
+        }
+
+        if (json.has("replies")) {
+            final ChatMessageCollectionResponse response = new ChatMessageCollectionResponse();
+            if (json.has("replies@odata.nextLink")) {
+                response.nextLink = json.get("replies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("replies").toString(), JsonObject[].class);
+            final ChatMessage[] array = new ChatMessage[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), ChatMessage.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            replies = new ChatMessageCollectionPage(response, null);
         }
     }
 }

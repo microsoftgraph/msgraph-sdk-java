@@ -8,10 +8,10 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.generated.ConditionalAccessPolicyState;
 import com.microsoft.graph.models.extensions.ConditionalAccessConditionSet;
 import com.microsoft.graph.models.extensions.ConditionalAccessGrantControls;
 import com.microsoft.graph.models.extensions.ConditionalAccessSessionControls;
+import com.microsoft.graph.models.generated.ConditionalAccessPolicyState;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -31,28 +31,20 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
 
 
     /**
+     * The Conditions.
+     * Specifies the rules that must be met for the policy to apply. Required.
+     */
+    @SerializedName("conditions")
+    @Expose
+    public ConditionalAccessConditionSet conditions;
+
+    /**
      * The Created Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Readonly.
      */
     @SerializedName("createdDateTime")
     @Expose
     public java.util.Calendar createdDateTime;
-
-    /**
-     * The Modified Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Readonly.
-     */
-    @SerializedName("modifiedDateTime")
-    @Expose
-    public java.util.Calendar modifiedDateTime;
-
-    /**
-     * The Display Name.
-     * Specifies a display name for the conditionalAccessPolicy object.
-     */
-    @SerializedName("displayName")
-    @Expose
-    public String displayName;
 
     /**
      * The Description.
@@ -63,20 +55,12 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
     public String description;
 
     /**
-     * The State.
-     * Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
+     * The Display Name.
+     * Specifies a display name for the conditionalAccessPolicy object.
      */
-    @SerializedName("state")
+    @SerializedName("displayName")
     @Expose
-    public ConditionalAccessPolicyState state;
-
-    /**
-     * The Conditions.
-     * Specifies the rules that must be met for the policy to apply. Required.
-     */
-    @SerializedName("conditions")
-    @Expose
-    public ConditionalAccessConditionSet conditions;
+    public String displayName;
 
     /**
      * The Grant Controls.
@@ -87,12 +71,28 @@ public class ConditionalAccessPolicy extends Entity implements IJsonBackedObject
     public ConditionalAccessGrantControls grantControls;
 
     /**
+     * The Modified Date Time.
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Readonly.
+     */
+    @SerializedName("modifiedDateTime")
+    @Expose
+    public java.util.Calendar modifiedDateTime;
+
+    /**
      * The Session Controls.
      * Specifies the session controls that are enforced after sign-in.
      */
     @SerializedName("sessionControls")
     @Expose
     public ConditionalAccessSessionControls sessionControls;
+
+    /**
+     * The State.
+     * Specifies the state of the conditionalAccessPolicy object. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required.
+     */
+    @SerializedName("state")
+    @Expose
+    public ConditionalAccessPolicyState state;
 
 
     /**

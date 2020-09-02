@@ -17,24 +17,24 @@ import com.microsoft.graph.models.extensions.PasswordCredential;
 import com.microsoft.graph.models.extensions.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
+import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Endpoint;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
-import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionResponse;
 import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionPage;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
@@ -81,20 +81,20 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public java.util.List<String> alternativeNames;
 
     /**
-     * The App Display Name.
-     * The display name exposed by the associated application.
-     */
-    @SerializedName("appDisplayName")
-    @Expose
-    public String appDisplayName;
-
-    /**
      * The App Description.
      * 
      */
     @SerializedName("appDescription")
     @Expose
     public String appDescription;
+
+    /**
+     * The App Display Name.
+     * The display name exposed by the associated application.
+     */
+    @SerializedName("appDisplayName")
+    @Expose
+    public String appDisplayName;
 
     /**
      * The App Id.
@@ -225,20 +225,20 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public java.util.List<PasswordCredential> passwordCredentials;
 
     /**
-     * The Preferred Token Signing Key Thumbprint.
-     * 
-     */
-    @SerializedName("preferredTokenSigningKeyThumbprint")
-    @Expose
-    public String preferredTokenSigningKeyThumbprint;
-
-    /**
      * The Preferred Single Sign On Mode.
      * Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, external, and oidc.
      */
     @SerializedName("preferredSingleSignOnMode")
     @Expose
     public String preferredSingleSignOnMode;
+
+    /**
+     * The Preferred Token Signing Key Thumbprint.
+     * 
+     */
+    @SerializedName("preferredTokenSigningKeyThumbprint")
+    @Expose
+    public String preferredTokenSigningKeyThumbprint;
 
     /**
      * The Reply Urls.
@@ -249,20 +249,20 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public java.util.List<String> replyUrls;
 
     /**
-     * The Service Principal Names.
-     * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.
-     */
-    @SerializedName("servicePrincipalNames")
-    @Expose
-    public java.util.List<String> servicePrincipalNames;
-
-    /**
      * The Saml Single Sign On Settings.
      * The collection for settings related to saml single sign-on.
      */
     @SerializedName("samlSingleSignOnSettings")
     @Expose
     public SamlSingleSignOnSettings samlSingleSignOnSettings;
+
+    /**
+     * The Service Principal Names.
+     * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.
+     */
+    @SerializedName("servicePrincipalNames")
+    @Expose
+    public java.util.List<String> servicePrincipalNames;
 
     /**
      * The Service Principal Type.
@@ -307,6 +307,12 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
 
     /**
+     * The Created Objects.
+     * Directory objects created by this service principal. Read-only. Nullable.
+     */
+    public DirectoryObjectCollectionPage createdObjects;
+
+    /**
      * The Endpoints.
      * Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
      */
@@ -319,40 +325,28 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
 
     /**
-     * The Oauth2Permission Grants.
-     * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
-     */
-    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
-
-    /**
      * The Member Of.
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage memberOf;
 
     /**
-     * The Transitive Member Of.
-     * 
+     * The Oauth2Permission Grants.
+     * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
      */
-    public DirectoryObjectCollectionPage transitiveMemberOf;
-
-    /**
-     * The Created Objects.
-     * Directory objects created by this service principal. Read-only. Nullable.
-     */
-    public DirectoryObjectCollectionPage createdObjects;
-
-    /**
-     * The Owners.
-     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
-     */
-    public DirectoryObjectCollectionPage owners;
+    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by this service principal. Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage ownedObjects;
+
+    /**
+     * The Owners.
+     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
+     */
+    public DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
@@ -365,6 +359,12 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The tokenLifetimePolicies assigned to this service principal.
      */
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+
+    /**
+     * The Transitive Member Of.
+     * 
+     */
+    public DirectoryObjectCollectionPage transitiveMemberOf;
 
 
     /**
@@ -454,6 +454,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             claimsMappingPolicies = new ClaimsMappingPolicyCollectionPage(response, null);
         }
 
+        if (json.has("createdObjects")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("createdObjects@odata.nextLink")) {
+                response.nextLink = json.get("createdObjects@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("createdObjects").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            createdObjects = new DirectoryObjectCollectionPage(response, null);
+        }
+
         if (json.has("endpoints")) {
             final EndpointCollectionResponse response = new EndpointCollectionResponse();
             if (json.has("endpoints@odata.nextLink")) {
@@ -486,22 +502,6 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
         }
 
-        if (json.has("oauth2PermissionGrants")) {
-            final OAuth2PermissionGrantCollectionResponse response = new OAuth2PermissionGrantCollectionResponse();
-            if (json.has("oauth2PermissionGrants@odata.nextLink")) {
-                response.nextLink = json.get("oauth2PermissionGrants@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), JsonObject[].class);
-            final OAuth2PermissionGrant[] array = new OAuth2PermissionGrant[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OAuth2PermissionGrant.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            oauth2PermissionGrants = new OAuth2PermissionGrantCollectionPage(response, null);
-        }
-
         if (json.has("memberOf")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
             if (json.has("memberOf@odata.nextLink")) {
@@ -518,52 +518,20 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             memberOf = new DirectoryObjectCollectionPage(response, null);
         }
 
-        if (json.has("transitiveMemberOf")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("transitiveMemberOf@odata.nextLink")) {
-                response.nextLink = json.get("transitiveMemberOf@odata.nextLink").getAsString();
+        if (json.has("oauth2PermissionGrants")) {
+            final OAuth2PermissionGrantCollectionResponse response = new OAuth2PermissionGrantCollectionResponse();
+            if (json.has("oauth2PermissionGrants@odata.nextLink")) {
+                response.nextLink = json.get("oauth2PermissionGrants@odata.nextLink").getAsString();
             }
 
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("oauth2PermissionGrants").toString(), JsonObject[].class);
+            final OAuth2PermissionGrant[] array = new OAuth2PermissionGrant[sourceArray.length];
             for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), OAuth2PermissionGrant.class);
                 array[i].setRawObject(serializer, sourceArray[i]);
             }
             response.value = Arrays.asList(array);
-            transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
-        }
-
-        if (json.has("createdObjects")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("createdObjects@odata.nextLink")) {
-                response.nextLink = json.get("createdObjects@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("createdObjects").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            createdObjects = new DirectoryObjectCollectionPage(response, null);
-        }
-
-        if (json.has("owners")) {
-            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
-            if (json.has("owners@odata.nextLink")) {
-                response.nextLink = json.get("owners@odata.nextLink").getAsString();
-            }
-
-            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
-            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
-            for (int i = 0; i < sourceArray.length; i++) {
-                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
-                array[i].setRawObject(serializer, sourceArray[i]);
-            }
-            response.value = Arrays.asList(array);
-            owners = new DirectoryObjectCollectionPage(response, null);
+            oauth2PermissionGrants = new OAuth2PermissionGrantCollectionPage(response, null);
         }
 
         if (json.has("ownedObjects")) {
@@ -580,6 +548,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             }
             response.value = Arrays.asList(array);
             ownedObjects = new DirectoryObjectCollectionPage(response, null);
+        }
+
+        if (json.has("owners")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("owners@odata.nextLink")) {
+                response.nextLink = json.get("owners@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("owners").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            owners = new DirectoryObjectCollectionPage(response, null);
         }
 
         if (json.has("tokenIssuancePolicies")) {
@@ -612,6 +596,22 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
             }
             response.value = Arrays.asList(array);
             tokenLifetimePolicies = new TokenLifetimePolicyCollectionPage(response, null);
+        }
+
+        if (json.has("transitiveMemberOf")) {
+            final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();
+            if (json.has("transitiveMemberOf@odata.nextLink")) {
+                response.nextLink = json.get("transitiveMemberOf@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("transitiveMemberOf").toString(), JsonObject[].class);
+            final DirectoryObject[] array = new DirectoryObject[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DirectoryObject.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            transitiveMemberOf = new DirectoryObjectCollectionPage(response, null);
         }
     }
 }
