@@ -124,7 +124,6 @@ public class DefaultSerializer implements ISerializer {
 
                 // If the object is a HashMap, iterate through its children
                 if (fieldObject instanceof HashMap) {
-                    @SuppressWarnings("unchecked")
                     HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
                     Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 
@@ -146,7 +145,7 @@ public class DefaultSerializer implements ISerializer {
                 // If the object is a list of Graph objects, iterate through elements
                 else if (fieldObject instanceof List && rawJson != null) {
                     final JsonElement collectionJson = rawJson.get(field.getName());
-                    final List fieldObjectList = (List) fieldObject;
+                    final List<?> fieldObjectList = (List<?>) fieldObject;
                     if (collectionJson.isJsonArray() && ((JsonArray)collectionJson).size() == fieldObjectList.size()) {
                         final JsonArray rawJsonArray = (JsonArray) collectionJson;
                         for (int i = 0; i < fieldObjectList.size(); i++) {
