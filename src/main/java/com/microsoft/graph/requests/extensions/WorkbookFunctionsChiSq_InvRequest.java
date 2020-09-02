@@ -8,11 +8,12 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsChiSq_InvRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsChiSq_InvRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +32,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest implements IW
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsChiSq_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsChiSq_InvRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsChiSq_InvBody();
     }
@@ -51,7 +52,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest implements IW
      * @return the updated request
      */
     public IWorkbookFunctionsChiSq_InvRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsChiSq_InvRequest)this;
     }
 
@@ -62,7 +63,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest implements IW
      * @return the updated request
      */
     public IWorkbookFunctionsChiSq_InvRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsChiSq_InvRequest)this;
     }
 
@@ -73,7 +74,7 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest implements IW
      * @return the updated request
      */
     public IWorkbookFunctionsChiSq_InvRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsChiSq_InvRequest)this;
     }
 

@@ -168,14 +168,20 @@ public class ChunkedUploadProvider<UploadType> {
         byte[] buffer = new byte[chunkSize];
 
         while (this.readSoFar < this.streamSize) {
-            int read = this.inputStream.read(buffer);
+            int buffRead = 0;
 
-            if (read == -1) {
-                break;
+            // inner loop is to work-around the case where read buffer size is limited to less than chunk size by a global setting
+            while (buffRead < chunkSize) {
+                int read = 0;
+                read = this.inputStream.read(buffer, buffRead, chunkSize - buffRead);
+                if (read == -1) {
+                    break;
+                }
+                buffRead += read;
             }
 
             ChunkedUploadRequest request =
-                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, read,
+                    new ChunkedUploadRequest(this.uploadUrl, this.client, options, buffer, buffRead,
                             maxRetry, this.readSoFar, this.streamSize);
             ChunkedUploadResult<UploadType> result = request.upload(this.responseHandler);
 
@@ -190,7 +196,7 @@ public class ChunkedUploadProvider<UploadType> {
                 break;
             }
 
-            this.readSoFar += read;
+            this.readSoFar += buffRead;
         }
     }
     

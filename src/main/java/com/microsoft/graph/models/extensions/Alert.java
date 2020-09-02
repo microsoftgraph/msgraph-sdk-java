@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.CloudAppSecurityState;
@@ -19,6 +17,7 @@ import com.microsoft.graph.models.extensions.MalwareState;
 import com.microsoft.graph.models.extensions.NetworkConnection;
 import com.microsoft.graph.models.extensions.Process;
 import com.microsoft.graph.models.extensions.RegistryKeyState;
+import com.microsoft.graph.models.extensions.SecurityResource;
 import com.microsoft.graph.models.generated.AlertSeverity;
 import com.microsoft.graph.models.generated.AlertStatus;
 import com.microsoft.graph.models.extensions.AlertTrigger;
@@ -30,7 +29,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -179,6 +179,14 @@ public class Alert extends Entity implements IJsonBackedObject {
     public java.util.List<HostSecurityState> hostStates;
 
     /**
+     * The Incident Ids.
+     * IDs of incidents related to current alert.
+     */
+    @SerializedName("incidentIds")
+    @Expose
+    public java.util.List<String> incidentIds;
+
+    /**
      * The Last Modified Date Time.
      * Time at which the alert entity was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
@@ -225,6 +233,14 @@ public class Alert extends Entity implements IJsonBackedObject {
     @SerializedName("registryKeyStates")
     @Expose
     public java.util.List<RegistryKeyState> registryKeyStates;
+
+    /**
+     * The Security Resources.
+     * Resources related to current alert. For example, for some alerts this can have the Azure Resource value.
+     */
+    @SerializedName("securityResources")
+    @Expose
+    public java.util.List<SecurityResource> securityResources;
 
     /**
      * The Severity.

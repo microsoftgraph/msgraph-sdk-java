@@ -3,23 +3,26 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.CallState;
 import com.microsoft.graph.models.extensions.CallMediaState;
 import com.microsoft.graph.models.extensions.ResultInfo;
 import com.microsoft.graph.models.generated.CallDirection;
+import com.microsoft.graph.models.extensions.CallRoute;
 import com.microsoft.graph.models.extensions.ParticipantInfo;
+import com.microsoft.graph.models.extensions.InvitationParticipantInfo;
 import com.microsoft.graph.models.generated.Modality;
 import com.microsoft.graph.models.extensions.MediaConfig;
 import com.microsoft.graph.models.extensions.ChatInfo;
+import com.microsoft.graph.models.extensions.CallOptions;
 import com.microsoft.graph.models.extensions.MeetingInfo;
+import com.microsoft.graph.models.extensions.CallTranscriptionInfo;
 import com.microsoft.graph.models.extensions.ToneInfo;
+import com.microsoft.graph.models.extensions.IncomingContext;
 import com.microsoft.graph.models.extensions.Participant;
 import com.microsoft.graph.models.extensions.CommsOperation;
 import com.microsoft.graph.models.extensions.Entity;
@@ -31,7 +34,8 @@ import com.microsoft.graph.requests.extensions.CommsOperationCollectionPage;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,7 +49,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      */
     @SerializedName("state")
     @Expose
@@ -53,7 +57,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media State.
-     * 
+     * Read-only. The call media state.
      */
     @SerializedName("mediaState")
     @Expose
@@ -61,7 +65,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Info.
-     * 
+     * The result information. For example can hold termination reason. Read-only.
      */
     @SerializedName("resultInfo")
     @Expose
@@ -69,7 +73,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * 
+     * The direction of the call. The possible value are incoming or outgoing. Read-only.
      */
     @SerializedName("direction")
     @Expose
@@ -77,7 +81,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the conversation.
      */
     @SerializedName("subject")
     @Expose
@@ -85,15 +89,23 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Callback Uri.
-     * 
+     * The callback URL on which callbacks will be delivered. Must be https.
      */
     @SerializedName("callbackUri")
     @Expose
     public String callbackUri;
 
     /**
+     * The Call Routes.
+     * The routing information on how the call was retargeted. Read-only.
+     */
+    @SerializedName("callRoutes")
+    @Expose
+    public java.util.List<CallRoute> callRoutes;
+
+    /**
      * The Source.
-     * 
+     * The originator of the call.
      */
     @SerializedName("source")
     @Expose
@@ -101,15 +113,15 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Targets.
-     * 
+     * The targets of the call. Required information for creating peer to peer call.
      */
     @SerializedName("targets")
     @Expose
-    public java.util.List<ParticipantInfo> targets;
+    public java.util.List<InvitationParticipantInfo> targets;
 
     /**
      * The Requested Modalities.
-     * 
+     * The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      */
     @SerializedName("requestedModalities")
     @Expose
@@ -117,7 +129,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Config.
-     * 
+     * The media configuration. Required.
      */
     @SerializedName("mediaConfig")
     @Expose
@@ -125,19 +137,35 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * 
+     * The chat information. Required information for joining a meeting.
      */
     @SerializedName("chatInfo")
     @Expose
     public ChatInfo chatInfo;
 
     /**
-     * The Meeting Info.
+     * The Call Options.
      * 
+     */
+    @SerializedName("callOptions")
+    @Expose
+    public CallOptions callOptions;
+
+    /**
+     * The Meeting Info.
+     * The meeting information that's required for joining a meeting.
      */
     @SerializedName("meetingInfo")
     @Expose
     public MeetingInfo meetingInfo;
+
+    /**
+     * The Transcription.
+     * 
+     */
+    @SerializedName("transcription")
+    @Expose
+    public CallTranscriptionInfo transcription;
 
     /**
      * The Tenant Id.
@@ -149,7 +177,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The My Participant Id.
-     * 
+     * Read-only.
      */
     @SerializedName("myParticipantId")
     @Expose
@@ -164,14 +192,30 @@ public class Call extends Entity implements IJsonBackedObject {
     public ToneInfo toneInfo;
 
     /**
-     * The Participants.
+     * The Call Chain Id.
+     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     */
+    @SerializedName("callChainId")
+    @Expose
+    public String callChainId;
+
+    /**
+     * The Incoming Context.
      * 
+     */
+    @SerializedName("incomingContext")
+    @Expose
+    public IncomingContext incomingContext;
+
+    /**
+     * The Participants.
+     * Read-only. Nullable.
      */
     public ParticipantCollectionPage participants;
 
     /**
      * The Operations.
-     * 
+     * Read-only. Nullable.
      */
     public CommsOperationCollectionPage operations;
 

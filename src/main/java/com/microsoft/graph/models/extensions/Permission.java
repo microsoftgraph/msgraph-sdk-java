@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
@@ -19,7 +17,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,12 +31,36 @@ public class Permission extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Expiration Date Time.
+     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Granted To.
      * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
      */
     @SerializedName("grantedTo")
     @Expose
     public IdentitySet grantedTo;
+
+    /**
+     * The Granted To Identities.
+     * For link type permissions, the details of the users to whom permission was granted. Read-only.
+     */
+    @SerializedName("grantedToIdentities")
+    @Expose
+    public java.util.List<IdentitySet> grantedToIdentities;
+
+    /**
+     * The Has Password.
+     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
+     */
+    @SerializedName("hasPassword")
+    @Expose
+    public Boolean hasPassword;
 
     /**
      * The Inherited From.

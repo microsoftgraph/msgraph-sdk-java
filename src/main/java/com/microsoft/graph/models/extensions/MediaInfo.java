@@ -3,18 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +37,7 @@ public class MediaInfo implements IJsonBackedObject {
 
     /**
      * The Uri.
-     * 
+     * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples with a 16,000 (16KHz) sampling rate.
      */
     @SerializedName("uri")
     @Expose
@@ -46,7 +45,7 @@ public class MediaInfo implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * 
+     * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId as a key.
      */
     @SerializedName("resourceId")
     @Expose

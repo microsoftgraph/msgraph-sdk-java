@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookApplication;
@@ -16,6 +14,7 @@ import com.microsoft.graph.models.extensions.WorkbookTable;
 import com.microsoft.graph.models.extensions.WorkbookWorksheet;
 import com.microsoft.graph.models.extensions.WorkbookComment;
 import com.microsoft.graph.models.extensions.WorkbookFunctions;
+import com.microsoft.graph.models.extensions.WorkbookOperation;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemCollectionPage;
@@ -25,11 +24,14 @@ import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionRespon
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetCollectionPage;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionResponse;
 import com.microsoft.graph.requests.extensions.WorkbookCommentCollectionPage;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionResponse;
+import com.microsoft.graph.requests.extensions.WorkbookOperationCollectionPage;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -80,6 +82,12 @@ public class Workbook extends Entity implements IJsonBackedObject {
     @SerializedName("functions")
     @Expose
     public WorkbookFunctions functions;
+
+    /**
+     * The Operations.
+     * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
+     */
+    public WorkbookOperationCollectionPage operations;
 
 
     /**
@@ -183,6 +191,22 @@ public class Workbook extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             comments = new WorkbookCommentCollectionPage(response, null);
+        }
+
+        if (json.has("operations")) {
+            final WorkbookOperationCollectionResponse response = new WorkbookOperationCollectionResponse();
+            if (json.has("operations@odata.nextLink")) {
+                response.nextLink = json.get("operations@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("operations").toString(), JsonObject[].class);
+            final WorkbookOperation[] array = new WorkbookOperation[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), WorkbookOperation.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            operations = new WorkbookOperationCollectionPage(response, null);
         }
     }
 }

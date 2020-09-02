@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.DomainState;
@@ -22,7 +20,8 @@ import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -52,7 +51,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Admin Managed.
-     * The value of the property is false if the DNS record management of the domain has been delegated to Office 365. Otherwise, the value is true. Not nullable
+     * The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
      */
     @SerializedName("isAdminManaged")
     @Expose
@@ -89,6 +88,22 @@ public class Domain extends Entity implements IJsonBackedObject {
     @SerializedName("isVerified")
     @Expose
     public Boolean isVerified;
+
+    /**
+     * The Manufacturer.
+     * 
+     */
+    @SerializedName("manufacturer")
+    @Expose
+    public String manufacturer;
+
+    /**
+     * The Model.
+     * 
+     */
+    @SerializedName("model")
+    @Expose
+    public String model;
 
     /**
      * The Password Notification Window In Days.

@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TeamsTabConfiguration;
@@ -17,7 +15,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +38,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * Deep link url of the tab instance. Read only.
+     * Deep link URL of the tab instance. Read only.
      */
     @SerializedName("webUrl")
     @Expose

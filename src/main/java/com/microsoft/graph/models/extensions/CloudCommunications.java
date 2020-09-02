@@ -3,25 +3,27 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Call;
+import com.microsoft.graph.callrecords.models.extensions.CallRecord;
 import com.microsoft.graph.models.extensions.OnlineMeeting;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.CallCollectionResponse;
 import com.microsoft.graph.requests.extensions.CallCollectionPage;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionResponse;
+import com.microsoft.graph.callrecords.requests.extensions.CallRecordCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionResponse;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,6 +40,12 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      * 
      */
     public CallCollectionPage calls;
+
+    /**
+     * The Call Records.
+     * 
+     */
+    public CallRecordCollectionPage callRecords;
 
     /**
      * The Online Meetings.
@@ -99,6 +107,22 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             calls = new CallCollectionPage(response, null);
+        }
+
+        if (json.has("callRecords")) {
+            final CallRecordCollectionResponse response = new CallRecordCollectionResponse();
+            if (json.has("callRecords@odata.nextLink")) {
+                response.nextLink = json.get("callRecords@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("callRecords").toString(), JsonObject[].class);
+            final CallRecord[] array = new CallRecord[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), CallRecord.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            callRecords = new CallRecordCollectionPage(response, null);
         }
 
         if (json.has("onlineMeetings")) {

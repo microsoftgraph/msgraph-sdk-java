@@ -164,7 +164,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * @param maxRetries Max retries for a request
      */
     public void setMaxRetries(int maxRetries) {
-    	this.maxRedirects = maxRedirects;
+    	this.maxRetries = maxRetries;
     }
     
     /**

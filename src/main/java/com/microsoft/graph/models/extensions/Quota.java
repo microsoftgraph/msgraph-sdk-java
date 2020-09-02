@@ -3,18 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.StoragePlanInformation;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -75,6 +75,14 @@ public class Quota implements IJsonBackedObject {
     @SerializedName("used")
     @Expose
     public Long used;
+
+    /**
+     * The Storage Plan Information.
+     * Information about the drive's storage quota plans. Only in Personal OneDrive.
+     */
+    @SerializedName("storagePlanInformation")
+    @Expose
+    public StoragePlanInformation storagePlanInformation;
 
 
     /**

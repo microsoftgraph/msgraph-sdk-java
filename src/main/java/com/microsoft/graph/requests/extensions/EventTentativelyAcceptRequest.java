@@ -7,11 +7,12 @@ import com.microsoft.graph.models.extensions.EventTentativelyAcceptBody;
 import com.microsoft.graph.requests.extensions.IEventTentativelyAcceptRequest;
 import com.microsoft.graph.requests.extensions.EventTentativelyAcceptRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -30,7 +31,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest implements IEvent
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EventTentativelyAcceptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public EventTentativelyAcceptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new EventTentativelyAcceptBody();
     }
@@ -50,7 +51,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest implements IEvent
      * @return the updated request
      */
     public IEventTentativelyAcceptRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EventTentativelyAcceptRequest)this;
     }
 
@@ -61,7 +62,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest implements IEvent
      * @return the updated request
      */
     public IEventTentativelyAcceptRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (EventTentativelyAcceptRequest)this;
     }
 
@@ -72,7 +73,7 @@ public class EventTentativelyAcceptRequest extends BaseRequest implements IEvent
      * @return the updated request
      */
     public IEventTentativelyAcceptRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (EventTentativelyAcceptRequest)this;
     }
 

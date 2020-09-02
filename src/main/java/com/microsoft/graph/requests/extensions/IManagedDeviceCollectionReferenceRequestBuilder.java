@@ -4,15 +4,12 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.DetectedApp;
+import com.microsoft.graph.models.extensions.ManagedDevice;
+import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionParameter;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -25,5 +22,5 @@ public interface IManagedDeviceCollectionReferenceRequestBuilder extends IReques
 
     IManagedDeviceCollectionReferenceRequest buildRequest();
 
-    IManagedDeviceCollectionReferenceRequest buildRequest(final java.util.List<? extends Option> requestOptions);
+    IManagedDeviceCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

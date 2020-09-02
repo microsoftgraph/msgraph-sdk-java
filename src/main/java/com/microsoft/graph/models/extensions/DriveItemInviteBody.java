@@ -4,7 +4,8 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.DriveRecipient;
+import com.microsoft.graph.models.extensions.Permission;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;
@@ -57,6 +58,22 @@ public class DriveItemInviteBody {
     @SerializedName("recipients")
     @Expose
     public java.util.List<DriveRecipient> recipients;
+
+    /**
+     * The expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public String expirationDateTime;
+
+    /**
+     * The password.
+     * 
+     */
+    @SerializedName("password")
+    @Expose
+    public String password;
 
 
     /**

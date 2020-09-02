@@ -8,11 +8,12 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsFactRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsFactRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +32,7 @@ public class WorkbookFunctionsFactRequest extends BaseRequest implements IWorkbo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsFactRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsFactRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsFactBody();
     }
@@ -51,7 +52,7 @@ public class WorkbookFunctionsFactRequest extends BaseRequest implements IWorkbo
      * @return the updated request
      */
     public IWorkbookFunctionsFactRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsFactRequest)this;
     }
 
@@ -62,7 +63,7 @@ public class WorkbookFunctionsFactRequest extends BaseRequest implements IWorkbo
      * @return the updated request
      */
     public IWorkbookFunctionsFactRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsFactRequest)this;
     }
 
@@ -73,7 +74,7 @@ public class WorkbookFunctionsFactRequest extends BaseRequest implements IWorkbo
      * @return the updated request
      */
     public IWorkbookFunctionsFactRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsFactRequest)this;
     }
 

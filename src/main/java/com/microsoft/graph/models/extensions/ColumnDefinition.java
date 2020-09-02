@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.BooleanColumn;
@@ -16,6 +14,7 @@ import com.microsoft.graph.models.extensions.ChoiceColumn;
 import com.microsoft.graph.models.extensions.CurrencyColumn;
 import com.microsoft.graph.models.extensions.DateTimeColumn;
 import com.microsoft.graph.models.extensions.DefaultColumnValue;
+import com.microsoft.graph.models.extensions.GeolocationColumn;
 import com.microsoft.graph.models.extensions.LookupColumn;
 import com.microsoft.graph.models.extensions.NumberColumn;
 import com.microsoft.graph.models.extensions.PersonOrGroupColumn;
@@ -25,7 +24,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,7 +43,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
      */
     @SerializedName("boolean")
     @Expose
-    public BooleanColumn msgraphboolean;
+    public BooleanColumn msgraphBoolean;
 
     /**
      * The Calculated.
@@ -116,6 +116,14 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     @SerializedName("enforceUniqueValues")
     @Expose
     public Boolean enforceUniqueValues;
+
+    /**
+     * The Geolocation.
+     * This column stores a geolocation.
+     */
+    @SerializedName("geolocation")
+    @Expose
+    public GeolocationColumn geolocation;
 
     /**
      * The Hidden.

@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.RgbColor;
@@ -16,7 +14,8 @@ import com.microsoft.graph.models.extensions.MimeContent;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,62 +44,6 @@ public class IntuneBrand implements IJsonBackedObject {
     @SerializedName("displayName")
     @Expose
     public String displayName;
-
-    /**
-     * The Contact ITName.
-     * Name of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITName")
-    @Expose
-    public String contactITName;
-
-    /**
-     * The Contact ITPhone Number.
-     * Phone number of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITPhoneNumber")
-    @Expose
-    public String contactITPhoneNumber;
-
-    /**
-     * The Contact ITEmail Address.
-     * Email address of the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITEmailAddress")
-    @Expose
-    public String contactITEmailAddress;
-
-    /**
-     * The Contact ITNotes.
-     * Text comments regarding the person/organization responsible for IT support.
-     */
-    @SerializedName("contactITNotes")
-    @Expose
-    public String contactITNotes;
-
-    /**
-     * The Privacy Url.
-     * URL to the company/organization’s privacy policy.
-     */
-    @SerializedName("privacyUrl")
-    @Expose
-    public String privacyUrl;
-
-    /**
-     * The Online Support Site Url.
-     * URL to the company/organization’s IT helpdesk site.
-     */
-    @SerializedName("onlineSupportSiteUrl")
-    @Expose
-    public String onlineSupportSiteUrl;
-
-    /**
-     * The Online Support Site Name.
-     * Display name of the company/organization’s IT helpdesk site.
-     */
-    @SerializedName("onlineSupportSiteName")
-    @Expose
-    public String onlineSupportSiteName;
 
     /**
      * The Theme Color.
@@ -149,6 +92,62 @@ public class IntuneBrand implements IJsonBackedObject {
     @SerializedName("showDisplayNameNextToLogo")
     @Expose
     public Boolean showDisplayNameNextToLogo;
+
+    /**
+     * The Contact ITName.
+     * Name of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITName")
+    @Expose
+    public String contactITName;
+
+    /**
+     * The Contact ITPhone Number.
+     * Phone number of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITPhoneNumber")
+    @Expose
+    public String contactITPhoneNumber;
+
+    /**
+     * The Contact ITEmail Address.
+     * Email address of the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITEmailAddress")
+    @Expose
+    public String contactITEmailAddress;
+
+    /**
+     * The Contact ITNotes.
+     * Text comments regarding the person/organization responsible for IT support.
+     */
+    @SerializedName("contactITNotes")
+    @Expose
+    public String contactITNotes;
+
+    /**
+     * The Online Support Site Url.
+     * URL to the company/organization’s IT helpdesk site.
+     */
+    @SerializedName("onlineSupportSiteUrl")
+    @Expose
+    public String onlineSupportSiteUrl;
+
+    /**
+     * The Online Support Site Name.
+     * Display name of the company/organization’s IT helpdesk site.
+     */
+    @SerializedName("onlineSupportSiteName")
+    @Expose
+    public String onlineSupportSiteName;
+
+    /**
+     * The Privacy Url.
+     * URL to the company/organization’s privacy policy.
+     */
+    @SerializedName("privacyUrl")
+    @Expose
+    public String privacyUrl;
 
 
     /**

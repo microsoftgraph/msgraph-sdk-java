@@ -8,11 +8,12 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsF_Inv_RTRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsF_Inv_RTRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +32,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest implements IWo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsF_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsF_Inv_RTRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsF_Inv_RTBody();
     }
@@ -51,7 +52,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest implements IWo
      * @return the updated request
      */
     public IWorkbookFunctionsF_Inv_RTRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsF_Inv_RTRequest)this;
     }
 
@@ -62,7 +63,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest implements IWo
      * @return the updated request
      */
     public IWorkbookFunctionsF_Inv_RTRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsF_Inv_RTRequest)this;
     }
 
@@ -73,7 +74,7 @@ public class WorkbookFunctionsF_Inv_RTRequest extends BaseRequest implements IWo
      * @return the updated request
      */
     public IWorkbookFunctionsF_Inv_RTRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsF_Inv_RTRequest)this;
     }
 

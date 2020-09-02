@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
@@ -23,7 +21,8 @@ import com.microsoft.graph.requests.extensions.DriveItemCollectionPage;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -74,6 +73,12 @@ public class Drive extends BaseItem implements IJsonBackedObject {
     @SerializedName("system")
     @Expose
     public SystemFacet system;
+
+    /**
+     * The Following.
+     * The list of items the user is following. Only in OneDrive for Business.
+     */
+    public DriveItemCollectionPage following;
 
     /**
      * The Items.
@@ -142,6 +147,22 @@ public class Drive extends BaseItem implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("following")) {
+            final DriveItemCollectionResponse response = new DriveItemCollectionResponse();
+            if (json.has("following@odata.nextLink")) {
+                response.nextLink = json.get("following@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("following").toString(), JsonObject[].class);
+            final DriveItem[] array = new DriveItem[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), DriveItem.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            following = new DriveItemCollectionPage(response, null);
+        }
 
         if (json.has("items")) {
             final DriveItemCollectionResponse response = new DriveItemCollectionResponse();

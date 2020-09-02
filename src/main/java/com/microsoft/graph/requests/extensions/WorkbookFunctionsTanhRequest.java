@@ -8,11 +8,12 @@ import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import com.microsoft.graph.requests.extensions.IWorkbookFunctionsTanhRequest;
 import com.microsoft.graph.requests.extensions.WorkbookFunctionsTanhRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +32,7 @@ public class WorkbookFunctionsTanhRequest extends BaseRequest implements IWorkbo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsTanhRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookFunctionsTanhRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctionResult.class);
         body = new WorkbookFunctionsTanhBody();
     }
@@ -51,7 +52,7 @@ public class WorkbookFunctionsTanhRequest extends BaseRequest implements IWorkbo
      * @return the updated request
      */
     public IWorkbookFunctionsTanhRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookFunctionsTanhRequest)this;
     }
 
@@ -62,7 +63,7 @@ public class WorkbookFunctionsTanhRequest extends BaseRequest implements IWorkbo
      * @return the updated request
      */
     public IWorkbookFunctionsTanhRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookFunctionsTanhRequest)this;
     }
 
@@ -73,7 +74,7 @@ public class WorkbookFunctionsTanhRequest extends BaseRequest implements IWorkbo
      * @return the updated request
      */
     public IWorkbookFunctionsTanhRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookFunctionsTanhRequest)this;
     }
 

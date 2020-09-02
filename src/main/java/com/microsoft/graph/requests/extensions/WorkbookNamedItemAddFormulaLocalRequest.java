@@ -8,11 +8,12 @@ import com.microsoft.graph.models.extensions.WorkbookNamedItem;
 import com.microsoft.graph.requests.extensions.IWorkbookNamedItemAddFormulaLocalRequest;
 import com.microsoft.graph.requests.extensions.WorkbookNamedItemAddFormulaLocalRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +32,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookNamedItemAddFormulaLocalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookNamedItemAddFormulaLocalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookNamedItem.class);
         body = new WorkbookNamedItemAddFormulaLocalBody();
     }
@@ -51,7 +52,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseRequest impleme
      * @return the updated request
      */
     public IWorkbookNamedItemAddFormulaLocalRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (WorkbookNamedItemAddFormulaLocalRequest)this;
     }
 
@@ -62,7 +63,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseRequest impleme
      * @return the updated request
      */
     public IWorkbookNamedItemAddFormulaLocalRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (WorkbookNamedItemAddFormulaLocalRequest)this;
     }
 
@@ -73,7 +74,7 @@ public class WorkbookNamedItemAddFormulaLocalRequest extends BaseRequest impleme
      * @return the updated request
      */
     public IWorkbookNamedItemAddFormulaLocalRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (WorkbookNamedItemAddFormulaLocalRequest)this;
     }
 

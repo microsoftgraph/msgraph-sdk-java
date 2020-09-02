@@ -7,11 +7,12 @@ import com.microsoft.graph.models.extensions.DeviceEnrollmentConfigurationAssign
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationAssignRequest;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationAssignRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -30,7 +31,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationAssignRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DeviceEnrollmentConfigurationAssignRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new DeviceEnrollmentConfigurationAssignBody();
     }
@@ -50,7 +51,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest impl
      * @return the updated request
      */
     public IDeviceEnrollmentConfigurationAssignRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DeviceEnrollmentConfigurationAssignRequest)this;
     }
 
@@ -61,7 +62,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest impl
      * @return the updated request
      */
     public IDeviceEnrollmentConfigurationAssignRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DeviceEnrollmentConfigurationAssignRequest)this;
     }
 
@@ -72,7 +73,7 @@ public class DeviceEnrollmentConfigurationAssignRequest extends BaseRequest impl
      * @return the updated request
      */
     public IDeviceEnrollmentConfigurationAssignRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DeviceEnrollmentConfigurationAssignRequest)this;
     }
 

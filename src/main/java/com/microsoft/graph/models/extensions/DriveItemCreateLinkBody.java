@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.models.generated.*;
+import com.microsoft.graph.models.extensions.Permission;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.JsonObject;
@@ -33,6 +33,30 @@ public class DriveItemCreateLinkBody {
     @SerializedName("scope")
     @Expose
     public String scope;
+
+    /**
+     * The expiration Date Time.
+     * 
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
+     * The password.
+     * 
+     */
+    @SerializedName("password")
+    @Expose
+    public String password;
+
+    /**
+     * The message.
+     * 
+     */
+    @SerializedName("message")
+    @Expose
+    public String message;
 
 
     /**

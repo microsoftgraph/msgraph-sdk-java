@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Identity;
@@ -15,7 +13,8 @@ import com.microsoft.graph.models.extensions.Identity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +45,14 @@ public class SharingLink implements IJsonBackedObject {
     public Identity application;
 
     /**
+     * The Prevents Download.
+     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
+     */
+    @SerializedName("preventsDownload")
+    @Expose
+    public Boolean preventsDownload;
+
+    /**
      * The Scope.
      * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
      */
@@ -60,6 +67,14 @@ public class SharingLink implements IJsonBackedObject {
     @SerializedName("type")
     @Expose
     public String type;
+
+    /**
+     * The Web Html.
+     * For embed links, this property contains the HTML code for an &amp;lt;iframe&amp;gt; element that will embed the item in a webpage.
+     */
+    @SerializedName("webHtml")
+    @Expose
+    public String webHtml;
 
     /**
      * The Web Url.

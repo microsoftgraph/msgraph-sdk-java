@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.FileSystemInfo;
@@ -15,7 +13,8 @@ import com.microsoft.graph.models.extensions.FileSystemInfo;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,7 +38,7 @@ public class DriveItemUploadableProperties implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal
+     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
      */
     @SerializedName("description")
     @Expose
@@ -60,6 +59,14 @@ public class DriveItemUploadableProperties implements IJsonBackedObject {
     @SerializedName("name")
     @Expose
     public String name;
+
+    /**
+     * The File Size.
+     * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
+     */
+    @SerializedName("fileSize")
+    @Expose
+    public Long fileSize;
 
 
     /**

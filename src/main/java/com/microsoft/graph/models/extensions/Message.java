@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.InternetMessageHeader;
@@ -33,7 +31,8 @@ import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -127,7 +126,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sender.
-     * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, or sending a message as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * The account that is actually used to generate the message. In most cases, this value is the same as the from property. You can set this property to a different value when sending a message from a shared mailbox, for a shared calendar, or as a delegate. In any case, the value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      */
     @SerializedName("sender")
     @Expose
@@ -135,7 +134,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The From.
-     * The mailbox owner and sender of the message. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
+     * The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      */
     @SerializedName("from")
     @Expose
@@ -180,6 +179,14 @@ public class Message extends OutlookItem implements IJsonBackedObject {
     @SerializedName("conversationId")
     @Expose
     public String conversationId;
+
+    /**
+     * The Conversation Index.
+     * Indicates the position of the message within the conversation.
+     */
+    @SerializedName("conversationIndex")
+    @Expose
+    public byte[] conversationIndex;
 
     /**
      * The Unique Body.

@@ -4,21 +4,173 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
+import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InvitationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupSettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupSettingTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupSettingTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscribedSkuRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscribedSkuRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SharedDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SchemaExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DataPolicyOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityContainerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.PolicyRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
+import com.microsoft.graph.requests.extensions.CloudCommunicationsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceAppManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
+import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.authentication.*;
 import com.microsoft.graph.logger.*;
 import com.google.gson.JsonObject;
+import com.microsoft.graph.concurrency.IExecutors;
+import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.http.IHttpProvider;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.core.IClientConfig;
+import com.microsoft.graph.core.DefaultClientConfig;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -43,7 +195,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @return the instance of this builder
      */
     public <T> CustomRequestBuilder<T> customRequest(final String url, final Class<T> responseType) {
-        return new CustomRequestBuilder<T>(getServiceRoot() + url, (IGraphServiceClient) this, null, responseType);
+        return new CustomRequestBuilder<T>(getServiceRoot() + url, this, null, responseType);
     }
 
     /**
@@ -54,7 +206,7 @@ public class GraphServiceClient extends BaseGraphServiceClient implements IGraph
      * @return the instance of this builder
      */
     public CustomRequestBuilder<JsonObject> customRequest(final String url) {
-        return new CustomRequestBuilder<JsonObject>(getServiceRoot() + url, (IGraphServiceClient) this, null,
+        return new CustomRequestBuilder<JsonObject>(getServiceRoot() + url, this, null,
                 JsonObject.class);
     }
 

@@ -4,17 +4,88 @@
 
 package com.microsoft.graph.models.extensions;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupSettingTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscribedSkuRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlaceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedDriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISharedDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
+import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.core.IBaseClient;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -67,6 +138,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the IdentityProviders object
      */
     IIdentityProviderRequestBuilder identityProviders(final String id);
+
+    /**
+     * Gets the collection of Applications objects
+     *
+     * @return the request builder for the collection of Applications objects
+     */
+    IApplicationCollectionRequestBuilder applications();
+
+    /**
+     * Gets a single Applications
+     *
+     * @param id the id of the Applications to retrieve
+     * @return the request builder for the Applications object
+     */
+    IApplicationRequestBuilder applications(final String id);
 
     /**
      * Gets the collection of CertificateBasedAuthConfiguration objects
@@ -279,6 +365,36 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IContractRequestBuilder contracts(final String id);
 
     /**
+     * Gets the collection of ServicePrincipals objects
+     *
+     * @return the request builder for the collection of ServicePrincipals objects
+     */
+    IServicePrincipalCollectionRequestBuilder servicePrincipals();
+
+    /**
+     * Gets a single ServicePrincipals
+     *
+     * @param id the id of the ServicePrincipals to retrieve
+     * @return the request builder for the ServicePrincipals object
+     */
+    IServicePrincipalRequestBuilder servicePrincipals(final String id);
+
+    /**
+     * Gets the collection of Oauth2PermissionGrants objects
+     *
+     * @return the request builder for the collection of Oauth2PermissionGrants objects
+     */
+    IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants();
+
+    /**
+     * Gets a single Oauth2PermissionGrants
+     *
+     * @param id the id of the Oauth2PermissionGrants to retrieve
+     * @return the request builder for the Oauth2PermissionGrants object
+     */
+    IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id);
+
+    /**
      * Gets the collection of Workbooks objects
      *
      * @return the request builder for the collection of Workbooks objects
@@ -292,6 +408,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Workbooks object
      */
     IDriveItemRequestBuilder workbooks(final String id);
+
+    /**
+     * Gets the collection of Places objects
+     *
+     * @return the request builder for the collection of Places objects
+     */
+    IPlaceCollectionRequestBuilder places();
+
+    /**
+     * Gets a single Places
+     *
+     * @param id the id of the Places to retrieve
+     * @return the request builder for the Places object
+     */
+    IPlaceRequestBuilder places(final String id);
 
     /**
      * Gets the collection of Drives objects
@@ -414,11 +545,40 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     ITeamRequestBuilder teams(final String id);
 
     /**
+     * Gets the collection of TeamsTemplates objects
+     *
+     * @return the request builder for the collection of TeamsTemplates objects
+     */
+    ITeamsTemplateCollectionRequestBuilder teamsTemplates();
+
+    /**
+     * Gets a single TeamsTemplates
+     *
+     * @param id the id of the TeamsTemplates to retrieve
+     * @return the request builder for the TeamsTemplates object
+     */
+    ITeamsTemplateRequestBuilder teamsTemplates(final String id);
+
+    /**
      * Gets the GraphServiceRequestBuilder
      *
      * @return the AuditLogRoot
      */
     IAuditLogRootRequestBuilder auditLogs();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the IdentityContainer
+     */
+    IIdentityContainerRequestBuilder identity();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the PolicyRoot
+     */
+    IPolicyRootRequestBuilder policies();
 
     /**
      * Gets the GraphServiceRequestBuilder
@@ -447,6 +607,13 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the Drive
      */
     IDriveRequestBuilder drive();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the CloudCommunications
+     */
+    ICloudCommunicationsRequestBuilder communications();
 
     /**
      * Gets the GraphServiceRequestBuilder
@@ -486,9 +653,9 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the CloudCommunications
+     * @return the Teamwork
      */
-    ICloudCommunicationsRequestBuilder communications();
+    ITeamworkRequestBuilder teamwork();
 
     /**
      * Gets the GraphServiceRequestBuilder
@@ -496,5 +663,12 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the AppCatalogs
      */
     IAppCatalogsRequestBuilder appCatalogs();
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the InformationProtection
+     */
+    IInformationProtectionRequestBuilder informationProtection();
 
 }

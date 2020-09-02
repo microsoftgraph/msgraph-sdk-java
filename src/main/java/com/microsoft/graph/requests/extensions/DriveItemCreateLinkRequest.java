@@ -8,11 +8,12 @@ import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.requests.extensions.IDriveItemCreateLinkRequest;
 import com.microsoft.graph.requests.extensions.DriveItemCreateLinkRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -31,7 +32,7 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DriveItemCreateLinkRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Permission.class);
         body = new DriveItemCreateLinkBody();
     }
@@ -51,7 +52,7 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
      * @return the updated request
      */
     public IDriveItemCreateLinkRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DriveItemCreateLinkRequest)this;
     }
 
@@ -62,7 +63,7 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
      * @return the updated request
      */
     public IDriveItemCreateLinkRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DriveItemCreateLinkRequest)this;
     }
 
@@ -73,7 +74,7 @@ public class DriveItemCreateLinkRequest extends BaseRequest implements IDriveIte
      * @return the updated request
      */
     public IDriveItemCreateLinkRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DriveItemCreateLinkRequest)this;
     }
 

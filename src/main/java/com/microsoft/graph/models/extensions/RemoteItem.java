@@ -3,26 +3,27 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.File;
 import com.microsoft.graph.models.extensions.FileSystemInfo;
 import com.microsoft.graph.models.extensions.Folder;
+import com.microsoft.graph.models.extensions.Image;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.Shared;
 import com.microsoft.graph.models.extensions.SharepointIds;
 import com.microsoft.graph.models.extensions.SpecialFolder;
+import com.microsoft.graph.models.extensions.Video;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -85,6 +86,14 @@ public class RemoteItem implements IJsonBackedObject {
     public Folder folder;
 
     /**
+     * The Image.
+     * Image metadata, if the item is an image. Read-only.
+     */
+    @SerializedName("image")
+    @Expose
+    public Image image;
+
+    /**
      * The Id.
      * Unique identifier for the remote item in its drive. Read-only.
      */
@@ -122,7 +131,7 @@ public class RemoteItem implements IJsonBackedObject {
      */
     @SerializedName("package")
     @Expose
-    public com.microsoft.graph.models.extensions.Package msgraphpackage;
+    public com.microsoft.graph.models.extensions.Package msgraphPackage;
 
     /**
      * The Parent Reference.
@@ -163,6 +172,14 @@ public class RemoteItem implements IJsonBackedObject {
     @SerializedName("specialFolder")
     @Expose
     public SpecialFolder specialFolder;
+
+    /**
+     * The Video.
+     * Video metadata, if the item is a video. Read-only.
+     */
+    @SerializedName("video")
+    @Expose
+    public Video video;
 
     /**
      * The Web Dav Url.

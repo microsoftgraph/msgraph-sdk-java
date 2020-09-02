@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.Modality;
@@ -16,7 +14,8 @@ import com.microsoft.graph.models.generated.MediaDirection;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,7 +39,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * 
+     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
      */
     @SerializedName("mediaType")
     @Expose
@@ -48,7 +47,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Label.
-     * 
+     * The media stream label.
      */
     @SerializedName("label")
     @Expose
@@ -56,7 +55,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Source Id.
-     * 
+     * The source ID.
      */
     @SerializedName("sourceId")
     @Expose
@@ -64,7 +63,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * 
+     * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
      */
     @SerializedName("direction")
     @Expose
@@ -72,7 +71,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Server Muted.
-     * 
+     * If the media is muted by the server.
      */
     @SerializedName("serverMuted")
     @Expose

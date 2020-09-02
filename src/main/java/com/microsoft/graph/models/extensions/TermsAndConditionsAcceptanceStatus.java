@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
@@ -16,7 +14,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,6 +50,14 @@ public class TermsAndConditionsAcceptanceStatus extends Entity implements IJsonB
     @SerializedName("acceptedDateTime")
     @Expose
     public java.util.Calendar acceptedDateTime;
+
+    /**
+     * The User Principal Name.
+     * The userPrincipalName of the User that accepted the term.
+     */
+    @SerializedName("userPrincipalName")
+    @Expose
+    public String userPrincipalName;
 
     /**
      * The Terms And Conditions.

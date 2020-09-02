@@ -7,11 +7,12 @@ import com.microsoft.graph.models.extensions.DomainForceDeleteBody;
 import com.microsoft.graph.requests.extensions.IDomainForceDeleteRequest;
 import com.microsoft.graph.requests.extensions.DomainForceDeleteRequest;
 
+import com.microsoft.graph.http.BaseCollectionRequest;
+import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
-import com.microsoft.graph.options.Option;
-import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
 
@@ -30,7 +31,7 @@ public class DomainForceDeleteRequest extends BaseRequest implements IDomainForc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainForceDeleteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public DomainForceDeleteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Void.class);
         body = new DomainForceDeleteBody();
     }
@@ -50,7 +51,7 @@ public class DomainForceDeleteRequest extends BaseRequest implements IDomainForc
      * @return the updated request
      */
     public IDomainForceDeleteRequest select(final String value) {
-        getQueryOptions().add(new QueryOption("$select", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DomainForceDeleteRequest)this;
     }
 
@@ -61,7 +62,7 @@ public class DomainForceDeleteRequest extends BaseRequest implements IDomainForc
      * @return the updated request
      */
     public IDomainForceDeleteRequest top(final int value) {
-        getQueryOptions().add(new QueryOption("$top", value+""));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$top", value+""));
         return (DomainForceDeleteRequest)this;
     }
 
@@ -72,7 +73,7 @@ public class DomainForceDeleteRequest extends BaseRequest implements IDomainForc
      * @return the updated request
      */
     public IDomainForceDeleteRequest expand(final String value) {
-        getQueryOptions().add(new QueryOption("$expand", value));
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (DomainForceDeleteRequest)this;
     }
 

@@ -3,75 +3,22 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRequest;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRequest;
+
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.WorkbookRange;
+import com.microsoft.graph.models.extensions.WorkbookRangeView;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookRangeSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeClearRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeClearRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeDeleteRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeDeleteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeInsertRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeInsertRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeMergeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeMergeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeUnmergeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeUnmergeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBoundingRectRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeBoundingRectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeCellRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeCellRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnsAfterRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeColumnsAfterRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnsAfterRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeColumnsAfterRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnsBeforeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeColumnsBeforeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeColumnsBeforeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeColumnsBeforeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeEntireColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeEntireColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeEntireRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeEntireRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeIntersectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeIntersectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeLastCellRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeLastCellRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeLastColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeLastColumnRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeLastRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeLastRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeOffsetRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeOffsetRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeResizedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeResizedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowsAboveRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRowsAboveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowsAboveRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRowsAboveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowsBelowRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRowsBelowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeRowsBelowRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeRowsBelowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeUsedRangeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeVisibleViewRequestBuilder;
-import com.microsoft.graph.requests.extensions.WorkbookRangeVisibleViewRequestBuilder;
-
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.options.Option;
-import java.util.EnumSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -87,7 +34,7 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public WorkbookRangeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -106,8 +53,8 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
      * @param requestOptions the options for this request
      * @return the IWorkbookRangeRequest instance
      */
-    public IWorkbookRangeRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new WorkbookRangeRequest(getRequestUrl(), getClient(), requestOptions);
+    public IWorkbookRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        return new com.microsoft.graph.requests.extensions.WorkbookRangeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -251,4 +198,3 @@ public class WorkbookRangeRequestBuilder extends BaseRequestBuilder implements I
         return new WorkbookRangeVisibleViewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.visibleView"), getClient(), null);
     }
 }
-

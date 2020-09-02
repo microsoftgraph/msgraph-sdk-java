@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Audio;
@@ -17,6 +15,7 @@ import com.microsoft.graph.models.extensions.FileSystemInfo;
 import com.microsoft.graph.models.extensions.Folder;
 import com.microsoft.graph.models.extensions.Image;
 import com.microsoft.graph.models.extensions.GeoCoordinates;
+import com.microsoft.graph.models.extensions.PendingOperations;
 import com.microsoft.graph.models.extensions.Photo;
 import com.microsoft.graph.models.extensions.PublicationFacet;
 import com.microsoft.graph.models.extensions.RemoteItem;
@@ -49,7 +48,8 @@ import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionPage;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -131,7 +131,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
      */
     @SerializedName("package")
     @Expose
-    public com.microsoft.graph.models.extensions.Package msgraphpackage;
+    public com.microsoft.graph.models.extensions.Package msgraphPackage;
+
+    /**
+     * The Pending Operations.
+     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
+     */
+    @SerializedName("pendingOperations")
+    @Expose
+    public PendingOperations pendingOperations;
 
     /**
      * The Photo.

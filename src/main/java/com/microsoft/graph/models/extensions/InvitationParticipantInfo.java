@@ -3,19 +3,18 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.ParticipantInfo;
+import com.microsoft.graph.models.extensions.IdentitySet;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,12 +23,30 @@ import java.util.Map;
 /**
  * The class for the Invitation Participant Info.
  */
-public class InvitationParticipantInfo extends ParticipantInfo implements IJsonBackedObject {
+public class InvitationParticipantInfo implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
+
+    /**
+     * The Identity.
+     * The identitySet associated with this invitation.
+     */
+    @SerializedName("identity")
+    @Expose
+    public IdentitySet identity;
 
     /**
      * The Replaces Call Id.
-     * 
+     * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
      */
     @SerializedName("replacesCallId")
     @Expose

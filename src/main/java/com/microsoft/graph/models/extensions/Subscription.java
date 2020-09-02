@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.Entity;
@@ -15,7 +13,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +28,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/).
+     * Required. Specifies the resource that will be monitored for changes. Do not include the base URL (https://graph.microsoft.com/v1.0/). See the possible resource path values for each supported resource.
      */
     @SerializedName("resource")
     @Expose
@@ -37,7 +36,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Type.
-     * Required. Indicates the type of change in the subscribed resource that will raise a notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item notifications support only the updated changeType. User and group notifications support updated and deleted changeType.
+     * Required. Indicates the type of change in the subscribed resource that will raise a change notification. The supported values are: created, updated, deleted. Multiple values can be combined using a comma-separated list.Note: Drive root item and list change notifications support only the updated changeType. User and group change notifications support updated and deleted changeType.
      */
     @SerializedName("changeType")
     @Expose
@@ -45,7 +44,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Client State.
-     * Optional. Specifies the value of the clientState property sent by the service in each notification. The maximum length is 128 characters. The client can check that the notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each notification.
+     * Optional. Specifies the value of the clientState property sent by the service in each change notification. The maximum length is 128 characters. The client can check that the change notification came from the service by comparing the value of the clientState property sent with the subscription with the value of the clientState property received with each change notification.
      */
     @SerializedName("clientState")
     @Expose
@@ -53,7 +52,7 @@ public class Subscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Url.
-     * Required. The URL of the endpoint that will receive the notifications. This URL must make use of the HTTPS protocol.
+     * Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
      */
     @SerializedName("notificationUrl")
     @Expose
@@ -82,6 +81,14 @@ public class Subscription extends Entity implements IJsonBackedObject {
     @SerializedName("creatorId")
     @Expose
     public String creatorId;
+
+    /**
+     * The Latest Supported Tls Version.
+     * Specifies the latest version of Transport Layer Security (TLS) that the notification endpoint, specified by notificationUrl, supports. The possible values are: v1_0, v1_1, v1_2, v1_3. For subscribers whose notification endpoint supports a version lower than the currently recommended version (TLS 1.2), specifying this property by a set timeline allows them to temporarily use their deprecated version of TLS before completing their upgrade to TLS 1.2. For these subscribers, not setting this property per the timeline would result in subscription operations failing. For subscribers whose notification endpoint already supports TLS 1.2, setting this property is optional. In such cases, Microsoft Graph defaults the property to v1_2.
+     */
+    @SerializedName("latestSupportedTlsVersion")
+    @Expose
+    public String latestSupportedTlsVersion;
 
 
     /**

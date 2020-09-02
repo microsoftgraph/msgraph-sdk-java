@@ -30,14 +30,14 @@ dependencies {
     implementation 'com.google.guava:guava:20.0'
 
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     
-    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.google.code.gson:gson:2.8.6'
     
     compile 'com.sun.jersey:jersey-server:1.19.4'
     
     // Core Http library 
-    compile('com.microsoft.graph:microsoft-graph-core:1.0.0')
+    compile('com.microsoft.graph:microsoft-graph-core:1.0.1')
 }
 
 def pomConfig = {

@@ -3,18 +3,17 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -59,6 +58,14 @@ public class Hashes implements IJsonBackedObject {
     @SerializedName("sha1Hash")
     @Expose
     public String sha1Hash;
+
+    /**
+     * The Sha256Hash.
+     * SHA256 hash for the contents of the file (if available). Read-only.
+     */
+    @SerializedName("sha256Hash")
+    @Expose
+    public String sha256Hash;
 
 
     /**

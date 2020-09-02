@@ -3,16 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AssignedLabel;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.LicenseProcessingState;
 import com.microsoft.graph.models.extensions.OnPremisesProvisioningError;
+import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.GroupSetting;
 import com.microsoft.graph.models.extensions.Conversation;
@@ -27,6 +27,8 @@ import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import com.microsoft.graph.models.extensions.PlannerGroup;
 import com.microsoft.graph.models.extensions.Onenote;
 import com.microsoft.graph.models.extensions.Team;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupSettingCollectionResponse;
@@ -51,7 +53,8 @@ import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionPag
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +65,14 @@ import java.util.Map;
  */
 public class Group extends DirectoryObject implements IJsonBackedObject {
 
+
+    /**
+     * The Assigned Labels.
+     * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
+     */
+    @SerializedName("assignedLabels")
+    @Expose
+    public java.util.List<AssignedLabel> assignedLabels;
 
     /**
      * The Assigned Licenses.
@@ -104,6 +115,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Expiration Date Time.
+     * Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     */
+    @SerializedName("expirationDateTime")
+    @Expose
+    public java.util.Calendar expirationDateTime;
+
+    /**
      * The Has Members With License Errors.
      * Indicates whether there are members in this group that have license errors from its group-based license assignment. This property is never returned on a GET operation. You can use it as a $filter argument to get groups that have members with license errors (that is, filter for this property being true). See an example.
      */
@@ -113,7 +132,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Types.
-     * Specifies the group type and its membership.  If the collection contains Unified then the group is an Office 365 group; otherwise it's a security group.  If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
+     * Specifies the group type and its membership.  If the collection contains Unified, the group is a Microsoft 365 group; otherwise, it's either a security group or distribution group. For details, see groups overview.If the collection includes DynamicMembership, the group has dynamic membership; otherwise, membership is static.  Returned by default. Supports $filter.
      */
     @SerializedName("groupTypes")
     @Expose
@@ -152,6 +171,30 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String mailNickname;
 
     /**
+     * The Membership Rule.
+     * The rule that determines members for this group if the group is a dynamic group (groupTypes contains DynamicMembership). For more information about the syntax of the membership rule, see Membership Rules syntax. Returned by default.
+     */
+    @SerializedName("membershipRule")
+    @Expose
+    public String membershipRule;
+
+    /**
+     * The Membership Rule Processing State.
+     * Indicates whether the dynamic membership processing is on or paused. Possible values are 'On' or 'Paused'. Returned by default.
+     */
+    @SerializedName("membershipRuleProcessingState")
+    @Expose
+    public String membershipRuleProcessingState;
+
+    /**
+     * The On Premises Domain Name.
+     * Contains the on-premises domain FQDN, also called dnsDomainName synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+     */
+    @SerializedName("onPremisesDomainName")
+    @Expose
+    public String onPremisesDomainName;
+
+    /**
      * The On Premises Last Sync Date Time.
      * Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. Supports $filter.
      */
@@ -160,12 +203,28 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public java.util.Calendar onPremisesLastSyncDateTime;
 
     /**
+     * The On Premises Net Bios Name.
+     * Contains the on-premises netBios name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+     */
+    @SerializedName("onPremisesNetBiosName")
+    @Expose
+    public String onPremisesNetBiosName;
+
+    /**
      * The On Premises Provisioning Errors.
      * Errors when using Microsoft synchronization product during provisioning. Returned by default.
      */
     @SerializedName("onPremisesProvisioningErrors")
     @Expose
     public java.util.List<OnPremisesProvisioningError> onPremisesProvisioningErrors;
+
+    /**
+     * The On Premises Sam Account Name.
+     * Contains the on-premises SAM account name synchronized from the on-premises directory. The property is only populated for customers who are synchronizing their on-premises directory to Azure Active Directory via Azure AD Connect.Returned by default. Read-only.
+     */
+    @SerializedName("onPremisesSamAccountName")
+    @Expose
+    public String onPremisesSamAccountName;
 
     /**
      * The On Premises Security Identifier.
@@ -190,6 +249,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("preferredDataLocation")
     @Expose
     public String preferredDataLocation;
+
+    /**
+     * The Preferred Language.
+     * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+     */
+    @SerializedName("preferredLanguage")
+    @Expose
+    public String preferredLanguage;
 
     /**
      * The Proxy Addresses.
@@ -224,8 +291,16 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public String securityIdentifier;
 
     /**
+     * The Theme.
+     * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+     */
+    @SerializedName("theme")
+    @Expose
+    public String theme;
+
+    /**
      * The Visibility.
-     * Specifies the visibility of an Office 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
+     * Specifies the visibility of a Microsoft 365 group. Possible values are: Private, Public, or Hiddenmembership; blank values are treated as public.  See group visibility options to learn more.Visibility can be set only when a group is created; it is not editable.Visibility is supported only for unified groups; it is not supported for security groups. Returned by default.
      */
     @SerializedName("visibility")
     @Expose
@@ -264,6 +339,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Integer unseenCount;
 
     /**
+     * The Hide From Outlook Clients.
+     * True if the group is not displayed in Outlook clients, such as Outlook for Windows and Outlook on the web; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromOutlookClients")
+    @Expose
+    public Boolean hideFromOutlookClients;
+
+    /**
+     * The Hide From Address Lists.
+     * True if the group is not displayed in certain parts of the Outlook UI: the Address Book, address lists for selecting message recipients, and the Browse Groups dialog for searching groups; otherwise, false. Default value is false. Returned only on $select.
+     */
+    @SerializedName("hideFromAddressLists")
+    @Expose
+    public Boolean hideFromAddressLists;
+
+    /**
      * The Is Archived.
      * 
      */
@@ -272,8 +363,14 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean isArchived;
 
     /**
+     * The App Role Assignments.
+     * 
+     */
+    public AppRoleAssignmentCollectionPage appRoleAssignments;
+
+    /**
      * The Members.
-     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups) Nullable.
+     * Users and groups that are members of this group. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups) Nullable.
      */
     public DirectoryObjectCollectionPage members;
 
@@ -311,7 +408,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 10 owners. HTTP Methods: GET (supported for all groups), POST (supported for Office 365 groups, security groups and mail-enabled security groups), DELETE (supported for Office 365 groups and security groups). Nullable.
+     * The owners of the group. The owners are a set of non-admin users who are allowed to modify this object. Limited to 100 owners. HTTP Methods: GET (supported for all groups), POST (supported for Microsoft 365 groups, security groups and mail-enabled security groups), DELETE (supported for Microsoft 365 groups and security groups). Nullable.
      */
     public DirectoryObjectCollectionPage owners;
 
@@ -474,6 +571,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("appRoleAssignments")) {
+            final AppRoleAssignmentCollectionResponse response = new AppRoleAssignmentCollectionResponse();
+            if (json.has("appRoleAssignments@odata.nextLink")) {
+                response.nextLink = json.get("appRoleAssignments@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("appRoleAssignments").toString(), JsonObject[].class);
+            final AppRoleAssignment[] array = new AppRoleAssignment[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), AppRoleAssignment.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            appRoleAssignments = new AppRoleAssignmentCollectionPage(response, null);
+        }
 
         if (json.has("members")) {
             final DirectoryObjectCollectionResponse response = new DirectoryObjectCollectionResponse();

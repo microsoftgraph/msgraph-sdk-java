@@ -3,21 +3,21 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AutomaticRepliesSetting;
 import com.microsoft.graph.models.extensions.LocaleInfo;
+import com.microsoft.graph.models.generated.DelegateMeetingMessageDeliveryOptions;
 import com.microsoft.graph.models.extensions.WorkingHours;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,6 +70,14 @@ public class MailboxSettings implements IJsonBackedObject {
     @SerializedName("language")
     @Expose
     public LocaleInfo language;
+
+    /**
+     * The Delegate Meeting Message Delivery Options.
+     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
+     */
+    @SerializedName("delegateMeetingMessageDeliveryOptions")
+    @Expose
+    public DelegateMeetingMessageDeliveryOptions delegateMeetingMessageDeliveryOptions;
 
     /**
      * The Working Hours.

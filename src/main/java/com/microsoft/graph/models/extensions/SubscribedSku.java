@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.LicenseUnitsDetail;
@@ -17,7 +15,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +30,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * For example, 'Enabled'.
+     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut.
      */
     @SerializedName("capabilityStatus")
     @Expose
@@ -71,7 +70,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'.
+     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      */
     @SerializedName("skuPartNumber")
     @Expose

@@ -3,23 +3,23 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ManagedAppDataTransferLevel;
 import com.microsoft.graph.models.generated.ManagedAppClipboardSharingLevel;
 import com.microsoft.graph.models.generated.ManagedAppPinCharacterSet;
 import com.microsoft.graph.models.generated.ManagedAppDataStorageLocation;
+import com.microsoft.graph.models.generated.ManagedBrowserType;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -97,7 +97,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Managed Browser To Open Links Required.
-     * Indicates whether internet links should be opened in the managed browser app.
+     * Indicates whether internet links should be opened in the managed browser app, or any custom browser specified by CustomBrowserProtocol (for iOS) or CustomBrowserPackageId/CustomBrowserDisplayName (for Android)
      */
     @SerializedName("managedBrowserToOpenLinksRequired")
     @Expose
@@ -238,6 +238,14 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     @SerializedName("minimumWarningAppVersion")
     @Expose
     public String minimumWarningAppVersion;
+
+    /**
+     * The Managed Browser.
+     * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
+     */
+    @SerializedName("managedBrowser")
+    @Expose
+    public EnumSet<ManagedBrowserType> managedBrowser;
 
 
     /**

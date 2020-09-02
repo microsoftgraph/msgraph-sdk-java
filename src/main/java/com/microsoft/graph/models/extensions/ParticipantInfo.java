@@ -3,19 +3,19 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.generated.EndpointType;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,15 +39,23 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * 
+     * The identitySet associated with this participant. Read-only.
      */
     @SerializedName("identity")
     @Expose
     public IdentitySet identity;
 
     /**
+     * The Endpoint Type.
+     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     */
+    @SerializedName("endpointType")
+    @Expose
+    public EndpointType endpointType;
+
+    /**
      * The Region.
-     * 
+     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      */
     @SerializedName("region")
     @Expose
@@ -55,11 +63,19 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Language Id.
-     * 
+     * The language culture string. Read-only.
      */
     @SerializedName("languageId")
     @Expose
     public String languageId;
+
+    /**
+     * The Country Code.
+     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+     */
+    @SerializedName("countryCode")
+    @Expose
+    public String countryCode;
 
 
     /**

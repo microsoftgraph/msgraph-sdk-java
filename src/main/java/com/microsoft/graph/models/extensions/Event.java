@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ResponseStatus;
@@ -21,6 +19,8 @@ import com.microsoft.graph.models.generated.FreeBusyStatus;
 import com.microsoft.graph.models.generated.EventType;
 import com.microsoft.graph.models.extensions.Attendee;
 import com.microsoft.graph.models.extensions.Recipient;
+import com.microsoft.graph.models.generated.OnlineMeetingProviderType;
+import com.microsoft.graph.models.extensions.OnlineMeetingInfo;
 import com.microsoft.graph.models.extensions.Attachment;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import com.microsoft.graph.models.extensions.MultiValueLegacyExtendedProperty;
@@ -42,7 +42,8 @@ import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -208,7 +209,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Organizer.
-     * Set to true if the message sender is also the organizer.
+     * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
      */
     @SerializedName("isOrganizer")
     @Expose
@@ -224,7 +225,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Requested.
-     * Set to true if the sender would like a response when the event is accepted or declined.
+     * Default is true, which represents the organizer would like an invitee to send a response to the event.
      */
     @SerializedName("responseRequested")
     @Expose
@@ -285,6 +286,38 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     @SerializedName("onlineMeetingUrl")
     @Expose
     public String onlineMeetingUrl;
+
+    /**
+     * The Is Online Meeting.
+     * True if this event has online meeting information, false otherwise. Default is false. Optional.
+     */
+    @SerializedName("isOnlineMeeting")
+    @Expose
+    public Boolean isOnlineMeeting;
+
+    /**
+     * The Online Meeting Provider.
+     * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
+     */
+    @SerializedName("onlineMeetingProvider")
+    @Expose
+    public OnlineMeetingProviderType onlineMeetingProvider;
+
+    /**
+     * The Online Meeting.
+     * Details for an attendee to join the meeting online. Read-only.
+     */
+    @SerializedName("onlineMeeting")
+    @Expose
+    public OnlineMeetingInfo onlineMeeting;
+
+    /**
+     * The Allow New Time Proposals.
+     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
+     */
+    @SerializedName("allowNewTimeProposals")
+    @Expose
+    public Boolean allowNewTimeProposals;
 
     /**
      * The Attachments.

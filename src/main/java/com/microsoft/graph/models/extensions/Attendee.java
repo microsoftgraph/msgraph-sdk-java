@@ -3,20 +3,20 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ResponseStatus;
+import com.microsoft.graph.models.extensions.TimeSlot;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +35,14 @@ public class Attendee extends AttendeeBase implements IJsonBackedObject {
     @SerializedName("status")
     @Expose
     public ResponseStatus status;
+
+    /**
+     * The Proposed New Time.
+     * An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
+     */
+    @SerializedName("proposedNewTime")
+    @Expose
+    public TimeSlot proposedNewTime;
 
 
     /**

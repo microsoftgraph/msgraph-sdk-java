@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ResourceVisualization;
@@ -17,7 +15,8 @@ import com.microsoft.graph.models.extensions.Entity;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +30,7 @@ public class Trending extends Entity implements IJsonBackedObject {
 
     /**
      * The Weight.
-     * 
+     * Value indicating how much the document is currently trending. The larger the number, the more the document is currently trending around the user (the more relevant it is). Returned documents are sorted by this value.
      */
     @SerializedName("weight")
     @Expose
@@ -39,7 +38,7 @@ public class Trending extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Visualization.
-     * 
+     * Properties that you can use to visualize the document in your experience.
      */
     @SerializedName("resourceVisualization")
     @Expose
@@ -47,7 +46,7 @@ public class Trending extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Reference.
-     * 
+     * Reference properties of the trending document, such as the url and type of the document.
      */
     @SerializedName("resourceReference")
     @Expose
@@ -63,7 +62,7 @@ public class Trending extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * 
+     * Used for navigating to the trending document.
      */
     @SerializedName("resource")
     @Expose

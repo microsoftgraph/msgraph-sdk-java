@@ -3,11 +3,9 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.models.extensions;
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
+import com.microsoft.graph.serializer.ISerializer;
+import com.microsoft.graph.serializer.IJsonBackedObject;
+import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.ConnectionDirection;
@@ -17,7 +15,8 @@ import com.microsoft.graph.models.generated.ConnectionStatus;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonElement;
-import com.google.gson.annotations.*;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,7 +40,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Application Name.
-     * Name of the application managing the network connection (for example, Facebook, SMTP, etc.).
+     * Name of the application managing the network connection (for example, Facebook or SMTP).
      */
     @SerializedName("applicationName")
     @Expose
@@ -62,6 +61,14 @@ public class NetworkConnection implements IJsonBackedObject {
     @SerializedName("destinationDomain")
     @Expose
     public String destinationDomain;
+
+    /**
+     * The Destination Location.
+     * Location (by IP address mapping) associated with the destination of a network connection.
+     */
+    @SerializedName("destinationLocation")
+    @Expose
+    public String destinationLocation;
 
     /**
      * The Destination Port.
@@ -158,6 +165,14 @@ public class NetworkConnection implements IJsonBackedObject {
     @SerializedName("sourceAddress")
     @Expose
     public String sourceAddress;
+
+    /**
+     * The Source Location.
+     * Location (by IP address mapping) associated with the source of a network connection.
+     */
+    @SerializedName("sourceLocation")
+    @Expose
+    public String sourceLocation;
 
     /**
      * The Source Port.

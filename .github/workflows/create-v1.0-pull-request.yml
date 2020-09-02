@@ -13,6 +13,8 @@ on:
   push:
     branches:
       - "v1.0/pipelinebuild/*"
+    paths:
+      - 'src/**/*.java'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,9 +37,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MESSAGE_TITLE: Generated v1.0 models and request builders using Typewriter
-        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. \n\n cc: @darrelmiller"
-        REVIEWERS: peombwa,ddyett
-        ASSIGNEDTO: MIchaelMainer
+        MESSAGE_BODY: "This pull request was automatically created by the GitHub Action, **${{github.workflow}}**. \n\n The commit hash is _${{github.sha}}_. \n\n **Important** Check for unexpected deletions or changes in this PR. \n\n - [ ] update version in gradle.properties and Constants.java. \n\n - [ ] update version in readme.md\n\n- [ ] create tag and release\n\n cc: @darrelmiller"
+        REVIEWERS: peombwa,ddyett,zengin,nikithauc,baywet
+        ASSIGNEDTO: baywet
         LABELS: generated
         BASE: dev
       run: |

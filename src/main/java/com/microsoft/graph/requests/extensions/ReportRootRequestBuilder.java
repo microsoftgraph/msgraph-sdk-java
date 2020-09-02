@@ -3,191 +3,16 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests.extensions;
-import com.microsoft.graph.requests.extensions.IReportRootRequest;
-import com.microsoft.graph.requests.extensions.ReportRootRequest;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationUserActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationUserActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootDeviceConfigurationDeviceActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootDeviceConfigurationDeviceActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootManagedDeviceEnrollmentTopFailuresRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActivationsUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActivationCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActivationsUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActivationsUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ServicesUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ServicesUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365ActiveUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365ActiveUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityGroupCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOffice365GroupsActivityFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOffice365GroupsActivityFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageAppsUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageAppsUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageMailboxCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageMailboxCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetMailboxUsageStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetMailboxUsageStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveActivityFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveActivityFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageAccountDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageAccountDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageAccountCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageAccountCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetOneDriveUsageStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetOneDriveUsageStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointActivityPagesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointActivityPagesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageFileCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageSiteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageSiteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsageStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsageStorageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSharePointSiteUsagePagesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSharePointSiteUsagePagesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessPeerToPeerActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessOrganizerActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessOrganizerActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessParticipantActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessParticipantActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessParticipantActivityMinuteCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageDistributionUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetSkypeForBusinessDeviceUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageDistributionUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerDeviceUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerDeviceUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityGroupCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityGroupCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetYammerGroupsActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetYammerGroupsActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsUserActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsUserActivityUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserDetailRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder;
 
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.ReportRoot;
+import com.microsoft.graph.models.extensions.Report;
+import java.util.Arrays;
+import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.options.Option;
-import java.util.EnumSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
@@ -203,7 +28,7 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public ReportRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -222,8 +47,8 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
      * @param requestOptions the options for this request
      * @return the IReportRootRequest instance
      */
-    public IReportRootRequest buildRequest(final java.util.List<? extends Option> requestOptions) {
-        return new ReportRootRequest(getRequestUrl(), getClient(), requestOptions);
+    public IReportRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+        return new com.microsoft.graph.requests.extensions.ReportRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
@@ -584,4 +409,3 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
         return new ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTeamsDeviceUsageDistributionUserCounts"), getClient(), null, period);
     }
 }
-
