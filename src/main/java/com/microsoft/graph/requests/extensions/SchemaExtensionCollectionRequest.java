@@ -105,6 +105,27 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
         return (SchemaExtensionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISchemaExtensionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SchemaExtensionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISchemaExtensionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISchemaExtensionCollectionRequest)this;
+    }
     public ISchemaExtensionCollectionPage buildFromResponse(final SchemaExtensionCollectionResponse response) {
         final ISchemaExtensionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

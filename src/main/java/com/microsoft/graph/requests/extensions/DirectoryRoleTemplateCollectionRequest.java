@@ -105,6 +105,27 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
         return (DirectoryRoleTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDirectoryRoleTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DirectoryRoleTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDirectoryRoleTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDirectoryRoleTemplateCollectionRequest)this;
+    }
     public IDirectoryRoleTemplateCollectionPage buildFromResponse(final DirectoryRoleTemplateCollectionResponse response) {
         final IDirectoryRoleTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

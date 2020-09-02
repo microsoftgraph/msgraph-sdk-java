@@ -107,6 +107,27 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
         return (OnenoteSectionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnenoteSectionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnenoteSectionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnenoteSectionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnenoteSectionCollectionRequest)this;
+    }
     public IOnenoteSectionCollectionPage buildFromResponse(final OnenoteSectionCollectionResponse response) {
         final IOnenoteSectionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

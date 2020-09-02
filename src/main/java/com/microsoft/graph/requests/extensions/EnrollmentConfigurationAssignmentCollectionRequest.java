@@ -106,6 +106,27 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEnrollmentConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EnrollmentConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEnrollmentConfigurationAssignmentCollectionRequest)this;
+    }
     public IEnrollmentConfigurationAssignmentCollectionPage buildFromResponse(final EnrollmentConfigurationAssignmentCollectionResponse response) {
         final IEnrollmentConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

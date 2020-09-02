@@ -106,6 +106,27 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITargetedManagedAppPolicyAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITargetedManagedAppPolicyAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITargetedManagedAppPolicyAssignmentCollectionRequest)this;
+    }
     public ITargetedManagedAppPolicyAssignmentCollectionPage buildFromResponse(final TargetedManagedAppPolicyAssignmentCollectionResponse response) {
         final ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

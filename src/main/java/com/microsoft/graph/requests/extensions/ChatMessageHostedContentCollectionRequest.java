@@ -106,6 +106,27 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
         return (ChatMessageHostedContentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IChatMessageHostedContentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ChatMessageHostedContentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IChatMessageHostedContentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IChatMessageHostedContentCollectionRequest)this;
+    }
     public IChatMessageHostedContentCollectionPage buildFromResponse(final ChatMessageHostedContentCollectionResponse response) {
         final IChatMessageHostedContentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

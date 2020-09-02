@@ -106,6 +106,27 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
         return (WorkbookChartSeriesCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookChartSeriesCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookChartSeriesCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookChartSeriesCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookChartSeriesCollectionRequest)this;
+    }
     public IWorkbookChartSeriesCollectionPage buildFromResponse(final WorkbookChartSeriesCollectionResponse response) {
         final IWorkbookChartSeriesCollectionRequestBuilder builder;
         if (response.nextLink != null) {

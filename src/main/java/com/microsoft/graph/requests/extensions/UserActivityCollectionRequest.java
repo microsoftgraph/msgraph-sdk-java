@@ -106,6 +106,27 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
         return (UserActivityCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserActivityCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserActivityCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserActivityCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserActivityCollectionRequest)this;
+    }
     public IUserActivityCollectionPage buildFromResponse(final UserActivityCollectionResponse response) {
         final IUserActivityCollectionRequestBuilder builder;
         if (response.nextLink != null) {

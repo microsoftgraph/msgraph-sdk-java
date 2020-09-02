@@ -106,6 +106,27 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
         return (ThreatAssessmentResultCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IThreatAssessmentResultCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ThreatAssessmentResultCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IThreatAssessmentResultCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IThreatAssessmentResultCollectionRequest)this;
+    }
     public IThreatAssessmentResultCollectionPage buildFromResponse(final ThreatAssessmentResultCollectionResponse response) {
         final IThreatAssessmentResultCollectionRequestBuilder builder;
         if (response.nextLink != null) {

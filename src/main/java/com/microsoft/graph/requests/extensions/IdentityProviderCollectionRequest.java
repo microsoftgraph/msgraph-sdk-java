@@ -105,6 +105,27 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
         return (IdentityProviderCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIdentityProviderCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IdentityProviderCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIdentityProviderCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIdentityProviderCollectionRequest)this;
+    }
     public IIdentityProviderCollectionPage buildFromResponse(final IdentityProviderCollectionResponse response) {
         final IIdentityProviderCollectionRequestBuilder builder;
         if (response.nextLink != null) {

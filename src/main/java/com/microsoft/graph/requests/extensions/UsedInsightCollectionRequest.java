@@ -106,6 +106,27 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
         return (UsedInsightCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUsedInsightCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UsedInsightCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUsedInsightCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUsedInsightCollectionRequest)this;
+    }
     public IUsedInsightCollectionPage buildFromResponse(final UsedInsightCollectionResponse response) {
         final IUsedInsightCollectionRequestBuilder builder;
         if (response.nextLink != null) {

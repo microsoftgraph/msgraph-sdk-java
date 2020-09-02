@@ -106,6 +106,27 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMdmWindowsInformationProtectionPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMdmWindowsInformationProtectionPolicyCollectionRequest)this;
+    }
     public IMdmWindowsInformationProtectionPolicyCollectionPage buildFromResponse(final MdmWindowsInformationProtectionPolicyCollectionResponse response) {
         final IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

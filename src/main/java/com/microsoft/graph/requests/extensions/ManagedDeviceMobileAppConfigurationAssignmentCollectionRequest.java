@@ -106,6 +106,27 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
+    }
     public IManagedDeviceMobileAppConfigurationAssignmentCollectionPage buildFromResponse(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response) {
         final IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

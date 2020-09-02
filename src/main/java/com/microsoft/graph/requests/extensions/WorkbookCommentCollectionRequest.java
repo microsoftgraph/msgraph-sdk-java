@@ -106,6 +106,27 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
         return (WorkbookCommentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookCommentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookCommentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookCommentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookCommentCollectionRequest)this;
+    }
     public IWorkbookCommentCollectionPage buildFromResponse(final WorkbookCommentCollectionResponse response) {
         final IWorkbookCommentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

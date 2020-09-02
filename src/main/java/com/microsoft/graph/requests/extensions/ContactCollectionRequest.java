@@ -106,6 +106,27 @@ public class ContactCollectionRequest extends BaseCollectionRequest<ContactColle
         return (ContactCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IContactCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ContactCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IContactCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IContactCollectionRequest)this;
+    }
     public IContactCollectionPage buildFromResponse(final ContactCollectionResponse response) {
         final IContactCollectionRequestBuilder builder;
         if (response.nextLink != null) {

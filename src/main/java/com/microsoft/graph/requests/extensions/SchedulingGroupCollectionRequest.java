@@ -106,6 +106,27 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
         return (SchedulingGroupCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISchedulingGroupCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SchedulingGroupCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISchedulingGroupCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISchedulingGroupCollectionRequest)this;
+    }
     public ISchedulingGroupCollectionPage buildFromResponse(final SchedulingGroupCollectionResponse response) {
         final ISchedulingGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -106,6 +106,27 @@ public class DeviceCompliancePolicyStateCollectionRequest extends BaseCollection
         return (DeviceCompliancePolicyStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCompliancePolicyStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCompliancePolicyStateCollectionRequest)this;
+    }
     public IDeviceCompliancePolicyStateCollectionPage buildFromResponse(final DeviceCompliancePolicyStateCollectionResponse response) {
         final IDeviceCompliancePolicyStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

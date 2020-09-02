@@ -106,6 +106,27 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
         return (DriveItemVersionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDriveItemVersionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DriveItemVersionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDriveItemVersionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDriveItemVersionCollectionRequest)this;
+    }
     public IDriveItemVersionCollectionPage buildFromResponse(final DriveItemVersionCollectionResponse response) {
         final IDriveItemVersionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

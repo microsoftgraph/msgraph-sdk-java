@@ -53,4 +53,20 @@ public interface IRoomCollectionRequest {
      */
     IRoomCollectionRequest top(final int value);
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    IRoomCollectionRequest skip(final int value);
+
+    /**
+	 * Sets the skip token value for the request
+	 * 
+	 * @param skipToken value for pagination
+     *
+	 * @return the updated request
+	 */
+	IRoomCollectionRequest skipToken(String skipToken);
 }

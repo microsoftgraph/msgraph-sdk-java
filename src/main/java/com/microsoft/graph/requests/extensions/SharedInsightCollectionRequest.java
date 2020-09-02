@@ -106,6 +106,27 @@ public class SharedInsightCollectionRequest extends BaseCollectionRequest<Shared
         return (SharedInsightCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISharedInsightCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SharedInsightCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISharedInsightCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISharedInsightCollectionRequest)this;
+    }
     public ISharedInsightCollectionPage buildFromResponse(final SharedInsightCollectionResponse response) {
         final ISharedInsightCollectionRequestBuilder builder;
         if (response.nextLink != null) {

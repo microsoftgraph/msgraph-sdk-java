@@ -106,6 +106,27 @@ public class PlannerTaskCollectionRequest extends BaseCollectionRequest<PlannerT
         return (PlannerTaskCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPlannerTaskCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PlannerTaskCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPlannerTaskCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPlannerTaskCollectionRequest)this;
+    }
     public IPlannerTaskCollectionPage buildFromResponse(final PlannerTaskCollectionResponse response) {
         final IPlannerTaskCollectionRequestBuilder builder;
         if (response.nextLink != null) {

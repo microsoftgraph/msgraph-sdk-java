@@ -107,6 +107,27 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
         return (ManagedDeviceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceCollectionRequest)this;
+    }
     public IManagedDeviceCollectionPage buildFromResponse(final ManagedDeviceCollectionResponse response) {
         final IManagedDeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

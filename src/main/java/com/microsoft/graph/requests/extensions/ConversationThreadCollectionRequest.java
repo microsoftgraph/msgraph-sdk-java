@@ -107,6 +107,27 @@ public class ConversationThreadCollectionRequest extends BaseCollectionRequest<C
         return (ConversationThreadCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IConversationThreadCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ConversationThreadCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IConversationThreadCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IConversationThreadCollectionRequest)this;
+    }
     public IConversationThreadCollectionPage buildFromResponse(final ConversationThreadCollectionResponse response) {
         final IConversationThreadCollectionRequestBuilder builder;
         if (response.nextLink != null) {

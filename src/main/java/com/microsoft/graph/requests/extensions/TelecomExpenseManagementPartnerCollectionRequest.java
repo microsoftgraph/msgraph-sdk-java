@@ -106,6 +106,27 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITelecomExpenseManagementPartnerCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TelecomExpenseManagementPartnerCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITelecomExpenseManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITelecomExpenseManagementPartnerCollectionRequest)this;
+    }
     public ITelecomExpenseManagementPartnerCollectionPage buildFromResponse(final TelecomExpenseManagementPartnerCollectionResponse response) {
         final ITelecomExpenseManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {

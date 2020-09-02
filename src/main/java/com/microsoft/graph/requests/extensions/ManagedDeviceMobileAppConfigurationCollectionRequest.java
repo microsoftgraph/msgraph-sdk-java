@@ -107,6 +107,27 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceMobileAppConfigurationCollectionRequest)this;
+    }
     public IManagedDeviceMobileAppConfigurationCollectionPage buildFromResponse(final ManagedDeviceMobileAppConfigurationCollectionResponse response) {
         final IManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

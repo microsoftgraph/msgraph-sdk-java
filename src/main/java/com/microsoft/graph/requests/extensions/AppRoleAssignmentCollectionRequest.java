@@ -106,6 +106,27 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
         return (AppRoleAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAppRoleAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AppRoleAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAppRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAppRoleAssignmentCollectionRequest)this;
+    }
     public IAppRoleAssignmentCollectionPage buildFromResponse(final AppRoleAssignmentCollectionResponse response) {
         final IAppRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

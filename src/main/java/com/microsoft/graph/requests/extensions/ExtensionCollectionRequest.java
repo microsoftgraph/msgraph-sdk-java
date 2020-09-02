@@ -106,6 +106,27 @@ public class ExtensionCollectionRequest extends BaseCollectionRequest<ExtensionC
         return (ExtensionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IExtensionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ExtensionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IExtensionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IExtensionCollectionRequest)this;
+    }
     public IExtensionCollectionPage buildFromResponse(final ExtensionCollectionResponse response) {
         final IExtensionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

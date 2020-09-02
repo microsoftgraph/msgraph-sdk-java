@@ -106,6 +106,27 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
         return (RoleDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRoleDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RoleDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRoleDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRoleDefinitionCollectionRequest)this;
+    }
     public IRoleDefinitionCollectionPage buildFromResponse(final RoleDefinitionCollectionResponse response) {
         final IRoleDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -106,6 +106,27 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
         return (ListItemVersionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IListItemVersionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ListItemVersionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IListItemVersionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IListItemVersionCollectionRequest)this;
+    }
     public IListItemVersionCollectionPage buildFromResponse(final ListItemVersionCollectionResponse response) {
         final IListItemVersionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

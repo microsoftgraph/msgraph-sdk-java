@@ -105,6 +105,27 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
         return (DeviceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCollectionRequest)this;
+    }
     public IDeviceCollectionPage buildFromResponse(final DeviceCollectionResponse response) {
         final IDeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

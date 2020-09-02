@@ -106,6 +106,27 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
         return (ShiftCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IShiftCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ShiftCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IShiftCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IShiftCollectionRequest)this;
+    }
     public IShiftCollectionPage buildFromResponse(final ShiftCollectionResponse response) {
         final IShiftCollectionRequestBuilder builder;
         if (response.nextLink != null) {

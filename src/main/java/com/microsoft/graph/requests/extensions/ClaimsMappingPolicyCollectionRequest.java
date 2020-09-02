@@ -106,6 +106,27 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IClaimsMappingPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ClaimsMappingPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IClaimsMappingPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IClaimsMappingPolicyCollectionRequest)this;
+    }
     public IClaimsMappingPolicyCollectionPage buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {
         final IClaimsMappingPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

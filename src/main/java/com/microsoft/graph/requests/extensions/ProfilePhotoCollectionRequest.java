@@ -106,6 +106,27 @@ public class ProfilePhotoCollectionRequest extends BaseCollectionRequest<Profile
         return (ProfilePhotoCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IProfilePhotoCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ProfilePhotoCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IProfilePhotoCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IProfilePhotoCollectionRequest)this;
+    }
     public IProfilePhotoCollectionPage buildFromResponse(final ProfilePhotoCollectionResponse response) {
         final IProfilePhotoCollectionRequestBuilder builder;
         if (response.nextLink != null) {

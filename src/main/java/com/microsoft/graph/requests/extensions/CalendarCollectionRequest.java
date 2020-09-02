@@ -109,6 +109,27 @@ public class CalendarCollectionRequest extends BaseCollectionRequest<CalendarCol
         return (CalendarCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICalendarCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CalendarCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICalendarCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICalendarCollectionRequest)this;
+    }
     public ICalendarCollectionPage buildFromResponse(final CalendarCollectionResponse response) {
         final ICalendarCollectionRequestBuilder builder;
         if (response.nextLink != null) {

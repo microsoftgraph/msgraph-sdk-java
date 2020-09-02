@@ -106,6 +106,27 @@ public class WindowsInformationProtectionNetworkLearningSummaryCollectionRequest
         return (WindowsInformationProtectionNetworkLearningSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsInformationProtectionNetworkLearningSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsInformationProtectionNetworkLearningSummaryCollectionRequest)this;
+    }
     public IWindowsInformationProtectionNetworkLearningSummaryCollectionPage buildFromResponse(final WindowsInformationProtectionNetworkLearningSummaryCollectionResponse response) {
         final IWindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

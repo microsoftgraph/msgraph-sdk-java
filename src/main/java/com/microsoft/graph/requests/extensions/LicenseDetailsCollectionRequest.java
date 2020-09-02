@@ -106,6 +106,27 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
         return (LicenseDetailsCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ILicenseDetailsCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (LicenseDetailsCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ILicenseDetailsCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ILicenseDetailsCollectionRequest)this;
+    }
     public ILicenseDetailsCollectionPage buildFromResponse(final LicenseDetailsCollectionResponse response) {
         final ILicenseDetailsCollectionRequestBuilder builder;
         if (response.nextLink != null) {

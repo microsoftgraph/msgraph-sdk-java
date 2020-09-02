@@ -106,6 +106,27 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
         return (VppTokenCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IVppTokenCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (VppTokenCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IVppTokenCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IVppTokenCollectionRequest)this;
+    }
     public IVppTokenCollectionPage buildFromResponse(final VppTokenCollectionResponse response) {
         final IVppTokenCollectionRequestBuilder builder;
         if (response.nextLink != null) {
