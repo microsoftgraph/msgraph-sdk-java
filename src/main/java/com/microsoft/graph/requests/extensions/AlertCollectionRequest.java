@@ -106,6 +106,27 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         return (AlertCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAlertCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AlertCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAlertCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAlertCollectionRequest)this;
+    }
     public IAlertCollectionPage buildFromResponse(final AlertCollectionResponse response) {
         final IAlertCollectionRequestBuilder builder;
         if (response.nextLink != null) {

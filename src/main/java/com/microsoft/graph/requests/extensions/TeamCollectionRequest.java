@@ -108,6 +108,27 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
         return (TeamCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamCollectionRequest)this;
+    }
     public ITeamCollectionPage buildFromResponse(final TeamCollectionResponse response) {
         final ITeamCollectionRequestBuilder builder;
         if (response.nextLink != null) {

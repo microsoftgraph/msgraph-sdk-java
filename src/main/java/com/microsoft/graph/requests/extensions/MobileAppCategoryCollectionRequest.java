@@ -106,6 +106,27 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
         return (MobileAppCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppCategoryCollectionRequest)this;
+    }
     public IMobileAppCategoryCollectionPage buildFromResponse(final MobileAppCategoryCollectionResponse response) {
         final IMobileAppCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

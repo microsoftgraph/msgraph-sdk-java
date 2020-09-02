@@ -106,6 +106,27 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
         return (CallRecordCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICallRecordCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CallRecordCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICallRecordCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICallRecordCollectionRequest)this;
+    }
     public ICallRecordCollectionPage buildFromResponse(final CallRecordCollectionResponse response) {
         final ICallRecordCollectionRequestBuilder builder;
         if (response.nextLink != null) {

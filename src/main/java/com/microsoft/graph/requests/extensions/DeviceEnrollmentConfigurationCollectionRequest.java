@@ -107,6 +107,27 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceEnrollmentConfigurationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceEnrollmentConfigurationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceEnrollmentConfigurationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceEnrollmentConfigurationCollectionRequest)this;
+    }
     public IDeviceEnrollmentConfigurationCollectionPage buildFromResponse(final DeviceEnrollmentConfigurationCollectionResponse response) {
         final IDeviceEnrollmentConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

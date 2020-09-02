@@ -106,6 +106,27 @@ public class AndroidManagedAppProtectionCollectionRequest extends BaseCollection
         return (AndroidManagedAppProtectionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAndroidManagedAppProtectionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AndroidManagedAppProtectionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAndroidManagedAppProtectionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAndroidManagedAppProtectionCollectionRequest)this;
+    }
     public IAndroidManagedAppProtectionCollectionPage buildFromResponse(final AndroidManagedAppProtectionCollectionResponse response) {
         final IAndroidManagedAppProtectionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

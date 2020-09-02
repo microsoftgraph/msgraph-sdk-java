@@ -106,6 +106,27 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
         return (LocalizedNotificationMessageCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ILocalizedNotificationMessageCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (LocalizedNotificationMessageCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ILocalizedNotificationMessageCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ILocalizedNotificationMessageCollectionRequest)this;
+    }
     public ILocalizedNotificationMessageCollectionPage buildFromResponse(final LocalizedNotificationMessageCollectionResponse response) {
         final ILocalizedNotificationMessageCollectionRequestBuilder builder;
         if (response.nextLink != null) {

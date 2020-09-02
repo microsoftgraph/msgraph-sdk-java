@@ -109,6 +109,27 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
         return (ParticipantCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IParticipantCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ParticipantCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IParticipantCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IParticipantCollectionRequest)this;
+    }
     public IParticipantCollectionPage buildFromResponse(final ParticipantCollectionResponse response) {
         final IParticipantCollectionRequestBuilder builder;
         if (response.nextLink != null) {

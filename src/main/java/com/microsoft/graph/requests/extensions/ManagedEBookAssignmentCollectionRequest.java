@@ -106,6 +106,27 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedEBookAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedEBookAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedEBookAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedEBookAssignmentCollectionRequest)this;
+    }
     public IManagedEBookAssignmentCollectionPage buildFromResponse(final ManagedEBookAssignmentCollectionResponse response) {
         final IManagedEBookAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

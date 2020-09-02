@@ -106,6 +106,27 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
         return (ContentTypeCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IContentTypeCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ContentTypeCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IContentTypeCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IContentTypeCollectionRequest)this;
+    }
     public IContentTypeCollectionPage buildFromResponse(final ContentTypeCollectionResponse response) {
         final IContentTypeCollectionRequestBuilder builder;
         if (response.nextLink != null) {

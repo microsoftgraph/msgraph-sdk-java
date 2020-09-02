@@ -106,6 +106,27 @@ public class EducationClassCollectionRequest extends BaseCollectionRequest<Educa
         return (EducationClassCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationClassCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationClassCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationClassCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationClassCollectionRequest)this;
+    }
     public IEducationClassCollectionPage buildFromResponse(final EducationClassCollectionResponse response) {
         final IEducationClassCollectionRequestBuilder builder;
         if (response.nextLink != null) {

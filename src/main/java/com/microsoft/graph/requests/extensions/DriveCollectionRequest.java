@@ -106,6 +106,27 @@ public class DriveCollectionRequest extends BaseCollectionRequest<DriveCollectio
         return (DriveCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDriveCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DriveCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDriveCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDriveCollectionRequest)this;
+    }
     public IDriveCollectionPage buildFromResponse(final DriveCollectionResponse response) {
         final IDriveCollectionRequestBuilder builder;
         if (response.nextLink != null) {

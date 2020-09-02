@@ -106,6 +106,27 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
         return (SessionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISessionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SessionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISessionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISessionCollectionRequest)this;
+    }
     public ISessionCollectionPage buildFromResponse(final SessionCollectionResponse response) {
         final ISessionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

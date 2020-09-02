@@ -106,6 +106,27 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
         return (TokenLifetimePolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITokenLifetimePolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TokenLifetimePolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITokenLifetimePolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITokenLifetimePolicyCollectionRequest)this;
+    }
     public ITokenLifetimePolicyCollectionPage buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {
         final ITokenLifetimePolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

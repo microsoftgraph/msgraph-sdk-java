@@ -107,6 +107,27 @@ public class ServicePrincipalCollectionRequest extends BaseCollectionRequest<Ser
         return (ServicePrincipalCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IServicePrincipalCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ServicePrincipalCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IServicePrincipalCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IServicePrincipalCollectionRequest)this;
+    }
     public IServicePrincipalCollectionPage buildFromResponse(final ServicePrincipalCollectionResponse response) {
         final IServicePrincipalCollectionRequestBuilder builder;
         if (response.nextLink != null) {

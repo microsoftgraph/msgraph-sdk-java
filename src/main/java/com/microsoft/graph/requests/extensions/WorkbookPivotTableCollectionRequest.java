@@ -106,6 +106,27 @@ public class WorkbookPivotTableCollectionRequest extends BaseCollectionRequest<W
         return (WorkbookPivotTableCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookPivotTableCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookPivotTableCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookPivotTableCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookPivotTableCollectionRequest)this;
+    }
     public IWorkbookPivotTableCollectionPage buildFromResponse(final WorkbookPivotTableCollectionResponse response) {
         final IWorkbookPivotTableCollectionRequestBuilder builder;
         if (response.nextLink != null) {

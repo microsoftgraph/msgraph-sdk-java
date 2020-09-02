@@ -106,6 +106,27 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
         return (ColumnDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IColumnDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ColumnDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IColumnDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IColumnDefinitionCollectionRequest)this;
+    }
     public IColumnDefinitionCollectionPage buildFromResponse(final ColumnDefinitionCollectionResponse response) {
         final IColumnDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

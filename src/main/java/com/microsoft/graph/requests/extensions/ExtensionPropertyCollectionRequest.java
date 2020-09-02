@@ -106,6 +106,27 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
         return (ExtensionPropertyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IExtensionPropertyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ExtensionPropertyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IExtensionPropertyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IExtensionPropertyCollectionRequest)this;
+    }
     public IExtensionPropertyCollectionPage buildFromResponse(final ExtensionPropertyCollectionResponse response) {
         final IExtensionPropertyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

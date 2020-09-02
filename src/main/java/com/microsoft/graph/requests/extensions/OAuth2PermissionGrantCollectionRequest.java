@@ -105,6 +105,27 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
         return (OAuth2PermissionGrantCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OAuth2PermissionGrantCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOAuth2PermissionGrantCollectionRequest)this;
+    }
     public IOAuth2PermissionGrantCollectionPage buildFromResponse(final OAuth2PermissionGrantCollectionResponse response) {
         final IOAuth2PermissionGrantCollectionRequestBuilder builder;
         if (response.nextLink != null) {

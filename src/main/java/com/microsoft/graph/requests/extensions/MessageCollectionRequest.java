@@ -107,6 +107,27 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
         return (MessageCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMessageCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MessageCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMessageCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMessageCollectionRequest)this;
+    }
     public IMessageCollectionPage buildFromResponse(final MessageCollectionResponse response) {
         final IMessageCollectionRequestBuilder builder;
         if (response.nextLink != null) {

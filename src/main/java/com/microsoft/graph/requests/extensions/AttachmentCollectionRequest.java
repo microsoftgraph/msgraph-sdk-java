@@ -108,6 +108,27 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
         return (AttachmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAttachmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AttachmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAttachmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAttachmentCollectionRequest)this;
+    }
     public IAttachmentCollectionPage buildFromResponse(final AttachmentCollectionResponse response) {
         final IAttachmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

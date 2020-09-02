@@ -107,6 +107,27 @@ public class WorkbookTableCollectionRequest extends BaseCollectionRequest<Workbo
         return (WorkbookTableCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookTableCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookTableCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookTableCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookTableCollectionRequest)this;
+    }
     public IWorkbookTableCollectionPage buildFromResponse(final WorkbookTableCollectionResponse response) {
         final IWorkbookTableCollectionRequestBuilder builder;
         if (response.nextLink != null) {

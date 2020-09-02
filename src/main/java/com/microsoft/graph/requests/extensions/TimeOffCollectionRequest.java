@@ -106,6 +106,27 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
         return (TimeOffCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITimeOffCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TimeOffCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITimeOffCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITimeOffCollectionRequest)this;
+    }
     public ITimeOffCollectionPage buildFromResponse(final TimeOffCollectionResponse response) {
         final ITimeOffCollectionRequestBuilder builder;
         if (response.nextLink != null) {

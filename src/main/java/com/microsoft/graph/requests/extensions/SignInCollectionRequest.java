@@ -106,6 +106,27 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
         return (SignInCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISignInCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SignInCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISignInCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISignInCollectionRequest)this;
+    }
     public ISignInCollectionPage buildFromResponse(final SignInCollectionResponse response) {
         final ISignInCollectionRequestBuilder builder;
         if (response.nextLink != null) {

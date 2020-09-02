@@ -105,6 +105,27 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
         return (GroupSettingTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IGroupSettingTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (GroupSettingTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IGroupSettingTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IGroupSettingTemplateCollectionRequest)this;
+    }
     public IGroupSettingTemplateCollectionPage buildFromResponse(final GroupSettingTemplateCollectionResponse response) {
         final IGroupSettingTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

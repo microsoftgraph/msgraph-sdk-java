@@ -105,6 +105,27 @@ public class ContactFolderCollectionRequest extends BaseCollectionRequest<Contac
         return (ContactFolderCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IContactFolderCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ContactFolderCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IContactFolderCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IContactFolderCollectionRequest)this;
+    }
     public IContactFolderCollectionPage buildFromResponse(final ContactFolderCollectionResponse response) {
         final IContactFolderCollectionRequestBuilder builder;
         if (response.nextLink != null) {

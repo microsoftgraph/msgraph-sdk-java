@@ -106,6 +106,27 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
         return (InferenceClassificationOverrideCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IInferenceClassificationOverrideCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (InferenceClassificationOverrideCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IInferenceClassificationOverrideCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IInferenceClassificationOverrideCollectionRequest)this;
+    }
     public IInferenceClassificationOverrideCollectionPage buildFromResponse(final InferenceClassificationOverrideCollectionResponse response) {
         final IInferenceClassificationOverrideCollectionRequestBuilder builder;
         if (response.nextLink != null) {

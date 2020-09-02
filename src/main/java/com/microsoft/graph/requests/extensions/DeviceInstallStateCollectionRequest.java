@@ -106,6 +106,27 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
         return (DeviceInstallStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceInstallStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceInstallStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceInstallStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceInstallStateCollectionRequest)this;
+    }
     public IDeviceInstallStateCollectionPage buildFromResponse(final DeviceInstallStateCollectionResponse response) {
         final IDeviceInstallStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

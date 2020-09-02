@@ -106,6 +106,27 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
         return (ThumbnailSetCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IThumbnailSetCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ThumbnailSetCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IThumbnailSetCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IThumbnailSetCollectionRequest)this;
+    }
     public IThumbnailSetCollectionPage buildFromResponse(final ThumbnailSetCollectionResponse response) {
         final IThumbnailSetCollectionRequestBuilder builder;
         if (response.nextLink != null) {

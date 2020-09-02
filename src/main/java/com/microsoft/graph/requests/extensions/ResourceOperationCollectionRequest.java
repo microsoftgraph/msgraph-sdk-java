@@ -106,6 +106,27 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
         return (ResourceOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IResourceOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ResourceOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IResourceOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IResourceOperationCollectionRequest)this;
+    }
     public IResourceOperationCollectionPage buildFromResponse(final ResourceOperationCollectionResponse response) {
         final IResourceOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

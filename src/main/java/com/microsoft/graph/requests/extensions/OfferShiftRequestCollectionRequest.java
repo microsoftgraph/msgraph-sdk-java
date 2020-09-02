@@ -106,6 +106,27 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
         return (OfferShiftRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOfferShiftRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OfferShiftRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOfferShiftRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOfferShiftRequestCollectionRequest)this;
+    }
     public IOfferShiftRequestCollectionPage buildFromResponse(final OfferShiftRequestCollectionResponse response) {
         final IOfferShiftRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -105,6 +105,27 @@ public class SubscribedSkuCollectionRequest extends BaseCollectionRequest<Subscr
         return (SubscribedSkuCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISubscribedSkuCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SubscribedSkuCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISubscribedSkuCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISubscribedSkuCollectionRequest)this;
+    }
     public ISubscribedSkuCollectionPage buildFromResponse(final SubscribedSkuCollectionResponse response) {
         final ISubscribedSkuCollectionRequestBuilder builder;
         if (response.nextLink != null) {

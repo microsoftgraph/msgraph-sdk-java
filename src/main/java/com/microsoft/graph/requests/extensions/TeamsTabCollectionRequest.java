@@ -106,6 +106,27 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
         return (TeamsTabCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamsTabCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamsTabCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamsTabCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamsTabCollectionRequest)this;
+    }
     public ITeamsTabCollectionPage buildFromResponse(final TeamsTabCollectionResponse response) {
         final ITeamsTabCollectionRequestBuilder builder;
         if (response.nextLink != null) {

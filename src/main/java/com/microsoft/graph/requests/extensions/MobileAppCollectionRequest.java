@@ -107,6 +107,27 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileAppC
         return (MobileAppCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppCollectionRequest)this;
+    }
     public IMobileAppCollectionPage buildFromResponse(final MobileAppCollectionResponse response) {
         final IMobileAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {

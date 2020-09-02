@@ -106,6 +106,27 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         return (ManagedAppStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedAppStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedAppStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedAppStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedAppStatusCollectionRequest)this;
+    }
     public IManagedAppStatusCollectionPage buildFromResponse(final ManagedAppStatusCollectionResponse response) {
         final IManagedAppStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

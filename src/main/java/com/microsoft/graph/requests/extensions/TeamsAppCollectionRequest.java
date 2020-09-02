@@ -106,6 +106,27 @@ public class TeamsAppCollectionRequest extends BaseCollectionRequest<TeamsAppCol
         return (TeamsAppCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamsAppCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamsAppCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamsAppCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamsAppCollectionRequest)this;
+    }
     public ITeamsAppCollectionPage buildFromResponse(final TeamsAppCollectionResponse response) {
         final ITeamsAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {

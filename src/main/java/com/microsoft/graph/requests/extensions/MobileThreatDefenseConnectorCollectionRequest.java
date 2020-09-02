@@ -106,6 +106,27 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
         return (MobileThreatDefenseConnectorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileThreatDefenseConnectorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileThreatDefenseConnectorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileThreatDefenseConnectorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileThreatDefenseConnectorCollectionRequest)this;
+    }
     public IMobileThreatDefenseConnectorCollectionPage buildFromResponse(final MobileThreatDefenseConnectorCollectionResponse response) {
         final IMobileThreatDefenseConnectorCollectionRequestBuilder builder;
         if (response.nextLink != null) {

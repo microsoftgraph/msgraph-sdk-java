@@ -106,6 +106,27 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<ChannelColle
         return (ChannelCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IChannelCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ChannelCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IChannelCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IChannelCollectionRequest)this;
+    }
     public IChannelCollectionPage buildFromResponse(final ChannelCollectionResponse response) {
         final IChannelCollectionRequestBuilder builder;
         if (response.nextLink != null) {

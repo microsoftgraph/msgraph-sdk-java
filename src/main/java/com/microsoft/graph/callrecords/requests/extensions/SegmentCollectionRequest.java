@@ -106,6 +106,27 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
         return (SegmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISegmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SegmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISegmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISegmentCollectionRequest)this;
+    }
     public ISegmentCollectionPage buildFromResponse(final SegmentCollectionResponse response) {
         final ISegmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -106,6 +106,27 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
         return (NotificationMessageTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public INotificationMessageTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (NotificationMessageTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public INotificationMessageTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (INotificationMessageTemplateCollectionRequest)this;
+    }
     public INotificationMessageTemplateCollectionPage buildFromResponse(final NotificationMessageTemplateCollectionResponse response) {
         final INotificationMessageTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

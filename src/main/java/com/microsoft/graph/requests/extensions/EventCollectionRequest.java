@@ -107,6 +107,27 @@ public class EventCollectionRequest extends BaseCollectionRequest<EventCollectio
         return (EventCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEventCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EventCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEventCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEventCollectionRequest)this;
+    }
     public IEventCollectionPage buildFromResponse(final EventCollectionResponse response) {
         final IEventCollectionRequestBuilder builder;
         if (response.nextLink != null) {
