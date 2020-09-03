@@ -80,6 +80,23 @@ public interface ISchedulingGroupRequest extends IHttpRequest {
     SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException;
 
     /**
+     * Posts a SchedulingGroup with a new object
+     *
+     * @param newSchedulingGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback);
+
+    /**
+     * Posts a SchedulingGroup with a new object
+     *
+     * @param newSchedulingGroup the object to create/update
+     * @return the created SchedulingGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SchedulingGroup put(final SchedulingGroup newSchedulingGroup) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

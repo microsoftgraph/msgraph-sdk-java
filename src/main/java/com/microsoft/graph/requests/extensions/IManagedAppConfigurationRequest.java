@@ -80,6 +80,23 @@ public interface IManagedAppConfigurationRequest extends IHttpRequest {
     ManagedAppConfiguration post(final ManagedAppConfiguration newManagedAppConfiguration) throws ClientException;
 
     /**
+     * Posts a ManagedAppConfiguration with a new object
+     *
+     * @param newManagedAppConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<ManagedAppConfiguration> callback);
+
+    /**
+     * Posts a ManagedAppConfiguration with a new object
+     *
+     * @param newManagedAppConfiguration the object to create/update
+     * @return the created ManagedAppConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedAppConfiguration put(final ManagedAppConfiguration newManagedAppConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

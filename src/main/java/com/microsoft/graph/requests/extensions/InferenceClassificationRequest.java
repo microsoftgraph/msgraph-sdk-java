@@ -116,6 +116,27 @@ public class InferenceClassificationRequest extends BaseRequest implements IInfe
     }
 
     /**
+     * Creates a InferenceClassification with a new object
+     *
+     * @param newInferenceClassification the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final InferenceClassification newInferenceClassification, final ICallback<InferenceClassification> callback) {
+        send(HttpMethod.PUT, callback, newInferenceClassification);
+    }
+
+    /**
+     * Creates a InferenceClassification with a new object
+     *
+     * @param newInferenceClassification the object to create/update
+     * @return the created InferenceClassification
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public InferenceClassification put(final InferenceClassification newInferenceClassification) throws ClientException {
+        return send(HttpMethod.PUT, newInferenceClassification);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

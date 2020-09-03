@@ -80,6 +80,23 @@ public interface IAndroidManagedAppProtectionRequest extends IHttpRequest {
     AndroidManagedAppProtection post(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException;
 
     /**
+     * Posts a AndroidManagedAppProtection with a new object
+     *
+     * @param newAndroidManagedAppProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<AndroidManagedAppProtection> callback);
+
+    /**
+     * Posts a AndroidManagedAppProtection with a new object
+     *
+     * @param newAndroidManagedAppProtection the object to create/update
+     * @return the created AndroidManagedAppProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidManagedAppProtection put(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IIosDeviceFeaturesConfigurationRequest extends IHttpRequest {
     IosDeviceFeaturesConfiguration post(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException;
 
     /**
+     * Posts a IosDeviceFeaturesConfiguration with a new object
+     *
+     * @param newIosDeviceFeaturesConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<IosDeviceFeaturesConfiguration> callback);
+
+    /**
+     * Posts a IosDeviceFeaturesConfiguration with a new object
+     *
+     * @param newIosDeviceFeaturesConfiguration the object to create/update
+     * @return the created IosDeviceFeaturesConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosDeviceFeaturesConfiguration put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

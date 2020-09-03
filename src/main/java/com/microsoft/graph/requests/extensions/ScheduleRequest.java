@@ -148,6 +148,27 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
     }
 
     /**
+     * Creates a Schedule with a new object
+     *
+     * @param newSchedule the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Schedule newSchedule, final ICallback<Schedule> callback) {
+        send(HttpMethod.PUT, callback, newSchedule);
+    }
+
+    /**
+     * Creates a Schedule with a new object
+     *
+     * @param newSchedule the object to create/update
+     * @return the created Schedule
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Schedule put(final Schedule newSchedule) throws ClientException {
+        return send(HttpMethod.PUT, newSchedule);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

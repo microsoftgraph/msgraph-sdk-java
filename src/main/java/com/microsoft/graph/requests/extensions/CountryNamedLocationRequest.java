@@ -112,6 +112,27 @@ public class CountryNamedLocationRequest extends BaseRequest implements ICountry
     }
 
     /**
+     * Creates a CountryNamedLocation with a new object
+     *
+     * @param newCountryNamedLocation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CountryNamedLocation newCountryNamedLocation, final ICallback<CountryNamedLocation> callback) {
+        send(HttpMethod.PUT, callback, newCountryNamedLocation);
+    }
+
+    /**
+     * Creates a CountryNamedLocation with a new object
+     *
+     * @param newCountryNamedLocation the object to create/update
+     * @return the created CountryNamedLocation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CountryNamedLocation put(final CountryNamedLocation newCountryNamedLocation) throws ClientException {
+        return send(HttpMethod.PUT, newCountryNamedLocation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

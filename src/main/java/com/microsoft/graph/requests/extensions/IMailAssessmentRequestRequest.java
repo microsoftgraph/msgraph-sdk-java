@@ -80,6 +80,23 @@ public interface IMailAssessmentRequestRequest extends IHttpRequest {
     MailAssessmentRequest post(final MailAssessmentRequest newMailAssessmentRequest) throws ClientException;
 
     /**
+     * Posts a MailAssessmentRequest with a new object
+     *
+     * @param newMailAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MailAssessmentRequest newMailAssessmentRequest, final ICallback<MailAssessmentRequest> callback);
+
+    /**
+     * Posts a MailAssessmentRequest with a new object
+     *
+     * @param newMailAssessmentRequest the object to create/update
+     * @return the created MailAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MailAssessmentRequest put(final MailAssessmentRequest newMailAssessmentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

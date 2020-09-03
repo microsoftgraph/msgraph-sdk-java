@@ -114,6 +114,27 @@ public class IdentityContainerRequest extends BaseRequest implements IIdentityCo
     }
 
     /**
+     * Creates a IdentityContainer with a new object
+     *
+     * @param newIdentityContainer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback) {
+        send(HttpMethod.PUT, callback, newIdentityContainer);
+    }
+
+    /**
+     * Creates a IdentityContainer with a new object
+     *
+     * @param newIdentityContainer the object to create/update
+     * @return the created IdentityContainer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IdentityContainer put(final IdentityContainer newIdentityContainer) throws ClientException {
+        return send(HttpMethod.PUT, newIdentityContainer);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

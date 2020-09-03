@@ -112,6 +112,27 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
     }
 
     /**
+     * Creates a GroupLifecyclePolicy with a new object
+     *
+     * @param newGroupLifecyclePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback) {
+        send(HttpMethod.PUT, callback, newGroupLifecyclePolicy);
+    }
+
+    /**
+     * Creates a GroupLifecyclePolicy with a new object
+     *
+     * @param newGroupLifecyclePolicy the object to create/update
+     * @return the created GroupLifecyclePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupLifecyclePolicy put(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newGroupLifecyclePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

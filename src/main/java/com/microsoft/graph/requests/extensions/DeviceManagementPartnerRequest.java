@@ -112,6 +112,27 @@ public class DeviceManagementPartnerRequest extends BaseRequest implements IDevi
     }
 
     /**
+     * Creates a DeviceManagementPartner with a new object
+     *
+     * @param newDeviceManagementPartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementPartner);
+    }
+
+    /**
+     * Creates a DeviceManagementPartner with a new object
+     *
+     * @param newDeviceManagementPartner the object to create/update
+     * @return the created DeviceManagementPartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementPartner put(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementPartner);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

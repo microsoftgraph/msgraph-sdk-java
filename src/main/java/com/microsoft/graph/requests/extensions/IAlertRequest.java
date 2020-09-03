@@ -80,6 +80,23 @@ public interface IAlertRequest extends IHttpRequest {
     Alert post(final Alert newAlert) throws ClientException;
 
     /**
+     * Posts a Alert with a new object
+     *
+     * @param newAlert the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Alert newAlert, final ICallback<Alert> callback);
+
+    /**
+     * Posts a Alert with a new object
+     *
+     * @param newAlert the object to create/update
+     * @return the created Alert
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Alert put(final Alert newAlert) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

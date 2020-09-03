@@ -135,6 +135,27 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
     }
 
     /**
+     * Creates a ManagedAppRegistration with a new object
+     *
+     * @param newManagedAppRegistration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAppRegistration newManagedAppRegistration, final ICallback<ManagedAppRegistration> callback) {
+        send(HttpMethod.PUT, callback, newManagedAppRegistration);
+    }
+
+    /**
+     * Creates a ManagedAppRegistration with a new object
+     *
+     * @param newManagedAppRegistration the object to create/update
+     * @return the created ManagedAppRegistration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAppRegistration put(final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAppRegistration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IInviteParticipantsOperationRequest extends IHttpRequest {
     InviteParticipantsOperation post(final InviteParticipantsOperation newInviteParticipantsOperation) throws ClientException;
 
     /**
+     * Posts a InviteParticipantsOperation with a new object
+     *
+     * @param newInviteParticipantsOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback);
+
+    /**
+     * Posts a InviteParticipantsOperation with a new object
+     *
+     * @param newInviteParticipantsOperation the object to create/update
+     * @return the created InviteParticipantsOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    InviteParticipantsOperation put(final InviteParticipantsOperation newInviteParticipantsOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

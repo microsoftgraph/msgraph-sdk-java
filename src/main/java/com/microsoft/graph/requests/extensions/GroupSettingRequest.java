@@ -112,6 +112,27 @@ public class GroupSettingRequest extends BaseRequest implements IGroupSettingReq
     }
 
     /**
+     * Creates a GroupSetting with a new object
+     *
+     * @param newGroupSetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final GroupSetting newGroupSetting, final ICallback<GroupSetting> callback) {
+        send(HttpMethod.PUT, callback, newGroupSetting);
+    }
+
+    /**
+     * Creates a GroupSetting with a new object
+     *
+     * @param newGroupSetting the object to create/update
+     * @return the created GroupSetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public GroupSetting put(final GroupSetting newGroupSetting) throws ClientException {
+        return send(HttpMethod.PUT, newGroupSetting);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

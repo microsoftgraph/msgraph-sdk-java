@@ -114,6 +114,27 @@ public class WorkbookChartLegendRequest extends BaseRequest implements IWorkbook
     }
 
     /**
+     * Creates a WorkbookChartLegend with a new object
+     *
+     * @param newWorkbookChartLegend the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartLegend);
+    }
+
+    /**
+     * Creates a WorkbookChartLegend with a new object
+     *
+     * @param newWorkbookChartLegend the object to create/update
+     * @return the created WorkbookChartLegend
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartLegend put(final WorkbookChartLegend newWorkbookChartLegend) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartLegend);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

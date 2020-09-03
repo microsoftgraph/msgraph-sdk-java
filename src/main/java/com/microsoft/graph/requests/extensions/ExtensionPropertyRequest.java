@@ -112,6 +112,27 @@ public class ExtensionPropertyRequest extends BaseRequest implements IExtensionP
     }
 
     /**
+     * Creates a ExtensionProperty with a new object
+     *
+     * @param newExtensionProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback) {
+        send(HttpMethod.PUT, callback, newExtensionProperty);
+    }
+
+    /**
+     * Creates a ExtensionProperty with a new object
+     *
+     * @param newExtensionProperty the object to create/update
+     * @return the created ExtensionProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ExtensionProperty put(final ExtensionProperty newExtensionProperty) throws ClientException {
+        return send(HttpMethod.PUT, newExtensionProperty);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

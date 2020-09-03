@@ -112,6 +112,27 @@ public class WorkbookApplicationRequest extends BaseRequest implements IWorkbook
     }
 
     /**
+     * Creates a WorkbookApplication with a new object
+     *
+     * @param newWorkbookApplication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookApplication newWorkbookApplication, final ICallback<WorkbookApplication> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookApplication);
+    }
+
+    /**
+     * Creates a WorkbookApplication with a new object
+     *
+     * @param newWorkbookApplication the object to create/update
+     * @return the created WorkbookApplication
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookApplication put(final WorkbookApplication newWorkbookApplication) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookApplication);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

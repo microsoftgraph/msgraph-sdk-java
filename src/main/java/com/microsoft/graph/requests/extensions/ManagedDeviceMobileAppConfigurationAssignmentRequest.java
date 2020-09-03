@@ -112,6 +112,27 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
     }
 
     /**
+     * Creates a ManagedDeviceMobileAppConfigurationAssignment with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
+        send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationAssignment);
+    }
+
+    /**
+     * Creates a ManagedDeviceMobileAppConfigurationAssignment with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationAssignment the object to create/update
+     * @return the created ManagedDeviceMobileAppConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedDeviceMobileAppConfigurationAssignment put(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

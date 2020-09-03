@@ -116,6 +116,27 @@ public class PlannerBucketRequest extends BaseRequest implements IPlannerBucketR
     }
 
     /**
+     * Creates a PlannerBucket with a new object
+     *
+     * @param newPlannerBucket the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback) {
+        send(HttpMethod.PUT, callback, newPlannerBucket);
+    }
+
+    /**
+     * Creates a PlannerBucket with a new object
+     *
+     * @param newPlannerBucket the object to create/update
+     * @return the created PlannerBucket
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerBucket put(final PlannerBucket newPlannerBucket) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerBucket);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class WindowsInformationProtectionNetworkLearningSummaryRequest extends B
     }
 
     /**
+     * Creates a WindowsInformationProtectionNetworkLearningSummary with a new object
+     *
+     * @param newWindowsInformationProtectionNetworkLearningSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary, final ICallback<WindowsInformationProtectionNetworkLearningSummary> callback) {
+        send(HttpMethod.PUT, callback, newWindowsInformationProtectionNetworkLearningSummary);
+    }
+
+    /**
+     * Creates a WindowsInformationProtectionNetworkLearningSummary with a new object
+     *
+     * @param newWindowsInformationProtectionNetworkLearningSummary the object to create/update
+     * @return the created WindowsInformationProtectionNetworkLearningSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsInformationProtectionNetworkLearningSummary put(final WindowsInformationProtectionNetworkLearningSummary newWindowsInformationProtectionNetworkLearningSummary) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsInformationProtectionNetworkLearningSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

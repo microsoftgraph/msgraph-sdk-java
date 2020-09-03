@@ -112,6 +112,27 @@ public class WorkbookChartLineFormatRequest extends BaseRequest implements IWork
     }
 
     /**
+     * Creates a WorkbookChartLineFormat with a new object
+     *
+     * @param newWorkbookChartLineFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartLineFormat newWorkbookChartLineFormat, final ICallback<WorkbookChartLineFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartLineFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartLineFormat with a new object
+     *
+     * @param newWorkbookChartLineFormat the object to create/update
+     * @return the created WorkbookChartLineFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartLineFormat put(final WorkbookChartLineFormat newWorkbookChartLineFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartLineFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

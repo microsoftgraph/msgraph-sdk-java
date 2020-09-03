@@ -112,6 +112,27 @@ public class MultiValueLegacyExtendedPropertyRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a MultiValueLegacyExtendedProperty with a new object
+     *
+     * @param newMultiValueLegacyExtendedProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback) {
+        send(HttpMethod.PUT, callback, newMultiValueLegacyExtendedProperty);
+    }
+
+    /**
+     * Creates a MultiValueLegacyExtendedProperty with a new object
+     *
+     * @param newMultiValueLegacyExtendedProperty the object to create/update
+     * @return the created MultiValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MultiValueLegacyExtendedProperty put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException {
+        return send(HttpMethod.PUT, newMultiValueLegacyExtendedProperty);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

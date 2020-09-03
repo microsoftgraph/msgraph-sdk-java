@@ -80,6 +80,23 @@ public interface IManagedAppOperationRequest extends IHttpRequest {
     ManagedAppOperation post(final ManagedAppOperation newManagedAppOperation) throws ClientException;
 
     /**
+     * Posts a ManagedAppOperation with a new object
+     *
+     * @param newManagedAppOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback);
+
+    /**
+     * Posts a ManagedAppOperation with a new object
+     *
+     * @param newManagedAppOperation the object to create/update
+     * @return the created ManagedAppOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedAppOperation put(final ManagedAppOperation newManagedAppOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

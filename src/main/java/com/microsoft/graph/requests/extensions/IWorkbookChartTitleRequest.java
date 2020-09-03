@@ -80,6 +80,23 @@ public interface IWorkbookChartTitleRequest extends IHttpRequest {
     WorkbookChartTitle post(final WorkbookChartTitle newWorkbookChartTitle) throws ClientException;
 
     /**
+     * Posts a WorkbookChartTitle with a new object
+     *
+     * @param newWorkbookChartTitle the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartTitle newWorkbookChartTitle, final ICallback<WorkbookChartTitle> callback);
+
+    /**
+     * Posts a WorkbookChartTitle with a new object
+     *
+     * @param newWorkbookChartTitle the object to create/update
+     * @return the created WorkbookChartTitle
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartTitle put(final WorkbookChartTitle newWorkbookChartTitle) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class IpNamedLocationRequest extends BaseRequest implements IIpNamedLocat
     }
 
     /**
+     * Creates a IpNamedLocation with a new object
+     *
+     * @param newIpNamedLocation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IpNamedLocation newIpNamedLocation, final ICallback<IpNamedLocation> callback) {
+        send(HttpMethod.PUT, callback, newIpNamedLocation);
+    }
+
+    /**
+     * Creates a IpNamedLocation with a new object
+     *
+     * @param newIpNamedLocation the object to create/update
+     * @return the created IpNamedLocation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IpNamedLocation put(final IpNamedLocation newIpNamedLocation) throws ClientException {
+        return send(HttpMethod.PUT, newIpNamedLocation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

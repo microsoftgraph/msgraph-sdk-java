@@ -112,6 +112,27 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
     }
 
     /**
+     * Creates a IosVppEBook with a new object
+     *
+     * @param newIosVppEBook the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosVppEBook newIosVppEBook, final ICallback<IosVppEBook> callback) {
+        send(HttpMethod.PUT, callback, newIosVppEBook);
+    }
+
+    /**
+     * Creates a IosVppEBook with a new object
+     *
+     * @param newIosVppEBook the object to create/update
+     * @return the created IosVppEBook
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosVppEBook put(final IosVppEBook newIosVppEBook) throws ClientException {
+        return send(HttpMethod.PUT, newIosVppEBook);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

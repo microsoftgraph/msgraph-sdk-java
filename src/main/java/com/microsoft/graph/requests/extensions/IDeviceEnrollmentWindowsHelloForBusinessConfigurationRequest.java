@@ -80,6 +80,23 @@ public interface IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest ex
     DeviceEnrollmentWindowsHelloForBusinessConfiguration post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException;
 
     /**
+     * Posts a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback);
+
+    /**
+     * Posts a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
+     * @return the created DeviceEnrollmentWindowsHelloForBusinessConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceEnrollmentWindowsHelloForBusinessConfiguration put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

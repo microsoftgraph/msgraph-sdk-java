@@ -80,6 +80,23 @@ public interface IWorkforceIntegrationRequest extends IHttpRequest {
     WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException;
 
     /**
+     * Posts a WorkforceIntegration with a new object
+     *
+     * @param newWorkforceIntegration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback);
+
+    /**
+     * Posts a WorkforceIntegration with a new object
+     *
+     * @param newWorkforceIntegration the object to create/update
+     * @return the created WorkforceIntegration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkforceIntegration put(final WorkforceIntegration newWorkforceIntegration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

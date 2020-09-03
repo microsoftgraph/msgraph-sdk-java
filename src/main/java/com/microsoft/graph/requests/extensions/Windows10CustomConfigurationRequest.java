@@ -112,6 +112,27 @@ public class Windows10CustomConfigurationRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a Windows10CustomConfiguration with a new object
+     *
+     * @param newWindows10CustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10CustomConfiguration newWindows10CustomConfiguration, final ICallback<Windows10CustomConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10CustomConfiguration);
+    }
+
+    /**
+     * Creates a Windows10CustomConfiguration with a new object
+     *
+     * @param newWindows10CustomConfiguration the object to create/update
+     * @return the created Windows10CustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10CustomConfiguration put(final Windows10CustomConfiguration newWindows10CustomConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10CustomConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -128,6 +128,27 @@ public class ContactFolderRequest extends BaseRequest implements IContactFolderR
     }
 
     /**
+     * Creates a ContactFolder with a new object
+     *
+     * @param newContactFolder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ContactFolder newContactFolder, final ICallback<ContactFolder> callback) {
+        send(HttpMethod.PUT, callback, newContactFolder);
+    }
+
+    /**
+     * Creates a ContactFolder with a new object
+     *
+     * @param newContactFolder the object to create/update
+     * @return the created ContactFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ContactFolder put(final ContactFolder newContactFolder) throws ClientException {
+        return send(HttpMethod.PUT, newContactFolder);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

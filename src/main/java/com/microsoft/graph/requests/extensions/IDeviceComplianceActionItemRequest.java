@@ -80,6 +80,23 @@ public interface IDeviceComplianceActionItemRequest extends IHttpRequest {
     DeviceComplianceActionItem post(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceActionItem with a new object
+     *
+     * @param newDeviceComplianceActionItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback);
+
+    /**
+     * Posts a DeviceComplianceActionItem with a new object
+     *
+     * @param newDeviceComplianceActionItem the object to create/update
+     * @return the created DeviceComplianceActionItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceActionItem put(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -116,6 +116,27 @@ public class NotificationMessageTemplateRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a NotificationMessageTemplate with a new object
+     *
+     * @param newNotificationMessageTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
+        send(HttpMethod.PUT, callback, newNotificationMessageTemplate);
+    }
+
+    /**
+     * Creates a NotificationMessageTemplate with a new object
+     *
+     * @param newNotificationMessageTemplate the object to create/update
+     * @return the created NotificationMessageTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public NotificationMessageTemplate put(final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newNotificationMessageTemplate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

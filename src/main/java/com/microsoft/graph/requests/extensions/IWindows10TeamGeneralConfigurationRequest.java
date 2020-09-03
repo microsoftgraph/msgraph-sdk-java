@@ -80,6 +80,23 @@ public interface IWindows10TeamGeneralConfigurationRequest extends IHttpRequest 
     Windows10TeamGeneralConfiguration post(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration) throws ClientException;
 
     /**
+     * Posts a Windows10TeamGeneralConfiguration with a new object
+     *
+     * @param newWindows10TeamGeneralConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback);
+
+    /**
+     * Posts a Windows10TeamGeneralConfiguration with a new object
+     *
+     * @param newWindows10TeamGeneralConfiguration the object to create/update
+     * @return the created Windows10TeamGeneralConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10TeamGeneralConfiguration put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

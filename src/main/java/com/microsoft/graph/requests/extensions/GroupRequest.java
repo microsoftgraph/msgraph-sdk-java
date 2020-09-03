@@ -165,6 +165,27 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
     }
 
     /**
+     * Creates a Group with a new object
+     *
+     * @param newGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Group newGroup, final ICallback<Group> callback) {
+        send(HttpMethod.PUT, callback, newGroup);
+    }
+
+    /**
+     * Creates a Group with a new object
+     *
+     * @param newGroup the object to create/update
+     * @return the created Group
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Group put(final Group newGroup) throws ClientException {
+        return send(HttpMethod.PUT, newGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

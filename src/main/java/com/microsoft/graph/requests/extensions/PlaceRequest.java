@@ -127,6 +127,27 @@ public class PlaceRequest extends BaseRequest implements IPlaceRequest {
     }
 
     /**
+     * Creates a Place with a new object
+     *
+     * @param newPlace the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Place newPlace, final ICallback<Place> callback) {
+        send(HttpMethod.PUT, callback, newPlace);
+    }
+
+    /**
+     * Creates a Place with a new object
+     *
+     * @param newPlace the object to create/update
+     * @return the created Place
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Place put(final Place newPlace) throws ClientException {
+        return send(HttpMethod.PUT, newPlace);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class OnenoteOperationRequest extends BaseRequest implements IOnenoteOper
     }
 
     /**
+     * Creates a OnenoteOperation with a new object
+     *
+     * @param newOnenoteOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback) {
+        send(HttpMethod.PUT, callback, newOnenoteOperation);
+    }
+
+    /**
+     * Creates a OnenoteOperation with a new object
+     *
+     * @param newOnenoteOperation the object to create/update
+     * @return the created OnenoteOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenoteOperation put(final OnenoteOperation newOnenoteOperation) throws ClientException {
+        return send(HttpMethod.PUT, newOnenoteOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

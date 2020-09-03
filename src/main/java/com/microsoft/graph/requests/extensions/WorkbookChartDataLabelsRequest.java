@@ -114,6 +114,27 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
     }
 
     /**
+     * Creates a WorkbookChartDataLabels with a new object
+     *
+     * @param newWorkbookChartDataLabels the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<WorkbookChartDataLabels> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartDataLabels);
+    }
+
+    /**
+     * Creates a WorkbookChartDataLabels with a new object
+     *
+     * @param newWorkbookChartDataLabels the object to create/update
+     * @return the created WorkbookChartDataLabels
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartDataLabels put(final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartDataLabels);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IMacOSOfficeSuiteAppRequest extends IHttpRequest {
     MacOSOfficeSuiteApp post(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) throws ClientException;
 
     /**
+     * Posts a MacOSOfficeSuiteApp with a new object
+     *
+     * @param newMacOSOfficeSuiteApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback);
+
+    /**
+     * Posts a MacOSOfficeSuiteApp with a new object
+     *
+     * @param newMacOSOfficeSuiteApp the object to create/update
+     * @return the created MacOSOfficeSuiteApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSOfficeSuiteApp put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

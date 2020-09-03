@@ -80,6 +80,23 @@ public interface IManagedDeviceRequest extends IHttpRequest {
     ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException;
 
     /**
+     * Posts a ManagedDevice with a new object
+     *
+     * @param newManagedDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback);
+
+    /**
+     * Posts a ManagedDevice with a new object
+     *
+     * @param newManagedDevice the object to create/update
+     * @return the created ManagedDevice
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedDevice put(final ManagedDevice newManagedDevice) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class ShiftRequest extends BaseRequest implements IShiftRequest {
     }
 
     /**
+     * Creates a Shift with a new object
+     *
+     * @param newShift the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Shift newShift, final ICallback<Shift> callback) {
+        send(HttpMethod.PUT, callback, newShift);
+    }
+
+    /**
+     * Creates a Shift with a new object
+     *
+     * @param newShift the object to create/update
+     * @return the created Shift
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Shift put(final Shift newShift) throws ClientException {
+        return send(HttpMethod.PUT, newShift);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

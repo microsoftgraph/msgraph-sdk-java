@@ -112,6 +112,27 @@ public class DeviceComplianceUserStatusRequest extends BaseRequest implements ID
     }
 
     /**
+     * Creates a DeviceComplianceUserStatus with a new object
+     *
+     * @param newDeviceComplianceUserStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<DeviceComplianceUserStatus> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceUserStatus);
+    }
+
+    /**
+     * Creates a DeviceComplianceUserStatus with a new object
+     *
+     * @param newDeviceComplianceUserStatus the object to create/update
+     * @return the created DeviceComplianceUserStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceUserStatus put(final DeviceComplianceUserStatus newDeviceComplianceUserStatus) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceUserStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

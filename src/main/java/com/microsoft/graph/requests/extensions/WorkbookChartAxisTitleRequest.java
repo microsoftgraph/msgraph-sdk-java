@@ -114,6 +114,27 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
     }
 
     /**
+     * Creates a WorkbookChartAxisTitle with a new object
+     *
+     * @param newWorkbookChartAxisTitle the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartAxisTitle);
+    }
+
+    /**
+     * Creates a WorkbookChartAxisTitle with a new object
+     *
+     * @param newWorkbookChartAxisTitle the object to create/update
+     * @return the created WorkbookChartAxisTitle
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartAxisTitle put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartAxisTitle);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

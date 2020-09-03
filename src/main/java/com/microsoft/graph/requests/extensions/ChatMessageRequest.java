@@ -120,6 +120,27 @@ public class ChatMessageRequest extends BaseRequest implements IChatMessageReque
     }
 
     /**
+     * Creates a ChatMessage with a new object
+     *
+     * @param newChatMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
+        send(HttpMethod.PUT, callback, newChatMessage);
+    }
+
+    /**
+     * Creates a ChatMessage with a new object
+     *
+     * @param newChatMessage the object to create/update
+     * @return the created ChatMessage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ChatMessage put(final ChatMessage newChatMessage) throws ClientException {
+        return send(HttpMethod.PUT, newChatMessage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

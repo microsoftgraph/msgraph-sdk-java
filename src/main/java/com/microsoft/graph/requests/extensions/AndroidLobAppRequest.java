@@ -112,6 +112,27 @@ public class AndroidLobAppRequest extends BaseRequest implements IAndroidLobAppR
     }
 
     /**
+     * Creates a AndroidLobApp with a new object
+     *
+     * @param newAndroidLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidLobApp newAndroidLobApp, final ICallback<AndroidLobApp> callback) {
+        send(HttpMethod.PUT, callback, newAndroidLobApp);
+    }
+
+    /**
+     * Creates a AndroidLobApp with a new object
+     *
+     * @param newAndroidLobApp the object to create/update
+     * @return the created AndroidLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidLobApp put(final AndroidLobApp newAndroidLobApp) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidLobApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

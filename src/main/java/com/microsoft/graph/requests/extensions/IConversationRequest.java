@@ -80,6 +80,23 @@ public interface IConversationRequest extends IHttpRequest {
     Conversation post(final Conversation newConversation) throws ClientException;
 
     /**
+     * Posts a Conversation with a new object
+     *
+     * @param newConversation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Conversation newConversation, final ICallback<Conversation> callback);
+
+    /**
+     * Posts a Conversation with a new object
+     *
+     * @param newConversation the object to create/update
+     * @return the created Conversation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Conversation put(final Conversation newConversation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

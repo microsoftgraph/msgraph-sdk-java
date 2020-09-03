@@ -118,6 +118,27 @@ public class IosManagedAppProtectionRequest extends BaseRequest implements IIosM
     }
 
     /**
+     * Creates a IosManagedAppProtection with a new object
+     *
+     * @param newIosManagedAppProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosManagedAppProtection newIosManagedAppProtection, final ICallback<IosManagedAppProtection> callback) {
+        send(HttpMethod.PUT, callback, newIosManagedAppProtection);
+    }
+
+    /**
+     * Creates a IosManagedAppProtection with a new object
+     *
+     * @param newIosManagedAppProtection the object to create/update
+     * @return the created IosManagedAppProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosManagedAppProtection put(final IosManagedAppProtection newIosManagedAppProtection) throws ClientException {
+        return send(HttpMethod.PUT, newIosManagedAppProtection);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

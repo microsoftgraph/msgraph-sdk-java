@@ -116,6 +116,27 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
     }
 
     /**
+     * Creates a ItemAnalytics with a new object
+     *
+     * @param newItemAnalytics the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemAnalytics newItemAnalytics, final ICallback<ItemAnalytics> callback) {
+        send(HttpMethod.PUT, callback, newItemAnalytics);
+    }
+
+    /**
+     * Creates a ItemAnalytics with a new object
+     *
+     * @param newItemAnalytics the object to create/update
+     * @return the created ItemAnalytics
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemAnalytics put(final ItemAnalytics newItemAnalytics) throws ClientException {
+        return send(HttpMethod.PUT, newItemAnalytics);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -113,6 +113,27 @@ public class CalendarSharingMessageRequest extends BaseRequest implements ICalen
     }
 
     /**
+     * Creates a CalendarSharingMessage with a new object
+     *
+     * @param newCalendarSharingMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback) {
+        send(HttpMethod.PUT, callback, newCalendarSharingMessage);
+    }
+
+    /**
+     * Creates a CalendarSharingMessage with a new object
+     *
+     * @param newCalendarSharingMessage the object to create/update
+     * @return the created CalendarSharingMessage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CalendarSharingMessage put(final CalendarSharingMessage newCalendarSharingMessage) throws ClientException {
+        return send(HttpMethod.PUT, newCalendarSharingMessage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

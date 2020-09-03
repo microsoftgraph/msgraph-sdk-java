@@ -80,6 +80,23 @@ public interface IApplePushNotificationCertificateRequest extends IHttpRequest {
     ApplePushNotificationCertificate post(final ApplePushNotificationCertificate newApplePushNotificationCertificate) throws ClientException;
 
     /**
+     * Posts a ApplePushNotificationCertificate with a new object
+     *
+     * @param newApplePushNotificationCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback);
+
+    /**
+     * Posts a ApplePushNotificationCertificate with a new object
+     *
+     * @param newApplePushNotificationCertificate the object to create/update
+     * @return the created ApplePushNotificationCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ApplePushNotificationCertificate put(final ApplePushNotificationCertificate newApplePushNotificationCertificate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

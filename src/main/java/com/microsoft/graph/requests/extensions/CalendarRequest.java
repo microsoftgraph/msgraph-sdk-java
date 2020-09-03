@@ -131,6 +131,27 @@ public class CalendarRequest extends BaseRequest implements ICalendarRequest {
     }
 
     /**
+     * Creates a Calendar with a new object
+     *
+     * @param newCalendar the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Calendar newCalendar, final ICallback<Calendar> callback) {
+        send(HttpMethod.PUT, callback, newCalendar);
+    }
+
+    /**
+     * Creates a Calendar with a new object
+     *
+     * @param newCalendar the object to create/update
+     * @return the created Calendar
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Calendar put(final Calendar newCalendar) throws ClientException {
+        return send(HttpMethod.PUT, newCalendar);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

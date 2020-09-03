@@ -114,6 +114,27 @@ public class ItemActivityRequest extends BaseRequest implements IItemActivityReq
     }
 
     /**
+     * Creates a ItemActivity with a new object
+     *
+     * @param newItemActivity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemActivity newItemActivity, final ICallback<ItemActivity> callback) {
+        send(HttpMethod.PUT, callback, newItemActivity);
+    }
+
+    /**
+     * Creates a ItemActivity with a new object
+     *
+     * @param newItemActivity the object to create/update
+     * @return the created ItemActivity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemActivity put(final ItemActivity newItemActivity) throws ClientException {
+        return send(HttpMethod.PUT, newItemActivity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

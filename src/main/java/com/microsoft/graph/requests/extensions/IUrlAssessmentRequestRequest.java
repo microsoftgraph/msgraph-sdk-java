@@ -80,6 +80,23 @@ public interface IUrlAssessmentRequestRequest extends IHttpRequest {
     UrlAssessmentRequest post(final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException;
 
     /**
+     * Posts a UrlAssessmentRequest with a new object
+     *
+     * @param newUrlAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback);
+
+    /**
+     * Posts a UrlAssessmentRequest with a new object
+     *
+     * @param newUrlAssessmentRequest the object to create/update
+     * @return the created UrlAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UrlAssessmentRequest put(final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

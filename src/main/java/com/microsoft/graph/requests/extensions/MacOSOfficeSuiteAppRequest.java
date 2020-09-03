@@ -112,6 +112,27 @@ public class MacOSOfficeSuiteAppRequest extends BaseRequest implements IMacOSOff
     }
 
     /**
+     * Creates a MacOSOfficeSuiteApp with a new object
+     *
+     * @param newMacOSOfficeSuiteApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp, final ICallback<MacOSOfficeSuiteApp> callback) {
+        send(HttpMethod.PUT, callback, newMacOSOfficeSuiteApp);
+    }
+
+    /**
+     * Creates a MacOSOfficeSuiteApp with a new object
+     *
+     * @param newMacOSOfficeSuiteApp the object to create/update
+     * @return the created MacOSOfficeSuiteApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSOfficeSuiteApp put(final MacOSOfficeSuiteApp newMacOSOfficeSuiteApp) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSOfficeSuiteApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

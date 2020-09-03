@@ -114,6 +114,27 @@ public class TermsAndConditionsAcceptanceStatusRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a TermsAndConditionsAcceptanceStatus with a new object
+     *
+     * @param newTermsAndConditionsAcceptanceStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback) {
+        send(HttpMethod.PUT, callback, newTermsAndConditionsAcceptanceStatus);
+    }
+
+    /**
+     * Creates a TermsAndConditionsAcceptanceStatus with a new object
+     *
+     * @param newTermsAndConditionsAcceptanceStatus the object to create/update
+     * @return the created TermsAndConditionsAcceptanceStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TermsAndConditionsAcceptanceStatus put(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
+        return send(HttpMethod.PUT, newTermsAndConditionsAcceptanceStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

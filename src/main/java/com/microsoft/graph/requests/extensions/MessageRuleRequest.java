@@ -112,6 +112,27 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
     }
 
     /**
+     * Creates a MessageRule with a new object
+     *
+     * @param newMessageRule the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MessageRule newMessageRule, final ICallback<MessageRule> callback) {
+        send(HttpMethod.PUT, callback, newMessageRule);
+    }
+
+    /**
+     * Creates a MessageRule with a new object
+     *
+     * @param newMessageRule the object to create/update
+     * @return the created MessageRule
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MessageRule put(final MessageRule newMessageRule) throws ClientException {
+        return send(HttpMethod.PUT, newMessageRule);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

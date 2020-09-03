@@ -118,6 +118,27 @@ public class DefaultManagedAppProtectionRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a DefaultManagedAppProtection with a new object
+     *
+     * @param newDefaultManagedAppProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback) {
+        send(HttpMethod.PUT, callback, newDefaultManagedAppProtection);
+    }
+
+    /**
+     * Creates a DefaultManagedAppProtection with a new object
+     *
+     * @param newDefaultManagedAppProtection the object to create/update
+     * @return the created DefaultManagedAppProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DefaultManagedAppProtection put(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
+        return send(HttpMethod.PUT, newDefaultManagedAppProtection);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

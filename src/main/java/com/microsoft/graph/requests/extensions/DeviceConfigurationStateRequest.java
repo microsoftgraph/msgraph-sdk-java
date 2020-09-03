@@ -112,6 +112,27 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
     }
 
     /**
+     * Creates a DeviceConfigurationState with a new object
+     *
+     * @param newDeviceConfigurationState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationState);
+    }
+
+    /**
+     * Creates a DeviceConfigurationState with a new object
+     *
+     * @param newDeviceConfigurationState the object to create/update
+     * @return the created DeviceConfigurationState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationState put(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

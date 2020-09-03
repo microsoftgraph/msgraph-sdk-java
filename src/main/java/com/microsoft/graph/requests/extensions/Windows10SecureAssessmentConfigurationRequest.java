@@ -112,6 +112,27 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
     }
 
     /**
+     * Creates a Windows10SecureAssessmentConfiguration with a new object
+     *
+     * @param newWindows10SecureAssessmentConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration, final ICallback<Windows10SecureAssessmentConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10SecureAssessmentConfiguration);
+    }
+
+    /**
+     * Creates a Windows10SecureAssessmentConfiguration with a new object
+     *
+     * @param newWindows10SecureAssessmentConfiguration the object to create/update
+     * @return the created Windows10SecureAssessmentConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10SecureAssessmentConfiguration put(final Windows10SecureAssessmentConfiguration newWindows10SecureAssessmentConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10SecureAssessmentConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

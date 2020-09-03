@@ -80,6 +80,23 @@ public interface IConditionalAccessPolicyRequest extends IHttpRequest {
     ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException;
 
     /**
+     * Posts a ConditionalAccessPolicy with a new object
+     *
+     * @param newConditionalAccessPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback);
+
+    /**
+     * Posts a ConditionalAccessPolicy with a new object
+     *
+     * @param newConditionalAccessPolicy the object to create/update
+     * @return the created ConditionalAccessPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ConditionalAccessPolicy put(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

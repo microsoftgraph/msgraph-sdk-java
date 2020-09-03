@@ -112,6 +112,27 @@ public class MobileAppCategoryRequest extends BaseRequest implements IMobileAppC
     }
 
     /**
+     * Creates a MobileAppCategory with a new object
+     *
+     * @param newMobileAppCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppCategory);
+    }
+
+    /**
+     * Creates a MobileAppCategory with a new object
+     *
+     * @param newMobileAppCategory the object to create/update
+     * @return the created MobileAppCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppCategory put(final MobileAppCategory newMobileAppCategory) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

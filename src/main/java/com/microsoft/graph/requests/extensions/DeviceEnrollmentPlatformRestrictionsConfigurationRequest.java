@@ -112,6 +112,27 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
     }
 
     /**
+     * Creates a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
+    }
+
+    /**
+     * Creates a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
+     * @return the created DeviceEnrollmentPlatformRestrictionsConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceEnrollmentPlatformRestrictionsConfiguration put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceEnrollmentPlatformRestrictionsConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

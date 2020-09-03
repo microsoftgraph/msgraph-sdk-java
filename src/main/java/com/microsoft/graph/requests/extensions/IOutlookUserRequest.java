@@ -80,6 +80,23 @@ public interface IOutlookUserRequest extends IHttpRequest {
     OutlookUser post(final OutlookUser newOutlookUser) throws ClientException;
 
     /**
+     * Posts a OutlookUser with a new object
+     *
+     * @param newOutlookUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback);
+
+    /**
+     * Posts a OutlookUser with a new object
+     *
+     * @param newOutlookUser the object to create/update
+     * @return the created OutlookUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OutlookUser put(final OutlookUser newOutlookUser) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

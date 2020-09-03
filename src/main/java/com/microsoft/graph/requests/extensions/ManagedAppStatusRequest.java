@@ -127,6 +127,27 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
     }
 
     /**
+     * Creates a ManagedAppStatus with a new object
+     *
+     * @param newManagedAppStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
+        send(HttpMethod.PUT, callback, newManagedAppStatus);
+    }
+
+    /**
+     * Creates a ManagedAppStatus with a new object
+     *
+     * @param newManagedAppStatus the object to create/update
+     * @return the created ManagedAppStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAppStatus put(final ManagedAppStatus newManagedAppStatus) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAppStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

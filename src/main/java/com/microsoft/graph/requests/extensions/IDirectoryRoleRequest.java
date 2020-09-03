@@ -80,6 +80,23 @@ public interface IDirectoryRoleRequest extends IHttpRequest {
     DirectoryRole post(final DirectoryRole newDirectoryRole) throws ClientException;
 
     /**
+     * Posts a DirectoryRole with a new object
+     *
+     * @param newDirectoryRole the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DirectoryRole newDirectoryRole, final ICallback<DirectoryRole> callback);
+
+    /**
+     * Posts a DirectoryRole with a new object
+     *
+     * @param newDirectoryRole the object to create/update
+     * @return the created DirectoryRole
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DirectoryRole put(final DirectoryRole newDirectoryRole) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

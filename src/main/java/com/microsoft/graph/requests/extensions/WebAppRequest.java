@@ -112,6 +112,27 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
     }
 
     /**
+     * Creates a WebApp with a new object
+     *
+     * @param newWebApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WebApp newWebApp, final ICallback<WebApp> callback) {
+        send(HttpMethod.PUT, callback, newWebApp);
+    }
+
+    /**
+     * Creates a WebApp with a new object
+     *
+     * @param newWebApp the object to create/update
+     * @return the created WebApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WebApp put(final WebApp newWebApp) throws ClientException {
+        return send(HttpMethod.PUT, newWebApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ISchemaExtensionRequest extends IHttpRequest {
     SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException;
 
     /**
+     * Posts a SchemaExtension with a new object
+     *
+     * @param newSchemaExtension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback);
+
+    /**
+     * Posts a SchemaExtension with a new object
+     *
+     * @param newSchemaExtension the object to create/update
+     * @return the created SchemaExtension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SchemaExtension put(final SchemaExtension newSchemaExtension) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

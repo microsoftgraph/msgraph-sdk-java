@@ -129,6 +129,27 @@ public class RoleAssignmentRequest extends BaseRequest implements IRoleAssignmen
     }
 
     /**
+     * Creates a RoleAssignment with a new object
+     *
+     * @param newRoleAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
+        send(HttpMethod.PUT, callback, newRoleAssignment);
+    }
+
+    /**
+     * Creates a RoleAssignment with a new object
+     *
+     * @param newRoleAssignment the object to create/update
+     * @return the created RoleAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RoleAssignment put(final RoleAssignment newRoleAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newRoleAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

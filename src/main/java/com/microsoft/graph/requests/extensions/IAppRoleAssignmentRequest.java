@@ -80,6 +80,23 @@ public interface IAppRoleAssignmentRequest extends IHttpRequest {
     AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException;
 
     /**
+     * Posts a AppRoleAssignment with a new object
+     *
+     * @param newAppRoleAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback);
+
+    /**
+     * Posts a AppRoleAssignment with a new object
+     *
+     * @param newAppRoleAssignment the object to create/update
+     * @return the created AppRoleAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppRoleAssignment put(final AppRoleAssignment newAppRoleAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class DeviceInstallStateRequest extends BaseRequest implements IDeviceIns
     }
 
     /**
+     * Creates a DeviceInstallState with a new object
+     *
+     * @param newDeviceInstallState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceInstallState);
+    }
+
+    /**
+     * Creates a DeviceInstallState with a new object
+     *
+     * @param newDeviceInstallState the object to create/update
+     * @return the created DeviceInstallState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceInstallState put(final DeviceInstallState newDeviceInstallState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceInstallState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

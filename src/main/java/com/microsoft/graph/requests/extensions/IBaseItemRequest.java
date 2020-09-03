@@ -80,6 +80,23 @@ public interface IBaseItemRequest extends IHttpRequest {
     BaseItem post(final BaseItem newBaseItem) throws ClientException;
 
     /**
+     * Posts a BaseItem with a new object
+     *
+     * @param newBaseItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final BaseItem newBaseItem, final ICallback<BaseItem> callback);
+
+    /**
+     * Posts a BaseItem with a new object
+     *
+     * @param newBaseItem the object to create/update
+     * @return the created BaseItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    BaseItem put(final BaseItem newBaseItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

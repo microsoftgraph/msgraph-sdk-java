@@ -80,6 +80,23 @@ public interface IIosGeneralDeviceConfigurationRequest extends IHttpRequest {
     IosGeneralDeviceConfiguration post(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException;
 
     /**
+     * Posts a IosGeneralDeviceConfiguration with a new object
+     *
+     * @param newIosGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback);
+
+    /**
+     * Posts a IosGeneralDeviceConfiguration with a new object
+     *
+     * @param newIosGeneralDeviceConfiguration the object to create/update
+     * @return the created IosGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosGeneralDeviceConfiguration put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

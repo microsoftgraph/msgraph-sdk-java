@@ -112,6 +112,27 @@ public class SegmentRequest extends BaseRequest implements ISegmentRequest {
     }
 
     /**
+     * Creates a Segment with a new object
+     *
+     * @param newSegment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Segment newSegment, final ICallback<Segment> callback) {
+        send(HttpMethod.PUT, callback, newSegment);
+    }
+
+    /**
+     * Creates a Segment with a new object
+     *
+     * @param newSegment the object to create/update
+     * @return the created Segment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Segment put(final Segment newSegment) throws ClientException {
+        return send(HttpMethod.PUT, newSegment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

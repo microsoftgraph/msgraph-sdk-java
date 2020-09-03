@@ -80,6 +80,23 @@ public interface IWorkbookChartGridlinesFormatRequest extends IHttpRequest {
     WorkbookChartGridlinesFormat post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException;
 
     /**
+     * Posts a WorkbookChartGridlinesFormat with a new object
+     *
+     * @param newWorkbookChartGridlinesFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback);
+
+    /**
+     * Posts a WorkbookChartGridlinesFormat with a new object
+     *
+     * @param newWorkbookChartGridlinesFormat the object to create/update
+     * @return the created WorkbookChartGridlinesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartGridlinesFormat put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

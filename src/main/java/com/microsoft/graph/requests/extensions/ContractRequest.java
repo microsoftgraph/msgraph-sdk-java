@@ -112,6 +112,27 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
     }
 
     /**
+     * Creates a Contract with a new object
+     *
+     * @param newContract the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Contract newContract, final ICallback<Contract> callback) {
+        send(HttpMethod.PUT, callback, newContract);
+    }
+
+    /**
+     * Creates a Contract with a new object
+     *
+     * @param newContract the object to create/update
+     * @return the created Contract
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Contract put(final Contract newContract) throws ClientException {
+        return send(HttpMethod.PUT, newContract);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

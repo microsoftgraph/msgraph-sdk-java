@@ -80,6 +80,23 @@ public interface IReportRootRequest extends IHttpRequest {
     ReportRoot post(final ReportRoot newReportRoot) throws ClientException;
 
     /**
+     * Posts a ReportRoot with a new object
+     *
+     * @param newReportRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ReportRoot newReportRoot, final ICallback<ReportRoot> callback);
+
+    /**
+     * Posts a ReportRoot with a new object
+     *
+     * @param newReportRoot the object to create/update
+     * @return the created ReportRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ReportRoot put(final ReportRoot newReportRoot) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

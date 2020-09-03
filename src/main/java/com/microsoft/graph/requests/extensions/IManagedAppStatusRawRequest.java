@@ -80,6 +80,23 @@ public interface IManagedAppStatusRawRequest extends IHttpRequest {
     ManagedAppStatusRaw post(final ManagedAppStatusRaw newManagedAppStatusRaw) throws ClientException;
 
     /**
+     * Posts a ManagedAppStatusRaw with a new object
+     *
+     * @param newManagedAppStatusRaw the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedAppStatusRaw newManagedAppStatusRaw, final ICallback<ManagedAppStatusRaw> callback);
+
+    /**
+     * Posts a ManagedAppStatusRaw with a new object
+     *
+     * @param newManagedAppStatusRaw the object to create/update
+     * @return the created ManagedAppStatusRaw
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedAppStatusRaw put(final ManagedAppStatusRaw newManagedAppStatusRaw) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

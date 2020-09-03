@@ -80,6 +80,23 @@ public interface IDeviceManagementTroubleshootingEventRequest extends IHttpReque
     DeviceManagementTroubleshootingEvent post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException;
 
     /**
+     * Posts a DeviceManagementTroubleshootingEvent with a new object
+     *
+     * @param newDeviceManagementTroubleshootingEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback);
+
+    /**
+     * Posts a DeviceManagementTroubleshootingEvent with a new object
+     *
+     * @param newDeviceManagementTroubleshootingEvent the object to create/update
+     * @return the created DeviceManagementTroubleshootingEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementTroubleshootingEvent put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

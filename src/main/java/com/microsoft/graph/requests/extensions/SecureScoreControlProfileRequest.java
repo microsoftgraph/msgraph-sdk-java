@@ -112,6 +112,27 @@ public class SecureScoreControlProfileRequest extends BaseRequest implements ISe
     }
 
     /**
+     * Creates a SecureScoreControlProfile with a new object
+     *
+     * @param newSecureScoreControlProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback) {
+        send(HttpMethod.PUT, callback, newSecureScoreControlProfile);
+    }
+
+    /**
+     * Creates a SecureScoreControlProfile with a new object
+     *
+     * @param newSecureScoreControlProfile the object to create/update
+     * @return the created SecureScoreControlProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecureScoreControlProfile put(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException {
+        return send(HttpMethod.PUT, newSecureScoreControlProfile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

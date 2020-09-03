@@ -112,6 +112,27 @@ public class RemoteAssistancePartnerRequest extends BaseRequest implements IRemo
     }
 
     /**
+     * Creates a RemoteAssistancePartner with a new object
+     *
+     * @param newRemoteAssistancePartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
+        send(HttpMethod.PUT, callback, newRemoteAssistancePartner);
+    }
+
+    /**
+     * Creates a RemoteAssistancePartner with a new object
+     *
+     * @param newRemoteAssistancePartner the object to create/update
+     * @return the created RemoteAssistancePartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RemoteAssistancePartner put(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException {
+        return send(HttpMethod.PUT, newRemoteAssistancePartner);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

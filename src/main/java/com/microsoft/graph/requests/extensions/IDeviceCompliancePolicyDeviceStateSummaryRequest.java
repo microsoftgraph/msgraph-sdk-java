@@ -80,6 +80,23 @@ public interface IDeviceCompliancePolicyDeviceStateSummaryRequest extends IHttpR
     DeviceCompliancePolicyDeviceStateSummary post(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) throws ClientException;
 
     /**
+     * Posts a DeviceCompliancePolicyDeviceStateSummary with a new object
+     *
+     * @param newDeviceCompliancePolicyDeviceStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<DeviceCompliancePolicyDeviceStateSummary> callback);
+
+    /**
+     * Posts a DeviceCompliancePolicyDeviceStateSummary with a new object
+     *
+     * @param newDeviceCompliancePolicyDeviceStateSummary the object to create/update
+     * @return the created DeviceCompliancePolicyDeviceStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceCompliancePolicyDeviceStateSummary put(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

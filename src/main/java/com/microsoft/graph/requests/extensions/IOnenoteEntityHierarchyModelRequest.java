@@ -80,6 +80,23 @@ public interface IOnenoteEntityHierarchyModelRequest extends IHttpRequest {
     OnenoteEntityHierarchyModel post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException;
 
     /**
+     * Posts a OnenoteEntityHierarchyModel with a new object
+     *
+     * @param newOnenoteEntityHierarchyModel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback);
+
+    /**
+     * Posts a OnenoteEntityHierarchyModel with a new object
+     *
+     * @param newOnenoteEntityHierarchyModel the object to create/update
+     * @return the created OnenoteEntityHierarchyModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnenoteEntityHierarchyModel put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

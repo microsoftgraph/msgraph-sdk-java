@@ -112,6 +112,27 @@ public class DeviceEnrollmentLimitConfigurationRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a DeviceEnrollmentLimitConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentLimitConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration, final ICallback<DeviceEnrollmentLimitConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newDeviceEnrollmentLimitConfiguration);
+    }
+
+    /**
+     * Creates a DeviceEnrollmentLimitConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentLimitConfiguration the object to create/update
+     * @return the created DeviceEnrollmentLimitConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceEnrollmentLimitConfiguration put(final DeviceEnrollmentLimitConfiguration newDeviceEnrollmentLimitConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceEnrollmentLimitConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

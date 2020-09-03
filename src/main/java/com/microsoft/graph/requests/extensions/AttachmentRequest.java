@@ -129,6 +129,27 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
     }
 
     /**
+     * Creates a Attachment with a new object
+     *
+     * @param newAttachment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Attachment newAttachment, final ICallback<Attachment> callback) {
+        send(HttpMethod.PUT, callback, newAttachment);
+    }
+
+    /**
+     * Creates a Attachment with a new object
+     *
+     * @param newAttachment the object to create/update
+     * @return the created Attachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Attachment put(final Attachment newAttachment) throws ClientException {
+        return send(HttpMethod.PUT, newAttachment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IContentTypeRequest extends IHttpRequest {
     ContentType post(final ContentType newContentType) throws ClientException;
 
     /**
+     * Posts a ContentType with a new object
+     *
+     * @param newContentType the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ContentType newContentType, final ICallback<ContentType> callback);
+
+    /**
+     * Posts a ContentType with a new object
+     *
+     * @param newContentType the object to create/update
+     * @return the created ContentType
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ContentType put(final ContentType newContentType) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

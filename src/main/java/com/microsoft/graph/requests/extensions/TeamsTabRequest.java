@@ -114,6 +114,27 @@ public class TeamsTabRequest extends BaseRequest implements ITeamsTabRequest {
     }
 
     /**
+     * Creates a TeamsTab with a new object
+     *
+     * @param newTeamsTab the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback) {
+        send(HttpMethod.PUT, callback, newTeamsTab);
+    }
+
+    /**
+     * Creates a TeamsTab with a new object
+     *
+     * @param newTeamsTab the object to create/update
+     * @return the created TeamsTab
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TeamsTab put(final TeamsTab newTeamsTab) throws ClientException {
+        return send(HttpMethod.PUT, newTeamsTab);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

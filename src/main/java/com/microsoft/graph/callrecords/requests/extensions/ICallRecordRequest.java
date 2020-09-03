@@ -80,6 +80,23 @@ public interface ICallRecordRequest extends IHttpRequest {
     CallRecord post(final CallRecord newCallRecord) throws ClientException;
 
     /**
+     * Posts a CallRecord with a new object
+     *
+     * @param newCallRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CallRecord newCallRecord, final ICallback<CallRecord> callback);
+
+    /**
+     * Posts a CallRecord with a new object
+     *
+     * @param newCallRecord the object to create/update
+     * @return the created CallRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CallRecord put(final CallRecord newCallRecord) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

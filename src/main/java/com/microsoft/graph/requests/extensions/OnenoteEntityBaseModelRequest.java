@@ -127,6 +127,27 @@ public class OnenoteEntityBaseModelRequest extends BaseRequest implements IOneno
     }
 
     /**
+     * Creates a OnenoteEntityBaseModel with a new object
+     *
+     * @param newOnenoteEntityBaseModel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback) {
+        send(HttpMethod.PUT, callback, newOnenoteEntityBaseModel);
+    }
+
+    /**
+     * Creates a OnenoteEntityBaseModel with a new object
+     *
+     * @param newOnenoteEntityBaseModel the object to create/update
+     * @return the created OnenoteEntityBaseModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenoteEntityBaseModel put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel) throws ClientException {
+        return send(HttpMethod.PUT, newOnenoteEntityBaseModel);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

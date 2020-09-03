@@ -135,6 +135,27 @@ public class CallRequest extends BaseRequest implements ICallRequest {
     }
 
     /**
+     * Creates a Call with a new object
+     *
+     * @param newCall the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Call newCall, final ICallback<Call> callback) {
+        send(HttpMethod.PUT, callback, newCall);
+    }
+
+    /**
+     * Creates a Call with a new object
+     *
+     * @param newCall the object to create/update
+     * @return the created Call
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Call put(final Call newCall) throws ClientException {
+        return send(HttpMethod.PUT, newCall);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

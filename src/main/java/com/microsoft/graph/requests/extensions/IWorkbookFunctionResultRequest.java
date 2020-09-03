@@ -80,6 +80,23 @@ public interface IWorkbookFunctionResultRequest extends IHttpRequest {
     WorkbookFunctionResult post(final WorkbookFunctionResult newWorkbookFunctionResult) throws ClientException;
 
     /**
+     * Posts a WorkbookFunctionResult with a new object
+     *
+     * @param newWorkbookFunctionResult the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookFunctionResult newWorkbookFunctionResult, final ICallback<WorkbookFunctionResult> callback);
+
+    /**
+     * Posts a WorkbookFunctionResult with a new object
+     *
+     * @param newWorkbookFunctionResult the object to create/update
+     * @return the created WorkbookFunctionResult
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookFunctionResult put(final WorkbookFunctionResult newWorkbookFunctionResult) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

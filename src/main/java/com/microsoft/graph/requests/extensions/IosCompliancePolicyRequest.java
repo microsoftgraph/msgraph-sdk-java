@@ -112,6 +112,27 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
     }
 
     /**
+     * Creates a IosCompliancePolicy with a new object
+     *
+     * @param newIosCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newIosCompliancePolicy);
+    }
+
+    /**
+     * Creates a IosCompliancePolicy with a new object
+     *
+     * @param newIosCompliancePolicy the object to create/update
+     * @return the created IosCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosCompliancePolicy put(final IosCompliancePolicy newIosCompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newIosCompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

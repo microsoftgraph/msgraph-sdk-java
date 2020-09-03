@@ -127,6 +127,27 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
     }
 
     /**
+     * Creates a ScheduleChangeRequest with a new object
+     *
+     * @param newScheduleChangeRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<ScheduleChangeRequest> callback) {
+        send(HttpMethod.PUT, callback, newScheduleChangeRequest);
+    }
+
+    /**
+     * Creates a ScheduleChangeRequest with a new object
+     *
+     * @param newScheduleChangeRequest the object to create/update
+     * @return the created ScheduleChangeRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ScheduleChangeRequest put(final ScheduleChangeRequest newScheduleChangeRequest) throws ClientException {
+        return send(HttpMethod.PUT, newScheduleChangeRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

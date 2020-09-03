@@ -80,6 +80,23 @@ public interface ISubscribedSkuRequest extends IHttpRequest {
     SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException;
 
     /**
+     * Posts a SubscribedSku with a new object
+     *
+     * @param newSubscribedSku the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback);
+
+    /**
+     * Posts a SubscribedSku with a new object
+     *
+     * @param newSubscribedSku the object to create/update
+     * @return the created SubscribedSku
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SubscribedSku put(final SubscribedSku newSubscribedSku) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -113,6 +113,27 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
     }
 
     /**
+     * Creates a ReportRoot with a new object
+     *
+     * @param newReportRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ReportRoot newReportRoot, final ICallback<ReportRoot> callback) {
+        send(HttpMethod.PUT, callback, newReportRoot);
+    }
+
+    /**
+     * Creates a ReportRoot with a new object
+     *
+     * @param newReportRoot the object to create/update
+     * @return the created ReportRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ReportRoot put(final ReportRoot newReportRoot) throws ClientException {
+        return send(HttpMethod.PUT, newReportRoot);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

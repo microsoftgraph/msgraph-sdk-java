@@ -116,6 +116,27 @@ public class WorkbookCommentRequest extends BaseRequest implements IWorkbookComm
     }
 
     /**
+     * Creates a WorkbookComment with a new object
+     *
+     * @param newWorkbookComment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookComment);
+    }
+
+    /**
+     * Creates a WorkbookComment with a new object
+     *
+     * @param newWorkbookComment the object to create/update
+     * @return the created WorkbookComment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookComment put(final WorkbookComment newWorkbookComment) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookComment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

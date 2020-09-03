@@ -80,6 +80,23 @@ public interface IActivityBasedTimeoutPolicyRequest extends IHttpRequest {
     ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException;
 
     /**
+     * Posts a ActivityBasedTimeoutPolicy with a new object
+     *
+     * @param newActivityBasedTimeoutPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback);
+
+    /**
+     * Posts a ActivityBasedTimeoutPolicy with a new object
+     *
+     * @param newActivityBasedTimeoutPolicy the object to create/update
+     * @return the created ActivityBasedTimeoutPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ActivityBasedTimeoutPolicy put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

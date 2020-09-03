@@ -114,6 +114,27 @@ public class WorkbookPivotTableRequest extends BaseRequest implements IWorkbookP
     }
 
     /**
+     * Creates a WorkbookPivotTable with a new object
+     *
+     * @param newWorkbookPivotTable the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookPivotTable newWorkbookPivotTable, final ICallback<WorkbookPivotTable> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookPivotTable);
+    }
+
+    /**
+     * Creates a WorkbookPivotTable with a new object
+     *
+     * @param newWorkbookPivotTable the object to create/update
+     * @return the created WorkbookPivotTable
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookPivotTable put(final WorkbookPivotTable newWorkbookPivotTable) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookPivotTable);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

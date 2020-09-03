@@ -113,6 +113,27 @@ public class WorkbookTableSortRequest extends BaseRequest implements IWorkbookTa
     }
 
     /**
+     * Creates a WorkbookTableSort with a new object
+     *
+     * @param newWorkbookTableSort the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<WorkbookTableSort> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookTableSort);
+    }
+
+    /**
+     * Creates a WorkbookTableSort with a new object
+     *
+     * @param newWorkbookTableSort the object to create/update
+     * @return the created WorkbookTableSort
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookTableSort put(final WorkbookTableSort newWorkbookTableSort) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookTableSort);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

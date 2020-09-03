@@ -112,6 +112,27 @@ public class DeviceCategoryRequest extends BaseRequest implements IDeviceCategor
     }
 
     /**
+     * Creates a DeviceCategory with a new object
+     *
+     * @param newDeviceCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback) {
+        send(HttpMethod.PUT, callback, newDeviceCategory);
+    }
+
+    /**
+     * Creates a DeviceCategory with a new object
+     *
+     * @param newDeviceCategory the object to create/update
+     * @return the created DeviceCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceCategory put(final DeviceCategory newDeviceCategory) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWorkbookChartAxisTitleFormatRequest extends IHttpRequest {
     WorkbookChartAxisTitleFormat post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException;
 
     /**
+     * Posts a WorkbookChartAxisTitleFormat with a new object
+     *
+     * @param newWorkbookChartAxisTitleFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback);
+
+    /**
+     * Posts a WorkbookChartAxisTitleFormat with a new object
+     *
+     * @param newWorkbookChartAxisTitleFormat the object to create/update
+     * @return the created WorkbookChartAxisTitleFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartAxisTitleFormat put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

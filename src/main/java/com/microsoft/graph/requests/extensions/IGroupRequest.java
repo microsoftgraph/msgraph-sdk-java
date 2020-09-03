@@ -80,6 +80,23 @@ public interface IGroupRequest extends IHttpRequest {
     Group post(final Group newGroup) throws ClientException;
 
     /**
+     * Posts a Group with a new object
+     *
+     * @param newGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Group newGroup, final ICallback<Group> callback);
+
+    /**
+     * Posts a Group with a new object
+     *
+     * @param newGroup the object to create/update
+     * @return the created Group
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Group put(final Group newGroup) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

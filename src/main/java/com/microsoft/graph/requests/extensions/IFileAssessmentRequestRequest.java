@@ -80,6 +80,23 @@ public interface IFileAssessmentRequestRequest extends IHttpRequest {
     FileAssessmentRequest post(final FileAssessmentRequest newFileAssessmentRequest) throws ClientException;
 
     /**
+     * Posts a FileAssessmentRequest with a new object
+     *
+     * @param newFileAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback);
+
+    /**
+     * Posts a FileAssessmentRequest with a new object
+     *
+     * @param newFileAssessmentRequest the object to create/update
+     * @return the created FileAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    FileAssessmentRequest put(final FileAssessmentRequest newFileAssessmentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

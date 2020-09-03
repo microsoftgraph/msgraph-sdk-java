@@ -112,6 +112,27 @@ public class SchedulingGroupRequest extends BaseRequest implements ISchedulingGr
     }
 
     /**
+     * Creates a SchedulingGroup with a new object
+     *
+     * @param newSchedulingGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback) {
+        send(HttpMethod.PUT, callback, newSchedulingGroup);
+    }
+
+    /**
+     * Creates a SchedulingGroup with a new object
+     *
+     * @param newSchedulingGroup the object to create/update
+     * @return the created SchedulingGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SchedulingGroup put(final SchedulingGroup newSchedulingGroup) throws ClientException {
+        return send(HttpMethod.PUT, newSchedulingGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

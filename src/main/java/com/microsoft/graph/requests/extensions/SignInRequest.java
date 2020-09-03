@@ -127,6 +127,27 @@ public class SignInRequest extends BaseRequest implements ISignInRequest {
     }
 
     /**
+     * Creates a SignIn with a new object
+     *
+     * @param newSignIn the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SignIn newSignIn, final ICallback<SignIn> callback) {
+        send(HttpMethod.PUT, callback, newSignIn);
+    }
+
+    /**
+     * Creates a SignIn with a new object
+     *
+     * @param newSignIn the object to create/update
+     * @return the created SignIn
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SignIn put(final SignIn newSignIn) throws ClientException {
+        return send(HttpMethod.PUT, newSignIn);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

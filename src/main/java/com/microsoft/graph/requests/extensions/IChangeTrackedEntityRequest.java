@@ -80,6 +80,23 @@ public interface IChangeTrackedEntityRequest extends IHttpRequest {
     ChangeTrackedEntity post(final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException;
 
     /**
+     * Posts a ChangeTrackedEntity with a new object
+     *
+     * @param newChangeTrackedEntity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback);
+
+    /**
+     * Posts a ChangeTrackedEntity with a new object
+     *
+     * @param newChangeTrackedEntity the object to create/update
+     * @return the created ChangeTrackedEntity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ChangeTrackedEntity put(final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

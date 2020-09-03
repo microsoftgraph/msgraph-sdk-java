@@ -80,6 +80,23 @@ public interface IWindows81GeneralConfigurationRequest extends IHttpRequest {
     Windows81GeneralConfiguration post(final Windows81GeneralConfiguration newWindows81GeneralConfiguration) throws ClientException;
 
     /**
+     * Posts a Windows81GeneralConfiguration with a new object
+     *
+     * @param newWindows81GeneralConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback);
+
+    /**
+     * Posts a Windows81GeneralConfiguration with a new object
+     *
+     * @param newWindows81GeneralConfiguration the object to create/update
+     * @return the created Windows81GeneralConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows81GeneralConfiguration put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

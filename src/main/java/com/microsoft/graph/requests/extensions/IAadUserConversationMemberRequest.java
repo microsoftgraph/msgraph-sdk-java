@@ -80,6 +80,23 @@ public interface IAadUserConversationMemberRequest extends IHttpRequest {
     AadUserConversationMember post(final AadUserConversationMember newAadUserConversationMember) throws ClientException;
 
     /**
+     * Posts a AadUserConversationMember with a new object
+     *
+     * @param newAadUserConversationMember the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<AadUserConversationMember> callback);
+
+    /**
+     * Posts a AadUserConversationMember with a new object
+     *
+     * @param newAadUserConversationMember the object to create/update
+     * @return the created AadUserConversationMember
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AadUserConversationMember put(final AadUserConversationMember newAadUserConversationMember) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

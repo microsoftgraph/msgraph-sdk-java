@@ -116,6 +116,27 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
     }
 
     /**
+     * Creates a WorkbookChartLegendFormat with a new object
+     *
+     * @param newWorkbookChartLegendFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<WorkbookChartLegendFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartLegendFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartLegendFormat with a new object
+     *
+     * @param newWorkbookChartLegendFormat the object to create/update
+     * @return the created WorkbookChartLegendFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartLegendFormat put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartLegendFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

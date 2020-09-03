@@ -112,6 +112,27 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
     }
 
     /**
+     * Creates a TimeOff with a new object
+     *
+     * @param newTimeOff the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TimeOff newTimeOff, final ICallback<TimeOff> callback) {
+        send(HttpMethod.PUT, callback, newTimeOff);
+    }
+
+    /**
+     * Creates a TimeOff with a new object
+     *
+     * @param newTimeOff the object to create/update
+     * @return the created TimeOff
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TimeOff put(final TimeOff newTimeOff) throws ClientException {
+        return send(HttpMethod.PUT, newTimeOff);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

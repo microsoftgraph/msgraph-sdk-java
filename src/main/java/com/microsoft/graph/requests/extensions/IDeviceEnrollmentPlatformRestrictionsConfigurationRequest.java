@@ -80,6 +80,23 @@ public interface IDeviceEnrollmentPlatformRestrictionsConfigurationRequest exten
     DeviceEnrollmentPlatformRestrictionsConfiguration post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException;
 
     /**
+     * Posts a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<DeviceEnrollmentPlatformRestrictionsConfiguration> callback);
+
+    /**
+     * Posts a DeviceEnrollmentPlatformRestrictionsConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
+     * @return the created DeviceEnrollmentPlatformRestrictionsConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceEnrollmentPlatformRestrictionsConfiguration put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class InviteParticipantsOperationRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a InviteParticipantsOperation with a new object
+     *
+     * @param newInviteParticipantsOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final InviteParticipantsOperation newInviteParticipantsOperation, final ICallback<InviteParticipantsOperation> callback) {
+        send(HttpMethod.PUT, callback, newInviteParticipantsOperation);
+    }
+
+    /**
+     * Creates a InviteParticipantsOperation with a new object
+     *
+     * @param newInviteParticipantsOperation the object to create/update
+     * @return the created InviteParticipantsOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public InviteParticipantsOperation put(final InviteParticipantsOperation newInviteParticipantsOperation) throws ClientException {
+        return send(HttpMethod.PUT, newInviteParticipantsOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

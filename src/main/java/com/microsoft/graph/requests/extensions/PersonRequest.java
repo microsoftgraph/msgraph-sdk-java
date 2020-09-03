@@ -112,6 +112,27 @@ public class PersonRequest extends BaseRequest implements IPersonRequest {
     }
 
     /**
+     * Creates a Person with a new object
+     *
+     * @param newPerson the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Person newPerson, final ICallback<Person> callback) {
+        send(HttpMethod.PUT, callback, newPerson);
+    }
+
+    /**
+     * Creates a Person with a new object
+     *
+     * @param newPerson the object to create/update
+     * @return the created Person
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Person put(final Person newPerson) throws ClientException {
+        return send(HttpMethod.PUT, newPerson);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

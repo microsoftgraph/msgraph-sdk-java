@@ -116,6 +116,27 @@ public class UserActivityRequest extends BaseRequest implements IUserActivityReq
     }
 
     /**
+     * Creates a UserActivity with a new object
+     *
+     * @param newUserActivity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserActivity newUserActivity, final ICallback<UserActivity> callback) {
+        send(HttpMethod.PUT, callback, newUserActivity);
+    }
+
+    /**
+     * Creates a UserActivity with a new object
+     *
+     * @param newUserActivity the object to create/update
+     * @return the created UserActivity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserActivity put(final UserActivity newUserActivity) throws ClientException {
+        return send(HttpMethod.PUT, newUserActivity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

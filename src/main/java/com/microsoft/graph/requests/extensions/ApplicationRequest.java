@@ -134,6 +134,27 @@ public class ApplicationRequest extends BaseRequest implements IApplicationReque
     }
 
     /**
+     * Creates a Application with a new object
+     *
+     * @param newApplication the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Application newApplication, final ICallback<Application> callback) {
+        send(HttpMethod.PUT, callback, newApplication);
+    }
+
+    /**
+     * Creates a Application with a new object
+     *
+     * @param newApplication the object to create/update
+     * @return the created Application
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Application put(final Application newApplication) throws ClientException {
+        return send(HttpMethod.PUT, newApplication);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

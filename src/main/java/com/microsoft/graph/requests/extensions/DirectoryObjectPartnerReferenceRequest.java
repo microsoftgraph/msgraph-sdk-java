@@ -112,6 +112,27 @@ public class DirectoryObjectPartnerReferenceRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a DirectoryObjectPartnerReference with a new object
+     *
+     * @param newDirectoryObjectPartnerReference the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference, final ICallback<DirectoryObjectPartnerReference> callback) {
+        send(HttpMethod.PUT, callback, newDirectoryObjectPartnerReference);
+    }
+
+    /**
+     * Creates a DirectoryObjectPartnerReference with a new object
+     *
+     * @param newDirectoryObjectPartnerReference the object to create/update
+     * @return the created DirectoryObjectPartnerReference
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DirectoryObjectPartnerReference put(final DirectoryObjectPartnerReference newDirectoryObjectPartnerReference) throws ClientException {
+        return send(HttpMethod.PUT, newDirectoryObjectPartnerReference);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

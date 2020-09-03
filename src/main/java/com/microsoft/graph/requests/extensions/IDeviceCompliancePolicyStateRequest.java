@@ -80,6 +80,23 @@ public interface IDeviceCompliancePolicyStateRequest extends IHttpRequest {
     DeviceCompliancePolicyState post(final DeviceCompliancePolicyState newDeviceCompliancePolicyState) throws ClientException;
 
     /**
+     * Posts a DeviceCompliancePolicyState with a new object
+     *
+     * @param newDeviceCompliancePolicyState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceCompliancePolicyState newDeviceCompliancePolicyState, final ICallback<DeviceCompliancePolicyState> callback);
+
+    /**
+     * Posts a DeviceCompliancePolicyState with a new object
+     *
+     * @param newDeviceCompliancePolicyState the object to create/update
+     * @return the created DeviceCompliancePolicyState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceCompliancePolicyState put(final DeviceCompliancePolicyState newDeviceCompliancePolicyState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

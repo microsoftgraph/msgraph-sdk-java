@@ -80,6 +80,23 @@ public interface IEducationRootRequest extends IHttpRequest {
     EducationRoot post(final EducationRoot newEducationRoot) throws ClientException;
 
     /**
+     * Posts a EducationRoot with a new object
+     *
+     * @param newEducationRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EducationRoot newEducationRoot, final ICallback<EducationRoot> callback);
+
+    /**
+     * Posts a EducationRoot with a new object
+     *
+     * @param newEducationRoot the object to create/update
+     * @return the created EducationRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EducationRoot put(final EducationRoot newEducationRoot) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

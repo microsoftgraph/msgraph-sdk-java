@@ -112,6 +112,27 @@ public class ApplePushNotificationCertificateRequest extends BaseRequest impleme
     }
 
     /**
+     * Creates a ApplePushNotificationCertificate with a new object
+     *
+     * @param newApplePushNotificationCertificate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ApplePushNotificationCertificate newApplePushNotificationCertificate, final ICallback<ApplePushNotificationCertificate> callback) {
+        send(HttpMethod.PUT, callback, newApplePushNotificationCertificate);
+    }
+
+    /**
+     * Creates a ApplePushNotificationCertificate with a new object
+     *
+     * @param newApplePushNotificationCertificate the object to create/update
+     * @return the created ApplePushNotificationCertificate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ApplePushNotificationCertificate put(final ApplePushNotificationCertificate newApplePushNotificationCertificate) throws ClientException {
+        return send(HttpMethod.PUT, newApplePushNotificationCertificate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

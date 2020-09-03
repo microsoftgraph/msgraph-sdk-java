@@ -80,6 +80,23 @@ public interface IPolicyBaseRequest extends IHttpRequest {
     PolicyBase post(final PolicyBase newPolicyBase) throws ClientException;
 
     /**
+     * Posts a PolicyBase with a new object
+     *
+     * @param newPolicyBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PolicyBase newPolicyBase, final ICallback<PolicyBase> callback);
+
+    /**
+     * Posts a PolicyBase with a new object
+     *
+     * @param newPolicyBase the object to create/update
+     * @return the created PolicyBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PolicyBase put(final PolicyBase newPolicyBase) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

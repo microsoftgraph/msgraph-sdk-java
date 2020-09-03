@@ -112,6 +112,27 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
     }
 
     /**
+     * Creates a AndroidStoreApp with a new object
+     *
+     * @param newAndroidStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidStoreApp newAndroidStoreApp, final ICallback<AndroidStoreApp> callback) {
+        send(HttpMethod.PUT, callback, newAndroidStoreApp);
+    }
+
+    /**
+     * Creates a AndroidStoreApp with a new object
+     *
+     * @param newAndroidStoreApp the object to create/update
+     * @return the created AndroidStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidStoreApp put(final AndroidStoreApp newAndroidStoreApp) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidStoreApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

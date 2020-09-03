@@ -80,6 +80,23 @@ public interface IWorkbookChartPointRequest extends IHttpRequest {
     WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException;
 
     /**
+     * Posts a WorkbookChartPoint with a new object
+     *
+     * @param newWorkbookChartPoint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback);
+
+    /**
+     * Posts a WorkbookChartPoint with a new object
+     *
+     * @param newWorkbookChartPoint the object to create/update
+     * @return the created WorkbookChartPoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartPoint put(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

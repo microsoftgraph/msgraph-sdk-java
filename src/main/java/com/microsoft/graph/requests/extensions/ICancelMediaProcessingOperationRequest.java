@@ -80,6 +80,23 @@ public interface ICancelMediaProcessingOperationRequest extends IHttpRequest {
     CancelMediaProcessingOperation post(final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException;
 
     /**
+     * Posts a CancelMediaProcessingOperation with a new object
+     *
+     * @param newCancelMediaProcessingOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<CancelMediaProcessingOperation> callback);
+
+    /**
+     * Posts a CancelMediaProcessingOperation with a new object
+     *
+     * @param newCancelMediaProcessingOperation the object to create/update
+     * @return the created CancelMediaProcessingOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CancelMediaProcessingOperation put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

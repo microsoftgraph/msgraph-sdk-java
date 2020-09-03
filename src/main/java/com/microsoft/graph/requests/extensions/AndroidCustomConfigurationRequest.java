@@ -112,6 +112,27 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
     }
 
     /**
+     * Creates a AndroidCustomConfiguration with a new object
+     *
+     * @param newAndroidCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidCustomConfiguration);
+    }
+
+    /**
+     * Creates a AndroidCustomConfiguration with a new object
+     *
+     * @param newAndroidCustomConfiguration the object to create/update
+     * @return the created AndroidCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidCustomConfiguration put(final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidCustomConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

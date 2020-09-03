@@ -112,6 +112,27 @@ public class LicenseDetailsRequest extends BaseRequest implements ILicenseDetail
     }
 
     /**
+     * Creates a LicenseDetails with a new object
+     *
+     * @param newLicenseDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback) {
+        send(HttpMethod.PUT, callback, newLicenseDetails);
+    }
+
+    /**
+     * Creates a LicenseDetails with a new object
+     *
+     * @param newLicenseDetails the object to create/update
+     * @return the created LicenseDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public LicenseDetails put(final LicenseDetails newLicenseDetails) throws ClientException {
+        return send(HttpMethod.PUT, newLicenseDetails);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

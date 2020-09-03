@@ -112,6 +112,27 @@ public class WorkbookRangeFillRequest extends BaseRequest implements IWorkbookRa
     }
 
     /**
+     * Creates a WorkbookRangeFill with a new object
+     *
+     * @param newWorkbookRangeFill the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookRangeFill newWorkbookRangeFill, final ICallback<WorkbookRangeFill> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookRangeFill);
+    }
+
+    /**
+     * Creates a WorkbookRangeFill with a new object
+     *
+     * @param newWorkbookRangeFill the object to create/update
+     * @return the created WorkbookRangeFill
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookRangeFill put(final WorkbookRangeFill newWorkbookRangeFill) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookRangeFill);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

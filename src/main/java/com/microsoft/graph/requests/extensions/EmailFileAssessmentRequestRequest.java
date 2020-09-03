@@ -112,6 +112,27 @@ public class EmailFileAssessmentRequestRequest extends BaseRequest implements IE
     }
 
     /**
+     * Creates a EmailFileAssessmentRequest with a new object
+     *
+     * @param newEmailFileAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EmailFileAssessmentRequest newEmailFileAssessmentRequest, final ICallback<EmailFileAssessmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newEmailFileAssessmentRequest);
+    }
+
+    /**
+     * Creates a EmailFileAssessmentRequest with a new object
+     *
+     * @param newEmailFileAssessmentRequest the object to create/update
+     * @return the created EmailFileAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EmailFileAssessmentRequest put(final EmailFileAssessmentRequest newEmailFileAssessmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newEmailFileAssessmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

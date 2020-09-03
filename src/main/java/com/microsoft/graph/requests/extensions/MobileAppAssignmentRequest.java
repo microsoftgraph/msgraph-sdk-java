@@ -112,6 +112,27 @@ public class MobileAppAssignmentRequest extends BaseRequest implements IMobileAp
     }
 
     /**
+     * Creates a MobileAppAssignment with a new object
+     *
+     * @param newMobileAppAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppAssignment newMobileAppAssignment, final ICallback<MobileAppAssignment> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppAssignment);
+    }
+
+    /**
+     * Creates a MobileAppAssignment with a new object
+     *
+     * @param newMobileAppAssignment the object to create/update
+     * @return the created MobileAppAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppAssignment put(final MobileAppAssignment newMobileAppAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

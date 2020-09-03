@@ -113,6 +113,27 @@ public class WorkbookWorksheetProtectionRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a WorkbookWorksheetProtection with a new object
+     *
+     * @param newWorkbookWorksheetProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookWorksheetProtection newWorkbookWorksheetProtection, final ICallback<WorkbookWorksheetProtection> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookWorksheetProtection);
+    }
+
+    /**
+     * Creates a WorkbookWorksheetProtection with a new object
+     *
+     * @param newWorkbookWorksheetProtection the object to create/update
+     * @return the created WorkbookWorksheetProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookWorksheetProtection put(final WorkbookWorksheetProtection newWorkbookWorksheetProtection) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookWorksheetProtection);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

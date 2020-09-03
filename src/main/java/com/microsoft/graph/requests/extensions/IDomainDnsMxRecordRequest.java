@@ -80,6 +80,23 @@ public interface IDomainDnsMxRecordRequest extends IHttpRequest {
     DomainDnsMxRecord post(final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException;
 
     /**
+     * Posts a DomainDnsMxRecord with a new object
+     *
+     * @param newDomainDnsMxRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback);
+
+    /**
+     * Posts a DomainDnsMxRecord with a new object
+     *
+     * @param newDomainDnsMxRecord the object to create/update
+     * @return the created DomainDnsMxRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DomainDnsMxRecord put(final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

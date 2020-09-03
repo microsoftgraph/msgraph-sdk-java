@@ -80,6 +80,23 @@ public interface IWorkbookCommentRequest extends IHttpRequest {
     WorkbookComment post(final WorkbookComment newWorkbookComment) throws ClientException;
 
     /**
+     * Posts a WorkbookComment with a new object
+     *
+     * @param newWorkbookComment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback);
+
+    /**
+     * Posts a WorkbookComment with a new object
+     *
+     * @param newWorkbookComment the object to create/update
+     * @return the created WorkbookComment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookComment put(final WorkbookComment newWorkbookComment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

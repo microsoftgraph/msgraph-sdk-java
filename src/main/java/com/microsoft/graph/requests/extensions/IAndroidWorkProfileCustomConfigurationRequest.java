@@ -80,6 +80,23 @@ public interface IAndroidWorkProfileCustomConfigurationRequest extends IHttpRequ
     AndroidWorkProfileCustomConfiguration post(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidWorkProfileCustomConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback);
+
+    /**
+     * Posts a AndroidWorkProfileCustomConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileCustomConfiguration the object to create/update
+     * @return the created AndroidWorkProfileCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidWorkProfileCustomConfiguration put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

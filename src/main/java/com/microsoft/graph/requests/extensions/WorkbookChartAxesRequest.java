@@ -114,6 +114,27 @@ public class WorkbookChartAxesRequest extends BaseRequest implements IWorkbookCh
     }
 
     /**
+     * Creates a WorkbookChartAxes with a new object
+     *
+     * @param newWorkbookChartAxes the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartAxes newWorkbookChartAxes, final ICallback<WorkbookChartAxes> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartAxes);
+    }
+
+    /**
+     * Creates a WorkbookChartAxes with a new object
+     *
+     * @param newWorkbookChartAxes the object to create/update
+     * @return the created WorkbookChartAxes
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartAxes put(final WorkbookChartAxes newWorkbookChartAxes) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartAxes);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

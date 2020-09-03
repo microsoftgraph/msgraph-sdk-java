@@ -80,6 +80,23 @@ public interface ISecureScoreControlProfileRequest extends IHttpRequest {
     SecureScoreControlProfile post(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException;
 
     /**
+     * Posts a SecureScoreControlProfile with a new object
+     *
+     * @param newSecureScoreControlProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback);
+
+    /**
+     * Posts a SecureScoreControlProfile with a new object
+     *
+     * @param newSecureScoreControlProfile the object to create/update
+     * @return the created SecureScoreControlProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SecureScoreControlProfile put(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

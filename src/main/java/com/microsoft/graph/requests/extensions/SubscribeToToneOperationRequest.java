@@ -112,6 +112,27 @@ public class SubscribeToToneOperationRequest extends BaseRequest implements ISub
     }
 
     /**
+     * Creates a SubscribeToToneOperation with a new object
+     *
+     * @param newSubscribeToToneOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SubscribeToToneOperation newSubscribeToToneOperation, final ICallback<SubscribeToToneOperation> callback) {
+        send(HttpMethod.PUT, callback, newSubscribeToToneOperation);
+    }
+
+    /**
+     * Creates a SubscribeToToneOperation with a new object
+     *
+     * @param newSubscribeToToneOperation the object to create/update
+     * @return the created SubscribeToToneOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SubscribeToToneOperation put(final SubscribeToToneOperation newSubscribeToToneOperation) throws ClientException {
+        return send(HttpMethod.PUT, newSubscribeToToneOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

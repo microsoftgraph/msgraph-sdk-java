@@ -80,6 +80,23 @@ public interface IMacOSCompliancePolicyRequest extends IHttpRequest {
     MacOSCompliancePolicy post(final MacOSCompliancePolicy newMacOSCompliancePolicy) throws ClientException;
 
     /**
+     * Posts a MacOSCompliancePolicy with a new object
+     *
+     * @param newMacOSCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSCompliancePolicy newMacOSCompliancePolicy, final ICallback<MacOSCompliancePolicy> callback);
+
+    /**
+     * Posts a MacOSCompliancePolicy with a new object
+     *
+     * @param newMacOSCompliancePolicy the object to create/update
+     * @return the created MacOSCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSCompliancePolicy put(final MacOSCompliancePolicy newMacOSCompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

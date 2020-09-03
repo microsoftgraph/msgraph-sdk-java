@@ -127,6 +127,27 @@ public class CommsOperationRequest extends BaseRequest implements ICommsOperatio
     }
 
     /**
+     * Creates a CommsOperation with a new object
+     *
+     * @param newCommsOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CommsOperation newCommsOperation, final ICallback<CommsOperation> callback) {
+        send(HttpMethod.PUT, callback, newCommsOperation);
+    }
+
+    /**
+     * Creates a CommsOperation with a new object
+     *
+     * @param newCommsOperation the object to create/update
+     * @return the created CommsOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CommsOperation put(final CommsOperation newCommsOperation) throws ClientException {
+        return send(HttpMethod.PUT, newCommsOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

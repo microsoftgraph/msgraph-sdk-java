@@ -80,6 +80,23 @@ public interface ICalendarPermissionRequest extends IHttpRequest {
     CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException;
 
     /**
+     * Posts a CalendarPermission with a new object
+     *
+     * @param newCalendarPermission the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback);
+
+    /**
+     * Posts a CalendarPermission with a new object
+     *
+     * @param newCalendarPermission the object to create/update
+     * @return the created CalendarPermission
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CalendarPermission put(final CalendarPermission newCalendarPermission) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

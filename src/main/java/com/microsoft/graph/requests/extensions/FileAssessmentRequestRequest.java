@@ -112,6 +112,27 @@ public class FileAssessmentRequestRequest extends BaseRequest implements IFileAs
     }
 
     /**
+     * Creates a FileAssessmentRequest with a new object
+     *
+     * @param newFileAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final FileAssessmentRequest newFileAssessmentRequest, final ICallback<FileAssessmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newFileAssessmentRequest);
+    }
+
+    /**
+     * Creates a FileAssessmentRequest with a new object
+     *
+     * @param newFileAssessmentRequest the object to create/update
+     * @return the created FileAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public FileAssessmentRequest put(final FileAssessmentRequest newFileAssessmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newFileAssessmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

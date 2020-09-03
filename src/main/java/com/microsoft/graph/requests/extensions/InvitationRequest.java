@@ -114,6 +114,27 @@ public class InvitationRequest extends BaseRequest implements IInvitationRequest
     }
 
     /**
+     * Creates a Invitation with a new object
+     *
+     * @param newInvitation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Invitation newInvitation, final ICallback<Invitation> callback) {
+        send(HttpMethod.PUT, callback, newInvitation);
+    }
+
+    /**
+     * Creates a Invitation with a new object
+     *
+     * @param newInvitation the object to create/update
+     * @return the created Invitation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Invitation put(final Invitation newInvitation) throws ClientException {
+        return send(HttpMethod.PUT, newInvitation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

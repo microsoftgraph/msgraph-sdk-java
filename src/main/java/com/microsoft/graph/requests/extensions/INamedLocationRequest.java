@@ -80,6 +80,23 @@ public interface INamedLocationRequest extends IHttpRequest {
     NamedLocation post(final NamedLocation newNamedLocation) throws ClientException;
 
     /**
+     * Posts a NamedLocation with a new object
+     *
+     * @param newNamedLocation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback);
+
+    /**
+     * Posts a NamedLocation with a new object
+     *
+     * @param newNamedLocation the object to create/update
+     * @return the created NamedLocation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    NamedLocation put(final NamedLocation newNamedLocation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IThumbnailRequest extends IHttpRequest {
     Thumbnail post(final Thumbnail newThumbnail) throws ClientException;
 
     /**
+     * Posts a Thumbnail with a new object
+     *
+     * @param newThumbnail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback);
+
+    /**
+     * Posts a Thumbnail with a new object
+     *
+     * @param newThumbnail the object to create/update
+     * @return the created Thumbnail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Thumbnail put(final Thumbnail newThumbnail) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

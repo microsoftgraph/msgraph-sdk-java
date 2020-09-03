@@ -119,6 +119,27 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
     }
 
     /**
+     * Creates a OutlookUser with a new object
+     *
+     * @param newOutlookUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OutlookUser newOutlookUser, final ICallback<OutlookUser> callback) {
+        send(HttpMethod.PUT, callback, newOutlookUser);
+    }
+
+    /**
+     * Creates a OutlookUser with a new object
+     *
+     * @param newOutlookUser the object to create/update
+     * @return the created OutlookUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OutlookUser put(final OutlookUser newOutlookUser) throws ClientException {
+        return send(HttpMethod.PUT, newOutlookUser);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

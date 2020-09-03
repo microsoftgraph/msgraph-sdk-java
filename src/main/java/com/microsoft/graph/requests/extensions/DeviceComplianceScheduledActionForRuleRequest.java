@@ -116,6 +116,27 @@ public class DeviceComplianceScheduledActionForRuleRequest extends BaseRequest i
     }
 
     /**
+     * Creates a DeviceComplianceScheduledActionForRule with a new object
+     *
+     * @param newDeviceComplianceScheduledActionForRule the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceScheduledActionForRule);
+    }
+
+    /**
+     * Creates a DeviceComplianceScheduledActionForRule with a new object
+     *
+     * @param newDeviceComplianceScheduledActionForRule the object to create/update
+     * @return the created DeviceComplianceScheduledActionForRule
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceScheduledActionForRule put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceScheduledActionForRule);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

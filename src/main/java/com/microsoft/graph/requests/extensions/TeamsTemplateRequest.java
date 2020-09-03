@@ -112,6 +112,27 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
     }
 
     /**
+     * Creates a TeamsTemplate with a new object
+     *
+     * @param newTeamsTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback) {
+        send(HttpMethod.PUT, callback, newTeamsTemplate);
+    }
+
+    /**
+     * Creates a TeamsTemplate with a new object
+     *
+     * @param newTeamsTemplate the object to create/update
+     * @return the created TeamsTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TeamsTemplate put(final TeamsTemplate newTeamsTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newTeamsTemplate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

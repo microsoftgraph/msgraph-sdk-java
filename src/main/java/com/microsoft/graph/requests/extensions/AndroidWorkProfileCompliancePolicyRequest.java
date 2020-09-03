@@ -112,6 +112,27 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a AndroidWorkProfileCompliancePolicy with a new object
+     *
+     * @param newAndroidWorkProfileCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy, final ICallback<AndroidWorkProfileCompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileCompliancePolicy);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileCompliancePolicy with a new object
+     *
+     * @param newAndroidWorkProfileCompliancePolicy the object to create/update
+     * @return the created AndroidWorkProfileCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileCompliancePolicy put(final AndroidWorkProfileCompliancePolicy newAndroidWorkProfileCompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileCompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

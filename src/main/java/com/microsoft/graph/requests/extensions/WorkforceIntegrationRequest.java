@@ -112,6 +112,27 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
     }
 
     /**
+     * Creates a WorkforceIntegration with a new object
+     *
+     * @param newWorkforceIntegration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
+        send(HttpMethod.PUT, callback, newWorkforceIntegration);
+    }
+
+    /**
+     * Creates a WorkforceIntegration with a new object
+     *
+     * @param newWorkforceIntegration the object to create/update
+     * @return the created WorkforceIntegration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkforceIntegration put(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
+        return send(HttpMethod.PUT, newWorkforceIntegration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

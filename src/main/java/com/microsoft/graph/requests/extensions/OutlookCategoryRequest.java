@@ -112,6 +112,27 @@ public class OutlookCategoryRequest extends BaseRequest implements IOutlookCateg
     }
 
     /**
+     * Creates a OutlookCategory with a new object
+     *
+     * @param newOutlookCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback) {
+        send(HttpMethod.PUT, callback, newOutlookCategory);
+    }
+
+    /**
+     * Creates a OutlookCategory with a new object
+     *
+     * @param newOutlookCategory the object to create/update
+     * @return the created OutlookCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OutlookCategory put(final OutlookCategory newOutlookCategory) throws ClientException {
+        return send(HttpMethod.PUT, newOutlookCategory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

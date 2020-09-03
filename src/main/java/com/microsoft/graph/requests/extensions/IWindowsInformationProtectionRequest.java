@@ -80,6 +80,23 @@ public interface IWindowsInformationProtectionRequest extends IHttpRequest {
     WindowsInformationProtection post(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException;
 
     /**
+     * Posts a WindowsInformationProtection with a new object
+     *
+     * @param newWindowsInformationProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback);
+
+    /**
+     * Posts a WindowsInformationProtection with a new object
+     *
+     * @param newWindowsInformationProtection the object to create/update
+     * @return the created WindowsInformationProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsInformationProtection put(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

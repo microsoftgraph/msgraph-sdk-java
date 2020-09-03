@@ -80,6 +80,23 @@ public interface IWorkbookChartDataLabelsRequest extends IHttpRequest {
     WorkbookChartDataLabels post(final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException;
 
     /**
+     * Posts a WorkbookChartDataLabels with a new object
+     *
+     * @param newWorkbookChartDataLabels the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<WorkbookChartDataLabels> callback);
+
+    /**
+     * Posts a WorkbookChartDataLabels with a new object
+     *
+     * @param newWorkbookChartDataLabels the object to create/update
+     * @return the created WorkbookChartDataLabels
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartDataLabels put(final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

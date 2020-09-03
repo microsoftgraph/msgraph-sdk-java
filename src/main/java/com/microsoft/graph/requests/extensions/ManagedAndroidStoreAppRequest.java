@@ -112,6 +112,27 @@ public class ManagedAndroidStoreAppRequest extends BaseRequest implements IManag
     }
 
     /**
+     * Creates a ManagedAndroidStoreApp with a new object
+     *
+     * @param newManagedAndroidStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAndroidStoreApp newManagedAndroidStoreApp, final ICallback<ManagedAndroidStoreApp> callback) {
+        send(HttpMethod.PUT, callback, newManagedAndroidStoreApp);
+    }
+
+    /**
+     * Creates a ManagedAndroidStoreApp with a new object
+     *
+     * @param newManagedAndroidStoreApp the object to create/update
+     * @return the created ManagedAndroidStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAndroidStoreApp put(final ManagedAndroidStoreApp newManagedAndroidStoreApp) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAndroidStoreApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

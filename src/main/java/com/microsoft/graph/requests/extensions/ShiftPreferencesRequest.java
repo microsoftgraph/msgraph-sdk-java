@@ -112,6 +112,27 @@ public class ShiftPreferencesRequest extends BaseRequest implements IShiftPrefer
     }
 
     /**
+     * Creates a ShiftPreferences with a new object
+     *
+     * @param newShiftPreferences the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ShiftPreferences newShiftPreferences, final ICallback<ShiftPreferences> callback) {
+        send(HttpMethod.PUT, callback, newShiftPreferences);
+    }
+
+    /**
+     * Creates a ShiftPreferences with a new object
+     *
+     * @param newShiftPreferences the object to create/update
+     * @return the created ShiftPreferences
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ShiftPreferences put(final ShiftPreferences newShiftPreferences) throws ClientException {
+        return send(HttpMethod.PUT, newShiftPreferences);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

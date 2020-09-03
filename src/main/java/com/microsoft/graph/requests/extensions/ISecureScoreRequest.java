@@ -80,6 +80,23 @@ public interface ISecureScoreRequest extends IHttpRequest {
     SecureScore post(final SecureScore newSecureScore) throws ClientException;
 
     /**
+     * Posts a SecureScore with a new object
+     *
+     * @param newSecureScore the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SecureScore newSecureScore, final ICallback<SecureScore> callback);
+
+    /**
+     * Posts a SecureScore with a new object
+     *
+     * @param newSecureScore the object to create/update
+     * @return the created SecureScore
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SecureScore put(final SecureScore newSecureScore) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
