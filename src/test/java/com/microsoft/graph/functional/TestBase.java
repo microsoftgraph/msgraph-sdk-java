@@ -1,21 +1,20 @@
 package com.microsoft.graph.functional;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
-import com.microsoft.graph.core.DefaultClientConfig;
-import com.microsoft.graph.core.IClientConfig;
-import com.microsoft.graph.http.IHttpRequest;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
-import com.microsoft.graph.core.Constants;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.microsoft.graph.authentication.IAuthenticationProvider;
+import com.microsoft.graph.core.Constants;
+import com.microsoft.graph.core.DefaultClientConfig;
+import com.microsoft.graph.core.IClientConfig;
+import com.microsoft.graph.http.IHttpRequest;
+import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.requests.extensions.GraphServiceClient;
 
 
 public class TestBase {
@@ -53,7 +52,7 @@ public class TestBase {
                 };
                 IClientConfig mClientConfig = DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
 
-                graphClient = GraphServiceClient.builder().fromConfig(mClientConfig).buildClient();
+                graphClient = GraphServiceClient.fromConfig(mClientConfig);
             }
             catch (Exception e)
             {

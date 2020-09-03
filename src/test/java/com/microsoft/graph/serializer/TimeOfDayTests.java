@@ -1,9 +1,7 @@
 package com.microsoft.graph.serializer;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.TimeOfDay;
@@ -36,6 +34,14 @@ public class TimeOfDayTests {
         assertEquals(1, time.getHour());
         assertEquals(1, time.getMinute());
         assertEquals(1, time.getSecond());
+    }
+
+    @Test
+    public void testTimeOfDayDeserializerWithFraction() throws Exception{
+        TimeOfDay time = TimeOfDay.parse("12:30:44.0000000");
+        assertEquals(12, time.getHour());
+        assertEquals(30, time.getMinute());
+        assertEquals(44, time.getSecond());
     }
 
 }

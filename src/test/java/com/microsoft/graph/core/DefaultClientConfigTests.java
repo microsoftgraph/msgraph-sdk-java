@@ -1,12 +1,10 @@
 package com.microsoft.graph.core;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.logging.Logger;
 
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
@@ -47,6 +45,11 @@ public class DefaultClientConfigTests {
             @Override
             public ILogger getLogger() {
                 return logger;
+            }
+
+            @Override
+            public IAuthenticationProvider getAuthenticationProvider() {
+                return new MockAuthenticationProvider();
             }
 
         };

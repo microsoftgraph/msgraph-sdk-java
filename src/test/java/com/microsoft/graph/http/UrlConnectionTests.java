@@ -1,14 +1,12 @@
 package com.microsoft.graph.http;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class UrlConnectionTests {

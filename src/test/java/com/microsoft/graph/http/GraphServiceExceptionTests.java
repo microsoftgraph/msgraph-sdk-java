@@ -1,14 +1,16 @@
 package com.microsoft.graph.http;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.microsoft.graph.core.GraphErrorCodes;
@@ -68,6 +70,48 @@ public class GraphServiceExceptionTests {
         };
         try{
             exception = GraphServiceException.createFromConnection(new MockHttpRequest(),null,null,new MockConnection(data){},logger);
+            success = true;
+        }catch (IOException ex){
+            failure = true;
+        }
+
+        assertTrue(success);
+        assertFalse(failure);
+
+        String message = exception.getMessage();
+        assertTrue(message.indexOf("Error code: Unable to parse error response message") == 0);
+        assertTrue(message.indexOf("http://localhost") > 0);
+    }
+	
+	@Test
+	public void testNullConnection() {
+		DefaultLogger logger = new DefaultLogger();
+        GraphServiceException exception = null;
+        Boolean success = false;
+        Boolean failure = false;
+        final ITestConnectionData data = new ITestConnectionData() {
+            @Override
+            public int getRequestCode() {
+                return 401;
+            }
+
+            @Override
+            public String getJsonResponse() {
+                return "{}";
+            }
+
+            @Override
+            public Map<String, String> getHeaders() {
+                return new HashMap<>();
+            }
+        };
+        try{
+            exception = GraphServiceException.createFromConnection(new MockHttpRequest(),null,null,new MockConnection(data) {
+            	@Override
+            	public InputStream getInputStream() throws IOException {
+                    return null;
+                }
+            },logger);
             success = true;
         }catch (IOException ex){
             failure = true;

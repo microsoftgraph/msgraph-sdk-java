@@ -25,7 +25,7 @@ package com.microsoft.graph.core;
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
 import com.microsoft.graph.concurrency.IExecutors;
-import com.microsoft.graph.http.DefaultHttpProvider;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.IHttpProvider;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.logger.ILogger;
@@ -38,11 +38,6 @@ import com.microsoft.graph.serializer.ISerializer;
 public abstract class DefaultClientConfig implements IClientConfig {
 
     /**
-     * The authentication provider instance
-     */
-    private IAuthenticationProvider authenticationProvider;
-
-    /**
      * The executors instance
      */
     private IExecutors executors;
@@ -50,7 +45,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
     /**
      * The HTTP provider instance
      */
-    private DefaultHttpProvider httpProvider;
+    private IHttpProvider httpProvider;
 
     /**
      * The logger
@@ -72,8 +67,12 @@ public abstract class DefaultClientConfig implements IClientConfig {
             final IAuthenticationProvider authenticationProvider
     ) {
         DefaultClientConfig config = new DefaultClientConfig() {
+
+            @Override
+            public IAuthenticationProvider getAuthenticationProvider() {
+                return authenticationProvider;
+            }
         };
-        config.authenticationProvider = authenticationProvider;
         config.getLogger()
               .logDebug(
                         "Using provided auth provider "
@@ -90,10 +89,7 @@ public abstract class DefaultClientConfig implements IClientConfig {
      * @return the authentication provider
      */
     @Override
-    public IAuthenticationProvider getAuthenticationProvider() {
-        return authenticationProvider;
-    }
-
+    public abstract IAuthenticationProvider getAuthenticationProvider();
     /**
      * Gets the HTTP provider
      *
@@ -102,11 +98,11 @@ public abstract class DefaultClientConfig implements IClientConfig {
     @Override
     public IHttpProvider getHttpProvider() {
         if (httpProvider == null) {
-            httpProvider = new DefaultHttpProvider(getSerializer(),
+            httpProvider = new CoreHttpProvider(getSerializer(),
                     getAuthenticationProvider(),
                     getExecutors(),
                     getLogger());
-            getLogger().logDebug("Created DefaultHttpProvider");
+            getLogger().logDebug("Created CoreHttpProvider");
         }
         return httpProvider;
     }

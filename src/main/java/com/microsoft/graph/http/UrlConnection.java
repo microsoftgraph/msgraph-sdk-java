@@ -154,6 +154,16 @@ public class UrlConnection implements IConnection {
     public void setContentLength(final int length) {
         connection.setFixedLengthStreamingMode(length);
     }
+    
+    @Override
+    public void setReadTimeout(final int readTimeoutMilliseconds) {
+        connection.setReadTimeout(readTimeoutMilliseconds);
+    }
+
+    @Override
+    public void setConnectTimeout(final int connectTimeoutMilliseconds) {
+        connection.setConnectTimeout(connectTimeoutMilliseconds);
+    }
 
     /**
      * Gets the response headers from an HTTP URL connection

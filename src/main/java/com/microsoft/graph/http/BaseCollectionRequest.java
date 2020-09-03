@@ -22,15 +22,17 @@
 
 package com.microsoft.graph.http;
 
+import java.net.URL;
+import java.util.List;
+
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.IBaseClient;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.options.FunctionOption;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-
-import java.net.URL;
-import java.util.List;
 
 /**
  * A request against a collection
@@ -91,13 +93,11 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      * Posts this request
      *
      * @param serializedObject the object to serialize as the body
-     * @param <T1>             the type of the callback result
-     * @param <T2>             the type of the serialized body
+     * @param <BodyType>       the type of the serialized body, some times Action use different body than collection item
      * @return the response object
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @SuppressWarnings("unchecked")
-    protected <T1, T2> T1 post(final T2 serializedObject) throws ClientException {
+    protected <BodyType> T1 post(final BodyType serializedObject) throws ClientException {
         baseRequest.setHttpMethod(HttpMethod.POST);
         return (T1) baseRequest.getClient().getHttpProvider().send(this, responseClass, serializedObject);
     }
@@ -216,5 +216,95 @@ public abstract class BaseCollectionRequest<T1, T2> implements IHttpRequest {
      */
     public Class<T2> getCollectionPageClass() {
         return collectionPageClass;
+    }
+    
+    /**
+     * Sets the max redirects
+     * 
+     * @param maxRedirects Max redirects that a request can take
+     */
+    public void setMaxRedirects(int maxRedirects) {
+    	baseRequest.setMaxRedirects(maxRedirects);
+    }
+    
+    /**
+     * Gets the max redirects
+     * 
+     * @return Max redirects that a request can take
+     */
+    public int getMaxRedirects() {
+    	return baseRequest.getMaxRedirects();
+    }
+    
+    /**
+     * Sets the should redirect callback
+     * 
+     * @param shouldRedirect Callback called before doing a redirect
+     */
+    public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+    	baseRequest.setShouldRedirect(shouldRedirect);
+    }
+    
+    /**
+     * Gets the should redirect callback
+     * 
+     * @return Callback which is called before redirect
+     */
+    public IShouldRedirect getShouldRedirect() {
+    	return baseRequest.getShouldRedirect();
+    }
+    
+    /**
+     * Sets the should retry callback
+     * 
+     * @param shouldretry The callback called before retry
+     */
+    public void setShouldRetry(IShouldRetry shouldretry) {
+    	baseRequest.setShouldRetry(shouldretry);
+    }
+    
+    /**
+     * Gets the should retry callback
+     * 
+     * @return Callback called before retry
+     */
+    public IShouldRetry getShouldRetry() {
+    	return baseRequest.getShouldRetry();
+    }
+    
+    /**
+     * Sets the max retries
+     * 
+     * @param maxRetries Max retries for a request
+     */
+    public void setMaxRetries(int maxRetries) {
+    	baseRequest.setMaxRedirects(maxRetries);
+    }
+    
+    /**
+     * Gets max retries 
+     * 
+     * @return Max retries for a request
+     */
+    public int getMaxRetries() {
+    	return baseRequest.getMaxRetries();
+    }
+    
+    /**
+     * Sets the delay in seconds between retires
+     * 
+     * @param delay Delay in seconds between retries
+     */
+    public void setDelay(long delay) {
+    	baseRequest.setDelay(delay);
+    }
+    
+    /**
+     * Gets delay between retries
+     * 
+     * @return Delay between retries in seconds
+     */
+    public long getDelay() {
+    	return baseRequest.getDelay();
     }
 }

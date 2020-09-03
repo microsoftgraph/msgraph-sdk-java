@@ -42,7 +42,7 @@ public final class CalendarSerializer {
      */
     private CalendarSerializer() {
     }
-
+    
     /**
      * Deserializes an ISO-8601 formatted date
      * 
@@ -51,39 +51,73 @@ public final class CalendarSerializer {
      * @throws java.text.ParseException the parse exception
      */
     public static Calendar deserialize(final String strVal) throws ParseException {
-        // Change Z to +0000 to adapt the string to a format
+        // Change Z to adapt the string to a format
         // that can be parsed in Java
         final boolean hasZ = strVal.indexOf('Z') != -1;
+        final boolean hasDot = strVal.indexOf('.') != -1;
+		
+
         String modifiedStrVal;
         final String zSuffix;
-        if (hasZ) {
+        if (hasZ && hasDot) {
+        	zSuffix = "";
+            modifiedStrVal = strVal.replace("Z", "+00:00");
+        } else if (hasZ && !hasDot) {
             zSuffix = "Z";
             modifiedStrVal = strVal.replace("Z", "+0000");
         } else {
             zSuffix = "";
             modifiedStrVal = strVal;
         }
-
-        // Parse the well-formatted date string.
+        
+        final boolean hasOffset = modifiedStrVal.contains("T")
+				? (modifiedStrVal.substring(modifiedStrVal.indexOf('T') + 1).contains("+"))
+						|| (modifiedStrVal.substring(modifiedStrVal.indexOf('T') + 1).contains("-"))
+				: false;
+						
+        // Parse the well-formatted date string with and without offsets (eg: 2019-06-21T17:12:35.138, 2019-06-21T17:12:35.138+0000, 2019-06-21T17:12:35.138-07:00)
         final String datePattern;
-        if (modifiedStrVal.contains(".")) {
+        if (hasDot) {
+        	
+			String offsetSuffix = modifiedStrVal.substring(modifiedStrVal.indexOf(".") + 1);
+			
+			// Find index of offset
+			int offsetIndex = -1;
+			if (hasOffset) {
+				offsetIndex = (offsetSuffix.indexOf('+') != -1) ? offsetSuffix.indexOf('+') : offsetSuffix.indexOf('-');
+				offsetIndex = modifiedStrVal.indexOf('.') + 1 + offsetIndex; //find offset index in original string
+			}
+			
+			
             //SimpleDateFormat only supports 3 milliseconds
-            String milliseconds = modifiedStrVal.substring(modifiedStrVal.indexOf('.') + 1,
-                                                           modifiedStrVal.indexOf('+'));
-            final int millisSegmentLength = 3;
-            if (milliseconds.length() > millisSegmentLength) {
-                milliseconds = milliseconds.substring(0, millisSegmentLength);
-                modifiedStrVal = modifiedStrVal.substring(0,
-                    modifiedStrVal.indexOf('.') + 1)
-                    + milliseconds
-                    + modifiedStrVal.substring(modifiedStrVal.indexOf('+'));
+			//Strip extra characters in millisecond field (eg: 2019-06-21T17:12:35.1385912-07:00)
+			String milliSeconds = hasOffset ? modifiedStrVal.substring(modifiedStrVal.indexOf('.') + 1, offsetIndex)
+					: modifiedStrVal.substring(modifiedStrVal.indexOf('.') + 1);
+            final int MILLIS_SEGMENT_LENGTH = 3;
+            
+            if (milliSeconds.length() > MILLIS_SEGMENT_LENGTH) {
+                milliSeconds = milliSeconds.substring(0, MILLIS_SEGMENT_LENGTH);
             }
-
-            datePattern = "yyyy-MM-dd'T'HH:mm:ss.SSS" + zSuffix;
+            
+            //Handle date formats with and without offset cases
+			if (hasOffset) {
+				modifiedStrVal = modifiedStrVal.substring(0, modifiedStrVal.indexOf('.') + 1) + milliSeconds
+						+ modifiedStrVal.substring(offsetIndex);
+				datePattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX";
+			} else {
+				modifiedStrVal = modifiedStrVal.substring(0, modifiedStrVal.indexOf('.') + 1) + milliSeconds;
+				datePattern = "yyyy-MM-dd'T'HH:mm:ss.SSS" + zSuffix;
+			}
+			
+        } else if (zSuffix != "") {
+        	datePattern = "yyyy-MM-dd'T'HH:mm:ss" + zSuffix;
+        } else if (hasOffset){
+        	datePattern = "yyyy-MM-dd'T'HH:mm:ssX";
         } else {
-            datePattern = "yyyy-MM-dd'T'HH:mm:ss" + zSuffix;
+        	datePattern = "yyyy-MM-dd'T'HH:mm:ss";
         }
 
+        
         final SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern);
         dateFormat.setTimeZone(TimeZone.getDefault());
 

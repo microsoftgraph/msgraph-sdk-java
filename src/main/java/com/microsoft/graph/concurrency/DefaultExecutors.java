@@ -23,6 +23,7 @@
 package com.microsoft.graph.concurrency;
 
 import com.microsoft.graph.logger.ILogger;
+import com.google.common.annotations.VisibleForTesting;
 import com.microsoft.graph.core.ClientException;
 
 import java.util.concurrent.Executors;
@@ -139,4 +140,12 @@ public class DefaultExecutors implements IExecutors {
         });
     }
 
+    @VisibleForTesting
+    public ILogger getLogger() {
+        return logger;
+    }
+    
+    public void shutdownBackgroundExecutors() {
+    	this.backgroundExecutor.shutdown();
+    }
 }

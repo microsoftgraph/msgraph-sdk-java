@@ -1,18 +1,19 @@
 package com.microsoft.graph.functional;
 
-import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.models.extensions.ExtensionSchemaProperty;
-import com.microsoft.graph.models.extensions.Extension;
-import com.microsoft.graph.models.extensions.SchemaExtension;
+import static org.junit.Assert.assertEquals;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.gson.JsonPrimitive;
+import com.microsoft.graph.models.extensions.Extension;
+import com.microsoft.graph.models.extensions.ExtensionSchemaProperty;
+import com.microsoft.graph.models.extensions.SchemaExtension;
 
 @Ignore
 public class ODataTests {

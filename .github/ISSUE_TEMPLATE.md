@@ -14,12 +14,11 @@ Before you open this issue, did you:
 - Review the samples under github.com/microsoftgraph? They can help for some scenarios.
 - Take a look at the functional tests in this repo? They may have an example for you. See the [functional tests](https://github.com/microsoftgraph/msgraph-sdk-java/tree/master/src/test/java/com/microsoft/graph/functional)
 
+Please provide the following before submitting this issue:
+- Expected behavior. Please provide **links to the specific [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)** you used to determine the expected behavior. 
+- Actual behavior. Provide error codes, stack information, and a [Fiddler](http://www.telerik.com/fiddler) capture of the request and response (please remove personally identifiable information before posting).
+- Steps to reproduce the behavior. Include your code, IDE versions, client library versions, and any other information that might be helpful to understand your scenario.
 -->
-
-Please provide the following (and please check them off the list with [x]) before submitting this issue:
-- [ ] Expected behavior. Please provide **links to the specific [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)** you used to determine the expected behavior. 
-- [ ] Actual behavior. Provide error codes, stack information, and a [Fiddler](http://www.telerik.com/fiddler) capture of the request and response (please remove personally identifiable information before posting).
-- [ ] Steps to reproduce the behavior. Include your code, IDE versions, client library versions, and any other information that might be helpful to understand your scenario.
 
 ### Expected behavior
 

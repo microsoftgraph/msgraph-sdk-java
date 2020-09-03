@@ -1,18 +1,20 @@
 package com.microsoft.graph.functional;
 
-import com.microsoft.graph.requests.extensions.IDriveCollectionPage;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
-import com.microsoft.graph.requests.extensions.ISiteCollectionPage;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.options.Option;
 import com.microsoft.graph.options.QueryOption;
-
-import org.junit.*;
-import static org.junit.Assert.*;
-
-import java.util.Base64;
-import java.util.LinkedList;
-import java.util.List;
+import com.microsoft.graph.requests.extensions.IDriveCollectionPage;
+import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
+import com.microsoft.graph.requests.extensions.ISiteCollectionPage;
 
 @Ignore
 public class SharePointTests {

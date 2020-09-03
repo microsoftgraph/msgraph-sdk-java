@@ -22,21 +22,11 @@
 
 package com.microsoft.graph.http;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
-import com.microsoft.graph.concurrency.IProgressCallback;
-import com.microsoft.graph.concurrency.MockExecutors;
-import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
-import com.microsoft.graph.models.extensions.Drive;
-import com.microsoft.graph.models.extensions.DriveItem;
-import com.microsoft.graph.options.HeaderOption;
-import com.microsoft.graph.logger.LoggerLevel;
-import com.microsoft.graph.logger.MockLogger;
-import com.microsoft.graph.serializer.MockSerializer;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.InputStream;
 import java.util.Arrays;
@@ -46,6 +36,20 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+import com.microsoft.graph.authentication.MockAuthenticationProvider;
+import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.concurrency.MockExecutors;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.core.GraphErrorCodes;
+import com.microsoft.graph.logger.LoggerLevel;
+import com.microsoft.graph.logger.MockLogger;
+import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.DriveItem;
+import com.microsoft.graph.options.HeaderOption;
+import com.microsoft.graph.serializer.MockSerializer;
 
 /**
  * Test cases for {@see DefaultHttpProvider}

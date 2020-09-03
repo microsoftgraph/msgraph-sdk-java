@@ -1,11 +1,5 @@
 package com.microsoft.graph.core;
 
-import static org.junit.Assert.*;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.http.IHttpProvider;
@@ -83,6 +77,11 @@ public class MockBaseClient implements IBaseClient {
 
     public void setSerializer(final ISerializer serializer) {
         mSerializer = serializer;
+    }
+    
+    @Override
+    public void shutdown() {
+    	
     }
 
 }

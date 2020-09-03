@@ -4,16 +4,11 @@
 
 package com.microsoft.graph.requests.extensions;
 
-import com.microsoft.graph.concurrency.*;
-import com.microsoft.graph.core.*;
-import com.microsoft.graph.models.extensions.*;
-import com.microsoft.graph.models.generated.*;
-import com.microsoft.graph.http.*;
-import com.microsoft.graph.requests.extensions.*;
-import com.microsoft.graph.requests.generated.*;
-import com.microsoft.graph.options.*;
-import com.microsoft.graph.serializer.*;
-
+import com.microsoft.graph.http.IRequestBuilder;
+import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.concurrency.ICallback;
+import com.microsoft.graph.models.extensions.BaseItem;
+import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -22,6 +17,35 @@ import java.util.EnumSet;
 /**
  * The interface for the Base Item Request Builder.
  */
-public interface IBaseItemRequestBuilder extends IBaseBaseItemRequestBuilder {
+public interface IBaseItemRequestBuilder extends IRequestBuilder {
+    /**
+     * Creates the request
+     *
+     * @return the IBaseItemRequest instance
+     */
+    IBaseItemRequest buildRequest();
+
+    /**
+     * Creates the request with specific options instead of the existing options
+     *
+     * @param requestOptions the options for this request
+     * @return the IBaseItemRequest instance
+     */
+    IBaseItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder createdByUser();
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    IUserWithReferenceRequestBuilder lastModifiedByUser();
 
 }

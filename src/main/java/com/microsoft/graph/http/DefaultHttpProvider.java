@@ -28,7 +28,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
+import com.microsoft.graph.core.DefaultConnectionConfig;
+import com.microsoft.graph.core.IConnectionConfig;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
@@ -40,6 +41,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.util.List;
 import java.util.Map;
@@ -59,6 +61,11 @@ public class DefaultHttpProvider implements IHttpProvider {
      * The content type for JSON responses
      */
     static final String JSON_CONTENT_TYPE = "application/json";
+    
+    /**
+     * The encoding type for getBytes
+     */
+    static final String JSON_ENCODING = "UTF-8";
 
     /**
      * The serializer
@@ -84,9 +91,14 @@ public class DefaultHttpProvider implements IHttpProvider {
      * The connection factory
      */
     private IConnectionFactory connectionFactory;
+    
+    /**
+     * The connection config
+     */
+    private IConnectionConfig connectionConfig;
 
     /**
-     * Creates the DefaultHttpProvider
+     * Creates the DefaultHttpProvider using a DefaultConnectionFactory.
      *
      * @param serializer             the serializer
      * @param authenticationProvider the authentication provider
@@ -97,11 +109,28 @@ public class DefaultHttpProvider implements IHttpProvider {
                                final IAuthenticationProvider authenticationProvider,
                                final IExecutors executors,
                                final ILogger logger) {
+        this(serializer, authenticationProvider, executors, logger, new DefaultConnectionFactory());
+    }
+
+    /**
+     * Creates the DefaultHttpProvider
+     *
+     * @param serializer             the serializer
+     * @param authenticationProvider the authentication provider
+     * @param executors              the executors
+     * @param logger                 the logger for diagnostic information
+     * @param connectionFactory      an IConnectionFactory to create outgoing connections
+     */
+    public DefaultHttpProvider(final ISerializer serializer,
+                               final IAuthenticationProvider authenticationProvider,
+                               final IExecutors executors,
+                               final ILogger logger,
+                               final IConnectionFactory connectionFactory) {
         this.serializer = serializer;
         this.authenticationProvider = authenticationProvider;
         this.executors = executors;
         this.logger = logger;
-        connectionFactory = new DefaultConnectionFactory();
+        this.connectionFactory = connectionFactory;
     }
 
     /**
@@ -206,6 +235,7 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @return                  the result from the request
      * @throws ClientException an exception occurs if the request was unable to complete for any reason
      */
+    @SuppressWarnings("unchecked")
     private <Result, Body, DeserializeType> Result sendRequestInternal(final IHttpRequest request,
                                                                        final Class<Result> resultClass,
                                                                        final Body serializable,
@@ -226,6 +256,11 @@ public class DefaultHttpProvider implements IHttpProvider {
             final URL requestUrl = request.getRequestUrl();
             logger.logDebug("Starting to send request, URL " + requestUrl.toString());
             final IConnection connection = connectionFactory.createFromRequest(request);
+            if(this.connectionConfig == null) {
+                this.connectionConfig = new DefaultConnectionConfig();
+            }
+            connection.setConnectTimeout(connectionConfig.getConnectTimeout());
+            connection.setReadTimeout(connectionConfig.getReadTimeout());
 
             try {
                 logger.logDebug("Request Method " + request.getHttpMethod().toString());
@@ -254,7 +289,7 @@ public class DefaultHttpProvider implements IHttpProvider {
                 } else {
                     logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
                     final String serializeObject = serializer.serializeObject(serializable);
-                    bytesToWrite = serializeObject.getBytes();
+                    bytesToWrite = serializeObject.getBytes(JSON_ENCODING);
 
                     // If the user hasn't specified a Content-Type for the request
                     if (!hasHeader(requestHeaders, CONTENT_TYPE_HEADER_NAME)) {
@@ -341,6 +376,11 @@ public class DefaultHttpProvider implements IHttpProvider {
             final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
             logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
             throw ex;
+        } catch (final UnsupportedEncodingException ex) {
+        	final ClientException clientException = new ClientException("Unsupported encoding problem: ",
+                    ex);
+            logger.logError("Unsupported encoding problem: " + ex.getMessage(), ex);
+            throw clientException;
         } catch (final Exception ex) {
             final ClientException clientException = new ClientException("Error during http request",
                     ex);
@@ -401,10 +441,10 @@ public class DefaultHttpProvider implements IHttpProvider {
      * @param clazz           the type of the response object
      * @return                the JSON object
      */
-    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) {
+    private <Result> Result handleEmptyResponse(Map<String, List<String>> responseHeaders, final Class<Result> clazz) 
+    		throws UnsupportedEncodingException{
     	//Create an empty object to attach the response headers to
-        InputStream in = new ByteArrayInputStream("{}".getBytes());
-        
+    	InputStream in = new ByteArrayInputStream("{}".getBytes(JSON_ENCODING));
     	return handleJsonResponse(in, responseHeaders, clazz);
     }
 
@@ -452,5 +492,42 @@ public class DefaultHttpProvider implements IHttpProvider {
             }
         }
         return false;
+    }
+
+    @VisibleForTesting
+    public ILogger getLogger() {
+        return logger;
+    }
+
+    @VisibleForTesting
+    public IExecutors getExecutors() {
+        return executors;
+    }
+
+    @VisibleForTesting
+    public IAuthenticationProvider getAuthenticationProvider() {
+        return authenticationProvider;
+    }
+    
+
+    /**
+     * Get connection config for read and connect timeout in requests
+     *
+     * @return Connection configuration to be used for timeout values
+     */
+    public IConnectionConfig getConnectionConfig() {
+    	if(this.connectionConfig == null) {
+    		this.connectionConfig = new DefaultConnectionConfig();
+    	}
+        return connectionConfig;
+    }
+    
+    /**
+     * Set connection config for read and connect timeout in requests
+     *
+     * @param connectionConfig Connection configuration to be used for timeout values
+     */
+    public void setConnectionConfig(IConnectionConfig connectionConfig) {
+        this.connectionConfig = connectionConfig;
     }
 }

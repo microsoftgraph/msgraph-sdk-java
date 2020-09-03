@@ -1,15 +1,22 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Calendar;
+import java.util.UUID;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
-import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
-import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
+import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
@@ -23,18 +30,13 @@ import com.microsoft.graph.models.extensions.PlannerProgressTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.requests.extensions.IPlannerBucketRequest;
+import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequest;
+import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequest;
+import com.microsoft.graph.requests.extensions.IPlannerTaskRequest;
 import com.microsoft.graph.serializer.AdditionalDataManager;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
-import java.util.Calendar;
-import java.util.UUID;
+import com.microsoft.graph.serializer.DefaultSerializer;
 
 @Ignore
 public class PlannerTests {
@@ -125,10 +127,6 @@ public class PlannerTests {
 
         PlannerAssignment assignment = new PlannerAssignment();
         assignment.orderHint = " !";
-        AdditionalDataManager assignmentAdditionalData = assignment.additionalDataManager();
-        assignmentAdditionalData.put("@odata.type", new JsonPrimitive("#microsoft.graph.plannerAssignment"));
-        //assignment.oDataType = "#microsoft.graph.plannerAssignment";
-
         PlannerAssignments a2 = new PlannerAssignments();
         a2.put(me.id, assignment);
         task.assignments = a2;
@@ -136,7 +134,7 @@ public class PlannerTests {
         IPlannerTaskRequest req = prb
         		.tasks(planTask.id)
         		.buildRequest();
-        req.addHeader("If-Match", planTask.etag);
+        req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(task);
         
         Thread.sleep(4000);
@@ -157,11 +155,12 @@ public class PlannerTests {
         JsonObject data = new JsonObject();
         Gson gson = new Gson();
 
+        Thread.sleep(2000);
+        
         PlannerChecklistItem checklistItem1 = new PlannerChecklistItem();
         checklistItem1.orderHint = "  !!";
         checklistItem1.isChecked = true;
         checklistItem1.title = "C1";
-        checklistItem1.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerChecklistItem"));
         JsonElement checklist1Json = gson.toJsonTree(checklistItem1);
         data.add(uuid, checklist1Json);
 
@@ -169,7 +168,6 @@ public class PlannerTests {
         checklistItem2.orderHint = " !";
         checklistItem2.isChecked = false;
         checklistItem2.title = "C2";
-        checklistItem2.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerChecklistItem"));
         JsonElement checklist2Json = gson.toJsonTree(checklistItem2);
         data.add(UUID.randomUUID().toString(), checklist2Json);
 
@@ -177,12 +175,10 @@ public class PlannerTests {
         checklistItem3.orderHint = "   !!!";
         checklistItem3.isChecked = false;
         checklistItem3.title = "C3";
-        checklistItem3.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerChecklistItem"));
         JsonElement checklist3Json = gson.toJsonTree(checklistItem3);
         data.add(UUID.randomUUID().toString(), checklist3Json);
 
         AdditionalDataManager dataManager = details.additionalDataManager();
-        details.oDataType = "#microsoft.graph.plannerTaskDetails";
         dataManager.put("checklist", data);
 
         PlannerTaskDetails d = prb
@@ -194,11 +190,11 @@ public class PlannerTests {
         		.tasks(planTask.id)
         		.details()
         		.buildRequest();
-        req.addHeader("If-Match", d.etag);
-        req.addHeader("If-None-Match", d.etag);
+        req.addHeader("If-Match", d.additionalDataManager().get("@odata.etag").getAsString());
+        req.addHeader("If-None-Match", d.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(details);
 
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         
         PlannerTask updatedTask = prb.tasks(planTask.id).buildRequest().get();
         int checklistItemCount = updatedTask.getRawObject().get("checklistItemCount").getAsInt();
@@ -215,7 +211,6 @@ public class PlannerTests {
             JsonObject data = new JsonObject();
             PlannerExternalReference reference = new PlannerExternalReference();
 
-            reference.additionalDataManager().put("@odata.type", new JsonPrimitive("microsoft.graph.plannerExternalReference"));
             reference.alias = "Msn";
             reference.previewPriority = " !";
             reference.type = "Other";
@@ -224,7 +219,6 @@ public class PlannerTests {
             data.add("http%3A//www%2Emsn%2Ecom", referenceJson);
 
             AdditionalDataManager dataManager = details.additionalDataManager();
-            details.oDataType = "#microsoft.graph.plannerTaskDetails";
             dataManager.put("references", data);
 
             PlannerTaskDetails d = prb
@@ -236,8 +230,8 @@ public class PlannerTests {
             		.tasks(planTask.id)
             		.details()
             		.buildRequest();
-            req.addHeader("If-Match", d.etag);
-            req.addHeader("If-None-Match", d.etag);
+            req.addHeader("If-Match", d.additionalDataManager().get("@odata.etag").getAsString());
+            req.addHeader("If-None-Match", d.additionalDataManager().get("@odata.etag").getAsString());
             req.addHeader("Prefer", "return=representation");
             PlannerTaskDetails updatedTaskDetails = req.patch(details);
             
@@ -265,7 +259,7 @@ public class PlannerTests {
         task.percentComplete = 50;
 
         IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", planTask.etag);
+        req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(task);
         
         Thread.sleep(4000);
@@ -281,7 +275,7 @@ public class PlannerTests {
         task.startDateTime = Calendar.getInstance();
 
         IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", planTask.etag);
+        req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(task);
 
         Thread.sleep(2000);
@@ -300,7 +294,7 @@ public class PlannerTests {
         IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
         planTask = prb.tasks(planTask.id).buildRequest().get();
         
-        req.addHeader("If-Match", planTask.etag);
+        req.addHeader("If-Match", planTask.additionalDataManager().get("@odata.etag").getAsString());
         req.patch(task);
         
         Thread.sleep(6000);
@@ -324,13 +318,12 @@ public class PlannerTests {
         data.add("category6", new JsonPrimitive(false));
 
         AdditionalDataManager dataManager = task.additionalDataManager();
-        task.oDataType = "#microsoft.graph.plannerTask";
         dataManager.put("appliedCategories", data);
 
         PlannerTask newTask = prb.tasks(planTask.id).buildRequest().get();
         IPlannerTaskRequest req = prb.tasks(planTask.id).buildRequest();
-        req.addHeader("If-Match", newTask.etag);
-        req.addHeader("If-None-Match", newTask.etag);
+        req.addHeader("If-Match", newTask.additionalDataManager().get("@odata.etag").getAsString());
+        req.addHeader("If-None-Match", newTask.additionalDataManager().get("@odata.etag").getAsString());
         req.addHeader("Prefer", "return=representation");
         PlannerTask updatedTask = req.patch(task);
 
@@ -348,8 +341,8 @@ public class PlannerTests {
 
         PlannerPlanDetails newDetails = prb.plans(planId).details().buildRequest().get();
         IPlannerPlanDetailsRequest req = prb.plans(planId).details().buildRequest();
-        req.addHeader("If-Match", newDetails.etag);
-        req.addHeader("If-None-Match", newDetails.etag);
+        req.addHeader("If-Match", newDetails.additionalDataManager().get("@odata.etag").getAsString());
+        req.addHeader("If-None-Match", newDetails.additionalDataManager().get("@odata.etag").getAsString());
         req.addHeader("Prefer", "return=representation");
         PlannerPlanDetails updatedPlanDetails = req.patch(planDetails);
 
@@ -366,7 +359,7 @@ public class PlannerTests {
         PlannerTask task = prb.tasks().buildRequest().post(newTask);
 
         IPlannerTaskRequest req = testBase.graphClient.planner().tasks(task.id).buildRequest();
-        req.addHeader("If-Match", task.etag);
+        req.addHeader("If-Match", task.additionalDataManager().get("@odata.etag").getAsString());
         req.delete();
     }
 
@@ -384,10 +377,9 @@ public class PlannerTests {
     public void testUpdateBucket() {
         PlannerBucket patchBucket = new PlannerBucket();
         patchBucket.name = "RenamedBucket";
-        patchBucket.oDataType = "#microsoft.graph.plannerBucket";
 
         IPlannerBucketRequest req = prb.buckets(planBucket.id).buildRequest();
-        req.addHeader("If-Match", planBucket.etag);
+        req.addHeader("If-Match", planBucket.additionalDataManager().get("@odata.etag").getAsString());
 
         req.patch(patchBucket);
         PlannerBucket updatedBucket = prb.buckets(planBucket.id).buildRequest().get();
@@ -396,7 +388,7 @@ public class PlannerTests {
 
         patchBucket.name = "Test Bucket";
         IPlannerBucketRequest req2 = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
-        req2.addHeader("If-Match", updatedBucket.etag);
+        req2.addHeader("If-Match", updatedBucket.additionalDataManager().get("@odata.etag").getAsString());
         req2.patch(patchBucket);
     }
 
@@ -409,8 +401,53 @@ public class PlannerTests {
         PlannerBucket createdBucket = testBase.graphClient.planner().buckets().buildRequest().post(newBucket);
 
         IPlannerBucketRequest req = testBase.graphClient.planner().buckets(createdBucket.id).buildRequest();
-        req.addHeader("If-Match", createdBucket.etag);
+        req.addHeader("If-Match", createdBucket.additionalDataManager().get("@odata.etag").getAsString());
         req.delete();
+    }
+    
+    @Test
+    public void testPlannerChecklistItemDeserialization() throws Exception{
+    	String input = "{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#planner/tasks('433tZlfn_USJwWRL9khDx8kALTM7')/details/$entity\",\"@odata.etag\":\"W/\\\"JzEtVGFza0RldGFpbHMgQEBAQEBAQEBAQEBAQEBAcCc=\\\"\",\"description\":\"This is a test description of test event two.\",\"previewType\":\"automatic\",\"id\":\"433tZlfn_USJwWRL9khDx8kALTM7\",\"references\":{},\"checklist\":{\"55554\":{\"@odata.type\":\"#microsoft.graph.plannerChecklistItem\",\"isChecked\":false,\"title\":\"Test Item 2\",\"orderHint\":\"8586580527[2\",\"lastModifiedDateTime\":\"2018-11-30T05:01:53.0387892Z\",\"lastModifiedBy\":{\"user\":{\"displayName\":null,\"id\":\"ec786dee-da15-4896-8e73-57141477bae7\"}}},\"91100\":{\"@odata.type\":\"#microsoft.graph.plannerChecklistItem\",\"isChecked\":true,\"title\":\"Test Item 1 \",\"orderHint\":\"8586580528393292964Pc\",\"lastModifiedDateTime\":\"2018-11-30T05:01:47.4138223Z\",\"lastModifiedBy\":{\"user\":{\"displayName\":null,\"id\":\"ec786dee-da15-4896-8e73-57141477bae7\"}}}}}";
+    	final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+    	PlannerTaskDetails ptd = serializer.deserializeObject(input, PlannerTaskDetails.class);
+    	assertNotNull(ptd);
+    	PlannerChecklistItem item1 = ptd.checklist.get("91100");
+    	assertEquals(item1.title,"Test Item 1 ");
+    	PlannerChecklistItem item2 = ptd.checklist.get("55554");
+    	assertEquals(item2.title,"Test Item 2");
+    }
+    
+    @Test
+    public void testPlannerTaskDetailsDeserialization() {
+    	String input = "{\r\n" + 
+    			"	\"references\": {},\r\n" + 
+    			"	\"@odata.etag\": \"W/\\\"JzEtVGFza0RldGFpbHMgQEBAQEBAQEBAQEBAQEBAUCc=\\\"\",\r\n" + 
+    			"	\"description\": null,\r\n" + 
+    			"	\"checklist\": {\r\n" + 
+    			"		\"42660\": {\r\n" + 
+    			"			\"lastModifiedDateTime\": \"2018-10-28T14:29:37.7423391Z\",\r\n" + 
+    			"			\"@odata.type\": \"#microsoft.graph.plannerChecklistItem\",\r\n" + 
+    			"			\"orderHint\": \"8586608699726429822PK\",\r\n" + 
+    			"			\"lastModifiedBy\": {\r\n" + 
+    			"				\"user\": {\r\n" + 
+    			"					\"displayName\": null,\r\n" + 
+    			"					\"id\": \"f3a1dfe8-f2ef-4870-9642-413d468c571c\"\r\n" + 
+    			"				}\r\n" + 
+    			"			},\r\n" + 
+    			"			\"title\": \"Ein Checklisteneintrag\",\r\n" + 
+    			"			\"isChecked\": false\r\n" + 
+    			"		}\r\n" + 
+    			"	},\r\n" + 
+    			"	\"@odata.context\": \"https://graph.microsoft.com/v1.0/$metadata#planner/tasks('C6iIn6oJcEGcLX5XAiKeCZcAOv30')/details/$entity\",\r\n" + 
+    			"	\"previewType\": \"automatic\",\r\n" + 
+    			"	\"id\": \"C6iIn6oJcEGcLX5XAiKeCZcAOv30\"\r\n" + 
+    			"}";
+    	final DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
+    	PlannerTaskDetails ptd = serializer.deserializeObject(input, PlannerTaskDetails.class);
+    	assertNotNull(ptd);
+    	PlannerChecklistItem item = ptd.checklist.get("42660");
+    	assertEquals(item.title, "Ein Checklisteneintrag");
+    	assertEquals(item.isChecked, false);
     }
 
     @AfterClass
@@ -421,12 +458,12 @@ public class PlannerTests {
         //This may have updated since we last saw it
         PlannerTask task = testBase.graphClient.planner().tasks(planTask.id).buildRequest().get();
         IPlannerTaskRequest taskReq = testBase.graphClient.planner().tasks(planTask.id).buildRequest();
-        taskReq.addHeader("If-Match", task.etag);
+        taskReq.addHeader("If-Match", task.additionalDataManager().get("@odata.etag").getAsString());
         taskReq.delete();
 
         PlannerBucket bucket = testBase.graphClient.planner().buckets(planBucket.id).buildRequest().get();
         IPlannerBucketRequest bucketReq = testBase.graphClient.planner().buckets(planBucket.id).buildRequest();
-        bucketReq.addHeader("If-Match", bucket.etag);
+        bucketReq.addHeader("If-Match", bucket.additionalDataManager().get("@odata.etag").getAsString());
         bucketReq.delete();
 
         //Fails with 403 Forbidden
