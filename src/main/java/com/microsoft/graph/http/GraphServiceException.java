@@ -28,11 +28,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Collections;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
@@ -150,8 +150,16 @@ public class GraphServiceException extends ClientException {
         this.responseHeaders = responseHeaders;
         this.error = error;
         this.verbose = verbose;
+        for(String requestHeader : requestHeaders) {
+            for(String headerKeyToRedact : requestHeadersToRedact) {
+                if(requestHeader.startsWith(headerKeyToRedact)) {
+                    Collections.replaceAll(requestHeaders, requestHeader, headerKeyToRedact + " : [PII_REDACTED]");
+                    break;
+                }
+            }
+        }
     }
-    
+    private static String[] requestHeadersToRedact = {"Authorization"};
     /**
      * Gets the The HTTP response message
      *
