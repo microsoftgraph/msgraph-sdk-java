@@ -62,14 +62,14 @@ public class ColumnDefinitionCollectionRequest extends BaseCollectionRequest<Col
     public void post(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newColumnDefinition, callback);
     }
 
     public ColumnDefinition post(final ColumnDefinition newColumnDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newColumnDefinition);
     }
 

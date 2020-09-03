@@ -62,14 +62,14 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
     public void post(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConversationMember, callback);
     }
 
     public ConversationMember post(final ConversationMember newConversationMember) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConversationMember);
     }
 

@@ -62,14 +62,14 @@ public class ChatMessageHostedContentCollectionRequest extends BaseCollectionReq
     public void post(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChatMessageHostedContent, callback);
     }
 
     public ChatMessageHostedContent post(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageHostedContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChatMessageHostedContent);
     }
 

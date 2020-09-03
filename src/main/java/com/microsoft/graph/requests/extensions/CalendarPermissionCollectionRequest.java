@@ -62,14 +62,14 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
     public void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCalendarPermission, callback);
     }
 
     public CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCalendarPermission);
     }
 

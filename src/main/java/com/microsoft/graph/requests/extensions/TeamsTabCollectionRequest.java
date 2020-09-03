@@ -62,14 +62,14 @@ public class TeamsTabCollectionRequest extends BaseCollectionRequest<TeamsTabCol
     public void post(final TeamsTab newTeamsTab, final ICallback<TeamsTab> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsTab, callback);
     }
 
     public TeamsTab post(final TeamsTab newTeamsTab) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTabRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsTab);
     }
 

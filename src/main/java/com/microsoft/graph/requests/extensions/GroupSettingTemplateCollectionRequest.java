@@ -61,14 +61,14 @@ public class GroupSettingTemplateCollectionRequest extends BaseCollectionRequest
     public void post(final GroupSettingTemplate newGroupSettingTemplate, final ICallback<GroupSettingTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupSettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupSettingTemplate, callback);
     }
 
     public GroupSettingTemplate post(final GroupSettingTemplate newGroupSettingTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupSettingTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupSettingTemplate);
     }
 

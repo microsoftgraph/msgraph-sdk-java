@@ -64,14 +64,14 @@ public class TeamCollectionRequest extends BaseCollectionRequest<TeamCollectionR
     public void post(final Team newTeam, final ICallback<Team> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeam, callback);
     }
 
     public Team post(final Team newTeam) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeam);
     }
 

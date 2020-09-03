@@ -63,14 +63,14 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
     public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppContentFile, callback);
     }
 
     public MobileAppContentFile post(final MobileAppContentFile newMobileAppContentFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppContentFile);
     }
 

@@ -41,7 +41,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         new SiteWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSite, body, callback);
     }
 
@@ -49,7 +49,7 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/sites/" + newSite.id);
         return new SiteWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newSite, body);
     }
     /**

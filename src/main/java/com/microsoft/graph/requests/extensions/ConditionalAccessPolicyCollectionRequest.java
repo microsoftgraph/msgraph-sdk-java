@@ -62,14 +62,14 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
     public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConditionalAccessPolicy, callback);
     }
 
     public ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConditionalAccessPolicy);
     }
 

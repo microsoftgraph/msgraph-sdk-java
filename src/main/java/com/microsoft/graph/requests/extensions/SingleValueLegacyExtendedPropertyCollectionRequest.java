@@ -62,14 +62,14 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
     public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSingleValueLegacyExtendedProperty, callback);
     }
 
     public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSingleValueLegacyExtendedProperty);
     }
 

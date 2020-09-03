@@ -61,14 +61,14 @@ public class TeamsTemplateCollectionRequest extends BaseCollectionRequest<TeamsT
     public void post(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsTemplate, callback);
     }
 
     public TeamsTemplate post(final TeamsTemplate newTeamsTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsTemplate);
     }
 

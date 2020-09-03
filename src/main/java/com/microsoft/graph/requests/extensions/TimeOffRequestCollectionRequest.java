@@ -63,14 +63,14 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
     public void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOffRequest, callback);
     }
 
     public TimeOffRequest post(final TimeOffRequest newTimeOffRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOffRequest);
     }
 

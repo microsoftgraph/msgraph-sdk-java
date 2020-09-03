@@ -62,14 +62,14 @@ public class VppTokenCollectionRequest extends BaseCollectionRequest<VppTokenCol
     public void post(final VppToken newVppToken, final ICallback<VppToken> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newVppToken, callback);
     }
 
     public VppToken post(final VppToken newVppToken) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new VppTokenRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newVppToken);
     }
 

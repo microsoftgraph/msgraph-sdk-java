@@ -62,14 +62,14 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
     public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSettingStateDeviceSummary, callback);
     }
 
     public SettingStateDeviceSummary post(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSettingStateDeviceSummary);
     }
 

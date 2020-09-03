@@ -62,14 +62,14 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
     public void post(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteResource, callback);
     }
 
     public OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteResource);
     }
 

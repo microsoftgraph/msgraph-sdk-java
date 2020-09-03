@@ -62,14 +62,14 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
     public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScoreControlProfile, callback);
     }
 
     public SecureScoreControlProfile post(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScoreControlProfile);
     }
 

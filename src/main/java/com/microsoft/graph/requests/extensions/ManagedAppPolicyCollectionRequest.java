@@ -63,14 +63,14 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
     public void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppPolicy, callback);
     }
 
     public ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppPolicy);
     }
 

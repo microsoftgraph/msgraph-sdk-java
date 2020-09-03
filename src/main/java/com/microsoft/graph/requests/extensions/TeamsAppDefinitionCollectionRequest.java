@@ -62,14 +62,14 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
     public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppDefinition, callback);
     }
 
     public TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppDefinition);
     }
 

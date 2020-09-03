@@ -62,14 +62,14 @@ public class RoleDefinitionCollectionRequest extends BaseCollectionRequest<RoleD
     public void post(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleDefinition, callback);
     }
 
     public RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleDefinition);
     }
 

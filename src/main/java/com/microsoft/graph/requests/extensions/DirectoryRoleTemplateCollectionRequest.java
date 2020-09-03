@@ -61,14 +61,14 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
     public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryRoleTemplate, callback);
     }
 
     public DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryRoleTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryRoleTemplate);
     }
 

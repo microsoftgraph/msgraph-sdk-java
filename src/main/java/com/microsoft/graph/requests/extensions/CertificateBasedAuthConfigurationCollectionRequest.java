@@ -61,14 +61,14 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCertificateBasedAuthConfiguration, callback);
     }
 
     public CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCertificateBasedAuthConfiguration);
     }
 

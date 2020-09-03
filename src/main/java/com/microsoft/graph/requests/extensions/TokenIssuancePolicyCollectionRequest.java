@@ -62,14 +62,14 @@ public class TokenIssuancePolicyCollectionRequest extends BaseCollectionRequest<
     public void post(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTokenIssuancePolicy, callback);
     }
 
     public TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenIssuancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTokenIssuancePolicy);
     }
 

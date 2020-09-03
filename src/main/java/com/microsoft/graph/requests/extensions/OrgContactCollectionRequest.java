@@ -61,14 +61,14 @@ public class OrgContactCollectionRequest extends BaseCollectionRequest<OrgContac
     public void post(final OrgContact newOrgContact, final ICallback<OrgContact> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrgContact, callback);
     }
 
     public OrgContact post(final OrgContact newOrgContact) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrgContactRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrgContact);
     }
 

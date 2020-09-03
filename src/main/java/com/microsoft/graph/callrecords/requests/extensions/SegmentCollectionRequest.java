@@ -62,14 +62,14 @@ public class SegmentCollectionRequest extends BaseCollectionRequest<SegmentColle
     public void post(final Segment newSegment, final ICallback<Segment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSegment, callback);
     }
 
     public Segment post(final Segment newSegment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SegmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSegment);
     }
 

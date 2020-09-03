@@ -40,7 +40,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
         new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newHomeRealmDiscoveryPolicy, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class HomeRealmDiscoveryPolicyCollectionReferenceRequest extends BaseColl
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/policies/homeRealmDiscoveryPolicies/" + newHomeRealmDiscoveryPolicy.id);
         return new HomeRealmDiscoveryPolicyWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newHomeRealmDiscoveryPolicy, body);
     }
     /**

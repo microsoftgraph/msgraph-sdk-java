@@ -62,14 +62,14 @@ public class DirectoryAuditCollectionRequest extends BaseCollectionRequest<Direc
     public void post(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryAudit, callback);
     }
 
     public DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryAuditRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryAudit);
     }
 

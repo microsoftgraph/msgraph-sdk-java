@@ -62,14 +62,14 @@ public class CallRecordCollectionRequest extends BaseCollectionRequest<CallRecor
     public void post(final CallRecord newCallRecord, final ICallback<CallRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCallRecord, callback);
     }
 
     public CallRecord post(final CallRecord newCallRecord) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CallRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCallRecord);
     }
 

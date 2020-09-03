@@ -62,14 +62,14 @@ public class SessionCollectionRequest extends BaseCollectionRequest<SessionColle
     public void post(final Session newSession, final ICallback<Session> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSession, callback);
     }
 
     public Session post(final Session newSession) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SessionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSession);
     }
 

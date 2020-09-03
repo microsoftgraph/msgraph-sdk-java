@@ -63,14 +63,14 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
     public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExchangeConnector, callback);
     }
 
     public DeviceManagementExchangeConnector post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExchangeConnector);
     }
 

@@ -62,14 +62,14 @@ public class UsedInsightCollectionRequest extends BaseCollectionRequest<UsedInsi
     public void post(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUsedInsight, callback);
     }
 
     public UsedInsight post(final UsedInsight newUsedInsight) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UsedInsightRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUsedInsight);
     }
 

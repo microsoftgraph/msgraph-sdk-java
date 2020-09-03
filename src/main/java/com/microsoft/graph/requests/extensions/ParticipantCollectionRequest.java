@@ -65,14 +65,14 @@ public class ParticipantCollectionRequest extends BaseCollectionRequest<Particip
     public void post(final Participant newParticipant, final ICallback<Participant> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newParticipant, callback);
     }
 
     public Participant post(final Participant newParticipant) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ParticipantRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newParticipant);
     }
 

@@ -62,14 +62,14 @@ public class ColumnLinkCollectionRequest extends BaseCollectionRequest<ColumnLin
     public void post(final ColumnLink newColumnLink, final ICallback<ColumnLink> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newColumnLink, callback);
     }
 
     public ColumnLink post(final ColumnLink newColumnLink) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ColumnLinkRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newColumnLink);
     }
 

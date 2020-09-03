@@ -63,14 +63,14 @@ public class ManagedDeviceCollectionRequest extends BaseCollectionRequest<Manage
     public void post(final ManagedDevice newManagedDevice, final ICallback<ManagedDevice> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDevice, callback);
     }
 
     public ManagedDevice post(final ManagedDevice newManagedDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDevice);
     }
 

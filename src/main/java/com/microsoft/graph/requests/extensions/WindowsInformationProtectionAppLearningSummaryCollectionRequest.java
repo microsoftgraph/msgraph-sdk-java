@@ -62,14 +62,14 @@ public class WindowsInformationProtectionAppLearningSummaryCollectionRequest ext
     public void post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionAppLearningSummary, callback);
     }
 
     public WindowsInformationProtectionAppLearningSummary post(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionAppLearningSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionAppLearningSummary);
     }
 

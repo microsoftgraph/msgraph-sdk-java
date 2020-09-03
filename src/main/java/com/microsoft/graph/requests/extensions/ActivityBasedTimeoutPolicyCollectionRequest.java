@@ -62,14 +62,14 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
     public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityBasedTimeoutPolicy, callback);
     }
 
     public ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityBasedTimeoutPolicy);
     }
 

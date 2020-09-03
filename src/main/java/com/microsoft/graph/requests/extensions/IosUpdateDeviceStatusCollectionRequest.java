@@ -62,14 +62,14 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
     public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosUpdateDeviceStatus, callback);
     }
 
     public IosUpdateDeviceStatus post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosUpdateDeviceStatus);
     }
 

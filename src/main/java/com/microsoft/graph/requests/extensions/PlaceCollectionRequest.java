@@ -61,14 +61,14 @@ public class PlaceCollectionRequest extends BaseCollectionRequest<PlaceCollectio
     public void post(final Place newPlace, final ICallback<Place> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPlace, callback);
     }
 
     public Place post(final Place newPlace) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PlaceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPlace);
     }
 

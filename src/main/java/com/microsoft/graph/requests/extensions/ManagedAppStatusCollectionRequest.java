@@ -62,14 +62,14 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
     public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppStatus, callback);
     }
 
     public ManagedAppStatus post(final ManagedAppStatus newManagedAppStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppStatus);
     }
 

@@ -62,14 +62,14 @@ public class GroupCollectionRequest extends BaseCollectionRequest<GroupCollectio
     public void post(final Group newGroup, final ICallback<Group> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroup, callback);
     }
 
     public Group post(final Group newGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroup);
     }
 

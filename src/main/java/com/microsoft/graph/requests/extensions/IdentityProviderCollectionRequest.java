@@ -61,14 +61,14 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
     public void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityProvider, callback);
     }
 
     public IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityProvider);
     }
 

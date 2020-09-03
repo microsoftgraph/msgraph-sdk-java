@@ -63,14 +63,14 @@ public class ListItemCollectionRequest extends BaseCollectionRequest<ListItemCol
     public void post(final ListItem newListItem, final ICallback<ListItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newListItem, callback);
     }
 
     public ListItem post(final ListItem newListItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newListItem);
     }
 

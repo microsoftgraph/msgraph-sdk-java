@@ -63,14 +63,14 @@ public class ManagedEBookCollectionRequest extends BaseCollectionRequest<Managed
     public void post(final ManagedEBook newManagedEBook, final ICallback<ManagedEBook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBook, callback);
     }
 
     public ManagedEBook post(final ManagedEBook newManagedEBook) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBook);
     }
 

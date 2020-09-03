@@ -62,14 +62,14 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
     public void post(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookComment, callback);
     }
 
     public WorkbookComment post(final WorkbookComment newWorkbookComment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookComment);
     }
 

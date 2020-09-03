@@ -77,14 +77,14 @@ public class CallCollectionRequest extends BaseCollectionRequest<CallCollectionR
     public void post(final Call newCall, final ICallback<Call> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCall, callback);
     }
 
     public Call post(final Call newCall) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CallRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCall);
     }
 

@@ -62,14 +62,14 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
     public void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookCategory, callback);
     }
 
     public OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOutlookCategory);
     }
 

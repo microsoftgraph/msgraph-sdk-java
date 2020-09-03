@@ -61,14 +61,14 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
     public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<DomainDnsRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainDnsRecord, callback);
     }
 
     public DomainDnsRecord post(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainDnsRecord);
     }
 
