@@ -62,14 +62,14 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
     public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfferShiftRequest, callback);
     }
 
     public OfferShiftRequest post(final OfferShiftRequest newOfferShiftRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfferShiftRequest);
     }
 

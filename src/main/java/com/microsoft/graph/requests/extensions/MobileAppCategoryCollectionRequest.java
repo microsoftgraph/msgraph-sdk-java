@@ -62,14 +62,14 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppCategory, callback);
     }
 
     public MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppCategory);
     }
 

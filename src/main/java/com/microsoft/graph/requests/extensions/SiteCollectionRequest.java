@@ -62,14 +62,14 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
     public void post(final Site newSite, final ICallback<Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSite, callback);
     }
 
     public Site post(final Site newSite) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSite);
     }
 

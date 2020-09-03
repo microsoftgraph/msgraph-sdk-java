@@ -62,14 +62,14 @@ public class NamedLocationCollectionRequest extends BaseCollectionRequest<NamedL
     public void post(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNamedLocation, callback);
     }
 
     public NamedLocation post(final NamedLocation newNamedLocation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NamedLocationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNamedLocation);
     }
 

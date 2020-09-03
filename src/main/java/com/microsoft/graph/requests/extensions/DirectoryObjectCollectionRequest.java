@@ -62,14 +62,14 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
     public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryObject, callback);
     }
 
     public DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryObject);
     }
 

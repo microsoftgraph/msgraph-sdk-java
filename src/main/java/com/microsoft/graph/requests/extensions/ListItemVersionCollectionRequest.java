@@ -62,14 +62,14 @@ public class ListItemVersionCollectionRequest extends BaseCollectionRequest<List
     public void post(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newListItemVersion, callback);
     }
 
     public ListItemVersion post(final ListItemVersion newListItemVersion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ListItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newListItemVersion);
     }
 

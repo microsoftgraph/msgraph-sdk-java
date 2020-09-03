@@ -61,14 +61,14 @@ public class SubscriptionCollectionRequest extends BaseCollectionRequest<Subscri
     public void post(final Subscription newSubscription, final ICallback<Subscription> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSubscription, callback);
     }
 
     public Subscription post(final Subscription newSubscription) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SubscriptionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSubscription);
     }
 

@@ -62,14 +62,14 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
     public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkforceIntegration, callback);
     }
 
     public WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkforceIntegration);
     }
 

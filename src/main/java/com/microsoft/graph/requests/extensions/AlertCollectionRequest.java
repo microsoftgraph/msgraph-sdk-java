@@ -62,14 +62,14 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
     public void post(final Alert newAlert, final ICallback<Alert> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAlert, callback);
     }
 
     public Alert post(final Alert newAlert) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAlert);
     }
 

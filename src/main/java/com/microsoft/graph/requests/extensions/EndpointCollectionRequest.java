@@ -62,14 +62,14 @@ public class EndpointCollectionRequest extends BaseCollectionRequest<EndpointCol
     public void post(final Endpoint newEndpoint, final ICallback<Endpoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEndpoint, callback);
     }
 
     public Endpoint post(final Endpoint newEndpoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EndpointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEndpoint);
     }
 

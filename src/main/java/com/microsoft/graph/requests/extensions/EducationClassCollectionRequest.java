@@ -62,14 +62,14 @@ public class EducationClassCollectionRequest extends BaseCollectionRequest<Educa
     public void post(final EducationClass newEducationClass, final ICallback<EducationClass> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationClassRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationClass, callback);
     }
 
     public EducationClass post(final EducationClass newEducationClass) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationClassRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationClass);
     }
 

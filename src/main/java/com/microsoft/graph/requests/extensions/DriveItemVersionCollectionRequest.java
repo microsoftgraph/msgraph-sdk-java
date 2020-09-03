@@ -62,14 +62,14 @@ public class DriveItemVersionCollectionRequest extends BaseCollectionRequest<Dri
     public void post(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDriveItemVersion, callback);
     }
 
     public DriveItemVersion post(final DriveItemVersion newDriveItemVersion) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveItemVersionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDriveItemVersion);
     }
 

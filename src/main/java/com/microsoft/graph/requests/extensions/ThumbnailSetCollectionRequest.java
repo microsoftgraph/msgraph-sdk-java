@@ -62,14 +62,14 @@ public class ThumbnailSetCollectionRequest extends BaseCollectionRequest<Thumbna
     public void post(final ThumbnailSet newThumbnailSet, final ICallback<ThumbnailSet> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThumbnailSet, callback);
     }
 
     public ThumbnailSet post(final ThumbnailSet newThumbnailSet) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThumbnailSetRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThumbnailSet);
     }
 

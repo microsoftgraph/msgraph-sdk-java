@@ -62,14 +62,14 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
     public void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSchedulingGroup, callback);
     }
 
     public SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSchedulingGroup);
     }
 

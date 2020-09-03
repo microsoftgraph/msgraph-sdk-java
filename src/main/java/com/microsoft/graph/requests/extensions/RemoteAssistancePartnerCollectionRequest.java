@@ -62,14 +62,14 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
     public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteAssistancePartner, callback);
     }
 
     public RemoteAssistancePartner post(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteAssistancePartner);
     }
 

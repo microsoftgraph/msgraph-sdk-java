@@ -62,14 +62,14 @@ public class ShiftCollectionRequest extends BaseCollectionRequest<ShiftCollectio
     public void post(final Shift newShift, final ICallback<Shift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newShift, callback);
     }
 
     public Shift post(final Shift newShift) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newShift);
     }
 

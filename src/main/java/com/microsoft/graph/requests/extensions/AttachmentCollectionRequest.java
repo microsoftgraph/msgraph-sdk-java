@@ -64,14 +64,14 @@ public class AttachmentCollectionRequest extends BaseCollectionRequest<Attachmen
     public void post(final Attachment newAttachment, final ICallback<Attachment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAttachment, callback);
     }
 
     public Attachment post(final Attachment newAttachment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AttachmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAttachment);
     }
 

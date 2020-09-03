@@ -62,14 +62,14 @@ public class TermsAndConditionsCollectionRequest extends BaseCollectionRequest<T
     public void post(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditions, callback);
     }
 
     public TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditions);
     }
 

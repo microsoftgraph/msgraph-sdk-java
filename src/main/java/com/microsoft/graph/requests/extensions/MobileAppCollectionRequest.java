@@ -63,14 +63,14 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileAppC
     public void post(final MobileApp newMobileApp, final ICallback<MobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileApp, callback);
     }
 
     public MobileApp post(final MobileApp newMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileApp);
     }
 

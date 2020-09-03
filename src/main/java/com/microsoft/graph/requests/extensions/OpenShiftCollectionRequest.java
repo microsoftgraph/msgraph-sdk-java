@@ -62,14 +62,14 @@ public class OpenShiftCollectionRequest extends BaseCollectionRequest<OpenShiftC
     public void post(final OpenShift newOpenShift, final ICallback<OpenShift> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOpenShift, callback);
     }
 
     public OpenShift post(final OpenShift newOpenShift) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOpenShift);
     }
 

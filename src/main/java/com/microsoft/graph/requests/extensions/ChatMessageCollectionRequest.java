@@ -61,14 +61,14 @@ public class ChatMessageCollectionRequest extends BaseCollectionRequest<ChatMess
     public void post(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChatMessage, callback);
     }
 
     public ChatMessage post(final ChatMessage newChatMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChatMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChatMessage);
     }
 

@@ -61,14 +61,14 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataPolicyOperation, callback);
     }
 
     public DataPolicyOperation post(final DataPolicyOperation newDataPolicyOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataPolicyOperation);
     }
 

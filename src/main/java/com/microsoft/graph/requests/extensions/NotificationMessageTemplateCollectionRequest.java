@@ -62,14 +62,14 @@ public class NotificationMessageTemplateCollectionRequest extends BaseCollection
     public void post(final NotificationMessageTemplate newNotificationMessageTemplate, final ICallback<NotificationMessageTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNotificationMessageTemplate, callback);
     }
 
     public NotificationMessageTemplate post(final NotificationMessageTemplate newNotificationMessageTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotificationMessageTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNotificationMessageTemplate);
     }
 
