@@ -80,6 +80,23 @@ public interface IScheduleRequest extends IHttpRequest {
     Schedule post(final Schedule newSchedule) throws ClientException;
 
     /**
+     * Posts a Schedule with a new object
+     *
+     * @param newSchedule the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Schedule newSchedule, final ICallback<Schedule> callback);
+
+    /**
+     * Posts a Schedule with a new object
+     *
+     * @param newSchedule the object to create/update
+     * @return the created Schedule
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Schedule put(final Schedule newSchedule) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

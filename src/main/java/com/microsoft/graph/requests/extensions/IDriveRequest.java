@@ -80,6 +80,23 @@ public interface IDriveRequest extends IHttpRequest {
     Drive post(final Drive newDrive) throws ClientException;
 
     /**
+     * Posts a Drive with a new object
+     *
+     * @param newDrive the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Drive newDrive, final ICallback<Drive> callback);
+
+    /**
+     * Posts a Drive with a new object
+     *
+     * @param newDrive the object to create/update
+     * @return the created Drive
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Drive put(final Drive newDrive) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

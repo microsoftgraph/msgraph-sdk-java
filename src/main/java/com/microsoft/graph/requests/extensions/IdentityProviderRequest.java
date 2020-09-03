@@ -112,6 +112,27 @@ public class IdentityProviderRequest extends BaseRequest implements IIdentityPro
     }
 
     /**
+     * Creates a IdentityProvider with a new object
+     *
+     * @param newIdentityProvider the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
+        send(HttpMethod.PUT, callback, newIdentityProvider);
+    }
+
+    /**
+     * Creates a IdentityProvider with a new object
+     *
+     * @param newIdentityProvider the object to create/update
+     * @return the created IdentityProvider
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IdentityProvider put(final IdentityProvider newIdentityProvider) throws ClientException {
+        return send(HttpMethod.PUT, newIdentityProvider);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

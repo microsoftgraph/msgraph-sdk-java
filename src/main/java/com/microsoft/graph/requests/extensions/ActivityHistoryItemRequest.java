@@ -114,6 +114,27 @@ public class ActivityHistoryItemRequest extends BaseRequest implements IActivity
     }
 
     /**
+     * Creates a ActivityHistoryItem with a new object
+     *
+     * @param newActivityHistoryItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ActivityHistoryItem newActivityHistoryItem, final ICallback<ActivityHistoryItem> callback) {
+        send(HttpMethod.PUT, callback, newActivityHistoryItem);
+    }
+
+    /**
+     * Creates a ActivityHistoryItem with a new object
+     *
+     * @param newActivityHistoryItem the object to create/update
+     * @return the created ActivityHistoryItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ActivityHistoryItem put(final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
+        return send(HttpMethod.PUT, newActivityHistoryItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

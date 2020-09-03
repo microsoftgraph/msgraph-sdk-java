@@ -80,6 +80,23 @@ public interface IIosVppEBookAssignmentRequest extends IHttpRequest {
     IosVppEBookAssignment post(final IosVppEBookAssignment newIosVppEBookAssignment) throws ClientException;
 
     /**
+     * Posts a IosVppEBookAssignment with a new object
+     *
+     * @param newIosVppEBookAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosVppEBookAssignment newIosVppEBookAssignment, final ICallback<IosVppEBookAssignment> callback);
+
+    /**
+     * Posts a IosVppEBookAssignment with a new object
+     *
+     * @param newIosVppEBookAssignment the object to create/update
+     * @return the created IosVppEBookAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosVppEBookAssignment put(final IosVppEBookAssignment newIosVppEBookAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

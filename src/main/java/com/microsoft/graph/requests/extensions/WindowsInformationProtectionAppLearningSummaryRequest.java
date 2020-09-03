@@ -112,6 +112,27 @@ public class WindowsInformationProtectionAppLearningSummaryRequest extends BaseR
     }
 
     /**
+     * Creates a WindowsInformationProtectionAppLearningSummary with a new object
+     *
+     * @param newWindowsInformationProtectionAppLearningSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary, final ICallback<WindowsInformationProtectionAppLearningSummary> callback) {
+        send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLearningSummary);
+    }
+
+    /**
+     * Creates a WindowsInformationProtectionAppLearningSummary with a new object
+     *
+     * @param newWindowsInformationProtectionAppLearningSummary the object to create/update
+     * @return the created WindowsInformationProtectionAppLearningSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsInformationProtectionAppLearningSummary put(final WindowsInformationProtectionAppLearningSummary newWindowsInformationProtectionAppLearningSummary) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsInformationProtectionAppLearningSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

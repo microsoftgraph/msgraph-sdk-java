@@ -80,6 +80,23 @@ public interface ISectionGroupRequest extends IHttpRequest {
     SectionGroup post(final SectionGroup newSectionGroup) throws ClientException;
 
     /**
+     * Posts a SectionGroup with a new object
+     *
+     * @param newSectionGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SectionGroup newSectionGroup, final ICallback<SectionGroup> callback);
+
+    /**
+     * Posts a SectionGroup with a new object
+     *
+     * @param newSectionGroup the object to create/update
+     * @return the created SectionGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SectionGroup put(final SectionGroup newSectionGroup) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

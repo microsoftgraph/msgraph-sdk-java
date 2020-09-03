@@ -112,6 +112,27 @@ public class ChatMessageHostedContentRequest extends BaseRequest implements ICha
     }
 
     /**
+     * Creates a ChatMessageHostedContent with a new object
+     *
+     * @param newChatMessageHostedContent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ChatMessageHostedContent newChatMessageHostedContent, final ICallback<ChatMessageHostedContent> callback) {
+        send(HttpMethod.PUT, callback, newChatMessageHostedContent);
+    }
+
+    /**
+     * Creates a ChatMessageHostedContent with a new object
+     *
+     * @param newChatMessageHostedContent the object to create/update
+     * @return the created ChatMessageHostedContent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ChatMessageHostedContent put(final ChatMessageHostedContent newChatMessageHostedContent) throws ClientException {
+        return send(HttpMethod.PUT, newChatMessageHostedContent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -127,6 +127,27 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a OnenoteEntitySchemaObjectModel with a new object
+     *
+     * @param newOnenoteEntitySchemaObjectModel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<OnenoteEntitySchemaObjectModel> callback) {
+        send(HttpMethod.PUT, callback, newOnenoteEntitySchemaObjectModel);
+    }
+
+    /**
+     * Creates a OnenoteEntitySchemaObjectModel with a new object
+     *
+     * @param newOnenoteEntitySchemaObjectModel the object to create/update
+     * @return the created OnenoteEntitySchemaObjectModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenoteEntitySchemaObjectModel put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) throws ClientException {
+        return send(HttpMethod.PUT, newOnenoteEntitySchemaObjectModel);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

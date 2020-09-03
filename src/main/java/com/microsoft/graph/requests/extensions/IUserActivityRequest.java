@@ -80,6 +80,23 @@ public interface IUserActivityRequest extends IHttpRequest {
     UserActivity post(final UserActivity newUserActivity) throws ClientException;
 
     /**
+     * Posts a UserActivity with a new object
+     *
+     * @param newUserActivity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserActivity newUserActivity, final ICallback<UserActivity> callback);
+
+    /**
+     * Posts a UserActivity with a new object
+     *
+     * @param newUserActivity the object to create/update
+     * @return the created UserActivity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserActivity put(final UserActivity newUserActivity) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IUsedInsightRequest extends IHttpRequest {
     UsedInsight post(final UsedInsight newUsedInsight) throws ClientException;
 
     /**
+     * Posts a UsedInsight with a new object
+     *
+     * @param newUsedInsight the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback);
+
+    /**
+     * Posts a UsedInsight with a new object
+     *
+     * @param newUsedInsight the object to create/update
+     * @return the created UsedInsight
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UsedInsight put(final UsedInsight newUsedInsight) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

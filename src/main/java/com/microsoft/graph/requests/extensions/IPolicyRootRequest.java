@@ -80,6 +80,23 @@ public interface IPolicyRootRequest extends IHttpRequest {
     PolicyRoot post(final PolicyRoot newPolicyRoot) throws ClientException;
 
     /**
+     * Posts a PolicyRoot with a new object
+     *
+     * @param newPolicyRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PolicyRoot newPolicyRoot, final ICallback<PolicyRoot> callback);
+
+    /**
+     * Posts a PolicyRoot with a new object
+     *
+     * @param newPolicyRoot the object to create/update
+     * @return the created PolicyRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PolicyRoot put(final PolicyRoot newPolicyRoot) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

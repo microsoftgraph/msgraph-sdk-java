@@ -116,6 +116,27 @@ public class CallRecordRequest extends BaseRequest implements ICallRecordRequest
     }
 
     /**
+     * Creates a CallRecord with a new object
+     *
+     * @param newCallRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CallRecord newCallRecord, final ICallback<CallRecord> callback) {
+        send(HttpMethod.PUT, callback, newCallRecord);
+    }
+
+    /**
+     * Creates a CallRecord with a new object
+     *
+     * @param newCallRecord the object to create/update
+     * @return the created CallRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CallRecord put(final CallRecord newCallRecord) throws ClientException {
+        return send(HttpMethod.PUT, newCallRecord);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

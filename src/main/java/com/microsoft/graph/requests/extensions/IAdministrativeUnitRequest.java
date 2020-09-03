@@ -80,6 +80,23 @@ public interface IAdministrativeUnitRequest extends IHttpRequest {
     AdministrativeUnit post(final AdministrativeUnit newAdministrativeUnit) throws ClientException;
 
     /**
+     * Posts a AdministrativeUnit with a new object
+     *
+     * @param newAdministrativeUnit the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback);
+
+    /**
+     * Posts a AdministrativeUnit with a new object
+     *
+     * @param newAdministrativeUnit the object to create/update
+     * @return the created AdministrativeUnit
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AdministrativeUnit put(final AdministrativeUnit newAdministrativeUnit) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a WindowsPhone81CustomConfiguration with a new object
+     *
+     * @param newWindowsPhone81CustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhone81CustomConfiguration);
+    }
+
+    /**
+     * Creates a WindowsPhone81CustomConfiguration with a new object
+     *
+     * @param newWindowsPhone81CustomConfiguration the object to create/update
+     * @return the created WindowsPhone81CustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhone81CustomConfiguration put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhone81CustomConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

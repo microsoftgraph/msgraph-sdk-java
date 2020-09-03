@@ -80,6 +80,23 @@ public interface ILicenseDetailsRequest extends IHttpRequest {
     LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException;
 
     /**
+     * Posts a LicenseDetails with a new object
+     *
+     * @param newLicenseDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback);
+
+    /**
+     * Posts a LicenseDetails with a new object
+     *
+     * @param newLicenseDetails the object to create/update
+     * @return the created LicenseDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    LicenseDetails put(final LicenseDetails newLicenseDetails) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IAndroidManagedAppRegistrationRequest extends IHttpRequest {
     AndroidManagedAppRegistration post(final AndroidManagedAppRegistration newAndroidManagedAppRegistration) throws ClientException;
 
     /**
+     * Posts a AndroidManagedAppRegistration with a new object
+     *
+     * @param newAndroidManagedAppRegistration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback);
+
+    /**
+     * Posts a AndroidManagedAppRegistration with a new object
+     *
+     * @param newAndroidManagedAppRegistration the object to create/update
+     * @return the created AndroidManagedAppRegistration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidManagedAppRegistration put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

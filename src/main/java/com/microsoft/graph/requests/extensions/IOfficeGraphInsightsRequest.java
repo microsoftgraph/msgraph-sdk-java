@@ -80,6 +80,23 @@ public interface IOfficeGraphInsightsRequest extends IHttpRequest {
     OfficeGraphInsights post(final OfficeGraphInsights newOfficeGraphInsights) throws ClientException;
 
     /**
+     * Posts a OfficeGraphInsights with a new object
+     *
+     * @param newOfficeGraphInsights the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OfficeGraphInsights newOfficeGraphInsights, final ICallback<OfficeGraphInsights> callback);
+
+    /**
+     * Posts a OfficeGraphInsights with a new object
+     *
+     * @param newOfficeGraphInsights the object to create/update
+     * @return the created OfficeGraphInsights
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OfficeGraphInsights put(final OfficeGraphInsights newOfficeGraphInsights) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

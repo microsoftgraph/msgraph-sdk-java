@@ -127,6 +127,27 @@ public class EducationOrganizationRequest extends BaseRequest implements IEducat
     }
 
     /**
+     * Creates a EducationOrganization with a new object
+     *
+     * @param newEducationOrganization the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationOrganization newEducationOrganization, final ICallback<EducationOrganization> callback) {
+        send(HttpMethod.PUT, callback, newEducationOrganization);
+    }
+
+    /**
+     * Creates a EducationOrganization with a new object
+     *
+     * @param newEducationOrganization the object to create/update
+     * @return the created EducationOrganization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationOrganization put(final EducationOrganization newEducationOrganization) throws ClientException {
+        return send(HttpMethod.PUT, newEducationOrganization);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

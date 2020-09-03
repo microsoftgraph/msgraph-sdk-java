@@ -80,6 +80,23 @@ public interface IServicePrincipalRequest extends IHttpRequest {
     ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException;
 
     /**
+     * Posts a ServicePrincipal with a new object
+     *
+     * @param newServicePrincipal the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ServicePrincipal newServicePrincipal, final ICallback<ServicePrincipal> callback);
+
+    /**
+     * Posts a ServicePrincipal with a new object
+     *
+     * @param newServicePrincipal the object to create/update
+     * @return the created ServicePrincipal
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ServicePrincipal put(final ServicePrincipal newServicePrincipal) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

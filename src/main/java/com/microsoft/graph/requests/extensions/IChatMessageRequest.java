@@ -80,6 +80,23 @@ public interface IChatMessageRequest extends IHttpRequest {
     ChatMessage post(final ChatMessage newChatMessage) throws ClientException;
 
     /**
+     * Posts a ChatMessage with a new object
+     *
+     * @param newChatMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ChatMessage newChatMessage, final ICallback<ChatMessage> callback);
+
+    /**
+     * Posts a ChatMessage with a new object
+     *
+     * @param newChatMessage the object to create/update
+     * @return the created ChatMessage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ChatMessage put(final ChatMessage newChatMessage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

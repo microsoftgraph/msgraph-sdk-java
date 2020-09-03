@@ -80,6 +80,23 @@ public interface ISessionRequest extends IHttpRequest {
     Session post(final Session newSession) throws ClientException;
 
     /**
+     * Posts a Session with a new object
+     *
+     * @param newSession the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Session newSession, final ICallback<Session> callback);
+
+    /**
+     * Posts a Session with a new object
+     *
+     * @param newSession the object to create/update
+     * @return the created Session
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Session put(final Session newSession) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

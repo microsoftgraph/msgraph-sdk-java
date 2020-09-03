@@ -80,6 +80,23 @@ public interface IUnmuteParticipantOperationRequest extends IHttpRequest {
     UnmuteParticipantOperation post(final UnmuteParticipantOperation newUnmuteParticipantOperation) throws ClientException;
 
     /**
+     * Posts a UnmuteParticipantOperation with a new object
+     *
+     * @param newUnmuteParticipantOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback);
+
+    /**
+     * Posts a UnmuteParticipantOperation with a new object
+     *
+     * @param newUnmuteParticipantOperation the object to create/update
+     * @return the created UnmuteParticipantOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UnmuteParticipantOperation put(final UnmuteParticipantOperation newUnmuteParticipantOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

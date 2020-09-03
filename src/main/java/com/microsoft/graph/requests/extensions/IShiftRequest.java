@@ -80,6 +80,23 @@ public interface IShiftRequest extends IHttpRequest {
     Shift post(final Shift newShift) throws ClientException;
 
     /**
+     * Posts a Shift with a new object
+     *
+     * @param newShift the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Shift newShift, final ICallback<Shift> callback);
+
+    /**
+     * Posts a Shift with a new object
+     *
+     * @param newShift the object to create/update
+     * @return the created Shift
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Shift put(final Shift newShift) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

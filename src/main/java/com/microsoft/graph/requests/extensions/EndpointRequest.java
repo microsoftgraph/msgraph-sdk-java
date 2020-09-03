@@ -112,6 +112,27 @@ public class EndpointRequest extends BaseRequest implements IEndpointRequest {
     }
 
     /**
+     * Creates a Endpoint with a new object
+     *
+     * @param newEndpoint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Endpoint newEndpoint, final ICallback<Endpoint> callback) {
+        send(HttpMethod.PUT, callback, newEndpoint);
+    }
+
+    /**
+     * Creates a Endpoint with a new object
+     *
+     * @param newEndpoint the object to create/update
+     * @return the created Endpoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Endpoint put(final Endpoint newEndpoint) throws ClientException {
+        return send(HttpMethod.PUT, newEndpoint);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

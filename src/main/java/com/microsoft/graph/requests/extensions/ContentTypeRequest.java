@@ -116,6 +116,27 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
     }
 
     /**
+     * Creates a ContentType with a new object
+     *
+     * @param newContentType the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ContentType newContentType, final ICallback<ContentType> callback) {
+        send(HttpMethod.PUT, callback, newContentType);
+    }
+
+    /**
+     * Creates a ContentType with a new object
+     *
+     * @param newContentType the object to create/update
+     * @return the created ContentType
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ContentType put(final ContentType newContentType) throws ClientException {
+        return send(HttpMethod.PUT, newContentType);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

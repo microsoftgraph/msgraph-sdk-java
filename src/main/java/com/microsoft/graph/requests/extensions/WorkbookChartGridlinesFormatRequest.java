@@ -114,6 +114,27 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a WorkbookChartGridlinesFormat with a new object
+     *
+     * @param newWorkbookChartGridlinesFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<WorkbookChartGridlinesFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartGridlinesFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartGridlinesFormat with a new object
+     *
+     * @param newWorkbookChartGridlinesFormat the object to create/update
+     * @return the created WorkbookChartGridlinesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartGridlinesFormat put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartGridlinesFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

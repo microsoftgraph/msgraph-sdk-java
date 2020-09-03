@@ -80,6 +80,23 @@ public interface ITokenIssuancePolicyRequest extends IHttpRequest {
     TokenIssuancePolicy post(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException;
 
     /**
+     * Posts a TokenIssuancePolicy with a new object
+     *
+     * @param newTokenIssuancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TokenIssuancePolicy newTokenIssuancePolicy, final ICallback<TokenIssuancePolicy> callback);
+
+    /**
+     * Posts a TokenIssuancePolicy with a new object
+     *
+     * @param newTokenIssuancePolicy the object to create/update
+     * @return the created TokenIssuancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TokenIssuancePolicy put(final TokenIssuancePolicy newTokenIssuancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class WindowsInformationProtectionAppLockerFileRequest extends BaseReques
     }
 
     /**
+     * Creates a WindowsInformationProtectionAppLockerFile with a new object
+     *
+     * @param newWindowsInformationProtectionAppLockerFile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
+        send(HttpMethod.PUT, callback, newWindowsInformationProtectionAppLockerFile);
+    }
+
+    /**
+     * Creates a WindowsInformationProtectionAppLockerFile with a new object
+     *
+     * @param newWindowsInformationProtectionAppLockerFile the object to create/update
+     * @return the created WindowsInformationProtectionAppLockerFile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsInformationProtectionAppLockerFile put(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsInformationProtectionAppLockerFile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

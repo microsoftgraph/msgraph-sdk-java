@@ -147,6 +147,27 @@ public class MailFolderRequest extends BaseRequest implements IMailFolderRequest
     }
 
     /**
+     * Creates a MailFolder with a new object
+     *
+     * @param newMailFolder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailFolder newMailFolder, final ICallback<MailFolder> callback) {
+        send(HttpMethod.PUT, callback, newMailFolder);
+    }
+
+    /**
+     * Creates a MailFolder with a new object
+     *
+     * @param newMailFolder the object to create/update
+     * @return the created MailFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailFolder put(final MailFolder newMailFolder) throws ClientException {
+        return send(HttpMethod.PUT, newMailFolder);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

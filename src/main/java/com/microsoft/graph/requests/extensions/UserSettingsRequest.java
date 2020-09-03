@@ -114,6 +114,27 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
     }
 
     /**
+     * Creates a UserSettings with a new object
+     *
+     * @param newUserSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserSettings newUserSettings, final ICallback<UserSettings> callback) {
+        send(HttpMethod.PUT, callback, newUserSettings);
+    }
+
+    /**
+     * Creates a UserSettings with a new object
+     *
+     * @param newUserSettings the object to create/update
+     * @return the created UserSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserSettings put(final UserSettings newUserSettings) throws ClientException {
+        return send(HttpMethod.PUT, newUserSettings);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

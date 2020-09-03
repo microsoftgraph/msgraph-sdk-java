@@ -80,6 +80,23 @@ public interface IChannelRequest extends IHttpRequest {
     Channel post(final Channel newChannel) throws ClientException;
 
     /**
+     * Posts a Channel with a new object
+     *
+     * @param newChannel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Channel newChannel, final ICallback<Channel> callback);
+
+    /**
+     * Posts a Channel with a new object
+     *
+     * @param newChannel the object to create/update
+     * @return the created Channel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Channel put(final Channel newChannel) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

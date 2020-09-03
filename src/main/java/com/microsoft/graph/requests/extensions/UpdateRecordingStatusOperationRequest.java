@@ -112,6 +112,27 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a UpdateRecordingStatusOperation with a new object
+     *
+     * @param newUpdateRecordingStatusOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<UpdateRecordingStatusOperation> callback) {
+        send(HttpMethod.PUT, callback, newUpdateRecordingStatusOperation);
+    }
+
+    /**
+     * Creates a UpdateRecordingStatusOperation with a new object
+     *
+     * @param newUpdateRecordingStatusOperation the object to create/update
+     * @return the created UpdateRecordingStatusOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UpdateRecordingStatusOperation put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) throws ClientException {
+        return send(HttpMethod.PUT, newUpdateRecordingStatusOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

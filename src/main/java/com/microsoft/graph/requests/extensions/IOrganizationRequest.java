@@ -80,6 +80,23 @@ public interface IOrganizationRequest extends IHttpRequest {
     Organization post(final Organization newOrganization) throws ClientException;
 
     /**
+     * Posts a Organization with a new object
+     *
+     * @param newOrganization the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Organization newOrganization, final ICallback<Organization> callback);
+
+    /**
+     * Posts a Organization with a new object
+     *
+     * @param newOrganization the object to create/update
+     * @return the created Organization
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Organization put(final Organization newOrganization) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

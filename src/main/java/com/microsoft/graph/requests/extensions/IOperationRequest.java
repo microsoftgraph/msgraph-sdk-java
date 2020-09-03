@@ -80,6 +80,23 @@ public interface IOperationRequest extends IHttpRequest {
     Operation post(final Operation newOperation) throws ClientException;
 
     /**
+     * Posts a Operation with a new object
+     *
+     * @param newOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Operation newOperation, final ICallback<Operation> callback);
+
+    /**
+     * Posts a Operation with a new object
+     *
+     * @param newOperation the object to create/update
+     * @return the created Operation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Operation put(final Operation newOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

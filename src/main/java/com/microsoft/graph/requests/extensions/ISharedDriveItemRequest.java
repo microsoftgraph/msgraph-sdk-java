@@ -80,6 +80,23 @@ public interface ISharedDriveItemRequest extends IHttpRequest {
     SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException;
 
     /**
+     * Posts a SharedDriveItem with a new object
+     *
+     * @param newSharedDriveItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback);
+
+    /**
+     * Posts a SharedDriveItem with a new object
+     *
+     * @param newSharedDriveItem the object to create/update
+     * @return the created SharedDriveItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharedDriveItem put(final SharedDriveItem newSharedDriveItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IDeviceEnrollmentConfigurationRequest extends IHttpRequest {
     DeviceEnrollmentConfiguration post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException;
 
     /**
+     * Posts a DeviceEnrollmentConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback);
+
+    /**
+     * Posts a DeviceEnrollmentConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentConfiguration the object to create/update
+     * @return the created DeviceEnrollmentConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceEnrollmentConfiguration put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

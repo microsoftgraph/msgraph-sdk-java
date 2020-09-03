@@ -80,6 +80,23 @@ public interface IOnenoteResourceRequest extends IHttpRequest {
     OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException;
 
     /**
+     * Posts a OnenoteResource with a new object
+     *
+     * @param newOnenoteResource the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback);
+
+    /**
+     * Posts a OnenoteResource with a new object
+     *
+     * @param newOnenoteResource the object to create/update
+     * @return the created OnenoteResource
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnenoteResource put(final OnenoteResource newOnenoteResource) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

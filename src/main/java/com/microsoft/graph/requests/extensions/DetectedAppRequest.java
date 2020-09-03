@@ -116,6 +116,27 @@ public class DetectedAppRequest extends BaseRequest implements IDetectedAppReque
     }
 
     /**
+     * Creates a DetectedApp with a new object
+     *
+     * @param newDetectedApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback) {
+        send(HttpMethod.PUT, callback, newDetectedApp);
+    }
+
+    /**
+     * Creates a DetectedApp with a new object
+     *
+     * @param newDetectedApp the object to create/update
+     * @return the created DetectedApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DetectedApp put(final DetectedApp newDetectedApp) throws ClientException {
+        return send(HttpMethod.PUT, newDetectedApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

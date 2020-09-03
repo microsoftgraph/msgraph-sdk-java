@@ -114,6 +114,27 @@ public class WorkbookChartTitleRequest extends BaseRequest implements IWorkbookC
     }
 
     /**
+     * Creates a WorkbookChartTitle with a new object
+     *
+     * @param newWorkbookChartTitle the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartTitle newWorkbookChartTitle, final ICallback<WorkbookChartTitle> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartTitle);
+    }
+
+    /**
+     * Creates a WorkbookChartTitle with a new object
+     *
+     * @param newWorkbookChartTitle the object to create/update
+     * @return the created WorkbookChartTitle
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartTitle put(final WorkbookChartTitle newWorkbookChartTitle) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartTitle);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

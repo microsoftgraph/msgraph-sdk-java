@@ -80,6 +80,23 @@ public interface IMailSearchFolderRequest extends IHttpRequest {
     MailSearchFolder post(final MailSearchFolder newMailSearchFolder) throws ClientException;
 
     /**
+     * Posts a MailSearchFolder with a new object
+     *
+     * @param newMailSearchFolder the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MailSearchFolder newMailSearchFolder, final ICallback<MailSearchFolder> callback);
+
+    /**
+     * Posts a MailSearchFolder with a new object
+     *
+     * @param newMailSearchFolder the object to create/update
+     * @return the created MailSearchFolder
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MailSearchFolder put(final MailSearchFolder newMailSearchFolder) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

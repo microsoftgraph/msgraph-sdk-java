@@ -80,6 +80,23 @@ public interface IEnrollmentTroubleshootingEventRequest extends IHttpRequest {
     EnrollmentTroubleshootingEvent post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException;
 
     /**
+     * Posts a EnrollmentTroubleshootingEvent with a new object
+     *
+     * @param newEnrollmentTroubleshootingEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback);
+
+    /**
+     * Posts a EnrollmentTroubleshootingEvent with a new object
+     *
+     * @param newEnrollmentTroubleshootingEvent the object to create/update
+     * @return the created EnrollmentTroubleshootingEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EnrollmentTroubleshootingEvent put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

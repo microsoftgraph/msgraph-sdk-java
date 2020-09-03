@@ -80,6 +80,23 @@ public interface IDeviceComplianceDeviceOverviewRequest extends IHttpRequest {
     DeviceComplianceDeviceOverview post(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceDeviceOverview with a new object
+     *
+     * @param newDeviceComplianceDeviceOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<DeviceComplianceDeviceOverview> callback);
+
+    /**
+     * Posts a DeviceComplianceDeviceOverview with a new object
+     *
+     * @param newDeviceComplianceDeviceOverview the object to create/update
+     * @return the created DeviceComplianceDeviceOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceDeviceOverview put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

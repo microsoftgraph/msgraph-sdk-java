@@ -80,6 +80,23 @@ public interface IDeviceCategoryRequest extends IHttpRequest {
     DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException;
 
     /**
+     * Posts a DeviceCategory with a new object
+     *
+     * @param newDeviceCategory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback);
+
+    /**
+     * Posts a DeviceCategory with a new object
+     *
+     * @param newDeviceCategory the object to create/update
+     * @return the created DeviceCategory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceCategory put(final DeviceCategory newDeviceCategory) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

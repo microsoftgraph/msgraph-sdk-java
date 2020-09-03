@@ -80,6 +80,23 @@ public interface IDeviceComplianceScheduledActionForRuleRequest extends IHttpReq
     DeviceComplianceScheduledActionForRule post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceScheduledActionForRule with a new object
+     *
+     * @param newDeviceComplianceScheduledActionForRule the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback);
+
+    /**
+     * Posts a DeviceComplianceScheduledActionForRule with a new object
+     *
+     * @param newDeviceComplianceScheduledActionForRule the object to create/update
+     * @return the created DeviceComplianceScheduledActionForRule
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceScheduledActionForRule put(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

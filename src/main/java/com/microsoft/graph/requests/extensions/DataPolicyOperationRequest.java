@@ -112,6 +112,27 @@ public class DataPolicyOperationRequest extends BaseRequest implements IDataPoli
     }
 
     /**
+     * Creates a DataPolicyOperation with a new object
+     *
+     * @param newDataPolicyOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback) {
+        send(HttpMethod.PUT, callback, newDataPolicyOperation);
+    }
+
+    /**
+     * Creates a DataPolicyOperation with a new object
+     *
+     * @param newDataPolicyOperation the object to create/update
+     * @return the created DataPolicyOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DataPolicyOperation put(final DataPolicyOperation newDataPolicyOperation) throws ClientException {
+        return send(HttpMethod.PUT, newDataPolicyOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

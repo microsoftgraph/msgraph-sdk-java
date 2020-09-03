@@ -116,6 +116,27 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
     }
 
     /**
+     * Creates a WorkbookChartTitleFormat with a new object
+     *
+     * @param newWorkbookChartTitleFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<WorkbookChartTitleFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartTitleFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartTitleFormat with a new object
+     *
+     * @param newWorkbookChartTitleFormat the object to create/update
+     * @return the created WorkbookChartTitleFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartTitleFormat put(final WorkbookChartTitleFormat newWorkbookChartTitleFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartTitleFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

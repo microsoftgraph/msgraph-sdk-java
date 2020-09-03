@@ -112,6 +112,27 @@ public class ThumbnailRequest extends BaseRequest implements IThumbnailRequest {
     }
 
     /**
+     * Creates a Thumbnail with a new object
+     *
+     * @param newThumbnail the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Thumbnail newThumbnail, final ICallback<Thumbnail> callback) {
+        send(HttpMethod.PUT, callback, newThumbnail);
+    }
+
+    /**
+     * Creates a Thumbnail with a new object
+     *
+     * @param newThumbnail the object to create/update
+     * @return the created Thumbnail
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Thumbnail put(final Thumbnail newThumbnail) throws ClientException {
+        return send(HttpMethod.PUT, newThumbnail);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -113,6 +113,27 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a DeviceManagementExchangeConnector with a new object
+     *
+     * @param newDeviceManagementExchangeConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementExchangeConnector);
+    }
+
+    /**
+     * Creates a DeviceManagementExchangeConnector with a new object
+     *
+     * @param newDeviceManagementExchangeConnector the object to create/update
+     * @return the created DeviceManagementExchangeConnector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementExchangeConnector put(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementExchangeConnector);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

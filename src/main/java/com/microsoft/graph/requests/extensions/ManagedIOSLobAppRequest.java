@@ -112,6 +112,27 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
     }
 
     /**
+     * Creates a ManagedIOSLobApp with a new object
+     *
+     * @param newManagedIOSLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<ManagedIOSLobApp> callback) {
+        send(HttpMethod.PUT, callback, newManagedIOSLobApp);
+    }
+
+    /**
+     * Creates a ManagedIOSLobApp with a new object
+     *
+     * @param newManagedIOSLobApp the object to create/update
+     * @return the created ManagedIOSLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedIOSLobApp put(final ManagedIOSLobApp newManagedIOSLobApp) throws ClientException {
+        return send(HttpMethod.PUT, newManagedIOSLobApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

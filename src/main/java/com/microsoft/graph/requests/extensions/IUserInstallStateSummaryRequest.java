@@ -80,6 +80,23 @@ public interface IUserInstallStateSummaryRequest extends IHttpRequest {
     UserInstallStateSummary post(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException;
 
     /**
+     * Posts a UserInstallStateSummary with a new object
+     *
+     * @param newUserInstallStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback);
+
+    /**
+     * Posts a UserInstallStateSummary with a new object
+     *
+     * @param newUserInstallStateSummary the object to create/update
+     * @return the created UserInstallStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserInstallStateSummary put(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -127,6 +127,27 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
     }
 
     /**
+     * Creates a OfferShiftRequest with a new object
+     *
+     * @param newOfferShiftRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
+        send(HttpMethod.PUT, callback, newOfferShiftRequest);
+    }
+
+    /**
+     * Creates a OfferShiftRequest with a new object
+     *
+     * @param newOfferShiftRequest the object to create/update
+     * @return the created OfferShiftRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OfferShiftRequest put(final OfferShiftRequest newOfferShiftRequest) throws ClientException {
+        return send(HttpMethod.PUT, newOfferShiftRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

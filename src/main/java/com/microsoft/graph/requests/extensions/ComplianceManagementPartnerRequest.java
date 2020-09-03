@@ -112,6 +112,27 @@ public class ComplianceManagementPartnerRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a ComplianceManagementPartner with a new object
+     *
+     * @param newComplianceManagementPartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback) {
+        send(HttpMethod.PUT, callback, newComplianceManagementPartner);
+    }
+
+    /**
+     * Creates a ComplianceManagementPartner with a new object
+     *
+     * @param newComplianceManagementPartner the object to create/update
+     * @return the created ComplianceManagementPartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ComplianceManagementPartner put(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException {
+        return send(HttpMethod.PUT, newComplianceManagementPartner);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

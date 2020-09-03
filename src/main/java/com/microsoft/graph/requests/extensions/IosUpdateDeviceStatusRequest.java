@@ -112,6 +112,27 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
     }
 
     /**
+     * Creates a IosUpdateDeviceStatus with a new object
+     *
+     * @param newIosUpdateDeviceStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
+        send(HttpMethod.PUT, callback, newIosUpdateDeviceStatus);
+    }
+
+    /**
+     * Creates a IosUpdateDeviceStatus with a new object
+     *
+     * @param newIosUpdateDeviceStatus the object to create/update
+     * @return the created IosUpdateDeviceStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosUpdateDeviceStatus put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
+        return send(HttpMethod.PUT, newIosUpdateDeviceStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

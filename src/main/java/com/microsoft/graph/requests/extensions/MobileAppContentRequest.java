@@ -116,6 +116,27 @@ public class MobileAppContentRequest extends BaseRequest implements IMobileAppCo
     }
 
     /**
+     * Creates a MobileAppContent with a new object
+     *
+     * @param newMobileAppContent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppContent);
+    }
+
+    /**
+     * Creates a MobileAppContent with a new object
+     *
+     * @param newMobileAppContent the object to create/update
+     * @return the created MobileAppContent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppContent put(final MobileAppContent newMobileAppContent) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppContent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

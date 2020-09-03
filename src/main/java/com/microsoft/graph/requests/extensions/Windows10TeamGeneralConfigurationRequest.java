@@ -112,6 +112,27 @@ public class Windows10TeamGeneralConfigurationRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a Windows10TeamGeneralConfiguration with a new object
+     *
+     * @param newWindows10TeamGeneralConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration, final ICallback<Windows10TeamGeneralConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10TeamGeneralConfiguration);
+    }
+
+    /**
+     * Creates a Windows10TeamGeneralConfiguration with a new object
+     *
+     * @param newWindows10TeamGeneralConfiguration the object to create/update
+     * @return the created Windows10TeamGeneralConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10TeamGeneralConfiguration put(final Windows10TeamGeneralConfiguration newWindows10TeamGeneralConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10TeamGeneralConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

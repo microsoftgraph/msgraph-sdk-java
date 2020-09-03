@@ -112,6 +112,27 @@ public class TelecomExpenseManagementPartnerRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a TelecomExpenseManagementPartner with a new object
+     *
+     * @param newTelecomExpenseManagementPartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback) {
+        send(HttpMethod.PUT, callback, newTelecomExpenseManagementPartner);
+    }
+
+    /**
+     * Creates a TelecomExpenseManagementPartner with a new object
+     *
+     * @param newTelecomExpenseManagementPartner the object to create/update
+     * @return the created TelecomExpenseManagementPartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TelecomExpenseManagementPartner put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
+        return send(HttpMethod.PUT, newTelecomExpenseManagementPartner);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class OpenTypeExtensionRequest extends BaseRequest implements IOpenTypeEx
     }
 
     /**
+     * Creates a OpenTypeExtension with a new object
+     *
+     * @param newOpenTypeExtension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OpenTypeExtension newOpenTypeExtension, final ICallback<OpenTypeExtension> callback) {
+        send(HttpMethod.PUT, callback, newOpenTypeExtension);
+    }
+
+    /**
+     * Creates a OpenTypeExtension with a new object
+     *
+     * @param newOpenTypeExtension the object to create/update
+     * @return the created OpenTypeExtension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OpenTypeExtension put(final OpenTypeExtension newOpenTypeExtension) throws ClientException {
+        return send(HttpMethod.PUT, newOpenTypeExtension);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

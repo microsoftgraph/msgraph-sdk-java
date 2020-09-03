@@ -120,6 +120,27 @@ public class DomainRequest extends BaseRequest implements IDomainRequest {
     }
 
     /**
+     * Creates a Domain with a new object
+     *
+     * @param newDomain the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Domain newDomain, final ICallback<Domain> callback) {
+        send(HttpMethod.PUT, callback, newDomain);
+    }
+
+    /**
+     * Creates a Domain with a new object
+     *
+     * @param newDomain the object to create/update
+     * @return the created Domain
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Domain put(final Domain newDomain) throws ClientException {
+        return send(HttpMethod.PUT, newDomain);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

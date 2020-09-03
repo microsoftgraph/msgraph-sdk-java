@@ -80,6 +80,23 @@ public interface IManagedMobileLobAppRequest extends IHttpRequest {
     ManagedMobileLobApp post(final ManagedMobileLobApp newManagedMobileLobApp) throws ClientException;
 
     /**
+     * Posts a ManagedMobileLobApp with a new object
+     *
+     * @param newManagedMobileLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedMobileLobApp newManagedMobileLobApp, final ICallback<ManagedMobileLobApp> callback);
+
+    /**
+     * Posts a ManagedMobileLobApp with a new object
+     *
+     * @param newManagedMobileLobApp the object to create/update
+     * @return the created ManagedMobileLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedMobileLobApp put(final ManagedMobileLobApp newManagedMobileLobApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

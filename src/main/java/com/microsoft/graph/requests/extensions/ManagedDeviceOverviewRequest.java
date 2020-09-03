@@ -112,6 +112,27 @@ public class ManagedDeviceOverviewRequest extends BaseRequest implements IManage
     }
 
     /**
+     * Creates a ManagedDeviceOverview with a new object
+     *
+     * @param newManagedDeviceOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback) {
+        send(HttpMethod.PUT, callback, newManagedDeviceOverview);
+    }
+
+    /**
+     * Creates a ManagedDeviceOverview with a new object
+     *
+     * @param newManagedDeviceOverview the object to create/update
+     * @return the created ManagedDeviceOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedDeviceOverview put(final ManagedDeviceOverview newManagedDeviceOverview) throws ClientException {
+        return send(HttpMethod.PUT, newManagedDeviceOverview);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

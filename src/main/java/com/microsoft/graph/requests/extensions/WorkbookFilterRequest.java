@@ -114,6 +114,27 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
     }
 
     /**
+     * Creates a WorkbookFilter with a new object
+     *
+     * @param newWorkbookFilter the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookFilter newWorkbookFilter, final ICallback<WorkbookFilter> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookFilter);
+    }
+
+    /**
+     * Creates a WorkbookFilter with a new object
+     *
+     * @param newWorkbookFilter the object to create/update
+     * @return the created WorkbookFilter
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookFilter put(final WorkbookFilter newWorkbookFilter) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookFilter);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

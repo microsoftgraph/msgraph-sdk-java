@@ -80,6 +80,23 @@ public interface ITeamsAsyncOperationRequest extends IHttpRequest {
     TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException;
 
     /**
+     * Posts a TeamsAsyncOperation with a new object
+     *
+     * @param newTeamsAsyncOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback);
+
+    /**
+     * Posts a TeamsAsyncOperation with a new object
+     *
+     * @param newTeamsAsyncOperation the object to create/update
+     * @return the created TeamsAsyncOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsAsyncOperation put(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

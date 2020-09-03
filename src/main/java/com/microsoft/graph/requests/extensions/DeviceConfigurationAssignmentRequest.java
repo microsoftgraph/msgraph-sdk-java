@@ -112,6 +112,27 @@ public class DeviceConfigurationAssignmentRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a DeviceConfigurationAssignment with a new object
+     *
+     * @param newDeviceConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationAssignment newDeviceConfigurationAssignment, final ICallback<DeviceConfigurationAssignment> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationAssignment);
+    }
+
+    /**
+     * Creates a DeviceConfigurationAssignment with a new object
+     *
+     * @param newDeviceConfigurationAssignment the object to create/update
+     * @return the created DeviceConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationAssignment put(final DeviceConfigurationAssignment newDeviceConfigurationAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

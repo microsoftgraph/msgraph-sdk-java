@@ -168,6 +168,27 @@ public class DeviceAppManagementRequest extends BaseRequest implements IDeviceAp
     }
 
     /**
+     * Creates a DeviceAppManagement with a new object
+     *
+     * @param newDeviceAppManagement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceAppManagement newDeviceAppManagement, final ICallback<DeviceAppManagement> callback) {
+        send(HttpMethod.PUT, callback, newDeviceAppManagement);
+    }
+
+    /**
+     * Creates a DeviceAppManagement with a new object
+     *
+     * @param newDeviceAppManagement the object to create/update
+     * @return the created DeviceAppManagement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceAppManagement put(final DeviceAppManagement newDeviceAppManagement) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceAppManagement);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

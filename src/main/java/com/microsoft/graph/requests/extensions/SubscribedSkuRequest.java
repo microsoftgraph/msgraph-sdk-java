@@ -112,6 +112,27 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
     }
 
     /**
+     * Creates a SubscribedSku with a new object
+     *
+     * @param newSubscribedSku the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SubscribedSku newSubscribedSku, final ICallback<SubscribedSku> callback) {
+        send(HttpMethod.PUT, callback, newSubscribedSku);
+    }
+
+    /**
+     * Creates a SubscribedSku with a new object
+     *
+     * @param newSubscribedSku the object to create/update
+     * @return the created SubscribedSku
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SubscribedSku put(final SubscribedSku newSubscribedSku) throws ClientException {
+        return send(HttpMethod.PUT, newSubscribedSku);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -131,6 +131,27 @@ public class ThreatAssessmentRequestRequest extends BaseRequest implements IThre
     }
 
     /**
+     * Creates a ThreatAssessmentRequest with a new object
+     *
+     * @param newThreatAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newThreatAssessmentRequest);
+    }
+
+    /**
+     * Creates a ThreatAssessmentRequest with a new object
+     *
+     * @param newThreatAssessmentRequest the object to create/update
+     * @return the created ThreatAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ThreatAssessmentRequest put(final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newThreatAssessmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

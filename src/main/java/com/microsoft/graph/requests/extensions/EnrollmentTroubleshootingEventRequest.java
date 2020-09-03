@@ -112,6 +112,27 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a EnrollmentTroubleshootingEvent with a new object
+     *
+     * @param newEnrollmentTroubleshootingEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<EnrollmentTroubleshootingEvent> callback) {
+        send(HttpMethod.PUT, callback, newEnrollmentTroubleshootingEvent);
+    }
+
+    /**
+     * Creates a EnrollmentTroubleshootingEvent with a new object
+     *
+     * @param newEnrollmentTroubleshootingEvent the object to create/update
+     * @return the created EnrollmentTroubleshootingEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EnrollmentTroubleshootingEvent put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException {
+        return send(HttpMethod.PUT, newEnrollmentTroubleshootingEvent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

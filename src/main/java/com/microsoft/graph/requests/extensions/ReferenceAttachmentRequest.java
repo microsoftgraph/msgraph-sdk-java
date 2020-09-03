@@ -112,6 +112,27 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
     }
 
     /**
+     * Creates a ReferenceAttachment with a new object
+     *
+     * @param newReferenceAttachment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ReferenceAttachment newReferenceAttachment, final ICallback<ReferenceAttachment> callback) {
+        send(HttpMethod.PUT, callback, newReferenceAttachment);
+    }
+
+    /**
+     * Creates a ReferenceAttachment with a new object
+     *
+     * @param newReferenceAttachment the object to create/update
+     * @return the created ReferenceAttachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ReferenceAttachment put(final ReferenceAttachment newReferenceAttachment) throws ClientException {
+        return send(HttpMethod.PUT, newReferenceAttachment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

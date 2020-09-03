@@ -80,6 +80,23 @@ public interface IPermissionRequest extends IHttpRequest {
     Permission post(final Permission newPermission) throws ClientException;
 
     /**
+     * Posts a Permission with a new object
+     *
+     * @param newPermission the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Permission newPermission, final ICallback<Permission> callback);
+
+    /**
+     * Posts a Permission with a new object
+     *
+     * @param newPermission the object to create/update
+     * @return the created Permission
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Permission put(final Permission newPermission) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

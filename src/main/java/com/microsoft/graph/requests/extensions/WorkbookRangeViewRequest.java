@@ -117,6 +117,27 @@ public class WorkbookRangeViewRequest extends BaseRequest implements IWorkbookRa
     }
 
     /**
+     * Creates a WorkbookRangeView with a new object
+     *
+     * @param newWorkbookRangeView the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookRangeView);
+    }
+
+    /**
+     * Creates a WorkbookRangeView with a new object
+     *
+     * @param newWorkbookRangeView the object to create/update
+     * @return the created WorkbookRangeView
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookRangeView put(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookRangeView);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

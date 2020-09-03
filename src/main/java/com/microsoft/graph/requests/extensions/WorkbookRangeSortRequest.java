@@ -113,6 +113,27 @@ public class WorkbookRangeSortRequest extends BaseRequest implements IWorkbookRa
     }
 
     /**
+     * Creates a WorkbookRangeSort with a new object
+     *
+     * @param newWorkbookRangeSort the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookRangeSort);
+    }
+
+    /**
+     * Creates a WorkbookRangeSort with a new object
+     *
+     * @param newWorkbookRangeSort the object to create/update
+     * @return the created WorkbookRangeSort
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookRangeSort put(final WorkbookRangeSort newWorkbookRangeSort) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookRangeSort);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

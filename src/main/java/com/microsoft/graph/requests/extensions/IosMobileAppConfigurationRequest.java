@@ -112,6 +112,27 @@ public class IosMobileAppConfigurationRequest extends BaseRequest implements IIo
     }
 
     /**
+     * Creates a IosMobileAppConfiguration with a new object
+     *
+     * @param newIosMobileAppConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosMobileAppConfiguration newIosMobileAppConfiguration, final ICallback<IosMobileAppConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosMobileAppConfiguration);
+    }
+
+    /**
+     * Creates a IosMobileAppConfiguration with a new object
+     *
+     * @param newIosMobileAppConfiguration the object to create/update
+     * @return the created IosMobileAppConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosMobileAppConfiguration put(final IosMobileAppConfiguration newIosMobileAppConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosMobileAppConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

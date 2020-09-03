@@ -124,6 +124,27 @@ public class EducationRootRequest extends BaseRequest implements IEducationRootR
     }
 
     /**
+     * Creates a EducationRoot with a new object
+     *
+     * @param newEducationRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationRoot newEducationRoot, final ICallback<EducationRoot> callback) {
+        send(HttpMethod.PUT, callback, newEducationRoot);
+    }
+
+    /**
+     * Creates a EducationRoot with a new object
+     *
+     * @param newEducationRoot the object to create/update
+     * @return the created EducationRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationRoot put(final EducationRoot newEducationRoot) throws ClientException {
+        return send(HttpMethod.PUT, newEducationRoot);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

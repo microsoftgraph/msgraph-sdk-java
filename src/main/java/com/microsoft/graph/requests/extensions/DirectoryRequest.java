@@ -116,6 +116,27 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
     }
 
     /**
+     * Creates a Directory with a new object
+     *
+     * @param newDirectory the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Directory newDirectory, final ICallback<Directory> callback) {
+        send(HttpMethod.PUT, callback, newDirectory);
+    }
+
+    /**
+     * Creates a Directory with a new object
+     *
+     * @param newDirectory the object to create/update
+     * @return the created Directory
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Directory put(final Directory newDirectory) throws ClientException {
+        return send(HttpMethod.PUT, newDirectory);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

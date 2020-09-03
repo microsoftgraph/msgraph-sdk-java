@@ -80,6 +80,23 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequest extends IH
     AndroidWorkProfileGeneralDeviceConfiguration post(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidWorkProfileGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration, final ICallback<AndroidWorkProfileGeneralDeviceConfiguration> callback);
+
+    /**
+     * Posts a AndroidWorkProfileGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileGeneralDeviceConfiguration the object to create/update
+     * @return the created AndroidWorkProfileGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidWorkProfileGeneralDeviceConfiguration put(final AndroidWorkProfileGeneralDeviceConfiguration newAndroidWorkProfileGeneralDeviceConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

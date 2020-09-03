@@ -80,6 +80,23 @@ public interface IStsPolicyRequest extends IHttpRequest {
     StsPolicy post(final StsPolicy newStsPolicy) throws ClientException;
 
     /**
+     * Posts a StsPolicy with a new object
+     *
+     * @param newStsPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final StsPolicy newStsPolicy, final ICallback<StsPolicy> callback);
+
+    /**
+     * Posts a StsPolicy with a new object
+     *
+     * @param newStsPolicy the object to create/update
+     * @return the created StsPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    StsPolicy put(final StsPolicy newStsPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

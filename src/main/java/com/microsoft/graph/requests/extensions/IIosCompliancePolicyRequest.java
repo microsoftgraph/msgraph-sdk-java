@@ -80,6 +80,23 @@ public interface IIosCompliancePolicyRequest extends IHttpRequest {
     IosCompliancePolicy post(final IosCompliancePolicy newIosCompliancePolicy) throws ClientException;
 
     /**
+     * Posts a IosCompliancePolicy with a new object
+     *
+     * @param newIosCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosCompliancePolicy newIosCompliancePolicy, final ICallback<IosCompliancePolicy> callback);
+
+    /**
+     * Posts a IosCompliancePolicy with a new object
+     *
+     * @param newIosCompliancePolicy the object to create/update
+     * @return the created IosCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosCompliancePolicy put(final IosCompliancePolicy newIosCompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

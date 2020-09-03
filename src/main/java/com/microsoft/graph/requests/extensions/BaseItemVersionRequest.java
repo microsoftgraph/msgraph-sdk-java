@@ -127,6 +127,27 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
     }
 
     /**
+     * Creates a BaseItemVersion with a new object
+     *
+     * @param newBaseItemVersion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BaseItemVersion newBaseItemVersion, final ICallback<BaseItemVersion> callback) {
+        send(HttpMethod.PUT, callback, newBaseItemVersion);
+    }
+
+    /**
+     * Creates a BaseItemVersion with a new object
+     *
+     * @param newBaseItemVersion the object to create/update
+     * @return the created BaseItemVersion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BaseItemVersion put(final BaseItemVersion newBaseItemVersion) throws ClientException {
+        return send(HttpMethod.PUT, newBaseItemVersion);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

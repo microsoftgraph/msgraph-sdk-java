@@ -80,6 +80,23 @@ public interface IAndroidCustomConfigurationRequest extends IHttpRequest {
     AndroidCustomConfiguration post(final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException;
 
     /**
+     * Posts a AndroidCustomConfiguration with a new object
+     *
+     * @param newAndroidCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<AndroidCustomConfiguration> callback);
+
+    /**
+     * Posts a AndroidCustomConfiguration with a new object
+     *
+     * @param newAndroidCustomConfiguration the object to create/update
+     * @return the created AndroidCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AndroidCustomConfiguration put(final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

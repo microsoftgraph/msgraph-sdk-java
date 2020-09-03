@@ -80,6 +80,23 @@ public interface IWindowsInformationProtectionPolicyRequest extends IHttpRequest
     WindowsInformationProtectionPolicy post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException;
 
     /**
+     * Posts a WindowsInformationProtectionPolicy with a new object
+     *
+     * @param newWindowsInformationProtectionPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<WindowsInformationProtectionPolicy> callback);
+
+    /**
+     * Posts a WindowsInformationProtectionPolicy with a new object
+     *
+     * @param newWindowsInformationProtectionPolicy the object to create/update
+     * @return the created WindowsInformationProtectionPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsInformationProtectionPolicy put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

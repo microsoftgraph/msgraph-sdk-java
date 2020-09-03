@@ -112,6 +112,27 @@ public class Windows81CompliancePolicyRequest extends BaseRequest implements IWi
     }
 
     /**
+     * Creates a Windows81CompliancePolicy with a new object
+     *
+     * @param newWindows81CompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows81CompliancePolicy newWindows81CompliancePolicy, final ICallback<Windows81CompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newWindows81CompliancePolicy);
+    }
+
+    /**
+     * Creates a Windows81CompliancePolicy with a new object
+     *
+     * @param newWindows81CompliancePolicy the object to create/update
+     * @return the created Windows81CompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows81CompliancePolicy put(final Windows81CompliancePolicy newWindows81CompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newWindows81CompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

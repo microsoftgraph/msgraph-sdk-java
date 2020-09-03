@@ -112,6 +112,27 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
     }
 
     /**
+     * Creates a DeviceComplianceActionItem with a new object
+     *
+     * @param newDeviceComplianceActionItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceActionItem);
+    }
+
+    /**
+     * Creates a DeviceComplianceActionItem with a new object
+     *
+     * @param newDeviceComplianceActionItem the object to create/update
+     * @return the created DeviceComplianceActionItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceActionItem put(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceActionItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

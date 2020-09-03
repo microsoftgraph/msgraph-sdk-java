@@ -116,6 +116,27 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
     }
 
     /**
+     * Creates a WorkbookChartSeriesFormat with a new object
+     *
+     * @param newWorkbookChartSeriesFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<WorkbookChartSeriesFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartSeriesFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartSeriesFormat with a new object
+     *
+     * @param newWorkbookChartSeriesFormat the object to create/update
+     * @return the created WorkbookChartSeriesFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartSeriesFormat put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartSeriesFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

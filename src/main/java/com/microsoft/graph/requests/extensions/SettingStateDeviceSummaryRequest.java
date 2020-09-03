@@ -112,6 +112,27 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
     }
 
     /**
+     * Creates a SettingStateDeviceSummary with a new object
+     *
+     * @param newSettingStateDeviceSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback) {
+        send(HttpMethod.PUT, callback, newSettingStateDeviceSummary);
+    }
+
+    /**
+     * Creates a SettingStateDeviceSummary with a new object
+     *
+     * @param newSettingStateDeviceSummary the object to create/update
+     * @return the created SettingStateDeviceSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SettingStateDeviceSummary put(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
+        return send(HttpMethod.PUT, newSettingStateDeviceSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

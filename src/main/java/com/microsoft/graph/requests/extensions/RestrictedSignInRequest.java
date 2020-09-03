@@ -112,6 +112,27 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
     }
 
     /**
+     * Creates a RestrictedSignIn with a new object
+     *
+     * @param newRestrictedSignIn the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
+        send(HttpMethod.PUT, callback, newRestrictedSignIn);
+    }
+
+    /**
+     * Creates a RestrictedSignIn with a new object
+     *
+     * @param newRestrictedSignIn the object to create/update
+     * @return the created RestrictedSignIn
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RestrictedSignIn put(final RestrictedSignIn newRestrictedSignIn) throws ClientException {
+        return send(HttpMethod.PUT, newRestrictedSignIn);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ISegmentRequest extends IHttpRequest {
     Segment post(final Segment newSegment) throws ClientException;
 
     /**
+     * Posts a Segment with a new object
+     *
+     * @param newSegment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Segment newSegment, final ICallback<Segment> callback);
+
+    /**
+     * Posts a Segment with a new object
+     *
+     * @param newSegment the object to create/update
+     * @return the created Segment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Segment put(final Segment newSegment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

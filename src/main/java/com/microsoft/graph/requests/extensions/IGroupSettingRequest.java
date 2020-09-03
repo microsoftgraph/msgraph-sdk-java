@@ -80,6 +80,23 @@ public interface IGroupSettingRequest extends IHttpRequest {
     GroupSetting post(final GroupSetting newGroupSetting) throws ClientException;
 
     /**
+     * Posts a GroupSetting with a new object
+     *
+     * @param newGroupSetting the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupSetting newGroupSetting, final ICallback<GroupSetting> callback);
+
+    /**
+     * Posts a GroupSetting with a new object
+     *
+     * @param newGroupSetting the object to create/update
+     * @return the created GroupSetting
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupSetting put(final GroupSetting newGroupSetting) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

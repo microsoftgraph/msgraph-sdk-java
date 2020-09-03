@@ -80,6 +80,23 @@ public interface IWorkbookRangeSortRequest extends IHttpRequest {
     WorkbookRangeSort post(final WorkbookRangeSort newWorkbookRangeSort) throws ClientException;
 
     /**
+     * Posts a WorkbookRangeSort with a new object
+     *
+     * @param newWorkbookRangeSort the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookRangeSort newWorkbookRangeSort, final ICallback<WorkbookRangeSort> callback);
+
+    /**
+     * Posts a WorkbookRangeSort with a new object
+     *
+     * @param newWorkbookRangeSort the object to create/update
+     * @return the created WorkbookRangeSort
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookRangeSort put(final WorkbookRangeSort newWorkbookRangeSort) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

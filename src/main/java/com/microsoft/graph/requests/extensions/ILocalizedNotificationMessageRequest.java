@@ -80,6 +80,23 @@ public interface ILocalizedNotificationMessageRequest extends IHttpRequest {
     LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException;
 
     /**
+     * Posts a LocalizedNotificationMessage with a new object
+     *
+     * @param newLocalizedNotificationMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback);
+
+    /**
+     * Posts a LocalizedNotificationMessage with a new object
+     *
+     * @param newLocalizedNotificationMessage the object to create/update
+     * @return the created LocalizedNotificationMessage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    LocalizedNotificationMessage put(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

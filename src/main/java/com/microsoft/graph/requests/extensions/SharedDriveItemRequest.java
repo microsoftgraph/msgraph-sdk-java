@@ -124,6 +124,27 @@ public class SharedDriveItemRequest extends BaseRequest implements ISharedDriveI
     }
 
     /**
+     * Creates a SharedDriveItem with a new object
+     *
+     * @param newSharedDriveItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback) {
+        send(HttpMethod.PUT, callback, newSharedDriveItem);
+    }
+
+    /**
+     * Creates a SharedDriveItem with a new object
+     *
+     * @param newSharedDriveItem the object to create/update
+     * @return the created SharedDriveItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharedDriveItem put(final SharedDriveItem newSharedDriveItem) throws ClientException {
+        return send(HttpMethod.PUT, newSharedDriveItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -127,6 +127,27 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
     }
 
     /**
+     * Creates a ChangeTrackedEntity with a new object
+     *
+     * @param newChangeTrackedEntity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<ChangeTrackedEntity> callback) {
+        send(HttpMethod.PUT, callback, newChangeTrackedEntity);
+    }
+
+    /**
+     * Creates a ChangeTrackedEntity with a new object
+     *
+     * @param newChangeTrackedEntity the object to create/update
+     * @return the created ChangeTrackedEntity
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ChangeTrackedEntity put(final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException {
+        return send(HttpMethod.PUT, newChangeTrackedEntity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

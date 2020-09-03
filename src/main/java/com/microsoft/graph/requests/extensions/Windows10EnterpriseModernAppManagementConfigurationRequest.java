@@ -112,6 +112,27 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
     }
 
     /**
+     * Creates a Windows10EnterpriseModernAppManagementConfiguration with a new object
+     *
+     * @param newWindows10EnterpriseModernAppManagementConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<Windows10EnterpriseModernAppManagementConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10EnterpriseModernAppManagementConfiguration);
+    }
+
+    /**
+     * Creates a Windows10EnterpriseModernAppManagementConfiguration with a new object
+     *
+     * @param newWindows10EnterpriseModernAppManagementConfiguration the object to create/update
+     * @return the created Windows10EnterpriseModernAppManagementConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10EnterpriseModernAppManagementConfiguration put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10EnterpriseModernAppManagementConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

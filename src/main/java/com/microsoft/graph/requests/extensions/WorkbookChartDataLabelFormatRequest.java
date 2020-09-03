@@ -116,6 +116,27 @@ public class WorkbookChartDataLabelFormatRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a WorkbookChartDataLabelFormat with a new object
+     *
+     * @param newWorkbookChartDataLabelFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartDataLabelFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartDataLabelFormat with a new object
+     *
+     * @param newWorkbookChartDataLabelFormat the object to create/update
+     * @return the created WorkbookChartDataLabelFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartDataLabelFormat put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartDataLabelFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

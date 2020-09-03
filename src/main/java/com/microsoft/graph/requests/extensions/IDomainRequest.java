@@ -80,6 +80,23 @@ public interface IDomainRequest extends IHttpRequest {
     Domain post(final Domain newDomain) throws ClientException;
 
     /**
+     * Posts a Domain with a new object
+     *
+     * @param newDomain the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Domain newDomain, final ICallback<Domain> callback);
+
+    /**
+     * Posts a Domain with a new object
+     *
+     * @param newDomain the object to create/update
+     * @return the created Domain
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Domain put(final Domain newDomain) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

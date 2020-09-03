@@ -80,6 +80,23 @@ public interface ITeamsTemplateRequest extends IHttpRequest {
     TeamsTemplate post(final TeamsTemplate newTeamsTemplate) throws ClientException;
 
     /**
+     * Posts a TeamsTemplate with a new object
+     *
+     * @param newTeamsTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsTemplate newTeamsTemplate, final ICallback<TeamsTemplate> callback);
+
+    /**
+     * Posts a TeamsTemplate with a new object
+     *
+     * @param newTeamsTemplate the object to create/update
+     * @return the created TeamsTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsTemplate put(final TeamsTemplate newTeamsTemplate) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

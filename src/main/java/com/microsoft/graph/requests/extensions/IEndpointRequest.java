@@ -80,6 +80,23 @@ public interface IEndpointRequest extends IHttpRequest {
     Endpoint post(final Endpoint newEndpoint) throws ClientException;
 
     /**
+     * Posts a Endpoint with a new object
+     *
+     * @param newEndpoint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Endpoint newEndpoint, final ICallback<Endpoint> callback);
+
+    /**
+     * Posts a Endpoint with a new object
+     *
+     * @param newEndpoint the object to create/update
+     * @return the created Endpoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Endpoint put(final Endpoint newEndpoint) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

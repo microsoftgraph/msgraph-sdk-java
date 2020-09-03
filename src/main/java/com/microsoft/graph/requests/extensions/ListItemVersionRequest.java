@@ -114,6 +114,27 @@ public class ListItemVersionRequest extends BaseRequest implements IListItemVers
     }
 
     /**
+     * Creates a ListItemVersion with a new object
+     *
+     * @param newListItemVersion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback) {
+        send(HttpMethod.PUT, callback, newListItemVersion);
+    }
+
+    /**
+     * Creates a ListItemVersion with a new object
+     *
+     * @param newListItemVersion the object to create/update
+     * @return the created ListItemVersion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ListItemVersion put(final ListItemVersion newListItemVersion) throws ClientException {
+        return send(HttpMethod.PUT, newListItemVersion);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

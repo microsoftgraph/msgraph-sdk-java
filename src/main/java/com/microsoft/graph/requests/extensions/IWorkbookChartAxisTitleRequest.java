@@ -80,6 +80,23 @@ public interface IWorkbookChartAxisTitleRequest extends IHttpRequest {
     WorkbookChartAxisTitle post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException;
 
     /**
+     * Posts a WorkbookChartAxisTitle with a new object
+     *
+     * @param newWorkbookChartAxisTitle the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<WorkbookChartAxisTitle> callback);
+
+    /**
+     * Posts a WorkbookChartAxisTitle with a new object
+     *
+     * @param newWorkbookChartAxisTitle the object to create/update
+     * @return the created WorkbookChartAxisTitle
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartAxisTitle put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

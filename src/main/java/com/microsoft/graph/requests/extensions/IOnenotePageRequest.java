@@ -80,6 +80,23 @@ public interface IOnenotePageRequest extends IHttpRequest {
     OnenotePage post(final byte[] newOnenotePage) throws ClientException;
 
     /**
+     * Posts a OnenotePage with a new object
+     *
+     * @param newOnenotePage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnenotePage newOnenotePage, final ICallback<OnenotePage> callback);
+
+    /**
+     * Posts a OnenotePage with a new object
+     *
+     * @param newOnenotePage the object to create/update
+     * @return the created OnenotePage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnenotePage put(final OnenotePage newOnenotePage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

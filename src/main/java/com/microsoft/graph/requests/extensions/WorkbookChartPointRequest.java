@@ -114,6 +114,27 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
     }
 
     /**
+     * Creates a WorkbookChartPoint with a new object
+     *
+     * @param newWorkbookChartPoint the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartPoint);
+    }
+
+    /**
+     * Creates a WorkbookChartPoint with a new object
+     *
+     * @param newWorkbookChartPoint the object to create/update
+     * @return the created WorkbookChartPoint
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartPoint put(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartPoint);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

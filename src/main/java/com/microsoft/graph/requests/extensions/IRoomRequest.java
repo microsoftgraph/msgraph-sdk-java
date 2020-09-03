@@ -80,6 +80,23 @@ public interface IRoomRequest extends IHttpRequest {
     Room post(final Room newRoom) throws ClientException;
 
     /**
+     * Posts a Room with a new object
+     *
+     * @param newRoom the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Room newRoom, final ICallback<Room> callback);
+
+    /**
+     * Posts a Room with a new object
+     *
+     * @param newRoom the object to create/update
+     * @return the created Room
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Room put(final Room newRoom) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

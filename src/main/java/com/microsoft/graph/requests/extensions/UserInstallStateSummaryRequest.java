@@ -116,6 +116,27 @@ public class UserInstallStateSummaryRequest extends BaseRequest implements IUser
     }
 
     /**
+     * Creates a UserInstallStateSummary with a new object
+     *
+     * @param newUserInstallStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newUserInstallStateSummary);
+    }
+
+    /**
+     * Creates a UserInstallStateSummary with a new object
+     *
+     * @param newUserInstallStateSummary the object to create/update
+     * @return the created UserInstallStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UserInstallStateSummary put(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newUserInstallStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

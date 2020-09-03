@@ -127,6 +127,27 @@ public class ManagedAppRequest extends BaseRequest implements IManagedAppRequest
     }
 
     /**
+     * Creates a ManagedApp with a new object
+     *
+     * @param newManagedApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedApp newManagedApp, final ICallback<ManagedApp> callback) {
+        send(HttpMethod.PUT, callback, newManagedApp);
+    }
+
+    /**
+     * Creates a ManagedApp with a new object
+     *
+     * @param newManagedApp the object to create/update
+     * @return the created ManagedApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedApp put(final ManagedApp newManagedApp) throws ClientException {
+        return send(HttpMethod.PUT, newManagedApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

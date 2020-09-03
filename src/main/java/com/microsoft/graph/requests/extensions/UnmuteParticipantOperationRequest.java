@@ -112,6 +112,27 @@ public class UnmuteParticipantOperationRequest extends BaseRequest implements IU
     }
 
     /**
+     * Creates a UnmuteParticipantOperation with a new object
+     *
+     * @param newUnmuteParticipantOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UnmuteParticipantOperation newUnmuteParticipantOperation, final ICallback<UnmuteParticipantOperation> callback) {
+        send(HttpMethod.PUT, callback, newUnmuteParticipantOperation);
+    }
+
+    /**
+     * Creates a UnmuteParticipantOperation with a new object
+     *
+     * @param newUnmuteParticipantOperation the object to create/update
+     * @return the created UnmuteParticipantOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UnmuteParticipantOperation put(final UnmuteParticipantOperation newUnmuteParticipantOperation) throws ClientException {
+        return send(HttpMethod.PUT, newUnmuteParticipantOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

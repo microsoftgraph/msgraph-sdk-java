@@ -80,6 +80,23 @@ public interface IIdentitySecurityDefaultsEnforcementPolicyRequest extends IHttp
     IdentitySecurityDefaultsEnforcementPolicy post(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) throws ClientException;
 
     /**
+     * Posts a IdentitySecurityDefaultsEnforcementPolicy with a new object
+     *
+     * @param newIdentitySecurityDefaultsEnforcementPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy, final ICallback<IdentitySecurityDefaultsEnforcementPolicy> callback);
+
+    /**
+     * Posts a IdentitySecurityDefaultsEnforcementPolicy with a new object
+     *
+     * @param newIdentitySecurityDefaultsEnforcementPolicy the object to create/update
+     * @return the created IdentitySecurityDefaultsEnforcementPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IdentitySecurityDefaultsEnforcementPolicy put(final IdentitySecurityDefaultsEnforcementPolicy newIdentitySecurityDefaultsEnforcementPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

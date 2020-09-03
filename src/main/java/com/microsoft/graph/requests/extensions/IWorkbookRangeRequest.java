@@ -80,6 +80,23 @@ public interface IWorkbookRangeRequest extends IHttpRequest {
     WorkbookRange post(final WorkbookRange newWorkbookRange) throws ClientException;
 
     /**
+     * Posts a WorkbookRange with a new object
+     *
+     * @param newWorkbookRange the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookRange newWorkbookRange, final ICallback<WorkbookRange> callback);
+
+    /**
+     * Posts a WorkbookRange with a new object
+     *
+     * @param newWorkbookRange the object to create/update
+     * @return the created WorkbookRange
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookRange put(final WorkbookRange newWorkbookRange) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

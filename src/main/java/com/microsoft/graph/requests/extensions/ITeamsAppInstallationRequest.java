@@ -80,6 +80,23 @@ public interface ITeamsAppInstallationRequest extends IHttpRequest {
     TeamsAppInstallation post(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException;
 
     /**
+     * Posts a TeamsAppInstallation with a new object
+     *
+     * @param newTeamsAppInstallation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback);
+
+    /**
+     * Posts a TeamsAppInstallation with a new object
+     *
+     * @param newTeamsAppInstallation the object to create/update
+     * @return the created TeamsAppInstallation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsAppInstallation put(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWorkbookChartFontRequest extends IHttpRequest {
     WorkbookChartFont post(final WorkbookChartFont newWorkbookChartFont) throws ClientException;
 
     /**
+     * Posts a WorkbookChartFont with a new object
+     *
+     * @param newWorkbookChartFont the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<WorkbookChartFont> callback);
+
+    /**
+     * Posts a WorkbookChartFont with a new object
+     *
+     * @param newWorkbookChartFont the object to create/update
+     * @return the created WorkbookChartFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartFont put(final WorkbookChartFont newWorkbookChartFont) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

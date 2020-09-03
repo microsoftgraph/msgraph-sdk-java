@@ -112,6 +112,27 @@ public class TargetedManagedAppPolicyAssignmentRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a TargetedManagedAppPolicyAssignment with a new object
+     *
+     * @param newTargetedManagedAppPolicyAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback) {
+        send(HttpMethod.PUT, callback, newTargetedManagedAppPolicyAssignment);
+    }
+
+    /**
+     * Creates a TargetedManagedAppPolicyAssignment with a new object
+     *
+     * @param newTargetedManagedAppPolicyAssignment the object to create/update
+     * @return the created TargetedManagedAppPolicyAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TargetedManagedAppPolicyAssignment put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newTargetedManagedAppPolicyAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

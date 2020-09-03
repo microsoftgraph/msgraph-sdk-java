@@ -80,6 +80,23 @@ public interface IOnPremisesConditionalAccessSettingsRequest extends IHttpReques
     OnPremisesConditionalAccessSettings post(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings) throws ClientException;
 
     /**
+     * Posts a OnPremisesConditionalAccessSettings with a new object
+     *
+     * @param newOnPremisesConditionalAccessSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings, final ICallback<OnPremisesConditionalAccessSettings> callback);
+
+    /**
+     * Posts a OnPremisesConditionalAccessSettings with a new object
+     *
+     * @param newOnPremisesConditionalAccessSettings the object to create/update
+     * @return the created OnPremisesConditionalAccessSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnPremisesConditionalAccessSettings put(final OnPremisesConditionalAccessSettings newOnPremisesConditionalAccessSettings) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

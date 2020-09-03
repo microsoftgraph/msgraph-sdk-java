@@ -112,6 +112,27 @@ public class DomainDnsMxRecordRequest extends BaseRequest implements IDomainDnsM
     }
 
     /**
+     * Creates a DomainDnsMxRecord with a new object
+     *
+     * @param newDomainDnsMxRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DomainDnsMxRecord newDomainDnsMxRecord, final ICallback<DomainDnsMxRecord> callback) {
+        send(HttpMethod.PUT, callback, newDomainDnsMxRecord);
+    }
+
+    /**
+     * Creates a DomainDnsMxRecord with a new object
+     *
+     * @param newDomainDnsMxRecord the object to create/update
+     * @return the created DomainDnsMxRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DomainDnsMxRecord put(final DomainDnsMxRecord newDomainDnsMxRecord) throws ClientException {
+        return send(HttpMethod.PUT, newDomainDnsMxRecord);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

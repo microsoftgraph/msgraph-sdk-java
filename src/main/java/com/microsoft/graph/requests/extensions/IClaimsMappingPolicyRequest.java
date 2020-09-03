@@ -80,6 +80,23 @@ public interface IClaimsMappingPolicyRequest extends IHttpRequest {
     ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException;
 
     /**
+     * Posts a ClaimsMappingPolicy with a new object
+     *
+     * @param newClaimsMappingPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback);
+
+    /**
+     * Posts a ClaimsMappingPolicy with a new object
+     *
+     * @param newClaimsMappingPolicy the object to create/update
+     * @return the created ClaimsMappingPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ClaimsMappingPolicy put(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

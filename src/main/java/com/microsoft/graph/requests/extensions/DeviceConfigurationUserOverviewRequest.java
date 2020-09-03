@@ -112,6 +112,27 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a DeviceConfigurationUserOverview with a new object
+     *
+     * @param newDeviceConfigurationUserOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<DeviceConfigurationUserOverview> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationUserOverview);
+    }
+
+    /**
+     * Creates a DeviceConfigurationUserOverview with a new object
+     *
+     * @param newDeviceConfigurationUserOverview the object to create/update
+     * @return the created DeviceConfigurationUserOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationUserOverview put(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationUserOverview);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

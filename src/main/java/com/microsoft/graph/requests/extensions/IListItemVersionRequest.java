@@ -80,6 +80,23 @@ public interface IListItemVersionRequest extends IHttpRequest {
     ListItemVersion post(final ListItemVersion newListItemVersion) throws ClientException;
 
     /**
+     * Posts a ListItemVersion with a new object
+     *
+     * @param newListItemVersion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ListItemVersion newListItemVersion, final ICallback<ListItemVersion> callback);
+
+    /**
+     * Posts a ListItemVersion with a new object
+     *
+     * @param newListItemVersion the object to create/update
+     * @return the created ListItemVersion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ListItemVersion put(final ListItemVersion newListItemVersion) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

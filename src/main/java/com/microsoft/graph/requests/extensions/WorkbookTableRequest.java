@@ -125,6 +125,27 @@ public class WorkbookTableRequest extends BaseRequest implements IWorkbookTableR
     }
 
     /**
+     * Creates a WorkbookTable with a new object
+     *
+     * @param newWorkbookTable the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookTable newWorkbookTable, final ICallback<WorkbookTable> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookTable);
+    }
+
+    /**
+     * Creates a WorkbookTable with a new object
+     *
+     * @param newWorkbookTable the object to create/update
+     * @return the created WorkbookTable
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookTable put(final WorkbookTable newWorkbookTable) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookTable);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

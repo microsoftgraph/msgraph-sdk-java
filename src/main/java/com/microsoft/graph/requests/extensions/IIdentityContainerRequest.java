@@ -80,6 +80,23 @@ public interface IIdentityContainerRequest extends IHttpRequest {
     IdentityContainer post(final IdentityContainer newIdentityContainer) throws ClientException;
 
     /**
+     * Posts a IdentityContainer with a new object
+     *
+     * @param newIdentityContainer the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IdentityContainer newIdentityContainer, final ICallback<IdentityContainer> callback);
+
+    /**
+     * Posts a IdentityContainer with a new object
+     *
+     * @param newIdentityContainer the object to create/update
+     * @return the created IdentityContainer
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IdentityContainer put(final IdentityContainer newIdentityContainer) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

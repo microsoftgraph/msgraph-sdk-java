@@ -112,6 +112,27 @@ public class WorkbookChartFontRequest extends BaseRequest implements IWorkbookCh
     }
 
     /**
+     * Creates a WorkbookChartFont with a new object
+     *
+     * @param newWorkbookChartFont the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartFont newWorkbookChartFont, final ICallback<WorkbookChartFont> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartFont);
+    }
+
+    /**
+     * Creates a WorkbookChartFont with a new object
+     *
+     * @param newWorkbookChartFont the object to create/update
+     * @return the created WorkbookChartFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartFont put(final WorkbookChartFont newWorkbookChartFont) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartFont);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

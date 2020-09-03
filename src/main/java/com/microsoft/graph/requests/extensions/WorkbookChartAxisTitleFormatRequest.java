@@ -114,6 +114,27 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a WorkbookChartAxisTitleFormat with a new object
+     *
+     * @param newWorkbookChartAxisTitleFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<WorkbookChartAxisTitleFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartAxisTitleFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartAxisTitleFormat with a new object
+     *
+     * @param newWorkbookChartAxisTitleFormat the object to create/update
+     * @return the created WorkbookChartAxisTitleFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartAxisTitleFormat put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartAxisTitleFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWorkbookChartAxisFormatRequest extends IHttpRequest {
     WorkbookChartAxisFormat post(final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException;
 
     /**
+     * Posts a WorkbookChartAxisFormat with a new object
+     *
+     * @param newWorkbookChartAxisFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat, final ICallback<WorkbookChartAxisFormat> callback);
+
+    /**
+     * Posts a WorkbookChartAxisFormat with a new object
+     *
+     * @param newWorkbookChartAxisFormat the object to create/update
+     * @return the created WorkbookChartAxisFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartAxisFormat put(final WorkbookChartAxisFormat newWorkbookChartAxisFormat) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

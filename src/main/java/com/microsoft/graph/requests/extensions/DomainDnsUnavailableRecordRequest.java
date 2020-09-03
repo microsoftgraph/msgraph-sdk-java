@@ -112,6 +112,27 @@ public class DomainDnsUnavailableRecordRequest extends BaseRequest implements ID
     }
 
     /**
+     * Creates a DomainDnsUnavailableRecord with a new object
+     *
+     * @param newDomainDnsUnavailableRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord, final ICallback<DomainDnsUnavailableRecord> callback) {
+        send(HttpMethod.PUT, callback, newDomainDnsUnavailableRecord);
+    }
+
+    /**
+     * Creates a DomainDnsUnavailableRecord with a new object
+     *
+     * @param newDomainDnsUnavailableRecord the object to create/update
+     * @return the created DomainDnsUnavailableRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DomainDnsUnavailableRecord put(final DomainDnsUnavailableRecord newDomainDnsUnavailableRecord) throws ClientException {
+        return send(HttpMethod.PUT, newDomainDnsUnavailableRecord);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

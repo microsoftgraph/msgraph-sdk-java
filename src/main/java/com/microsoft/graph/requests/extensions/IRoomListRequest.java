@@ -80,6 +80,23 @@ public interface IRoomListRequest extends IHttpRequest {
     RoomList post(final RoomList newRoomList) throws ClientException;
 
     /**
+     * Posts a RoomList with a new object
+     *
+     * @param newRoomList the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RoomList newRoomList, final ICallback<RoomList> callback);
+
+    /**
+     * Posts a RoomList with a new object
+     *
+     * @param newRoomList the object to create/update
+     * @return the created RoomList
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RoomList put(final RoomList newRoomList) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

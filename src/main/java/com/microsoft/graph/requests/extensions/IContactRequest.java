@@ -80,6 +80,23 @@ public interface IContactRequest extends IHttpRequest {
     Contact post(final Contact newContact) throws ClientException;
 
     /**
+     * Posts a Contact with a new object
+     *
+     * @param newContact the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Contact newContact, final ICallback<Contact> callback);
+
+    /**
+     * Posts a Contact with a new object
+     *
+     * @param newContact the object to create/update
+     * @return the created Contact
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Contact put(final Contact newContact) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

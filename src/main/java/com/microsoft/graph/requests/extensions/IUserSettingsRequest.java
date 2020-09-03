@@ -80,6 +80,23 @@ public interface IUserSettingsRequest extends IHttpRequest {
     UserSettings post(final UserSettings newUserSettings) throws ClientException;
 
     /**
+     * Posts a UserSettings with a new object
+     *
+     * @param newUserSettings the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final UserSettings newUserSettings, final ICallback<UserSettings> callback);
+
+    /**
+     * Posts a UserSettings with a new object
+     *
+     * @param newUserSettings the object to create/update
+     * @return the created UserSettings
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    UserSettings put(final UserSettings newUserSettings) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

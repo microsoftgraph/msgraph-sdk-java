@@ -114,6 +114,27 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
     }
 
     /**
+     * Creates a UsedInsight with a new object
+     *
+     * @param newUsedInsight the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UsedInsight newUsedInsight, final ICallback<UsedInsight> callback) {
+        send(HttpMethod.PUT, callback, newUsedInsight);
+    }
+
+    /**
+     * Creates a UsedInsight with a new object
+     *
+     * @param newUsedInsight the object to create/update
+     * @return the created UsedInsight
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UsedInsight put(final UsedInsight newUsedInsight) throws ClientException {
+        return send(HttpMethod.PUT, newUsedInsight);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

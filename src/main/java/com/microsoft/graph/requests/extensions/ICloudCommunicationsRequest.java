@@ -80,6 +80,23 @@ public interface ICloudCommunicationsRequest extends IHttpRequest {
     CloudCommunications post(final CloudCommunications newCloudCommunications) throws ClientException;
 
     /**
+     * Posts a CloudCommunications with a new object
+     *
+     * @param newCloudCommunications the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CloudCommunications newCloudCommunications, final ICallback<CloudCommunications> callback);
+
+    /**
+     * Posts a CloudCommunications with a new object
+     *
+     * @param newCloudCommunications the object to create/update
+     * @return the created CloudCommunications
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CloudCommunications put(final CloudCommunications newCloudCommunications) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

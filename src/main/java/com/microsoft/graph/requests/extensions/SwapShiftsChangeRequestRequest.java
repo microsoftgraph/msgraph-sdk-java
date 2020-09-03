@@ -112,6 +112,27 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
     }
 
     /**
+     * Creates a SwapShiftsChangeRequest with a new object
+     *
+     * @param newSwapShiftsChangeRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
+        send(HttpMethod.PUT, callback, newSwapShiftsChangeRequest);
+    }
+
+    /**
+     * Creates a SwapShiftsChangeRequest with a new object
+     *
+     * @param newSwapShiftsChangeRequest the object to create/update
+     * @return the created SwapShiftsChangeRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SwapShiftsChangeRequest put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
+        return send(HttpMethod.PUT, newSwapShiftsChangeRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

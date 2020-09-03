@@ -80,6 +80,23 @@ public interface IDefaultManagedAppProtectionRequest extends IHttpRequest {
     DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException;
 
     /**
+     * Posts a DefaultManagedAppProtection with a new object
+     *
+     * @param newDefaultManagedAppProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback);
+
+    /**
+     * Posts a DefaultManagedAppProtection with a new object
+     *
+     * @param newDefaultManagedAppProtection the object to create/update
+     * @return the created DefaultManagedAppProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DefaultManagedAppProtection put(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

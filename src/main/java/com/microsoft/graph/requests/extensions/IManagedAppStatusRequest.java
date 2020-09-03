@@ -80,6 +80,23 @@ public interface IManagedAppStatusRequest extends IHttpRequest {
     ManagedAppStatus post(final ManagedAppStatus newManagedAppStatus) throws ClientException;
 
     /**
+     * Posts a ManagedAppStatus with a new object
+     *
+     * @param newManagedAppStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback);
+
+    /**
+     * Posts a ManagedAppStatus with a new object
+     *
+     * @param newManagedAppStatus the object to create/update
+     * @return the created ManagedAppStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedAppStatus put(final ManagedAppStatus newManagedAppStatus) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWorkbookRangeFormatRequest extends IHttpRequest {
     WorkbookRangeFormat post(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException;
 
     /**
+     * Posts a WorkbookRangeFormat with a new object
+     *
+     * @param newWorkbookRangeFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback);
+
+    /**
+     * Posts a WorkbookRangeFormat with a new object
+     *
+     * @param newWorkbookRangeFormat the object to create/update
+     * @return the created WorkbookRangeFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookRangeFormat put(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

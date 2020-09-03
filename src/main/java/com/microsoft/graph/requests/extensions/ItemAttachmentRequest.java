@@ -114,6 +114,27 @@ public class ItemAttachmentRequest extends BaseRequest implements IItemAttachmen
     }
 
     /**
+     * Creates a ItemAttachment with a new object
+     *
+     * @param newItemAttachment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemAttachment newItemAttachment, final ICallback<ItemAttachment> callback) {
+        send(HttpMethod.PUT, callback, newItemAttachment);
+    }
+
+    /**
+     * Creates a ItemAttachment with a new object
+     *
+     * @param newItemAttachment the object to create/update
+     * @return the created ItemAttachment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemAttachment put(final ItemAttachment newItemAttachment) throws ClientException {
+        return send(HttpMethod.PUT, newItemAttachment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

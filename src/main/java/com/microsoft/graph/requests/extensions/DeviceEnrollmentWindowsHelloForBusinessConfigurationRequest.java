@@ -112,6 +112,27 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
     }
 
     /**
+     * Creates a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    }
+
+    /**
+     * Creates a DeviceEnrollmentWindowsHelloForBusinessConfiguration with a new object
+     *
+     * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
+     * @return the created DeviceEnrollmentWindowsHelloForBusinessConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceEnrollmentWindowsHelloForBusinessConfiguration put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
     }
 
     /**
+     * Creates a Room with a new object
+     *
+     * @param newRoom the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Room newRoom, final ICallback<Room> callback) {
+        send(HttpMethod.PUT, callback, newRoom);
+    }
+
+    /**
+     * Creates a Room with a new object
+     *
+     * @param newRoom the object to create/update
+     * @return the created Room
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Room put(final Room newRoom) throws ClientException {
+        return send(HttpMethod.PUT, newRoom);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

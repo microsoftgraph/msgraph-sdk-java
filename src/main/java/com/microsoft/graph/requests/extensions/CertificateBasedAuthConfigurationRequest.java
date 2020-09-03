@@ -112,6 +112,27 @@ public class CertificateBasedAuthConfigurationRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a CertificateBasedAuthConfiguration with a new object
+     *
+     * @param newCertificateBasedAuthConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newCertificateBasedAuthConfiguration);
+    }
+
+    /**
+     * Creates a CertificateBasedAuthConfiguration with a new object
+     *
+     * @param newCertificateBasedAuthConfiguration the object to create/update
+     * @return the created CertificateBasedAuthConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CertificateBasedAuthConfiguration put(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newCertificateBasedAuthConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

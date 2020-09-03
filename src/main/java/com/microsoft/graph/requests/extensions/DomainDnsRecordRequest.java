@@ -127,6 +127,27 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
     }
 
     /**
+     * Creates a DomainDnsRecord with a new object
+     *
+     * @param newDomainDnsRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DomainDnsRecord newDomainDnsRecord, final ICallback<DomainDnsRecord> callback) {
+        send(HttpMethod.PUT, callback, newDomainDnsRecord);
+    }
+
+    /**
+     * Creates a DomainDnsRecord with a new object
+     *
+     * @param newDomainDnsRecord the object to create/update
+     * @return the created DomainDnsRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DomainDnsRecord put(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
+        return send(HttpMethod.PUT, newDomainDnsRecord);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IComplianceManagementPartnerRequest extends IHttpRequest {
     ComplianceManagementPartner post(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException;
 
     /**
+     * Posts a ComplianceManagementPartner with a new object
+     *
+     * @param newComplianceManagementPartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback);
+
+    /**
+     * Posts a ComplianceManagementPartner with a new object
+     *
+     * @param newComplianceManagementPartner the object to create/update
+     * @return the created ComplianceManagementPartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ComplianceManagementPartner put(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

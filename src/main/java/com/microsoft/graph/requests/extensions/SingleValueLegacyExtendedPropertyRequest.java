@@ -112,6 +112,27 @@ public class SingleValueLegacyExtendedPropertyRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a SingleValueLegacyExtendedProperty with a new object
+     *
+     * @param newSingleValueLegacyExtendedProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
+        send(HttpMethod.PUT, callback, newSingleValueLegacyExtendedProperty);
+    }
+
+    /**
+     * Creates a SingleValueLegacyExtendedProperty with a new object
+     *
+     * @param newSingleValueLegacyExtendedProperty the object to create/update
+     * @return the created SingleValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SingleValueLegacyExtendedProperty put(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
+        return send(HttpMethod.PUT, newSingleValueLegacyExtendedProperty);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

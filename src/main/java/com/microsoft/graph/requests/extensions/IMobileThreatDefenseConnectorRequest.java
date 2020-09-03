@@ -80,6 +80,23 @@ public interface IMobileThreatDefenseConnectorRequest extends IHttpRequest {
     MobileThreatDefenseConnector post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException;
 
     /**
+     * Posts a MobileThreatDefenseConnector with a new object
+     *
+     * @param newMobileThreatDefenseConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback);
+
+    /**
+     * Posts a MobileThreatDefenseConnector with a new object
+     *
+     * @param newMobileThreatDefenseConnector the object to create/update
+     * @return the created MobileThreatDefenseConnector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileThreatDefenseConnector put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IRecordOperationRequest extends IHttpRequest {
     RecordOperation post(final RecordOperation newRecordOperation) throws ClientException;
 
     /**
+     * Posts a RecordOperation with a new object
+     *
+     * @param newRecordOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RecordOperation newRecordOperation, final ICallback<RecordOperation> callback);
+
+    /**
+     * Posts a RecordOperation with a new object
+     *
+     * @param newRecordOperation the object to create/update
+     * @return the created RecordOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RecordOperation put(final RecordOperation newRecordOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -121,6 +121,27 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
     }
 
     /**
+     * Creates a OnenoteSection with a new object
+     *
+     * @param newOnenoteSection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
+        send(HttpMethod.PUT, callback, newOnenoteSection);
+    }
+
+    /**
+     * Creates a OnenoteSection with a new object
+     *
+     * @param newOnenoteSection the object to create/update
+     * @return the created OnenoteSection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenoteSection put(final OnenoteSection newOnenoteSection) throws ClientException {
+        return send(HttpMethod.PUT, newOnenoteSection);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

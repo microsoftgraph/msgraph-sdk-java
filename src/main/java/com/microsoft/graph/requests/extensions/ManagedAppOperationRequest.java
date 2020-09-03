@@ -112,6 +112,27 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
     }
 
     /**
+     * Creates a ManagedAppOperation with a new object
+     *
+     * @param newManagedAppOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
+        send(HttpMethod.PUT, callback, newManagedAppOperation);
+    }
+
+    /**
+     * Creates a ManagedAppOperation with a new object
+     *
+     * @param newManagedAppOperation the object to create/update
+     * @return the created ManagedAppOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAppOperation put(final ManagedAppOperation newManagedAppOperation) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAppOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

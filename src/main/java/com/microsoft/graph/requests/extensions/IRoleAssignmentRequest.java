@@ -80,6 +80,23 @@ public interface IRoleAssignmentRequest extends IHttpRequest {
     RoleAssignment post(final RoleAssignment newRoleAssignment) throws ClientException;
 
     /**
+     * Posts a RoleAssignment with a new object
+     *
+     * @param newRoleAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback);
+
+    /**
+     * Posts a RoleAssignment with a new object
+     *
+     * @param newRoleAssignment the object to create/update
+     * @return the created RoleAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RoleAssignment put(final RoleAssignment newRoleAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

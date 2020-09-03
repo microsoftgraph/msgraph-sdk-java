@@ -80,6 +80,23 @@ public interface IWorkbookTableSortRequest extends IHttpRequest {
     WorkbookTableSort post(final WorkbookTableSort newWorkbookTableSort) throws ClientException;
 
     /**
+     * Posts a WorkbookTableSort with a new object
+     *
+     * @param newWorkbookTableSort the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookTableSort newWorkbookTableSort, final ICallback<WorkbookTableSort> callback);
+
+    /**
+     * Posts a WorkbookTableSort with a new object
+     *
+     * @param newWorkbookTableSort the object to create/update
+     * @return the created WorkbookTableSort
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookTableSort put(final WorkbookTableSort newWorkbookTableSort) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

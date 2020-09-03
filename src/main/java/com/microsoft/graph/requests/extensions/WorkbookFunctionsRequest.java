@@ -113,6 +113,27 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
     }
 
     /**
+     * Creates a WorkbookFunctions with a new object
+     *
+     * @param newWorkbookFunctions the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookFunctions newWorkbookFunctions, final ICallback<WorkbookFunctions> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookFunctions);
+    }
+
+    /**
+     * Creates a WorkbookFunctions with a new object
+     *
+     * @param newWorkbookFunctions the object to create/update
+     * @return the created WorkbookFunctions
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookFunctions put(final WorkbookFunctions newWorkbookFunctions) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookFunctions);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
