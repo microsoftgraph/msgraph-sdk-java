@@ -39,11 +39,10 @@ import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.ReferenceAttachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.generated.BaseAttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
 public class AttachmentCollectionPageSerializer {
 
-	private static JsonParser parser;
 	private static DefaultSerializer serializer;
 
 	/**
@@ -68,11 +67,10 @@ public class AttachmentCollectionPageSerializer {
 		serializer = new DefaultSerializer(logger);
 		String json;
 		JsonObject jsonObject;
-		parser = new JsonParser();
 		for(Attachment attachment : attachments) {
 			jsonObject = new JsonObject();
 			json = serializer.serializeObject(attachment);
-			jsonObject = (JsonObject)parser.parse(json);
+			jsonObject = (JsonObject)JsonParser.parseString(json);
 			jsonArray.add(jsonObject);
 		}
 		return jsonArray;
@@ -90,7 +88,7 @@ public class AttachmentCollectionPageSerializer {
 		if (json == null) {
 			return null;
 		}
-		final BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
+		final AttachmentCollectionResponse response = new AttachmentCollectionResponse();
 		serializer = new DefaultSerializer(logger);
 		final JsonObject[] sourceArray = serializer.deserializeObject(json.toString(), JsonObject[].class);
 		final Attachment[] array = new Attachment[sourceArray.length];

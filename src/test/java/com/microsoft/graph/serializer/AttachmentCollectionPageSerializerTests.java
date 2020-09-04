@@ -20,7 +20,7 @@ import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import com.microsoft.graph.models.extensions.ItemAttachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
-import com.microsoft.graph.requests.generated.BaseAttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
 public class AttachmentCollectionPageSerializerTests {
 	private MockLogger logger;
@@ -31,8 +31,8 @@ public class AttachmentCollectionPageSerializerTests {
 
 	@Test
 	public void testAttachmentCollectionPageSerialization() throws Exception {
-        String expectedString = "[{\"contentBytes\":\"data\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"item\":{\"subject\":\"Test Event Subject\",\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"},\"name\":\"Holiday event\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"},{\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"},\"name\":\"Attachment name\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"}]";
-        BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
+        String expectedString = "[{\"contentBytes\":\"data\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"item\":{\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"subject\":\"Test Event Subject\",\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"},\"name\":\"Holiday event\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"},{\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"},\"name\":\"Attachment name\",\"@odata.type\":\"#microsoft.graph.itemAttachment\"}]";
+        AttachmentCollectionResponse response = new AttachmentCollectionResponse();
         response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
         AttachmentCollectionPage attachmentCollectionPage = new AttachmentCollectionPage(response, null);
         JsonElement serializedJson = AttachmentCollectionPageSerializer.serialize(attachmentCollectionPage, logger);

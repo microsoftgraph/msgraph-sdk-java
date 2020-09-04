@@ -19,13 +19,13 @@ public enum OnenoteUserRole
     */
     CONTRIBUTOR,
     /**
-    * Reader
-    */
-    READER,
-    /**
     * None
     */
     NONE,
+    /**
+    * Reader
+    */
+    READER,
     /**
     * For OnenoteUserRole values that were not expected from the service
     */

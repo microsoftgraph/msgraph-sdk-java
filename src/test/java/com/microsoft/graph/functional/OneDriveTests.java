@@ -37,7 +37,7 @@ public class OneDriveTests {
     	
     	//Get resource file from file system
     	InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("hamilton.jpg");
-    	int fileSize = uploadFile.available();
+    	long fileSize = (long) uploadFile.available();
     	
     	IProgressCallback<DriveItem> callback = new IProgressCallback<DriveItem> () {
     		@Override

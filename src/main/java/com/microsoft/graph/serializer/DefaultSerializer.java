@@ -25,12 +25,13 @@ package com.microsoft.graph.serializer;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.logger.ILogger;
-
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -71,7 +72,7 @@ public class DefaultSerializer implements ISerializer {
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
     	return deserializeObject(inputString, clazz, null);
     }
-    
+    private static final String graphResponseHeadersKey = "graphResponseHeaders";
     @SuppressWarnings("unchecked")
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
@@ -96,7 +97,7 @@ public class DefaultSerializer implements ISerializer {
 
             if (responseHeaders != null) {
 	            JsonElement convertedHeaders = gson.toJsonTree(responseHeaders);
-	            jsonBackedObject.additionalDataManager().put("graphResponseHeaders", convertedHeaders);
+	            jsonBackedObject.additionalDataManager().put(graphResponseHeadersKey, convertedHeaders);
             }
             
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
@@ -123,7 +124,6 @@ public class DefaultSerializer implements ISerializer {
 
                 // If the object is a HashMap, iterate through its children
                 if (fieldObject instanceof HashMap) {
-                    @SuppressWarnings("unchecked")
                     HashMap<String, Object> serializableChildren = (HashMap<String, Object>) fieldObject;
                     Iterator<Entry<String, Object>> it = serializableChildren.entrySet().iterator();
 
@@ -134,9 +134,25 @@ public class DefaultSerializer implements ISerializer {
                         // If the item is a valid Graph object, set its additional data
                         if (child instanceof IJsonBackedObject) {
                             AdditionalDataManager childAdditionalDataManager = ((IJsonBackedObject) child).additionalDataManager();
-                            if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject()) {
-                            	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject());
-                            	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject());
+                            if(rawJson != null && field != null && rawJson.get(field.getName()) != null && rawJson.get(field.getName()).isJsonObject() 
+                            		&& rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).isJsonObject()) {
+                            	childAdditionalDataManager.setAdditionalData(rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                            	setChildAdditionalData((IJsonBackedObject) child,rawJson.get(field.getName()).getAsJsonObject().get(pair.getKey()).getAsJsonObject());
+                            }
+                        }
+                    }
+                }
+                // If the object is a list of Graph objects, iterate through elements
+                else if (fieldObject instanceof List && rawJson != null) {
+                    final JsonElement collectionJson = rawJson.get(field.getName());
+                    final List<?> fieldObjectList = (List<?>) fieldObject;
+                    if (collectionJson.isJsonArray() && ((JsonArray)collectionJson).size() == fieldObjectList.size()) {
+                        final JsonArray rawJsonArray = (JsonArray) collectionJson;
+                        for (int i = 0; i < fieldObjectList.size(); i++) {
+                            final Object element = fieldObjectList.get(i);
+                            if (element instanceof IJsonBackedObject) {
+                                final JsonElement elementRawJson = rawJsonArray.get(i);
+                                setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
                             }
                         }
                     }
@@ -255,17 +271,10 @@ public class DefaultSerializer implements ISerializer {
      */
     private void addAdditionalDataToJson(AdditionalDataManager additionalDataManager, JsonObject jsonNode) {
     	for (Map.Entry<String, JsonElement> entry : additionalDataManager.entrySet()) {
-            if (!fieldIsOdataTransient(entry)) {
-                jsonNode.add(
-                        entry.getKey(),
-                        entry.getValue()
-                );
+            if(!entry.getKey().equals(graphResponseHeadersKey)) {
+                jsonNode.add(entry.getKey(), entry.getValue());
             }
         }
-    }
-
-    private boolean fieldIsOdataTransient(Map.Entry<String, JsonElement> entry) {
-        return (entry.getKey().startsWith("@") && entry.getKey() != "@odata.type");
     }
     
     /**

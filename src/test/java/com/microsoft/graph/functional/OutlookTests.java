@@ -18,7 +18,6 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import com.microsoft.graph.models.extensions.Attendee;
-//import com.microsoft.graph.extensions.IDirectoryDeletedItemsCollectionPage;
 import com.microsoft.graph.models.extensions.AttendeeBase;
 import com.microsoft.graph.models.extensions.Contact;
 import com.microsoft.graph.models.extensions.DateTimeTimeZone;
@@ -36,7 +35,7 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
-import com.microsoft.graph.requests.generated.BaseAttachmentCollectionResponse;
+import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
 @Ignore
 public class OutlookTests {
@@ -126,7 +125,7 @@ public class OutlookTests {
     	TestBase testBase = new TestBase();
     	Message message = getMessage();
     	message.hasAttachments = true;
-    	BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
+    	AttachmentCollectionResponse response = new AttachmentCollectionResponse();
     	response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
 		message.attachments = new AttachmentCollectionPage(response, null);
 		testBase.graphClient.me().sendMail(message, true).buildRequest().post();
@@ -147,7 +146,7 @@ public class OutlookTests {
     	Event event = getEvent();
 		event.body = getItemBody();
 		event.hasAttachments = true;
-		BaseAttachmentCollectionResponse response = new BaseAttachmentCollectionResponse();
+		AttachmentCollectionResponse response = new AttachmentCollectionResponse();
 		response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithContact());
 		event.attachments = new AttachmentCollectionPage(response, null); 
 		Event eventResponse = testBase.graphClient.me().events().buildRequest().post(event);
