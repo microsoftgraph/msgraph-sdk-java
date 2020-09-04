@@ -22,7 +22,6 @@
 
 package com.microsoft.graph.serializer;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
 
 import com.google.gson.JsonArray;
@@ -32,12 +31,6 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.Attachment;
-import com.microsoft.graph.models.extensions.Contact;
-import com.microsoft.graph.models.extensions.Event;
-import com.microsoft.graph.models.extensions.FileAttachment;
-import com.microsoft.graph.models.extensions.ItemAttachment;
-import com.microsoft.graph.models.extensions.Message;
-import com.microsoft.graph.models.extensions.ReferenceAttachment;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionResponse;
 
