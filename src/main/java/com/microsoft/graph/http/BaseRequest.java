@@ -22,8 +22,6 @@
 
 package com.microsoft.graph.http;
 
-import java.net.URI;
-
 import okhttp3.HttpUrl;
 import okhttp3.HttpUrl.Builder;
 
