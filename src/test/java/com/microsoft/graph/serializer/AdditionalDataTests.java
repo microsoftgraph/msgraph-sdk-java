@@ -11,24 +11,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
-import com.microsoft.graph.authentication.IAuthenticationProvider;
-import com.microsoft.graph.authentication.MockAuthenticationProvider;
-import com.microsoft.graph.core.DefaultClientConfig;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.models.extensions.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.PlannerTaskDetails;
-import com.microsoft.graph.models.extensions.UploadSession;
 import com.microsoft.graph.models.extensions.User;
-import com.microsoft.graph.requests.extensions.GraphServiceClient;
-import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequest;
-import com.microsoft.graph.requests.extensions.IDriveItemCreateUploadSessionRequestBuilder;
 
 public class AdditionalDataTests {
 	public DefaultSerializer serializer;
@@ -114,8 +106,7 @@ public class AdditionalDataTests {
 		
 		String serialized = serializer.serializeObject(deserializedObject);
 		
-		JsonParser parser = new JsonParser();
-		JsonObject jsonObject = parser.parse(serialized).getAsJsonObject();
+		JsonObject jsonObject = JsonParser.parseString(serialized).getAsJsonObject();
 		assertNotNull(jsonObject.get("checklist").getAsJsonObject().get("1234"));
 		assertNull(jsonObject.get("checklist").getAsJsonObject().get("1234").getAsJsonObject().get("1234"));
 		assertNull(jsonObject.get("checklist").getAsJsonObject().get("1234").getAsJsonObject().get("66442"));
