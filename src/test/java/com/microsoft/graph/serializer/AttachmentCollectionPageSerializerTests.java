@@ -36,15 +36,14 @@ public class AttachmentCollectionPageSerializerTests {
         response.value = Arrays.asList(getFileAttachment(),getItemAttachmentWithEvent(),getItemAttachmentWithContact());
         AttachmentCollectionPage attachmentCollectionPage = new AttachmentCollectionPage(response, null);
         JsonElement serializedJson = AttachmentCollectionPageSerializer.serialize(attachmentCollectionPage, logger);
-        System.out.println(serializedJson);
+        logger.logDebug(serializedJson.toString());
         assertEquals(expectedString,serializedJson.toString());
     }
 
 	@Test
     public void testAttachmentCollectionPageDeserialization() throws Exception {
 		String jsonString = "[{\"contentBytes\":\"data\",\"name\":\"document.pdf\",\"@odata.type\":\"#microsoft.graph.fileAttachment\",\"id\":\"54321\"},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Holiday event\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"subject\":\"Test Event Subject\",\"start\":{\"dateTime\":\"2018-10-16T06:15:26.544Z\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2018-11-18T07:30:26.544Z\",\"timeZone\":\"UTC\"},\"@odata.type\":\"microsoft.graph.event\",\"id\":\"1234\"}},{\"@odata.type\":\"#microsoft.graph.itemAttachment\",\"name\":\"Attachment name\",\"id\":null,\"isInline\":null,\"size\":null,\"item\":{\"displayName\":\"displayname\",\"mobilePhone\":\"123456890\",\"@odata.type\":\"microsoft.graph.contact\"}}]";
-		JsonParser parser = new JsonParser();
-		JsonElement jsonElement = parser.parse(jsonString);
+		JsonElement jsonElement = JsonParser.parseString(jsonString);
 		AttachmentCollectionPage attachmentCollectionPage = AttachmentCollectionPageSerializer.deserialize(jsonElement, logger);
 		for(Attachment attachment: attachmentCollectionPage.getCurrentPage()) {
 			if(attachment instanceof FileAttachment) {

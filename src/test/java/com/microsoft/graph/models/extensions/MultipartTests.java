@@ -51,7 +51,6 @@ public class MultipartTests {
 	public void testCreatePartHeader() {
 		String actual = multipart.createPartHeader(null, null, null);
 		String expected = "--"+multipart.getBoundary()+"\r\nContent-Disposition: form-data\r\n\r\n";
-		System.out.println(actual);
 		assertEquals(expected, actual);
 	}
 	
