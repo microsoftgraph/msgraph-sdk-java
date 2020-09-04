@@ -62,14 +62,14 @@ public class WorkbookChartSeriesCollectionRequest extends BaseCollectionRequest<
     public void post(final WorkbookChartSeries newWorkbookChartSeries, final ICallback<WorkbookChartSeries> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartSeriesRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookChartSeries, callback);
     }
 
     public WorkbookChartSeries post(final WorkbookChartSeries newWorkbookChartSeries) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartSeriesRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookChartSeries);
     }
 

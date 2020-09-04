@@ -62,14 +62,14 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
     public void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScore, callback);
     }
 
     public SecureScore post(final SecureScore newSecureScore) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScore);
     }
 

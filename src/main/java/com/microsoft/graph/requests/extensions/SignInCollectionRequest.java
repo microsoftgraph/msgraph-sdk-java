@@ -62,14 +62,14 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
     public void post(final SignIn newSignIn, final ICallback<SignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSignIn, callback);
     }
 
     public SignIn post(final SignIn newSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSignIn);
     }
 

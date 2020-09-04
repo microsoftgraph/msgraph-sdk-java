@@ -62,14 +62,14 @@ public class ResourceOperationCollectionRequest extends BaseCollectionRequest<Re
     public void post(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newResourceOperation, callback);
     }
 
     public ResourceOperation post(final ResourceOperation newResourceOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ResourceOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newResourceOperation);
     }
 

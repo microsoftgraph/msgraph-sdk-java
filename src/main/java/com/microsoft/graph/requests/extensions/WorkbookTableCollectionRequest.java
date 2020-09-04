@@ -63,14 +63,14 @@ public class WorkbookTableCollectionRequest extends BaseCollectionRequest<Workbo
     public void post(final WorkbookTable newWorkbookTable, final ICallback<WorkbookTable> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookTable, callback);
     }
 
     public WorkbookTable post(final WorkbookTable newWorkbookTable) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookTableRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookTable);
     }
 

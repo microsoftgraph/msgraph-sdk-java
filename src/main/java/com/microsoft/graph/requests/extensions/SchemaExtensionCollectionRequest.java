@@ -61,14 +61,14 @@ public class SchemaExtensionCollectionRequest extends BaseCollectionRequest<Sche
     public void post(final SchemaExtension newSchemaExtension, final ICallback<SchemaExtension> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSchemaExtension, callback);
     }
 
     public SchemaExtension post(final SchemaExtension newSchemaExtension) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchemaExtensionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSchemaExtension);
     }
 

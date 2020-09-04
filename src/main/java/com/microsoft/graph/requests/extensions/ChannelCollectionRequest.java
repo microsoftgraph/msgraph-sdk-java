@@ -62,14 +62,14 @@ public class ChannelCollectionRequest extends BaseCollectionRequest<ChannelColle
     public void post(final Channel newChannel, final ICallback<Channel> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ChannelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChannel, callback);
     }
 
     public Channel post(final Channel newChannel) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ChannelRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newChannel);
     }
 

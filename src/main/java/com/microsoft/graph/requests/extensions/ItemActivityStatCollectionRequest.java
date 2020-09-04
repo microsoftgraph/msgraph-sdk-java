@@ -62,14 +62,14 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
     public void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityStat, callback);
     }
 
     public ItemActivityStat post(final ItemActivityStat newItemActivityStat) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityStat);
     }
 

@@ -63,14 +63,14 @@ public class DeviceConfigurationCollectionRequest extends BaseCollectionRequest<
     public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfiguration, callback);
     }
 
     public DeviceConfiguration post(final DeviceConfiguration newDeviceConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfiguration);
     }
 

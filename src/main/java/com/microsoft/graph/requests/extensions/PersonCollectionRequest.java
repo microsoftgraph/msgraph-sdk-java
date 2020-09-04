@@ -62,14 +62,14 @@ public class PersonCollectionRequest extends BaseCollectionRequest<PersonCollect
     public void post(final Person newPerson, final ICallback<Person> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PersonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPerson, callback);
     }
 
     public Person post(final Person newPerson) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PersonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPerson);
     }
 

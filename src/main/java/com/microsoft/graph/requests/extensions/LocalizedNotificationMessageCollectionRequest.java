@@ -62,14 +62,14 @@ public class LocalizedNotificationMessageCollectionRequest extends BaseCollectio
     public void post(final LocalizedNotificationMessage newLocalizedNotificationMessage, final ICallback<LocalizedNotificationMessage> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLocalizedNotificationMessage, callback);
     }
 
     public LocalizedNotificationMessage post(final LocalizedNotificationMessage newLocalizedNotificationMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LocalizedNotificationMessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLocalizedNotificationMessage);
     }
 

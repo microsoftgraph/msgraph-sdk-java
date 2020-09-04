@@ -62,14 +62,14 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAsyncOperation, callback);
     }
 
     public TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAsyncOperation);
     }
 

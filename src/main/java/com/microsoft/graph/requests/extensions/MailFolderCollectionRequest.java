@@ -61,14 +61,14 @@ public class MailFolderCollectionRequest extends BaseCollectionRequest<MailFolde
     public void post(final MailFolder newMailFolder, final ICallback<MailFolder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMailFolder, callback);
     }
 
     public MailFolder post(final MailFolder newMailFolder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MailFolderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMailFolder);
     }
 

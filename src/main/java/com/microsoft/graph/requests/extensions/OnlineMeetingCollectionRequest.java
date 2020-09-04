@@ -64,14 +64,14 @@ public class OnlineMeetingCollectionRequest extends BaseCollectionRequest<Online
     public void post(final OnlineMeeting newOnlineMeeting, final ICallback<OnlineMeeting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnlineMeeting, callback);
     }
 
     public OnlineMeeting post(final OnlineMeeting newOnlineMeeting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnlineMeetingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnlineMeeting);
     }
 

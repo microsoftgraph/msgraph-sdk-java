@@ -62,14 +62,14 @@ public class DeviceInstallStateCollectionRequest extends BaseCollectionRequest<D
     public void post(final DeviceInstallState newDeviceInstallState, final ICallback<DeviceInstallState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceInstallState, callback);
     }
 
     public DeviceInstallState post(final DeviceInstallState newDeviceInstallState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceInstallStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceInstallState);
     }
 

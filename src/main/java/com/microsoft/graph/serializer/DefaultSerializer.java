@@ -72,7 +72,7 @@ public class DefaultSerializer implements ISerializer {
     public <T> T deserializeObject(final String inputString, final Class<T> clazz) {
     	return deserializeObject(inputString, clazz, null);
     }
-    
+    private static final String graphResponseHeadersKey = "graphResponseHeaders";
     @SuppressWarnings("unchecked")
     @Override
     public <T> T deserializeObject(final String inputString, final Class<T> clazz, Map<String, java.util.List<String>> responseHeaders) {
@@ -97,7 +97,7 @@ public class DefaultSerializer implements ISerializer {
 
             if (responseHeaders != null) {
 	            JsonElement convertedHeaders = gson.toJsonTree(responseHeaders);
-	            jsonBackedObject.additionalDataManager().put("graphResponseHeaders", convertedHeaders);
+	            jsonBackedObject.additionalDataManager().put(graphResponseHeadersKey, convertedHeaders);
             }
             
             jsonBackedObject.additionalDataManager().setAdditionalData(rawObject);
@@ -271,7 +271,9 @@ public class DefaultSerializer implements ISerializer {
      */
     private void addAdditionalDataToJson(AdditionalDataManager additionalDataManager, JsonObject jsonNode) {
     	for (Map.Entry<String, JsonElement> entry : additionalDataManager.entrySet()) {
+            if(!entry.getKey().equals(graphResponseHeadersKey)) {
                 jsonNode.add(entry.getKey(), entry.getValue());
+            }
         }
     }
     

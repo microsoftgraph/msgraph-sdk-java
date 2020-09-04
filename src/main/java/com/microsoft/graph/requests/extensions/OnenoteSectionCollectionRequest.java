@@ -63,14 +63,14 @@ public class OnenoteSectionCollectionRequest extends BaseCollectionRequest<Oneno
     public void post(final OnenoteSection newOnenoteSection, final ICallback<OnenoteSection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteSection, callback);
     }
 
     public OnenoteSection post(final OnenoteSection newOnenoteSection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteSectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteSection);
     }
 

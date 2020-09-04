@@ -62,14 +62,14 @@ public class DetectedAppCollectionRequest extends BaseCollectionRequest<Detected
     public void post(final DetectedApp newDetectedApp, final ICallback<DetectedApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDetectedApp, callback);
     }
 
     public DetectedApp post(final DetectedApp newDetectedApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DetectedAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDetectedApp);
     }
 

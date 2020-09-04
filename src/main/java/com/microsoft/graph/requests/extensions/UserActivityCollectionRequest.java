@@ -62,14 +62,14 @@ public class UserActivityCollectionRequest extends BaseCollectionRequest<UserAct
     public void post(final UserActivity newUserActivity, final ICallback<UserActivity> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserActivity, callback);
     }
 
     public UserActivity post(final UserActivity newUserActivity) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserActivityRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserActivity);
     }
 

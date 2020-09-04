@@ -62,14 +62,14 @@ public class MessageRuleCollectionRequest extends BaseCollectionRequest<MessageR
     public void post(final MessageRule newMessageRule, final ICallback<MessageRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMessageRule, callback);
     }
 
     public MessageRule post(final MessageRule newMessageRule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMessageRule);
     }
 

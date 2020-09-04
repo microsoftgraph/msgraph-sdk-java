@@ -62,14 +62,14 @@ public class TimeOffReasonCollectionRequest extends BaseCollectionRequest<TimeOf
     public void post(final TimeOffReason newTimeOffReason, final ICallback<TimeOffReason> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOffReason, callback);
     }
 
     public TimeOffReason post(final TimeOffReason newTimeOffReason) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffReasonRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOffReason);
     }
 

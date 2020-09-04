@@ -62,14 +62,14 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppOperation, callback);
     }
 
     public ManagedAppOperation post(final ManagedAppOperation newManagedAppOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppOperation);
     }
 

@@ -62,14 +62,14 @@ public class ContentTypeCollectionRequest extends BaseCollectionRequest<ContentT
     public void post(final ContentType newContentType, final ICallback<ContentType> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newContentType, callback);
     }
 
     public ContentType post(final ContentType newContentType) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ContentTypeRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newContentType);
     }
 

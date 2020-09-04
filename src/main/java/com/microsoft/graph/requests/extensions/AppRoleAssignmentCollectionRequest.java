@@ -62,14 +62,14 @@ public class AppRoleAssignmentCollectionRequest extends BaseCollectionRequest<Ap
     public void post(final AppRoleAssignment newAppRoleAssignment, final ICallback<AppRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppRoleAssignment, callback);
     }
 
     public AppRoleAssignment post(final AppRoleAssignment newAppRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AppRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAppRoleAssignment);
     }
 

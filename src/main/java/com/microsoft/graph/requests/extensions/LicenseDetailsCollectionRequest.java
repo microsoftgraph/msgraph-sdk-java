@@ -62,14 +62,14 @@ public class LicenseDetailsCollectionRequest extends BaseCollectionRequest<Licen
     public void post(final LicenseDetails newLicenseDetails, final ICallback<LicenseDetails> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLicenseDetails, callback);
     }
 
     public LicenseDetails post(final LicenseDetails newLicenseDetails) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new LicenseDetailsRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newLicenseDetails);
     }
 

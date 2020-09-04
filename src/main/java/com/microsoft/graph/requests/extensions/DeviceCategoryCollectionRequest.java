@@ -62,14 +62,14 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
     public void post(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCategory, callback);
     }
 
     public DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCategory);
     }
 

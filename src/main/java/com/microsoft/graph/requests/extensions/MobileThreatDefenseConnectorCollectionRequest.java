@@ -62,14 +62,14 @@ public class MobileThreatDefenseConnectorCollectionRequest extends BaseCollectio
     public void post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileThreatDefenseConnector, callback);
     }
 
     public MobileThreatDefenseConnector post(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileThreatDefenseConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileThreatDefenseConnector);
     }
 

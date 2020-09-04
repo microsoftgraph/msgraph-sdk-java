@@ -62,14 +62,14 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
     public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentResult, callback);
     }
 
     public ThreatAssessmentResult post(final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentResult);
     }
 

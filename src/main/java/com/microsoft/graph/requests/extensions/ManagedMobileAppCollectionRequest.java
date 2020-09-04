@@ -62,14 +62,14 @@ public class ManagedMobileAppCollectionRequest extends BaseCollectionRequest<Man
     public void post(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedMobileApp, callback);
     }
 
     public ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedMobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedMobileApp);
     }
 

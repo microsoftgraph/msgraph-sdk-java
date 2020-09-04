@@ -62,14 +62,14 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
     public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newInferenceClassificationOverride, callback);
     }
 
     public InferenceClassificationOverride post(final InferenceClassificationOverride newInferenceClassificationOverride) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newInferenceClassificationOverride);
     }
 

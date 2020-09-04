@@ -61,14 +61,14 @@ public class GroupSettingCollectionRequest extends BaseCollectionRequest<GroupSe
     public void post(final GroupSetting newGroupSetting, final ICallback<GroupSetting> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupSetting, callback);
     }
 
     public GroupSetting post(final GroupSetting newGroupSetting) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new GroupSettingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newGroupSetting);
     }
 

@@ -62,14 +62,14 @@ public class ExtensionPropertyCollectionRequest extends BaseCollectionRequest<Ex
     public void post(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ExtensionPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExtensionProperty, callback);
     }
 
     public ExtensionProperty post(final ExtensionProperty newExtensionProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ExtensionPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newExtensionProperty);
     }
 

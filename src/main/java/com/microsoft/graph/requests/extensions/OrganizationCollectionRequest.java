@@ -61,14 +61,14 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
     public void post(final Organization newOrganization, final ICallback<Organization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrganization, callback);
     }
 
     public Organization post(final Organization newOrganization) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrganization);
     }
 

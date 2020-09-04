@@ -62,14 +62,14 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
     public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSwapShiftsChangeRequest, callback);
     }
 
     public SwapShiftsChangeRequest post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSwapShiftsChangeRequest);
     }
 

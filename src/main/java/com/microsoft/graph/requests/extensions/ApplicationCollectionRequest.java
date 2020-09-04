@@ -63,14 +63,14 @@ public class ApplicationCollectionRequest extends BaseCollectionRequest<Applicat
     public void post(final Application newApplication, final ICallback<Application> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplication, callback);
     }
 
     public Application post(final Application newApplication) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ApplicationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newApplication);
     }
 

@@ -62,14 +62,14 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
     public void post(final Trending newTrending, final ICallback<Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrending, callback);
     }
 
     public Trending post(final Trending newTrending) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrending);
     }
 

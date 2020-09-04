@@ -62,14 +62,14 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
     public void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleAssignment, callback);
     }
 
     public RoleAssignment post(final RoleAssignment newRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleAssignment);
     }
 

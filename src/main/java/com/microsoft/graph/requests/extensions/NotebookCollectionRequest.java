@@ -65,14 +65,14 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
     public void post(final Notebook newNotebook, final ICallback<Notebook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNotebook, callback);
     }
 
     public Notebook post(final Notebook newNotebook) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNotebook);
     }
 

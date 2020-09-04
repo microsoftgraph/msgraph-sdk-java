@@ -62,14 +62,14 @@ public class RoomCollectionRequest extends BaseCollectionRequest<RoomCollectionR
     public void post(final Room newRoom, final ICallback<Room> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoom, callback);
     }
 
     public Room post(final Room newRoom) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoom);
     }
 
