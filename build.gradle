@@ -30,6 +30,7 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.13'
+    testImplementation 'org.mockito:mockito-inline:+'
     
     implementation 'com.google.code.gson:gson:2.8.6'
     
