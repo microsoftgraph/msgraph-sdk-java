@@ -156,7 +156,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
      */
     @SerializedName("companyName")
     @Expose
@@ -177,6 +177,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("country")
     @Expose
     public String country;
+
+    /**
+     * The Created Date Time.
+     * The created date of the user object.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Creation Type.
@@ -300,7 +308,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
      */
     @SerializedName("mail")
     @Expose
@@ -630,6 +638,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The App Role Assignments.
      * 
      */
+    @SerializedName("appRoleAssignments")
+    @Expose
     public AppRoleAssignmentCollectionPage appRoleAssignments;
 
     /**
@@ -648,6 +658,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The License Details.
      * A collection of this user's license details. Read-only.
      */
+    @SerializedName("licenseDetails")
+    @Expose
     public LicenseDetailsCollectionPage licenseDetails;
 
     /**
@@ -706,36 +718,48 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Calendar Groups.
      * The user's calendar groups. Read-only. Nullable.
      */
+    @SerializedName("calendarGroups")
+    @Expose
     public CalendarGroupCollectionPage calendarGroups;
 
     /**
      * The Calendars.
      * The user's calendars. Read-only. Nullable.
      */
+    @SerializedName("calendars")
+    @Expose
     public CalendarCollectionPage calendars;
 
     /**
      * The Calendar View.
      * The calendar view for the calendar. Read-only. Nullable.
      */
+    @SerializedName("calendarView")
+    @Expose
     public EventCollectionPage calendarView;
 
     /**
      * The Contact Folders.
      * The user's contacts folders. Read-only. Nullable.
      */
+    @SerializedName("contactFolders")
+    @Expose
     public ContactFolderCollectionPage contactFolders;
 
     /**
      * The Contacts.
      * The user's contacts. Read-only. Nullable.
      */
+    @SerializedName("contacts")
+    @Expose
     public ContactCollectionPage contacts;
 
     /**
      * The Events.
      * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      */
+    @SerializedName("events")
+    @Expose
     public EventCollectionPage events;
 
     /**
@@ -750,12 +774,16 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Mail Folders.
      * The user's mail folders. Read-only. Nullable.
      */
+    @SerializedName("mailFolders")
+    @Expose
     public MailFolderCollectionPage mailFolders;
 
     /**
      * The Messages.
      * The messages in a mailbox or folder. Read-only. Nullable.
      */
+    @SerializedName("messages")
+    @Expose
     public MessageCollectionPage messages;
 
     /**
@@ -770,6 +798,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The People.
      * People that are relevant to the user. Read-only. Nullable.
      */
+    @SerializedName("people")
+    @Expose
     public PersonCollectionPage people;
 
     /**
@@ -784,6 +814,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Photos.
      * 
      */
+    @SerializedName("photos")
+    @Expose
     public ProfilePhotoCollectionPage photos;
 
     /**
@@ -798,6 +830,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Drives.
      * A collection of drives available for this user. Read-only.
      */
+    @SerializedName("drives")
+    @Expose
     public DriveCollectionPage drives;
 
     /**
@@ -810,12 +844,16 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the user. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Managed Devices.
      * The managed devices associated with the user.
      */
+    @SerializedName("managedDevices")
+    @Expose
     public ManagedDeviceCollectionPage managedDevices;
 
     /**
@@ -828,6 +866,8 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Device Management Troubleshooting Events.
      * The list of troubleshooting events for this user.
      */
+    @SerializedName("deviceManagementTroubleshootingEvents")
+    @Expose
     public DeviceManagementTroubleshootingEventCollectionPage deviceManagementTroubleshootingEvents;
 
     /**
@@ -866,18 +906,24 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Activities.
      * The user's activities across devices. Read-only. Nullable.
      */
+    @SerializedName("activities")
+    @Expose
     public UserActivityCollectionPage activities;
 
     /**
      * The Online Meetings.
      * 
      */
+    @SerializedName("onlineMeetings")
+    @Expose
     public OnlineMeetingCollectionPage onlineMeetings;
 
     /**
      * The Joined Teams.
      * 
      */
+    @SerializedName("joinedTeams")
+    @Expose
     public TeamCollectionPage joinedTeams;
 
 

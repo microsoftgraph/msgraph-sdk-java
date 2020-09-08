@@ -54,6 +54,8 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
      * The Items.
      * All driveItems contained in the sharing root. This collection cannot be enumerated.
      */
+    @SerializedName("items")
+    @Expose
     public DriveItemCollectionPage items;
 
     /**

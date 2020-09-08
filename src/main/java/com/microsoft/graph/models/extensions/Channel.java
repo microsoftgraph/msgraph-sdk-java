@@ -89,18 +89,24 @@ public class Channel extends Entity implements IJsonBackedObject {
      * The Members.
      * 
      */
+    @SerializedName("members")
+    @Expose
     public ConversationMemberCollectionPage members;
 
     /**
      * The Messages.
      * A collection of all the messages in the channel. A navigation property. Nullable.
      */
+    @SerializedName("messages")
+    @Expose
     public ChatMessageCollectionPage messages;
 
     /**
      * The Tabs.
      * A collection of all the tabs in the channel. A navigation property.
      */
+    @SerializedName("tabs")
+    @Expose
     public TeamsTabCollectionPage tabs;
 
 

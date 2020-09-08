@@ -147,12 +147,16 @@ public class Domain extends Entity implements IJsonBackedObject {
      * The Service Configuration Records.
      * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services.Read-only, Nullable
      */
+    @SerializedName("serviceConfigurationRecords")
+    @Expose
     public DomainDnsRecordCollectionPage serviceConfigurationRecords;
 
     /**
      * The Verification Dns Records.
      * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD.Read-only, Nullable
      */
+    @SerializedName("verificationDnsRecords")
+    @Expose
     public DomainDnsRecordCollectionPage verificationDnsRecords;
 
 

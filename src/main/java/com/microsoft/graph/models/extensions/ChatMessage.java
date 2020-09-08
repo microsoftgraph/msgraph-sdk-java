@@ -180,12 +180,16 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
      * The Hosted Contents.
      * 
      */
+    @SerializedName("hostedContents")
+    @Expose
     public ChatMessageHostedContentCollectionPage hostedContents;
 
     /**
      * The Replies.
      * 
      */
+    @SerializedName("replies")
+    @Expose
     public ChatMessageCollectionPage replies;
 
 

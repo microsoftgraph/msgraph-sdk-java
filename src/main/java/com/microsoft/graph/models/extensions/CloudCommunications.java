@@ -39,18 +39,24 @@ public class CloudCommunications extends Entity implements IJsonBackedObject {
      * The Calls.
      * 
      */
+    @SerializedName("calls")
+    @Expose
     public CallCollectionPage calls;
 
     /**
      * The Call Records.
      * 
      */
+    @SerializedName("callRecords")
+    @Expose
     public CallRecordCollectionPage callRecords;
 
     /**
      * The Online Meetings.
      * 
      */
+    @SerializedName("onlineMeetings")
+    @Expose
     public OnlineMeetingCollectionPage onlineMeetings;
 
 

@@ -81,6 +81,8 @@ public class DeviceEnrollmentConfiguration extends Entity implements IJsonBacked
      * The Assignments.
      * The list of group assignments for the device configuration profile.
      */
+    @SerializedName("assignments")
+    @Expose
     public EnrollmentConfigurationAssignmentCollectionPage assignments;
 
 

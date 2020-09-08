@@ -39,6 +39,8 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Classes.
      * Read-only. Nullable.
      */
+    @SerializedName("classes")
+    @Expose
     public EducationClassCollectionPage classes;
 
     /**
@@ -53,12 +55,16 @@ public class EducationRoot extends Entity implements IJsonBackedObject {
      * The Schools.
      * Read-only. Nullable.
      */
+    @SerializedName("schools")
+    @Expose
     public EducationSchoolCollectionPage schools;
 
     /**
      * The Users.
      * Read-only. Nullable.
      */
+    @SerializedName("users")
+    @Expose
     public EducationUserCollectionPage users;
 
 

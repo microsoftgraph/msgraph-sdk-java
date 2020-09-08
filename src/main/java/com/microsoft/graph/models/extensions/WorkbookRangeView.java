@@ -121,6 +121,8 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
      * The Rows.
      * Represents a collection of range views associated with the range. Read-only. Read-only.
      */
+    @SerializedName("rows")
+    @Expose
     public WorkbookRangeViewCollectionPage rows;
 
 

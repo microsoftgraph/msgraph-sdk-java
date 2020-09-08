@@ -33,6 +33,8 @@ public class Directory extends Entity implements IJsonBackedObject {
      * The Deleted Items.
      * Recently deleted items. Read-only. Nullable.
      */
+    @SerializedName("deletedItems")
+    @Expose
     public DirectoryObjectCollectionPage deletedItems;
 
 

@@ -57,6 +57,8 @@ public class MobileLobApp extends MobileApp implements IJsonBackedObject {
      * The Content Versions.
      * The list of content versions for this app.
      */
+    @SerializedName("contentVersions")
+    @Expose
     public MobileAppContentCollectionPage contentVersions;
 
 
