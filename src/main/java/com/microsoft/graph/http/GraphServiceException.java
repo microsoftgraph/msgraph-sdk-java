@@ -325,7 +325,7 @@ public class GraphServiceException extends ClientException {
         final String responseMessage = connection.getResponseMessage();
         String rawOutput = "{}";
         if(connection.getInputStream() != null) {
-        	rawOutput = DefaultHttpProvider.streamToString(connection.getInputStream());
+        	rawOutput = CoreHttpProvider.streamToString(connection.getInputStream());
         }
         GraphErrorResponse error;
         try {
@@ -429,7 +429,7 @@ public class GraphServiceException extends ClientException {
 
         InputStream is = response.body().byteStream();
         try {
-            rawOutput = DefaultHttpProvider.streamToString(is);
+            rawOutput = CoreHttpProvider.streamToString(is);
         } finally {
             closeQuietly(is);
         }

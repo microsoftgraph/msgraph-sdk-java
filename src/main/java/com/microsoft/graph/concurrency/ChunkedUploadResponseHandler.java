@@ -26,7 +26,7 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import com.microsoft.graph.http.DefaultHttpProvider;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.http.HttpResponseCode;
 import com.microsoft.graph.http.IConnection;
@@ -103,7 +103,7 @@ public class ChunkedUploadResponseHandler<UploadType>
                 logger.logDebug("Chunk bytes has been accepted by the server.");
                 in = new BufferedInputStream(connection.getInputStream());
                 final UploadSession session = serializer.deserializeObject(
-                        DefaultHttpProvider.streamToString(in), UploadSession.class);
+                        CoreHttpProvider.streamToString(in), UploadSession.class);
 
                 return new ChunkedUploadResult<UploadType>(session);
 
@@ -111,7 +111,7 @@ public class ChunkedUploadResponseHandler<UploadType>
                     || connection.getResponseCode() == HttpResponseCode.HTTP_OK) {
                 logger.logDebug("Upload session is completed, uploaded item returned.");
                 in = new BufferedInputStream(connection.getInputStream());
-                String rawJson = DefaultHttpProvider.streamToString(in);
+                String rawJson = CoreHttpProvider.streamToString(in);
                 UploadType uploadedItem = serializer.deserializeObject(rawJson,
                         this.deserializeTypeClass);
 
@@ -158,7 +158,7 @@ public class ChunkedUploadResponseHandler<UploadType>
         		logger.logDebug("Chunk bytes has been accepted by the server.");
         		in = new BufferedInputStream(response.body().byteStream());
         		final UploadSession session = serializer.deserializeObject(
-        				DefaultHttpProvider.streamToString(in), UploadSession.class);
+        				CoreHttpProvider.streamToString(in), UploadSession.class);
 
         		return new ChunkedUploadResult<UploadType>(session);
 
@@ -166,7 +166,7 @@ public class ChunkedUploadResponseHandler<UploadType>
         			|| response.code() == HttpResponseCode.HTTP_OK) {
         		logger.logDebug("Upload session is completed, uploaded item returned.");
         		in = new BufferedInputStream(response.body().byteStream());
-        		String rawJson = DefaultHttpProvider.streamToString(in);
+        		String rawJson = CoreHttpProvider.streamToString(in);
         		UploadType uploadedItem = serializer.deserializeObject(rawJson,
         				this.deserializeTypeClass);
 

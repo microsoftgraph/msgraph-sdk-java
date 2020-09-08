@@ -99,7 +99,7 @@ public class CoreHttpProvider implements IHttpProvider {
 	private OkHttpClient corehttpClient;
 
 	/**
-	 * Creates the DefaultHttpProvider
+	 * Creates the CoreHttpProvider
 	 *
 	 * @param serializer             the serializer
 	 * @param authenticationProvider the authentication provider
@@ -110,10 +110,28 @@ public class CoreHttpProvider implements IHttpProvider {
 			final IAuthenticationProvider authenticationProvider,
 			final IExecutors executors,
 			final ILogger logger) {
+		this(serializer, authenticationProvider, executors, logger, null);
+	}
+
+	/**
+	 * Creates the CoreHttpProvider
+	 *
+	 * @param serializer             the serializer
+	 * @param authenticationProvider the authentication provider
+	 * @param executors              the executors
+	 * @param logger                 the logger for diagnostic information
+	 * @param httpClient             the client to send http requests with
+	 */
+	public CoreHttpProvider(final ISerializer serializer,
+			final IAuthenticationProvider authenticationProvider,
+			final IExecutors executors,
+			final ILogger logger,
+			final OkHttpClient httpClient) {
 		this.serializer = serializer;
 		this.authenticationProvider = authenticationProvider;
 		this.executors = executors;
 		this.logger = logger;
+		this.corehttpClient = httpClient;
 	}
 
 	/**

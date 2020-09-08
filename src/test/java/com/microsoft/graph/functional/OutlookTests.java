@@ -234,7 +234,7 @@ public class OutlookTests {
 		return event;
 	}
 
-	public byte[] getByteArray(InputStream in) {
+	public static byte[] getByteArray(InputStream in) {
 		try {
 			ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 			int nRead;

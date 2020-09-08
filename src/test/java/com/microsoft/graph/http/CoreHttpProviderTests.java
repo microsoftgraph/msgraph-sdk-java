@@ -39,7 +39,7 @@ public class CoreHttpProviderTests {
         toSerialize.error.message = expectedMessage;
         toSerialize.error.innererror = null;
 
-        setDefaultHttpProvider(toSerialize);
+        setCoreHttpProvider(toSerialize);
         try {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");
@@ -82,19 +82,19 @@ public class CoreHttpProviderTests {
     @Test
     public void testHasHeaderReturnsTrue() {
         HeaderOption h = new HeaderOption("name", "value");
-        assertTrue(DefaultHttpProvider.hasHeader(Arrays.asList(h), "name"));
+        assertTrue(CoreHttpProvider.hasHeader(Arrays.asList(h), "name"));
     }
     
     @Test
     public void testHasHeaderReturnsTrueWhenDifferentCase() {
         HeaderOption h = new HeaderOption("name", "value");
-        assertTrue(DefaultHttpProvider.hasHeader(Arrays.asList(h), "NAME"));
+        assertTrue(CoreHttpProvider.hasHeader(Arrays.asList(h), "NAME"));
     }
     
     @Test
     public void testHasHeaderReturnsFalse() {
         HeaderOption h = new HeaderOption("name", "value");
-        assertFalse(DefaultHttpProvider.hasHeader(Arrays.asList(h), "blah"));
+        assertFalse(CoreHttpProvider.hasHeader(Arrays.asList(h), "blah"));
     }
     
 
@@ -102,7 +102,7 @@ public class CoreHttpProviderTests {
      * Configures the http provider for test cases
      * @param toSerialize The object to serialize
      */
-    private void setDefaultHttpProvider(final Object toSerialize) {
+    private void setCoreHttpProvider(final Object toSerialize) {
         mProvider = new CoreHttpProvider(new MockSerializer(toSerialize, ""),
                 mAuthenticationProvider = new MockAuthenticationProvider(),
                 new MockExecutors(),

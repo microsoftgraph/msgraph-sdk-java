@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +13,16 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import okhttp3.Call;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Protocol;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+
+import static org.mockito.Mockito.*;
 
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
@@ -36,30 +47,23 @@ public class BaseStreamRequestTests {
     }
 
     @Test
-    public void testSend() {
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
+    public void testSend() throws IOException {
+        final Response response = new Response.Builder()
+                .request(new Request.Builder().url("https://a.b.c").build())
+                .protocol(Protocol.HTTP_1_1)
+                .code(200).message("OK").body(
+                   ResponseBody.create(
+                        MediaType.parse("application/octet-stream"),
+                        "{ \"id\": \"zzz\" }"
+                ))
+                .build();
 
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/octet-stream");
-                return map;
-            }
-        };
-        DefaultHttpProvider mProvider = new DefaultHttpProvider(new MockSerializer(null, ""),
+        final OkHttpClient mockClient = getMockClient(response);
+        CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
                 mAuthenticationProvider,
                 new MockExecutors(),
-                new MockLogger());
-        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
+                new MockLogger(),
+                mockClient);
         mBaseClient.setHttpProvider(mProvider);
         final BaseStreamRequest<String> request = new BaseStreamRequest<String>("https://a.b.c", mBaseClient,null, null){};
         request.send();
@@ -67,30 +71,23 @@ public class BaseStreamRequestTests {
     }
 
     @Test
-    public void testSendWithCallback() {
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
+    public void testSendWithCallback() throws IOException {
+        final Response response = new Response.Builder()
+                .request(new Request.Builder().url("https://a.b.c").build())
+                .protocol(Protocol.HTTP_1_1)
+                .code(200).message("OK").body(
+                   ResponseBody.create(
+                        MediaType.parse("application/json"),
+                        "{ \"id\": \"zzz\" }"
+                ))
+                .build();
 
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json");
-                return map;
-            }
-        };
-        DefaultHttpProvider mProvider = new DefaultHttpProvider(new MockSerializer(null, ""),
+        final OkHttpClient mockClient = getMockClient(response);
+        CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
                 mAuthenticationProvider,
                 new MockExecutors(),
-                new MockLogger());
-        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
+                new MockLogger(),
+                mockClient);
         mBaseClient.setHttpProvider(mProvider);
         final AtomicBoolean success = new AtomicBoolean(false);
         final AtomicBoolean failure = new AtomicBoolean(false);
@@ -113,30 +110,23 @@ public class BaseStreamRequestTests {
     }
 
     @Test
-    public void testSendWithContentAndCallback() {
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
+    public void testSendWithContentAndCallback() throws IOException {
+        final Response response = new Response.Builder()
+                .request(new Request.Builder().url("https://a.b.c").build())
+                .protocol(Protocol.HTTP_1_1)
+                .code(200).message("OK").body(
+                   ResponseBody.create(
+                        MediaType.parse("application/json"),
+                        "{ \"id\": \"zzz\" }"
+                ))
+                .build();
 
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json");
-                return map;
-            }
-        };
-        DefaultHttpProvider mProvider = new DefaultHttpProvider(new MockSerializer(null, ""),
+        final OkHttpClient mockClient = getMockClient(response);
+        CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
                 mAuthenticationProvider,
                 new MockExecutors(),
-                new MockLogger());
-        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
+                new MockLogger(),
+                mockClient);
         mBaseClient.setHttpProvider(mProvider);
         final AtomicBoolean success = new AtomicBoolean(false);
         final AtomicBoolean failure = new AtomicBoolean(false);
@@ -159,30 +149,24 @@ public class BaseStreamRequestTests {
     }
 
     @Test
-    public void testSendWithContent() {
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 200;
-            }
+    public void testSendWithContent() throws IOException {
+        final Response response = new Response.Builder()
+                .request(new Request.Builder().url("https://a.b.c").build())
+                .protocol(Protocol.HTTP_1_1)
+                .code(200).message("OK").body(
+                   ResponseBody.create(
+                        MediaType.parse("application/json"),
+                        "{ \"id\": \"zzz\" }"
+                ))
+                .build();
 
-            @Override
-            public String getJsonResponse() {
-                return "{ \"id\": \"zzz\" }";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                final HashMap<String, String> map = new HashMap<>();
-                map.put("Content-Type", "application/json");
-                return map;
-            }
-        };
-        DefaultHttpProvider mProvider = new DefaultHttpProvider(new MockSerializer(null, ""),
+        final OkHttpClient mockClient = getMockClient(response);
+        
+        CoreHttpProvider mProvider = new CoreHttpProvider(new MockSerializer(null, ""),
                 mAuthenticationProvider,
                 new MockExecutors(),
-                new MockLogger());
-        mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
+                new MockLogger(),
+                mockClient);
         mBaseClient.setHttpProvider(mProvider);
         final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
         request.send(new byte[]{1, 2, 3, 4});
@@ -198,5 +182,11 @@ public class BaseStreamRequestTests {
         assertNull(request.getHttpMethod());
         assertEquals(2, request.getOptions().size());
     }
-
+    private OkHttpClient getMockClient(final Response response) throws IOException {
+        final OkHttpClient mockClient = mock(OkHttpClient.class);
+        final Call remoteCall = mock(Call.class);
+        when(remoteCall.execute()).thenReturn(response);
+        when(mockClient.newCall(any())).thenReturn(remoteCall);
+        return mockClient;
+    }
 }
