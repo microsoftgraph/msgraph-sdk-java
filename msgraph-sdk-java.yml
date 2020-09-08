@@ -1,0 +1,16 @@
+page_type: sample
+products:
+  - office-365
+  - ms-graph
+languages:
+  - java
+extensions:
+  contentType: sdks
+  technologies:
+    - Microsoft Graph
+    - Microsoft identity platform
+  platforms:
+    - Android
+  createdDate: '9/12/2017 10:20:15 AM'
+title: Microsoft Graph SDK for Java
+description: Microsoft Graph SDK for Java and Android

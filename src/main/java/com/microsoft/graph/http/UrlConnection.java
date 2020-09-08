@@ -40,14 +40,6 @@ import java.util.Map;
 public class UrlConnection implements IConnection {
 
     /**
-     * Default connection read timeout
-     */
-    private static final int DEFAULT_CONNECTION_READ_TIMEOUT_MS = 30_000;
-    /**
-     * Default connect timeout
-     */
-    private static final int DEFAULT_CONNECT_TIMEOUT_MS = 30_000;
-    /**
      * The backing HTTP URL connection instance
      */
     private final HttpURLConnection connection;
@@ -71,8 +63,6 @@ public class UrlConnection implements IConnection {
         }
 
         connection.setUseCaches(request.getUseCaches());
-        connection.setConnectTimeout(DEFAULT_CONNECT_TIMEOUT_MS);
-        connection.setReadTimeout(DEFAULT_CONNECTION_READ_TIMEOUT_MS);
 
         try {
             connection.setRequestMethod(request.getHttpMethod().toString());
@@ -163,6 +153,16 @@ public class UrlConnection implements IConnection {
     @Override
     public void setContentLength(final int length) {
         connection.setFixedLengthStreamingMode(length);
+    }
+    
+    @Override
+    public void setReadTimeout(final int readTimeoutMilliseconds) {
+        connection.setReadTimeout(readTimeoutMilliseconds);
+    }
+
+    @Override
+    public void setConnectTimeout(final int connectTimeoutMilliseconds) {
+        connection.setConnectTimeout(connectTimeoutMilliseconds);
     }
 
     /**

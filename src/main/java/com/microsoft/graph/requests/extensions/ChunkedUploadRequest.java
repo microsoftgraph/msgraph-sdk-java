@@ -31,7 +31,7 @@ public class ChunkedUploadRequest {
     /**
      * The seconds for retry delay.
      */
-    private static final int RETRY_DELAY = 2 * 1000;
+    private static final long RETRY_DELAY = 2000L; // 2 seconds
 
     /**
      * The chunk data sent to the server.
@@ -46,12 +46,12 @@ public class ChunkedUploadRequest {
     /**
      * The max retry for a single request.
      */
-    private final int maxRetry;
+    private final long maxRetry;
 
     /**
      * The retry counter.
      */
-    private int retryCount;
+    private long retryCount;
 
     /**
      * Construct the ChunkedUploadRequest
@@ -71,12 +71,12 @@ public class ChunkedUploadRequest {
                                 final byte[] chunk,
                                 final int chunkSize,
                                 final int maxRetry,
-                                final int beginIndex,
-                                final int totalLength) {
+                                final long beginIndex,
+                                final long totalLength) {
         this.data = new byte[chunkSize];
         System.arraycopy(chunk, 0, this.data, 0, chunkSize);
-        this.retryCount = 0;
-        this.maxRetry = maxRetry;
+        this.retryCount = 0L;
+        this.maxRetry = (long)maxRetry;
         this.baseRequest = new BaseRequest(requestUrl, client, options, ChunkedUploadResult.class) {
         };
         this.baseRequest.setHttpMethod(HttpMethod.PUT);
@@ -95,6 +95,7 @@ public class ChunkedUploadRequest {
      * @param <UploadType>    The upload item type.
      * @return The upload result.
      */
+    @SuppressWarnings("unchecked")
     public <UploadType> ChunkedUploadResult<UploadType> upload(
             final ChunkedUploadResponseHandler<UploadType> responseHandler) {
         while (this.retryCount < this.maxRetry) {
@@ -110,7 +111,7 @@ public class ChunkedUploadRequest {
                 result = this.baseRequest
                         .getClient()
                         .getHttpProvider()
-                        .send(baseRequest, ChunkedUploadResult.class, this.data, responseHandler);
+                        .send(baseRequest, (Class<ChunkedUploadResult<UploadType>>)(Class<?>) ChunkedUploadResult.class, this.data, responseHandler);
             } catch (final ClientException e) {
                 throw new ClientException("Request failed with error, retry if necessary.", e);
             }

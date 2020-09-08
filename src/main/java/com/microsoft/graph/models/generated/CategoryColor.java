@@ -19,6 +19,10 @@ public enum CategoryColor
     */
     PRESET1,
     /**
+    * none
+    */
+    NONE,
+    /**
     * preset2
     */
     PRESET2,
@@ -110,10 +114,6 @@ public enum CategoryColor
     * preset24
     */
     PRESET24,
-    /**
-    * none
-    */
-    NONE,
     /**
     * For CategoryColor values that were not expected from the service
     */

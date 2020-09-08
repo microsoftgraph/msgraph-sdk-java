@@ -34,6 +34,7 @@ import com.google.gson.JsonSerializer;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.models.extensions.DateOnly;
 
+import com.microsoft.graph.models.extensions.TimeOfDay;
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.util.Calendar;
@@ -209,6 +210,20 @@ final class GsonFactory {
                 }
             }
         };
+
+        final JsonDeserializer<TimeOfDay> timeOfDayJsonDeserializer = new JsonDeserializer<TimeOfDay>() {
+            @Override
+            public TimeOfDay deserialize(final JsonElement json,
+                    final Type typeOfT,
+                    final JsonDeserializationContext context) throws JsonParseException {
+                try {
+                    return TimeOfDay.parse(json.getAsString());
+                } catch (Exception e) {
+                    return null;
+                }
+            }
+        };
+
         return new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()
                 .registerTypeAdapter(Calendar.class, calendarJsonSerializer)
@@ -223,6 +238,7 @@ final class GsonFactory {
                 .registerTypeAdapter(EnumSet.class, enumSetJsonDeserializer)
                 .registerTypeAdapter(Duration.class, durationJsonSerializer)
                 .registerTypeAdapter(Duration.class, durationJsonDeserializer)
+                .registerTypeAdapter(TimeOfDay.class, timeOfDayJsonDeserializer)
                 .registerTypeAdapterFactory(new FallbackTypeAdapterFactory(logger))
                 .create();
     }

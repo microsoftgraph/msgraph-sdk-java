@@ -27,57 +27,61 @@ public enum IosUpdatesInstallStatus
     */
     UNKNOWN,
     /**
-    * downloading
+    * device Os Higher Than Desired Os Version
     */
-    DOWNLOADING,
+    DEVICE_OS_HIGHER_THAN_DESIRED_OS_VERSION,
     /**
-    * download Failed
+    * shared Device User Logged In Error
     */
-    DOWNLOAD_FAILED,
-    /**
-    * download Requires Computer
-    */
-    DOWNLOAD_REQUIRES_COMPUTER,
-    /**
-    * download Insufficient Space
-    */
-    DOWNLOAD_INSUFFICIENT_SPACE,
-    /**
-    * download Insufficient Power
-    */
-    DOWNLOAD_INSUFFICIENT_POWER,
-    /**
-    * download Insufficient Network
-    */
-    DOWNLOAD_INSUFFICIENT_NETWORK,
-    /**
-    * installing
-    */
-    INSTALLING,
-    /**
-    * install Insufficient Space
-    */
-    INSTALL_INSUFFICIENT_SPACE,
-    /**
-    * install Insufficient Power
-    */
-    INSTALL_INSUFFICIENT_POWER,
-    /**
-    * install Phone Call In Progress
-    */
-    INSTALL_PHONE_CALL_IN_PROGRESS,
-    /**
-    * install Failed
-    */
-    INSTALL_FAILED,
+    SHARED_DEVICE_USER_LOGGED_IN_ERROR,
     /**
     * not Supported Operation
     */
     NOT_SUPPORTED_OPERATION,
     /**
-    * shared Device User Logged In Error
+    * install Failed
     */
-    SHARED_DEVICE_USER_LOGGED_IN_ERROR,
+    INSTALL_FAILED,
+    /**
+    * install Phone Call In Progress
+    */
+    INSTALL_PHONE_CALL_IN_PROGRESS,
+    /**
+    * install Insufficient Power
+    */
+    INSTALL_INSUFFICIENT_POWER,
+    /**
+    * install Insufficient Space
+    */
+    INSTALL_INSUFFICIENT_SPACE,
+    /**
+    * installing
+    */
+    INSTALLING,
+    /**
+    * download Insufficient Network
+    */
+    DOWNLOAD_INSUFFICIENT_NETWORK,
+    /**
+    * download Insufficient Power
+    */
+    DOWNLOAD_INSUFFICIENT_POWER,
+    /**
+    * download Insufficient Space
+    */
+    DOWNLOAD_INSUFFICIENT_SPACE,
+    /**
+    * download Requires Computer
+    */
+    DOWNLOAD_REQUIRES_COMPUTER,
+    /**
+    * download Failed
+    */
+    DOWNLOAD_FAILED,
+    /**
+    * downloading
+    */
+    DOWNLOADING,
     /**
     * For IosUpdatesInstallStatus values that were not expected from the service
     */

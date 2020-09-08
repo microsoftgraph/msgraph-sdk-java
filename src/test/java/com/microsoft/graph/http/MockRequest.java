@@ -27,6 +27,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
+import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
+import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
+import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
 
@@ -72,4 +76,49 @@ class MockRequest implements IHttpRequest {
     public boolean getUseCaches() {
         return false;
     }
+
+	@Override
+	public void setMaxRedirects(int maxRedirects) {
+	}
+
+	@Override
+	public int getMaxRedirects() {
+		return RedirectOptions.DEFAULT_MAX_REDIRECTS;
+	}
+
+	@Override
+	public void setShouldRedirect(IShouldRedirect shouldRedirect) {
+	}
+
+	@Override
+	public IShouldRedirect getShouldRedirect() {
+		return RedirectOptions.DEFAULT_SHOULD_REDIRECT;
+	}
+
+	@Override
+	public void setShouldRetry(IShouldRetry shouldretry) {
+	}
+
+	@Override
+	public IShouldRetry getShouldRetry() {
+		return RetryOptions.DEFAULT_SHOULD_RETRY;
+	}
+
+	@Override
+	public void setMaxRetries(int maxRetries) {
+	}
+
+	@Override
+	public int getMaxRetries() {
+		return RetryOptions.DEFAULT_MAX_RETRIES;
+	}
+
+	@Override
+	public void setDelay(long delay) {
+	}
+
+	@Override
+	public long getDelay() {
+		return RetryOptions.DEFAULT_DELAY;
+	}
 }

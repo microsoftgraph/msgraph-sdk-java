@@ -19,6 +19,10 @@ public enum FreeBusyStatus
     */
     TENTATIVE,
     /**
+    * unknown
+    */
+    UNKNOWN,
+    /**
     * busy
     */
     BUSY,
@@ -30,10 +34,6 @@ public enum FreeBusyStatus
     * working Elsewhere
     */
     WORKING_ELSEWHERE,
-    /**
-    * unknown
-    */
-    UNKNOWN,
     /**
     * For FreeBusyStatus values that were not expected from the service
     */
