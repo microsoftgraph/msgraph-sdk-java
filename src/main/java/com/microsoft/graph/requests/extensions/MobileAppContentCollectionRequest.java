@@ -62,14 +62,14 @@ public class MobileAppContentCollectionRequest extends BaseCollectionRequest<Mob
     public void post(final MobileAppContent newMobileAppContent, final ICallback<MobileAppContent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMobileAppContent, callback);
     }
 
     public MobileAppContent post(final MobileAppContent newMobileAppContent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppContentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMobileAppContent);
     }
 
@@ -106,27 +106,6 @@ public class MobileAppContentCollectionRequest extends BaseCollectionRequest<Mob
         return (MobileAppContentCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IMobileAppContentCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (MobileAppContentCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IMobileAppContentCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IMobileAppContentCollectionRequest)this;
-    }
     public IMobileAppContentCollectionPage buildFromResponse(final MobileAppContentCollectionResponse response) {
         final IMobileAppContentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

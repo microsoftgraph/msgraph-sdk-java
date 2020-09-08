@@ -63,14 +63,14 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
     public void post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newManagedDeviceMobileAppConfiguration, callback);
     }
 
     public ManagedDeviceMobileAppConfiguration post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newManagedDeviceMobileAppConfiguration);
     }
 
@@ -107,27 +107,6 @@ public class ManagedDeviceMobileAppConfigurationCollectionRequest extends BaseCo
         return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IManagedDeviceMobileAppConfigurationCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (ManagedDeviceMobileAppConfigurationCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IManagedDeviceMobileAppConfigurationCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IManagedDeviceMobileAppConfigurationCollectionRequest)this;
-    }
     public IManagedDeviceMobileAppConfigurationCollectionPage buildFromResponse(final ManagedDeviceMobileAppConfigurationCollectionResponse response) {
         final IManagedDeviceMobileAppConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

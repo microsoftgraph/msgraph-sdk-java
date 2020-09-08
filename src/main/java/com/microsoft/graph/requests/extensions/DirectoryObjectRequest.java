@@ -128,27 +128,6 @@ public class DirectoryObjectRequest extends BaseRequest implements IDirectoryObj
     }
 
     /**
-     * Creates a DirectoryObject with a new object
-     *
-     * @param newDirectoryObject the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
-        send(HttpMethod.PUT, callback, newDirectoryObject);
-    }
-
-    /**
-     * Creates a DirectoryObject with a new object
-     *
-     * @param newDirectoryObject the object to create/update
-     * @return the created DirectoryObject
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public DirectoryObject put(final DirectoryObject newDirectoryObject) throws ClientException {
-        return send(HttpMethod.PUT, newDirectoryObject);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

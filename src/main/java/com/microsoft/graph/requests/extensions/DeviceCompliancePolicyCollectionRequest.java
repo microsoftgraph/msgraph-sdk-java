@@ -64,14 +64,14 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
     public void post(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDeviceCompliancePolicy, callback);
     }
 
     public DeviceCompliancePolicy post(final DeviceCompliancePolicy newDeviceCompliancePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDeviceCompliancePolicy);
     }
 
@@ -108,27 +108,6 @@ public class DeviceCompliancePolicyCollectionRequest extends BaseCollectionReque
         return (DeviceCompliancePolicyCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (DeviceCompliancePolicyCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IDeviceCompliancePolicyCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IDeviceCompliancePolicyCollectionRequest)this;
-    }
     public IDeviceCompliancePolicyCollectionPage buildFromResponse(final DeviceCompliancePolicyCollectionResponse response) {
         final IDeviceCompliancePolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

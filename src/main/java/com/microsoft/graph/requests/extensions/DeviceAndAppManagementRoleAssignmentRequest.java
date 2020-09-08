@@ -112,27 +112,6 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
     }
 
     /**
-     * Creates a DeviceAndAppManagementRoleAssignment with a new object
-     *
-     * @param newDeviceAndAppManagementRoleAssignment the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
-        send(HttpMethod.PUT, callback, newDeviceAndAppManagementRoleAssignment);
-    }
-
-    /**
-     * Creates a DeviceAndAppManagementRoleAssignment with a new object
-     *
-     * @param newDeviceAndAppManagementRoleAssignment the object to create/update
-     * @return the created DeviceAndAppManagementRoleAssignment
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public DeviceAndAppManagementRoleAssignment put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
-        return send(HttpMethod.PUT, newDeviceAndAppManagementRoleAssignment);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

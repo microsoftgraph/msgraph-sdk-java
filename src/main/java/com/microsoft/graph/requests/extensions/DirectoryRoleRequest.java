@@ -116,27 +116,6 @@ public class DirectoryRoleRequest extends BaseRequest implements IDirectoryRoleR
     }
 
     /**
-     * Creates a DirectoryRole with a new object
-     *
-     * @param newDirectoryRole the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final DirectoryRole newDirectoryRole, final ICallback<DirectoryRole> callback) {
-        send(HttpMethod.PUT, callback, newDirectoryRole);
-    }
-
-    /**
-     * Creates a DirectoryRole with a new object
-     *
-     * @param newDirectoryRole the object to create/update
-     * @return the created DirectoryRole
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public DirectoryRole put(final DirectoryRole newDirectoryRole) throws ClientException {
-        return send(HttpMethod.PUT, newDirectoryRole);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

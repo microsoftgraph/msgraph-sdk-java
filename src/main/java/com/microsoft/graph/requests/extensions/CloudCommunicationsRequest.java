@@ -124,27 +124,6 @@ public class CloudCommunicationsRequest extends BaseRequest implements ICloudCom
     }
 
     /**
-     * Creates a CloudCommunications with a new object
-     *
-     * @param newCloudCommunications the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final CloudCommunications newCloudCommunications, final ICallback<CloudCommunications> callback) {
-        send(HttpMethod.PUT, callback, newCloudCommunications);
-    }
-
-    /**
-     * Creates a CloudCommunications with a new object
-     *
-     * @param newCloudCommunications the object to create/update
-     * @return the created CloudCommunications
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public CloudCommunications put(final CloudCommunications newCloudCommunications) throws ClientException {
-        return send(HttpMethod.PUT, newCloudCommunications);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

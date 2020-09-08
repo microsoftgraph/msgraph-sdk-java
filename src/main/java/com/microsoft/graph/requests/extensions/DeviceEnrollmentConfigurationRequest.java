@@ -132,27 +132,6 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
     }
 
     /**
-     * Creates a DeviceEnrollmentConfiguration with a new object
-     *
-     * @param newDeviceEnrollmentConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newDeviceEnrollmentConfiguration);
-    }
-
-    /**
-     * Creates a DeviceEnrollmentConfiguration with a new object
-     *
-     * @param newDeviceEnrollmentConfiguration the object to create/update
-     * @return the created DeviceEnrollmentConfiguration
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public DeviceEnrollmentConfiguration put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
-        return send(HttpMethod.PUT, newDeviceEnrollmentConfiguration);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

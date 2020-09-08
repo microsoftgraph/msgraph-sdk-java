@@ -112,27 +112,6 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
     }
 
     /**
-     * Creates a MacOSDeviceFeaturesConfiguration with a new object
-     *
-     * @param newMacOSDeviceFeaturesConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newMacOSDeviceFeaturesConfiguration);
-    }
-
-    /**
-     * Creates a MacOSDeviceFeaturesConfiguration with a new object
-     *
-     * @param newMacOSDeviceFeaturesConfiguration the object to create/update
-     * @return the created MacOSDeviceFeaturesConfiguration
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public MacOSDeviceFeaturesConfiguration put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException {
-        return send(HttpMethod.PUT, newMacOSDeviceFeaturesConfiguration);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

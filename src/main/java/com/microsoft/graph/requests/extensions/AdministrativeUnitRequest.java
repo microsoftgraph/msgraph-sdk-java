@@ -112,27 +112,6 @@ public class AdministrativeUnitRequest extends BaseRequest implements IAdministr
     }
 
     /**
-     * Creates a AdministrativeUnit with a new object
-     *
-     * @param newAdministrativeUnit the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final AdministrativeUnit newAdministrativeUnit, final ICallback<AdministrativeUnit> callback) {
-        send(HttpMethod.PUT, callback, newAdministrativeUnit);
-    }
-
-    /**
-     * Creates a AdministrativeUnit with a new object
-     *
-     * @param newAdministrativeUnit the object to create/update
-     * @return the created AdministrativeUnit
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public AdministrativeUnit put(final AdministrativeUnit newAdministrativeUnit) throws ClientException {
-        return send(HttpMethod.PUT, newAdministrativeUnit);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

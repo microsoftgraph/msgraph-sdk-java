@@ -130,27 +130,6 @@ public class ListRequest extends BaseRequest implements IListRequest {
     }
 
     /**
-     * Creates a List with a new object
-     *
-     * @param newList the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final List newList, final ICallback<List> callback) {
-        send(HttpMethod.PUT, callback, newList);
-    }
-
-    /**
-     * Creates a List with a new object
-     *
-     * @param newList the object to create/update
-     * @return the created List
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public List put(final List newList) throws ClientException {
-        return send(HttpMethod.PUT, newList);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

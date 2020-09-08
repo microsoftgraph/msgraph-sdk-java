@@ -63,14 +63,14 @@ public class DeviceConfigurationCollectionRequest extends BaseCollectionRequest<
     public void post(final DeviceConfiguration newDeviceConfiguration, final ICallback<DeviceConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDeviceConfiguration, callback);
     }
 
     public DeviceConfiguration post(final DeviceConfiguration newDeviceConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDeviceConfiguration);
     }
 
@@ -107,27 +107,6 @@ public class DeviceConfigurationCollectionRequest extends BaseCollectionRequest<
         return (DeviceConfigurationCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IDeviceConfigurationCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (DeviceConfigurationCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IDeviceConfigurationCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IDeviceConfigurationCollectionRequest)this;
-    }
     public IDeviceConfigurationCollectionPage buildFromResponse(final DeviceConfigurationCollectionResponse response) {
         final IDeviceConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

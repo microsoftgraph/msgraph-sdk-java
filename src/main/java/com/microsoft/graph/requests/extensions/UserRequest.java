@@ -226,27 +226,6 @@ public class UserRequest extends BaseRequest implements IUserRequest {
     }
 
     /**
-     * Creates a User with a new object
-     *
-     * @param newUser the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final User newUser, final ICallback<User> callback) {
-        send(HttpMethod.PUT, callback, newUser);
-    }
-
-    /**
-     * Creates a User with a new object
-     *
-     * @param newUser the object to create/update
-     * @return the created User
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public User put(final User newUser) throws ClientException {
-        return send(HttpMethod.PUT, newUser);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

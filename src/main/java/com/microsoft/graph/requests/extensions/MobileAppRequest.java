@@ -136,27 +136,6 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
     }
 
     /**
-     * Creates a MobileApp with a new object
-     *
-     * @param newMobileApp the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final MobileApp newMobileApp, final ICallback<MobileApp> callback) {
-        send(HttpMethod.PUT, callback, newMobileApp);
-    }
-
-    /**
-     * Creates a MobileApp with a new object
-     *
-     * @param newMobileApp the object to create/update
-     * @return the created MobileApp
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public MobileApp put(final MobileApp newMobileApp) throws ClientException {
-        return send(HttpMethod.PUT, newMobileApp);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

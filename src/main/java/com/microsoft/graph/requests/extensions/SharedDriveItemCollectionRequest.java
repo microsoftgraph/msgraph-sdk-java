@@ -61,14 +61,14 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
     public void post(final SharedDriveItem newSharedDriveItem, final ICallback<SharedDriveItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSharedDriveItem, callback);
     }
 
     public SharedDriveItem post(final SharedDriveItem newSharedDriveItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SharedDriveItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSharedDriveItem);
     }
 
@@ -105,27 +105,6 @@ public class SharedDriveItemCollectionRequest extends BaseCollectionRequest<Shar
         return (SharedDriveItemCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public ISharedDriveItemCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (SharedDriveItemCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public ISharedDriveItemCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (ISharedDriveItemCollectionRequest)this;
-    }
     public ISharedDriveItemCollectionPage buildFromResponse(final SharedDriveItemCollectionResponse response) {
         final ISharedDriveItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

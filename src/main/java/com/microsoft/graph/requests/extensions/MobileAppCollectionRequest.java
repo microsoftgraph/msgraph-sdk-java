@@ -63,14 +63,14 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileAppC
     public void post(final MobileApp newMobileApp, final ICallback<MobileApp> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMobileApp, callback);
     }
 
     public MobileApp post(final MobileApp newMobileApp) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMobileApp);
     }
 
@@ -107,27 +107,6 @@ public class MobileAppCollectionRequest extends BaseCollectionRequest<MobileAppC
         return (MobileAppCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IMobileAppCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (MobileAppCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IMobileAppCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IMobileAppCollectionRequest)this;
-    }
     public IMobileAppCollectionPage buildFromResponse(final MobileAppCollectionResponse response) {
         final IMobileAppCollectionRequestBuilder builder;
         if (response.nextLink != null) {

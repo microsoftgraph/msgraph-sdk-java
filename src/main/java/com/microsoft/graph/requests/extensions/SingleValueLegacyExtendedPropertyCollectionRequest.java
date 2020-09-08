@@ -62,14 +62,14 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
     public void post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty, final ICallback<SingleValueLegacyExtendedProperty> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSingleValueLegacyExtendedProperty, callback);
     }
 
     public SingleValueLegacyExtendedProperty post(final SingleValueLegacyExtendedProperty newSingleValueLegacyExtendedProperty) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SingleValueLegacyExtendedPropertyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newSingleValueLegacyExtendedProperty);
     }
 
@@ -106,27 +106,6 @@ public class SingleValueLegacyExtendedPropertyCollectionRequest extends BaseColl
         return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public ISingleValueLegacyExtendedPropertyCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (SingleValueLegacyExtendedPropertyCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public ISingleValueLegacyExtendedPropertyCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (ISingleValueLegacyExtendedPropertyCollectionRequest)this;
-    }
     public ISingleValueLegacyExtendedPropertyCollectionPage buildFromResponse(final SingleValueLegacyExtendedPropertyCollectionResponse response) {
         final ISingleValueLegacyExtendedPropertyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

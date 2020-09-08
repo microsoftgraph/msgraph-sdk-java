@@ -112,27 +112,6 @@ public class EventMessageRequestRequest extends BaseRequest implements IEventMes
     }
 
     /**
-     * Creates a EventMessageRequest with a new object
-     *
-     * @param newEventMessageRequest the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final EventMessageRequest newEventMessageRequest, final ICallback<EventMessageRequest> callback) {
-        send(HttpMethod.PUT, callback, newEventMessageRequest);
-    }
-
-    /**
-     * Creates a EventMessageRequest with a new object
-     *
-     * @param newEventMessageRequest the object to create/update
-     * @return the created EventMessageRequest
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public EventMessageRequest put(final EventMessageRequest newEventMessageRequest) throws ClientException {
-        return send(HttpMethod.PUT, newEventMessageRequest);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

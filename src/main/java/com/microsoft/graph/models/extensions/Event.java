@@ -304,6 +304,14 @@ public class Event extends OutlookItem implements IJsonBackedObject {
     public String subject;
 
     /**
+     * The Transaction Id.
+     * 
+     */
+    @SerializedName("transactionId")
+    @Expose
+    public String transactionId;
+
+    /**
      * The Type.
      * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
      */

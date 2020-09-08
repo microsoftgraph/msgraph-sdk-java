@@ -120,27 +120,6 @@ public class PlannerUserRequest extends BaseRequest implements IPlannerUserReque
     }
 
     /**
-     * Creates a PlannerUser with a new object
-     *
-     * @param newPlannerUser the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final PlannerUser newPlannerUser, final ICallback<PlannerUser> callback) {
-        send(HttpMethod.PUT, callback, newPlannerUser);
-    }
-
-    /**
-     * Creates a PlannerUser with a new object
-     *
-     * @param newPlannerUser the object to create/update
-     * @return the created PlannerUser
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public PlannerUser put(final PlannerUser newPlannerUser) throws ClientException {
-        return send(HttpMethod.PUT, newPlannerUser);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

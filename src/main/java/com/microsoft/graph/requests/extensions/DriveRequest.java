@@ -119,27 +119,6 @@ public class DriveRequest extends BaseRequest implements IDriveRequest {
     }
 
     /**
-     * Creates a Drive with a new object
-     *
-     * @param newDrive the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final Drive newDrive, final ICallback<Drive> callback) {
-        send(HttpMethod.PUT, callback, newDrive);
-    }
-
-    /**
-     * Creates a Drive with a new object
-     *
-     * @param newDrive the object to create/update
-     * @return the created Drive
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public Drive put(final Drive newDrive) throws ClientException {
-        return send(HttpMethod.PUT, newDrive);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

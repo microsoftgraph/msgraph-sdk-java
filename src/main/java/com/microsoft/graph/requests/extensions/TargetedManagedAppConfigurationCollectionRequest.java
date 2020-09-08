@@ -64,14 +64,14 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
     public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<TargetedManagedAppConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newTargetedManagedAppConfiguration, callback);
     }
 
     public TargetedManagedAppConfiguration post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newTargetedManagedAppConfiguration);
     }
 
@@ -108,27 +108,6 @@ public class TargetedManagedAppConfigurationCollectionRequest extends BaseCollec
         return (TargetedManagedAppConfigurationCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public ITargetedManagedAppConfigurationCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (TargetedManagedAppConfigurationCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public ITargetedManagedAppConfigurationCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (ITargetedManagedAppConfigurationCollectionRequest)this;
-    }
     public ITargetedManagedAppConfigurationCollectionPage buildFromResponse(final TargetedManagedAppConfigurationCollectionResponse response) {
         final ITargetedManagedAppConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

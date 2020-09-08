@@ -62,14 +62,14 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
     public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<MdmWindowsInformationProtectionPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMdmWindowsInformationProtectionPolicy, callback);
     }
 
     public MdmWindowsInformationProtectionPolicy post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MdmWindowsInformationProtectionPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -106,27 +106,6 @@ public class MdmWindowsInformationProtectionPolicyCollectionRequest extends Base
         return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IMdmWindowsInformationProtectionPolicyCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (MdmWindowsInformationProtectionPolicyCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IMdmWindowsInformationProtectionPolicyCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IMdmWindowsInformationProtectionPolicyCollectionRequest)this;
-    }
     public IMdmWindowsInformationProtectionPolicyCollectionPage buildFromResponse(final MdmWindowsInformationProtectionPolicyCollectionResponse response) {
         final IMdmWindowsInformationProtectionPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

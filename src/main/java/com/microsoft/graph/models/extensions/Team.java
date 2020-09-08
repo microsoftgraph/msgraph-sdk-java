@@ -129,7 +129,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * The visibility of a the group and team. Defaults to Public.
+     * The visibility of the group and team. Defaults to Public.
      */
     @SerializedName("visibility")
     @Expose

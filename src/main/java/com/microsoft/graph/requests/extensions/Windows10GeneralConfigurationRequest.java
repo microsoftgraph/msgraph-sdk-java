@@ -112,27 +112,6 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
     }
 
     /**
-     * Creates a Windows10GeneralConfiguration with a new object
-     *
-     * @param newWindows10GeneralConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<Windows10GeneralConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newWindows10GeneralConfiguration);
-    }
-
-    /**
-     * Creates a Windows10GeneralConfiguration with a new object
-     *
-     * @param newWindows10GeneralConfiguration the object to create/update
-     * @return the created Windows10GeneralConfiguration
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public Windows10GeneralConfiguration put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration) throws ClientException {
-        return send(HttpMethod.PUT, newWindows10GeneralConfiguration);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

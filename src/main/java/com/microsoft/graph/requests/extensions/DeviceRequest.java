@@ -120,27 +120,6 @@ public class DeviceRequest extends BaseRequest implements IDeviceRequest {
     }
 
     /**
-     * Creates a Device with a new object
-     *
-     * @param newDevice the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final Device newDevice, final ICallback<Device> callback) {
-        send(HttpMethod.PUT, callback, newDevice);
-    }
-
-    /**
-     * Creates a Device with a new object
-     *
-     * @param newDevice the object to create/update
-     * @return the created Device
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public Device put(final Device newDevice) throws ClientException {
-        return send(HttpMethod.PUT, newDevice);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -63,14 +63,14 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
     public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<DeviceEnrollmentConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDeviceEnrollmentConfiguration, callback);
     }
 
     public DeviceEnrollmentConfiguration post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceEnrollmentConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newDeviceEnrollmentConfiguration);
     }
 
@@ -107,27 +107,6 @@ public class DeviceEnrollmentConfigurationCollectionRequest extends BaseCollecti
         return (DeviceEnrollmentConfigurationCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IDeviceEnrollmentConfigurationCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (DeviceEnrollmentConfigurationCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IDeviceEnrollmentConfigurationCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IDeviceEnrollmentConfigurationCollectionRequest)this;
-    }
     public IDeviceEnrollmentConfigurationCollectionPage buildFromResponse(final DeviceEnrollmentConfigurationCollectionResponse response) {
         final IDeviceEnrollmentConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

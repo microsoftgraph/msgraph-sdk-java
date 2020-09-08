@@ -116,27 +116,6 @@ public class InformationProtectionRequest extends BaseRequest implements IInform
     }
 
     /**
-     * Creates a InformationProtection with a new object
-     *
-     * @param newInformationProtection the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback) {
-        send(HttpMethod.PUT, callback, newInformationProtection);
-    }
-
-    /**
-     * Creates a InformationProtection with a new object
-     *
-     * @param newInformationProtection the object to create/update
-     * @return the created InformationProtection
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public InformationProtection put(final InformationProtection newInformationProtection) throws ClientException {
-        return send(HttpMethod.PUT, newInformationProtection);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

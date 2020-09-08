@@ -62,14 +62,14 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
     public void post(final OutlookCategory newOutlookCategory, final ICallback<OutlookCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newOutlookCategory, callback);
     }
 
     public OutlookCategory post(final OutlookCategory newOutlookCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OutlookCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newOutlookCategory);
     }
 
@@ -106,27 +106,6 @@ public class OutlookCategoryCollectionRequest extends BaseCollectionRequest<Outl
         return (OutlookCategoryCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IOutlookCategoryCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (OutlookCategoryCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IOutlookCategoryCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IOutlookCategoryCollectionRequest)this;
-    }
     public IOutlookCategoryCollectionPage buildFromResponse(final OutlookCategoryCollectionResponse response) {
         final IOutlookCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

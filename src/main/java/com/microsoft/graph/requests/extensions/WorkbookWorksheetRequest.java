@@ -131,27 +131,6 @@ public class WorkbookWorksheetRequest extends BaseRequest implements IWorkbookWo
     }
 
     /**
-     * Creates a WorkbookWorksheet with a new object
-     *
-     * @param newWorkbookWorksheet the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final WorkbookWorksheet newWorkbookWorksheet, final ICallback<WorkbookWorksheet> callback) {
-        send(HttpMethod.PUT, callback, newWorkbookWorksheet);
-    }
-
-    /**
-     * Creates a WorkbookWorksheet with a new object
-     *
-     * @param newWorkbookWorksheet the object to create/update
-     * @return the created WorkbookWorksheet
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public WorkbookWorksheet put(final WorkbookWorksheet newWorkbookWorksheet) throws ClientException {
-        return send(HttpMethod.PUT, newWorkbookWorksheet);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

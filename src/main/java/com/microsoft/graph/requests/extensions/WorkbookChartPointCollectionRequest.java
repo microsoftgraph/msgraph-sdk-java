@@ -62,14 +62,14 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
     public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<WorkbookChartPoint> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookChartPoint, callback);
     }
 
     public WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookChartPointRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newWorkbookChartPoint);
     }
 
@@ -106,27 +106,6 @@ public class WorkbookChartPointCollectionRequest extends BaseCollectionRequest<W
         return (WorkbookChartPointCollectionRequest)this;
     }
 
-    /**
-     * Sets the skip value for the request
-     *
-     * @param value of the number of items to skip
-     * @return the updated request
-     */
-    public IWorkbookChartPointCollectionRequest skip(final int value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
-        return (WorkbookChartPointCollectionRequest)this;
-    }
-
-
-    /**
-     * Add Skip token for pagination
-     * @param skipToken - Token for pagination
-     * @return the updated request
-     */
-    public IWorkbookChartPointCollectionRequest skipToken(final String skipToken) {
-    	addQueryOption(new QueryOption("$skiptoken", skipToken));
-        return (IWorkbookChartPointCollectionRequest)this;
-    }
     public IWorkbookChartPointCollectionPage buildFromResponse(final WorkbookChartPointCollectionResponse response) {
         final IWorkbookChartPointCollectionRequestBuilder builder;
         if (response.nextLink != null) {

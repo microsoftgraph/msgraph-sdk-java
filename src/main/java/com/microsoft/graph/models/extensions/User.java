@@ -156,7 +156,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
      */
     @SerializedName("companyName")
     @Expose
@@ -177,6 +177,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName("country")
     @Expose
     public String country;
+
+    /**
+     * The Created Date Time.
+     * The created date of the user object.
+     */
+    @SerializedName("createdDateTime")
+    @Expose
+    public java.util.Calendar createdDateTime;
 
     /**
      * The Creation Type.
@@ -300,7 +308,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports $filter.
+     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter.
      */
     @SerializedName("mail")
     @Expose

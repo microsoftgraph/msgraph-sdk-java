@@ -112,27 +112,6 @@ public class IosDeviceFeaturesConfigurationRequest extends BaseRequest implement
     }
 
     /**
-     * Creates a IosDeviceFeaturesConfiguration with a new object
-     *
-     * @param newIosDeviceFeaturesConfiguration the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration, final ICallback<IosDeviceFeaturesConfiguration> callback) {
-        send(HttpMethod.PUT, callback, newIosDeviceFeaturesConfiguration);
-    }
-
-    /**
-     * Creates a IosDeviceFeaturesConfiguration with a new object
-     *
-     * @param newIosDeviceFeaturesConfiguration the object to create/update
-     * @return the created IosDeviceFeaturesConfiguration
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public IosDeviceFeaturesConfiguration put(final IosDeviceFeaturesConfiguration newIosDeviceFeaturesConfiguration) throws ClientException {
-        return send(HttpMethod.PUT, newIosDeviceFeaturesConfiguration);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

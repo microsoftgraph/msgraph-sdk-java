@@ -120,27 +120,6 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
     }
 
     /**
-     * Creates a Organization with a new object
-     *
-     * @param newOrganization the object to create/update
-     * @param callback the callback to be called after success or failure
-     */
-    public void put(final Organization newOrganization, final ICallback<Organization> callback) {
-        send(HttpMethod.PUT, callback, newOrganization);
-    }
-
-    /**
-     * Creates a Organization with a new object
-     *
-     * @param newOrganization the object to create/update
-     * @return the created Organization
-     * @throws ClientException this exception occurs if the request was unable to complete for any reason
-     */
-    public Organization put(final Organization newOrganization) throws ClientException {
-        return send(HttpMethod.PUT, newOrganization);
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -41,7 +41,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         new ManagedDeviceWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getHeaders())
+            .buildRequest(getBaseRequest().getOptions())
             .post(newManagedDevice, body, callback);
     }
 
@@ -49,7 +49,7 @@ public class ManagedDeviceCollectionReferenceRequest extends BaseCollectionReque
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/me/managedDevices/" + newManagedDevice.id);
         return new ManagedDeviceWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getHeaders())
+                .buildRequest(getBaseRequest().getOptions())
                 .post(newManagedDevice, body);
     }
     /**
