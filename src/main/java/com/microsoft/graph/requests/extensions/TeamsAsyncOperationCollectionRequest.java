@@ -62,14 +62,14 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAsyncOperation, callback);
     }
 
     public TeamsAsyncOperation post(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAsyncOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAsyncOperation);
     }
 
@@ -106,6 +106,27 @@ public class TeamsAsyncOperationCollectionRequest extends BaseCollectionRequest<
         return (TeamsAsyncOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamsAsyncOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamsAsyncOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamsAsyncOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamsAsyncOperationCollectionRequest)this;
+    }
     public ITeamsAsyncOperationCollectionPage buildFromResponse(final TeamsAsyncOperationCollectionResponse response) {
         final ITeamsAsyncOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

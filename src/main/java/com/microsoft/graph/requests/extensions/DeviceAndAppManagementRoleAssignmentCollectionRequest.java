@@ -62,14 +62,14 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
     public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<DeviceAndAppManagementRoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAndAppManagementRoleAssignment, callback);
     }
 
     public DeviceAndAppManagementRoleAssignment post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceAndAppManagementRoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -106,6 +106,27 @@ public class DeviceAndAppManagementRoleAssignmentCollectionRequest extends BaseC
         return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceAndAppManagementRoleAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceAndAppManagementRoleAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceAndAppManagementRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceAndAppManagementRoleAssignmentCollectionRequest)this;
+    }
     public IDeviceAndAppManagementRoleAssignmentCollectionPage buildFromResponse(final DeviceAndAppManagementRoleAssignmentCollectionResponse response) {
         final IDeviceAndAppManagementRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

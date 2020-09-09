@@ -112,6 +112,27 @@ public class WindowsPhone81GeneralConfigurationRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a WindowsPhone81GeneralConfiguration with a new object
+     *
+     * @param newWindowsPhone81GeneralConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration, final ICallback<WindowsPhone81GeneralConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindowsPhone81GeneralConfiguration);
+    }
+
+    /**
+     * Creates a WindowsPhone81GeneralConfiguration with a new object
+     *
+     * @param newWindowsPhone81GeneralConfiguration the object to create/update
+     * @return the created WindowsPhone81GeneralConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsPhone81GeneralConfiguration put(final WindowsPhone81GeneralConfiguration newWindowsPhone81GeneralConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsPhone81GeneralConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

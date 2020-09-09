@@ -22,8 +22,8 @@
 
 package com.microsoft.graph.http;
 
-import java.net.URI;
-import javax.ws.rs.core.UriBuilder;
+import okhttp3.HttpUrl;
+import okhttp3.HttpUrl.Builder;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.core.IBaseClient;
@@ -172,11 +172,10 @@ public abstract class BaseRequest implements IHttpRequest {
     @Override
     public URL getRequestUrl() {
         String requestUrl = addFunctionParameters();
-        URI baseUrl = URI.create(requestUrl);
-        final UriBuilder uriBuilder = UriBuilder.fromUri(baseUrl);
+        final Builder uriBuilder = HttpUrl.parse(requestUrl).newBuilder();
 
         for (final QueryOption option : queryOptions) {
-        	uriBuilder.queryParam(option.getName(), option.getValue().toString());
+        	uriBuilder.addQueryParameter(option.getName(), option.getValue().toString());
         }
 
         try {

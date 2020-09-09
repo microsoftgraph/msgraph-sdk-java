@@ -120,6 +120,27 @@ public class EducationSchoolRequest extends BaseRequest implements IEducationSch
     }
 
     /**
+     * Creates a EducationSchool with a new object
+     *
+     * @param newEducationSchool the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationSchool newEducationSchool, final ICallback<EducationSchool> callback) {
+        send(HttpMethod.PUT, callback, newEducationSchool);
+    }
+
+    /**
+     * Creates a EducationSchool with a new object
+     *
+     * @param newEducationSchool the object to create/update
+     * @return the created EducationSchool
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationSchool put(final EducationSchool newEducationSchool) throws ClientException {
+        return send(HttpMethod.PUT, newEducationSchool);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

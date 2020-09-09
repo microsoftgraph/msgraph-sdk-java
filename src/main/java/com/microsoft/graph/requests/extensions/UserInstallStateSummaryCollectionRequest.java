@@ -62,14 +62,14 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
     public void post(final UserInstallStateSummary newUserInstallStateSummary, final ICallback<UserInstallStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserInstallStateSummary, callback);
     }
 
     public UserInstallStateSummary post(final UserInstallStateSummary newUserInstallStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new UserInstallStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newUserInstallStateSummary);
     }
 
@@ -106,6 +106,27 @@ public class UserInstallStateSummaryCollectionRequest extends BaseCollectionRequ
         return (UserInstallStateSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IUserInstallStateSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (UserInstallStateSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IUserInstallStateSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IUserInstallStateSummaryCollectionRequest)this;
+    }
     public IUserInstallStateSummaryCollectionPage buildFromResponse(final UserInstallStateSummaryCollectionResponse response) {
         final IUserInstallStateSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

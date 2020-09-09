@@ -63,14 +63,14 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
     public void post(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppPolicy, callback);
     }
 
     public ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppPolicy);
     }
 
@@ -107,6 +107,27 @@ public class ManagedAppPolicyCollectionRequest extends BaseCollectionRequest<Man
         return (ManagedAppPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedAppPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedAppPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedAppPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedAppPolicyCollectionRequest)this;
+    }
     public IManagedAppPolicyCollectionPage buildFromResponse(final ManagedAppPolicyCollectionResponse response) {
         final IManagedAppPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

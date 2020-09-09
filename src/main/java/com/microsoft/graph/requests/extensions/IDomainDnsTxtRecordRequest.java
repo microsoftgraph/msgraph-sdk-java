@@ -80,6 +80,23 @@ public interface IDomainDnsTxtRecordRequest extends IHttpRequest {
     DomainDnsTxtRecord post(final DomainDnsTxtRecord newDomainDnsTxtRecord) throws ClientException;
 
     /**
+     * Posts a DomainDnsTxtRecord with a new object
+     *
+     * @param newDomainDnsTxtRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback);
+
+    /**
+     * Posts a DomainDnsTxtRecord with a new object
+     *
+     * @param newDomainDnsTxtRecord the object to create/update
+     * @return the created DomainDnsTxtRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DomainDnsTxtRecord put(final DomainDnsTxtRecord newDomainDnsTxtRecord) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

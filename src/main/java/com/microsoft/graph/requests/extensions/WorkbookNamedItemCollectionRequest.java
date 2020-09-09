@@ -63,14 +63,14 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
     public void post(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookNamedItem, callback);
     }
 
     public WorkbookNamedItem post(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookNamedItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookNamedItem);
     }
 
@@ -107,6 +107,27 @@ public class WorkbookNamedItemCollectionRequest extends BaseCollectionRequest<Wo
         return (WorkbookNamedItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookNamedItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookNamedItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookNamedItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookNamedItemCollectionRequest)this;
+    }
     public IWorkbookNamedItemCollectionPage buildFromResponse(final WorkbookNamedItemCollectionResponse response) {
         final IWorkbookNamedItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

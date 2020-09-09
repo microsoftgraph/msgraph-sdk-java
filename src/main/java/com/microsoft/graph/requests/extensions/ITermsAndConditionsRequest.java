@@ -80,6 +80,23 @@ public interface ITermsAndConditionsRequest extends IHttpRequest {
     TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException;
 
     /**
+     * Posts a TermsAndConditions with a new object
+     *
+     * @param newTermsAndConditions the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback);
+
+    /**
+     * Posts a TermsAndConditions with a new object
+     *
+     * @param newTermsAndConditions the object to create/update
+     * @return the created TermsAndConditions
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TermsAndConditions put(final TermsAndConditions newTermsAndConditions) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

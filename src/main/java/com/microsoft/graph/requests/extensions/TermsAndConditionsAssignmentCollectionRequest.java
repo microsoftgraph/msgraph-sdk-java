@@ -62,14 +62,14 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
     public void post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment, final ICallback<TermsAndConditionsAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditionsAssignment, callback);
     }
 
     public TermsAndConditionsAssignment post(final TermsAndConditionsAssignment newTermsAndConditionsAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditionsAssignment);
     }
 
@@ -106,6 +106,27 @@ public class TermsAndConditionsAssignmentCollectionRequest extends BaseCollectio
         return (TermsAndConditionsAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITermsAndConditionsAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TermsAndConditionsAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITermsAndConditionsAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITermsAndConditionsAssignmentCollectionRequest)this;
+    }
     public ITermsAndConditionsAssignmentCollectionPage buildFromResponse(final TermsAndConditionsAssignmentCollectionResponse response) {
         final ITermsAndConditionsAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

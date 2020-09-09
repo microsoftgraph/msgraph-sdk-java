@@ -62,14 +62,14 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
     public void post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<DeviceCompliancePolicySettingStateSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicySettingStateSummary, callback);
     }
 
     public DeviceCompliancePolicySettingStateSummary post(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicySettingStateSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicySettingStateSummary);
     }
 
@@ -106,6 +106,27 @@ public class DeviceCompliancePolicySettingStateSummaryCollectionRequest extends 
         return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicySettingStateSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicySettingStateSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCompliancePolicySettingStateSummaryCollectionRequest)this;
+    }
     public IDeviceCompliancePolicySettingStateSummaryCollectionPage buildFromResponse(final DeviceCompliancePolicySettingStateSummaryCollectionResponse response) {
         final IDeviceCompliancePolicySettingStateSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

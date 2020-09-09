@@ -65,14 +65,14 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
     public void post(final Notebook newNotebook, final ICallback<Notebook> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNotebook, callback);
     }
 
     public Notebook post(final Notebook newNotebook) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new NotebookRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newNotebook);
     }
 
@@ -109,6 +109,27 @@ public class NotebookCollectionRequest extends BaseCollectionRequest<NotebookCol
         return (NotebookCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public INotebookCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (NotebookCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public INotebookCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (INotebookCollectionRequest)this;
+    }
     public INotebookCollectionPage buildFromResponse(final NotebookCollectionResponse response) {
         final INotebookCollectionRequestBuilder builder;
         if (response.nextLink != null) {

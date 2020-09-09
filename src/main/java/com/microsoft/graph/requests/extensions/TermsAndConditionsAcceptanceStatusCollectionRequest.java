@@ -62,14 +62,14 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
     public void post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus, final ICallback<TermsAndConditionsAcceptanceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditionsAcceptanceStatus, callback);
     }
 
     public TermsAndConditionsAcceptanceStatus post(final TermsAndConditionsAcceptanceStatus newTermsAndConditionsAcceptanceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TermsAndConditionsAcceptanceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTermsAndConditionsAcceptanceStatus);
     }
 
@@ -106,6 +106,27 @@ public class TermsAndConditionsAcceptanceStatusCollectionRequest extends BaseCol
         return (TermsAndConditionsAcceptanceStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITermsAndConditionsAcceptanceStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TermsAndConditionsAcceptanceStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITermsAndConditionsAcceptanceStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITermsAndConditionsAcceptanceStatusCollectionRequest)this;
+    }
     public ITermsAndConditionsAcceptanceStatusCollectionPage buildFromResponse(final TermsAndConditionsAcceptanceStatusCollectionResponse response) {
         final ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

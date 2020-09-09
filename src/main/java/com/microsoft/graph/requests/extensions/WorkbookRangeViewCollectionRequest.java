@@ -62,14 +62,14 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
     public void post(final WorkbookRangeView newWorkbookRangeView, final ICallback<WorkbookRangeView> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookRangeView, callback);
     }
 
     public WorkbookRangeView post(final WorkbookRangeView newWorkbookRangeView) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeViewRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookRangeView);
     }
 
@@ -106,6 +106,27 @@ public class WorkbookRangeViewCollectionRequest extends BaseCollectionRequest<Wo
         return (WorkbookRangeViewCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookRangeViewCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookRangeViewCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookRangeViewCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookRangeViewCollectionRequest)this;
+    }
     public IWorkbookRangeViewCollectionPage buildFromResponse(final WorkbookRangeViewCollectionResponse response) {
         final IWorkbookRangeViewCollectionRequestBuilder builder;
         if (response.nextLink != null) {

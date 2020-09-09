@@ -153,6 +153,27 @@ public class DeviceCompliancePolicyRequest extends BaseRequest implements IDevic
     }
 
     /**
+     * Creates a DeviceCompliancePolicy with a new object
+     *
+     * @param newDeviceCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceCompliancePolicy newDeviceCompliancePolicy, final ICallback<DeviceCompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newDeviceCompliancePolicy);
+    }
+
+    /**
+     * Creates a DeviceCompliancePolicy with a new object
+     *
+     * @param newDeviceCompliancePolicy the object to create/update
+     * @return the created DeviceCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceCompliancePolicy put(final DeviceCompliancePolicy newDeviceCompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceCompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

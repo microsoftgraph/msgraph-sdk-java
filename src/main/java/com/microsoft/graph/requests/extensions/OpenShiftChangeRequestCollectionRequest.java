@@ -62,14 +62,14 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
     public void post(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOpenShiftChangeRequest, callback);
     }
 
     public OpenShiftChangeRequest post(final OpenShiftChangeRequest newOpenShiftChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OpenShiftChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOpenShiftChangeRequest);
     }
 
@@ -106,6 +106,27 @@ public class OpenShiftChangeRequestCollectionRequest extends BaseCollectionReque
         return (OpenShiftChangeRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOpenShiftChangeRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OpenShiftChangeRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOpenShiftChangeRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOpenShiftChangeRequestCollectionRequest)this;
+    }
     public IOpenShiftChangeRequestCollectionPage buildFromResponse(final OpenShiftChangeRequestCollectionResponse response) {
         final IOpenShiftChangeRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IEventRequest extends IHttpRequest {
     Event post(final Event newEvent) throws ClientException;
 
     /**
+     * Posts a Event with a new object
+     *
+     * @param newEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Event newEvent, final ICallback<Event> callback);
+
+    /**
+     * Posts a Event with a new object
+     *
+     * @param newEvent the object to create/update
+     * @return the created Event
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Event put(final Event newEvent) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

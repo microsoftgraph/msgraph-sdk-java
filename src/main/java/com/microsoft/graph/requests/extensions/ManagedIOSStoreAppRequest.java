@@ -112,6 +112,27 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
     }
 
     /**
+     * Creates a ManagedIOSStoreApp with a new object
+     *
+     * @param newManagedIOSStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback) {
+        send(HttpMethod.PUT, callback, newManagedIOSStoreApp);
+    }
+
+    /**
+     * Creates a ManagedIOSStoreApp with a new object
+     *
+     * @param newManagedIOSStoreApp the object to create/update
+     * @return the created ManagedIOSStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedIOSStoreApp put(final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException {
+        return send(HttpMethod.PUT, newManagedIOSStoreApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

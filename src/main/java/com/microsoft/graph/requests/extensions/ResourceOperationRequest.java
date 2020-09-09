@@ -112,6 +112,27 @@ public class ResourceOperationRequest extends BaseRequest implements IResourceOp
     }
 
     /**
+     * Creates a ResourceOperation with a new object
+     *
+     * @param newResourceOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ResourceOperation newResourceOperation, final ICallback<ResourceOperation> callback) {
+        send(HttpMethod.PUT, callback, newResourceOperation);
+    }
+
+    /**
+     * Creates a ResourceOperation with a new object
+     *
+     * @param newResourceOperation the object to create/update
+     * @return the created ResourceOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ResourceOperation put(final ResourceOperation newResourceOperation) throws ClientException {
+        return send(HttpMethod.PUT, newResourceOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

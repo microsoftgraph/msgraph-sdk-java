@@ -62,14 +62,14 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
     public void post(final ConversationMember newConversationMember, final ICallback<ConversationMember> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConversationMember, callback);
     }
 
     public ConversationMember post(final ConversationMember newConversationMember) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConversationMemberRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConversationMember);
     }
 
@@ -106,6 +106,27 @@ public class ConversationMemberCollectionRequest extends BaseCollectionRequest<C
         return (ConversationMemberCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IConversationMemberCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ConversationMemberCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IConversationMemberCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IConversationMemberCollectionRequest)this;
+    }
     public IConversationMemberCollectionPage buildFromResponse(final ConversationMemberCollectionResponse response) {
         final IConversationMemberCollectionRequestBuilder builder;
         if (response.nextLink != null) {

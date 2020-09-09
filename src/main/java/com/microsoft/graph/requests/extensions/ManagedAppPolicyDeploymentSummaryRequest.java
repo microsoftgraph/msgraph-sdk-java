@@ -112,6 +112,27 @@ public class ManagedAppPolicyDeploymentSummaryRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a ManagedAppPolicyDeploymentSummary with a new object
+     *
+     * @param newManagedAppPolicyDeploymentSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary, final ICallback<ManagedAppPolicyDeploymentSummary> callback) {
+        send(HttpMethod.PUT, callback, newManagedAppPolicyDeploymentSummary);
+    }
+
+    /**
+     * Creates a ManagedAppPolicyDeploymentSummary with a new object
+     *
+     * @param newManagedAppPolicyDeploymentSummary the object to create/update
+     * @return the created ManagedAppPolicyDeploymentSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAppPolicyDeploymentSummary put(final ManagedAppPolicyDeploymentSummary newManagedAppPolicyDeploymentSummary) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAppPolicyDeploymentSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

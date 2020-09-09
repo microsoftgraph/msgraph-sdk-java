@@ -62,14 +62,14 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
     public void post(final DefaultManagedAppProtection newDefaultManagedAppProtection, final ICallback<DefaultManagedAppProtection> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDefaultManagedAppProtection, callback);
     }
 
     public DefaultManagedAppProtection post(final DefaultManagedAppProtection newDefaultManagedAppProtection) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DefaultManagedAppProtectionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDefaultManagedAppProtection);
     }
 
@@ -106,6 +106,27 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
         return (DefaultManagedAppProtectionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDefaultManagedAppProtectionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DefaultManagedAppProtectionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDefaultManagedAppProtectionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDefaultManagedAppProtectionCollectionRequest)this;
+    }
     public IDefaultManagedAppProtectionCollectionPage buildFromResponse(final DefaultManagedAppProtectionCollectionResponse response) {
         final IDefaultManagedAppProtectionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -112,6 +112,27 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a Windows10MobileCompliancePolicy with a new object
+     *
+     * @param newWindows10MobileCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback) {
+        send(HttpMethod.PUT, callback, newWindows10MobileCompliancePolicy);
+    }
+
+    /**
+     * Creates a Windows10MobileCompliancePolicy with a new object
+     *
+     * @param newWindows10MobileCompliancePolicy the object to create/update
+     * @return the created Windows10MobileCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10MobileCompliancePolicy put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10MobileCompliancePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

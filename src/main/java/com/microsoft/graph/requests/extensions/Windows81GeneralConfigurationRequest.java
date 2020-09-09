@@ -112,6 +112,27 @@ public class Windows81GeneralConfigurationRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a Windows81GeneralConfiguration with a new object
+     *
+     * @param newWindows81GeneralConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration, final ICallback<Windows81GeneralConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows81GeneralConfiguration);
+    }
+
+    /**
+     * Creates a Windows81GeneralConfiguration with a new object
+     *
+     * @param newWindows81GeneralConfiguration the object to create/update
+     * @return the created Windows81GeneralConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows81GeneralConfiguration put(final Windows81GeneralConfiguration newWindows81GeneralConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows81GeneralConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

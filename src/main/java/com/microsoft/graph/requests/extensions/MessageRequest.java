@@ -144,6 +144,27 @@ public class MessageRequest extends BaseRequest implements IMessageRequest {
     }
 
     /**
+     * Creates a Message with a new object
+     *
+     * @param newMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Message newMessage, final ICallback<Message> callback) {
+        send(HttpMethod.PUT, callback, newMessage);
+    }
+
+    /**
+     * Creates a Message with a new object
+     *
+     * @param newMessage the object to create/update
+     * @return the created Message
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Message put(final Message newMessage) throws ClientException {
+        return send(HttpMethod.PUT, newMessage);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

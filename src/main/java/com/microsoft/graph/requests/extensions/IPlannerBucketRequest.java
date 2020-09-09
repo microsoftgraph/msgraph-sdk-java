@@ -80,6 +80,23 @@ public interface IPlannerBucketRequest extends IHttpRequest {
     PlannerBucket post(final PlannerBucket newPlannerBucket) throws ClientException;
 
     /**
+     * Posts a PlannerBucket with a new object
+     *
+     * @param newPlannerBucket the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PlannerBucket newPlannerBucket, final ICallback<PlannerBucket> callback);
+
+    /**
+     * Posts a PlannerBucket with a new object
+     *
+     * @param newPlannerBucket the object to create/update
+     * @return the created PlannerBucket
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PlannerBucket put(final PlannerBucket newPlannerBucket) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

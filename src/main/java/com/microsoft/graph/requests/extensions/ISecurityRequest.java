@@ -80,6 +80,23 @@ public interface ISecurityRequest extends IHttpRequest {
     Security post(final Security newSecurity) throws ClientException;
 
     /**
+     * Posts a Security with a new object
+     *
+     * @param newSecurity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Security newSecurity, final ICallback<Security> callback);
+
+    /**
+     * Posts a Security with a new object
+     *
+     * @param newSecurity the object to create/update
+     * @return the created Security
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Security put(final Security newSecurity) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

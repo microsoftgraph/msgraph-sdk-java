@@ -62,14 +62,14 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
     public void post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEnrollmentConfigurationAssignment, callback);
     }
 
     public EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EnrollmentConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEnrollmentConfigurationAssignment);
     }
 
@@ -106,6 +106,27 @@ public class EnrollmentConfigurationAssignmentCollectionRequest extends BaseColl
         return (EnrollmentConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEnrollmentConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EnrollmentConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEnrollmentConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEnrollmentConfigurationAssignmentCollectionRequest)this;
+    }
     public IEnrollmentConfigurationAssignmentCollectionPage buildFromResponse(final EnrollmentConfigurationAssignmentCollectionResponse response) {
         final IEnrollmentConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

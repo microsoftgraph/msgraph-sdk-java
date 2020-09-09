@@ -122,6 +122,27 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
     }
 
     /**
+     * Creates a EducationUser with a new object
+     *
+     * @param newEducationUser the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EducationUser newEducationUser, final ICallback<EducationUser> callback) {
+        send(HttpMethod.PUT, callback, newEducationUser);
+    }
+
+    /**
+     * Creates a EducationUser with a new object
+     *
+     * @param newEducationUser the object to create/update
+     * @return the created EducationUser
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EducationUser put(final EducationUser newEducationUser) throws ClientException {
+        return send(HttpMethod.PUT, newEducationUser);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
     public void post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementTroubleshootingEvent, callback);
     }
 
     public DeviceManagementTroubleshootingEvent post(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementTroubleshootingEventRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementTroubleshootingEvent);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementTroubleshootingEventCollectionRequest extends BaseC
         return (DeviceManagementTroubleshootingEventCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementTroubleshootingEventCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementTroubleshootingEventCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementTroubleshootingEventCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementTroubleshootingEventCollectionRequest)this;
+    }
     public IDeviceManagementTroubleshootingEventCollectionPage buildFromResponse(final DeviceManagementTroubleshootingEventCollectionResponse response) {
         final IDeviceManagementTroubleshootingEventCollectionRequestBuilder builder;
         if (response.nextLink != null) {

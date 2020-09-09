@@ -62,14 +62,14 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
     public void post(final SignIn newSignIn, final ICallback<SignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSignIn, callback);
     }
 
     public SignIn post(final SignIn newSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSignIn);
     }
 
@@ -106,6 +106,27 @@ public class SignInCollectionRequest extends BaseCollectionRequest<SignInCollect
         return (SignInCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISignInCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SignInCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISignInCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISignInCollectionRequest)this;
+    }
     public ISignInCollectionPage buildFromResponse(final SignInCollectionResponse response) {
         final ISignInCollectionRequestBuilder builder;
         if (response.nextLink != null) {

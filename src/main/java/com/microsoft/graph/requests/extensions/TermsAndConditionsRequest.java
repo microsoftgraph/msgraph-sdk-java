@@ -120,6 +120,27 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
     }
 
     /**
+     * Creates a TermsAndConditions with a new object
+     *
+     * @param newTermsAndConditions the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TermsAndConditions newTermsAndConditions, final ICallback<TermsAndConditions> callback) {
+        send(HttpMethod.PUT, callback, newTermsAndConditions);
+    }
+
+    /**
+     * Creates a TermsAndConditions with a new object
+     *
+     * @param newTermsAndConditions the object to create/update
+     * @return the created TermsAndConditions
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TermsAndConditions put(final TermsAndConditions newTermsAndConditions) throws ClientException {
+        return send(HttpMethod.PUT, newTermsAndConditions);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

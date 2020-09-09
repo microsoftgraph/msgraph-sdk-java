@@ -112,6 +112,27 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
     }
 
     /**
+     * Creates a WindowsMobileMSI with a new object
+     *
+     * @param newWindowsMobileMSI the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<WindowsMobileMSI> callback) {
+        send(HttpMethod.PUT, callback, newWindowsMobileMSI);
+    }
+
+    /**
+     * Creates a WindowsMobileMSI with a new object
+     *
+     * @param newWindowsMobileMSI the object to create/update
+     * @return the created WindowsMobileMSI
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsMobileMSI put(final WindowsMobileMSI newWindowsMobileMSI) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsMobileMSI);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

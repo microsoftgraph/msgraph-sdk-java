@@ -61,14 +61,14 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
     public void post(final Organization newOrganization, final ICallback<Organization> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrganization, callback);
     }
 
     public Organization post(final Organization newOrganization) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OrganizationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOrganization);
     }
 
@@ -105,6 +105,27 @@ public class OrganizationCollectionRequest extends BaseCollectionRequest<Organiz
         return (OrganizationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOrganizationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OrganizationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOrganizationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOrganizationCollectionRequest)this;
+    }
     public IOrganizationCollectionPage buildFromResponse(final OrganizationCollectionResponse response) {
         final IOrganizationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

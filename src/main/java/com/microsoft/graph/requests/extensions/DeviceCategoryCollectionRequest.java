@@ -62,14 +62,14 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
     public void post(final DeviceCategory newDeviceCategory, final ICallback<DeviceCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCategory, callback);
     }
 
     public DeviceCategory post(final DeviceCategory newDeviceCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCategory);
     }
 
@@ -106,6 +106,27 @@ public class DeviceCategoryCollectionRequest extends BaseCollectionRequest<Devic
         return (DeviceCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCategoryCollectionRequest)this;
+    }
     public IDeviceCategoryCollectionPage buildFromResponse(final DeviceCategoryCollectionResponse response) {
         final IDeviceCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

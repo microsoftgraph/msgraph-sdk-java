@@ -80,6 +80,23 @@ public interface IManagedIOSStoreAppRequest extends IHttpRequest {
     ManagedIOSStoreApp post(final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException;
 
     /**
+     * Posts a ManagedIOSStoreApp with a new object
+     *
+     * @param newManagedIOSStoreApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<ManagedIOSStoreApp> callback);
+
+    /**
+     * Posts a ManagedIOSStoreApp with a new object
+     *
+     * @param newManagedIOSStoreApp the object to create/update
+     * @return the created ManagedIOSStoreApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedIOSStoreApp put(final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

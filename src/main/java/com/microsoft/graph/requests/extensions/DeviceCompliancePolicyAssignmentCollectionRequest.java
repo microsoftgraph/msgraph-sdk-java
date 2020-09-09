@@ -62,14 +62,14 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
     public void post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment, final ICallback<DeviceCompliancePolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicyAssignment, callback);
     }
 
     public DeviceCompliancePolicyAssignment post(final DeviceCompliancePolicyAssignment newDeviceCompliancePolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceCompliancePolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceCompliancePolicyAssignment);
     }
 
@@ -106,6 +106,27 @@ public class DeviceCompliancePolicyAssignmentCollectionRequest extends BaseColle
         return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCompliancePolicyAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCompliancePolicyAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCompliancePolicyAssignmentCollectionRequest)this;
+    }
     public IDeviceCompliancePolicyAssignmentCollectionPage buildFromResponse(final DeviceCompliancePolicyAssignmentCollectionResponse response) {
         final IDeviceCompliancePolicyAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

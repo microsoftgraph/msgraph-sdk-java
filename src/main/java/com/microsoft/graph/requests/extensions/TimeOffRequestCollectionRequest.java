@@ -63,14 +63,14 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
     public void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOffRequest, callback);
     }
 
     public TimeOffRequest post(final TimeOffRequest newTimeOffRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOffRequest);
     }
 
@@ -107,6 +107,27 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
         return (TimeOffRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITimeOffRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TimeOffRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITimeOffRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITimeOffRequestCollectionRequest)this;
+    }
     public ITimeOffRequestCollectionPage buildFromResponse(final TimeOffRequestCollectionResponse response) {
         final ITimeOffRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

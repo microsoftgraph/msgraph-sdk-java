@@ -112,6 +112,27 @@ public class OpenShiftChangeRequestRequest extends BaseRequest implements IOpenS
     }
 
     /**
+     * Creates a OpenShiftChangeRequest with a new object
+     *
+     * @param newOpenShiftChangeRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OpenShiftChangeRequest newOpenShiftChangeRequest, final ICallback<OpenShiftChangeRequest> callback) {
+        send(HttpMethod.PUT, callback, newOpenShiftChangeRequest);
+    }
+
+    /**
+     * Creates a OpenShiftChangeRequest with a new object
+     *
+     * @param newOpenShiftChangeRequest the object to create/update
+     * @return the created OpenShiftChangeRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OpenShiftChangeRequest put(final OpenShiftChangeRequest newOpenShiftChangeRequest) throws ClientException {
+        return send(HttpMethod.PUT, newOpenShiftChangeRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

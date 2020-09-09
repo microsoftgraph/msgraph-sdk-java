@@ -80,6 +80,23 @@ public interface IMobileAppContentFileRequest extends IHttpRequest {
     MobileAppContentFile post(final MobileAppContentFile newMobileAppContentFile) throws ClientException;
 
     /**
+     * Posts a MobileAppContentFile with a new object
+     *
+     * @param newMobileAppContentFile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback);
+
+    /**
+     * Posts a MobileAppContentFile with a new object
+     *
+     * @param newMobileAppContentFile the object to create/update
+     * @return the created MobileAppContentFile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileAppContentFile put(final MobileAppContentFile newMobileAppContentFile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

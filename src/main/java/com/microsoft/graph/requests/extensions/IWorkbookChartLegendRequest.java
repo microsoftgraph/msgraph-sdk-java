@@ -80,6 +80,23 @@ public interface IWorkbookChartLegendRequest extends IHttpRequest {
     WorkbookChartLegend post(final WorkbookChartLegend newWorkbookChartLegend) throws ClientException;
 
     /**
+     * Posts a WorkbookChartLegend with a new object
+     *
+     * @param newWorkbookChartLegend the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartLegend newWorkbookChartLegend, final ICallback<WorkbookChartLegend> callback);
+
+    /**
+     * Posts a WorkbookChartLegend with a new object
+     *
+     * @param newWorkbookChartLegend the object to create/update
+     * @return the created WorkbookChartLegend
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartLegend put(final WorkbookChartLegend newWorkbookChartLegend) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

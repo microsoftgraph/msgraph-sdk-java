@@ -80,6 +80,23 @@ public interface IMacOSDeviceFeaturesConfigurationRequest extends IHttpRequest {
     MacOSDeviceFeaturesConfiguration post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException;
 
     /**
+     * Posts a MacOSDeviceFeaturesConfiguration with a new object
+     *
+     * @param newMacOSDeviceFeaturesConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<MacOSDeviceFeaturesConfiguration> callback);
+
+    /**
+     * Posts a MacOSDeviceFeaturesConfiguration with a new object
+     *
+     * @param newMacOSDeviceFeaturesConfiguration the object to create/update
+     * @return the created MacOSDeviceFeaturesConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSDeviceFeaturesConfiguration put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

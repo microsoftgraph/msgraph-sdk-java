@@ -114,6 +114,27 @@ public class WorkbookChartPointFormatRequest extends BaseRequest implements IWor
     }
 
     /**
+     * Creates a WorkbookChartPointFormat with a new object
+     *
+     * @param newWorkbookChartPointFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartPointFormat newWorkbookChartPointFormat, final ICallback<WorkbookChartPointFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartPointFormat);
+    }
+
+    /**
+     * Creates a WorkbookChartPointFormat with a new object
+     *
+     * @param newWorkbookChartPointFormat the object to create/update
+     * @return the created WorkbookChartPointFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartPointFormat put(final WorkbookChartPointFormat newWorkbookChartPointFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartPointFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

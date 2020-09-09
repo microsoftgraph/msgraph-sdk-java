@@ -62,14 +62,14 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
     public void post(final TimeOff newTimeOff, final ICallback<TimeOff> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOff, callback);
     }
 
     public TimeOff post(final TimeOff newTimeOff) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTimeOff);
     }
 
@@ -106,6 +106,27 @@ public class TimeOffCollectionRequest extends BaseCollectionRequest<TimeOffColle
         return (TimeOffCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITimeOffCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TimeOffCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITimeOffCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITimeOffCollectionRequest)this;
+    }
     public ITimeOffCollectionPage buildFromResponse(final TimeOffCollectionResponse response) {
         final ITimeOffCollectionRequestBuilder builder;
         if (response.nextLink != null) {

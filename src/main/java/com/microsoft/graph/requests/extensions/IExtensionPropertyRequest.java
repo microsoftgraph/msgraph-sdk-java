@@ -80,6 +80,23 @@ public interface IExtensionPropertyRequest extends IHttpRequest {
     ExtensionProperty post(final ExtensionProperty newExtensionProperty) throws ClientException;
 
     /**
+     * Posts a ExtensionProperty with a new object
+     *
+     * @param newExtensionProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ExtensionProperty newExtensionProperty, final ICallback<ExtensionProperty> callback);
+
+    /**
+     * Posts a ExtensionProperty with a new object
+     *
+     * @param newExtensionProperty the object to create/update
+     * @return the created ExtensionProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ExtensionProperty put(final ExtensionProperty newExtensionProperty) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

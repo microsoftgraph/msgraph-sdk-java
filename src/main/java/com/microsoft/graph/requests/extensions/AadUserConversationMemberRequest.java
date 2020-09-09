@@ -114,6 +114,27 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
     }
 
     /**
+     * Creates a AadUserConversationMember with a new object
+     *
+     * @param newAadUserConversationMember the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<AadUserConversationMember> callback) {
+        send(HttpMethod.PUT, callback, newAadUserConversationMember);
+    }
+
+    /**
+     * Creates a AadUserConversationMember with a new object
+     *
+     * @param newAadUserConversationMember the object to create/update
+     * @return the created AadUserConversationMember
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AadUserConversationMember put(final AadUserConversationMember newAadUserConversationMember) throws ClientException {
+        return send(HttpMethod.PUT, newAadUserConversationMember);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

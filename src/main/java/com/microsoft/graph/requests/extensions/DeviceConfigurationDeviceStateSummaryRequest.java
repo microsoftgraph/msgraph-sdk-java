@@ -112,6 +112,27 @@ public class DeviceConfigurationDeviceStateSummaryRequest extends BaseRequest im
     }
 
     /**
+     * Creates a DeviceConfigurationDeviceStateSummary with a new object
+     *
+     * @param newDeviceConfigurationDeviceStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationDeviceStateSummary newDeviceConfigurationDeviceStateSummary, final ICallback<DeviceConfigurationDeviceStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationDeviceStateSummary);
+    }
+
+    /**
+     * Creates a DeviceConfigurationDeviceStateSummary with a new object
+     *
+     * @param newDeviceConfigurationDeviceStateSummary the object to create/update
+     * @return the created DeviceConfigurationDeviceStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationDeviceStateSummary put(final DeviceConfigurationDeviceStateSummary newDeviceConfigurationDeviceStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationDeviceStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

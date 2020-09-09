@@ -52,7 +52,6 @@ public class CustomRequestTests {
 	 */
 	@Test
 	public void testCustomPut() {
-		JsonParser parser =  new JsonParser();
 		DefaultSerializer serializer = new DefaultSerializer(new DefaultLogger());
 		String str = "{ \"appActivityId\": \"/article?12345\", \"activitySourceHost\": \"https://www.contoso.com\", \"userTimezone\": \"Africa/Casablanca\","
 				+ " \"appDisplayName\": \"Contoso, Ltd.\", \"activationUrl\": \"https://www.contoso.com/article?id=12345\", \"contentUrl\": \"https://www.contoso.com/article?id=12345\", "
@@ -65,7 +64,7 @@ public class CustomRequestTests {
 		JsonObject response = testBase.graphClient.
 				customRequest("/me/activities/%2Farticle%3F12346").
 				buildRequest().
-				put(parser.parse(str).getAsJsonObject());
+				put(JsonParser.parseString(str).getAsJsonObject());
 		
 		UserActivity userActivity = serializer.deserializeObject(str, UserActivity.class); 
 		UserActivity responseWithClass = testBase.graphClient.

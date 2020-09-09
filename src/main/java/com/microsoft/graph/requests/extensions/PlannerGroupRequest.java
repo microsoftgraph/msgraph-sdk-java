@@ -116,6 +116,27 @@ public class PlannerGroupRequest extends BaseRequest implements IPlannerGroupReq
     }
 
     /**
+     * Creates a PlannerGroup with a new object
+     *
+     * @param newPlannerGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerGroup newPlannerGroup, final ICallback<PlannerGroup> callback) {
+        send(HttpMethod.PUT, callback, newPlannerGroup);
+    }
+
+    /**
+     * Creates a PlannerGroup with a new object
+     *
+     * @param newPlannerGroup the object to create/update
+     * @return the created PlannerGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerGroup put(final PlannerGroup newPlannerGroup) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IGroupLifecyclePolicyRequest extends IHttpRequest {
     GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException;
 
     /**
+     * Posts a GroupLifecyclePolicy with a new object
+     *
+     * @param newGroupLifecyclePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<GroupLifecyclePolicy> callback);
+
+    /**
+     * Posts a GroupLifecyclePolicy with a new object
+     *
+     * @param newGroupLifecyclePolicy the object to create/update
+     * @return the created GroupLifecyclePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    GroupLifecyclePolicy put(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

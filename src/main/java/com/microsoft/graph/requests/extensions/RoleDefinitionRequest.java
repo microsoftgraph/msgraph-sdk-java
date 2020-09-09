@@ -131,6 +131,27 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
     }
 
     /**
+     * Creates a RoleDefinition with a new object
+     *
+     * @param newRoleDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback) {
+        send(HttpMethod.PUT, callback, newRoleDefinition);
+    }
+
+    /**
+     * Creates a RoleDefinition with a new object
+     *
+     * @param newRoleDefinition the object to create/update
+     * @return the created RoleDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public RoleDefinition put(final RoleDefinition newRoleDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newRoleDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

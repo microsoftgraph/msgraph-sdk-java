@@ -80,6 +80,23 @@ public interface IFieldValueSetRequest extends IHttpRequest {
     FieldValueSet post(final FieldValueSet newFieldValueSet) throws ClientException;
 
     /**
+     * Posts a FieldValueSet with a new object
+     *
+     * @param newFieldValueSet the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final FieldValueSet newFieldValueSet, final ICallback<FieldValueSet> callback);
+
+    /**
+     * Posts a FieldValueSet with a new object
+     *
+     * @param newFieldValueSet the object to create/update
+     * @return the created FieldValueSet
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    FieldValueSet put(final FieldValueSet newFieldValueSet) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

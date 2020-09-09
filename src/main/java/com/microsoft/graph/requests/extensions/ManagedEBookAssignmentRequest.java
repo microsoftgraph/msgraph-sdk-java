@@ -127,6 +127,27 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
     }
 
     /**
+     * Creates a ManagedEBookAssignment with a new object
+     *
+     * @param newManagedEBookAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback) {
+        send(HttpMethod.PUT, callback, newManagedEBookAssignment);
+    }
+
+    /**
+     * Creates a ManagedEBookAssignment with a new object
+     *
+     * @param newManagedEBookAssignment the object to create/update
+     * @return the created ManagedEBookAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedEBookAssignment put(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newManagedEBookAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

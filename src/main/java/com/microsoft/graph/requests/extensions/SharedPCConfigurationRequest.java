@@ -112,6 +112,27 @@ public class SharedPCConfigurationRequest extends BaseRequest implements IShared
     }
 
     /**
+     * Creates a SharedPCConfiguration with a new object
+     *
+     * @param newSharedPCConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharedPCConfiguration newSharedPCConfiguration, final ICallback<SharedPCConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newSharedPCConfiguration);
+    }
+
+    /**
+     * Creates a SharedPCConfiguration with a new object
+     *
+     * @param newSharedPCConfiguration the object to create/update
+     * @return the created SharedPCConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharedPCConfiguration put(final SharedPCConfiguration newSharedPCConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newSharedPCConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

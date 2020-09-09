@@ -112,6 +112,27 @@ public class WorkbookFormatProtectionRequest extends BaseRequest implements IWor
     }
 
     /**
+     * Creates a WorkbookFormatProtection with a new object
+     *
+     * @param newWorkbookFormatProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookFormatProtection newWorkbookFormatProtection, final ICallback<WorkbookFormatProtection> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookFormatProtection);
+    }
+
+    /**
+     * Creates a WorkbookFormatProtection with a new object
+     *
+     * @param newWorkbookFormatProtection the object to create/update
+     * @return the created WorkbookFormatProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookFormatProtection put(final WorkbookFormatProtection newWorkbookFormatProtection) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookFormatProtection);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

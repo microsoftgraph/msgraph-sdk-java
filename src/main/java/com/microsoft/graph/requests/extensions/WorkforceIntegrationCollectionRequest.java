@@ -62,14 +62,14 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
     public void post(final WorkforceIntegration newWorkforceIntegration, final ICallback<WorkforceIntegration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkforceIntegration, callback);
     }
 
     public WorkforceIntegration post(final WorkforceIntegration newWorkforceIntegration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkforceIntegrationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkforceIntegration);
     }
 
@@ -106,6 +106,27 @@ public class WorkforceIntegrationCollectionRequest extends BaseCollectionRequest
         return (WorkforceIntegrationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkforceIntegrationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkforceIntegrationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkforceIntegrationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkforceIntegrationCollectionRequest)this;
+    }
     public IWorkforceIntegrationCollectionPage buildFromResponse(final WorkforceIntegrationCollectionResponse response) {
         final IWorkforceIntegrationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

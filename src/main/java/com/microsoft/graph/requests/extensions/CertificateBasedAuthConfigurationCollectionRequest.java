@@ -61,14 +61,14 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
     public void post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration, final ICallback<CertificateBasedAuthConfiguration> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCertificateBasedAuthConfiguration, callback);
     }
 
     public CertificateBasedAuthConfiguration post(final CertificateBasedAuthConfiguration newCertificateBasedAuthConfiguration) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CertificateBasedAuthConfigurationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCertificateBasedAuthConfiguration);
     }
 
@@ -105,6 +105,27 @@ public class CertificateBasedAuthConfigurationCollectionRequest extends BaseColl
         return (CertificateBasedAuthConfigurationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CertificateBasedAuthConfigurationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICertificateBasedAuthConfigurationCollectionRequest)this;
+    }
     public ICertificateBasedAuthConfigurationCollectionPage buildFromResponse(final CertificateBasedAuthConfigurationCollectionResponse response) {
         final ICertificateBasedAuthConfigurationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

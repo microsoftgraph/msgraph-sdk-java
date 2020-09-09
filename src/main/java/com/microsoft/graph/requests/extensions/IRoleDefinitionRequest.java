@@ -80,6 +80,23 @@ public interface IRoleDefinitionRequest extends IHttpRequest {
     RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException;
 
     /**
+     * Posts a RoleDefinition with a new object
+     *
+     * @param newRoleDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final RoleDefinition newRoleDefinition, final ICallback<RoleDefinition> callback);
+
+    /**
+     * Posts a RoleDefinition with a new object
+     *
+     * @param newRoleDefinition the object to create/update
+     * @return the created RoleDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    RoleDefinition put(final RoleDefinition newRoleDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

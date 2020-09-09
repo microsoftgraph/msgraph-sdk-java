@@ -62,14 +62,14 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
     public void post(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementPartner, callback);
     }
 
     public DeviceManagementPartner post(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementPartner);
     }
 
@@ -106,6 +106,27 @@ public class DeviceManagementPartnerCollectionRequest extends BaseCollectionRequ
         return (DeviceManagementPartnerCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementPartnerCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementPartnerCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementPartnerCollectionRequest)this;
+    }
     public IDeviceManagementPartnerCollectionPage buildFromResponse(final DeviceManagementPartnerCollectionResponse response) {
         final IDeviceManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {

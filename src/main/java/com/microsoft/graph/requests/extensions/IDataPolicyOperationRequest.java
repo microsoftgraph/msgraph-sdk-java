@@ -80,6 +80,23 @@ public interface IDataPolicyOperationRequest extends IHttpRequest {
     DataPolicyOperation post(final DataPolicyOperation newDataPolicyOperation) throws ClientException;
 
     /**
+     * Posts a DataPolicyOperation with a new object
+     *
+     * @param newDataPolicyOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback);
+
+    /**
+     * Posts a DataPolicyOperation with a new object
+     *
+     * @param newDataPolicyOperation the object to create/update
+     * @return the created DataPolicyOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DataPolicyOperation put(final DataPolicyOperation newDataPolicyOperation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

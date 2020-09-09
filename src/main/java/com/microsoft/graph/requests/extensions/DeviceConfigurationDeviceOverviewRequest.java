@@ -112,6 +112,27 @@ public class DeviceConfigurationDeviceOverviewRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a DeviceConfigurationDeviceOverview with a new object
+     *
+     * @param newDeviceConfigurationDeviceOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationDeviceOverview newDeviceConfigurationDeviceOverview, final ICallback<DeviceConfigurationDeviceOverview> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationDeviceOverview);
+    }
+
+    /**
+     * Creates a DeviceConfigurationDeviceOverview with a new object
+     *
+     * @param newDeviceConfigurationDeviceOverview the object to create/update
+     * @return the created DeviceConfigurationDeviceOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationDeviceOverview put(final DeviceConfigurationDeviceOverview newDeviceConfigurationDeviceOverview) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationDeviceOverview);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

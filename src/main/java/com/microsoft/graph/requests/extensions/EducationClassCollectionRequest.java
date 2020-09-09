@@ -62,14 +62,14 @@ public class EducationClassCollectionRequest extends BaseCollectionRequest<Educa
     public void post(final EducationClass newEducationClass, final ICallback<EducationClass> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new EducationClassRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationClass, callback);
     }
 
     public EducationClass post(final EducationClass newEducationClass) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new EducationClassRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationClass);
     }
 
@@ -106,6 +106,27 @@ public class EducationClassCollectionRequest extends BaseCollectionRequest<Educa
         return (EducationClassCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IEducationClassCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (EducationClassCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IEducationClassCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IEducationClassCollectionRequest)this;
+    }
     public IEducationClassCollectionPage buildFromResponse(final EducationClassCollectionResponse response) {
         final IEducationClassCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -62,14 +62,14 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
     public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<IosUpdateDeviceStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosUpdateDeviceStatus, callback);
     }
 
     public IosUpdateDeviceStatus post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IosUpdateDeviceStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIosUpdateDeviceStatus);
     }
 
@@ -106,6 +106,27 @@ public class IosUpdateDeviceStatusCollectionRequest extends BaseCollectionReques
         return (IosUpdateDeviceStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIosUpdateDeviceStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IosUpdateDeviceStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIosUpdateDeviceStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIosUpdateDeviceStatusCollectionRequest)this;
+    }
     public IIosUpdateDeviceStatusCollectionPage buildFromResponse(final IosUpdateDeviceStatusCollectionResponse response) {
         final IIosUpdateDeviceStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

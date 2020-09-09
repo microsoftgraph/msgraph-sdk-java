@@ -33,6 +33,8 @@ public class InformationProtection extends Entity implements IJsonBackedObject {
      * The Threat Assessment Requests.
      * 
      */
+    @SerializedName("threatAssessmentRequests")
+    @Expose
     public ThreatAssessmentRequestCollectionPage threatAssessmentRequests;
 
 

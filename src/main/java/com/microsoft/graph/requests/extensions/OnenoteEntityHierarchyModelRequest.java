@@ -127,6 +127,27 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a OnenoteEntityHierarchyModel with a new object
+     *
+     * @param newOnenoteEntityHierarchyModel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<OnenoteEntityHierarchyModel> callback) {
+        send(HttpMethod.PUT, callback, newOnenoteEntityHierarchyModel);
+    }
+
+    /**
+     * Creates a OnenoteEntityHierarchyModel with a new object
+     *
+     * @param newOnenoteEntityHierarchyModel the object to create/update
+     * @return the created OnenoteEntityHierarchyModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenoteEntityHierarchyModel put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException {
+        return send(HttpMethod.PUT, newOnenoteEntityHierarchyModel);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

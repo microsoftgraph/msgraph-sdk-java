@@ -63,14 +63,14 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
     public void post(final Permission newPermission, final ICallback<Permission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPermission, callback);
     }
 
     public Permission post(final Permission newPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPermission);
     }
 
@@ -107,6 +107,27 @@ public class PermissionCollectionRequest extends BaseCollectionRequest<Permissio
         return (PermissionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPermissionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PermissionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPermissionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPermissionCollectionRequest)this;
+    }
     public IPermissionCollectionPage buildFromResponse(final PermissionCollectionResponse response) {
         final IPermissionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IDeviceManagementPartnerRequest extends IHttpRequest {
     DeviceManagementPartner post(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException;
 
     /**
+     * Posts a DeviceManagementPartner with a new object
+     *
+     * @param newDeviceManagementPartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagementPartner newDeviceManagementPartner, final ICallback<DeviceManagementPartner> callback);
+
+    /**
+     * Posts a DeviceManagementPartner with a new object
+     *
+     * @param newDeviceManagementPartner the object to create/update
+     * @return the created DeviceManagementPartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagementPartner put(final DeviceManagementPartner newDeviceManagementPartner) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IWorkbookChartDataLabelFormatRequest extends IHttpRequest {
     WorkbookChartDataLabelFormat post(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException;
 
     /**
+     * Posts a WorkbookChartDataLabelFormat with a new object
+     *
+     * @param newWorkbookChartDataLabelFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat, final ICallback<WorkbookChartDataLabelFormat> callback);
+
+    /**
+     * Posts a WorkbookChartDataLabelFormat with a new object
+     *
+     * @param newWorkbookChartDataLabelFormat the object to create/update
+     * @return the created WorkbookChartDataLabelFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChartDataLabelFormat put(final WorkbookChartDataLabelFormat newWorkbookChartDataLabelFormat) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

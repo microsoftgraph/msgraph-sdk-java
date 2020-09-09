@@ -80,6 +80,23 @@ public interface IIosCertificateProfileRequest extends IHttpRequest {
     IosCertificateProfile post(final IosCertificateProfile newIosCertificateProfile) throws ClientException;
 
     /**
+     * Posts a IosCertificateProfile with a new object
+     *
+     * @param newIosCertificateProfile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosCertificateProfile newIosCertificateProfile, final ICallback<IosCertificateProfile> callback);
+
+    /**
+     * Posts a IosCertificateProfile with a new object
+     *
+     * @param newIosCertificateProfile the object to create/update
+     * @return the created IosCertificateProfile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosCertificateProfile put(final IosCertificateProfile newIosCertificateProfile) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

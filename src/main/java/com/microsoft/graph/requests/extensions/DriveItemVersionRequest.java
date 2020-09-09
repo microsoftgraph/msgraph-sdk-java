@@ -112,6 +112,27 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
     }
 
     /**
+     * Creates a DriveItemVersion with a new object
+     *
+     * @param newDriveItemVersion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DriveItemVersion newDriveItemVersion, final ICallback<DriveItemVersion> callback) {
+        send(HttpMethod.PUT, callback, newDriveItemVersion);
+    }
+
+    /**
+     * Creates a DriveItemVersion with a new object
+     *
+     * @param newDriveItemVersion the object to create/update
+     * @return the created DriveItemVersion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DriveItemVersion put(final DriveItemVersion newDriveItemVersion) throws ClientException {
+        return send(HttpMethod.PUT, newDriveItemVersion);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class DriveCollectionRequest extends BaseCollectionRequest<DriveCollectio
     public void post(final Drive newDrive, final ICallback<Drive> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DriveRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDrive, callback);
     }
 
     public Drive post(final Drive newDrive) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DriveRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDrive);
     }
 
@@ -106,6 +106,27 @@ public class DriveCollectionRequest extends BaseCollectionRequest<DriveCollectio
         return (DriveCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDriveCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DriveCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDriveCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDriveCollectionRequest)this;
+    }
     public IDriveCollectionPage buildFromResponse(final DriveCollectionResponse response) {
         final IDriveCollectionRequestBuilder builder;
         if (response.nextLink != null) {

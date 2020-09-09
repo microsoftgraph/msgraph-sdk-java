@@ -115,6 +115,27 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
     }
 
     /**
+     * Creates a WorkbookTableColumn with a new object
+     *
+     * @param newWorkbookTableColumn the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<WorkbookTableColumn> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookTableColumn);
+    }
+
+    /**
+     * Creates a WorkbookTableColumn with a new object
+     *
+     * @param newWorkbookTableColumn the object to create/update
+     * @return the created WorkbookTableColumn
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookTableColumn put(final WorkbookTableColumn newWorkbookTableColumn) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookTableColumn);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

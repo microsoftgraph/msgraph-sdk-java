@@ -112,6 +112,27 @@ public class MobileThreatDefenseConnectorRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a MobileThreatDefenseConnector with a new object
+     *
+     * @param newMobileThreatDefenseConnector the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector, final ICallback<MobileThreatDefenseConnector> callback) {
+        send(HttpMethod.PUT, callback, newMobileThreatDefenseConnector);
+    }
+
+    /**
+     * Creates a MobileThreatDefenseConnector with a new object
+     *
+     * @param newMobileThreatDefenseConnector the object to create/update
+     * @return the created MobileThreatDefenseConnector
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileThreatDefenseConnector put(final MobileThreatDefenseConnector newMobileThreatDefenseConnector) throws ClientException {
+        return send(HttpMethod.PUT, newMobileThreatDefenseConnector);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

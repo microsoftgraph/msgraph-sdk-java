@@ -62,14 +62,14 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItemCol
     public void post(final BaseItem newBaseItem, final ICallback<BaseItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new BaseItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBaseItem, callback);
     }
 
     public BaseItem post(final BaseItem newBaseItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new BaseItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newBaseItem);
     }
 
@@ -106,6 +106,27 @@ public class BaseItemCollectionRequest extends BaseCollectionRequest<BaseItemCol
         return (BaseItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IBaseItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (BaseItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IBaseItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IBaseItemCollectionRequest)this;
+    }
     public IBaseItemCollectionPage buildFromResponse(final BaseItemCollectionResponse response) {
         final IBaseItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

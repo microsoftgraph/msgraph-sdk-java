@@ -61,14 +61,14 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
     public void post(final IdentityProvider newIdentityProvider, final ICallback<IdentityProvider> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityProvider, callback);
     }
 
     public IdentityProvider post(final IdentityProvider newIdentityProvider) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new IdentityProviderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newIdentityProvider);
     }
 
@@ -105,6 +105,27 @@ public class IdentityProviderCollectionRequest extends BaseCollectionRequest<Ide
         return (IdentityProviderCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IIdentityProviderCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (IdentityProviderCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IIdentityProviderCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IIdentityProviderCollectionRequest)this;
+    }
     public IIdentityProviderCollectionPage buildFromResponse(final IdentityProviderCollectionResponse response) {
         final IIdentityProviderCollectionRequestBuilder builder;
         if (response.nextLink != null) {

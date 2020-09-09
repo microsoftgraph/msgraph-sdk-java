@@ -62,14 +62,14 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
     public void post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTargetedManagedAppPolicyAssignment, callback);
     }
 
     public TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TargetedManagedAppPolicyAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTargetedManagedAppPolicyAssignment);
     }
 
@@ -106,6 +106,27 @@ public class TargetedManagedAppPolicyAssignmentCollectionRequest extends BaseCol
         return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITargetedManagedAppPolicyAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TargetedManagedAppPolicyAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITargetedManagedAppPolicyAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITargetedManagedAppPolicyAssignmentCollectionRequest)this;
+    }
     public ITargetedManagedAppPolicyAssignmentCollectionPage buildFromResponse(final TargetedManagedAppPolicyAssignmentCollectionResponse response) {
         final ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IPlannerBucketTaskBoardTaskFormatRequest extends IHttpRequest {
     PlannerBucketTaskBoardTaskFormat post(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat) throws ClientException;
 
     /**
+     * Posts a PlannerBucketTaskBoardTaskFormat with a new object
+     *
+     * @param newPlannerBucketTaskBoardTaskFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat, final ICallback<PlannerBucketTaskBoardTaskFormat> callback);
+
+    /**
+     * Posts a PlannerBucketTaskBoardTaskFormat with a new object
+     *
+     * @param newPlannerBucketTaskBoardTaskFormat the object to create/update
+     * @return the created PlannerBucketTaskBoardTaskFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PlannerBucketTaskBoardTaskFormat put(final PlannerBucketTaskBoardTaskFormat newPlannerBucketTaskBoardTaskFormat) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

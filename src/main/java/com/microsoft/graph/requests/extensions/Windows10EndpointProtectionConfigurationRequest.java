@@ -112,6 +112,27 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
     }
 
     /**
+     * Creates a Windows10EndpointProtectionConfiguration with a new object
+     *
+     * @param newWindows10EndpointProtectionConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<Windows10EndpointProtectionConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newWindows10EndpointProtectionConfiguration);
+    }
+
+    /**
+     * Creates a Windows10EndpointProtectionConfiguration with a new object
+     *
+     * @param newWindows10EndpointProtectionConfiguration the object to create/update
+     * @return the created Windows10EndpointProtectionConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Windows10EndpointProtectionConfiguration put(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newWindows10EndpointProtectionConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

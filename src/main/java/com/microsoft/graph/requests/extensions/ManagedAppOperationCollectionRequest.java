@@ -62,14 +62,14 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<ManagedAppOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppOperation, callback);
     }
 
     public ManagedAppOperation post(final ManagedAppOperation newManagedAppOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppOperation);
     }
 
@@ -106,6 +106,27 @@ public class ManagedAppOperationCollectionRequest extends BaseCollectionRequest<
         return (ManagedAppOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedAppOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedAppOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedAppOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedAppOperationCollectionRequest)this;
+    }
     public IManagedAppOperationCollectionPage buildFromResponse(final ManagedAppOperationCollectionResponse response) {
         final IManagedAppOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

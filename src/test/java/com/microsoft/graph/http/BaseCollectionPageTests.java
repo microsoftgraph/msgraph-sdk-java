@@ -24,7 +24,7 @@ public class BaseCollectionPageTests {
     private IRequestBuilder mRequestBuilder;
     private static ArrayList<String> list;
     private BaseCollectionPage<String, IRequestBuilder> baseCollectionPage;
-    private String requestUrl = "https://a.b.c";
+    private String requestUrl = "https://a.b.c/";
 
     @Before
     public void setUp() throws Exception {

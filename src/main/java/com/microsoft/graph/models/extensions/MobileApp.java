@@ -142,6 +142,8 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of group assignments for this mobile app.
      */
+    @SerializedName("assignments")
+    @Expose
     public MobileAppAssignmentCollectionPage assignments;
 
     /**

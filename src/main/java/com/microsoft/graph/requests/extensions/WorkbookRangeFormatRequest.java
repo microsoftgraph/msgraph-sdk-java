@@ -122,6 +122,27 @@ public class WorkbookRangeFormatRequest extends BaseRequest implements IWorkbook
     }
 
     /**
+     * Creates a WorkbookRangeFormat with a new object
+     *
+     * @param newWorkbookRangeFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookRangeFormat newWorkbookRangeFormat, final ICallback<WorkbookRangeFormat> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookRangeFormat);
+    }
+
+    /**
+     * Creates a WorkbookRangeFormat with a new object
+     *
+     * @param newWorkbookRangeFormat the object to create/update
+     * @return the created WorkbookRangeFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookRangeFormat put(final WorkbookRangeFormat newWorkbookRangeFormat) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookRangeFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

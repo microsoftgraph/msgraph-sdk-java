@@ -127,6 +127,27 @@ public class DeviceManagementTroubleshootingEventRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a DeviceManagementTroubleshootingEvent with a new object
+     *
+     * @param newDeviceManagementTroubleshootingEvent the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent, final ICallback<DeviceManagementTroubleshootingEvent> callback) {
+        send(HttpMethod.PUT, callback, newDeviceManagementTroubleshootingEvent);
+    }
+
+    /**
+     * Creates a DeviceManagementTroubleshootingEvent with a new object
+     *
+     * @param newDeviceManagementTroubleshootingEvent the object to create/update
+     * @return the created DeviceManagementTroubleshootingEvent
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceManagementTroubleshootingEvent put(final DeviceManagementTroubleshootingEvent newDeviceManagementTroubleshootingEvent) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceManagementTroubleshootingEvent);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

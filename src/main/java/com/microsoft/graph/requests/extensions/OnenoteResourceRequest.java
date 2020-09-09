@@ -112,6 +112,27 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
     }
 
     /**
+     * Creates a OnenoteResource with a new object
+     *
+     * @param newOnenoteResource the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback) {
+        send(HttpMethod.PUT, callback, newOnenoteResource);
+    }
+
+    /**
+     * Creates a OnenoteResource with a new object
+     *
+     * @param newOnenoteResource the object to create/update
+     * @return the created OnenoteResource
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OnenoteResource put(final OnenoteResource newOnenoteResource) throws ClientException {
+        return send(HttpMethod.PUT, newOnenoteResource);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

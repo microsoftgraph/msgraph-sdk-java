@@ -80,6 +80,23 @@ public interface IManagedDeviceMobileAppConfigurationUserSummaryRequest extends 
     ManagedDeviceMobileAppConfigurationUserSummary post(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary) throws ClientException;
 
     /**
+     * Posts a ManagedDeviceMobileAppConfigurationUserSummary with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationUserSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary, final ICallback<ManagedDeviceMobileAppConfigurationUserSummary> callback);
+
+    /**
+     * Posts a ManagedDeviceMobileAppConfigurationUserSummary with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationUserSummary the object to create/update
+     * @return the created ManagedDeviceMobileAppConfigurationUserSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedDeviceMobileAppConfigurationUserSummary put(final ManagedDeviceMobileAppConfigurationUserSummary newManagedDeviceMobileAppConfigurationUserSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

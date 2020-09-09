@@ -80,6 +80,23 @@ public interface IMultiValueLegacyExtendedPropertyRequest extends IHttpRequest {
     MultiValueLegacyExtendedProperty post(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException;
 
     /**
+     * Posts a MultiValueLegacyExtendedProperty with a new object
+     *
+     * @param newMultiValueLegacyExtendedProperty the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty, final ICallback<MultiValueLegacyExtendedProperty> callback);
+
+    /**
+     * Posts a MultiValueLegacyExtendedProperty with a new object
+     *
+     * @param newMultiValueLegacyExtendedProperty the object to create/update
+     * @return the created MultiValueLegacyExtendedProperty
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MultiValueLegacyExtendedProperty put(final MultiValueLegacyExtendedProperty newMultiValueLegacyExtendedProperty) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

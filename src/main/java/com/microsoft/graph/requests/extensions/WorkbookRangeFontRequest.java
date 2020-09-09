@@ -112,6 +112,27 @@ public class WorkbookRangeFontRequest extends BaseRequest implements IWorkbookRa
     }
 
     /**
+     * Creates a WorkbookRangeFont with a new object
+     *
+     * @param newWorkbookRangeFont the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookRangeFont newWorkbookRangeFont, final ICallback<WorkbookRangeFont> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookRangeFont);
+    }
+
+    /**
+     * Creates a WorkbookRangeFont with a new object
+     *
+     * @param newWorkbookRangeFont the object to create/update
+     * @return the created WorkbookRangeFont
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookRangeFont put(final WorkbookRangeFont newWorkbookRangeFont) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookRangeFont);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

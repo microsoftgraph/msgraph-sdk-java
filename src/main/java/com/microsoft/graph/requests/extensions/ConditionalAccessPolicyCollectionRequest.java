@@ -62,14 +62,14 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
     public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConditionalAccessPolicy, callback);
     }
 
     public ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ConditionalAccessPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newConditionalAccessPolicy);
     }
 
@@ -106,6 +106,27 @@ public class ConditionalAccessPolicyCollectionRequest extends BaseCollectionRequ
         return (ConditionalAccessPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IConditionalAccessPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ConditionalAccessPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IConditionalAccessPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IConditionalAccessPolicyCollectionRequest)this;
+    }
     public IConditionalAccessPolicyCollectionPage buildFromResponse(final ConditionalAccessPolicyCollectionResponse response) {
         final IConditionalAccessPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

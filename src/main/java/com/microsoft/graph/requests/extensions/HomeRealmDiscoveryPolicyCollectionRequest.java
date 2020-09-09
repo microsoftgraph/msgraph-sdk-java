@@ -62,14 +62,14 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
     public void post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newHomeRealmDiscoveryPolicy, callback);
     }
 
     public HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new HomeRealmDiscoveryPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newHomeRealmDiscoveryPolicy);
     }
 
@@ -106,6 +106,27 @@ public class HomeRealmDiscoveryPolicyCollectionRequest extends BaseCollectionReq
         return (HomeRealmDiscoveryPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IHomeRealmDiscoveryPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (HomeRealmDiscoveryPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IHomeRealmDiscoveryPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IHomeRealmDiscoveryPolicyCollectionRequest)this;
+    }
     public IHomeRealmDiscoveryPolicyCollectionPage buildFromResponse(final HomeRealmDiscoveryPolicyCollectionResponse response) {
         final IHomeRealmDiscoveryPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

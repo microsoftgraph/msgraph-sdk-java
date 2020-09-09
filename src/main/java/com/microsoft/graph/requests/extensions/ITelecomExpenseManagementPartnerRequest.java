@@ -80,6 +80,23 @@ public interface ITelecomExpenseManagementPartnerRequest extends IHttpRequest {
     TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException;
 
     /**
+     * Posts a TelecomExpenseManagementPartner with a new object
+     *
+     * @param newTelecomExpenseManagementPartner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback);
+
+    /**
+     * Posts a TelecomExpenseManagementPartner with a new object
+     *
+     * @param newTelecomExpenseManagementPartner the object to create/update
+     * @return the created TelecomExpenseManagementPartner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TelecomExpenseManagementPartner put(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

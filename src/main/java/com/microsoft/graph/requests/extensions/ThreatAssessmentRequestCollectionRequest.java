@@ -62,14 +62,14 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
     public void post(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThreatAssessmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentRequest, callback);
     }
 
     public ThreatAssessmentRequest post(final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThreatAssessmentRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentRequest);
     }
 
@@ -106,6 +106,27 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
         return (ThreatAssessmentRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IThreatAssessmentRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ThreatAssessmentRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IThreatAssessmentRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IThreatAssessmentRequestCollectionRequest)this;
+    }
     public IThreatAssessmentRequestCollectionPage buildFromResponse(final ThreatAssessmentRequestCollectionResponse response) {
         final IThreatAssessmentRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

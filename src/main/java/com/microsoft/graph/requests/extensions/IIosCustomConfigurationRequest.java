@@ -80,6 +80,23 @@ public interface IIosCustomConfigurationRequest extends IHttpRequest {
     IosCustomConfiguration post(final IosCustomConfiguration newIosCustomConfiguration) throws ClientException;
 
     /**
+     * Posts a IosCustomConfiguration with a new object
+     *
+     * @param newIosCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosCustomConfiguration newIosCustomConfiguration, final ICallback<IosCustomConfiguration> callback);
+
+    /**
+     * Posts a IosCustomConfiguration with a new object
+     *
+     * @param newIosCustomConfiguration the object to create/update
+     * @return the created IosCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosCustomConfiguration put(final IosCustomConfiguration newIosCustomConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

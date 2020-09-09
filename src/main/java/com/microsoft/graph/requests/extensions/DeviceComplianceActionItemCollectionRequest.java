@@ -62,14 +62,14 @@ public class DeviceComplianceActionItemCollectionRequest extends BaseCollectionR
     public void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<DeviceComplianceActionItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceActionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceActionItem, callback);
     }
 
     public DeviceComplianceActionItem post(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceActionItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceActionItem);
     }
 
@@ -106,6 +106,27 @@ public class DeviceComplianceActionItemCollectionRequest extends BaseCollectionR
         return (DeviceComplianceActionItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceComplianceActionItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceComplianceActionItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceComplianceActionItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceComplianceActionItemCollectionRequest)this;
+    }
     public IDeviceComplianceActionItemCollectionPage buildFromResponse(final DeviceComplianceActionItemCollectionResponse response) {
         final IDeviceComplianceActionItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

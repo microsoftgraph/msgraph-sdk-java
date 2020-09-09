@@ -112,6 +112,27 @@ public class TokenLifetimePolicyRequest extends BaseRequest implements ITokenLif
     }
 
     /**
+     * Creates a TokenLifetimePolicy with a new object
+     *
+     * @param newTokenLifetimePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
+        send(HttpMethod.PUT, callback, newTokenLifetimePolicy);
+    }
+
+    /**
+     * Creates a TokenLifetimePolicy with a new object
+     *
+     * @param newTokenLifetimePolicy the object to create/update
+     * @return the created TokenLifetimePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TokenLifetimePolicy put(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
+        return send(HttpMethod.PUT, newTokenLifetimePolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

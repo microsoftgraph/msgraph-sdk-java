@@ -80,6 +80,23 @@ public interface IManagedMobileAppRequest extends IHttpRequest {
     ManagedMobileApp post(final ManagedMobileApp newManagedMobileApp) throws ClientException;
 
     /**
+     * Posts a ManagedMobileApp with a new object
+     *
+     * @param newManagedMobileApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback);
+
+    /**
+     * Posts a ManagedMobileApp with a new object
+     *
+     * @param newManagedMobileApp the object to create/update
+     * @return the created ManagedMobileApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedMobileApp put(final ManagedMobileApp newManagedMobileApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -41,6 +41,8 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * The Assignments.
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      */
+    @SerializedName("assignments")
+    @Expose
     public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
 

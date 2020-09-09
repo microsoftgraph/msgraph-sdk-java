@@ -114,6 +114,27 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
     }
 
     /**
+     * Creates a SharedInsight with a new object
+     *
+     * @param newSharedInsight the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback) {
+        send(HttpMethod.PUT, callback, newSharedInsight);
+    }
+
+    /**
+     * Creates a SharedInsight with a new object
+     *
+     * @param newSharedInsight the object to create/update
+     * @return the created SharedInsight
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SharedInsight put(final SharedInsight newSharedInsight) throws ClientException {
+        return send(HttpMethod.PUT, newSharedInsight);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

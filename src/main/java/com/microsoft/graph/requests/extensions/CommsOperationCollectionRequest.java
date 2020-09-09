@@ -62,14 +62,14 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
     public void post(final CommsOperation newCommsOperation, final ICallback<CommsOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCommsOperation, callback);
     }
 
     public CommsOperation post(final CommsOperation newCommsOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CommsOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCommsOperation);
     }
 
@@ -106,6 +106,27 @@ public class CommsOperationCollectionRequest extends BaseCollectionRequest<Comms
         return (CommsOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICommsOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CommsOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICommsOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICommsOperationCollectionRequest)this;
+    }
     public ICommsOperationCollectionPage buildFromResponse(final CommsOperationCollectionResponse response) {
         final ICommsOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

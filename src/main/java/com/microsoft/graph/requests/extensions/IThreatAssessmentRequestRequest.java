@@ -80,6 +80,23 @@ public interface IThreatAssessmentRequestRequest extends IHttpRequest {
     ThreatAssessmentRequest post(final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException;
 
     /**
+     * Posts a ThreatAssessmentRequest with a new object
+     *
+     * @param newThreatAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ThreatAssessmentRequest newThreatAssessmentRequest, final ICallback<ThreatAssessmentRequest> callback);
+
+    /**
+     * Posts a ThreatAssessmentRequest with a new object
+     *
+     * @param newThreatAssessmentRequest the object to create/update
+     * @return the created ThreatAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ThreatAssessmentRequest put(final ThreatAssessmentRequest newThreatAssessmentRequest) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

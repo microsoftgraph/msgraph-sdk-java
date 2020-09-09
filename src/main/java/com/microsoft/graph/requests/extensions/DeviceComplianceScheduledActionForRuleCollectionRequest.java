@@ -62,14 +62,14 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
     public void post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule, final ICallback<DeviceComplianceScheduledActionForRule> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceScheduledActionForRule, callback);
     }
 
     public DeviceComplianceScheduledActionForRule post(final DeviceComplianceScheduledActionForRule newDeviceComplianceScheduledActionForRule) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceScheduledActionForRule);
     }
 
@@ -106,6 +106,27 @@ public class DeviceComplianceScheduledActionForRuleCollectionRequest extends Bas
         return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceComplianceScheduledActionForRuleCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceComplianceScheduledActionForRuleCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceComplianceScheduledActionForRuleCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceComplianceScheduledActionForRuleCollectionRequest)this;
+    }
     public IDeviceComplianceScheduledActionForRuleCollectionPage buildFromResponse(final DeviceComplianceScheduledActionForRuleCollectionResponse response) {
         final IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IInformationProtectionRequest extends IHttpRequest {
     InformationProtection post(final InformationProtection newInformationProtection) throws ClientException;
 
     /**
+     * Posts a InformationProtection with a new object
+     *
+     * @param newInformationProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final InformationProtection newInformationProtection, final ICallback<InformationProtection> callback);
+
+    /**
+     * Posts a InformationProtection with a new object
+     *
+     * @param newInformationProtection the object to create/update
+     * @return the created InformationProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    InformationProtection put(final InformationProtection newInformationProtection) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

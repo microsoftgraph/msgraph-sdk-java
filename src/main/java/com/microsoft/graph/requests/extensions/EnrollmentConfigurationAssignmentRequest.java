@@ -112,6 +112,27 @@ public class EnrollmentConfigurationAssignmentRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a EnrollmentConfigurationAssignment with a new object
+     *
+     * @param newEnrollmentConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback) {
+        send(HttpMethod.PUT, callback, newEnrollmentConfigurationAssignment);
+    }
+
+    /**
+     * Creates a EnrollmentConfigurationAssignment with a new object
+     *
+     * @param newEnrollmentConfigurationAssignment the object to create/update
+     * @return the created EnrollmentConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EnrollmentConfigurationAssignment put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException {
+        return send(HttpMethod.PUT, newEnrollmentConfigurationAssignment);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -115,6 +115,27 @@ public class WorkbookNamedItemRequest extends BaseRequest implements IWorkbookNa
     }
 
     /**
+     * Creates a WorkbookNamedItem with a new object
+     *
+     * @param newWorkbookNamedItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookNamedItem newWorkbookNamedItem, final ICallback<WorkbookNamedItem> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookNamedItem);
+    }
+
+    /**
+     * Creates a WorkbookNamedItem with a new object
+     *
+     * @param newWorkbookNamedItem the object to create/update
+     * @return the created WorkbookNamedItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookNamedItem put(final WorkbookNamedItem newWorkbookNamedItem) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookNamedItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

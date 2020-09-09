@@ -62,14 +62,14 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
     public void post(final TeamsAppInstallation newTeamsAppInstallation, final ICallback<TeamsAppInstallation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppInstallation, callback);
     }
 
     public TeamsAppInstallation post(final TeamsAppInstallation newTeamsAppInstallation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppInstallationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppInstallation);
     }
 
@@ -106,6 +106,27 @@ public class TeamsAppInstallationCollectionRequest extends BaseCollectionRequest
         return (TeamsAppInstallationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamsAppInstallationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamsAppInstallationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamsAppInstallationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamsAppInstallationCollectionRequest)this;
+    }
     public ITeamsAppInstallationCollectionPage buildFromResponse(final TeamsAppInstallationCollectionResponse response) {
         final ITeamsAppInstallationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

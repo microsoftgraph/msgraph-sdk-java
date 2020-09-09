@@ -62,14 +62,14 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
     public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<SwapShiftsChangeRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSwapShiftsChangeRequest, callback);
     }
 
     public SwapShiftsChangeRequest post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SwapShiftsChangeRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSwapShiftsChangeRequest);
     }
 
@@ -106,6 +106,27 @@ public class SwapShiftsChangeRequestCollectionRequest extends BaseCollectionRequ
         return (SwapShiftsChangeRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISwapShiftsChangeRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SwapShiftsChangeRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISwapShiftsChangeRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISwapShiftsChangeRequestCollectionRequest)this;
+    }
     public ISwapShiftsChangeRequestCollectionPage buildFromResponse(final SwapShiftsChangeRequestCollectionResponse response) {
         final ISwapShiftsChangeRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

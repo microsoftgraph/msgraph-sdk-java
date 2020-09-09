@@ -63,14 +63,14 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
     public void post(final Message newMessage, final ICallback<Message> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMessage, callback);
     }
 
     public Message post(final Message newMessage) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MessageRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMessage);
     }
 
@@ -107,6 +107,27 @@ public class MessageCollectionRequest extends BaseCollectionRequest<MessageColle
         return (MessageCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMessageCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MessageCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMessageCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMessageCollectionRequest)this;
+    }
     public IMessageCollectionPage buildFromResponse(final MessageCollectionResponse response) {
         final IMessageCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -112,6 +112,27 @@ public class TeamsAsyncOperationRequest extends BaseRequest implements ITeamsAsy
     }
 
     /**
+     * Creates a TeamsAsyncOperation with a new object
+     *
+     * @param newTeamsAsyncOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final TeamsAsyncOperation newTeamsAsyncOperation, final ICallback<TeamsAsyncOperation> callback) {
+        send(HttpMethod.PUT, callback, newTeamsAsyncOperation);
+    }
+
+    /**
+     * Creates a TeamsAsyncOperation with a new object
+     *
+     * @param newTeamsAsyncOperation the object to create/update
+     * @return the created TeamsAsyncOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public TeamsAsyncOperation put(final TeamsAsyncOperation newTeamsAsyncOperation) throws ClientException {
+        return send(HttpMethod.PUT, newTeamsAsyncOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

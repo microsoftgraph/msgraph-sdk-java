@@ -62,14 +62,14 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
     public void post(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppDefinition, callback);
     }
 
     public TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TeamsAppDefinitionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTeamsAppDefinition);
     }
 
@@ -106,6 +106,27 @@ public class TeamsAppDefinitionCollectionRequest extends BaseCollectionRequest<T
         return (TeamsAppDefinitionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITeamsAppDefinitionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TeamsAppDefinitionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITeamsAppDefinitionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITeamsAppDefinitionCollectionRequest)this;
+    }
     public ITeamsAppDefinitionCollectionPage buildFromResponse(final TeamsAppDefinitionCollectionResponse response) {
         final ITeamsAppDefinitionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

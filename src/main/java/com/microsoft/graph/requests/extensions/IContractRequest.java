@@ -80,6 +80,23 @@ public interface IContractRequest extends IHttpRequest {
     Contract post(final Contract newContract) throws ClientException;
 
     /**
+     * Posts a Contract with a new object
+     *
+     * @param newContract the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Contract newContract, final ICallback<Contract> callback);
+
+    /**
+     * Posts a Contract with a new object
+     *
+     * @param newContract the object to create/update
+     * @return the created Contract
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Contract put(final Contract newContract) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ITimeOffRequest extends IHttpRequest {
     TimeOff post(final TimeOff newTimeOff) throws ClientException;
 
     /**
+     * Posts a TimeOff with a new object
+     *
+     * @param newTimeOff the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TimeOff newTimeOff, final ICallback<TimeOff> callback);
+
+    /**
+     * Posts a TimeOff with a new object
+     *
+     * @param newTimeOff the object to create/update
+     * @return the created TimeOff
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TimeOff put(final TimeOff newTimeOff) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -116,6 +116,27 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
     }
 
     /**
+     * Creates a OrgContact with a new object
+     *
+     * @param newOrgContact the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OrgContact newOrgContact, final ICallback<OrgContact> callback) {
+        send(HttpMethod.PUT, callback, newOrgContact);
+    }
+
+    /**
+     * Creates a OrgContact with a new object
+     *
+     * @param newOrgContact the object to create/update
+     * @return the created OrgContact
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OrgContact put(final OrgContact newOrgContact) throws ClientException {
+        return send(HttpMethod.PUT, newOrgContact);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

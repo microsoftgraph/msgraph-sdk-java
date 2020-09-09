@@ -62,14 +62,14 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
     public void post(final OnenoteOperation newOnenoteOperation, final ICallback<OnenoteOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteOperation, callback);
     }
 
     public OnenoteOperation post(final OnenoteOperation newOnenoteOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteOperation);
     }
 
@@ -106,6 +106,27 @@ public class OnenoteOperationCollectionRequest extends BaseCollectionRequest<One
         return (OnenoteOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnenoteOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnenoteOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnenoteOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnenoteOperationCollectionRequest)this;
+    }
     public IOnenoteOperationCollectionPage buildFromResponse(final OnenoteOperationCollectionResponse response) {
         final IOnenoteOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

@@ -80,6 +80,23 @@ public interface IDeviceConfigurationStateRequest extends IHttpRequest {
     DeviceConfigurationState post(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException;
 
     /**
+     * Posts a DeviceConfigurationState with a new object
+     *
+     * @param newDeviceConfigurationState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<DeviceConfigurationState> callback);
+
+    /**
+     * Posts a DeviceConfigurationState with a new object
+     *
+     * @param newDeviceConfigurationState the object to create/update
+     * @return the created DeviceConfigurationState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceConfigurationState put(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

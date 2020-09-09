@@ -128,6 +128,27 @@ public class WorkbookChartRequest extends BaseRequest implements IWorkbookChartR
     }
 
     /**
+     * Creates a WorkbookChart with a new object
+     *
+     * @param newWorkbookChart the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChart newWorkbookChart, final ICallback<WorkbookChart> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChart);
+    }
+
+    /**
+     * Creates a WorkbookChart with a new object
+     *
+     * @param newWorkbookChart the object to create/update
+     * @return the created WorkbookChart
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChart put(final WorkbookChart newWorkbookChart) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChart);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

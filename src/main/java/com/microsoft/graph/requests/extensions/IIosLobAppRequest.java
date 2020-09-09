@@ -80,6 +80,23 @@ public interface IIosLobAppRequest extends IHttpRequest {
     IosLobApp post(final IosLobApp newIosLobApp) throws ClientException;
 
     /**
+     * Posts a IosLobApp with a new object
+     *
+     * @param newIosLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final IosLobApp newIosLobApp, final ICallback<IosLobApp> callback);
+
+    /**
+     * Posts a IosLobApp with a new object
+     *
+     * @param newIosLobApp the object to create/update
+     * @return the created IosLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    IosLobApp put(final IosLobApp newIosLobApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

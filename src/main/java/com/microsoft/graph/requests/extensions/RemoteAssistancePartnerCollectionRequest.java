@@ -62,14 +62,14 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
     public void post(final RemoteAssistancePartner newRemoteAssistancePartner, final ICallback<RemoteAssistancePartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteAssistancePartner, callback);
     }
 
     public RemoteAssistancePartner post(final RemoteAssistancePartner newRemoteAssistancePartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RemoteAssistancePartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRemoteAssistancePartner);
     }
 
@@ -106,6 +106,27 @@ public class RemoteAssistancePartnerCollectionRequest extends BaseCollectionRequ
         return (RemoteAssistancePartnerCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRemoteAssistancePartnerCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RemoteAssistancePartnerCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRemoteAssistancePartnerCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRemoteAssistancePartnerCollectionRequest)this;
+    }
     public IRemoteAssistancePartnerCollectionPage buildFromResponse(final RemoteAssistancePartnerCollectionResponse response) {
         final IRemoteAssistancePartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {

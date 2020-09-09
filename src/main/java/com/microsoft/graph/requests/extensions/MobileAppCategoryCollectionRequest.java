@@ -62,14 +62,14 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
     public void post(final MobileAppCategory newMobileAppCategory, final ICallback<MobileAppCategory> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppCategory, callback);
     }
 
     public MobileAppCategory post(final MobileAppCategory newMobileAppCategory) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppCategoryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppCategory);
     }
 
@@ -106,6 +106,27 @@ public class MobileAppCategoryCollectionRequest extends BaseCollectionRequest<Mo
         return (MobileAppCategoryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppCategoryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppCategoryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppCategoryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppCategoryCollectionRequest)this;
+    }
     public IMobileAppCategoryCollectionPage buildFromResponse(final MobileAppCategoryCollectionResponse response) {
         final IMobileAppCategoryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

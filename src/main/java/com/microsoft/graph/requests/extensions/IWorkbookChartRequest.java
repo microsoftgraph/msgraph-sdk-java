@@ -80,6 +80,23 @@ public interface IWorkbookChartRequest extends IHttpRequest {
     WorkbookChart post(final WorkbookChart newWorkbookChart) throws ClientException;
 
     /**
+     * Posts a WorkbookChart with a new object
+     *
+     * @param newWorkbookChart the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WorkbookChart newWorkbookChart, final ICallback<WorkbookChart> callback);
+
+    /**
+     * Posts a WorkbookChart with a new object
+     *
+     * @param newWorkbookChart the object to create/update
+     * @return the created WorkbookChart
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WorkbookChart put(final WorkbookChart newWorkbookChart) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface IDirectoryAuditRequest extends IHttpRequest {
     DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException;
 
     /**
+     * Posts a DirectoryAudit with a new object
+     *
+     * @param newDirectoryAudit the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback);
+
+    /**
+     * Posts a DirectoryAudit with a new object
+     *
+     * @param newDirectoryAudit the object to create/update
+     * @return the created DirectoryAudit
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DirectoryAudit put(final DirectoryAudit newDirectoryAudit) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

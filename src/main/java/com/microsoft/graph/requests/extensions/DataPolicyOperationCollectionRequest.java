@@ -61,14 +61,14 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
     public void post(final DataPolicyOperation newDataPolicyOperation, final ICallback<DataPolicyOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataPolicyOperation, callback);
     }
 
     public DataPolicyOperation post(final DataPolicyOperation newDataPolicyOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DataPolicyOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDataPolicyOperation);
     }
 
@@ -105,6 +105,27 @@ public class DataPolicyOperationCollectionRequest extends BaseCollectionRequest<
         return (DataPolicyOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDataPolicyOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DataPolicyOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDataPolicyOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDataPolicyOperationCollectionRequest)this;
+    }
     public IDataPolicyOperationCollectionPage buildFromResponse(final DataPolicyOperationCollectionResponse response) {
         final IDataPolicyOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

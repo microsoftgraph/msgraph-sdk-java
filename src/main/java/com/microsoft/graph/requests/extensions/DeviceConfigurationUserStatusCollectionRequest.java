@@ -62,14 +62,14 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
     public void post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus, final ICallback<DeviceConfigurationUserStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationUserStatus, callback);
     }
 
     public DeviceConfigurationUserStatus post(final DeviceConfigurationUserStatus newDeviceConfigurationUserStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceConfigurationUserStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceConfigurationUserStatus);
     }
 
@@ -106,6 +106,27 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
         return (DeviceConfigurationUserStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceConfigurationUserStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceConfigurationUserStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceConfigurationUserStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceConfigurationUserStatusCollectionRequest)this;
+    }
     public IDeviceConfigurationUserStatusCollectionPage buildFromResponse(final DeviceConfigurationUserStatusCollectionResponse response) {
         final IDeviceConfigurationUserStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

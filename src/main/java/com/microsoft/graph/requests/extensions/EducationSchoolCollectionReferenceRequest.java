@@ -40,7 +40,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         new EducationSchoolWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newEducationSchool, body, callback);
     }
 
@@ -48,7 +48,7 @@ public class EducationSchoolCollectionReferenceRequest extends BaseCollectionReq
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/education/schools/" + newEducationSchool.id);
         return new EducationSchoolWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
-                .buildRequest(getBaseRequest().getOptions())
+                .buildRequest(getBaseRequest().getHeaders())
                 .post(newEducationSchool, body);
     }
     /**

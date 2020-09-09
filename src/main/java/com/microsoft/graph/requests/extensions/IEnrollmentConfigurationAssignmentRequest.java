@@ -80,6 +80,23 @@ public interface IEnrollmentConfigurationAssignmentRequest extends IHttpRequest 
     EnrollmentConfigurationAssignment post(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException;
 
     /**
+     * Posts a EnrollmentConfigurationAssignment with a new object
+     *
+     * @param newEnrollmentConfigurationAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment, final ICallback<EnrollmentConfigurationAssignment> callback);
+
+    /**
+     * Posts a EnrollmentConfigurationAssignment with a new object
+     *
+     * @param newEnrollmentConfigurationAssignment the object to create/update
+     * @return the created EnrollmentConfigurationAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EnrollmentConfigurationAssignment put(final EnrollmentConfigurationAssignment newEnrollmentConfigurationAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

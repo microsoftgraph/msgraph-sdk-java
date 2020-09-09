@@ -80,6 +80,23 @@ public interface IManagedDeviceMobileAppConfigurationRequest extends IHttpReques
     ManagedDeviceMobileAppConfiguration post(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration) throws ClientException;
 
     /**
+     * Posts a ManagedDeviceMobileAppConfiguration with a new object
+     *
+     * @param newManagedDeviceMobileAppConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration, final ICallback<ManagedDeviceMobileAppConfiguration> callback);
+
+    /**
+     * Posts a ManagedDeviceMobileAppConfiguration with a new object
+     *
+     * @param newManagedDeviceMobileAppConfiguration the object to create/update
+     * @return the created ManagedDeviceMobileAppConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedDeviceMobileAppConfiguration put(final ManagedDeviceMobileAppConfiguration newManagedDeviceMobileAppConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

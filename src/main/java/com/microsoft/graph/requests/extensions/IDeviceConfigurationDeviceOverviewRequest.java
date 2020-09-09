@@ -80,6 +80,23 @@ public interface IDeviceConfigurationDeviceOverviewRequest extends IHttpRequest 
     DeviceConfigurationDeviceOverview post(final DeviceConfigurationDeviceOverview newDeviceConfigurationDeviceOverview) throws ClientException;
 
     /**
+     * Posts a DeviceConfigurationDeviceOverview with a new object
+     *
+     * @param newDeviceConfigurationDeviceOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceConfigurationDeviceOverview newDeviceConfigurationDeviceOverview, final ICallback<DeviceConfigurationDeviceOverview> callback);
+
+    /**
+     * Posts a DeviceConfigurationDeviceOverview with a new object
+     *
+     * @param newDeviceConfigurationDeviceOverview the object to create/update
+     * @return the created DeviceConfigurationDeviceOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceConfigurationDeviceOverview put(final DeviceConfigurationDeviceOverview newDeviceConfigurationDeviceOverview) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

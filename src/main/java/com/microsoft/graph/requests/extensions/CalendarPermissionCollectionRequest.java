@@ -62,14 +62,14 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
     public void post(final CalendarPermission newCalendarPermission, final ICallback<CalendarPermission> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCalendarPermission, callback);
     }
 
     public CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new CalendarPermissionRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newCalendarPermission);
     }
 
@@ -106,6 +106,27 @@ public class CalendarPermissionCollectionRequest extends BaseCollectionRequest<C
         return (CalendarPermissionCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ICalendarPermissionCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (CalendarPermissionCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ICalendarPermissionCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ICalendarPermissionCollectionRequest)this;
+    }
     public ICalendarPermissionCollectionPage buildFromResponse(final CalendarPermissionCollectionResponse response) {
         final ICalendarPermissionCollectionRequestBuilder builder;
         if (response.nextLink != null) {

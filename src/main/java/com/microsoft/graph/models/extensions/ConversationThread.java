@@ -98,6 +98,8 @@ public class ConversationThread extends Entity implements IJsonBackedObject {
      * The Posts.
      * Read-only. Nullable.
      */
+    @SerializedName("posts")
+    @Expose
     public PostCollectionPage posts;
 
 

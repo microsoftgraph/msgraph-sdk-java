@@ -127,6 +127,27 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
     }
 
     /**
+     * Creates a Operation with a new object
+     *
+     * @param newOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Operation newOperation, final ICallback<Operation> callback) {
+        send(HttpMethod.PUT, callback, newOperation);
+    }
+
+    /**
+     * Creates a Operation with a new object
+     *
+     * @param newOperation the object to create/update
+     * @return the created Operation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Operation put(final Operation newOperation) throws ClientException {
+        return send(HttpMethod.PUT, newOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

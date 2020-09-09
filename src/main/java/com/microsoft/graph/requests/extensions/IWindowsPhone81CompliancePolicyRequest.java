@@ -80,6 +80,23 @@ public interface IWindowsPhone81CompliancePolicyRequest extends IHttpRequest {
     WindowsPhone81CompliancePolicy post(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81CompliancePolicy with a new object
+     *
+     * @param newWindowsPhone81CompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy, final ICallback<WindowsPhone81CompliancePolicy> callback);
+
+    /**
+     * Posts a WindowsPhone81CompliancePolicy with a new object
+     *
+     * @param newWindowsPhone81CompliancePolicy the object to create/update
+     * @return the created WindowsPhone81CompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81CompliancePolicy put(final WindowsPhone81CompliancePolicy newWindowsPhone81CompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

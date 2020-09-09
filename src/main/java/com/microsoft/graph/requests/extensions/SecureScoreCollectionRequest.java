@@ -62,14 +62,14 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
     public void post(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScore, callback);
     }
 
     public SecureScore post(final SecureScore newSecureScore) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScore);
     }
 
@@ -106,6 +106,27 @@ public class SecureScoreCollectionRequest extends BaseCollectionRequest<SecureSc
         return (SecureScoreCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecureScoreCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecureScoreCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecureScoreCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecureScoreCollectionRequest)this;
+    }
     public ISecureScoreCollectionPage buildFromResponse(final SecureScoreCollectionResponse response) {
         final ISecureScoreCollectionRequestBuilder builder;
         if (response.nextLink != null) {

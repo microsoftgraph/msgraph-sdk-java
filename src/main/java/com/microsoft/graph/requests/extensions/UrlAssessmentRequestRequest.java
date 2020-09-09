@@ -112,6 +112,27 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
     }
 
     /**
+     * Creates a UrlAssessmentRequest with a new object
+     *
+     * @param newUrlAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<UrlAssessmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newUrlAssessmentRequest);
+    }
+
+    /**
+     * Creates a UrlAssessmentRequest with a new object
+     *
+     * @param newUrlAssessmentRequest the object to create/update
+     * @return the created UrlAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public UrlAssessmentRequest put(final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newUrlAssessmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

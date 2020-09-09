@@ -62,14 +62,14 @@ public class RoomCollectionRequest extends BaseCollectionRequest<RoomCollectionR
     public void post(final Room newRoom, final ICallback<Room> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoom, callback);
     }
 
     public Room post(final Room newRoom) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoomRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoom);
     }
 
@@ -106,6 +106,27 @@ public class RoomCollectionRequest extends BaseCollectionRequest<RoomCollectionR
         return (RoomCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRoomCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RoomCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRoomCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRoomCollectionRequest)this;
+    }
     public IRoomCollectionPage buildFromResponse(final RoomCollectionResponse response) {
         final IRoomCollectionRequestBuilder builder;
         if (response.nextLink != null) {

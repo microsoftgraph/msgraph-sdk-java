@@ -112,6 +112,27 @@ public class DeviceComplianceSettingStateRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a DeviceComplianceSettingState with a new object
+     *
+     * @param newDeviceComplianceSettingState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceSettingState);
+    }
+
+    /**
+     * Creates a DeviceComplianceSettingState with a new object
+     *
+     * @param newDeviceComplianceSettingState the object to create/update
+     * @return the created DeviceComplianceSettingState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceSettingState put(final DeviceComplianceSettingState newDeviceComplianceSettingState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceSettingState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

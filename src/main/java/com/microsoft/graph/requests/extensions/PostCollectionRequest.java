@@ -63,14 +63,14 @@ public class PostCollectionRequest extends BaseCollectionRequest<PostCollectionR
     public void post(final Post newPost, final ICallback<Post> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPost, callback);
     }
 
     public Post post(final Post newPost) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new PostRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newPost);
     }
 
@@ -107,6 +107,27 @@ public class PostCollectionRequest extends BaseCollectionRequest<PostCollectionR
         return (PostCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IPostCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (PostCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IPostCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IPostCollectionRequest)this;
+    }
     public IPostCollectionPage buildFromResponse(final PostCollectionResponse response) {
         final IPostCollectionRequestBuilder builder;
         if (response.nextLink != null) {

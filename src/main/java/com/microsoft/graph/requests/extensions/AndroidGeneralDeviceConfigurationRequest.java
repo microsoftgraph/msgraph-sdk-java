@@ -112,6 +112,27 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
     }
 
     /**
+     * Creates a AndroidGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<AndroidGeneralDeviceConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidGeneralDeviceConfiguration);
+    }
+
+    /**
+     * Creates a AndroidGeneralDeviceConfiguration with a new object
+     *
+     * @param newAndroidGeneralDeviceConfiguration the object to create/update
+     * @return the created AndroidGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidGeneralDeviceConfiguration put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidGeneralDeviceConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

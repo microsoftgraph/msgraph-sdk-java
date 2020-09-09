@@ -112,6 +112,27 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a DeviceComplianceDeviceOverview with a new object
+     *
+     * @param newDeviceComplianceDeviceOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<DeviceComplianceDeviceOverview> callback) {
+        send(HttpMethod.PUT, callback, newDeviceComplianceDeviceOverview);
+    }
+
+    /**
+     * Creates a DeviceComplianceDeviceOverview with a new object
+     *
+     * @param newDeviceComplianceDeviceOverview the object to create/update
+     * @return the created DeviceComplianceDeviceOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceComplianceDeviceOverview put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceComplianceDeviceOverview);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
     public void post(final SecureScoreControlProfile newSecureScoreControlProfile, final ICallback<SecureScoreControlProfile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScoreControlProfile, callback);
     }
 
     public SecureScoreControlProfile post(final SecureScoreControlProfile newSecureScoreControlProfile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SecureScoreControlProfileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSecureScoreControlProfile);
     }
 
@@ -106,6 +106,27 @@ public class SecureScoreControlProfileCollectionRequest extends BaseCollectionRe
         return (SecureScoreControlProfileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISecureScoreControlProfileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SecureScoreControlProfileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISecureScoreControlProfileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISecureScoreControlProfileCollectionRequest)this;
+    }
     public ISecureScoreControlProfileCollectionPage buildFromResponse(final SecureScoreControlProfileCollectionResponse response) {
         final ISecureScoreControlProfileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

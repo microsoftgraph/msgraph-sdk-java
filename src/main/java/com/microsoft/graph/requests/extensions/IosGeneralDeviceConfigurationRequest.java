@@ -112,6 +112,27 @@ public class IosGeneralDeviceConfigurationRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a IosGeneralDeviceConfiguration with a new object
+     *
+     * @param newIosGeneralDeviceConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration, final ICallback<IosGeneralDeviceConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newIosGeneralDeviceConfiguration);
+    }
+
+    /**
+     * Creates a IosGeneralDeviceConfiguration with a new object
+     *
+     * @param newIosGeneralDeviceConfiguration the object to create/update
+     * @return the created IosGeneralDeviceConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public IosGeneralDeviceConfiguration put(final IosGeneralDeviceConfiguration newIosGeneralDeviceConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newIosGeneralDeviceConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

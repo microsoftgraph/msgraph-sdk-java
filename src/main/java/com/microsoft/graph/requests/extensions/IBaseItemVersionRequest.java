@@ -80,6 +80,23 @@ public interface IBaseItemVersionRequest extends IHttpRequest {
     BaseItemVersion post(final BaseItemVersion newBaseItemVersion) throws ClientException;
 
     /**
+     * Posts a BaseItemVersion with a new object
+     *
+     * @param newBaseItemVersion the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final BaseItemVersion newBaseItemVersion, final ICallback<BaseItemVersion> callback);
+
+    /**
+     * Posts a BaseItemVersion with a new object
+     *
+     * @param newBaseItemVersion the object to create/update
+     * @return the created BaseItemVersion
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    BaseItemVersion put(final BaseItemVersion newBaseItemVersion) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

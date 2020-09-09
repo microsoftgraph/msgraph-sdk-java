@@ -112,6 +112,27 @@ public class ManagedMobileAppRequest extends BaseRequest implements IManagedMobi
     }
 
     /**
+     * Creates a ManagedMobileApp with a new object
+     *
+     * @param newManagedMobileApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedMobileApp newManagedMobileApp, final ICallback<ManagedMobileApp> callback) {
+        send(HttpMethod.PUT, callback, newManagedMobileApp);
+    }
+
+    /**
+     * Creates a ManagedMobileApp with a new object
+     *
+     * @param newManagedMobileApp the object to create/update
+     * @return the created ManagedMobileApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedMobileApp put(final ManagedMobileApp newManagedMobileApp) throws ClientException {
+        return send(HttpMethod.PUT, newManagedMobileApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
     public void post(final WorkbookComment newWorkbookComment, final ICallback<WorkbookComment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookComment, callback);
     }
 
     public WorkbookComment post(final WorkbookComment newWorkbookComment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookCommentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookComment);
     }
 
@@ -106,6 +106,27 @@ public class WorkbookCommentCollectionRequest extends BaseCollectionRequest<Work
         return (WorkbookCommentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookCommentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookCommentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookCommentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookCommentCollectionRequest)this;
+    }
     public IWorkbookCommentCollectionPage buildFromResponse(final WorkbookCommentCollectionResponse response) {
         final IWorkbookCommentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

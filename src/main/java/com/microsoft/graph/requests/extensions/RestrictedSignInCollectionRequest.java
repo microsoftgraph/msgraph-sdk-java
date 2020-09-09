@@ -62,14 +62,14 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
     public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<RestrictedSignIn> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRestrictedSignIn, callback);
     }
 
     public RestrictedSignIn post(final RestrictedSignIn newRestrictedSignIn) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RestrictedSignInRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRestrictedSignIn);
     }
 
@@ -106,6 +106,27 @@ public class RestrictedSignInCollectionRequest extends BaseCollectionRequest<Res
         return (RestrictedSignInCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRestrictedSignInCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RestrictedSignInCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRestrictedSignInCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRestrictedSignInCollectionRequest)this;
+    }
     public IRestrictedSignInCollectionPage buildFromResponse(final RestrictedSignInCollectionResponse response) {
         final IRestrictedSignInCollectionRequestBuilder builder;
         if (response.nextLink != null) {

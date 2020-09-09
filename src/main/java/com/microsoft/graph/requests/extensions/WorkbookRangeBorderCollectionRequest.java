@@ -62,14 +62,14 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
     public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<WorkbookRangeBorder> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookRangeBorder, callback);
     }
 
     public WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookRangeBorderRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookRangeBorder);
     }
 
@@ -106,6 +106,27 @@ public class WorkbookRangeBorderCollectionRequest extends BaseCollectionRequest<
         return (WorkbookRangeBorderCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookRangeBorderCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookRangeBorderCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookRangeBorderCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookRangeBorderCollectionRequest)this;
+    }
     public IWorkbookRangeBorderCollectionPage buildFromResponse(final WorkbookRangeBorderCollectionResponse response) {
         final IWorkbookRangeBorderCollectionRequestBuilder builder;
         if (response.nextLink != null) {

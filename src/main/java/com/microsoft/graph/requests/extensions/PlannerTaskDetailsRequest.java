@@ -112,6 +112,27 @@ public class PlannerTaskDetailsRequest extends BaseRequest implements IPlannerTa
     }
 
     /**
+     * Creates a PlannerTaskDetails with a new object
+     *
+     * @param newPlannerTaskDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerTaskDetails newPlannerTaskDetails, final ICallback<PlannerTaskDetails> callback) {
+        send(HttpMethod.PUT, callback, newPlannerTaskDetails);
+    }
+
+    /**
+     * Creates a PlannerTaskDetails with a new object
+     *
+     * @param newPlannerTaskDetails the object to create/update
+     * @return the created PlannerTaskDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerTaskDetails put(final PlannerTaskDetails newPlannerTaskDetails) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerTaskDetails);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

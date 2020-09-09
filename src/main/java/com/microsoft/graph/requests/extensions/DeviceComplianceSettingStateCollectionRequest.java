@@ -62,14 +62,14 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
     public void post(final DeviceComplianceSettingState newDeviceComplianceSettingState, final ICallback<DeviceComplianceSettingState> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceSettingState, callback);
     }
 
     public DeviceComplianceSettingState post(final DeviceComplianceSettingState newDeviceComplianceSettingState) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceComplianceSettingStateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceComplianceSettingState);
     }
 
@@ -106,6 +106,27 @@ public class DeviceComplianceSettingStateCollectionRequest extends BaseCollectio
         return (DeviceComplianceSettingStateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceComplianceSettingStateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceComplianceSettingStateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceComplianceSettingStateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceComplianceSettingStateCollectionRequest)this;
+    }
     public IDeviceComplianceSettingStateCollectionPage buildFromResponse(final DeviceComplianceSettingStateCollectionResponse response) {
         final IDeviceComplianceSettingStateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

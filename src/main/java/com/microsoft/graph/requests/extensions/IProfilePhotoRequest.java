@@ -80,6 +80,23 @@ public interface IProfilePhotoRequest extends IHttpRequest {
     ProfilePhoto post(final ProfilePhoto newProfilePhoto) throws ClientException;
 
     /**
+     * Posts a ProfilePhoto with a new object
+     *
+     * @param newProfilePhoto the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ProfilePhoto newProfilePhoto, final ICallback<ProfilePhoto> callback);
+
+    /**
+     * Posts a ProfilePhoto with a new object
+     *
+     * @param newProfilePhoto the object to create/update
+     * @return the created ProfilePhoto
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ProfilePhoto put(final ProfilePhoto newProfilePhoto) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

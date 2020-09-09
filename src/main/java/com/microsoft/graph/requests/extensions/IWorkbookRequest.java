@@ -80,6 +80,23 @@ public interface IWorkbookRequest extends IHttpRequest {
     Workbook post(final Workbook newWorkbook) throws ClientException;
 
     /**
+     * Posts a Workbook with a new object
+     *
+     * @param newWorkbook the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Workbook newWorkbook, final ICallback<Workbook> callback);
+
+    /**
+     * Posts a Workbook with a new object
+     *
+     * @param newWorkbook the object to create/update
+     * @return the created Workbook
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Workbook put(final Workbook newWorkbook) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

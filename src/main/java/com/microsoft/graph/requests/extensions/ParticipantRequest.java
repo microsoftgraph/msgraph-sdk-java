@@ -115,6 +115,27 @@ public class ParticipantRequest extends BaseRequest implements IParticipantReque
     }
 
     /**
+     * Creates a Participant with a new object
+     *
+     * @param newParticipant the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Participant newParticipant, final ICallback<Participant> callback) {
+        send(HttpMethod.PUT, callback, newParticipant);
+    }
+
+    /**
+     * Creates a Participant with a new object
+     *
+     * @param newParticipant the object to create/update
+     * @return the created Participant
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Participant put(final Participant newParticipant) throws ClientException {
+        return send(HttpMethod.PUT, newParticipant);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

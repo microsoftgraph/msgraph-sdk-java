@@ -13,6 +13,8 @@ import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.microsoft.graph.logger.DefaultLogger;
 import com.microsoft.graph.models.extensions.Drive;
+import com.microsoft.graph.models.extensions.DriveItemCreateUploadSessionBody;
+import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.models.extensions.PlannerAssignment;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
@@ -55,6 +57,17 @@ public class AdditionalDataTests {
 		
 		assertEquals("{\"manager\":{\"id\":\"1\",\"additionalData\":\"additionalValue\"},\"id\":\"2\"}", serializedObject);
 	}
+
+	@Test 
+	public void testPropsAdditionalDataOnNonIJSONObjects() {
+		final DriveItemUploadableProperties upProps = new DriveItemUploadableProperties();
+        upProps.name = "vacation.gif";
+		upProps.additionalDataManager().put("@microsoft.graph.conflictBehavior", new JsonPrimitive("rename"));
+		final DriveItemCreateUploadSessionBody body = new DriveItemCreateUploadSessionBody();
+		body.item = upProps;
+		String serializedObject = serializer.serializeObject(body);
+		assertEquals("{\"item\":{\"name\":\"vacation.gif\"},\"@microsoft.graph.conflictBehavior\":\"rename\"}", serializedObject);
+	}
 	
 	@Test
 	public void testHashMapChildAnnotationData() {
@@ -93,8 +106,7 @@ public class AdditionalDataTests {
 		
 		String serialized = serializer.serializeObject(deserializedObject);
 		
-		JsonParser parser = new JsonParser();
-		JsonObject jsonObject = parser.parse(serialized).getAsJsonObject();
+		JsonObject jsonObject = JsonParser.parseString(serialized).getAsJsonObject();
 		assertNotNull(jsonObject.get("checklist").getAsJsonObject().get("1234"));
 		assertNull(jsonObject.get("checklist").getAsJsonObject().get("1234").getAsJsonObject().get("1234"));
 		assertNull(jsonObject.get("checklist").getAsJsonObject().get("1234").getAsJsonObject().get("66442"));

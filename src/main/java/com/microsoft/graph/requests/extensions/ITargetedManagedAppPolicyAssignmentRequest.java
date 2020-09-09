@@ -80,6 +80,23 @@ public interface ITargetedManagedAppPolicyAssignmentRequest extends IHttpRequest
     TargetedManagedAppPolicyAssignment post(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException;
 
     /**
+     * Posts a TargetedManagedAppPolicyAssignment with a new object
+     *
+     * @param newTargetedManagedAppPolicyAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment, final ICallback<TargetedManagedAppPolicyAssignment> callback);
+
+    /**
+     * Posts a TargetedManagedAppPolicyAssignment with a new object
+     *
+     * @param newTargetedManagedAppPolicyAssignment the object to create/update
+     * @return the created TargetedManagedAppPolicyAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TargetedManagedAppPolicyAssignment put(final TargetedManagedAppPolicyAssignment newTargetedManagedAppPolicyAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

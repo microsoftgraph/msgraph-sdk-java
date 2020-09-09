@@ -112,6 +112,27 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
     }
 
     /**
+     * Creates a WorkbookCommentReply with a new object
+     *
+     * @param newWorkbookCommentReply the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<WorkbookCommentReply> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookCommentReply);
+    }
+
+    /**
+     * Creates a WorkbookCommentReply with a new object
+     *
+     * @param newWorkbookCommentReply the object to create/update
+     * @return the created WorkbookCommentReply
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookCommentReply put(final WorkbookCommentReply newWorkbookCommentReply) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookCommentReply);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

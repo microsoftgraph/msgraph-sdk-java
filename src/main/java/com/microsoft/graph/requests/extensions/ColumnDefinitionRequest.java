@@ -112,6 +112,27 @@ public class ColumnDefinitionRequest extends BaseRequest implements IColumnDefin
     }
 
     /**
+     * Creates a ColumnDefinition with a new object
+     *
+     * @param newColumnDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ColumnDefinition newColumnDefinition, final ICallback<ColumnDefinition> callback) {
+        send(HttpMethod.PUT, callback, newColumnDefinition);
+    }
+
+    /**
+     * Creates a ColumnDefinition with a new object
+     *
+     * @param newColumnDefinition the object to create/update
+     * @return the created ColumnDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ColumnDefinition put(final ColumnDefinition newColumnDefinition) throws ClientException {
+        return send(HttpMethod.PUT, newColumnDefinition);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

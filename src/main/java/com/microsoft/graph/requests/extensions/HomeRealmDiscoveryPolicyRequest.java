@@ -112,6 +112,27 @@ public class HomeRealmDiscoveryPolicyRequest extends BaseRequest implements IHom
     }
 
     /**
+     * Creates a HomeRealmDiscoveryPolicy with a new object
+     *
+     * @param newHomeRealmDiscoveryPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback) {
+        send(HttpMethod.PUT, callback, newHomeRealmDiscoveryPolicy);
+    }
+
+    /**
+     * Creates a HomeRealmDiscoveryPolicy with a new object
+     *
+     * @param newHomeRealmDiscoveryPolicy the object to create/update
+     * @return the created HomeRealmDiscoveryPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public HomeRealmDiscoveryPolicy put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newHomeRealmDiscoveryPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

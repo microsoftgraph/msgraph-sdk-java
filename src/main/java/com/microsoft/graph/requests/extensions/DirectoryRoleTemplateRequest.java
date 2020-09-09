@@ -112,6 +112,27 @@ public class DirectoryRoleTemplateRequest extends BaseRequest implements IDirect
     }
 
     /**
+     * Creates a DirectoryRoleTemplate with a new object
+     *
+     * @param newDirectoryRoleTemplate the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
+        send(HttpMethod.PUT, callback, newDirectoryRoleTemplate);
+    }
+
+    /**
+     * Creates a DirectoryRoleTemplate with a new object
+     *
+     * @param newDirectoryRoleTemplate the object to create/update
+     * @return the created DirectoryRoleTemplate
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DirectoryRoleTemplate put(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException {
+        return send(HttpMethod.PUT, newDirectoryRoleTemplate);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

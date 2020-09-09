@@ -131,6 +131,27 @@ public class PostRequest extends BaseRequest implements IPostRequest {
     }
 
     /**
+     * Creates a Post with a new object
+     *
+     * @param newPost the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Post newPost, final ICallback<Post> callback) {
+        send(HttpMethod.PUT, callback, newPost);
+    }
+
+    /**
+     * Creates a Post with a new object
+     *
+     * @param newPost the object to create/update
+     * @return the created Post
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Post put(final Post newPost) throws ClientException {
+        return send(HttpMethod.PUT, newPost);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

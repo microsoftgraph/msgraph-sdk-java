@@ -112,6 +112,27 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummaryRequest extends Bas
     }
 
     /**
+     * Creates a ManagedDeviceMobileAppConfigurationDeviceSummary with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationDeviceSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary, final ICallback<ManagedDeviceMobileAppConfigurationDeviceSummary> callback) {
+        send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationDeviceSummary);
+    }
+
+    /**
+     * Creates a ManagedDeviceMobileAppConfigurationDeviceSummary with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationDeviceSummary the object to create/update
+     * @return the created ManagedDeviceMobileAppConfigurationDeviceSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedDeviceMobileAppConfigurationDeviceSummary put(final ManagedDeviceMobileAppConfigurationDeviceSummary newManagedDeviceMobileAppConfigurationDeviceSummary) throws ClientException {
+        return send(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationDeviceSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

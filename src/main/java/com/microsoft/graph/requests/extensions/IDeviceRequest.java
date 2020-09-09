@@ -80,6 +80,23 @@ public interface IDeviceRequest extends IHttpRequest {
     Device post(final Device newDevice) throws ClientException;
 
     /**
+     * Posts a Device with a new object
+     *
+     * @param newDevice the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Device newDevice, final ICallback<Device> callback);
+
+    /**
+     * Posts a Device with a new object
+     *
+     * @param newDevice the object to create/update
+     * @return the created Device
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Device put(final Device newDevice) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -80,6 +80,23 @@ public interface ITeamsAppDefinitionRequest extends IHttpRequest {
     TeamsAppDefinition post(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException;
 
     /**
+     * Posts a TeamsAppDefinition with a new object
+     *
+     * @param newTeamsAppDefinition the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsAppDefinition newTeamsAppDefinition, final ICallback<TeamsAppDefinition> callback);
+
+    /**
+     * Posts a TeamsAppDefinition with a new object
+     *
+     * @param newTeamsAppDefinition the object to create/update
+     * @return the created TeamsAppDefinition
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsAppDefinition put(final TeamsAppDefinition newTeamsAppDefinition) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

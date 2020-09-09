@@ -61,14 +61,14 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
     public void post(final DirectoryRoleTemplate newDirectoryRoleTemplate, final ICallback<DirectoryRoleTemplate> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryRoleTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryRoleTemplate, callback);
     }
 
     public DirectoryRoleTemplate post(final DirectoryRoleTemplate newDirectoryRoleTemplate) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryRoleTemplateRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryRoleTemplate);
     }
 
@@ -105,6 +105,27 @@ public class DirectoryRoleTemplateCollectionRequest extends BaseCollectionReques
         return (DirectoryRoleTemplateCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDirectoryRoleTemplateCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DirectoryRoleTemplateCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDirectoryRoleTemplateCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDirectoryRoleTemplateCollectionRequest)this;
+    }
     public IDirectoryRoleTemplateCollectionPage buildFromResponse(final DirectoryRoleTemplateCollectionResponse response) {
         final IDirectoryRoleTemplateCollectionRequestBuilder builder;
         if (response.nextLink != null) {

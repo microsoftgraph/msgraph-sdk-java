@@ -80,6 +80,23 @@ public interface IPlannerRequest extends IHttpRequest {
     Planner post(final Planner newPlanner) throws ClientException;
 
     /**
+     * Posts a Planner with a new object
+     *
+     * @param newPlanner the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Planner newPlanner, final ICallback<Planner> callback);
+
+    /**
+     * Posts a Planner with a new object
+     *
+     * @param newPlanner the object to create/update
+     * @return the created Planner
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Planner put(final Planner newPlanner) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

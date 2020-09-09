@@ -62,14 +62,14 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
     public void post(final ActivityHistoryItem newActivityHistoryItem, final ICallback<ActivityHistoryItem> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityHistoryItem, callback);
     }
 
     public ActivityHistoryItem post(final ActivityHistoryItem newActivityHistoryItem) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityHistoryItemRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityHistoryItem);
     }
 
@@ -106,6 +106,27 @@ public class ActivityHistoryItemCollectionRequest extends BaseCollectionRequest<
         return (ActivityHistoryItemCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IActivityHistoryItemCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ActivityHistoryItemCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IActivityHistoryItemCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IActivityHistoryItemCollectionRequest)this;
+    }
     public IActivityHistoryItemCollectionPage buildFromResponse(final ActivityHistoryItemCollectionResponse response) {
         final IActivityHistoryItemCollectionRequestBuilder builder;
         if (response.nextLink != null) {

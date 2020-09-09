@@ -62,14 +62,14 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
     public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<SettingStateDeviceSummary> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSettingStateDeviceSummary, callback);
     }
 
     public SettingStateDeviceSummary post(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SettingStateDeviceSummaryRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSettingStateDeviceSummary);
     }
 
@@ -106,6 +106,27 @@ public class SettingStateDeviceSummaryCollectionRequest extends BaseCollectionRe
         return (SettingStateDeviceSummaryCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISettingStateDeviceSummaryCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SettingStateDeviceSummaryCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISettingStateDeviceSummaryCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISettingStateDeviceSummaryCollectionRequest)this;
+    }
     public ISettingStateDeviceSummaryCollectionPage buildFromResponse(final SettingStateDeviceSummaryCollectionResponse response) {
         final ISettingStateDeviceSummaryCollectionRequestBuilder builder;
         if (response.nextLink != null) {

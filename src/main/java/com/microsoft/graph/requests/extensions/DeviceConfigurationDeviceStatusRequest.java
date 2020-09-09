@@ -112,6 +112,27 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
     }
 
     /**
+     * Creates a DeviceConfigurationDeviceStatus with a new object
+     *
+     * @param newDeviceConfigurationDeviceStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<DeviceConfigurationDeviceStatus> callback) {
+        send(HttpMethod.PUT, callback, newDeviceConfigurationDeviceStatus);
+    }
+
+    /**
+     * Creates a DeviceConfigurationDeviceStatus with a new object
+     *
+     * @param newDeviceConfigurationDeviceStatus the object to create/update
+     * @return the created DeviceConfigurationDeviceStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceConfigurationDeviceStatus put(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceConfigurationDeviceStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

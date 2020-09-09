@@ -112,6 +112,27 @@ public class OpenShiftRequest extends BaseRequest implements IOpenShiftRequest {
     }
 
     /**
+     * Creates a OpenShift with a new object
+     *
+     * @param newOpenShift the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OpenShift newOpenShift, final ICallback<OpenShift> callback) {
+        send(HttpMethod.PUT, callback, newOpenShift);
+    }
+
+    /**
+     * Creates a OpenShift with a new object
+     *
+     * @param newOpenShift the object to create/update
+     * @return the created OpenShift
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OpenShift put(final OpenShift newOpenShift) throws ClientException {
+        return send(HttpMethod.PUT, newOpenShift);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

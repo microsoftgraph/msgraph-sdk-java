@@ -112,6 +112,27 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
     }
 
     /**
+     * Creates a ConditionalAccessPolicy with a new object
+     *
+     * @param newConditionalAccessPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<ConditionalAccessPolicy> callback) {
+        send(HttpMethod.PUT, callback, newConditionalAccessPolicy);
+    }
+
+    /**
+     * Creates a ConditionalAccessPolicy with a new object
+     *
+     * @param newConditionalAccessPolicy the object to create/update
+     * @return the created ConditionalAccessPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ConditionalAccessPolicy put(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newConditionalAccessPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

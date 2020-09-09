@@ -80,6 +80,23 @@ public interface IDeviceComplianceUserStatusRequest extends IHttpRequest {
     DeviceComplianceUserStatus post(final DeviceComplianceUserStatus newDeviceComplianceUserStatus) throws ClientException;
 
     /**
+     * Posts a DeviceComplianceUserStatus with a new object
+     *
+     * @param newDeviceComplianceUserStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceComplianceUserStatus newDeviceComplianceUserStatus, final ICallback<DeviceComplianceUserStatus> callback);
+
+    /**
+     * Posts a DeviceComplianceUserStatus with a new object
+     *
+     * @param newDeviceComplianceUserStatus the object to create/update
+     * @return the created DeviceComplianceUserStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceComplianceUserStatus put(final DeviceComplianceUserStatus newDeviceComplianceUserStatus) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

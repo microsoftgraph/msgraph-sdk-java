@@ -80,6 +80,23 @@ public interface IMacOSCustomConfigurationRequest extends IHttpRequest {
     MacOSCustomConfiguration post(final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException;
 
     /**
+     * Posts a MacOSCustomConfiguration with a new object
+     *
+     * @param newMacOSCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback);
+
+    /**
+     * Posts a MacOSCustomConfiguration with a new object
+     *
+     * @param newMacOSCustomConfiguration the object to create/update
+     * @return the created MacOSCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MacOSCustomConfiguration put(final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

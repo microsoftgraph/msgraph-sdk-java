@@ -127,6 +127,27 @@ public class NamedLocationRequest extends BaseRequest implements INamedLocationR
     }
 
     /**
+     * Creates a NamedLocation with a new object
+     *
+     * @param newNamedLocation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final NamedLocation newNamedLocation, final ICallback<NamedLocation> callback) {
+        send(HttpMethod.PUT, callback, newNamedLocation);
+    }
+
+    /**
+     * Creates a NamedLocation with a new object
+     *
+     * @param newNamedLocation the object to create/update
+     * @return the created NamedLocation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public NamedLocation put(final NamedLocation newNamedLocation) throws ClientException {
+        return send(HttpMethod.PUT, newNamedLocation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

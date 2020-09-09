@@ -87,18 +87,24 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Assignments.
      * The collection of assignments for this compliance policy.
      */
+    @SerializedName("assignments")
+    @Expose
     public DeviceCompliancePolicyAssignmentCollectionPage assignments;
 
     /**
      * The Device Setting State Summaries.
      * Compliance Setting State Device Summary
      */
+    @SerializedName("deviceSettingStateSummaries")
+    @Expose
     public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
      * List of DeviceComplianceDeviceStatus.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public DeviceComplianceDeviceStatusCollectionPage deviceStatuses;
 
     /**
@@ -113,12 +119,16 @@ public class DeviceCompliancePolicy extends Entity implements IJsonBackedObject 
      * The Scheduled Actions For Rule.
      * The list of scheduled action for this rule
      */
+    @SerializedName("scheduledActionsForRule")
+    @Expose
     public DeviceComplianceScheduledActionForRuleCollectionPage scheduledActionsForRule;
 
     /**
      * The User Statuses.
      * List of DeviceComplianceUserStatus.
      */
+    @SerializedName("userStatuses")
+    @Expose
     public DeviceComplianceUserStatusCollectionPage userStatuses;
 
     /**

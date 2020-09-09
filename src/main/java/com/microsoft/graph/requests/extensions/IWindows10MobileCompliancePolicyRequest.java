@@ -80,6 +80,23 @@ public interface IWindows10MobileCompliancePolicyRequest extends IHttpRequest {
     Windows10MobileCompliancePolicy post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException;
 
     /**
+     * Posts a Windows10MobileCompliancePolicy with a new object
+     *
+     * @param newWindows10MobileCompliancePolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<Windows10MobileCompliancePolicy> callback);
+
+    /**
+     * Posts a Windows10MobileCompliancePolicy with a new object
+     *
+     * @param newWindows10MobileCompliancePolicy the object to create/update
+     * @return the created Windows10MobileCompliancePolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10MobileCompliancePolicy put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

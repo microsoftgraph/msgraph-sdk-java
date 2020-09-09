@@ -112,6 +112,27 @@ public class PlannerProgressTaskBoardTaskFormatRequest extends BaseRequest imple
     }
 
     /**
+     * Creates a PlannerProgressTaskBoardTaskFormat with a new object
+     *
+     * @param newPlannerProgressTaskBoardTaskFormat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat, final ICallback<PlannerProgressTaskBoardTaskFormat> callback) {
+        send(HttpMethod.PUT, callback, newPlannerProgressTaskBoardTaskFormat);
+    }
+
+    /**
+     * Creates a PlannerProgressTaskBoardTaskFormat with a new object
+     *
+     * @param newPlannerProgressTaskBoardTaskFormat the object to create/update
+     * @return the created PlannerProgressTaskBoardTaskFormat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PlannerProgressTaskBoardTaskFormat put(final PlannerProgressTaskBoardTaskFormat newPlannerProgressTaskBoardTaskFormat) throws ClientException {
+        return send(HttpMethod.PUT, newPlannerProgressTaskBoardTaskFormat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

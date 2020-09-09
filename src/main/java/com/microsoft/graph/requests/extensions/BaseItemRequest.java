@@ -129,6 +129,27 @@ public class BaseItemRequest extends BaseRequest implements IBaseItemRequest {
     }
 
     /**
+     * Creates a BaseItem with a new object
+     *
+     * @param newBaseItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final BaseItem newBaseItem, final ICallback<BaseItem> callback) {
+        send(HttpMethod.PUT, callback, newBaseItem);
+    }
+
+    /**
+     * Creates a BaseItem with a new object
+     *
+     * @param newBaseItem the object to create/update
+     * @return the created BaseItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public BaseItem put(final BaseItem newBaseItem) throws ClientException {
+        return send(HttpMethod.PUT, newBaseItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

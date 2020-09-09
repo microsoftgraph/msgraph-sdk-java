@@ -114,6 +114,27 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
     }
 
     /**
+     * Creates a WorkbookChartGridlines with a new object
+     *
+     * @param newWorkbookChartGridlines the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<WorkbookChartGridlines> callback) {
+        send(HttpMethod.PUT, callback, newWorkbookChartGridlines);
+    }
+
+    /**
+     * Creates a WorkbookChartGridlines with a new object
+     *
+     * @param newWorkbookChartGridlines the object to create/update
+     * @return the created WorkbookChartGridlines
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WorkbookChartGridlines put(final WorkbookChartGridlines newWorkbookChartGridlines) throws ClientException {
+        return send(HttpMethod.PUT, newWorkbookChartGridlines);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

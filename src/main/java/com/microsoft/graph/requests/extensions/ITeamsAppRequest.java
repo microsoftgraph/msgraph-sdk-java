@@ -80,6 +80,23 @@ public interface ITeamsAppRequest extends IHttpRequest {
     TeamsApp post(final TeamsApp newTeamsApp) throws ClientException;
 
     /**
+     * Posts a TeamsApp with a new object
+     *
+     * @param newTeamsApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final TeamsApp newTeamsApp, final ICallback<TeamsApp> callback);
+
+    /**
+     * Posts a TeamsApp with a new object
+     *
+     * @param newTeamsApp the object to create/update
+     * @return the created TeamsApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    TeamsApp put(final TeamsApp newTeamsApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

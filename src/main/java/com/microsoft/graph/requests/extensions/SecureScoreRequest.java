@@ -112,6 +112,27 @@ public class SecureScoreRequest extends BaseRequest implements ISecureScoreReque
     }
 
     /**
+     * Creates a SecureScore with a new object
+     *
+     * @param newSecureScore the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final SecureScore newSecureScore, final ICallback<SecureScore> callback) {
+        send(HttpMethod.PUT, callback, newSecureScore);
+    }
+
+    /**
+     * Creates a SecureScore with a new object
+     *
+     * @param newSecureScore the object to create/update
+     * @return the created SecureScore
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public SecureScore put(final SecureScore newSecureScore) throws ClientException {
+        return send(HttpMethod.PUT, newSecureScore);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

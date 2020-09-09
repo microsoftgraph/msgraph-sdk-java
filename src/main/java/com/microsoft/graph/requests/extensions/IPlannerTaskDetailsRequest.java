@@ -80,6 +80,23 @@ public interface IPlannerTaskDetailsRequest extends IHttpRequest {
     PlannerTaskDetails post(final PlannerTaskDetails newPlannerTaskDetails) throws ClientException;
 
     /**
+     * Posts a PlannerTaskDetails with a new object
+     *
+     * @param newPlannerTaskDetails the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final PlannerTaskDetails newPlannerTaskDetails, final ICallback<PlannerTaskDetails> callback);
+
+    /**
+     * Posts a PlannerTaskDetails with a new object
+     *
+     * @param newPlannerTaskDetails the object to create/update
+     * @return the created PlannerTaskDetails
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    PlannerTaskDetails put(final PlannerTaskDetails newPlannerTaskDetails) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

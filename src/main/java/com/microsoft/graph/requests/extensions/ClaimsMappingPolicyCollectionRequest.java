@@ -62,14 +62,14 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
     public void post(final ClaimsMappingPolicy newClaimsMappingPolicy, final ICallback<ClaimsMappingPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newClaimsMappingPolicy, callback);
     }
 
     public ClaimsMappingPolicy post(final ClaimsMappingPolicy newClaimsMappingPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ClaimsMappingPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newClaimsMappingPolicy);
     }
 
@@ -106,6 +106,27 @@ public class ClaimsMappingPolicyCollectionRequest extends BaseCollectionRequest<
         return (ClaimsMappingPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IClaimsMappingPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ClaimsMappingPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IClaimsMappingPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IClaimsMappingPolicyCollectionRequest)this;
+    }
     public IClaimsMappingPolicyCollectionPage buildFromResponse(final ClaimsMappingPolicyCollectionResponse response) {
         final IClaimsMappingPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

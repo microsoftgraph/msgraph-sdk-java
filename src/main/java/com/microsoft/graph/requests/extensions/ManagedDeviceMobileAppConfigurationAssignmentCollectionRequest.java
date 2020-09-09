@@ -62,14 +62,14 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
     public void post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment, final ICallback<ManagedDeviceMobileAppConfigurationAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceMobileAppConfigurationAssignment, callback);
     }
 
     public ManagedDeviceMobileAppConfigurationAssignment post(final ManagedDeviceMobileAppConfigurationAssignment newManagedDeviceMobileAppConfigurationAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedDeviceMobileAppConfigurationAssignment);
     }
 
@@ -106,6 +106,27 @@ public class ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest exte
         return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedDeviceMobileAppConfigurationAssignmentCollectionRequest)this;
+    }
     public IManagedDeviceMobileAppConfigurationAssignmentCollectionPage buildFromResponse(final ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse response) {
         final IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

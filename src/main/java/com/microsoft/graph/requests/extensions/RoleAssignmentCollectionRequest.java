@@ -62,14 +62,14 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
     public void post(final RoleAssignment newRoleAssignment, final ICallback<RoleAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleAssignment, callback);
     }
 
     public RoleAssignment post(final RoleAssignment newRoleAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new RoleAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newRoleAssignment);
     }
 
@@ -106,6 +106,27 @@ public class RoleAssignmentCollectionRequest extends BaseCollectionRequest<RoleA
         return (RoleAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IRoleAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (RoleAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IRoleAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IRoleAssignmentCollectionRequest)this;
+    }
     public IRoleAssignmentCollectionPage buildFromResponse(final RoleAssignmentCollectionResponse response) {
         final IRoleAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

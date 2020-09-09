@@ -80,6 +80,23 @@ public interface IOnenoteEntityBaseModelRequest extends IHttpRequest {
     OnenoteEntityBaseModel post(final OnenoteEntityBaseModel newOnenoteEntityBaseModel) throws ClientException;
 
     /**
+     * Posts a OnenoteEntityBaseModel with a new object
+     *
+     * @param newOnenoteEntityBaseModel the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel, final ICallback<OnenoteEntityBaseModel> callback);
+
+    /**
+     * Posts a OnenoteEntityBaseModel with a new object
+     *
+     * @param newOnenoteEntityBaseModel the object to create/update
+     * @return the created OnenoteEntityBaseModel
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    OnenoteEntityBaseModel put(final OnenoteEntityBaseModel newOnenoteEntityBaseModel) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

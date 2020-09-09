@@ -134,18 +134,24 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
      * The Applied Policies.
      * Zero or more policys already applied on the registered app when it last synchronized with managment service.
      */
+    @SerializedName("appliedPolicies")
+    @Expose
     public ManagedAppPolicyCollectionPage appliedPolicies;
 
     /**
      * The Intended Policies.
      * Zero or more policies admin intended for the app as of now.
      */
+    @SerializedName("intendedPolicies")
+    @Expose
     public ManagedAppPolicyCollectionPage intendedPolicies;
 
     /**
      * The Operations.
      * Zero or more long running operations triggered on the app registration.
      */
+    @SerializedName("operations")
+    @Expose
     public ManagedAppOperationCollectionPage operations;
 
 

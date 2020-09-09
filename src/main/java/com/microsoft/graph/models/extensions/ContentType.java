@@ -107,6 +107,8 @@ public class ContentType extends Entity implements IJsonBackedObject {
      * The Column Links.
      * The collection of columns that are required by this content type
      */
+    @SerializedName("columnLinks")
+    @Expose
     public ColumnLinkCollectionPage columnLinks;
 
 

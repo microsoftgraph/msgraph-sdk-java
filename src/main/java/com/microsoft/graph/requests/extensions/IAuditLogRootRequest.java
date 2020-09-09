@@ -80,6 +80,23 @@ public interface IAuditLogRootRequest extends IHttpRequest {
     AuditLogRoot post(final AuditLogRoot newAuditLogRoot) throws ClientException;
 
     /**
+     * Posts a AuditLogRoot with a new object
+     *
+     * @param newAuditLogRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AuditLogRoot newAuditLogRoot, final ICallback<AuditLogRoot> callback);
+
+    /**
+     * Posts a AuditLogRoot with a new object
+     *
+     * @param newAuditLogRoot the object to create/update
+     * @return the created AuditLogRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AuditLogRoot put(final AuditLogRoot newAuditLogRoot) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

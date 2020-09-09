@@ -62,14 +62,14 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
     public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<ManagedAppStatus> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppStatus, callback);
     }
 
     public ManagedAppStatus post(final ManagedAppStatus newManagedAppStatus) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedAppStatusRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedAppStatus);
     }
 
@@ -106,6 +106,27 @@ public class ManagedAppStatusCollectionRequest extends BaseCollectionRequest<Man
         return (ManagedAppStatusCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedAppStatusCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedAppStatusCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedAppStatusCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedAppStatusCollectionRequest)this;
+    }
     public IManagedAppStatusCollectionPage buildFromResponse(final ManagedAppStatusCollectionResponse response) {
         final IManagedAppStatusCollectionRequestBuilder builder;
         if (response.nextLink != null) {

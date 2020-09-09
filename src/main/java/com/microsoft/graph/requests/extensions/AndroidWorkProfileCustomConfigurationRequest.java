@@ -112,6 +112,27 @@ public class AndroidWorkProfileCustomConfigurationRequest extends BaseRequest im
     }
 
     /**
+     * Creates a AndroidWorkProfileCustomConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration, final ICallback<AndroidWorkProfileCustomConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidWorkProfileCustomConfiguration);
+    }
+
+    /**
+     * Creates a AndroidWorkProfileCustomConfiguration with a new object
+     *
+     * @param newAndroidWorkProfileCustomConfiguration the object to create/update
+     * @return the created AndroidWorkProfileCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidWorkProfileCustomConfiguration put(final AndroidWorkProfileCustomConfiguration newAndroidWorkProfileCustomConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidWorkProfileCustomConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

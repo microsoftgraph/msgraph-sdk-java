@@ -80,6 +80,23 @@ public interface IMobileLobAppRequest extends IHttpRequest {
     MobileLobApp post(final MobileLobApp newMobileLobApp) throws ClientException;
 
     /**
+     * Posts a MobileLobApp with a new object
+     *
+     * @param newMobileLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final MobileLobApp newMobileLobApp, final ICallback<MobileLobApp> callback);
+
+    /**
+     * Posts a MobileLobApp with a new object
+     *
+     * @param newMobileLobApp the object to create/update
+     * @return the created MobileLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    MobileLobApp put(final MobileLobApp newMobileLobApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

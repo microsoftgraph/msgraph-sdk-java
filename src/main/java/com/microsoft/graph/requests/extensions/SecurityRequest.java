@@ -124,6 +124,27 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
     }
 
     /**
+     * Creates a Security with a new object
+     *
+     * @param newSecurity the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Security newSecurity, final ICallback<Security> callback) {
+        send(HttpMethod.PUT, callback, newSecurity);
+    }
+
+    /**
+     * Creates a Security with a new object
+     *
+     * @param newSecurity the object to create/update
+     * @return the created Security
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Security put(final Security newSecurity) throws ClientException {
+        return send(HttpMethod.PUT, newSecurity);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

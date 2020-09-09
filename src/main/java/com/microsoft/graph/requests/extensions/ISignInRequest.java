@@ -80,6 +80,23 @@ public interface ISignInRequest extends IHttpRequest {
     SignIn post(final SignIn newSignIn) throws ClientException;
 
     /**
+     * Posts a SignIn with a new object
+     *
+     * @param newSignIn the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SignIn newSignIn, final ICallback<SignIn> callback);
+
+    /**
+     * Posts a SignIn with a new object
+     *
+     * @param newSignIn the object to create/update
+     * @return the created SignIn
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SignIn put(final SignIn newSignIn) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

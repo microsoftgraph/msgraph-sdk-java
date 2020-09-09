@@ -80,6 +80,23 @@ public interface IWindowsMobileMSIRequest extends IHttpRequest {
     WindowsMobileMSI post(final WindowsMobileMSI newWindowsMobileMSI) throws ClientException;
 
     /**
+     * Posts a WindowsMobileMSI with a new object
+     *
+     * @param newWindowsMobileMSI the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<WindowsMobileMSI> callback);
+
+    /**
+     * Posts a WindowsMobileMSI with a new object
+     *
+     * @param newWindowsMobileMSI the object to create/update
+     * @return the created WindowsMobileMSI
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsMobileMSI put(final WindowsMobileMSI newWindowsMobileMSI) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

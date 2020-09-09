@@ -63,14 +63,14 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
     public void post(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppContentFile, callback);
     }
 
     public MobileAppContentFile post(final MobileAppContentFile newMobileAppContentFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new MobileAppContentFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newMobileAppContentFile);
     }
 
@@ -107,6 +107,27 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
         return (MobileAppContentFileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IMobileAppContentFileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (MobileAppContentFileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IMobileAppContentFileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IMobileAppContentFileCollectionRequest)this;
+    }
     public IMobileAppContentFileCollectionPage buildFromResponse(final MobileAppContentFileCollectionResponse response) {
         final IMobileAppContentFileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

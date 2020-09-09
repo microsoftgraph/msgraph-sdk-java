@@ -62,14 +62,14 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
     public void post(final Alert newAlert, final ICallback<Alert> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAlert, callback);
     }
 
     public Alert post(final Alert newAlert) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new AlertRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newAlert);
     }
 
@@ -106,6 +106,27 @@ public class AlertCollectionRequest extends BaseCollectionRequest<AlertCollectio
         return (AlertCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IAlertCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (AlertCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IAlertCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IAlertCollectionRequest)this;
+    }
     public IAlertCollectionPage buildFromResponse(final AlertCollectionResponse response) {
         final IAlertCollectionRequestBuilder builder;
         if (response.nextLink != null) {

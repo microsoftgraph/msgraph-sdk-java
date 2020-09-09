@@ -112,6 +112,27 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
     }
 
     /**
+     * Creates a EBookInstallSummary with a new object
+     *
+     * @param newEBookInstallSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final EBookInstallSummary newEBookInstallSummary, final ICallback<EBookInstallSummary> callback) {
+        send(HttpMethod.PUT, callback, newEBookInstallSummary);
+    }
+
+    /**
+     * Creates a EBookInstallSummary with a new object
+     *
+     * @param newEBookInstallSummary the object to create/update
+     * @return the created EBookInstallSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public EBookInstallSummary put(final EBookInstallSummary newEBookInstallSummary) throws ClientException {
+        return send(HttpMethod.PUT, newEBookInstallSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

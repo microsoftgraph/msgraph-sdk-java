@@ -62,14 +62,14 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
     public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityBasedTimeoutPolicy, callback);
     }
 
     public ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ActivityBasedTimeoutPolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newActivityBasedTimeoutPolicy);
     }
 
@@ -106,6 +106,27 @@ public class ActivityBasedTimeoutPolicyCollectionRequest extends BaseCollectionR
         return (ActivityBasedTimeoutPolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IActivityBasedTimeoutPolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ActivityBasedTimeoutPolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IActivityBasedTimeoutPolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IActivityBasedTimeoutPolicyCollectionRequest)this;
+    }
     public IActivityBasedTimeoutPolicyCollectionPage buildFromResponse(final ActivityBasedTimeoutPolicyCollectionResponse response) {
         final IActivityBasedTimeoutPolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

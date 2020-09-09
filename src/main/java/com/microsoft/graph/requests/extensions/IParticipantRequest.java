@@ -80,6 +80,23 @@ public interface IParticipantRequest extends IHttpRequest {
     Participant post(final Participant newParticipant) throws ClientException;
 
     /**
+     * Posts a Participant with a new object
+     *
+     * @param newParticipant the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Participant newParticipant, final ICallback<Participant> callback);
+
+    /**
+     * Posts a Participant with a new object
+     *
+     * @param newParticipant the object to create/update
+     * @return the created Participant
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Participant put(final Participant newParticipant) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

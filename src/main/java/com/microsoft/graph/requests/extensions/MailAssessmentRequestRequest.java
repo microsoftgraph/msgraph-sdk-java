@@ -112,6 +112,27 @@ public class MailAssessmentRequestRequest extends BaseRequest implements IMailAs
     }
 
     /**
+     * Creates a MailAssessmentRequest with a new object
+     *
+     * @param newMailAssessmentRequest the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MailAssessmentRequest newMailAssessmentRequest, final ICallback<MailAssessmentRequest> callback) {
+        send(HttpMethod.PUT, callback, newMailAssessmentRequest);
+    }
+
+    /**
+     * Creates a MailAssessmentRequest with a new object
+     *
+     * @param newMailAssessmentRequest the object to create/update
+     * @return the created MailAssessmentRequest
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MailAssessmentRequest put(final MailAssessmentRequest newMailAssessmentRequest) throws ClientException {
+        return send(HttpMethod.PUT, newMailAssessmentRequest);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

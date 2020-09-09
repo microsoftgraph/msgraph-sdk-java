@@ -113,6 +113,27 @@ public class MobileAppContentFileRequest extends BaseRequest implements IMobileA
     }
 
     /**
+     * Creates a MobileAppContentFile with a new object
+     *
+     * @param newMobileAppContentFile the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MobileAppContentFile newMobileAppContentFile, final ICallback<MobileAppContentFile> callback) {
+        send(HttpMethod.PUT, callback, newMobileAppContentFile);
+    }
+
+    /**
+     * Creates a MobileAppContentFile with a new object
+     *
+     * @param newMobileAppContentFile the object to create/update
+     * @return the created MobileAppContentFile
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MobileAppContentFile put(final MobileAppContentFile newMobileAppContentFile) throws ClientException {
+        return send(HttpMethod.PUT, newMobileAppContentFile);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

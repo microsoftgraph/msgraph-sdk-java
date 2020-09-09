@@ -112,6 +112,27 @@ public class DeviceCompliancePolicyStateRequest extends BaseRequest implements I
     }
 
     /**
+     * Creates a DeviceCompliancePolicyState with a new object
+     *
+     * @param newDeviceCompliancePolicyState the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceCompliancePolicyState newDeviceCompliancePolicyState, final ICallback<DeviceCompliancePolicyState> callback) {
+        send(HttpMethod.PUT, callback, newDeviceCompliancePolicyState);
+    }
+
+    /**
+     * Creates a DeviceCompliancePolicyState with a new object
+     *
+     * @param newDeviceCompliancePolicyState the object to create/update
+     * @return the created DeviceCompliancePolicyState
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceCompliancePolicyState put(final DeviceCompliancePolicyState newDeviceCompliancePolicyState) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceCompliancePolicyState);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

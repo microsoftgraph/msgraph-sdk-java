@@ -41,6 +41,8 @@ public class RoomList extends Place implements IJsonBackedObject {
      * The Rooms.
      * Read-only. Nullable.
      */
+    @SerializedName("rooms")
+    @Expose
     public RoomCollectionPage rooms;
 
 

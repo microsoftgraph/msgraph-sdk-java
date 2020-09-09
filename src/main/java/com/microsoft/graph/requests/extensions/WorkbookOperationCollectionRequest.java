@@ -62,14 +62,14 @@ public class WorkbookOperationCollectionRequest extends BaseCollectionRequest<Wo
     public void post(final WorkbookOperation newWorkbookOperation, final ICallback<WorkbookOperation> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WorkbookOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookOperation, callback);
     }
 
     public WorkbookOperation post(final WorkbookOperation newWorkbookOperation) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WorkbookOperationRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWorkbookOperation);
     }
 
@@ -106,6 +106,27 @@ public class WorkbookOperationCollectionRequest extends BaseCollectionRequest<Wo
         return (WorkbookOperationCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWorkbookOperationCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WorkbookOperationCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWorkbookOperationCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWorkbookOperationCollectionRequest)this;
+    }
     public IWorkbookOperationCollectionPage buildFromResponse(final WorkbookOperationCollectionResponse response) {
         final IWorkbookOperationCollectionRequestBuilder builder;
         if (response.nextLink != null) {

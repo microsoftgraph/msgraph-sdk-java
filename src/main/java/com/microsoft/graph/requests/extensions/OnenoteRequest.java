@@ -136,6 +136,27 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
     }
 
     /**
+     * Creates a Onenote with a new object
+     *
+     * @param newOnenote the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Onenote newOnenote, final ICallback<Onenote> callback) {
+        send(HttpMethod.PUT, callback, newOnenote);
+    }
+
+    /**
+     * Creates a Onenote with a new object
+     *
+     * @param newOnenote the object to create/update
+     * @return the created Onenote
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Onenote put(final Onenote newOnenote) throws ClientException {
+        return send(HttpMethod.PUT, newOnenote);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

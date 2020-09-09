@@ -80,6 +80,23 @@ public interface IActivityHistoryItemRequest extends IHttpRequest {
     ActivityHistoryItem post(final ActivityHistoryItem newActivityHistoryItem) throws ClientException;
 
     /**
+     * Posts a ActivityHistoryItem with a new object
+     *
+     * @param newActivityHistoryItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ActivityHistoryItem newActivityHistoryItem, final ICallback<ActivityHistoryItem> callback);
+
+    /**
+     * Posts a ActivityHistoryItem with a new object
+     *
+     * @param newActivityHistoryItem the object to create/update
+     * @return the created ActivityHistoryItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ActivityHistoryItem put(final ActivityHistoryItem newActivityHistoryItem) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

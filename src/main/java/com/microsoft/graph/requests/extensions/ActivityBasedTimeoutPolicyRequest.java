@@ -112,6 +112,27 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
     }
 
     /**
+     * Creates a ActivityBasedTimeoutPolicy with a new object
+     *
+     * @param newActivityBasedTimeoutPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<ActivityBasedTimeoutPolicy> callback) {
+        send(HttpMethod.PUT, callback, newActivityBasedTimeoutPolicy);
+    }
+
+    /**
+     * Creates a ActivityBasedTimeoutPolicy with a new object
+     *
+     * @param newActivityBasedTimeoutPolicy the object to create/update
+     * @return the created ActivityBasedTimeoutPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ActivityBasedTimeoutPolicy put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
+        return send(HttpMethod.PUT, newActivityBasedTimeoutPolicy);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

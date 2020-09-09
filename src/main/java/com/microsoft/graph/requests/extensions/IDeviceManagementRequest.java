@@ -80,6 +80,23 @@ public interface IDeviceManagementRequest extends IHttpRequest {
     DeviceManagement post(final DeviceManagement newDeviceManagement) throws ClientException;
 
     /**
+     * Posts a DeviceManagement with a new object
+     *
+     * @param newDeviceManagement the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final DeviceManagement newDeviceManagement, final ICallback<DeviceManagement> callback);
+
+    /**
+     * Posts a DeviceManagement with a new object
+     *
+     * @param newDeviceManagement the object to create/update
+     * @return the created DeviceManagement
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    DeviceManagement put(final DeviceManagement newDeviceManagement) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

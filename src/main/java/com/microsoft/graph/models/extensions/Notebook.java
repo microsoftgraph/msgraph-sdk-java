@@ -86,12 +86,16 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
      * The Section Groups.
      * The section groups in the notebook. Read-only. Nullable.
      */
+    @SerializedName("sectionGroups")
+    @Expose
     public SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Sections.
      * The sections in the notebook. Read-only. Nullable.
      */
+    @SerializedName("sections")
+    @Expose
     public OnenoteSectionCollectionPage sections;
 
 

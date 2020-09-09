@@ -80,6 +80,23 @@ public interface IInvitationRequest extends IHttpRequest {
     Invitation post(final Invitation newInvitation) throws ClientException;
 
     /**
+     * Posts a Invitation with a new object
+     *
+     * @param newInvitation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Invitation newInvitation, final ICallback<Invitation> callback);
+
+    /**
+     * Posts a Invitation with a new object
+     *
+     * @param newInvitation the object to create/update
+     * @return the created Invitation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Invitation put(final Invitation newInvitation) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

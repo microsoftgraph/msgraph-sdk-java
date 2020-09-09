@@ -62,14 +62,14 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
     public void post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile, final ICallback<WindowsInformationProtectionAppLockerFile> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionAppLockerFile, callback);
     }
 
     public WindowsInformationProtectionAppLockerFile post(final WindowsInformationProtectionAppLockerFile newWindowsInformationProtectionAppLockerFile) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new WindowsInformationProtectionAppLockerFileRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newWindowsInformationProtectionAppLockerFile);
     }
 
@@ -106,6 +106,27 @@ public class WindowsInformationProtectionAppLockerFileCollectionRequest extends 
         return (WindowsInformationProtectionAppLockerFileCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionAppLockerFileCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (WindowsInformationProtectionAppLockerFileCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IWindowsInformationProtectionAppLockerFileCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IWindowsInformationProtectionAppLockerFileCollectionRequest)this;
+    }
     public IWindowsInformationProtectionAppLockerFileCollectionPage buildFromResponse(final WindowsInformationProtectionAppLockerFileCollectionResponse response) {
         final IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder builder;
         if (response.nextLink != null) {

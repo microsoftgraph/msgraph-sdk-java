@@ -62,14 +62,14 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
     public void post(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityStat, callback);
     }
 
     public ItemActivityStat post(final ItemActivityStat newItemActivityStat) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ItemActivityStatRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newItemActivityStat);
     }
 
@@ -106,6 +106,27 @@ public class ItemActivityStatCollectionRequest extends BaseCollectionRequest<Ite
         return (ItemActivityStatCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IItemActivityStatCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ItemActivityStatCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IItemActivityStatCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IItemActivityStatCollectionRequest)this;
+    }
     public IItemActivityStatCollectionPage buildFromResponse(final ItemActivityStatCollectionResponse response) {
         final IItemActivityStatCollectionRequestBuilder builder;
         if (response.nextLink != null) {

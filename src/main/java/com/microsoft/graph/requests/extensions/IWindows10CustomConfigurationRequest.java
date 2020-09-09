@@ -80,6 +80,23 @@ public interface IWindows10CustomConfigurationRequest extends IHttpRequest {
     Windows10CustomConfiguration post(final Windows10CustomConfiguration newWindows10CustomConfiguration) throws ClientException;
 
     /**
+     * Posts a Windows10CustomConfiguration with a new object
+     *
+     * @param newWindows10CustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Windows10CustomConfiguration newWindows10CustomConfiguration, final ICallback<Windows10CustomConfiguration> callback);
+
+    /**
+     * Posts a Windows10CustomConfiguration with a new object
+     *
+     * @param newWindows10CustomConfiguration the object to create/update
+     * @return the created Windows10CustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Windows10CustomConfiguration put(final Windows10CustomConfiguration newWindows10CustomConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

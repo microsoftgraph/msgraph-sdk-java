@@ -127,6 +127,27 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest imp
     }
 
     /**
+     * Creates a AppleDeviceFeaturesConfigurationBase with a new object
+     *
+     * @param newAppleDeviceFeaturesConfigurationBase the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase, final ICallback<AppleDeviceFeaturesConfigurationBase> callback) {
+        send(HttpMethod.PUT, callback, newAppleDeviceFeaturesConfigurationBase);
+    }
+
+    /**
+     * Creates a AppleDeviceFeaturesConfigurationBase with a new object
+     *
+     * @param newAppleDeviceFeaturesConfigurationBase the object to create/update
+     * @return the created AppleDeviceFeaturesConfigurationBase
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AppleDeviceFeaturesConfigurationBase put(final AppleDeviceFeaturesConfigurationBase newAppleDeviceFeaturesConfigurationBase) throws ClientException {
+        return send(HttpMethod.PUT, newAppleDeviceFeaturesConfigurationBase);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

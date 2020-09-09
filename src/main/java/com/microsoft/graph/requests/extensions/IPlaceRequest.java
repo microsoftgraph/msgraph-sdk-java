@@ -80,6 +80,23 @@ public interface IPlaceRequest extends IHttpRequest {
     Place post(final Place newPlace) throws ClientException;
 
     /**
+     * Posts a Place with a new object
+     *
+     * @param newPlace the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final Place newPlace, final ICallback<Place> callback);
+
+    /**
+     * Posts a Place with a new object
+     *
+     * @param newPlace the object to create/update
+     * @return the created Place
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    Place put(final Place newPlace) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -127,6 +127,27 @@ public class ExtensionRequest extends BaseRequest implements IExtensionRequest {
     }
 
     /**
+     * Creates a Extension with a new object
+     *
+     * @param newExtension the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Extension newExtension, final ICallback<Extension> callback) {
+        send(HttpMethod.PUT, callback, newExtension);
+    }
+
+    /**
+     * Creates a Extension with a new object
+     *
+     * @param newExtension the object to create/update
+     * @return the created Extension
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Extension put(final Extension newExtension) throws ClientException {
+        return send(HttpMethod.PUT, newExtension);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
     public void post(final Site newSite, final ICallback<Site> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSite, callback);
     }
 
     public Site post(final Site newSite) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SiteRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSite);
     }
 
@@ -106,6 +106,27 @@ public class SiteCollectionRequest extends BaseCollectionRequest<SiteCollectionR
         return (SiteCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISiteCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SiteCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISiteCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISiteCollectionRequest)this;
+    }
     public ISiteCollectionPage buildFromResponse(final SiteCollectionResponse response) {
         final ISiteCollectionRequestBuilder builder;
         if (response.nextLink != null) {

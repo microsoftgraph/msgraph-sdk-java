@@ -116,6 +116,27 @@ public class CalendarGroupRequest extends BaseRequest implements ICalendarGroupR
     }
 
     /**
+     * Creates a CalendarGroup with a new object
+     *
+     * @param newCalendarGroup the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CalendarGroup newCalendarGroup, final ICallback<CalendarGroup> callback) {
+        send(HttpMethod.PUT, callback, newCalendarGroup);
+    }
+
+    /**
+     * Creates a CalendarGroup with a new object
+     *
+     * @param newCalendarGroup the object to create/update
+     * @return the created CalendarGroup
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CalendarGroup put(final CalendarGroup newCalendarGroup) throws ClientException {
+        return send(HttpMethod.PUT, newCalendarGroup);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

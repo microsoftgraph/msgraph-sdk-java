@@ -116,6 +116,27 @@ public class DeviceCompliancePolicySettingStateSummaryRequest extends BaseReques
     }
 
     /**
+     * Creates a DeviceCompliancePolicySettingStateSummary with a new object
+     *
+     * @param newDeviceCompliancePolicySettingStateSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary, final ICallback<DeviceCompliancePolicySettingStateSummary> callback) {
+        send(HttpMethod.PUT, callback, newDeviceCompliancePolicySettingStateSummary);
+    }
+
+    /**
+     * Creates a DeviceCompliancePolicySettingStateSummary with a new object
+     *
+     * @param newDeviceCompliancePolicySettingStateSummary the object to create/update
+     * @return the created DeviceCompliancePolicySettingStateSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DeviceCompliancePolicySettingStateSummary put(final DeviceCompliancePolicySettingStateSummary newDeviceCompliancePolicySettingStateSummary) throws ClientException {
+        return send(HttpMethod.PUT, newDeviceCompliancePolicySettingStateSummary);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

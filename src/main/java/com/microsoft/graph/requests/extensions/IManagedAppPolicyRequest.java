@@ -80,6 +80,23 @@ public interface IManagedAppPolicyRequest extends IHttpRequest {
     ManagedAppPolicy post(final ManagedAppPolicy newManagedAppPolicy) throws ClientException;
 
     /**
+     * Posts a ManagedAppPolicy with a new object
+     *
+     * @param newManagedAppPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedAppPolicy newManagedAppPolicy, final ICallback<ManagedAppPolicy> callback);
+
+    /**
+     * Posts a ManagedAppPolicy with a new object
+     *
+     * @param newManagedAppPolicy the object to create/update
+     * @return the created ManagedAppPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedAppPolicy put(final ManagedAppPolicy newManagedAppPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

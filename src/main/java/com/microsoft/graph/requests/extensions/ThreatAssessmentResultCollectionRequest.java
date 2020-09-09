@@ -62,14 +62,14 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
     public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<ThreatAssessmentResult> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentResult, callback);
     }
 
     public ThreatAssessmentResult post(final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ThreatAssessmentResultRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newThreatAssessmentResult);
     }
 
@@ -106,6 +106,27 @@ public class ThreatAssessmentResultCollectionRequest extends BaseCollectionReque
         return (ThreatAssessmentResultCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IThreatAssessmentResultCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ThreatAssessmentResultCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IThreatAssessmentResultCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IThreatAssessmentResultCollectionRequest)this;
+    }
     public IThreatAssessmentResultCollectionPage buildFromResponse(final ThreatAssessmentResultCollectionResponse response) {
         final IThreatAssessmentResultCollectionRequestBuilder builder;
         if (response.nextLink != null) {

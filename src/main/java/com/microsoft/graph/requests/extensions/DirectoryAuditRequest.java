@@ -112,6 +112,27 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
     }
 
     /**
+     * Creates a DirectoryAudit with a new object
+     *
+     * @param newDirectoryAudit the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DirectoryAudit newDirectoryAudit, final ICallback<DirectoryAudit> callback) {
+        send(HttpMethod.PUT, callback, newDirectoryAudit);
+    }
+
+    /**
+     * Creates a DirectoryAudit with a new object
+     *
+     * @param newDirectoryAudit the object to create/update
+     * @return the created DirectoryAudit
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DirectoryAudit put(final DirectoryAudit newDirectoryAudit) throws ClientException {
+        return send(HttpMethod.PUT, newDirectoryAudit);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
     public void post(final ComplianceManagementPartner newComplianceManagementPartner, final ICallback<ComplianceManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newComplianceManagementPartner, callback);
     }
 
     public ComplianceManagementPartner post(final ComplianceManagementPartner newComplianceManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ComplianceManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newComplianceManagementPartner);
     }
 
@@ -106,6 +106,27 @@ public class ComplianceManagementPartnerCollectionRequest extends BaseCollection
         return (ComplianceManagementPartnerCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IComplianceManagementPartnerCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ComplianceManagementPartnerCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IComplianceManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IComplianceManagementPartnerCollectionRequest)this;
+    }
     public IComplianceManagementPartnerCollectionPage buildFromResponse(final ComplianceManagementPartnerCollectionResponse response) {
         final IComplianceManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {

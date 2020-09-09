@@ -62,14 +62,14 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
     public void post(final Trending newTrending, final ICallback<Trending> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrending, callback);
     }
 
     public Trending post(final Trending newTrending) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TrendingRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTrending);
     }
 
@@ -106,6 +106,27 @@ public class TrendingCollectionRequest extends BaseCollectionRequest<TrendingCol
         return (TrendingCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITrendingCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TrendingCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITrendingCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITrendingCollectionRequest)this;
+    }
     public ITrendingCollectionPage buildFromResponse(final TrendingCollectionResponse response) {
         final ITrendingCollectionRequestBuilder builder;
         if (response.nextLink != null) {

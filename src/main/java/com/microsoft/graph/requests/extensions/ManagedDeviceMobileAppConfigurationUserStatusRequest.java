@@ -112,6 +112,27 @@ public class ManagedDeviceMobileAppConfigurationUserStatusRequest extends BaseRe
     }
 
     /**
+     * Creates a ManagedDeviceMobileAppConfigurationUserStatus with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationUserStatus the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus, final ICallback<ManagedDeviceMobileAppConfigurationUserStatus> callback) {
+        send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationUserStatus);
+    }
+
+    /**
+     * Creates a ManagedDeviceMobileAppConfigurationUserStatus with a new object
+     *
+     * @param newManagedDeviceMobileAppConfigurationUserStatus the object to create/update
+     * @return the created ManagedDeviceMobileAppConfigurationUserStatus
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedDeviceMobileAppConfigurationUserStatus put(final ManagedDeviceMobileAppConfigurationUserStatus newManagedDeviceMobileAppConfigurationUserStatus) throws ClientException {
+        return send(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationUserStatus);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

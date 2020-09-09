@@ -80,6 +80,23 @@ public interface IEventMessageResponseRequest extends IHttpRequest {
     EventMessageResponse post(final EventMessageResponse newEventMessageResponse) throws ClientException;
 
     /**
+     * Posts a EventMessageResponse with a new object
+     *
+     * @param newEventMessageResponse the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final EventMessageResponse newEventMessageResponse, final ICallback<EventMessageResponse> callback);
+
+    /**
+     * Posts a EventMessageResponse with a new object
+     *
+     * @param newEventMessageResponse the object to create/update
+     * @return the created EventMessageResponse
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    EventMessageResponse put(final EventMessageResponse newEventMessageResponse) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

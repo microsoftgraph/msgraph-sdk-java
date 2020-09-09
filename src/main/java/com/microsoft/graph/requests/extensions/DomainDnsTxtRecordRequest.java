@@ -112,6 +112,27 @@ public class DomainDnsTxtRecordRequest extends BaseRequest implements IDomainDns
     }
 
     /**
+     * Creates a DomainDnsTxtRecord with a new object
+     *
+     * @param newDomainDnsTxtRecord the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final DomainDnsTxtRecord newDomainDnsTxtRecord, final ICallback<DomainDnsTxtRecord> callback) {
+        send(HttpMethod.PUT, callback, newDomainDnsTxtRecord);
+    }
+
+    /**
+     * Creates a DomainDnsTxtRecord with a new object
+     *
+     * @param newDomainDnsTxtRecord the object to create/update
+     * @return the created DomainDnsTxtRecord
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public DomainDnsTxtRecord put(final DomainDnsTxtRecord newDomainDnsTxtRecord) throws ClientException {
+        return send(HttpMethod.PUT, newDomainDnsTxtRecord);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

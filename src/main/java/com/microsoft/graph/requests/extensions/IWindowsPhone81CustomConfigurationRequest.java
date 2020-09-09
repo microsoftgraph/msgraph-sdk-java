@@ -80,6 +80,23 @@ public interface IWindowsPhone81CustomConfigurationRequest extends IHttpRequest 
     WindowsPhone81CustomConfiguration post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException;
 
     /**
+     * Posts a WindowsPhone81CustomConfiguration with a new object
+     *
+     * @param newWindowsPhone81CustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<WindowsPhone81CustomConfiguration> callback);
+
+    /**
+     * Posts a WindowsPhone81CustomConfiguration with a new object
+     *
+     * @param newWindowsPhone81CustomConfiguration the object to create/update
+     * @return the created WindowsPhone81CustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    WindowsPhone81CustomConfiguration put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

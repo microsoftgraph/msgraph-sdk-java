@@ -62,14 +62,14 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
     public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBookAssignment, callback);
     }
 
     public ManagedEBookAssignment post(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new ManagedEBookAssignmentRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newManagedEBookAssignment);
     }
 
@@ -106,6 +106,27 @@ public class ManagedEBookAssignmentCollectionRequest extends BaseCollectionReque
         return (ManagedEBookAssignmentCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IManagedEBookAssignmentCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (ManagedEBookAssignmentCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IManagedEBookAssignmentCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IManagedEBookAssignmentCollectionRequest)this;
+    }
     public IManagedEBookAssignmentCollectionPage buildFromResponse(final ManagedEBookAssignmentCollectionResponse response) {
         final IManagedEBookAssignmentCollectionRequestBuilder builder;
         if (response.nextLink != null) {

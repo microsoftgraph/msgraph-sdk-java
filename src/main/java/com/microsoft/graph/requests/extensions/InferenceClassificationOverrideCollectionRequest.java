@@ -62,14 +62,14 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
     public void post(final InferenceClassificationOverride newInferenceClassificationOverride, final ICallback<InferenceClassificationOverride> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newInferenceClassificationOverride, callback);
     }
 
     public InferenceClassificationOverride post(final InferenceClassificationOverride newInferenceClassificationOverride) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new InferenceClassificationOverrideRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newInferenceClassificationOverride);
     }
 
@@ -106,6 +106,27 @@ public class InferenceClassificationOverrideCollectionRequest extends BaseCollec
         return (InferenceClassificationOverrideCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IInferenceClassificationOverrideCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (InferenceClassificationOverrideCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IInferenceClassificationOverrideCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IInferenceClassificationOverrideCollectionRequest)this;
+    }
     public IInferenceClassificationOverrideCollectionPage buildFromResponse(final InferenceClassificationOverrideCollectionResponse response) {
         final IInferenceClassificationOverrideCollectionRequestBuilder builder;
         if (response.nextLink != null) {

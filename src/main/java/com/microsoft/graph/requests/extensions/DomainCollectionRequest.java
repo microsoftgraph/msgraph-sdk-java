@@ -61,14 +61,14 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
     public void post(final Domain newDomain, final ICallback<Domain> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomain, callback);
     }
 
     public Domain post(final Domain newDomain) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomain);
     }
 
@@ -105,6 +105,27 @@ public class DomainCollectionRequest extends BaseCollectionRequest<DomainCollect
         return (DomainCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDomainCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DomainCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDomainCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDomainCollectionRequest)this;
+    }
     public IDomainCollectionPage buildFromResponse(final DomainCollectionResponse response) {
         final IDomainCollectionRequestBuilder builder;
         if (response.nextLink != null) {

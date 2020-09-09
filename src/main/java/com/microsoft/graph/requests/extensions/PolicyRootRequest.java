@@ -138,6 +138,27 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
     }
 
     /**
+     * Creates a PolicyRoot with a new object
+     *
+     * @param newPolicyRoot the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final PolicyRoot newPolicyRoot, final ICallback<PolicyRoot> callback) {
+        send(HttpMethod.PUT, callback, newPolicyRoot);
+    }
+
+    /**
+     * Creates a PolicyRoot with a new object
+     *
+     * @param newPolicyRoot the object to create/update
+     * @return the created PolicyRoot
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public PolicyRoot put(final PolicyRoot newPolicyRoot) throws ClientException {
+        return send(HttpMethod.PUT, newPolicyRoot);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

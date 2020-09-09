@@ -80,6 +80,23 @@ public interface IHomeRealmDiscoveryPolicyRequest extends IHttpRequest {
     HomeRealmDiscoveryPolicy post(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException;
 
     /**
+     * Posts a HomeRealmDiscoveryPolicy with a new object
+     *
+     * @param newHomeRealmDiscoveryPolicy the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy, final ICallback<HomeRealmDiscoveryPolicy> callback);
+
+    /**
+     * Posts a HomeRealmDiscoveryPolicy with a new object
+     *
+     * @param newHomeRealmDiscoveryPolicy the object to create/update
+     * @return the created HomeRealmDiscoveryPolicy
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    HomeRealmDiscoveryPolicy put(final HomeRealmDiscoveryPolicy newHomeRealmDiscoveryPolicy) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

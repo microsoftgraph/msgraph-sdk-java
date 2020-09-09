@@ -62,14 +62,14 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
     public void post(final SchedulingGroup newSchedulingGroup, final ICallback<SchedulingGroup> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSchedulingGroup, callback);
     }
 
     public SchedulingGroup post(final SchedulingGroup newSchedulingGroup) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new SchedulingGroupRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newSchedulingGroup);
     }
 
@@ -106,6 +106,27 @@ public class SchedulingGroupCollectionRequest extends BaseCollectionRequest<Sche
         return (SchedulingGroupCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ISchedulingGroupCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (SchedulingGroupCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ISchedulingGroupCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ISchedulingGroupCollectionRequest)this;
+    }
     public ISchedulingGroupCollectionPage buildFromResponse(final SchedulingGroupCollectionResponse response) {
         final ISchedulingGroupCollectionRequestBuilder builder;
         if (response.nextLink != null) {

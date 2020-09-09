@@ -62,14 +62,14 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
     public void post(final OfferShiftRequest newOfferShiftRequest, final ICallback<OfferShiftRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfferShiftRequest, callback);
     }
 
     public OfferShiftRequest post(final OfferShiftRequest newOfferShiftRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OfferShiftRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOfferShiftRequest);
     }
 
@@ -106,6 +106,27 @@ public class OfferShiftRequestCollectionRequest extends BaseCollectionRequest<Of
         return (OfferShiftRequestCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOfferShiftRequestCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OfferShiftRequestCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOfferShiftRequestCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOfferShiftRequestCollectionRequest)this;
+    }
     public IOfferShiftRequestCollectionPage buildFromResponse(final OfferShiftRequestCollectionResponse response) {
         final IOfferShiftRequestCollectionRequestBuilder builder;
         if (response.nextLink != null) {

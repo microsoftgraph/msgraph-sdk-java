@@ -36,12 +36,16 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
      * The Named Locations.
      * 
      */
+    @SerializedName("namedLocations")
+    @Expose
     public NamedLocationCollectionPage namedLocations;
 
     /**
      * The Policies.
      * 
      */
+    @SerializedName("policies")
+    @Expose
     public ConditionalAccessPolicyCollectionPage policies;
 
 

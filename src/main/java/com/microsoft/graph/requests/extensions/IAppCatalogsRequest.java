@@ -80,6 +80,23 @@ public interface IAppCatalogsRequest extends IHttpRequest {
     AppCatalogs post(final AppCatalogs newAppCatalogs) throws ClientException;
 
     /**
+     * Posts a AppCatalogs with a new object
+     *
+     * @param newAppCatalogs the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final AppCatalogs newAppCatalogs, final ICallback<AppCatalogs> callback);
+
+    /**
+     * Posts a AppCatalogs with a new object
+     *
+     * @param newAppCatalogs the object to create/update
+     * @return the created AppCatalogs
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    AppCatalogs put(final AppCatalogs newAppCatalogs) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

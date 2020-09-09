@@ -271,6 +271,8 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
      * The Extension Properties.
      * Read-only. Nullable.
      */
+    @SerializedName("extensionProperties")
+    @Expose
     public ExtensionPropertyCollectionPage extensionProperties;
 
     /**

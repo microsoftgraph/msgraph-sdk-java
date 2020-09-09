@@ -61,14 +61,14 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
     public void post(final Device newDevice, final ICallback<Device> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDevice, callback);
     }
 
     public Device post(final Device newDevice) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDevice);
     }
 
@@ -105,6 +105,27 @@ public class DeviceCollectionRequest extends BaseCollectionRequest<DeviceCollect
         return (DeviceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceCollectionRequest)this;
+    }
     public IDeviceCollectionPage buildFromResponse(final DeviceCollectionResponse response) {
         final IDeviceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

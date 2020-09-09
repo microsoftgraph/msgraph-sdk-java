@@ -61,14 +61,14 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
     public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<DomainDnsRecord> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainDnsRecord, callback);
     }
 
     public DomainDnsRecord post(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DomainDnsRecordRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDomainDnsRecord);
     }
 
@@ -105,6 +105,27 @@ public class DomainDnsRecordCollectionRequest extends BaseCollectionRequest<Doma
         return (DomainDnsRecordCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDomainDnsRecordCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DomainDnsRecordCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDomainDnsRecordCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDomainDnsRecordCollectionRequest)this;
+    }
     public IDomainDnsRecordCollectionPage buildFromResponse(final DomainDnsRecordCollectionResponse response) {
         final IDomainDnsRecordCollectionRequestBuilder builder;
         if (response.nextLink != null) {

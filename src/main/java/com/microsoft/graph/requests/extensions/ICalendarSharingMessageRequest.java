@@ -80,6 +80,23 @@ public interface ICalendarSharingMessageRequest extends IHttpRequest {
     CalendarSharingMessage post(final CalendarSharingMessage newCalendarSharingMessage) throws ClientException;
 
     /**
+     * Posts a CalendarSharingMessage with a new object
+     *
+     * @param newCalendarSharingMessage the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final CalendarSharingMessage newCalendarSharingMessage, final ICallback<CalendarSharingMessage> callback);
+
+    /**
+     * Posts a CalendarSharingMessage with a new object
+     *
+     * @param newCalendarSharingMessage the object to create/update
+     * @return the created CalendarSharingMessage
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    CalendarSharingMessage put(final CalendarSharingMessage newCalendarSharingMessage) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

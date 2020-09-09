@@ -116,6 +116,27 @@ public class ItemActivityStatRequest extends BaseRequest implements IItemActivit
     }
 
     /**
+     * Creates a ItemActivityStat with a new object
+     *
+     * @param newItemActivityStat the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ItemActivityStat newItemActivityStat, final ICallback<ItemActivityStat> callback) {
+        send(HttpMethod.PUT, callback, newItemActivityStat);
+    }
+
+    /**
+     * Creates a ItemActivityStat with a new object
+     *
+     * @param newItemActivityStat the object to create/update
+     * @return the created ItemActivityStat
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ItemActivityStat put(final ItemActivityStat newItemActivityStat) throws ClientException {
+        return send(HttpMethod.PUT, newItemActivityStat);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

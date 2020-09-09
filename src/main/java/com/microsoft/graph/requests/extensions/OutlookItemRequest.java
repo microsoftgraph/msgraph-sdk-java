@@ -127,6 +127,27 @@ public class OutlookItemRequest extends BaseRequest implements IOutlookItemReque
     }
 
     /**
+     * Creates a OutlookItem with a new object
+     *
+     * @param newOutlookItem the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final OutlookItem newOutlookItem, final ICallback<OutlookItem> callback) {
+        send(HttpMethod.PUT, callback, newOutlookItem);
+    }
+
+    /**
+     * Creates a OutlookItem with a new object
+     *
+     * @param newOutlookItem the object to create/update
+     * @return the created OutlookItem
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public OutlookItem put(final OutlookItem newOutlookItem) throws ClientException {
+        return send(HttpMethod.PUT, newOutlookItem);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

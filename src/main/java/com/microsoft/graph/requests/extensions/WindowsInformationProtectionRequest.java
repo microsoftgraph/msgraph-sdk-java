@@ -136,6 +136,27 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
     }
 
     /**
+     * Creates a WindowsInformationProtection with a new object
+     *
+     * @param newWindowsInformationProtection the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<WindowsInformationProtection> callback) {
+        send(HttpMethod.PUT, callback, newWindowsInformationProtection);
+    }
+
+    /**
+     * Creates a WindowsInformationProtection with a new object
+     *
+     * @param newWindowsInformationProtection the object to create/update
+     * @return the created WindowsInformationProtection
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public WindowsInformationProtection put(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
+        return send(HttpMethod.PUT, newWindowsInformationProtection);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

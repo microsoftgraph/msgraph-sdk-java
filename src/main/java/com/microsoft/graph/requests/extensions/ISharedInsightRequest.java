@@ -80,6 +80,23 @@ public interface ISharedInsightRequest extends IHttpRequest {
     SharedInsight post(final SharedInsight newSharedInsight) throws ClientException;
 
     /**
+     * Posts a SharedInsight with a new object
+     *
+     * @param newSharedInsight the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SharedInsight newSharedInsight, final ICallback<SharedInsight> callback);
+
+    /**
+     * Posts a SharedInsight with a new object
+     *
+     * @param newSharedInsight the object to create/update
+     * @return the created SharedInsight
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SharedInsight put(final SharedInsight newSharedInsight) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

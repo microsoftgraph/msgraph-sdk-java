@@ -80,6 +80,23 @@ public interface IManagedEBookAssignmentRequest extends IHttpRequest {
     ManagedEBookAssignment post(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException;
 
     /**
+     * Posts a ManagedEBookAssignment with a new object
+     *
+     * @param newManagedEBookAssignment the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<ManagedEBookAssignment> callback);
+
+    /**
+     * Posts a ManagedEBookAssignment with a new object
+     *
+     * @param newManagedEBookAssignment the object to create/update
+     * @return the created ManagedEBookAssignment
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedEBookAssignment put(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

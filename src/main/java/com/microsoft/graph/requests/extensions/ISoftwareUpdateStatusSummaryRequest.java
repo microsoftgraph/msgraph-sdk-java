@@ -80,6 +80,23 @@ public interface ISoftwareUpdateStatusSummaryRequest extends IHttpRequest {
     SoftwareUpdateStatusSummary post(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary) throws ClientException;
 
     /**
+     * Posts a SoftwareUpdateStatusSummary with a new object
+     *
+     * @param newSoftwareUpdateStatusSummary the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary, final ICallback<SoftwareUpdateStatusSummary> callback);
+
+    /**
+     * Posts a SoftwareUpdateStatusSummary with a new object
+     *
+     * @param newSoftwareUpdateStatusSummary the object to create/update
+     * @return the created SoftwareUpdateStatusSummary
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    SoftwareUpdateStatusSummary put(final SoftwareUpdateStatusSummary newSoftwareUpdateStatusSummary) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

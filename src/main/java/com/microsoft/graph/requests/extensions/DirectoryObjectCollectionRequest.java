@@ -62,14 +62,14 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
     public void post(final DirectoryObject newDirectoryObject, final ICallback<DirectoryObject> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryObject, callback);
     }
 
     public DirectoryObject post(final DirectoryObject newDirectoryObject) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DirectoryObjectRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDirectoryObject);
     }
 
@@ -106,6 +106,27 @@ public class DirectoryObjectCollectionRequest extends BaseCollectionRequest<Dire
         return (DirectoryObjectCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDirectoryObjectCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DirectoryObjectCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDirectoryObjectCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDirectoryObjectCollectionRequest)this;
+    }
     public IDirectoryObjectCollectionPage buildFromResponse(final DirectoryObjectCollectionResponse response) {
         final IDirectoryObjectCollectionRequestBuilder builder;
         if (response.nextLink != null) {

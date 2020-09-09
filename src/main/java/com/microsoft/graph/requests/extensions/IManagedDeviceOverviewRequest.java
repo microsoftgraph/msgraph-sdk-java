@@ -80,6 +80,23 @@ public interface IManagedDeviceOverviewRequest extends IHttpRequest {
     ManagedDeviceOverview post(final ManagedDeviceOverview newManagedDeviceOverview) throws ClientException;
 
     /**
+     * Posts a ManagedDeviceOverview with a new object
+     *
+     * @param newManagedDeviceOverview the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedDeviceOverview newManagedDeviceOverview, final ICallback<ManagedDeviceOverview> callback);
+
+    /**
+     * Posts a ManagedDeviceOverview with a new object
+     *
+     * @param newManagedDeviceOverview the object to create/update
+     * @return the created ManagedDeviceOverview
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedDeviceOverview put(final ManagedDeviceOverview newManagedDeviceOverview) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

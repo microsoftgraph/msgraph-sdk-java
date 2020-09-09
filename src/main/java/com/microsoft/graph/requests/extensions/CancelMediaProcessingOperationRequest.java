@@ -112,6 +112,27 @@ public class CancelMediaProcessingOperationRequest extends BaseRequest implement
     }
 
     /**
+     * Creates a CancelMediaProcessingOperation with a new object
+     *
+     * @param newCancelMediaProcessingOperation the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation, final ICallback<CancelMediaProcessingOperation> callback) {
+        send(HttpMethod.PUT, callback, newCancelMediaProcessingOperation);
+    }
+
+    /**
+     * Creates a CancelMediaProcessingOperation with a new object
+     *
+     * @param newCancelMediaProcessingOperation the object to create/update
+     * @return the created CancelMediaProcessingOperation
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public CancelMediaProcessingOperation put(final CancelMediaProcessingOperation newCancelMediaProcessingOperation) throws ClientException {
+        return send(HttpMethod.PUT, newCancelMediaProcessingOperation);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

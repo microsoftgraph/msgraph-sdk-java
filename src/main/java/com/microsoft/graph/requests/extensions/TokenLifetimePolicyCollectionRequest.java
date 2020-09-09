@@ -62,14 +62,14 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
     public void post(final TokenLifetimePolicy newTokenLifetimePolicy, final ICallback<TokenLifetimePolicy> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTokenLifetimePolicy, callback);
     }
 
     public TokenLifetimePolicy post(final TokenLifetimePolicy newTokenLifetimePolicy) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TokenLifetimePolicyRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTokenLifetimePolicy);
     }
 
@@ -106,6 +106,27 @@ public class TokenLifetimePolicyCollectionRequest extends BaseCollectionRequest<
         return (TokenLifetimePolicyCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITokenLifetimePolicyCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TokenLifetimePolicyCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITokenLifetimePolicyCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITokenLifetimePolicyCollectionRequest)this;
+    }
     public ITokenLifetimePolicyCollectionPage buildFromResponse(final TokenLifetimePolicyCollectionResponse response) {
         final ITokenLifetimePolicyCollectionRequestBuilder builder;
         if (response.nextLink != null) {

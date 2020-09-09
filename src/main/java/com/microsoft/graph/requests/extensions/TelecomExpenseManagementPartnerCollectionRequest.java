@@ -62,14 +62,14 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
     public void post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner, final ICallback<TelecomExpenseManagementPartner> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTelecomExpenseManagementPartner, callback);
     }
 
     public TelecomExpenseManagementPartner post(final TelecomExpenseManagementPartner newTelecomExpenseManagementPartner) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TelecomExpenseManagementPartnerRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newTelecomExpenseManagementPartner);
     }
 
@@ -106,6 +106,27 @@ public class TelecomExpenseManagementPartnerCollectionRequest extends BaseCollec
         return (TelecomExpenseManagementPartnerCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public ITelecomExpenseManagementPartnerCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (TelecomExpenseManagementPartnerCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public ITelecomExpenseManagementPartnerCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (ITelecomExpenseManagementPartnerCollectionRequest)this;
+    }
     public ITelecomExpenseManagementPartnerCollectionPage buildFromResponse(final TelecomExpenseManagementPartnerCollectionResponse response) {
         final ITelecomExpenseManagementPartnerCollectionRequestBuilder builder;
         if (response.nextLink != null) {

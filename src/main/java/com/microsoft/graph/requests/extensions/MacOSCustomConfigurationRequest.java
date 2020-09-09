@@ -112,6 +112,27 @@ public class MacOSCustomConfigurationRequest extends BaseRequest implements IMac
     }
 
     /**
+     * Creates a MacOSCustomConfiguration with a new object
+     *
+     * @param newMacOSCustomConfiguration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final MacOSCustomConfiguration newMacOSCustomConfiguration, final ICallback<MacOSCustomConfiguration> callback) {
+        send(HttpMethod.PUT, callback, newMacOSCustomConfiguration);
+    }
+
+    /**
+     * Creates a MacOSCustomConfiguration with a new object
+     *
+     * @param newMacOSCustomConfiguration the object to create/update
+     * @return the created MacOSCustomConfiguration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public MacOSCustomConfiguration put(final MacOSCustomConfiguration newMacOSCustomConfiguration) throws ClientException {
+        return send(HttpMethod.PUT, newMacOSCustomConfiguration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -112,6 +112,27 @@ public class ManagedAndroidLobAppRequest extends BaseRequest implements IManaged
     }
 
     /**
+     * Creates a ManagedAndroidLobApp with a new object
+     *
+     * @param newManagedAndroidLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback) {
+        send(HttpMethod.PUT, callback, newManagedAndroidLobApp);
+    }
+
+    /**
+     * Creates a ManagedAndroidLobApp with a new object
+     *
+     * @param newManagedAndroidLobApp the object to create/update
+     * @return the created ManagedAndroidLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public ManagedAndroidLobApp put(final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException {
+        return send(HttpMethod.PUT, newManagedAndroidLobApp);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

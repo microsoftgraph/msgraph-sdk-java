@@ -114,6 +114,27 @@ public class TrendingRequest extends BaseRequest implements ITrendingRequest {
     }
 
     /**
+     * Creates a Trending with a new object
+     *
+     * @param newTrending the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final Trending newTrending, final ICallback<Trending> callback) {
+        send(HttpMethod.PUT, callback, newTrending);
+    }
+
+    /**
+     * Creates a Trending with a new object
+     *
+     * @param newTrending the object to create/update
+     * @return the created Trending
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public Trending put(final Trending newTrending) throws ClientException {
+        return send(HttpMethod.PUT, newTrending);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

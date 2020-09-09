@@ -80,6 +80,23 @@ public interface IManagedAndroidLobAppRequest extends IHttpRequest {
     ManagedAndroidLobApp post(final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException;
 
     /**
+     * Posts a ManagedAndroidLobApp with a new object
+     *
+     * @param newManagedAndroidLobApp the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    void put(final ManagedAndroidLobApp newManagedAndroidLobApp, final ICallback<ManagedAndroidLobApp> callback);
+
+    /**
+     * Posts a ManagedAndroidLobApp with a new object
+     *
+     * @param newManagedAndroidLobApp the object to create/update
+     * @return the created ManagedAndroidLobApp
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    ManagedAndroidLobApp put(final ManagedAndroidLobApp newManagedAndroidLobApp) throws ClientException;
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -62,14 +62,14 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
     public void post(final OnenoteResource newOnenoteResource, final ICallback<OnenoteResource> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteResource, callback);
     }
 
     public OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new OnenoteResourceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newOnenoteResource);
     }
 
@@ -106,6 +106,27 @@ public class OnenoteResourceCollectionRequest extends BaseCollectionRequest<Onen
         return (OnenoteResourceCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IOnenoteResourceCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (OnenoteResourceCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IOnenoteResourceCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IOnenoteResourceCollectionRequest)this;
+    }
     public IOnenoteResourceCollectionPage buildFromResponse(final OnenoteResourceCollectionResponse response) {
         final IOnenoteResourceCollectionRequestBuilder builder;
         if (response.nextLink != null) {

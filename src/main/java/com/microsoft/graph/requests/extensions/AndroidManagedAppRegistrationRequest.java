@@ -112,6 +112,27 @@ public class AndroidManagedAppRegistrationRequest extends BaseRequest implements
     }
 
     /**
+     * Creates a AndroidManagedAppRegistration with a new object
+     *
+     * @param newAndroidManagedAppRegistration the object to create/update
+     * @param callback the callback to be called after success or failure
+     */
+    public void put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration, final ICallback<AndroidManagedAppRegistration> callback) {
+        send(HttpMethod.PUT, callback, newAndroidManagedAppRegistration);
+    }
+
+    /**
+     * Creates a AndroidManagedAppRegistration with a new object
+     *
+     * @param newAndroidManagedAppRegistration the object to create/update
+     * @return the created AndroidManagedAppRegistration
+     * @throws ClientException this exception occurs if the request was unable to complete for any reason
+     */
+    public AndroidManagedAppRegistration put(final AndroidManagedAppRegistration newAndroidManagedAppRegistration) throws ClientException {
+        return send(HttpMethod.PUT, newAndroidManagedAppRegistration);
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

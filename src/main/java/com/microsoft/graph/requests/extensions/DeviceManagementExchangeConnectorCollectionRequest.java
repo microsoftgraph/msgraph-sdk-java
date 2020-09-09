@@ -63,14 +63,14 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
     public void post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector, final ICallback<DeviceManagementExchangeConnector> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExchangeConnector, callback);
     }
 
     public DeviceManagementExchangeConnector post(final DeviceManagementExchangeConnector newDeviceManagementExchangeConnector) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new DeviceManagementExchangeConnectorRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
-            .buildRequest(getBaseRequest().getOptions())
+            .buildRequest(getBaseRequest().getHeaders())
             .post(newDeviceManagementExchangeConnector);
     }
 
@@ -107,6 +107,27 @@ public class DeviceManagementExchangeConnectorCollectionRequest extends BaseColl
         return (DeviceManagementExchangeConnectorCollectionRequest)this;
     }
 
+    /**
+     * Sets the skip value for the request
+     *
+     * @param value of the number of items to skip
+     * @return the updated request
+     */
+    public IDeviceManagementExchangeConnectorCollectionRequest skip(final int value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$skip", value + ""));
+        return (DeviceManagementExchangeConnectorCollectionRequest)this;
+    }
+
+
+    /**
+     * Add Skip token for pagination
+     * @param skipToken - Token for pagination
+     * @return the updated request
+     */
+    public IDeviceManagementExchangeConnectorCollectionRequest skipToken(final String skipToken) {
+    	addQueryOption(new QueryOption("$skiptoken", skipToken));
+        return (IDeviceManagementExchangeConnectorCollectionRequest)this;
+    }
     public IDeviceManagementExchangeConnectorCollectionPage buildFromResponse(final DeviceManagementExchangeConnectorCollectionResponse response) {
         final IDeviceManagementExchangeConnectorCollectionRequestBuilder builder;
         if (response.nextLink != null) {
