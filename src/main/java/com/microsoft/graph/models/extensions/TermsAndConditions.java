@@ -100,12 +100,16 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
      * The Acceptance Statuses.
      * The list of acceptance statuses for this T&amp;C policy.
      */
+    @SerializedName("acceptanceStatuses")
+    @Expose
     public TermsAndConditionsAcceptanceStatusCollectionPage acceptanceStatuses;
 
     /**
      * The Assignments.
      * The list of assignments for this T&amp;C policy.
      */
+    @SerializedName("assignments")
+    @Expose
     public TermsAndConditionsAssignmentCollectionPage assignments;
 
 

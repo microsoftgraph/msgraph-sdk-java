@@ -65,7 +65,7 @@ public class MockHttpProvider implements IHttpProvider {
             if(connection.getResponseCode() == 200) {
                 if(connection.getHeaders().containsKey("Content-Type")) {
                     if (connection.getHeaders().get("Content-Type").equals("application/json")){
-                        JsonObject jsonObject = new JsonParser().parse(connection.getResponseMessage()).getAsJsonObject();
+                        JsonObject jsonObject = JsonParser.parseString(connection.getResponseMessage()).getAsJsonObject();
                         result = (Result) jsonObject;
                     }else if (connection.getHeaders().get("Content-Type").equals("application/octet-stream")) {
                         result = (Result) new BufferedInputStream(connection.getInputStream());
@@ -89,7 +89,7 @@ public class MockHttpProvider implements IHttpProvider {
             if(connection.getResponseCode() == 200) {
                 if(connection.getHeaders().containsKey("Content-Type")) {
                     if (connection.getHeaders().get("Content-Type").equals("application/json")){
-                        JsonObject jsonObject = new JsonParser().parse(connection.getResponseMessage()).getAsJsonObject();
+                        JsonObject jsonObject = JsonParser.parseString(connection.getResponseMessage()).getAsJsonObject();
                         return (Result) jsonObject;
                     }else if (connection.getHeaders().get("Content-Type").equals("application/octet-stream")) {
                         return (Result) new BufferedInputStream(connection.getInputStream());

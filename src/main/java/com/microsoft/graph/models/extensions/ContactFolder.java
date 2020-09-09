@@ -58,24 +58,32 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
      * The Child Folders.
      * The collection of child folders in the folder. Navigation property. Read-only. Nullable.
      */
+    @SerializedName("childFolders")
+    @Expose
     public ContactFolderCollectionPage childFolders;
 
     /**
      * The Contacts.
      * The contacts in the folder. Navigation property. Read-only. Nullable.
      */
+    @SerializedName("contacts")
+    @Expose
     public ContactCollectionPage contacts;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the contactFolder. Read-only. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

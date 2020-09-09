@@ -256,24 +256,32 @@ public class Message extends OutlookItem implements IJsonBackedObject {
      * The Attachments.
      * The fileAttachment and itemAttachment attachments for the message.
      */
+    @SerializedName("attachments")
+    @Expose
     public AttachmentCollectionPage attachments;
 
     /**
      * The Extensions.
      * The collection of open extensions defined for the message. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the message. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the message. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

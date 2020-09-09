@@ -49,6 +49,8 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
      * The Replies.
      * Read-only. Nullable.
      */
+    @SerializedName("replies")
+    @Expose
     public WorkbookCommentReplyCollectionPage replies;
 
 

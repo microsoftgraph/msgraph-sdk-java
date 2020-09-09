@@ -73,6 +73,8 @@ public class Conversation extends Entity implements IJsonBackedObject {
      * The Threads.
      * A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
      */
+    @SerializedName("threads")
+    @Expose
     public ConversationThreadCollectionPage threads;
 
 

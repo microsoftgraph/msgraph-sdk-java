@@ -139,6 +139,8 @@ public class UserActivity extends Entity implements IJsonBackedObject {
      * The History Items.
      * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      */
+    @SerializedName("historyItems")
+    @Expose
     public ActivityHistoryItemCollectionPage historyItems;
 
 

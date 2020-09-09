@@ -66,6 +66,8 @@ public class RoleDefinition extends Entity implements IJsonBackedObject {
      * The Role Assignments.
      * List of Role assignments for this role definition.
      */
+    @SerializedName("roleAssignments")
+    @Expose
     public RoleAssignmentCollectionPage roleAssignments;
 
 

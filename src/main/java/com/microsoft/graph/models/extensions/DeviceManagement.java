@@ -137,12 +137,16 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Terms And Conditions.
      * The terms and conditions associated with device management of the company.
      */
+    @SerializedName("termsAndConditions")
+    @Expose
     public TermsAndConditionsCollectionPage termsAndConditions;
 
     /**
      * The Device Compliance Policies.
      * The device compliance policies.
      */
+    @SerializedName("deviceCompliancePolicies")
+    @Expose
     public DeviceCompliancePolicyCollectionPage deviceCompliancePolicies;
 
     /**
@@ -157,6 +161,8 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Compliance Policy Setting State Summaries.
      * The summary states of compliance policy settings for this account.
      */
+    @SerializedName("deviceCompliancePolicySettingStateSummaries")
+    @Expose
     public DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
 
     /**
@@ -171,12 +177,16 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Configurations.
      * The device configurations.
      */
+    @SerializedName("deviceConfigurations")
+    @Expose
     public DeviceConfigurationCollectionPage deviceConfigurations;
 
     /**
      * The Ios Update Statuses.
      * The IOS software update installation statuses for this account.
      */
+    @SerializedName("iosUpdateStatuses")
+    @Expose
     public IosUpdateDeviceStatusCollectionPage iosUpdateStatuses;
 
     /**
@@ -191,6 +201,8 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Compliance Management Partners.
      * The list of Compliance Management Partners configured by the tenant.
      */
+    @SerializedName("complianceManagementPartners")
+    @Expose
     public ComplianceManagementPartnerCollectionPage complianceManagementPartners;
 
     /**
@@ -205,30 +217,40 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Device Categories.
      * The list of device categories with the tenant.
      */
+    @SerializedName("deviceCategories")
+    @Expose
     public DeviceCategoryCollectionPage deviceCategories;
 
     /**
      * The Device Enrollment Configurations.
      * The list of device enrollment configurations
      */
+    @SerializedName("deviceEnrollmentConfigurations")
+    @Expose
     public DeviceEnrollmentConfigurationCollectionPage deviceEnrollmentConfigurations;
 
     /**
      * The Device Management Partners.
      * The list of Device Management Partners configured by the tenant.
      */
+    @SerializedName("deviceManagementPartners")
+    @Expose
     public DeviceManagementPartnerCollectionPage deviceManagementPartners;
 
     /**
      * The Exchange Connectors.
      * The list of Exchange Connectors configured by the tenant.
      */
+    @SerializedName("exchangeConnectors")
+    @Expose
     public DeviceManagementExchangeConnectorCollectionPage exchangeConnectors;
 
     /**
      * The Mobile Threat Defense Connectors.
      * The list of Mobile threat Defense connectors configured by the tenant.
      */
+    @SerializedName("mobileThreatDefenseConnectors")
+    @Expose
     public MobileThreatDefenseConnectorCollectionPage mobileThreatDefenseConnectors;
 
     /**
@@ -243,6 +265,8 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Detected Apps.
      * The list of detected apps associated with a device.
      */
+    @SerializedName("detectedApps")
+    @Expose
     public DetectedAppCollectionPage detectedApps;
 
     /**
@@ -257,60 +281,80 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
      * The Managed Devices.
      * The list of managed devices.
      */
+    @SerializedName("managedDevices")
+    @Expose
     public ManagedDeviceCollectionPage managedDevices;
 
     /**
      * The Notification Message Templates.
      * The Notification Message Templates.
      */
+    @SerializedName("notificationMessageTemplates")
+    @Expose
     public NotificationMessageTemplateCollectionPage notificationMessageTemplates;
 
     /**
      * The Resource Operations.
      * The Resource Operations.
      */
+    @SerializedName("resourceOperations")
+    @Expose
     public ResourceOperationCollectionPage resourceOperations;
 
     /**
      * The Role Assignments.
      * The Role Assignments.
      */
+    @SerializedName("roleAssignments")
+    @Expose
     public DeviceAndAppManagementRoleAssignmentCollectionPage roleAssignments;
 
     /**
      * The Role Definitions.
      * The Role Definitions.
      */
+    @SerializedName("roleDefinitions")
+    @Expose
     public RoleDefinitionCollectionPage roleDefinitions;
 
     /**
      * The Remote Assistance Partners.
      * The remote assist partners.
      */
+    @SerializedName("remoteAssistancePartners")
+    @Expose
     public RemoteAssistancePartnerCollectionPage remoteAssistancePartners;
 
     /**
      * The Telecom Expense Management Partners.
      * The telecom expense management partners.
      */
+    @SerializedName("telecomExpenseManagementPartners")
+    @Expose
     public TelecomExpenseManagementPartnerCollectionPage telecomExpenseManagementPartners;
 
     /**
      * The Troubleshooting Events.
      * The list of troubleshooting events for the tenant.
      */
+    @SerializedName("troubleshootingEvents")
+    @Expose
     public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
 
     /**
      * The Windows Information Protection App Learning Summaries.
      * The windows information protection app learning summaries.
      */
+    @SerializedName("windowsInformationProtectionAppLearningSummaries")
+    @Expose
     public WindowsInformationProtectionAppLearningSummaryCollectionPage windowsInformationProtectionAppLearningSummaries;
 
     /**
      * The Windows Information Protection Network Learning Summaries.
      * The windows information protection network learning summaries.
      */
+    @SerializedName("windowsInformationProtectionNetworkLearningSummaries")
+    @Expose
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
 
 

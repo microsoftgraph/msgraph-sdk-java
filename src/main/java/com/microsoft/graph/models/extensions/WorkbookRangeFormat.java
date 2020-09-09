@@ -76,6 +76,8 @@ public class WorkbookRangeFormat extends Entity implements IJsonBackedObject {
      * The Borders.
      * Collection of border objects that apply to the overall range selected Read-only.
      */
+    @SerializedName("borders")
+    @Expose
     public WorkbookRangeBorderCollectionPage borders;
 
     /**

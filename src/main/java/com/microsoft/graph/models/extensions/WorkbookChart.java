@@ -111,6 +111,8 @@ public class WorkbookChart extends Entity implements IJsonBackedObject {
      * The Series.
      * Represents either a single series or collection of series in the chart. Read-only.
      */
+    @SerializedName("series")
+    @Expose
     public WorkbookChartSeriesCollectionPage series;
 
     /**

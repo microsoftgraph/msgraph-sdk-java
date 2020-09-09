@@ -33,6 +33,8 @@ public class MobileAppContent extends Entity implements IJsonBackedObject {
      * The Files.
      * The list of files for this app content version.
      */
+    @SerializedName("files")
+    @Expose
     public MobileAppContentFileCollectionPage files;
 
 

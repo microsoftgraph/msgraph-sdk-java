@@ -211,12 +211,16 @@ public class Call extends Entity implements IJsonBackedObject {
      * The Operations.
      * Read-only. Nullable.
      */
+    @SerializedName("operations")
+    @Expose
     public CommsOperationCollectionPage operations;
 
     /**
      * The Participants.
      * Read-only. Nullable.
      */
+    @SerializedName("participants")
+    @Expose
     public ParticipantCollectionPage participants;
 
 
