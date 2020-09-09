@@ -2,6 +2,8 @@ package com.microsoft.graph.functional;
 
 import static org.junit.Assert.assertNotNull;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.List;
 
@@ -12,6 +14,7 @@ import org.junit.Test;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.requests.extensions.IContactCollectionPage;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesPage;
@@ -120,6 +123,13 @@ public class UserTests {
 				break;
 			}
 		}
+	}
+
+	@Test
+	public void updateUserPhotoValueTest() throws Exception {
+		final File photo = new File("src/test/resources/hamilton.jpg");
+		final InputStream fileStream = new FileInputStream(photo);
+		graphServiceClient.me().photo().content().buildRequest().put(OutlookTests.getByteArray(fileStream));
 	}
 
 	@Test
