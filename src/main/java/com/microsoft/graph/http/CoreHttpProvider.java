@@ -398,8 +398,13 @@ public class CoreHttpProvider implements IHttpProvider {
 				} else {
 					logger.logDebug("Response binary");
 					isBinaryStreamInput = true;
-					//no inspection unchecked
-					return (Result) handleBinaryStream(in);
+					if (resultClass == InputStream.class) {
+						return (Result) handleBinaryStream(in);
+					} else if(response.body() != null && response.body().contentLength() > 0) { // some services reply in text/plain with a JSON representation...
+						return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
+					} else {
+						return (Result) null;
+					}
 				}
 			} finally {
 				if (!isBinaryStreamInput) {
