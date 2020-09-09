@@ -114,4 +114,18 @@ public interface IConnection {
      * @param length the length of content
      */
     void setContentLength(final int length);
+    
+    /**
+     * Set the connect timeout on the connection
+     *
+     * @param connectTimeoutMilliseconds the connection timeout in milliseconds
+     */
+    void setConnectTimeout(final int connectTimeoutMilliseconds);
+
+    /**
+     * Set the read timeout on the connection
+     *
+     * @param readTimeoutMilliseconds the read timeout in milliseconds
+     */
+    void setReadTimeout(final int readTimeoutMilliseconds);
 }

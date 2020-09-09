@@ -1,6 +1,7 @@
 package com.microsoft.graph.models.extensions;
 
 
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Locale;
 
@@ -51,7 +52,7 @@ public class TimeOfDay {
         // unpack this array
         int hour = Integer.parseInt(timeInfo[indHour]);
         int minute = Integer.parseInt(timeInfo[indMinute]);
-        int second = Integer.parseInt(timeInfo[indSecond]);
+        int second = new BigDecimal(timeInfo[indSecond]).intValue();
 
         return new TimeOfDay(hour, minute, second);
     }

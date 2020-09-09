@@ -8,10 +8,14 @@ import static org.junit.Assert.fail;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -33,9 +37,12 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.INotebookCollectionPage;
 import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollectionPage;
 import com.microsoft.graph.requests.extensions.IOnenotePageCollectionPage;
+import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequest;
+import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionPage;
 import com.microsoft.graph.requests.extensions.ISectionGroupCollectionPage;
+import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequest;
 
 /**
  * Tests for OneNote API functionality
@@ -49,6 +56,7 @@ public class OneNoteTests {
     private OnenotePage testPage;
     private OnenoteSection testSection;
     private SectionGroup testSectionGroup2;
+    private final String HTML_ENCODING= "US-ASCII";
 
     @Before
     public void setUp() {
@@ -288,10 +296,10 @@ public class OneNoteTests {
 
     /**
      * Test posting a page stream to a page
-     * @throws InterruptedException
+     * @throws InterruptedException, UnsupportedEncodingException
      */
     @Test
-    public void testPostToNotebook() throws InterruptedException {
+    public void testPostToNotebook() throws InterruptedException, UnsupportedEncodingException {
         SectionGroup sectionGroupData = new SectionGroup();
         
         // Currently, there is no way to delete sections or section groups, so let's create a random one
@@ -319,7 +327,7 @@ public class OneNoteTests {
         // Test HTML content
         String content = "<html><head><title>Test Title</title></head><body>Test body</body></html>";
 
-        byte[] pageStream = content.getBytes();
+        byte[] pageStream = content.getBytes(HTML_ENCODING);
         List<Option> options = new ArrayList<Option>();
         options.add(new HeaderOption("Content-Type", "application/xhtml+xml"));
         OnenotePage page = orb
@@ -346,7 +354,7 @@ public class OneNoteTests {
     	// Test copy to notebook
         OnenoteOperation notebookCopy = orb
         		.sections(testSection.id)
-        		.copyToNotebook(testNotebook2.id, null, null)
+        		.copyToNotebook(testNotebook2.id, null, null, "TODOsiteCollectionId", "TODOsiteId")
         		.buildRequest()
         		.post();
         assertNotNull(notebookCopy);
@@ -361,7 +369,7 @@ public class OneNoteTests {
         // Test copy to section group
         OnenoteOperation copySectionGroup = orb
         		.sections(testSection.id)
-        		.copyToSectionGroup(testSectionGroup2.id, null, null)
+        		.copyToSectionGroup(testSectionGroup2.id, null, null, "TODOsiteCollectionId", "TODOsiteId")
         		.buildRequest()
         		.post();
         assertNotNull(copySectionGroup);
@@ -378,7 +386,7 @@ public class OneNoteTests {
         
         OnenoteOperation copySection = orb
         		.pages(testPage.id)
-        		.copyToSection(section.id, null)
+        		.copyToSection(section.id, null, "TODOsiteCollectionId", "TODOsiteId")
         		.buildRequest()
         		.post();
         assertNotNull(copySection);
@@ -410,7 +418,7 @@ public class OneNoteTests {
         	File imgFile = new File("src/test/resources/hamilton.jpg");
         	File pdfFile = new File("src/test/resources/document.pdf");
         	
-        	multipart.addHtmlPart("Presentation", htmlContent);
+        	multipart.addHtmlPart("Presentation", htmlContent.getBytes(HTML_ENCODING));
         	multipart.addFilePart("hamilton", "image/jpg", imgFile);
         	multipart.addFilePart("metadata", "application/pdf", pdfFile);
         	
@@ -428,6 +436,67 @@ public class OneNoteTests {
         } catch (Exception e) {
             fail("Unable to write to output stream");
         }
+    }
+    
+    /**
+     * Test posting multipart content to a page
+     */
+    @Test
+    public void testMultipartPostWithHeadersMap() throws Exception{
+    	Multipart multipart = new Multipart();
+
+    	String htmlContent = "<!DOCTYPE html>\r\n" +
+    			"<html lang=\"en-US\">\r\n" +
+    			"<head>\r\n" +
+    			"<title>Test Multipart Page</title>\r\n" +
+    			"<meta name=\"created\" content=\"2001-01-01T01:01+0100\">\r\n" +
+    			"</head>\r\n" +
+    			"<body>\r\n" +
+    			"<p>\r\n" +
+    			"<img src=\"name:image\" />\r\n" +
+    			"</p>\r\n" +
+    			"<p>\r\n" +
+    			"<object data=\"name:attachment\" data-attachment=\"document.pdf\" /></p>\r\n" +
+    			"\r\n" +
+    			"</body>\r\n" +
+    			"</html>";
+    	File imgFile = new File("src/test/resources/hamilton.jpg");
+    	File pdfFile = new File("src/test/resources/document.pdf");
+
+    	Map<String, String> htmlHeaderMap = new HashMap<>();
+    	Map<String, String> contentDispMap = new HashMap<>();
+    	contentDispMap.put("name","Presentation" );
+    	htmlHeaderMap.put("Content-Disposition", Multipart.createContentHeaderValue("form-data", contentDispMap));
+    	htmlHeaderMap.put("Content-Type", Multipart.createContentHeaderValue("text/html", null));
+    	multipart.addPart(htmlHeaderMap, htmlContent.getBytes(HTML_ENCODING));
+
+    	InputStream fileStream = new FileInputStream(imgFile);
+    	multipart.addFormData("hamilton", "image/jpg", getByteArray(fileStream));
+    	multipart.addFilePart("metadata", "application/pdf", pdfFile);
+
+    	// Add multipart request header
+    	List<Option> options = new ArrayList<Option>();
+    	options.add(multipart.header());
+
+    	// Post the multipart content
+    	IOnenotePageCollectionRequestBuilder pageReq = orb
+    			.sections(testSection.id)
+    			.pages();
+    	String expectedRequestUrl = "https://graph.microsoft.com/v1.0/me/onenote/sections/"+testSection.id+"/pages";
+    	assertEquals(expectedRequestUrl, pageReq.getRequestUrl());
+    	IOnenotePageCollectionRequest request = pageReq.buildRequest(options);
+    	assertNotNull(request);
+    	
+    	OnenotePageCollectionRequest pageCollectionReq = (OnenotePageCollectionRequest)request;
+    	List<HeaderOption> headeroption = pageCollectionReq.getHeaders();
+    	assertEquals("Content-Type", headeroption.get(0).getName());
+    	
+    	String expectedHeaderValue = "multipart/form-data; boundary=\""+multipart.getBoundary()+"\"";
+    	assertEquals(expectedHeaderValue, headeroption.get(0).getValue().toString());
+    	assertNotNull(multipart.content());
+    	
+    	OnenotePage page = request.post(multipart.content());
+    	assertNotNull(page);
     }
 
     /**
