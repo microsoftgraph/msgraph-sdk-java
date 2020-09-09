@@ -59,15 +59,6 @@ public class AdditionalDataTests {
 	}
 
 	@Test
-	public void testChildAdditionalDataDeserialization() {
-		String source = "{\"@odata.context\":\"https://graph.microsoft.com/v1.0/$metadata#drives/$entity\",\"id\":\"8bf6ae90006c4a4c\",\"driveType\":\"personal\",\"owner\":{\"user\":{\"displayName\":\"Peter\",\"id\":\"8bf6ae90006c4a4c\",\"email\":\"petertest@onmicrosoft.com\"}},\"quota\":{\"deleted\":1485718314,\"remaining\":983887466461,\"state\":\"normal\",\"total\":1142461300736,\"used\":158573834275}}";
-		Drive result = serializer.deserializeObject(source, Drive.class);
-		JsonElement email = result.owner.user.additionalDataManager().get("email");
-
-		assertEquals("\"petertest@onmicrosoft.com\"",email.toString());
-	}
-	
-	@Test
 	public void testSkipTransientData() {
 		Entity entity = new Entity();
 		entity.id = "1";
@@ -77,7 +68,7 @@ public class AdditionalDataTests {
 		
 		String serializedObject = serializer.serializeObject(entity);
 		
-		assertEquals("{\"id\":\"1\",\"@odata.type\":\"entity\"}", serializedObject);
+		assertEquals("{\"id\":\"1\",\"@odata.nextLink\":\"1\",\"@odata.type\":\"entity\"}", serializedObject);
   }
   
   @Test 
