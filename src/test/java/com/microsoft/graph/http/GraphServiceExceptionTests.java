@@ -13,6 +13,12 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import okhttp3.MediaType;
+import okhttp3.Protocol;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.ResponseBody;
+
 import com.microsoft.graph.core.GraphErrorCodes;
 import com.microsoft.graph.logger.DefaultLogger;
 
@@ -47,29 +53,22 @@ public class GraphServiceExceptionTests {
 	}
 
 	@Test
-    public void testCreateFromConnection() {
+    public void testcreateFromResponse() {
 		DefaultLogger logger = new DefaultLogger();
         GraphServiceException exception = null;
         Boolean success = false;
         Boolean failure = false;
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 401;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{}";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                return new HashMap<>();
-            }
-        };
+        final Response response = new Response.Builder()
+                .request(new Request.Builder().url("https://a.b.c").build())
+                .protocol(Protocol.HTTP_1_1)
+                .code(401).message("Unauthorized").body(
+                   ResponseBody.create(
+                        MediaType.parse("application/json"),
+                        "{}"
+                ))
+                .build();
         try{
-            exception = GraphServiceException.createFromConnection(new MockHttpRequest(),null,null,new MockConnection(data){},logger);
+            exception = GraphServiceException.createFromResponse(new MockHttpRequest(),null,null,response,logger);
             success = true;
         }catch (IOException ex){
             failure = true;
@@ -82,47 +81,4 @@ public class GraphServiceExceptionTests {
         assertTrue(message.indexOf("Error code: Unable to parse error response message") == 0);
         assertTrue(message.indexOf("http://localhost") > 0);
     }
-	
-	@Test
-	public void testNullConnection() {
-		DefaultLogger logger = new DefaultLogger();
-        GraphServiceException exception = null;
-        Boolean success = false;
-        Boolean failure = false;
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 401;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{}";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                return new HashMap<>();
-            }
-        };
-        try{
-            exception = GraphServiceException.createFromConnection(new MockHttpRequest(),null,null,new MockConnection(data) {
-            	@Override
-            	public InputStream getInputStream() throws IOException {
-                    return null;
-                }
-            },logger);
-            success = true;
-        }catch (IOException ex){
-            failure = true;
-        }
-
-        assertTrue(success);
-        assertFalse(failure);
-
-        String message = exception.getMessage();
-        assertTrue(message.indexOf("Error code: Unable to parse error response message") == 0);
-        assertTrue(message.indexOf("http://localhost") > 0);
-    }
-
 }

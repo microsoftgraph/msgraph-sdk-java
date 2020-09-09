@@ -182,7 +182,7 @@ public class BaseStreamRequestTests {
         assertNull(request.getHttpMethod());
         assertEquals(2, request.getOptions().size());
     }
-    private OkHttpClient getMockClient(final Response response) throws IOException {
+    public static OkHttpClient getMockClient(final Response response) throws IOException {
         final OkHttpClient mockClient = mock(OkHttpClient.class);
         final Call remoteCall = mock(Call.class);
         when(remoteCall.execute()).thenReturn(response);

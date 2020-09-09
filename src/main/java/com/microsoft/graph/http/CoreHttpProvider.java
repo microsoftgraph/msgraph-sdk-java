@@ -502,7 +502,7 @@ public class CoreHttpProvider implements IHttpProvider {
 			final Body serializable,
 			final Response response)
 					throws IOException {
-		throw GraphServiceException.createFromConnection(request, serializable, serializer,
+		throw GraphServiceException.createFromResponse(request, serializable, serializer,
 				response, logger);
 	}
 

@@ -29,7 +29,6 @@ import java.io.InputStream;
 import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.http.HttpResponseCode;
-import com.microsoft.graph.http.IConnection;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
 import com.microsoft.graph.logger.ILogger;
@@ -59,16 +58,6 @@ public class ChunkedUploadResponseHandler<UploadType>
     public ChunkedUploadResponseHandler(final Class<UploadType> uploadType) {
         this.deserializeTypeClass = uploadType;
     }
-
-    /**
-     * Do nothing before getting the response
-     *
-     * @param connection the connection
-     */
-    @Override
-    public void configConnection(final IConnection connection) {
-        return;
-    }
     
     /**
      * Do nothing before getting the response
@@ -79,63 +68,6 @@ public class ChunkedUploadResponseHandler<UploadType>
     public void configConnection(final Response response) {
         return;
     }
-
-    /**
-     * Generate the chunked upload response result
-     *
-     * @param request    the HTTP request
-     * @param connection the HTTP connection
-     * @param serializer the serializer
-     * @param logger     the system logger
-     * @return the chunked upload result, which could be either an uploaded item or error
-     * @throws Exception an exception occurs if the request was unable to complete for any reason
-     */
-    @Override
-    public ChunkedUploadResult<UploadType> generateResult(
-            final IHttpRequest request,
-            final IConnection connection,
-            final ISerializer serializer,
-            final ILogger logger) throws Exception {
-        InputStream in = null;
-
-        try {
-            if (connection.getResponseCode() == HttpResponseCode.HTTP_ACCEPTED) {
-                logger.logDebug("Chunk bytes has been accepted by the server.");
-                in = new BufferedInputStream(connection.getInputStream());
-                final UploadSession session = serializer.deserializeObject(
-                        CoreHttpProvider.streamToString(in), UploadSession.class);
-
-                return new ChunkedUploadResult<UploadType>(session);
-
-            } else if (connection.getResponseCode() == HttpResponseCode.HTTP_CREATED
-                    || connection.getResponseCode() == HttpResponseCode.HTTP_OK) {
-                logger.logDebug("Upload session is completed, uploaded item returned.");
-                in = new BufferedInputStream(connection.getInputStream());
-                String rawJson = CoreHttpProvider.streamToString(in);
-                UploadType uploadedItem = serializer.deserializeObject(rawJson,
-                        this.deserializeTypeClass);
-
-                return new ChunkedUploadResult<UploadType>(uploadedItem);
-            } else if (connection.getResponseCode() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
-                logger.logDebug("Receiving error during upload, see detail on result error");
-
-                return new ChunkedUploadResult<UploadType>(
-                        GraphServiceException.createFromConnection(request, null, serializer,
-                                connection, logger));
-            }
-        } finally {
-            if (in != null) {
-                try{
-                	in.close();
-                } catch(IOException e) {
-                	logger.logError(e.getMessage(), e);
-                }
-            }
-        }
-
-        return null;
-    }
-    
     /**
      * Generate the chunked upload response result
      *
@@ -175,7 +107,7 @@ public class ChunkedUploadResponseHandler<UploadType>
         		logger.logDebug("Receiving error during upload, see detail on result error");
 
         		return new ChunkedUploadResult<UploadType>(
-        				GraphServiceException.createFromConnection(request, null, serializer,
+        				GraphServiceException.createFromResponse(request, null, serializer,
         						response, logger));
         	}
         } finally {

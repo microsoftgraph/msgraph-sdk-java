@@ -13,7 +13,7 @@ import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.IExecutors;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.http.IHttpProvider;
-import com.microsoft.graph.http.MockHttpProvider;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.ISerializer;
@@ -47,9 +47,12 @@ public class BaseClientTests {
         };
         mAuthenticationProvider = new MockAuthenticationProvider();
         mExecutors = new MockExecutors();
-        mHttpProvider = new MockHttpProvider();
         mLogger = new MockLogger();
         mSerializer = new MockSerializer(null, "");
+        mHttpProvider = new CoreHttpProvider(mSerializer,
+            mAuthenticationProvider,
+            mExecutors,
+            mLogger);
 	}
 
 	@Test
