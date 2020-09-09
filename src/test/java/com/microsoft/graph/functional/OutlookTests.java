@@ -183,7 +183,7 @@ public class OutlookTests {
 		fileAttachment.name = "document.pdf";
 		File pdfFile = new File("src/test/resources/document.pdf");
 		InputStream fileStream = new FileInputStream(pdfFile);
-		fileAttachment.contentBytes = getByteArray(fileStream);
+		fileAttachment.contentBytes = OutlookTests.getByteArray(fileStream);
 		fileAttachment.oDataType = "#microsoft.graph.fileAttachment";
 		fileAttachment.id="54321";
 		return fileAttachment;
@@ -234,7 +234,7 @@ public class OutlookTests {
 		return event;
 	}
 
-	public byte[] getByteArray(InputStream in) {
+	public static byte[] getByteArray(InputStream in) {
 		try {
 			ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 			int nRead;
