@@ -19,7 +19,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph:2.0.+'
+    implementation 'com.microsoft.graph:microsoft-graph:2.1.+'
 }
 ```
 
@@ -31,7 +31,7 @@ Add the dependency in `dependencies` in pom.xml
 <dependency>
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0</version>
 </dependency>
 ```
 
