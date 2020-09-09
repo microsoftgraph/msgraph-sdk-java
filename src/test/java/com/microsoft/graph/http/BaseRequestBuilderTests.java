@@ -11,7 +11,7 @@ import org.junit.Test;
  */
 public class BaseRequestBuilderTests {
 
-    private String expectedRequestUrl = "https://a.b.c";
+    private String expectedRequestUrl = "https://a.b.c/";
     private BaseRequestBuilder baseRequestBuilder;
 
     @Before

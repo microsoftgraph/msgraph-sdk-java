@@ -61,7 +61,7 @@ public class BaseStreamRequestTests {
                 new MockLogger());
         mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
         mBaseClient.setHttpProvider(mProvider);
-        final BaseStreamRequest<String> request = new BaseStreamRequest<String>("https://a.b.c", mBaseClient,null, null){};
+        final BaseStreamRequest<String> request = new BaseStreamRequest<String>("https://a.b.c/", mBaseClient,null, null){};
         request.send();
         assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
@@ -105,7 +105,7 @@ public class BaseStreamRequestTests {
                 failure.set(true);
             }
         };
-        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
         request.send(callback);
         assertTrue(success.get());
         assertFalse(failure.get());
@@ -151,7 +151,7 @@ public class BaseStreamRequestTests {
                 failure.set(true);
             }
         };
-        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
         request.send(new byte[]{1, 2, 3, 4},callback);
         assertTrue(success.get());
         assertFalse(failure.get());
@@ -184,15 +184,15 @@ public class BaseStreamRequestTests {
                 new MockLogger());
         mProvider.setConnectionFactory(new MockConnectionFactory(new MockConnection(data)));
         mBaseClient.setHttpProvider(mProvider);
-        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
+        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
         request.send(new byte[]{1, 2, 3, 4});
         assertEquals(1, mAuthenticationProvider.getInterceptionCount());
     }
 
     @Test
     public void testBaseMethod() {
-        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c", mBaseClient,null, InputStream.class){};
-        assertEquals("https://a.b.c", request.getRequestUrl().toString());
+        final BaseStreamRequest<InputStream> request = new BaseStreamRequest<InputStream>("https://a.b.c/", mBaseClient,null, InputStream.class){};
+        assertEquals("https://a.b.c/", request.getRequestUrl().toString());
         request.addHeader("header key", "header value");
         assertEquals(2,request.getHeaders().size());
         assertNull(request.getHttpMethod());
