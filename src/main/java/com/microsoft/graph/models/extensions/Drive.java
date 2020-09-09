@@ -78,12 +78,16 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Following.
      * The list of items the user is following. Only in OneDrive for Business.
      */
+    @SerializedName("following")
+    @Expose
     public DriveItemCollectionPage following;
 
     /**
      * The Items.
      * All items contained in the drive. Read-only. Nullable.
      */
+    @SerializedName("items")
+    @Expose
     public DriveItemCollectionPage items;
 
     /**
@@ -106,6 +110,8 @@ public class Drive extends BaseItem implements IJsonBackedObject {
      * The Special.
      * Collection of common folders available in OneDrive. Read-only. Nullable.
      */
+    @SerializedName("special")
+    @Expose
     public DriveItemCollectionPage special;
 
 

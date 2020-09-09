@@ -78,6 +78,8 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
      * The Versions.
      * The list of previous versions of the list item.
      */
+    @SerializedName("versions")
+    @Expose
     public ListItemVersionCollectionPage versions;
 
 

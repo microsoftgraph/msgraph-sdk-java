@@ -110,7 +110,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * @param maxRedirects Max redirects that a request can take
      */
     public void setMaxRedirects(int maxRedirects) {
-    	this.maxRedirects = maxRedirects;
+    	DefaultConnectionConfig.maxRedirects = maxRedirects;
     }
     
     /**
@@ -128,7 +128,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * @param shouldRedirect Callback called before doing a redirect
      */
     public void setShouldRedirect(IShouldRedirect shouldRedirect) {
-    	this.shouldRedirect = shouldRedirect;
+    	DefaultConnectionConfig.shouldRedirect = shouldRedirect;
     }
     
     /**
@@ -146,7 +146,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * @param shouldretry The callback called before retry
      */
     public void setShouldRetry(IShouldRetry shouldretry) {
-    	this.shouldRetry = shouldretry;
+    	DefaultConnectionConfig.shouldRetry = shouldretry;
     }
     
     /**
@@ -164,7 +164,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * @param maxRetries Max retries for a request
      */
     public void setMaxRetries(int maxRetries) {
-    	this.maxRetries = maxRetries;
+    	DefaultConnectionConfig.maxRetries = maxRetries;
     }
     
     /**
@@ -182,7 +182,7 @@ public class DefaultConnectionConfig implements IConnectionConfig{
      * @param delay Delay in seconds between retries
      */
     public void setDelay(long delay) {
-    	this.delay = delay;
+    	DefaultConnectionConfig.delay = delay;
     }
     
     /**

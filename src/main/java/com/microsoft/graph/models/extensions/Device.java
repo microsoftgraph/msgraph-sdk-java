@@ -212,6 +212,8 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
      * The Extensions.
      * The collection of open extensions defined for the device. Read-only. Nullable.
      */
+    @SerializedName("extensions")
+    @Expose
     public ExtensionCollectionPage extensions;
 
 

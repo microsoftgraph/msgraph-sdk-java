@@ -67,18 +67,24 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Charts.
      * Returns collection of charts that are part of the worksheet. Read-only.
      */
+    @SerializedName("charts")
+    @Expose
     public WorkbookChartCollectionPage charts;
 
     /**
      * The Names.
      * Returns collection of names that are associated with the worksheet. Read-only.
      */
+    @SerializedName("names")
+    @Expose
     public WorkbookNamedItemCollectionPage names;
 
     /**
      * The Pivot Tables.
      * Collection of PivotTables that are part of the worksheet.
      */
+    @SerializedName("pivotTables")
+    @Expose
     public WorkbookPivotTableCollectionPage pivotTables;
 
     /**
@@ -93,6 +99,8 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
      * The Tables.
      * Collection of tables that are part of the worksheet. Read-only.
      */
+    @SerializedName("tables")
+    @Expose
     public WorkbookTableCollectionPage tables;
 
 

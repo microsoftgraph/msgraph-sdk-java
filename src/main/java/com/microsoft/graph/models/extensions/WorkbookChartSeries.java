@@ -50,6 +50,8 @@ public class WorkbookChartSeries extends Entity implements IJsonBackedObject {
      * The Points.
      * Represents a collection of all points in the series. Read-only.
      */
+    @SerializedName("points")
+    @Expose
     public WorkbookChartPointCollectionPage points;
 
 

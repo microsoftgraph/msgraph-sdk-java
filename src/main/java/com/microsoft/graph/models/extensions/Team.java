@@ -129,7 +129,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * The visibility of a the group and team. Defaults to Public.
+     * The visibility of the group and team. Defaults to Public.
      */
     @SerializedName("visibility")
     @Expose
@@ -155,6 +155,8 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Channels.
      * The collection of channels &amp; messages associated with the team.
      */
+    @SerializedName("channels")
+    @Expose
     public ChannelCollectionPage channels;
 
     /**
@@ -169,18 +171,24 @@ public class Team extends Entity implements IJsonBackedObject {
      * The Installed Apps.
      * The apps installed in this team.
      */
+    @SerializedName("installedApps")
+    @Expose
     public TeamsAppInstallationCollectionPage installedApps;
 
     /**
      * The Members.
      * Members and owners of the team.
      */
+    @SerializedName("members")
+    @Expose
     public ConversationMemberCollectionPage members;
 
     /**
      * The Operations.
      * The async operations that ran or are running on this team.
      */
+    @SerializedName("operations")
+    @Expose
     public TeamsAsyncOperationCollectionPage operations;
 
     /**

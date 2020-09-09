@@ -85,30 +85,40 @@ public class MailFolder extends Entity implements IJsonBackedObject {
      * The Child Folders.
      * The collection of child folders in the mailFolder.
      */
+    @SerializedName("childFolders")
+    @Expose
     public MailFolderCollectionPage childFolders;
 
     /**
      * The Message Rules.
      * The collection of rules that apply to the user's Inbox folder.
      */
+    @SerializedName("messageRules")
+    @Expose
     public MessageRuleCollectionPage messageRules;
 
     /**
      * The Messages.
      * The collection of messages in the mailFolder.
      */
+    @SerializedName("messages")
+    @Expose
     public MessageCollectionPage messages;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

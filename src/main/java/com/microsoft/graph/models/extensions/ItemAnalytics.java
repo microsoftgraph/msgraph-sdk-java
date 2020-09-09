@@ -41,6 +41,8 @@ public class ItemAnalytics extends Entity implements IJsonBackedObject {
      * The Item Activity Stats.
      * 
      */
+    @SerializedName("itemActivityStats")
+    @Expose
     public ItemActivityStatCollectionPage itemActivityStats;
 
     /**

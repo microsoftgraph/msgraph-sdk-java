@@ -84,18 +84,24 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The Assignments.
      * The list of assignments for the device configuration profile.
      */
+    @SerializedName("assignments")
+    @Expose
     public DeviceConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Device Setting State Summaries.
      * Device Configuration Setting State Device Summary
      */
+    @SerializedName("deviceSettingStateSummaries")
+    @Expose
     public SettingStateDeviceSummaryCollectionPage deviceSettingStateSummaries;
 
     /**
      * The Device Statuses.
      * Device configuration installation status by device.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public DeviceConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
@@ -110,6 +116,8 @@ public class DeviceConfiguration extends Entity implements IJsonBackedObject {
      * The User Statuses.
      * Device configuration installation status by user.
      */
+    @SerializedName("userStatuses")
+    @Expose
     public DeviceConfigurationUserStatusCollectionPage userStatuses;
 
     /**

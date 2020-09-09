@@ -118,12 +118,16 @@ public class WorkbookTable extends Entity implements IJsonBackedObject {
      * The Columns.
      * Represents a collection of all the columns in the table. Read-only.
      */
+    @SerializedName("columns")
+    @Expose
     public WorkbookTableColumnCollectionPage columns;
 
     /**
      * The Rows.
      * Represents a collection of all the rows in the table. Read-only.
      */
+    @SerializedName("rows")
+    @Expose
     public WorkbookTableRowCollectionPage rows;
 
     /**

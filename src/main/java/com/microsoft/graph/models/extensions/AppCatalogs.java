@@ -33,6 +33,8 @@ public class AppCatalogs extends Entity implements IJsonBackedObject {
      * The Teams Apps.
      * 
      */
+    @SerializedName("teamsApps")
+    @Expose
     public TeamsAppCollectionPage teamsApps;
 
 

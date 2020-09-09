@@ -107,6 +107,8 @@ public class ItemActivityStat extends Entity implements IJsonBackedObject {
      * The Activities.
      * Exposes the itemActivities represented in this itemActivityStat resource.
      */
+    @SerializedName("activities")
+    @Expose
     public ItemActivityCollectionPage activities;
 
 

@@ -89,12 +89,16 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The Assignments.
      * The list of group assignemenets for app configration.
      */
+    @SerializedName("assignments")
+    @Expose
     public ManagedDeviceMobileAppConfigurationAssignmentCollectionPage assignments;
 
     /**
      * The Device Statuses.
      * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
      */
+    @SerializedName("deviceStatuses")
+    @Expose
     public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionPage deviceStatuses;
 
     /**
@@ -109,6 +113,8 @@ public class ManagedDeviceMobileAppConfiguration extends Entity implements IJson
      * The User Statuses.
      * List of ManagedDeviceMobileAppConfigurationUserStatus.
      */
+    @SerializedName("userStatuses")
+    @Expose
     public ManagedDeviceMobileAppConfigurationUserStatusCollectionPage userStatuses;
 
     /**

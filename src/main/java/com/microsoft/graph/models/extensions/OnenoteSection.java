@@ -60,6 +60,8 @@ public class OnenoteSection extends OnenoteEntityHierarchyModel implements IJson
      * The Pages.
      * The collection of pages in the section.  Read-only. Nullable.
      */
+    @SerializedName("pages")
+    @Expose
     public OnenotePageCollectionPage pages;
 
     /**
