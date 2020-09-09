@@ -218,18 +218,24 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements IJ
      * The Assignments.
      * Navigation property to list of security groups targeted for policy.
      */
+    @SerializedName("assignments")
+    @Expose
     public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**
      * The Exempt App Locker Files.
      * Another way to input exempt apps through xml files
      */
+    @SerializedName("exemptAppLockerFiles")
+    @Expose
     public WindowsInformationProtectionAppLockerFileCollectionPage exemptAppLockerFiles;
 
     /**
      * The Protected App Locker Files.
      * Another way to input protected apps through xml files
      */
+    @SerializedName("protectedAppLockerFiles")
+    @Expose
     public WindowsInformationProtectionAppLockerFileCollectionPage protectedAppLockerFiles;
 
 

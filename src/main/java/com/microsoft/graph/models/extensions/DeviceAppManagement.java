@@ -104,84 +104,112 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
      * The Managed EBooks.
      * The Managed eBook.
      */
+    @SerializedName("managedEBooks")
+    @Expose
     public ManagedEBookCollectionPage managedEBooks;
 
     /**
      * The Mobile App Categories.
      * The mobile app categories.
      */
+    @SerializedName("mobileAppCategories")
+    @Expose
     public MobileAppCategoryCollectionPage mobileAppCategories;
 
     /**
      * The Mobile App Configurations.
      * The Managed Device Mobile Application Configurations.
      */
+    @SerializedName("mobileAppConfigurations")
+    @Expose
     public ManagedDeviceMobileAppConfigurationCollectionPage mobileAppConfigurations;
 
     /**
      * The Mobile Apps.
      * The mobile apps.
      */
+    @SerializedName("mobileApps")
+    @Expose
     public MobileAppCollectionPage mobileApps;
 
     /**
      * The Vpp Tokens.
      * List of Vpp tokens for this organization.
      */
+    @SerializedName("vppTokens")
+    @Expose
     public VppTokenCollectionPage vppTokens;
 
     /**
      * The Android Managed App Protections.
      * Android managed app policies.
      */
+    @SerializedName("androidManagedAppProtections")
+    @Expose
     public AndroidManagedAppProtectionCollectionPage androidManagedAppProtections;
 
     /**
      * The Default Managed App Protections.
      * Default managed app policies.
      */
+    @SerializedName("defaultManagedAppProtections")
+    @Expose
     public DefaultManagedAppProtectionCollectionPage defaultManagedAppProtections;
 
     /**
      * The Ios Managed App Protections.
      * iOS managed app policies.
      */
+    @SerializedName("iosManagedAppProtections")
+    @Expose
     public IosManagedAppProtectionCollectionPage iosManagedAppProtections;
 
     /**
      * The Managed App Policies.
      * Managed app policies.
      */
+    @SerializedName("managedAppPolicies")
+    @Expose
     public ManagedAppPolicyCollectionPage managedAppPolicies;
 
     /**
      * The Managed App Registrations.
      * The managed app registrations.
      */
+    @SerializedName("managedAppRegistrations")
+    @Expose
     public ManagedAppRegistrationCollectionPage managedAppRegistrations;
 
     /**
      * The Managed App Statuses.
      * The managed app statuses.
      */
+    @SerializedName("managedAppStatuses")
+    @Expose
     public ManagedAppStatusCollectionPage managedAppStatuses;
 
     /**
      * The Mdm Windows Information Protection Policies.
      * Windows information protection for apps running on devices which are MDM enrolled.
      */
+    @SerializedName("mdmWindowsInformationProtectionPolicies")
+    @Expose
     public MdmWindowsInformationProtectionPolicyCollectionPage mdmWindowsInformationProtectionPolicies;
 
     /**
      * The Targeted Managed App Configurations.
      * Targeted managed app configurations.
      */
+    @SerializedName("targetedManagedAppConfigurations")
+    @Expose
     public TargetedManagedAppConfigurationCollectionPage targetedManagedAppConfigurations;
 
     /**
      * The Windows Information Protection Policies.
      * Windows information protection for apps running on devices which are not MDM enrolled.
      */
+    @SerializedName("windowsInformationProtectionPolicies")
+    @Expose
     public WindowsInformationProtectionPolicyCollectionPage windowsInformationProtectionPolicies;
 
 

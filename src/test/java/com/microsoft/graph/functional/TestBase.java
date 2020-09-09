@@ -21,10 +21,11 @@ public class TestBase {
     private String clientId;
     private String username;
     private String password;
+    private String clientSecret;
     // Don't use password grant in your apps. Only use for legacy solutions and automated testing.
     private String grantType = "password";
-    private String tokenEndpoint = "https://login.microsoftonline.com/common/oauth2/token";
-    private String resourceId = "https%3A%2F%2Fgraph.microsoft.com%2F";
+    private String tokenEndpoint = "https://login.microsoftonline.com/"+ Constants.TENANTID +"/oauth2/v2.0/token";
+    private String resourceId = "https%3A%2F%2Fgraph.microsoft.com%2F.default";
     private String accessToken = null;
 
     protected IGraphServiceClient graphClient = null;
@@ -34,6 +35,7 @@ public class TestBase {
         clientId = Constants.APPID;
         username = Constants.USERNAME;
         password = Constants.PASSWORD;
+        clientSecret = Constants.CLIENTSECRET;
 
         GetAuthenticatedClient();
     }
@@ -77,12 +79,13 @@ public class TestBase {
             conn.setInstanceFollowRedirects(false);
             conn.connect();
             OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream(), "UTF-8");
-            String payload = String.format("grant_type=%1$s&resource=%2$s&client_id=%3$s&username=%4$s&password=%5$s",
+            String payload = String.format("grant_type=%1$s&scope=%2$s&client_id=%3$s&username=%4$s&password=%5$s&client_secret=%6$s",
                     grantType,
                     resourceId,
                     clientId,
                     username,
-                    password);
+                    password,
+                    clientSecret);
             writer.write(payload);
             writer.close();
             try {

@@ -39,18 +39,24 @@ public class Planner extends Entity implements IJsonBackedObject {
      * The Buckets.
      * Read-only. Nullable. Returns a collection of the specified buckets
      */
+    @SerializedName("buckets")
+    @Expose
     public PlannerBucketCollectionPage buckets;
 
     /**
      * The Plans.
      * Read-only. Nullable. Returns a collection of the specified plans
      */
+    @SerializedName("plans")
+    @Expose
     public PlannerPlanCollectionPage plans;
 
     /**
      * The Tasks.
      * Read-only. Nullable. Returns a collection of the specified tasks
      */
+    @SerializedName("tasks")
+    @Expose
     public PlannerTaskCollectionPage tasks;
 
 

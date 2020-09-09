@@ -101,12 +101,16 @@ public class Site extends BaseItem implements IJsonBackedObject {
      * The Columns.
      * The collection of column definitions reusable across lists under this site.
      */
+    @SerializedName("columns")
+    @Expose
     public ColumnDefinitionCollectionPage columns;
 
     /**
      * The Content Types.
      * The collection of content types defined for this site.
      */
+    @SerializedName("contentTypes")
+    @Expose
     public ContentTypeCollectionPage contentTypes;
 
     /**
@@ -121,24 +125,32 @@ public class Site extends BaseItem implements IJsonBackedObject {
      * The Drives.
      * The collection of drives (document libraries) under this site.
      */
+    @SerializedName("drives")
+    @Expose
     public DriveCollectionPage drives;
 
     /**
      * The Items.
      * Used to address any item contained in this site. This collection cannot be enumerated.
      */
+    @SerializedName("items")
+    @Expose
     public BaseItemCollectionPage items;
 
     /**
      * The Lists.
      * The collection of lists under this site.
      */
+    @SerializedName("lists")
+    @Expose
     public ListCollectionPage lists;
 
     /**
      * The Sites.
      * The collection of the sub-sites under this site.
      */
+    @SerializedName("sites")
+    @Expose
     public SiteCollectionPage sites;
 
     /**
