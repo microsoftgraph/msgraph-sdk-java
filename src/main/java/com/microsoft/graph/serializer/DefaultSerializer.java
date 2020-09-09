@@ -29,6 +29,9 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.microsoft.graph.logger.ILogger;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -185,22 +188,45 @@ public class DefaultSerializer implements ISerializer {
         JsonElement outJsonTree = gson.toJsonTree(serializableObject);
 
         if (serializableObject instanceof IJsonBackedObject) {
-        	IJsonBackedObject serializableJsonObject = (IJsonBackedObject) serializableObject;
-        	
-            AdditionalDataManager additionalData = serializableJsonObject.additionalDataManager();
-            
-            // If the item is a valid Graph object, add its additional data
-            if (outJsonTree.isJsonObject()) {
-                JsonObject outJson = outJsonTree.getAsJsonObject();
-                
-                addAdditionalDataToJson(additionalData, outJson);
-                outJson = getChildAdditionalData(serializableJsonObject, outJson);
-                
-                outJsonTree = outJson;
+        	outJsonTree = getDataFromAdditionalDataManager(outJsonTree, serializableObject);
+        } else if (outJsonTree.isJsonObject()) {
+            final Field[] fields = serializableObject.getClass().getDeclaredFields();
+            JsonObject outJson = outJsonTree.getAsJsonObject();
+            for(Field field : fields) {
+                if(outJson.has(field.getName())) {
+                    final Type[] interfaces = field.getType().getGenericInterfaces();
+                    for(Type interfaceType : interfaces) {
+                        if(interfaceType == IJsonBackedObject.class) {
+                            try {
+                                outJsonTree = getDataFromAdditionalDataManager(outJsonTree, field.get(serializableObject));
+                            } catch (IllegalAccessException ex ) {
+                                logger.logDebug("Couldn't access prop" + field.getName());
+                            }
+                            break;
+                        }
+                    }
+                }
             }
         }
 
         return outJsonTree.toString();
+    }
+    private <T> JsonElement getDataFromAdditionalDataManager(JsonElement outJsonTree, final T serializableObject) {
+        IJsonBackedObject serializableJsonObject = (IJsonBackedObject) serializableObject;
+        	
+        AdditionalDataManager additionalData = serializableJsonObject.additionalDataManager();
+        
+        // If the item is a valid Graph object, add its additional data
+        if (outJsonTree.isJsonObject()) {
+            JsonObject outJson = outJsonTree.getAsJsonObject();
+            
+            addAdditionalDataToJson(additionalData, outJson);
+            outJson = getChildAdditionalData(serializableJsonObject, outJson);
+            
+            return outJson;
+        } else {
+            return outJsonTree;
+        }
     }
     
     /**

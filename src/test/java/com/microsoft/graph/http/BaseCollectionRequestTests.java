@@ -67,7 +67,7 @@ public class BaseCollectionRequestTests {
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        mRequest = new BaseCollectionRequest<JsonObject,String>("https://a.b.c", mBaseClient, null, JsonObject.class,null){};
+        mrequest = new BaseCollectionRequest<JsonObject,String>("https://a.b.c/", mBaseClient, null, JsonObject.class,null){};
     }
 
     @Test
@@ -88,10 +88,10 @@ public class BaseCollectionRequestTests {
     public void testFunctionParameters() {
         final Option f1 = new FunctionOption("1", "one");
         final Option f2 = new FunctionOption("2", null);
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c", null, Arrays.asList(f1, f2), null,null){};
-        assertEquals("https://a.b.c(1='one',2=null)", request.getRequestUrl().toString());
+        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, Arrays.asList(f1, f2), null,null){};
+        assertEquals("https://a.b.c/(1='one',2=null)", request.getRequestUrl().toString());
         request.addFunctionOption(new FunctionOption("3","two"));;
-        assertEquals("https://a.b.c(1='one',2=null,3='two')", request.getRequestUrl().toString());
+        assertEquals("https://a.b.c/(1='one',2=null,3='two')", request.getRequestUrl().toString());
         assertEquals(4, request.getOptions().size());
     }
 
@@ -99,10 +99,10 @@ public class BaseCollectionRequestTests {
     public void testQueryParameters() {
         final Option q1 = new QueryOption("q1","option1 ");
         final Option q2 = new QueryOption("q2","option2");
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c", null, Arrays.asList(q1, q2), null,null){};
-        assertEquals("https://a.b.c?q1=option1+&q2=option2", request.getRequestUrl().toString());
+        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, Arrays.asList(q1, q2), null,null){};
+        assertEquals("https://a.b.c/?q1=option1%20&q2=option2", request.getRequestUrl().toString());
         request.addQueryOption(new QueryOption("q3","option3"));
-        assertEquals("https://a.b.c?q1=option1+&q2=option2&q3=option3", request.getRequestUrl().toString());
+        assertEquals("https://a.b.c/?q1=option1%20&q2=option2&q3=option3", request.getRequestUrl().toString());
         assertEquals(4,request.getOptions().size());
     }
 
@@ -112,8 +112,8 @@ public class BaseCollectionRequestTests {
         final Option f2 = new FunctionOption("f2", null);
         final Option q1 = new QueryOption("q1","option1 ");
         final Option q2 = new QueryOption("q2","option2");
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c", null, Arrays.asList(f1, f2, q1, q2), null,null){};
-        assertEquals("https://a.b.c(f1='fun1',f2=null)?q1=option1+&q2=option2", request.getRequestUrl().toString());
+        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, Arrays.asList(f1, f2, q1, q2), null,null){};
+        assertEquals("https://a.b.c/(f1='fun1',f2=null)?q1=option1%20&q2=option2", request.getRequestUrl().toString());
         assertEquals(5, request.getOptions().size());
     }
 
@@ -134,7 +134,7 @@ public class BaseCollectionRequestTests {
     public void testHeader() {
         String expectedHeader = "header key";
         String expectedValue = "header value";
-        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c", null, null, null,null){};
+        final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c/", null, null, null,null){};
         assertEquals(1, request.getHeaders().size());
         request.addHeader(expectedHeader,expectedValue);
         assertEquals(2,request.getHeaders().size());
