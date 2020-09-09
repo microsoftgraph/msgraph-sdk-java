@@ -67,7 +67,7 @@ public class BaseCollectionRequestTests {
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        mrequest = new BaseCollectionRequest<JsonObject,String>("https://a.b.c/", mBaseClient, null, JsonObject.class,null){};
+        mRequest = new BaseCollectionRequest<JsonObject,String>("https://a.b.c/", mBaseClient, null, JsonObject.class,null){};
     }
 
     @Test

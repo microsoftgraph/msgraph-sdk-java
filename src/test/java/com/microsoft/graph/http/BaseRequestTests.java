@@ -68,7 +68,7 @@ public class BaseRequestTests {
                 new MockLogger(),
                 mockClient);
         mBaseClient.setHttpProvider(mProvider);
-        mrequest = new BaseRequest("https://a.b.c/", mBaseClient, null,null){};
+        mRequest = new BaseRequest("https://a.b.c/", mBaseClient, null,null){};
     }
 
     @Test
