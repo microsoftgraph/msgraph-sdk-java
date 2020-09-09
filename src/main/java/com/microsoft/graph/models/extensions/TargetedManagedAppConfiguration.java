@@ -53,12 +53,16 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      * The Apps.
      * List of apps to which the policy is deployed.
      */
+    @SerializedName("apps")
+    @Expose
     public ManagedMobileAppCollectionPage apps;
 
     /**
      * The Assignments.
      * Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
      */
+    @SerializedName("assignments")
+    @Expose
     public TargetedManagedAppPolicyAssignmentCollectionPage assignments;
 
     /**

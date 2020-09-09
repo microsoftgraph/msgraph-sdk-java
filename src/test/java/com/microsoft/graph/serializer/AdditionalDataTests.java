@@ -93,8 +93,7 @@ public class AdditionalDataTests {
 		
 		String serialized = serializer.serializeObject(deserializedObject);
 		
-		JsonParser parser = new JsonParser();
-		JsonObject jsonObject = parser.parse(serialized).getAsJsonObject();
+		JsonObject jsonObject = JsonParser.parseString(serialized).getAsJsonObject();
 		assertNotNull(jsonObject.get("checklist").getAsJsonObject().get("1234"));
 		assertNull(jsonObject.get("checklist").getAsJsonObject().get("1234").getAsJsonObject().get("1234"));
 		assertNull(jsonObject.get("checklist").getAsJsonObject().get("1234").getAsJsonObject().get("66442"));

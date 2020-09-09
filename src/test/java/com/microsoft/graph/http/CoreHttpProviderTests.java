@@ -40,23 +40,6 @@ public class CoreHttpProviderTests {
         toSerialize.error.innererror = null;
 
         setDefaultHttpProvider(toSerialize);
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 415;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{}";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                return new HashMap<>();
-            }
-        };
-
         try {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");
@@ -87,23 +70,6 @@ public class CoreHttpProviderTests {
                 new MockExecutors(),
                 logger);
         
-        final ITestConnectionData data = new ITestConnectionData() {
-            @Override
-            public int getRequestCode() {
-                return 415;
-            }
-
-            @Override
-            public String getJsonResponse() {
-                return "{}";
-            }
-
-            @Override
-            public Map<String, String> getHeaders() {
-                return new HashMap<>();
-            }
-        };
-
         try {
             mProvider.send(new MockHttpRequest(), DriveItem.class, null);
             fail("Expected exception in previous statement");

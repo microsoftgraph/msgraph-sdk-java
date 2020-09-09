@@ -416,12 +416,16 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Device Compliance Policy States.
      * Device compliance policy states for this device.
      */
+    @SerializedName("deviceCompliancePolicyStates")
+    @Expose
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
      * Device configuration states for this device.
      */
+    @SerializedName("deviceConfigurationStates")
+    @Expose
     public DeviceConfigurationStateCollectionPage deviceConfigurationStates;
 
     /**

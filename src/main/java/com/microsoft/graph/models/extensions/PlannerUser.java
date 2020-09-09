@@ -36,12 +36,16 @@ public class PlannerUser extends Entity implements IJsonBackedObject {
      * The Plans.
      * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
+    @SerializedName("plans")
+    @Expose
     public PlannerPlanCollectionPage plans;
 
     /**
      * The Tasks.
      * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
+    @SerializedName("tasks")
+    @Expose
     public PlannerTaskCollectionPage tasks;
 
 

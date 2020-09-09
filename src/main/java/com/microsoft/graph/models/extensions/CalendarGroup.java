@@ -57,6 +57,8 @@ public class CalendarGroup extends Entity implements IJsonBackedObject {
      * The Calendars.
      * The calendars in the calendar group. Navigation property. Read-only. Nullable.
      */
+    @SerializedName("calendars")
+    @Expose
     public CalendarCollectionPage calendars;
 
 

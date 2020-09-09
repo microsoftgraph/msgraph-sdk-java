@@ -138,54 +138,72 @@ public class Schedule extends Entity implements IJsonBackedObject {
      * The Offer Shift Requests.
      * 
      */
+    @SerializedName("offerShiftRequests")
+    @Expose
     public OfferShiftRequestCollectionPage offerShiftRequests;
 
     /**
      * The Open Shift Change Requests.
      * 
      */
+    @SerializedName("openShiftChangeRequests")
+    @Expose
     public OpenShiftChangeRequestCollectionPage openShiftChangeRequests;
 
     /**
      * The Open Shifts.
      * 
      */
+    @SerializedName("openShifts")
+    @Expose
     public OpenShiftCollectionPage openShifts;
 
     /**
      * The Scheduling Groups.
      * The logical grouping of users in the schedule (usually by role).
      */
+    @SerializedName("schedulingGroups")
+    @Expose
     public SchedulingGroupCollectionPage schedulingGroups;
 
     /**
      * The Shifts.
      * The shifts in the schedule.
      */
+    @SerializedName("shifts")
+    @Expose
     public ShiftCollectionPage shifts;
 
     /**
      * The Swap Shifts Change Requests.
      * 
      */
+    @SerializedName("swapShiftsChangeRequests")
+    @Expose
     public SwapShiftsChangeRequestCollectionPage swapShiftsChangeRequests;
 
     /**
      * The Time Off Reasons.
      * The set of reasons for a time off in the schedule.
      */
+    @SerializedName("timeOffReasons")
+    @Expose
     public TimeOffReasonCollectionPage timeOffReasons;
 
     /**
      * The Time Off Requests.
      * 
      */
+    @SerializedName("timeOffRequests")
+    @Expose
     public TimeOffRequestCollectionPage timeOffRequests;
 
     /**
      * The Times Off.
      * The instances of times off in the schedule.
      */
+    @SerializedName("timesOff")
+    @Expose
     public TimeOffCollectionPage timesOff;
 
 

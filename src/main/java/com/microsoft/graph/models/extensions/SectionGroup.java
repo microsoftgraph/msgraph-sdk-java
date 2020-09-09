@@ -69,12 +69,16 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
      * The Section Groups.
      * The section groups in the section. Read-only. Nullable.
      */
+    @SerializedName("sectionGroups")
+    @Expose
     public SectionGroupCollectionPage sectionGroups;
 
     /**
      * The Sections.
      * The sections in the section group. Read-only. Nullable.
      */
+    @SerializedName("sections")
+    @Expose
     public OnenoteSectionCollectionPage sections;
 
 

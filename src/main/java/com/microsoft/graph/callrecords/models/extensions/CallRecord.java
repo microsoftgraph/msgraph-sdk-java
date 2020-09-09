@@ -108,6 +108,8 @@ public class CallRecord extends Entity implements IJsonBackedObject {
      * The Sessions.
      * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
      */
+    @SerializedName("sessions")
+    @Expose
     public SessionCollectionPage sessions;
 
 

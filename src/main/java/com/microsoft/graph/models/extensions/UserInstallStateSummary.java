@@ -65,6 +65,8 @@ public class UserInstallStateSummary extends Entity implements IJsonBackedObject
      * The Device States.
      * The install state of the eBook.
      */
+    @SerializedName("deviceStates")
+    @Expose
     public DeviceInstallStateCollectionPage deviceStates;
 
 

@@ -58,6 +58,8 @@ public class TeamsApp extends Entity implements IJsonBackedObject {
      * The App Definitions.
      * The details for each version of the app.
      */
+    @SerializedName("appDefinitions")
+    @Expose
     public TeamsAppDefinitionCollectionPage appDefinitions;
 
 

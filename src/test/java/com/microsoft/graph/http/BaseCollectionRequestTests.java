@@ -81,7 +81,6 @@ public class BaseCollectionRequestTests {
         final Option f1 = new FunctionOption("1", "one");
         final Option f2 = new FunctionOption("2", null);
         final BaseCollectionRequest<String,String> request = new BaseCollectionRequest<String,String>("https://a.b.c", null, Arrays.asList(f1, f2), null,null){};
-        String urlTest = request.getRequestUrl().toString();
         assertEquals("https://a.b.c(1='one',2=null)", request.getRequestUrl().toString());
         request.addFunctionOption(new FunctionOption("3","two"));;
         assertEquals("https://a.b.c(1='one',2=null,3='two')", request.getRequestUrl().toString());

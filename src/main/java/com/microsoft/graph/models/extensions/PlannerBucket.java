@@ -57,6 +57,8 @@ public class PlannerBucket extends Entity implements IJsonBackedObject {
      * The Tasks.
      * Read-only. Nullable. The collection of tasks in the bucket.
      */
+    @SerializedName("tasks")
+    @Expose
     public PlannerTaskCollectionPage tasks;
 
 

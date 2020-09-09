@@ -39,18 +39,24 @@ public class Security extends Entity implements IJsonBackedObject {
      * The Alerts.
      * Read-only. Nullable.
      */
+    @SerializedName("alerts")
+    @Expose
     public AlertCollectionPage alerts;
 
     /**
      * The Secure Score Control Profiles.
      * 
      */
+    @SerializedName("secureScoreControlProfiles")
+    @Expose
     public SecureScoreControlProfileCollectionPage secureScoreControlProfiles;
 
     /**
      * The Secure Scores.
      * 
      */
+    @SerializedName("secureScores")
+    @Expose
     public SecureScoreCollectionPage secureScores;
 
 

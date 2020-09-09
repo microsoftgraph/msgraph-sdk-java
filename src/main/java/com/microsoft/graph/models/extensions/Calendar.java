@@ -133,30 +133,40 @@ public class Calendar extends Entity implements IJsonBackedObject {
      * The Calendar Permissions.
      * The permissions of the users with whom the calendar is shared.
      */
+    @SerializedName("calendarPermissions")
+    @Expose
     public CalendarPermissionCollectionPage calendarPermissions;
 
     /**
      * The Calendar View.
      * The calendar view for the calendar. Navigation property. Read-only.
      */
+    @SerializedName("calendarView")
+    @Expose
     public EventCollectionPage calendarView;
 
     /**
      * The Events.
      * The events in the calendar. Navigation property. Read-only.
      */
+    @SerializedName("events")
+    @Expose
     public EventCollectionPage events;
 
     /**
      * The Multi Value Extended Properties.
      * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
      */
+    @SerializedName("multiValueExtendedProperties")
+    @Expose
     public MultiValueLegacyExtendedPropertyCollectionPage multiValueExtendedProperties;
 
     /**
      * The Single Value Extended Properties.
      * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
      */
+    @SerializedName("singleValueExtendedProperties")
+    @Expose
     public SingleValueLegacyExtendedPropertyCollectionPage singleValueExtendedProperties;
 
 

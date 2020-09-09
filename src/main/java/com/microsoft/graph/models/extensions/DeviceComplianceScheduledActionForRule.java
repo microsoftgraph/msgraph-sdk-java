@@ -41,6 +41,8 @@ public class DeviceComplianceScheduledActionForRule extends Entity implements IJ
      * The Scheduled Action Configurations.
      * The list of scheduled action configurations for this compliance policy.
      */
+    @SerializedName("scheduledActionConfigurations")
+    @Expose
     public DeviceComplianceActionItemCollectionPage scheduledActionConfigurations;
 
 
