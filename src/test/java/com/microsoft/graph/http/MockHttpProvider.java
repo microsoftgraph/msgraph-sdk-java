@@ -8,6 +8,7 @@ import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IExecutors;
+import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.concurrency.MockExecutors;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.core.DefaultConnectionConfig;
@@ -16,6 +17,8 @@ import com.microsoft.graph.logger.ILogger;
 import com.microsoft.graph.logger.MockLogger;
 import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.MockSerializer;
+
+import okhttp3.Request;
 
 /**
  * Mock for {@see IHttpProvider}
@@ -123,4 +126,10 @@ public class MockHttpProvider implements IHttpProvider {
     public void setConnectionConfig(IConnectionConfig connectionConfig) {
     	this.connectionConfig = connectionConfig;
     }
+
+	@Override
+	public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
+			BodyType serializable, IProgressCallback<Result> progress) throws ClientException {
+		return null;
+	}
 }
