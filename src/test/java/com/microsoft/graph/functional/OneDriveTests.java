@@ -1,6 +1,6 @@
 package com.microsoft.graph.functional;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -82,7 +82,6 @@ public class OneDriveTests {
 	public void testDownloadWithCustomRequest() throws IOException {
 		final String testDownloadFileId = "01RWFXFJG3UYRHE75RZVFYWKNUEBB53H7A";
 		final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get();
-		final byte[] bytes = stream.readAllBytes();
-		assertTrue("stream should not be empty", bytes.length > 0);
+		assertFalse("stream should not be empty", stream.read() == -1);
 	}
 }
