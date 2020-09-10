@@ -113,4 +113,15 @@ public class WorkbookTableDataBodyRangeRequest extends BaseRequest implements IW
         return (WorkbookTableDataBodyRangeRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookTableDataBodyRangeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookTableDataBodyRangeRequest)this;
+    }
+
 }

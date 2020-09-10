@@ -37,6 +37,14 @@ public interface IContactFolderCollectionRequest {
     IContactFolderCollectionRequest expand(final String value);
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    IContactFolderCollectionRequest filter(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

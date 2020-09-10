@@ -154,5 +154,16 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
          return (WebAppRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWebAppRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WebAppRequest)this;
+     }
+
 }
 

@@ -78,4 +78,15 @@ public class WorkbookFunctionsZ_TestRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsZ_TestRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsZ_TestRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsZ_TestRequest)this;
+    }
+
 }

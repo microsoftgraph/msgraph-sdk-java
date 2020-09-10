@@ -154,5 +154,16 @@ public class DriveItemVersionRequest extends BaseRequest implements IDriveItemVe
          return (DriveItemVersionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDriveItemVersionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DriveItemVersionRequest)this;
+     }
+
 }
 

@@ -78,4 +78,15 @@ public class WorkbookFunctionsErf_PreciseRequest extends BaseRequest implements 
         return (WorkbookFunctionsErf_PreciseRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsErf_PreciseRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsErf_PreciseRequest)this;
+    }
+
 }

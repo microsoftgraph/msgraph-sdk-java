@@ -78,4 +78,15 @@ public class WorkbookFunctionsGammaLn_PreciseRequest extends BaseRequest impleme
         return (WorkbookFunctionsGammaLn_PreciseRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsGammaLn_PreciseRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsGammaLn_PreciseRequest)this;
+    }
+
 }

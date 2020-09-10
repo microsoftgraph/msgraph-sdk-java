@@ -173,5 +173,16 @@ public class PostRequest extends BaseRequest implements IPostRequest {
          return (PostRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IPostRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (PostRequest)this;
+     }
+
 }
 

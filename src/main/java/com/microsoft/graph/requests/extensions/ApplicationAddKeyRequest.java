@@ -78,4 +78,15 @@ public class ApplicationAddKeyRequest extends BaseRequest implements IApplicatio
         return (ApplicationAddKeyRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IApplicationAddKeyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ApplicationAddKeyRequest)this;
+    }
+
 }

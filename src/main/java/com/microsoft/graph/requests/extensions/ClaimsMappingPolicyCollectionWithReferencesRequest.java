@@ -59,6 +59,11 @@ public class ClaimsMappingPolicyCollectionWithReferencesRequest extends BaseColl
         return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
     }
 
+    public IClaimsMappingPolicyCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;
+    }
+
     public IClaimsMappingPolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (ClaimsMappingPolicyCollectionWithReferencesRequest)this;

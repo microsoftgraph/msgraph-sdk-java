@@ -158,5 +158,16 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
          return (ItemAnalyticsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IItemAnalyticsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ItemAnalyticsRequest)this;
+     }
+
 }
 

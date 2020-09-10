@@ -78,4 +78,15 @@ public class WorkbookFunctionsT_InvRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsT_InvRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsT_InvRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsT_InvRequest)this;
+    }
+
 }

@@ -78,4 +78,15 @@ public class WorkbookFunctionsImCschRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsImCschRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsImCschRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsImCschRequest)this;
+    }
+
 }

@@ -78,4 +78,15 @@ public class WorkbookFunctionsChiSq_InvRequest extends BaseRequest implements IW
         return (WorkbookFunctionsChiSq_InvRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsChiSq_InvRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsChiSq_InvRequest)this;
+    }
+
 }

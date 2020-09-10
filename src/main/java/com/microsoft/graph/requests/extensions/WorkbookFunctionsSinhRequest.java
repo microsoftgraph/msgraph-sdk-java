@@ -78,4 +78,15 @@ public class WorkbookFunctionsSinhRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsSinhRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsSinhRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsSinhRequest)this;
+    }
+
 }

@@ -155,5 +155,16 @@ public class DeviceManagementExchangeConnectorRequest extends BaseRequest implem
          return (DeviceManagementExchangeConnectorRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceManagementExchangeConnectorRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceManagementExchangeConnectorRequest)this;
+     }
+
 }
 

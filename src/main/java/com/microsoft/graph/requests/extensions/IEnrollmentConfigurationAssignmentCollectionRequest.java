@@ -38,6 +38,14 @@ public interface IEnrollmentConfigurationAssignmentCollectionRequest {
     IEnrollmentConfigurationAssignmentCollectionRequest expand(final String value);
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    IEnrollmentConfigurationAssignmentCollectionRequest filter(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

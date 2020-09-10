@@ -78,4 +78,15 @@ public class WorkbookFunctionsPriceRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsPriceRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsPriceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsPriceRequest)this;
+    }
+
 }

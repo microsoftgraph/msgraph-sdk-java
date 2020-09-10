@@ -113,4 +113,15 @@ public class WorkbookRangeBorderItemAtRequest extends BaseRequest implements IWo
         return (WorkbookRangeBorderItemAtRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookRangeBorderItemAtRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookRangeBorderItemAtRequest)this;
+    }
+
 }

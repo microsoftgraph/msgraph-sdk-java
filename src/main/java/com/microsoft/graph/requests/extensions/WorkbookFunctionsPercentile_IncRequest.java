@@ -78,4 +78,15 @@ public class WorkbookFunctionsPercentile_IncRequest extends BaseRequest implemen
         return (WorkbookFunctionsPercentile_IncRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsPercentile_IncRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsPercentile_IncRequest)this;
+    }
+
 }

@@ -109,4 +109,15 @@ public class DirectoryObjectCheckMemberObjectsCollectionRequest extends BaseColl
         return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDirectoryObjectCheckMemberObjectsCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDirectoryObjectCheckMemberObjectsCollectionRequest)this;
+    }
+
 }

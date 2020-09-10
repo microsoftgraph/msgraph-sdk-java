@@ -59,6 +59,11 @@ public class TokenLifetimePolicyCollectionWithReferencesRequest extends BaseColl
         return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
     }
 
+    public ITokenLifetimePolicyCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
+    }
+
     public ITokenLifetimePolicyCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (TokenLifetimePolicyCollectionWithReferencesRequest)this;
