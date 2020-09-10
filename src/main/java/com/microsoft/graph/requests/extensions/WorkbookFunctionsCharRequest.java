@@ -78,4 +78,15 @@ public class WorkbookFunctionsCharRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsCharRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsCharRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsCharRequest)this;
+    }
+
 }

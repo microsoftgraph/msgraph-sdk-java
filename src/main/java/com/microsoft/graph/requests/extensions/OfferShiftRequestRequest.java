@@ -169,5 +169,16 @@ public class OfferShiftRequestRequest extends BaseRequest implements IOfferShift
          return (OfferShiftRequestRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOfferShiftRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (OfferShiftRequestRequest)this;
+     }
+
 }
 

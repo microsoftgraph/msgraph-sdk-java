@@ -78,4 +78,15 @@ public class WorkbookFunctionsYearFracRequest extends BaseRequest implements IWo
         return (WorkbookFunctionsYearFracRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsYearFracRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsYearFracRequest)this;
+    }
+
 }

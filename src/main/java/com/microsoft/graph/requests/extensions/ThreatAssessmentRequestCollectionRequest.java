@@ -85,6 +85,17 @@ public class ThreatAssessmentRequestCollectionRequest extends BaseCollectionRequ
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IThreatAssessmentRequestCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ThreatAssessmentRequestCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

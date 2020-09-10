@@ -113,4 +113,15 @@ public class WorkbookTableRangeRequest extends BaseRequest implements IWorkbookT
         return (WorkbookTableRangeRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookTableRangeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookTableRangeRequest)this;
+    }
+
 }

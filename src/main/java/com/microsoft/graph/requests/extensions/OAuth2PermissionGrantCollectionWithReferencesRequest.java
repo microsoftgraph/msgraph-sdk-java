@@ -59,6 +59,11 @@ public class OAuth2PermissionGrantCollectionWithReferencesRequest extends BaseCo
         return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
     }
 
+    public IOAuth2PermissionGrantCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;
+    }
+
     public IOAuth2PermissionGrantCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (OAuth2PermissionGrantCollectionWithReferencesRequest)this;

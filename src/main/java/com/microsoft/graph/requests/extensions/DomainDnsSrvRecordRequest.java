@@ -154,5 +154,16 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
          return (DomainDnsSrvRecordRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDomainDnsSrvRecordRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DomainDnsSrvRecordRequest)this;
+     }
+
 }
 

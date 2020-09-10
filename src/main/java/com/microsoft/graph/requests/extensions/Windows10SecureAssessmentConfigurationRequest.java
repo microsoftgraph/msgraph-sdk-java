@@ -154,5 +154,16 @@ public class Windows10SecureAssessmentConfigurationRequest extends BaseRequest i
          return (Windows10SecureAssessmentConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10SecureAssessmentConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Windows10SecureAssessmentConfigurationRequest)this;
+     }
+
 }
 

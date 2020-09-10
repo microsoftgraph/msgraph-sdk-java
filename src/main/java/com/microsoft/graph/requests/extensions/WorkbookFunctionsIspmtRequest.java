@@ -78,4 +78,15 @@ public class WorkbookFunctionsIspmtRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsIspmtRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIspmtRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsIspmtRequest)this;
+    }
+
 }

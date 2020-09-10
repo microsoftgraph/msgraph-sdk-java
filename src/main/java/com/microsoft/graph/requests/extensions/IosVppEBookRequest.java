@@ -154,5 +154,16 @@ public class IosVppEBookRequest extends BaseRequest implements IIosVppEBookReque
          return (IosVppEBookRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosVppEBookRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IosVppEBookRequest)this;
+     }
+
 }
 

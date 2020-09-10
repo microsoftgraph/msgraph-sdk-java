@@ -78,4 +78,15 @@ public class WorkbookFunctionsFixedRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsFixedRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsFixedRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsFixedRequest)this;
+    }
+
 }

@@ -38,6 +38,14 @@ public interface IActivityHistoryItemCollectionRequest {
     IActivityHistoryItemCollectionRequest expand(final String value);
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    IActivityHistoryItemCollectionRequest filter(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

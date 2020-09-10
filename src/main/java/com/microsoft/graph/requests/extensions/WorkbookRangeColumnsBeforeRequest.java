@@ -113,4 +113,15 @@ public class WorkbookRangeColumnsBeforeRequest extends BaseRequest implements IW
         return (WorkbookRangeColumnsBeforeRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookRangeColumnsBeforeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookRangeColumnsBeforeRequest)this;
+    }
+
 }

@@ -154,5 +154,16 @@ public class ColumnLinkRequest extends BaseRequest implements IColumnLinkRequest
          return (ColumnLinkRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IColumnLinkRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ColumnLinkRequest)this;
+     }
+
 }
 

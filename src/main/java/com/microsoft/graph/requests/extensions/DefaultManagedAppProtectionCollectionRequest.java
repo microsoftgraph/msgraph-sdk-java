@@ -85,6 +85,17 @@ public class DefaultManagedAppProtectionCollectionRequest extends BaseCollection
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDefaultManagedAppProtectionCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DefaultManagedAppProtectionCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

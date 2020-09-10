@@ -77,4 +77,15 @@ public class CallRedirectRequest extends BaseRequest implements ICallRedirectReq
         return (CallRedirectRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICallRedirectRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CallRedirectRequest)this;
+    }
+
 }

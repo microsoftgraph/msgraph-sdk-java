@@ -78,4 +78,15 @@ public class WorkbookFunctionsYieldDiscRequest extends BaseRequest implements IW
         return (WorkbookFunctionsYieldDiscRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsYieldDiscRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsYieldDiscRequest)this;
+    }
+
 }

@@ -78,4 +78,15 @@ public class WorkbookFunctionsQuartile_ExcRequest extends BaseRequest implements
         return (WorkbookFunctionsQuartile_ExcRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsQuartile_ExcRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsQuartile_ExcRequest)this;
+    }
+
 }
