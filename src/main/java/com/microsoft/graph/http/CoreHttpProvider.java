@@ -220,9 +220,6 @@ public class CoreHttpProvider implements IHttpProvider {
 			final Body serializable,
 			final IProgressCallback<Result> progress) throws ClientException {
 		final int defaultBufferSize = 4096;
-		if (authenticationProvider != null) {
-			authenticationProvider.authenticateRequest(request);
-		}
 
 		final URL requestUrl = request.getRequestUrl();
 		logger.logDebug("Starting to send request, URL " + requestUrl.toString());
@@ -369,6 +366,9 @@ public class CoreHttpProvider implements IHttpProvider {
 				okBuilder.followRedirects(false);
 				okBuilder.retryOnConnectionFailure(false);
 				this.corehttpClient = okBuilder.build();
+			}
+			if (authenticationProvider != null) {
+				authenticationProvider.authenticateRequest(request);
 			}
 			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
 			Response response = corehttpClient.newCall(coreHttpRequest).execute();

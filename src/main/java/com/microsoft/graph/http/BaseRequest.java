@@ -28,6 +28,8 @@ import okhttp3.HttpUrl.Builder;
 
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.content.MSBatchRequestContent;
+import com.microsoft.graph.content.MSBatchRequestStep;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
@@ -43,9 +45,11 @@ import com.microsoft.graph.options.Option;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * An HTTP request
@@ -191,36 +195,39 @@ public abstract class BaseRequest implements IHttpRequest {
         }
 		return null;
     }
+
     /**
      * Returns the Request object to be executed
      * @return the Request object to be executed
      */
-    public Request GetHttpRequest() throws ClientException {
-        return GetHttpRequest(null);
+    @Override
+    public Request getHttpRequest() throws ClientException {
+        return getHttpRequest(null);
     }
 
     /**
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
-     * @param <T1> the type of the serialized object
+     * @param <requestBodyType> the type of the serialized object
      * @return the Request object to be executed
      */
-    public <T1> Request GetHttpRequest(final T1 serializedObject) throws ClientException {
-        return GetHttpRequest(serializedObject, null);
+    @Override
+    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+        return getHttpRequest(serializedObject, null);
     }
 
     /**
      * Returns the Request object to be executed
      * @param serializedObject the object to serialize at the body of the request
      * @param progress the progress callback
-     * @param <T1> the type of the serialized object
-     * @param <T2> the type of the response object
+     * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response object
      * @return the Request object to be executed
      */
     @SuppressWarnings("unchecked")
-    public <T1, T2> Request GetHttpRequest(final T1 serializedObject, final IProgressCallback<T2> progress) throws ClientException {
-        final IHttpProvider provider = this.getClient().getHttpProvider();
-        return provider.getHttpRequest(this, (Class<T2>) responseClass, serializedObject, progress);
+    @Override
+    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+        return client.getHttpProvider().getHttpRequest(this, (Class<responseType>) responseClass, serializedObject, progress);
     }
 
     private String addFunctionParameters() {
@@ -394,6 +401,17 @@ public abstract class BaseRequest implements IHttpRequest {
      */
     public void setHttpMethod(final HttpMethod httpMethod) {
         method = httpMethod;
+    }
+
+    /**
+     * Sets the HTTP method and returns the current request
+     *
+     * @param httpMethod the HTTP method
+     * @return the current request
+     */
+    public IHttpRequest withHttpMethod(final HttpMethod httpMethod) {
+        method = httpMethod;
+        return this;
     }
 
     /**
