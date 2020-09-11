@@ -81,7 +81,8 @@ public class OneDriveTests {
 	@Test
 	public void testDownloadWithCustomRequest() throws IOException {
 		final String testDownloadFileId = "01RWFXFJG3UYRHE75RZVFYWKNUEBB53H7A";
-		final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get();
-		assertFalse("stream should not be empty", stream.read() == -1);
+		try (final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get()) {
+		   assertFalse("stream should not be empty", stream.read() == -1);
+		}
 	}
 }
