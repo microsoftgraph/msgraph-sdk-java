@@ -155,5 +155,16 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
          return (WorkbookFunctionsRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookFunctionsRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WorkbookFunctionsRequest)this;
+     }
+
 }
 

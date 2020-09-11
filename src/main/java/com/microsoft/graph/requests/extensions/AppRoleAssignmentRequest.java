@@ -154,5 +154,16 @@ public class AppRoleAssignmentRequest extends BaseRequest implements IAppRoleAss
          return (AppRoleAssignmentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAppRoleAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AppRoleAssignmentRequest)this;
+     }
+
 }
 

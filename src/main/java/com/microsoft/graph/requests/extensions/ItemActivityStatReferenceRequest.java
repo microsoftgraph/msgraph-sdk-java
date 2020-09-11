@@ -68,6 +68,16 @@ public class ItemActivityStatReferenceRequest extends BaseRequest implements IIt
         return (ItemActivityStatReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IItemActivityStatReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ItemActivityStatReferenceRequest)this;
+    }
+    /**
      * Puts the ItemActivityStat
      *
      * @param srcItemActivityStat the ItemActivityStat reference to PUT

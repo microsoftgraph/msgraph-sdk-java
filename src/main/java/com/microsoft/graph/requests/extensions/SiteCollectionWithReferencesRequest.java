@@ -60,6 +60,11 @@ public class SiteCollectionWithReferencesRequest extends BaseCollectionRequest<S
         return (SiteCollectionWithReferencesRequest)this;
     }
 
+    public ISiteCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SiteCollectionWithReferencesRequest)this;
+    }
+
     public ISiteCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (SiteCollectionWithReferencesRequest)this;

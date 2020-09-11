@@ -78,4 +78,15 @@ public class WorkbookRangeInsertRequest extends BaseRequest implements IWorkbook
         return (WorkbookRangeInsertRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookRangeInsertRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookRangeInsertRequest)this;
+    }
+
 }

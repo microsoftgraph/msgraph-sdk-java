@@ -78,4 +78,15 @@ public class WorkbookFunctionsLowerRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsLowerRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsLowerRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsLowerRequest)this;
+    }
+
 }

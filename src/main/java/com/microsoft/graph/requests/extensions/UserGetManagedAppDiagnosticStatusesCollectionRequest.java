@@ -104,4 +104,15 @@ public class UserGetManagedAppDiagnosticStatusesCollectionRequest extends BaseCo
         return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserGetManagedAppDiagnosticStatusesCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IUserGetManagedAppDiagnosticStatusesCollectionRequest)this;
+    }
+
 }

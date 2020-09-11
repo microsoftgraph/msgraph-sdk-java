@@ -77,4 +77,15 @@ public class UserChangePasswordRequest extends BaseRequest implements IUserChang
         return (UserChangePasswordRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IUserChangePasswordRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (UserChangePasswordRequest)this;
+    }
+
 }

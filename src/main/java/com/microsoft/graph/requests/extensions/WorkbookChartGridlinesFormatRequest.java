@@ -156,5 +156,16 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
          return (WorkbookChartGridlinesFormatRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookChartGridlinesFormatRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WorkbookChartGridlinesFormatRequest)this;
+     }
+
 }
 

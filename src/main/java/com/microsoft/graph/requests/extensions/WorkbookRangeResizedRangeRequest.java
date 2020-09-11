@@ -113,4 +113,15 @@ public class WorkbookRangeResizedRangeRequest extends BaseRequest implements IWo
         return (WorkbookRangeResizedRangeRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookRangeResizedRangeRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookRangeResizedRangeRequest)this;
+    }
+
 }

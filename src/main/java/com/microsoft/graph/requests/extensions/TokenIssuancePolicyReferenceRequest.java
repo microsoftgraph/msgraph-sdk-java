@@ -64,6 +64,16 @@ public class TokenIssuancePolicyReferenceRequest extends BaseRequest implements 
         return (TokenIssuancePolicyReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITokenIssuancePolicyReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TokenIssuancePolicyReferenceRequest)this;
+    }
+    /**
      * Puts the TokenIssuancePolicy
      *
      * @param srcTokenIssuancePolicy the TokenIssuancePolicy reference to PUT

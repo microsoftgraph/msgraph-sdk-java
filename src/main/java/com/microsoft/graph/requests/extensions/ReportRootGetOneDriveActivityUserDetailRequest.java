@@ -113,4 +113,15 @@ public class ReportRootGetOneDriveActivityUserDetailRequest extends BaseRequest 
         return (ReportRootGetOneDriveActivityUserDetailRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOneDriveActivityUserDetailRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetOneDriveActivityUserDetailRequest)this;
+    }
+
 }

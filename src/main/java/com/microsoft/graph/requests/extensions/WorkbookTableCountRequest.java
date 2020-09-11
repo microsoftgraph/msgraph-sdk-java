@@ -72,4 +72,15 @@ public class WorkbookTableCountRequest extends BaseRequest implements IWorkbookT
         return (WorkbookTableCountRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookTableCountRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookTableCountRequest)this;
+    }
+
 }

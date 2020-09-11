@@ -154,5 +154,16 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
          return (Windows10CompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindows10CompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (Windows10CompliancePolicyRequest)this;
+     }
+
 }
 

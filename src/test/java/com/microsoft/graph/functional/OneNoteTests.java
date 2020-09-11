@@ -3,6 +3,7 @@ package com.microsoft.graph.functional;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.BufferedReader;
@@ -164,6 +165,13 @@ public class OneNoteTests {
      */
     @Test
     public void testODataQueries() {
+        // Test Filter
+        INotebookCollectionPage filteredBooks = orb
+        		.notebooks()
+                .buildRequest()
+                .filter("isDefault eq true")
+                .get();
+        assertTrue(filteredBooks.getCurrentPage().size() == 0);
     	// Test Expand
         INotebookCollectionPage books = orb
         		.notebooks()

@@ -113,4 +113,15 @@ public class ReportRootGetMailboxUsageDetailRequest extends BaseRequest implemen
         return (ReportRootGetMailboxUsageDetailRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetMailboxUsageDetailRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetMailboxUsageDetailRequest)this;
+    }
+
 }

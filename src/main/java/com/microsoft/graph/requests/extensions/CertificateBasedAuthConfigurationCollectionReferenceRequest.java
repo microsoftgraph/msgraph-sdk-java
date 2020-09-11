@@ -63,6 +63,17 @@ public class CertificateBasedAuthConfigurationCollectionReferenceRequest extends
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICertificateBasedAuthConfigurationCollectionReferenceRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CertificateBasedAuthConfigurationCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

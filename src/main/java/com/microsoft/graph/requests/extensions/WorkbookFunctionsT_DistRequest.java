@@ -78,4 +78,15 @@ public class WorkbookFunctionsT_DistRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsT_DistRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsT_DistRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsT_DistRequest)this;
+    }
+
 }

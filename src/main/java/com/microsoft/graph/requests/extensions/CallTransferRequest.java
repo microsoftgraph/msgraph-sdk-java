@@ -77,4 +77,15 @@ public class CallTransferRequest extends BaseRequest implements ICallTransferReq
         return (CallTransferRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ICallTransferRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CallTransferRequest)this;
+    }
+
 }

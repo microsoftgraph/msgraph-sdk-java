@@ -154,5 +154,16 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
          return (CalendarPermissionRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICalendarPermissionRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (CalendarPermissionRequest)this;
+     }
+
 }
 

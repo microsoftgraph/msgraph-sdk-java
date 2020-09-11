@@ -78,4 +78,15 @@ public class WorkbookFunctionsGaussRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsGaussRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsGaussRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsGaussRequest)this;
+    }
+
 }

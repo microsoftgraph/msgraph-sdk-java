@@ -78,4 +78,15 @@ public class WorkbookFunctionsIsNumberRequest extends BaseRequest implements IWo
         return (WorkbookFunctionsIsNumberRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIsNumberRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsIsNumberRequest)this;
+    }
+
 }

@@ -169,5 +169,16 @@ public class AppleDeviceFeaturesConfigurationBaseRequest extends BaseRequest imp
          return (AppleDeviceFeaturesConfigurationBaseRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAppleDeviceFeaturesConfigurationBaseRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AppleDeviceFeaturesConfigurationBaseRequest)this;
+     }
+
 }
 
