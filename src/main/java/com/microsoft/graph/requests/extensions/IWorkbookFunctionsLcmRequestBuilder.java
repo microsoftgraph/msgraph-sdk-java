@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsLcmRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsLcmRequest instance
      */
     IWorkbookFunctionsLcmRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

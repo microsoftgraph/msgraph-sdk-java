@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsExactRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsExactRequest instance
      */
     IWorkbookFunctionsExactRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

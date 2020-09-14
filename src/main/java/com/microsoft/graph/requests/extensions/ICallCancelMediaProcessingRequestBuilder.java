@@ -28,4 +28,5 @@ public interface ICallCancelMediaProcessingRequestBuilder extends IRequestBuilde
      * @return the ICallCancelMediaProcessingRequest instance
      */
     ICallCancelMediaProcessingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

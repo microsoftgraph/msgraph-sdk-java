@@ -28,4 +28,5 @@ public interface IWorkbookNamedItemAddRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookNamedItemAddRequest instance
      */
     IWorkbookNamedItemAddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

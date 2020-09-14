@@ -28,4 +28,5 @@ public interface IWorkbookSessionInfoResourceRequestBuilder extends IRequestBuil
      * @return the IWorkbookSessionInfoResourceRequest instance
      */
     IWorkbookSessionInfoResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsXorRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsXorRequest instance
      */
     IWorkbookFunctionsXorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IManagedDeviceRecoverPasscodeRequestBuilder extends IRequestBui
      * @return the IManagedDeviceRecoverPasscodeRequest instance
      */
     IManagedDeviceRecoverPasscodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

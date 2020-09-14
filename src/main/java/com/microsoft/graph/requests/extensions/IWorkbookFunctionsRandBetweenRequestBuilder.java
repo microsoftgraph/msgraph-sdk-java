@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsRandBetweenRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsRandBetweenRequest instance
      */
     IWorkbookFunctionsRandBetweenRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

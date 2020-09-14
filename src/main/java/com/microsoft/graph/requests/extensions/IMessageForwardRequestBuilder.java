@@ -28,4 +28,5 @@ public interface IMessageForwardRequestBuilder extends IRequestBuilder {
      * @return the IMessageForwardRequest instance
      */
     IMessageForwardRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

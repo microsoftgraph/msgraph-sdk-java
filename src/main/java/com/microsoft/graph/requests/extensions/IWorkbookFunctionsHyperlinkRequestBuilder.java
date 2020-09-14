@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsHyperlinkRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
     IWorkbookFunctionsHyperlinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

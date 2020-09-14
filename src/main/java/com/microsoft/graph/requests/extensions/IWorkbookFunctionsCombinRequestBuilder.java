@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsCombinRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsCombinRequest instance
      */
     IWorkbookFunctionsCombinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

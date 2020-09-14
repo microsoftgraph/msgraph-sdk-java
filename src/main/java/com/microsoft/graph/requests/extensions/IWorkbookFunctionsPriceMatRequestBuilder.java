@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsPriceMatRequestBuilder extends IRequestBuilde
      * @return the IWorkbookFunctionsPriceMatRequest instance
      */
     IWorkbookFunctionsPriceMatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

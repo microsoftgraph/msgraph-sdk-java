@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsNominalRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsNominalRequest instance
      */
     IWorkbookFunctionsNominalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

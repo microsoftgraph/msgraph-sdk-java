@@ -28,4 +28,5 @@ public interface IWorkbookCreateSessionRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookCreateSessionRequest instance
      */
     IWorkbookCreateSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

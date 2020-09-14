@@ -28,4 +28,5 @@ public interface IDriveItemUnfollowRequestBuilder extends IRequestBuilder {
      * @return the IDriveItemUnfollowRequest instance
      */
     IDriveItemUnfollowRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

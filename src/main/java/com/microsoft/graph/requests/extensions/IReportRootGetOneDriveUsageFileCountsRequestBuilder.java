@@ -28,4 +28,5 @@ public interface IReportRootGetOneDriveUsageFileCountsRequestBuilder extends IRe
      * @return the IReportRootGetOneDriveUsageFileCountsRequest instance
      */
     IReportRootGetOneDriveUsageFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

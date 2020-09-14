@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsEoMonthRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsEoMonthRequest instance
      */
     IWorkbookFunctionsEoMonthRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

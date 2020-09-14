@@ -28,4 +28,5 @@ public interface IReportRootDeviceConfigurationDeviceActivityRequestBuilder exte
      * @return the IReportRootDeviceConfigurationDeviceActivityRequest instance
      */
     IReportRootDeviceConfigurationDeviceActivityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

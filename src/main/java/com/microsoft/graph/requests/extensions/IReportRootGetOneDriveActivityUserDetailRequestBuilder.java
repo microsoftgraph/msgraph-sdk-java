@@ -28,4 +28,5 @@ public interface IReportRootGetOneDriveActivityUserDetailRequestBuilder extends 
      * @return the IReportRootGetOneDriveActivityUserDetailRequest instance
      */
     IReportRootGetOneDriveActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsWeekNumRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsWeekNumRequest instance
      */
     IWorkbookFunctionsWeekNumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

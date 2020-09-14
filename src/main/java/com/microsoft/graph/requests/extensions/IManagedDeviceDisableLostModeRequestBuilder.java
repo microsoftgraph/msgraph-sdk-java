@@ -28,4 +28,5 @@ public interface IManagedDeviceDisableLostModeRequestBuilder extends IRequestBui
      * @return the IManagedDeviceDisableLostModeRequest instance
      */
     IManagedDeviceDisableLostModeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

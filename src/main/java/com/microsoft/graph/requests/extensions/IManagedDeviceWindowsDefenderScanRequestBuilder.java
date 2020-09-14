@@ -28,4 +28,5 @@ public interface IManagedDeviceWindowsDefenderScanRequestBuilder extends IReques
      * @return the IManagedDeviceWindowsDefenderScanRequest instance
      */
     IManagedDeviceWindowsDefenderScanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

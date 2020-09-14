@@ -28,4 +28,5 @@ public interface IManagedDeviceRetireRequestBuilder extends IRequestBuilder {
      * @return the IManagedDeviceRetireRequest instance
      */
     IManagedDeviceRetireRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

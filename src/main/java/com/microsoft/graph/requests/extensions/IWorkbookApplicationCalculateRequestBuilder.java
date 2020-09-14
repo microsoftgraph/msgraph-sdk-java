@@ -28,4 +28,5 @@ public interface IWorkbookApplicationCalculateRequestBuilder extends IRequestBui
      * @return the IWorkbookApplicationCalculateRequest instance
      */
     IWorkbookApplicationCalculateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

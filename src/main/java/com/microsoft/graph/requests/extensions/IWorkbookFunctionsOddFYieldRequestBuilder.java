@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsOddFYieldRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsOddFYieldRequest instance
      */
     IWorkbookFunctionsOddFYieldRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

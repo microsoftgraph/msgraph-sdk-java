@@ -28,4 +28,5 @@ public interface IWorkbookRefreshSessionRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookRefreshSessionRequest instance
      */
     IWorkbookRefreshSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

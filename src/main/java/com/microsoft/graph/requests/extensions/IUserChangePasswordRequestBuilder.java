@@ -28,4 +28,5 @@ public interface IUserChangePasswordRequestBuilder extends IRequestBuilder {
      * @return the IUserChangePasswordRequest instance
      */
     IUserChangePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

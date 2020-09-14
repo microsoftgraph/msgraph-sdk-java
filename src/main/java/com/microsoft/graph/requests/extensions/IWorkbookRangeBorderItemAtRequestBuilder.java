@@ -28,4 +28,5 @@ public interface IWorkbookRangeBorderItemAtRequestBuilder extends IRequestBuilde
      * @return the IWorkbookRangeBorderItemAtRequest instance
      */
     IWorkbookRangeBorderItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

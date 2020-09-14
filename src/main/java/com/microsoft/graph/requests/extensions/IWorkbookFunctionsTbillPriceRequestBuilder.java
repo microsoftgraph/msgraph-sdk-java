@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsTbillPriceRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsTbillPriceRequest instance
      */
     IWorkbookFunctionsTbillPriceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

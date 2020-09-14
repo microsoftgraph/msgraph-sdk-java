@@ -28,4 +28,5 @@ public interface IMobileAppContentFileRenewUploadRequestBuilder extends IRequest
      * @return the IMobileAppContentFileRenewUploadRequest instance
      */
     IMobileAppContentFileRenewUploadRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

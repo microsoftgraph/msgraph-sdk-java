@@ -28,4 +28,5 @@ public interface IWorkbookChartSetPositionRequestBuilder extends IRequestBuilder
      * @return the IWorkbookChartSetPositionRequest instance
      */
     IWorkbookChartSetPositionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

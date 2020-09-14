@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsRateRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsRateRequest instance
      */
     IWorkbookFunctionsRateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

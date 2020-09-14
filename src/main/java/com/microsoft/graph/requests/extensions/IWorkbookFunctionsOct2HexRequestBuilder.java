@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsOct2HexRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsOct2HexRequest instance
      */
     IWorkbookFunctionsOct2HexRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

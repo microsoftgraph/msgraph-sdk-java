@@ -28,4 +28,5 @@ public interface IGroupAddFavoriteRequestBuilder extends IRequestBuilder {
      * @return the IGroupAddFavoriteRequest instance
      */
     IGroupAddFavoriteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

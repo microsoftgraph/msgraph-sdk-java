@@ -28,4 +28,26 @@ public interface IWorkbookTableDataBodyRangeRequestBuilder extends IRequestBuild
      * @return the IWorkbookTableDataBodyRangeRequest instance
      */
     IWorkbookTableDataBodyRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+
+    /**
+     * Gets the request builder for WorkbookRangeFormat
+     *
+     * @return the IWorkbookRangeFormatRequestBuilder instance
+     */
+    IWorkbookRangeFormatRequestBuilder format();
+
+    /**
+     * Gets the request builder for WorkbookRangeSort
+     *
+     * @return the IWorkbookRangeSortRequestBuilder instance
+     */
+    IWorkbookRangeSortRequestBuilder sort();
+
+    /**
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
+     */
+    IWorkbookWorksheetRequestBuilder worksheet();
 }

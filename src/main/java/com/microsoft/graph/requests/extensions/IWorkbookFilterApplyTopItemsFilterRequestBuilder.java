@@ -28,4 +28,5 @@ public interface IWorkbookFilterApplyTopItemsFilterRequestBuilder extends IReque
      * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
     IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

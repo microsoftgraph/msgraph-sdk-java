@@ -28,4 +28,5 @@ public interface IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequestBui
      * @return the IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest instance
      */
     IDeviceManagementVerifyWindowsEnrollmentAutoDiscoveryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

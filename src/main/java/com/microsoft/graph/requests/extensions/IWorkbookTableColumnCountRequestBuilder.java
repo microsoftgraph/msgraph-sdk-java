@@ -28,4 +28,5 @@ public interface IWorkbookTableColumnCountRequestBuilder extends IRequestBuilder
      * @return the IWorkbookTableColumnCountRequest instance
      */
     IWorkbookTableColumnCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

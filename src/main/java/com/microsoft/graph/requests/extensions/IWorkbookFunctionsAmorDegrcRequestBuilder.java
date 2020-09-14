@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsAmorDegrcRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsAmorDegrcRequest instance
      */
     IWorkbookFunctionsAmorDegrcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

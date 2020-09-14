@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsConfidence_TRequestBuilder extends IRequestBu
      * @return the IWorkbookFunctionsConfidence_TRequest instance
      */
     IWorkbookFunctionsConfidence_TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

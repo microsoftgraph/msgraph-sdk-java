@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsEffectRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsEffectRequest instance
      */
     IWorkbookFunctionsEffectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

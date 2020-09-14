@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsGamma_DistRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsGamma_DistRequest instance
      */
     IWorkbookFunctionsGamma_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

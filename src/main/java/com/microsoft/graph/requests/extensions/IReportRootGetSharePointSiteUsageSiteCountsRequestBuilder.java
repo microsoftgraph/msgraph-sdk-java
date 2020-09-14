@@ -28,4 +28,5 @@ public interface IReportRootGetSharePointSiteUsageSiteCountsRequestBuilder exten
      * @return the IReportRootGetSharePointSiteUsageSiteCountsRequest instance
      */
     IReportRootGetSharePointSiteUsageSiteCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

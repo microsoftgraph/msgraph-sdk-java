@@ -28,4 +28,5 @@ public interface IDeviceEnrollmentConfigurationSetPriorityRequestBuilder extends
      * @return the IDeviceEnrollmentConfigurationSetPriorityRequest instance
      */
     IDeviceEnrollmentConfigurationSetPriorityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

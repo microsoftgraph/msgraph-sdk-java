@@ -28,4 +28,5 @@ public interface IMobileAppAssignRequestBuilder extends IRequestBuilder {
      * @return the IMobileAppAssignRequest instance
      */
     IMobileAppAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

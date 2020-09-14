@@ -28,4 +28,5 @@ public interface IGroupAssignLicenseRequestBuilder extends IRequestBuilder {
      * @return the IGroupAssignLicenseRequest instance
      */
     IGroupAssignLicenseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

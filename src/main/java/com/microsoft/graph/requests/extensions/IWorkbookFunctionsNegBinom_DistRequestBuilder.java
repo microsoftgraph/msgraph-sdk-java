@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsNegBinom_DistRequestBuilder extends IRequestB
      * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
     IWorkbookFunctionsNegBinom_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

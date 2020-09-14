@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsGammaLnRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsGammaLnRequest instance
      */
     IWorkbookFunctionsGammaLnRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

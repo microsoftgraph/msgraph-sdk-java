@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsBitxorRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsBitxorRequest instance
      */
     IWorkbookFunctionsBitxorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

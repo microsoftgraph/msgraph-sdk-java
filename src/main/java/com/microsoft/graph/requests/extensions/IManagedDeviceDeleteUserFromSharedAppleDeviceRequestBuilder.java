@@ -28,4 +28,5 @@ public interface IManagedDeviceDeleteUserFromSharedAppleDeviceRequestBuilder ext
      * @return the IManagedDeviceDeleteUserFromSharedAppleDeviceRequest instance
      */
     IManagedDeviceDeleteUserFromSharedAppleDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

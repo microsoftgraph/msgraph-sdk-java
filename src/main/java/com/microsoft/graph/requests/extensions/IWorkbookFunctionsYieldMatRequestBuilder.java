@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsYieldMatRequestBuilder extends IRequestBuilde
      * @return the IWorkbookFunctionsYieldMatRequest instance
      */
     IWorkbookFunctionsYieldMatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

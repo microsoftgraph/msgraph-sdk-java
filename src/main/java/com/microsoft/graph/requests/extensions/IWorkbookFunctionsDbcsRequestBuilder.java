@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsDbcsRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsDbcsRequest instance
      */
     IWorkbookFunctionsDbcsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

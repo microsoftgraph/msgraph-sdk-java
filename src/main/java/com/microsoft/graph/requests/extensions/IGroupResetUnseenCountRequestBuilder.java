@@ -28,4 +28,5 @@ public interface IGroupResetUnseenCountRequestBuilder extends IRequestBuilder {
      * @return the IGroupResetUnseenCountRequest instance
      */
     IGroupResetUnseenCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

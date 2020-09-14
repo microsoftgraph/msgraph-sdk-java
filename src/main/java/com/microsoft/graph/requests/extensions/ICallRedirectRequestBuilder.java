@@ -28,4 +28,5 @@ public interface ICallRedirectRequestBuilder extends IRequestBuilder {
      * @return the ICallRedirectRequest instance
      */
     ICallRedirectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

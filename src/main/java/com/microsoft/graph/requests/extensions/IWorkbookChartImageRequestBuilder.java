@@ -28,4 +28,5 @@ public interface IWorkbookChartImageRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookChartImageRequest instance
      */
     IWorkbookChartImageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

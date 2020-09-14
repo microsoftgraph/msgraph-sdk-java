@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsPermutationaRequestBuilder extends IRequestBu
      * @return the IWorkbookFunctionsPermutationaRequest instance
      */
     IWorkbookFunctionsPermutationaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

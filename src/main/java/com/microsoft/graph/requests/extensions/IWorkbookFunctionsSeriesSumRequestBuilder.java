@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsSeriesSumRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsSeriesSumRequest instance
      */
     IWorkbookFunctionsSeriesSumRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

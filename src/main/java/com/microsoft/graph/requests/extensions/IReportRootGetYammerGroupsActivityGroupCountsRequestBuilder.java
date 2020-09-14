@@ -28,4 +28,5 @@ public interface IReportRootGetYammerGroupsActivityGroupCountsRequestBuilder ext
      * @return the IReportRootGetYammerGroupsActivityGroupCountsRequest instance
      */
     IReportRootGetYammerGroupsActivityGroupCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsOddLPriceRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsOddLPriceRequest instance
      */
     IWorkbookFunctionsOddLPriceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

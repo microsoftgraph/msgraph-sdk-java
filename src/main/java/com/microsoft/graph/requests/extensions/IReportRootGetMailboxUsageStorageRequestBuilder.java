@@ -28,4 +28,5 @@ public interface IReportRootGetMailboxUsageStorageRequestBuilder extends IReques
      * @return the IReportRootGetMailboxUsageStorageRequest instance
      */
     IReportRootGetMailboxUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

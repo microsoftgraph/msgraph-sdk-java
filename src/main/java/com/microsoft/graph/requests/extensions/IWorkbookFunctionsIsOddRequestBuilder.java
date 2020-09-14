@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsIsOddRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsIsOddRequest instance
      */
     IWorkbookFunctionsIsOddRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

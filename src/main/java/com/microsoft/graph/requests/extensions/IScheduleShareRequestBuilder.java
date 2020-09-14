@@ -28,4 +28,5 @@ public interface IScheduleShareRequestBuilder extends IRequestBuilder {
      * @return the IScheduleShareRequest instance
      */
     IScheduleShareRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

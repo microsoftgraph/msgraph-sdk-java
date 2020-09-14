@@ -28,4 +28,5 @@ public interface IReportRootGetOffice365GroupsActivityCountsRequestBuilder exten
      * @return the IReportRootGetOffice365GroupsActivityCountsRequest instance
      */
     IReportRootGetOffice365GroupsActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

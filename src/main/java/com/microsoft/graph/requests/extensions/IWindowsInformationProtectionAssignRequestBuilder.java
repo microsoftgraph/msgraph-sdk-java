@@ -28,4 +28,5 @@ public interface IWindowsInformationProtectionAssignRequestBuilder extends IRequ
      * @return the IWindowsInformationProtectionAssignRequest instance
      */
     IWindowsInformationProtectionAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

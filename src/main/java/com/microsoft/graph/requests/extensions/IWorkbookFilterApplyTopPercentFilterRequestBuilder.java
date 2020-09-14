@@ -28,4 +28,5 @@ public interface IWorkbookFilterApplyTopPercentFilterRequestBuilder extends IReq
      * @return the IWorkbookFilterApplyTopPercentFilterRequest instance
      */
     IWorkbookFilterApplyTopPercentFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsError_TypeRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsError_TypeRequest instance
      */
     IWorkbookFunctionsError_TypeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

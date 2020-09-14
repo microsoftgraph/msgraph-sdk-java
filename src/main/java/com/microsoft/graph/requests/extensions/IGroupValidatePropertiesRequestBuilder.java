@@ -28,4 +28,5 @@ public interface IGroupValidatePropertiesRequestBuilder extends IRequestBuilder 
      * @return the IGroupValidatePropertiesRequest instance
      */
     IGroupValidatePropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

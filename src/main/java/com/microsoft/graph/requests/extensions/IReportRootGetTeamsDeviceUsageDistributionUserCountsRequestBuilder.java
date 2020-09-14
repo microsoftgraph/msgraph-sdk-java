@@ -28,4 +28,5 @@ public interface IReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuil
      * @return the IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest instance
      */
     IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

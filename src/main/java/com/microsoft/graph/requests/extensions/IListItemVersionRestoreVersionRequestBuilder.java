@@ -28,4 +28,5 @@ public interface IListItemVersionRestoreVersionRequestBuilder extends IRequestBu
      * @return the IListItemVersionRestoreVersionRequest instance
      */
     IListItemVersionRestoreVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

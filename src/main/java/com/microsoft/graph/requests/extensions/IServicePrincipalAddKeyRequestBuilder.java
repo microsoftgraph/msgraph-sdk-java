@@ -28,4 +28,5 @@ public interface IServicePrincipalAddKeyRequestBuilder extends IRequestBuilder {
      * @return the IServicePrincipalAddKeyRequest instance
      */
     IServicePrincipalAddKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

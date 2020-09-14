@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsTruncRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsTruncRequest instance
      */
     IWorkbookFunctionsTruncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

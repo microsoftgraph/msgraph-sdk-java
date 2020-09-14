@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsRomanRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsRomanRequest instance
      */
     IWorkbookFunctionsRomanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsFloor_MathRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsFloor_MathRequest instance
      */
     IWorkbookFunctionsFloor_MathRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

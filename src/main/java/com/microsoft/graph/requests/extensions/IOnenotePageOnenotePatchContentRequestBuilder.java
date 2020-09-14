@@ -28,4 +28,5 @@ public interface IOnenotePageOnenotePatchContentRequestBuilder extends IRequestB
      * @return the IOnenotePageOnenotePatchContentRequest instance
      */
     IOnenotePageOnenotePatchContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

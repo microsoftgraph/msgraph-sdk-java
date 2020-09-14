@@ -28,4 +28,5 @@ public interface IWorkbookTableSortClearRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookTableSortClearRequest instance
      */
     IWorkbookTableSortClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface ITeamsAppInstallationUpgradeRequestBuilder extends IRequestBuil
      * @return the ITeamsAppInstallationUpgradeRequest instance
      */
     ITeamsAppInstallationUpgradeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

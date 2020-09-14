@@ -28,4 +28,5 @@ public interface IWorkbookFilterApplyValuesFilterRequestBuilder extends IRequest
      * @return the IWorkbookFilterApplyValuesFilterRequest instance
      */
     IWorkbookFilterApplyValuesFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

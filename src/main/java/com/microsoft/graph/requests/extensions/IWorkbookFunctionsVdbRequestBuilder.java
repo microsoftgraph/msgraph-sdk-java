@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsVdbRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsVdbRequest instance
      */
     IWorkbookFunctionsVdbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

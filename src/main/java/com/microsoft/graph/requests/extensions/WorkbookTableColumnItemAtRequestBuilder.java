@@ -59,4 +59,13 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseFunctionRequest
 
         return request;
     }
+
+    /**
+     * Gets the request builder for WorkbookFilter
+     *
+     * @return the IWorkbookFilterRequestBuilder instance
+     */
+    public IWorkbookFilterRequestBuilder filter() {
+        return new WorkbookFilterRequestBuilder(getRequestUrlWithAdditionalSegment("filter"), getClient(), null);
+    }
 }

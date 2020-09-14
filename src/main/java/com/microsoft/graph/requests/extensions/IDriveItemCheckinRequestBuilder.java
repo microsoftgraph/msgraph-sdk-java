@@ -28,4 +28,5 @@ public interface IDriveItemCheckinRequestBuilder extends IRequestBuilder {
      * @return the IDriveItemCheckinRequest instance
      */
     IDriveItemCheckinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsConfidence_NormRequestBuilder extends IReques
      * @return the IWorkbookFunctionsConfidence_NormRequest instance
      */
     IWorkbookFunctionsConfidence_NormRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

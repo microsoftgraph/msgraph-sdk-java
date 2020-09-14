@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsErf_PreciseRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsErf_PreciseRequest instance
      */
     IWorkbookFunctionsErf_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

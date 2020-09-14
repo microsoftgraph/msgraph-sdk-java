@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsCumIPmtRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsCumIPmtRequest instance
      */
     IWorkbookFunctionsCumIPmtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

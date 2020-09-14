@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsMedianRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsMedianRequest instance
      */
     IWorkbookFunctionsMedianRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IPostForwardRequestBuilder extends IRequestBuilder {
      * @return the IPostForwardRequest instance
      */
     IPostForwardRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

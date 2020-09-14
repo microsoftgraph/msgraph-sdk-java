@@ -28,4 +28,5 @@ public interface ICallKeepAliveRequestBuilder extends IRequestBuilder {
      * @return the ICallKeepAliveRequest instance
      */
     ICallKeepAliveRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

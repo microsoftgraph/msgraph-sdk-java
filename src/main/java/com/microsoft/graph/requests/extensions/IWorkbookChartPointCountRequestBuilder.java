@@ -28,4 +28,5 @@ public interface IWorkbookChartPointCountRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookChartPointCountRequest instance
      */
     IWorkbookChartPointCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

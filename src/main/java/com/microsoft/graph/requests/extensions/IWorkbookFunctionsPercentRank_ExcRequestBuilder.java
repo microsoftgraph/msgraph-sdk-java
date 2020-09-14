@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsPercentRank_ExcRequestBuilder extends IReques
      * @return the IWorkbookFunctionsPercentRank_ExcRequest instance
      */
     IWorkbookFunctionsPercentRank_ExcRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

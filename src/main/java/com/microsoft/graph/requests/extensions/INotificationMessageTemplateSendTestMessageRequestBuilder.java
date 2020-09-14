@@ -28,4 +28,5 @@ public interface INotificationMessageTemplateSendTestMessageRequestBuilder exten
      * @return the INotificationMessageTemplateSendTestMessageRequest instance
      */
     INotificationMessageTemplateSendTestMessageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IApplicationAddPasswordRequestBuilder extends IRequestBuilder {
      * @return the IApplicationAddPasswordRequest instance
      */
     IApplicationAddPasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

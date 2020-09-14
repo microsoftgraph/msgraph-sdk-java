@@ -28,4 +28,5 @@ public interface IConversationThreadReplyRequestBuilder extends IRequestBuilder 
      * @return the IConversationThreadReplyRequest instance
      */
     IConversationThreadReplyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

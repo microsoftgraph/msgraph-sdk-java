@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsImSecRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsImSecRequest instance
      */
     IWorkbookFunctionsImSecRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsXnpvRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsXnpvRequest instance
      */
     IWorkbookFunctionsXnpvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

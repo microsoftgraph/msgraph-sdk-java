@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsCountBlankRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsCountBlankRequest instance
      */
     IWorkbookFunctionsCountBlankRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

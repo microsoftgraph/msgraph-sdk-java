@@ -28,4 +28,5 @@ public interface IManagedDeviceRequestRemoteAssistanceRequestBuilder extends IRe
      * @return the IManagedDeviceRequestRemoteAssistanceRequest instance
      */
     IManagedDeviceRequestRemoteAssistanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

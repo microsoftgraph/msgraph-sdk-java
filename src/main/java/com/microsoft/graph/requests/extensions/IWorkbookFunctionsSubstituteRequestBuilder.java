@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsSubstituteRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsSubstituteRequest instance
      */
     IWorkbookFunctionsSubstituteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

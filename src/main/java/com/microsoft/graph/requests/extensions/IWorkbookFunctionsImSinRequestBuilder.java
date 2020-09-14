@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsImSinRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsImSinRequest instance
      */
     IWorkbookFunctionsImSinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

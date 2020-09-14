@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsImConjugateRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsImConjugateRequest instance
      */
     IWorkbookFunctionsImConjugateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

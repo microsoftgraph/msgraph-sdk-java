@@ -28,4 +28,5 @@ public interface IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsReque
      * @return the IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest instance
      */
     IReportRootGetSkypeForBusinessPeerToPeerActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

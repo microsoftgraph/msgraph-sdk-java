@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsNetworkDays_IntlRequestBuilder extends IReque
      * @return the IWorkbookFunctionsNetworkDays_IntlRequest instance
      */
     IWorkbookFunctionsNetworkDays_IntlRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

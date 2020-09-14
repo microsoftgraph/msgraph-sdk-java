@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsFvscheduleRequestBuilder extends IRequestBuil
      * @return the IWorkbookFunctionsFvscheduleRequest instance
      */
     IWorkbookFunctionsFvscheduleRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IManagedDeviceRemoteLockRequestBuilder extends IRequestBuilder 
      * @return the IManagedDeviceRemoteLockRequest instance
      */
     IManagedDeviceRemoteLockRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsBinom_InvRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
     IWorkbookFunctionsBinom_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

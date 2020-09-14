@@ -28,4 +28,5 @@ public interface IDriveItemPreviewRequestBuilder extends IRequestBuilder {
      * @return the IDriveItemPreviewRequest instance
      */
     IDriveItemPreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

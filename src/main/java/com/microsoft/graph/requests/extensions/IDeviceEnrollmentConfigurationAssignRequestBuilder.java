@@ -28,4 +28,5 @@ public interface IDeviceEnrollmentConfigurationAssignRequestBuilder extends IReq
      * @return the IDeviceEnrollmentConfigurationAssignRequest instance
      */
     IDeviceEnrollmentConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

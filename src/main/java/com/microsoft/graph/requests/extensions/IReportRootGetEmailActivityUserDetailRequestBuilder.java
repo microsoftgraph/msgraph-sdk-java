@@ -28,4 +28,5 @@ public interface IReportRootGetEmailActivityUserDetailRequestBuilder extends IRe
      * @return the IReportRootGetEmailActivityUserDetailRequest instance
      */
     IReportRootGetEmailActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

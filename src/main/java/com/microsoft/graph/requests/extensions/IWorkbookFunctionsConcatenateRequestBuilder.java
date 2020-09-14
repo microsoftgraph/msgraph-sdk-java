@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsConcatenateRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsConcatenateRequest instance
      */
     IWorkbookFunctionsConcatenateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

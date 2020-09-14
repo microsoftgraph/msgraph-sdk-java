@@ -28,4 +28,5 @@ public interface IReportRootGetOneDriveActivityFileCountsRequestBuilder extends 
      * @return the IReportRootGetOneDriveActivityFileCountsRequest instance
      */
     IReportRootGetOneDriveActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }

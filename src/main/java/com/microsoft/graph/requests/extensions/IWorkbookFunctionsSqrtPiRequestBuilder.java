@@ -28,4 +28,5 @@ public interface IWorkbookFunctionsSqrtPiRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsSqrtPiRequest instance
      */
     IWorkbookFunctionsSqrtPiRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
 }
