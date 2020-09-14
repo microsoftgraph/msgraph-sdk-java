@@ -154,5 +154,16 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
          return (TeamsTemplateRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITeamsTemplateRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (TeamsTemplateRequest)this;
+     }
+
 }
 

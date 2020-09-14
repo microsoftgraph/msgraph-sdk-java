@@ -158,5 +158,16 @@ public class CallRecordRequest extends BaseRequest implements ICallRecordRequest
          return (CallRecordRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICallRecordRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (CallRecordRequest)this;
+     }
+
 }
 

@@ -59,6 +59,11 @@ public class CertificateBasedAuthConfigurationCollectionWithReferencesRequest ex
         return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
     }
 
+    public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;
+    }
+
     public ICertificateBasedAuthConfigurationCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (CertificateBasedAuthConfigurationCollectionWithReferencesRequest)this;

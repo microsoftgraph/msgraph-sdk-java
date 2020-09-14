@@ -78,4 +78,15 @@ public class WorkbookFunctionsChiSq_Dist_RTRequest extends BaseRequest implement
         return (WorkbookFunctionsChiSq_Dist_RTRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsChiSq_Dist_RTRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsChiSq_Dist_RTRequest)this;
+    }
+
 }

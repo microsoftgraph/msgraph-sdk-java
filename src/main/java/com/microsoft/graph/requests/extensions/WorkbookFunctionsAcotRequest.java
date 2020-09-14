@@ -78,4 +78,15 @@ public class WorkbookFunctionsAcotRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsAcotRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsAcotRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsAcotRequest)this;
+    }
+
 }

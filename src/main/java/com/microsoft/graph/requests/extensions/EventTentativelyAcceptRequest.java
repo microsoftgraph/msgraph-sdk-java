@@ -77,4 +77,15 @@ public class EventTentativelyAcceptRequest extends BaseRequest implements IEvent
         return (EventTentativelyAcceptRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEventTentativelyAcceptRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EventTentativelyAcceptRequest)this;
+    }
+
 }

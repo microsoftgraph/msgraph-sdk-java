@@ -37,6 +37,14 @@ public interface IGroupSettingTemplateCollectionRequest {
     IGroupSettingTemplateCollectionRequest expand(final String value);
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    IGroupSettingTemplateCollectionRequest filter(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

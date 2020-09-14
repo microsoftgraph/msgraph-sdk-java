@@ -186,5 +186,16 @@ public class MessageRequest extends BaseRequest implements IMessageRequest {
          return (MessageRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMessageRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MessageRequest)this;
+     }
+
 }
 

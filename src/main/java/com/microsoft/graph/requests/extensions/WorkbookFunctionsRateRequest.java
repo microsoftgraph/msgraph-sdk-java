@@ -78,4 +78,15 @@ public class WorkbookFunctionsRateRequest extends BaseRequest implements IWorkbo
         return (WorkbookFunctionsRateRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsRateRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsRateRequest)this;
+    }
+
 }

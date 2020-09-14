@@ -72,6 +72,16 @@ public class ManagedAppRegistrationReferenceRequest extends BaseRequest implemen
         return (ManagedAppRegistrationReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedAppRegistrationReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedAppRegistrationReferenceRequest)this;
+    }
+    /**
      * Puts the ManagedAppRegistration
      *
      * @param srcManagedAppRegistration the ManagedAppRegistration reference to PUT

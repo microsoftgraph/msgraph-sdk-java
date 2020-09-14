@@ -154,5 +154,16 @@ public class ManagedAppStatusRawRequest extends BaseRequest implements IManagedA
          return (ManagedAppStatusRawRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedAppStatusRawRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ManagedAppStatusRawRequest)this;
+     }
+
 }
 

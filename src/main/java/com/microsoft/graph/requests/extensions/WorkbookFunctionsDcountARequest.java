@@ -78,4 +78,15 @@ public class WorkbookFunctionsDcountARequest extends BaseRequest implements IWor
         return (WorkbookFunctionsDcountARequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsDcountARequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsDcountARequest)this;
+    }
+
 }

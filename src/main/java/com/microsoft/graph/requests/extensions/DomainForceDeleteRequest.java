@@ -77,4 +77,15 @@ public class DomainForceDeleteRequest extends BaseRequest implements IDomainForc
         return (DomainForceDeleteRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDomainForceDeleteRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DomainForceDeleteRequest)this;
+    }
+
 }

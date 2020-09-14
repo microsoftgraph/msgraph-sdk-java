@@ -104,4 +104,15 @@ public class EventDeltaCollectionRequest extends BaseCollectionRequest<EventDelt
         return (IEventDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IEventDeltaCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IEventDeltaCollectionRequest)this;
+    }
+
 }

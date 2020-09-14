@@ -104,4 +104,15 @@ public class OrgContactDeltaCollectionRequest extends BaseCollectionRequest<OrgC
         return (IOrgContactDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOrgContactDeltaCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IOrgContactDeltaCollectionRequest)this;
+    }
+
 }

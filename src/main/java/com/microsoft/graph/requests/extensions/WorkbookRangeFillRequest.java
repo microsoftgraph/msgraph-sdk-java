@@ -154,5 +154,16 @@ public class WorkbookRangeFillRequest extends BaseRequest implements IWorkbookRa
          return (WorkbookRangeFillRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWorkbookRangeFillRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WorkbookRangeFillRequest)this;
+     }
+
 }
 

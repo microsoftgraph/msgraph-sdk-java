@@ -154,5 +154,16 @@ public class MacOSCompliancePolicyRequest extends BaseRequest implements IMacOSC
          return (MacOSCompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IMacOSCompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (MacOSCompliancePolicyRequest)this;
+     }
+
 }
 

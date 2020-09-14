@@ -64,6 +64,16 @@ public class OAuth2PermissionGrantReferenceRequest extends BaseRequest implement
         return (OAuth2PermissionGrantReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OAuth2PermissionGrantReferenceRequest)this;
+    }
+    /**
      * Puts the OAuth2PermissionGrant
      *
      * @param srcOAuth2PermissionGrant the OAuth2PermissionGrant reference to PUT

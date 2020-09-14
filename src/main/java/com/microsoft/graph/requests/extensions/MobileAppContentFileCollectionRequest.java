@@ -86,6 +86,17 @@ public class MobileAppContentFileCollectionRequest extends BaseCollectionRequest
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMobileAppContentFileCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppContentFileCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -154,5 +154,16 @@ public class DeviceCompliancePolicyAssignmentRequest extends BaseRequest impleme
          return (DeviceCompliancePolicyAssignmentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDeviceCompliancePolicyAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DeviceCompliancePolicyAssignmentRequest)this;
+     }
+
 }
 

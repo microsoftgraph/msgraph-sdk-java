@@ -64,6 +64,17 @@ public class SiteCollectionReferenceRequest extends BaseCollectionRequest<SiteCo
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ISiteCollectionReferenceRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (SiteCollectionReferenceRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

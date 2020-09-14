@@ -113,4 +113,15 @@ public class WorkbookRangeLastColumnRequest extends BaseRequest implements IWork
         return (WorkbookRangeLastColumnRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookRangeLastColumnRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookRangeLastColumnRequest)this;
+    }
+
 }

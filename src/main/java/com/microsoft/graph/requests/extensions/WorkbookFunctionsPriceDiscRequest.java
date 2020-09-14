@@ -78,4 +78,15 @@ public class WorkbookFunctionsPriceDiscRequest extends BaseRequest implements IW
         return (WorkbookFunctionsPriceDiscRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsPriceDiscRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsPriceDiscRequest)this;
+    }
+
 }

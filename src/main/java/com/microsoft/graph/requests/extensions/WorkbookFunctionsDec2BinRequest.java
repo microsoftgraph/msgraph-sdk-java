@@ -78,4 +78,15 @@ public class WorkbookFunctionsDec2BinRequest extends BaseRequest implements IWor
         return (WorkbookFunctionsDec2BinRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsDec2BinRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsDec2BinRequest)this;
+    }
+
 }

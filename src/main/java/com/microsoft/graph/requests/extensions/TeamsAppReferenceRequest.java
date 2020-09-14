@@ -68,6 +68,16 @@ public class TeamsAppReferenceRequest extends BaseRequest implements ITeamsAppRe
         return (TeamsAppReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITeamsAppReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TeamsAppReferenceRequest)this;
+    }
+    /**
      * Puts the TeamsApp
      *
      * @param srcTeamsApp the TeamsApp reference to PUT

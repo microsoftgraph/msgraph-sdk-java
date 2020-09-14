@@ -85,6 +85,17 @@ public class DeviceComplianceUserStatusCollectionRequest extends BaseCollectionR
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceComplianceUserStatusCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceComplianceUserStatusCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause
