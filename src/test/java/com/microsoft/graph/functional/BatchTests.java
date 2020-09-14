@@ -6,6 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import java.io.IOException;
 
 import com.microsoft.graph.content.MSBatchRequestContent;
+import com.microsoft.graph.content.MSBatchResponseContent;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.httpcore.HttpClients;
 import com.microsoft.graph.httpcore.ICoreAuthenticationProvider;
@@ -64,6 +65,12 @@ public class BatchTests {
         
         final OkHttpClient client = HttpClients.createDefault((ICoreAuthenticationProvider)graphServiceClient.getAuthenticationProvider());
         final Response batchResponse = client.newCall(batchRequest).execute();
-        assertEquals(batchResponse.code(), 200);
+        assertEquals(200, batchResponse.code());
+
+        final MSBatchResponseContent responseContent = new MSBatchResponseContent(batchResponse);
+
+        assertEquals(400, responseContent.getResponseById(userPostId).code()); //400:we're not providing enough properties for the call to go through
+        assertEquals(200, responseContent.getResponseById(meGetId).code());
+        assertEquals(200, responseContent.getResponseById(usersGetId).code());
     }
 }
