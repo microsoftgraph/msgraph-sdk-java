@@ -104,4 +104,15 @@ public class ContactFolderDeltaCollectionRequest extends BaseCollectionRequest<C
         return (IContactFolderDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IContactFolderDeltaCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IContactFolderDeltaCollectionRequest)this;
+    }
+
 }

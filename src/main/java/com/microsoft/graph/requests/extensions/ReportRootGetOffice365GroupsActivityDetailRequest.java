@@ -113,4 +113,15 @@ public class ReportRootGetOffice365GroupsActivityDetailRequest extends BaseReque
         return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetOffice365GroupsActivityDetailRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetOffice365GroupsActivityDetailRequest)this;
+    }
+
 }

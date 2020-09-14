@@ -1,5 +1,7 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertFalse;
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -32,7 +34,7 @@ public class OneDriveTests {
      * @throws InterruptedException if the chunked upload fails
      */
     @Test
-    public void testLargeFileUpload() throws IOException, InterruptedException {
+	public void testLargeFileUpload() throws IOException, InterruptedException {
     	String itemId = "01BQHXQL5GQVAGCFJLYRH3EAG2YHGERMQA"; //Test upload folder
     	
     	//Get resource file from file system
@@ -67,7 +69,6 @@ public class OneDriveTests {
     			.createUploadSession(new DriveItemUploadableProperties())
     			.buildRequest()
     			.post();
-    	
     	ChunkedUploadProvider<DriveItem> chunkedUploadProvider = new ChunkedUploadProvider<DriveItem>(
     			uploadSession, 
     			testBase.graphClient, 
@@ -77,5 +78,11 @@ public class OneDriveTests {
 		
     	chunkedUploadProvider.upload(callback);
     }
-    
+	@Test
+	public void testDownloadWithCustomRequest() throws IOException {
+		final String testDownloadFileId = "01RWFXFJG3UYRHE75RZVFYWKNUEBB53H7A";
+		try (final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get()) {
+		   assertFalse("stream should not be empty", stream.read() == -1);
+		}
+	}
 }

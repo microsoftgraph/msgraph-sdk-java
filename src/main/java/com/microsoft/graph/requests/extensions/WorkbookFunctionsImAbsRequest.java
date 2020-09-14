@@ -78,4 +78,15 @@ public class WorkbookFunctionsImAbsRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsImAbsRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsImAbsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsImAbsRequest)this;
+    }
+
 }

@@ -109,4 +109,15 @@ public class SiteAddCollectionRequest extends BaseCollectionRequest<SiteAddColle
         return (ISiteAddCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ISiteAddCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ISiteAddCollectionRequest)this;
+    }
+
 }

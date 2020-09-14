@@ -84,6 +84,17 @@ public class OAuth2PermissionGrantCollectionRequest extends BaseCollectionReques
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOAuth2PermissionGrantCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OAuth2PermissionGrantCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

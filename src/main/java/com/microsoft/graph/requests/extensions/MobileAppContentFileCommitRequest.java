@@ -77,4 +77,15 @@ public class MobileAppContentFileCommitRequest extends BaseRequest implements IM
         return (MobileAppContentFileCommitRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IMobileAppContentFileCommitRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (MobileAppContentFileCommitRequest)this;
+    }
+
 }

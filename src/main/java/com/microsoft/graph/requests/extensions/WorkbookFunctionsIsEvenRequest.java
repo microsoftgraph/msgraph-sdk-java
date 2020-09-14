@@ -78,4 +78,15 @@ public class WorkbookFunctionsIsEvenRequest extends BaseRequest implements IWork
         return (WorkbookFunctionsIsEvenRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsIsEvenRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsIsEvenRequest)this;
+    }
+
 }

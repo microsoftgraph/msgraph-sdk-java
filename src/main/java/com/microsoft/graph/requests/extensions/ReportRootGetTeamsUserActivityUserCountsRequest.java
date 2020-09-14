@@ -113,4 +113,15 @@ public class ReportRootGetTeamsUserActivityUserCountsRequest extends BaseRequest
         return (ReportRootGetTeamsUserActivityUserCountsRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IReportRootGetTeamsUserActivityUserCountsRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ReportRootGetTeamsUserActivityUserCountsRequest)this;
+    }
+
 }

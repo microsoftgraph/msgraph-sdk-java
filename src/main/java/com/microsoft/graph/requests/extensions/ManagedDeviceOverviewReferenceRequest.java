@@ -64,6 +64,16 @@ public class ManagedDeviceOverviewReferenceRequest extends BaseRequest implement
         return (ManagedDeviceOverviewReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedDeviceOverviewReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedDeviceOverviewReferenceRequest)this;
+    }
+    /**
      * Puts the ManagedDeviceOverview
      *
      * @param srcManagedDeviceOverview the ManagedDeviceOverview reference to PUT

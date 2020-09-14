@@ -113,4 +113,15 @@ public class WorkbookChartPointItemAtRequest extends BaseRequest implements IWor
         return (WorkbookChartPointItemAtRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookChartPointItemAtRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookChartPointItemAtRequest)this;
+    }
+
 }

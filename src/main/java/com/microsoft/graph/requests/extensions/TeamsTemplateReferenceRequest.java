@@ -64,6 +64,16 @@ public class TeamsTemplateReferenceRequest extends BaseRequest implements ITeams
         return (TeamsTemplateReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public ITeamsTemplateReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (TeamsTemplateReferenceRequest)this;
+    }
+    /**
      * Puts the TeamsTemplate
      *
      * @param srcTeamsTemplate the TeamsTemplate reference to PUT

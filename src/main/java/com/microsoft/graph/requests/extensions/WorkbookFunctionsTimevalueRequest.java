@@ -78,4 +78,15 @@ public class WorkbookFunctionsTimevalueRequest extends BaseRequest implements IW
         return (WorkbookFunctionsTimevalueRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsTimevalueRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsTimevalueRequest)this;
+    }
+
 }

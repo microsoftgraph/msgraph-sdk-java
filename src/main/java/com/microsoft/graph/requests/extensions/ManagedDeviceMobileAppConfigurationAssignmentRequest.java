@@ -154,5 +154,16 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequest extends BaseRe
          return (ManagedDeviceMobileAppConfigurationAssignmentRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IManagedDeviceMobileAppConfigurationAssignmentRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ManagedDeviceMobileAppConfigurationAssignmentRequest)this;
+     }
+
 }
 

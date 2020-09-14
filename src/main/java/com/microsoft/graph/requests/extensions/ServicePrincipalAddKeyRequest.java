@@ -78,4 +78,15 @@ public class ServicePrincipalAddKeyRequest extends BaseRequest implements IServi
         return (ServicePrincipalAddKeyRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IServicePrincipalAddKeyRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ServicePrincipalAddKeyRequest)this;
+    }
+
 }
