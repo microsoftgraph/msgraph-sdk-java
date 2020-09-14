@@ -203,7 +203,134 @@ public class CoreHttpProvider implements IHttpProvider {
 			final IStatefulResponseHandler<Result, DeserializeType> handler) throws ClientException {
 		return sendRequestInternal(request, resultClass, serializable, null, handler);
 	}
+	/**
+	 * Sends the HTTP request
+	 *
+	 * @param request           the request description
+	 * @param resultClass       the class of the response from the service
+	 * @param serializable      the object to send to the service in the body of the request
+	 * @param progress          the progress callback for the request
+	 * @param <Result>          the type of the response object
+	 * @param <Body>            the type of the object to send to the service in the body of the request
+	 * @return                  the result from the request
+	 * @throws ClientException an exception occurs if the request was unable to complete for any reason
+	 */
+	public <Result, Body> Request getHttpRequest(final IHttpRequest request,
+			final Class<Result> resultClass,
+			final Body serializable,
+			final IProgressCallback<Result> progress) throws ClientException {
+		final int defaultBufferSize = 4096;
 
+		final URL requestUrl = request.getRequestUrl();
+		logger.logDebug("Starting to send request, URL " + requestUrl.toString());
+
+		if(this.connectionConfig == null) {
+			this.connectionConfig = new DefaultConnectionConfig();
+		}
+		
+		// Request level middleware options
+		RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
+				request.getShouldRedirect() != null? request.getShouldRedirect() : this.connectionConfig.getShouldRedirect());
+		RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
+				request.getMaxRetries() > 0? request.getMaxRetries() : this.connectionConfig.getMaxRetries(),
+				request.getDelay() > 0? request.getDelay() : this.connectionConfig.getDelay());
+
+		Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
+		Request.Builder corehttpRequestBuilder = coreHttpRequest
+				.newBuilder()
+				.tag(RedirectOptions.class, redirectOptions)
+				.tag(RetryOptions.class, retryOptions);
+		
+		String contenttype = null;
+
+		logger.logDebug("Request Method " + request.getHttpMethod().toString());
+		List<HeaderOption> requestHeaders = request.getHeaders();
+
+		for(HeaderOption headerOption : requestHeaders) {
+			if(headerOption.getName().equalsIgnoreCase(Constants.CONTENT_TYPE_HEADER_NAME)) {
+				contenttype = headerOption.getValue().toString();
+				break;
+			}
+		}
+
+		final byte[] bytesToWrite;
+		corehttpRequestBuilder.addHeader("Accept", "*/*");
+		if (serializable == null) {
+			// Send an empty body through with a POST request
+			// This ensures that the Content-Length header is properly set
+			if (request.getHttpMethod() == HttpMethod.POST) {
+				bytesToWrite = new byte[0];
+				contenttype = Constants.BINARY_CONTENT_TYPE;
+			}
+			else {
+				bytesToWrite = null;
+			}
+		} else if (serializable instanceof byte[]) {
+			logger.logDebug("Sending byte[] as request body");
+			bytesToWrite = (byte[]) serializable;
+
+			// If the user hasn't specified a Content-Type for the request
+			if (!hasHeader(requestHeaders, Constants.CONTENT_TYPE_HEADER_NAME)) {
+				corehttpRequestBuilder.addHeader(Constants.CONTENT_TYPE_HEADER_NAME, Constants.BINARY_CONTENT_TYPE);
+				contenttype = Constants.BINARY_CONTENT_TYPE;
+			}
+		} else {
+			logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
+			final String serializeObject = serializer.serializeObject(serializable);
+			try {
+				bytesToWrite = serializeObject.getBytes(Constants.JSON_ENCODING);
+			} catch (final UnsupportedEncodingException ex) {
+				final ClientException clientException = new ClientException("Unsupported encoding problem: ",
+						ex);
+				logger.logError("Unsupported encoding problem: " + ex.getMessage(), ex);
+				throw clientException;
+			}
+
+			// If the user hasn't specified a Content-Type for the request
+			if (!hasHeader(requestHeaders, Constants.CONTENT_TYPE_HEADER_NAME)) {
+				corehttpRequestBuilder.addHeader(Constants.CONTENT_TYPE_HEADER_NAME, Constants.JSON_CONTENT_TYPE);
+				contenttype = Constants.JSON_CONTENT_TYPE;
+			}
+		}
+
+		RequestBody requestBody = null;
+		// Handle cases where we've got a body to process.
+		if (bytesToWrite != null) {
+			final String mediaContentType = contenttype;
+			requestBody = new RequestBody() {
+				@Override
+				public long contentLength() throws IOException {
+					return bytesToWrite.length;
+				}
+				@Override
+				public void writeTo(BufferedSink sink) throws IOException {
+					OutputStream out = sink.outputStream();
+					int writtenSoFar = 0;
+					BufferedOutputStream bos = new BufferedOutputStream(out);
+					int toWrite;
+					do {
+						toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
+						bos.write(bytesToWrite, writtenSoFar, toWrite);
+						writtenSoFar = writtenSoFar + toWrite;
+						if (progress != null) {
+							executors.performOnForeground(writtenSoFar, bytesToWrite.length,
+									progress);
+						}
+					} while (toWrite > 0);
+					bos.close();
+					out.close();
+				}
+
+				@Override
+				public MediaType contentType() {
+					return MediaType.parse(mediaContentType);
+				}
+			};
+		}
+
+		corehttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
+		return corehttpRequestBuilder.build();
+	}
 	/**
 	 * Sends the HTTP request
 	 *
@@ -225,22 +352,8 @@ public class CoreHttpProvider implements IHttpProvider {
 			final IProgressCallback<Result> progress,
 			final IStatefulResponseHandler<Result, DeserializeType> handler)
 					throws ClientException {
-		final int defaultBufferSize = 4096;
 
 		try {
-			if (authenticationProvider != null) {
-				authenticationProvider.authenticateRequest(request);
-			}
-
-			InputStream in = null;
-			boolean isBinaryStreamInput = false;
-			final URL requestUrl = request.getRequestUrl();
-			logger.logDebug("Starting to send request, URL " + requestUrl.toString());
-
-			if(this.connectionConfig == null) {
-				this.connectionConfig = new DefaultConnectionConfig();
-			}
-
 			if(this.corehttpClient == null) {
 				OkHttpClient.Builder okBuilder = HttpClients.createDefault(new ICoreAuthenticationProvider() {
 					@Override
@@ -248,113 +361,26 @@ public class CoreHttpProvider implements IHttpProvider {
 						return request;
 					}
 				}).newBuilder();
+				if(this.connectionConfig == null) {
+					this.connectionConfig = new DefaultConnectionConfig();
+				}
 				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.followRedirects(false);
 				okBuilder.retryOnConnectionFailure(false);
 				this.corehttpClient = okBuilder.build();
 			}
-			
-			// Request level middleware options
-			RedirectOptions redirectOptions = new RedirectOptions(request.getMaxRedirects() > 0? request.getMaxRedirects() : this.connectionConfig.getMaxRedirects(),
-					request.getShouldRedirect() != null? request.getShouldRedirect() : this.connectionConfig.getShouldRedirect());
-			RetryOptions retryOptions = new RetryOptions(request.getShouldRetry() != null? request.getShouldRetry() : this.connectionConfig.getShouldRetry(),
-					request.getMaxRetries() > 0? request.getMaxRetries() : this.connectionConfig.getMaxRetries(),
-					request.getDelay() > 0? request.getDelay() : this.connectionConfig.getDelay());
-
-			Request coreHttpRequest = convertIHttpRequestToOkHttpRequest(request);
-			Request.Builder corehttpRequestBuilder = coreHttpRequest
-					.newBuilder()
-					.tag(RedirectOptions.class, redirectOptions)
-					.tag(RetryOptions.class, retryOptions);
-			
-			String contenttype = null;
-			Response response = null;
-
+			if (authenticationProvider != null) {
+				authenticationProvider.authenticateRequest(request);
+			}
+			Request coreHttpRequest = getHttpRequest(request, resultClass, serializable, progress);
+			Response response = corehttpClient.newCall(coreHttpRequest).execute();
+			InputStream in = null;
+			boolean isBinaryStreamInput = false;
 			try {
-				logger.logDebug("Request Method " + request.getHttpMethod().toString());
-				List<HeaderOption> requestHeaders = request.getHeaders();
-
-				for(HeaderOption headerOption : requestHeaders) {
-					if(headerOption.getName().equalsIgnoreCase(Constants.CONTENT_TYPE_HEADER_NAME)) {
-						contenttype = headerOption.getValue().toString();
-						break;
-					}
-				}
-
-				final byte[] bytesToWrite;
-				corehttpRequestBuilder.addHeader("Accept", "*/*");
-				if (serializable == null) {
-					// Send an empty body through with a POST request
-					// This ensures that the Content-Length header is properly set
-					if (request.getHttpMethod() == HttpMethod.POST) {
-						bytesToWrite = new byte[0];
-						contenttype = Constants.BINARY_CONTENT_TYPE;
-					}
-					else {
-						bytesToWrite = null;
-					}
-				} else if (serializable instanceof byte[]) {
-					logger.logDebug("Sending byte[] as request body");
-					bytesToWrite = (byte[]) serializable;
-
-					// If the user hasn't specified a Content-Type for the request
-					if (!hasHeader(requestHeaders, Constants.CONTENT_TYPE_HEADER_NAME)) {
-						corehttpRequestBuilder.addHeader(Constants.CONTENT_TYPE_HEADER_NAME, Constants.BINARY_CONTENT_TYPE);
-						contenttype = Constants.BINARY_CONTENT_TYPE;
-					}
-				} else {
-					logger.logDebug("Sending " + serializable.getClass().getName() + " as request body");
-					final String serializeObject = serializer.serializeObject(serializable);
-					bytesToWrite = serializeObject.getBytes(Constants.JSON_ENCODING);
-
-					// If the user hasn't specified a Content-Type for the request
-					if (!hasHeader(requestHeaders, Constants.CONTENT_TYPE_HEADER_NAME)) {
-						corehttpRequestBuilder.addHeader(Constants.CONTENT_TYPE_HEADER_NAME, Constants.JSON_CONTENT_TYPE);
-						contenttype = Constants.JSON_CONTENT_TYPE;
-					}
-				}
-
-				RequestBody requestBody = null;
-				// Handle cases where we've got a body to process.
-				if (bytesToWrite != null) {
-					final String mediaContentType = contenttype;
-					requestBody = new RequestBody() {
-						@Override
-						public long contentLength() throws IOException {
-							return bytesToWrite.length;
-						}
-						@Override
-						public void writeTo(BufferedSink sink) throws IOException {
-							OutputStream out = sink.outputStream();
-							int writtenSoFar = 0;
-							BufferedOutputStream bos = new BufferedOutputStream(out);
-							int toWrite;
-							do {
-								toWrite = Math.min(defaultBufferSize, bytesToWrite.length - writtenSoFar);
-								bos.write(bytesToWrite, writtenSoFar, toWrite);
-								writtenSoFar = writtenSoFar + toWrite;
-								if (progress != null) {
-									executors.performOnForeground(writtenSoFar, bytesToWrite.length,
-											progress);
-								}
-							} while (toWrite > 0);
-							bos.close();
-							out.close();
-						}
-
-						@Override
-						public MediaType contentType() {
-							return MediaType.parse(mediaContentType);
-						}
-					};
-				}
-
-				corehttpRequestBuilder.method(request.getHttpMethod().toString(), requestBody);
-				coreHttpRequest = corehttpRequestBuilder.build();
 
 				// Call being executed
-				response = corehttpClient.newCall(coreHttpRequest).execute();
+				
 
 				if (handler != null) {
 					handler.configConnection(response);
@@ -420,11 +446,6 @@ public class CoreHttpProvider implements IHttpProvider {
 			final boolean shouldLogVerbosely = logger.getLoggingLevel() == LoggerLevel.DEBUG;
 			logger.logError("Graph service exception " + ex.getMessage(shouldLogVerbosely), ex);
 			throw ex;
-		} catch (final UnsupportedEncodingException ex) {
-			final ClientException clientException = new ClientException("Unsupported encoding problem: ",
-					ex);
-			logger.logError("Unsupported encoding problem: " + ex.getMessage(), ex);
-			throw clientException;
 		} catch (final Exception ex) {
 			final ClientException clientException = new ClientException("Error during http request",
 					ex);

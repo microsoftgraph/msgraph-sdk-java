@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
@@ -12,6 +13,8 @@ import com.microsoft.graph.httpcore.middlewareoption.RedirectOptions;
 import com.microsoft.graph.httpcore.middlewareoption.RetryOptions;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
+
+import okhttp3.Request;
 
 /**
  * Mock for {@see IHttpRequest}
@@ -110,6 +113,48 @@ public class MockHttpRequest implements IHttpRequest {
 	public long getDelay() {
 		return RetryOptions.DEFAULT_DELAY;
 	}
-    
-    
+
+	@Override
+	public IHttpRequest withHttpMethod(HttpMethod httpMethod) {
+		return this;
+	}
+
+
+    /**
+     * Returns the Request object to be executed
+     * @return the Request object to be executed
+     */
+    @Override
+    public Request getHttpRequest() throws ClientException {
+        return getHttpRequest(null);
+    }
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param <requestBodyType> the type of the serialized object
+     * @return the Request object to be executed
+     */
+    @Override
+    public <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException {
+        return getHttpRequest(serializedObject, null);
+    }
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param progress the progress callback
+     * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response object
+     * @return the Request object to be executed
+     */
+    @Override
+    public <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException {
+        try {
+            final Request.Builder requestBuilder = new Request.Builder();
+            return requestBuilder.build();
+        } catch (Exception ex) {
+            throw new ClientException("dummy", ex);
+        }
+    }
 }

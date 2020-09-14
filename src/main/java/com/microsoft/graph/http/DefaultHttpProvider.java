@@ -35,6 +35,8 @@ import com.microsoft.graph.logger.LoggerLevel;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.serializer.ISerializer;
 
+import okhttp3.Request;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -530,4 +532,10 @@ public class DefaultHttpProvider implements IHttpProvider {
     public void setConnectionConfig(IConnectionConfig connectionConfig) {
         this.connectionConfig = connectionConfig;
     }
+
+	@Override
+	public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
+			BodyType serializable, IProgressCallback<Result> progress) throws ClientException {
+		return null;
+	}
 }

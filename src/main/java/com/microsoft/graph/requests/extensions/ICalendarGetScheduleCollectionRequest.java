@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.DateTimeTimeZone;
 import com.microsoft.graph.models.extensions.ScheduleInformation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Calendar Get Schedule Collection Request.
  */
-public interface ICalendarGetScheduleCollectionRequest {
+public interface ICalendarGetScheduleCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<ICalendarGetScheduleCollectionPage> callback);
 

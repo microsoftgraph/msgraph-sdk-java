@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Directory Role Delta Collection Request.
  */
-public interface IDirectoryRoleDeltaCollectionRequest {
+public interface IDirectoryRoleDeltaCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IDirectoryRoleDeltaCollectionPage> callback);
 
