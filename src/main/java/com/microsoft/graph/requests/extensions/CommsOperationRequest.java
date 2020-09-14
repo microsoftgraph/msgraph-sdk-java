@@ -169,5 +169,16 @@ public class CommsOperationRequest extends BaseRequest implements ICommsOperatio
          return (CommsOperationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ICommsOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (CommsOperationRequest)this;
+     }
+
 }
 

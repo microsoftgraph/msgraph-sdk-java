@@ -154,5 +154,16 @@ public class WindowsPhone81CompliancePolicyRequest extends BaseRequest implement
          return (WindowsPhone81CompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IWindowsPhone81CompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (WindowsPhone81CompliancePolicyRequest)this;
+     }
+
 }
 

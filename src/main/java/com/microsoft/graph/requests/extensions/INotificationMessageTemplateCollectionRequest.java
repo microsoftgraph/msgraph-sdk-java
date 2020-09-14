@@ -38,6 +38,14 @@ public interface INotificationMessageTemplateCollectionRequest {
     INotificationMessageTemplateCollectionRequest expand(final String value);
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    INotificationMessageTemplateCollectionRequest filter(final String value);
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

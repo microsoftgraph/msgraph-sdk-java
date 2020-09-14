@@ -104,4 +104,15 @@ public class DriveItemDeltaCollectionRequest extends BaseCollectionRequest<Drive
         return (IDriveItemDeltaCollectionRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDriveItemDeltaCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (IDriveItemDeltaCollectionRequest)this;
+    }
+
 }

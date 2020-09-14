@@ -154,5 +154,16 @@ public class OAuth2PermissionGrantRequest extends BaseRequest implements IOAuth2
          return (OAuth2PermissionGrantRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IOAuth2PermissionGrantRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (OAuth2PermissionGrantRequest)this;
+     }
+
 }
 

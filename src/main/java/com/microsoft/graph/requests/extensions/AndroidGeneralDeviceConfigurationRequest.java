@@ -154,5 +154,16 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
          return (AndroidGeneralDeviceConfigurationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidGeneralDeviceConfigurationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidGeneralDeviceConfigurationRequest)this;
+     }
+
 }
 

@@ -65,6 +65,16 @@ public class DirectoryObjectReferenceRequest extends BaseRequest implements IDir
         return (DirectoryObjectReferenceRequest)this;
     }
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDirectoryObjectReferenceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DirectoryObjectReferenceRequest)this;
+    }
+    /**
      * Puts the DirectoryObject
      *
      * @param srcDirectoryObject the DirectoryObject reference to PUT

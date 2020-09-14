@@ -85,6 +85,17 @@ public class DeviceConfigurationUserStatusCollectionRequest extends BaseCollecti
     }
 
     /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IDeviceConfigurationUserStatusCollectionRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (DeviceConfigurationUserStatusCollectionRequest)this;
+    }
+
+    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

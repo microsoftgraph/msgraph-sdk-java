@@ -154,5 +154,16 @@ public class RecordOperationRequest extends BaseRequest implements IRecordOperat
          return (RecordOperationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IRecordOperationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (RecordOperationRequest)this;
+     }
+
 }
 

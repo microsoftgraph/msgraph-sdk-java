@@ -154,5 +154,16 @@ public class TokenIssuancePolicyRequest extends BaseRequest implements ITokenIss
          return (TokenIssuancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITokenIssuancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (TokenIssuancePolicyRequest)this;
+     }
+
 }
 

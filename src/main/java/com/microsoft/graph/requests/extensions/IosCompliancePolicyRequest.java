@@ -154,5 +154,16 @@ public class IosCompliancePolicyRequest extends BaseRequest implements IIosCompl
          return (IosCompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IIosCompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (IosCompliancePolicyRequest)this;
+     }
+
 }
 

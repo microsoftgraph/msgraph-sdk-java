@@ -78,4 +78,15 @@ public class WorkbookFunctionsSumSqRequest extends BaseRequest implements IWorkb
         return (WorkbookFunctionsSumSqRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsSumSqRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsSumSqRequest)this;
+    }
+
 }

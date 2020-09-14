@@ -158,5 +158,16 @@ public class TeamsAppInstallationRequest extends BaseRequest implements ITeamsAp
          return (TeamsAppInstallationRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public ITeamsAppInstallationRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (TeamsAppInstallationRequest)this;
+     }
+
 }
 

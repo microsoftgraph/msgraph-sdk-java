@@ -78,4 +78,15 @@ public class WorkbookFunctionsHex2OctRequest extends BaseRequest implements IWor
         return (WorkbookFunctionsHex2OctRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsHex2OctRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsHex2OctRequest)this;
+    }
+
 }

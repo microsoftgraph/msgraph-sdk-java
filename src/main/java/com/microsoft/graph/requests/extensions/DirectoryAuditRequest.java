@@ -154,5 +154,16 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
          return (DirectoryAuditRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IDirectoryAuditRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (DirectoryAuditRequest)this;
+     }
+
 }
 

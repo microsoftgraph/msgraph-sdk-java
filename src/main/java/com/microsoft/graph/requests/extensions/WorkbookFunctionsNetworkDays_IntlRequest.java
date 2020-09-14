@@ -78,4 +78,15 @@ public class WorkbookFunctionsNetworkDays_IntlRequest extends BaseRequest implem
         return (WorkbookFunctionsNetworkDays_IntlRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsNetworkDays_IntlRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsNetworkDays_IntlRequest)this;
+    }
+
 }

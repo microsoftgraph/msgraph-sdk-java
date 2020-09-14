@@ -78,4 +78,15 @@ public class WorkbookFunctionsPhiRequest extends BaseRequest implements IWorkboo
         return (WorkbookFunctionsPhiRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IWorkbookFunctionsPhiRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (WorkbookFunctionsPhiRequest)this;
+    }
+
 }

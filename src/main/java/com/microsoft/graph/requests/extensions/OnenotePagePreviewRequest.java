@@ -73,4 +73,15 @@ public class OnenotePagePreviewRequest extends BaseRequest implements IOnenotePa
         return (OnenotePagePreviewRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IOnenotePagePreviewRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (OnenotePagePreviewRequest)this;
+    }
+
 }

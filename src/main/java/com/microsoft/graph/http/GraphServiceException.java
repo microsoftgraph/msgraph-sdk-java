@@ -112,7 +112,7 @@ public class GraphServiceException extends ClientException {
      * The response headers
      */
     private final List<String> responseHeaders;
-    
+
     /**
      * Whether to log the full error response
      */
@@ -175,12 +175,52 @@ public class GraphServiceException extends ClientException {
     }
     
     /**
-     * Gets the The HTTP status code
+     * Gets the HTTP status code
      *
      * @return The HTTP status response code
      */
     public int getResponseCode() {
     	return responseCode;
+    }
+
+    /**
+     * Gets the response headers
+     * @return the response headers
+     */
+    public List<String> getResponseHeaders() {
+        return responseHeaders;
+    }
+
+    /**
+     * Gets the error returned by the service
+     * @return the error returned by the service
+     */
+    public GraphErrorResponse getError() {
+        return error;
+    }
+
+    /**
+     * Gets the HTTP method of the request
+     * @return the HTTP method of the request
+     */
+    public String getMethod() {
+        return method;
+    }
+
+    /**
+     * Gets the URL of the request
+     * @return the URL of the request
+     */
+    public String getUrl() {
+        return url;
+    }
+    
+    /**
+     * Gets the request headers
+     * @return the request headers
+     */
+    public List<String> getRequestHeaders() {
+        return requestHeaders;
     }
 
     /**

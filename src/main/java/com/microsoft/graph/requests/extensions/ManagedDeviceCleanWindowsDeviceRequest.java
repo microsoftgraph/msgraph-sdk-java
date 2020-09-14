@@ -77,4 +77,15 @@ public class ManagedDeviceCleanWindowsDeviceRequest extends BaseRequest implemen
         return (ManagedDeviceCleanWindowsDeviceRequest)this;
     }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+    public IManagedDeviceCleanWindowsDeviceRequest filter(final String value) {
+        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (ManagedDeviceCleanWindowsDeviceRequest)this;
+    }
+
 }

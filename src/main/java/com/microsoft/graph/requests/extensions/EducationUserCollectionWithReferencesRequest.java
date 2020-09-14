@@ -59,6 +59,11 @@ public class EducationUserCollectionWithReferencesRequest extends BaseCollection
         return (EducationUserCollectionWithReferencesRequest)this;
     }
 
+    public IEducationUserCollectionWithReferencesRequest filter(final String value) {
+        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
+        return (EducationUserCollectionWithReferencesRequest)this;
+    }
+
     public IEducationUserCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (EducationUserCollectionWithReferencesRequest)this;

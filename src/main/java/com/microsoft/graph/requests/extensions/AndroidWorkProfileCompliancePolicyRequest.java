@@ -154,5 +154,16 @@ public class AndroidWorkProfileCompliancePolicyRequest extends BaseRequest imple
          return (AndroidWorkProfileCompliancePolicyRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IAndroidWorkProfileCompliancePolicyRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (AndroidWorkProfileCompliancePolicyRequest)this;
+     }
+
 }
 

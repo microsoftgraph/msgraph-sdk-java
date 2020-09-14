@@ -169,5 +169,16 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
          return (ScheduleChangeRequestRequest)this;
      }
 
+    /**
+     * Sets the filter clause for the request
+     *
+     * @param value the filter clause
+     * @return the updated request
+     */
+     public IScheduleChangeRequestRequest filter(final String value) {
+         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
+         return (ScheduleChangeRequestRequest)this;
+     }
+
 }
 
