@@ -1,21 +1,28 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import okhttp3.Request;
+
+import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.IGraphServiceClient;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.options.HeaderOption;
+import com.microsoft.graph.options.Option;
 import com.microsoft.graph.requests.extensions.IContactCollectionPage;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.IDriveItemCollectionPage;
@@ -162,6 +169,20 @@ public class UserTests {
 	public void meMemberof() {
 		IDirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
 		assertNotNull(page);
+	}
+
+	@Test
+	public void emptyPostContentType() {
+		final String contentTypeValue = "application/json";
+		final HeaderOption ctype = new HeaderOption("Content-Type", contentTypeValue);
+        final ArrayList<Option> options = new ArrayList<>();
+        options.add(ctype);
+        final Request request = graphServiceClient.me()
+                                            .revokeSignInSessions()
+                                            .buildRequest(options)
+                                            .withHttpMethod(HttpMethod.POST)
+                                            .getHttpRequest();
+		assertEquals(contentTypeValue, request.body().contentType().toString());					
 	}
 
 }

@@ -260,7 +260,9 @@ public class CoreHttpProvider implements IHttpProvider {
 			// This ensures that the Content-Length header is properly set
 			if (request.getHttpMethod() == HttpMethod.POST) {
 				bytesToWrite = new byte[0];
-				contenttype = Constants.BINARY_CONTENT_TYPE;
+				if(contenttype == null) {
+					contenttype = Constants.BINARY_CONTENT_TYPE;
+				}
 			}
 			else {
 				bytesToWrite = null;
