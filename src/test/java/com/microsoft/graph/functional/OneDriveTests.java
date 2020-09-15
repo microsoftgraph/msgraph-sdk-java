@@ -1,6 +1,7 @@
 package com.microsoft.graph.functional;
 
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,6 +14,7 @@ import org.junit.Test;
 import com.microsoft.graph.concurrency.ChunkedUploadProvider;
 import com.microsoft.graph.concurrency.IProgressCallback;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.http.CoreHttpProvider;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
@@ -84,5 +86,19 @@ public class OneDriveTests {
 		try (final InputStream stream = testBase.graphClient.customRequest("/me/drive/items/"+testDownloadFileId+"/content", InputStream.class).buildRequest().get()) {
 		   assertFalse("stream should not be empty", stream.read() == -1);
 		}
+	}
+	@Test
+	public void downloadJsonFileFromOneDrive() throws Exception {
+		final InputStream stream = testBase.graphClient.me()
+		.drive()
+		.root()
+		.itemWithPath("test.json")
+		.content()
+		.buildRequest()
+		.get();
+
+		final String fileContent = CoreHttpProvider.streamToString(stream);
+
+		assertTrue(fileContent.length() > 0);
 	}
 }

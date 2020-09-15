@@ -417,20 +417,20 @@ public class CoreHttpProvider implements IHttpProvider {
 
 				final Map<String, String> headers = CoreHttpProvider.getResponseHeadersAsMapStringString(response);
 
+				if(response.body() == null || response.body().contentLength() == 0)
+					return (Result) null;
+
 				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
-				if (contentType != null && contentType.contains(Constants.JSON_CONTENT_TYPE)) {
+				if (contentType != null && resultClass != InputStream.class && 
+							(contentType.contains(Constants.JSON_CONTENT_TYPE) || contentType.contains(Constants.TEXT_CONTENT_TYPE))) { // some services reply in text/plain with a JSON representation...
 					logger.logDebug("Response json");
 					return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-				} else {
+				} else if (resultClass == InputStream.class) {
 					logger.logDebug("Response binary");
 					isBinaryStreamInput = true;
-					if (resultClass == InputStream.class) {
-						return (Result) handleBinaryStream(in);
-					} else if(response.body() != null && response.body().contentLength() > 0) { // some services reply in text/plain with a JSON representation...
-						return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
-					} else {
-						return (Result) null;
-					}
+					return (Result) handleBinaryStream(in);
+				} else {
+					return (Result) null;
 				}
 			} finally {
 				if (!isBinaryStreamInput) {
