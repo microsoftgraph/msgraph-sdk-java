@@ -1,11 +1,15 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Before;
 import org.junit.Ignore;
@@ -24,7 +28,6 @@ import com.microsoft.graph.requests.extensions.IMessageCollectionPage;
 import com.microsoft.graph.requests.extensions.IOrganizationCollectionPage;
 import com.microsoft.graph.requests.extensions.IUsedInsightCollectionPage;
 import com.microsoft.graph.requests.extensions.IUserCollectionPage;
-
 @Ignore
 public class UserTests {
 	IGraphServiceClient graphServiceClient = null;
@@ -162,6 +165,27 @@ public class UserTests {
 	public void meMemberof() {
 		IDirectoryObjectCollectionWithReferencesPage page = graphServiceClient.me().memberOf().buildRequest().get();
 		assertNotNull(page);
+	}
+	@Test
+	public void getMeAndRetryOnThrottling() throws Exception {
+		ExecutorService exec = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() * 2);
+		try {
+			for(Integer i = 0; i < 2000; i++) {
+				exec.submit(new Runnable() {
+					@Override
+					public void run() {
+						final IUserCollectionPage users = graphServiceClient.users().buildRequest().get();
+						assertNotNull(users);
+						final List<User> currentPage = users.getCurrentPage();
+						assertNotNull(currentPage);
+						assertNotEquals(0, currentPage.size());
+					}
+				});
+			}
+			exec.awaitTermination(5L, TimeUnit.MINUTES);
+		} finally {
+			exec.shutdown();
+		}
 	}
 
 }
