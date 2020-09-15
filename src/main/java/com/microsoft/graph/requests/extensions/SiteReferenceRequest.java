@@ -93,16 +93,6 @@ public class SiteReferenceRequest extends BaseRequest implements ISiteReferenceR
         return (SiteReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ISiteReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (SiteReferenceRequest)this;
-    }
-    /**
      * Puts the Site
      *
      * @param srcSite the Site reference to PUT

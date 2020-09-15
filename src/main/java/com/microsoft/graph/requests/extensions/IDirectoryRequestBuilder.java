@@ -8,6 +8,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import java.util.Arrays;
@@ -34,6 +36,10 @@ public interface IDirectoryRequestBuilder extends IRequestBuilder {
      */
     IDirectoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IAdministrativeUnitCollectionRequestBuilder administrativeUnits();
+
+    IAdministrativeUnitRequestBuilder administrativeUnits(final String id);
 
     IDirectoryObjectCollectionRequestBuilder deletedItems();
 

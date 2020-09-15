@@ -60,11 +60,6 @@ public class DirectoryObjectCollectionWithReferencesRequest extends BaseCollecti
         return (DirectoryObjectCollectionWithReferencesRequest)this;
     }
 
-    public IDirectoryObjectCollectionWithReferencesRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (DirectoryObjectCollectionWithReferencesRequest)this;
-    }
-
     public IDirectoryObjectCollectionWithReferencesRequest select(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$select", value));
         return (DirectoryObjectCollectionWithReferencesRequest)this;

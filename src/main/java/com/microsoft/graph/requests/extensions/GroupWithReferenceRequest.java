@@ -146,14 +146,4 @@ public class GroupWithReferenceRequest extends BaseRequest implements IGroupWith
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
         return (GroupWithReferenceRequest)this;
     }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupWithReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupWithReferenceRequest)this;
-    }
 }

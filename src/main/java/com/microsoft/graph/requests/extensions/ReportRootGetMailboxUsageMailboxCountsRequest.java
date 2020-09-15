@@ -113,15 +113,4 @@ public class ReportRootGetMailboxUsageMailboxCountsRequest extends BaseRequest i
         return (ReportRootGetMailboxUsageMailboxCountsRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IReportRootGetMailboxUsageMailboxCountsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetMailboxUsageMailboxCountsRequest)this;
-    }
-
 }

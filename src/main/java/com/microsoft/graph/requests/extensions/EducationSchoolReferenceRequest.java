@@ -72,16 +72,6 @@ public class EducationSchoolReferenceRequest extends BaseRequest implements IEdu
         return (EducationSchoolReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IEducationSchoolReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (EducationSchoolReferenceRequest)this;
-    }
-    /**
      * Puts the EducationSchool
      *
      * @param srcEducationSchool the EducationSchool reference to PUT

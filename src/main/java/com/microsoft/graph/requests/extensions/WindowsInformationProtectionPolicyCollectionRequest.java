@@ -85,17 +85,6 @@ public class WindowsInformationProtectionPolicyCollectionRequest extends BaseCol
     }
 
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWindowsInformationProtectionPolicyCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WindowsInformationProtectionPolicyCollectionRequest)this;
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

@@ -78,15 +78,4 @@ public class WorkbookFunctionsStandardizeRequest extends BaseRequest implements 
         return (WorkbookFunctionsStandardizeRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsStandardizeRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsStandardizeRequest)this;
-    }
-
 }

@@ -66,9 +66,9 @@ public interface IWorkbookWorksheetRequestBuilder extends IRequestBuilder {
 
     IWorkbookTableRequestBuilder tables(final String id);
     IWorkbookWorksheetCellRequestBuilder cell(final Integer row, final Integer column);
-    IWorkbookWorksheetRangeRequestBuilder range();
-    IWorkbookWorksheetRangeRequestBuilder range(final String address);
     IWorkbookWorksheetUsedRangeRequestBuilder usedRange();
     IWorkbookWorksheetUsedRangeRequestBuilder usedRange(final Boolean valuesOnly);
+    IWorkbookWorksheetRangeRequestBuilder range();
+    IWorkbookWorksheetRangeRequestBuilder range(final String address);
 
 }

@@ -38,6 +38,10 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionR
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
@@ -236,6 +240,13 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
 
     public IDirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id, getClient(), null);
+    }
+    public IScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberOf() {
+        return new ScopedRoleMembershipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMemberOf"), getClient(), null);
+    }
+
+    public IScopedRoleMembershipRequestBuilder scopedRoleMemberOf(final String id) {
+        return new ScopedRoleMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMemberOf") + "/" + id, getClient(), null);
     }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);

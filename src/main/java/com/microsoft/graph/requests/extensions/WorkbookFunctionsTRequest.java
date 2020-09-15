@@ -78,15 +78,4 @@ public class WorkbookFunctionsTRequest extends BaseRequest implements IWorkbookF
         return (WorkbookFunctionsTRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IWorkbookFunctionsTRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (WorkbookFunctionsTRequest)this;
-    }
-
 }

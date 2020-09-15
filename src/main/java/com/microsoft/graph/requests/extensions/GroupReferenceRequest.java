@@ -117,16 +117,6 @@ public class GroupReferenceRequest extends BaseRequest implements IGroupReferenc
         return (GroupReferenceRequest)this;
     }
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IGroupReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (GroupReferenceRequest)this;
-    }
-    /**
      * Puts the Group
      *
      * @param srcGroup the Group reference to PUT

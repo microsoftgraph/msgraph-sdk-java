@@ -63,17 +63,6 @@ public class TokenLifetimePolicyCollectionReferenceRequest extends BaseCollectio
     }
 
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITokenLifetimePolicyCollectionReferenceRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TokenLifetimePolicyCollectionReferenceRequest)this;
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

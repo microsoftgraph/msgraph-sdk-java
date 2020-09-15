@@ -38,6 +38,10 @@ import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionR
 import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
@@ -175,16 +179,6 @@ public class UserReferenceRequest extends BaseRequest implements IUserReferenceR
      */
     public IUserReferenceRequest expand(final String value) {
         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserReferenceRequest)this;
-    }
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IUserReferenceRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (UserReferenceRequest)this;
     }
     /**

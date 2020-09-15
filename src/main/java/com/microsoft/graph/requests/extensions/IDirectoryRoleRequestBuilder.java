@@ -10,6 +10,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRole;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,5 +40,9 @@ public interface IDirectoryRoleRequestBuilder extends IRequestBuilder {
     IDirectoryObjectCollectionWithReferencesRequestBuilder members();
 
     IDirectoryObjectWithReferenceRequestBuilder members(final String id);
+
+    IScopedRoleMembershipCollectionRequestBuilder scopedMembers();
+
+    IScopedRoleMembershipRequestBuilder scopedMembers(final String id);
 
 }

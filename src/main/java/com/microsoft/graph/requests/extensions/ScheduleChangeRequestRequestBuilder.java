@@ -52,11 +52,11 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
 
 
 
-    public IScheduleChangeRequestApproveRequestBuilder approve(final String message) {
-        return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
-    }
-
     public IScheduleChangeRequestDeclineRequestBuilder decline(final String message) {
         return new ScheduleChangeRequestDeclineRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.decline"), getClient(), null, message);
+    }
+
+    public IScheduleChangeRequestApproveRequestBuilder approve(final String message) {
+        return new ScheduleChangeRequestApproveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.approve"), getClient(), null, message);
     }
 }

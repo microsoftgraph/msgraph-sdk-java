@@ -154,16 +154,5 @@ public class WorkforceIntegrationRequest extends BaseRequest implements IWorkfor
          return (WorkforceIntegrationRequest)this;
      }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IWorkforceIntegrationRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-         return (WorkforceIntegrationRequest)this;
-     }
-
 }
 

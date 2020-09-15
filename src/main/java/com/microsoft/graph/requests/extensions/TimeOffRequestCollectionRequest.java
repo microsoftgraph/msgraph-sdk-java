@@ -86,17 +86,6 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
     }
 
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ITimeOffRequestCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (TimeOffRequestCollectionRequest)this;
-    }
-
-    /**
      * Sets the select clause for the request
      *
      * @param value the select clause

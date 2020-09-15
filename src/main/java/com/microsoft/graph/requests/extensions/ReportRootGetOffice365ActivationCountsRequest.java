@@ -113,15 +113,4 @@ public class ReportRootGetOffice365ActivationCountsRequest extends BaseRequest i
         return (ReportRootGetOffice365ActivationCountsRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IReportRootGetOffice365ActivationCountsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetOffice365ActivationCountsRequest)this;
-    }
-
 }

@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Managed App Registration Get User Ids With Flagged App Registration Collection Request.
  */
-public interface IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest extends IHttpRequest {
+public interface IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionRequest {
 
     void get(final ICallback<IManagedAppRegistrationGetUserIdsWithFlaggedAppRegistrationCollectionPage> callback);
 

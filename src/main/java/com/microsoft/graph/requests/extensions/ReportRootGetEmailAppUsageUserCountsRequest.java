@@ -113,15 +113,4 @@ public class ReportRootGetEmailAppUsageUserCountsRequest extends BaseRequest imp
         return (ReportRootGetEmailAppUsageUserCountsRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IReportRootGetEmailAppUsageUserCountsRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetEmailAppUsageUserCountsRequest)this;
-    }
-
 }

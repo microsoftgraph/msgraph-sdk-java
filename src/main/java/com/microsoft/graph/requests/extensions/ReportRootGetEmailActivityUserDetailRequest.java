@@ -113,15 +113,4 @@ public class ReportRootGetEmailActivityUserDetailRequest extends BaseRequest imp
         return (ReportRootGetEmailActivityUserDetailRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IReportRootGetEmailActivityUserDetailRequest filter(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ReportRootGetEmailActivityUserDetailRequest)this;
-    }
-
 }

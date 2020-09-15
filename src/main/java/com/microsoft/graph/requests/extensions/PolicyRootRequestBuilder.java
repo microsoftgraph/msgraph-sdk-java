@@ -20,6 +20,10 @@ import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollecti
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -97,6 +101,13 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
 
     public IHomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(final String id) {
         return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
+    }
+    public IPermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
+        return new PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies"), getClient(), null);
+    }
+
+    public IPermissionGrantPolicyRequestBuilder permissionGrantPolicies(final String id) {
+        return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
     }
     public ITokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);

@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RecentNotebook;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Notebook Get Recent Notebooks Collection Request.
  */
-public interface INotebookGetRecentNotebooksCollectionRequest extends IHttpRequest {
+public interface INotebookGetRecentNotebooksCollectionRequest {
 
     void get(final ICallback<INotebookGetRecentNotebooksCollectionPage> callback);
 

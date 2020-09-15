@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
@@ -155,17 +159,6 @@ public class DirectoryRequest extends BaseRequest implements IDirectoryRequest {
      */
      public IDirectoryRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IDirectoryRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (DirectoryRequest)this;
      }
 

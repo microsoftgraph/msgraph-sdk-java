@@ -10,7 +10,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.generated.CalendarRoleType;
 import java.util.Arrays;
 import java.util.EnumSet;
-import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +20,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Calendar Allowed Calendar Sharing Roles Collection Request.
  */
-public interface ICalendarAllowedCalendarSharingRolesCollectionRequest extends IHttpRequest {
+public interface ICalendarAllowedCalendarSharingRolesCollectionRequest {
 
     void get(final ICallback<ICalendarAllowedCalendarSharingRolesCollectionPage> callback);
 

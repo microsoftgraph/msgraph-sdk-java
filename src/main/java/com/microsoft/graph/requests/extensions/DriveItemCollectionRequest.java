@@ -9,9 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
@@ -87,17 +87,6 @@ public class DriveItemCollectionRequest extends BaseCollectionRequest<DriveItemC
      */
     public IDriveItemCollectionRequest expand(final String value) {
         addQueryOption(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DriveItemCollectionRequest)this;
-    }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDriveItemCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
         return (DriveItemCollectionRequest)this;
     }
 

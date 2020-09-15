@@ -109,15 +109,4 @@ public class DirectoryObjectGetAvailableExtensionPropertiesCollectionRequest ext
         return (IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (IDirectoryObjectGetAvailableExtensionPropertiesCollectionRequest)this;
-    }
-
 }

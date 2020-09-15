@@ -20,6 +20,10 @@ import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollecti
 import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
@@ -177,17 +181,6 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      */
      public IPolicyRootRequest expand(final String value) {
          getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicyRootRequest)this;
-     }
-
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-     public IPolicyRootRequest filter(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$filter", value));
          return (PolicyRootRequest)this;
      }
 

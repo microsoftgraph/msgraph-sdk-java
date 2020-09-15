@@ -110,15 +110,4 @@ public class CalendarGetScheduleCollectionRequest extends BaseCollectionRequest<
         return (ICalendarGetScheduleCollectionRequest)this;
     }
 
-    /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    public ICalendarGetScheduleCollectionRequest filter(final String value) {
-        addQueryOption(new com.microsoft.graph.options.QueryOption("$filter", value));
-        return (ICalendarGetScheduleCollectionRequest)this;
-    }
-
 }
