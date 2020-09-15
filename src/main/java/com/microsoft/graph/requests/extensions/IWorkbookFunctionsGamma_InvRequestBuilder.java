@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsGamma_InvRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsGamma_InvRequest instance
      */
     IWorkbookFunctionsGamma_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

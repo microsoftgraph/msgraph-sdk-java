@@ -28,5 +28,4 @@ public interface IManagedDeviceCleanWindowsDeviceRequestBuilder extends IRequest
      * @return the IManagedDeviceCleanWindowsDeviceRequest instance
      */
     IManagedDeviceCleanWindowsDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

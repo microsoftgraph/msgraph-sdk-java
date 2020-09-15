@@ -28,5 +28,4 @@ public interface ICallLogTeleconferenceDeviceQualityRequestBuilder extends IRequ
      * @return the ICallLogTeleconferenceDeviceQualityRequest instance
      */
     ICallLogTeleconferenceDeviceQualityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

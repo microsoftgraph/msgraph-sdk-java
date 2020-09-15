@@ -28,5 +28,4 @@ public interface IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequestBuilde
      * @return the IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest instance
      */
     IReportRootGetMailboxUsageQuotaStatusMailboxCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

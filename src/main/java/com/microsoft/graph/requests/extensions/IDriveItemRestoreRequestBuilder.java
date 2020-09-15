@@ -28,5 +28,4 @@ public interface IDriveItemRestoreRequestBuilder extends IRequestBuilder {
      * @return the IDriveItemRestoreRequest instance
      */
     IDriveItemRestoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsF_Dist_RTRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsF_Dist_RTRequest instance
      */
     IWorkbookFunctionsF_Dist_RTRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

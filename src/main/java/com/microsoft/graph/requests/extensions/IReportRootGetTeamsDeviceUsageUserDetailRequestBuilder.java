@@ -28,5 +28,4 @@ public interface IReportRootGetTeamsDeviceUsageUserDetailRequestBuilder extends 
      * @return the IReportRootGetTeamsDeviceUsageUserDetailRequest instance
      */
     IReportRootGetTeamsDeviceUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

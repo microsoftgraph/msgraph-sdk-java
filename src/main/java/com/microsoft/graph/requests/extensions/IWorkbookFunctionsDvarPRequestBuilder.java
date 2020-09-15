@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsDvarPRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsDvarPRequest instance
      */
     IWorkbookFunctionsDvarPRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

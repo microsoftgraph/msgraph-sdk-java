@@ -28,5 +28,4 @@ public interface IWorkbookTableRowItemAtRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookTableRowItemAtRequest instance
      */
     IWorkbookTableRowItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

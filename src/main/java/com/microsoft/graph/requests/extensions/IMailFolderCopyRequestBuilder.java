@@ -28,5 +28,4 @@ public interface IMailFolderCopyRequestBuilder extends IRequestBuilder {
      * @return the IMailFolderCopyRequest instance
      */
     IMailFolderCopyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

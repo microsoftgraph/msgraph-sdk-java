@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsFisherRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsFisherRequest instance
      */
     IWorkbookFunctionsFisherRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

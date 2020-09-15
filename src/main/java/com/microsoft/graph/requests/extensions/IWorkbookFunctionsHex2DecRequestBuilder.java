@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsHex2DecRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsHex2DecRequest instance
      */
     IWorkbookFunctionsHex2DecRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

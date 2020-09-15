@@ -28,5 +28,4 @@ public interface IWorkbookTableClearFiltersRequestBuilder extends IRequestBuilde
      * @return the IWorkbookTableClearFiltersRequest instance
      */
     IWorkbookTableClearFiltersRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

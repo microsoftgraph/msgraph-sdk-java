@@ -28,5 +28,4 @@ public interface IOnenotePagePreviewRequestBuilder extends IRequestBuilder {
      * @return the IOnenotePagePreviewRequest instance
      */
     IOnenotePagePreviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

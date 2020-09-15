@@ -28,5 +28,4 @@ public interface IDirectoryObjectRestoreRequestBuilder extends IRequestBuilder {
      * @return the IDirectoryObjectRestoreRequest instance
      */
     IDirectoryObjectRestoreRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

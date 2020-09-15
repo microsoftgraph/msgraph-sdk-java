@@ -28,5 +28,4 @@ public interface IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder e
      * @return the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
      */
     IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

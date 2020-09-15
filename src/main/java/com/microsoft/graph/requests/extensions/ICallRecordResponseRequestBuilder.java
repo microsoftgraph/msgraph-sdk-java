@@ -28,5 +28,4 @@ public interface ICallRecordResponseRequestBuilder extends IRequestBuilder {
      * @return the ICallRecordResponseRequest instance
      */
     ICallRecordResponseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

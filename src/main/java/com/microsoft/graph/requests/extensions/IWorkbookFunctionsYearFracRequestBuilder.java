@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsYearFracRequestBuilder extends IRequestBuilde
      * @return the IWorkbookFunctionsYearFracRequest instance
      */
     IWorkbookFunctionsYearFracRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

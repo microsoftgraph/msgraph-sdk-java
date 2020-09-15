@@ -28,5 +28,4 @@ public interface IUserRemoveAllDevicesFromManagementRequestBuilder extends IRequ
      * @return the IUserRemoveAllDevicesFromManagementRequest instance
      */
     IUserRemoveAllDevicesFromManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

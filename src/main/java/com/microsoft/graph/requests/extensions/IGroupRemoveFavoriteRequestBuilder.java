@@ -28,5 +28,4 @@ public interface IGroupRemoveFavoriteRequestBuilder extends IRequestBuilder {
      * @return the IGroupRemoveFavoriteRequest instance
      */
     IGroupRemoveFavoriteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

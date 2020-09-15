@@ -28,5 +28,4 @@ public interface IWorkbookFilterApplyBottomPercentFilterRequestBuilder extends I
      * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
     IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

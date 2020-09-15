@@ -28,5 +28,4 @@ public interface IReportRootGetOffice365ActivationsUserDetailRequestBuilder exte
      * @return the IReportRootGetOffice365ActivationsUserDetailRequest instance
      */
     IReportRootGetOffice365ActivationsUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

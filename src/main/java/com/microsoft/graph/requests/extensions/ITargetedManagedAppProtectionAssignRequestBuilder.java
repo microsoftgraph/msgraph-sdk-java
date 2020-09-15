@@ -28,5 +28,4 @@ public interface ITargetedManagedAppProtectionAssignRequestBuilder extends IRequ
      * @return the ITargetedManagedAppProtectionAssignRequest instance
      */
     ITargetedManagedAppProtectionAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

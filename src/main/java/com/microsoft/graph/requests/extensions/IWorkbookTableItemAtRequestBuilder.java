@@ -29,7 +29,6 @@ public interface IWorkbookTableItemAtRequestBuilder extends IRequestBuilder {
      */
     IWorkbookTableItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-
     IWorkbookTableColumnCollectionRequestBuilder columns();
 
     IWorkbookTableColumnRequestBuilder columns(final String id);

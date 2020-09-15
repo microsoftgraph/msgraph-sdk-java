@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsEcma_CeilingRequestBuilder extends IRequestBu
      * @return the IWorkbookFunctionsEcma_CeilingRequest instance
      */
     IWorkbookFunctionsEcma_CeilingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

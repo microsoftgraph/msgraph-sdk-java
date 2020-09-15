@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsCothRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsCothRequest instance
      */
     IWorkbookFunctionsCothRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

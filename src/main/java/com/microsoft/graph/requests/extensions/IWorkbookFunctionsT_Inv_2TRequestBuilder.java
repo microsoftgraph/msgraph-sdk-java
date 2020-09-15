@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsT_Inv_2TRequestBuilder extends IRequestBuilde
      * @return the IWorkbookFunctionsT_Inv_2TRequest instance
      */
     IWorkbookFunctionsT_Inv_2TRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

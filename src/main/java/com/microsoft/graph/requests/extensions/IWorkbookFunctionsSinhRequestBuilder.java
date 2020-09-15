@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsSinhRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsSinhRequest instance
      */
     IWorkbookFunctionsSinhRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

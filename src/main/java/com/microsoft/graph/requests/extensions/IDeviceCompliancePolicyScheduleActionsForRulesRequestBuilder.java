@@ -28,5 +28,4 @@ public interface IDeviceCompliancePolicyScheduleActionsForRulesRequestBuilder ex
      * @return the IDeviceCompliancePolicyScheduleActionsForRulesRequest instance
      */
     IDeviceCompliancePolicyScheduleActionsForRulesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

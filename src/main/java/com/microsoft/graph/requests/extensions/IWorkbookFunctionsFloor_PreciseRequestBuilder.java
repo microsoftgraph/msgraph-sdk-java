@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsFloor_PreciseRequestBuilder extends IRequestB
      * @return the IWorkbookFunctionsFloor_PreciseRequest instance
      */
     IWorkbookFunctionsFloor_PreciseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

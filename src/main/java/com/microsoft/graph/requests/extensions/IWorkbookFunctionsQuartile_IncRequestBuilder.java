@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsQuartile_IncRequestBuilder extends IRequestBu
      * @return the IWorkbookFunctionsQuartile_IncRequest instance
      */
     IWorkbookFunctionsQuartile_IncRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

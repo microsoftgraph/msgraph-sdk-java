@@ -28,5 +28,4 @@ public interface IGroupSubscribeByMailRequestBuilder extends IRequestBuilder {
      * @return the IGroupSubscribeByMailRequest instance
      */
     IGroupSubscribeByMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

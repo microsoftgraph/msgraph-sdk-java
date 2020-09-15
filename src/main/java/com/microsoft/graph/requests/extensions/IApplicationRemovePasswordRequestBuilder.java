@@ -28,5 +28,4 @@ public interface IApplicationRemovePasswordRequestBuilder extends IRequestBuilde
      * @return the IApplicationRemovePasswordRequest instance
      */
     IApplicationRemovePasswordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

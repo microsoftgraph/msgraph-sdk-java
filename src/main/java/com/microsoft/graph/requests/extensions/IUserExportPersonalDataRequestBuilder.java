@@ -28,5 +28,4 @@ public interface IUserExportPersonalDataRequestBuilder extends IRequestBuilder {
      * @return the IUserExportPersonalDataRequest instance
      */
     IUserExportPersonalDataRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

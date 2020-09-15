@@ -28,5 +28,4 @@ public interface ITargetedManagedAppConfigurationAssignRequestBuilder extends IR
      * @return the ITargetedManagedAppConfigurationAssignRequest instance
      */
     ITargetedManagedAppConfigurationAssignRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

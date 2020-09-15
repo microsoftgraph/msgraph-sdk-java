@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsIso_CeilingRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
     IWorkbookFunctionsIso_CeilingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsDollarRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsDollarRequest instance
      */
     IWorkbookFunctionsDollarRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsZ_TestRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsZ_TestRequest instance
      */
     IWorkbookFunctionsZ_TestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

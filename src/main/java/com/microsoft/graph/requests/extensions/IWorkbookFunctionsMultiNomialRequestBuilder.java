@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsMultiNomialRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsMultiNomialRequest instance
      */
     IWorkbookFunctionsMultiNomialRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

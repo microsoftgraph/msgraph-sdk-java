@@ -28,5 +28,4 @@ public interface IReportRootGetOffice365ServicesUserCountsRequestBuilder extends
      * @return the IReportRootGetOffice365ServicesUserCountsRequest instance
      */
     IReportRootGetOffice365ServicesUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

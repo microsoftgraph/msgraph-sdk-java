@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsDec2BinRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsDec2BinRequest instance
      */
     IWorkbookFunctionsDec2BinRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

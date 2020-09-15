@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsRoundDownRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsRoundDownRequest instance
      */
     IWorkbookFunctionsRoundDownRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

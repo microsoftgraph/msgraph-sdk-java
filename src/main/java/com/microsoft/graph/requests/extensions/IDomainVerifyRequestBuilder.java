@@ -28,5 +28,4 @@ public interface IDomainVerifyRequestBuilder extends IRequestBuilder {
      * @return the IDomainVerifyRequest instance
      */
     IDomainVerifyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

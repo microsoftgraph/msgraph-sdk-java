@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsGcdRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsGcdRequest instance
      */
     IWorkbookFunctionsGcdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

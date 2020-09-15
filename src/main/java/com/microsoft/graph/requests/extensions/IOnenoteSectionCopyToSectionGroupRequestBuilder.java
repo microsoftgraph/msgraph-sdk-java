@@ -28,5 +28,4 @@ public interface IOnenoteSectionCopyToSectionGroupRequestBuilder extends IReques
      * @return the IOnenoteSectionCopyToSectionGroupRequest instance
      */
     IOnenoteSectionCopyToSectionGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

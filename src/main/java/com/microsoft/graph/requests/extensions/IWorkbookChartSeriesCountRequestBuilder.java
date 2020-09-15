@@ -28,5 +28,4 @@ public interface IWorkbookChartSeriesCountRequestBuilder extends IRequestBuilder
      * @return the IWorkbookChartSeriesCountRequest instance
      */
     IWorkbookChartSeriesCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

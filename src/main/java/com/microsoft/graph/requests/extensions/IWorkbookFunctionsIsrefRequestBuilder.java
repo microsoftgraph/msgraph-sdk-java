@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsIsrefRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsIsrefRequest instance
      */
     IWorkbookFunctionsIsrefRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

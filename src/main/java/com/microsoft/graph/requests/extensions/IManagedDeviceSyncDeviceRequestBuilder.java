@@ -28,5 +28,4 @@ public interface IManagedDeviceSyncDeviceRequestBuilder extends IRequestBuilder 
      * @return the IManagedDeviceSyncDeviceRequest instance
      */
     IManagedDeviceSyncDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

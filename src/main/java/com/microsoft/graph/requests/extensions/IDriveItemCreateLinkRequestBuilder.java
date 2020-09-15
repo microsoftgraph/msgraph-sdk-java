@@ -28,5 +28,4 @@ public interface IDriveItemCreateLinkRequestBuilder extends IRequestBuilder {
      * @return the IDriveItemCreateLinkRequest instance
      */
     IDriveItemCreateLinkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

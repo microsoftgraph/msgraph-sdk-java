@@ -28,5 +28,4 @@ public interface ICallUnmuteRequestBuilder extends IRequestBuilder {
      * @return the ICallUnmuteRequest instance
      */
     ICallUnmuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

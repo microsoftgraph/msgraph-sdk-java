@@ -28,5 +28,4 @@ public interface IEventAcceptRequestBuilder extends IRequestBuilder {
      * @return the IEventAcceptRequest instance
      */
     IEventAcceptRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

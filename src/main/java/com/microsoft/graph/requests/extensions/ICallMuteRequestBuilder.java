@@ -28,5 +28,4 @@ public interface ICallMuteRequestBuilder extends IRequestBuilder {
      * @return the ICallMuteRequest instance
      */
     ICallMuteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

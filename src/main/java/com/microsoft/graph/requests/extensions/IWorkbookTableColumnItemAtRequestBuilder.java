@@ -29,7 +29,6 @@ public interface IWorkbookTableColumnItemAtRequestBuilder extends IRequestBuilde
      */
     IWorkbookTableColumnItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-
     /**
      * Gets the request builder for WorkbookFilter
      *

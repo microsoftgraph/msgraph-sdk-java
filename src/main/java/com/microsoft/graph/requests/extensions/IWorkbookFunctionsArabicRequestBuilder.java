@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsArabicRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsArabicRequest instance
      */
     IWorkbookFunctionsArabicRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

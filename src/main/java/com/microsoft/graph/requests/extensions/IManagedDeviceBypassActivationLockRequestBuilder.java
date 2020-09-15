@@ -28,5 +28,4 @@ public interface IManagedDeviceBypassActivationLockRequestBuilder extends IReque
      * @return the IManagedDeviceBypassActivationLockRequest instance
      */
     IManagedDeviceBypassActivationLockRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

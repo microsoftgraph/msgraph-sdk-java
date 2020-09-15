@@ -28,5 +28,4 @@ public interface IOnlineMeetingCreateOrGetRequestBuilder extends IRequestBuilder
      * @return the IOnlineMeetingCreateOrGetRequest instance
      */
     IOnlineMeetingCreateOrGetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

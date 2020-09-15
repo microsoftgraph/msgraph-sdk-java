@@ -28,5 +28,4 @@ public interface IWorkbookFilterApplyFontColorFilterRequestBuilder extends IRequ
      * @return the IWorkbookFilterApplyFontColorFilterRequest instance
      */
     IWorkbookFilterApplyFontColorFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

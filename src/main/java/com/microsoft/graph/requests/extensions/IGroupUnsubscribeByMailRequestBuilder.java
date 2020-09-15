@@ -28,5 +28,4 @@ public interface IGroupUnsubscribeByMailRequestBuilder extends IRequestBuilder {
      * @return the IGroupUnsubscribeByMailRequest instance
      */
     IGroupUnsubscribeByMailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

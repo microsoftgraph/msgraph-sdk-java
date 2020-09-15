@@ -28,5 +28,4 @@ public interface ICallTransferRequestBuilder extends IRequestBuilder {
      * @return the ICallTransferRequest instance
      */
     ICallTransferRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

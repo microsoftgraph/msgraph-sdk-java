@@ -28,5 +28,4 @@ public interface IWorkbookFilterApplyDynamicFilterRequestBuilder extends IReques
      * @return the IWorkbookFilterApplyDynamicFilterRequest instance
      */
     IWorkbookFilterApplyDynamicFilterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

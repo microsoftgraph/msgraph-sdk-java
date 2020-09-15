@@ -28,5 +28,4 @@ public interface IReportRootGetSharePointActivityPagesRequestBuilder extends IRe
      * @return the IReportRootGetSharePointActivityPagesRequest instance
      */
     IReportRootGetSharePointActivityPagesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

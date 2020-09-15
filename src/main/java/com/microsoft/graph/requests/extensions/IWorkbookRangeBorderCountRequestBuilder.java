@@ -28,5 +28,4 @@ public interface IWorkbookRangeBorderCountRequestBuilder extends IRequestBuilder
      * @return the IWorkbookRangeBorderCountRequest instance
      */
     IWorkbookRangeBorderCountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

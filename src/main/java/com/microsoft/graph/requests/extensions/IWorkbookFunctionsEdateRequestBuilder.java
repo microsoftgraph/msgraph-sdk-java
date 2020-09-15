@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsEdateRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsEdateRequest instance
      */
     IWorkbookFunctionsEdateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsGeoMeanRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsGeoMeanRequest instance
      */
     IWorkbookFunctionsGeoMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

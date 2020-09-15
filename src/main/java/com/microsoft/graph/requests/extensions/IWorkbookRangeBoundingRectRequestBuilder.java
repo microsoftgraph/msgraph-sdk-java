@@ -29,7 +29,6 @@ public interface IWorkbookRangeBoundingRectRequestBuilder extends IRequestBuilde
      */
     IWorkbookRangeBoundingRectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-
     /**
      * Gets the request builder for WorkbookRangeFormat
      *

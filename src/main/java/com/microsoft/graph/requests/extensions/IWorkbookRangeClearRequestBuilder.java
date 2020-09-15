@@ -28,5 +28,4 @@ public interface IWorkbookRangeClearRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookRangeClearRequest instance
      */
     IWorkbookRangeClearRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

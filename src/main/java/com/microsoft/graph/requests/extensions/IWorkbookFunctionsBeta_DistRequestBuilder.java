@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsBeta_DistRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
     IWorkbookFunctionsBeta_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

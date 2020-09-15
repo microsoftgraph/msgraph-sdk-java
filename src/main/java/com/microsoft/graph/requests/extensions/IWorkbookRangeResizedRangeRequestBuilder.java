@@ -29,7 +29,6 @@ public interface IWorkbookRangeResizedRangeRequestBuilder extends IRequestBuilde
      */
     IWorkbookRangeResizedRangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
-
     /**
      * Gets the request builder for WorkbookRangeFormat
      *

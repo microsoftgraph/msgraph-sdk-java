@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsHlookupRequestBuilder extends IRequestBuilder
      * @return the IWorkbookFunctionsHlookupRequest instance
      */
     IWorkbookFunctionsHlookupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

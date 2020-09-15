@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsPpmtRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsPpmtRequest instance
      */
     IWorkbookFunctionsPpmtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

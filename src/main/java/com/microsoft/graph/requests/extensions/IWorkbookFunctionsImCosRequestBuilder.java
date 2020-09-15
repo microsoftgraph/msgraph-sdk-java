@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsImCosRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsImCosRequest instance
      */
     IWorkbookFunctionsImCosRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

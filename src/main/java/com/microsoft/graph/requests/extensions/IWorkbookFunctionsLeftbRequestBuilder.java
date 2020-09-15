@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsLeftbRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsLeftbRequest instance
      */
     IWorkbookFunctionsLeftbRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

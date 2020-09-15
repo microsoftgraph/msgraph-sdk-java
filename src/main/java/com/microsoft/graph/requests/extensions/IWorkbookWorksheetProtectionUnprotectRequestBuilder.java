@@ -28,5 +28,4 @@ public interface IWorkbookWorksheetProtectionUnprotectRequestBuilder extends IRe
      * @return the IWorkbookWorksheetProtectionUnprotectRequest instance
      */
     IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

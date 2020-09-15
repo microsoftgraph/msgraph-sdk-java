@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsPdurationRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsPdurationRequest instance
      */
     IWorkbookFunctionsPdurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

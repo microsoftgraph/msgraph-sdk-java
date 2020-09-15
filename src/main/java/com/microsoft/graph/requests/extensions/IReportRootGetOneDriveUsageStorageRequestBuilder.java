@@ -28,5 +28,4 @@ public interface IReportRootGetOneDriveUsageStorageRequestBuilder extends IReque
      * @return the IReportRootGetOneDriveUsageStorageRequest instance
      */
     IReportRootGetOneDriveUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

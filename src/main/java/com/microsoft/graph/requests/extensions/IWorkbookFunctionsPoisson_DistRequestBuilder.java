@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsPoisson_DistRequestBuilder extends IRequestBu
      * @return the IWorkbookFunctionsPoisson_DistRequest instance
      */
     IWorkbookFunctionsPoisson_DistRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

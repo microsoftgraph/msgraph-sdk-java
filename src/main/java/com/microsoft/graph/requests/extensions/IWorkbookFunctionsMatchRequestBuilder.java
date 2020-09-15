@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsMatchRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsMatchRequest instance
      */
     IWorkbookFunctionsMatchRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

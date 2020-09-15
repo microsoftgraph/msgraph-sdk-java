@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsTrimMeanRequestBuilder extends IRequestBuilde
      * @return the IWorkbookFunctionsTrimMeanRequest instance
      */
     IWorkbookFunctionsTrimMeanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

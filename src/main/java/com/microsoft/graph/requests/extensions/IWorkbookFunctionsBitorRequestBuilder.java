@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsBitorRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsBitorRequest instance
      */
     IWorkbookFunctionsBitorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

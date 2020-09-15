@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsLogNorm_InvRequestBuilder extends IRequestBui
      * @return the IWorkbookFunctionsLogNorm_InvRequest instance
      */
     IWorkbookFunctionsLogNorm_InvRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

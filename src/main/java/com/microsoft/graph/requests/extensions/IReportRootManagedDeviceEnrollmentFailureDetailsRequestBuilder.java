@@ -28,5 +28,4 @@ public interface IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder 
      * @return the IReportRootManagedDeviceEnrollmentFailureDetailsRequest instance
      */
     IReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

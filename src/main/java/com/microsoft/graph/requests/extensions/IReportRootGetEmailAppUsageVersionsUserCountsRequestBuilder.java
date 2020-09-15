@@ -28,5 +28,4 @@ public interface IReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder ext
      * @return the IReportRootGetEmailAppUsageVersionsUserCountsRequest instance
      */
     IReportRootGetEmailAppUsageVersionsUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

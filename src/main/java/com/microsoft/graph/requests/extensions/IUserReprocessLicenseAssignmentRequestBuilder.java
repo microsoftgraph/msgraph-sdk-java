@@ -28,5 +28,4 @@ public interface IUserReprocessLicenseAssignmentRequestBuilder extends IRequestB
      * @return the IUserReprocessLicenseAssignmentRequest instance
      */
     IUserReprocessLicenseAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

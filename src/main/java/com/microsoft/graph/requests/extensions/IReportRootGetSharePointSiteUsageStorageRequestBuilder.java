@@ -28,5 +28,4 @@ public interface IReportRootGetSharePointSiteUsageStorageRequestBuilder extends 
      * @return the IReportRootGetSharePointSiteUsageStorageRequest instance
      */
     IReportRootGetSharePointSiteUsageStorageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsDatevalueRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsDatevalueRequest instance
      */
     IWorkbookFunctionsDatevalueRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

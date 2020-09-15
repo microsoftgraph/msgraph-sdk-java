@@ -28,5 +28,4 @@ public interface IReportRootGetYammerActivityUserDetailRequestBuilder extends IR
      * @return the IReportRootGetYammerActivityUserDetailRequest instance
      */
     IReportRootGetYammerActivityUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

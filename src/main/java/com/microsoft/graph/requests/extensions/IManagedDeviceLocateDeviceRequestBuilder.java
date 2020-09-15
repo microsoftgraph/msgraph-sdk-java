@@ -28,5 +28,4 @@ public interface IManagedDeviceLocateDeviceRequestBuilder extends IRequestBuilde
      * @return the IManagedDeviceLocateDeviceRequest instance
      */
     IManagedDeviceLocateDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

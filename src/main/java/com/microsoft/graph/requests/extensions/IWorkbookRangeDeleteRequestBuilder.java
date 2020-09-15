@@ -28,5 +28,4 @@ public interface IWorkbookRangeDeleteRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookRangeDeleteRequest instance
      */
     IWorkbookRangeDeleteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

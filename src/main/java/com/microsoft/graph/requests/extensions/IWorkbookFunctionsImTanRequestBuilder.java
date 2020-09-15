@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsImTanRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsImTanRequest instance
      */
     IWorkbookFunctionsImTanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

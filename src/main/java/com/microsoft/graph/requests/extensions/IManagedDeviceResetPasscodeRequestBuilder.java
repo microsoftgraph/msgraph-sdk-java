@@ -28,5 +28,4 @@ public interface IManagedDeviceResetPasscodeRequestBuilder extends IRequestBuild
      * @return the IManagedDeviceResetPasscodeRequest instance
      */
     IManagedDeviceResetPasscodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

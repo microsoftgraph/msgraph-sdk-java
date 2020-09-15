@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsIsNonTextRequestBuilder extends IRequestBuild
      * @return the IWorkbookFunctionsIsNonTextRequest instance
      */
     IWorkbookFunctionsIsNonTextRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

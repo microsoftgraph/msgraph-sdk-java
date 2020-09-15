@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsBinom_Dist_RangeRequestBuilder extends IReque
      * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
      */
     IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

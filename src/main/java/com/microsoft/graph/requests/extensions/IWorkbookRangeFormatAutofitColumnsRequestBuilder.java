@@ -28,5 +28,4 @@ public interface IWorkbookRangeFormatAutofitColumnsRequestBuilder extends IReque
      * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
     IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

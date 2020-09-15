@@ -28,5 +28,4 @@ public interface IWorkbookTableReapplyFiltersRequestBuilder extends IRequestBuil
      * @return the IWorkbookTableReapplyFiltersRequest instance
      */
     IWorkbookTableReapplyFiltersRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

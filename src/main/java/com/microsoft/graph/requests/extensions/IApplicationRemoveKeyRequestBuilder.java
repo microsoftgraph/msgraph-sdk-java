@@ -28,5 +28,4 @@ public interface IApplicationRemoveKeyRequestBuilder extends IRequestBuilder {
      * @return the IApplicationRemoveKeyRequest instance
      */
     IApplicationRemoveKeyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

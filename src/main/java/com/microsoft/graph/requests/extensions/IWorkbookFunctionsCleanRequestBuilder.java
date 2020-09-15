@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsCleanRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsCleanRequest instance
      */
     IWorkbookFunctionsCleanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

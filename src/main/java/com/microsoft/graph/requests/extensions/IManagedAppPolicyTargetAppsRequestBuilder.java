@@ -28,5 +28,4 @@ public interface IManagedAppPolicyTargetAppsRequestBuilder extends IRequestBuild
      * @return the IManagedAppPolicyTargetAppsRequest instance
      */
     IManagedAppPolicyTargetAppsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

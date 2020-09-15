@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsBitandRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsBitandRequest instance
      */
     IWorkbookFunctionsBitandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

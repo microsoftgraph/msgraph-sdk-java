@@ -28,5 +28,4 @@ public interface IManagedDeviceWipeRequestBuilder extends IRequestBuilder {
      * @return the IManagedDeviceWipeRequest instance
      */
     IManagedDeviceWipeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

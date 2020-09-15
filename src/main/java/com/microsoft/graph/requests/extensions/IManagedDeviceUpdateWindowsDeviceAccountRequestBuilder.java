@@ -28,5 +28,4 @@ public interface IManagedDeviceUpdateWindowsDeviceAccountRequestBuilder extends 
      * @return the IManagedDeviceUpdateWindowsDeviceAccountRequest instance
      */
     IManagedDeviceUpdateWindowsDeviceAccountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

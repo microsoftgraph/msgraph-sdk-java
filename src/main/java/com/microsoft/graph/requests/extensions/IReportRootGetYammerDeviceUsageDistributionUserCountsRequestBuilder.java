@@ -28,5 +28,4 @@ public interface IReportRootGetYammerDeviceUsageDistributionUserCountsRequestBui
      * @return the IReportRootGetYammerDeviceUsageDistributionUserCountsRequest instance
      */
     IReportRootGetYammerDeviceUsageDistributionUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

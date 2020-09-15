@@ -28,5 +28,4 @@ public interface IReportRootGetMailboxUsageDetailRequestBuilder extends IRequest
      * @return the IReportRootGetMailboxUsageDetailRequest instance
      */
     IReportRootGetMailboxUsageDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

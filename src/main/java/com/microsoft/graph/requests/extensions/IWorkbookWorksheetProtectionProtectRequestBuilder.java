@@ -28,5 +28,4 @@ public interface IWorkbookWorksheetProtectionProtectRequestBuilder extends IRequ
      * @return the IWorkbookWorksheetProtectionProtectRequest instance
      */
     IWorkbookWorksheetProtectionProtectRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

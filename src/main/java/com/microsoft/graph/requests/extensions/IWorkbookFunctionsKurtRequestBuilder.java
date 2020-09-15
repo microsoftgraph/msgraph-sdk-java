@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsKurtRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookFunctionsKurtRequest instance
      */
     IWorkbookFunctionsKurtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

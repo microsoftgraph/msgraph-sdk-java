@@ -28,5 +28,4 @@ public interface IReportRootGetTeamsUserActivityUserCountsRequestBuilder extends
      * @return the IReportRootGetTeamsUserActivityUserCountsRequest instance
      */
     IReportRootGetTeamsUserActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }

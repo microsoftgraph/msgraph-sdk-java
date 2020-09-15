@@ -28,5 +28,4 @@ public interface IWorkbookFunctionsDcountRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookFunctionsDcountRequest instance
      */
     IWorkbookFunctionsDcountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
-
 }
