@@ -178,10 +178,10 @@ public class UserTests {
         final ArrayList<Option> options = new ArrayList<>();
         options.add(ctype);
         final Request request = graphServiceClient.me()
-                                            .revokeSignInSessions().
-                                            buildRequest(options)
+                                            .revokeSignInSessions()
+                                            .buildRequest(options)
                                             .withHttpMethod(HttpMethod.POST)
-											.getHttpRequest();
+                                            .getHttpRequest();
 		assertEquals(contentTypeValue, request.body().contentType().toString());					
 	}
 
