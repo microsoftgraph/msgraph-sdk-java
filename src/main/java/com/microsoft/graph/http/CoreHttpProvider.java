@@ -367,7 +367,6 @@ public class CoreHttpProvider implements IHttpProvider {
 				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
 				okBuilder.followRedirects(false);
-				okBuilder.retryOnConnectionFailure(false);
 				this.corehttpClient = okBuilder.build();
 			}
 			if (authenticationProvider != null) {
