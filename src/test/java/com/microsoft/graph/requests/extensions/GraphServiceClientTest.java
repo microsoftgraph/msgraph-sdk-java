@@ -8,6 +8,8 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import okhttp3.Request;
+
 import com.microsoft.graph.authentication.IAuthenticationProvider;
 import com.microsoft.graph.authentication.MockAuthenticationProvider;
 import com.microsoft.graph.concurrency.DefaultExecutors;
@@ -201,6 +203,12 @@ public class GraphServiceClientTest {
 			@Override
 			public void setConnectionConfig(IConnectionConfig connectionConfig) {
 				// do nothing
+			}
+
+			@Override
+			public <Result, BodyType> Request getHttpRequest(IHttpRequest request, Class<Result> resultClass,
+					BodyType serializable, IProgressCallback<Result> progress) throws ClientException {
+				return null;
 			}
         };
         IGraphServiceClient client = GraphServiceClient //

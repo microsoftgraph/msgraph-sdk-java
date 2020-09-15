@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Outlook User Supported Time Zones Collection Request.
  */
-public interface IOutlookUserSupportedTimeZonesCollectionRequest {
+public interface IOutlookUserSupportedTimeZonesCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IOutlookUserSupportedTimeZonesCollectionPage> callback);
 

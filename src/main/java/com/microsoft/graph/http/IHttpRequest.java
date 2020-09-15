@@ -22,10 +22,14 @@
 
 package com.microsoft.graph.http;
 
+import com.microsoft.graph.concurrency.IProgressCallback;
+import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRedirect;
 import com.microsoft.graph.httpcore.middlewareoption.IShouldRetry;
 import com.microsoft.graph.options.HeaderOption;
 import com.microsoft.graph.options.Option;
+
+import okhttp3.Request;
 
 import java.net.URL;
 import java.util.List;
@@ -154,5 +158,37 @@ public interface IHttpRequest {
      * @return Delay between retries in seconds
      */
     long getDelay();
+
+    /**
+     * Sets the HTTP method and returns the current request
+     *
+     * @param httpMethod the HTTP method
+     * @return the current request
+     */
+    IHttpRequest withHttpMethod(final HttpMethod httpMethod);
+    
+    /**
+     * Returns the Request object to be executed
+     * @return the Request object to be executed
+     */
+    Request getHttpRequest() throws ClientException;
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param <requestBodyType> the type of the serialized object
+     * @return the Request object to be executed
+     */
+    <requestBodyType> Request getHttpRequest(final requestBodyType serializedObject) throws ClientException;
+
+    /**
+     * Returns the Request object to be executed
+     * @param serializedObject the object to serialize at the body of the request
+     * @param progress the progress callback
+     * @param <requestBodyType> the type of the serialized object
+     * @param <responseType> the type of the response object
+     * @return the Request object to be executed
+     */
+    <requestBodyType, responseType> Request getHttpRequest(final requestBodyType serializedObject, final IProgressCallback<responseType> progress) throws ClientException;
 }
 

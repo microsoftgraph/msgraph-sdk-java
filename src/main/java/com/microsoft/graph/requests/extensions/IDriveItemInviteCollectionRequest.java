@@ -11,6 +11,7 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -21,7 +22,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Drive Item Invite Collection Request.
  */
-public interface IDriveItemInviteCollectionRequest {
+public interface IDriveItemInviteCollectionRequest extends IHttpRequest {
 
     void post(final ICallback<IDriveItemInviteCollectionPage> callback);
 

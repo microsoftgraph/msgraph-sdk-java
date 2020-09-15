@@ -10,6 +10,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import com.microsoft.graph.http.IHttpRequest;
 
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
@@ -20,7 +21,7 @@ import com.google.gson.annotations.Expose;
 /**
  * The interface for the Administrative Unit Delta Collection Request.
  */
-public interface IAdministrativeUnitDeltaCollectionRequest {
+public interface IAdministrativeUnitDeltaCollectionRequest extends IHttpRequest {
 
     void get(final ICallback<IAdministrativeUnitDeltaCollectionPage> callback);
 
