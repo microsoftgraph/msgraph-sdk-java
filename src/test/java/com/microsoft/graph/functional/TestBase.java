@@ -45,14 +45,7 @@ public class TestBase {
         if (graphClient == null) {
             try {
                 accessToken = GetAccessToken().replace("\"", "");
-                IAuthenticationProvider mAuthenticationProvider = new IAuthenticationProvider() {
-                    @Override
-                    public void authenticateRequest(final IHttpRequest request) {
-                        request.addHeader("Authorization",
-                                "Bearer " + accessToken);
-                    }
-                };
-                IClientConfig mClientConfig = DefaultClientConfig.createWithAuthenticationProvider(mAuthenticationProvider);
+                IClientConfig mClientConfig = DefaultClientConfig.createWithAuthenticationProvider(new TestBaseAuthenticationProvider(accessToken));
 
                 graphClient = GraphServiceClient.fromConfig(mClientConfig);
             }
