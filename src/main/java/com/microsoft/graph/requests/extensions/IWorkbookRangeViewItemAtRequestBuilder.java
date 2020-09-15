@@ -28,4 +28,8 @@ public interface IWorkbookRangeViewItemAtRequestBuilder extends IRequestBuilder 
      * @return the IWorkbookRangeViewItemAtRequest instance
      */
     IWorkbookRangeViewItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    IWorkbookRangeViewCollectionRequestBuilder rows();
+
+    IWorkbookRangeViewRequestBuilder rows(final String id);
 }

@@ -28,4 +28,26 @@ public interface IWorkbookTableItemAtRequestBuilder extends IRequestBuilder {
      * @return the IWorkbookTableItemAtRequest instance
      */
     IWorkbookTableItemAtRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
+
+    IWorkbookTableColumnCollectionRequestBuilder columns();
+
+    IWorkbookTableColumnRequestBuilder columns(final String id);
+
+    IWorkbookTableRowCollectionRequestBuilder rows();
+
+    IWorkbookTableRowRequestBuilder rows(final String id);
+
+    /**
+     * Gets the request builder for WorkbookTableSort
+     *
+     * @return the IWorkbookTableSortRequestBuilder instance
+     */
+    IWorkbookTableSortRequestBuilder sort();
+
+    /**
+     * Gets the request builder for WorkbookWorksheet
+     *
+     * @return the IWorkbookWorksheetRequestBuilder instance
+     */
+    IWorkbookWorksheetRequestBuilder worksheet();
 }

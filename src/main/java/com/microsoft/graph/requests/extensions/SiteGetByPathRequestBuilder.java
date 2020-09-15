@@ -59,4 +59,91 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
 
         return request;
     }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder createdByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for User
+     *
+     * @return the IUserWithReferenceRequestBuilder instance
+     */
+    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ItemAnalytics
+     *
+     * @return the IItemAnalyticsWithReferenceRequestBuilder instance
+     */
+    public IItemAnalyticsWithReferenceRequestBuilder analytics() {
+        return new ItemAnalyticsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    }
+    public IColumnDefinitionCollectionRequestBuilder columns() {
+        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    }
+
+    public IColumnDefinitionRequestBuilder columns(final String id) {
+        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    }
+    public IContentTypeCollectionRequestBuilder contentTypes() {
+        return new ContentTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes"), getClient(), null);
+    }
+
+    public IContentTypeRequestBuilder contentTypes(final String id) {
+        return new ContentTypeRequestBuilder(getRequestUrlWithAdditionalSegment("contentTypes") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Drive
+     *
+     * @return the IDriveRequestBuilder instance
+     */
+    public IDriveRequestBuilder drive() {
+        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
+    }
+    public IDriveCollectionRequestBuilder drives() {
+        return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
+    }
+
+    public IDriveRequestBuilder drives(final String id) {
+        return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
+    }
+    public IBaseItemCollectionRequestBuilder items() {
+        return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
+    }
+
+    public IBaseItemRequestBuilder items(final String id) {
+        return new BaseItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
+    }
+    public IListCollectionRequestBuilder lists() {
+        return new ListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
+    }
+
+    public IListRequestBuilder lists(final String id) {
+        return new ListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
+    }
+    public ISiteCollectionRequestBuilder sites() {
+        return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
+    }
+
+    public ISiteRequestBuilder sites(final String id) {
+        return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Onenote
+     *
+     * @return the IOnenoteRequestBuilder instance
+     */
+    public IOnenoteRequestBuilder onenote() {
+        return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
 }
