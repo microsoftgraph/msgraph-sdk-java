@@ -94,9 +94,9 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
      * @return the full list of options for this request
      */
     public List<? extends Option> getOptions(final Option... requestOptions) {
-        return requestOptions != null && requestOptions.length > 0 ? 
+        return Collections.unmodifiableList(requestOptions != null && requestOptions.length > 0 ? 
                 Arrays.asList(requestOptions) 
-                : Collections.unmodifiableList(options);
+                : options);
     }
 
     /**
