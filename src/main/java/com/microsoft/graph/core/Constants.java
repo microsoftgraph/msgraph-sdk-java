@@ -18,10 +18,6 @@ public final class Constants {
 	 */
 	public static final String JSON_CONTENT_TYPE = "application/json";
 	/**
-	 * The content type for text responses
-	 */
-	public static final String TEXT_CONTENT_TYPE = "text/plain";
-	/**
 	 * The binary content type header's value 
 	 */
 	public static final String BINARY_CONTENT_TYPE = "application/octet-stream";

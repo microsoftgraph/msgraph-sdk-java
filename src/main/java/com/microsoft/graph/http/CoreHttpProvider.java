@@ -422,7 +422,7 @@ public class CoreHttpProvider implements IHttpProvider {
 
 				final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
 				if (contentType != null && resultClass != InputStream.class && 
-							(contentType.contains(Constants.JSON_CONTENT_TYPE) || contentType.contains(Constants.TEXT_CONTENT_TYPE))) { // some services reply in text/plain with a JSON representation...
+							contentType.contains(Constants.JSON_CONTENT_TYPE)) {
 					logger.logDebug("Response json");
 					return handleJsonResponse(in, CoreHttpProvider.getResponseHeadersAsMapOfStringList(response), resultClass);
 				} else if (resultClass == InputStream.class) {
