@@ -34,10 +34,11 @@ public class PlannerBucketTaskBoardTaskFormatRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerBucketTaskBoardTaskFormatRequest instance
      */
-    public IPlannerBucketTaskBoardTaskFormatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerBucketTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

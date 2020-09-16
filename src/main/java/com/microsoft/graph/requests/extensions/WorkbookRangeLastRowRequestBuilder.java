@@ -32,10 +32,11 @@ public class WorkbookRangeLastRowRequestBuilder extends BaseFunctionRequestBuild
     /**
      * Creates the IWorkbookRangeLastRowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeLastRowRequest instance
      */
-    public IWorkbookRangeLastRowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeLastRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

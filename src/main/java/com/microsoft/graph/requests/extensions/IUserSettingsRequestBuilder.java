@@ -21,9 +21,10 @@ public interface IUserSettingsRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserSettingsRequest instance
      */
-    IUserSettingsRequest buildRequest();
+    IUserSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

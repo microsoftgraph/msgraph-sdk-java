@@ -34,10 +34,11 @@ public class OutlookItemRequestBuilder extends BaseRequestBuilder implements IOu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOutlookItemRequest instance
      */
-    public IOutlookItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOutlookItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

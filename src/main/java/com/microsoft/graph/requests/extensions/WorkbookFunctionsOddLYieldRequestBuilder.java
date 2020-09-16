@@ -48,10 +48,11 @@ public class WorkbookFunctionsOddLYieldRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsOddLYieldRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOddLYieldRequest instance
      */
-    public IWorkbookFunctionsOddLYieldRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsOddLYieldRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

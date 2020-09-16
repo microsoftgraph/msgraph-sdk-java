@@ -34,10 +34,11 @@ public class SchedulingGroupRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISchedulingGroupRequest instance
      */
-    public ISchedulingGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISchedulingGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

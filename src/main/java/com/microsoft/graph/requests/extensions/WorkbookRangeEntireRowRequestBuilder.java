@@ -32,10 +32,11 @@ public class WorkbookRangeEntireRowRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookRangeEntireRowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeEntireRowRequest instance
      */
-    public IWorkbookRangeEntireRowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeEntireRowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

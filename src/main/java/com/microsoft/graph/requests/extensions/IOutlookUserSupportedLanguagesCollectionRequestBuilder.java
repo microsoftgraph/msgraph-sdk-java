@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.IOutlookUserSupportedLanguagesCol
  */
 public interface IOutlookUserSupportedLanguagesCollectionRequestBuilder extends IRequestBuilder {
 
-    IOutlookUserSupportedLanguagesCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IOutlookUserSupportedLanguagesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IOutlookUserSupportedLanguagesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

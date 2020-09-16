@@ -34,10 +34,11 @@ public class DataPolicyOperationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDataPolicyOperationRequest instance
      */
-    public IDataPolicyOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDataPolicyOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

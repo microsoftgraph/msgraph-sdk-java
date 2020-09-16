@@ -45,10 +45,11 @@ public class WorkbookRangeUsedRangeRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookRangeUsedRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeUsedRangeRequest instance
      */
-    public IWorkbookRangeUsedRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeUsedRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAreasRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsAreasRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAreasRequest instance
      */
-    IWorkbookFunctionsAreasRequest buildRequest();
+    IWorkbookFunctionsAreasRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAreasRequest with specific options instead of the existing options

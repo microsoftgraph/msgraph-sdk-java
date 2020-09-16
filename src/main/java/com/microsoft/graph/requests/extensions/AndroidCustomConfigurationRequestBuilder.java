@@ -34,10 +34,11 @@ public class AndroidCustomConfigurationRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidCustomConfigurationRequest instance
      */
-    public IAndroidCustomConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidCustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

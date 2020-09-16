@@ -34,10 +34,11 @@ public class SubscribedSkuRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISubscribedSkuRequest instance
      */
-    public ISubscribedSkuRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISubscribedSkuRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

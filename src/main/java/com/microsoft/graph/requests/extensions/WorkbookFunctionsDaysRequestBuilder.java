@@ -36,10 +36,11 @@ public class WorkbookFunctionsDaysRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsDaysRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDaysRequest instance
      */
-    public IWorkbookFunctionsDaysRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDaysRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

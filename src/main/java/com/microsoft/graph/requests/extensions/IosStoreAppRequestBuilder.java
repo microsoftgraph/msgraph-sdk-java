@@ -34,10 +34,11 @@ public class IosStoreAppRequestBuilder extends BaseRequestBuilder implements IIo
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosStoreAppRequest instance
      */
-    public IIosStoreAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIosStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

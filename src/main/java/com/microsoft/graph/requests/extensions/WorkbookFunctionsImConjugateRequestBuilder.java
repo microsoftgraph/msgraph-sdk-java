@@ -34,10 +34,11 @@ public class WorkbookFunctionsImConjugateRequestBuilder extends BaseActionReques
     /**
      * Creates the IWorkbookFunctionsImConjugateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImConjugateRequest instance
      */
-    public IWorkbookFunctionsImConjugateRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImConjugateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

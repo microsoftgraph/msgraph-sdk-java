@@ -34,10 +34,11 @@ public class MultiValueLegacyExtendedPropertyRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
-    public IMultiValueLegacyExtendedPropertyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMultiValueLegacyExtendedPropertyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

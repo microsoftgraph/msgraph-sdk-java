@@ -34,10 +34,11 @@ public class WorkbookFunctionsImLnRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsImLnRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImLnRequest instance
      */
-    public IWorkbookFunctionsImLnRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImLnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class MessageSendRequestBuilder extends BaseActionRequestBuilder implemen
     /**
      * Creates the IMessageSendRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageSendRequest instance
      */
-    public IMessageSendRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageSendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

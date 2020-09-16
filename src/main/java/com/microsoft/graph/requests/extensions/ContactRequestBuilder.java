@@ -48,10 +48,11 @@ public class ContactRequestBuilder extends BaseRequestBuilder implements IContac
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IContactRequest instance
      */
-    public IContactRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IContactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

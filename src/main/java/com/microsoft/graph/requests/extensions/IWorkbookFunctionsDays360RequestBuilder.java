@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDays360RequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsDays360Request
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDays360Request instance
      */
-    IWorkbookFunctionsDays360Request buildRequest();
+    IWorkbookFunctionsDays360Request buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDays360Request with specific options instead of the existing options

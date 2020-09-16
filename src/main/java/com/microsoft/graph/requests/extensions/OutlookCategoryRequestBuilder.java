@@ -34,10 +34,11 @@ public class OutlookCategoryRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOutlookCategoryRequest instance
      */
-    public IOutlookCategoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOutlookCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

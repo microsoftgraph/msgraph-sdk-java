@@ -17,9 +17,10 @@ public interface IReportRootDeviceConfigurationUserActivityRequestBuilder extend
     /**
      * Creates the IReportRootDeviceConfigurationUserActivityRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootDeviceConfigurationUserActivityRequest instance
      */
-    IReportRootDeviceConfigurationUserActivityRequest buildRequest();
+    IReportRootDeviceConfigurationUserActivityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootDeviceConfigurationUserActivityRequest with specific options instead of the existing options

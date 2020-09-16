@@ -34,10 +34,11 @@ public class WorkbookFunctionsRadiansRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsRadiansRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRadiansRequest instance
      */
-    public IWorkbookFunctionsRadiansRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRadiansRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

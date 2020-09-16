@@ -37,10 +37,11 @@ public class CallUpdateRecordingStatusRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the ICallUpdateRecordingStatusRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallUpdateRecordingStatusRequest instance
      */
-    public ICallUpdateRecordingStatusRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallUpdateRecordingStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

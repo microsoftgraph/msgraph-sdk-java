@@ -17,9 +17,10 @@ public interface IWorkbookTableTotalRowRangeRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookTableTotalRowRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableTotalRowRangeRequest instance
      */
-    IWorkbookTableTotalRowRangeRequest buildRequest();
+    IWorkbookTableTotalRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableTotalRowRangeRequest with specific options instead of the existing options

@@ -45,10 +45,11 @@ public class WorkbookRangeColumnsAfterRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookRangeColumnsAfterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeColumnsAfterRequest instance
      */
-    public IWorkbookRangeColumnsAfterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeColumnsAfterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

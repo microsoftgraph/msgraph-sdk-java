@@ -42,10 +42,11 @@ public class OnenoteSectionCopyToSectionGroupRequestBuilder extends BaseActionRe
     /**
      * Creates the IOnenoteSectionCopyToSectionGroupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnenoteSectionCopyToSectionGroupRequest instance
      */
-    public IOnenoteSectionCopyToSectionGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenoteSectionCopyToSectionGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class OfferShiftRequestRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOfferShiftRequestRequest instance
      */
-    public IOfferShiftRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOfferShiftRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

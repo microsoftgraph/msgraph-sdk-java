@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsPdurationRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsPdurationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPdurationRequest instance
      */
-    IWorkbookFunctionsPdurationRequest buildRequest();
+    IWorkbookFunctionsPdurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsPdurationRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class WindowsInformationProtectionPolicyRequestBuilder extends BaseReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsInformationProtectionPolicyRequest instance
      */
-    public IWindowsInformationProtectionPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsInformationProtectionPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

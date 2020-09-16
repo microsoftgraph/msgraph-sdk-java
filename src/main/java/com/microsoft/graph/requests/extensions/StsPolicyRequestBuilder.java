@@ -38,10 +38,11 @@ public class StsPolicyRequestBuilder extends BaseRequestBuilder implements IStsP
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IStsPolicyRequest instance
      */
-    public IStsPolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IStsPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

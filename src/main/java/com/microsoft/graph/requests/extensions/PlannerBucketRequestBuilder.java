@@ -38,10 +38,11 @@ public class PlannerBucketRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPlannerBucketRequest instance
      */
-    public IPlannerBucketRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPlannerBucketRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

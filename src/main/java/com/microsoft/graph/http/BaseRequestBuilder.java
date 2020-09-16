@@ -28,6 +28,7 @@ import com.microsoft.graph.options.Option;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Arrays;
 
 /**
  * A request builder
@@ -89,10 +90,13 @@ public abstract class BaseRequestBuilder implements IRequestBuilder {
     /**
      * Get the full list of options for this request
      *
+     * @param requestOptions the options for this request
      * @return the full list of options for this request
      */
-    public List<? extends Option> getOptions() {
-        return Collections.unmodifiableList(options);
+    public List<? extends Option> getOptions(final Option... requestOptions) {
+        return Collections.unmodifiableList(requestOptions != null && requestOptions.length > 0 ? 
+                Arrays.asList(requestOptions) 
+                : options);
     }
 
     /**

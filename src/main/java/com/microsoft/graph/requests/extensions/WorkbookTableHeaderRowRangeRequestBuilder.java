@@ -32,10 +32,11 @@ public class WorkbookTableHeaderRowRangeRequestBuilder extends BaseFunctionReque
     /**
      * Creates the IWorkbookTableHeaderRowRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableHeaderRowRangeRequest instance
      */
-    public IWorkbookTableHeaderRowRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableHeaderRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

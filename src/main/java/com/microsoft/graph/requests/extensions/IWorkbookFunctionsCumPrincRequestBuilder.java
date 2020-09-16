@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCumPrincRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsCumPrincRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCumPrincRequest instance
      */
-    IWorkbookFunctionsCumPrincRequest buildRequest();
+    IWorkbookFunctionsCumPrincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCumPrincRequest with specific options instead of the existing options

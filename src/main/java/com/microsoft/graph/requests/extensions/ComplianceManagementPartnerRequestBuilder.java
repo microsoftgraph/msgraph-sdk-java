@@ -34,10 +34,11 @@ public class ComplianceManagementPartnerRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IComplianceManagementPartnerRequest instance
      */
-    public IComplianceManagementPartnerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IComplianceManagementPartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookTableSortApplyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableSortApplyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableSortApplyRequest instance
      */
-    IWorkbookTableSortApplyRequest buildRequest();
+    IWorkbookTableSortApplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableSortApplyRequest with specific options instead of the existing options

@@ -38,10 +38,11 @@ public class WorkbookFunctionsTbillYieldRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsTbillYieldRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTbillYieldRequest instance
      */
-    public IWorkbookFunctionsTbillYieldRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTbillYieldRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

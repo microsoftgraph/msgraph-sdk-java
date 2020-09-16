@@ -17,9 +17,10 @@ public interface IReportRootGetMailboxUsageMailboxCountsRequestBuilder extends I
     /**
      * Creates the IReportRootGetMailboxUsageMailboxCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageMailboxCountsRequest instance
      */
-    IReportRootGetMailboxUsageMailboxCountsRequest buildRequest();
+    IReportRootGetMailboxUsageMailboxCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetMailboxUsageMailboxCountsRequest with specific options instead of the existing options

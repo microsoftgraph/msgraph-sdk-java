@@ -17,9 +17,10 @@ public interface IWorkbookRangeBorderItemAtRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookRangeBorderItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeBorderItemAtRequest instance
      */
-    IWorkbookRangeBorderItemAtRequest buildRequest();
+    IWorkbookRangeBorderItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeBorderItemAtRequest with specific options instead of the existing options

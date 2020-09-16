@@ -45,10 +45,11 @@ public class WorkbookRangeRowsBelowRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookRangeRowsBelowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeRowsBelowRequest instance
      */
-    public IWorkbookRangeRowsBelowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeRowsBelowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class DriveItemVersionRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDriveItemVersionRequest instance
      */
-    public IDriveItemVersionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

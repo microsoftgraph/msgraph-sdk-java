@@ -36,10 +36,11 @@ public class EventTentativelyAcceptRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IEventTentativelyAcceptRequest
      *
+     * @param requestOptions the options for the request
      * @return the IEventTentativelyAcceptRequest instance
      */
-    public IEventTentativelyAcceptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEventTentativelyAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

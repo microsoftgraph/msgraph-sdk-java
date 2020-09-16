@@ -34,10 +34,11 @@ public class WorkbookFunctionsKurtRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsKurtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsKurtRequest instance
      */
-    public IWorkbookFunctionsKurtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsKurtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

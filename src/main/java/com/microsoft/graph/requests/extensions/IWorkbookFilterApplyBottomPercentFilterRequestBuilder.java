@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyBottomPercentFilterRequestBuilder extends I
     /**
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyBottomPercentFilterRequest instance
      */
-    IWorkbookFilterApplyBottomPercentFilterRequest buildRequest();
+    IWorkbookFilterApplyBottomPercentFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyBottomPercentFilterRequest with specific options instead of the existing options

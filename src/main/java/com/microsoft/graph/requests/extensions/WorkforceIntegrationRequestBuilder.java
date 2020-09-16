@@ -34,10 +34,11 @@ public class WorkforceIntegrationRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkforceIntegrationRequest instance
      */
-    public IWorkforceIntegrationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkforceIntegrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

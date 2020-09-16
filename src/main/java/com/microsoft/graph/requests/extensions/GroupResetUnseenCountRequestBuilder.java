@@ -32,10 +32,11 @@ public class GroupResetUnseenCountRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IGroupResetUnseenCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupResetUnseenCountRequest instance
      */
-    public IGroupResetUnseenCountRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupResetUnseenCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

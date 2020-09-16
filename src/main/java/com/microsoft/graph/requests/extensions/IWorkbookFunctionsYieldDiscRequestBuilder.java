@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsYieldDiscRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsYieldDiscRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsYieldDiscRequest instance
      */
-    IWorkbookFunctionsYieldDiscRequest buildRequest();
+    IWorkbookFunctionsYieldDiscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsYieldDiscRequest with specific options instead of the existing options

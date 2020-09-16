@@ -34,10 +34,11 @@ public class Windows10EndpointProtectionConfigurationRequestBuilder extends Base
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10EndpointProtectionConfigurationRequest instance
      */
-    public IWindows10EndpointProtectionConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10EndpointProtectionConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

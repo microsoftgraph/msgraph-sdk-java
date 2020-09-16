@@ -36,10 +36,11 @@ public class WorkbookFunctionsHyperlinkRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsHyperlinkRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHyperlinkRequest instance
      */
-    public IWorkbookFunctionsHyperlinkRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsHyperlinkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

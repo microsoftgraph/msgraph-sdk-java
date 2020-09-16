@@ -32,10 +32,11 @@ public class ManagedDeviceRecoverPasscodeRequestBuilder extends BaseActionReques
     /**
      * Creates the IManagedDeviceRecoverPasscodeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRecoverPasscodeRequest instance
      */
-    public IManagedDeviceRecoverPasscodeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceRecoverPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

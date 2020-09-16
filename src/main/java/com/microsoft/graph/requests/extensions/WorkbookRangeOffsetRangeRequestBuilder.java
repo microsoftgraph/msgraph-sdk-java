@@ -36,10 +36,11 @@ public class WorkbookRangeOffsetRangeRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookRangeOffsetRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeOffsetRangeRequest instance
      */
-    public IWorkbookRangeOffsetRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeOffsetRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

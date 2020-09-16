@@ -32,10 +32,11 @@ public class ReportRootGetOffice365ActivationCountsRequestBuilder extends BaseFu
     /**
      * Creates the IReportRootGetOffice365ActivationCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActivationCountsRequest instance
      */
-    public IReportRootGetOffice365ActivationCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOffice365ActivationCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

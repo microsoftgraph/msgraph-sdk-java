@@ -32,10 +32,11 @@ public class GroupRenewRequestBuilder extends BaseActionRequestBuilder implement
     /**
      * Creates the IGroupRenewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupRenewRequest instance
      */
-    public IGroupRenewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupRenewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -32,10 +32,11 @@ public class WorkbookRangeEntireColumnRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookRangeEntireColumnRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeEntireColumnRequest instance
      */
-    public IWorkbookRangeEntireColumnRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeEntireColumnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

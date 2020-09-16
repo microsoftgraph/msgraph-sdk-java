@@ -17,9 +17,10 @@ public interface IReportRootGetTeamsUserActivityUserDetailRequestBuilder extends
     /**
      * Creates the IReportRootGetTeamsUserActivityUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsUserActivityUserDetailRequest instance
      */
-    IReportRootGetTeamsUserActivityUserDetailRequest buildRequest();
+    IReportRootGetTeamsUserActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetTeamsUserActivityUserDetailRequest with specific options instead of the existing options

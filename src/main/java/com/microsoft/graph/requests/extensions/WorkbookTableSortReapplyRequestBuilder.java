@@ -32,10 +32,11 @@ public class WorkbookTableSortReapplyRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookTableSortReapplyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableSortReapplyRequest instance
      */
-    public IWorkbookTableSortReapplyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableSortReapplyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

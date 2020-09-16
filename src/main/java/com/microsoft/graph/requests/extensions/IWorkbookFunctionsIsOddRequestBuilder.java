@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIsOddRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsIsOddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsOddRequest instance
      */
-    IWorkbookFunctionsIsOddRequest buildRequest();
+    IWorkbookFunctionsIsOddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIsOddRequest with specific options instead of the existing options

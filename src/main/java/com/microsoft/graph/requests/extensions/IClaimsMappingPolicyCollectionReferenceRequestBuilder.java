@@ -19,7 +19,19 @@ import java.util.EnumSet;
  */
 public interface IClaimsMappingPolicyCollectionReferenceRequestBuilder extends IRequestBuilder {
 
-    IClaimsMappingPolicyCollectionReferenceRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IClaimsMappingPolicyCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IClaimsMappingPolicyCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

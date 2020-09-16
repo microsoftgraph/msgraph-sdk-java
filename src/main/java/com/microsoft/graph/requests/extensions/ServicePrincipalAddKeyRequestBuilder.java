@@ -39,10 +39,11 @@ public class ServicePrincipalAddKeyRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IServicePrincipalAddKeyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalAddKeyRequest instance
      */
-    public IServicePrincipalAddKeyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IServicePrincipalAddKeyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

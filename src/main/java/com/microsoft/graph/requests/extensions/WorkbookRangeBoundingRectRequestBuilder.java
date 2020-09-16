@@ -34,10 +34,11 @@ public class WorkbookRangeBoundingRectRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookRangeBoundingRectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeBoundingRectRequest instance
      */
-    public IWorkbookRangeBoundingRectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeBoundingRectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

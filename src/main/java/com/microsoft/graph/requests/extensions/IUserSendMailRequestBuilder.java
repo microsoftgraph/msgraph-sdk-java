@@ -17,9 +17,10 @@ public interface IUserSendMailRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserSendMailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserSendMailRequest instance
      */
-    IUserSendMailRequest buildRequest();
+    IUserSendMailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserSendMailRequest with specific options instead of the existing options

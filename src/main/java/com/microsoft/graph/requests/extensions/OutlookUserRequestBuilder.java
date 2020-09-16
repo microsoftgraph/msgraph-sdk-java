@@ -41,10 +41,11 @@ public class OutlookUserRequestBuilder extends BaseRequestBuilder implements IOu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOutlookUserRequest instance
      */
-    public IOutlookUserRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOutlookUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

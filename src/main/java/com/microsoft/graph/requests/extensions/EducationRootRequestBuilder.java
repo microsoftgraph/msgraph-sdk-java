@@ -46,10 +46,11 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEducationRootRequest instance
      */
-    public IEducationRootRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEducationRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

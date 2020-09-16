@@ -17,9 +17,10 @@ public interface IReportRootGetOneDriveUsageFileCountsRequestBuilder extends IRe
     /**
      * Creates the IReportRootGetOneDriveUsageFileCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOneDriveUsageFileCountsRequest instance
      */
-    IReportRootGetOneDriveUsageFileCountsRequest buildRequest();
+    IReportRootGetOneDriveUsageFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetOneDriveUsageFileCountsRequest with specific options instead of the existing options

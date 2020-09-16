@@ -34,10 +34,11 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
     /**
      * Creates the ISiteGetByPathRequest
      *
+     * @param requestOptions the options for the request
      * @return the ISiteGetByPathRequest instance
      */
-    public ISiteGetByPathRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISiteGetByPathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

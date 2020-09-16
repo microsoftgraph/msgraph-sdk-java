@@ -44,10 +44,11 @@ public class WorkbookFunctionsMdurationRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsMdurationRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMdurationRequest instance
      */
-    public IWorkbookFunctionsMdurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMdurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

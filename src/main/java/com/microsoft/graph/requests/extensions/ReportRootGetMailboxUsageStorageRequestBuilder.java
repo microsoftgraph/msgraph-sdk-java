@@ -34,10 +34,11 @@ public class ReportRootGetMailboxUsageStorageRequestBuilder extends BaseFunction
     /**
      * Creates the IReportRootGetMailboxUsageStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageStorageRequest instance
      */
-    public IReportRootGetMailboxUsageStorageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetMailboxUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

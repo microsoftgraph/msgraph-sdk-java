@@ -17,9 +17,10 @@ public interface IWorkbookRangeFormatAutofitRowsRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookRangeFormatAutofitRowsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeFormatAutofitRowsRequest instance
      */
-    IWorkbookRangeFormatAutofitRowsRequest buildRequest();
+    IWorkbookRangeFormatAutofitRowsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeFormatAutofitRowsRequest with specific options instead of the existing options

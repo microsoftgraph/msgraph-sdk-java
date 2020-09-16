@@ -41,10 +41,11 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDriveRequest instance
      */
-    public IDriveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

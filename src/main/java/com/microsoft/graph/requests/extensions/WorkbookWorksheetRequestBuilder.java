@@ -53,10 +53,11 @@ public class WorkbookWorksheetRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetRequest instance
      */
-    public IWorkbookWorksheetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookWorksheetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

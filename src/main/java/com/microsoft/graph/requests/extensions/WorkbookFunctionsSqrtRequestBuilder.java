@@ -34,10 +34,11 @@ public class WorkbookFunctionsSqrtRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSqrtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSqrtRequest instance
      */
-    public IWorkbookFunctionsSqrtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSqrtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

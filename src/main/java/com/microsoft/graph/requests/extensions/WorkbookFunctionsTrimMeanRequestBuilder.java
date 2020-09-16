@@ -36,10 +36,11 @@ public class WorkbookFunctionsTrimMeanRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsTrimMeanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTrimMeanRequest instance
      */
-    public IWorkbookFunctionsTrimMeanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTrimMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

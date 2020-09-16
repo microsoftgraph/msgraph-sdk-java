@@ -17,9 +17,10 @@ public interface IManagedDeviceMobileAppConfigurationAssignRequestBuilder extend
     /**
      * Creates the IManagedDeviceMobileAppConfigurationAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceMobileAppConfigurationAssignRequest instance
      */
-    IManagedDeviceMobileAppConfigurationAssignRequest buildRequest();
+    IManagedDeviceMobileAppConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceMobileAppConfigurationAssignRequest with specific options instead of the existing options

@@ -22,9 +22,10 @@ public interface IWorkbookNamedItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookNamedItemRequest instance
      */
-    IWorkbookNamedItemRequest buildRequest();
+    IWorkbookNamedItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

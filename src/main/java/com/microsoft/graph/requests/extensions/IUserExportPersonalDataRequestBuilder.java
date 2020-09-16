@@ -17,9 +17,10 @@ public interface IUserExportPersonalDataRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IUserExportPersonalDataRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserExportPersonalDataRequest instance
      */
-    IUserExportPersonalDataRequest buildRequest();
+    IUserExportPersonalDataRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserExportPersonalDataRequest with specific options instead of the existing options

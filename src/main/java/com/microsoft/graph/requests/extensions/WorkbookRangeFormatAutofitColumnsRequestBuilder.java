@@ -32,10 +32,11 @@ public class WorkbookRangeFormatAutofitColumnsRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
-    public IWorkbookRangeFormatAutofitColumnsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -21,9 +21,10 @@ public interface IWorkbookPivotTableRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookPivotTableRequest instance
      */
-    IWorkbookPivotTableRequest buildRequest();
+    IWorkbookPivotTableRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

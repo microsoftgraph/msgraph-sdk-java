@@ -29,8 +29,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IDriveItemCollectionRequestBuilder extends IRequestBuilder {
 
-    IDriveItemCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IDriveItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IDriveItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IDriveItemRequestBuilder byId(final String id);

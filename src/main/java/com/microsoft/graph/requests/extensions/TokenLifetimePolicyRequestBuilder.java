@@ -34,10 +34,11 @@ public class TokenLifetimePolicyRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITokenLifetimePolicyRequest instance
      */
-    public ITokenLifetimePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITokenLifetimePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

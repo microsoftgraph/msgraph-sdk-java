@@ -32,10 +32,11 @@ public class WorkbookFunctionsNowRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsNowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNowRequest instance
      */
-    public IWorkbookFunctionsNowRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

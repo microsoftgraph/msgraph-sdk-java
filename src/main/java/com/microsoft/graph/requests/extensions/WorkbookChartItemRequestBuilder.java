@@ -34,10 +34,11 @@ public class WorkbookChartItemRequestBuilder extends BaseFunctionRequestBuilder 
     /**
      * Creates the IWorkbookChartItemRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartItemRequest instance
      */
-    public IWorkbookChartItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

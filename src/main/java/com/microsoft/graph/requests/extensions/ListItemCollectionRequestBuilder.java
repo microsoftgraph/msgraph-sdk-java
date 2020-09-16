@@ -37,10 +37,22 @@ public class ListItemCollectionRequestBuilder extends BaseRequestBuilder impleme
         super(requestUrl, client, requestOptions);
     }
 
-    public IListItemCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IListItemCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IListItemCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ListItemCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -34,10 +34,11 @@ public class CallChangeScreenSharingRoleRequestBuilder extends BaseActionRequest
     /**
      * Creates the ICallChangeScreenSharingRoleRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallChangeScreenSharingRoleRequest instance
      */
-    public ICallChangeScreenSharingRoleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallChangeScreenSharingRoleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookFunctionsImArgumentRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsImArgumentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImArgumentRequest instance
      */
-    public IWorkbookFunctionsImArgumentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImArgumentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

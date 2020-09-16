@@ -48,10 +48,11 @@ public class ChannelRequestBuilder extends BaseRequestBuilder implements IChanne
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IChannelRequest instance
      */
-    public IChannelRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChannelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

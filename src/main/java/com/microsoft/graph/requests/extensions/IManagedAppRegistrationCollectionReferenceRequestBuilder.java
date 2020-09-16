@@ -19,7 +19,19 @@ import java.util.EnumSet;
  */
 public interface IManagedAppRegistrationCollectionReferenceRequestBuilder extends IRequestBuilder {
 
-    IManagedAppRegistrationCollectionReferenceRequest buildRequest();
-
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IManagedAppRegistrationCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IManagedAppRegistrationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 }

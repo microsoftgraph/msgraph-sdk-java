@@ -36,10 +36,11 @@ public class WorkbookFunctionsSmallRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsSmallRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSmallRequest instance
      */
-    public IWorkbookFunctionsSmallRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSmallRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

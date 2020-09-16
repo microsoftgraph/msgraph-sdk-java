@@ -34,10 +34,11 @@ public class ReportRootGetOneDriveActivityUserCountsRequestBuilder extends BaseF
     /**
      * Creates the IReportRootGetOneDriveActivityUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOneDriveActivityUserCountsRequest instance
      */
-    public IReportRootGetOneDriveActivityUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetOneDriveActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -37,10 +37,11 @@ public class CallPlayPromptRequestBuilder extends BaseActionRequestBuilder imple
     /**
      * Creates the ICallPlayPromptRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallPlayPromptRequest instance
      */
-    public ICallPlayPromptRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICallPlayPromptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

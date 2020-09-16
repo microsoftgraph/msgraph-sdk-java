@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBitorRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsBitorRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitorRequest instance
      */
-    IWorkbookFunctionsBitorRequest buildRequest();
+    IWorkbookFunctionsBitorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBitorRequest with specific options instead of the existing options

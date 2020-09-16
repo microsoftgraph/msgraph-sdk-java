@@ -34,10 +34,11 @@ public class CancelMediaProcessingOperationRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICancelMediaProcessingOperationRequest instance
      */
-    public ICancelMediaProcessingOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICancelMediaProcessingOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

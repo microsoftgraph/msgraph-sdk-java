@@ -38,10 +38,11 @@ public class DirectoryRoleRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryRoleRequest instance
      */
-    public IDirectoryRoleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryRoleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

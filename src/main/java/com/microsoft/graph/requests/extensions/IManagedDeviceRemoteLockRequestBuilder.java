@@ -17,9 +17,10 @@ public interface IManagedDeviceRemoteLockRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IManagedDeviceRemoteLockRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceRemoteLockRequest instance
      */
-    IManagedDeviceRemoteLockRequest buildRequest();
+    IManagedDeviceRemoteLockRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceRemoteLockRequest with specific options instead of the existing options

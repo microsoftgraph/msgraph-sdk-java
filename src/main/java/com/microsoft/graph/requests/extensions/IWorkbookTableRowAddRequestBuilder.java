@@ -17,9 +17,10 @@ public interface IWorkbookTableRowAddRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableRowAddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableRowAddRequest instance
      */
-    IWorkbookTableRowAddRequest buildRequest();
+    IWorkbookTableRowAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableRowAddRequest with specific options instead of the existing options

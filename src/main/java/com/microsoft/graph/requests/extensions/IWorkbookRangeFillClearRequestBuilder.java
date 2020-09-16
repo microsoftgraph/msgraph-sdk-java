@@ -17,9 +17,10 @@ public interface IWorkbookRangeFillClearRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeFillClearRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeFillClearRequest instance
      */
-    IWorkbookRangeFillClearRequest buildRequest();
+    IWorkbookRangeFillClearRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeFillClearRequest with specific options instead of the existing options

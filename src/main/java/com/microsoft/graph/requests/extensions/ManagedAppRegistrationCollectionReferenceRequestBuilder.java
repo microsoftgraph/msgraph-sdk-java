@@ -33,10 +33,22 @@ public class ManagedAppRegistrationCollectionReferenceRequestBuilder extends Bas
         super(requestUrl, client, requestOptions);
     }
 
-    public IManagedAppRegistrationCollectionReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IManagedAppRegistrationCollectionReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IManagedAppRegistrationCollectionReferenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new ManagedAppRegistrationCollectionReferenceRequest(getRequestUrl(), getClient(), requestOptions);
     }

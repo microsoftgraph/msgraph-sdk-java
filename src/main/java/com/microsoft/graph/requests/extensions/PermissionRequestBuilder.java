@@ -35,10 +35,11 @@ public class PermissionRequestBuilder extends BaseRequestBuilder implements IPer
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPermissionRequest instance
      */
-    public IPermissionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

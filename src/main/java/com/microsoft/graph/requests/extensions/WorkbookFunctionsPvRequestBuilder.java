@@ -42,10 +42,11 @@ public class WorkbookFunctionsPvRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsPvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPvRequest instance
      */
-    public IWorkbookFunctionsPvRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

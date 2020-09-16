@@ -148,10 +148,11 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserRequest instance
      */
-    public IUserRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

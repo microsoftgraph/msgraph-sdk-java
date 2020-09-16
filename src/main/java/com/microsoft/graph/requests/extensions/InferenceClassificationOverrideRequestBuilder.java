@@ -34,10 +34,11 @@ public class InferenceClassificationOverrideRequestBuilder extends BaseRequestBu
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IInferenceClassificationOverrideRequest instance
      */
-    public IInferenceClassificationOverrideRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IInferenceClassificationOverrideRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

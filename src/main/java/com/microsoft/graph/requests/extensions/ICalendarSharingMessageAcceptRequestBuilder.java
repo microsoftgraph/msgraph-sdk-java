@@ -17,9 +17,10 @@ public interface ICalendarSharingMessageAcceptRequestBuilder extends IRequestBui
     /**
      * Creates the ICalendarSharingMessageAcceptRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICalendarSharingMessageAcceptRequest instance
      */
-    ICalendarSharingMessageAcceptRequest buildRequest();
+    ICalendarSharingMessageAcceptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICalendarSharingMessageAcceptRequest with specific options instead of the existing options

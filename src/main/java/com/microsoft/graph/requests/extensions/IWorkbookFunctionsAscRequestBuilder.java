@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAscRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsAscRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAscRequest instance
      */
-    IWorkbookFunctionsAscRequest buildRequest();
+    IWorkbookFunctionsAscRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAscRequest with specific options instead of the existing options

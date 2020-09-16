@@ -34,10 +34,11 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsUniversalAppXRequest instance
      */
-    public IWindowsUniversalAppXRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsUniversalAppXRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

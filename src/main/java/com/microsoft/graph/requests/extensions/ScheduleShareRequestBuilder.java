@@ -38,10 +38,11 @@ public class ScheduleShareRequestBuilder extends BaseActionRequestBuilder implem
     /**
      * Creates the IScheduleShareRequest
      *
+     * @param requestOptions the options for the request
      * @return the IScheduleShareRequest instance
      */
-    public IScheduleShareRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IScheduleShareRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

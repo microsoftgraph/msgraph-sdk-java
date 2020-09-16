@@ -34,10 +34,11 @@ public class ManagedDeviceWindowsDefenderScanRequestBuilder extends BaseActionRe
     /**
      * Creates the IManagedDeviceWindowsDefenderScanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceWindowsDefenderScanRequest instance
      */
-    public IManagedDeviceWindowsDefenderScanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceWindowsDefenderScanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

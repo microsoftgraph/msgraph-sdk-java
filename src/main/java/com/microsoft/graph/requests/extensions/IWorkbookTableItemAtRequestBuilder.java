@@ -17,9 +17,10 @@ public interface IWorkbookTableItemAtRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookTableItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableItemAtRequest instance
      */
-    IWorkbookTableItemAtRequest buildRequest();
+    IWorkbookTableItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableItemAtRequest with specific options instead of the existing options

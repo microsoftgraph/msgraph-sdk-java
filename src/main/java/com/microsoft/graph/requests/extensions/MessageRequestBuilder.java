@@ -51,10 +51,11 @@ public class MessageRequestBuilder extends BaseRequestBuilder implements IMessag
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMessageRequest instance
      */
-    public IMessageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

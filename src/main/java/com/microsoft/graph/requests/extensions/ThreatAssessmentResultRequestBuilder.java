@@ -34,10 +34,11 @@ public class ThreatAssessmentResultRequestBuilder extends BaseRequestBuilder imp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IThreatAssessmentResultRequest instance
      */
-    public IThreatAssessmentResultRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IThreatAssessmentResultRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

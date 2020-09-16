@@ -35,10 +35,11 @@ public class MobileAppCategoryWithReferenceRequestBuilder extends BaseRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileAppCategoryWithReferenceRequest instance
      */
-    public IMobileAppCategoryWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMobileAppCategoryWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

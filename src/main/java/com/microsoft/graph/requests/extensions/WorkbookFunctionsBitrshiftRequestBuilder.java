@@ -36,10 +36,11 @@ public class WorkbookFunctionsBitrshiftRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsBitrshiftRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBitrshiftRequest instance
      */
-    public IWorkbookFunctionsBitrshiftRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBitrshiftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

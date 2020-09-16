@@ -34,10 +34,11 @@ public class EnrollmentConfigurationAssignmentRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEnrollmentConfigurationAssignmentRequest instance
      */
-    public IEnrollmentConfigurationAssignmentRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEnrollmentConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

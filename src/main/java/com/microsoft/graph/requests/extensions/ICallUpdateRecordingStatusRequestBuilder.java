@@ -17,9 +17,10 @@ public interface ICallUpdateRecordingStatusRequestBuilder extends IRequestBuilde
     /**
      * Creates the ICallUpdateRecordingStatusRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallUpdateRecordingStatusRequest instance
      */
-    ICallUpdateRecordingStatusRequest buildRequest();
+    ICallUpdateRecordingStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallUpdateRecordingStatusRequest with specific options instead of the existing options

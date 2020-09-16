@@ -32,10 +32,11 @@ public class WorkbookTableDataBodyRangeRequestBuilder extends BaseFunctionReques
     /**
      * Creates the IWorkbookTableDataBodyRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableDataBodyRangeRequest instance
      */
-    public IWorkbookTableDataBodyRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableDataBodyRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

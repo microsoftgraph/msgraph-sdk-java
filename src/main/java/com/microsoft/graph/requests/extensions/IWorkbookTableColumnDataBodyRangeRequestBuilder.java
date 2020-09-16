@@ -17,9 +17,10 @@ public interface IWorkbookTableColumnDataBodyRangeRequestBuilder extends IReques
     /**
      * Creates the IWorkbookTableColumnDataBodyRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnDataBodyRangeRequest instance
      */
-    IWorkbookTableColumnDataBodyRangeRequest buildRequest();
+    IWorkbookTableColumnDataBodyRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableColumnDataBodyRangeRequest with specific options instead of the existing options

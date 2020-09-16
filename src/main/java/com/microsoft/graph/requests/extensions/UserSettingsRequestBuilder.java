@@ -36,10 +36,11 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserSettingsRequest instance
      */
-    public IUserSettingsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

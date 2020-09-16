@@ -23,9 +23,10 @@ public interface IDirectoryObjectWithReferenceRequestBuilder extends IRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryObjectWithReferenceRequest instance
      */
-    IDirectoryObjectWithReferenceRequest buildRequest();
+    IDirectoryObjectWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

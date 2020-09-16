@@ -17,9 +17,10 @@ public interface IServicePrincipalRemovePasswordRequestBuilder extends IRequestB
     /**
      * Creates the IServicePrincipalRemovePasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IServicePrincipalRemovePasswordRequest instance
      */
-    IServicePrincipalRemovePasswordRequest buildRequest();
+    IServicePrincipalRemovePasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IServicePrincipalRemovePasswordRequest with specific options instead of the existing options

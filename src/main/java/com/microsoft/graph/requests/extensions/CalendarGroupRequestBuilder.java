@@ -38,10 +38,11 @@ public class CalendarGroupRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICalendarGroupRequest instance
      */
-    public ICalendarGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICalendarGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsHarMeanRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsHarMeanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHarMeanRequest instance
      */
-    IWorkbookFunctionsHarMeanRequest buildRequest();
+    IWorkbookFunctionsHarMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsHarMeanRequest with specific options instead of the existing options

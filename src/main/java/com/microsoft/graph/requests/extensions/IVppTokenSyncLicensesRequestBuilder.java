@@ -17,9 +17,10 @@ public interface IVppTokenSyncLicensesRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IVppTokenSyncLicensesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IVppTokenSyncLicensesRequest instance
      */
-    IVppTokenSyncLicensesRequest buildRequest();
+    IVppTokenSyncLicensesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IVppTokenSyncLicensesRequest with specific options instead of the existing options

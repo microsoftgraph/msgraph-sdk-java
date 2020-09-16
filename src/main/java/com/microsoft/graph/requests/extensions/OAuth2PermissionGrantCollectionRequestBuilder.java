@@ -36,10 +36,22 @@ public class OAuth2PermissionGrantCollectionRequestBuilder extends BaseRequestBu
         super(requestUrl, client, requestOptions);
     }
 
-    public IOAuth2PermissionGrantCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IOAuth2PermissionGrantCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IOAuth2PermissionGrantCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new OAuth2PermissionGrantCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

@@ -32,10 +32,11 @@ public class UserRemoveAllDevicesFromManagementRequestBuilder extends BaseAction
     /**
      * Creates the IUserRemoveAllDevicesFromManagementRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserRemoveAllDevicesFromManagementRequest instance
      */
-    public IUserRemoveAllDevicesFromManagementRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserRemoveAllDevicesFromManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

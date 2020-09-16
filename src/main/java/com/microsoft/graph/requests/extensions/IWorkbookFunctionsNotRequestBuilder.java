@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNotRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsNotRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNotRequest instance
      */
-    IWorkbookFunctionsNotRequest buildRequest();
+    IWorkbookFunctionsNotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNotRequest with specific options instead of the existing options

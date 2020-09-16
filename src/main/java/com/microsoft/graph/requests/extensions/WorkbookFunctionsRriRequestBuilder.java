@@ -38,10 +38,11 @@ public class WorkbookFunctionsRriRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsRriRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRriRequest instance
      */
-    public IWorkbookFunctionsRriRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRriRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

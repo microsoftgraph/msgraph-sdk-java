@@ -34,10 +34,11 @@ public class WorkbookFunctionsPhiRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsPhiRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsPhiRequest instance
      */
-    public IWorkbookFunctionsPhiRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsPhiRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookFunctionsCotRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsCotRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCotRequest instance
      */
-    public IWorkbookFunctionsCotRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

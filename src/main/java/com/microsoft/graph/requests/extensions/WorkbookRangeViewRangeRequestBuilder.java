@@ -32,10 +32,11 @@ public class WorkbookRangeViewRangeRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookRangeViewRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeViewRangeRequest instance
      */
-    public IWorkbookRangeViewRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeViewRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

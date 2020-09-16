@@ -32,10 +32,11 @@ public class ManagedDeviceLocateDeviceRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IManagedDeviceLocateDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceLocateDeviceRequest instance
      */
-    public IManagedDeviceLocateDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceLocateDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

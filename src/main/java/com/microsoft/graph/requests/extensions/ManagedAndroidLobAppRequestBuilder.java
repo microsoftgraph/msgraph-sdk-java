@@ -34,10 +34,11 @@ public class ManagedAndroidLobAppRequestBuilder extends BaseRequestBuilder imple
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAndroidLobAppRequest instance
      */
-    public IManagedAndroidLobAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAndroidLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

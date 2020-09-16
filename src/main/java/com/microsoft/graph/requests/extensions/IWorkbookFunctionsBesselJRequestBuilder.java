@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBesselJRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsBesselJRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBesselJRequest instance
      */
-    IWorkbookFunctionsBesselJRequest buildRequest();
+    IWorkbookFunctionsBesselJRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBesselJRequest with specific options instead of the existing options

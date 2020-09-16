@@ -38,10 +38,11 @@ public class WorkbookFunctionsRank_EqRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsRank_EqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_EqRequest instance
      */
-    public IWorkbookFunctionsRank_EqRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsRank_EqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

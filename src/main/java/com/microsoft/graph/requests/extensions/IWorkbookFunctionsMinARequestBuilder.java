@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsMinARequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsMinARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMinARequest instance
      */
-    IWorkbookFunctionsMinARequest buildRequest();
+    IWorkbookFunctionsMinARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsMinARequest with specific options instead of the existing options

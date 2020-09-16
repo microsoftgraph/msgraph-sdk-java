@@ -17,9 +17,10 @@ public interface IManagedDeviceCleanWindowsDeviceRequestBuilder extends IRequest
     /**
      * Creates the IManagedDeviceCleanWindowsDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceCleanWindowsDeviceRequest instance
      */
-    IManagedDeviceCleanWindowsDeviceRequest buildRequest();
+    IManagedDeviceCleanWindowsDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceCleanWindowsDeviceRequest with specific options instead of the existing options

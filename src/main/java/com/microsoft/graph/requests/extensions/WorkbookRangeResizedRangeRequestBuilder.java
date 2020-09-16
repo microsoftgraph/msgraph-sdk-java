@@ -36,10 +36,11 @@ public class WorkbookRangeResizedRangeRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookRangeResizedRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeResizedRangeRequest instance
      */
-    public IWorkbookRangeResizedRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeResizedRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookTableRowItemAtRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookTableRowItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableRowItemAtRequest instance
      */
-    public IWorkbookTableRowItemAtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableRowItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

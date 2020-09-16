@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyCellColorFilterRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookFilterApplyCellColorFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyCellColorFilterRequest instance
      */
-    IWorkbookFilterApplyCellColorFilterRequest buildRequest();
+    IWorkbookFilterApplyCellColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyCellColorFilterRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IReportRootGetSkypeForBusinessActivityUserCountsRequestBuilder 
     /**
      * Creates the IReportRootGetSkypeForBusinessActivityUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSkypeForBusinessActivityUserCountsRequest instance
      */
-    IReportRootGetSkypeForBusinessActivityUserCountsRequest buildRequest();
+    IReportRootGetSkypeForBusinessActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSkypeForBusinessActivityUserCountsRequest with specific options instead of the existing options

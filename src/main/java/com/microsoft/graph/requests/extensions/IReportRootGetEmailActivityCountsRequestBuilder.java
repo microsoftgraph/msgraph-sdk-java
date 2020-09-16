@@ -17,9 +17,10 @@ public interface IReportRootGetEmailActivityCountsRequestBuilder extends IReques
     /**
      * Creates the IReportRootGetEmailActivityCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetEmailActivityCountsRequest instance
      */
-    IReportRootGetEmailActivityCountsRequest buildRequest();
+    IReportRootGetEmailActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetEmailActivityCountsRequest with specific options instead of the existing options

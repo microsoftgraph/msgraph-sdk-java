@@ -34,10 +34,11 @@ public class WorkbookChartPointItemAtRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookChartPointItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartPointItemAtRequest instance
      */
-    public IWorkbookChartPointItemAtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartPointItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -44,10 +44,11 @@ public class WorkbookFunctionsBeta_DistRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsBeta_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBeta_DistRequest instance
      */
-    public IWorkbookFunctionsBeta_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBeta_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

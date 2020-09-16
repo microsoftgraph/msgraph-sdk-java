@@ -32,10 +32,11 @@ public class WorkbookRangeVisibleViewRequestBuilder extends BaseFunctionRequestB
     /**
      * Creates the IWorkbookRangeVisibleViewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeVisibleViewRequest instance
      */
-    public IWorkbookRangeVisibleViewRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeVisibleViewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class WorkbookFunctionsHourRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsHourRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHourRequest instance
      */
-    public IWorkbookFunctionsHourRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsHourRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

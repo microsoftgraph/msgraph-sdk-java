@@ -34,10 +34,11 @@ public class WorkbookFunctionsArabicRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsArabicRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsArabicRequest instance
      */
-    public IWorkbookFunctionsArabicRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsArabicRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

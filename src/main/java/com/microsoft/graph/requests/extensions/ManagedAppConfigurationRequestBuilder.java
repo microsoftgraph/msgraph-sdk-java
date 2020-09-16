@@ -34,10 +34,11 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedAppConfigurationRequest instance
      */
-    public IManagedAppConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

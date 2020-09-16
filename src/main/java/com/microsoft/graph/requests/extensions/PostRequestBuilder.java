@@ -53,10 +53,11 @@ public class PostRequestBuilder extends BaseRequestBuilder implements IPostReque
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IPostRequest instance
      */
-    public IPostRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IPostRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

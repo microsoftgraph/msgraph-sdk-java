@@ -34,10 +34,11 @@ public class WorkbookFunctionsIsFormulaRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsIsFormulaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsFormulaRequest instance
      */
-    public IWorkbookFunctionsIsFormulaRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsIsFormulaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

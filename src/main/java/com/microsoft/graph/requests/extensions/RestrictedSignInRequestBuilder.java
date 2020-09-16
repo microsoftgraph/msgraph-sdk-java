@@ -34,10 +34,11 @@ public class RestrictedSignInRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRestrictedSignInRequest instance
      */
-    public IRestrictedSignInRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRestrictedSignInRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIsNonTextRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsIsNonTextRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsNonTextRequest instance
      */
-    IWorkbookFunctionsIsNonTextRequest buildRequest();
+    IWorkbookFunctionsIsNonTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIsNonTextRequest with specific options instead of the existing options

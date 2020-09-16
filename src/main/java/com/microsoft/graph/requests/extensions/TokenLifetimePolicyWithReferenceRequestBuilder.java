@@ -35,10 +35,11 @@ public class TokenLifetimePolicyWithReferenceRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITokenLifetimePolicyWithReferenceRequest instance
      */
-    public ITokenLifetimePolicyWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITokenLifetimePolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

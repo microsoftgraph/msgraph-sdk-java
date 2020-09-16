@@ -34,10 +34,11 @@ public class SwapShiftsChangeRequestRequestBuilder extends BaseRequestBuilder im
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISwapShiftsChangeRequestRequest instance
      */
-    public ISwapShiftsChangeRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISwapShiftsChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

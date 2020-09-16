@@ -17,9 +17,10 @@ public interface IWorkbookRangeIntersectionRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookRangeIntersectionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeIntersectionRequest instance
      */
-    IWorkbookRangeIntersectionRequest buildRequest();
+    IWorkbookRangeIntersectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeIntersectionRequest with specific options instead of the existing options

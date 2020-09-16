@@ -40,9 +40,10 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDriveItemRequest instance
      */
-    IDriveItemRequest buildRequest();
+    IDriveItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

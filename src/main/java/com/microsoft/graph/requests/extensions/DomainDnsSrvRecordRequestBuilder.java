@@ -34,10 +34,11 @@ public class DomainDnsSrvRecordRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDomainDnsSrvRecordRequest instance
      */
-    public IDomainDnsSrvRecordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDomainDnsSrvRecordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

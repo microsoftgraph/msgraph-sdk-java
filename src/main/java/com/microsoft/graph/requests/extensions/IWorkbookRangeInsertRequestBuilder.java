@@ -17,9 +17,10 @@ public interface IWorkbookRangeInsertRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeInsertRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeInsertRequest instance
      */
-    IWorkbookRangeInsertRequest buildRequest();
+    IWorkbookRangeInsertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeInsertRequest with specific options instead of the existing options

@@ -35,10 +35,11 @@ public class TokenIssuancePolicyWithReferenceRequestBuilder extends BaseRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITokenIssuancePolicyWithReferenceRequest instance
      */
-    public ITokenIssuancePolicyWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITokenIssuancePolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

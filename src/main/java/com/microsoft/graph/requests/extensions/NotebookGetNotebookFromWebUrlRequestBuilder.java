@@ -34,10 +34,11 @@ public class NotebookGetNotebookFromWebUrlRequestBuilder extends BaseActionReque
     /**
      * Creates the INotebookGetNotebookFromWebUrlRequest
      *
+     * @param requestOptions the options for the request
      * @return the INotebookGetNotebookFromWebUrlRequest instance
      */
-    public INotebookGetNotebookFromWebUrlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INotebookGetNotebookFromWebUrlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

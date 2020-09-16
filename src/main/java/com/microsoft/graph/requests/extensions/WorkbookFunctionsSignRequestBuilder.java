@@ -34,10 +34,11 @@ public class WorkbookFunctionsSignRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSignRequest instance
      */
-    public IWorkbookFunctionsSignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsSignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

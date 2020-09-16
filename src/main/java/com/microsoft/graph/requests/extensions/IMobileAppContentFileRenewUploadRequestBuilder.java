@@ -17,9 +17,10 @@ public interface IMobileAppContentFileRenewUploadRequestBuilder extends IRequest
     /**
      * Creates the IMobileAppContentFileRenewUploadRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMobileAppContentFileRenewUploadRequest instance
      */
-    IMobileAppContentFileRenewUploadRequest buildRequest();
+    IMobileAppContentFileRenewUploadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMobileAppContentFileRenewUploadRequest with specific options instead of the existing options

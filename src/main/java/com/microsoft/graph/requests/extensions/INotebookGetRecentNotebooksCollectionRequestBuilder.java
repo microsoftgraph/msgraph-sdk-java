@@ -20,8 +20,20 @@ import com.microsoft.graph.requests.extensions.INotebookGetRecentNotebooksCollec
  */
 public interface INotebookGetRecentNotebooksCollectionRequestBuilder extends IRequestBuilder {
 
-    INotebookGetRecentNotebooksCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    INotebookGetRecentNotebooksCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     INotebookGetRecentNotebooksCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 }

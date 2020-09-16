@@ -17,9 +17,10 @@ public interface IWorkbookChartSeriesCountRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookChartSeriesCountRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartSeriesCountRequest instance
      */
-    IWorkbookChartSeriesCountRequest buildRequest();
+    IWorkbookChartSeriesCountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartSeriesCountRequest with specific options instead of the existing options

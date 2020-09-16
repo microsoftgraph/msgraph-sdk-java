@@ -34,10 +34,11 @@ public class WorkbookFunctionsAsinhRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsAsinhRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAsinhRequest instance
      */
-    public IWorkbookFunctionsAsinhRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAsinhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class Windows10GeneralConfigurationRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10GeneralConfigurationRequest instance
      */
-    public IWindows10GeneralConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10GeneralConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

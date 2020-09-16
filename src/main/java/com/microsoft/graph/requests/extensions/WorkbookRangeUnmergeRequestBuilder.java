@@ -32,10 +32,11 @@ public class WorkbookRangeUnmergeRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookRangeUnmergeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeUnmergeRequest instance
      */
-    public IWorkbookRangeUnmergeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeUnmergeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

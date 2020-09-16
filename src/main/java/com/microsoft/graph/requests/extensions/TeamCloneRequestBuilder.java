@@ -46,10 +46,11 @@ public class TeamCloneRequestBuilder extends BaseActionRequestBuilder implements
     /**
      * Creates the ITeamCloneRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamCloneRequest instance
      */
-    public ITeamCloneRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITeamCloneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class ReportRootGetSharePointActivityPagesRequestBuilder extends BaseFunc
     /**
      * Creates the IReportRootGetSharePointActivityPagesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityPagesRequest instance
      */
-    public IReportRootGetSharePointActivityPagesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointActivityPagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

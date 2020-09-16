@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsLogNorm_DistRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsLogNorm_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLogNorm_DistRequest instance
      */
-    IWorkbookFunctionsLogNorm_DistRequest buildRequest();
+    IWorkbookFunctionsLogNorm_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsLogNorm_DistRequest with specific options instead of the existing options

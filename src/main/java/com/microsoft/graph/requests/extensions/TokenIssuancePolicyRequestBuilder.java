@@ -34,10 +34,11 @@ public class TokenIssuancePolicyRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITokenIssuancePolicyRequest instance
      */
-    public ITokenIssuancePolicyRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITokenIssuancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

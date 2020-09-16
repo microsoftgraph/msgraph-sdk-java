@@ -34,10 +34,11 @@ public class ApplicationAddPasswordRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IApplicationAddPasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationAddPasswordRequest instance
      */
-    public IApplicationAddPasswordRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IApplicationAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

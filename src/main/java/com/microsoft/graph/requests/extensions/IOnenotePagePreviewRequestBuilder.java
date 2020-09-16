@@ -17,9 +17,10 @@ public interface IOnenotePagePreviewRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IOnenotePagePreviewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnenotePagePreviewRequest instance
      */
-    IOnenotePagePreviewRequest buildRequest();
+    IOnenotePagePreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IOnenotePagePreviewRequest with specific options instead of the existing options

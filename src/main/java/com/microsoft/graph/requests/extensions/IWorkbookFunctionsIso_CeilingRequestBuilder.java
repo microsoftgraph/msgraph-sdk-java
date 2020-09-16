@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIso_CeilingRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsIso_CeilingRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIso_CeilingRequest instance
      */
-    IWorkbookFunctionsIso_CeilingRequest buildRequest();
+    IWorkbookFunctionsIso_CeilingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIso_CeilingRequest with specific options instead of the existing options

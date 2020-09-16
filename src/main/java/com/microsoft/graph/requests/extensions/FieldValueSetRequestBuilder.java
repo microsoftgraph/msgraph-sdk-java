@@ -34,10 +34,11 @@ public class FieldValueSetRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IFieldValueSetRequest instance
      */
-    public IFieldValueSetRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IFieldValueSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -39,10 +39,11 @@ public class ConversationThreadRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IConversationThreadRequest instance
      */
-    public IConversationThreadRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IConversationThreadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

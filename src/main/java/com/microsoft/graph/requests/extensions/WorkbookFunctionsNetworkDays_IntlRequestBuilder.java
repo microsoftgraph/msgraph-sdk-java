@@ -40,10 +40,11 @@ public class WorkbookFunctionsNetworkDays_IntlRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsNetworkDays_IntlRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNetworkDays_IntlRequest instance
      */
-    public IWorkbookFunctionsNetworkDays_IntlRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsNetworkDays_IntlRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookTableHeaderRowRangeRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookTableHeaderRowRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableHeaderRowRangeRequest instance
      */
-    IWorkbookTableHeaderRowRangeRequest buildRequest();
+    IWorkbookTableHeaderRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookTableHeaderRowRangeRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class WindowsDefenderAdvancedThreatProtectionConfigurationRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsDefenderAdvancedThreatProtectionConfigurationRequest instance
      */
-    public IWindowsDefenderAdvancedThreatProtectionConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsDefenderAdvancedThreatProtectionConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

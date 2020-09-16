@@ -34,10 +34,11 @@ public class WorkbookFunctionsBahtTextRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsBahtTextRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBahtTextRequest instance
      */
-    public IWorkbookFunctionsBahtTextRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBahtTextRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -50,10 +50,11 @@ public class ContactFolderRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IContactFolderRequest instance
      */
-    public IContactFolderRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IContactFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

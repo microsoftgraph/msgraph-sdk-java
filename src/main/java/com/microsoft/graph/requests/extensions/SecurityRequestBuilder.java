@@ -46,10 +46,11 @@ public class SecurityRequestBuilder extends BaseRequestBuilder implements ISecur
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISecurityRequest instance
      */
-    public ISecurityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISecurityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

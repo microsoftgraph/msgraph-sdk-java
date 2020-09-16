@@ -34,10 +34,11 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAdministrativeUnitRequest instance
      */
-    public IAdministrativeUnitRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAdministrativeUnitRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

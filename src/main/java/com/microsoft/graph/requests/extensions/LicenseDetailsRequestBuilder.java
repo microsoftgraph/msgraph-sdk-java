@@ -34,10 +34,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ILicenseDetailsRequest instance
      */
-    public ILicenseDetailsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ILicenseDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

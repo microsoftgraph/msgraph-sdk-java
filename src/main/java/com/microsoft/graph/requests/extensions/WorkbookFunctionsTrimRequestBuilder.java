@@ -34,10 +34,11 @@ public class WorkbookFunctionsTrimRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsTrimRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTrimRequest instance
      */
-    public IWorkbookFunctionsTrimRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTrimRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

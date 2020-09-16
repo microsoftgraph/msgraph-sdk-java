@@ -32,10 +32,11 @@ public class ManagedDeviceSyncDeviceRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IManagedDeviceSyncDeviceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceSyncDeviceRequest instance
      */
-    public IManagedDeviceSyncDeviceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceSyncDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -44,10 +44,11 @@ public class WorkbookFunctionsCumPrincRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsCumPrincRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCumPrincRequest instance
      */
-    public IWorkbookFunctionsCumPrincRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCumPrincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

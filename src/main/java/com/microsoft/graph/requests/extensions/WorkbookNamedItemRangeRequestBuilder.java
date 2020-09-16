@@ -32,10 +32,11 @@ public class WorkbookNamedItemRangeRequestBuilder extends BaseFunctionRequestBui
     /**
      * Creates the IWorkbookNamedItemRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookNamedItemRangeRequest instance
      */
-    public IWorkbookNamedItemRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookNamedItemRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

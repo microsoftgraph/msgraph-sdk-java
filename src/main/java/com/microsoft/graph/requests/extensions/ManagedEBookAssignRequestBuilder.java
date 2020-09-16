@@ -34,10 +34,11 @@ public class ManagedEBookAssignRequestBuilder extends BaseActionRequestBuilder i
     /**
      * Creates the IManagedEBookAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedEBookAssignRequest instance
      */
-    public IManagedEBookAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedEBookAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

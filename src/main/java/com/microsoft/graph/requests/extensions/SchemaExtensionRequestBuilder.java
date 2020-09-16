@@ -34,10 +34,11 @@ public class SchemaExtensionRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISchemaExtensionRequest instance
      */
-    public ISchemaExtensionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISchemaExtensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -42,10 +42,11 @@ public class WorkbookFunctionsReceivedRequestBuilder extends BaseActionRequestBu
     /**
      * Creates the IWorkbookFunctionsReceivedRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsReceivedRequest instance
      */
-    public IWorkbookFunctionsReceivedRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsReceivedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

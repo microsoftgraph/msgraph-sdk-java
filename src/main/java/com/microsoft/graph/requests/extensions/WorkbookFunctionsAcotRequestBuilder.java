@@ -34,10 +34,11 @@ public class WorkbookFunctionsAcotRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAcotRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAcotRequest instance
      */
-    public IWorkbookFunctionsAcotRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsAcotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

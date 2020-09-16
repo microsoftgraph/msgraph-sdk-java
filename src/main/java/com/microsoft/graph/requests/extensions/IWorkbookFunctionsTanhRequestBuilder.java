@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsTanhRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsTanhRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTanhRequest instance
      */
-    IWorkbookFunctionsTanhRequest buildRequest();
+    IWorkbookFunctionsTanhRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsTanhRequest with specific options instead of the existing options

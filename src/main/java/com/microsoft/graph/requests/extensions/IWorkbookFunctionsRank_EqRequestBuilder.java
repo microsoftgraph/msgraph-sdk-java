@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsRank_EqRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsRank_EqRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRank_EqRequest instance
      */
-    IWorkbookFunctionsRank_EqRequest buildRequest();
+    IWorkbookFunctionsRank_EqRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsRank_EqRequest with specific options instead of the existing options

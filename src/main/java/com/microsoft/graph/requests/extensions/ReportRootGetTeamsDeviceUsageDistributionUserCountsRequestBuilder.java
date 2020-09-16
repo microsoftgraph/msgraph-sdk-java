@@ -34,10 +34,11 @@ public class ReportRootGetTeamsDeviceUsageDistributionUserCountsRequestBuilder e
     /**
      * Creates the IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest instance
      */
-    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetTeamsDeviceUsageDistributionUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

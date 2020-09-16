@@ -45,10 +45,11 @@ public class WorkbookWorksheetUsedRangeRequestBuilder extends BaseFunctionReques
     /**
      * Creates the IWorkbookWorksheetUsedRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetUsedRangeRequest instance
      */
-    public IWorkbookWorksheetUsedRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookWorksheetUsedRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

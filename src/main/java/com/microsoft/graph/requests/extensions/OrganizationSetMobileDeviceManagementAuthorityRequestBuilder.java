@@ -32,10 +32,11 @@ public class OrganizationSetMobileDeviceManagementAuthorityRequestBuilder extend
     /**
      * Creates the IOrganizationSetMobileDeviceManagementAuthorityRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOrganizationSetMobileDeviceManagementAuthorityRequest instance
      */
-    public IOrganizationSetMobileDeviceManagementAuthorityRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOrganizationSetMobileDeviceManagementAuthorityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -36,10 +36,22 @@ public class DriveItemVersionCollectionRequestBuilder extends BaseRequestBuilder
         super(requestUrl, client, requestOptions);
     }
 
-    public IDriveItemVersionCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IDriveItemVersionCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IDriveItemVersionCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new DriveItemVersionCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

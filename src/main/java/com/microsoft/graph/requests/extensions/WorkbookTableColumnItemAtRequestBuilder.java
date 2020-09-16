@@ -34,10 +34,11 @@ public class WorkbookTableColumnItemAtRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookTableColumnItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnItemAtRequest instance
      */
-    public IWorkbookTableColumnItemAtRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableColumnItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

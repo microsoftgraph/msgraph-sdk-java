@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsValueRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsValueRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsValueRequest instance
      */
-    IWorkbookFunctionsValueRequest buildRequest();
+    IWorkbookFunctionsValueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsValueRequest with specific options instead of the existing options

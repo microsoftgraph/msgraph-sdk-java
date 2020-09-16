@@ -36,10 +36,11 @@ public class WorkbookFunctionsEffectRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsEffectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEffectRequest instance
      */
-    public IWorkbookFunctionsEffectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsEffectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

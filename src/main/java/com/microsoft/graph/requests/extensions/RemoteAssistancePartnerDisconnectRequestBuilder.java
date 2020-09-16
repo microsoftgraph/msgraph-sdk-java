@@ -32,10 +32,11 @@ public class RemoteAssistancePartnerDisconnectRequestBuilder extends BaseActionR
     /**
      * Creates the IRemoteAssistancePartnerDisconnectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IRemoteAssistancePartnerDisconnectRequest instance
      */
-    public IRemoteAssistancePartnerDisconnectRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IRemoteAssistancePartnerDisconnectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookRangeFormatAutofitColumnsRequestBuilder extends IReque
     /**
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeFormatAutofitColumnsRequest instance
      */
-    IWorkbookRangeFormatAutofitColumnsRequest buildRequest();
+    IWorkbookRangeFormatAutofitColumnsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeFormatAutofitColumnsRequest with specific options instead of the existing options

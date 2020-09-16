@@ -17,9 +17,10 @@ public interface IManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder e
     /**
      * Creates the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
      */
-    IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest();
+    IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest with specific options instead of the existing options

@@ -36,10 +36,11 @@ public class WorkbookFunctionsWeekdayRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsWeekdayRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWeekdayRequest instance
      */
-    public IWorkbookFunctionsWeekdayRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsWeekdayRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

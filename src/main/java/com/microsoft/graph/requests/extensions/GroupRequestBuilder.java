@@ -87,10 +87,11 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IGroupRequest instance
      */
-    public IGroupRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

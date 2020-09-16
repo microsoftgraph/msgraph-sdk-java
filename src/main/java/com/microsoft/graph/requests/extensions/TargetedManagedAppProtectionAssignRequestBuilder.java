@@ -34,10 +34,11 @@ public class TargetedManagedAppProtectionAssignRequestBuilder extends BaseAction
     /**
      * Creates the ITargetedManagedAppProtectionAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITargetedManagedAppProtectionAssignRequest instance
      */
-    public ITargetedManagedAppProtectionAssignRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITargetedManagedAppProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

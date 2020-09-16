@@ -34,10 +34,11 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IShiftPreferencesRequest instance
      */
-    public IShiftPreferencesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IShiftPreferencesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

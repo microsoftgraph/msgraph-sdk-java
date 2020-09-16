@@ -17,9 +17,10 @@ public interface IWorkbookWorksheetUsedRangeRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookWorksheetUsedRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetUsedRangeRequest instance
      */
-    IWorkbookWorksheetUsedRangeRequest buildRequest();
+    IWorkbookWorksheetUsedRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookWorksheetUsedRangeRequest with specific options instead of the existing options

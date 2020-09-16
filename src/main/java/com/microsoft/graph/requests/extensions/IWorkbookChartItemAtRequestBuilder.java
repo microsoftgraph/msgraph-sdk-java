@@ -17,9 +17,10 @@ public interface IWorkbookChartItemAtRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookChartItemAtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartItemAtRequest instance
      */
-    IWorkbookChartItemAtRequest buildRequest();
+    IWorkbookChartItemAtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartItemAtRequest with specific options instead of the existing options

@@ -34,10 +34,11 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder implement
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IColumnDefinitionRequest instance
      */
-    public IColumnDefinitionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IColumnDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

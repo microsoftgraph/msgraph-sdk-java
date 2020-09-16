@@ -42,10 +42,11 @@ public class TermsAndConditionsRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsAndConditionsRequest instance
      */
-    public ITermsAndConditionsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ITermsAndConditionsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

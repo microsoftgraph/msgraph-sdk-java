@@ -150,10 +150,11 @@ public class UserReferenceRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return The IUserReferenceRequest instance
      */
-    public IUserReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IUserReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

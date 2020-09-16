@@ -34,10 +34,11 @@ public class WorkbookFilterApplyBottomItemsFilterRequestBuilder extends BaseActi
     /**
      * Creates the IWorkbookFilterApplyBottomItemsFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyBottomItemsFilterRequest instance
      */
-    public IWorkbookFilterApplyBottomItemsFilterRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFilterApplyBottomItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

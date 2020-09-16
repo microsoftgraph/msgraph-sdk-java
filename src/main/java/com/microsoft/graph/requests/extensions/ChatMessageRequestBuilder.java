@@ -42,10 +42,11 @@ public class ChatMessageRequestBuilder extends BaseRequestBuilder implements ICh
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IChatMessageRequest instance
      */
-    public IChatMessageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IChatMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

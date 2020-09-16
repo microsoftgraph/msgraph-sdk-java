@@ -34,10 +34,11 @@ public class WorkbookFunctionsCoshRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsCoshRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoshRequest instance
      */
-    public IWorkbookFunctionsCoshRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCoshRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

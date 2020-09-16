@@ -34,10 +34,11 @@ public class WorkbookApplicationRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookApplicationRequest instance
      */
-    public IWorkbookApplicationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

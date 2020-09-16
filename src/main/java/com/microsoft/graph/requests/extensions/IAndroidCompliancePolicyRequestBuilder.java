@@ -20,9 +20,10 @@ public interface IAndroidCompliancePolicyRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidCompliancePolicyRequest instance
      */
-    IAndroidCompliancePolicyRequest buildRequest();
+    IAndroidCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

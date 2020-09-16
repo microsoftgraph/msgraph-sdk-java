@@ -36,10 +36,22 @@ public class EducationSchoolCollectionRequestBuilder extends BaseRequestBuilder 
         super(requestUrl, client, requestOptions);
     }
 
-    public IEducationSchoolCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public IEducationSchoolCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public IEducationSchoolCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new EducationSchoolCollectionRequest(getRequestUrl(), getClient(), requestOptions);
     }

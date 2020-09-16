@@ -32,10 +32,11 @@ public class WorkbookTableColumnTotalRowRangeRequestBuilder extends BaseFunction
     /**
      * Creates the IWorkbookTableColumnTotalRowRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableColumnTotalRowRangeRequest instance
      */
-    public IWorkbookTableColumnTotalRowRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableColumnTotalRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

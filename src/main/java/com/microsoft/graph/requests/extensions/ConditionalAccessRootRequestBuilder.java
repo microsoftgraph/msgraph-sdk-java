@@ -42,10 +42,11 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IConditionalAccessRootRequest instance
      */
-    public IConditionalAccessRootRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IConditionalAccessRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

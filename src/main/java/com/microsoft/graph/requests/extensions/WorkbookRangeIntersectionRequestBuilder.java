@@ -34,10 +34,11 @@ public class WorkbookRangeIntersectionRequestBuilder extends BaseFunctionRequest
     /**
      * Creates the IWorkbookRangeIntersectionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeIntersectionRequest instance
      */
-    public IWorkbookRangeIntersectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeIntersectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

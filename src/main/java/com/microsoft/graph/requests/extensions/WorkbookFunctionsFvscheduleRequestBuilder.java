@@ -36,10 +36,11 @@ public class WorkbookFunctionsFvscheduleRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsFvscheduleRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFvscheduleRequest instance
      */
-    public IWorkbookFunctionsFvscheduleRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsFvscheduleRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

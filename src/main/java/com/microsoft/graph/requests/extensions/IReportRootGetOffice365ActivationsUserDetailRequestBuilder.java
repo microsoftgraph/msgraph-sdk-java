@@ -17,9 +17,10 @@ public interface IReportRootGetOffice365ActivationsUserDetailRequestBuilder exte
     /**
      * Creates the IReportRootGetOffice365ActivationsUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOffice365ActivationsUserDetailRequest instance
      */
-    IReportRootGetOffice365ActivationsUserDetailRequest buildRequest();
+    IReportRootGetOffice365ActivationsUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetOffice365ActivationsUserDetailRequest with specific options instead of the existing options

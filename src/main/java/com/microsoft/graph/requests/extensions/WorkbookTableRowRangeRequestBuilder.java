@@ -32,10 +32,11 @@ public class WorkbookTableRowRangeRequestBuilder extends BaseFunctionRequestBuil
     /**
      * Creates the IWorkbookTableRowRangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableRowRangeRequest instance
      */
-    public IWorkbookTableRowRangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableRowRangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

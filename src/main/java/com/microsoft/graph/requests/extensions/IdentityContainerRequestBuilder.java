@@ -36,10 +36,11 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIdentityContainerRequest instance
      */
-    public IIdentityContainerRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IIdentityContainerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

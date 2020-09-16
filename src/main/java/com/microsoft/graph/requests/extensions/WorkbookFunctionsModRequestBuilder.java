@@ -36,10 +36,11 @@ public class WorkbookFunctionsModRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IWorkbookFunctionsModRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsModRequest instance
      */
-    public IWorkbookFunctionsModRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsModRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

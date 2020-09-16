@@ -38,10 +38,11 @@ public class WorkbookFunctionsMirrRequestBuilder extends BaseActionRequestBuilde
     /**
      * Creates the IWorkbookFunctionsMirrRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsMirrRequest instance
      */
-    public IWorkbookFunctionsMirrRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsMirrRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

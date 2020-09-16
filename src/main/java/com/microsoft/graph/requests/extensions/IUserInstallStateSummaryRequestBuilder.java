@@ -22,9 +22,10 @@ public interface IUserInstallStateSummaryRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUserInstallStateSummaryRequest instance
      */
-    IUserInstallStateSummaryRequest buildRequest();
+    IUserInstallStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

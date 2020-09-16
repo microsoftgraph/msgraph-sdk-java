@@ -34,10 +34,11 @@ public class Windows10TeamGeneralConfigurationRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindows10TeamGeneralConfigurationRequest instance
      */
-    public IWindows10TeamGeneralConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindows10TeamGeneralConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

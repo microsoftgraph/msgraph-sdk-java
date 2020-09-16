@@ -42,10 +42,11 @@ public class NotebookCopyNotebookRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the INotebookCopyNotebookRequest
      *
+     * @param requestOptions the options for the request
      * @return the INotebookCopyNotebookRequest instance
      */
-    public INotebookCopyNotebookRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INotebookCopyNotebookRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

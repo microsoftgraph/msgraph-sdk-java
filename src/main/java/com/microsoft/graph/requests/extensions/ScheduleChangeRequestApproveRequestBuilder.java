@@ -34,10 +34,11 @@ public class ScheduleChangeRequestApproveRequestBuilder extends BaseActionReques
     /**
      * Creates the IScheduleChangeRequestApproveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IScheduleChangeRequestApproveRequest instance
      */
-    public IScheduleChangeRequestApproveRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IScheduleChangeRequestApproveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -17,9 +17,10 @@ public interface IWorkbookRangeColumnRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeColumnRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeColumnRequest instance
      */
-    IWorkbookRangeColumnRequest buildRequest();
+    IWorkbookRangeColumnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeColumnRequest with specific options instead of the existing options

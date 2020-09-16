@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCeiling_MathRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsCeiling_MathRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCeiling_MathRequest instance
      */
-    IWorkbookFunctionsCeiling_MathRequest buildRequest();
+    IWorkbookFunctionsCeiling_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCeiling_MathRequest with specific options instead of the existing options

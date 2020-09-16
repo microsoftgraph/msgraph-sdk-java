@@ -32,10 +32,11 @@ public class NotificationMessageTemplateSendTestMessageRequestBuilder extends Ba
     /**
      * Creates the INotificationMessageTemplateSendTestMessageRequest
      *
+     * @param requestOptions the options for the request
      * @return the INotificationMessageTemplateSendTestMessageRequest instance
      */
-    public INotificationMessageTemplateSendTestMessageRequest buildRequest() {
-        return buildRequest(getOptions());
+    public INotificationMessageTemplateSendTestMessageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

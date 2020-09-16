@@ -34,10 +34,11 @@ public class WorkbookFunctionsDegreesRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsDegreesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDegreesRequest instance
      */
-    public IWorkbookFunctionsDegreesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDegreesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

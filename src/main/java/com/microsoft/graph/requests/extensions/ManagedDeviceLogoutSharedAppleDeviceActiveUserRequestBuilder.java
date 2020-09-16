@@ -32,10 +32,11 @@ public class ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder extend
     /**
      * Creates the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest instance
      */
-    public IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IManagedDeviceLogoutSharedAppleDeviceActiveUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

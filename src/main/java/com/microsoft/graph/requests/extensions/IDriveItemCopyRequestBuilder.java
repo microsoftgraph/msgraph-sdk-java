@@ -17,9 +17,10 @@ public interface IDriveItemCopyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemCopyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemCopyRequest instance
      */
-    IDriveItemCopyRequest buildRequest();
+    IDriveItemCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemCopyRequest with specific options instead of the existing options

@@ -39,10 +39,11 @@ public class DeviceEnrollmentConfigurationRequestBuilder extends BaseRequestBuil
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceEnrollmentConfigurationRequest instance
      */
-    public IDeviceEnrollmentConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceEnrollmentConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

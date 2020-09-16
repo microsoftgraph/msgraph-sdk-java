@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsReplaceRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsReplaceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsReplaceRequest instance
      */
-    IWorkbookFunctionsReplaceRequest buildRequest();
+    IWorkbookFunctionsReplaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsReplaceRequest with specific options instead of the existing options

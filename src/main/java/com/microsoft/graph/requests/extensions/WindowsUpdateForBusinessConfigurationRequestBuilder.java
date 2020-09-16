@@ -34,10 +34,11 @@ public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsUpdateForBusinessConfigurationRequest instance
      */
-    public IWindowsUpdateForBusinessConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWindowsUpdateForBusinessConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -20,9 +20,10 @@ public interface IAndroidWorkProfileCustomConfigurationRequestBuilder extends IR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileCustomConfigurationRequest instance
      */
-    IAndroidWorkProfileCustomConfigurationRequest buildRequest();
+    IAndroidWorkProfileCustomConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

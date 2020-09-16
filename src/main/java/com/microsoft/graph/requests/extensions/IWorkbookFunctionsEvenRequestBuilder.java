@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsEvenRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsEvenRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEvenRequest instance
      */
-    IWorkbookFunctionsEvenRequest buildRequest();
+    IWorkbookFunctionsEvenRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsEvenRequest with specific options instead of the existing options

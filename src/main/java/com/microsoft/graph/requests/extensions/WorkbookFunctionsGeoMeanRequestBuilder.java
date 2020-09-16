@@ -34,10 +34,11 @@ public class WorkbookFunctionsGeoMeanRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsGeoMeanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGeoMeanRequest instance
      */
-    public IWorkbookFunctionsGeoMeanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGeoMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

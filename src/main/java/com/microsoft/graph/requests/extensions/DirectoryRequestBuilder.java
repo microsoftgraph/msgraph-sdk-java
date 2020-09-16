@@ -38,10 +38,11 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDirectoryRequest instance
      */
-    public IDirectoryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

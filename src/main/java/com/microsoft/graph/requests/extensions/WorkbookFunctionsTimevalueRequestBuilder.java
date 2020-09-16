@@ -34,10 +34,11 @@ public class WorkbookFunctionsTimevalueRequestBuilder extends BaseActionRequestB
     /**
      * Creates the IWorkbookFunctionsTimevalueRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTimevalueRequest instance
      */
-    public IWorkbookFunctionsTimevalueRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsTimevalueRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

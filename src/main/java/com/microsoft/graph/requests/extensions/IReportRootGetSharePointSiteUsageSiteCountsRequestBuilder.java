@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointSiteUsageSiteCountsRequestBuilder exten
     /**
      * Creates the IReportRootGetSharePointSiteUsageSiteCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsageSiteCountsRequest instance
      */
-    IReportRootGetSharePointSiteUsageSiteCountsRequest buildRequest();
+    IReportRootGetSharePointSiteUsageSiteCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointSiteUsageSiteCountsRequest with specific options instead of the existing options

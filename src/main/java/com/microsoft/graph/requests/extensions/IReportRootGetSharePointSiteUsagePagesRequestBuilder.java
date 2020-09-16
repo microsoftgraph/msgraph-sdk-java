@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointSiteUsagePagesRequestBuilder extends IR
     /**
      * Creates the IReportRootGetSharePointSiteUsagePagesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointSiteUsagePagesRequest instance
      */
-    IReportRootGetSharePointSiteUsagePagesRequest buildRequest();
+    IReportRootGetSharePointSiteUsagePagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointSiteUsagePagesRequest with specific options instead of the existing options

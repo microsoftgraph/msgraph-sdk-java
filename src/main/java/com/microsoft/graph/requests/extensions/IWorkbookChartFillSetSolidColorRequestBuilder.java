@@ -17,9 +17,10 @@ public interface IWorkbookChartFillSetSolidColorRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookChartFillSetSolidColorRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartFillSetSolidColorRequest instance
      */
-    IWorkbookChartFillSetSolidColorRequest buildRequest();
+    IWorkbookChartFillSetSolidColorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartFillSetSolidColorRequest with specific options instead of the existing options

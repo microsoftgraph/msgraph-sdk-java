@@ -47,10 +47,11 @@ public class ReportRootGetSharePointActivityUserDetailRequestBuilder extends Bas
     /**
      * Creates the IReportRootGetSharePointActivityUserDetailRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityUserDetailRequest instance
      */
-    public IReportRootGetSharePointActivityUserDetailRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IReportRootGetSharePointActivityUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

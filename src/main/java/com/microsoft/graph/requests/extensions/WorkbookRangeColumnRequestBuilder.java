@@ -34,10 +34,11 @@ public class WorkbookRangeColumnRequestBuilder extends BaseFunctionRequestBuilde
     /**
      * Creates the IWorkbookRangeColumnRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeColumnRequest instance
      */
-    public IWorkbookRangeColumnRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeColumnRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

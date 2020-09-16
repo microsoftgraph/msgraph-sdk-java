@@ -20,9 +20,10 @@ public interface ITermsAndConditionsAssignmentRequestBuilder extends IRequestBui
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITermsAndConditionsAssignmentRequest instance
      */
-    ITermsAndConditionsAssignmentRequest buildRequest();
+    ITermsAndConditionsAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

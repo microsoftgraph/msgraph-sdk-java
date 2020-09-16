@@ -35,10 +35,11 @@ public class CertificateBasedAuthConfigurationWithReferenceRequestBuilder extend
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICertificateBasedAuthConfigurationWithReferenceRequest instance
      */
-    public ICertificateBasedAuthConfigurationWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICertificateBasedAuthConfigurationWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

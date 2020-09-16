@@ -34,10 +34,11 @@ public class ResourceOperationRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IResourceOperationRequest instance
      */
-    public IResourceOperationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IResourceOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

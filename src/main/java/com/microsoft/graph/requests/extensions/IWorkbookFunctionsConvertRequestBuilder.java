@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsConvertRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsConvertRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConvertRequest instance
      */
-    IWorkbookFunctionsConvertRequest buildRequest();
+    IWorkbookFunctionsConvertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsConvertRequest with specific options instead of the existing options

@@ -36,10 +36,11 @@ public class WorkbookFunctionsDecimalRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsDecimalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDecimalRequest instance
      */
-    public IWorkbookFunctionsDecimalRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

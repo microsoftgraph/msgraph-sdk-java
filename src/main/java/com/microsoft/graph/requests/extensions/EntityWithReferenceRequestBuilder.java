@@ -35,10 +35,11 @@ public class EntityWithReferenceRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEntityWithReferenceRequest instance
      */
-    public IEntityWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IEntityWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

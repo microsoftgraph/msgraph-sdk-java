@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsOddLPriceRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsOddLPriceRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOddLPriceRequest instance
      */
-    IWorkbookFunctionsOddLPriceRequest buildRequest();
+    IWorkbookFunctionsOddLPriceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsOddLPriceRequest with specific options instead of the existing options

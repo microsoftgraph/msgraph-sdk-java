@@ -40,10 +40,11 @@ public class WorkbookFunctionsGamma_DistRequestBuilder extends BaseActionRequest
     /**
      * Creates the IWorkbookFunctionsGamma_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGamma_DistRequest instance
      */
-    public IWorkbookFunctionsGamma_DistRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsGamma_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -34,10 +34,11 @@ public class AndroidStoreAppRequestBuilder extends BaseRequestBuilder implements
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidStoreAppRequest instance
      */
-    public IAndroidStoreAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAndroidStoreAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

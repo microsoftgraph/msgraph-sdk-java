@@ -39,10 +39,11 @@ public class MessageCreateForwardRequestBuilder extends BaseActionRequestBuilder
     /**
      * Creates the IMessageCreateForwardRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMessageCreateForwardRequest instance
      */
-    public IMessageCreateForwardRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IMessageCreateForwardRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

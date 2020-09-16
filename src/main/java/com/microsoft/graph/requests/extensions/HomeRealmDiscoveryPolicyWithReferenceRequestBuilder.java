@@ -35,10 +35,11 @@ public class HomeRealmDiscoveryPolicyWithReferenceRequestBuilder extends BaseReq
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IHomeRealmDiscoveryPolicyWithReferenceRequest instance
      */
-    public IHomeRealmDiscoveryPolicyWithReferenceRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IHomeRealmDiscoveryPolicyWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

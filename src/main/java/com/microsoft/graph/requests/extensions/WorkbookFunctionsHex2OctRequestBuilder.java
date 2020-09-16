@@ -36,10 +36,11 @@ public class WorkbookFunctionsHex2OctRequestBuilder extends BaseActionRequestBui
     /**
      * Creates the IWorkbookFunctionsHex2OctRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsHex2OctRequest instance
      */
-    public IWorkbookFunctionsHex2OctRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsHex2OctRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

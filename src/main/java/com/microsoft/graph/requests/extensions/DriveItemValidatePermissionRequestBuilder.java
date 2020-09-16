@@ -36,10 +36,11 @@ public class DriveItemValidatePermissionRequestBuilder extends BaseActionRequest
     /**
      * Creates the IDriveItemValidatePermissionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemValidatePermissionRequest instance
      */
-    public IDriveItemValidatePermissionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDriveItemValidatePermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAppCatalogsRequest instance
      */
-    public IAppCatalogsRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IAppCatalogsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

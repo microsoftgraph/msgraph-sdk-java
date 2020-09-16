@@ -17,9 +17,10 @@ public interface IReportRootGetSharePointActivityPagesRequestBuilder extends IRe
     /**
      * Creates the IReportRootGetSharePointActivityPagesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetSharePointActivityPagesRequest instance
      */
-    IReportRootGetSharePointActivityPagesRequest buildRequest();
+    IReportRootGetSharePointActivityPagesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetSharePointActivityPagesRequest with specific options instead of the existing options

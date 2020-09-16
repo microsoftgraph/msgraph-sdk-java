@@ -34,10 +34,11 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ISoftwareUpdateStatusSummaryRequest instance
      */
-    public ISoftwareUpdateStatusSummaryRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ISoftwareUpdateStatusSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

@@ -38,10 +38,11 @@ public class WorkbookChartDataLabelFormatRequestBuilder extends BaseRequestBuild
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookChartDataLabelFormatRequest instance
      */
-    public IWorkbookChartDataLabelFormatRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookChartDataLabelFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

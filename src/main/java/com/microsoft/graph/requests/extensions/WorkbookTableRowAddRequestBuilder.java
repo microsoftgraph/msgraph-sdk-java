@@ -36,10 +36,11 @@ public class WorkbookTableRowAddRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IWorkbookTableRowAddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookTableRowAddRequest instance
      */
-    public IWorkbookTableRowAddRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookTableRowAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

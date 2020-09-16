@@ -17,9 +17,10 @@ public interface IWorkbookWorksheetCellRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookWorksheetCellRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetCellRequest instance
      */
-    IWorkbookWorksheetCellRequest buildRequest();
+    IWorkbookWorksheetCellRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookWorksheetCellRequest with specific options instead of the existing options

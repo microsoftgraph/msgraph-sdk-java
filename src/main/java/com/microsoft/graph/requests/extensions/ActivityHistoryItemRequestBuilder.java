@@ -36,10 +36,11 @@ public class ActivityHistoryItemRequestBuilder extends BaseRequestBuilder implem
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IActivityHistoryItemRequest instance
      */
-    public IActivityHistoryItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IActivityHistoryItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

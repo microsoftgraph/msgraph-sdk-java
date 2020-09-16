@@ -34,10 +34,11 @@ public class DeviceComplianceActionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceComplianceActionItemRequest instance
      */
-    public IDeviceComplianceActionItemRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDeviceComplianceActionItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

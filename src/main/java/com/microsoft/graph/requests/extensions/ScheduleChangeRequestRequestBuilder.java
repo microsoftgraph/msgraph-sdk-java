@@ -34,10 +34,11 @@ public class ScheduleChangeRequestRequestBuilder extends BaseRequestBuilder impl
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IScheduleChangeRequestRequest instance
      */
-    public IScheduleChangeRequestRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IScheduleChangeRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

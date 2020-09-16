@@ -40,10 +40,11 @@ public class WorkbookFunctionsBinom_Dist_RangeRequestBuilder extends BaseActionR
     /**
      * Creates the IWorkbookFunctionsBinom_Dist_RangeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBinom_Dist_RangeRequest instance
      */
-    public IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsBinom_Dist_RangeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

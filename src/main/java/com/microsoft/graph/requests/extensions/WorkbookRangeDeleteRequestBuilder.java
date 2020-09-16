@@ -34,10 +34,11 @@ public class WorkbookRangeDeleteRequestBuilder extends BaseActionRequestBuilder 
     /**
      * Creates the IWorkbookRangeDeleteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeDeleteRequest instance
      */
-    public IWorkbookRangeDeleteRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookRangeDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

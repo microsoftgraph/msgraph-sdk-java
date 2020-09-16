@@ -39,11 +39,23 @@ public class CalendarAllowedCalendarSharingRolesCollectionRequestBuilder extends
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("user", user));
 		}
       }
-
-    public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     public ICalendarAllowedCalendarSharingRolesCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         CalendarAllowedCalendarSharingRolesCollectionRequest request = new CalendarAllowedCalendarSharingRolesCollectionRequest(
                 getRequestUrl(),

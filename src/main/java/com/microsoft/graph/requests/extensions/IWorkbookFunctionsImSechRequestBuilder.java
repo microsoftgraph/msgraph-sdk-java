@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsImSechRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsImSechRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImSechRequest instance
      */
-    IWorkbookFunctionsImSechRequest buildRequest();
+    IWorkbookFunctionsImSechRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsImSechRequest with specific options instead of the existing options

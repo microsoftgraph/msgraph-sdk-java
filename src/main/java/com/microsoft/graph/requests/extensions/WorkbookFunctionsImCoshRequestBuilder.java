@@ -34,10 +34,11 @@ public class WorkbookFunctionsImCoshRequestBuilder extends BaseActionRequestBuil
     /**
      * Creates the IWorkbookFunctionsImCoshRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImCoshRequest instance
      */
-    public IWorkbookFunctionsImCoshRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImCoshRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

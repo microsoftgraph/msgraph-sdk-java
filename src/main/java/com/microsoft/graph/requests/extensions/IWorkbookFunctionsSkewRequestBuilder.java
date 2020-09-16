@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSkewRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSkewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSkewRequest instance
      */
-    IWorkbookFunctionsSkewRequest buildRequest();
+    IWorkbookFunctionsSkewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSkewRequest with specific options instead of the existing options

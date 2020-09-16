@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsZ_TestRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsZ_TestRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsZ_TestRequest instance
      */
-    IWorkbookFunctionsZ_TestRequest buildRequest();
+    IWorkbookFunctionsZ_TestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsZ_TestRequest with specific options instead of the existing options

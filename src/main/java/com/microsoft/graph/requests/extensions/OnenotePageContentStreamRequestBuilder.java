@@ -34,10 +34,11 @@ public class OnenotePageContentStreamRequestBuilder extends BaseRequestBuilder i
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IOnenotePageContentStreamRequest instance
      */
-    public IOnenotePageContentStreamRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IOnenotePageContentStreamRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

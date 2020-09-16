@@ -40,10 +40,11 @@ public class DefaultManagedAppProtectionRequestBuilder extends BaseRequestBuilde
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDefaultManagedAppProtectionRequest instance
      */
-    public IDefaultManagedAppProtectionRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDefaultManagedAppProtectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

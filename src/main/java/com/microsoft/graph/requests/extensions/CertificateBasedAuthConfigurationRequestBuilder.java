@@ -34,10 +34,11 @@ public class CertificateBasedAuthConfigurationRequestBuilder extends BaseRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ICertificateBasedAuthConfigurationRequest instance
      */
-    public ICertificateBasedAuthConfigurationRequest buildRequest() {
-        return buildRequest(getOptions());
+    public ICertificateBasedAuthConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

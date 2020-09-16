@@ -34,10 +34,11 @@ public class WebAppRequestBuilder extends BaseRequestBuilder implements IWebAppR
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWebAppRequest instance
      */
-    public IWebAppRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWebAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

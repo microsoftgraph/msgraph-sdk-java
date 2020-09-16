@@ -34,10 +34,11 @@ public class WorkbookFunctionsCleanRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsCleanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCleanRequest instance
      */
-    public IWorkbookFunctionsCleanRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsCleanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

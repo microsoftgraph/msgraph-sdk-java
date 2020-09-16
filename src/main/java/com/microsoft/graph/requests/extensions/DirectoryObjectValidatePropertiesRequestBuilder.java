@@ -40,10 +40,11 @@ public class DirectoryObjectValidatePropertiesRequestBuilder extends BaseActionR
     /**
      * Creates the IDirectoryObjectValidatePropertiesRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDirectoryObjectValidatePropertiesRequest instance
      */
-    public IDirectoryObjectValidatePropertiesRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IDirectoryObjectValidatePropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

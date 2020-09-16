@@ -17,9 +17,10 @@ public interface IAttachmentCreateUploadSessionRequestBuilder extends IRequestBu
     /**
      * Creates the IAttachmentCreateUploadSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IAttachmentCreateUploadSessionRequest instance
      */
-    IAttachmentCreateUploadSessionRequest buildRequest();
+    IAttachmentCreateUploadSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IAttachmentCreateUploadSessionRequest with specific options instead of the existing options

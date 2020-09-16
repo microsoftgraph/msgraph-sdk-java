@@ -24,9 +24,10 @@ public interface IConditionalAccessRootRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IConditionalAccessRootRequest instance
      */
-    IConditionalAccessRootRequest buildRequest();
+    IConditionalAccessRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

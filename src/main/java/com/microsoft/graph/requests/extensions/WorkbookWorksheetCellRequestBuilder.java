@@ -36,10 +36,11 @@ public class WorkbookWorksheetCellRequestBuilder extends BaseFunctionRequestBuil
     /**
      * Creates the IWorkbookWorksheetCellRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetCellRequest instance
      */
-    public IWorkbookWorksheetCellRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookWorksheetCellRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**

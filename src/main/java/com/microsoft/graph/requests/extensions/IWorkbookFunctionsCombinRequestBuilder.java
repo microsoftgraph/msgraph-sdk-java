@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCombinRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsCombinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCombinRequest instance
      */
-    IWorkbookFunctionsCombinRequest buildRequest();
+    IWorkbookFunctionsCombinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCombinRequest with specific options instead of the existing options

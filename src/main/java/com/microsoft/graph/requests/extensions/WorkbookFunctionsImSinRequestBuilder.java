@@ -34,10 +34,11 @@ public class WorkbookFunctionsImSinRequestBuilder extends BaseActionRequestBuild
     /**
      * Creates the IWorkbookFunctionsImSinRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImSinRequest instance
      */
-    public IWorkbookFunctionsImSinRequest buildRequest() {
-        return buildRequest(getOptions());
+    public IWorkbookFunctionsImSinRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+        return buildRequest(getOptions(requestOptions));
     }
 
     /**
