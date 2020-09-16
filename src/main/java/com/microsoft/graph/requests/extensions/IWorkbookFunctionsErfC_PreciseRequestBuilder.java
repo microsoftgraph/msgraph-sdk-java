@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsErfC_PreciseRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsErfC_PreciseRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsErfC_PreciseRequest instance
      */
-    IWorkbookFunctionsErfC_PreciseRequest buildRequest();
+    IWorkbookFunctionsErfC_PreciseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsErfC_PreciseRequest with specific options instead of the existing options

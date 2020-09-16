@@ -20,9 +20,10 @@ public interface IWindowsPhone81GeneralConfigurationRequestBuilder extends IRequ
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWindowsPhone81GeneralConfigurationRequest instance
      */
-    IWindowsPhone81GeneralConfigurationRequest buildRequest();
+    IWindowsPhone81GeneralConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

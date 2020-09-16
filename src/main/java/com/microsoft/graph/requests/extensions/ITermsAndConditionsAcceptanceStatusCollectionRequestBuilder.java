@@ -23,8 +23,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder extends IRequestBuilder {
 
-    ITermsAndConditionsAcceptanceStatusCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    ITermsAndConditionsAcceptanceStatusCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     ITermsAndConditionsAcceptanceStatusCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ITermsAndConditionsAcceptanceStatusRequestBuilder byId(final String id);

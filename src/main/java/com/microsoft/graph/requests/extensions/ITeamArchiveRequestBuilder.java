@@ -17,9 +17,10 @@ public interface ITeamArchiveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ITeamArchiveRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITeamArchiveRequest instance
      */
-    ITeamArchiveRequest buildRequest();
+    ITeamArchiveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITeamArchiveRequest with specific options instead of the existing options

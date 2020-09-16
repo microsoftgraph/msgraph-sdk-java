@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNegBinom_DistRequestBuilder extends IRequestB
     /**
      * Creates the IWorkbookFunctionsNegBinom_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNegBinom_DistRequest instance
      */
-    IWorkbookFunctionsNegBinom_DistRequest buildRequest();
+    IWorkbookFunctionsNegBinom_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNegBinom_DistRequest with specific options instead of the existing options

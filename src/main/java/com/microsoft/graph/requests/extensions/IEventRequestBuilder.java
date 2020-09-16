@@ -32,9 +32,10 @@ public interface IEventRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IEventRequest instance
      */
-    IEventRequest buildRequest();
+    IEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

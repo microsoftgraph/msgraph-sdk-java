@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsTrimMeanRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsTrimMeanRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsTrimMeanRequest instance
      */
-    IWorkbookFunctionsTrimMeanRequest buildRequest();
+    IWorkbookFunctionsTrimMeanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsTrimMeanRequest with specific options instead of the existing options

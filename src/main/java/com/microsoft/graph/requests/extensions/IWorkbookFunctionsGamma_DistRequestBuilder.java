@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsGamma_DistRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsGamma_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGamma_DistRequest instance
      */
-    IWorkbookFunctionsGamma_DistRequest buildRequest();
+    IWorkbookFunctionsGamma_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsGamma_DistRequest with specific options instead of the existing options

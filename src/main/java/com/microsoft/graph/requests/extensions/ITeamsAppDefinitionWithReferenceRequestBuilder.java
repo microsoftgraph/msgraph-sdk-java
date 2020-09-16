@@ -22,9 +22,10 @@ public interface ITeamsAppDefinitionWithReferenceRequestBuilder extends IRequest
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the ITeamsAppDefinitionWithReferenceRequest instance
      */
-    ITeamsAppDefinitionWithReferenceRequest buildRequest();
+    ITeamsAppDefinitionWithReferenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

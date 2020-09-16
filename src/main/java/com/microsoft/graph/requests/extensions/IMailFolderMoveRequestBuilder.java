@@ -17,9 +17,10 @@ public interface IMailFolderMoveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMailFolderMoveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMailFolderMoveRequest instance
      */
-    IMailFolderMoveRequest buildRequest();
+    IMailFolderMoveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMailFolderMoveRequest with specific options instead of the existing options

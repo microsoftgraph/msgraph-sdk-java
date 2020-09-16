@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCoupNcdRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsCoupNcdRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupNcdRequest instance
      */
-    IWorkbookFunctionsCoupNcdRequest buildRequest();
+    IWorkbookFunctionsCoupNcdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCoupNcdRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyFontColorFilterRequestBuilder extends IRequ
     /**
      * Creates the IWorkbookFilterApplyFontColorFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyFontColorFilterRequest instance
      */
-    IWorkbookFilterApplyFontColorFilterRequest buildRequest();
+    IWorkbookFilterApplyFontColorFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyFontColorFilterRequest with specific options instead of the existing options

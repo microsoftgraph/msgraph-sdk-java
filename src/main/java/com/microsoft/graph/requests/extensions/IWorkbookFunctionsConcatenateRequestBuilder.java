@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsConcatenateRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsConcatenateRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsConcatenateRequest instance
      */
-    IWorkbookFunctionsConcatenateRequest buildRequest();
+    IWorkbookFunctionsConcatenateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsConcatenateRequest with specific options instead of the existing options

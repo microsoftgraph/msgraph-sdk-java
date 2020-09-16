@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDmaxRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsDmaxRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDmaxRequest instance
      */
-    IWorkbookFunctionsDmaxRequest buildRequest();
+    IWorkbookFunctionsDmaxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDmaxRequest with specific options instead of the existing options

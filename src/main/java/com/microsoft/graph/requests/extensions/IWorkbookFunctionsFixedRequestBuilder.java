@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsFixedRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsFixedRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFixedRequest instance
      */
-    IWorkbookFunctionsFixedRequest buildRequest();
+    IWorkbookFunctionsFixedRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsFixedRequest with specific options instead of the existing options

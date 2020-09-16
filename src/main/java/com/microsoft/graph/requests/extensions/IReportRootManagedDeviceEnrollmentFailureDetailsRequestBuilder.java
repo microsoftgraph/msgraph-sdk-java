@@ -17,9 +17,10 @@ public interface IReportRootManagedDeviceEnrollmentFailureDetailsRequestBuilder 
     /**
      * Creates the IReportRootManagedDeviceEnrollmentFailureDetailsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootManagedDeviceEnrollmentFailureDetailsRequest instance
      */
-    IReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest();
+    IReportRootManagedDeviceEnrollmentFailureDetailsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootManagedDeviceEnrollmentFailureDetailsRequest with specific options instead of the existing options

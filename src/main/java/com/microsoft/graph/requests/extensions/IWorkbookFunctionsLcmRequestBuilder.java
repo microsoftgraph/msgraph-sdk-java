@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsLcmRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsLcmRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLcmRequest instance
      */
-    IWorkbookFunctionsLcmRequest buildRequest();
+    IWorkbookFunctionsLcmRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsLcmRequest with specific options instead of the existing options

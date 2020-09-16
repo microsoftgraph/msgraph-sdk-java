@@ -27,9 +27,10 @@ public interface IChannelRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IChannelRequest instance
      */
-    IChannelRequest buildRequest();
+    IChannelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

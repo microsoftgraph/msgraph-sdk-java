@@ -22,9 +22,10 @@ public interface IMobileLobAppRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMobileLobAppRequest instance
      */
-    IMobileLobAppRequest buildRequest();
+    IMobileLobAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsOct2HexRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsOct2HexRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsOct2HexRequest instance
      */
-    IWorkbookFunctionsOct2HexRequest buildRequest();
+    IWorkbookFunctionsOct2HexRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsOct2HexRequest with specific options instead of the existing options

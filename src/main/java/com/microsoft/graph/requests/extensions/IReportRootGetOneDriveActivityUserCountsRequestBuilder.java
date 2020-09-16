@@ -17,9 +17,10 @@ public interface IReportRootGetOneDriveActivityUserCountsRequestBuilder extends 
     /**
      * Creates the IReportRootGetOneDriveActivityUserCountsRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetOneDriveActivityUserCountsRequest instance
      */
-    IReportRootGetOneDriveActivityUserCountsRequest buildRequest();
+    IReportRootGetOneDriveActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetOneDriveActivityUserCountsRequest with specific options instead of the existing options

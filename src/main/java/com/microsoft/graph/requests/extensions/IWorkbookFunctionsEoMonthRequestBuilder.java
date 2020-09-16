@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsEoMonthRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsEoMonthRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEoMonthRequest instance
      */
-    IWorkbookFunctionsEoMonthRequest buildRequest();
+    IWorkbookFunctionsEoMonthRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsEoMonthRequest with specific options instead of the existing options

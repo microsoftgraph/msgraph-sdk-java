@@ -17,9 +17,10 @@ public interface ITargetedManagedAppProtectionAssignRequestBuilder extends IRequ
     /**
      * Creates the ITargetedManagedAppProtectionAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITargetedManagedAppProtectionAssignRequest instance
      */
-    ITargetedManagedAppProtectionAssignRequest buildRequest();
+    ITargetedManagedAppProtectionAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITargetedManagedAppProtectionAssignRequest with specific options instead of the existing options

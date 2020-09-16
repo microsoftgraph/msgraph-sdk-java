@@ -17,9 +17,10 @@ public interface IApplePushNotificationCertificateDownloadApplePushNotificationC
     /**
      * Creates the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest instance
      */
-    IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest();
+    IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IApplePushNotificationCertificateDownloadApplePushNotificationCertificateSigningRequestRequest with specific options instead of the existing options

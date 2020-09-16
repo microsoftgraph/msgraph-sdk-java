@@ -17,9 +17,10 @@ public interface IApplicationAddPasswordRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IApplicationAddPasswordRequest
      *
+     * @param requestOptions the options for the request
      * @return the IApplicationAddPasswordRequest instance
      */
-    IApplicationAddPasswordRequest buildRequest();
+    IApplicationAddPasswordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IApplicationAddPasswordRequest with specific options instead of the existing options

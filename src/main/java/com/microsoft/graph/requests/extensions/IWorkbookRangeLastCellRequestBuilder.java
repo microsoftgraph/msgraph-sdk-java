@@ -17,9 +17,10 @@ public interface IWorkbookRangeLastCellRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeLastCellRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeLastCellRequest instance
      */
-    IWorkbookRangeLastCellRequest buildRequest();
+    IWorkbookRangeLastCellRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeLastCellRequest with specific options instead of the existing options

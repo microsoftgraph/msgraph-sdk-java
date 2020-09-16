@@ -24,8 +24,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface IWorkbookPivotTableCollectionRequestBuilder extends IRequestBuilder {
 
-    IWorkbookPivotTableCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    IWorkbookPivotTableCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     IWorkbookPivotTableCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     IWorkbookPivotTableRequestBuilder byId(final String id);

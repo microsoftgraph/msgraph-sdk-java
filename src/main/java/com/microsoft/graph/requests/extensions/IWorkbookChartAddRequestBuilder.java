@@ -17,9 +17,10 @@ public interface IWorkbookChartAddRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookChartAddRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookChartAddRequest instance
      */
-    IWorkbookChartAddRequest buildRequest();
+    IWorkbookChartAddRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookChartAddRequest with specific options instead of the existing options

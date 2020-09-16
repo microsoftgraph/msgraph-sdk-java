@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAccrIntMRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAccrIntMRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAccrIntMRequest instance
      */
-    IWorkbookFunctionsAccrIntMRequest buildRequest();
+    IWorkbookFunctionsAccrIntMRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAccrIntMRequest with specific options instead of the existing options

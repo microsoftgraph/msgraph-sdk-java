@@ -17,9 +17,10 @@ public interface IMailFolderCopyRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IMailFolderCopyRequest
      *
+     * @param requestOptions the options for the request
      * @return the IMailFolderCopyRequest instance
      */
-    IMailFolderCopyRequest buildRequest();
+    IMailFolderCopyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IMailFolderCopyRequest with specific options instead of the existing options

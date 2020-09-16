@@ -17,9 +17,10 @@ public interface IReportRootGetMailboxUsageStorageRequestBuilder extends IReques
     /**
      * Creates the IReportRootGetMailboxUsageStorageRequest
      *
+     * @param requestOptions the options for the request
      * @return the IReportRootGetMailboxUsageStorageRequest instance
      */
-    IReportRootGetMailboxUsageStorageRequest buildRequest();
+    IReportRootGetMailboxUsageStorageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IReportRootGetMailboxUsageStorageRequest with specific options instead of the existing options

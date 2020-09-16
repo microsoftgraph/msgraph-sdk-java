@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsImSubRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsImSubRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImSubRequest instance
      */
-    IWorkbookFunctionsImSubRequest buildRequest();
+    IWorkbookFunctionsImSubRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsImSubRequest with specific options instead of the existing options

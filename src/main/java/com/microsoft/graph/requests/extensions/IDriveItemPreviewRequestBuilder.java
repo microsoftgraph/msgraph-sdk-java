@@ -17,9 +17,10 @@ public interface IDriveItemPreviewRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemPreviewRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemPreviewRequest instance
      */
-    IDriveItemPreviewRequest buildRequest();
+    IDriveItemPreviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemPreviewRequest with specific options instead of the existing options

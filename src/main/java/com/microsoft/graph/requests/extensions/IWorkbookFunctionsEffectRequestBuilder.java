@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsEffectRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsEffectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsEffectRequest instance
      */
-    IWorkbookFunctionsEffectRequest buildRequest();
+    IWorkbookFunctionsEffectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsEffectRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsImArgumentRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsImArgumentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsImArgumentRequest instance
      */
-    IWorkbookFunctionsImArgumentRequest buildRequest();
+    IWorkbookFunctionsImArgumentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsImArgumentRequest with specific options instead of the existing options

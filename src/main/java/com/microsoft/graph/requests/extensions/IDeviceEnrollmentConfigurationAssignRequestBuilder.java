@@ -17,9 +17,10 @@ public interface IDeviceEnrollmentConfigurationAssignRequestBuilder extends IReq
     /**
      * Creates the IDeviceEnrollmentConfigurationAssignRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceEnrollmentConfigurationAssignRequest instance
      */
-    IDeviceEnrollmentConfigurationAssignRequest buildRequest();
+    IDeviceEnrollmentConfigurationAssignRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceEnrollmentConfigurationAssignRequest with specific options instead of the existing options

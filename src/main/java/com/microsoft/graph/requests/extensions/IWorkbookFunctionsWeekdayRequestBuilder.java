@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsWeekdayRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsWeekdayRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsWeekdayRequest instance
      */
-    IWorkbookFunctionsWeekdayRequest buildRequest();
+    IWorkbookFunctionsWeekdayRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsWeekdayRequest with specific options instead of the existing options

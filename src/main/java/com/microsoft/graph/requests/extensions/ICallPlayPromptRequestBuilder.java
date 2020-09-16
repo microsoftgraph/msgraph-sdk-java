@@ -17,9 +17,10 @@ public interface ICallPlayPromptRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallPlayPromptRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallPlayPromptRequest instance
      */
-    ICallPlayPromptRequest buildRequest();
+    ICallPlayPromptRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallPlayPromptRequest with specific options instead of the existing options

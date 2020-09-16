@@ -17,9 +17,10 @@ public interface ICallUnmuteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the ICallUnmuteRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallUnmuteRequest instance
      */
-    ICallUnmuteRequest buildRequest();
+    ICallUnmuteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallUnmuteRequest with specific options instead of the existing options

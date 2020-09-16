@@ -17,9 +17,10 @@ public interface IOnenotePageOnenotePatchContentRequestBuilder extends IRequestB
     /**
      * Creates the IOnenotePageOnenotePatchContentRequest
      *
+     * @param requestOptions the options for the request
      * @return the IOnenotePageOnenotePatchContentRequest instance
      */
-    IOnenotePageOnenotePatchContentRequest buildRequest();
+    IOnenotePageOnenotePatchContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IOnenotePageOnenotePatchContentRequest with specific options instead of the existing options

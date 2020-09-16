@@ -38,9 +38,10 @@ public interface IServicePrincipalRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IServicePrincipalRequest instance
      */
-    IServicePrincipalRequest buildRequest();
+    IServicePrincipalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsQuartile_ExcRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsQuartile_ExcRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsQuartile_ExcRequest instance
      */
-    IWorkbookFunctionsQuartile_ExcRequest buildRequest();
+    IWorkbookFunctionsQuartile_ExcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsQuartile_ExcRequest with specific options instead of the existing options

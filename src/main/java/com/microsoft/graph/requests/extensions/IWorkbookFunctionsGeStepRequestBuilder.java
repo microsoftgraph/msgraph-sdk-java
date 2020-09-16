@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsGeStepRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsGeStepRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsGeStepRequest instance
      */
-    IWorkbookFunctionsGeStepRequest buildRequest();
+    IWorkbookFunctionsGeStepRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsGeStepRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface ITargetedManagedAppConfigurationTargetAppsRequestBuilder extend
     /**
      * Creates the ITargetedManagedAppConfigurationTargetAppsRequest
      *
+     * @param requestOptions the options for the request
      * @return the ITargetedManagedAppConfigurationTargetAppsRequest instance
      */
-    ITargetedManagedAppConfigurationTargetAppsRequest buildRequest();
+    ITargetedManagedAppConfigurationTargetAppsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ITargetedManagedAppConfigurationTargetAppsRequest with specific options instead of the existing options

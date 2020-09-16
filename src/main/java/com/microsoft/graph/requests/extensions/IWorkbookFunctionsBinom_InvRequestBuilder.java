@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsBinom_InvRequestBuilder extends IRequestBuild
     /**
      * Creates the IWorkbookFunctionsBinom_InvRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsBinom_InvRequest instance
      */
-    IWorkbookFunctionsBinom_InvRequest buildRequest();
+    IWorkbookFunctionsBinom_InvRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsBinom_InvRequest with specific options instead of the existing options

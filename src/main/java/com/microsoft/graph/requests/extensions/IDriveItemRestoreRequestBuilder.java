@@ -17,9 +17,10 @@ public interface IDriveItemRestoreRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemRestoreRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemRestoreRequest instance
      */
-    IDriveItemRestoreRequest buildRequest();
+    IDriveItemRestoreRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemRestoreRequest with specific options instead of the existing options

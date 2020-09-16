@@ -30,9 +30,10 @@ public interface IWorkbookWorksheetRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IWorkbookWorksheetRequest instance
      */
-    IWorkbookWorksheetRequest buildRequest();
+    IWorkbookWorksheetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

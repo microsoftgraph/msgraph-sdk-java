@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsNorm_S_DistRequestBuilder extends IRequestBui
     /**
      * Creates the IWorkbookFunctionsNorm_S_DistRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsNorm_S_DistRequest instance
      */
-    IWorkbookFunctionsNorm_S_DistRequest buildRequest();
+    IWorkbookFunctionsNorm_S_DistRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsNorm_S_DistRequest with specific options instead of the existing options

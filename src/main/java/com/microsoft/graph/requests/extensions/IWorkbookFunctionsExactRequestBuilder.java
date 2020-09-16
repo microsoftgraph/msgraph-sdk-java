@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsExactRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsExactRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsExactRequest instance
      */
-    IWorkbookFunctionsExactRequest buildRequest();
+    IWorkbookFunctionsExactRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsExactRequest with specific options instead of the existing options

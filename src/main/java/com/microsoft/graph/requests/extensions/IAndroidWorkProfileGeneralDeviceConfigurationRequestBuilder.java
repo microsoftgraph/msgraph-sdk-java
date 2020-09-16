@@ -20,9 +20,10 @@ public interface IAndroidWorkProfileGeneralDeviceConfigurationRequestBuilder ext
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IAndroidWorkProfileGeneralDeviceConfigurationRequest instance
      */
-    IAndroidWorkProfileGeneralDeviceConfigurationRequest buildRequest();
+    IAndroidWorkProfileGeneralDeviceConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsChiSq_Inv_RTRequestBuilder extends IRequestBu
     /**
      * Creates the IWorkbookFunctionsChiSq_Inv_RTRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsChiSq_Inv_RTRequest instance
      */
-    IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest();
+    IWorkbookFunctionsChiSq_Inv_RTRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsChiSq_Inv_RTRequest with specific options instead of the existing options

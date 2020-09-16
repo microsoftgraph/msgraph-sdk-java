@@ -17,9 +17,10 @@ public interface IDriveItemValidatePermissionRequestBuilder extends IRequestBuil
     /**
      * Creates the IDriveItemValidatePermissionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemValidatePermissionRequest instance
      */
-    IDriveItemValidatePermissionRequest buildRequest();
+    IDriveItemValidatePermissionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemValidatePermissionRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSubtotalRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsSubtotalRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSubtotalRequest instance
      */
-    IWorkbookFunctionsSubtotalRequest buildRequest();
+    IWorkbookFunctionsSubtotalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSubtotalRequest with specific options instead of the existing options

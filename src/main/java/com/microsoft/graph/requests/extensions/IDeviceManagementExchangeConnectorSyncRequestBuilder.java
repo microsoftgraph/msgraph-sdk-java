@@ -17,9 +17,10 @@ public interface IDeviceManagementExchangeConnectorSyncRequestBuilder extends IR
     /**
      * Creates the IDeviceManagementExchangeConnectorSyncRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDeviceManagementExchangeConnectorSyncRequest instance
      */
-    IDeviceManagementExchangeConnectorSyncRequest buildRequest();
+    IDeviceManagementExchangeConnectorSyncRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDeviceManagementExchangeConnectorSyncRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IManagedDeviceWipeRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IManagedDeviceWipeRequest
      *
+     * @param requestOptions the options for the request
      * @return the IManagedDeviceWipeRequest instance
      */
-    IManagedDeviceWipeRequest buildRequest();
+    IManagedDeviceWipeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IManagedDeviceWipeRequest with specific options instead of the existing options

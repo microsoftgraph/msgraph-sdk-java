@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDvarPRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsDvarPRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDvarPRequest instance
      */
-    IWorkbookFunctionsDvarPRequest buildRequest();
+    IWorkbookFunctionsDvarPRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDvarPRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookCreateSessionRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookCreateSessionRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookCreateSessionRequest instance
      */
-    IWorkbookCreateSessionRequest buildRequest();
+    IWorkbookCreateSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookCreateSessionRequest with specific options instead of the existing options

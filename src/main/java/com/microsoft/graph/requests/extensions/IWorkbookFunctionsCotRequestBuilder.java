@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCotRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsCotRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCotRequest instance
      */
-    IWorkbookFunctionsCotRequest buildRequest();
+    IWorkbookFunctionsCotRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCotRequest with specific options instead of the existing options

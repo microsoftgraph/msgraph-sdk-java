@@ -21,9 +21,10 @@ public interface IUsedInsightRequestBuilder extends IRequestBuilder {
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IUsedInsightRequest instance
      */
-    IUsedInsightRequest buildRequest();
+    IUsedInsightRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

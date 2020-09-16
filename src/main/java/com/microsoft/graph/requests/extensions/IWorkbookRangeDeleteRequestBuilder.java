@@ -17,9 +17,10 @@ public interface IWorkbookRangeDeleteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeDeleteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeDeleteRequest instance
      */
-    IWorkbookRangeDeleteRequest buildRequest();
+    IWorkbookRangeDeleteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeDeleteRequest with specific options instead of the existing options

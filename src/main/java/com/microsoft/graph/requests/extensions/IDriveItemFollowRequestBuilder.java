@@ -17,9 +17,10 @@ public interface IDriveItemFollowRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IDriveItemFollowRequest
      *
+     * @param requestOptions the options for the request
      * @return the IDriveItemFollowRequest instance
      */
-    IDriveItemFollowRequest buildRequest();
+    IDriveItemFollowRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IDriveItemFollowRequest with specific options instead of the existing options

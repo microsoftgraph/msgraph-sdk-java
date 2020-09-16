@@ -20,9 +20,10 @@ public interface IIosDeviceFeaturesConfigurationRequestBuilder extends IRequestB
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IIosDeviceFeaturesConfigurationRequest instance
      */
-    IIosDeviceFeaturesConfigurationRequest buildRequest();
+    IIosDeviceFeaturesConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

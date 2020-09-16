@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsCoupDaysNcRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsCoupDaysNcRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsCoupDaysNcRequest instance
      */
-    IWorkbookFunctionsCoupDaysNcRequest buildRequest();
+    IWorkbookFunctionsCoupDaysNcRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsCoupDaysNcRequest with specific options instead of the existing options

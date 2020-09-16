@@ -20,9 +20,10 @@ public interface IMultiValueLegacyExtendedPropertyRequestBuilder extends IReques
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IMultiValueLegacyExtendedPropertyRequest instance
      */
-    IMultiValueLegacyExtendedPropertyRequest buildRequest();
+    IMultiValueLegacyExtendedPropertyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

@@ -28,8 +28,20 @@ import com.microsoft.graph.http.IBaseCollectionPage;
  */
 public interface INotebookCollectionRequestBuilder extends IRequestBuilder {
 
-    INotebookCollectionRequest buildRequest();
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
+    INotebookCollectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
+    /**
+     * Creates the request
+     *
+     * @param requestOptions the options for this request
+     * @return the IUserRequest instance
+     */
     INotebookCollectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     INotebookRequestBuilder byId(final String id);

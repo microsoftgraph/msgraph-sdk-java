@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsRoundUpRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsRoundUpRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsRoundUpRequest instance
      */
-    IWorkbookFunctionsRoundUpRequest buildRequest();
+    IWorkbookFunctionsRoundUpRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsRoundUpRequest with specific options instead of the existing options

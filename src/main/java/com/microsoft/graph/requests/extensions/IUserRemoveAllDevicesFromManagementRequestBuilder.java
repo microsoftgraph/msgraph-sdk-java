@@ -17,9 +17,10 @@ public interface IUserRemoveAllDevicesFromManagementRequestBuilder extends IRequ
     /**
      * Creates the IUserRemoveAllDevicesFromManagementRequest
      *
+     * @param requestOptions the options for the request
      * @return the IUserRemoveAllDevicesFromManagementRequest instance
      */
-    IUserRemoveAllDevicesFromManagementRequest buildRequest();
+    IUserRemoveAllDevicesFromManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IUserRemoveAllDevicesFromManagementRequest with specific options instead of the existing options

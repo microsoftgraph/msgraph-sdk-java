@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsAmorLincRequestBuilder extends IRequestBuilde
     /**
      * Creates the IWorkbookFunctionsAmorLincRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsAmorLincRequest instance
      */
-    IWorkbookFunctionsAmorLincRequest buildRequest();
+    IWorkbookFunctionsAmorLincRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsAmorLincRequest with specific options instead of the existing options

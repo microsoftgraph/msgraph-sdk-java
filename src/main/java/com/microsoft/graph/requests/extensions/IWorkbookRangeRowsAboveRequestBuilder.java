@@ -17,9 +17,10 @@ public interface IWorkbookRangeRowsAboveRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookRangeRowsAboveRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookRangeRowsAboveRequest instance
      */
-    IWorkbookRangeRowsAboveRequest buildRequest();
+    IWorkbookRangeRowsAboveRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookRangeRowsAboveRequest with specific options instead of the existing options

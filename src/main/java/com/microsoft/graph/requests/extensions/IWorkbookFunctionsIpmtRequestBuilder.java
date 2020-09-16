@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIpmtRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsIpmtRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIpmtRequest instance
      */
-    IWorkbookFunctionsIpmtRequest buildRequest();
+    IWorkbookFunctionsIpmtRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIpmtRequest with specific options instead of the existing options

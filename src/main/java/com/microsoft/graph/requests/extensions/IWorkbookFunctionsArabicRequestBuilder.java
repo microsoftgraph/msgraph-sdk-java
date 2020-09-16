@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsArabicRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsArabicRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsArabicRequest instance
      */
-    IWorkbookFunctionsArabicRequest buildRequest();
+    IWorkbookFunctionsArabicRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsArabicRequest with specific options instead of the existing options

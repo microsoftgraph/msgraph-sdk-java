@@ -20,9 +20,10 @@ public interface IDeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IDeviceCompliancePolicyDeviceStateSummaryRequest instance
      */
-    IDeviceCompliancePolicyDeviceStateSummaryRequest buildRequest();
+    IDeviceCompliancePolicyDeviceStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

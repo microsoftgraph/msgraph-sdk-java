@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsLookupRequestBuilder extends IRequestBuilder 
     /**
      * Creates the IWorkbookFunctionsLookupRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsLookupRequest instance
      */
-    IWorkbookFunctionsLookupRequest buildRequest();
+    IWorkbookFunctionsLookupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsLookupRequest with specific options instead of the existing options

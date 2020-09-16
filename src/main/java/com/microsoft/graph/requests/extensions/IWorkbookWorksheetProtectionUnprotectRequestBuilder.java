@@ -17,9 +17,10 @@ public interface IWorkbookWorksheetProtectionUnprotectRequestBuilder extends IRe
     /**
      * Creates the IWorkbookWorksheetProtectionUnprotectRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookWorksheetProtectionUnprotectRequest instance
      */
-    IWorkbookWorksheetProtectionUnprotectRequest buildRequest();
+    IWorkbookWorksheetProtectionUnprotectRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookWorksheetProtectionUnprotectRequest with specific options instead of the existing options

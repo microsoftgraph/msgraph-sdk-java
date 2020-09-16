@@ -17,9 +17,10 @@ public interface IWorkbookFilterApplyTopItemsFilterRequestBuilder extends IReque
     /**
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFilterApplyTopItemsFilterRequest instance
      */
-    IWorkbookFilterApplyTopItemsFilterRequest buildRequest();
+    IWorkbookFilterApplyTopItemsFilterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFilterApplyTopItemsFilterRequest with specific options instead of the existing options

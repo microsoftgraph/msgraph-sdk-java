@@ -20,9 +20,10 @@ public interface IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest();
+    IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

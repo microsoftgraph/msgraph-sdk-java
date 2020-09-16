@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsIsNARequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsIsNARequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsIsNARequest instance
      */
-    IWorkbookFunctionsIsNARequest buildRequest();
+    IWorkbookFunctionsIsNARequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsIsNARequest with specific options instead of the existing options

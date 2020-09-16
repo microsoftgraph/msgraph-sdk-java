@@ -20,9 +20,10 @@ public interface IRemoteAssistancePartnerRequestBuilder extends IRequestBuilder 
     /**
      * Creates the request
      *
+     * @param requestOptions the options for this request
      * @return the IRemoteAssistancePartnerRequest instance
      */
-    IRemoteAssistancePartnerRequest buildRequest();
+    IRemoteAssistancePartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the request with specific options instead of the existing options

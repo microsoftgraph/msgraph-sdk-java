@@ -17,9 +17,10 @@ public interface ICallCancelMediaProcessingRequestBuilder extends IRequestBuilde
     /**
      * Creates the ICallCancelMediaProcessingRequest
      *
+     * @param requestOptions the options for the request
      * @return the ICallCancelMediaProcessingRequest instance
      */
-    ICallCancelMediaProcessingRequest buildRequest();
+    ICallCancelMediaProcessingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the ICallCancelMediaProcessingRequest with specific options instead of the existing options

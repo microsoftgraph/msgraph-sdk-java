@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsDeltaRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsDeltaRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsDeltaRequest instance
      */
-    IWorkbookFunctionsDeltaRequest buildRequest();
+    IWorkbookFunctionsDeltaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsDeltaRequest with specific options instead of the existing options

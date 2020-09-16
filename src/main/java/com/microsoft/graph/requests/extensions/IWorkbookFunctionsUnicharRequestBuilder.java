@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsUnicharRequestBuilder extends IRequestBuilder
     /**
      * Creates the IWorkbookFunctionsUnicharRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsUnicharRequest instance
      */
-    IWorkbookFunctionsUnicharRequest buildRequest();
+    IWorkbookFunctionsUnicharRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsUnicharRequest with specific options instead of the existing options

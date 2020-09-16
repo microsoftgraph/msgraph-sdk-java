@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsFloor_MathRequestBuilder extends IRequestBuil
     /**
      * Creates the IWorkbookFunctionsFloor_MathRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsFloor_MathRequest instance
      */
-    IWorkbookFunctionsFloor_MathRequest buildRequest();
+    IWorkbookFunctionsFloor_MathRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsFloor_MathRequest with specific options instead of the existing options

@@ -17,9 +17,10 @@ public interface IWorkbookFunctionsSumIfRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IWorkbookFunctionsSumIfRequest
      *
+     * @param requestOptions the options for the request
      * @return the IWorkbookFunctionsSumIfRequest instance
      */
-    IWorkbookFunctionsSumIfRequest buildRequest();
+    IWorkbookFunctionsSumIfRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IWorkbookFunctionsSumIfRequest with specific options instead of the existing options

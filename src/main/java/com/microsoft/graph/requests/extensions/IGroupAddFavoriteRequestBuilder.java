@@ -17,9 +17,10 @@ public interface IGroupAddFavoriteRequestBuilder extends IRequestBuilder {
     /**
      * Creates the IGroupAddFavoriteRequest
      *
+     * @param requestOptions the options for the request
      * @return the IGroupAddFavoriteRequest instance
      */
-    IGroupAddFavoriteRequest buildRequest();
+    IGroupAddFavoriteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions);
 
     /**
      * Creates the IGroupAddFavoriteRequest with specific options instead of the existing options
