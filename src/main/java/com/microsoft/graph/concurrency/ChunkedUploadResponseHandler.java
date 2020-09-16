@@ -166,8 +166,8 @@ public class ChunkedUploadResponseHandler<UploadType>
         			|| response.code() == HttpResponseCode.HTTP_OK) {
         		logger.logDebug("Upload session is completed, uploaded item returned.");
         		in = new BufferedInputStream(response.body().byteStream());
-        		String rawJson = DefaultHttpProvider.streamToString(in);
-        		UploadType uploadedItem = serializer.deserializeObject(rawJson,
+        		final String rawJson = DefaultHttpProvider.streamToString(in);
+        		final UploadType uploadedItem = serializer.deserializeObject(rawJson,
         				this.deserializeTypeClass);
 
         		return new ChunkedUploadResult<UploadType>(uploadedItem);
