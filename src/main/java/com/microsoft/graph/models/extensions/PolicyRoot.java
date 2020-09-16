@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
+import com.microsoft.graph.models.extensions.PermissionGrantPolicy;
 import com.microsoft.graph.models.extensions.TokenIssuancePolicy;
 import com.microsoft.graph.models.extensions.TokenLifetimePolicy;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
@@ -22,6 +23,8 @@ import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionResp
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionResponse;
+import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionResponse;
@@ -68,6 +71,14 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
     @SerializedName("homeRealmDiscoveryPolicies")
     @Expose
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+
+    /**
+     * The Permission Grant Policies.
+     * 
+     */
+    @SerializedName("permissionGrantPolicies")
+    @Expose
+    public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
 
     /**
      * The Token Issuance Policies.
@@ -187,6 +198,22 @@ public class PolicyRoot extends Entity implements IJsonBackedObject {
             }
             response.value = Arrays.asList(array);
             homeRealmDiscoveryPolicies = new HomeRealmDiscoveryPolicyCollectionPage(response, null);
+        }
+
+        if (json.has("permissionGrantPolicies")) {
+            final PermissionGrantPolicyCollectionResponse response = new PermissionGrantPolicyCollectionResponse();
+            if (json.has("permissionGrantPolicies@odata.nextLink")) {
+                response.nextLink = json.get("permissionGrantPolicies@odata.nextLink").getAsString();
+            }
+
+            final JsonObject[] sourceArray = serializer.deserializeObject(json.get("permissionGrantPolicies").toString(), JsonObject[].class);
+            final PermissionGrantPolicy[] array = new PermissionGrantPolicy[sourceArray.length];
+            for (int i = 0; i < sourceArray.length; i++) {
+                array[i] = serializer.deserializeObject(sourceArray[i].toString(), PermissionGrantPolicy.class);
+                array[i].setRawObject(serializer, sourceArray[i]);
+            }
+            response.value = Arrays.asList(array);
+            permissionGrantPolicies = new PermissionGrantPolicyCollectionPage(response, null);
         }
 
         if (json.has("tokenIssuancePolicies")) {

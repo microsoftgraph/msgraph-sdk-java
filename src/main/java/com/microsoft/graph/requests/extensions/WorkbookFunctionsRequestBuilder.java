@@ -54,6 +54,10 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
 
 
+    public IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
+        return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, number1, number2);
+    }
+
     public IWorkbookFunctionsAbsRequestBuilder abs(final com.google.gson.JsonElement number) {
         return new WorkbookFunctionsAbsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.abs"), getClient(), null, number);
     }
@@ -432,10 +436,6 @@ public class WorkbookFunctionsRequestBuilder extends BaseRequestBuilder implemen
 
     public IWorkbookFunctionsDegreesRequestBuilder degrees(final com.google.gson.JsonElement angle) {
         return new WorkbookFunctionsDegreesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.degrees"), getClient(), null, angle);
-    }
-
-    public IWorkbookFunctionsDeltaRequestBuilder delta(final com.google.gson.JsonElement number1, final com.google.gson.JsonElement number2) {
-        return new WorkbookFunctionsDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null, number1, number2);
     }
 
     public IWorkbookFunctionsDevSqRequestBuilder devSq(final com.google.gson.JsonElement values) {
