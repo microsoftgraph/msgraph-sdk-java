@@ -117,12 +117,12 @@ public class DriveRequestBuilder extends BaseRequestBuilder implements IDriveReq
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("special") + "/" + id, getClient(), null);
     }
 
-    public IDriveRecentCollectionRequestBuilder recent() {
-        return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
-    }
-
     public IDriveSearchCollectionRequestBuilder search(final String q) {
         return new DriveSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.search"), getClient(), null, q);
+    }
+
+    public IDriveRecentCollectionRequestBuilder recent() {
+        return new DriveRecentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recent"), getClient(), null);
     }
 
     public IDriveSharedWithMeCollectionRequestBuilder sharedWithMe() {

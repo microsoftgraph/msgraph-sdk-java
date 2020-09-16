@@ -78,9 +78,9 @@ public interface IDriveRequestBuilder extends IRequestBuilder {
 
     IDriveItemRequestBuilder special(final String id);
 
-    IDriveRecentCollectionRequestBuilder recent();
-
     IDriveSearchCollectionRequestBuilder search(final String q);
+
+    IDriveRecentCollectionRequestBuilder recent();
 
     IDriveSharedWithMeCollectionRequestBuilder sharedWithMe();
 

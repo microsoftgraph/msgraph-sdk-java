@@ -8,6 +8,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
@@ -56,6 +60,13 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
     }
 
 
+    public IAdministrativeUnitCollectionRequestBuilder administrativeUnits() {
+        return new AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits"), getClient(), null);
+    }
+
+    public IAdministrativeUnitRequestBuilder administrativeUnits(final String id) {
+        return new AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits") + "/" + id, getClient(), null);
+    }
     public IDirectoryObjectCollectionRequestBuilder deletedItems() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
     }

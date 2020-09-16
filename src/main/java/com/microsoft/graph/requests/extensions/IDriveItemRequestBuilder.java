@@ -9,9 +9,9 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DriveItem;
 import com.microsoft.graph.models.extensions.ItemReference;
-import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveItemUploadableProperties;
 import com.microsoft.graph.models.extensions.UploadSession;
+import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
@@ -116,16 +116,16 @@ public interface IDriveItemRequestBuilder extends IRequestBuilder {
     IDriveItemVersionRequestBuilder versions(final String id);
 
     IDriveItemContentStreamRequestBuilder content();
+    IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name);
+    IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference);
+    IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
     IDriveItemCheckinRequestBuilder checkin(final String checkInAs, final String comment);
     IDriveItemCheckoutRequestBuilder checkout();
-    IDriveItemCopyRequestBuilder copy(final String name, final ItemReference parentReference);
     IDriveItemCreateLinkRequestBuilder createLink(final String type, final String scope, final java.util.Calendar expirationDateTime, final String password, final String message);
-    IDriveItemCreateUploadSessionRequestBuilder createUploadSession(final DriveItemUploadableProperties item);
     IDriveItemFollowRequestBuilder follow();
 
     IDriveItemInviteCollectionRequestBuilder invite(final Boolean requireSignIn, final java.util.List<String> roles, final Boolean sendInvitation, final String message, final java.util.List<DriveRecipient> recipients, final String expirationDateTime, final String password);
     IDriveItemPreviewRequestBuilder preview(final String page, final Double zoom);
-    IDriveItemRestoreRequestBuilder restore(final ItemReference parentReference, final String name);
     IDriveItemUnfollowRequestBuilder unfollow();
     IDriveItemValidatePermissionRequestBuilder validatePermission(final String challengeToken, final String password);
 
