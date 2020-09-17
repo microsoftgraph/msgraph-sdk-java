@@ -58,18 +58,16 @@ public class OneDriveTests {
      */
     @Test
 	public void testLargeFileUpload() throws IOException, InterruptedException {
-    	String itemId = "01BQHXQL5GQVAGCFJLYRH3EAG2YHGERMQA"; //Test upload folder
-    	
     	//Get resource file from file system
-    	InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("hamilton.jpg");
+    	InputStream uploadFile = OneDriveTests.class.getClassLoader().getResourceAsStream("largefile10M.blob");
     	long fileSize = (long) uploadFile.available();
     	
     	UploadSession uploadSession = testBase
     			.graphClient
     			.me()
-    			.drive()
-    			.items(itemId)
-    			.itemWithPath("_hamilton.jpg")
+				.drive()
+				.root()
+    			.itemWithPath("largefile10M.blob")
     			.createUploadSession(new DriveItemUploadableProperties())
     			.buildRequest()
     			.post();
