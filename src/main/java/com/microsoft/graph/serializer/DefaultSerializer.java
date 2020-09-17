@@ -154,17 +154,19 @@ public class DefaultSerializer implements ISerializer {
                             final List<?> fieldObjectList = (List<?>) fieldObject;
                             if (collectionJson != null && collectionJson.isJsonArray()) {
                                 final JsonArray rawJsonArray = (JsonArray) collectionJson;
-                                if(rawJsonArray.size() == fieldObjectList.size()) {
-                                    for (int i = 0; i < fieldObjectList.size(); i++) {
-                                        final Object element = fieldObjectList.get(i);
-                                        if (element instanceof IJsonBackedObject) {
-                                            final JsonElement elementRawJson = rawJsonArray.get(i);
-                                            if(elementRawJson != null) {
-                                                setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
-                                            }
+                                final Integer fieldObjectListSize = fieldObjectList.size();
+                                final Integer rawJsonArraySize = rawJsonArray.size();
+                                for (int i = 0; i < fieldObjectListSize && i < rawJsonArraySize; i++) {
+                                    final Object element = fieldObjectList.get(i);
+                                    if (element instanceof IJsonBackedObject) {
+                                        final JsonElement elementRawJson = rawJsonArray.get(i);
+                                        if(elementRawJson != null) {
+                                            setChildAdditionalData((IJsonBackedObject) element, elementRawJson.getAsJsonObject());
                                         }
                                     }
                                 }
+                                if (rawJsonArraySize != fieldObjectListSize) 
+                                    logger.logDebug("rawJsonArray has a size of " + rawJsonArraySize + " and fieldObjectList of " + fieldObjectListSize);
                             }
                         }
                         // If the object is a valid Graph object, set its additional data
@@ -181,6 +183,7 @@ public class DefaultSerializer implements ISerializer {
                 } catch (IllegalArgumentException | IllegalAccessException e) {
                     //Not throwing the IllegalArgumentException as the Serialized Object would still be usable even if the additional data is not set.
                     logger.logError("Unable to set child fields of " + serializedObject.getClass().getSimpleName(), e);
+                    logger.logDebug(rawJson.getAsString());
                 }
             }
         }
