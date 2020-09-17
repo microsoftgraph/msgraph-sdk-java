@@ -356,20 +356,22 @@ public class CoreHttpProvider implements IHttpProvider {
 					throws ClientException {
 
 		try {
+			if(this.connectionConfig == null) {
+				this.connectionConfig = new DefaultConnectionConfig();
+			}
 			if(this.corehttpClient == null) {
-				OkHttpClient.Builder okBuilder = HttpClients.createDefault(new ICoreAuthenticationProvider() {
-					@Override
-					public Request authenticateRequest(Request request) {
-						return request;
-					}
-				}).newBuilder();
-				if(this.connectionConfig == null) {
-					this.connectionConfig = new DefaultConnectionConfig();
-				}
-				okBuilder.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS);
-				okBuilder.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS);
-				okBuilder.followRedirects(false);
-				this.corehttpClient = okBuilder.build();
+				this.corehttpClient = HttpClients
+										.createDefault(new ICoreAuthenticationProvider() {
+															@Override
+															public Request authenticateRequest(Request request) {
+																return request;
+															}
+														}).newBuilder()
+										.connectTimeout(connectionConfig.getConnectTimeout(), TimeUnit.MILLISECONDS)
+										.readTimeout(connectionConfig.getReadTimeout(), TimeUnit.MILLISECONDS)
+										.followRedirects(false)
+										.protocols(Arrays.asList(Protocol.HTTP_1_1)) //https://stackoverflow.com/questions/62031298/sockettimeout-on-java-11-but-not-on-java-8
+										.build();
 			}
 			if (authenticationProvider != null) {
 				authenticationProvider.authenticateRequest(request);
