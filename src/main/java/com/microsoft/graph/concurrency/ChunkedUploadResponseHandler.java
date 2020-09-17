@@ -25,10 +25,13 @@ package com.microsoft.graph.concurrency;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
+import com.microsoft.graph.core.Constants;
 import com.microsoft.graph.http.DefaultHttpProvider;
 import com.microsoft.graph.http.GraphServiceException;
 import com.microsoft.graph.http.HttpResponseCode;
+import com.microsoft.graph.http.HttpResponseHeadersHelper;
 import com.microsoft.graph.http.IConnection;
 import com.microsoft.graph.http.IHttpRequest;
 import com.microsoft.graph.http.IStatefulResponseHandler;
@@ -46,6 +49,8 @@ import okhttp3.Response;
  */
 public class ChunkedUploadResponseHandler<UploadType>
         implements IStatefulResponseHandler<ChunkedUploadResult<UploadType>, UploadType> {
+
+    private final static HttpResponseHeadersHelper  responseHeadersHelper = new HttpResponseHeadersHelper();
     /**
      * The expected deserialized upload type
      */
@@ -154,30 +159,35 @@ public class ChunkedUploadResponseHandler<UploadType>
             final ILogger logger) throws Exception {
         InputStream in = null;
         try {
-        	if (response.code() == HttpResponseCode.HTTP_ACCEPTED) {
-        		logger.logDebug("Chunk bytes has been accepted by the server.");
-        		in = new BufferedInputStream(response.body().byteStream());
-        		final UploadSession session = serializer.deserializeObject(
-        				DefaultHttpProvider.streamToString(in), UploadSession.class);
-
-        		return new ChunkedUploadResult<UploadType>(session);
-
-        	} else if (response.code() == HttpResponseCode.HTTP_CREATED
-        			|| response.code() == HttpResponseCode.HTTP_OK) {
-        		logger.logDebug("Upload session is completed, uploaded item returned.");
-        		in = new BufferedInputStream(response.body().byteStream());
-        		final String rawJson = DefaultHttpProvider.streamToString(in);
-        		final UploadType uploadedItem = serializer.deserializeObject(rawJson,
-        				this.deserializeTypeClass);
-
-        		return new ChunkedUploadResult<UploadType>(uploadedItem);
-        	} else if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
+        	if (response.code() >= HttpResponseCode.HTTP_CLIENT_ERROR) {
         		logger.logDebug("Receiving error during upload, see detail on result error");
 
         		return new ChunkedUploadResult<UploadType>(
         				GraphServiceException.createFromConnection(request, null, serializer,
         						response, logger));
-        	}
+            } else if (response.code() >= HttpResponseCode.HTTP_OK 
+                    && response.code() < HttpResponseCode.HTTP_MULTIPLE_CHOICES) {
+                final Map<String, String> headers = responseHeadersHelper.getResponseHeadersAsMapStringString(response);
+                final String contentType = headers.get(Constants.CONTENT_TYPE_HEADER_NAME);
+                final String location = headers.get("Location");
+                if(contentType != null
+                    && contentType.contains(Constants.JSON_CONTENT_TYPE)) {
+                    in = new BufferedInputStream(response.body().byteStream());
+                    final String rawJson = DefaultHttpProvider.streamToString(in);
+                    final UploadSession session = serializer.deserializeObject(rawJson, UploadSession.class);
+                    if(session == null) {
+                        logger.logDebug("Upload session is completed (ODSP), uploaded item returned.");
+                        final UploadType uploadedItem = serializer.deserializeObject(rawJson, this.deserializeTypeClass);
+                        return new ChunkedUploadResult<UploadType>(uploadedItem);
+                    } else {
+                        logger.logDebug("Chunk bytes has been accepted by the server.");
+                        return new ChunkedUploadResult<UploadType>(session);
+                    }
+                } else if(location != null) {
+                    logger.logDebug("Upload session is completed (Outlook), uploaded item returned.");
+                    return new ChunkedUploadResult<UploadType>(this.deserializeTypeClass.getDeclaredConstructor().newInstance());
+                }
+            }
         } finally {
         	if (in != null) {
         		try{
